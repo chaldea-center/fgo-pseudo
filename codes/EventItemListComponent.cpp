@@ -15,7 +15,7 @@ void __fastcall EventItemListComponent__Clear(EventItemListComponent_o *this, co
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_8:
-    sub_1C13F80(gameObject, v4);
+    sub_1C1AE30(gameObject, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   eventItemDrawList = this->fields.eventItemDrawList;
   if ( eventItemDrawList )
@@ -27,7 +27,7 @@ LABEL_8:
       if ( (int)v6 >= max_length )
         break;
       if ( (unsigned int)v6 >= max_length )
-        sub_1C13F88(gameObject, v4);
+        sub_1C1AE38(gameObject, v4);
       gameObject = (UnityEngine_GameObject_o *)eventItemDrawList->m_Items[v6];
       if ( gameObject )
       {
@@ -52,20 +52,20 @@ void __fastcall EventItemListComponent__GoToEventShop(int32_t eventId, const Met
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BB3B39 & 1) == 0 )
+  if ( (byte_4BC6F07 & 1) == 0 )
   {
-    sub_1C13D24(&SceneJumpInfo_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_1C13D24(&StringLiteral_9707/*"None (FSM)"*/, v4);
-    byte_4BB3B39 = 1;
+    sub_1C1ABD4(&SceneJumpInfo_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
+    sub_1C1ABD4(&StringLiteral_9713/*"NormalEventShop"*/, v4);
+    byte_4BC6F07 = 1;
   }
-  v5 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
-  SceneJumpInfo___ctor_39818028(v5, (System_String_o *)StringLiteral_9707/*"None (FSM)"*/, eventId, 0LL);
+  v5 = (SceneJumpInfo_o *)sub_1C1AE20(SceneJumpInfo_TypeInfo);
+  SceneJumpInfo___ctor_39871920(v5, (System_String_o *)StringLiteral_9713/*"NormalEventShop"*/, eventId, 0LL);
   if ( !v5
     || (SceneJumpInfo__SetReturnNowScene(v5, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
-    sub_1C13F80(Instance, v7);
+    sub_1C1AE30(Instance, v7);
   }
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 72, 1, (Il2CppObject *)v5, 0LL);
 }
@@ -79,20 +79,20 @@ void __fastcall EventItemListComponent__GoToShopEventItemExchange(int32_t eventI
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BB3B38 & 1) == 0 )
+  if ( (byte_4BC6F06 & 1) == 0 )
   {
-    sub_1C13D24(&SceneJumpInfo_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
-    sub_1C13D24(&StringLiteral_6342/*"EventInfoReleaseCraftItemDialogPrefab"*/, v4);
-    byte_4BB3B38 = 1;
+    sub_1C1ABD4(&SceneJumpInfo_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v3);
+    sub_1C1ABD4(&StringLiteral_6346/*"EventItem"*/, v4);
+    byte_4BC6F06 = 1;
   }
-  v5 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
-  SceneJumpInfo___ctor_39818028(v5, (System_String_o *)StringLiteral_6342/*"EventInfoReleaseCraftItemDialogPrefab"*/, eventId, 0LL);
+  v5 = (SceneJumpInfo_o *)sub_1C1AE20(SceneJumpInfo_TypeInfo);
+  SceneJumpInfo___ctor_39871920(v5, (System_String_o *)StringLiteral_6346/*"EventItem"*/, eventId, 0LL);
   if ( !v5
     || (SceneJumpInfo__SetReturnNowScene(v5, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
   {
-    sub_1C13F80(Instance, v7);
+    sub_1C1AE30(Instance, v7);
   }
   AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, (Il2CppObject *)v5, 0LL);
 }
@@ -112,11 +112,11 @@ void __fastcall EventItemListComponent__Set(EventItemListComponent_o *this, int3
   unsigned __int64 max_length; // x9
   unsigned __int64 klass_low; // x9
 
-  if ( (byte_4BB3B3A & 1) == 0 )
+  if ( (byte_4BC6F08 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ShopMaster___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BB3B3A = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ShopMaster___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4BC6F08 = 1;
   }
   if ( eventId < 1 )
   {
@@ -127,13 +127,13 @@ void __fastcall EventItemListComponent__Set(EventItemListComponent_o *this, int3
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject
       || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
-          (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+          (gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
       || (gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)gameObject,
-                                                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL )
+                                                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL )
     {
 LABEL_19:
-      sub_1C13F80(gameObject, v7);
+      sub_1C1AE30(gameObject, v7);
     }
     gameObject = (UnityEngine_GameObject_o *)ShopMaster__GetEventItemList((ShopMaster_o *)gameObject, eventId, 0LL);
     eventItemDrawList = this->fields.eventItemDrawList;
@@ -151,7 +151,7 @@ LABEL_19:
           goto LABEL_19;
         if ( v11 >= max_length )
 LABEL_22:
-          sub_1C13F88(gameObject, v7);
+          sub_1C1AE38(gameObject, v7);
         klass_low = LODWORD(v10[1].klass);
         gameObject = (UnityEngine_GameObject_o *)eventItemDrawList->m_Items[v11];
         if ( (__int64)v11 >= (int)klass_low )

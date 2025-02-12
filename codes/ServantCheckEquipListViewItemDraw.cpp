@@ -44,16 +44,16 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+20h] [xbp-60h]
 
   v6 = this;
-  if ( (byte_4BB0925 & 1) == 0 )
+  if ( (byte_4BC3CDE & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, item);
-    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
-    sub_1C13D24(&Rarity_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_23315/*"return"*/, v9);
-    sub_1C13D24(&StringLiteral_20494/*"icon_guest"*/, v10);
-    sub_1C13D24(&StringLiteral_20483/*"icon_event_"*/, v11);
-    this = (ServantCheckEquipListViewItemDraw_o *)sub_1C13D24(&StringLiteral_20493/*"icon_grade_1"*/, v12);
-    byte_4BB0925 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, item);
+    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    sub_1C1ABD4(&Rarity_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_23335/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1C1ABD4(&StringLiteral_20508/*"icon_reinforced"*/, v10);
+    sub_1C1ABD4(&StringLiteral_20497/*"icon_noblephantasmup"*/, v11);
+    this = (ServantCheckEquipListViewItemDraw_o *)sub_1C1ABD4(&StringLiteral_20507/*"icon_rarity5"*/, v12);
+    byte_4BC3CDE = 1;
   }
   if ( item && mode )
   {
@@ -67,11 +67,11 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v25 = v26;
-    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47494132(
+    this = (ServantCheckEquipListViewItemDraw_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47559652(
                                                     &v25,
                                                     0LL);
     if ( !servantEquipIcon
-      || (ServantFaceIconComponent__Set_39363772(
+      || (ServantFaceIconComponent__Set_39417356(
             servantEquipIcon,
             (int64_t)this,
             item->fields.materialIconLabelInfo,
@@ -80,7 +80,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
           (v16 = item->fields.materialUserServantEntity) == 0LL) )
     {
 LABEL_48:
-      sub_1C13F80(this, item);
+      sub_1C1AE30(this, item);
     }
     subInfo = v6->fields.subInfo;
     rarity = item->fields.rarity;
@@ -137,7 +137,7 @@ LABEL_48:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_48;
-        v22 = &StringLiteral_20494/*"icon_guest"*/;
+        v22 = &StringLiteral_20508/*"icon_reinforced"*/;
         goto LABEL_34;
       case 2:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.equipSprite;
@@ -165,7 +165,7 @@ LABEL_48:
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.warningSprite;
         if ( !this )
           goto LABEL_48;
-        v22 = &StringLiteral_20493/*"icon_grade_1"*/;
+        v22 = &StringLiteral_20507/*"icon_rarity5"*/;
 LABEL_34:
         UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v22, 0LL);
 LABEL_35:
@@ -201,7 +201,7 @@ LABEL_35:
         v24 = v6->fields.warningSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetEventSprite(v24, (System_String_o *)StringLiteral_20483/*"icon_event_"*/, 0LL);
+        AtlasManager__SetEventSprite(v24, (System_String_o *)StringLiteral_20497/*"icon_noblephantasmup"*/, 0LL);
         this = (ServantCheckEquipListViewItemDraw_o *)v6->fields.materialTdSprite;
         if ( !this )
           goto LABEL_48;
@@ -211,7 +211,7 @@ LABEL_35:
         if ( !this )
           goto LABEL_48;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_23315/*"return"*/, 0LL);
+        AtlasManager__SetEventSprite(v6->fields.materialTdSprite, (System_String_o *)StringLiteral_23335/*"ribbon_noblephantasmup_01"*/, 0LL);
         return;
       default:
         return;

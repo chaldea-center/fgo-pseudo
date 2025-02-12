@@ -18,10 +18,10 @@ void __fastcall ActEnemyEffectFlipProc___ctor(
   __int64 v16; // x0
 
   v3 = effectFlipDataArray;
-  if ( (byte_4BB6C7F & 1) == 0 )
+  if ( (byte_4BCA061 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Array_Empty_EffectFlipData___, effectFlipDataArray);
-    byte_4BB6C7F = 1;
+    sub_1C1ABD4(&Method_System_Array_Empty_EffectFlipData___, effectFlipDataArray);
+    byte_4BCA061 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !v3 )
@@ -30,23 +30,23 @@ void __fastcall ActEnemyEffectFlipProc___ctor(
     v15 = *((_QWORD *)Method_System_Array_Empty_EffectFlipData___ + 7);
     if ( !v15 )
     {
-      sub_1C65C5C(Method_System_Array_Empty_EffectFlipData___);
+      sub_1C6CB0C(Method_System_Array_Empty_EffectFlipData___);
       v15 = v14[7];
     }
     v16 = *(_QWORD *)(v15 + 16);
     if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-      v16 = sub_1C65C00(inited);
+      v16 = sub_1C6CAB0(inited);
     if ( !*(_DWORD *)(v16 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v16);
     v5 = *(_QWORD *)(v14[7] + 16LL);
     if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-      v5 = sub_1C65C00(inited);
+      v5 = sub_1C6CAB0(inited);
     v3 = **(struct EffectFlipData_array ***)(v5 + 184);
   }
   if ( !this )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   this->fields.flipDataArray = v3;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -85,30 +85,30 @@ EffectFlipData_o *__fastcall ActEnemyEffectFlipProc__GetFlipData(
   System_Collections_Generic_IEnumerable_TSource__o *flipDataArray; // x19
   System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_4BB6C80 & 1) == 0 )
+  if ( (byte_4BCA062 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_EffectFlipData___, *(_QWORD *)&effectId);
-    sub_1C13D24(&System_Func_EffectFlipData__bool__TypeInfo, v5);
-    sub_1C13D24(&Method_ActEnemyEffectFlipProc___c__DisplayClass2_0__GetFlipData_b__0__, v6);
-    sub_1C13D24(&ActEnemyEffectFlipProc___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4BB6C80 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_EffectFlipData___, *(_QWORD *)&effectId);
+    sub_1C1ABD4(&System_Func_EffectFlipData__bool__TypeInfo, v5);
+    sub_1C1ABD4(&Method_ActEnemyEffectFlipProc___c__DisplayClass2_0__GetFlipData_b__0__, v6);
+    sub_1C1ABD4(&ActEnemyEffectFlipProc___c__DisplayClass2_0_TypeInfo, v7);
+    byte_4BCA062 = 1;
   }
-  v8 = sub_1C13F70(ActEnemyEffectFlipProc___c__DisplayClass2_0_TypeInfo);
+  v8 = sub_1C1AE20(ActEnemyEffectFlipProc___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   *(_DWORD *)(v8 + 16) = effectId;
   flipDataArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.flipDataArray;
-  v12 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EffectFlipData__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EffectFlipData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v8,
     Method_ActEnemyEffectFlipProc___c__DisplayClass2_0__GetFlipData_b__0__,
     0LL);
-  return (EffectFlipData_o *)System_Linq_Enumerable__FirstOrDefault_object__50015312(
+  return (EffectFlipData_o *)System_Linq_Enumerable__FirstOrDefault_object__50081164(
                                flipDataArray,
                                (System_Func_TSource__bool__o *)v12,
-                               (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_EffectFlipData___);
+                               (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EffectFlipData___);
 }
 
 
@@ -122,11 +122,11 @@ bool __fastcall ActEnemyEffectFlipProc__IsApplyCond(
   __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4BB6C81 & 1) == 0 )
+  if ( (byte_4BCA063 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, actorObj);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BB6C81 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, actorObj);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BCA063 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -138,7 +138,7 @@ bool __fastcall ActEnemyEffectFlipProc__IsApplyCond(
       goto LABEL_14;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          actorObj,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -148,7 +148,7 @@ bool __fastcall ActEnemyEffectFlipProc__IsApplyCond(
     if ( Component_object )
       return LOBYTE(Component_object[30].klass) != 0;
 LABEL_14:
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   }
   return 0;
 }
@@ -183,6 +183,6 @@ bool __fastcall ActEnemyEffectFlipProc___c__DisplayClass2_0___GetFlipData_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return x->fields.effectId == -1 || x->fields.effectId == this->fields.effectId;
 }

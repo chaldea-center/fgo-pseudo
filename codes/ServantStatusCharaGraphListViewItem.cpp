@@ -14,10 +14,10 @@ void __fastcall ServantStatusCharaGraphListViewItem___ctor(
   PartyListViewItem_o *v13; // x7
 
   v7 = this;
-  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 112);
-  sub_1C13CC8((PartyOrganizationUtility_o *)v7, (int64_t)mainInfo, v8, v9, v10, v11, v12, v13);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v7, (int64_t)mainInfo, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

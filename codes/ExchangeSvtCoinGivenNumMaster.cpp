@@ -1,16 +1,16 @@
 void __fastcall ExchangeSvtCoinGivenNumMaster___ctor(ExchangeSvtCoinGivenNumMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB48FC & 1) == 0 )
+  if ( (byte_4BC7CCC & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string___ctor__,
       method);
-    byte_4BB48FC = 1;
+    byte_4BC7CCC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     528,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ ExchangeSvtCoinGivenNumEntity_o *__fastcall ExchangeSvtCoinGivenNumMaster__GetEn
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB48FA & 1) == 0 )
+  if ( (byte_4BC7CCA & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__GetEntity__,
       *(_QWORD *)&itemId);
-    byte_4BB48FA = 1;
+    byte_4BC7CCA = 1;
   }
   PK = (Il2CppObject *)ExchangeSvtCoinGivenNumEntity__CreatePK(itemId, *(const MethodInfo **)&itemId);
   return (ExchangeSvtCoinGivenNumEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                               PK,
-                                              (const MethodInfo_323D0DC *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__GetEntity__);
+                                              (const MethodInfo_324D130 *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__GetEntity__);
 }
 
 
@@ -61,25 +61,25 @@ System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__o *__fastcall Exc
   int64_t v20; // x1
   Il2CppClass **v21; // x0
 
-  if ( (byte_4BB48FD & 1) == 0 )
+  if ( (byte_4BC7CCD & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Count__, method);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Item__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__Add__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity___ctor__, v5);
-    sub_1C13D24(&System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__TypeInfo, v6);
-    byte_4BB48FD = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Count__, method);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Item__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__Add__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity___ctor__, v5);
+    sub_1C1ABD4(&System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__TypeInfo, v6);
+    byte_4BC7CCD = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Count__);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__TypeInfo);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Count__);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity___ctor__);
   if ( Count >= 1 )
   {
     v10 = 0;
@@ -91,7 +91,7 @@ System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__o *__fastcall Exc
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v10,
-                                                                 (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Item__);
+                                                                 (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_ExchangeSvtCoinGivenNumEntity__get_Item__);
       if ( list )
       {
         if ( !v9 )
@@ -108,21 +108,21 @@ System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__o *__fastcall Exc
           System_Collections_Generic_List_object___AddWithResize(
             v9,
             (Il2CppObject *)list,
-            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_363C890 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v9->fields._size = size + 1;
           v21[4] = (Il2CppClass *)v20;
-          sub_1C13CC8((PartyOrganizationUtility_o *)(v21 + 4), v20, v11, v12, v13, v14, v15, v16);
+          sub_1C1AB78((PartyOrganizationUtility_o *)(v21 + 4), v20, v11, v12, v13, v14, v15, v16);
         }
       }
       if ( Count == ++v10 )
         return (System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__o *)v9;
     }
 LABEL_15:
-    sub_1C13F80(list, method);
+    sub_1C1AE30(list, method);
   }
   return (System_Collections_Generic_List_ExchangeSvtCoinGivenNumEntity__o *)v9;
 }
@@ -136,17 +136,17 @@ bool __fastcall ExchangeSvtCoinGivenNumMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB48FB & 1) == 0 )
+  if ( (byte_4BC7CCB & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__TryGetEntity__,
       entity);
-    byte_4BB48FB = 1;
+    byte_4BC7CCB = 1;
   }
   PK = (Il2CppObject *)ExchangeSvtCoinGivenNumEntity__CreatePK(itemId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_ExchangeSvtCoinGivenNumMaster__ExchangeSvtCoinGivenNumEntity__string__TryGetEntity__);
 }

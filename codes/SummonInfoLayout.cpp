@@ -18,10 +18,10 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   PartyListViewItem_o *v12; // x7
   const MethodInfo *v13; // x1
 
-  if ( (byte_4BB0E4E & 1) == 0 )
+  if ( (byte_4BC4207 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_FSOffset___, method);
-    byte_4BB0E4E = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_FSOffset___, method);
+    byte_4BC4207 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -33,10 +33,10 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   this->fields.infoControlLayoutDefault.fields.Scale = UnityEngine_Transform__get_localScale(transform, 0LL);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
   this->fields.fsOffset = (struct FSOffset_o *)Component_object;
   p_fsOffset = &this->fields.fsOffset;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.fsOffset,
     (int64_t)Component_object,
     v7,
@@ -53,7 +53,7 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   transform = (UnityEngine_Transform_o *)*p_fsOffset;
   if ( !*p_fsOffset )
 LABEL_9:
-    sub_1C13F80(transform, v4);
+    sub_1C1AE30(transform, v4);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, 1, 0LL);
   SummonInfoLayout__UpdateOffset(this, v13);
 }
@@ -76,7 +76,7 @@ void __fastcall SummonInfoLayout__UpdateCustom(SummonInfoLayout_o *this, const M
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutCustom.fields.Position, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(transform, v4);
+    sub_1C1AE30(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutCustom.fields.Scale, 0LL);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -94,7 +94,7 @@ void __fastcall SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const 
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutDefault.fields.Position, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(transform, v4);
+    sub_1C1AE30(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutDefault.fields.Scale, 0LL);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -107,10 +107,10 @@ void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const M
   __int64 v4; // x1
   FSOffset_o *v5; // x0
 
-  if ( (byte_4BB0E4F & 1) == 0 )
+  if ( (byte_4BC4208 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB0E4F = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4208 = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -119,7 +119,7 @@ void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const M
   {
     v5 = this->fields.fsOffset;
     if ( !v5 )
-      sub_1C13F80(0LL, v4);
+      sub_1C1AE30(0LL, v4);
     FSOffset__UpdateOffset(v5, 0LL);
   }
 }

@@ -18,7 +18,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__Init(
   PartyListViewItem_o *v7; // x7
 
   this->fields.onModifyCenterItem = onModifyCenter;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.onModifyCenterItem,
     (int64_t)onModifyCenter,
     (int64_t)method,
@@ -45,10 +45,10 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator__OnModifyCenterIt
   __int64 methodPtr_low; // x11
   ListViewItem_o *v12; // x1
 
-  if ( (byte_4BB0656 & 1) == 0 )
+  if ( (byte_4BC39E9 & 1) == 0 )
   {
-    sub_1C13D24(&ServantStatusCharaGraphListViewItem_TypeInfo, manager);
-    byte_4BB0656 = 1;
+    sub_1C1ABD4(&ServantStatusCharaGraphListViewItem_TypeInfo, manager);
+    byte_4BC39E9 = 1;
   }
   onModifyCenterItem = this->fields.onModifyCenterItem;
   if ( onModifyCenterItem )
@@ -104,7 +104,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -115,11 +115,11 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C13DE4(v10) & 1) != 0 )
+  if ( (sub_1C1AC94(v10) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = (Il2CppObject *)sub_1A4FEBC;
+      v13 = (Il2CppObject *)sub_1A56C40;
 LABEL_16:
       this->fields.m_target = v13;
       goto LABEL_17;
@@ -131,41 +131,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v15 = sub_1C13DDC(v10);
-        v16 = sub_1C14298(v10);
+        v15 = sub_1C1AC8C(v10);
+        v16 = sub_1C1B148(v10);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = (Il2CppObject *)sub_1A4FFB8;
+            v13 = (Il2CppObject *)sub_1A56D3C;
           else
-            v13 = (Il2CppObject *)sub_1A4FF7C;
+            v13 = (Il2CppObject *)sub_1A56D00;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = (Il2CppObject *)sub_1A4FEF8;
+          v13 = (Il2CppObject *)sub_1A56C7C;
         }
         else
         {
-          v13 = (Il2CppObject *)sub_1A4FECC;
+          v13 = (Il2CppObject *)sub_1A56C50;
         }
       }
       else
       {
-        v13 = (Il2CppObject *)sub_1A4FE9C;
+        v13 = (Il2CppObject *)sub_1A56C20;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C13E4C(v17, 0LL);
+      v17 = sub_1C1AE4C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C1ACFC(v17, 0LL);
     }
   }
   v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v14;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A4FE54;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A56BD8;
 }
 
 
@@ -179,7 +179,7 @@ System_IAsyncResult_o *__fastcall ServantStatusCharaGraphViewerListViewIndicator
   ServantStatusCharaGraphListViewItem_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = item;
-  return (System_IAsyncResult_o *)sub_1C13CD8(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C1AB88(this, &v6, callback, object);
 }
 
 
@@ -188,7 +188,7 @@ void __fastcall ServantStatusCharaGraphViewerListViewIndicator_OnModifyCenterEve
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C13CDC(result, 0LL, method);
+  sub_1C1AB8C(result, 0LL, method);
 }
 
 

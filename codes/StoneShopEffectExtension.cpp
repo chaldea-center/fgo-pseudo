@@ -9,26 +9,26 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
   System_Enum_o v10; // [xsp+8h] [xbp-38h] BYREF
   int32_t v11; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4BB36C7 & 1) == 0 )
+  if ( (byte_4BC6A93 & 1) == 0 )
   {
-    sub_1C13D24(&StoneShopEffect_Kind_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_6489/*"Expression of type '{0}' cannot be used for return type '{1}'"*/, v3);
-    sub_1C13D24(&StringLiteral_3267/*"BattleBondOffset"*/, v4);
-    sub_1C13D24(&StringLiteral_6490/*"Expression.NodeType"*/, v5);
-    sub_1C13D24(&StringLiteral_2416/*"AnyUri"*/, v6);
-    sub_1C13D24(&StringLiteral_6491/*"Expression.Type"*/, v7);
-    byte_4BB36C7 = 1;
+    sub_1C1ABD4(&StoneShopEffect_Kind_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_6492/*"ExtendFriendMax"*/, v3);
+    sub_1C1ABD4(&StringLiteral_3270/*"BattleContinue"*/, v4);
+    sub_1C1ABD4(&StringLiteral_6493/*"ExtendServantEquipMax"*/, v5);
+    sub_1C1ABD4(&StringLiteral_2417/*"ApRecover"*/, v6);
+    sub_1C1ABD4(&StringLiteral_6494/*"ExtendServantMax"*/, v7);
+    byte_4BC6A93 = 1;
   }
   if ( this <= 10 )
   {
     if ( this == 1 )
     {
-      v8 = &StringLiteral_3267/*"BattleBondOffset"*/;
+      v8 = &StringLiteral_3270/*"BattleContinue"*/;
       return (System_String_o *)*v8;
     }
     if ( this == 2 )
     {
-      v8 = &StringLiteral_2416/*"AnyUri"*/;
+      v8 = &StringLiteral_2417/*"ApRecover"*/;
       return (System_String_o *)*v8;
     }
 LABEL_16:
@@ -39,16 +39,16 @@ LABEL_16:
   }
   if ( this == 11 )
   {
-    v8 = &StringLiteral_6489/*"Expression of type '{0}' cannot be used for return type '{1}'"*/;
+    v8 = &StringLiteral_6492/*"ExtendFriendMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this == 12 )
   {
-    v8 = &StringLiteral_6491/*"Expression.Type"*/;
+    v8 = &StringLiteral_6494/*"ExtendServantMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this != 13 )
     goto LABEL_16;
-  v8 = &StringLiteral_6490/*"Expression.NodeType"*/;
+  v8 = &StringLiteral_6493/*"ExtendServantEquipMax"*/;
   return (System_String_o *)*v8;
 }

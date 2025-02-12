@@ -12,7 +12,7 @@ void __fastcall WrapBattleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.animation = normalAnim;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)normalAnim, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)normalAnim, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -53,21 +53,21 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleAnimation__GetPlaying
   int *v33; // x10
   __int64 v34; // x0
 
-  if ( (byte_4BB7A0C & 1) == 0 )
+  if ( (byte_4BCADF2 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_AnimationState_TypeInfo, method);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v3);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v4);
-    sub_1C13D24(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v5);
-    byte_4BB7A0C = 1;
+    sub_1C1ABD4(&UnityEngine_AnimationState_TypeInfo, method);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v3);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v4);
+    sub_1C1ABD4(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v5);
+    byte_4BCADF2 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
 LABEL_34:
-    sub_1C13F80(animation, method);
+    sub_1C1AE30(animation, method);
   Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0LL);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v7);
+    sub_1C1AE30(0LL, v7);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -87,7 +87,7 @@ LABEL_34:
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -110,34 +110,34 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v16 = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v16 = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v17 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v16)(
                                             Enumerator,
                                             *(_QWORD *)(v16 + 8));
     v19 = v17;
     if ( !v17 )
-      sub_1C13F80(0LL, v18);
+      sub_1C1AE30(0LL, v18);
     if ( v17->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1C14240(v17);
+      sub_1C1B0F0(v17);
       goto LABEL_34;
     }
     if ( UnityEngine_AnimationState__get_enabled(v17, 0LL) )
     {
       name = UnityEngine_AnimationState__get_name(v19, 0LL);
       time = UnityEngine_AnimationState__get_time(v19, 0LL);
-      v22 = sub_1C13F70(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+      v22 = sub_1C1AE20(WrapBattleBaseAnimation_SimpleData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v22, 0LL);
       *(_QWORD *)(v22 + 16) = name;
-      sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)name, v23, v24, v25, v26, v27, v28);
+      sub_1C1AB78((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)name, v23, v24, v25, v26, v27, v28);
       *(float *)(v22 + 24) = time;
       goto LABEL_23;
     }
   }
   v22 = 0LL;
 LABEL_23:
-  v29 = sub_1C13E60(Enumerator, System_IDisposable_TypeInfo);
+  v29 = sub_1C1AD10(Enumerator, System_IDisposable_TypeInfo);
   if ( v29 )
   {
     v30 = *(_QWORD *)v29;
@@ -158,7 +158,7 @@ LABEL_23:
     else
     {
 LABEL_28:
-      v34 = sub_1C65D04(v29, System_IDisposable_TypeInfo, 0LL);
+      v34 = sub_1C6CBB4(v29, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v34)(v31, *(_QWORD *)(v34 + 8));
   }
@@ -181,7 +181,7 @@ void __fastcall WrapBattleAnimation__PlayAnimation(
         (animation = this->fields.animation) == 0LL)
     || (UnityEngine_Animation__Sample(animation, 0LL), (animation = this->fields.animation) == 0LL) )
   {
-    sub_1C13F80(animation, animName);
+    sub_1C1AE30(animation, animName);
   }
-  UnityEngine_Animation__Play_70466396(animation, animName, 0LL);
+  UnityEngine_Animation__Play_70538820(animation, animName, 0LL);
 }

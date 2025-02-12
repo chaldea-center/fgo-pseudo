@@ -9,16 +9,16 @@ void __fastcall TipsArchiveStateManager___cctor(const MethodInfo *method)
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4BB5994 & 1) == 0 )
+  if ( (byte_4BC8D74 & 1) == 0 )
   {
-    sub_1C13D24(&TipsArchiveStateManager_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_6808/*"Fgo_20220404"*/, v8);
-    byte_4BB5994 = 1;
+    sub_1C1ABD4(&TipsArchiveStateManager_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_6811/*"Fgo_20230514_1"*/, v8);
+    byte_4BC8D74 = 1;
   }
-  TipsArchiveStateManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6808/*"Fgo_20220404"*/;
-  sub_1C13CC8(
+  TipsArchiveStateManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6811/*"Fgo_20230514_1"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)TipsArchiveStateManager_TypeInfo->static_fields,
-    StringLiteral_6808/*"Fgo_20220404"*/,
+    StringLiteral_6811/*"Fgo_20230514_1"*/,
     v2,
     v3,
     v4,
@@ -39,20 +39,20 @@ void __fastcall TipsArchiveStateManager___ctor(TipsArchiveStateManager_o *this, 
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BB5993 & 1) == 0 )
+  if ( (byte_4BC8D73 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData___ctor__,
       method);
-    sub_1C13D24(&System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo, v3);
-    byte_4BB5993 = 1;
+    sub_1C1ABD4(&System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo, v3);
+    byte_4BC8D73 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData___ctor__);
   this->fields.stateDataList = (struct System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__o *)v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.stateDataList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.stateDataList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -67,19 +67,19 @@ void __fastcall TipsArchiveStateManager__ClearSaveDataList(TipsArchiveStateManag
   int v7; // w9
 
   v2 = this;
-  if ( (byte_4BB5990 & 1) == 0 )
+  if ( (byte_4BC8D70 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__Clear__,
       method);
-    this = (TipsArchiveStateManager_o *)sub_1C13D24(
+    this = (TipsArchiveStateManager_o *)sub_1C1ABD4(
                                           &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__get_Count__,
                                           v3);
-    byte_4BB5990 = 1;
+    byte_4BC8D70 = 1;
   }
   stateDataList = v2->fields.stateDataList;
   if ( !stateDataList )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   size = stateDataList->fields._size;
   if ( size >= 1 )
   {
@@ -99,15 +99,15 @@ System_String_o *__fastcall TipsArchiveStateManager__GetSaveFileName(
 {
   System_String_o *DatFileSavePath; // x0
 
-  if ( (byte_4BB598F & 1) == 0 )
+  if ( (byte_4BC8D6F & 1) == 0 )
   {
-    sub_1C13D24(&AndroidUtil_TypeInfo, method);
-    byte_4BB598F = 1;
+    sub_1C1ABD4(&AndroidUtil_TypeInfo, method);
+    byte_4BC8D6F = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  return System_String__Concat_62967944(DatFileSavePath, this->fields.saveName, 0LL);
+  return System_String__Concat_63040368(DatFileSavePath, this->fields.saveName, 0LL);
 }
 
 
@@ -148,16 +148,16 @@ bool __fastcall TipsArchiveStateManager__ReadData(TipsArchiveStateManager_o *thi
   int32_t *p_offset; // x10
   __int64 v36; // x0
 
-  if ( (byte_4BB5991 & 1) == 0 )
+  if ( (byte_4BC8D71 & 1) == 0 )
   {
-    sub_1C13D24(&System_IO_BinaryReader_TypeInfo, method);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&System_IO_BinaryReader_TypeInfo, method);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v3);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__Add__,
       v4);
-    sub_1C13D24(&EventInfoTipsArchiveListViewItem_TipsArchiveStateData_TypeInfo, v5);
-    sub_1C13D24(&TipsArchiveStateManager_TypeInfo, v6);
-    byte_4BB5991 = 1;
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewItem_TipsArchiveStateData_TypeInfo, v5);
+    sub_1C1ABD4(&TipsArchiveStateManager_TypeInfo, v6);
+    byte_4BC8D71 = 1;
   }
   this->fields.isModfiy = 0;
   SaveFileName = TipsArchiveStateManager__GetSaveFileName(this, method);
@@ -167,10 +167,10 @@ bool __fastcall TipsArchiveStateManager__ReadData(TipsArchiveStateManager_o *thi
     return 0;
   }
   v9 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-  v10 = (System_IO_BinaryReader_o *)sub_1C13F70(System_IO_BinaryReader_TypeInfo);
+  v10 = (System_IO_BinaryReader_o *)sub_1C1AE20(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v10, v9, 0LL);
   if ( !v10 )
-    sub_1C13F80(v11, v12);
+    sub_1C1AE30(v11, v12);
   v13 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._22_ReadString.method)(
                              v10,
                              v10->klass->vtable._23_ReadChars.methodPtr);
@@ -205,30 +205,30 @@ bool __fastcall TipsArchiveStateManager__ReadData(TipsArchiveStateManager_o *thi
         v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v10->klass->vtable._15_ReadInt32.method)(
                 v10,
                 v10->klass->vtable._16_ReadUInt32.methodPtr);
-        v20 = (EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)sub_1C13F70(EventInfoTipsArchiveListViewItem_TipsArchiveStateData_TypeInfo);
+        v20 = (EventInfoTipsArchiveListViewItem_TipsArchiveStateData_o *)sub_1C1AE20(EventInfoTipsArchiveListViewItem_TipsArchiveStateData_TypeInfo);
         EventInfoTipsArchiveListViewItem_TipsArchiveStateData___ctor(v20, v17, v18, v19, 0LL);
         stateDataList = (System_Collections_Generic_List_object__o *)this->fields.stateDataList;
         if ( !stateDataList )
-          sub_1C13F80(0LL, v21);
+          sub_1C1AE30(0LL, v21);
         items = stateDataList->fields._items;
         v30 = Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__Add__;
         ++stateDataList->fields._version;
         if ( !items )
-          sub_1C13F80(stateDataList, v21);
+          sub_1C1AE30(stateDataList, v21);
         size = stateDataList->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             stateDataList,
             (Il2CppObject *)v20,
-            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_363C890 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + size;
           stateDataList->fields._size = size + 1;
           v32[4] = (Il2CppClass *)v20;
-          sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v20, v22, v23, v24, v25, v26, v27);
+          sub_1C1AB78((PartyOrganizationUtility_o *)(v32 + 4), (int64_t)v20, v22, v23, v24, v25, v26, v27);
         }
         --v16;
       }
@@ -256,7 +256,7 @@ bool __fastcall TipsArchiveStateManager__ReadData(TipsArchiveStateManager_o *thi
   else
   {
 LABEL_21:
-    v36 = sub_1C65D04(v10, System_IDisposable_TypeInfo, 0LL);
+    v36 = sub_1C6CBB4(v10, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v36)(v10, *(_QWORD *)(v36 + 8));
   return v15 == 7;
@@ -269,7 +269,7 @@ void __fastcall TipsArchiveStateManager__SetSaveFileName(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  System_String_o *FileName_38825068; // x0
+  System_String_o *FileName_38878224; // x0
   struct System_String_o *v7; // x0
   int64_t v8; // x2
   int32_t v9; // w3
@@ -278,18 +278,18 @@ void __fastcall TipsArchiveStateManager__SetSaveFileName(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BB598E & 1) == 0 )
+  if ( (byte_4BC8D6E & 1) == 0 )
   {
-    sub_1C13D24(&DatFileName_TypeInfo, eventUiName);
-    sub_1C13D24(&StringLiteral_1123/*"/"*/, v5);
-    byte_4BB598E = 1;
+    sub_1C1ABD4(&DatFileName_TypeInfo, eventUiName);
+    sub_1C1ABD4(&StringLiteral_1123/*"/"*/, v5);
+    byte_4BC8D6E = 1;
   }
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_38825068 = DatFileName__getFileName_38825068(40, eventUiName, 0LL, 0LL);
-  v7 = System_String__Concat_62967944((System_String_o *)StringLiteral_1123/*"/"*/, FileName_38825068, 0LL);
+  FileName_38878224 = DatFileName__getFileName_38878224(40, eventUiName, 0LL, 0LL);
+  v7 = System_String__Concat_63040368((System_String_o *)StringLiteral_1123/*"/"*/, FileName_38878224, 0LL);
   this->fields.saveName = v7;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.saveName, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.saveName, (int64_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -321,19 +321,19 @@ bool __fastcall TipsArchiveStateManager__WriteData(TipsArchiveStateManager_o *th
   int32_t *p_offset; // x10
   __int64 v28; // x0
 
-  if ( (byte_4BB5992 & 1) == 0 )
+  if ( (byte_4BC8D72 & 1) == 0 )
   {
-    sub_1C13D24(&System_IO_BinaryWriter_TypeInfo, method);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&System_IO_BinaryWriter_TypeInfo, method);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v3);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__get_Count__,
       v4);
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__get_Item__,
       v5);
-    sub_1C13D24(&ManagerConfig_TypeInfo, v6);
-    sub_1C13D24(&TipsArchiveStateManager_TypeInfo, v7);
-    byte_4BB5992 = 1;
+    sub_1C1ABD4(&ManagerConfig_TypeInfo, v6);
+    sub_1C1ABD4(&TipsArchiveStateManager_TypeInfo, v7);
+    byte_4BC8D72 = 1;
   }
   if ( !this->fields.isModfiy )
     return 0;
@@ -348,17 +348,17 @@ bool __fastcall TipsArchiveStateManager__WriteData(TipsArchiveStateManager_o *th
     return 0;
   SaveFileName = TipsArchiveStateManager__GetSaveFileName(this, method);
   v11 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v12 = (System_IO_BinaryWriter_o *)sub_1C13F70(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63206436(v12, v11, 0LL);
+  v12 = (System_IO_BinaryWriter_o *)sub_1C1AE20(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63278860(v12, v11, 0LL);
   stateDataList = this->fields.stateDataList;
   if ( !stateDataList )
-    sub_1C13F80(v13, v14);
+    sub_1C1AE30(v13, v14);
   size = stateDataList->fields._size;
   v18 = TipsArchiveStateManager_TypeInfo;
   if ( !TipsArchiveStateManager_TypeInfo->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(TipsArchiveStateManager_TypeInfo);
   if ( !v12 )
-    sub_1C13F80(v18, v14);
+    sub_1C1AE30(v18, v14);
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *, long double))v12->klass->vtable._22_Write.method)(
     v12,
     TipsArchiveStateManager_TypeInfo->static_fields->SAVE_DATA_VERSION,
@@ -378,14 +378,14 @@ bool __fastcall TipsArchiveStateManager__WriteData(TipsArchiveStateManager_o *th
     {
       v21 = this->fields.stateDataList;
       if ( !v21 )
-        sub_1C13F80(0LL, v19);
+        sub_1C1AE30(0LL, v19);
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)v21,
                i,
-               (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__get_Item__);
+               (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewItem_TipsArchiveStateData__get_Item__);
       v24 = Item;
       if ( !Item )
-        sub_1C13F80(0LL, v23);
+        sub_1C1AE30(0LL, v23);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v12->klass->vtable._17_Write.method)(
         v12,
         LODWORD(Item[1].klass),
@@ -420,7 +420,7 @@ bool __fastcall TipsArchiveStateManager__WriteData(TipsArchiveStateManager_o *th
   else
   {
 LABEL_21:
-    v28 = sub_1C65D04(v12, System_IDisposable_TypeInfo, 0LL);
+    v28 = sub_1C6CBB4(v12, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v28)(v12, *(_QWORD *)(v28 + 8));
   return 1;
@@ -462,7 +462,7 @@ void __fastcall TipsArchiveStateManager__set_StateDataList(
   PartyListViewItem_o *v7; // x7
 
   this->fields.stateDataList = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.stateDataList,
     (int64_t)value,
     (int64_t)method,

@@ -1,14 +1,14 @@
 void __fastcall BattlePointMaster___ctor(BattlePointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4364 & 1) == 0 )
+  if ( (byte_4BC7732 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__, method);
-    byte_4BB4364 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__, method);
+    byte_4BC7732 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     508,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int___ctor__);
 }
 
 
@@ -48,21 +48,21 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall BattlePointMaster__Get
   FollowerInfo_o *v32; // x6
   PartyListViewItem_o *v33; // x7
 
-  if ( (byte_4BB4363 & 1) == 0 )
+  if ( (byte_4BC7731 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_OfType_BattlePointEntity___, method);
-    sub_1C13D24(&Method_System_Linq_Enumerable_OrderBy_int__int___, v3);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Select_BattlePointEntity__int___, v4);
-    sub_1C13D24(&System_Func_BattlePointEntity__int__TypeInfo, v5);
-    sub_1C13D24(&System_Func_int__int__TypeInfo, v6);
-    sub_1C13D24(&Method_BattlePointMaster___c__GetBattlePointIds_b__0_0__, v7);
-    sub_1C13D24(&Method_BattlePointMaster___c__GetBattlePointIds_b__0_1__, v8);
-    sub_1C13D24(&BattlePointMaster___c_TypeInfo, v9);
-    byte_4BB4363 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_OfType_BattlePointEntity___, method);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_OrderBy_int__int___, v3);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_BattlePointEntity__int___, v4);
+    sub_1C1ABD4(&System_Func_BattlePointEntity__int__TypeInfo, v5);
+    sub_1C1ABD4(&System_Func_int__int__TypeInfo, v6);
+    sub_1C1ABD4(&Method_BattlePointMaster___c__GetBattlePointIds_b__0_0__, v7);
+    sub_1C1ABD4(&Method_BattlePointMaster___c__GetBattlePointIds_b__0_1__, v8);
+    sub_1C1ABD4(&BattlePointMaster___c_TypeInfo, v9);
+    byte_4BC7731 = 1;
   }
   v10 = System_Linq_Enumerable__OfType_object_(
           (System_Collections_IEnumerable_o *)this->fields.list,
-          (const MethodInfo_2FB7F8C *)Method_System_Linq_Enumerable_OfType_BattlePointEntity___);
+          (const MethodInfo_2FC80C8 *)Method_System_Linq_Enumerable_OfType_BattlePointEntity___);
   v11 = BattlePointMaster___c_TypeInfo;
   v12 = (System_Collections_Generic_IEnumerable_TSource__o *)v10;
   if ( !BattlePointMaster___c_TypeInfo->_2.cctor_finished )
@@ -79,16 +79,16 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall BattlePointMaster__Get
       v11 = BattlePointMaster___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_BattlePointEntity__int__TypeInfo);
+    _9__0_0 = (System_Func_object__int__o *)sub_1C1AE20(System_Func_BattlePointEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__0_0, v14, Method_BattlePointMaster___c__GetBattlePointIds_b__0_0__, 0LL);
     static_fields = BattlePointMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_BattlePointEntity__int__o *)_9__0_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v16, v17, v18, v19, v20, v21);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v16, v17, v18, v19, v20, v21);
   }
   v22 = System_Linq_Enumerable__Select_object__int_(
           v12,
           (System_Func_TSource__TResult__o *)_9__0_0,
-          (const MethodInfo_2FC022C *)Method_System_Linq_Enumerable_Select_BattlePointEntity__int___);
+          (const MethodInfo_2FD0368 *)Method_System_Linq_Enumerable_Select_BattlePointEntity__int___);
   v23 = BattlePointMaster___c_TypeInfo;
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)v22;
   if ( !BattlePointMaster___c_TypeInfo->_2.cctor_finished )
@@ -105,16 +105,16 @@ System_Collections_Generic_IEnumerable_int__o *__fastcall BattlePointMaster__Get
       v23 = BattlePointMaster___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v23->static_fields->__9;
-    _9__0_1 = (System_Func_int__int__o *)sub_1C13F70(System_Func_int__int__TypeInfo);
+    _9__0_1 = (System_Func_int__int__o *)sub_1C1AE20(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(_9__0_1, v26, Method_BattlePointMaster___c__GetBattlePointIds_b__0_1__, 0LL);
     v27 = BattlePointMaster___c_TypeInfo->static_fields;
     v27->__9__0_1 = _9__0_1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v27->__9__0_1, (int64_t)_9__0_1, v28, v29, v30, v31, v32, v33);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v27->__9__0_1, (int64_t)_9__0_1, v28, v29, v30, v31, v32, v33);
   }
   return (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__OrderBy_int__int_(
                                                             v24,
                                                             (System_Func_TSource__TKey__o *)_9__0_1,
-                                                            (const MethodInfo_2FB8210 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+                                                            (const MethodInfo_2FC834C *)Method_System_Linq_Enumerable_OrderBy_int__int___);
 }
 
 
@@ -129,15 +129,15 @@ void __fastcall BattlePointMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB4365 & 1) == 0 )
+  if ( (byte_4BC7733 & 1) == 0 )
   {
-    sub_1C13D24(&BattlePointMaster___c_TypeInfo, v1);
-    byte_4BB4365 = 1;
+    sub_1C1ABD4(&BattlePointMaster___c_TypeInfo, v1);
+    byte_4BC7733 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(BattlePointMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(BattlePointMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattlePointMaster___c_TypeInfo->static_fields->__9 = (struct BattlePointMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)BattlePointMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -161,7 +161,7 @@ int32_t __fastcall BattlePointMaster___c___GetBattlePointIds_b__0_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return entity->fields.id;
 }
 

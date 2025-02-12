@@ -16,13 +16,13 @@ void __fastcall WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields._keys_k__BackingField = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField, 0LL, v9, v10, v11, v12, v13, v14);
 }
 
 
-void __fastcall WarBoardUiData___ctor_36678440(
+void __fastcall WarBoardUiData___ctor_36725864(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -46,11 +46,11 @@ void __fastcall WarBoardUiData___ctor_36678440(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
     (int64_t)pieceIndex,
     v7,
@@ -61,7 +61,7 @@ void __fastcall WarBoardUiData___ctor_36678440(
     v12);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
     (int64_t)keys,
     v15,
@@ -73,7 +73,7 @@ void __fastcall WarBoardUiData___ctor_36678440(
 }
 
 
-void __fastcall WarBoardUiData___ctor_36678520(
+void __fastcall WarBoardUiData___ctor_36725944(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
@@ -95,9 +95,9 @@ void __fastcall WarBoardUiData___ctor_36678520(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v7, v8, v9, v10, v11, v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
     (int64_t)setKeys,
     v13,
@@ -109,7 +109,7 @@ void __fastcall WarBoardUiData___ctor_36678520(
 }
 
 
-void __fastcall WarBoardUiData___ctor_36678592(
+void __fastcall WarBoardUiData___ctor_36726016(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
@@ -131,7 +131,7 @@ void __fastcall WarBoardUiData___ctor_36678592(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
     (int64_t)indexes,
     v7,
@@ -141,7 +141,7 @@ void __fastcall WarBoardUiData___ctor_36678592(
     v11,
     v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
     (int64_t)setKeys,
     v13,
@@ -162,7 +162,7 @@ void __fastcall WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_ar
   PartyListViewItem_o *v7; // x7
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
     (int64_t)setKeys,
     (int64_t)method,
@@ -201,7 +201,7 @@ void __fastcall WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_a
   PartyListViewItem_o *v7; // x7
 
   this->fields._keys_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -225,7 +225,7 @@ void __fastcall WarBoardUiData__set_pieceIndex(
   PartyListViewItem_o *v7; // x7
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -261,13 +261,13 @@ void __fastcall WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.pieceIndex, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.pieceIndex, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.keys = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.keys, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.keys, 0LL, v9, v10, v11, v12, v13, v14);
 }
 
 
-void __fastcall WarBoardUiData_SaveData___ctor_36635648(
+void __fastcall WarBoardUiData_SaveData___ctor_36683072(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
@@ -291,11 +291,11 @@ void __fastcall WarBoardUiData_SaveData___ctor_36635648(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !uiData )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.pieceIndex,
     (int64_t)pieceIndex_k__BackingField,
     v7,
@@ -306,7 +306,7 @@ void __fastcall WarBoardUiData_SaveData___ctor_36635648(
     v12);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.keys,
     (int64_t)keys_k__BackingField,
     v15,

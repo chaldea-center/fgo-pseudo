@@ -2,10 +2,10 @@ void __fastcall EventTradePickupMaster___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BB487E & 1) == 0 )
+  if ( (byte_4BC7C4E & 1) == 0 )
   {
-    sub_1C13D24(&EventTradePickupMaster_TypeInfo, v1);
-    byte_4BB487E = 1;
+    sub_1C1ABD4(&EventTradePickupMaster_TypeInfo, v1);
+    byte_4BC7C4E = 1;
   }
   EventTradePickupMaster_TypeInfo->static_fields->DEFAULT_EVENT_TRADE_TIME_RATE = 1000;
 }
@@ -13,15 +13,15 @@ void __fastcall EventTradePickupMaster___cctor(const MethodInfo *method)
 
 void __fastcall EventTradePickupMaster___ctor(EventTradePickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB487B & 1) == 0 )
+  if ( (byte_4BC7C4B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string___ctor__, method);
-    byte_4BB487B = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string___ctor__, method);
+    byte_4BC7C4B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     498,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string___ctor__);
 }
 
 
@@ -34,18 +34,18 @@ EventTradePickupEntity_o *__fastcall EventTradePickupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB487C & 1) == 0 )
+  if ( (byte_4BC7C4C & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__GetEntity__,
       *(_QWORD *)&tradeGoodsId);
-    byte_4BB487C = 1;
+    byte_4BC7C4C = 1;
   }
   PK = (Il2CppObject *)EventTradePickupEntity__CreatePK(tradeGoodsId, startedAt, (const MethodInfo *)startedAt);
   return (EventTradePickupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_323D0DC *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__GetEntity__);
+                                       (const MethodInfo_324D130 *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__GetEntity__);
 }
 
 
@@ -87,27 +87,27 @@ int64_t __fastcall EventTradePickupMaster__GetNextRateStartTime(
   System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
   System_Collections_Generic_List_TSource__o *v37; // x19
 
-  if ( (byte_4BB4879 & 1) == 0 )
+  if ( (byte_4BC7C49 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_Any_long___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Select_KeyValuePair_long__int___long___, v9);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_long___, v10);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_KeyValuePair_long__int____, v11);
-    sub_1C13D24(&System_Func_KeyValuePair_long__int___long__TypeInfo, v12);
-    sub_1C13D24(&System_Func_KeyValuePair_long__int___bool__TypeInfo, v13);
-    sub_1C13D24(&Method_EventTradePickupMaster___c__GetNextRateStartTime_b__4_1__, v14);
-    sub_1C13D24(&Method_EventTradePickupMaster___c__DisplayClass4_0__GetNextRateStartTime_b__0__, v15);
-    sub_1C13D24(&EventTradePickupMaster___c__DisplayClass4_0_TypeInfo, v16);
-    sub_1C13D24(&EventTradePickupMaster___c_TypeInfo, v17);
-    byte_4BB4879 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_long___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_KeyValuePair_long__int___long___, v9);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_long___, v10);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_KeyValuePair_long__int____, v11);
+    sub_1C1ABD4(&System_Func_KeyValuePair_long__int___long__TypeInfo, v12);
+    sub_1C1ABD4(&System_Func_KeyValuePair_long__int___bool__TypeInfo, v13);
+    sub_1C1ABD4(&Method_EventTradePickupMaster___c__GetNextRateStartTime_b__4_1__, v14);
+    sub_1C1ABD4(&Method_EventTradePickupMaster___c__DisplayClass4_0__GetNextRateStartTime_b__0__, v15);
+    sub_1C1ABD4(&EventTradePickupMaster___c__DisplayClass4_0_TypeInfo, v16);
+    sub_1C1ABD4(&EventTradePickupMaster___c_TypeInfo, v17);
+    byte_4BC7C49 = 1;
   }
-  v18 = (Il2CppObject *)sub_1C13F70(EventTradePickupMaster___c__DisplayClass4_0_TypeInfo);
+  v18 = (Il2CppObject *)sub_1C1AE20(EventTradePickupMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor(v18, 0LL);
   if ( !v18 )
-    sub_1C13F80(v19, v20);
+    sub_1C1AE30(v19, v20);
   v18[1].klass = (Il2CppClass *)targetAt;
   v22 = EventTradePickupMaster__SelectTradeTimeRateDic(this, eventId, tradeGoodsId, v21);
-  v23 = (System_Func_KeyValuePair_long__int___bool__o *)sub_1C13F70(System_Func_KeyValuePair_long__int___bool__TypeInfo);
+  v23 = (System_Func_KeyValuePair_long__int___bool__o *)sub_1C1AE20(System_Func_KeyValuePair_long__int___bool__TypeInfo);
   System_Func_KeyValuePair_long__int___bool____ctor(
     v23,
     v18,
@@ -116,7 +116,7 @@ int64_t __fastcall EventTradePickupMaster__GetNextRateStartTime(
   v24 = System_Linq_Enumerable__Where_KeyValuePair_long__int__(
           (System_Collections_Generic_IEnumerable_TSource__o *)v22,
           (System_Func_TSource__bool__o *)v23,
-          (const MethodInfo_2FCD7F4 *)Method_System_Linq_Enumerable_Where_KeyValuePair_long__int____);
+          (const MethodInfo_2FDD9B8 *)Method_System_Linq_Enumerable_Where_KeyValuePair_long__int____);
   v25 = EventTradePickupMaster___c_TypeInfo;
   v26 = v24;
   if ( !EventTradePickupMaster___c_TypeInfo->_2.cctor_finished )
@@ -133,7 +133,7 @@ int64_t __fastcall EventTradePickupMaster__GetNextRateStartTime(
       v25 = EventTradePickupMaster___c_TypeInfo;
     }
     v28 = (Il2CppObject *)v25->static_fields->__9;
-    _9__4_1 = (System_Func_KeyValuePair_long__int___long__o *)sub_1C13F70(System_Func_KeyValuePair_long__int___long__TypeInfo);
+    _9__4_1 = (System_Func_KeyValuePair_long__int___long__o *)sub_1C1AE20(System_Func_KeyValuePair_long__int___long__TypeInfo);
     System_Func_KeyValuePair_long__int___long____ctor(
       _9__4_1,
       v28,
@@ -141,20 +141,20 @@ int64_t __fastcall EventTradePickupMaster__GetNextRateStartTime(
       0LL);
     static_fields = EventTradePickupMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_1 = _9__4_1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__4_1, (int64_t)_9__4_1, v30, v31, v32, v33, v34, v35);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__4_1, (int64_t)_9__4_1, v30, v31, v32, v33, v34, v35);
   }
   v36 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_KeyValuePair_long__int___long_(
                                                                v26,
                                                                (System_Func_TSource__TResult__o *)_9__4_1,
-                                                               (const MethodInfo_2FB9FC4 *)Method_System_Linq_Enumerable_Select_KeyValuePair_long__int___long___);
+                                                               (const MethodInfo_2FCA100 *)Method_System_Linq_Enumerable_Select_KeyValuePair_long__int___long___);
   v37 = System_Linq_Enumerable__ToList_long_(
           v36,
-          (const MethodInfo_2FCC91C *)Method_System_Linq_Enumerable_ToList_long___);
+          (const MethodInfo_2FDCAE0 *)Method_System_Linq_Enumerable_ToList_long___);
   if ( System_Linq_Enumerable__Any_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v37,
-         (const MethodInfo_2F9A674 *)Method_System_Linq_Enumerable_Any_long___) )
+         (const MethodInfo_2FAA698 *)Method_System_Linq_Enumerable_Any_long___) )
   {
-    return System_Linq_Enumerable__Min_65190004((System_Collections_Generic_IEnumerable_long__o *)v37, 0LL);
+    return System_Linq_Enumerable__Min_65262428((System_Collections_Generic_IEnumerable_long__o *)v37, 0LL);
   }
   else
   {
@@ -192,28 +192,28 @@ EventTradePickupEntity_array *__fastcall EventTradePickupMaster__GetTradePickupE
   Il2CppClass **v25; // x0
 
   v5 = eventId;
-  if ( (byte_4BB4876 & 1) == 0 )
+  if ( (byte_4BC7C46 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity__Add__, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity__ToArray__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__, v10);
-    sub_1C13D24(&System_Collections_Generic_List_EventTradePickupEntity__TypeInfo, v11);
-    byte_4BB4876 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity__Add__, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity__ToArray__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__, v10);
+    sub_1C1ABD4(&System_Collections_Generic_List_EventTradePickupEntity__TypeInfo, v11);
+    byte_4BC7C46 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_18;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventTradePickupEntity__TypeInfo);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventTradePickupEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__);
   if ( Count >= 1 )
   {
     v15 = 0;
@@ -225,7 +225,7 @@ EventTradePickupEntity_array *__fastcall EventTradePickupMaster__GetTradePickupE
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v15,
-                                                                 (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
+                                                                 (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&eventId = list;
@@ -244,14 +244,14 @@ EventTradePickupEntity_array *__fastcall EventTradePickupMaster__GetTradePickupE
             System_Collections_Generic_List_object___AddWithResize(
               v14,
               (Il2CppObject *)list,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
           }
           else
           {
             v25 = &items->obj.klass + size;
             v14->fields._size = size + 1;
             v25[4] = *(Il2CppClass **)&eventId;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), *(int64_t *)&eventId, v16, v17, v18, v19, v20, v21);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v25 + 4), *(int64_t *)&eventId, v16, v17, v18, v19, v20, v21);
           }
         }
       }
@@ -259,14 +259,14 @@ EventTradePickupEntity_array *__fastcall EventTradePickupMaster__GetTradePickupE
         goto LABEL_16;
     }
 LABEL_18:
-    sub_1C13F80(list, *(_QWORD *)&eventId);
+    sub_1C1AE30(list, *(_QWORD *)&eventId);
   }
 LABEL_16:
   if ( !v14 )
     goto LABEL_18;
   return (EventTradePickupEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v14,
-                                           (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventTradePickupEntity__ToArray__);
+                                           (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_EventTradePickupEntity__ToArray__);
 }
 
 
@@ -290,19 +290,19 @@ System_Collections_Generic_Dictionary_long__int__o *__fastcall EventTradePickupM
   EventTradePickupMaster_c *v17; // x0
   int64_t endedAt; // x24
 
-  if ( (byte_4BB487A & 1) == 0 )
+  if ( (byte_4BC7C4A & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_long__int___ctor__, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_long__int__set_Item__, v7);
-    sub_1C13D24(&System_Collections_Generic_Dictionary_long__int__TypeInfo, v8);
-    sub_1C13D24(&EventTradePickupMaster_TypeInfo, v9);
-    byte_4BB487A = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_long__int___ctor__, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_long__int__set_Item__, v7);
+    sub_1C1ABD4(&System_Collections_Generic_Dictionary_long__int__TypeInfo, v8);
+    sub_1C1ABD4(&EventTradePickupMaster_TypeInfo, v9);
+    byte_4BC7C4A = 1;
   }
   TradePickupEntityArray = EventTradePickupMaster__GetTradePickupEntityArray(this, eventId, goodsId, method);
-  v11 = (System_Collections_Generic_Dictionary_long__int__o *)sub_1C13F70(System_Collections_Generic_Dictionary_long__int__TypeInfo);
+  v11 = (System_Collections_Generic_Dictionary_long__int__o *)sub_1C1AE20(System_Collections_Generic_Dictionary_long__int__TypeInfo);
   System_Collections_Generic_Dictionary_long__int____ctor(
     v11,
-    (const MethodInfo_32CAF8C *)Method_System_Collections_Generic_Dictionary_long__int___ctor__);
+    (const MethodInfo_32DB2CC *)Method_System_Collections_Generic_Dictionary_long__int___ctor__);
   if ( !TradePickupEntityArray )
     goto LABEL_13;
   max_length = TradePickupEntityArray->max_length;
@@ -312,7 +312,7 @@ System_Collections_Generic_Dictionary_long__int__o *__fastcall EventTradePickupM
     while ( 1 )
     {
       if ( v15 >= max_length )
-        sub_1C13F88(v12, v13);
+        sub_1C1AE38(v12, v13);
       v16 = TradePickupEntityArray->m_Items[v15];
       if ( !v16 || !v11 )
         break;
@@ -320,7 +320,7 @@ System_Collections_Generic_Dictionary_long__int__o *__fastcall EventTradePickupM
         v11,
         v16->fields.startedAt,
         v16->fields.tradeTimeRate,
-        (const MethodInfo_32CB94C *)Method_System_Collections_Generic_Dictionary_long__int__set_Item__);
+        (const MethodInfo_32DBC8C *)Method_System_Collections_Generic_Dictionary_long__int__set_Item__);
       v17 = EventTradePickupMaster_TypeInfo;
       endedAt = v16->fields.endedAt;
       if ( !EventTradePickupMaster_TypeInfo->_2.cctor_finished )
@@ -332,13 +332,13 @@ System_Collections_Generic_Dictionary_long__int__o *__fastcall EventTradePickupM
         v11,
         endedAt + 1,
         v17->static_fields->DEFAULT_EVENT_TRADE_TIME_RATE,
-        (const MethodInfo_32CB94C *)Method_System_Collections_Generic_Dictionary_long__int__set_Item__);
+        (const MethodInfo_32DBC8C *)Method_System_Collections_Generic_Dictionary_long__int__set_Item__);
       max_length = TradePickupEntityArray->max_length;
       if ( (int)++v15 >= max_length )
         return v11;
     }
 LABEL_13:
-    sub_1C13F80(v12, v13);
+    sub_1C1AE30(v12, v13);
   }
   return v11;
 }
@@ -354,17 +354,17 @@ bool __fastcall EventTradePickupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB487D & 1) == 0 )
+  if ( (byte_4BC7C4D & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__TryGetEntity__, entity);
-    byte_4BB487D = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__TryGetEntity__, entity);
+    byte_4BC7C4D = 1;
   }
   PK = (Il2CppObject *)EventTradePickupEntity__CreatePK(tradeGoodsId, startedAt, *(const MethodInfo **)&tradeGoodsId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_EventTradePickupMaster__EventTradePickupEntity__string__TryGetEntity__);
 }
 
 
@@ -403,28 +403,28 @@ bool __fastcall EventTradePickupMaster__TryGetEntityListTargetTime(
   __int64 v33; // x8
 
   v7 = (PartyOrganizationUtility_o *)pickupEntityList;
-  if ( (byte_4BB4878 & 1) == 0 )
+  if ( (byte_4BC7C48 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__, pickupEntityList);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity__Add__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__, v11);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Count__, v12);
-    sub_1C13D24(&System_Collections_Generic_List_EventTradePickupEntity__TypeInfo, v13);
-    byte_4BB4878 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__, pickupEntityList);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity__Add__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__, v11);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventTradePickupEntity__get_Count__, v12);
+    sub_1C1ABD4(&System_Collections_Generic_List_EventTradePickupEntity__TypeInfo, v13);
+    byte_4BC7C48 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventTradePickupEntity__TypeInfo);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventTradePickupEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventTradePickupEntity___ctor__);
   v7->klass = (PartyOrganizationUtility_c *)v16;
-  sub_1C13CC8(v7, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78(v7, (int64_t)v16, v17, v18, v19, v20, v21, v22);
   if ( Count >= 1 )
   {
     v23 = 0;
@@ -436,7 +436,7 @@ bool __fastcall EventTradePickupMaster__TryGetEntityListTargetTime(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v23,
-                                                                 (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
+                                                                 (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
       if ( list )
       {
         pickupEntityList = (System_Collections_Generic_List_EventTradePickupEntity__o **)list;
@@ -458,14 +458,14 @@ bool __fastcall EventTradePickupMaster__TryGetEntityListTargetTime(
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)list,
               (Il2CppObject *)pickupEntityList,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
           }
           else
           {
             v33 = (__int64)items + 8 * klass_low;
             LODWORD(list[1].klass) = klass_low + 1;
             *(_QWORD *)(v33 + 32) = pickupEntityList;
-            sub_1C13CC8(
+            sub_1C1AB78(
               (PartyOrganizationUtility_o *)(v33 + 32),
               (int64_t)pickupEntityList,
               v24,
@@ -481,7 +481,7 @@ bool __fastcall EventTradePickupMaster__TryGetEntityListTargetTime(
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1C13F80(list, pickupEntityList);
+    sub_1C1AE30(list, pickupEntityList);
   }
 LABEL_17:
   if ( !v7->klass )
@@ -519,22 +519,22 @@ bool __fastcall EventTradePickupMaster__TryGetEntityTargetTime(
   PartyListViewItem_o *v28; // x7
 
   v9 = (PartyOrganizationUtility_o *)pickupEntity;
-  if ( (byte_4BB4877 & 1) == 0 )
+  if ( (byte_4BC7C47 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__, pickupEntity);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v11);
-    sub_1C13D24(&NetworkManager_TypeInfo, v12);
-    byte_4BB4877 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__, pickupEntity);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__, v11);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v12);
+    byte_4BC7C47 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_19:
-    sub_1C13F80(list, pickupEntity);
+    sub_1C1AE30(list, pickupEntity);
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Count__);
   v9->klass = 0LL;
-  sub_1C13CC8(v9, 0LL, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78(v9, 0LL, v15, v16, v17, v18, v19, v20);
   if ( (targetAt & 0x8000000000000000LL) != 0 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -552,7 +552,7 @@ LABEL_19:
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v21,
-               (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
+               (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_EventTradePickupEntity__get_Item__);
       if ( Item )
       {
         pickupEntity = (EventTradePickupEntity_o **)Item;
@@ -568,7 +568,7 @@ LABEL_19:
         return v9->klass != 0LL;
     }
     v9->klass = (PartyOrganizationUtility_c *)Item;
-    sub_1C13CC8(v9, (int64_t)Item, v23, v24, v25, v26, v27, v28);
+    sub_1C1AB78(v9, (int64_t)Item, v23, v24, v25, v26, v27, v28);
   }
   return v9->klass != 0LL;
 }
@@ -585,15 +585,15 @@ void __fastcall EventTradePickupMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB487F & 1) == 0 )
+  if ( (byte_4BC7C4F & 1) == 0 )
   {
-    sub_1C13D24(&EventTradePickupMaster___c_TypeInfo, v1);
-    byte_4BB487F = 1;
+    sub_1C1ABD4(&EventTradePickupMaster___c_TypeInfo, v1);
+    byte_4BC7C4F = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(EventTradePickupMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(EventTradePickupMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventTradePickupMaster___c_TypeInfo->static_fields->__9 = (struct EventTradePickupMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)EventTradePickupMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -619,10 +619,10 @@ int64_t __fastcall EventTradePickupMaster___c___GetNextRateStartTime_b__4_1(
   int64_t key; // x19
 
   key = entity.fields.key;
-  if ( (byte_4BB4880 & 1) == 0 )
+  if ( (byte_4BC7C50 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_long__int__get_Key__, entity.fields.key);
-    byte_4BB4880 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_KeyValuePair_long__int__get_Key__, entity.fields.key);
+    byte_4BC7C50 = 1;
   }
   return key;
 }
@@ -644,10 +644,10 @@ bool __fastcall EventTradePickupMaster___c__DisplayClass4_0___GetNextRateStartTi
   int64_t key; // x19
 
   key = entity.fields.key;
-  if ( (byte_4BB4881 & 1) == 0 )
+  if ( (byte_4BC7C51 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_KeyValuePair_long__int__get_Key__, entity.fields.key);
-    byte_4BB4881 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_KeyValuePair_long__int__get_Key__, entity.fields.key);
+    byte_4BC7C51 = 1;
   }
   return key > this->fields.targetAt;
 }

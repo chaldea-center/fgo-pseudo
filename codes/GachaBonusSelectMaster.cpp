@@ -1,14 +1,14 @@
 void __fastcall GachaBonusSelectMaster___ctor(GachaBonusSelectMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB495C & 1) == 0 )
+  if ( (byte_4BC7D2C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string___ctor__, method);
-    byte_4BB495C = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string___ctor__, method);
+    byte_4BC7D2C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     193,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ GachaBonusSelectEntity_o *__fastcall GachaBonusSelectMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB495A & 1) == 0 )
+  if ( (byte_4BC7D2A & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__GetEntity__,
       *(_QWORD *)&gachaId);
-    byte_4BB495A = 1;
+    byte_4BC7D2A = 1;
   }
   PK = (Il2CppObject *)GachaBonusSelectEntity__CreatePK(gachaId, gachaBonusId, slot, *(const MethodInfo **)&slot);
   return (GachaBonusSelectEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_323D0DC *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__GetEntity__);
+                                       (const MethodInfo_324D130 *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__GetEntity__);
 }
 
 
@@ -48,10 +48,10 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB495B & 1) == 0 )
+  if ( (byte_4BC7D2B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__TryGetEntity__, entity);
-    byte_4BB495B = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__TryGetEntity__, entity);
+    byte_4BC7D2B = 1;
   }
   PK = (Il2CppObject *)GachaBonusSelectEntity__CreatePK(
                          gachaId,
@@ -62,7 +62,7 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_GachaBonusSelectMaster__GachaBonusSelectEntity__string__TryGetEntity__);
 }
 
 
@@ -132,34 +132,34 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntityArray(
   FollowerInfo_o *v64; // x6
   PartyListViewItem_o *v65; // x7
 
-  if ( (byte_4BB495D & 1) == 0 )
+  if ( (byte_4BC7D2D & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__, entityArray);
-    sub_1C13D24(&Method_System_Linq_Enumerable_OrderBy_GachaBonusSelectEntity__int___, v7);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_GachaBonusSelectEntity___, v8);
-    sub_1C13D24(&System_Func_GachaBonusSelectEntity__int__TypeInfo, v9);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, v11);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GachaBonusSelectEntity__Add__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GachaBonusSelectEntity___ctor__, v14);
-    sub_1C13D24(&System_Collections_Generic_List_GachaBonusSelectEntity__TypeInfo, v15);
-    sub_1C13D24(&Method_GachaBonusSelectMaster___c__TryGetEntityArray_b__3_0__, v16);
-    sub_1C13D24(&GachaBonusSelectMaster___c_TypeInfo, v17);
-    byte_4BB495D = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__, entityArray);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_OrderBy_GachaBonusSelectEntity__int___, v7);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_GachaBonusSelectEntity___, v8);
+    sub_1C1ABD4(&System_Func_GachaBonusSelectEntity__int__TypeInfo, v9);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v10);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, v11);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GachaBonusSelectEntity__Add__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GachaBonusSelectEntity___ctor__, v14);
+    sub_1C1ABD4(&System_Collections_Generic_List_GachaBonusSelectEntity__TypeInfo, v15);
+    sub_1C1ABD4(&Method_GachaBonusSelectMaster___c__TryGetEntityArray_b__3_0__, v16);
+    sub_1C1ABD4(&GachaBonusSelectMaster___c_TypeInfo, v17);
+    byte_4BC7D2D = 1;
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_GachaBonusSelectEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_GachaBonusSelectEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_GachaBonusSelectEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_GachaBonusSelectEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_42;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v21);
+    sub_1C1AE30(0LL, v21);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -179,7 +179,7 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntityArray(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -202,37 +202,37 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v30 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, 0LL);
+      v30 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, 0LL);
     }
     v31 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(
             Enumerator,
             *(_QWORD *)(v30 + 8));
     v39 = v31;
     if ( !v31 )
-      sub_1C13F80(0LL, v32);
+      sub_1C1AE30(0LL, v32);
     if ( *(_DWORD *)(v31 + 16) == gachaId )
     {
       if ( !v18 )
-        sub_1C13F80(v31, v32);
+        sub_1C1AE30(v31, v32);
       items = v18->fields._items;
       v41 = Method_System_Collections_Generic_List_GachaBonusSelectEntity__Add__;
       ++v18->fields._version;
       if ( !items )
-        sub_1C13F80(v31, v32);
+        sub_1C1AE30(v31, v32);
       size = v18->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v18,
           (Il2CppObject *)v31,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &items->obj.klass + size;
         v18->fields._size = size + 1;
         v43[4] = (Il2CppClass *)v39;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v43 + 4), v39, v33, v34, v35, v36, v37, v38);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v43 + 4), v39, v33, v34, v35, v36, v37, v38);
       }
     }
   }
@@ -253,7 +253,7 @@ LABEL_16:
   else
   {
 LABEL_29:
-    v47 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v47 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v47)(Enumerator, *(_QWORD *)(v47 + 8));
   v48 = GachaBonusSelectMaster___c_TypeInfo;
@@ -271,24 +271,24 @@ LABEL_29:
       v48 = GachaBonusSelectMaster___c_TypeInfo;
     }
     v50 = (Il2CppObject *)v48->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_GachaBonusSelectEntity__int__TypeInfo);
+    _9__3_0 = (System_Func_object__int__o *)sub_1C1AE20(System_Func_GachaBonusSelectEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__3_0, v50, Method_GachaBonusSelectMaster___c__TryGetEntityArray_b__3_0__, 0LL);
     static_fields = GachaBonusSelectMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_GachaBonusSelectEntity__int__o *)_9__3_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v52, v53, v54, v55, v56, v57);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v52, v53, v54, v55, v56, v57);
   }
   v58 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v18,
                                                                (System_Func_TSource__TKey__o *)_9__3_0,
-                                                               (const MethodInfo_2FB842C *)Method_System_Linq_Enumerable_OrderBy_GachaBonusSelectEntity__int___);
+                                                               (const MethodInfo_2FC8568 *)Method_System_Linq_Enumerable_OrderBy_GachaBonusSelectEntity__int___);
   v59 = System_Linq_Enumerable__ToArray_object_(
           v58,
-          (const MethodInfo_2FC8D34 *)Method_System_Linq_Enumerable_ToArray_GachaBonusSelectEntity___);
+          (const MethodInfo_2FD8E70 *)Method_System_Linq_Enumerable_ToArray_GachaBonusSelectEntity___);
   *entityArray = (GachaBonusSelectEntity_array *)v59;
-  sub_1C13CC8((PartyOrganizationUtility_o *)entityArray, (int64_t)v59, v60, v61, v62, v63, v64, v65);
+  sub_1C1AB78((PartyOrganizationUtility_o *)entityArray, (int64_t)v59, v60, v61, v62, v63, v64, v65);
   if ( !*entityArray )
 LABEL_42:
-    sub_1C13F80(list, v19);
+    sub_1C1AE30(list, v19);
   return (*entityArray)->max_length != 0;
 }
 
@@ -332,16 +332,16 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntitySlot(
   int32_t *v37; // x10
   __int64 v38; // x0
 
-  if ( (byte_4BB495E & 1) == 0 )
+  if ( (byte_4BC7D2E & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__, selectEntity);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v12);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, v13);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v14);
-    byte_4BB495E = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__, selectEntity);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v12);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, v13);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v14);
+    byte_4BC7D2E = 1;
   }
   *selectEntity = 0LL;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)selectEntity,
     0LL,
     *(int64_t *)&gachaId,
@@ -352,12 +352,12 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntitySlot(
     v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C13F80(0LL, v15);
+    sub_1C1AE30(0LL, v15);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_GachaBonusSelectEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v17);
+    sub_1C1AE30(0LL, v17);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -377,7 +377,7 @@ bool __fastcall GachaBonusSelectMaster__TryGetEntitySlot(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -400,17 +400,17 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v26 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, 0LL);
+      v26 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_GachaBonusSelectEntity__TypeInfo, 0LL);
     }
     v27 = (GachaBonusSelectEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
                                         Enumerator,
                                         *(_QWORD *)(v26 + 8));
     if ( !v27 )
-      sub_1C13F80(0LL, v28);
+      sub_1C1AE30(0LL, v28);
     if ( v27->fields.gachaId == gachaId && v27->fields.slot == slot )
     {
       *selectEntity = v27;
-      sub_1C13CC8((PartyOrganizationUtility_o *)selectEntity, (int64_t)v27, v29, v30, v31, v32, v33, v34);
+      sub_1C1AB78((PartyOrganizationUtility_o *)selectEntity, (int64_t)v27, v29, v30, v31, v32, v33, v34);
       break;
     }
   }
@@ -431,7 +431,7 @@ LABEL_16:
   else
   {
 LABEL_26:
-    v38 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v38 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v38)(Enumerator, *(_QWORD *)(v38 + 8));
   return *selectEntity != 0LL;
@@ -449,15 +449,15 @@ void __fastcall GachaBonusSelectMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB495F & 1) == 0 )
+  if ( (byte_4BC7D2F & 1) == 0 )
   {
-    sub_1C13D24(&GachaBonusSelectMaster___c_TypeInfo, v1);
-    byte_4BB495F = 1;
+    sub_1C1ABD4(&GachaBonusSelectMaster___c_TypeInfo, v1);
+    byte_4BC7D2F = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(GachaBonusSelectMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(GachaBonusSelectMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   GachaBonusSelectMaster___c_TypeInfo->static_fields->__9 = (struct GachaBonusSelectMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)GachaBonusSelectMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -481,6 +481,6 @@ int32_t __fastcall GachaBonusSelectMaster___c___TryGetEntityArray_b__3_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return x->fields.slot;
 }

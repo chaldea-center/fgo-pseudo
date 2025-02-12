@@ -14,16 +14,16 @@ void __fastcall ServantSkillCombineRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4BB60DD & 1) == 0 )
+  if ( (byte_4BC94BF & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_17344/*"base64"*/, baseUsrSvtId);
-    sub_1C13D24(&StringLiteral_22548/*"npNameFileSuffix"*/, v9);
-    sub_1C13D24(&StringLiteral_23730/*"signatures"*/, v10);
-    byte_4BB60DD = 1;
+    sub_1C1ABD4(&StringLiteral_17358/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_1C1ABD4(&StringLiteral_22566/*"num"*/, v9);
+    sub_1C1ABD4(&StringLiteral_23750/*"skillId"*/, v10);
+    byte_4BC94BF = 1;
   }
-  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_17344/*"base64"*/, baseUsrSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22548/*"npNameFileSuffix"*/, selectSkillIndex, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23730/*"signatures"*/, selectSkillId, 0LL);
+  RequestBase__addField_42368496((RequestBase_o *)this, (System_String_o *)StringLiteral_17358/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22566/*"num"*/, selectSkillIndex, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23750/*"skillId"*/, selectSkillId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -35,16 +35,16 @@ System_String_o *__fastcall ServantSkillCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB60DC & 1) == 0 )
+  if ( (byte_4BC94BE & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_18024/*"cant get material from SkinnedMeshRenderer.sharedMaterials. Either the sharedMaterials is null or have 0 length"*/, v2);
-    byte_4BB60DC = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_18038/*"card/combineSkill"*/, v2);
+    byte_4BC94BE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_18024/*"cant get material from SkinnedMeshRenderer.sharedMaterials. Either the sharedMaterials is null or have 0 length"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18038/*"card/combineSkill"*/, 0LL);
 }
 
 
@@ -61,12 +61,12 @@ void __fastcall ServantSkillCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BB60DE & 1) == 0 )
+  if ( (byte_4BC94C0 & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB60DE = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC94C0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -80,7 +80,7 @@ void __fastcall ServantSkillCombineRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22421/*"newAttributes"*/;
+    v11 = (System_String_o *)StringLiteral_22437/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

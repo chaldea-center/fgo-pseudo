@@ -18,18 +18,18 @@ void __fastcall ClassBoardForwardIconAnimComponent___ctor(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BB7C5E & 1) == 0 )
+  if ( (byte_4BCB052 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_20605/*"img_bg_quick"*/, method);
-    sub_1C13D24(&StringLiteral_17764/*"btn_bg_event_organization"*/, v9);
-    byte_4BB7C5E = 1;
+    sub_1C1ABD4(&StringLiteral_20619/*"img_class_{0}"*/, method);
+    sub_1C1ABD4(&StringLiteral_17778/*"btn_class"*/, v9);
+    byte_4BCB052 = 1;
   }
-  v10 = StringLiteral_20605/*"img_bg_quick"*/;
-  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_20605/*"img_bg_quick"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.spriteNameFormatIcon, v10, v2, v3, v4, v5, v6, v7);
-  v11 = StringLiteral_17764/*"btn_bg_event_organization"*/;
-  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17764/*"btn_bg_event_organization"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.spriteNameButton, v11, v12, v13, v14, v15, v16, v17);
+  v10 = StringLiteral_20619/*"img_class_{0}"*/;
+  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_20619/*"img_class_{0}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.spriteNameFormatIcon, v10, v2, v3, v4, v5, v6, v7);
+  v11 = StringLiteral_17778/*"btn_class"*/;
+  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17778/*"btn_class"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.spriteNameButton, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -47,10 +47,10 @@ void __fastcall ClassBoardForwardIconAnimComponent__PlayAnim(
     || (UnityEngine_Animation__Rewind(anim, 0LL), (v4 = this->fields.anim) == 0LL)
     || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_clip(v4, 0LL)) == 0LL )
   {
-    sub_1C13F80(anim, method);
+    sub_1C1AE30(anim, method);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)anim, 0LL);
-  UnityEngine_Animation__Play_70466396(v4, name, 0LL);
+  UnityEngine_Animation__Play_70538820(v4, name, 0LL);
 }
 
 
@@ -84,24 +84,24 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   __int64 v28; // x0
   int32_t revision; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BB7C5D & 1) == 0 )
+  if ( (byte_4BCB051 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, resourceCatalog);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v8);
-    sub_1C13D24(&IClassBoardResourceCatalog_TypeInfo, v9);
-    sub_1C13D24(&int_TypeInfo, v10);
-    byte_4BB7C5D = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, resourceCatalog);
+    sub_1C1ABD4(&DataManager_TypeInfo, v7);
+    sub_1C1ABD4(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v8);
+    sub_1C1ABD4(&IClassBoardResourceCatalog_TypeInfo, v9);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    byte_4BCB051 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   baseId,
-                                                                  (const MethodInfo_3238624 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+                                                                  (const MethodInfo_3248678 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Master_object )
     return;
   if ( !resourceCatalog )
@@ -124,7 +124,7 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   else
   {
 LABEL_12:
-    p_method = sub_1C65D04(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    p_method = sub_1C6CBB4(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))p_method)(
                                                                   resourceCatalog,
@@ -157,7 +157,7 @@ LABEL_12:
   else
   {
 LABEL_20:
-    v28 = sub_1C65D04(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    v28 = sub_1C6CBB4(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v28)(
                                                                   resourceCatalog,
@@ -166,7 +166,7 @@ LABEL_20:
     || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object[1].fields._lookup) == 0LL )
   {
 LABEL_26:
-    sub_1C13F80(Master_object, v12);
+    sub_1C1AE30(Master_object, v12);
   }
   AtlasManagerUnit__SetUI(
     (AtlasManagerUnit_o *)Master_object,

@@ -1,9 +1,9 @@
 void __fastcall EventExpeditionListViewObject___ctor(EventExpeditionListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB8614 & 1) == 0 )
+  if ( (byte_4BCBA08 & 1) == 0 )
   {
-    sub_1C13D24(&ListViewObject_TypeInfo, method);
-    byte_4BB8614 = 1;
+    sub_1C1ABD4(&ListViewObject_TypeInfo, method);
+    byte_4BCBA08 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void __fastcall EventExpeditionListViewObject__Awake(EventExpeditionListViewObje
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB860D & 1) == 0 )
+  if ( (byte_4BCBA01 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___, method);
-    byte_4BB860D = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___, method);
+    byte_4BCBA01 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventExpeditionListViewItemDraw___);
   this->fields.itemDraw = (struct EventExpeditionListViewItemDraw_o *)Component_object;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -47,10 +47,10 @@ EventExpeditionListViewItem_o *__fastcall EventExpeditionListViewObject__GetItem
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BB860F & 1) == 0 )
+  if ( (byte_4BCBA03 & 1) == 0 )
   {
-    sub_1C13D24(&EventExpeditionListViewItem_TypeInfo, method);
-    byte_4BB860F = 1;
+    sub_1C1ABD4(&EventExpeditionListViewItem_TypeInfo, method);
+    byte_4BCBA03 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -99,10 +99,10 @@ void __fastcall EventExpeditionListViewObject__Init(
   PartyListViewItem_o *v32; // x7
   struct System_Action_o *v33; // x19
 
-  if ( (byte_4BB8610 & 1) == 0 )
+  if ( (byte_4BCBA04 & 1) == 0 )
   {
-    sub_1C13D24(&EventExpeditionListViewItem_TypeInfo, callbackFunc);
-    byte_4BB8610 = 1;
+    sub_1C1ABD4(&EventExpeditionListViewItem_TypeInfo, callbackFunc);
+    byte_4BCBA04 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -123,12 +123,12 @@ void __fastcall EventExpeditionListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(transform, v9);
+    sub_1C1AE30(transform, v9);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (PartyOrganizationUtility_o *)&this->fields.callbackFunc;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callbackFunc,
     v11,
@@ -192,7 +192,7 @@ LABEL_22:
   if ( v33 )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C13CC8(p_callbackFunc, 0LL, v27, v28, v29, v30, v31, v32);
+    sub_1C1AB78(p_callbackFunc, 0LL, v27, v28, v29, v30, v31, v32);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v33->fields.m_target)(
       v33->fields.original_method_info,
       *(_QWORD *)&v33->fields.extra_arg);
@@ -215,19 +215,19 @@ bool __fastcall EventExpeditionListViewObject__IsAllUserItemEnough(
   UserItemMaster_o *v11; // x22
   UserItemEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4BB8612 & 1) == 0 )
+  if ( (byte_4BCBA06 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserItemMaster___, consumeList);
-    sub_1C13D24(&NetworkManager_TypeInfo, v4);
-    this = (EventExpeditionListViewObject_o *)sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserItemMaster___, consumeList);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
+    this = (EventExpeditionListViewObject_o *)sub_1C1ABD4(
                                                 &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
                                                 v5);
-    byte_4BB8612 = 1;
+    byte_4BCBA06 = 1;
   }
   entity = 0LL;
   if ( !consumeList )
 LABEL_23:
-    sub_1C13F80(this, consumeList);
+    sub_1C1AE30(this, consumeList);
   max_length = consumeList->max_length;
   v7 = 1;
   if ( max_length >= 1 )
@@ -236,22 +236,22 @@ LABEL_23:
     while ( 1 )
     {
       if ( v8 >= max_length )
-        sub_1C13F88(this, consumeList);
+        sub_1C1AE38(this, consumeList);
       v9 = consumeList->m_Items[v8];
-      this = (EventExpeditionListViewObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (EventExpeditionListViewObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_23;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)this,
-                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserItemMaster___);
       entity = 0LL;
       v11 = (UserItemMaster_o *)MasterData_object;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BAF1E5 )
+      if ( !byte_4BC2585 )
       {
-        sub_1C13D24(&NetworkManager_TypeInfo, consumeList);
-        byte_4BAF1E5 = 1;
+        sub_1C1ABD4(&NetworkManager_TypeInfo, consumeList);
+        byte_4BC2585 = 1;
       }
       this = (EventExpeditionListViewObject_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -288,15 +288,15 @@ void __fastcall EventExpeditionListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4BB8613 & 1) == 0 )
+  if ( (byte_4BCBA07 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_10028/*"OnClickIcon"*/, method);
-    byte_4BB8613 = 1;
+    sub_1C1ABD4(&StringLiteral_10034/*"OnClickListView"*/, method);
+    byte_4BCBA07 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1C13F80(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10028/*"OnClickIcon"*/, (Il2CppObject *)this, 0LL);
+    sub_1C1AE30(0LL, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10034/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
 }
 
 
@@ -306,7 +306,7 @@ void __fastcall EventExpeditionListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_41915964((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41974544((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -323,11 +323,11 @@ void __fastcall EventExpeditionListViewObject__SetupDisp(
   const MethodInfo *v9; // x3
   EventExpeditionListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4BB8611 & 1) == 0 )
+  if ( (byte_4BCBA05 & 1) == 0 )
   {
-    sub_1C13D24(&EventExpeditionListViewItem_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB8611 = 1;
+    sub_1C1ABD4(&EventExpeditionListViewItem_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BCBA05 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -351,7 +351,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C13F80(0LL, v8);
+      sub_1C1AE30(0LL, v8);
     EventExpeditionListViewItemDraw__SetItem(v10, (EventExpeditionListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -369,10 +369,10 @@ void __fastcall EventExpeditionListViewObject__Update(EventExpeditionListViewObj
   __int64 v10; // x1
   const MethodInfo *v11; // x3
 
-  if ( (byte_4BB860E & 1) == 0 )
+  if ( (byte_4BCBA02 & 1) == 0 )
   {
-    sub_1C13D24(&EventExpeditionListViewItem_TypeInfo, method);
-    byte_4BB860E = 1;
+    sub_1C1ABD4(&EventExpeditionListViewItem_TypeInfo, method);
+    byte_4BCBA02 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -387,7 +387,7 @@ void __fastcall EventExpeditionListViewObject__Update(EventExpeditionListViewObj
         itemDraw = this->fields.itemDraw;
         EventExpeditionListViewObject__Init(this, 0LL, v2);
         if ( !itemDraw )
-          sub_1C13F80(v9, v10);
+          sub_1C1AE30(v9, v10);
         EventExpeditionListViewItemDraw__UpdateItem(itemDraw, v7, this->fields.dispMode, v11);
       }
     }
@@ -410,10 +410,10 @@ void __fastcall EventExpeditionListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BB860B & 1) == 0 )
+  if ( (byte_4BCB9FF & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, value);
-    byte_4BB860B = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, value);
+    byte_4BCB9FF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -426,13 +426,13 @@ void __fastcall EventExpeditionListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   EventExpeditionListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -459,10 +459,10 @@ void __fastcall EventExpeditionListViewObject__remove_callbackFunc(
   EventExpeditionListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BB860C & 1) == 0 )
+  if ( (byte_4BCBA00 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, value);
-    byte_4BB860C = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, value);
+    byte_4BCBA00 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -475,12 +475,12 @@ void __fastcall EventExpeditionListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   EventExpeditionListViewObject__Awake(v11, v12);
 }

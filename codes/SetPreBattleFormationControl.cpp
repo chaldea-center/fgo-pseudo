@@ -16,25 +16,25 @@ void __fastcall SetPreBattleFormationControl__Init(SetPreBattleFormationControl_
   UILabel_o *btnTitle; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4BAFA7E & 1) == 0 )
+  if ( (byte_4BC2E27 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, method);
-    sub_1C13D24(&OptionManager_TypeInfo, v3);
-    sub_1C13D24(&StringLiteral_9851/*"OPTION_NOTICE_AP"*/, v4);
-    sub_1C13D24(&StringLiteral_9852/*"OPTION_NOTICE_ELSE"*/, v5);
-    byte_4BAFA7E = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+    sub_1C1ABD4(&OptionManager_TypeInfo, v3);
+    sub_1C1ABD4(&StringLiteral_9857/*"OPTION_PREBATTLEFORMATION_DISP"*/, v4);
+    sub_1C1ABD4(&StringLiteral_9858/*"OPTION_PREBATTLEFORMATION_INFO"*/, v5);
+    byte_4BC2E27 = 1;
   }
   infoLabel = this->fields.infoLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9852/*"OPTION_NOTICE_ELSE"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9858/*"OPTION_PREBATTLEFORMATION_INFO"*/, 0LL);
   if ( !infoLabel
     || (UILabel__set_text(infoLabel, v7, 0LL),
         btnTitle = this->fields.btnTitle,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9851/*"OPTION_NOTICE_AP"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9857/*"OPTION_PREBATTLEFORMATION_DISP"*/, 0LL),
         !btnTitle) )
   {
-    sub_1C13F80(v7, v8);
+    sub_1C1AE30(v7, v8);
   }
   UILabel__set_text(btnTitle, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -53,16 +53,16 @@ void __fastcall SetPreBattleFormationControl__OnClickPreBattleFormation(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BAFA81 & 1) == 0 )
+  if ( (byte_4BC2E2A & 1) == 0 )
   {
-    sub_1C13D24(&Method_SetPreBattleFormationControl_OnClickPreBattleFormation__, method);
-    byte_4BAFA81 = 1;
+    sub_1C1ABD4(&Method_SetPreBattleFormationControl_OnClickPreBattleFormation__, method);
+    byte_4BC2E2A = 1;
   }
   v3 = Method_SetPreBattleFormationControl_OnClickPreBattleFormation__;
   isPreBattleFormationSetting = this->fields.isPreBattleFormationSetting;
   if ( (*((_BYTE *)Method_SetPreBattleFormationControl_OnClickPreBattleFormation__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C13D3C(Method_SetPreBattleFormationControl_OnClickPreBattleFormation__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C1ABEC(Method_SetPreBattleFormationControl_OnClickPreBattleFormation__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isPreBattleFormationSetting, 0, 0LL);
   this->fields.isPreBattleFormationSetting = !isPreBattleFormationSetting;
   SetPreBattleFormationControl__SetPreBattleFormationDispValue(this, v6);
@@ -75,10 +75,10 @@ void __fastcall SetPreBattleFormationControl__Reflection(
 {
   _BOOL4 isPreBattleFormationSetting; // w19
 
-  if ( (byte_4BAFA80 & 1) == 0 )
+  if ( (byte_4BC2E29 & 1) == 0 )
   {
-    sub_1C13D24(&OptionManager_TypeInfo, method);
-    byte_4BAFA80 = 1;
+    sub_1C1ABD4(&OptionManager_TypeInfo, method);
+    byte_4BC2E29 = 1;
   }
   isPreBattleFormationSetting = this->fields.isPreBattleFormationSetting;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -95,18 +95,18 @@ void __fastcall SetPreBattleFormationControl__SetPreBattleFormationDispValue(
   UIButton_o *settingBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BAFA7F & 1) == 0 )
+  if ( (byte_4BC2E28 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_17792/*"btn_getreward"*/, method);
-    sub_1C13D24(&StringLiteral_17791/*"btn_filter_on"*/, v3);
-    byte_4BAFA7F = 1;
+    sub_1C1ABD4(&StringLiteral_17806/*"btn_on"*/, method);
+    sub_1C1ABD4(&StringLiteral_17805/*"btn_off"*/, v3);
+    byte_4BC2E28 = 1;
   }
   settingBtn = this->fields.settingBtn;
   if ( !settingBtn )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   if ( this->fields.isPreBattleFormationSetting )
-    v5 = &StringLiteral_17792/*"btn_getreward"*/;
+    v5 = &StringLiteral_17806/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17791/*"btn_filter_on"*/;
+    v5 = &StringLiteral_17805/*"btn_off"*/;
   UIButton__set_normalSprite(settingBtn, (System_String_o *)*v5, 0LL);
 }

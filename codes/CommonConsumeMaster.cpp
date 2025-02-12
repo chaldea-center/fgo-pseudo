@@ -1,14 +1,14 @@
 void __fastcall CommonConsumeMaster___ctor(CommonConsumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB44F0 & 1) == 0 )
+  if ( (byte_4BC78BE & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string___ctor__, method);
-    byte_4BB44F0 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string___ctor__, method);
+    byte_4BC78BE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     353,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ CommonConsumeEntity_o *__fastcall CommonConsumeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB44EE & 1) == 0 )
+  if ( (byte_4BC78BC & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4BB44EE = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4BC78BC = 1;
   }
   PK = (Il2CppObject *)CommonConsumeEntity__CreatePK(id, priority, *(const MethodInfo **)&priority);
   return (CommonConsumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__GetEntity__);
+                                    (const MethodInfo_324D130 *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__GetEntity__);
 }
 
 
@@ -61,26 +61,26 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetIdEntityList(
   __int64 size; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4BB44F2 & 1) == 0 )
+  if ( (byte_4BC78C0 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__, *(_QWORD *)&id);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity__Add__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__, v8);
-    sub_1C13D24(&System_Collections_Generic_List_CommonConsumeEntity__TypeInfo, v9);
-    byte_4BB44F2 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__, *(_QWORD *)&id);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity__Add__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__, v8);
+    sub_1C1ABD4(&System_Collections_Generic_List_CommonConsumeEntity__TypeInfo, v9);
+    byte_4BC78C0 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_CommonConsumeEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_CommonConsumeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
     goto LABEL_17;
   list = System_Collections_ObjectModel_Collection_object___get_Count(
            (System_Collections_ObjectModel_Collection_T__o *)list,
-           (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__);
+           (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v13 = list;
@@ -93,7 +93,7 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetIdEntityList(
       list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                         (System_Collections_ObjectModel_Collection_T__o *)list,
                         v14,
-                        (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__);
+                        (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__);
       if ( list )
       {
         v11 = list;
@@ -112,14 +112,14 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetIdEntityList(
             System_Collections_Generic_List_object___AddWithResize(
               v10,
               (Il2CppObject *)list,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
           }
           else
           {
             v24 = &items->obj.klass + size;
             v10->fields._size = size + 1;
             v24[4] = (Il2CppClass *)v11;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v24 + 4), v11, v15, v16, v17, v18, v19, v20);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v24 + 4), v11, v15, v16, v17, v18, v19, v20);
           }
         }
       }
@@ -127,14 +127,14 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetIdEntityList(
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1C13F80(list, v11);
+    sub_1C1AE30(list, v11);
   }
 LABEL_15:
   if ( !v10 )
     goto LABEL_17;
   return (CommonConsumeEntity_array *)System_Collections_Generic_List_object___ToArray(
                                         v10,
-                                        (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__);
+                                        (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__);
 }
 
 
@@ -179,30 +179,30 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetSortedEntityList(
   FollowerInfo_o *v37; // x6
   PartyListViewItem_o *v38; // x7
 
-  if ( (byte_4BB44F1 & 1) == 0 )
+  if ( (byte_4BC78BF & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__, *(_QWORD *)&id);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__, v5);
-    sub_1C13D24(&System_Comparison_CommonConsumeEntity__TypeInfo, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity__Add__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity__Sort__, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__, v10);
-    sub_1C13D24(&System_Collections_Generic_List_CommonConsumeEntity__TypeInfo, v11);
-    sub_1C13D24(&Method_CommonConsumeMaster___c__GetSortedEntityList_b__3_0__, v12);
-    sub_1C13D24(&CommonConsumeMaster___c_TypeInfo, v13);
-    byte_4BB44F1 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__, *(_QWORD *)&id);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__, v5);
+    sub_1C1ABD4(&System_Comparison_CommonConsumeEntity__TypeInfo, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity__Add__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity__Sort__, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__, v10);
+    sub_1C1ABD4(&System_Collections_Generic_List_CommonConsumeEntity__TypeInfo, v11);
+    sub_1C1ABD4(&Method_CommonConsumeMaster___c__GetSortedEntityList_b__3_0__, v12);
+    sub_1C1ABD4(&CommonConsumeMaster___c_TypeInfo, v13);
+    byte_4BC78BF = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_CommonConsumeEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_CommonConsumeEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_CommonConsumeEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_23;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Count__);
   if ( Count >= 1 )
   {
     v18 = Count;
@@ -215,7 +215,7 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetSortedEntityList(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v19,
-               (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__);
+               (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_CommonConsumeEntity__get_Item__);
       if ( list )
       {
         v15 = (int64_t)list;
@@ -234,14 +234,14 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetSortedEntityList(
             System_Collections_Generic_List_object___AddWithResize(
               v14,
               (Il2CppObject *)list,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
           }
           else
           {
             v29 = &items->obj.klass + size;
             v14->fields._size = size + 1;
             v29[4] = (Il2CppClass *)v15;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v29 + 4), v15, v20, v21, v22, v23, v24, v25);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v29 + 4), v15, v20, v21, v22, v23, v24, v25);
           }
         }
       }
@@ -249,7 +249,7 @@ CommonConsumeEntity_array *__fastcall CommonConsumeMaster__GetSortedEntityList(
         goto LABEL_15;
     }
 LABEL_23:
-    sub_1C13F80(list, v15);
+    sub_1C1AE30(list, v15);
   }
 LABEL_15:
   list = CommonConsumeMaster___c_TypeInfo;
@@ -267,21 +267,21 @@ LABEL_15:
       list = CommonConsumeMaster___c_TypeInfo;
     }
     v31 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v30 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_CommonConsumeEntity__TypeInfo);
+    v30 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_CommonConsumeEntity__TypeInfo);
     System_Comparison_object____ctor(v30, v31, Method_CommonConsumeMaster___c__GetSortedEntityList_b__3_0__, 0LL);
     static_fields = CommonConsumeMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_CommonConsumeEntity__o *)v30;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v30, v33, v34, v35, v36, v37, v38);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)v30, v33, v34, v35, v36, v37, v38);
   }
   if ( !v14 )
     goto LABEL_23;
-  System_Collections_Generic_List_object___Sort_56814736(
+  System_Collections_Generic_List_object___Sort_56877908(
     v14,
     v30,
-    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_CommonConsumeEntity__Sort__);
+    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_CommonConsumeEntity__Sort__);
   return (CommonConsumeEntity_array *)System_Collections_Generic_List_object___ToArray(
                                         v14,
-                                        (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__);
+                                        (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_CommonConsumeEntity__ToArray__);
 }
 
 
@@ -295,17 +295,17 @@ bool __fastcall CommonConsumeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB44EF & 1) == 0 )
+  if ( (byte_4BC78BD & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__TryGetEntity__, entity);
-    byte_4BB44EF = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__TryGetEntity__, entity);
+    byte_4BC78BD = 1;
   }
   PK = (Il2CppObject *)CommonConsumeEntity__CreatePK(id, priority, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_CommonConsumeMaster__CommonConsumeEntity__string__TryGetEntity__);
 }
 
 
@@ -320,15 +320,15 @@ void __fastcall CommonConsumeMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB44F3 & 1) == 0 )
+  if ( (byte_4BC78C1 & 1) == 0 )
   {
-    sub_1C13D24(&CommonConsumeMaster___c_TypeInfo, v1);
-    byte_4BB44F3 = 1;
+    sub_1C1ABD4(&CommonConsumeMaster___c_TypeInfo, v1);
+    byte_4BC78C1 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(CommonConsumeMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(CommonConsumeMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CommonConsumeMaster___c_TypeInfo->static_fields->__9 = (struct CommonConsumeMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)CommonConsumeMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -353,6 +353,6 @@ int32_t __fastcall CommonConsumeMaster___c___GetSortedEntityList_b__3_0(
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_1C13F80(this, x);
+    sub_1C1AE30(this, x);
   return y->fields.priority - x->fields.priority;
 }

@@ -20,57 +20,57 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropItemEffectOb
   AssetData_o *AssetStorage; // x0
   __int64 v14; // x1
   __int64 *v15; // x8
-  Il2CppObject *Object_object__49747248; // x1
+  Il2CppObject *Object_object__49812820; // x1
 
-  if ( (byte_4BB6D0A & 1) == 0 )
+  if ( (byte_4BCA0EC & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, *(_QWORD *)&dropEffectType);
-    sub_1C13D24(&AssetManager_TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_22558/*"nsmgr"*/, v8);
-    sub_1C13D24(&StringLiteral_19200/*"effect/ef_command_flash01"*/, v9);
-    sub_1C13D24(&StringLiteral_22559/*"nso"*/, v10);
-    sub_1C13D24(&StringLiteral_3247/*"Battle/Common"*/, v11);
-    sub_1C13D24(&StringLiteral_3246/*"Battle/BattleResult"*/, v12);
-    byte_4BB6D0A = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, *(_QWORD *)&dropEffectType);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_22576/*"obj_treasure_item_bound"*/, v8);
+    sub_1C1ABD4(&StringLiteral_19214/*"effect/obj_treasure_item01"*/, v9);
+    sub_1C1ABD4(&StringLiteral_22577/*"obj_treasure_item_high_position"*/, v10);
+    sub_1C1ABD4(&StringLiteral_3250/*"Battle/DropEffect/2"*/, v11);
+    sub_1C1ABD4(&StringLiteral_3249/*"Battle/DropEffect/1"*/, v12);
+    byte_4BCA0EC = 1;
   }
   if ( dropEffectType == 2 )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3247/*"Battle/Common"*/, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3250/*"Battle/DropEffect/2"*/, 0LL);
     if ( AssetStorage )
     {
-      v15 = &StringLiteral_22559/*"nso"*/;
+      v15 = &StringLiteral_22577/*"obj_treasure_item_high_position"*/;
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1C13F80(AssetStorage, v14);
+    sub_1C1AE30(AssetStorage, v14);
   }
   if ( dropEffectType == 1 )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3246/*"Battle/BattleResult"*/, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3249/*"Battle/DropEffect/1"*/, 0LL);
     if ( AssetStorage )
     {
-      v15 = &StringLiteral_22558/*"nsmgr"*/;
+      v15 = &StringLiteral_22576/*"obj_treasure_item_bound"*/;
 LABEL_13:
-      Object_object__49747248 = AssetData__GetObject_object__49747248(
+      Object_object__49812820 = AssetData__GetObject_object__49812820(
                                   AssetStorage,
                                   (System_String_o *)*v15,
-                                  (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                  (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
       return BaseMonoBehaviour__createObject(
                (BaseMonoBehaviour_o *)this,
-               (UnityEngine_GameObject_o *)Object_object__49747248,
+               (UnityEngine_GameObject_o *)Object_object__49812820,
                rootTr,
                0LL,
                0LL);
     }
     goto LABEL_15;
   }
-  return BaseMonoBehaviour__createObject_39385652(
+  return BaseMonoBehaviour__createObject_39439284(
            (BaseMonoBehaviour_o *)this,
-           (System_String_o *)StringLiteral_19200/*"effect/ef_command_flash01"*/,
+           (System_String_o *)StringLiteral_19214/*"effect/obj_treasure_item01"*/,
            rootTr,
            0LL,
            0LL);
@@ -99,37 +99,37 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropTreasureEffe
   Il2CppObject *v21; // x0
   System_String_o *v22; // x0
   __int64 v23; // x1
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int v25; // [xsp+8h] [xbp-38h] BYREF
   int v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB6D0B & 1) == 0 )
+  if ( (byte_4BCA0ED & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, *(_QWORD *)&dropEffectType);
-    sub_1C13D24(&AssetManager_TypeInfo, v9);
-    sub_1C13D24(&int_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_19203/*"effect/ef_commandup_{0}{1:00}"*/, v11);
-    sub_1C13D24(&StringLiteral_3246/*"Battle/BattleResult"*/, v12);
-    sub_1C13D24(&StringLiteral_22560/*"nso-ZA"*/, v13);
-    byte_4BB6D0B = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, *(_QWORD *)&dropEffectType);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v9);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    sub_1C1ABD4(&StringLiteral_19217/*"effect/obj_treasure{0:D2}"*/, v11);
+    sub_1C1ABD4(&StringLiteral_3249/*"Battle/DropEffect/1"*/, v12);
+    sub_1C1ABD4(&StringLiteral_22578/*"obj_treasure{0:D2}_bound"*/, v13);
+    byte_4BCA0ED = 1;
   }
   if ( dropEffectType == 1 )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3246/*"Battle/BattleResult"*/, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3249/*"Battle/DropEffect/1"*/, 0LL);
     v25 = rarity % 3 + 1;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v18, v19, v20);
-    v22 = System_String__Format((System_String_o *)StringLiteral_22560/*"nso-ZA"*/, v21, 0LL);
+    v22 = System_String__Format((System_String_o *)StringLiteral_22578/*"obj_treasure{0:D2}_bound"*/, v21, 0LL);
     if ( !AssetStorage )
-      sub_1C13F80(v22, v23);
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+      sub_1C1AE30(v22, v23);
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 AssetStorage,
                                 v22,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     return BaseMonoBehaviour__createObject(
              (BaseMonoBehaviour_o *)this,
-             (UnityEngine_GameObject_o *)Object_object__49747248,
+             (UnityEngine_GameObject_o *)Object_object__49812820,
              rootTr,
              0LL,
              0LL);
@@ -142,8 +142,8 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__CreateDropTreasureEffe
   {
     v26 = rarity % 3 + 1;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, rootTr, *(_QWORD *)&rarity, method);
-    v15 = System_String__Format((System_String_o *)StringLiteral_19203/*"effect/ef_commandup_{0}{1:00}"*/, v14, 0LL);
-    return BaseMonoBehaviour__createObject_39385652((BaseMonoBehaviour_o *)this, v15, rootTr, 0LL, 0LL);
+    v15 = System_String__Format((System_String_o *)StringLiteral_19217/*"effect/obj_treasure{0:D2}"*/, v14, 0LL);
+    return BaseMonoBehaviour__createObject_39439284((BaseMonoBehaviour_o *)this, v15, rootTr, 0LL, 0LL);
   }
 }
 
@@ -168,7 +168,7 @@ void __fastcall BattleEffectControl__SetAvoidResetDamageObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AvoidResetDamageObject_k__BackingField = obj;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._AvoidResetDamageObject_k__BackingField,
     (int64_t)obj,
     (int64_t)method,
@@ -192,7 +192,7 @@ void __fastcall BattleEffectControl__SetAvoidResetDamageTextObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AvoidResetDamageTextObject_k__BackingField = obj;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._AvoidResetDamageTextObject_k__BackingField,
     (int64_t)obj,
     (int64_t)method,
@@ -211,11 +211,11 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject(
 {
   const MethodInfo *v3; // x3
 
-  return BattleEffectControl__SetBuffIconObject_43907416(this, bufflist, this->fields.buffIconObject, v3);
+  return BattleEffectControl__SetBuffIconObject_43966108(this, bufflist, this->fields.buffIconObject, v3);
 }
 
 
-UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject_43907416(
+UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject_43966108(
         BattleEffectControl_o *this,
         BattleBuffData_ShowBuffData_array *bufflist,
         UnityEngine_GameObject_o *buffIcon,
@@ -233,16 +233,16 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject_4390
   UnityEngine_GameObject_o *v16; // x24
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB6D08 & 1) == 0 )
+  if ( (byte_4BCA0EA & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, bufflist);
-    sub_1C13D24(&UnityEngine_GameObject_TypeInfo, v7);
-    byte_4BB6D08 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___, bufflist);
+    sub_1C1ABD4(&UnityEngine_GameObject_TypeInfo, v7);
+    byte_4BCA0EA = 1;
   }
   if ( !bufflist || !*(_QWORD *)&bufflist->max_length )
     return 0LL;
-  v8 = (UnityEngine_GameObject_o *)sub_1C13F70(UnityEngine_GameObject_TypeInfo);
-  UnityEngine_GameObject___ctor_70703736(v8, 0LL);
+  v8 = (UnityEngine_GameObject_o *)sub_1C1AE20(UnityEngine_GameObject_TypeInfo);
+  UnityEngine_GameObject___ctor_70776160(v8, 0LL);
   v11 = *(_QWORD *)&bufflist->max_length;
   if ( (int)v11 >= 1 )
   {
@@ -251,7 +251,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject_4390
     do
     {
       if ( v12 >= (unsigned int)v11 )
-        sub_1C13F88(Object, v10);
+        sub_1C1AE38(Object, v10);
       if ( !v8
         || (v14 = bufflist->m_Items[v12],
             transform = UnityEngine_GameObject__get_transform(v8, 0LL),
@@ -259,11 +259,11 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__SetBuffIconObject_4390
         || (v16 = Object,
             (Object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     Object,
-                                                    (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___)) == 0LL)
-        || (BattleServantBuffIconComponent__setIcon_45219680((BattleServantBuffIconComponent_o *)Object, v14, 0LL),
+                                                    (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_BattleServantBuffIconComponent___)) == 0LL)
+        || (BattleServantBuffIconComponent__setIcon_45280392((BattleServantBuffIconComponent_o *)Object, v14, 0LL),
             (Object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v16, 0LL)) == 0LL) )
       {
-        sub_1C13F80(Object, v10);
+        sub_1C1AE30(Object, v10);
       }
       v18.fields.y = 0.0;
       v18.fields.z = 0.0;
@@ -291,7 +291,7 @@ void __fastcall BattleEffectControl__SetDoNotActByCommandSealedObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._DoNotActByCommandSealedObject_k__BackingField = obj;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._DoNotActByCommandSealedObject_k__BackingField,
     (int64_t)obj,
     (int64_t)method,
@@ -315,7 +315,7 @@ void __fastcall BattleEffectControl__SetSpecialInvincibleObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._specialInvincibleObject_k__BackingField = obj;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._specialInvincibleObject_k__BackingField,
     (int64_t)obj,
     (int64_t)method,
@@ -360,16 +360,16 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   unsigned __int64 v31; // x9
   UnityEngine_Object_o *v32; // x21
 
-  if ( (byte_4BB6D07 & 1) == 0 )
+  if ( (byte_4BCA0E9 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_Spawner__get_Instance__, v3);
-    byte_4BB6D07 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_Spawner__get_Instance__, v3);
+    byte_4BCA0E9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_Spawner__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_Spawner__get_Instance__);
   this->fields.spawner = (struct Spawner_o *)Instance;
   p_spawner = &this->fields.spawner;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.spawner, (int64_t)Instance, v6, v7, v8, v9, v10, v11);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.spawner, (int64_t)Instance, v6, v7, v8, v9, v10, v11);
   spawner = (UnityEngine_Object_o *)this->fields.spawner;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -384,7 +384,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)EffectList->m_Items[2], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)EffectList->m_Items[2], 5, 0LL);
   v16 = this->fields.EffectList;
   if ( !v16 )
     goto LABEL_57;
@@ -393,7 +393,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v16->m_Items[3], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v16->m_Items[3], 5, 0LL);
   v17 = this->fields.EffectList;
   if ( !v17 )
     goto LABEL_57;
@@ -402,7 +402,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v17->m_Items[4], 50, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v17->m_Items[4], 50, 0LL);
   v18 = this->fields.EffectList;
   if ( !v18 )
     goto LABEL_57;
@@ -411,7 +411,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v18->m_Items[6], 3, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v18->m_Items[6], 3, 0LL);
   v19 = this->fields.EffectList;
   if ( !v19 )
     goto LABEL_57;
@@ -420,7 +420,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v19->m_Items[7], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v19->m_Items[7], 5, 0LL);
   v20 = this->fields.EffectList;
   if ( !v20 )
     goto LABEL_57;
@@ -429,7 +429,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v20->m_Items[9], 50, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v20->m_Items[9], 50, 0LL);
   damageObjectlist = this->fields.damageObjectlist;
   if ( !damageObjectlist )
     goto LABEL_57;
@@ -438,7 +438,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)damageObjectlist->m_Items[0], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)damageObjectlist->m_Items[0], 5, 0LL);
   v22 = this->fields.damageObjectlist;
   if ( !v22 )
     goto LABEL_57;
@@ -447,7 +447,7 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v22->m_Items[1], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v22->m_Items[1], 5, 0LL);
   v23 = this->fields.damageObjectlist;
   if ( !v23 )
     goto LABEL_57;
@@ -456,17 +456,17 @@ void __fastcall BattleEffectControl__Start(BattleEffectControl_o *this, const Me
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v23->m_Items[2], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v23->m_Items[2], 5, 0LL);
   v24 = this->fields.damageObjectlist;
   if ( !v24 )
     goto LABEL_57;
   if ( v24->max_length <= 3 )
 LABEL_59:
-    sub_1C13F88(v13, v14);
+    sub_1C1AE38(v13, v14);
   v13 = this->fields.spawner;
   if ( !v13 )
     goto LABEL_57;
-  Spawner__Precache_39110152(v13, (UnityEngine_Object_o *)v24->m_Items[3], 5, 0LL);
+  Spawner__Precache_39163724(v13, (UnityEngine_Object_o *)v24->m_Items[3], 5, 0LL);
   buffTextObjectlist = this->fields.buffTextObjectlist;
   if ( !buffTextObjectlist )
     goto LABEL_57;
@@ -487,7 +487,7 @@ LABEL_59:
       v13 = *p_spawner;
       if ( !*p_spawner )
         goto LABEL_57;
-      Spawner__Precache_39110152(v13, v28, 5, 0LL);
+      Spawner__Precache_39163724(v13, v28, 5, 0LL);
     }
     buffTextObjectlist = this->fields.buffTextObjectlist;
     ++v26;
@@ -497,7 +497,7 @@ LABEL_59:
   buffTextClassIconObjectList = this->fields.buffTextClassIconObjectList;
   if ( !buffTextClassIconObjectList )
 LABEL_57:
-    sub_1C13F80(v13, v14);
+    sub_1C1AE30(v13, v14);
   v30 = 0LL;
   while ( 1 )
   {
@@ -515,7 +515,7 @@ LABEL_57:
       v13 = *p_spawner;
       if ( !*p_spawner )
         goto LABEL_57;
-      Spawner__Precache_39110152(v13, v32, 5, 0LL);
+      Spawner__Precache_39163724(v13, v32, 5, 0LL);
     }
     buffTextClassIconObjectList = this->fields.buffTextClassIconObjectList;
     ++v30;
@@ -534,7 +534,7 @@ void __fastcall BattleEffectControl__destroyInstantiate(
 
   spawner = this->fields.spawner;
   if ( !spawner )
-    sub_1C13F80(0LL, obj);
+    sub_1C1AE30(0LL, obj);
   Spawner__Despawn(spawner, obj, 1, 0LL);
 }
 
@@ -558,22 +558,22 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getBuffTextClassIconOb
     if ( (int)v5 < max_length )
     {
       if ( v5 >= max_length )
-        sub_1C13F88(this, *(_QWORD *)&color);
+        sub_1C1AE38(this, *(_QWORD *)&color);
       spawner = this->fields.spawner;
       if ( spawner )
       {
         buffTextClassIconObjectList = (struct UnityEngine_GameObject_array *)((char *)buffTextClassIconObjectList
                                                                             + 8 * v5);
-        return Spawner__Spawn_39111804(spawner, (UnityEngine_Object_o *)buffTextClassIconObjectList->m_Items[0], 0LL);
+        return Spawner__Spawn_39165376(spawner, (UnityEngine_Object_o *)buffTextClassIconObjectList->m_Items[0], 0LL);
       }
 LABEL_10:
-      sub_1C13F80(spawner, color);
+      sub_1C1AE30(spawner, color);
     }
     if ( max_length >= 1 )
     {
       spawner = this->fields.spawner;
       if ( spawner )
-        return Spawner__Spawn_39111804(spawner, (UnityEngine_Object_o *)buffTextClassIconObjectList->m_Items[0], 0LL);
+        return Spawner__Spawn_39165376(spawner, (UnityEngine_Object_o *)buffTextClassIconObjectList->m_Items[0], 0LL);
       goto LABEL_10;
     }
   }
@@ -600,21 +600,21 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getBuffTextObject(
     if ( (int)v5 < max_length )
     {
       if ( v5 >= max_length )
-        sub_1C13F88(this, *(_QWORD *)&color);
+        sub_1C1AE38(this, *(_QWORD *)&color);
       spawner = this->fields.spawner;
       if ( spawner )
       {
         buffTextObjectlist = (struct UnityEngine_GameObject_array *)((char *)buffTextObjectlist + 8 * v5);
-        return Spawner__Spawn_39111804(spawner, (UnityEngine_Object_o *)buffTextObjectlist->m_Items[0], 0LL);
+        return Spawner__Spawn_39165376(spawner, (UnityEngine_Object_o *)buffTextObjectlist->m_Items[0], 0LL);
       }
 LABEL_10:
-      sub_1C13F80(spawner, color);
+      sub_1C1AE30(spawner, color);
     }
     if ( max_length >= 1 )
     {
       spawner = this->fields.spawner;
       if ( spawner )
-        return Spawner__Spawn_39111804(spawner, (UnityEngine_Object_o *)buffTextObjectlist->m_Items[0], 0LL);
+        return Spawner__Spawn_39165376(spawner, (UnityEngine_Object_o *)buffTextObjectlist->m_Items[0], 0LL);
       goto LABEL_10;
     }
   }
@@ -648,10 +648,10 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getDamageObject(
         if ( this )
         {
           m_Items = (UnityEngine_Object_o **)&damageObjectlist->m_Items[2];
-          return Spawner__Spawn_39111804((Spawner_o *)this, *m_Items, 0LL);
+          return Spawner__Spawn_39165376((Spawner_o *)this, *m_Items, 0LL);
         }
 LABEL_18:
-        sub_1C13F80(this, critical);
+        sub_1C1AE30(this, critical);
       }
     }
     else if ( resist )
@@ -661,7 +661,7 @@ LABEL_18:
         if ( this )
         {
           m_Items = (UnityEngine_Object_o **)&damageObjectlist->m_Items[3];
-          return Spawner__Spawn_39111804((Spawner_o *)this, *m_Items, 0LL);
+          return Spawner__Spawn_39165376((Spawner_o *)this, *m_Items, 0LL);
         }
         goto LABEL_18;
       }
@@ -671,19 +671,19 @@ LABEL_18:
       if ( this )
       {
         m_Items = (UnityEngine_Object_o **)damageObjectlist->m_Items;
-        return Spawner__Spawn_39111804((Spawner_o *)this, *m_Items, 0LL);
+        return Spawner__Spawn_39165376((Spawner_o *)this, *m_Items, 0LL);
       }
       goto LABEL_18;
     }
 LABEL_19:
-    sub_1C13F88(this, critical);
+    sub_1C1AE38(this, critical);
   }
   if ( max_length <= 1 )
     goto LABEL_19;
   if ( !this )
     goto LABEL_18;
   m_Items = (UnityEngine_Object_o **)&damageObjectlist->m_Items[1];
-  return Spawner__Spawn_39111804((Spawner_o *)this, *m_Items, 0LL);
+  return Spawner__Spawn_39165376((Spawner_o *)this, *m_Items, 0LL);
 }
 
 
@@ -703,12 +703,12 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getEffectInstantiate(
   if ( max_length > id )
   {
     if ( max_length <= (unsigned int)id )
-      sub_1C13F88(this, *(_QWORD *)&id);
+      sub_1C1AE38(this, *(_QWORD *)&id);
     this = (BattleEffectControl_o *)this->fields.spawner;
     if ( this )
-      return Spawner__Spawn_39111804((Spawner_o *)this, (UnityEngine_Object_o *)EffectList->m_Items[id], 0LL);
+      return Spawner__Spawn_39165376((Spawner_o *)this, (UnityEngine_Object_o *)EffectList->m_Items[id], 0LL);
 LABEL_8:
-    sub_1C13F80(this, id);
+    sub_1C1AE30(this, id);
   }
   return 0LL;
 }
@@ -725,12 +725,12 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getListEffect(
 
   EffectList = this->fields.EffectList;
   if ( !EffectList )
-    sub_1C13F80(this, id);
+    sub_1C1AE30(this, id);
   max_length = EffectList->max_length;
   if ( max_length <= id )
     return 0LL;
   if ( max_length <= (unsigned int)id )
-    sub_1C13F88(this, *(_QWORD *)&id);
+    sub_1C1AE38(this, *(_QWORD *)&id);
   return EffectList->m_Items[id];
 }
 
@@ -754,12 +754,12 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getTreasureObject(
   __int64 *v16; // x8
 
   v8 = this;
-  if ( (byte_4BB6D09 & 1) == 0 )
+  if ( (byte_4BCA0EB & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_19201/*"effect/ef_command_{0:00}"*/, *(_QWORD *)&rarity);
-    sub_1C13D24(&StringLiteral_24445/*"tradeStoreIdxs"*/, v9);
-    this = (BattleEffectControl_o *)sub_1C13D24(&StringLiteral_19202/*"effect/ef_commandburn_s01"*/, v10);
-    byte_4BB6D09 = 1;
+    sub_1C1ABD4(&StringLiteral_19215/*"effect/obj_treasure_p"*/, *(_QWORD *)&rarity);
+    sub_1C1ABD4(&StringLiteral_24465/*"treasure"*/, v9);
+    this = (BattleEffectControl_o *)sub_1C1ABD4(&StringLiteral_19216/*"effect/obj_treasure_pp"*/, v10);
+    byte_4BCA0EB = 1;
   }
   if ( !dropInfo )
     goto LABEL_16;
@@ -776,7 +776,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getTreasureObject(
     {
       v12 = this;
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-      NodeFromName = TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_24445/*"tradeStoreIdxs"*/, 0, 0LL);
+      NodeFromName = TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_24465/*"treasure"*/, 0, 0LL);
       if ( (unsigned int)(rarity - 3) > 2 )
       {
         if ( (unsigned int)(rarity - 6) > 2 )
@@ -786,7 +786,7 @@ UnityEngine_GameObject_o *__fastcall BattleEffectControl__getTreasureObject(
       goto LABEL_12;
     }
 LABEL_16:
-    sub_1C13F80(this, *(_QWORD *)&rarity);
+    sub_1C1AE30(this, *(_QWORD *)&rarity);
   }
   this = (BattleEffectControl_o *)BattleEffectControl__CreateDropItemEffectObject(
                                     v8,
@@ -797,19 +797,19 @@ LABEL_16:
     goto LABEL_16;
   v12 = this;
   v15 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
-  NodeFromName = TransformHelper__getNodeFromName(v15, (System_String_o *)StringLiteral_24445/*"tradeStoreIdxs"*/, 0, 0LL);
+  NodeFromName = TransformHelper__getNodeFromName(v15, (System_String_o *)StringLiteral_24465/*"treasure"*/, 0, 0LL);
   if ( rarity == 1002 )
   {
 LABEL_13:
-    v16 = &StringLiteral_19202/*"effect/ef_commandburn_s01"*/;
+    v16 = &StringLiteral_19216/*"effect/obj_treasure_pp"*/;
     goto LABEL_14;
   }
   if ( rarity == 1001 )
   {
 LABEL_12:
-    v16 = &StringLiteral_19201/*"effect/ef_command_{0:00}"*/;
+    v16 = &StringLiteral_19215/*"effect/obj_treasure_p"*/;
 LABEL_14:
-    BaseMonoBehaviour__createObject_39385652((BaseMonoBehaviour_o *)v8, (System_String_o *)*v16, NodeFromName, 0LL, 0LL);
+    BaseMonoBehaviour__createObject_39439284((BaseMonoBehaviour_o *)v8, (System_String_o *)*v16, NodeFromName, 0LL, 0LL);
   }
   return (UnityEngine_GameObject_o *)v12;
 }
@@ -915,7 +915,7 @@ void __fastcall BattleEffectControl__set_AvoidResetDamageObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AvoidResetDamageObject_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._AvoidResetDamageObject_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -939,7 +939,7 @@ void __fastcall BattleEffectControl__set_AvoidResetDamageTextObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AvoidResetDamageTextObject_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._AvoidResetDamageTextObject_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -963,7 +963,7 @@ void __fastcall BattleEffectControl__set_DoNotActByCommandSealedObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._DoNotActByCommandSealedObject_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._DoNotActByCommandSealedObject_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -987,7 +987,7 @@ void __fastcall BattleEffectControl__set_specialInvincibleObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._specialInvincibleObject_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._specialInvincibleObject_k__BackingField,
     (int64_t)value,
     (int64_t)method,

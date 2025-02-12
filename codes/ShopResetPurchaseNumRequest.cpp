@@ -13,14 +13,14 @@ void __fastcall ShopResetPurchaseNumRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4BB60E6 & 1) == 0 )
+  if ( (byte_4BC94C8 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_23265/*"repeat-x | repeat-y | [ repeat | space | round | no-repeat ]{1,2}"*/, *(_QWORD *)&shopId);
-    sub_1C13D24(&StringLiteral_23658/*"sharedMesh from SkinnedMeshRenderer returned null value"*/, v7);
-    byte_4BB60E6 = 1;
+    sub_1C1ABD4(&StringLiteral_23285/*"resetItemId"*/, *(_QWORD *)&shopId);
+    sub_1C1ABD4(&StringLiteral_23678/*"shopId"*/, v7);
+    byte_4BC94C8 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23658/*"sharedMesh from SkinnedMeshRenderer returned null value"*/, shopId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23265/*"repeat-x | repeat-y | [ repeat | space | round | no-repeat ]{1,2}"*/, resetItemId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23678/*"shopId"*/, shopId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23285/*"resetItemId"*/, resetItemId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,16 +32,16 @@ System_String_o *__fastcall ShopResetPurchaseNumRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB60E5 & 1) == 0 )
+  if ( (byte_4BC94C7 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_23656/*"share"*/, v2);
-    byte_4BB60E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_23676/*"shop/resetPurchaseNum"*/, v2);
+    byte_4BC94C7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_23656/*"share"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_23676/*"shop/resetPurchaseNum"*/, 0LL);
 }
 
 
@@ -58,12 +58,12 @@ void __fastcall ShopResetPurchaseNumRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BB60E7 & 1) == 0 )
+  if ( (byte_4BC94C9 & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB60E7 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC94C9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -77,7 +77,7 @@ void __fastcall ShopResetPurchaseNumRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22421/*"newAttributes"*/;
+    v11 = (System_String_o *)StringLiteral_22437/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

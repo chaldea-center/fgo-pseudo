@@ -1,14 +1,14 @@
 void __fastcall TreasureBoxMaster___ctor(TreasureBoxMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB528C & 1) == 0 )
+  if ( (byte_4BC8669 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__, method);
-    byte_4BB528C = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__, method);
+    byte_4BC8669 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     380,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_TreasureBoxMaster__TreasureBoxEntity__int___ctor__);
 }
 
 
@@ -26,18 +26,18 @@ TreasureBoxEntity_o *__fastcall TreasureBoxMaster__GetTreasureBoxData(
   int32_t v11; // w23
   TreasureBoxEntity_o *result; // x0
 
-  if ( (byte_4BB528D & 1) == 0 )
+  if ( (byte_4BC866A & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Count__, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Item__, v7);
-    byte_4BB528D = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Item__, v7);
+    byte_4BC866A = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Count__);
   if ( Count >= 1 )
   {
     v10 = Count;
@@ -50,14 +50,14 @@ TreasureBoxEntity_o *__fastcall TreasureBoxMaster__GetTreasureBoxData(
       result = (TreasureBoxEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                         list,
                                         v11,
-                                        (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Item__);
+                                        (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxEntity__get_Item__);
       if ( result && result->fields.eventId == eventId && result->fields.idx == Index )
         return result;
       if ( v10 == ++v11 )
         return 0LL;
     }
 LABEL_13:
-    sub_1C13F80(list, *(_QWORD *)&eventId);
+    sub_1C1AE30(list, *(_QWORD *)&eventId);
   }
   return 0LL;
 }

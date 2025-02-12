@@ -23,29 +23,29 @@ CreateSkillTaskFromBuffAction_array *__fastcall BattleAddSkillTaskAfterCounterTr
   PartyListViewItem_o *v12; // x7
   __int64 v14; // x0
 
-  if ( (byte_4BB72DF & 1) == 0 )
+  if ( (byte_4BCA6C1 & 1) == 0 )
   {
-    sub_1C13D24(&CreateSkillTaskFromBuffAction___TypeInfo, method);
-    sub_1C13D24(&ForceCreateComboEndSkillTask_TypeInfo, v2);
-    byte_4BB72DF = 1;
+    sub_1C1ABD4(&CreateSkillTaskFromBuffAction___TypeInfo, method);
+    sub_1C1ABD4(&ForceCreateComboEndSkillTask_TypeInfo, v2);
+    byte_4BCA6C1 = 1;
   }
-  v3 = (CreateSkillTaskFromBuffAction_array *)sub_1C13DCC(CreateSkillTaskFromBuffAction___TypeInfo, 1LL);
-  v4 = (Il2CppObject *)sub_1C13F70(ForceCreateComboEndSkillTask_TypeInfo);
+  v3 = (CreateSkillTaskFromBuffAction_array *)sub_1C1AC7C(CreateSkillTaskFromBuffAction___TypeInfo, 1LL);
+  v4 = (Il2CppObject *)sub_1C1AE20(ForceCreateComboEndSkillTask_TypeInfo);
   System_Object___ctor(v4, 0LL);
   if ( !v3 )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   if ( v4 )
   {
-    v5 = sub_1C13E60(v4, v3->obj.klass->_1.element_class);
+    v5 = sub_1C1AD10(v4, v3->obj.klass->_1.element_class);
     if ( !v5 )
     {
-      v14 = sub_1C13FA4(0LL);
-      sub_1C13E4C(v14, 0LL);
+      v14 = sub_1C1AE54(0LL);
+      sub_1C1ACFC(v14, 0LL);
     }
   }
   if ( !v3->max_length )
-    sub_1C13F88(v5, v6);
+    sub_1C1AE38(v5, v6);
   v3->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v3->m_Items, (int64_t)v4, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v3->m_Items, (int64_t)v4, v7, v8, v9, v10, v11, v12);
   return v3;
 }

@@ -8,15 +8,15 @@ void __fastcall MoveLabelTextControl___ctor(MoveLabelTextControl_o *this, const 
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BB842C & 1) == 0 )
+  if ( (byte_4BCB820 & 1) == 0 )
   {
-    sub_1C13D24(&System_Collections_Hashtable_TypeInfo, method);
-    byte_4BB842C = 1;
+    sub_1C1ABD4(&System_Collections_Hashtable_TypeInfo, method);
+    byte_4BCB820 = 1;
   }
-  v3 = (System_Collections_Hashtable_o *)sub_1C13F70(System_Collections_Hashtable_TypeInfo);
-  System_Collections_Hashtable___ctor_63547704(v3, 0LL);
+  v3 = (System_Collections_Hashtable_o *)sub_1C1AE20(System_Collections_Hashtable_TypeInfo);
+  System_Collections_Hashtable___ctor_63620128(v3, 0LL);
   this->fields.table = v3;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.table, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.table, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -27,7 +27,7 @@ void __fastcall MoveLabelTextControl__onMoveComplete(MoveLabelTextControl_o *thi
 
   targetLb = (UnityEngine_Component_o *)this->fields.targetLb;
   if ( !targetLb || (targetLb = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(targetLb, 0LL)) == 0LL )
-    sub_1C13F80(targetLb, method);
+    sub_1C1AE30(targetLb, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)targetLb, this->fields.lbStartPosition, 0LL);
 }
 
@@ -95,32 +95,32 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
   char v60[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v6 = this;
-  if ( (byte_4BB842B & 1) == 0 )
+  if ( (byte_4BCB81F & 1) == 0 )
   {
-    sub_1C13D24(&bool_TypeInfo, parent);
-    sub_1C13D24(&iTween_LoopType_TypeInfo, v7);
-    sub_1C13D24(&float_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_25141/*"wipeinEx"*/, v9);
-    sub_1C13D24(&StringLiteral_19049/*"easeInQuart"*/, v10);
-    sub_1C13D24(&StringLiteral_22630/*"onClickCheckListView"*/, v11);
-    sub_1C13D24(&StringLiteral_24320/*"textarea"*/, v12);
-    sub_1C13D24(&StringLiteral_22645/*"onFetchStorePromotionVisibilityFailed"*/, v13);
-    sub_1C13D24(&StringLiteral_18836/*"defaultPort"*/, v14);
-    sub_1C13D24(&StringLiteral_21563/*"login/top"*/, v15);
-    sub_1C13D24(&StringLiteral_21465/*"limitCountUpResultServantLimitCount"*/, v16);
-    sub_1C13D24(&StringLiteral_21143/*"isDisableChangeRaidDownMessage"*/, v17);
-    sub_1C13D24(&StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/, v18);
-    this = (MoveLabelTextControl_o *)sub_1C13D24(&iTween_TypeInfo, v19);
-    byte_4BB842B = 1;
+    sub_1C1ABD4(&bool_TypeInfo, parent);
+    sub_1C1ABD4(&iTween_LoopType_TypeInfo, v7);
+    sub_1C1ABD4(&float_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_25163/*"x"*/, v9);
+    sub_1C1ABD4(&StringLiteral_19063/*"easetype"*/, v10);
+    sub_1C1ABD4(&StringLiteral_22648/*"onMoveComplete"*/, v11);
+    sub_1C1ABD4(&StringLiteral_24340/*"time"*/, v12);
+    sub_1C1ABD4(&StringLiteral_22663/*"oncompletetarget"*/, v13);
+    sub_1C1ABD4(&StringLiteral_18850/*"delay"*/, v14);
+    sub_1C1ABD4(&StringLiteral_21577/*"looptype"*/, v15);
+    sub_1C1ABD4(&StringLiteral_21479/*"linear"*/, v16);
+    sub_1C1ABD4(&StringLiteral_21157/*"isLocal"*/, v17);
+    sub_1C1ABD4(&StringLiteral_22661/*"oncomplete"*/, v18);
+    this = (MoveLabelTextControl_o *)sub_1C1ABD4(&iTween_TypeInfo, v19);
+    byte_4BCB81F = 1;
   }
   if ( !targetLb )
     goto LABEL_28;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetLb, 0LL);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__Stop_61615872(gameObject, 0LL);
+  iTween__Stop_61688296(gameObject, 0LL);
   v6->fields.targetLb = targetLb;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v6->fields.targetLb, (int64_t)targetLb, v21, v22, v23, v24, v25, v26);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v6->fields.targetLb, (int64_t)targetLb, v21, v22, v23, v24, v25, v26);
   mText = targetLb->fields.mText;
   if ( !mText )
     goto LABEL_28;
@@ -166,7 +166,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))table->klass->vtable._23_Add.method)(
     table,
-    StringLiteral_21143/*"isDisableChangeRaidDownMessage"*/,
+    StringLiteral_21157/*"isLocal"*/,
     this,
     table->klass->vtable._24_Clear.methodPtr);
   v38 = v6->fields.table;
@@ -176,7 +176,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, void *, MoveLabelTextControl_o *, Il2CppMethodPointer))v38->klass->vtable._23_Add.method)(
     v38,
-    StringLiteral_25141/*"wipeinEx"*/,
+    StringLiteral_25163/*"x"*/,
     this,
     v38->klass->vtable._24_Clear.methodPtr);
   this = (MoveLabelTextControl_o *)v6->fields.table;
@@ -184,8 +184,8 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(MoveLabelTextControl_o *, __int64, __int64, Il2CppMethodPointer))this->klass[1].vtable._0_Equals.method)(
     this,
-    StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/,
-    StringLiteral_22630/*"onClickCheckListView"*/,
+    StringLiteral_22661/*"oncomplete"*/,
+    StringLiteral_22648/*"onMoveComplete"*/,
     this->klass[1].vtable._1_Finalize.methodPtr);
   v42 = v6->fields.table;
   this = (MoveLabelTextControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0LL);
@@ -193,7 +193,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v42->klass->vtable._23_Add.method)(
     v42,
-    StringLiteral_22645/*"onFetchStorePromotionVisibilityFailed"*/,
+    StringLiteral_22663/*"oncompletetarget"*/,
     this,
     v42->klass->vtable._24_Clear.methodPtr);
   this = (MoveLabelTextControl_o *)v6->fields.table;
@@ -201,8 +201,8 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(MoveLabelTextControl_o *, __int64, __int64, Il2CppMethodPointer))this->klass[1].vtable._0_Equals.method)(
     this,
-    StringLiteral_19049/*"easeInQuart"*/,
-    StringLiteral_21465/*"limitCountUpResultServantLimitCount"*/,
+    StringLiteral_19063/*"easetype"*/,
+    StringLiteral_21479/*"linear"*/,
     this->klass[1].vtable._1_Finalize.methodPtr);
   v43 = v6->fields.table;
   v58 = 1092616192;
@@ -211,7 +211,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
     goto LABEL_28;
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v43->klass->vtable._23_Add.method)(
     v43,
-    StringLiteral_24320/*"textarea"*/,
+    StringLiteral_24340/*"time"*/,
     this,
     v43->klass->vtable._24_Clear.methodPtr);
   v47 = v6->fields.table;
@@ -220,7 +220,7 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
   if ( !v47
     || (((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v47->klass->vtable._23_Add.method)(
           v47,
-          StringLiteral_18836/*"defaultPort"*/,
+          StringLiteral_18850/*"delay"*/,
           this,
           v47->klass->vtable._24_Clear.methodPtr),
         v51 = v6->fields.table,
@@ -229,15 +229,15 @@ void __fastcall MoveLabelTextControl__setMoveTextOver(
         !v51) )
   {
 LABEL_28:
-    sub_1C13F80(this, parent);
+    sub_1C1AE30(this, parent);
   }
   ((void (__fastcall *)(struct System_Collections_Hashtable_o *, __int64, MoveLabelTextControl_o *, Il2CppMethodPointer))v51->klass->vtable._23_Add.method)(
     v51,
-    StringLiteral_21563/*"login/top"*/,
+    StringLiteral_21577/*"looptype"*/,
     this,
     v51->klass->vtable._24_Clear.methodPtr);
   v55 = v6->fields.table;
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  iTween__MoveTo_61505532(v31, v55, 0LL);
+  iTween__MoveTo_61577956(v31, v55, 0LL);
 }

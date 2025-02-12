@@ -1,25 +1,32 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FieldAiActArgument___ctor(
         FieldAiActArgument_o *this,
         AiActEntity_o *aiActEnt,
         AiBaseEntity_o *aiEnt,
         BattleFieldData_o *fieldData,
         bool isForcedSpeedOne,
+        int32_t procState,
         const MethodInfo *method)
 {
-  FieldAiActArgument_o *v8; // x21
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  FieldAiActArgument_o *v9; // x21
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
 
-  v8 = this;
-  BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)fieldData);
-  v8->fields._FieldData_k__BackingField = fieldData;
-  v8 = (FieldAiActArgument_o *)((char *)v8 + 32);
-  sub_1C13CC8((PartyOrganizationUtility_o *)v8, (int64_t)fieldData, v9, v10, v11, v12, v13, v14);
-  LOBYTE(v8->monitor) = isForcedSpeedOne;
+  v9 = this;
+  BaseAiActArgument___ctor(
+    (BaseAiActArgument_o *)this,
+    aiActEnt,
+    aiEnt,
+    procState,
+    (const MethodInfo *)isForcedSpeedOne);
+  v9->fields._FieldData_k__BackingField = fieldData;
+  v9 = (FieldAiActArgument_o *)((char *)v9 + 40);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v9, (int64_t)fieldData, v10, v11, v12, v13, v14, v15);
+  LOBYTE(v9->monitor) = isForcedSpeedOne;
 }
 
 
@@ -40,11 +47,11 @@ void __fastcall FieldAiActArgument__InitCommonTask(
     || (task->fields.isForcedSpeedOne = this->fields._IsForcedSpeedOne_k__BackingField,
         (AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField) == 0LL) )
   {
-    sub_1C13F80(this, task);
+    sub_1C1AE30(this, task);
   }
   infoText = AiEnt_k__BackingField->fields.infoText;
   task->fields.motionMessage = infoText;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&task->fields.motionMessage,
     (int64_t)infoText,
     (int64_t)method,
@@ -74,7 +81,7 @@ int32_t __fastcall FieldAiActArgument__get_UniqueId(FieldAiActArgument_o *this, 
 
   FieldData_k__BackingField = this->fields._FieldData_k__BackingField;
   if ( !FieldData_k__BackingField )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   return FieldData_k__BackingField->fields.uniqueId;
 }
 
@@ -91,7 +98,7 @@ void __fastcall FieldAiActArgument__set_FieldData(
   PartyListViewItem_o *v7; // x7
 
   this->fields._FieldData_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._FieldData_k__BackingField,
     (int64_t)value,
     (int64_t)method,

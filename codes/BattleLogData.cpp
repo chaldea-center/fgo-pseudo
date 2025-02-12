@@ -24,31 +24,31 @@ void __fastcall BattleLogData___ctor(BattleLogData_o *this, const MethodInfo *me
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4BB6DF4 & 1) == 0 )
+  if ( (byte_4BCA1D6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, method);
-    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v3);
-    sub_1C13D24(&StringLiteral_1/*""*/, v4);
-    byte_4BB6DF4 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string___ctor__, method);
+    sub_1C1ABD4(&System_Collections_Generic_List_string__TypeInfo, v3);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
+    byte_4BCA1D6 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v5;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v12, v13, v14, v15, v16, v17, v18);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v19 = StringLiteral_1/*""*/;
   this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v19, v20, v21, v22, v23, v24, v25);
 }
 
 
-void __fastcall BattleLogData___ctor_44010432(BattleLogData_o *this, System_String_o *intag, const MethodInfo *method)
+void __fastcall BattleLogData___ctor_44069124(BattleLogData_o *this, System_String_o *intag, const MethodInfo *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -73,30 +73,30 @@ void __fastcall BattleLogData___ctor_44010432(BattleLogData_o *this, System_Stri
   FollowerInfo_o *v25; // x6
   PartyListViewItem_o *v26; // x7
 
-  if ( (byte_4BB6DF5 & 1) == 0 )
+  if ( (byte_4BCA1D7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, intag);
-    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_1/*""*/, v6);
-    byte_4BB6DF5 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string___ctor__, intag);
+    sub_1C1ABD4(&System_Collections_Generic_List_string__TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v6);
+    byte_4BCA1D7 = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v7;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   v14 = StringLiteral_1/*""*/;
   this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v14, v15, v16, v17, v18, v19, v20);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.tag = intag;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)intag, v21, v22, v23, v24, v25, v26);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)intag, v21, v22, v23, v24, v25, v26);
 }
 
 
-void __fastcall BattleLogData___ctor_44010644(
+void __fastcall BattleLogData___ctor_44069336(
         BattleLogData_o *this,
         System_String_o *intag,
         int32_t inmax,
@@ -125,26 +125,26 @@ void __fastcall BattleLogData___ctor_44010644(
   FollowerInfo_o *v27; // x6
   PartyListViewItem_o *v28; // x7
 
-  if ( (byte_4BB6DF6 & 1) == 0 )
+  if ( (byte_4BCA1D8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, intag);
-    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_1/*""*/, v8);
-    byte_4BB6DF6 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string___ctor__, intag);
+    sub_1C1ABD4(&System_Collections_Generic_List_string__TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
+    byte_4BCA1D8 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.list = (struct System_Collections_Generic_List_string__o *)v9;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v9, v10, v11, v12, v13, v14, v15);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v9, v10, v11, v12, v13, v14, v15);
   v16 = StringLiteral_1/*""*/;
   this->fields.tag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)v16, v17, v18, v19, v20, v21, v22);
   this->fields.max = 10;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.tag = intag;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)intag, v23, v24, v25, v26, v27, v28);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.tag, (int64_t)intag, v23, v24, v25, v26, v27, v28);
   this->fields.max = inmax;
 }
 
@@ -168,15 +168,15 @@ void __fastcall BattleLogData__addStr(BattleLogData_o *this, System_String_o *st
   int64_t v19; // x1
   Il2CppClass **v20; // x0
 
-  if ( (byte_4BB6DF7 & 1) == 0 )
+  if ( (byte_4BCA1D9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, str);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__RemoveAt__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v6);
-    byte_4BB6DF7 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__Add__, str);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__RemoveAt__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__get_Count__, v6);
+    byte_4BCA1D9 = 1;
   }
   list = (System_Collections_Generic_List_object__o *)this->fields.list;
-  v8 = (Il2CppObject *)System_String__Concat_62967944(this->fields.tag, str, 0LL);
+  v8 = (Il2CppObject *)System_String__Concat_63040368(this->fields.tag, str, 0LL);
   if ( !list )
     goto LABEL_12;
   items = list->fields._items;
@@ -191,24 +191,24 @@ void __fastcall BattleLogData__addStr(BattleLogData_o *this, System_String_o *st
     System_Collections_Generic_List_object___AddWithResize(
       list,
       v8,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v20 = &items->obj.klass + size;
     list->fields._size = size + 1;
     v20[4] = (Il2CppClass *)v19;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v20 + 4), v19, v10, v11, v12, v13, v14, v15);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v20 + 4), v19, v10, v11, v12, v13, v14, v15);
   }
   v8 = (Il2CppObject *)this->fields.list;
   if ( !v8 )
 LABEL_12:
-    sub_1C13F80(v8, v9);
+    sub_1C1AE30(v8, v9);
   if ( this->fields.max < SLODWORD(v8[1].monitor) )
     System_Collections_Generic_List_object___RemoveAt(
       (System_Collections_Generic_List_object__o *)v8,
       0,
-      (const MethodInfo_362E9A0 *)Method_System_Collections_Generic_List_string__RemoveAt__);
+      (const MethodInfo_363E064 *)Method_System_Collections_Generic_List_string__RemoveAt__);
 }
 
 
@@ -216,15 +216,15 @@ System_String_array *__fastcall BattleLogData__getStringList(BattleLogData_o *th
 {
   struct System_Collections_Generic_List_string__o *list; // x0
 
-  if ( (byte_4BB6DF8 & 1) == 0 )
+  if ( (byte_4BCA1DA & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__ToArray__, method);
-    byte_4BB6DF8 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__ToArray__, method);
+    byte_4BCA1DA = 1;
   }
   list = this->fields.list;
   if ( !list )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)list,
-                                  (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_string__ToArray__);
 }

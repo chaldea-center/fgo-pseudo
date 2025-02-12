@@ -1,14 +1,14 @@
 void __fastcall CompleteMissionMaster___ctor(CompleteMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB450C & 1) == 0 )
+  if ( (byte_4BC78DA & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
-    byte_4BB450C = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
+    byte_4BC78DA = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     145,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
 }
 
 
@@ -53,22 +53,22 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
   FollowerInfo_o *v39; // x6
   PartyListViewItem_o *v40; // x7
 
-  if ( (byte_4BB450D & 1) == 0 )
+  if ( (byte_4BC78DB & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v7);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4BB450D = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v7);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4BC78DB = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C13F80(0LL, entity);
+    sub_1C1AE30(0LL, entity);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v11);
+    sub_1C1AE30(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -88,7 +88,7 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -111,17 +111,17 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v20 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
+      v20 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
     }
     v21 = (CompleteMissionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
                                        Enumerator,
                                        *(_QWORD *)(v20 + 8));
     if ( !v21 )
-      sub_1C13F80(0LL, v22);
+      sub_1C1AE30(0LL, v22);
     if ( v21->fields.objectId == objectId )
     {
       *entity = v21;
-      sub_1C13CC8((PartyOrganizationUtility_o *)entity, (int64_t)v21, v23, v24, v25, v26, v27, v28);
+      sub_1C1AB78((PartyOrganizationUtility_o *)entity, (int64_t)v21, v23, v24, v25, v26, v27, v28);
       v29 = 1;
       v30 = 4;
       goto LABEL_22;
@@ -147,13 +147,13 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v34 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v34 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(Enumerator, *(_QWORD *)(v34 + 8));
   if ( v30 == 5 )
   {
     *entity = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)entity, 0LL, v35, v36, v37, v38, v39, v40);
+    sub_1C1AB78((PartyOrganizationUtility_o *)entity, 0LL, v35, v36, v37, v38, v39, v40);
     return 0;
   }
   return v29;

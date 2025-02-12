@@ -14,25 +14,25 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
   __int64 v5; // x1
   Il2CppObject *MasterData_object; // x19
 
-  if ( (byte_4BAF5D3 & 1) == 0 )
+  if ( (byte_4BC297C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_1C13D24(&NetworkManager_TypeInfo, v2);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BAF5D3 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v2);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4BC297C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v5);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
+    byte_4BC2585 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -42,7 +42,7 @@ UserPresentBoxEntity_array *__fastcall PresentBoxInfoComponent__GetPresentList(
   }
   if ( !MasterData_object )
 LABEL_12:
-    sub_1C13F80(Instance, v5);
+    sub_1C1AE30(Instance, v5);
   return UserPresentBoxMaster__getVaildList(
            (UserPresentBoxMaster_o *)MasterData_object,
            *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -73,12 +73,12 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
   int32_t v20; // w1
 
   v2 = this;
-  if ( (byte_4BAF5D2 & 1) == 0 )
+  if ( (byte_4BC297B & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    this = (PresentBoxInfoComponent_o *)sub_1C13D24(&StringLiteral_1/*""*/, v4);
-    byte_4BAF5D2 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    this = (PresentBoxInfoComponent_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
+    byte_4BC297B = 1;
   }
   PresentList = (SimpleAnimation_o *)PresentBoxInfoComponent__GetPresentList(this, method);
   if ( !PresentList )
@@ -118,7 +118,7 @@ void __fastcall PresentBoxInfoComponent__SetPresentBoxInfo(PresentBoxInfoCompone
       goto LABEL_17;
     }
 LABEL_50:
-    sub_1C13F88(PresentList, v6);
+    sub_1C1AE38(PresentList, v6);
   }
 LABEL_17:
   presentBoxSimpleAnimation = (UnityEngine_Object_o *)v2->fields.presentBoxSimpleAnimation;
@@ -138,7 +138,7 @@ LABEL_17:
       PresentList = v2->fields.presentBoxSimpleAnimation;
       if ( !PresentList )
         goto LABEL_49;
-      SimpleAnimation__Play_65106228(PresentList, v14, 0LL);
+      SimpleAnimation__Play_65178652(PresentList, v14, 0LL);
     }
   }
   else
@@ -161,7 +161,7 @@ LABEL_17:
         PresentList = (SimpleAnimation_o *)v2->fields.presentBoxAnimation;
         if ( !PresentList )
           goto LABEL_49;
-        UnityEngine_Animation__Play_70466396((UnityEngine_Animation_o *)PresentList, v14, 0LL);
+        UnityEngine_Animation__Play_70538820((UnityEngine_Animation_o *)PresentList, v14, 0LL);
       }
     }
   }
@@ -182,7 +182,7 @@ LABEL_17:
                                              0LL)) == 0LL )
   {
 LABEL_49:
-    sub_1C13F80(PresentList, v6);
+    sub_1C1AE30(PresentList, v6);
   }
   if ( !v10 || m_CancellationTokenSource >= 1 )
   {

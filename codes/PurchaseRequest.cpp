@@ -12,21 +12,21 @@ void __fastcall PurchaseRequest__beginRequest(
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x3
 
-  if ( (byte_4BB608D & 1) == 0 )
+  if ( (byte_4BC946F & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_22548/*"npNameFileSuffix"*/, *(_QWORD *)&id);
-    sub_1C13D24(&StringLiteral_20526/*"icon_stateup_off"*/, v9);
-    sub_1C13D24(&StringLiteral_17046/*"anim_commandfloat"*/, v10);
-    byte_4BB608D = 1;
+    sub_1C1ABD4(&StringLiteral_22566/*"num"*/, *(_QWORD *)&id);
+    sub_1C1ABD4(&StringLiteral_20540/*"id"*/, v9);
+    sub_1C1ABD4(&StringLiteral_17060/*"anotherPayFlag"*/, v10);
+    byte_4BC946F = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_20526/*"icon_stateup_off"*/,
+    (System_String_o *)StringLiteral_20540/*"id"*/,
     id,
     *(const MethodInfo **)&anotherPayFlag);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22548/*"npNameFileSuffix"*/, num, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22566/*"num"*/, num, v11);
   if ( anotherPayFlag >= 1 )
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17046/*"anim_commandfloat"*/, anotherPayFlag, v13);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17060/*"anotherPayFlag"*/, anotherPayFlag, v13);
   RequestBase__beginRequest((RequestBase_o *)this, v12);
 }
 
@@ -36,16 +36,16 @@ System_String_o *__fastcall PurchaseRequest__getURL(PurchaseRequest_o *this, con
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB608C & 1) == 0 )
+  if ( (byte_4BC946E & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_23653/*"shadow_"*/, v2);
-    byte_4BB608C = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_23673/*"shop/purchase"*/, v2);
+    byte_4BC946E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_23653/*"shadow_"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_23673/*"shop/purchase"*/, 0LL);
 }
 
 
@@ -63,18 +63,18 @@ void __fastcall PurchaseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BB608E & 1) == 0 )
+  if ( (byte_4BC9470 & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB608E = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC9470 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(9, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -93,7 +93,7 @@ void __fastcall PurchaseRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22421/*"newAttributes"*/,
+        StringLiteral_22437/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

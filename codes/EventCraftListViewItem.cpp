@@ -95,38 +95,38 @@ void __fastcall EventCraftListViewItem___ctor(
   Il2CppObject *v97; // [xsp+8h] [xbp-58h] BYREF
   UserItemEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4BB854B & 1) == 0 )
+  if ( (byte_4BCB93F & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonReleaseMaster___, v13);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventMaster___, v14);
-    sub_1C13D24(&Method_DataManager_GetMaster_UserItemMaster___, v15);
-    sub_1C13D24(&DataManager_TypeInfo, v16);
-    sub_1C13D24(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v17);
-    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v18);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___, v19);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___, v20);
-    sub_1C13D24(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v21);
-    sub_1C13D24(&System_Func_EventTradeInfo__bool__TypeInfo, v22);
-    sub_1C13D24(&NetworkManager_TypeInfo, v23);
-    sub_1C13D24(&Method_EventCraftListViewItem___c__DisplayClass35_0___ctor_b__0__, v24);
-    sub_1C13D24(&Method_EventCraftListViewItem___c__DisplayClass35_0___ctor_b__1__, v25);
-    sub_1C13D24(&EventCraftListViewItem___c__DisplayClass35_0_TypeInfo, v26);
-    byte_4BB854B = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v13);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventMaster___, v14);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserItemMaster___, v15);
+    sub_1C1ABD4(&DataManager_TypeInfo, v16);
+    sub_1C1ABD4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v17);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v18);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___, v19);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___, v20);
+    sub_1C1ABD4(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v21);
+    sub_1C1ABD4(&System_Func_EventTradeInfo__bool__TypeInfo, v22);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v23);
+    sub_1C1ABD4(&Method_EventCraftListViewItem___c__DisplayClass35_0___ctor_b__0__, v24);
+    sub_1C1ABD4(&Method_EventCraftListViewItem___c__DisplayClass35_0___ctor_b__1__, v25);
+    sub_1C1ABD4(&EventCraftListViewItem___c__DisplayClass35_0_TypeInfo, v26);
+    byte_4BCB93F = 1;
   }
   entity = 0LL;
   v97 = 0LL;
-  v27 = sub_1C13F70(EventCraftListViewItem___c__DisplayClass35_0_TypeInfo);
+  v27 = sub_1C1AE20(EventCraftListViewItem___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v27, 0LL);
   if ( !v27 )
     goto LABEL_47;
   *(_QWORD *)(v27 + 16) = tradeGoodsEntity;
   v36 = v27 + 16;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)tradeGoodsEntity, v30, v31, v32, v33, v34, v35);
-  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v27 + 16), (int64_t)tradeGoodsEntity, v30, v31, v32, v33, v34, v35);
+  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
   v37 = *(struct EventTradeGoodsEntity_o **)(v27 + 16);
   this->fields._TradeGoodsEntity_k__BackingField = v37;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._TradeGoodsEntity_k__BackingField,
     (int64_t)v37,
     v38,
@@ -136,7 +136,7 @@ void __fastcall EventCraftListViewItem___ctor(
     v42,
     v43);
   this->fields._SupportTool_k__BackingField = supportItem;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._SupportTool_k__BackingField,
     (int64_t)supportItem,
     v44,
@@ -147,7 +147,7 @@ void __fastcall EventCraftListViewItem___ctor(
     v49);
   this->fields._EventId_k__BackingField = eventId;
   this->fields._UpdateReceiveAllButtonState_k__BackingField = updateReceiveAllButton;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._UpdateReceiveAllButtonState_k__BackingField,
     (int64_t)updateReceiveAllButton,
     v50,
@@ -161,23 +161,23 @@ void __fastcall EventCraftListViewItem___ctor(
   if ( UserTradeEntity_k__BackingField
     && (tradeList = (System_Collections_Generic_IEnumerable_TSource__o *)UserTradeEntity_k__BackingField->fields.tradeList) != 0LL )
   {
-    v65 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EventTradeInfo__bool__TypeInfo);
+    v65 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventTradeInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v65,
       (Il2CppObject *)v27,
       Method_EventCraftListViewItem___c__DisplayClass35_0___ctor_b__0__,
       0LL);
-    v66 = System_Linq_Enumerable__FirstOrDefault_object__50015312(
+    v66 = System_Linq_Enumerable__FirstOrDefault_object__50081164(
             tradeList,
             (System_Func_TSource__bool__o *)v65,
-            (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
+            (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
   }
   else
   {
     v66 = 0LL;
   }
   this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v66;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._TradeInfo_k__BackingField,
     (int64_t)v66,
     v57,
@@ -189,7 +189,7 @@ void __fastcall EventCraftListViewItem___ctor(
   v73 = this->fields._UserTradeEntity_k__BackingField;
   if ( v73 && (pickupList = (System_Collections_Generic_IEnumerable_TSource__o *)v73->fields.pickupList) != 0LL )
   {
-    v75 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EventCraftPickupInfo__bool__TypeInfo);
+    v75 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v75,
       (Il2CppObject *)v27,
@@ -198,17 +198,17 @@ void __fastcall EventCraftListViewItem___ctor(
     v76 = System_Linq_Enumerable__Where_object_(
             pickupList,
             (System_Func_TSource__bool__o *)v75,
-            (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___);
+            (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___);
     v77 = (struct System_Collections_Generic_List_EventCraftPickupInfo__o *)System_Linq_Enumerable__ToList_object_(
                                                                               v76,
-                                                                              (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___);
+                                                                              (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___);
   }
   else
   {
     v77 = 0LL;
   }
   this->fields._PickupInfoList_k__BackingField = v77;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._PickupInfoList_k__BackingField,
     (int64_t)v77,
     v67,
@@ -219,13 +219,13 @@ void __fastcall EventCraftListViewItem___ctor(
     v72);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v29);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v29);
+    byte_4BC2585 = 1;
   }
   v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   if ( NetworkManager_TypeInfo->_2.cctor_finished )
@@ -269,23 +269,23 @@ LABEL_24:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventMaster___);
+    v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventMaster___);
     if ( !v28 )
       goto LABEL_47;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            v28,
            &v97,
            this->fields._EventId_k__BackingField,
-           (const MethodInfo_3238670 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+           (const MethodInfo_32486C4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     {
       v88 = v97;
       this->fields.eventEntity = (struct EventEntity_o *)v97;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)v88, v82, v83, v84, v85, v86, v87);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)v88, v82, v83, v84, v85, v86, v87);
     }
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !*(_QWORD *)v36 )
     goto LABEL_47;
   if ( !v28 )
@@ -295,7 +295,7 @@ LABEL_24:
                        *(_DWORD *)(*(_QWORD *)v36 + 48LL),
                        0LL);
   this->fields._CommonConsumeEntityArray_k__BackingField = SortedEntityList;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._CommonConsumeEntityArray_k__BackingField,
     (int64_t)SortedEntityList,
     v90,
@@ -313,10 +313,10 @@ LABEL_24:
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !*(_QWORD *)v36 || !v28 )
 LABEL_47:
-    sub_1C13F80(v28, v29);
+    sub_1C1AE30(v28, v29);
   IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)v28, *(_DWORD *)(*(_QWORD *)v36 + 76LL), 0LL, 0, 0LL);
 LABEL_46:
   this->fields._IsRelease_k__BackingField = IsOpen;
@@ -343,14 +343,14 @@ bool __fastcall EventCraftListViewItem__IsUsedSupportTool(EventCraftListViewItem
   System_Collections_Generic_IEnumerable_TResult__o *v19; // x0
   int64_t v20; // x19
 
-  if ( (byte_4BB8552 & 1) == 0 )
+  if ( (byte_4BCB946 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, method);
-    sub_1C13D24(&System_Func_EventCraftPickupInfo__long__TypeInfo, v3);
-    sub_1C13D24(&NetworkManager_TypeInfo, v4);
-    sub_1C13D24(&Method_EventCraftListViewItem___c__IsUsedSupportTool_b__58_0__, v5);
-    sub_1C13D24(&EventCraftListViewItem___c_TypeInfo, v6);
-    byte_4BB8552 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, method);
+    sub_1C1ABD4(&System_Func_EventCraftPickupInfo__long__TypeInfo, v3);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_EventCraftListViewItem___c__IsUsedSupportTool_b__58_0__, v5);
+    sub_1C1ABD4(&EventCraftListViewItem___c_TypeInfo, v6);
+    byte_4BCB946 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields._PickupInfoList_k__BackingField, 0LL) )
     return 0;
@@ -370,11 +370,11 @@ bool __fastcall EventCraftListViewItem__IsUsedSupportTool(EventCraftListViewItem
       v9 = EventCraftListViewItem___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__58_0 = (System_Func_T__TResult__o *)sub_1C13F70(System_Func_EventCraftPickupInfo__long__TypeInfo);
+    _9__58_0 = (System_Func_T__TResult__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__long__TypeInfo);
     System_Func_object__long____ctor(_9__58_0, v11, Method_EventCraftListViewItem___c__IsUsedSupportTool_b__58_0__, 0LL);
     static_fields = EventCraftListViewItem___c_TypeInfo->static_fields;
     static_fields->__9__58_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__58_0;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&static_fields->__9__58_0,
       (int64_t)_9__58_0,
       v13,
@@ -387,8 +387,8 @@ bool __fastcall EventCraftListViewItem__IsUsedSupportTool(EventCraftListViewItem
   v19 = System_Linq_Enumerable__Select_object__long_(
           (System_Collections_Generic_IEnumerable_TSource__o *)PickupInfoList_k__BackingField,
           (System_Func_TSource__TResult__o *)_9__58_0,
-          (const MethodInfo_2FC0814 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-  v20 = System_Linq_Enumerable__Max_65191620((System_Collections_Generic_IEnumerable_long__o *)v19, 0LL);
+          (const MethodInfo_2FD0950 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+  v20 = System_Linq_Enumerable__Max_65264044((System_Collections_Generic_IEnumerable_long__o *)v19, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   return v20 >= NetworkManager__getTime(0LL);
@@ -414,7 +414,7 @@ bool __fastcall EventCraftListViewItem__SetSortValue(
   TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !TradeGoodsEntity_k__BackingField )
-    sub_1C13F80(this, sort);
+    sub_1C1AE30(this, sort);
   TradeInfo_k__BackingField = this->fields._TradeInfo_k__BackingField;
   this->fields.sortValue1 = TradeGoodsEntity_k__BackingField->fields.id;
   if ( TradeInfo_k__BackingField )
@@ -500,25 +500,25 @@ void __fastcall EventCraftListViewItem__UpdateCraftUserInfo(EventCraftListViewIt
   struct System_Collections_Generic_List_EventCraftPickupInfo__o *v34; // x1
   UserEventTradeEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB854C & 1) == 0 )
+  if ( (byte_4BCB940 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_UserEventTradeMaster___, method);
-    sub_1C13D24(&DataManager_TypeInfo, v3);
-    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v4);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___, v5);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___, v6);
-    sub_1C13D24(&Method_EventCraftListViewItem__UpdateCraftUserInfo_b__36_0__, v7);
-    sub_1C13D24(&Method_EventCraftListViewItem__UpdateCraftUserInfo_b__36_1__, v8);
-    sub_1C13D24(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v9);
-    sub_1C13D24(&System_Func_EventTradeInfo__bool__TypeInfo, v10);
-    byte_4BB854C = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserEventTradeMaster___, method);
+    sub_1C1ABD4(&DataManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___, v4);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___, v5);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___, v6);
+    sub_1C1ABD4(&Method_EventCraftListViewItem__UpdateCraftUserInfo_b__36_0__, v7);
+    sub_1C1ABD4(&Method_EventCraftListViewItem__UpdateCraftUserInfo_b__36_1__, v8);
+    sub_1C1ABD4(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v9);
+    sub_1C1ABD4(&System_Func_EventTradeInfo__bool__TypeInfo, v10);
+    byte_4BCB940 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !Master_object )
-    sub_1C13F80(0LL, v12);
+    sub_1C1AE30(0LL, v12);
   if ( UserEventTradeMaster__TryGetEntity(
          (UserEventTradeMaster_o *)Master_object,
          &entity,
@@ -527,7 +527,7 @@ void __fastcall EventCraftListViewItem__UpdateCraftUserInfo(EventCraftListViewIt
   {
     v19 = entity;
     this->fields._UserTradeEntity_k__BackingField = entity;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields._UserTradeEntity_k__BackingField,
       (int64_t)v19,
       v13,
@@ -541,23 +541,23 @@ void __fastcall EventCraftListViewItem__UpdateCraftUserInfo(EventCraftListViewIt
   if ( UserTradeEntity_k__BackingField
     && (tradeList = (System_Collections_Generic_IEnumerable_TSource__o *)UserTradeEntity_k__BackingField->fields.tradeList) != 0LL )
   {
-    v22 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EventTradeInfo__bool__TypeInfo);
+    v22 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventTradeInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v22,
       (Il2CppObject *)this,
       Method_EventCraftListViewItem__UpdateCraftUserInfo_b__36_0__,
       0LL);
-    v23 = System_Linq_Enumerable__FirstOrDefault_object__50015312(
+    v23 = System_Linq_Enumerable__FirstOrDefault_object__50081164(
             tradeList,
             (System_Func_TSource__bool__o *)v22,
-            (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
+            (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeInfo___);
   }
   else
   {
     v23 = 0LL;
   }
   this->fields._TradeInfo_k__BackingField = (struct EventTradeInfo_o *)v23;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._TradeInfo_k__BackingField,
     (int64_t)v23,
     v13,
@@ -569,7 +569,7 @@ void __fastcall EventCraftListViewItem__UpdateCraftUserInfo(EventCraftListViewIt
   v30 = this->fields._UserTradeEntity_k__BackingField;
   if ( v30 && (pickupList = (System_Collections_Generic_IEnumerable_TSource__o *)v30->fields.pickupList) != 0LL )
   {
-    v32 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EventCraftPickupInfo__bool__TypeInfo);
+    v32 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v32,
       (Il2CppObject *)this,
@@ -578,17 +578,17 @@ void __fastcall EventCraftListViewItem__UpdateCraftUserInfo(EventCraftListViewIt
     v33 = System_Linq_Enumerable__Where_object_(
             pickupList,
             (System_Func_TSource__bool__o *)v32,
-            (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___);
+            (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_EventCraftPickupInfo___);
     v34 = (struct System_Collections_Generic_List_EventCraftPickupInfo__o *)System_Linq_Enumerable__ToList_object_(
                                                                               v33,
-                                                                              (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___);
+                                                                              (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_EventCraftPickupInfo___);
   }
   else
   {
     v34 = 0LL;
   }
   this->fields._PickupInfoList_k__BackingField = v34;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._PickupInfoList_k__BackingField,
     (int64_t)v34,
     v24,
@@ -617,7 +617,7 @@ bool __fastcall EventCraftListViewItem___UpdateCraftUserInfo_b__36_0(
   struct EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x8
 
   if ( !info || (TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField) == 0LL )
-    sub_1C13F80(this, info);
+    sub_1C1AE30(this, info);
   return info->fields.tradeGoodsId == TradeGoodsEntity_k__BackingField->fields.id;
 }
 
@@ -630,7 +630,7 @@ bool __fastcall EventCraftListViewItem___UpdateCraftUserInfo_b__36_1(
   struct EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x8
 
   if ( !info || (TradeGoodsEntity_k__BackingField = this->fields._TradeGoodsEntity_k__BackingField) == 0LL )
-    sub_1C13F80(this, info);
+    sub_1C1AE30(this, info);
   return info->fields.tradeGoodsId == TradeGoodsEntity_k__BackingField->fields.id;
 }
 
@@ -681,13 +681,13 @@ bool __fastcall EventCraftListViewItem__get_IsBuyAble(EventCraftListViewItem_o *
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BB854F & 1) == 0 )
+  if ( (byte_4BCB943 & 1) == 0 )
   {
-    sub_1C13D24(&Method_BasicHelper_Any_CommonConsumeEntity___, method);
-    sub_1C13D24(&System_Func_CommonConsumeEntity__bool__TypeInfo, v3);
-    sub_1C13D24(&Method_EventCraftListViewItem___c__get_IsBuyAble_b__45_0__, v4);
-    sub_1C13D24(&EventCraftListViewItem___c_TypeInfo, v5);
-    byte_4BB854F = 1;
+    sub_1C1ABD4(&Method_BasicHelper_Any_CommonConsumeEntity___, method);
+    sub_1C1ABD4(&System_Func_CommonConsumeEntity__bool__TypeInfo, v3);
+    sub_1C1ABD4(&Method_EventCraftListViewItem___c__get_IsBuyAble_b__45_0__, v4);
+    sub_1C1ABD4(&EventCraftListViewItem___c_TypeInfo, v5);
+    byte_4BCB943 = 1;
   }
   if ( BasicHelper__IsNullOrEmpty(
          (System_Collections_ICollection_o *)this->fields._CommonConsumeEntityArray_k__BackingField,
@@ -713,11 +713,11 @@ bool __fastcall EventCraftListViewItem__get_IsBuyAble(EventCraftListViewItem_o *
         v8 = EventCraftListViewItem___c_TypeInfo;
       }
       v10 = (Il2CppObject *)v8->static_fields->__9;
-      _9__45_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_CommonConsumeEntity__bool__TypeInfo);
+      _9__45_0 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_CommonConsumeEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__45_0, v10, Method_EventCraftListViewItem___c__get_IsBuyAble_b__45_0__, 0LL);
       static_fields = EventCraftListViewItem___c_TypeInfo->static_fields;
       static_fields->__9__45_0 = (struct System_Func_CommonConsumeEntity__bool__o *)_9__45_0;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&static_fields->__9__45_0,
         (int64_t)_9__45_0,
         v12,
@@ -727,10 +727,10 @@ bool __fastcall EventCraftListViewItem__get_IsBuyAble(EventCraftListViewItem_o *
         v16,
         v17);
     }
-    return !BasicHelper__Any_object__49783940(
+    return !BasicHelper__Any_object__49849512(
               (System_Object_array *)CommonConsumeEntityArray_k__BackingField,
               (System_Func_T__bool__o *)_9__45_0,
-              (const MethodInfo_2F7A484 *)Method_BasicHelper_Any_CommonConsumeEntity___);
+              (const MethodInfo_2F8A4A8 *)Method_BasicHelper_Any_CommonConsumeEntity___);
   }
 }
 
@@ -741,17 +741,17 @@ bool __fastcall EventCraftListViewItem__get_IsEventEnd(EventCraftListViewItem_o 
   __int64 v4; // x1
   struct EventEntity_o *eventEntity; // x8
 
-  if ( (byte_4BB854D & 1) == 0 )
+  if ( (byte_4BCB941 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BB854D = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BCB941 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   eventEntity = this->fields.eventEntity;
   if ( !eventEntity )
-    sub_1C13F80(Time, v4);
+    sub_1C1AE30(Time, v4);
   return Time >= eventEntity->fields.endedAt;
 }
 
@@ -766,10 +766,10 @@ bool __fastcall EventCraftListViewItem__get_IsRefillable(EventCraftListViewItem_
   EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x20
   int32_t v9; // w19
 
-  if ( (byte_4BB8551 & 1) == 0 )
+  if ( (byte_4BCB945 & 1) == 0 )
   {
-    sub_1C13D24(&EventCraftTimeCalculation_TypeInfo, method);
-    byte_4BB8551 = 1;
+    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, method);
+    byte_4BCB945 = 1;
   }
   TradeInfo_k__BackingField = this->fields._TradeInfo_k__BackingField;
   if ( !TradeInfo_k__BackingField
@@ -828,11 +828,11 @@ int32_t __fastcall EventCraftListViewItem__get_NowCompleteNum(EventCraftListView
   __int64 v3; // x1
   int64_t Time; // x20
 
-  if ( (byte_4BB8550 & 1) == 0 )
+  if ( (byte_4BCB944 & 1) == 0 )
   {
-    sub_1C13D24(&EventCraftTimeCalculation_TypeInfo, method);
-    sub_1C13D24(&NetworkManager_TypeInfo, v3);
-    byte_4BB8550 = 1;
+    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, method);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v3);
+    byte_4BCB944 = 1;
   }
   if ( !this->fields._TradeInfo_k__BackingField )
     return 0;
@@ -860,7 +860,7 @@ int32_t __fastcall EventCraftListViewItem__get_NowTradeNum(EventCraftListViewIte
   NowCompleteNum = EventCraftListViewItem__get_NowCompleteNum(this, method);
   v7 = this->fields._TradeInfo_k__BackingField;
   if ( !v7 )
-    sub_1C13F80(NowCompleteNum, v6);
+    sub_1C1AE30(NowCompleteNum, v6);
   return tradeNum - NowCompleteNum + v7->fields.getNum;
 }
 
@@ -902,21 +902,21 @@ System_String_o *__fastcall EventCraftListViewItem__get_RestTimeEventAt(
   System_String_o *v19; // x0
   int v21; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB854E & 1) == 0 )
+  if ( (byte_4BCB942 & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, method);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v3);
-    sub_1C13D24(&NetworkManager_TypeInfo, v4);
-    sub_1C13D24(&StringLiteral_13543/*"TIMEOUT_REACHED"*/, v5);
-    sub_1C13D24(&StringLiteral_13632/*"TRADE_EVENT_POINT_NEXT_REWARD"*/, v6);
-    byte_4BB854E = 1;
+    sub_1C1ABD4(&int_TypeInfo, method);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v3);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
+    sub_1C1ABD4(&StringLiteral_13555/*"TIME_REST2_MINUTES"*/, v5);
+    sub_1C1ABD4(&StringLiteral_13644/*"TRADE_EVENT_REST_TIME_LABEL"*/, v6);
+    byte_4BCB942 = 1;
   }
   IsEventEnd = EventCraftListViewItem__get_IsEventEnd(this, method);
   if ( IsEventEnd )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_13543/*"TIMEOUT_REACHED"*/, 0LL);
+    v9 = LocalizationManager__Get((System_String_o *)StringLiteral_13555/*"TIME_REST2_MINUTES"*/, 0LL);
     v21 = 0;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v10, v11, v12);
     RestTime2 = System_String__Format(v9, v13, 0LL);
@@ -925,7 +925,7 @@ System_String_o *__fastcall EventCraftListViewItem__get_RestTimeEventAt(
   {
     eventEntity = this->fields.eventEntity;
     if ( !eventEntity )
-      sub_1C13F80(IsEventEnd, v8);
+      sub_1C1AE30(IsEventEnd, v8);
     endedAt = eventEntity->fields.endedAt;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -937,7 +937,7 @@ System_String_o *__fastcall EventCraftListViewItem__get_RestTimeEventAt(
   v18 = (Il2CppObject *)RestTime2;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_13632/*"TRADE_EVENT_POINT_NEXT_REWARD"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_13644/*"TRADE_EVENT_REST_TIME_LABEL"*/, 0LL);
   return System_String__Format(v19, v18, 0LL);
 }
 
@@ -994,7 +994,7 @@ void __fastcall EventCraftListViewItem__set_PickupInfoList(
   PartyListViewItem_o *v7; // x7
 
   this->fields._PickupInfoList_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._PickupInfoList_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1027,7 +1027,7 @@ void __fastcall EventCraftListViewItem__set_TradeInfo(
   PartyListViewItem_o *v7; // x7
 
   this->fields._TradeInfo_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._TradeInfo_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1051,7 +1051,7 @@ void __fastcall EventCraftListViewItem__set_UserTradeEntity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._UserTradeEntity_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._UserTradeEntity_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1074,15 +1074,15 @@ void __fastcall EventCraftListViewItem___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB8553 & 1) == 0 )
+  if ( (byte_4BCB947 & 1) == 0 )
   {
-    sub_1C13D24(&EventCraftListViewItem___c_TypeInfo, v1);
-    byte_4BB8553 = 1;
+    sub_1C1ABD4(&EventCraftListViewItem___c_TypeInfo, v1);
+    byte_4BCB947 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(EventCraftListViewItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(EventCraftListViewItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventCraftListViewItem___c_TypeInfo->static_fields->__9 = (struct EventCraftListViewItem___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)EventCraftListViewItem___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1106,7 +1106,7 @@ int64_t __fastcall EventCraftListViewItem___c___IsUsedSupportTool_b__58_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return x->fields.endedAt;
 }
 
@@ -1117,7 +1117,7 @@ bool __fastcall EventCraftListViewItem___c___get_IsBuyAble_b__45_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return CommonConsumeEntity__GetUserBuyableNum(x, 0LL) < 1;
 }
 
@@ -1138,7 +1138,7 @@ bool __fastcall EventCraftListViewItem___c__DisplayClass35_0____ctor_b__0(
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
 
   if ( !info || (tradeGoodsEntity = this->fields.tradeGoodsEntity) == 0LL )
-    sub_1C13F80(this, info);
+    sub_1C1AE30(this, info);
   return info->fields.tradeGoodsId == tradeGoodsEntity->fields.id;
 }
 
@@ -1151,6 +1151,6 @@ bool __fastcall EventCraftListViewItem___c__DisplayClass35_0____ctor_b__1(
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
 
   if ( !info || (tradeGoodsEntity = this->fields.tradeGoodsEntity) == 0LL )
-    sub_1C13F80(this, info);
+    sub_1C1AE30(this, info);
   return info->fields.tradeGoodsId == tradeGoodsEntity->fields.id;
 }

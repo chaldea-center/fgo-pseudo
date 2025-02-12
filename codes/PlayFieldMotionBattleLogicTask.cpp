@@ -19,6 +19,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
   *(_DWORD *)&v5[-1].fields.isCanCounterTask = 44;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v5, (int64_t)motionName, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v5, (int64_t)motionName, v7, v8, v9, v10, v11, v12);
   LOBYTE(v5->fields.command) = v6;
 }

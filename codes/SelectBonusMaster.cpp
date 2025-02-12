@@ -1,14 +1,14 @@
 void __fastcall SelectBonusMaster___ctor(SelectBonusMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4D49 & 1) == 0 )
+  if ( (byte_4BC8122 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__, method);
-    byte_4BB4D49 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__, method);
+    byte_4BC8122 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     523,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ SelectBonusEntity_o *__fastcall SelectBonusMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB4D4A & 1) == 0 )
+  if ( (byte_4BC8123 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__, *(_QWORD *)&eventId);
-    byte_4BB4D4A = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__, *(_QWORD *)&eventId);
+    byte_4BC8123 = 1;
   }
   PK = (Il2CppObject *)SelectBonusEntity__CreatePK(eventId, idx, 0LL);
   return (SelectBonusEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_323D0DC *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
+                                  (const MethodInfo_324D130 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__GetEntity__);
 }
 
 
@@ -52,25 +52,25 @@ System_Collections_Generic_List_SelectBonusEntity__o *__fastcall SelectBonusMast
   System_Func_object__bool__o *v14; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
 
-  if ( (byte_4BB4D48 & 1) == 0 )
+  if ( (byte_4BC8121 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_OfType_SelectBonusEntity___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_SelectBonusEntity___, v5);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_SelectBonusEntity___, v6);
-    sub_1C13D24(&System_Func_SelectBonusEntity__bool__TypeInfo, v7);
-    sub_1C13D24(&Method_SelectBonusMaster___c__DisplayClass0_0__GetSelectBonusEntitiesByEventId_b__0__, v8);
-    sub_1C13D24(&SelectBonusMaster___c__DisplayClass0_0_TypeInfo, v9);
-    byte_4BB4D48 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_OfType_SelectBonusEntity___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_SelectBonusEntity___, v5);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_SelectBonusEntity___, v6);
+    sub_1C1ABD4(&System_Func_SelectBonusEntity__bool__TypeInfo, v7);
+    sub_1C1ABD4(&Method_SelectBonusMaster___c__DisplayClass0_0__GetSelectBonusEntitiesByEventId_b__0__, v8);
+    sub_1C1ABD4(&SelectBonusMaster___c__DisplayClass0_0_TypeInfo, v9);
+    byte_4BC8121 = 1;
   }
-  v10 = sub_1C13F70(SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
+  v10 = sub_1C1AE20(SelectBonusMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1C13F80(v11, v12);
+    sub_1C1AE30(v11, v12);
   *(_DWORD *)(v10 + 16) = eventId;
   v13 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_2FB7F8C *)Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
-  v14 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_SelectBonusEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2FC80C8 *)Method_System_Linq_Enumerable_OfType_SelectBonusEntity___);
+  v14 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_SelectBonusEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v10,
@@ -79,10 +79,10 @@ System_Collections_Generic_List_SelectBonusEntity__o *__fastcall SelectBonusMast
   v15 = System_Linq_Enumerable__Where_object_(
           v13,
           (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
+          (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_SelectBonusEntity___);
   return (System_Collections_Generic_List_SelectBonusEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                    v15,
-                                                                   (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
+                                                                   (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_SelectBonusEntity___);
 }
 
 
@@ -95,17 +95,17 @@ bool __fastcall SelectBonusMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB4D4B & 1) == 0 )
+  if ( (byte_4BC8124 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__, entity);
-    byte_4BB4D4B = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__, entity);
+    byte_4BC8124 = 1;
   }
   PK = (Il2CppObject *)SelectBonusEntity__CreatePK(eventId, idx, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_SelectBonusMaster__SelectBonusEntity__string__TryGetEntity__);
 }
 
 
@@ -123,6 +123,6 @@ bool __fastcall SelectBonusMaster___c__DisplayClass0_0___GetSelectBonusEntitiesB
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return e->fields.eventId == this->fields.eventId;
 }

@@ -16,22 +16,22 @@ void __fastcall CommandCardExceedRequest__beginRequest(
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x1
 
-  if ( (byte_4BB5FAB & 1) == 0 )
+  if ( (byte_4BC938D & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_24851/*"userPresentHistory"*/, userId);
-    sub_1C13D24(&StringLiteral_19599/*"event_vs_back"*/, v12);
-    sub_1C13D24(&StringLiteral_24753/*"urlLink"*/, v13);
-    sub_1C13D24(&StringLiteral_20541/*"id attribute is required"*/, v14);
-    byte_4BB5FAB = 1;
+    sub_1C1ABD4(&StringLiteral_24873/*"userSvtId"*/, userId);
+    sub_1C1ABD4(&StringLiteral_19613/*"exceedCount"*/, v12);
+    sub_1C1ABD4(&StringLiteral_24773/*"useItemId"*/, v13);
+    sub_1C1ABD4(&StringLiteral_20555/*"idx"*/, v14);
+    byte_4BC938D = 1;
   }
-  RequestBase__addField_42309896(
+  RequestBase__addField_42368496(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24851/*"userPresentHistory"*/,
+    (System_String_o *)StringLiteral_24873/*"userSvtId"*/,
     userServantId,
     *(const MethodInfo **)&index);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20541/*"id attribute is required"*/, index, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24753/*"urlLink"*/, useItemId, v16);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19599/*"event_vs_back"*/, exceedCount, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20555/*"idx"*/, index, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24773/*"useItemId"*/, useItemId, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19613/*"exceedCount"*/, exceedCount, v17);
   RequestBase__beginRequest((RequestBase_o *)this, v18);
 }
 
@@ -43,16 +43,16 @@ System_String_o *__fastcall CommandCardExceedRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB5FAA & 1) == 0 )
+  if ( (byte_4BC938C & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_18026/*"capacity must be more than 0"*/, v2);
-    byte_4BB5FAA = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_18040/*"card/commandCardExceed"*/, v2);
+    byte_4BC938C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_18026/*"capacity must be more than 0"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18040/*"card/commandCardExceed"*/, 0LL);
 }
 
 
@@ -70,17 +70,17 @@ void __fastcall CommandCardExceedRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BB5FAC & 1) == 0 )
+  if ( (byte_4BC938E & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB5FAC = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC938E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(84, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -99,7 +99,7 @@ void __fastcall CommandCardExceedRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22421/*"newAttributes"*/,
+        StringLiteral_22437/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

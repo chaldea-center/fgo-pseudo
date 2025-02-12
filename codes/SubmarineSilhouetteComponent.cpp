@@ -18,11 +18,11 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB1223 & 1) == 0 )
+  if ( (byte_4BC45DD & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1223 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC45DD = 1;
   }
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -31,9 +31,9 @@ SimpleAnimation_o *__fastcall SubmarineSilhouetteComponent__get_AnimationCompone
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
     this->fields.mAnimation = (struct SimpleAnimation_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.mAnimation,
       (int64_t)Component_object,
       v6,

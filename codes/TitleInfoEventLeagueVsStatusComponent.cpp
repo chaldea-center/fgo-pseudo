@@ -3,10 +3,10 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent___cctor(const MethodInfo *
   __int64 v1; // x1
   struct TitleInfoEventLeagueVsStatusComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4BB29C0 & 1) == 0 )
+  if ( (byte_4BC5D7E & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, v1);
-    byte_4BB29C0 = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, v1);
+    byte_4BC5D7E = 1;
   }
   static_fields = TitleInfoEventLeagueVsStatusComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->FRAME_ANIM_OUT_POS_DELTA.fields.x = 3263954944LL;
@@ -30,13 +30,13 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__AnimFrameOutEnd(
   const MethodInfo *v2; // x2
   System_String_o *v4; // x1
 
-  if ( (byte_4BB29BC & 1) == 0 )
+  if ( (byte_4BC5D7A & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_18280/*"classBoardBaseId"*/, method);
-    byte_4BB29BC = 1;
+    sub_1C1ABD4(&StringLiteral_18294/*"clearAnimFinised"*/, method);
+    byte_4BC5D7A = 1;
   }
   if ( this->fields.clearAnimCallBack )
-    v4 = (System_String_o *)StringLiteral_18280/*"classBoardBaseId"*/;
+    v4 = (System_String_o *)StringLiteral_18294/*"clearAnimFinised"*/;
   else
     v4 = 0LL;
   TitleInfoEventLeagueVsStatusComponent__FrameIn(this, v4, v2);
@@ -81,11 +81,11 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FadeOut(
   TitleInfoEventLeagueVsStatusComponent_c *v6; // x8
   UnityEngine_GameObject_o *v7; // x19
 
-  if ( (byte_4BB29BF & 1) == 0 )
+  if ( (byte_4BC5D7D & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, method);
-    sub_1C13D24(&Method_UITweener_Begin_TweenAlpha___, v3);
-    byte_4BB29BF = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, method);
+    sub_1C1ABD4(&Method_UITweener_Begin_TweenAlpha___, v3);
+    byte_4BC5D7D = 1;
   }
   Root = (UnityEngine_Component_o *)this->fields.Root;
   if ( !Root )
@@ -101,10 +101,10 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FadeOut(
   Root = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                       v7,
                                       v6->static_fields->FRAME_ANIM_DURATION,
-                                      (const MethodInfo_3043CC0 *)Method_UITweener_Begin_TweenAlpha___);
+                                      (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !Root )
 LABEL_8:
-    sub_1C13F80(Root, method);
+    sub_1C1AE30(Root, method);
   LODWORD(Root[1].monitor) = 2;
   Root[5].monitor = (void *)1065353216;
 }
@@ -141,12 +141,12 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameIn(
   UnityEngine_GameObject_o *v28; // x0
   __int64 v29; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4BB29BD & 1) == 0 )
+  if ( (byte_4BC5D7B & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, callFinished);
-    sub_1C13D24(&Method_UITweener_Begin_TweenAlpha___, v5);
-    sub_1C13D24(&Method_UITweener_Begin_TweenPosition___, v6);
-    byte_4BB29BD = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, callFinished);
+    sub_1C1ABD4(&Method_UITweener_Begin_TweenAlpha___, v5);
+    sub_1C1ABD4(&Method_UITweener_Begin_TweenPosition___, v6);
+    byte_4BC5D7B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v8 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
@@ -159,7 +159,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameIn(
   Root = (char *)UITweener__Begin_object_(
                    v9,
                    v8->static_fields->FRAME_ANIM_DURATION,
-                   (const MethodInfo_3043CC0 *)Method_UITweener_Begin_TweenPosition___);
+                   (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenPosition___);
   v29 = *(_QWORD *)&this->fields.outPos.fields.x;
   if ( !Root )
     goto LABEL_9;
@@ -173,19 +173,19 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameIn(
   *(_QWORD *)(Root + 140) = v14;
   v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *((_QWORD *)v12 + 10) = v15;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
   *((_QWORD *)v12 + 11) = callFinished;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
   Root = (char *)this->fields.Root;
   if ( !Root
     || (v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Root, 0LL),
         (Root = (char *)UITweener__Begin_object_(
                           v28,
                           TitleInfoEventLeagueVsStatusComponent_TypeInfo->static_fields->FRAME_ANIM_DURATION,
-                          (const MethodInfo_3043CC0 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
+                          (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
   {
 LABEL_9:
-    sub_1C13F80(Root, v11);
+    sub_1C1AE30(Root, v11);
   }
   *((_QWORD *)Root + 16) = 0x3F80000000000000LL;
   *((_DWORD *)Root + 8) = 6;
@@ -223,12 +223,12 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameOut(
   UnityEngine_GameObject_o *v28; // x0
   __int64 v29; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4BB29BE & 1) == 0 )
+  if ( (byte_4BC5D7C & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, callFinished);
-    sub_1C13D24(&Method_UITweener_Begin_TweenAlpha___, v5);
-    sub_1C13D24(&Method_UITweener_Begin_TweenPosition___, v6);
-    byte_4BB29BE = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, callFinished);
+    sub_1C1ABD4(&Method_UITweener_Begin_TweenAlpha___, v5);
+    sub_1C1ABD4(&Method_UITweener_Begin_TweenPosition___, v6);
+    byte_4BC5D7C = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v8 = TitleInfoEventLeagueVsStatusComponent_TypeInfo;
@@ -241,7 +241,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameOut(
   Root = (char *)UITweener__Begin_object_(
                    v9,
                    v8->static_fields->FRAME_ANIM_DURATION,
-                   (const MethodInfo_3043CC0 *)Method_UITweener_Begin_TweenPosition___);
+                   (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenPosition___);
   v29 = *(_QWORD *)&this->fields.inPos.fields.x;
   if ( !Root )
     goto LABEL_9;
@@ -255,19 +255,19 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__FrameOut(
   *(_QWORD *)(Root + 140) = v14;
   v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *((_QWORD *)v12 + 10) = v15;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
   *((_QWORD *)v12 + 11) = callFinished;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
   Root = (char *)this->fields.Root;
   if ( !Root
     || (v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Root, 0LL),
         (Root = (char *)UITweener__Begin_object_(
                           v28,
                           TitleInfoEventLeagueVsStatusComponent_TypeInfo->static_fields->FRAME_ANIM_DURATION,
-                          (const MethodInfo_3043CC0 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
+                          (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
   {
 LABEL_9:
-    sub_1C13F80(Root, v11);
+    sub_1C1AE30(Root, v11);
   }
   *((_QWORD *)Root + 16) = 1065353216LL;
   *((_DWORD *)Root + 8) = 2;
@@ -307,7 +307,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__SetClearAnim(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -327,11 +327,11 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__SetEntryAnim(
   float v10; // s2
   float v11; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4BB29BA & 1) == 0 )
+  if ( (byte_4BC5D78 & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_6193/*"Entity"*/, v3);
-    byte_4BB29BA = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_6197/*"EntryAnim"*/, v3);
+    byte_4BC5D78 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -360,7 +360,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__SetEntryAnim(
         (transform = (UnityEngine_Transform_o *)this->fields.Root) == 0LL) )
   {
 LABEL_9:
-    sub_1C13F80(transform, v5);
+    sub_1C1AE30(transform, v5);
   }
   (*(void (__fastcall **)(UnityEngine_Transform_o *, Il2CppClass *, float))&transform->klass[1]._1.this_arg.bits)(
     transform,
@@ -368,7 +368,7 @@ LABEL_9:
     0.0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6193/*"Entity"*/,
+    (System_String_o *)StringLiteral_6197/*"EntryAnim"*/,
     TitleInfoEventLeagueVsStatusComponent_TypeInfo->static_fields->ENTRY_ANIM_DELAY
   + (float)(this->fields.inPos.fields.y / -500.0),
     0LL);
@@ -397,14 +397,14 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   float v18; // s2
   float v19; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4BB29BB & 1) == 0 )
+  if ( (byte_4BC5D79 & 1) == 0 )
   {
-    sub_1C13D24(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, cb);
-    sub_1C13D24(&StringLiteral_2401/*"AnimCameraObject"*/, v10);
-    byte_4BB29BB = 1;
+    sub_1C1ABD4(&TitleInfoEventLeagueVsStatusComponent_TypeInfo, cb);
+    sub_1C1ABD4(&StringLiteral_2402/*"AnimFrameOutEnd"*/, v10);
+    byte_4BC5D79 = 1;
   }
   this->fields.clearAnimCallBack = cb;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.clearAnimCallBack,
     (int64_t)cb,
     (int64_t)method,
@@ -415,7 +415,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
     v7);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1C13F80(0LL, v12);
+    sub_1C1AE30(0LL, v12);
   *(UnityEngine_Vector3_o *)(&v14 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
   this->fields.inPos.fields.x = 0.0;
   this->fields.inPos.fields.y = v14;
@@ -434,7 +434,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__StartClearAnim(
   v18 = static_fields[1].n64_f32[0];
   *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32((float32x2_t)static_fields->n64_u64[0], v17);
   this->fields.outPos.fields.z = v18 + 0.0;
-  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_2401/*"AnimCameraObject"*/, v13);
+  TitleInfoEventLeagueVsStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_2402/*"AnimFrameOutEnd"*/, v13);
 }
 
 
@@ -540,45 +540,45 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
   int32_t v80; // [xsp+8h] [xbp-58h] BYREF
   int32_t v81; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4BB29B9 & 1) == 0 )
+  if ( (byte_4BC5D77 & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, eventPointEntity);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventPointGroupMaster___, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestReleaseMaster___, v8);
-    sub_1C13D24(&Method_DataManager_GetMasterData_TotalEventPointMaster___, v9);
-    sub_1C13D24(&int_TypeInfo, v10);
-    sub_1C13D24(&NetworkManager_TypeInfo, v11);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1C13D24(&StringLiteral_16376/*"^delete"*/, v13);
-    sub_1C13D24(&StringLiteral_16378/*"^e"*/, v14);
-    sub_1C13D24(&StringLiteral_16379/*"^f"*/, v15);
-    sub_1C13D24(&StringLiteral_17313/*"backlogEnd"*/, v16);
-    sub_1C13D24(&StringLiteral_19592/*"event_towerbanner_"*/, v17);
-    sub_1C13D24(&StringLiteral_19591/*"event_tower_rewardget_"*/, v18);
-    sub_1C13D24(&StringLiteral_16380/*"^h"*/, v19);
-    sub_1C13D24(&StringLiteral_1/*""*/, v20);
-    sub_1C13D24(&StringLiteral_16377/*"^down"*/, v21);
-    sub_1C13D24(&StringLiteral_19593/*"event_trade_8048001"*/, v22);
-    byte_4BB29B9 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, eventPointEntity);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventPointGroupMaster___, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestReleaseMaster___, v8);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_TotalEventPointMaster___, v9);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v11);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1C1ABD4(&StringLiteral_16390/*"_01"*/, v13);
+    sub_1C1ABD4(&StringLiteral_16392/*"_03"*/, v14);
+    sub_1C1ABD4(&StringLiteral_16393/*"_04"*/, v15);
+    sub_1C1ABD4(&StringLiteral_17327/*"balance"*/, v16);
+    sub_1C1ABD4(&StringLiteral_19606/*"event_vs_status_bg_"*/, v17);
+    sub_1C1ABD4(&StringLiteral_19605/*"event_vs_status_"*/, v18);
+    sub_1C1ABD4(&StringLiteral_16394/*"_05"*/, v19);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v20);
+    sub_1C1ABD4(&StringLiteral_16391/*"_02"*/, v21);
+    sub_1C1ABD4(&StringLiteral_19607/*"event_vs_status_name_"*/, v22);
+    byte_4BC5D77 = 1;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_TotalEventPointMaster___);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_TotalEventPointMaster___);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   v26 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
   if ( !eventPointEntity )
     goto LABEL_18;
   if ( !Instance )
@@ -695,7 +695,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
       {
         if ( v50 < 0.15 )
         {
-          v29 = (Il2CppObject *)StringLiteral_17313/*"backlogEnd"*/;
+          v29 = (Il2CppObject *)StringLiteral_17327/*"balance"*/;
           goto LABEL_72;
         }
         if ( v46 <= Instance )
@@ -728,7 +728,7 @@ void __fastcall TitleInfoEventLeagueVsStatusComponent__setup(
       }
     }
 LABEL_18:
-    sub_1C13F80(Instance, v24);
+    sub_1C1AE30(Instance, v24);
   }
   v34 = eventPointEntity->fields.group1;
   if ( !v34 )
@@ -770,7 +770,7 @@ LABEL_18:
 LABEL_70:
     v81 = v52;
     v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v31, v32, v33);
-    v55 = &StringLiteral_16376/*"^delete"*/;
+    v55 = &StringLiteral_16390/*"_01"*/;
     goto LABEL_71;
   }
   if ( v42 >= 0.5 )
@@ -784,11 +784,11 @@ LABEL_70:
 LABEL_60:
         v81 = v44;
         v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v31, v32, v33);
-        v55 = &StringLiteral_16377/*"^down"*/;
+        v55 = &StringLiteral_16391/*"_02"*/;
         goto LABEL_71;
       }
 LABEL_88:
-      sub_1C13F88(Instance, v24);
+      sub_1C1AE38(Instance, v24);
     }
     goto LABEL_18;
   }
@@ -803,7 +803,7 @@ LABEL_88:
 LABEL_44:
     v81 = v53;
     v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v31, v32, v33);
-    v55 = &StringLiteral_16378/*"^e"*/;
+    v55 = &StringLiteral_16392/*"_03"*/;
 LABEL_71:
     v29 = (Il2CppObject *)System_String__Concat(v54, (Il2CppObject *)*v55, 0LL);
     goto LABEL_72;
@@ -817,7 +817,7 @@ LABEL_71:
       {
         v81 = v59->m_Items[1];
         v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v31, v32, v33);
-        v55 = &StringLiteral_16379/*"^f"*/;
+        v55 = &StringLiteral_16393/*"_04"*/;
         goto LABEL_71;
       }
       goto LABEL_88;
@@ -833,7 +833,7 @@ LABEL_71:
       {
         v81 = v79->m_Items[1];
         v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v31, v32, v33);
-        v55 = &StringLiteral_16380/*"^h"*/;
+        v55 = &StringLiteral_16394/*"_05"*/;
         goto LABEL_71;
       }
       goto LABEL_88;
@@ -870,18 +870,18 @@ LABEL_71:
   }
 LABEL_72:
   statusName = this->fields.statusName;
-  v61 = System_String__Concat_62967944((System_String_o *)StringLiteral_19591/*"event_tower_rewardget_"*/, (System_String_o *)v29, 0LL);
+  v61 = System_String__Concat_63040368((System_String_o *)StringLiteral_19605/*"event_vs_status_"*/, (System_String_o *)v29, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetEventUI(statusName, v61, 0LL);
   title = this->fields.title;
   v81 = eventPointEntity->fields.id;
   v66 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v63, v64, v65);
-  v67 = System_String__Concat((Il2CppObject *)StringLiteral_19593/*"event_trade_8048001"*/, v66, 0LL);
+  v67 = System_String__Concat((Il2CppObject *)StringLiteral_19607/*"event_vs_status_name_"*/, v66, 0LL);
   AtlasManager__SetEventUI(title, v67, 0LL);
   backGround = this->fields.backGround;
   v80 = eventPointEntity->fields.id;
   v72 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80, v69, v70, v71);
-  v73 = System_String__Concat((Il2CppObject *)StringLiteral_19592/*"event_towerbanner_"*/, v72, 0LL);
+  v73 = System_String__Concat((Il2CppObject *)StringLiteral_19606/*"event_vs_status_bg_"*/, v72, 0LL);
   AtlasManager__SetEventUI(backGround, v73, 0LL);
 }

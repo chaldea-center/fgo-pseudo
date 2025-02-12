@@ -1,9 +1,9 @@
 void __fastcall FriendshipUpItemSelectDialog___ctor(FriendshipUpItemSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB0225 & 1) == 0 )
+  if ( (byte_4BC35DA & 1) == 0 )
   {
-    sub_1C13D24(&BaseDialog_TypeInfo, method);
-    byte_4BB0225 = 1;
+    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
+    byte_4BC35DA = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,17 +18,17 @@ void __fastcall FriendshipUpItemSelectDialog__Awake(FriendshipUpItemSelectDialog
   __int64 v5; // x1
   FriendshipUpItemSelectDialog___c_c *v6; // x0
   System_Collections_Generic_IEnumerable_T__o *friendshipUpItemSelectItemArray; // x20
-  System_Action_object__o *_9__9_0; // x21
+  System_Action_object__o *_9__11_0; // x21
   Il2CppObject *v9; // x22
   struct FriendshipUpItemSelectDialog___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4BB021F & 1) == 0 )
+  if ( (byte_4BC35D4 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo, method);
-    sub_1C13D24(&Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___, v3);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog___c__Awake_b__9_0__, v4);
-    sub_1C13D24(&FriendshipUpItemSelectDialog___c_TypeInfo, v5);
-    byte_4BB021F = 1;
+    sub_1C1ABD4(&System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo, method);
+    sub_1C1ABD4(&Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___, v3);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog___c__Awake_b__11_0__, v4);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog___c_TypeInfo, v5);
+    byte_4BC35D4 = 1;
   }
   v6 = FriendshipUpItemSelectDialog___c_TypeInfo;
   friendshipUpItemSelectItemArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.friendshipUpItemSelectItemArray;
@@ -37,8 +37,8 @@ void __fastcall FriendshipUpItemSelectDialog__Awake(FriendshipUpItemSelectDialog
     j_il2cpp_runtime_class_init_0(FriendshipUpItemSelectDialog___c_TypeInfo);
     v6 = FriendshipUpItemSelectDialog___c_TypeInfo;
   }
-  _9__9_0 = (System_Action_object__o *)v6->static_fields->__9__9_0;
-  if ( !_9__9_0 )
+  _9__11_0 = (System_Action_object__o *)v6->static_fields->__9__11_0;
+  if ( !_9__11_0 )
   {
     if ( !v6->_2.cctor_finished )
     {
@@ -46,16 +46,16 @@ void __fastcall FriendshipUpItemSelectDialog__Awake(FriendshipUpItemSelectDialog
       v6 = FriendshipUpItemSelectDialog___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__9_0 = (System_Action_object__o *)sub_1C13F70(System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo);
-    System_Action_object____ctor(_9__9_0, v9, Method_FriendshipUpItemSelectDialog___c__Awake_b__9_0__, 0LL);
+    _9__11_0 = (System_Action_object__o *)sub_1C1AE20(System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo);
+    System_Action_object____ctor(_9__11_0, v9, Method_FriendshipUpItemSelectDialog___c__Awake_b__11_0__, 0LL);
     static_fields = FriendshipUpItemSelectDialog___c_TypeInfo->static_fields;
-    static_fields->__9__9_0 = (struct System_Action_FriendshipUpItemSelectDialog_SelectItem__o *)_9__9_0;
-    sub_1C13CC8(&static_fields->__9__9_0);
+    static_fields->__9__11_0 = (struct System_Action_FriendshipUpItemSelectDialog_SelectItem__o *)_9__11_0;
+    sub_1C1AB78(&static_fields->__9__11_0);
   }
   BasicHelper__ForEach_object_(
     friendshipUpItemSelectItemArray,
-    (System_Action_T__o *)_9__9_0,
-    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___);
+    (System_Action_T__o *)_9__11_0,
+    (const MethodInfo_2F8C3EC *)Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___);
   BaseDialog__Awake((BaseDialog_o *)this, 0LL);
 }
 
@@ -66,16 +66,16 @@ void __fastcall FriendshipUpItemSelectDialog__Close(FriendshipUpItemSelectDialog
   __int64 v4; // x1
   System_Action_o *v5; // x20
 
-  if ( (byte_4BB0222 & 1) == 0 )
+  if ( (byte_4BC35D7 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog__Close_b__12_0__, v3);
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, v4);
-    byte_4BB0222 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog__Close_b__14_0__, v3);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, v4);
+    byte_4BC35D7 = 1;
   }
   FriendshipUpItemSelectDialog_TypeInfo->static_fields->state = 4;
-  v5 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_FriendshipUpItemSelectDialog__Close_b__12_0__, 0LL);
+  v5 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_FriendshipUpItemSelectDialog__Close_b__14_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
 
@@ -85,11 +85,11 @@ void __fastcall FriendshipUpItemSelectDialog__Init(FriendshipUpItemSelectDialog_
   __int64 v3; // x1
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BB0220 & 1) == 0 )
+  if ( (byte_4BC35D5 & 1) == 0 )
   {
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_1/*""*/, v3);
-    byte_4BB0220 = 1;
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v3);
+    byte_4BC35D5 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -98,7 +98,7 @@ void __fastcall FriendshipUpItemSelectDialog__Init(FriendshipUpItemSelectDialog_
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(titleLabel, method);
+    sub_1C1AE30(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   FriendshipUpItemSelectDialog_TypeInfo->static_fields->state = 0;
@@ -115,18 +115,18 @@ void __fastcall FriendshipUpItemSelectDialog__OnClickClose(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BB0224 & 1) == 0 )
+  if ( (byte_4BC35D9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog_OnClickClose__, method);
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, v3);
-    byte_4BB0224 = 1;
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog_OnClickClose__, method);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, v3);
+    byte_4BC35D9 = 1;
   }
   if ( FriendshipUpItemSelectDialog_TypeInfo->static_fields->state == 2 )
   {
     v4 = Method_FriendshipUpItemSelectDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_FriendshipUpItemSelectDialog_OnClickClose__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C13D3C(Method_FriendshipUpItemSelectDialog_OnClickClose__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C1ABEC(Method_FriendshipUpItemSelectDialog_OnClickClose__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
     FriendshipUpItemSelectDialog__Close(this, v6);
   }
@@ -152,21 +152,21 @@ void __fastcall FriendshipUpItemSelectDialog__Open(
   UILabel_o *closeBtnLabel; // x20
   const MethodInfo *v17; // x1
   FriendshipUpItemSelectDialog___c_c *v18; // x0
-  System_Action_o *_9__11_0; // x20
+  System_Action_o *_9__13_0; // x20
   Il2CppObject *v20; // x21
   struct FriendshipUpItemSelectDialog___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4BB0221 & 1) == 0 )
+  if ( (byte_4BC35D6 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, v5);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v6);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog___c__Open_b__11_0__, v7);
-    sub_1C13D24(&FriendshipUpItemSelectDialog___c_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_10453/*"PARTY_ORGANIZATION_FIX_NPC_ONLY_EXPLANATION"*/, v9);
-    sub_1C13D24(&StringLiteral_10454/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/, v10);
-    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v11);
-    byte_4BB0221 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, v5);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog___c__Open_b__13_0__, v7);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog___c_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_10461/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_EXPLANATION"*/, v9);
+    sub_1C1ABD4(&StringLiteral_10462/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_TITLE"*/, v10);
+    sub_1C1ABD4(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v11);
+    byte_4BC35D6 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -174,23 +174,23 @@ void __fastcall FriendshipUpItemSelectDialog__Open(
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   FriendshipUpItemSelectDialog_TypeInfo->static_fields->state = 1;
   this->fields.closeCallback = callback;
-  sub_1C13CC8(&this->fields.closeCallback);
+  sub_1C1AB78(&this->fields.closeCallback);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10454/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10462/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL),
         subTitleLabel = this->fields.subTitleLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10453/*"PARTY_ORGANIZATION_FIX_NPC_ONLY_EXPLANATION"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10461/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_EXPLANATION"*/, 0LL),
         !subTitleLabel)
     || (UILabel__set_text(subTitleLabel, (System_String_o *)gameObject, 0LL),
         closeBtnLabel = this->fields.closeBtnLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
         !closeBtnLabel) )
   {
 LABEL_16:
-    sub_1C13F80(gameObject, v13);
+    sub_1C1AE30(gameObject, v13);
   }
   UILabel__set_text(closeBtnLabel, (System_String_o *)gameObject, 0LL);
   FriendshipUpItemSelectDialog__SetSelectItem(this, v17);
@@ -202,8 +202,8 @@ LABEL_16:
     j_il2cpp_runtime_class_init_0(FriendshipUpItemSelectDialog___c_TypeInfo);
     v18 = FriendshipUpItemSelectDialog___c_TypeInfo;
   }
-  _9__11_0 = v18->static_fields->__9__11_0;
-  if ( !_9__11_0 )
+  _9__13_0 = v18->static_fields->__9__13_0;
+  if ( !_9__13_0 )
   {
     if ( !v18->_2.cctor_finished )
     {
@@ -211,13 +211,13 @@ LABEL_16:
       v18 = FriendshipUpItemSelectDialog___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v18->static_fields->__9;
-    _9__11_0 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
-    System_Action___ctor(_9__11_0, v20, Method_FriendshipUpItemSelectDialog___c__Open_b__11_0__, 0LL);
+    _9__13_0 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
+    System_Action___ctor(_9__13_0, v20, Method_FriendshipUpItemSelectDialog___c__Open_b__13_0__, 0LL);
     static_fields = FriendshipUpItemSelectDialog___c_TypeInfo->static_fields;
-    static_fields->__9__11_0 = _9__11_0;
-    sub_1C13CC8(&static_fields->__9__11_0);
+    static_fields->__9__13_0 = _9__13_0;
+    sub_1C1AB78(&static_fields->__9__13_0);
   }
-  BaseDialog__Open((BaseDialog_o *)this, _9__11_0, 0, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, _9__13_0, 0, 0LL);
 }
 
 
@@ -229,126 +229,179 @@ void __fastcall FriendshipUpItemSelectDialog__SetSelectItem(
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
-  Il2CppObject *Instance; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  System_Collections_ICollection_o *klass; // x21
-  const MethodInfo *v10; // x2
-  System_Collections_Generic_IEnumerable_T__o *friendshipUpItemSelectItemArray; // x20
-  FriendshipUpItemSelectDialog___c_c *v12; // x0
-  System_Action_object__o *_9__13_0; // x19
-  Il2CppObject *v14; // x21
+  Il2CppObject *Instance; // x0
+  __int64 v10; // x1
+  FriendshipUpItemInfo_array *AvailableQuestUseItems; // x20
+  const MethodInfo *v12; // x2
+  System_Collections_Generic_IEnumerable_T__o *friendshipUpItemSelectItemArray; // x21
+  FriendshipUpItemSelectDialog___c_c *v14; // x0
+  System_Action_object__o *_9__15_0; // x19
+  Il2CppObject *v16; // x20
   struct FriendshipUpItemSelectDialog___c_StaticFields *static_fields; // x0
-  unsigned __int64 v16; // x22
-  __int64 v17; // x23
-  unsigned int monitor; // w8
-  bool v19; // w9
-  struct FriendshipUpItemSelectDialog_SelectItem_array *v20; // x8
-  bool v21; // w1
+  unsigned __int64 v18; // x22
+  __int64 v19; // x23
+  signed int max_length; // w8
+  bool v21; // w9
+  struct FriendshipUpItemSelectDialog_SelectItem_array *v22; // x8
+  bool v23; // w1
+  UnityEngine_Object_o *grid; // x21
+  struct System_Single_array *gridCellWidths; // x21
+  struct System_Single_array *v26; // x9
+  struct UIGrid_o *v27; // x8
+  float v28; // s0
+  UIGrid_c *klass; // x9
 
-  if ( (byte_4BB0223 & 1) == 0 )
+  if ( (byte_4BC35D8 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo, method);
-    sub_1C13D24(&Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___, v3);
-    sub_1C13D24(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v4);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog___c__SetSelectItem_b__13_0__, v5);
-    sub_1C13D24(&FriendshipUpItemSelectDialog___c_TypeInfo, v6);
-    byte_4BB0223 = 1;
+    sub_1C1ABD4(&System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo, method);
+    sub_1C1ABD4(&Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___, v3);
+    sub_1C1ABD4(&System_Math_TypeInfo, v4);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v6);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog___c__SetSelectItem_b__15_0__, v7);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog___c_TypeInfo, v8);
+    byte_4BC35D8 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
-    goto LABEL_28;
-  klass = (System_Collections_ICollection_o *)Instance[8].klass;
-  Instance = (Il2CppObject *)BasicHelper__IsNullOrEmpty(klass, 0LL);
+    goto LABEL_41;
+  AvailableQuestUseItems = PartyOrganizationUtility__GetAvailableQuestUseItems(
+                             (PartyOrganizationUtility_o *)Instance,
+                             0LL);
+  Instance = (Il2CppObject *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)AvailableQuestUseItems, 0LL);
   friendshipUpItemSelectItemArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.friendshipUpItemSelectItemArray;
-  if ( ((unsigned __int8)Instance & 1) == 0 )
+  if ( ((unsigned __int8)Instance & 1) != 0 )
   {
-    if ( friendshipUpItemSelectItemArray )
+    v14 = FriendshipUpItemSelectDialog___c_TypeInfo;
+    if ( !FriendshipUpItemSelectDialog___c_TypeInfo->_2.cctor_finished )
     {
-      if ( (int)friendshipUpItemSelectItemArray[1].monitor < 1 )
-        return;
-      if ( klass )
+      j_il2cpp_runtime_class_init_0(FriendshipUpItemSelectDialog___c_TypeInfo);
+      v14 = FriendshipUpItemSelectDialog___c_TypeInfo;
+    }
+    _9__15_0 = (System_Action_object__o *)v14->static_fields->__9__15_0;
+    if ( !_9__15_0 )
+    {
+      if ( !v14->_2.cctor_finished )
       {
-        v16 = 0LL;
-        v17 = (unsigned int)friendshipUpItemSelectItemArray[1].monitor - 1LL;
-        monitor = (unsigned int)klass[1].monitor;
-        v19 = (int)monitor > 0;
-        do
+        j_il2cpp_runtime_class_init_0(v14);
+        v14 = FriendshipUpItemSelectDialog___c_TypeInfo;
+      }
+      v16 = (Il2CppObject *)v14->static_fields->__9;
+      _9__15_0 = (System_Action_object__o *)sub_1C1AE20(System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo);
+      System_Action_object____ctor(_9__15_0, v16, Method_FriendshipUpItemSelectDialog___c__SetSelectItem_b__15_0__, 0LL);
+      static_fields = FriendshipUpItemSelectDialog___c_TypeInfo->static_fields;
+      static_fields->__9__15_0 = (struct System_Action_FriendshipUpItemSelectDialog_SelectItem__o *)_9__15_0;
+      sub_1C1AB78(&static_fields->__9__15_0);
+    }
+    BasicHelper__ForEach_object_(
+      friendshipUpItemSelectItemArray,
+      (System_Action_T__o *)_9__15_0,
+      (const MethodInfo_2F8C3EC *)Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___);
+    return;
+  }
+  if ( !friendshipUpItemSelectItemArray )
+    goto LABEL_41;
+  if ( (int)friendshipUpItemSelectItemArray[1].monitor >= 1 )
+  {
+    if ( AvailableQuestUseItems )
+    {
+      v18 = 0LL;
+      v19 = (unsigned int)friendshipUpItemSelectItemArray[1].monitor - 1LL;
+      max_length = *(_QWORD *)&AvailableQuestUseItems->max_length;
+      v21 = max_length > 0;
+      while ( v18 < LODWORD(friendshipUpItemSelectItemArray[1].monitor) )
+      {
+        Instance = (Il2CppObject *)*((_QWORD *)&friendshipUpItemSelectItemArray[2].klass + v18);
+        if ( v21 )
         {
-          if ( v16 >= LODWORD(friendshipUpItemSelectItemArray[1].monitor) )
-LABEL_30:
-            sub_1C13F88(Instance, v8);
-          Instance = (Il2CppObject *)*((_QWORD *)&friendshipUpItemSelectItemArray[2].klass + v16);
-          if ( v19 )
-          {
-            if ( v16 >= monitor )
-              goto LABEL_30;
-            if ( !Instance )
-              break;
-            FriendshipUpItemSelectDialog_SelectItem__Set(
-              (FriendshipUpItemSelectDialog_SelectItem_o *)Instance,
-              *((FriendshipUpItemInfo_o **)&klass[2].klass + v16),
-              v10);
-            v20 = this->fields.friendshipUpItemSelectItemArray;
-            if ( !v20 )
-              break;
-            if ( v16 >= v20->max_length )
-              goto LABEL_30;
-            Instance = (Il2CppObject *)v20->m_Items[v16];
-            if ( !Instance )
-              break;
-            v21 = 1;
-          }
-          else
-          {
-            if ( !Instance )
-              break;
-            v21 = 0;
-          }
-          FriendshipUpItemSelectDialog_SelectItem__SetEnable(
+          if ( v18 >= (unsigned int)max_length )
+            break;
+          if ( !Instance )
+            goto LABEL_41;
+          FriendshipUpItemSelectDialog_SelectItem__Set(
             (FriendshipUpItemSelectDialog_SelectItem_o *)Instance,
-            v21,
-            v10);
-          if ( v17 == v16 )
-            return;
-          monitor = (unsigned int)klass[1].monitor;
-          friendshipUpItemSelectItemArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.friendshipUpItemSelectItemArray;
-          v19 = (__int64)++v16 < (int)monitor;
+            AvailableQuestUseItems->m_Items[v18],
+            v12);
+          v22 = this->fields.friendshipUpItemSelectItemArray;
+          if ( !v22 )
+            goto LABEL_41;
+          if ( v18 >= v22->max_length )
+            break;
+          Instance = (Il2CppObject *)v22->m_Items[v18];
+          if ( !Instance )
+            goto LABEL_41;
+          v23 = 1;
         }
-        while ( friendshipUpItemSelectItemArray );
+        else
+        {
+          if ( !Instance )
+            goto LABEL_41;
+          v23 = 0;
+        }
+        FriendshipUpItemSelectDialog_SelectItem__SetEnable(
+          (FriendshipUpItemSelectDialog_SelectItem_o *)Instance,
+          v23,
+          v12);
+        if ( v19 == v18 )
+          goto LABEL_29;
+        max_length = AvailableQuestUseItems->max_length;
+        friendshipUpItemSelectItemArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.friendshipUpItemSelectItemArray;
+        v21 = (__int64)++v18 < max_length;
+        if ( !friendshipUpItemSelectItemArray )
+          goto LABEL_41;
+      }
+LABEL_42:
+      sub_1C1AE38(Instance, v10);
+    }
+    goto LABEL_41;
+  }
+LABEL_29:
+  grid = (UnityEngine_Object_o *)this->fields.grid;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  Instance = (Il2CppObject *)UnityEngine_Object__op_Inequality(grid, 0LL, 0LL);
+  if ( ((unsigned __int8)Instance & 1) != 0 )
+  {
+    if ( AvailableQuestUseItems )
+    {
+      gridCellWidths = this->fields.gridCellWidths;
+      if ( gridCellWidths )
+      {
+        if ( !System_Math_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+        Instance = (Il2CppObject *)System_Math__Min_63859840(
+                                     AvailableQuestUseItems->max_length,
+                                     gridCellWidths->max_length,
+                                     0LL);
+        v26 = this->fields.gridCellWidths;
+        if ( v26 )
+        {
+          if ( (int)Instance - 1 >= v26->max_length )
+            goto LABEL_42;
+          v27 = this->fields.grid;
+          if ( v27 )
+          {
+            v28 = v26->m_Items[(int)Instance];
+            klass = v27->klass;
+            v27->fields.maxPerLine = (int)Instance;
+            v27->fields.cellWidth = v28;
+            ((void (__fastcall *)(struct UIGrid_o *, Il2CppMethodPointer))klass->vtable._8_Reposition.method)(
+              v27,
+              klass->vtable._9_ResetPosition.methodPtr);
+            return;
+          }
+        }
       }
     }
-LABEL_28:
-    sub_1C13F80(Instance, v8);
+LABEL_41:
+    sub_1C1AE30(Instance, v10);
   }
-  v12 = FriendshipUpItemSelectDialog___c_TypeInfo;
-  if ( !FriendshipUpItemSelectDialog___c_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(FriendshipUpItemSelectDialog___c_TypeInfo);
-    v12 = FriendshipUpItemSelectDialog___c_TypeInfo;
-  }
-  _9__13_0 = (System_Action_object__o *)v12->static_fields->__9__13_0;
-  if ( !_9__13_0 )
-  {
-    if ( !v12->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v12);
-      v12 = FriendshipUpItemSelectDialog___c_TypeInfo;
-    }
-    v14 = (Il2CppObject *)v12->static_fields->__9;
-    _9__13_0 = (System_Action_object__o *)sub_1C13F70(System_Action_FriendshipUpItemSelectDialog_SelectItem__TypeInfo);
-    System_Action_object____ctor(_9__13_0, v14, Method_FriendshipUpItemSelectDialog___c__SetSelectItem_b__13_0__, 0LL);
-    static_fields = FriendshipUpItemSelectDialog___c_TypeInfo->static_fields;
-    static_fields->__9__13_0 = (struct System_Action_FriendshipUpItemSelectDialog_SelectItem__o *)_9__13_0;
-    sub_1C13CC8(&static_fields->__9__13_0);
-  }
-  BasicHelper__ForEach_object_(
-    friendshipUpItemSelectItemArray,
-    (System_Action_T__o *)_9__13_0,
-    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_FriendshipUpItemSelectDialog_SelectItem___);
 }
 
 
-void __fastcall FriendshipUpItemSelectDialog___Close_b__12_0(
+void __fastcall FriendshipUpItemSelectDialog___Close_b__14_0(
         FriendshipUpItemSelectDialog_o *this,
         const MethodInfo *method)
 {
@@ -375,6 +428,7 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem__ChangeButtonState(
         FriendshipUpItemSelectDialog_SelectItem_o *this,
         const MethodInfo *method)
 {
+  FriendshipUpItemSelectDialog_SelectItem_o *v2; // x19
   __int64 v3; // x1
   __int64 v4; // x1
   __int64 v5; // x1
@@ -383,125 +437,144 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem__ChangeButtonState(
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  FriendshipUpItemInfo_o *info; // x0
-  bool UseFlag; // w20
-  _QWORD *v13; // x8
-  System_Reflection_MethodBase_o *v14; // x0
-  const MethodInfo *v15; // x2
+  __int64 v11; // x1
+  struct FriendshipUpItemInfo_o *info; // x8
+  _BOOL4 UseFlag_k__BackingField; // w20
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
   const MethodInfo *v16; // x2
-  bool v17; // w1
+  struct FriendshipUpItemInfo_o *v17; // x8
   const MethodInfo *v18; // x2
+  struct FriendshipUpItemInfo_o *v19; // x8
   Il2CppObject *Instance; // x20
-  struct FriendshipUpItemInfo_o *v20; // x8
-  System_String_o *v21; // x19
-  FriendshipUpItemSelectDialog_SelectItem___c_c *v22; // x8
+  struct FriendshipUpItemInfo_o *v21; // x8
+  FriendshipUpItemSelectDialog_SelectItem_o *v22; // x19
+  FriendshipUpItemSelectDialog_SelectItem___c_c *v23; // x8
   System_Action_o *_9__5_0; // x22
-  System_String_o *v24; // x21
-  Il2CppObject *v25; // x23
+  System_String_o *v25; // x21
+  Il2CppObject *v26; // x23
   struct FriendshipUpItemSelectDialog_SelectItem___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4BB0227 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4BC35DC & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, v3);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v4);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__, v7);
-    sub_1C13D24(&FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_10449/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/, v9);
-    sub_1C13D24(&StringLiteral_1/*""*/, v10);
-    byte_4BB0227 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, v3);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C1ABD4(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v7);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__, v8);
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_10455/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v10);
+    this = (FriendshipUpItemSelectDialog_SelectItem_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v11);
+    byte_4BC35DC = 1;
   }
   if ( FriendshipUpItemSelectDialog_TypeInfo->static_fields->state == 2 )
   {
-    info = this->fields.info;
+    info = v2->fields.info;
     if ( !info )
-      goto LABEL_29;
-    UseFlag = FriendshipUpItemInfo__GetUseFlag(info, method);
-    v13 = Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__;
+      goto LABEL_30;
+    UseFlag_k__BackingField = info->fields._UseFlag_k__BackingField;
+    v14 = Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__;
     if ( (*((_BYTE *)Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1C13D3C(Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1C13D08(v13, v13[4]);
-    if ( UseFlag )
+      v14 = (_QWORD *)sub_1C1ABEC(Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__);
+    v15 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v14, v14[4]);
+    if ( UseFlag_k__BackingField )
     {
-      OverwriteAssetSoundName__PlaySystemSe(v14, 1, 0, 0LL);
-      info = (FriendshipUpItemInfo_o *)this->fields.component;
-      if ( info )
-      {
-        FriendshipUpItemUseItem__ChangeButtonState((FriendshipUpItemUseItem_o *)info, 0, v15);
-        info = this->fields.info;
-        if ( info )
-        {
-          v17 = 0;
+      OverwriteAssetSoundName__PlaySystemSe(v15, 1, 0, 0LL);
+      this = (FriendshipUpItemSelectDialog_SelectItem_o *)v2->fields.component;
+      if ( !this )
+        goto LABEL_30;
+      FriendshipUpItemUseItem__ChangeButtonState((FriendshipUpItemUseItem_o *)this, 0, v16);
+      v17 = v2->fields.info;
+      if ( !v17 )
+        goto LABEL_30;
+      v17->fields._UseFlag_k__BackingField = 0;
 LABEL_16:
-          FriendshipUpItemInfo__SetUseFlag(info, v17, v16);
-          return;
-        }
-      }
-      goto LABEL_29;
-    }
-    OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0LL);
-    info = this->fields.info;
-    if ( !info )
-      goto LABEL_29;
-    if ( FriendshipUpItemInfo__IsEventPeriod(info, method) )
-    {
-      info = (FriendshipUpItemInfo_o *)this->fields.component;
-      if ( info )
+      this = (FriendshipUpItemSelectDialog_SelectItem_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      if ( this )
       {
-        FriendshipUpItemUseItem__ChangeButtonState((FriendshipUpItemUseItem_o *)info, 1, v18);
-        info = this->fields.info;
-        if ( info )
-        {
-          v17 = 1;
-          goto LABEL_16;
-        }
+        PartyOrganizationUtility__SaveQuestUseItemUseState((PartyOrganizationUtility_o *)this, 0LL);
+        return;
       }
-LABEL_29:
-      sub_1C13F80(info, method);
+LABEL_30:
+      sub_1C1AE30(this, method);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0LL);
+    this = (FriendshipUpItemSelectDialog_SelectItem_o *)v2->fields.info;
+    if ( !this )
+      goto LABEL_30;
+    if ( FriendshipUpItemInfo__IsEventPeriod((FriendshipUpItemInfo_o *)this, method) )
+    {
+      this = (FriendshipUpItemSelectDialog_SelectItem_o *)v2->fields.component;
+      if ( !this )
+        goto LABEL_30;
+      FriendshipUpItemUseItem__ChangeButtonState((FriendshipUpItemUseItem_o *)this, 1, v18);
+      v19 = v2->fields.info;
+      if ( !v19 )
+        goto LABEL_30;
+      v19->fields._UseFlag_k__BackingField = 1;
+      goto LABEL_16;
+    }
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    info = (FriendshipUpItemInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10449/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/, 0LL);
-    v20 = this->fields.info;
-    if ( !v20 )
-      goto LABEL_29;
-    info = (FriendshipUpItemInfo_o *)System_String__Format(
-                                       (System_String_o *)info,
-                                       (Il2CppObject *)v20->fields._Name_k__BackingField,
-                                       0LL);
-    v21 = (System_String_o *)info;
-    v22 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
+    this = (FriendshipUpItemSelectDialog_SelectItem_o *)LocalizationManager__Get(
+                                                          (System_String_o *)StringLiteral_10455/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/,
+                                                          0LL);
+    v21 = v2->fields.info;
+    if ( !v21 )
+      goto LABEL_30;
+    this = (FriendshipUpItemSelectDialog_SelectItem_o *)System_String__Format(
+                                                          (System_String_o *)this,
+                                                          (Il2CppObject *)v21->fields._Name_k__BackingField,
+                                                          0LL);
+    v22 = this;
+    v23 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
     if ( !FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo);
-      v22 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
+      v23 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
     }
-    _9__5_0 = v22->static_fields->__9__5_0;
-    v24 = (System_String_o *)StringLiteral_1/*""*/;
+    _9__5_0 = v23->static_fields->__9__5_0;
+    v25 = (System_String_o *)StringLiteral_1/*""*/;
     if ( !_9__5_0 )
     {
-      if ( !v22->_2.cctor_finished )
+      if ( !v23->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v22);
-        v22 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v23);
+        v23 = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo;
       }
-      v25 = (Il2CppObject *)v22->static_fields->__9;
-      _9__5_0 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v26 = (Il2CppObject *)v23->static_fields->__9;
+      _9__5_0 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(
         _9__5_0,
-        v25,
+        v26,
         (intptr_t)Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__,
         0LL);
       static_fields = FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo->static_fields;
       static_fields->__9__5_0 = _9__5_0;
-      info = (FriendshipUpItemInfo_o *)sub_1C13CC8(&static_fields->__9__5_0);
+      this = (FriendshipUpItemSelectDialog_SelectItem_o *)sub_1C1AB78(&static_fields->__9__5_0);
     }
     if ( !Instance )
-      goto LABEL_29;
-    CommonUI__OpenNotificationDialog((CommonUI_o *)Instance, v24, v21, _9__5_0, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, 0.0, 0LL);
+      goto LABEL_30;
+    CommonUI__OpenNotificationDialog(
+      (CommonUI_o *)Instance,
+      v25,
+      (System_String_o *)v22,
+      _9__5_0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0LL,
+      0.0,
+      0LL);
   }
 }
 
@@ -512,106 +585,36 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem__Set(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  struct FriendshipUpItemInfo_o **p_info; // x19
   FriendshipUpItemUseItem_o *component; // x21
   FriendshipUpItemInfo_o *info; // x22
-  System_Action_o *v15; // x23
-  DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  DataMasterBase_TMaster__TEntity__PKType__o *v17; // x1
-  const MethodInfo *v18; // x3
-  struct FriendshipUpItemInfo_o *v19; // x8
-  UILabel_o *label; // x20
-  System_String_o *EffectExplanation; // x0
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  struct FriendshipUpItemInfo_o *v25; // x8
-  System_String_o *v26; // x19
-  Il2CppObject *v27; // x0
-  float v28; // [xsp+4h] [xbp-4Ch] BYREF
-  Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
+  System_Action_o *v8; // x23
+  UILabel_o *label; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x4
 
-  if ( (byte_4BB0226 & 1) == 0 )
+  if ( (byte_4BC35DB & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, itemInfo);
-    sub_1C13D24(&Method_DataManager_GetMaster_ItemMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v7);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__, v9);
-    sub_1C13D24(&float_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_10455/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v11);
-    byte_4BB0226 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, itemInfo);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__, v5);
+    byte_4BC35DB = 1;
   }
-  entity = 0LL;
   this->fields.info = itemInfo;
-  p_info = &this->fields.info;
-  sub_1C13CC8(&this->fields.info);
+  sub_1C1AB78(&this->fields.info);
   component = this->fields.component;
   info = this->fields.info;
-  v15 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
-    v15,
+    v8,
     (Il2CppObject *)this,
     (intptr_t)Method_FriendshipUpItemSelectDialog_SelectItem_ChangeButtonState__,
     0LL);
-  if ( !component )
-    goto LABEL_19;
-  FriendshipUpItemUseItem__SetInit(component, info, v15, v18);
-  if ( !DataManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ItemMaster___);
-  v19 = this->fields.info;
-  if ( !v19 || !Master_object )
-    goto LABEL_19;
-  label = this->fields.label;
-  if ( !DataMasterBase_object__object__int___TryGetEntity(
-          Master_object,
-          &entity,
-          v19->fields._Id_k__BackingField,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
-    goto LABEL_22;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
-  if ( !entity )
-    goto LABEL_19;
-  EffectExplanation = ItemEntity__GetEffectExplanation((ItemEntity_o *)entity, 0LL);
-  if ( System_String__IsNullOrEmpty(EffectExplanation, 0LL) )
+  if ( !component
+    || (FriendshipUpItemUseItem__SetInit(component, info, 0, v8, v11), !itemInfo)
+    || (label = this->fields.label) == 0LL )
   {
-LABEL_22:
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_10455/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/,
-                                                                    0LL);
-    v25 = *p_info;
-    if ( *p_info )
-    {
-      v26 = (System_String_o *)Master_object;
-      v28 = (float)v25->fields._Value_k__BackingField / 1000.0;
-      v27 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v28, v22, v23, v24);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(v26, v27, 0LL);
-      goto LABEL_17;
-    }
-LABEL_19:
-    sub_1C13F80(Master_object, v17);
+    sub_1C1AE30(label, v10);
   }
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
-  if ( !entity )
-    goto LABEL_19;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ItemEntity__GetEffectExplanation(
-                                                                  (ItemEntity_o *)entity,
-                                                                  0LL);
-LABEL_17:
-  v17 = Master_object;
-  if ( !label )
-    goto LABEL_19;
-  UILabel__set_text(label, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(label, itemInfo->fields._Explanation_k__BackingField, 0LL);
 }
 
 
@@ -627,7 +630,7 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem__SetEnable(
   if ( !component
     || (component = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(component, 0LL)) == 0LL )
   {
-    sub_1C13F80(component, flag);
+    sub_1C1AE30(component, flag);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)component, flag, 0LL);
 }
@@ -638,15 +641,15 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem___c___cctor(const Method
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4BB0228 & 1) == 0 )
+  if ( (byte_4BC35DD & 1) == 0 )
   {
-    sub_1C13D24(&FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo, v1);
-    byte_4BB0228 = 1;
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo, v1);
+    byte_4BC35DD = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo->static_fields->__9 = (struct FriendshipUpItemSelectDialog_SelectItem___c_o *)v2;
-  sub_1C13CC8(FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo->static_fields);
+  sub_1C1AB78(FriendshipUpItemSelectDialog_SelectItem___c_TypeInfo->static_fields);
 }
 
 
@@ -668,20 +671,20 @@ void __fastcall FriendshipUpItemSelectDialog_SelectItem___c___ChangeButtonState_
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BB0229 & 1) == 0 )
+  if ( (byte_4BC35DE & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    sub_1C13D24(&Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__, v2);
-    byte_4BB0229 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    sub_1C1ABD4(&Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__, v2);
+    byte_4BC35DE = 1;
   }
   v3 = Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__;
   if ( (*((_BYTE *)Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C13D3C(Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C1ABEC(Method_FriendshipUpItemSelectDialog_SelectItem___c__ChangeButtonState_b__5_0__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v6);
+    sub_1C1AE30(0LL, v6);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
 }
 
@@ -691,15 +694,15 @@ void __fastcall FriendshipUpItemSelectDialog___c___cctor(const MethodInfo *metho
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4BB022A & 1) == 0 )
+  if ( (byte_4BC35DF & 1) == 0 )
   {
-    sub_1C13D24(&FriendshipUpItemSelectDialog___c_TypeInfo, v1);
-    byte_4BB022A = 1;
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog___c_TypeInfo, v1);
+    byte_4BC35DF = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(FriendshipUpItemSelectDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(FriendshipUpItemSelectDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   FriendshipUpItemSelectDialog___c_TypeInfo->static_fields->__9 = (struct FriendshipUpItemSelectDialog___c_o *)v2;
-  sub_1C13CC8(FriendshipUpItemSelectDialog___c_TypeInfo->static_fields);
+  sub_1C1AB78(FriendshipUpItemSelectDialog___c_TypeInfo->static_fields);
 }
 
 
@@ -711,7 +714,7 @@ void __fastcall FriendshipUpItemSelectDialog___c___ctor(
 }
 
 
-void __fastcall FriendshipUpItemSelectDialog___c___Awake_b__9_0(
+void __fastcall FriendshipUpItemSelectDialog___c___Awake_b__11_0(
         FriendshipUpItemSelectDialog___c_o *this,
         FriendshipUpItemSelectDialog_SelectItem_o *item,
         const MethodInfo *method)
@@ -720,25 +723,25 @@ void __fastcall FriendshipUpItemSelectDialog___c___Awake_b__9_0(
 }
 
 
-void __fastcall FriendshipUpItemSelectDialog___c___Open_b__11_0(
+void __fastcall FriendshipUpItemSelectDialog___c___Open_b__13_0(
         FriendshipUpItemSelectDialog___c_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB022B & 1) == 0 )
+  if ( (byte_4BC35E0 & 1) == 0 )
   {
-    sub_1C13D24(&FriendshipUpItemSelectDialog_TypeInfo, method);
-    byte_4BB022B = 1;
+    sub_1C1ABD4(&FriendshipUpItemSelectDialog_TypeInfo, method);
+    byte_4BC35E0 = 1;
   }
   FriendshipUpItemSelectDialog_TypeInfo->static_fields->state = 2;
 }
 
 
-void __fastcall FriendshipUpItemSelectDialog___c___SetSelectItem_b__13_0(
+void __fastcall FriendshipUpItemSelectDialog___c___SetSelectItem_b__15_0(
         FriendshipUpItemSelectDialog___c_o *this,
         FriendshipUpItemSelectDialog_SelectItem_o *item,
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   FriendshipUpItemSelectDialog_SelectItem__SetEnable(item, 0, method);
 }

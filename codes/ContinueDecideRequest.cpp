@@ -2,10 +2,10 @@ void __fastcall ContinueDecideRequest__beginRequest(ContinueDecideRequest_o *thi
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4BB5FCA & 1) == 0 )
+  if ( (byte_4BC93AC & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BB5FCA = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC93AC = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, method);
   RequestBase__addDeviceInfoField((RequestBase_o *)this, v3);
@@ -27,16 +27,16 @@ void __fastcall ContinueDecideRequest__beginRequestCode(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4BB5FC6 & 1) == 0 )
+  if ( (byte_4BC93A8 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_18524/*"contentLength"*/, continueKey);
-    sub_1C13D24(&StringLiteral_18527/*"contentsEnabled"*/, v7);
-    sub_1C13D24(&StringLiteral_18526/*"contents"*/, v8);
-    byte_4BB5FC6 = 1;
+    sub_1C1ABD4(&StringLiteral_18538/*"continueKey"*/, continueKey);
+    sub_1C1ABD4(&StringLiteral_18541/*"continueType"*/, v7);
+    sub_1C1ABD4(&StringLiteral_18540/*"continuePass"*/, v8);
+    byte_4BC93A8 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18527/*"contentsEnabled"*/, 1, method);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_18524/*"contentLength"*/, continueKey, v9);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_18526/*"contents"*/, continuePass, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18541/*"continueType"*/, 1, method);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_18538/*"continueKey"*/, continueKey, v9);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_18540/*"continuePass"*/, continuePass, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
@@ -53,16 +53,16 @@ void __fastcall ContinueDecideRequest__beginRequestFacebook(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4BB5FC8 & 1) == 0 )
+  if ( (byte_4BC93AA & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_19663/*"f8"*/, facebookId);
-    sub_1C13D24(&StringLiteral_18527/*"contentsEnabled"*/, v7);
-    sub_1C13D24(&StringLiteral_16886/*"` registered. Are you missing a package?"*/, v8);
-    byte_4BB5FC8 = 1;
+    sub_1C1ABD4(&StringLiteral_19677/*"facebookId"*/, facebookId);
+    sub_1C1ABD4(&StringLiteral_18541/*"continueType"*/, v7);
+    sub_1C1ABD4(&StringLiteral_16900/*"accessToken"*/, v8);
+    byte_4BC93AA = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18527/*"contentsEnabled"*/, 3, method);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_19663/*"f8"*/, facebookId, v9);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_16886/*"` registered. Are you missing a package?"*/, accessToken, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18541/*"continueType"*/, 3, method);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_19677/*"facebookId"*/, facebookId, v9);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_16900/*"accessToken"*/, accessToken, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
@@ -79,26 +79,26 @@ void __fastcall ContinueDecideRequest__beginRequestTwitter(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4BB5FC7 & 1) == 0 )
+  if ( (byte_4BC93A9 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_24500/*"ttl"*/, twitterId);
-    sub_1C13D24(&StringLiteral_18527/*"contentsEnabled"*/, v7);
-    sub_1C13D24(&StringLiteral_16886/*"` registered. Are you missing a package?"*/, v8);
-    byte_4BB5FC7 = 1;
+    sub_1C1ABD4(&StringLiteral_24520/*"twitterId"*/, twitterId);
+    sub_1C1ABD4(&StringLiteral_18541/*"continueType"*/, v7);
+    sub_1C1ABD4(&StringLiteral_16900/*"accessToken"*/, v8);
+    byte_4BC93A9 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18527/*"contentsEnabled"*/, 2, method);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_24500/*"ttl"*/, twitterId, v9);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_16886/*"` registered. Are you missing a package?"*/, accessToken, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18541/*"continueType"*/, 2, method);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_24520/*"twitterId"*/, twitterId, v9);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_16900/*"accessToken"*/, accessToken, v10);
   ContinueDecideRequest__beginRequest(this, v11);
 }
 
 
 System_String_o *__fastcall ContinueDecideRequest__getMockData(ContinueDecideRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB5FC5 & 1) == 0 )
+  if ( (byte_4BC93A7 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_1/*""*/, method);
-    byte_4BB5FC5 = 1;
+    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
+    byte_4BC93A7 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -109,16 +109,16 @@ System_String_o *__fastcall ContinueDecideRequest__getURL(ContinueDecideRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB5FC4 & 1) == 0 )
+  if ( (byte_4BC93A6 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_18521/*"content-length"*/, v2);
-    byte_4BB5FC4 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_18535/*"continue/decide"*/, v2);
+    byte_4BC93A6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_18521/*"content-length"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18535/*"continue/decide"*/, 0LL);
 }
 
 
@@ -136,17 +136,17 @@ void __fastcall ContinueDecideRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BB5FC9 & 1) == 0 )
+  if ( (byte_4BC93AB & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB5FC9 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC93AB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(33, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -165,7 +165,7 @@ void __fastcall ContinueDecideRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22421/*"newAttributes"*/,
+        StringLiteral_22437/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

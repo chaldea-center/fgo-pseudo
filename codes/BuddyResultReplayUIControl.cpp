@@ -20,23 +20,23 @@ UserServantCollectionEntity_o *__fastcall BuddyResultReplayUIControl__GetBuddySe
   UserServantCollectionEntity_o *v11; // x19
   Il2CppObject *v12; // x20
 
-  if ( (byte_4BB892D & 1) == 0 )
+  if ( (byte_4BCBD21 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_UserEventServantPointMaster___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v4);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&NetworkManager_TypeInfo, v6);
-    byte_4BB892D = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserEventServantPointMaster___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v4);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v6);
+    byte_4BCBD21 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v7);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v7);
+    byte_4BC2585 = 1;
   }
   v9 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -56,13 +56,13 @@ UserServantCollectionEntity_o *__fastcall BuddyResultReplayUIControl__GetBuddySe
     v11 = result;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v12 = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    v12 = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BAF1E5 )
+    if ( !byte_4BC2585 )
     {
-      sub_1C13D24(&NetworkManager_TypeInfo, v7);
-      byte_4BAF1E5 = 1;
+      sub_1C1ABD4(&NetworkManager_TypeInfo, v7);
+      byte_4BC2585 = 1;
     }
     v9 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -77,7 +77,7 @@ UserServantCollectionEntity_o *__fastcall BuddyResultReplayUIControl__GetBuddySe
                v11->fields.maxAtk,
                0LL);
 LABEL_24:
-    sub_1C13F80(v9, v7);
+    sub_1C1AE30(v9, v7);
   }
   return result;
 }
@@ -109,10 +109,10 @@ void __fastcall BuddyResultReplayUIControl__OpenReplayIntroDialog(
   ResultReplayIntroDialog_o *v7; // x0
   const MethodInfo *v8; // x2
 
-  if ( (byte_4BB892C & 1) == 0 )
+  if ( (byte_4BCBD20 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, onCloseCallback);
-    byte_4BB892C = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, onCloseCallback);
+    byte_4BCBD20 = 1;
   }
   introDialog = (UnityEngine_Object_o *)this->fields.introDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -121,7 +121,7 @@ void __fastcall BuddyResultReplayUIControl__OpenReplayIntroDialog(
   {
     v7 = this->fields.introDialog;
     if ( !v7 || (ResultReplayIntroDialog__Init(v7, v6), (v7 = this->fields.introDialog) == 0LL) )
-      sub_1C13F80(v7, v6);
+      sub_1C1AE30(v7, v6);
     ResultReplayIntroDialog__Open(v7, onCloseCallback, v8);
   }
 }
@@ -141,12 +141,12 @@ void __fastcall BuddyResultReplayUIControl__OpenSelectDialog(
   __int64 v10; // x1
   const MethodInfo *v11; // x3
 
-  if ( (byte_4BB892B & 1) == 0 )
+  if ( (byte_4BCBD1F & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_int__TypeInfo, method);
-    sub_1C13D24(&Method_BuddyResultReplayUIControl_OnSelectPortraitLimitCount__, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BB892B = 1;
+    sub_1C1ABD4(&System_Action_int__TypeInfo, method);
+    sub_1C1ABD4(&Method_BuddyResultReplayUIControl_OnSelectPortraitLimitCount__, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BCBD1F = 1;
   }
   selectDialog = (UnityEngine_Object_o *)this->fields.selectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -157,14 +157,14 @@ void __fastcall BuddyResultReplayUIControl__OpenSelectDialog(
     if ( buddyServantEnt )
     {
       v7 = this->fields.selectDialog;
-      v8 = (System_Action_int__o *)sub_1C13F70(System_Action_int__TypeInfo);
+      v8 = (System_Action_int__o *)sub_1C1AE20(System_Action_int__TypeInfo);
       System_Action_int____ctor(
         v8,
         (Il2CppObject *)this,
         Method_BuddyResultReplayUIControl_OnSelectPortraitLimitCount__,
         0LL);
       if ( !v7 )
-        sub_1C13F80(v9, v10);
+        sub_1C1AE30(v9, v10);
       SelectServantPortraitLimitCountDialog__Open(v7, buddyServantEnt, v8, v11);
     }
   }
@@ -201,7 +201,7 @@ void __fastcall BuddyResultReplayUIControl__Setup(
                                 eventId,
                                 (const MethodInfo *)selectLimitCountCallback);
   v5->fields.buddyServantEnt = BuddyServantCollectionEnt;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v5->fields.buddyServantEnt,
     (int64_t)BuddyServantCollectionEnt,
     v7,
@@ -212,9 +212,9 @@ void __fastcall BuddyResultReplayUIControl__Setup(
     v12);
   v5->fields.selectPortraitLimitCountCallback = selectLimitCountCallback;
   v5 = (BuddyResultReplayUIControl_o *)((char *)v5 + 64);
-  sub_1C13CC8((PartyOrganizationUtility_o *)v5, (int64_t)selectLimitCountCallback, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v5, (int64_t)selectLimitCountCallback, v13, v14, v15, v16, v17, v18);
   introDialog = (SelectServantPortraitLimitCountDialog_o *)v5[-1].fields.introDialog;
   if ( !introDialog )
-    sub_1C13F80(0LL, v19);
+    sub_1C1AE30(0LL, v19);
   SelectServantPortraitLimitCountDialog__Init(introDialog, v19);
 }

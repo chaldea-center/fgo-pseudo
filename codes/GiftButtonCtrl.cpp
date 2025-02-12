@@ -3,10 +3,10 @@ void __fastcall GiftButtonCtrl___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct GiftButtonCtrl_StaticFields *static_fields; // x8
 
-  if ( (byte_4BB6765 & 1) == 0 )
+  if ( (byte_4BC9B47 & 1) == 0 )
   {
-    sub_1C13D24(&GiftButtonCtrl_TypeInfo, v1);
-    byte_4BB6765 = 1;
+    sub_1C1ABD4(&GiftButtonCtrl_TypeInfo, v1);
+    byte_4BC9B47 = 1;
   }
   static_fields = GiftButtonCtrl_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->BLANK_EARTH_WINDOW_POS.fields.x = 0LL;
@@ -34,18 +34,18 @@ void __fastcall GiftButtonCtrl__InvalidateGiftInfo(GiftButtonCtrl_o *this, const
   bool hasLimited; // [xsp+8h] [xbp-28h] BYREF
   int32_t count; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB675E & 1) == 0 )
+  if ( (byte_4BC9B40 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BB675E = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4BC9B40 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___);
   Instance = UserGameMaster__getSelfUserGame(0LL);
   count = 0;
   hasLimited = 0;
@@ -74,7 +74,7 @@ void __fastcall GiftButtonCtrl__InvalidateGiftInfo(GiftButtonCtrl_o *this, const
       goto LABEL_12;
     }
 LABEL_13:
-    sub_1C13F80(Instance, v5);
+    sub_1C1AE30(Instance, v5);
   }
   EnableTimeLimitedNotification = this->fields.EnableTimeLimitedNotification;
 LABEL_12:
@@ -90,21 +90,21 @@ void __fastcall GiftButtonCtrl__OnBtnTouched(GiftButtonCtrl_o *this, const Metho
   __int64 v6; // x1
   PlayMakerFSM_o *stateMachine; // x0
 
-  if ( (byte_4BB6760 & 1) == 0 )
+  if ( (byte_4BC9B42 & 1) == 0 )
   {
-    sub_1C13D24(&Method_GiftButtonCtrl_OnBtnTouched__, method);
-    sub_1C13D24(&StringLiteral_3144/*"BREAK_ON_BATTLE_WAIT"*/, v3);
-    byte_4BB6760 = 1;
+    sub_1C1ABD4(&Method_GiftButtonCtrl_OnBtnTouched__, method);
+    sub_1C1ABD4(&StringLiteral_3147/*"BTN_GIFT"*/, v3);
+    byte_4BC9B42 = 1;
   }
   v4 = Method_GiftButtonCtrl_OnBtnTouched__;
   if ( (*((_BYTE *)Method_GiftButtonCtrl_OnBtnTouched__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C13D3C(Method_GiftButtonCtrl_OnBtnTouched__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C13D08(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C1ABEC(Method_GiftButtonCtrl_OnBtnTouched__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine )
-    sub_1C13F80(0LL, v6);
-  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_3144/*"BREAK_ON_BATTLE_WAIT"*/, 0LL);
+    sub_1C1AE30(0LL, v6);
+  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_3147/*"BTN_GIFT"*/, 0LL);
   ActionExtensions__Call(this->fields.OnGiftOpenAdditionalAction, 0LL);
 }
 
@@ -113,15 +113,15 @@ void __fastcall GiftButtonCtrl__OnButtonTouched(GiftButtonCtrl_o *this, const Me
 {
   PlayMakerFSM_o *stateMachine; // x0
 
-  if ( (byte_4BB6763 & 1) == 0 )
+  if ( (byte_4BC9B45 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_3144/*"BREAK_ON_BATTLE_WAIT"*/, method);
-    byte_4BB6763 = 1;
+    sub_1C1ABD4(&StringLiteral_3147/*"BTN_GIFT"*/, method);
+    byte_4BC9B45 = 1;
   }
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine )
-    sub_1C13F80(0LL, method);
-  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_3144/*"BREAK_ON_BATTLE_WAIT"*/, 0LL);
+    sub_1C1AE30(0LL, method);
+  PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_3147/*"BTN_GIFT"*/, 0LL);
 }
 
 
@@ -143,25 +143,25 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceCloseFadedOut(
   UnityEngine_Object_o *v14; // x21
   struct System_Func_bool__bool__o *OnGiftCloseAdditionalAction; // x8
 
-  if ( (byte_4BB6762 & 1) == 0 )
+  if ( (byte_4BC9B44 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, retrievedNewServant);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_5852/*"EVENT_TOWER_REWARD_GET_2"*/, v8);
-    byte_4BB6762 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, retrievedNewServant);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_5856/*"EV_GIFT_EXIT"*/, v8);
+    byte_4BC9B44 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   CommonUI__CloseUsrPresentList(Instance, 0LL);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v11);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v11);
+    byte_4BC2713 = 1;
   }
   v12 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -171,7 +171,7 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceCloseFadedOut(
   }
   mInstance = v12->static_fields->mInstance;
   v14 = mInstance ? (UnityEngine_Object_o *)mInstance->fields.mTerminalList : 0LL;
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   if ( AvalonSceneManager__checkNowScene((AvalonSceneManager_o *)Instance, 34, 0LL) )
@@ -197,13 +197,13 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceCloseFadedOut(
     Instance = (CommonUI_o *)this->fields.stateMachine;
     if ( Instance )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5852/*"EVENT_TOWER_REWARD_GET_2"*/, 0LL);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_5856/*"EV_GIFT_EXIT"*/, 0LL);
       if ( v14 )
         ScrTerminalListTop__OnPlayerStatusSetBackMaskActive((ScrTerminalListTop_o *)v14, 0LL);
       return;
     }
 LABEL_27:
-    sub_1C13F80(Instance, v10);
+    sub_1C1AE30(Instance, v10);
   }
 }
 
@@ -218,24 +218,24 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceClosed(
   PlayMakerFSM_o *stateMachine; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4BB6764 & 1) == 0 )
+  if ( (byte_4BC9B46 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_7223/*"GoogleBillingResponseCode: "*/, retrievedNewServant);
-    sub_1C13D24(&StringLiteral_5853/*"EVENT_TRUE"*/, v5);
-    byte_4BB6764 = 1;
+    sub_1C1ABD4(&StringLiteral_7226/*"GotNewServantTrigger"*/, retrievedNewServant);
+    sub_1C1ABD4(&StringLiteral_5857/*"EV_GIFT_PROC_FIN"*/, v5);
+    byte_4BC9B46 = 1;
   }
   stateMachine = this->fields.stateMachine;
   if ( !stateMachine
-    || (PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5853/*"EVENT_TRUE"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(stateMachine, (System_String_o *)StringLiteral_5857/*"EV_GIFT_PROC_FIN"*/, 0LL),
         GiftButtonCtrl__InvalidateGiftInfo(this, v7),
         (stateMachine = this->fields.stateMachine) == 0LL)
     || (stateMachine = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(stateMachine, 0LL)) == 0LL
     || (stateMachine = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmBool(
                                            (HutongGames_PlayMaker_FsmVariables_o *)stateMachine,
-                                           (System_String_o *)StringLiteral_7223/*"GoogleBillingResponseCode: "*/,
+                                           (System_String_o *)StringLiteral_7226/*"GotNewServantTrigger"*/,
                                            0LL)) == 0LL )
   {
-    sub_1C13F80(stateMachine, retrievedNewServant);
+    sub_1C1AE30(stateMachine, retrievedNewServant);
   }
   LOBYTE(stateMachine->fields.addEventHandlers) = retrievedNewServant;
 }
@@ -261,41 +261,41 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceOpenFadedOut(GiftButtonCtrl_o *th
   QuestRewardTokenAction_c *v18; // x8
   QuestRewardTokenAction_c *v19; // x8
 
-  if ( (byte_4BB6761 & 1) == 0 )
+  if ( (byte_4BC9B43 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&UserPresentBoxWindow_ClickDelegate_TypeInfo, v3);
-    sub_1C13D24(&Method_GiftButtonCtrl_InvalidateGiftInfo__, v4);
-    sub_1C13D24(&Method_GiftButtonCtrl_OnGiftInterfaceClosed__, v5);
-    sub_1C13D24(&GiftButtonCtrl_TypeInfo, v6);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v8);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v9);
-    byte_4BB6761 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&UserPresentBoxWindow_ClickDelegate_TypeInfo, v3);
+    sub_1C1ABD4(&Method_GiftButtonCtrl_InvalidateGiftInfo__, v4);
+    sub_1C1ABD4(&Method_GiftButtonCtrl_OnGiftInterfaceClosed__, v5);
+    sub_1C1ABD4(&GiftButtonCtrl_TypeInfo, v6);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v8);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v9);
+    byte_4BC9B43 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v11 = (UserPresentBoxWindow_ClickDelegate_o *)sub_1C13F70(UserPresentBoxWindow_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v11 = (UserPresentBoxWindow_ClickDelegate_o *)sub_1C1AE20(UserPresentBoxWindow_ClickDelegate_TypeInfo);
   UserPresentBoxWindow_ClickDelegate___ctor(
     v11,
     (Il2CppObject *)this,
     Method_GiftButtonCtrl_OnGiftInterfaceClosed__,
     0LL);
-  v12 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_GiftButtonCtrl_InvalidateGiftInfo__, 0LL);
   if ( !Instance )
     goto LABEL_37;
   CommonUI__OpenUsrPresentList((CommonUI_o *)Instance, 1, v11, v12, 0LL);
-  v13 = (ScrTerminalListTop_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  v13 = (ScrTerminalListTop_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !v13 )
     goto LABEL_37;
   if ( AvalonSceneManager__checkNowScene((AvalonSceneManager_o *)v13, 34, 0LL) )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4BAF374 )
+    if ( !byte_4BC2713 )
     {
-      sub_1C13D24(&TerminalSceneComponent_TypeInfo, v14);
-      byte_4BAF374 = 1;
+      sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v14);
+      byte_4BC2713 = 1;
     }
     v13 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -311,7 +311,7 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceOpenFadedOut(GiftButtonCtrl_o *th
       {
         if ( ScrTerminalListTop__get_IsActiveBlankEarth(v13, 0LL) )
         {
-          v13 = (ScrTerminalListTop_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v13 = (ScrTerminalListTop_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v16 = (CommonUI_o *)v13;
           v17 = GiftButtonCtrl_TypeInfo;
           if ( !GiftButtonCtrl_TypeInfo->_2.cctor_finished )
@@ -324,10 +324,10 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceOpenFadedOut(GiftButtonCtrl_o *th
           CommonUI__SetUsrPresentListPos(v16, v17->static_fields->BLANK_EARTH_WINDOW_POS, 0LL);
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4BAF374 )
+          if ( !byte_4BC2713 )
           {
-            sub_1C13D24(&TerminalSceneComponent_TypeInfo, v14);
-            byte_4BAF374 = 1;
+            sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v14);
+            byte_4BC2713 = 1;
           }
           v13 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -345,10 +345,10 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceOpenFadedOut(GiftButtonCtrl_o *th
         }
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4BAF374 )
+        if ( !byte_4BC2713 )
         {
-          sub_1C13D24(&TerminalSceneComponent_TypeInfo, v14);
-          byte_4BAF374 = 1;
+          sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v14);
+          byte_4BC2713 = 1;
         }
         v13 = (ScrTerminalListTop_o *)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -369,7 +369,7 @@ void __fastcall GiftButtonCtrl__OnGiftInterfaceOpenFadedOut(GiftButtonCtrl_o *th
       }
     }
 LABEL_37:
-    sub_1C13F80(v13, v14);
+    sub_1C1AE30(v13, v14);
   }
 }
 
@@ -394,12 +394,12 @@ void __fastcall GiftButtonCtrl__SetGiftCount(GiftButtonCtrl_o *this, int32_t gif
   UnityEngine_Object_o *giftAnimation; // x23
   UnityEngine_Object_o *giftButton; // x22
 
-  if ( (byte_4BB675F & 1) == 0 )
+  if ( (byte_4BC9B41 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&giftCount);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_1/*""*/, v6);
-    byte_4BB675F = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, *(_QWORD *)&giftCount);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v6);
+    byte_4BC9B41 = 1;
   }
   giftNumberCounter = (SimpleAnimation_o *)BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -438,7 +438,7 @@ void __fastcall GiftButtonCtrl__SetGiftCount(GiftButtonCtrl_o *this, int32_t gif
       goto LABEL_16;
     }
 LABEL_43:
-    sub_1C13F88(giftNumberCounter, *(_QWORD *)&giftCount);
+    sub_1C1AE38(giftNumberCounter, *(_QWORD *)&giftCount);
   }
 LABEL_16:
   giftSimpleAnimation = (UnityEngine_Object_o *)this->fields.giftSimpleAnimation;
@@ -458,7 +458,7 @@ LABEL_16:
       giftNumberCounter = this->fields.giftSimpleAnimation;
       if ( !giftNumberCounter )
         goto LABEL_42;
-      SimpleAnimation__Play_65106228(giftNumberCounter, v15, 0LL);
+      SimpleAnimation__Play_65178652(giftNumberCounter, v15, 0LL);
     }
   }
   else
@@ -481,7 +481,7 @@ LABEL_16:
         giftNumberCounter = (SimpleAnimation_o *)this->fields.giftAnimation;
         if ( !giftNumberCounter )
           goto LABEL_42;
-        UnityEngine_Animation__Play_70466396((UnityEngine_Animation_o *)giftNumberCounter, v15, 0LL);
+        UnityEngine_Animation__Play_70538820((UnityEngine_Animation_o *)giftNumberCounter, v15, 0LL);
       }
     }
   }
@@ -498,7 +498,7 @@ LABEL_16:
   giftNumberCounter = (SimpleAnimation_o *)this->fields.giftNumberCounter;
   if ( !giftNumberCounter )
 LABEL_42:
-    sub_1C13F80(giftNumberCounter, *(_QWORD *)&giftCount);
+    sub_1C1AE30(giftNumberCounter, *(_QWORD *)&giftCount);
   NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)giftNumberCounter, giftCount, 0LL);
 }
 
@@ -515,7 +515,7 @@ void __fastcall GiftButtonCtrl__SetLimitedItemNotification(
   if ( !limitedPeriodSprite
     || (limitedPeriodSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(limitedPeriodSprite, 0LL)) == 0LL )
   {
-    sub_1C13F80(limitedPeriodSprite, hasLimited);
+    sub_1C1AE30(limitedPeriodSprite, hasLimited);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)limitedPeriodSprite, hasLimited, 0LL);
 }
@@ -527,7 +527,7 @@ bool __fastcall GiftButtonCtrl__get_isEnabled(GiftButtonCtrl_o *this, const Meth
 
   giftButton = this->fields.giftButton;
   if ( !giftButton )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return ((__int64 (__fastcall *)(struct UIButton_o *, Il2CppMethodPointer))giftButton->klass->vtable._4_get_isEnabled.method)(
            giftButton,
            giftButton->klass->vtable._5_set_isEnabled.methodPtr);
@@ -546,7 +546,7 @@ void __fastcall GiftButtonCtrl__set_OnGiftClose(
   PartyListViewItem_o *v7; // x7
 
   this->fields.OnGiftCloseAdditionalAction = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.OnGiftCloseAdditionalAction,
     (int64_t)value,
     (int64_t)method,
@@ -570,7 +570,7 @@ void __fastcall GiftButtonCtrl__set_OnGiftOpen(
   PartyListViewItem_o *v7; // x7
 
   this->fields.OnGiftOpenAdditionalAction = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.OnGiftOpenAdditionalAction,
     (int64_t)value,
     (int64_t)method,
@@ -588,7 +588,7 @@ void __fastcall GiftButtonCtrl__set_isEnabled(GiftButtonCtrl_o *this, bool value
 
   giftButton = this->fields.giftButton;
   if ( !giftButton )
-    sub_1C13F80(0LL, value);
+    sub_1C1AE30(0LL, value);
   ((void (__fastcall *)(struct UIButton_o *, bool, Il2CppMethodPointer))giftButton->klass->vtable._5_set_isEnabled.method)(
     giftButton,
     value,

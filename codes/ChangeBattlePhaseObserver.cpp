@@ -11,10 +11,10 @@ void __fastcall ChangeBattlePhaseObserver__Update(
 {
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4BB74FB & 1) == 0 )
+  if ( (byte_4BCA8DD & 1) == 0 )
   {
-    sub_1C13D24(&ChangeBattlePhaseNotify_TypeInfo, subject);
-    byte_4BB74FB = 1;
+    sub_1C1ABD4(&ChangeBattlePhaseNotify_TypeInfo, subject);
+    byte_4BCA8DD = 1;
   }
   if ( subject )
   {

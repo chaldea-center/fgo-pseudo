@@ -1,9 +1,9 @@
 void __fastcall LimitCountSealDialogComponent___ctor(LimitCountSealDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB816A & 1) == 0 )
+  if ( (byte_4BCB55E & 1) == 0 )
   {
-    sub_1C13D24(&BaseDialog_TypeInfo, method);
-    byte_4BB816A = 1;
+    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
+    byte_4BCB55E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -31,7 +31,7 @@ void __fastcall LimitCountSealDialogComponent__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C13CC8(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C1AB78(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       *(_QWORD *)&v9->fields.extra_arg);
@@ -52,14 +52,14 @@ void __fastcall LimitCountSealDialogComponent__Close(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4BB8168 & 1) == 0 )
+  if ( (byte_4BCB55C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&Method_LimitCountSealDialogComponent_EndClose__, v10);
-    byte_4BB8168 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&Method_LimitCountSealDialogComponent_EndClose__, v10);
+    byte_4BCB55C = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -68,7 +68,7 @@ void __fastcall LimitCountSealDialogComponent__Close(
     v5,
     v6,
     v7);
-  v11 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_LimitCountSealDialogComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -95,7 +95,7 @@ void __fastcall LimitCountSealDialogComponent__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C13CC8(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C1AB78(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -107,10 +107,10 @@ void __fastcall LimitCountSealDialogComponent__Init(LimitCountSealDialogComponen
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BB8166 & 1) == 0 )
+  if ( (byte_4BCB55A & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_1/*""*/, method);
-    byte_4BB8166 = 1;
+    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
+    byte_4BCB55A = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -121,7 +121,7 @@ void __fastcall LimitCountSealDialogComponent__Init(LimitCountSealDialogComponen
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(titleLabel, method);
+    sub_1C1AE30(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -143,14 +143,14 @@ void __fastcall LimitCountSealDialogComponent__OpenLimitCountSealDialog(
   UILabel_o *titleLabel; // x0
   UILabel_o *btnLabel; // x20
 
-  if ( (byte_4BB8167 & 1) == 0 )
+  if ( (byte_4BCB55B & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, title);
-    sub_1C13D24(&StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, v12);
-    byte_4BB8167 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, title);
+    sub_1C1ABD4(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v12);
+    byte_4BCB55B = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     (int64_t)message,
@@ -170,13 +170,13 @@ void __fastcall LimitCountSealDialogComponent__OpenLimitCountSealDialog(
   btnLabel = this->fields.btnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMNAD_SPELL_RECV_TXT"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !btnLabel
     || (UILabel__set_text(btnLabel, (System_String_o *)titleLabel, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_10:
-    sub_1C13F80(titleLabel, v13);
+    sub_1C1AE30(titleLabel, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 1, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
@@ -198,10 +198,10 @@ void __fastcall LimitCountSealDialogComponent__add_callbackFunc(
   LimitCountSealDialogComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BB8164 & 1) == 0 )
+  if ( (byte_4BCB558 & 1) == 0 )
   {
-    sub_1C13D24(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, value);
-    byte_4BB8164 = 1;
+    sub_1C1ABD4(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, value);
+    byte_4BCB558 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -214,13 +214,13 @@ void __fastcall LimitCountSealDialogComponent__add_callbackFunc(
       if ( (LimitCountSealDialogComponent_CallbackFunc_c *)v8->klass != LimitCountSealDialogComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   LimitCountSealDialogComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -229,12 +229,12 @@ System_String_o *__fastcall LimitCountSealDialogComponent__get_closeBtnPath(
         LimitCountSealDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB8169 & 1) == 0 )
+  if ( (byte_4BCB55D & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_15895/*"Window"*/, method);
-    byte_4BB8169 = 1;
+    sub_1C1ABD4(&StringLiteral_15909/*"Window/OkBtn"*/, method);
+    byte_4BCB55D = 1;
   }
-  return (System_String_o *)StringLiteral_15895/*"Window"*/;
+  return (System_String_o *)StringLiteral_15909/*"Window/OkBtn"*/;
 }
 
 
@@ -252,10 +252,10 @@ void __fastcall LimitCountSealDialogComponent__remove_callbackFunc(
   LimitCountSealDialogComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BB8165 & 1) == 0 )
+  if ( (byte_4BCB559 & 1) == 0 )
   {
-    sub_1C13D24(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, value);
-    byte_4BB8165 = 1;
+    sub_1C1ABD4(&LimitCountSealDialogComponent_CallbackFunc_TypeInfo, value);
+    byte_4BCB559 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -268,13 +268,13 @@ void __fastcall LimitCountSealDialogComponent__remove_callbackFunc(
       if ( (LimitCountSealDialogComponent_CallbackFunc_c *)v8->klass != LimitCountSealDialogComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   LimitCountSealDialogComponent__Init(v11, v12);
 }
 
@@ -301,7 +301,7 @@ void __fastcall LimitCountSealDialogComponent_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -312,12 +312,12 @@ void __fastcall LimitCountSealDialogComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C13DE4(v10) & 1) == 0 )
+  if ( (sub_1C1AC94(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C13E4C(v14, 0LL);
+      v14 = sub_1C1AE4C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C1ACFC(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -329,9 +329,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A59B9C;
+  this->fields.m_target = (Il2CppObject *)sub_1A6099C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A59B5C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6095C;
 }
 
 
@@ -344,7 +344,7 @@ System_IAsyncResult_o *__fastcall LimitCountSealDialogComponent_CallbackFunc__Be
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1C13CD8(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C1AB88(this, &v5, callback, object);
 }
 
 
@@ -353,7 +353,7 @@ void __fastcall LimitCountSealDialogComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C13CDC(result, 0LL, method);
+  sub_1C1AB8C(result, 0LL, method);
 }
 
 

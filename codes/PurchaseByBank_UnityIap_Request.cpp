@@ -21,27 +21,27 @@ void __fastcall PurchaseByBank_UnityIap_Request__beginRequest(
   PartyListViewItem_o *v23; // x7
   const MethodInfo *v24; // x1
 
-  if ( (byte_4BB6087 & 1) == 0 )
+  if ( (byte_4BC9469 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, purchaseBaseData);
-    sub_1C13D24(&StringLiteral_23946/*"stay_dog_30"*/, v13);
-    sub_1C13D24(&StringLiteral_23025/*"prs"*/, v14);
-    sub_1C13D24(&StringLiteral_23026/*"prs-AF"*/, v15);
-    sub_1C13D24(&StringLiteral_23709/*"shouldShowRequestPermissionRationale"*/, v16);
-    byte_4BB6087 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, purchaseBaseData);
+    sub_1C1ABD4(&StringLiteral_23966/*"storeError"*/, v13);
+    sub_1C1ABD4(&StringLiteral_23042/*"purchaseData"*/, v14);
+    sub_1C1ABD4(&StringLiteral_23043/*"purchaseDataBase64"*/, v15);
+    sub_1C1ABD4(&StringLiteral_23729/*"signatureData"*/, v16);
+    byte_4BC9469 = 1;
   }
-  RequestBase__addField_42303556(
+  RequestBase__addField_42362156(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23025/*"prs"*/,
+    (System_String_o *)StringLiteral_23042/*"purchaseData"*/,
     purchaseData,
     *(const MethodInfo **)&storeError);
   if ( !System_String__IsNullOrEmpty(purchaseBaseData, 0LL) )
-    RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_23026/*"prs-AF"*/, purchaseBaseData, v17);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23946/*"stay_dog_30"*/, storeError, v17);
+    RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_23043/*"purchaseDataBase64"*/, purchaseBaseData, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23966/*"storeError"*/, storeError, v17);
   if ( !System_String__IsNullOrEmpty(extraToken, 0LL) )
-    RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_23709/*"shouldShowRequestPermissionRationale"*/, extraToken, v19);
+    RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_23729/*"signatureData"*/, extraToken, v19);
   this->fields.passPurchaseResultCallBack = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.passPurchaseResultCallBack,
     (int64_t)callback,
     v18,
@@ -64,16 +64,16 @@ System_String_o *__fastcall PurchaseByBank_UnityIap_Request__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB6086 & 1) == 0 )
+  if ( (byte_4BC9468 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_23654/*"shake"*/, v2);
-    byte_4BB6086 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_23674/*"shop/purchaseByBank"*/, v2);
+    byte_4BC9468 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_23654/*"shake"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_23674/*"shop/purchaseByBank"*/, 0LL);
 }
 
 
@@ -109,19 +109,19 @@ void __fastcall PurchaseByBank_UnityIap_Request__requestCompleted(
   __int64 v29; // x1
   struct NetworkManager_ResultCallbackFunc_o *v30; // x8
 
-  if ( (byte_4BB6088 & 1) == 0 )
+  if ( (byte_4BC946A & 1) == 0 )
   {
-    sub_1C13D24(&Method_ActionExtensions_Call_PurchaseByBank_UnityIap_Request_PurchaseResult_____, responseList);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
-    sub_1C13D24(&Method_JsonManager_DeserializeArray_PurchaseByBank_UnityIap_Request_PurchaseResult___, v7);
-    sub_1C13D24(&JsonManager_TypeInfo, v8);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_23282/*"required"*/, v10);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v11);
-    sub_1C13D24(&StringLiteral_23029/*"ps3"*/, v12);
-    sub_1C13D24(&StringLiteral_1/*""*/, v13);
-    byte_4BB6088 = 1;
+    sub_1C1ABD4(&Method_ActionExtensions_Call_PurchaseByBank_UnityIap_Request_PurchaseResult_____, responseList);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
+    sub_1C1ABD4(&Method_JsonManager_DeserializeArray_PurchaseByBank_UnityIap_Request_PurchaseResult___, v7);
+    sub_1C1ABD4(&JsonManager_TypeInfo, v8);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_23302/*"result"*/, v10);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v11);
+    sub_1C1ABD4(&StringLiteral_23046/*"purchaseResults"*/, v12);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v13);
+    byte_4BC946A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -129,7 +129,7 @@ void __fastcall PurchaseByBank_UnityIap_Request__requestCompleted(
   if ( v14 )
   {
     v15 = v14;
-    if ( ResponseData__checkError_42394144(v14, 0LL) )
+    if ( ResponseData__checkError_42452820(v14, 0LL) )
     {
       success = (System_Collections_Generic_Dictionary_object__object__o *)v15->fields.success;
       if ( success )
@@ -138,13 +138,13 @@ void __fastcall PurchaseByBank_UnityIap_Request__requestCompleted(
         v18 = StringLiteral_1/*""*/;
         if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                 v17,
-                (Il2CppObject *)StringLiteral_23282/*"required"*/,
-                (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                (Il2CppObject *)StringLiteral_23302/*"result"*/,
+                (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           goto LABEL_11;
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  success,
-                 (Il2CppObject *)StringLiteral_23282/*"required"*/,
-                 (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_23302/*"result"*/,
+                 (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( Item )
         {
           v18 = (void *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -153,22 +153,22 @@ void __fastcall PurchaseByBank_UnityIap_Request__requestCompleted(
 LABEL_11:
           if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
                  success,
-                 (Il2CppObject *)StringLiteral_23029/*"ps3"*/,
-                 (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                 (Il2CppObject *)StringLiteral_23046/*"purchaseResults"*/,
+                 (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           {
             v21 = System_Collections_Generic_Dictionary_object__object___get_Item(
                     success,
-                    (Il2CppObject *)StringLiteral_23029/*"ps3"*/,
-                    (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                    (Il2CppObject *)StringLiteral_23046/*"purchaseResults"*/,
+                    (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
             if ( !JsonManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
             v22 = JsonManager__DeserializeArray_object_(
                     v21,
-                    (const MethodInfo_2FF6CCC *)Method_JsonManager_DeserializeArray_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+                    (const MethodInfo_3006E90 *)Method_JsonManager_DeserializeArray_PurchaseByBank_UnityIap_Request_PurchaseResult___);
             ActionExtensions__Call_object_(
               (System_Action_T__o *)this->fields.passPurchaseResultCallBack,
               &v22->obj,
-              (const MethodInfo_2EE1C78 *)Method_ActionExtensions_Call_PurchaseByBank_UnityIap_Request_PurchaseResult_____);
+              (const MethodInfo_2EF1C9C *)Method_ActionExtensions_Call_PurchaseByBank_UnityIap_Request_PurchaseResult_____);
           }
 LABEL_19:
           CallBack = this->fields.CallBack;
@@ -188,7 +188,7 @@ LABEL_23:
           return;
         }
 LABEL_25:
-        sub_1C13F80(Item, v20);
+        sub_1C1AE30(Item, v20);
       }
     }
     else
@@ -197,16 +197,16 @@ LABEL_25:
       if ( fail )
       {
         v24 = (System_Collections_Generic_Dictionary_object__object__o *)v15->fields.fail;
-        v18 = (void *)StringLiteral_22421/*"newAttributes"*/;
+        v18 = (void *)StringLiteral_22437/*"ng"*/;
         if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                 v24,
-                (Il2CppObject *)StringLiteral_23282/*"required"*/,
-                (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                (Il2CppObject *)StringLiteral_23302/*"result"*/,
+                (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
           goto LABEL_19;
         Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                  fail,
-                 (Il2CppObject *)StringLiteral_23282/*"required"*/,
-                 (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                 (Il2CppObject *)StringLiteral_23302/*"result"*/,
+                 (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( Item )
         {
           v18 = (void *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
@@ -224,7 +224,7 @@ LABEL_25:
     m_target = v30->fields.m_target;
     original_method_info = v30->fields.original_method_info;
     v28 = *(_QWORD *)&v30->fields.extra_arg;
-    v29 = StringLiteral_22421/*"newAttributes"*/;
+    v29 = StringLiteral_22437/*"ng"*/;
     goto LABEL_23;
   }
 }

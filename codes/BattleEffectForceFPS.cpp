@@ -47,10 +47,10 @@ void __fastcall BattleEffectForceFPS__LateUpdate(BattleEffectForceFPS_o *this, c
   bool v40; // zf
   float v41; // s1
 
-  if ( (byte_4BB6D0D & 1) == 0 )
+  if ( (byte_4BCA0EF & 1) == 0 )
   {
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, method);
-    byte_4BB6D0D = 1;
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, method);
+    byte_4BCA0EF = 1;
   }
   targetAnimations = this->fields.targetAnimations;
   if ( targetAnimations && *(_QWORD *)&targetAnimations->max_length
@@ -77,7 +77,7 @@ void __fastcall BattleEffectForceFPS__LateUpdate(BattleEffectForceFPS_o *this, c
           Item = SimpleAnimation__get_Item(v12, name, 0LL);
           monitor = (UnityEngine_Object_o *)SimpleAnimation__IsPlaying(v12, name, 0LL);
           if ( ((unsigned __int8)monitor & 1) == 0 )
-            monitor = (UnityEngine_Object_o *)SimpleAnimation__Play_65106228(v12, name, 0LL);
+            monitor = (UnityEngine_Object_o *)SimpleAnimation__Play_65178652(v12, name, 0LL);
           if ( Item )
           {
             targetFps = this->fields.targetFps;
@@ -103,7 +103,7 @@ void __fastcall BattleEffectForceFPS__LateUpdate(BattleEffectForceFPS_o *this, c
             else
             {
 LABEL_24:
-              p_method = sub_1C65D04(Item, SimpleAnimation_State_TypeInfo, 4LL);
+              p_method = sub_1C6CBB4(Item, SimpleAnimation_State_TypeInfo, 4LL);
             }
             (*(void (__fastcall **)(SimpleAnimation_State_o *, _QWORD, float))p_method)(
               Item,
@@ -126,7 +126,7 @@ LABEL_24:
             else
             {
 LABEL_30:
-              v25 = sub_1C65D04(Item, SimpleAnimation_State_TypeInfo, 1LL);
+              v25 = sub_1C6CBB4(Item, SimpleAnimation_State_TypeInfo, 1LL);
             }
             (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))v25)(Item, 1LL, *(_QWORD *)(v25 + 8));
             SimpleAnimation__Sample(v12, 0LL);
@@ -147,7 +147,7 @@ LABEL_30:
             else
             {
 LABEL_36:
-              v29 = sub_1C65D04(Item, SimpleAnimation_State_TypeInfo, 1LL);
+              v29 = sub_1C6CBB4(Item, SimpleAnimation_State_TypeInfo, 1LL);
             }
             monitor = (UnityEngine_Object_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD, _QWORD))v29)(
                                                 Item,
@@ -187,7 +187,7 @@ LABEL_36:
               v35 = UnityEngine_Object__get_name(monitor, 0LL);
               v36 = (UnityEngine_TrackedReference_o *)UnityEngine_Animation__get_Item(v34, v35, 0LL);
               if ( !UnityEngine_Animation__IsPlaying(v34, v35, 0LL) )
-                UnityEngine_Animation__Play_70466396(v34, v35, 0LL);
+                UnityEngine_Animation__Play_70538820(v34, v35, 0LL);
               monitor = (UnityEngine_Object_o *)UnityEngine_TrackedReference__op_Equality(v36, 0LL, 0LL);
               if ( ((unsigned __int8)monitor & 1) == 0 )
               {
@@ -208,13 +208,13 @@ LABEL_36:
               v30 = this->fields.targetAnimations;
               if ( !v30 )
 LABEL_59:
-                sub_1C13F80(monitor, v7);
+                sub_1C1AE30(monitor, v7);
               LODWORD(v31) = v30->max_length;
               if ( (int)++v32 >= (int)v31 )
                 return;
             }
 LABEL_60:
-            sub_1C13F88(monitor, v7);
+            sub_1C1AE38(monitor, v7);
           }
         }
       }
@@ -243,11 +243,11 @@ void __fastcall BattleEffectForceFPS__Start(BattleEffectForceFPS_o *this, const 
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4BB6D0C & 1) == 0 )
+  if ( (byte_4BCA0EE & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponentsInChildren_Animation____77489400, method);
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation____77489448, v3);
-    byte_4BB6D0C = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponentsInChildren_Animation____77566312, method);
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation____77566360, v3);
+    byte_4BCA0EE = 1;
   }
   targetSimpleAnimations = this->fields.targetSimpleAnimations;
   if ( !targetSimpleAnimations || !*(_QWORD *)&targetSimpleAnimations->max_length )
@@ -255,9 +255,9 @@ void __fastcall BattleEffectForceFPS__Start(BattleEffectForceFPS_o *this, const 
     ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                     (UnityEngine_Component_o *)this,
                                     1,
-                                    (const MethodInfo_2F869FC *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation____77489448);
+                                    (const MethodInfo_2F96A20 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation____77566360);
     this->fields.targetSimpleAnimations = (struct SimpleAnimation_array *)ComponentsInChildren_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.targetSimpleAnimations,
       (int64_t)ComponentsInChildren_object,
       v6,
@@ -273,9 +273,9 @@ void __fastcall BattleEffectForceFPS__Start(BattleEffectForceFPS_o *this, const 
     v13 = UnityEngine_Component__GetComponentsInChildren_object_(
             (UnityEngine_Component_o *)this,
             1,
-            (const MethodInfo_2F869FC *)Method_UnityEngine_Component_GetComponentsInChildren_Animation____77489400);
+            (const MethodInfo_2F96A20 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation____77566312);
     this->fields.targetAnimations = (struct UnityEngine_Animation_array *)v13;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.targetAnimations,
       (int64_t)v13,
       v14,

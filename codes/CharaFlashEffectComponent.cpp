@@ -8,19 +8,17 @@ void __fastcall CharaFlashEffectComponent___ctor(CharaFlashEffectComponent_o *th
   PartyListViewItem_o *v7; // x7
   int64_t v9; // x1
 
-  if ( (byte_4BB5A9C & 1) == 0 )
+  if ( (byte_4BC8E7C & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_18248/*"chnl"*/, method);
-    byte_4BB5A9C = 1;
+    sub_1C1ABD4(&StringLiteral_18262/*"circleIn"*/, method);
+    byte_4BC8E7C = 1;
   }
   *(_QWORD *)&this->fields.flashColor.fields.r = 0LL;
   *(_QWORD *)&this->fields.flashColor.fields.b = 0LL;
-  v9 = StringLiteral_18248/*"chnl"*/;
-  this->fields.wipeName = (struct System_String_o *)StringLiteral_18248/*"chnl"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.wipeName, v9, v2, v3, v4, v5, v6, v7);
-  __asm { FMOV            V0.4S, #1.0 }
-  this->fields.effectColor = _Q0;
-  UITweenRenderer___ctor((UITweenRenderer_o *)this, 0LL);
+  v9 = StringLiteral_18262/*"circleIn"*/;
+  this->fields.wipeName = (struct System_String_o *)StringLiteral_18262/*"circleIn"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.wipeName, v9, v2, v3, v4, v5, v6, v7);
+  ProgramEffectComponent___ctor((ProgramEffectComponent_o *)this, 0LL);
 }
 
 
@@ -46,10 +44,10 @@ void __fastcall CharaFlashEffectComponent__EffectResume(CharaFlashEffectComponen
   FollowerInfo_o *v20; // x6
   PartyListViewItem_o *v21; // x7
 
-  if ( (byte_4BB5A98 & 1) == 0 )
+  if ( (byte_4BC8E78 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_10076/*"OnDragStart"*/, method);
-    byte_4BB5A98 = 1;
+    sub_1C1ABD4(&StringLiteral_10082/*"OnEndEffect"*/, method);
+    byte_4BC8E78 = 1;
   }
   klass = this->klass;
   this->fields.isPause = 0;
@@ -60,15 +58,15 @@ void __fastcall CharaFlashEffectComponent__EffectResume(CharaFlashEffectComponen
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v5 = TweenRenderVolume__Begin(gameObject, this->fields.duration, 0.0, 0LL);
   if ( !v5 )
-    sub_1C13F80(0LL, v6);
+    sub_1C1AE30(0LL, v6);
   v7 = v5;
   v5->fields.method = 1;
   v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v7->fields.eventReceiver = v8;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v7->fields.eventReceiver, (int64_t)v8, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_10076/*"OnDragStart"*/;
-  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10076/*"OnDragStart"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v7->fields.callWhenFinished, v15, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v7->fields.eventReceiver, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_10082/*"OnEndEffect"*/;
+  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10082/*"OnEndEffect"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v7->fields.callWhenFinished, v15, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -86,7 +84,7 @@ void __fastcall CharaFlashEffectComponent__EndCreateEffect(
   _BOOL4 isPause; // w8
 
   this->fields.childEffect = effect;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.childEffect,
     (int64_t)effect,
     (int64_t)method,
@@ -138,30 +136,30 @@ void __fastcall CharaFlashEffectComponent__EndLoadWipe(
   const MethodInfo *v33; // x3
   const MethodInfo *v34; // x6
 
-  if ( (byte_4BB5A97 & 1) == 0 )
+  if ( (byte_4BC8E77 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_Texture2D___, data);
-    sub_1C13D24(&AssetManager_TypeInfo, v10);
-    sub_1C13D24(&Method_CharaFlashEffectComponent_EndCreateEffect__, v11);
-    sub_1C13D24(&CommonEffectManager_TypeInfo, v12);
-    sub_1C13D24(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo, v13);
-    sub_1C13D24(&UnityEngine_Material_TypeInfo, v14);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C13D24(&StringLiteral_5053/*"Custom/Sprite-ScriptActionFigureCut"*/, v16);
-    sub_1C13D24(&StringLiteral_16488/*"_FarRangeLength"*/, v17);
-    sub_1C13D24(&StringLiteral_13769/*"TZDIR"*/, v18);
-    sub_1C13D24(&StringLiteral_5036/*"Custom channel bindings are not supported."*/, v19);
-    byte_4BB5A97 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_Texture2D___, data);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v10);
+    sub_1C1ABD4(&Method_CharaFlashEffectComponent_EndCreateEffect__, v11);
+    sub_1C1ABD4(&CommonEffectManager_TypeInfo, v12);
+    sub_1C1ABD4(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo, v13);
+    sub_1C1ABD4(&UnityEngine_Material_TypeInfo, v14);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C1ABD4(&StringLiteral_5056/*"Custom/Sprite-ScriptActionFigureFlash"*/, v16);
+    sub_1C1ABD4(&StringLiteral_16502/*"_Gradation"*/, v17);
+    sub_1C1ABD4(&StringLiteral_13781/*"Talk/"*/, v18);
+    sub_1C1ABD4(&StringLiteral_5039/*"Custom/BackFlashSheder"*/, v19);
+    byte_4BC8E77 = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(wipeData, 0LL);
+    AssetManager__releaseAsset_38988476(wipeData, 0LL);
   }
   this->fields.wipeData = data;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.wipeData, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.wipeData, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
   figure = (UIStandFigureRender_o *)this->fields.figure;
   if ( !figure )
     goto LABEL_30;
@@ -171,11 +169,11 @@ void __fastcall CharaFlashEffectComponent__EndLoadWipe(
     goto LABEL_30;
   Object_object = AssetData__GetObject_object_(
                     data,
-                    (const MethodInfo_2F71428 *)Method_AssetData_GetObject_Texture2D___);
+                    (const MethodInfo_2F8144C *)Method_AssetData_GetObject_Texture2D___);
   backFlashMesh = this->fields.backFlashMesh;
   v25 = (UnityEngine_Texture_o *)Object_object;
-  v26 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5036/*"Custom channel bindings are not supported."*/, 0LL);
-  v27 = (UnityEngine_Material_o *)sub_1C13F70(UnityEngine_Material_TypeInfo);
+  v26 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5039/*"Custom/BackFlashSheder"*/, 0LL);
+  v27 = (UnityEngine_Material_o *)sub_1C1AE20(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v27, v26, 0LL);
   if ( !backFlashMesh )
     goto LABEL_30;
@@ -200,9 +198,9 @@ void __fastcall CharaFlashEffectComponent__EndLoadWipe(
   figure = (UIStandFigureRender_o *)ExUIMeshRenderer__get_material((ExUIMeshRenderer_o *)figure, 0LL);
   if ( !figure )
     goto LABEL_30;
-  if ( UnityEngine_Material__HasProperty_70588168(
+  if ( UnityEngine_Material__HasProperty_70660592(
          (UnityEngine_Material_o *)figure,
-         (System_String_o *)StringLiteral_16488/*"_FarRangeLength"*/,
+         (System_String_o *)StringLiteral_16502/*"_Gradation"*/,
          0LL) )
   {
     figure = (UIStandFigureRender_o *)this->fields.backFlashMesh;
@@ -213,20 +211,20 @@ void __fastcall CharaFlashEffectComponent__EndLoadWipe(
       {
         UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)figure,
-          (System_String_o *)StringLiteral_16488/*"_FarRangeLength"*/,
+          (System_String_o *)StringLiteral_16502/*"_Gradation"*/,
           0.2,
           0LL);
         goto LABEL_18;
       }
     }
 LABEL_30:
-    sub_1C13F80(figure, v21);
+    sub_1C1AE30(figure, v21);
   }
 LABEL_18:
   figure = (UIStandFigureRender_o *)this->fields.figure;
   if ( !figure )
     goto LABEL_30;
-  UIStandFigureRender__SetSharder(figure, (System_String_o *)StringLiteral_5053/*"Custom/Sprite-ScriptActionFigureCut"*/, 0LL);
+  UIStandFigureRender__SetSharder(figure, (System_String_o *)StringLiteral_5056/*"Custom/Sprite-ScriptActionFigureFlash"*/, 0LL);
   figure = (UIStandFigureRender_o *)this->fields.figure;
   if ( !figure )
     goto LABEL_30;
@@ -250,8 +248,8 @@ LABEL_18:
     && !System_String__IsNullOrEmpty(this->fields.subEffectName, 0LL) )
   {
     v30 = this->fields.subEffectBase;
-    v31 = System_String__Concat_62967944((System_String_o *)StringLiteral_13769/*"TZDIR"*/, this->fields.subEffectName, 0LL);
-    v32 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C13F70(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+    v31 = System_String__Concat_63040368((System_String_o *)StringLiteral_13781/*"Talk/"*/, this->fields.subEffectName, 0LL);
+    v32 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C1AE20(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
     CommonEffectLoadComponent_LoadEndHandler___ctor(
       v32,
       (Il2CppObject *)this,
@@ -259,7 +257,7 @@ LABEL_18:
       v33);
     if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-    CommonEffectManager__Create_41797904(v30, v31, v32, 0, 0, 0, v34);
+    CommonEffectManager__Create_41856112(v30, v31, v32, 0, 0, 0, v34);
   }
   else
   {
@@ -297,41 +295,41 @@ void __fastcall CharaFlashEffectComponent__FlashStart(
   System_String_o *v26; // x20
   AssetLoader_LoadEndDataHandler_o *v27; // x21
 
-  if ( (byte_4BB5A96 & 1) == 0 )
+  if ( (byte_4BC8E76 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, figure);
-    sub_1C13D24(&Method_CharaFlashEffectComponent_EndLoadWipe__, v10);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v12);
-    sub_1C13D24(&ScriptManager_TypeInfo, v13);
-    sub_1C13D24(&StringLiteral_15903/*"Window/FilterList/CancelButton"*/, v14);
-    sub_1C13D24(&StringLiteral_25089/*"weapon"*/, v15);
-    byte_4BB5A96 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, figure);
+    sub_1C1ABD4(&Method_CharaFlashEffectComponent_EndLoadWipe__, v10);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v11);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v12);
+    sub_1C1ABD4(&ScriptManager_TypeInfo, v13);
+    sub_1C1ABD4(&StringLiteral_15917/*"Wipe/"*/, v14);
+    sub_1C1ABD4(&StringLiteral_25111/*"white"*/, v15);
+    byte_4BC8E76 = 1;
   }
   p_figure = (UIStandFigureRender_o **)&this->fields.figure;
   this->fields.figure = figure;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.figure, (int64_t)figure, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.figure, (int64_t)figure, (int64_t)method, v3, v4, v5, v6, v7);
   isSkip = this->fields.isSkip;
   this->fields.duration = 5.0;
   if ( isSkip )
   {
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    ScriptManager__Fade((System_String_o *)StringLiteral_25089/*"weapon"*/, 0, 0.0, 0LL);
+    ScriptManager__Fade((System_String_o *)StringLiteral_25111/*"white"*/, 0, 0.0, 0LL);
     if ( !*p_figure )
-      sub_1C13F80(0LL, v18);
+      sub_1C1AE30(0LL, v18);
     UIStandFigureRender__SetAlpha(*p_figure, 0.0, 0LL);
     this->fields.figure = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.figure, 0LL, v19, v20, v21, v22, v23, v24);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.figure, 0LL, v19, v20, v21, v22, v23, v24);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   }
   else
   {
-    v26 = System_String__Concat_62967944((System_String_o *)StringLiteral_15903/*"Window/FilterList/CancelButton"*/, this->fields.wipeName, 0LL);
-    v27 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v26 = System_String__Concat_63040368((System_String_o *)StringLiteral_15917/*"Wipe/"*/, this->fields.wipeName, 0LL);
+    v27 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v27,
       (Il2CppObject *)this,
@@ -366,11 +364,11 @@ void __fastcall CharaFlashEffectComponent__OnDestroy(CharaFlashEffectComponent_o
   FollowerInfo_o *v20; // x6
   PartyListViewItem_o *v21; // x7
 
-  if ( (byte_4BB5A9A & 1) == 0 )
+  if ( (byte_4BC8E7A & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB5A9A = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC8E7A = 1;
   }
   if ( this->fields.wipeData )
   {
@@ -381,13 +379,13 @@ void __fastcall CharaFlashEffectComponent__OnDestroy(CharaFlashEffectComponent_o
     material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(backFlashMesh, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(material, 0LL);
+    UnityEngine_Object__Destroy_70794412(material, 0LL);
     v7 = *p_wipeData;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(v7, 0LL);
+    AssetManager__releaseAsset_38988476(v7, 0LL);
     *p_wipeData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.wipeData, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.wipeData, 0LL, v8, v9, v10, v11, v12, v13);
   }
   figure = (UnityEngine_Object_o *)this->fields.figure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -404,12 +402,12 @@ void __fastcall CharaFlashEffectComponent__OnDestroy(CharaFlashEffectComponent_o
       {
         UIStandFigureRender__SetAlpha((UIStandFigureRender_o *)backFlashMesh, 0.0, 0LL);
         p_figure->klass = 0LL;
-        sub_1C13CC8(p_figure, 0LL, v16, v17, v18, v19, v20, v21);
+        sub_1C1AB78(p_figure, 0LL, v16, v17, v18, v19, v20, v21);
         return;
       }
     }
 LABEL_17:
-    sub_1C13F80(backFlashMesh, method);
+    sub_1C1AE30(backFlashMesh, method);
   }
 }
 
@@ -421,12 +419,12 @@ void __fastcall CharaFlashEffectComponent__OnEndEffect(CharaFlashEffectComponent
   __int64 v5; // x1
   UnityEngine_GameObject_o *subEffectBase; // x20
 
-  if ( (byte_4BB5A99 & 1) == 0 )
+  if ( (byte_4BC8E79 & 1) == 0 )
   {
-    sub_1C13D24(&CommonEffectManager_TypeInfo, method);
-    sub_1C13D24(&ScriptManager_TypeInfo, v4);
-    sub_1C13D24(&StringLiteral_25089/*"weapon"*/, v5);
-    byte_4BB5A99 = 1;
+    sub_1C1ABD4(&CommonEffectManager_TypeInfo, method);
+    sub_1C1ABD4(&ScriptManager_TypeInfo, v4);
+    sub_1C1ABD4(&StringLiteral_25111/*"white"*/, v5);
+    byte_4BC8E79 = 1;
   }
   subEffectBase = this->fields.subEffectBase;
   if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
@@ -434,7 +432,7 @@ void __fastcall CharaFlashEffectComponent__OnEndEffect(CharaFlashEffectComponent
   CommonEffectManager__Stop(subEffectBase, 0, 0, v2);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-  ScriptManager__Fade((System_String_o *)StringLiteral_25089/*"weapon"*/, 0, 1.0, 0LL);
+  ScriptManager__Fade((System_String_o *)StringLiteral_25111/*"white"*/, 0, 1.0, 0LL);
   this->fields.isWaitEndEffect = 1;
 }
 
@@ -443,26 +441,19 @@ void __fastcall CharaFlashEffectComponent__OnUpdate(CharaFlashEffectComponent_o 
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  float totalTime; // s8
-  float deltaTime; // s0
-  _BOOL4 isWaitEndEffect; // w8
-  const MethodInfo *v8; // x1
+  const MethodInfo *v5; // x1
   UnityEngine_GameObject_o *subEffectBase; // x20
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4BB5A9B & 1) == 0 )
+  if ( (byte_4BC8E7B & 1) == 0 )
   {
-    sub_1C13D24(&CommonEffectManager_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C13D24(&ScriptManager_TypeInfo, v4);
-    byte_4BB5A9B = 1;
+    sub_1C1ABD4(&CommonEffectManager_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C1ABD4(&ScriptManager_TypeInfo, v4);
+    byte_4BC8E7B = 1;
   }
-  UIWidget__OnUpdate((UIWidget_o *)this, 0LL);
-  totalTime = this->fields.totalTime;
-  deltaTime = UnityEngine_Time__get_deltaTime(0LL);
-  isWaitEndEffect = this->fields.isWaitEndEffect;
-  this->fields.totalTime = totalTime + deltaTime;
-  if ( isWaitEndEffect )
+  ProgramEffectComponent__OnUpdate((ProgramEffectComponent_o *)this, 0LL);
+  if ( this->fields.isWaitEndEffect )
   {
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -471,13 +462,13 @@ void __fastcall CharaFlashEffectComponent__OnUpdate(CharaFlashEffectComponent_o 
       subEffectBase = this->fields.subEffectBase;
       if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-      if ( !CommonEffectManager__IsBusy(subEffectBase, v8) )
+      if ( !CommonEffectManager__IsBusy(subEffectBase, v5) )
       {
         this->fields.isWaitEndEffect = 0;
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+        UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
       }
     }
   }
@@ -533,7 +524,7 @@ void __fastcall CharaFlashEffectComponent__SetTweenColor(
           v3),
         (figure = this->fields.backFlashMesh) == 0LL) )
   {
-    sub_1C13F80(figure, v8);
+    sub_1C1AE30(figure, v8);
   }
   (*(void (__fastcall **)(void *, _QWORD, long double, long double, long double, long double))(*(_QWORD *)figure + 936LL))(
     figure,
@@ -561,7 +552,7 @@ void __fastcall CharaFlashEffectComponent__SetTweenVolume(
         UIStandFigureRender__SetVolume(figure, v, 0LL),
         (figure = (UIStandFigureRender_o *)this->fields.backFlashMesh) == 0LL) )
   {
-    sub_1C13F80(figure, method);
+    sub_1C1AE30(figure, method);
   }
   ((void (__fastcall *)(UIStandFigureRender_o *, Il2CppMethodPointer, long double))figure->klass->vtable._41_SetTweenVolume.method)(
     figure,

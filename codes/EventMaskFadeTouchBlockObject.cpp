@@ -25,7 +25,7 @@ void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
       onClickCallback->fields.original_method_info,
       *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_1C13CC8(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_1C1AB78(p_onClickCallback, 0LL, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -50,7 +50,7 @@ void __fastcall EventMaskFadeTouchBlockObject__RemoveCallback(
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_1C13CC8(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
+      sub_1C1AB78(p_onClickCallback, 0LL, v3, v4, v5, v6, v7, v8);
     }
   }
 }
@@ -77,7 +77,7 @@ void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (PartyOrganizationUtility_c *)callback;
-      sub_1C13CC8(p_onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
+      sub_1C1AB78(p_onClickCallback, (int64_t)callback, v5, v6, v7, v8, v9, v10);
     }
   }
 }

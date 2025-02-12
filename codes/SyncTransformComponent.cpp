@@ -24,7 +24,7 @@ void __fastcall SyncTransformComponent__setChild(
   const MethodInfo *v9; // x1
 
   this->fields.child = trans;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.child, (int64_t)trans, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.child, (int64_t)trans, (int64_t)method, v3, v4, v5, v6, v7);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v9);
 }
@@ -43,10 +43,10 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
   UnityEngine_Transform_o *v15; // x20
   int v16; // s0
 
-  if ( (byte_4BB3C6C & 1) == 0 )
+  if ( (byte_4BC703A & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB3C6C = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC703A = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -99,7 +99,7 @@ void __fastcall SyncTransformComponent__sync(SyncTransformComponent_o *this, con
           !v15) )
     {
 LABEL_20:
-      sub_1C13F80(gameObject, v4);
+      sub_1C1AE30(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v15, *(UnityEngine_Vector3_o *)&v16, 0LL);
   }

@@ -20,15 +20,15 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
   Il2CppObject *v15; // x0
   int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB36B8 & 1) == 0 )
+  if ( (byte_4BC6A84 & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&num);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_11010/*"PushNotification"*/, v6);
-    sub_1C13D24(&StringLiteral_8678/*"MALE"*/, v7);
-    sub_1C13D24(&StringLiteral_12521/*"STONE_SHOP_DETAIL_BUTTON"*/, v8);
-    sub_1C13D24(&StringLiteral_6679/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG1"*/, v9);
-    byte_4BB36B8 = 1;
+    sub_1C1ABD4(&int_TypeInfo, *(_QWORD *)&num);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_11019/*"QP_UNIT"*/, v6);
+    sub_1C1ABD4(&StringLiteral_8682/*"MANA_UNIT"*/, v7);
+    sub_1C1ABD4(&StringLiteral_12533/*"STONE_UNIT"*/, v8);
+    sub_1C1ABD4(&StringLiteral_6682/*"FRIEND_POINT_UNIT"*/, v9);
+    byte_4BC6A84 = 1;
   }
   if ( type <= 13 )
   {
@@ -38,7 +38,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v10 = &StringLiteral_8678/*"MALE"*/;
+        v10 = &StringLiteral_8682/*"MANA_UNIT"*/;
       }
       else
       {
@@ -46,7 +46,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
           goto LABEL_19;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v10 = &StringLiteral_6679/*"FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_MENU_MSG1"*/;
+        v10 = &StringLiteral_6682/*"FRIEND_POINT_UNIT"*/;
       }
 LABEL_13:
       v11 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
@@ -58,7 +58,7 @@ LABEL_13:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11010/*"PushNotification"*/;
+      v10 = &StringLiteral_11019/*"QP_UNIT"*/;
       goto LABEL_13;
     }
     if ( type != 2 )
@@ -66,7 +66,7 @@ LABEL_13:
 LABEL_10:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = &StringLiteral_12521/*"STONE_SHOP_DETAIL_BUTTON"*/;
+    v10 = &StringLiteral_12533/*"STONE_UNIT"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
@@ -99,15 +99,15 @@ System_String_o *__fastcall ItemType__get_CrossOperatorString(const MethodInfo *
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BB36B6 & 1) == 0 )
+  if ( (byte_4BC6A82 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_3812/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, v2);
-    byte_4BB36B6 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_3815/*"COMMON_COUNT_OPERATOR_CROSS"*/, v2);
+    byte_4BC6A82 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3815/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
 }
 
 
@@ -116,13 +116,13 @@ System_String_o *__fastcall ItemType__get_PlusOperatorString(const MethodInfo *m
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BB36B7 & 1) == 0 )
+  if ( (byte_4BC6A83 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_3813/*"COMMON_CONSUME_INFO_IF_LACKING"*/, v2);
-    byte_4BB36B7 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_3816/*"COMMON_COUNT_OPERATOR_PLUS"*/, v2);
+    byte_4BC6A83 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3813/*"COMMON_CONSUME_INFO_IF_LACKING"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3816/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
 }

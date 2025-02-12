@@ -1,16 +1,16 @@
 void __fastcall WarBoardMessageScriptMaster___ctor(WarBoardMessageScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB570F & 1) == 0 )
+  if ( (byte_4BC8AEE & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__,
       method);
-    byte_4BB570F = 1;
+    byte_4BC8AEE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     419,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
 }
 
 
@@ -41,22 +41,22 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
   int32_t *v24; // x10
   __int64 v25; // x0
 
-  if ( (byte_4BB5710 & 1) == 0 )
+  if ( (byte_4BC8AEF & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__, imageId);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v5);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, v6);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v7);
-    byte_4BB5710 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__, imageId);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v5);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, v6);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v7);
+    byte_4BC8AEF = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C13F80(0LL, imageId);
+    sub_1C1AE30(0LL, imageId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v9);
+    sub_1C1AE30(0LL, v9);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -76,7 +76,7 @@ WarBoardMessageScriptEntity_o *__fastcall WarBoardMessageScriptMaster__GetMessag
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -99,17 +99,17 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v18 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, 0LL);
+      v18 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, 0LL);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             Enumerator,
             *(_QWORD *)(v18 + 8));
     v21 = (WarBoardMessageScriptEntity_o *)v19;
     if ( !v19 )
-      sub_1C13F80(0LL, v20);
+      sub_1C1AE30(0LL, v20);
     if ( !imageId )
-      sub_1C13F80(v19, v20);
-    if ( System_String__Equals_62976260(imageId, *(System_String_o **)(v19 + 16), 0LL) )
+      sub_1C1AE30(v19, v20);
+    if ( System_String__Equals_63048684(imageId, *(System_String_o **)(v19 + 16), 0LL) )
       goto LABEL_23;
   }
   v21 = 0LL;
@@ -131,7 +131,7 @@ LABEL_23:
   else
   {
 LABEL_27:
-    v25 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v25 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(Enumerator, *(_QWORD *)(v25 + 8));
   return v21;

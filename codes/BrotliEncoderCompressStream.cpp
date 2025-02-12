@@ -186,7 +186,7 @@ LABEL_13:
           v18 = v16;
         }
         *(_DWORD *)(a1 + 12) = v18;
-        sub_1C0E960(a1);
+        sub_1C15810(a1);
         v20 = *(_QWORD *)(a1 + 16);
         if ( v20 )
         {
@@ -231,12 +231,12 @@ LABEL_13:
 LABEL_52:
           if ( !v25 )
           {
-            memcpy((void *)(a1 + 5584), &unk_FF5562, 0x80u);
-            memcpy((void *)(a1 + 5712), &unk_FF55E2, 0x100u);
-            *(_OWORD *)(a1 + 5968) = unk_C03BB5;
-            *(_OWORD *)(a1 + 6009) = *(__int128 *)((char *)&xmmword_C03BD5 + 9);
-            *(_OWORD *)(a1 + 6000) = xmmword_C03BD5;
-            *(_OWORD *)(a1 + 5984) = unk_C03BC5;
+            memcpy((void *)(a1 + 5584), &unk_FFA086, 0x80u);
+            memcpy((void *)(a1 + 5712), &unk_FFA106, 0x100u);
+            *(_OWORD *)(a1 + 5968) = unk_C07845;
+            *(_OWORD *)(a1 + 6009) = *(__int128 *)((char *)&xmmword_C07865 + 9);
+            *(_OWORD *)(a1 + 6000) = xmmword_C07865;
+            *(_OWORD *)(a1 + 5984) = unk_C07855;
             *(_QWORD *)(a1 + 6480) = 448LL;
           }
           *(_DWORD *)(a1 + 6556) = 1;
@@ -311,13 +311,13 @@ LABEL_73:
           {
             while ( 1 )
             {
-              while ( (unsigned int)sub_1C0BD1C(a1, a5, a6, a7) )
+              while ( (unsigned int)sub_1C12BCC(a1, a5, a6, a7) )
                 ;
               if ( *(_QWORD *)(a1 + 6512) )
                 return 1LL;
               if ( *(_QWORD *)(a1 + 168) == *(_QWORD *)(a1 + 256) )
                 break;
-              result = sub_1C0BE44(a1, 0LL, 1LL, a1 + 6512, a1 + 6504);
+              result = sub_1C12CF4(a1, 0LL, 1LL, a1 + 6512, a1 + 6504);
               if ( !(_DWORD)result )
                 return result;
             }
@@ -421,8 +421,8 @@ LABEL_96:
       v55 = *(_QWORD *)(a1 + 6488);
       if ( v53 >= 0x20000 && !v55 )
       {
-        *(_QWORD *)(a1 + 6488) = sub_1C22CD8(v127, 0x80000LL);
-        v56 = sub_1C22CD8(v127, 0x20000LL);
+        *(_QWORD *)(a1 + 6488) = sub_1C29B88(v127, 0x80000LL);
+        v56 = sub_1C29B88(v127, 0x20000LL);
         v57 = *(_QWORD *)(a1 + 6488);
         LODWORD(v126) = v56;
         *(_QWORD *)(a1 + 6496) = v56;
@@ -435,12 +435,12 @@ LABEL_187:
           while ( 1 )
           {
 LABEL_188:
-            while ( (unsigned int)sub_1C0BD1C(a1, a5, a6, a7) )
+            while ( (unsigned int)sub_1C12BCC(a1, a5, a6, a7) )
               ;
             if ( *(_QWORD *)(a1 + 6512) || *(_DWORD *)(a1 + 6548) || (v108 = *a3, !a2) && !v108 )
             {
-              sub_1C22CFC(v127, v123);
-              sub_1C22CFC(v127, v124);
+              sub_1C29BAC(v127, v123);
+              sub_1C29BAC(v127, v124);
               if ( *(_DWORD *)(a1 + 6548) == 1 && !*(_QWORD *)(a1 + 6512) )
                 goto LABEL_218;
               return 1LL;
@@ -455,18 +455,18 @@ LABEL_188:
               break;
             v128 = *a5;
             if ( 2 * v111 + 503 > *a5 )
-              v115 = (_BYTE *)sub_1C0EC50(a1);
+              v115 = (_BYTE *)sub_1C15B00(a1);
             else
               v115 = *a6;
             *v115 = *(_BYTE *)(a1 + 352);
             v116 = v110 && v112;
             v115[1] = *(_BYTE *)(a1 + 353);
-            v117 = sub_1C0ECA4(a1, *(unsigned int *)(a1 + 4), v111, v132);
+            v117 = sub_1C15B54(a1, *(unsigned int *)(a1 + 4), v111, v132);
             v118 = (void *)*a4;
             if ( *(_DWORD *)(a1 + 4) )
-              sub_1BE6B30(v127, v118, v111, v116, v125, v126, v117, v132[0], (__int64)&v133);
+              sub_1BED9E0(v127, v118, v111, v116, v125, v126, v117, v132[0], (__int64)&v133);
             else
-              sub_1BF20C0(
+              sub_1BF8F70(
                 v127,
                 v118,
                 v111,
@@ -518,8 +518,8 @@ LABEL_215:
           goto LABEL_215;
         }
 LABEL_185:
-        v125 = sub_1C22CD8(v127, 4 * v54);
-        v126 = sub_1C22CD8(v127, v54);
+        v125 = sub_1C29B88(v127, 4 * v54);
+        v126 = sub_1C29B88(v127, v54);
         v123 = v125;
         v124 = v126;
         goto LABEL_188;
@@ -569,14 +569,14 @@ LABEL_185:
           v76 = *(_DWORD *)(a1 + 188);
           if ( *(_DWORD *)(a1 + 192) < v76 )
           {
-            v77 = (_BYTE *)sub_1C22CD8(v58, v76 + 2 + 7LL);
+            v77 = (_BYTE *)sub_1C29B88(v58, v76 + 2 + 7LL);
             v78 = *(const void **)(a1 + 200);
             v79 = v58;
             v80 = v77;
             if ( v78 )
             {
               memcpy(v77, v78, *(_DWORD *)(a1 + 192) + 9);
-              sub_1C22CFC(v79, *(_QWORD *)(a1 + 200));
+              sub_1C29BAC(v79, *(_QWORD *)(a1 + 200));
             }
             *(_DWORD *)(a1 + 192) = v76;
             *(_QWORD *)(a1 + 200) = v80;
@@ -636,14 +636,14 @@ LABEL_185:
         else
         {
           *(_DWORD *)(a1 + 196) = v68;
-          v69 = (_BYTE *)sub_1C22CD8(v58, (unsigned int)(v68 + 2) + 7LL);
+          v69 = (_BYTE *)sub_1C29B88(v58, (unsigned int)(v68 + 2) + 7LL);
           v70 = *(const void **)(a1 + 200);
           v71 = v58;
           v72 = v69;
           if ( v70 )
           {
             memcpy(v69, v70, *(_DWORD *)(a1 + 192) + 9);
-            sub_1C22CFC(v71, *(_QWORD *)(a1 + 200));
+            sub_1C29BAC(v71, *(_QWORD *)(a1 + 200));
           }
           *(_DWORD *)(a1 + 192) = v68;
           *(_QWORD *)(a1 + 200) = v72;
@@ -672,7 +672,7 @@ LABEL_185:
         if ( v90 >= 1 )
           *(_BYTE *)(a1 + 355) = v90 - v68;
       }
-      if ( !(unsigned int)sub_1C0BD1C(a1, a5, a6, a7) )
+      if ( !(unsigned int)sub_1C12BCC(a1, a5, a6, a7) )
         break;
       if ( *(unsigned __int8 *)(a1 + 355) == 255 )
       {
@@ -725,7 +725,7 @@ LABEL_218:
         v102 = v100;
       *(_QWORD *)(a1 + 24) = v102;
     }
-    result = sub_1C0BE44(a1, (v131 == 2) & (unsigned __int8)v94, v96, v130, a1 + 6504);
+    result = sub_1C12CF4(a1, (v131 == 2) & (unsigned __int8)v94, v96, v130, a1 + 6504);
     if ( !(_DWORD)result )
       return result;
     if ( (v95 & 1) != 0 || v96 )

@@ -2,12 +2,12 @@ void __fastcall ServantEventBonusFilterItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BAFE1E & 1) == 0 )
+  if ( (byte_4BC31D4 & 1) == 0 )
   {
-    sub_1C13D24(&ServantEventBonusFilterItem_TypeInfo, v1);
-    byte_4BAFE1E = 1;
+    sub_1C1ABD4(&ServantEventBonusFilterItem_TypeInfo, v1);
+    byte_4BC31D4 = 1;
   }
-  *ServantEventBonusFilterItem_TypeInfo->static_fields = (struct ServantEventBonusFilterItem_StaticFields)xmmword_BF5D10;
+  *ServantEventBonusFilterItem_TypeInfo->static_fields = (struct ServantEventBonusFilterItem_StaticFields)xmmword_BF99B0;
 }
 
 
@@ -25,7 +25,7 @@ int32_t __fastcall ServantEventBonusFilterItem__GetEventId(
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   return entity->fields.eventId;
 }
 
@@ -36,7 +36,7 @@ float __fastcall ServantEventBonusFilterItem__GetHeight(ServantEventBonusFilterI
 
   baseSprite = this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   return (float)baseSprite->fields.mHeight;
 }
 
@@ -61,7 +61,7 @@ void __fastcall ServantEventBonusFilterItem__Init(
   EventBonusFilterEntity_o *v18; // x22
   ServantEventBonusFilterItem_c *v19; // x0
   struct UILabel_o *detailLabel; // x23
-  System_String_o *v21; // x22
+  System_String_o *klass; // x22
   struct ServantEventBonusFilterItem_StaticFields *static_fields; // x8
   UILabel_o *v23; // x0
   System_String_o *v24; // x1
@@ -81,25 +81,25 @@ void __fastcall ServantEventBonusFilterItem__Init(
   float LocalPositionY; // s0
   const MethodInfo *v39; // x1
 
-  if ( (byte_4BAFE1B & 1) == 0 )
+  if ( (byte_4BC31D1 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_EventBonusFilterGroupInfoMaster___, filterEntity);
-    sub_1C13D24(&Method_DataManager_GetMaster_SkillLvMaster___, v7);
-    sub_1C13D24(&Method_DataManager_GetMaster_SkillMaster___, v8);
-    sub_1C13D24(&DataManager_TypeInfo, v9);
-    sub_1C13D24(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventBonusFilterGroupInfoMaster___, filterEntity);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_SkillLvMaster___, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_SkillMaster___, v8);
+    sub_1C1ABD4(&DataManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v10);
+    sub_1C1ABD4(
       &Method_DataMasterBase_EventBonusFilterGroupInfoMaster__EventBonusFilterGroupInfoEntity__int__GetEntity__,
       v11);
-    sub_1C13D24(&ServantEventBonusFilterItem_TypeInfo, v12);
-    byte_4BAFE1B = 1;
+    sub_1C1ABD4(&ServantEventBonusFilterItem_TypeInfo, v12);
+    byte_4BC31D1 = 1;
   }
   this->fields.entity = filterEntity;
   p_entity = &this->fields.entity;
-  sub_1C13CC8(&this->fields.entity);
+  sub_1C1AB78(&this->fields.entity);
   this->fields.sort = sortParam;
   p_sort = &this->fields.sort;
-  sub_1C13CC8(&this->fields.sort);
+  sub_1C1AB78(&this->fields.sort);
   entity = this->fields.entity;
   if ( !entity )
     goto LABEL_40;
@@ -108,7 +108,7 @@ void __fastcall ServantEventBonusFilterItem__Init(
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   if ( v17 )
   {
-    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventBonusFilterGroupInfoMaster___);
+    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventBonusFilterGroupInfoMaster___);
     if ( !*p_entity )
       goto LABEL_40;
     if ( !entity )
@@ -116,21 +116,21 @@ void __fastcall ServantEventBonusFilterItem__Init(
     entity = (EventBonusFilterEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)entity,
                                            (*p_entity)->fields.value,
-                                           (const MethodInfo_3238624 *)Method_DataMasterBase_EventBonusFilterGroupInfoMaster__EventBonusFilterGroupInfoEntity__int__GetEntity__);
+                                           (const MethodInfo_3248678 *)Method_DataMasterBase_EventBonusFilterGroupInfoMaster__EventBonusFilterGroupInfoEntity__int__GetEntity__);
     if ( !entity )
       goto LABEL_40;
     v18 = entity;
     entity = (EventBonusFilterEntity_o *)this->fields.skillIconComponent;
     if ( !entity )
       goto LABEL_40;
-    SkillIconComponent__SetSpecifyIconId((SkillIconComponent_o *)entity, (int32_t)v18[1].klass, 0LL);
+    SkillIconComponent__SetSpecifyIconId((SkillIconComponent_o *)entity, v18->fields.condType, 0LL);
     entity = (EventBonusFilterEntity_o *)this->fields.nameLabel;
     if ( !entity )
       goto LABEL_40;
     UILabel__set_text((UILabel_o *)entity, *(System_String_o **)&v18->fields.value, 0LL);
     v19 = ServantEventBonusFilterItem_TypeInfo;
     detailLabel = this->fields.detailLabel;
-    v21 = *(System_String_o **)&v18[1].fields.eventId;
+    klass = (System_String_o *)v18[1].klass;
     if ( !ServantEventBonusFilterItem_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ServantEventBonusFilterItem_TypeInfo);
@@ -138,11 +138,11 @@ void __fastcall ServantEventBonusFilterItem__Init(
     }
     static_fields = v19->static_fields;
     v23 = detailLabel;
-    v24 = v21;
+    v24 = klass;
   }
   else
   {
-    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_SkillMaster___);
+    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_SkillMaster___);
     if ( !*p_entity )
       goto LABEL_40;
     if ( !entity )
@@ -150,7 +150,7 @@ void __fastcall ServantEventBonusFilterItem__Init(
     entity = (EventBonusFilterEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)entity,
                                            (*p_entity)->fields.value,
-                                           (const MethodInfo_3238624 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                           (const MethodInfo_3248678 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
     if ( !entity )
       goto LABEL_40;
     v25 = entity;
@@ -162,7 +162,7 @@ void __fastcall ServantEventBonusFilterItem__Init(
     if ( !entity )
       goto LABEL_40;
     UILabel__set_text((UILabel_o *)entity, *(System_String_o **)&v25->fields.value, 0LL);
-    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_SkillLvMaster___);
+    entity = (EventBonusFilterEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_SkillLvMaster___);
     if ( !entity )
       goto LABEL_40;
     entity = (EventBonusFilterEntity_o *)SkillLvMaster__GetEntity(
@@ -199,7 +199,7 @@ void __fastcall ServantEventBonusFilterItem__Init(
         (v31 = this->fields.detailLabel) == 0LL) )
   {
 LABEL_40:
-    sub_1C13F80(entity, v15);
+    sub_1C1AE30(entity, v15);
   }
   entity = (EventBonusFilterEntity_o *)ServantEventBonusFilterItem_TypeInfo;
   mHeight = v31->fields.mHeight;
@@ -217,7 +217,7 @@ LABEL_40:
     if ( !entity )
       goto LABEL_40;
     v35 = v33->ADJUST_HEIGHT + mHeight - DETAIL_BASE_HEIGHT;
-    UIWidget__set_height((UIWidget_o *)entity, HIDWORD(entity[5].monitor) + v35, 0LL);
+    UIWidget__set_height((UIWidget_o *)entity, entity[3].fields.priority + v35, 0LL);
     if ( v35 )
     {
       entity = (EventBonusFilterEntity_o *)this->fields.button;
@@ -265,8 +265,8 @@ void __fastcall ServantEventBonusFilterItem__InitButton(ServantEventBonusFilterI
     ServantEventBonusFilterItem__UpdateButton(this, method);
     entity = this->fields.entity;
     if ( !entity || (sort = this->fields.sort) == 0LL )
-      sub_1C13F80(sort, v4);
-    ListViewSort__SetSvtEventBonusFilter_41946232(
+      sub_1C1AE30(sort, v4);
+    ListViewSort__SetSvtEventBonusFilter_42004804(
       sort,
       entity->fields.eventId,
       entity->fields.value,
@@ -285,22 +285,22 @@ void __fastcall ServantEventBonusFilterItem__OnClick(ServantEventBonusFilterItem
   __int64 v7; // x1
   struct EventBonusFilterEntity_o *entity; // x8
 
-  if ( (byte_4BAFE1C & 1) == 0 )
+  if ( (byte_4BC31D2 & 1) == 0 )
   {
-    sub_1C13D24(&Method_ServantEventBonusFilterItem_OnClick__, method);
-    byte_4BAFE1C = 1;
+    sub_1C1ABD4(&Method_ServantEventBonusFilterItem_OnClick__, method);
+    byte_4BC31D2 = 1;
   }
   v3 = Method_ServantEventBonusFilterItem_OnClick__;
   if ( (*((_BYTE *)Method_ServantEventBonusFilterItem_OnClick__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C13D3C(Method_ServantEventBonusFilterItem_OnClick__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C13D08(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C1ABEC(Method_ServantEventBonusFilterItem_OnClick__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   this->fields.isHide ^= 1u;
   ServantEventBonusFilterItem__UpdateButton(this, v5);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_1C13F80(sort, v7);
-  ListViewSort__SetSvtEventBonusFilter_41946232(
+    sub_1C1AE30(sort, v7);
+  ListViewSort__SetSvtEventBonusFilter_42004804(
     sort,
     entity->fields.eventId,
     entity->fields.value,
@@ -349,8 +349,8 @@ void __fastcall ServantEventBonusFilterItem__SetButtonState(
   ServantEventBonusFilterItem__UpdateButton(this, (const MethodInfo *)isHideParam);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_1C13F80(sort, v5);
-  ListViewSort__SetSvtEventBonusFilter_41946232(
+    sub_1C1AE30(sort, v5);
+  ListViewSort__SetSvtEventBonusFilter_42004804(
     sort,
     entity->fields.eventId,
     entity->fields.value,
@@ -368,7 +368,7 @@ void __fastcall ServantEventBonusFilterItem__SetEnableFilterButton(
 
   button = this->fields.button;
   if ( !button )
-    sub_1C13F80(0LL, isEnable);
+    sub_1C1AE30(0LL, isEnable);
   UICommonButton__SetButtonEnableWithCollider(button, isEnable, 0LL);
 }
 
@@ -395,15 +395,15 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
   float *v18; // x11
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BAFE1D & 1) == 0 )
+  if ( (byte_4BC31D3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v3);
-    sub_1C13D24(&StringLiteral_11996/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_CAMPAIGN"*/, v4);
-    sub_1C13D24(&StringLiteral_17751/*"btn_bg_09"*/, v5);
-    sub_1C13D24(&StringLiteral_11994/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_NOT_COMBINE"*/, v6);
-    sub_1C13D24(&StringLiteral_17756/*"btn_bg_21"*/, v7);
-    byte_4BAFE1D = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v3);
+    sub_1C1ABD4(&StringLiteral_12007/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY"*/, v4);
+    sub_1C1ABD4(&StringLiteral_17765/*"btn_bg_off"*/, v5);
+    sub_1C1ABD4(&StringLiteral_12005/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY"*/, v6);
+    sub_1C1ABD4(&StringLiteral_17770/*"btn_bg_on"*/, v7);
+    byte_4BC31D3 = 1;
   }
   button = (UnityEngine_Component_o *)this->fields.button;
   if ( !button )
@@ -411,24 +411,24 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
   isHide = this->fields.isHide;
   button = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                         button,
-                                        (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                        (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !button )
     goto LABEL_25;
   if ( !isHide )
   {
-    UISprite__set_spriteName((UISprite_o *)button, (System_String_o *)StringLiteral_17756/*"btn_bg_21"*/, 0LL);
+    UISprite__set_spriteName((UISprite_o *)button, (System_String_o *)StringLiteral_17770/*"btn_bg_on"*/, 0LL);
     buttonLabel = this->fields.buttonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    button = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11994/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_NOT_COMBINE"*/, 0LL);
+    button = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12005/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY"*/, 0LL);
     if ( buttonLabel )
     {
       UILabel__set_text(buttonLabel, (System_String_o *)button, 0LL);
       v11 = this->fields.buttonLabel;
-      if ( !byte_4BAF546 )
+      if ( !byte_4BC28EF )
       {
-        sub_1C13D24(&LocalizationManager_TypeInfo, method);
-        byte_4BAF546 = 1;
+        sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+        byte_4BC28EF = 1;
       }
       button = (UnityEngine_Component_o *)LocalizationManager_TypeInfo;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -447,21 +447,21 @@ void __fastcall ServantEventBonusFilterItem__UpdateButton(
       }
     }
 LABEL_25:
-    sub_1C13F80(button, method);
+    sub_1C1AE30(button, method);
   }
-  UISprite__set_spriteName((UISprite_o *)button, (System_String_o *)StringLiteral_17751/*"btn_bg_09"*/, 0LL);
+  UISprite__set_spriteName((UISprite_o *)button, (System_String_o *)StringLiteral_17765/*"btn_bg_off"*/, 0LL);
   v10 = this->fields.buttonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  button = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11996/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_CAMPAIGN"*/, 0LL);
+  button = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12007/*"SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY"*/, 0LL);
   if ( !v10 )
     goto LABEL_25;
   UILabel__set_text(v10, (System_String_o *)button, 0LL);
   v11 = this->fields.buttonLabel;
-  if ( !byte_4BAF545 )
+  if ( !byte_4BC28EE )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, method);
-    byte_4BAF545 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+    byte_4BC28EE = 1;
   }
   button = (UnityEngine_Component_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )

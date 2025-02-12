@@ -50,12 +50,12 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   PartyListViewItem_o *v49; // x7
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.filterLogic,
     (int64_t)FilterLogic,
     v9,
@@ -66,10 +66,10 @@ void __fastcall CharaGraphListViewItemBase___ctor(
     v14);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
   this->fields.sortLogic = SortLogic;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.sortLogic, (int64_t)SortLogic, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.sortLogic, (int64_t)SortLogic, v17, v18, v19, v20, v21, v22);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._DrawPattern_k__BackingField,
     (int64_t)ItemDrawPattern,
     v25,
@@ -80,7 +80,7 @@ void __fastcall CharaGraphListViewItemBase___ctor(
     v30);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._RootInfo_k__BackingField,
     (int64_t)RootInfo_k__BackingField,
     v32,
@@ -92,14 +92,14 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v38, v39, v40, v41, v42, v43),
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v38, v39, v40, v41, v42, v43),
         (v6 = (char *)this->fields.sortLogic) == 0LL) )
   {
 LABEL_5:
-    sub_1C13F80(v6, v7);
+    sub_1C1AE30(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v44, v45, v46, v47, v48, v49);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -135,7 +135,7 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
   p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
     (int64_t)IconInfo1_k__BackingField,
     v2,
@@ -147,10 +147,10 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   v18 = (__int64)*(p_IconInfo1_k__BackingField - 9);
   if ( !v18 )
 LABEL_4:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   v19 = *(struct IconLabelInfo_o **)(v18 + 96);
   this->fields._IconInfo2_k__BackingField = v19;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
     (int64_t)v19,
     v12,
@@ -175,15 +175,15 @@ bool __fastcall CharaGraphListViewItemBase__GetNpInfo(
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BB3A44 & 1) == 0 )
+  if ( (byte_4BC6E12 & 1) == 0 )
   {
-    sub_1C13D24(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4BB3A44 = 1;
+    sub_1C1ABD4(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_4BC6E12 = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_1C13F70(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1C1AE20(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0LL);
   *tdInfo = v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)tdInfo, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)tdInfo, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   return 0;
 }
 
@@ -203,7 +203,7 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&filterLogic->fields,
           (int64_t)sort,
           (int64_t)method,
@@ -214,7 +214,7 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
           v7),
         (filterLogic = this->fields.filterLogic) == 0LL) )
   {
-    sub_1C13F80(filterLogic, sort);
+    sub_1C1AE30(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, Il2CppMethodPointer))filterLogic->klass->vtable._4_unknown.method)(
            filterLogic,
@@ -235,7 +235,7 @@ void __fastcall CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._11_OnBeforeMatchingFilter.methodPtr);
   if ( !args )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -301,10 +301,10 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_1C13CC8((PartyOrganizationUtility_o *)&sortLogic->fields, (int64_t)sort, v7, v8, v9, v10, v11, v12),
+          sub_1C1AB78((PartyOrganizationUtility_o *)&sortLogic->fields, (int64_t)sort, v7, v8, v9, v10, v11, v12),
           (sortLogic = this->fields.sortLogic) == 0LL) )
     {
-      sub_1C13F80(sortLogic, v6);
+      sub_1C1AE30(sortLogic, v6);
     }
     CharaGraphSortLogicBase__SetSortValue(sortLogic, 0LL);
     CharaGraphListViewItemBase__ApplySortValue(this, v15);
@@ -623,7 +623,7 @@ void __fastcall CharaGraphListViewItemBase__set_DrawPattern(
   PartyListViewItem_o *v7; // x7
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._DrawPattern_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -674,7 +674,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo1(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -698,7 +698,7 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo2(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -866,7 +866,7 @@ void __fastcall CharaGraphListViewItemBase__set_RootInfo(
   PartyListViewItem_o *v7; // x7
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._RootInfo_k__BackingField,
     (int64_t)value,
     (int64_t)method,

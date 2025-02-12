@@ -1,13 +1,13 @@
 void __fastcall EventBoardGameTokenEntity___ctor(EventBoardGameTokenEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB457E & 1) == 0 )
+  if ( (byte_4BC794C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BB457E = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BC794C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall EventBoardGameTokenEntity__CreatePK(
         int32_t tokenId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB457D & 1) == 0 )
+  if ( (byte_4BC794B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&tokenId);
-    byte_4BB457D = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&tokenId);
+    byte_4BC794B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            tokenId,
-           (const MethodInfo_2F8D690 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F9D6B4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

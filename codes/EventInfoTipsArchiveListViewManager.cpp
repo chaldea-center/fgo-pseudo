@@ -14,22 +14,22 @@ void __fastcall EventInfoTipsArchiveListViewManager___ctor(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( (byte_4BB66B9 & 1) == 0 )
+  if ( (byte_4BC9A9B & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject___ctor__, method);
-    sub_1C13D24(&System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__TypeInfo, v3);
-    byte_4BB66B9 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject___ctor__, method);
+    sub_1C1ABD4(&System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__TypeInfo, v3);
+    byte_4BC9A9B = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__o *)v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.objectList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  if ( !byte_4BAEDA1 )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.objectList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  if ( !byte_4BC2141 )
   {
-    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v11);
-    byte_4BAEDA1 = 1;
+    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v11);
+    byte_4BC2141 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -150,35 +150,35 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
   System_Nullable_Vector3__o v101; // 0:x3.16
   UnityEngine_Vector3_o v102; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB66B0 & 1) == 0 )
+  if ( (byte_4BC9A92 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___, *(_QWORD *)&tabKind);
-    sub_1C13D24(&EventDelegate_Callback_TypeInfo, v9);
-    sub_1C13D24(&EventDelegate_TypeInfo, v10);
-    sub_1C13D24(&Method_EventInfoTipsArchiveListViewManager_OnChangeScrollBarValue__, v11);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveListViewObject___, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__Add__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Count__, v14);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v15);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v16);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v17);
-    sub_1C13D24(&System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo, v18);
-    sub_1C13D24(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass21_0__CreateList_b__0__, v19);
-    sub_1C13D24(&EventInfoTipsArchiveListViewManager___c__DisplayClass21_0_TypeInfo, v20);
-    sub_1C13D24(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass21_1__CreateList_b__1__, v21);
-    sub_1C13D24(&EventInfoTipsArchiveListViewManager___c__DisplayClass21_1_TypeInfo, v22);
-    sub_1C13D24(&Method_UIScrollView_OnScrollBar__, v23);
-    byte_4BB66B0 = 1;
+    sub_1C1ABD4(&Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___, *(_QWORD *)&tabKind);
+    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, v9);
+    sub_1C1ABD4(&EventDelegate_TypeInfo, v10);
+    sub_1C1ABD4(&Method_EventInfoTipsArchiveListViewManager_OnChangeScrollBarValue__, v11);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveListViewObject___, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__Add__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__get_Count__, v14);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__get_Item__, v15);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v16);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v17);
+    sub_1C1ABD4(&System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo, v18);
+    sub_1C1ABD4(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass21_0__CreateList_b__0__, v19);
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewManager___c__DisplayClass21_0_TypeInfo, v20);
+    sub_1C1ABD4(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass21_1__CreateList_b__1__, v21);
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewManager___c__DisplayClass21_1_TypeInfo, v22);
+    sub_1C1ABD4(&Method_UIScrollView_OnScrollBar__, v23);
+    byte_4BC9A92 = 1;
   }
-  v24 = sub_1C13F70(EventInfoTipsArchiveListViewManager___c__DisplayClass21_0_TypeInfo);
+  v24 = sub_1C1AE20(EventInfoTipsArchiveListViewManager___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0LL);
   if ( !v24 )
     goto LABEL_45;
   *(_QWORD *)(v24 + 16) = scrollAction;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v24 + 16), (int64_t)scrollAction, v27, v28, v29, v30, v31, v32);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v24 + 16), (int64_t)scrollAction, v27, v28, v29, v30, v31, v32);
   EventInfoTipsArchiveListViewManager__DestroyList(this, v33);
   this->fields.mainInfo = item;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mainInfo, (int64_t)item, v34, v35, v36, v37, v38, v39);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mainInfo, (int64_t)item, v34, v35, v36, v37, v38, v39);
   mainInfo = this->fields.mainInfo;
   if ( !mainInfo )
     goto LABEL_45;
@@ -186,10 +186,10 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
   if ( IdList && this->fields.viewObjectInfoList )
   {
     v44 = IdList;
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v42);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v42);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -201,12 +201,12 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
       v49 = 0;
       do
       {
-        v50 = sub_1C13F70(EventInfoTipsArchiveListViewManager___c__DisplayClass21_1_TypeInfo);
+        v50 = sub_1C1AE20(EventInfoTipsArchiveListViewManager___c__DisplayClass21_1_TypeInfo);
         System_Object___ctor((Il2CppObject *)v50, 0LL);
         mainInfo = (void *)System_Collections_Generic_List_int___get_Item(
                              v44,
                              v49,
-                             (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
+                             (const MethodInfo_361F57C *)Method_System_Collections_Generic_List_int__get_Item__);
         if ( !v50 )
           goto LABEL_45;
         v26 = (unsigned int)mainInfo;
@@ -219,7 +219,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
           if ( StateData->fields.index >= 1 )
           {
             viewObjectInfoList = this->fields.viewObjectInfoList;
-            v54 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo);
+            v54 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo);
             System_Predicate_object____ctor(
               v54,
               (Il2CppObject *)v50,
@@ -228,7 +228,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
             object = System_Array__Find_object_(
                        (System_Object_array *)viewObjectInfoList,
                        (System_Predicate_T__o *)v54,
-                       (const MethodInfo_308A23C *)Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___);
+                       (const MethodInfo_309A400 *)Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___);
             if ( object )
             {
               monitor = (Il2CppObject *)object[1].monitor;
@@ -236,7 +236,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               v57 = UnityEngine_Object__Instantiate_object_(
                       monitor,
-                      (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                      (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
               mainInfo = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v57, 0LL, 0LL);
               if ( ((unsigned __int8)mainInfo & 1) == 0 )
               {
@@ -244,7 +244,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
                   goto LABEL_45;
                 mainInfo = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v57,
-                             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveListViewObject___);
+                             (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoTipsArchiveListViewObject___);
                 if ( !mainInfo )
                   goto LABEL_45;
                 v64 = *(_DWORD *)(v50 + 16);
@@ -252,7 +252,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
                 *((_DWORD *)mainInfo + 10) = v64;
                 *((_QWORD *)mainInfo + 6) = item;
                 v66 = v64 == DispLastId;
-                sub_1C13CC8(
+                sub_1C1AB78(
                   (PartyOrganizationUtility_o *)((char *)mainInfo + 48),
                   (int64_t)item,
                   v58,
@@ -269,7 +269,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
                 v71 = Size >= 0 ? Size : Size + 1;
                 v72 = v71 >> 1;
                 v73 = y - (float)(v71 >> 1);
-                GameObjectExtensions__SetParent_34717612((UnityEngine_GameObject_o *)v57, this->fields.listParent, 0LL);
+                GameObjectExtensions__SetParent_34762136((UnityEngine_GameObject_o *)v57, this->fields.listParent, 0LL);
                 v102.fields.x = x;
                 v102.fields.y = v73;
                 v102.fields.z = z;
@@ -297,14 +297,14 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
                   System_Collections_Generic_List_object___AddWithResize(
                     (System_Collections_Generic_List_object__o *)mainInfo,
                     (Il2CppObject *)v65,
-                    *(const MethodInfo_362D1CC **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
+                    *(const MethodInfo_363C890 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v86 = v83 + 8 * v85;
                   *((_DWORD *)mainInfo + 6) = v85 + 1;
                   *(_QWORD *)(v86 + 32) = v65;
-                  sub_1C13CC8((PartyOrganizationUtility_o *)(v86 + 32), (int64_t)v65, v77, v78, v79, v80, v81, v82);
+                  sub_1C1AB78((PartyOrganizationUtility_o *)(v86 + 32), (int64_t)v65, v77, v78, v79, v80, v81, v82);
                 }
                 y = v73 - (float)(EventInfoTipsArchiveListViewObject__PartitionHeight(v65, v87) + v72);
               }
@@ -340,7 +340,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
     goto LABEL_45;
   onChange = scrollBar->fields.onChange;
   v92 = (Il2CppObject *)this->fields.scrollView;
-  v93 = (EventDelegate_Callback_o *)sub_1C13F70(EventDelegate_Callback_TypeInfo);
+  v93 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v93, v92, Method_UIScrollView_OnScrollBar__, 0LL);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -348,7 +348,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
   v94 = this->fields.scrollBar;
   if ( !v94
     || (v95 = v94->fields.onChange,
-        v96 = (EventDelegate_Callback_o *)sub_1C13F70(EventDelegate_Callback_TypeInfo),
+        v96 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
           v96,
           (Il2CppObject *)this,
@@ -358,10 +358,10 @@ void __fastcall EventInfoTipsArchiveListViewManager__CreateList(
         (v97 = this->fields.scrollBar) == 0LL) )
   {
 LABEL_45:
-    sub_1C13F80(mainInfo, v26);
+    sub_1C1AE30(mainInfo, v26);
   }
   v98 = v97->fields.onChange;
-  v99 = (EventDelegate_Callback_o *)sub_1C13F70(EventDelegate_Callback_TypeInfo);
+  v99 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v99,
     (Il2CppObject *)v24,
@@ -390,19 +390,19 @@ void __fastcall EventInfoTipsArchiveListViewManager__DestroyList(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4BB66B3 & 1) == 0 )
+  if ( (byte_4BC9A95 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__,
       method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v3);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__get_Current__,
       v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__Clear__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v6);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BB66B3 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__Clear__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v6);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4BC9A95 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
@@ -411,24 +411,24 @@ void __fastcall EventInfoTipsArchiveListViewManager__DestroyList(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     objectList,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
   v16 = v15;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__) )
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__) )
   {
     if ( !v16.fields._current )
-      sub_1C13F80(0LL, v9);
+      sub_1C1AE30(0LL, v9);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)v16.fields._current,
                                            0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
   v11 = this->fields.objectList;
   if ( !v11 )
     goto LABEL_20;
@@ -450,7 +450,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__DestroyList(
       return;
     }
 LABEL_20:
-    sub_1C13F80(objectList, method);
+    sub_1C1AE30(objectList, method);
   }
 }
 
@@ -478,17 +478,17 @@ int32_t __fastcall EventInfoTipsArchiveListViewManager__GetDispLastId(
 
   v5 = idList;
   v6 = this;
-  if ( (byte_4BB66B2 & 1) == 0 )
+  if ( (byte_4BC9A94 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___, idList);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Count__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__get_Item__, v8);
-    sub_1C13D24(&System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo, v9);
-    sub_1C13D24(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass23_0__GetDispLastId_b__0__, v10);
-    this = (EventInfoTipsArchiveListViewManager_o *)sub_1C13D24(
+    sub_1C1ABD4(&Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___, idList);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__get_Count__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__get_Item__, v8);
+    sub_1C1ABD4(&System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo, v9);
+    sub_1C1ABD4(&Method_EventInfoTipsArchiveListViewManager___c__DisplayClass23_0__GetDispLastId_b__0__, v10);
+    this = (EventInfoTipsArchiveListViewManager_o *)sub_1C1ABD4(
                                                       &EventInfoTipsArchiveListViewManager___c__DisplayClass23_0_TypeInfo,
                                                       v11);
-    byte_4BB66B2 = 1;
+    byte_4BC9A94 = 1;
   }
   if ( !v5 )
     goto LABEL_16;
@@ -498,12 +498,12 @@ int32_t __fastcall EventInfoTipsArchiveListViewManager__GetDispLastId(
     v13 = 0;
     while ( 1 )
     {
-      v14 = sub_1C13F70(EventInfoTipsArchiveListViewManager___c__DisplayClass23_0_TypeInfo);
+      v14 = sub_1C1AE20(EventInfoTipsArchiveListViewManager___c__DisplayClass23_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v14, 0LL);
       this = (EventInfoTipsArchiveListViewManager_o *)System_Collections_Generic_List_int___get_Item(
                                                         v5,
                                                         v12,
-                                                        (const MethodInfo_360FEB8 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                        (const MethodInfo_361F57C *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( !v14 )
         break;
       idList = (System_Collections_Generic_List_int__o *)(unsigned int)this;
@@ -516,7 +516,7 @@ int32_t __fastcall EventInfoTipsArchiveListViewManager__GetDispLastId(
         if ( StateData->fields.index >= 1 )
         {
           viewObjectInfoList = (System_Object_array *)v6->fields.viewObjectInfoList;
-          v18 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo);
+          v18 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_EventInfoTipsArchiveListViewManager_ViewObjectInfo__TypeInfo);
           System_Predicate_object____ctor(
             v18,
             (Il2CppObject *)v14,
@@ -525,7 +525,7 @@ int32_t __fastcall EventInfoTipsArchiveListViewManager__GetDispLastId(
           if ( System_Array__Find_object_(
                  viewObjectInfoList,
                  (System_Predicate_T__o *)v18,
-                 (const MethodInfo_308A23C *)Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___) )
+                 (const MethodInfo_309A400 *)Method_System_Array_Find_EventInfoTipsArchiveListViewManager_ViewObjectInfo___) )
           {
             v13 = *(_DWORD *)(v14 + 16);
           }
@@ -535,7 +535,7 @@ int32_t __fastcall EventInfoTipsArchiveListViewManager__GetDispLastId(
         return v13;
     }
 LABEL_16:
-    sub_1C13F80(this, idList);
+    sub_1C1AE30(this, idList);
   }
   return 0;
 }
@@ -566,12 +566,12 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
   struct EventInfoTipsArchiveListViewItem_o *mainInfo; // x8
   struct TipsArchiveStateManager_o *tipsArchiveStateManager; // x8
 
-  if ( (byte_4BB66B7 & 1) == 0 )
+  if ( (byte_4BC9A99 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Item__, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BB66B7 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Item__, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BC9A99 = 1;
   }
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -601,7 +601,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
         scrollView = System_Collections_Generic_List_object___get_Item(
                        (System_Collections_Generic_List_object__o *)scrollView,
                        v10,
-                       (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Item__);
+                       (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Item__);
         v13 = (EventInfoTipsArchiveListViewObject_o *)scrollView;
         if ( v11 + v10 == -1 )
         {
@@ -662,7 +662,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnChangeScrollBarValue(
       }
       while ( scrollView );
 LABEL_30:
-      sub_1C13F80(scrollView, v6);
+      sub_1C1AE30(scrollView, v6);
     }
   }
 }
@@ -691,11 +691,11 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnClickListView(
     p_callbackFunc = (PartyOrganizationUtility_o *)&this->fields.callbackFunc;
     v9 = callbackFunc;
     p_callbackFunc->klass = 0LL;
-    sub_1C13CC8(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C1AB78(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     if ( callbackFunc )
     {
       if ( !obj )
-        sub_1C13F80(v12, v13);
+        sub_1C1AE30(v12, v13);
       Kind = EventInfoTipsArchiveListViewObject__GetKind(obj, v13);
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))v9->fields.m_target)(
         v9->fields.original_method_info,
@@ -718,10 +718,10 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnMoveEnd(
   __int64 v7; // x1
   UIScrollView_o *v8; // x0
 
-  if ( (byte_4BB66B6 & 1) == 0 )
+  if ( (byte_4BC9A98 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB66B6 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC9A98 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -744,7 +744,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__OnMoveEnd(
                 v8->klass->vtable._9_SetDragAmount.methodPtr),
               (v8 = this->fields.scrollView) == 0LL) )
         {
-          sub_1C13F80(v8, v7);
+          sub_1C1AE30(v8, v7);
         }
         UIScrollView__UpdatePosition(v8, 0LL);
       }
@@ -777,31 +777,31 @@ void __fastcall EventInfoTipsArchiveListViewManager__RequestListObject(
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
   System_Nullable_Vector3__o v21; // 0:x3.16
 
-  if ( (byte_4BB66B5 & 1) == 0 )
+  if ( (byte_4BC9A97 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v6);
-    sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v6);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__get_Current__,
       v7);
-    sub_1C13D24(&Method_EventInfoTipsArchiveListViewManager_OnMoveEnd__, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__, v10);
-    sub_1C13D24(&StringLiteral_10117/*"OnMouseDrag"*/, v11);
-    byte_4BB66B5 = 1;
+    sub_1C1ABD4(&Method_EventInfoTipsArchiveListViewManager_OnMoveEnd__, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__, v10);
+    sub_1C1ABD4(&StringLiteral_10123/*"OnMoveEnd"*/, v11);
+    byte_4BC9A97 = 1;
   }
   memset(&v20, 0, sizeof(v20));
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
-    sub_1C13F80(0LL, *(_QWORD *)&mode);
+    sub_1C1AE30(0LL, *(_QWORD *)&mode);
   size = objectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10117/*"OnMouseDrag"*/,
+      (System_String_o *)StringLiteral_10123/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -811,16 +811,16 @@ void __fastcall EventInfoTipsArchiveListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v20,
       objectList,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v20,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__) )
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__) )
     {
       current = v20.fields._current;
-      v15 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v15 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v15, (Il2CppObject *)this, Method_EventInfoTipsArchiveListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1C13F80(v16, v17);
+        sub_1C1AE30(v16, v17);
       *(_QWORD *)&v21.fields.hasValue = 0LL;
       *(_QWORD *)&v21.fields.value.fields.y = 0LL;
       EventInfoTipsArchiveListViewObject__Init(
@@ -833,7 +833,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__RequestListObject(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v20,
-      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
+      (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
   }
 }
 
@@ -851,7 +851,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     (int64_t)callback,
@@ -860,12 +860,12 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetMode(
     v5,
     v6,
     v7);
-  EventInfoTipsArchiveListViewManager__SetMode_43224904(this, mode, v10);
+  EventInfoTipsArchiveListViewManager__SetMode_43283588(this, mode, v10);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventInfoTipsArchiveListViewManager__SetMode_43224904(
+void __fastcall EventInfoTipsArchiveListViewManager__SetMode_43283588(
         EventInfoTipsArchiveListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -874,20 +874,20 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetMode_43224904(
   struct System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__o *objectList; // x8
 
   v4 = this;
-  if ( (byte_4BB66B4 & 1) == 0 )
+  if ( (byte_4BC9A96 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveListViewManager_o *)sub_1C13D24(
+    this = (EventInfoTipsArchiveListViewManager_o *)sub_1C1ABD4(
                                                       &Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__get_Count__,
                                                       *(_QWORD *)&mode);
-    byte_4BB66B4 = 1;
+    byte_4BC9A96 = 1;
   }
   objectList = v4->fields.objectList;
   v4->fields.initMode = mode;
   if ( !objectList )
-    sub_1C13F80(this, *(_QWORD *)&mode);
+    sub_1C1AE30(this, *(_QWORD *)&mode);
   v4->fields.callbackCount = objectList->fields._size;
   if ( (unsigned int)(mode - 1) <= 2 )
-    EventInfoTipsArchiveListViewManager__RequestListObject(v4, dword_C31F00[mode - 1], method);
+    EventInfoTipsArchiveListViewManager__RequestListObject(v4, dword_C35B90[mode - 1], method);
 }
 
 
@@ -911,7 +911,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetObjectItem(
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1C13F80(this, obj);
+    sub_1C1AE30(this, obj);
   }
   if ( initMode != 1 )
   {
@@ -949,44 +949,44 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetupTipsArchiveReadEndValu
   const MethodInfo *v13; // x1
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4BB66B8 & 1) == 0 )
+  if ( (byte_4BC9A9A & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_UIPanel___, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v4);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_UIPanel___, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v4);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__get_Current__,
       v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v6);
-    byte_4BB66B8 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v6);
+    byte_4BC9A9A = 1;
   }
   memset(&v14, 0, sizeof(v14));
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView
     || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                   scrollView,
-                                                  (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_UIPanel___)) == 0LL
+                                                  (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_UIPanel___)) == 0LL
     || (v8 = scrollView,
         height = UIPanel__get_height((UIPanel_o *)scrollView, 0LL),
         (scrollView = (UnityEngine_Component_o *)this->fields.objectList) == 0LL) )
   {
-    sub_1C13F80(scrollView, method);
+    sub_1C1AE30(scrollView, method);
   }
   v10 = *((float *)&v8[13].klass + 1);
   v11 = height;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     (System_Collections_Generic_List_object__o *)scrollView,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
   while ( 1 )
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v14,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__);
     if ( !v12 )
       break;
     if ( !v14.fields._current )
-      sub_1C13F80(v12, v13);
+      sub_1C1AE30(v12, v13);
     *((float *)&v14.fields._current[8].klass + 1) = fmaxf(
                                                       vabds_f32(
                                                         *((float *)&v14.fields._current[5].klass + 1)
@@ -1000,7 +1000,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__SetupTipsArchiveReadEndValu
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
 }
 
 
@@ -1023,43 +1023,43 @@ void __fastcall EventInfoTipsArchiveListViewManager__UpdateNewIconDisp(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4BB66B1 & 1) == 0 )
+  if ( (byte_4BC9A93 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__,
       method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__, v3);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__get_Current__,
       v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v5);
-    byte_4BB66B1 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__, v5);
+    byte_4BC9A93 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventInfoTipsArchiveListViewObject__GetEnumerator__);
   v16 = v15;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v16,
-           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__);
+           (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__MoveNext__);
     if ( !v7 )
       break;
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_1C13F80(v7, v8);
+      sub_1C1AE30(v7, v8);
     mainInfo = this->fields.mainInfo;
     if ( !mainInfo )
-      sub_1C13F80(0LL, v8);
+      sub_1C1AE30(0LL, v8);
     StateData = EventInfoTipsArchiveListViewItem__GetStateData(mainInfo, (int32_t)v16.fields._current[2].monitor, v9);
     if ( !StateData )
-      sub_1C13F80(0LL, v13);
+      sub_1C1AE30(0LL, v13);
     EventInfoTipsArchiveListViewObject__SetNewIconDisp(
       (EventInfoTipsArchiveListViewObject_o *)current,
       StateData->fields.state & 1,
@@ -1067,7 +1067,7 @@ void __fastcall EventInfoTipsArchiveListViewManager__UpdateNewIconDisp(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoTipsArchiveListViewObject__Dispose__);
 }
 
 
@@ -1086,10 +1086,10 @@ void __fastcall EventInfoTipsArchiveListViewManager__add_callbackFunc(
   EventInfoTipsArchiveListViewManager_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BB66AE & 1) == 0 )
+  if ( (byte_4BC9A90 & 1) == 0 )
   {
-    sub_1C13D24(&EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4BB66AE = 1;
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo, value);
+    byte_4BC9A90 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1102,13 +1102,13 @@ void __fastcall EventInfoTipsArchiveListViewManager__add_callbackFunc(
       if ( (EventInfoTipsArchiveListViewManager_CallbackFunc_c *)v8->klass != EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   EventInfoTipsArchiveListViewManager__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1135,10 +1135,10 @@ void __fastcall EventInfoTipsArchiveListViewManager__remove_callbackFunc(
   EventInfoTipsArchiveListViewManager_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BB66AF & 1) == 0 )
+  if ( (byte_4BC9A91 & 1) == 0 )
   {
-    sub_1C13D24(&EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo, value);
-    byte_4BB66AF = 1;
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo, value);
+    byte_4BC9A91 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1151,13 +1151,13 @@ void __fastcall EventInfoTipsArchiveListViewManager__remove_callbackFunc(
       if ( (EventInfoTipsArchiveListViewManager_CallbackFunc_c *)v8->klass != EventInfoTipsArchiveListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C4F214(p_callbackFunc, v8, v6);
+    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C14240(v8);
+  sub_1C1B0F0(v8);
   EventInfoTipsArchiveListViewManager__Awake(v11, v12);
 }
 
@@ -1184,7 +1184,7 @@ void __fastcall EventInfoTipsArchiveListViewManager_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1195,12 +1195,12 @@ void __fastcall EventInfoTipsArchiveListViewManager_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C13DE4(v10) & 1) == 0 )
+  if ( (sub_1C1AC94(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C13F9C(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C13E4C(v14, 0LL);
+      v14 = sub_1C1AE4C(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C1ACFC(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1212,9 +1212,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A56F0C;
+  this->fields.m_target = (Il2CppObject *)sub_1A5DD0C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A56EB4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A5DCB4;
 }
 
 
@@ -1237,11 +1237,11 @@ System_IAsyncResult_o *__fastcall EventInfoTipsArchiveListViewManager_CallbackFu
 
   v15 = id;
   v16 = result;
-  if ( (byte_4BB66BA & 1) == 0 )
+  if ( (byte_4BC9A9C & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&result);
-    sub_1C13D24(&EventInfoTipsArchiveListViewManager_ResultKind_TypeInfo, v9);
-    byte_4BB66BA = 1;
+    sub_1C1ABD4(&int_TypeInfo, *(_QWORD *)&result);
+    sub_1C1ABD4(&EventInfoTipsArchiveListViewManager_ResultKind_TypeInfo, v9);
+    byte_4BC9A9C = 1;
   }
   v14[2] = 0LL;
   v14[0] = j_il2cpp_value_box_0(
@@ -1251,7 +1251,7 @@ System_IAsyncResult_o *__fastcall EventInfoTipsArchiveListViewManager_CallbackFu
              callback,
              object);
   v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1C13CD8(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1C1AB88(this, v14, callback, object);
 }
 
 
@@ -1260,7 +1260,7 @@ void __fastcall EventInfoTipsArchiveListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C13CDC(result, 0LL, method);
+  sub_1C1AB8C(result, 0LL, method);
 }
 
 
@@ -1316,7 +1316,7 @@ bool __fastcall EventInfoTipsArchiveListViewManager___c__DisplayClass21_1___Crea
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return n->fields.Id == this->fields.id;
 }
 
@@ -1335,6 +1335,6 @@ bool __fastcall EventInfoTipsArchiveListViewManager___c__DisplayClass23_0___GetD
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return n->fields.Id == this->fields.id;
 }

@@ -97,12 +97,12 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
   UnityEngine_Vector3_o v78; // 0:s0.4,4:s1.4,8:s2.4
 
   v8 = this;
-  if ( (byte_4BB29B7 & 1) == 0 )
+  if ( (byte_4BC5D75 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, point1);
-    sub_1C13D24(&StringLiteral_17578/*"bit_runningdog_60"*/, v9);
-    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_1C13D24(&StringLiteral_17579/*"bit_runningdog_70"*/, v10);
-    byte_4BB29B7 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, point1);
+    sub_1C1ABD4(&StringLiteral_17592/*"bit_vs_gauge_part_1"*/, v9);
+    this = (TitleInfoEventLeagueVsGaugeEffect_o *)sub_1C1ABD4(&StringLiteral_17593/*"bit_vs_gauge_part_2"*/, v10);
+    byte_4BC5D75 = 1;
   }
   v11 = 0.5;
   v12 = 0.5;
@@ -219,9 +219,9 @@ void __fastcall TitleInfoEventLeagueVsGaugeEffect__setup(
                   this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeSimpleAnim;
                   if ( this )
                   {
-                    v27 = &StringLiteral_17579/*"bit_runningdog_70"*/;
+                    v27 = &StringLiteral_17593/*"bit_vs_gauge_part_2"*/;
 LABEL_51:
-                    SimpleAnimation__Play_65106228((SimpleAnimation_o *)this, (System_String_o *)*v27, 0LL);
+                    SimpleAnimation__Play_65178652((SimpleAnimation_o *)this, (System_String_o *)*v27, 0LL);
                     return;
                   }
                   goto LABEL_64;
@@ -234,9 +234,9 @@ LABEL_51:
                   this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeAnim;
                   if ( !this )
                     goto LABEL_64;
-                  v40 = &StringLiteral_17579/*"bit_runningdog_70"*/;
+                  v40 = &StringLiteral_17593/*"bit_vs_gauge_part_2"*/;
 LABEL_62:
-                  UnityEngine_Animation__Play_70466396((UnityEngine_Animation_o *)this, (System_String_o *)*v40, 0LL);
+                  UnityEngine_Animation__Play_70538820((UnityEngine_Animation_o *)this, (System_String_o *)*v40, 0LL);
                   return;
                 }
                 return;
@@ -247,7 +247,7 @@ LABEL_62:
       }
     }
 LABEL_65:
-    sub_1C13F88(this, point1);
+    sub_1C1AE38(this, point1);
   }
   if ( max_length <= 1 )
     goto LABEL_65;
@@ -338,11 +338,11 @@ LABEL_65:
     this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeSimpleAnim;
     if ( this )
     {
-      v27 = &StringLiteral_17578/*"bit_runningdog_60"*/;
+      v27 = &StringLiteral_17592/*"bit_vs_gauge_part_1"*/;
       goto LABEL_51;
     }
 LABEL_64:
-    sub_1C13F80(this, point1);
+    sub_1C1AE30(this, point1);
   }
   v41 = (UnityEngine_Object_o *)v8->fields.gaugeAnim;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -352,7 +352,7 @@ LABEL_64:
     this = (TitleInfoEventLeagueVsGaugeEffect_o *)v8->fields.gaugeAnim;
     if ( !this )
       goto LABEL_64;
-    v40 = &StringLiteral_17578/*"bit_runningdog_60"*/;
+    v40 = &StringLiteral_17592/*"bit_vs_gauge_part_1"*/;
     goto LABEL_62;
   }
 }

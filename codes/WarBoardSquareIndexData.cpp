@@ -4,7 +4,7 @@ void __fastcall WarBoardSquareIndexData___ctor(WarBoardSquareIndexData_o *this, 
 }
 
 
-void __fastcall WarBoardSquareIndexData___ctor_36677192(
+void __fastcall WarBoardSquareIndexData___ctor_36724616(
         WarBoardSquareIndexData_o *this,
         WarBoardSquareIndexData_SaveData_o *squareIndexData,
         const MethodInfo *method)
@@ -28,14 +28,14 @@ void __fastcall WarBoardSquareIndexData___ctor_36677192(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.effectIds, (int64_t)effectIds, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.effectIds, (int64_t)effectIds, v7, v8, v9, v10, v11, v12);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v15, v16, v17, v18, v19, v20);
 }
 
 
@@ -59,13 +59,13 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = 0;
   this->fields.effectIds = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.effectIds, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.effectIds, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.script = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.script, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.script, 0LL, v9, v10, v11, v12, v13, v14);
 }
 
 
-void __fastcall WarBoardSquareIndexData_SaveData___ctor_36635728(
+void __fastcall WarBoardSquareIndexData_SaveData___ctor_36683152(
         WarBoardSquareIndexData_SaveData_o *this,
         WarBoardSquareIndexData_o *squareIndexData,
         const MethodInfo *method)
@@ -89,12 +89,12 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor_36635728(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_1C13F80(v5, v6);
+    sub_1C1AE30(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.effectIds, (int64_t)effectIds, v7, v8, v9, v10, v11, v12);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.effectIds, (int64_t)effectIds, v7, v8, v9, v10, v11, v12);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v15, v16, v17, v18, v19, v20);
 }

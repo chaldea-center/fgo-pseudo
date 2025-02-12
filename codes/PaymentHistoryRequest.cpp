@@ -3,10 +3,10 @@ void __fastcall PaymentHistoryRequest___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct PaymentHistoryRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4BB6074 & 1) == 0 )
+  if ( (byte_4BC9456 & 1) == 0 )
   {
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v1);
-    byte_4BB6074 = 1;
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v1);
+    byte_4BC9456 = 1;
   }
   static_fields = PaymentHistoryRequest_TypeInfo->static_fields;
   static_fields->reflectResetTime = -1LL;
@@ -21,11 +21,11 @@ void __fastcall PaymentHistoryRequest__SetRemainTime(int64_t remain, const Metho
   __int64 v3; // x1
   PaymentHistoryRequest_c *v4; // x0
 
-  if ( (byte_4BB6072 & 1) == 0 )
+  if ( (byte_4BC9454 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v3);
-    byte_4BB6072 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v3);
+    byte_4BC9454 = 1;
   }
   v4 = PaymentHistoryRequest_TypeInfo;
   if ( !PaymentHistoryRequest_TypeInfo->_2.cctor_finished )
@@ -50,11 +50,11 @@ void __fastcall PaymentHistoryRequest__beginRequest(
   const MethodInfo *v6; // x1
   PaymentHistoryRequest_c *v7; // x0
 
-  if ( (byte_4BB606E & 1) == 0 )
+  if ( (byte_4BC9450 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, isFirstReflect);
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v5);
-    byte_4BB606E = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, isFirstReflect);
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v5);
+    byte_4BC9450 = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, (const MethodInfo *)isFirstReflect);
   RequestBase__WriteParameter((RequestBase_o *)this, v6);
@@ -81,12 +81,12 @@ bool __fastcall PaymentHistoryRequest__checkReflectRate(const MethodInfo *method
   PaymentHistoryRequest_c *v6; // x8
   int64_t v7; // x19
 
-  if ( (byte_4BB6070 & 1) == 0 )
+  if ( (byte_4BC9452 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, v1);
-    sub_1C13D24(&NetworkManager_TypeInfo, v2);
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v3);
-    byte_4BB6070 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v2);
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v3);
+    byte_4BC9452 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -115,10 +115,10 @@ void __fastcall PaymentHistoryRequest__clearReflectRate(const MethodInfo *method
   __int64 v1; // x1
   PaymentHistoryRequest_c *v2; // x0
 
-  if ( (byte_4BB606F & 1) == 0 )
+  if ( (byte_4BC9451 & 1) == 0 )
   {
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v1);
-    byte_4BB606F = 1;
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v1);
+    byte_4BC9451 = 1;
   }
   v2 = PaymentHistoryRequest_TypeInfo;
   if ( !PaymentHistoryRequest_TypeInfo->_2.cctor_finished )
@@ -142,12 +142,12 @@ int64_t __fastcall PaymentHistoryRequest__getReflectRemain(const MethodInfo *met
   int64_t reflectResetTime; // x19
   int64_t Time; // x0
 
-  if ( (byte_4BB6071 & 1) == 0 )
+  if ( (byte_4BC9453 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, v1);
-    sub_1C13D24(&NetworkManager_TypeInfo, v2);
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v3);
-    byte_4BB6071 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v2);
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v3);
+    byte_4BC9453 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -202,16 +202,16 @@ System_String_o *__fastcall PaymentHistoryRequest__getURL(PaymentHistoryRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB606D & 1) == 0 )
+  if ( (byte_4BC944F & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_23651/*"shaRSA"*/, v2);
-    byte_4BB606D = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_23671/*"shop/paymentHistory"*/, v2);
+    byte_4BC944F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_23651/*"shaRSA"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_23671/*"shop/paymentHistory"*/, 0LL);
 }
 
 
@@ -236,21 +236,21 @@ void __fastcall PaymentHistoryRequest__requestCompleted(
   __int64 *v17; // x9
 
   v4 = this;
-  if ( (byte_4BB6073 & 1) == 0 )
+  if ( (byte_4BC9455 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, responseList);
-    sub_1C13D24(&NetworkManager_TypeInfo, v5);
-    sub_1C13D24(&PaymentHistoryRequest_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v7);
-    this = (PaymentHistoryRequest_o *)sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v8);
-    byte_4BB6073 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, responseList);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
+    sub_1C1ABD4(&PaymentHistoryRequest_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_22613/*"ok"*/, v7);
+    this = (PaymentHistoryRequest_o *)sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v8);
+    byte_4BC9455 = 1;
   }
   if ( !responseList )
-    sub_1C13F80(this, responseList);
+    sub_1C1AE30(this, responseList);
   if ( !responseList->max_length )
-    sub_1C13F88(this, responseList);
+    sub_1C1AE38(this, responseList);
   v9 = responseList->m_Items[0];
-  if ( v9 && ResponseData__checkError_42394144(v9, 0LL) )
+  if ( v9 && ResponseData__checkError_42452820(v9, 0LL) )
   {
     v10 = PaymentHistoryRequest_TypeInfo;
     if ( !PaymentHistoryRequest_TypeInfo->_2.cctor_finished )
@@ -292,7 +292,7 @@ void __fastcall PaymentHistoryRequest__requestCompleted(
     CallBack = v4->fields.CallBack;
     if ( CallBack )
     {
-      v17 = &StringLiteral_22595/*"offline"*/;
+      v17 = &StringLiteral_22613/*"ok"*/;
       goto LABEL_24;
     }
   }
@@ -301,7 +301,7 @@ void __fastcall PaymentHistoryRequest__requestCompleted(
     CallBack = v4->fields.CallBack;
     if ( CallBack )
     {
-      v17 = &StringLiteral_22421/*"newAttributes"*/;
+      v17 = &StringLiteral_22437/*"ng"*/;
 LABEL_24:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,

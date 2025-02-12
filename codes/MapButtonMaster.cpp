@@ -1,14 +1,14 @@
 void __fastcall MapButtonMaster___ctor(MapButtonMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4A36 & 1) == 0 )
+  if ( (byte_4BC7E09 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string___ctor__, method);
-    byte_4BB4A36 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string___ctor__, method);
+    byte_4BC7E09 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     203,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ MapButtonEntity_o *__fastcall MapButtonMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB4A37 & 1) == 0 )
+  if ( (byte_4BC7E0A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4BB4A37 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4BC7E0A = 1;
   }
   PK = (Il2CppObject *)MapButtonEntity__CreatePK(id, priority, targetMapId, *(const MethodInfo **)&targetMapId);
   return (MapButtonEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_323D0DC *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__GetEntity__);
+                                (const MethodInfo_324D130 *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__GetEntity__);
 }
 
 
@@ -82,44 +82,44 @@ MapButtonEntity_array *__fastcall MapButtonMaster__GetOpenedButtons(
   FollowerInfo_o *v44; // x6
   PartyListViewItem_o *v45; // x7
 
-  if ( (byte_4BB4A35 & 1) == 0 )
+  if ( (byte_4BC7E08 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Count__, warInf);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Item__, v6);
-    sub_1C13D24(&System_Comparison_MapButtonEntity__TypeInfo, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_MapCondMaster___, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapButtonEntity__Add__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__Remove__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapButtonEntity__Sort__, v11);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapButtonEntity__ToArray__, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapButtonEntity___ctor__, v13);
-    sub_1C13D24(&System_Collections_Generic_List_MapButtonEntity__TypeInfo, v14);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1C13D24(&Method_MapButtonMaster___c__GetOpenedButtons_b__0_0__, v16);
-    sub_1C13D24(&MapButtonMaster___c_TypeInfo, v17);
-    byte_4BB4A35 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Count__, warInf);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Item__, v6);
+    sub_1C1ABD4(&System_Comparison_MapButtonEntity__TypeInfo, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_MapCondMaster___, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapButtonEntity__Add__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__Remove__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapButtonEntity__Sort__, v11);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapButtonEntity__ToArray__, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapButtonEntity___ctor__, v13);
+    sub_1C1ABD4(&System_Collections_Generic_List_MapButtonEntity__TypeInfo, v14);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1C1ABD4(&Method_MapButtonMaster___c__GetOpenedButtons_b__0_0__, v16);
+    sub_1C1ABD4(&MapButtonMaster___c_TypeInfo, v17);
+    byte_4BC7E08 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_MapCondMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_MapCondMaster___);
   if ( !mapInf )
     goto LABEL_27;
   if ( !Instance )
     goto LABEL_27;
   AvailableButtons = MapCondMaster__GetAvailableButtons((MapCondMaster_o *)Instance, mapInf->fields.mapId, v20);
-  v22 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_MapButtonEntity__TypeInfo);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_MapButtonEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v22,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_MapButtonEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_MapButtonEntity___ctor__);
   Instance = this->fields.list;
   if ( !Instance )
     goto LABEL_27;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)Instance,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Count__);
   if ( Count >= 1 )
   {
     v24 = Count;
@@ -132,14 +132,14 @@ MapButtonEntity_array *__fastcall MapButtonMaster__GetOpenedButtons(
       Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                    (System_Collections_ObjectModel_Collection_T__o *)Instance,
                    v25,
-                   (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Item__);
+                   (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_MapButtonEntity__get_Item__);
       if ( !Instance || !AvailableButtons )
         break;
       v26 = (Il2CppObject *)Instance;
       Instance = (void *)System_Collections_Generic_List_int___Remove(
                            AvailableButtons,
                            *((_DWORD *)Instance + 4),
-                           (const MethodInfo_36116A4 *)Method_System_Collections_Generic_List_int__Remove__);
+                           (const MethodInfo_3620D68 *)Method_System_Collections_Generic_List_int__Remove__);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         if ( !v22 )
@@ -155,21 +155,21 @@ MapButtonEntity_array *__fastcall MapButtonMaster__GetOpenedButtons(
           System_Collections_Generic_List_object___AddWithResize(
             v22,
             v26,
-            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+            *(const MethodInfo_363C890 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
         }
         else
         {
           v36 = &items->obj.klass + size;
           v22->fields._size = size + 1;
           v36[4] = (Il2CppClass *)v26;
-          sub_1C13CC8((PartyOrganizationUtility_o *)(v36 + 4), (int64_t)v26, v27, v28, v29, v30, v31, v32);
+          sub_1C1AB78((PartyOrganizationUtility_o *)(v36 + 4), (int64_t)v26, v27, v28, v29, v30, v31, v32);
         }
       }
       if ( v24 == ++v25 )
         goto LABEL_19;
     }
 LABEL_27:
-    sub_1C13F80(Instance, v19);
+    sub_1C1AE30(Instance, v19);
   }
 LABEL_19:
   Instance = MapButtonMaster___c_TypeInfo;
@@ -187,21 +187,21 @@ LABEL_19:
       Instance = MapButtonMaster___c_TypeInfo;
     }
     v38 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v37 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_MapButtonEntity__TypeInfo);
+    v37 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_MapButtonEntity__TypeInfo);
     System_Comparison_object____ctor(v37, v38, Method_MapButtonMaster___c__GetOpenedButtons_b__0_0__, 0LL);
     static_fields = MapButtonMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Comparison_MapButtonEntity__o *)v37;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)v37, v40, v41, v42, v43, v44, v45);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)v37, v40, v41, v42, v43, v44, v45);
   }
   if ( !v22 )
     goto LABEL_27;
-  System_Collections_Generic_List_object___Sort_56814736(
+  System_Collections_Generic_List_object___Sort_56877908(
     v22,
     v37,
-    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_MapButtonEntity__Sort__);
+    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_MapButtonEntity__Sort__);
   return (MapButtonEntity_array *)System_Collections_Generic_List_object___ToArray(
                                     v22,
-                                    (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_MapButtonEntity__ToArray__);
+                                    (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_MapButtonEntity__ToArray__);
 }
 
 
@@ -216,17 +216,17 @@ bool __fastcall MapButtonMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB4A38 & 1) == 0 )
+  if ( (byte_4BC7E0B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__TryGetEntity__, entity);
-    byte_4BB4A38 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__TryGetEntity__, entity);
+    byte_4BC7E0B = 1;
   }
   PK = (Il2CppObject *)MapButtonEntity__CreatePK(id, priority, targetMapId, *(const MethodInfo **)&priority);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_MapButtonMaster__MapButtonEntity__string__TryGetEntity__);
 }
 
 
@@ -241,15 +241,15 @@ void __fastcall MapButtonMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB4A39 & 1) == 0 )
+  if ( (byte_4BC7E0C & 1) == 0 )
   {
-    sub_1C13D24(&MapButtonMaster___c_TypeInfo, v1);
-    byte_4BB4A39 = 1;
+    sub_1C1ABD4(&MapButtonMaster___c_TypeInfo, v1);
+    byte_4BC7E0C = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(MapButtonMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(MapButtonMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MapButtonMaster___c_TypeInfo->static_fields->__9 = (struct MapButtonMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)MapButtonMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -274,6 +274,6 @@ int32_t __fastcall MapButtonMaster___c___GetOpenedButtons_b__0_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   return a->fields.priority - b->fields.priority;
 }

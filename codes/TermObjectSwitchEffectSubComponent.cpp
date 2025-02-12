@@ -29,14 +29,14 @@ void __fastcall TermObjectSwitchEffectSubComponent__RecvParam(
   struct UnityEngine_GameObject_array *v19; // x8
 
   v4 = this;
-  if ( (byte_4BB5B47 & 1) == 0 )
+  if ( (byte_4BC8F29 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
-    sub_1C13D24(&RaceResultEffectParam_TypeInfo, v5);
-    this = (TermObjectSwitchEffectSubComponent_o *)sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
+    sub_1C1ABD4(&RaceResultEffectParam_TypeInfo, v5);
+    this = (TermObjectSwitchEffectSubComponent_o *)sub_1C1ABD4(
                                                      &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
                                                      v6);
-    byte_4BB5B47 = 1;
+    byte_4BC8F29 = 1;
   }
   if ( param
     && (methodPtr_low = LOBYTE(RaceResultEffectParam_TypeInfo->vtable._0_Equals.methodPtr),
@@ -65,12 +65,12 @@ void __fastcall TermObjectSwitchEffectSubComponent__RecvParam(
     goto LABEL_24;
   v13 = *((_DWORD *)monitor + 8);
   v14 = *((_DWORD *)monitor + 10);
-  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                                   (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)EventRaceMaster__GetTermIndex((EventRaceMaster_o *)this, v13, v14, 0LL);
@@ -109,7 +109,7 @@ LABEL_24:
           break;
         if ( v18 >= v19->max_length )
 LABEL_32:
-          sub_1C13F88(this, param);
+          sub_1C1AE38(this, param);
         this = (TermObjectSwitchEffectSubComponent_o *)v19->m_Items[v18];
         if ( !this )
           break;
@@ -118,7 +118,7 @@ LABEL_32:
           return;
       }
 LABEL_31:
-      sub_1C13F80(this, param);
+      sub_1C1AE30(this, param);
     }
   }
 }

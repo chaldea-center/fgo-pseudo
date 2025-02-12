@@ -18,11 +18,11 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB1341 & 1) == 0 )
+  if ( (byte_4BC46FB & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1341 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC46FB = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -31,9 +31,9 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.mRenderer,
       (int64_t)Component_object,
       v6,
@@ -61,11 +61,11 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB1342 & 1) == 0 )
+  if ( (byte_4BC46FC & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1342 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC46FC = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -74,9 +74,9 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.mRigidbody,
       (int64_t)Component_object,
       v6,
@@ -104,11 +104,11 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB1343 & 1) == 0 )
+  if ( (byte_4BC46FD & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Transform___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1343 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Transform___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC46FD = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -117,9 +117,9 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.mTransform,
       (int64_t)Component_object,
       v6,

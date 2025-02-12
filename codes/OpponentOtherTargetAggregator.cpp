@@ -15,18 +15,18 @@ System_Int32_array *__fastcall OpponentOtherTargetAggregator__GetCandidate(
   System_Func_int__bool__o *v7; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
 
-  if ( (byte_4BB74D9 & 1) == 0 )
+  if ( (byte_4BCA8BB & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToArray_int___, method);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_int___, v3);
-    sub_1C13D24(&System_Func_int__bool__TypeInfo, v4);
-    sub_1C13D24(&Method_OpponentOtherTargetAggregator__GetCandidate_b__0_0__, v5);
-    byte_4BB74D9 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_int___, method);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_int___, v3);
+    sub_1C1ABD4(&System_Func_int__bool__TypeInfo, v4);
+    sub_1C1ABD4(&Method_OpponentOtherTargetAggregator__GetCandidate_b__0_0__, v5);
+    byte_4BCA8BB = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)OpponentAllFieldTargetAggregator__GetCandidate(
                                                                      (OpponentAllFieldTargetAggregator_o *)this,
                                                                      method);
-  v7 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
+  v7 = (System_Func_int__bool__o *)sub_1C1AE20(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v7,
     (Il2CppObject *)this,
@@ -35,10 +35,10 @@ System_Int32_array *__fastcall OpponentOtherTargetAggregator__GetCandidate(
   v8 = System_Linq_Enumerable__Where_int_(
          Candidate,
          (System_Func_TSource__bool__o *)v7,
-         (const MethodInfo_2FCE8EC *)Method_System_Linq_Enumerable_Where_int___);
+         (const MethodInfo_2FDEAB0 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v8,
-           (const MethodInfo_2FC8B9C *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_2FD8CD8 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -51,6 +51,6 @@ bool __fastcall OpponentOtherTargetAggregator___GetCandidate_b__0_0(
 
   args = this->fields.args;
   if ( !args )
-    sub_1C13F80(this, x);
+    sub_1C1AE30(this, x);
   return args->fields._targetId_k__BackingField != x;
 }

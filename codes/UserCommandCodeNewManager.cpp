@@ -19,18 +19,18 @@ void __fastcall UserCommandCodeNewManager___cctor(const MethodInfo *method)
   FollowerInfo_o *v17; // x6
   PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4BB59AF & 1) == 0 )
+  if ( (byte_4BC8D8F & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_long___ctor__, v1);
-    sub_1C13D24(&System_Collections_Generic_List_long__TypeInfo, v8);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_6796/*"Fgo_20160211_1"*/, v10);
-    byte_4BB59AF = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long___ctor__, v1);
+    sub_1C1ABD4(&System_Collections_Generic_List_long__TypeInfo, v8);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_6799/*"Fgo_20180629_1"*/, v10);
+    byte_4BC8D8F = 1;
   }
-  UserCommandCodeNewManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6796/*"Fgo_20160211_1"*/;
-  sub_1C13CC8(
+  UserCommandCodeNewManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6799/*"Fgo_20180629_1"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)UserCommandCodeNewManager_TypeInfo->static_fields,
-    StringLiteral_6796/*"Fgo_20160211_1"*/,
+    StringLiteral_6799/*"Fgo_20180629_1"*/,
     v2,
     v3,
     v4,
@@ -38,13 +38,13 @@ void __fastcall UserCommandCodeNewManager___cctor(const MethodInfo *method)
     v6,
     v7);
   *(_WORD *)&UserCommandCodeNewManager_TypeInfo->static_fields->isModfiy = 0;
-  v11 = (System_Collections_Generic_List_long__o *)sub_1C13F70(System_Collections_Generic_List_long__TypeInfo);
+  v11 = (System_Collections_Generic_List_long__o *)sub_1C1AE20(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
     v11,
-    (const MethodInfo_36149AC *)Method_System_Collections_Generic_List_long___ctor__);
+    (const MethodInfo_3624070 *)Method_System_Collections_Generic_List_long___ctor__);
   static_fields = UserCommandCodeNewManager_TypeInfo->static_fields;
   static_fields->oldList = v11;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->oldList, (int64_t)v11, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->oldList, (int64_t)v11, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -63,12 +63,12 @@ void __fastcall UserCommandCodeNewManager__ClearSaveDataList(const MethodInfo *m
   struct System_Collections_Generic_List_long__o *oldList; // x8
   int v6; // w9
 
-  if ( (byte_4BB59A9 & 1) == 0 )
+  if ( (byte_4BC8D89 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__Clear__, v1);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Count__, v2);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v3);
-    byte_4BB59A9 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__Clear__, v1);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Count__, v2);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v3);
+    byte_4BC8D89 = 1;
   }
   v4 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -88,7 +88,7 @@ void __fastcall UserCommandCodeNewManager__ClearSaveDataList(const MethodInfo *m
     oldList = UserCommandCodeNewManager_TypeInfo->static_fields->oldList;
     if ( !oldList )
 LABEL_13:
-      sub_1C13F80(v4, v1);
+      sub_1C1AE30(v4, v1);
   }
   v6 = oldList->fields._version + 1;
   oldList->fields._size = 0;
@@ -110,10 +110,10 @@ void __fastcall UserCommandCodeNewManager__CreateContinueDeviceSaveData(const Me
   const MethodInfo *v3; // x0
   const MethodInfo *v4; // x0
 
-  if ( (byte_4BB59A7 & 1) == 0 )
+  if ( (byte_4BC8D87 & 1) == 0 )
   {
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v1);
-    byte_4BB59A7 = 1;
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v1);
+    byte_4BC8D87 = 1;
   }
   v2 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -131,10 +131,10 @@ void __fastcall UserCommandCodeNewManager__DeleteSaveData(const MethodInfo *meth
   UserCommandCodeNewManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4BB59A6 & 1) == 0 )
+  if ( (byte_4BC8D86 & 1) == 0 )
   {
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v1);
-    byte_4BB59A6 = 1;
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v1);
+    byte_4BC8D86 = 1;
   }
   v2 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -150,10 +150,10 @@ void __fastcall UserCommandCodeNewManager__Initialize(const MethodInfo *method)
   __int64 v1; // x1
   UserCommandCodeNewManager_c *v2; // x0
 
-  if ( (byte_4BB59A8 & 1) == 0 )
+  if ( (byte_4BC8D88 & 1) == 0 )
   {
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v1);
-    byte_4BB59A8 = 1;
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v1);
+    byte_4BC8D88 = 1;
   }
   v2 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -172,12 +172,12 @@ bool __fastcall UserCommandCodeNewManager__IsNew(int64_t userCmdCodeId, const Me
   int v8; // w24
   bool v9; // w23
 
-  if ( (byte_4BB59AB & 1) == 0 )
+  if ( (byte_4BC8D8B & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Count__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Item__, v3);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v4);
-    byte_4BB59AB = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Count__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Item__, v3);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v4);
+    byte_4BC8D8B = 1;
   }
   v5 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -206,7 +206,7 @@ bool __fastcall UserCommandCodeNewManager__IsNew(int64_t userCmdCodeId, const Me
       if ( System_Collections_Generic_List_long___get_Item(
              (System_Collections_Generic_List_long__o *)v5,
              v8 - 1,
-             (const MethodInfo_3614F10 *)Method_System_Collections_Generic_List_long__get_Item__) == userCmdCodeId )
+             (const MethodInfo_36245D4 *)Method_System_Collections_Generic_List_long__get_Item__) == userCmdCodeId )
         return !v9;
       v9 = v8 < size;
       if ( size == v8 )
@@ -215,7 +215,7 @@ bool __fastcall UserCommandCodeNewManager__IsNew(int64_t userCmdCodeId, const Me
       ++v8;
     }
 LABEL_16:
-    sub_1C13F80(v5, method);
+    sub_1C1AE30(v5, method);
   }
   v9 = 0;
   return !v9;
@@ -232,12 +232,12 @@ void __fastcall UserCommandCodeNewManager__LoginProcess(const MethodInfo *method
   __int64 v6; // x1
   const MethodInfo *v7; // x0
 
-  if ( (byte_4BB59AA & 1) == 0 )
+  if ( (byte_4BC8D8A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v1);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v3);
-    byte_4BB59AA = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserCommandCodeMaster___, v1);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v3);
+    byte_4BC8D8A = 1;
   }
   v4 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -247,13 +247,13 @@ void __fastcall UserCommandCodeNewManager__LoginProcess(const MethodInfo *method
   }
   if ( v4->static_fields->isContinueDevice )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL )
+                       (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserCommandCodeMaster___)) == 0LL )
     {
-      sub_1C13F80(Instance, v6);
+      sub_1C1AE30(Instance, v6);
     }
     UserCommandCodeMaster__continueDeviceUserCommandCode((UserCommandCodeMaster_o *)Instance, 0LL);
     v7 = (const MethodInfo *)UserCommandCodeNewManager_TypeInfo;
@@ -303,14 +303,14 @@ bool __fastcall UserCommandCodeNewManager__ReadData(const MethodInfo *method)
   __int64 v32; // x0
   UserCommandCodeNewManager_c *v33; // x0
 
-  if ( (byte_4BB59AD & 1) == 0 )
+  if ( (byte_4BC8D8D & 1) == 0 )
   {
-    sub_1C13D24(&System_IO_BinaryReader_TypeInfo, v1);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v2);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__Add__, v3);
-    sub_1C13D24(&ManagerConfig_TypeInfo, v4);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v5);
-    byte_4BB59AD = 1;
+    sub_1C1ABD4(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v2);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__Add__, v3);
+    sub_1C1ABD4(&ManagerConfig_TypeInfo, v4);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v5);
+    byte_4BC8D8D = 1;
   }
   v6 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -338,10 +338,10 @@ bool __fastcall UserCommandCodeNewManager__ReadData(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo);
       UserCommandCodeNewManager__ClearSaveDataList((const MethodInfo *)v11);
       v12 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-      v13 = (System_IO_BinaryReader_o *)sub_1C13F70(System_IO_BinaryReader_TypeInfo);
+      v13 = (System_IO_BinaryReader_o *)sub_1C1AE20(System_IO_BinaryReader_TypeInfo);
       System_IO_BinaryReader___ctor(v13, v12, 0LL);
       if ( !v13 )
-        sub_1C13F80(v14, v15);
+        sub_1C1AE30(v14, v15);
       v16 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._22_ReadString.method)(
                                  v13,
                                  v13->klass->vtable._23_ReadChars.methodPtr);
@@ -385,19 +385,19 @@ bool __fastcall UserCommandCodeNewManager__ReadData(const MethodInfo *method)
             }
             oldList = v24->static_fields->oldList;
             if ( !oldList )
-              sub_1C13F80(0LL, v22);
+              sub_1C1AE30(0LL, v22);
             items = oldList->fields._items;
             v27 = Method_System_Collections_Generic_List_long__Add__;
             ++oldList->fields._version;
             if ( !items )
-              sub_1C13F80(oldList, v22);
+              sub_1C1AE30(oldList, v22);
             size = oldList->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_long___AddWithResize(
                 oldList,
                 v23,
-                *(const MethodInfo_3615200 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+                *(const MethodInfo_36248C4 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
             }
             else
             {
@@ -427,7 +427,7 @@ bool __fastcall UserCommandCodeNewManager__ReadData(const MethodInfo *method)
       else
       {
 LABEL_35:
-        v32 = sub_1C65D04(v13, System_IDisposable_TypeInfo, 0LL);
+        v32 = sub_1C6CBB4(v13, System_IDisposable_TypeInfo, 0LL);
       }
       (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v32)(v13, *(_QWORD *)(v32 + 8));
       if ( (v18 | 8) == 8 )
@@ -460,13 +460,13 @@ void __fastcall UserCommandCodeNewManager__SetOld(int64_t userCmdCodeId, const M
   _QWORD *v12; // x10
   __int64 namespaze_low; // x11
 
-  if ( (byte_4BB59AC & 1) == 0 )
+  if ( (byte_4BC8D8C & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__Add__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Count__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Item__, v4);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v5);
-    byte_4BB59AC = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__Add__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Count__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Item__, v4);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v5);
+    byte_4BC8D8C = 1;
   }
   v6 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -495,7 +495,7 @@ void __fastcall UserCommandCodeNewManager__SetOld(int64_t userCmdCodeId, const M
     if ( System_Collections_Generic_List_long___get_Item(
            (System_Collections_Generic_List_long__o *)v6,
            v8,
-           (const MethodInfo_3614F10 *)Method_System_Collections_Generic_List_long__get_Item__) == userCmdCodeId )
+           (const MethodInfo_36245D4 *)Method_System_Collections_Generic_List_long__get_Item__) == userCmdCodeId )
       return;
     v6 = UserCommandCodeNewManager_TypeInfo;
     ++v8;
@@ -505,14 +505,14 @@ void __fastcall UserCommandCodeNewManager__SetOld(int64_t userCmdCodeId, const M
   ++HIDWORD(v6->_1.namespaze);
   if ( !name )
 LABEL_19:
-    sub_1C13F80(v6, method);
+    sub_1C1AE30(v6, method);
   namespaze_low = SLODWORD(v6->_1.namespaze);
   if ( (unsigned int)namespaze_low >= *((_DWORD *)name + 6) )
   {
     System_Collections_Generic_List_long___AddWithResize(
       (System_Collections_Generic_List_long__o *)v6,
       userCmdCodeId,
-      *(const MethodInfo_3615200 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_36248C4 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
     static_fields = UserCommandCodeNewManager_TypeInfo->static_fields;
   }
   else
@@ -554,15 +554,15 @@ bool __fastcall UserCommandCodeNewManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v27; // x0
 
-  if ( (byte_4BB59AE & 1) == 0 )
+  if ( (byte_4BC8D8E & 1) == 0 )
   {
-    sub_1C13D24(&System_IO_BinaryWriter_TypeInfo, v1);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v2);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Count__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_long__get_Item__, v4);
-    sub_1C13D24(&ManagerConfig_TypeInfo, v5);
-    sub_1C13D24(&UserCommandCodeNewManager_TypeInfo, v6);
-    byte_4BB59AE = 1;
+    sub_1C1ABD4(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v2);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Count__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_long__get_Item__, v4);
+    sub_1C1ABD4(&ManagerConfig_TypeInfo, v5);
+    sub_1C1ABD4(&UserCommandCodeNewManager_TypeInfo, v6);
+    byte_4BC8D8E = 1;
   }
   v7 = UserCommandCodeNewManager_TypeInfo;
   if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
@@ -592,8 +592,8 @@ bool __fastcall UserCommandCodeNewManager__WriteData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UserCommandCodeNewManager_TypeInfo);
     SaveFileName = UserCommandCodeNewManager__getSaveFileName((const MethodInfo *)v10);
     v12 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-    v13 = (System_IO_BinaryWriter_o *)sub_1C13F70(System_IO_BinaryWriter_TypeInfo);
-    System_IO_BinaryWriter___ctor_63206436(v13, v12, 0LL);
+    v13 = (System_IO_BinaryWriter_o *)sub_1C1AE20(System_IO_BinaryWriter_TypeInfo);
+    System_IO_BinaryWriter___ctor_63278860(v13, v12, 0LL);
     v15 = UserCommandCodeNewManager_TypeInfo;
     if ( !UserCommandCodeNewManager_TypeInfo->_2.cctor_finished )
     {
@@ -603,9 +603,9 @@ bool __fastcall UserCommandCodeNewManager__WriteData(const MethodInfo *method)
     v16 = v15->static_fields;
     oldList = v16->oldList;
     if ( !oldList )
-      sub_1C13F80(v15, v14);
+      sub_1C1AE30(v15, v14);
     if ( !v13 )
-      sub_1C13F80(v15, v14);
+      sub_1C1AE30(v15, v14);
     size = oldList->fields._size;
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v13->klass->vtable._22_Write.method)(
       v13,
@@ -631,11 +631,11 @@ bool __fastcall UserCommandCodeNewManager__WriteData(const MethodInfo *method)
         }
         v22 = v21->static_fields->oldList;
         if ( !v22 )
-          sub_1C13F80(0LL, v19);
+          sub_1C1AE30(0LL, v19);
         Item = System_Collections_Generic_List_long___get_Item(
                  v22,
                  i,
-                 (const MethodInfo_3614F10 *)Method_System_Collections_Generic_List_long__get_Item__);
+                 (const MethodInfo_36245D4 *)Method_System_Collections_Generic_List_long__get_Item__);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, int64_t, Il2CppMethodPointer))v13->klass->vtable._19_Write.method)(
           v13,
           Item,
@@ -659,7 +659,7 @@ bool __fastcall UserCommandCodeNewManager__WriteData(const MethodInfo *method)
     else
     {
 LABEL_27:
-      v27 = sub_1C65D04(v13, System_IDisposable_TypeInfo, 0LL);
+      v27 = sub_1C6CBB4(v13, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v27)(v13, *(_QWORD *)(v27 + 8));
   }
@@ -675,12 +675,12 @@ System_String_o *__fastcall UserCommandCodeNewManager__getSaveFileName(const Met
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4BB59A5 & 1) == 0 )
+  if ( (byte_4BC8D85 & 1) == 0 )
   {
-    sub_1C13D24(&AndroidUtil_TypeInfo, v1);
-    sub_1C13D24(&DatFileName_TypeInfo, v2);
-    sub_1C13D24(&StringLiteral_1123/*"/"*/, v3);
-    byte_4BB59A5 = 1;
+    sub_1C1ABD4(&AndroidUtil_TypeInfo, v1);
+    sub_1C1ABD4(&DatFileName_TypeInfo, v2);
+    sub_1C1ABD4(&StringLiteral_1123/*"/"*/, v3);
+    byte_4BC8D85 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -688,5 +688,5 @@ System_String_o *__fastcall UserCommandCodeNewManager__getSaveFileName(const Met
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(9, 0LL);
-  return System_String__Concat_62979204(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+  return System_String__Concat_63051628(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
 }

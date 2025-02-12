@@ -21,10 +21,10 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   PartyListViewItem_o *v12; // x7
   struct BattleWindowOuterClickComponent_o *v13; // x0
 
-  if ( (byte_4BB79E0 & 1) == 0 )
+  if ( (byte_4BCADC6 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, callBack);
-    byte_4BB79E0 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, callBack);
+    byte_4BCADC6 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,8 +33,8 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   {
     v13 = this->fields.outerPanel;
     if ( !v13 )
-      sub_1C13F80(0LL, v6);
+      sub_1C1AE30(0LL, v6);
     v13->fields.clickCallBack = callBack;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v13->fields.clickCallBack, (int64_t)callBack, v7, v8, v9, v10, v11, v12);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v13->fields.clickCallBack, (int64_t)callBack, v7, v8, v9, v10, v11, v12);
   }
 }

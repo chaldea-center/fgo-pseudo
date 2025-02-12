@@ -1,13 +1,13 @@
 void __fastcall ServantOverwriteEntity___ctor(ServantOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4FAE & 1) == 0 )
+  if ( (byte_4BC838B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BB4FAE = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BC838B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall ServantOverwriteEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4BB4FAD & 1) == 0 )
+  if ( (byte_4BC838A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4BB4FAD = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4BC838A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            type,
            priority,
-           (const MethodInfo_2F8DB20 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -47,14 +47,14 @@ int32_t __fastcall ServantOverwriteEntity__GetOverwriteTreasureDeviceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4BB4FAC & 1) == 0 )
+  if ( (byte_4BC8389 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_22789/*"overwritePlayerSequenceSelectTypeByGender"*/, *(_QWORD *)&defaultValue);
-    byte_4BB4FAC = 1;
+    sub_1C1ABD4(&StringLiteral_22807/*"overwriteTreasureDeviceId"*/, *(_QWORD *)&defaultValue);
+    byte_4BC8389 = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.overwriteValue,
-           (System_String_o *)StringLiteral_22789/*"overwritePlayerSequenceSelectTypeByGender"*/,
+           (System_String_o *)StringLiteral_22807/*"overwriteTreasureDeviceId"*/,
            defaultValue,
            0LL);
 }

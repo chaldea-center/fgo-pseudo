@@ -2,14 +2,14 @@ void __fastcall CommunicationCharaEffectComponent___ctor(
         CommunicationCharaEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB5B0C & 1) == 0 )
+  if ( (byte_4BC8EEE & 1) == 0 )
   {
-    sub_1C13D24(&CommonEffectComponent_TypeInfo, method);
-    byte_4BB5B0C = 1;
+    sub_1C1ABD4(&CommonEffectComponent_TypeInfo, method);
+    byte_4BC8EEE = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, method);
+  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
 }
 
 
@@ -18,45 +18,34 @@ void __fastcall CommunicationCharaEffectComponent__EndDispFigure(
         const MethodInfo *method)
 {
   struct CommunicationCharaEffectParam_o *communicationCharaParam; // x8
-  _BOOL4 isStartLoop; // w9
-  CommunicationCharaEffectComponent_c *klass; // x8
-  CommunicationCharaEffectComponent_o *v5; // x19
-  struct CommunicationCharaEffectParam_o *v6; // x8
+  CommunicationCharaEffectComponent_o *v3; // x19
+  struct CommunicationCharaEffectParam_o *v4; // x8
   struct System_Action_o *callback; // x8
 
   communicationCharaParam = this->fields.communicationCharaParam;
   this->fields.isLoad = 0;
   if ( !communicationCharaParam )
     goto LABEL_10;
-  isStartLoop = communicationCharaParam->fields.isStartLoop;
-  klass = this->klass;
-  v5 = this;
-  if ( isStartLoop )
-    ((void (__fastcall *)(CommunicationCharaEffectComponent_o *, _QWORD, Il2CppMethodPointer))klass->vtable._7_ForceLoop.method)(
-      this,
-      0LL,
-      klass->vtable._8_Stop.methodPtr);
+  v3 = this;
+  if ( communicationCharaParam->fields.isStartLoop )
+    CommonEffectComponent__ForceLoop((CommonEffectComponent_o *)this, 0LL);
   else
-    ((void (__fastcall *)(CommunicationCharaEffectComponent_o *, _QWORD, _QWORD, Il2CppMethodPointer))klass->vtable._6_ForceStart.method)(
-      this,
-      0LL,
-      0LL,
-      klass->vtable._7_ForceLoop.methodPtr);
-  this = (CommunicationCharaEffectComponent_o *)v5->fields.noiseEffect1;
+    CommonEffectComponent__ForceStart((CommonEffectComponent_o *)this, 0LL);
+  this = (CommunicationCharaEffectComponent_o *)v3->fields.noiseEffect1;
   if ( !this
     || (this = (CommunicationCharaEffectComponent_o *)((__int64 (__fastcall *)(CommunicationCharaEffectComponent_o *, __int64, _QWORD, Il2CppMethodPointer))this->klass->vtable._8_Stop.method)(
                                                         this,
                                                         1LL,
                                                         0LL,
                                                         this->klass->vtable._9_ForceStop.methodPtr),
-        v6 = v5->fields.communicationCharaParam,
-        v5->fields.noiseCount = 2.0,
-        !v6) )
+        v4 = v3->fields.communicationCharaParam,
+        v3->fields.noiseCount = 2.0,
+        !v4) )
   {
 LABEL_10:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
-  callback = v6->fields.callback;
+  callback = v4->fields.callback;
   if ( callback )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
       callback->fields.original_method_info,
@@ -74,10 +63,10 @@ void __fastcall CommunicationCharaEffectComponent__SetFace(
   __int64 v6; // x1
   UIStandFigureRender_o *v7; // x0
 
-  if ( (byte_4BB5B0B & 1) == 0 )
+  if ( (byte_4BC8EED & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&faceType);
-    byte_4BB5B0B = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&faceType);
+    byte_4BC8EED = 1;
   }
   figure = (UnityEngine_Object_o *)this->fields.figure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -86,8 +75,8 @@ void __fastcall CommunicationCharaEffectComponent__SetFace(
   {
     v7 = (UIStandFigureRender_o *)this->fields.figure;
     if ( !v7 )
-      sub_1C13F80(0LL, v6);
-    UIStandFigureRender__SetFace_42237916(v7, faceType, 0.0, 0LL);
+      sub_1C1AE30(0LL, v6);
+    UIStandFigureRender__SetFace_42296516(v7, faceType, 0.0, 0LL);
   }
 }
 
@@ -117,7 +106,7 @@ void __fastcall CommunicationCharaEffectComponent__SetParam(
   int32_t limitCount; // w22
   int32_t faceType; // w23
   System_Action_o *v24; // x24
-  struct UIStandFigureM_o *MeshPrefab_39122248; // x1
+  struct UIStandFigureM_o *MeshPrefab_39175820; // x1
   int64_t v26; // x2
   int32_t v27; // w3
   System_String_o *v28; // x4
@@ -125,12 +114,12 @@ void __fastcall CommunicationCharaEffectComponent__SetParam(
   FollowerInfo_o *v30; // x6
   PartyListViewItem_o *v31; // x7
 
-  if ( (byte_4BB5B0A & 1) == 0 )
+  if ( (byte_4BC8EEC & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, param);
-    sub_1C13D24(&Method_CommunicationCharaEffectComponent_EndDispFigure__, v10);
-    sub_1C13D24(&CommunicationCharaEffectParam_TypeInfo, v11);
-    byte_4BB5B0A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, param);
+    sub_1C1ABD4(&Method_CommunicationCharaEffectComponent_EndDispFigure__, v10);
+    sub_1C1ABD4(&CommunicationCharaEffectParam_TypeInfo, v11);
+    byte_4BC8EEC = 1;
   }
   if ( param )
   {
@@ -167,7 +156,7 @@ void __fastcall CommunicationCharaEffectComponent__SetParam(
     this->fields.communicationCharaParam = 0LL;
     p_communicationCharaParam = &this->fields.communicationCharaParam;
   }
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)p_communicationCharaParam,
     (int64_t)v15,
     (int64_t)method,
@@ -198,15 +187,15 @@ void __fastcall CommunicationCharaEffectComponent__SetParam(
         this->fields.isLoad = 1,
         !communicationCharaParam) )
   {
-    sub_1C13F80(noiseEffect1, v17);
+    sub_1C1AE30(noiseEffect1, v17);
   }
   figureBase = this->fields.figureBase;
   svtId = communicationCharaParam->fields.svtId;
   limitCount = communicationCharaParam->fields.limitCount;
   faceType = communicationCharaParam->fields.faceType;
-  v24 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_CommunicationCharaEffectComponent_EndDispFigure__, 0LL);
-  MeshPrefab_39122248 = StandFigureManager__CreateMeshPrefab_39122248(
+  MeshPrefab_39175820 = StandFigureManager__CreateMeshPrefab_39175820(
                           figureBase,
                           svtId,
                           limitCount,
@@ -215,10 +204,10 @@ void __fastcall CommunicationCharaEffectComponent__SetParam(
                           v24,
                           0,
                           0LL);
-  this->fields.figure = MeshPrefab_39122248;
-  sub_1C13CC8(
+  this->fields.figure = MeshPrefab_39175820;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.figure,
-    (int64_t)MeshPrefab_39122248,
+    (int64_t)MeshPrefab_39175820,
     v26,
     v27,
     v28,
@@ -235,11 +224,11 @@ void __fastcall CommunicationCharaEffectComponent__Update(
   float noiseCount; // s8
   __int64 v4; // x1
   float v5; // s0
-  struct CommonEffectComponent_o *noiseEffect2; // x0
+  CommonEffectComponent_o *noiseEffect2; // x0
 
   if ( !this->fields.isLoad && (this->fields.status | 2) != 2 )
   {
-    CommonEffectComponent__Update((CommonEffectComponent_o *)this, method);
+    CommonEffectComponent__Update((CommonEffectComponent_o *)this, 0LL);
     noiseCount = this->fields.noiseCount;
     v5 = noiseCount - RealTime__get_deltaTime(0LL);
     this->fields.noiseCount = v5;
@@ -247,12 +236,8 @@ void __fastcall CommunicationCharaEffectComponent__Update(
     {
       noiseEffect2 = this->fields.noiseEffect2;
       if ( !noiseEffect2 )
-        sub_1C13F80(0LL, v4);
-      ((void (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, _QWORD, Il2CppMethodPointer))noiseEffect2->klass->vtable._6_ForceStart.method)(
-        noiseEffect2,
-        0LL,
-        0LL,
-        noiseEffect2->klass->vtable._7_ForceLoop.methodPtr);
+        sub_1C1AE30(0LL, v4);
+      CommonEffectComponent__ForceStart(noiseEffect2, 0LL);
       this->fields.noiseCount = 2.0;
     }
   }

@@ -1,13 +1,13 @@
 void __fastcall GachaBonusSelectEntity___ctor(GachaBonusSelectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4952 & 1) == 0 )
+  if ( (byte_4BC7D22 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BB4952 = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BC7D22 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaBonusSelectEntity__CreatePK(
         int32_t slot,
         const MethodInfo *method)
 {
-  if ( (byte_4BB494F & 1) == 0 )
+  if ( (byte_4BC7D1F & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&gachaBonusId);
-    byte_4BB494F = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&gachaBonusId);
+    byte_4BC7D1F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            gachaBonusId,
            slot,
-           (const MethodInfo_2F8DB20 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -50,11 +50,11 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
   int32_t v5; // w8
   int32_t ClassId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB4950 & 1) == 0 )
+  if ( (byte_4BC7D20 & 1) == 0 )
   {
-    sub_1C13D24(&SvtClassAttri_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_5081/*"Czech (Czech Republic)"*/, v4);
-    byte_4BB4950 = 1;
+    sub_1C1ABD4(&SvtClassAttri_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_5084/*"D3"*/, v4);
+    byte_4BC7D20 = 1;
   }
   ClassId = GachaBonusSelectEntity__GetClassId(this, 1001, v2);
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
@@ -64,7 +64,7 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
     v5 = 1004;
 LABEL_11:
     ClassId = v5;
-    return System_Int32__ToString_63773552((int32_t)&ClassId, (System_String_o *)StringLiteral_5081/*"Czech (Czech Republic)"*/, 0LL);
+    return System_Int32__ToString_63845976((int32_t)&ClassId, (System_String_o *)StringLiteral_5084/*"D3"*/, 0LL);
   }
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
@@ -73,7 +73,7 @@ LABEL_11:
     v5 = 1005;
     goto LABEL_11;
   }
-  return System_Int32__ToString_63773552((int32_t)&ClassId, (System_String_o *)StringLiteral_5081/*"Czech (Czech Republic)"*/, 0LL);
+  return System_Int32__ToString_63845976((int32_t)&ClassId, (System_String_o *)StringLiteral_5084/*"D3"*/, 0LL);
 }
 
 
@@ -83,10 +83,10 @@ int32_t __fastcall GachaBonusSelectEntity__GetClassId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB4951 & 1) == 0 )
+  if ( (byte_4BC7D21 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_18268/*"ckIndvCountAbove"*/, *(_QWORD *)&defId);
-    byte_4BB4951 = 1;
+    sub_1C1ABD4(&StringLiteral_18282/*"classId"*/, *(_QWORD *)&defId);
+    byte_4BC7D21 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18268/*"ckIndvCountAbove"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18282/*"classId"*/, defId, 0LL);
 }

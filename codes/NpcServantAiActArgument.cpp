@@ -4,38 +4,39 @@ void __fastcall NpcServantAiActArgument___ctor(
         AiBaseEntity_o *aiEnt,
         BattleServantData_o *svtData,
         BattleLogicNpcAi_o *npcAi,
+        int32_t fromProcState,
         const MethodInfo *method)
 {
-  NpcServantAiActArgument_o *v8; // x21
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  NpcServantAiActArgument_o *v9; // x21
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
 
-  v8 = this;
-  BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, (const MethodInfo *)svtData);
-  v8->fields._SvtData_k__BackingField = svtData;
-  sub_1C13CC8(
-    (PartyOrganizationUtility_o *)&v8->fields._SvtData_k__BackingField,
+  v9 = this;
+  BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
+  v9->fields._SvtData_k__BackingField = svtData;
+  sub_1C1AB78(
+    (PartyOrganizationUtility_o *)&v9->fields._SvtData_k__BackingField,
     (int64_t)svtData,
-    v9,
     v10,
     v11,
     v12,
     v13,
-    v14);
-  v8->fields._NpcAi_k__BackingField = npcAi;
-  v8 = (NpcServantAiActArgument_o *)((char *)v8 + 48);
-  LOBYTE(v8[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v8, (int64_t)npcAi, v15, v16, v17, v18, v19, v20);
+    v14,
+    v15);
+  v9->fields._NpcAi_k__BackingField = npcAi;
+  v9 = (NpcServantAiActArgument_o *)((char *)v9 + 56);
+  LOBYTE(v9[-1].fields._NpcAi_k__BackingField) = 0;
+  sub_1C1AB78((PartyOrganizationUtility_o *)v9, (int64_t)npcAi, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -74,13 +75,13 @@ void __fastcall NpcServantAiActArgument__InitCommonTask(
   PartyListViewItem_o *v32; // x7
   __int64 v33; // x0
 
-  if ( (byte_4BB736E & 1) == 0 )
+  if ( (byte_4BCA750 & 1) == 0 )
   {
-    sub_1C13D24(&BattleActionData___TypeInfo, task);
-    byte_4BB736E = 1;
+    sub_1C1ABD4(&BattleActionData___TypeInfo, task);
+    byte_4BCA750 = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
-  v5 = sub_1C13DCC(BattleActionData___TypeInfo, 2LL);
+  v5 = sub_1C1AC7C(BattleActionData___TypeInfo, 2LL);
   NpcAi_k__BackingField = this->fields._NpcAi_k__BackingField;
   v7 = (struct BattleActionData_array *)v5;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
@@ -97,18 +98,18 @@ void __fastcall NpcServantAiActArgument__InitCommonTask(
   v16 = LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C13E60(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C1AD10(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
     {
 LABEL_17:
-      v33 = sub_1C13FA4(LoadNpcPreStepInAction);
-      sub_1C13E4C(v33, 0LL);
+      v33 = sub_1C1AE54(LoadNpcPreStepInAction);
+      sub_1C1ACFC(v33, 0LL);
     }
   }
   if ( !v7->max_length )
     goto LABEL_16;
   v7->m_Items[0] = (BattleActionData_o *)v16;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v7->m_Items, v16, v10, v11, v12, v13, v14, v15);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v7->m_Items, v16, v10, v11, v12, v13, v14, v15);
   v17 = this->fields._NpcAi_k__BackingField;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, Il2CppMethodPointer))this->klass->vtable._4_get_UniqueId.method)(
                              this,
@@ -120,25 +121,25 @@ LABEL_17:
         !v17) )
   {
 LABEL_15:
-    sub_1C13F80(LoadNpcPreStepInAction, v9);
+    sub_1C1AE30(LoadNpcPreStepInAction, v9);
   }
   LoadNpcPreStepInAction = (int64_t)BattleLogicNpcAi__MakeStepInAction(v17, v19, LoadNpcPreStepInAction & 1, 0LL);
   v26 = LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C13E60(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C1AD10(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
       goto LABEL_17;
   }
   if ( v7->max_length <= 1 )
 LABEL_16:
-    sub_1C13F88(LoadNpcPreStepInAction, v9);
+    sub_1C1AE38(LoadNpcPreStepInAction, v9);
   v7->m_Items[1] = (BattleActionData_o *)v26;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v7->m_Items[1], v26, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v7->m_Items[1], v26, v20, v21, v22, v23, v24, v25);
   if ( !task )
     goto LABEL_15;
   task->fields.interruptActions = v7;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&task->fields.interruptActions, (int64_t)v7, v27, v28, v29, v30, v31, v32);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&task->fields.interruptActions, (int64_t)v7, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -162,7 +163,7 @@ void __fastcall NpcServantAiActArgument__set_NpcAi(
   PartyListViewItem_o *v7; // x7
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._NpcAi_k__BackingField,
     (int64_t)value,
     (int64_t)method,

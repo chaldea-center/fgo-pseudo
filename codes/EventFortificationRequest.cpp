@@ -15,18 +15,18 @@ void __fastcall EventFortificationRequest__beginRequest(
   __int64 v8; // x1
   System_String_o *v9; // x21
 
-  if ( (byte_4BB86B6 & 1) == 0 )
+  if ( (byte_4BCBAAA & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C13D24(&StringLiteral_19331/*"enemyFieldPosCount"*/, v7);
-    sub_1C13D24(&StringLiteral_19431/*"event/location"*/, v8);
-    byte_4BB86B6 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&StringLiteral_19345/*"enterUserSvtInfo"*/, v7);
+    sub_1C1ABD4(&StringLiteral_19445/*"eventId"*/, v8);
+    byte_4BCBAAA = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v9 = JsonManager__toJson(&enterUserSvtInfo->obj, 0, 0, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19431/*"event/location"*/, eventId, 0LL);
-  RequestBase__addField_42303556((RequestBase_o *)this, (System_String_o *)StringLiteral_19331/*"enemyFieldPosCount"*/, v9, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19445/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_19345/*"enterUserSvtInfo"*/, v9, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -38,16 +38,16 @@ System_String_o *__fastcall EventFortificationRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB86B5 & 1) == 0 )
+  if ( (byte_4BCBAA9 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_19416/*"evGoBack_Earth"*/, v2);
-    byte_4BB86B5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_19430/*"event/fortification"*/, v2);
+    byte_4BCBAA9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19416/*"evGoBack_Earth"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_19430/*"event/fortification"*/, 0LL);
 }
 
 
@@ -63,11 +63,11 @@ void __fastcall EventFortificationRequest__requestCompleted(
   System_String_o *v9; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4BB86B7 & 1) == 0 )
+  if ( (byte_4BCBAAB & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    byte_4BB86B7 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    byte_4BCBAAB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -75,7 +75,7 @@ void __fastcall EventFortificationRequest__requestCompleted(
   if ( v6 )
   {
     v7 = v6;
-    v8 = ResponseData__checkError_42394144(v6, 0LL);
+    v8 = ResponseData__checkError_42452820(v6, 0LL);
     v9 = 0LL;
     if ( v8 )
     {

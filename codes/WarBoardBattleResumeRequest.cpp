@@ -13,14 +13,14 @@ void __fastcall WarBoardBattleResumeRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4BB613B & 1) == 0 )
+  if ( (byte_4BC951D & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_23865/*"squareIndexes"*/, *(_QWORD *)&stageId);
-    sub_1C13D24(&StringLiteral_17374/*"battle/turn"*/, v7);
-    byte_4BB613B = 1;
+    sub_1C1ABD4(&StringLiteral_23885/*"stageId"*/, *(_QWORD *)&stageId);
+    sub_1C1ABD4(&StringLiteral_17388/*"battleId"*/, v7);
+    byte_4BC951D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23865/*"squareIndexes"*/, stageId, 0LL);
-  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_17374/*"battle/turn"*/, battleId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23885/*"stageId"*/, stageId, 0LL);
+  RequestBase__addField_42368496((RequestBase_o *)this, (System_String_o *)StringLiteral_17388/*"battleId"*/, battleId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,14 +32,14 @@ System_String_o *__fastcall WarBoardBattleResumeRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB613A & 1) == 0 )
+  if ( (byte_4BC951C & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_25009/*"voicePatternId"*/, v2);
-    byte_4BB613A = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_25031/*"warBoard/battleResume"*/, v2);
+    byte_4BC951C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_25009/*"voicePatternId"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_25031/*"warBoard/battleResume"*/, 0LL);
 }

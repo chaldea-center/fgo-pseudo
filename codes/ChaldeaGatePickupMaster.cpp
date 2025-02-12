@@ -1,14 +1,14 @@
 void __fastcall ChaldeaGatePickupMaster___ctor(ChaldeaGatePickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4445 & 1) == 0 )
+  if ( (byte_4BC7813 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_ChaldeaGatePickupMaster__ChaldeaGatePickupEntity__int___ctor__, method);
-    byte_4BB4445 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_ChaldeaGatePickupMaster__ChaldeaGatePickupEntity__int___ctor__, method);
+    byte_4BC7813 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     529,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_ChaldeaGatePickupMaster__ChaldeaGatePickupEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_ChaldeaGatePickupMaster__ChaldeaGatePickupEntity__int___ctor__);
 }
 
 
@@ -69,26 +69,26 @@ System_Collections_Generic_List_ChaldeaGatePickupEntity__o *__fastcall ChaldeaGa
   FollowerInfo_o *v53; // x6
   PartyListViewItem_o *v54; // x7
 
-  if ( (byte_4BB4444 & 1) == 0 )
+  if ( (byte_4BC7812 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_ChaldeaGatePickupEntity__GetEnumerator__, method);
-    sub_1C13D24(&System_Comparison_ChaldeaGatePickupEntity__TypeInfo, v3);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v4);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_ChaldeaGatePickupEntity__TypeInfo, v5);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Add__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Sort__, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity___ctor__, v9);
-    sub_1C13D24(&System_Collections_Generic_List_ChaldeaGatePickupEntity__TypeInfo, v10);
-    sub_1C13D24(&NetworkManager_TypeInfo, v11);
-    sub_1C13D24(&Method_ChaldeaGatePickupMaster___c__GetEnableEntityList_b__0_0__, v12);
-    sub_1C13D24(&ChaldeaGatePickupMaster___c_TypeInfo, v13);
-    byte_4BB4444 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_ChaldeaGatePickupEntity__GetEnumerator__, method);
+    sub_1C1ABD4(&System_Comparison_ChaldeaGatePickupEntity__TypeInfo, v3);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v4);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_ChaldeaGatePickupEntity__TypeInfo, v5);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Add__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Sort__, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ChaldeaGatePickupEntity___ctor__, v9);
+    sub_1C1ABD4(&System_Collections_Generic_List_ChaldeaGatePickupEntity__TypeInfo, v10);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v11);
+    sub_1C1ABD4(&Method_ChaldeaGatePickupMaster___c__GetEnableEntityList_b__0_0__, v12);
+    sub_1C1ABD4(&ChaldeaGatePickupMaster___c_TypeInfo, v13);
+    byte_4BC7812 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_ChaldeaGatePickupEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_ChaldeaGatePickupEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_ChaldeaGatePickupEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_ChaldeaGatePickupEntity___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
@@ -97,9 +97,9 @@ System_Collections_Generic_List_ChaldeaGatePickupEntity__o *__fastcall ChaldeaGa
   v17 = Time;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ChaldeaGatePickupEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_ChaldeaGatePickupEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v18);
+    sub_1C1AE30(0LL, v18);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -119,7 +119,7 @@ System_Collections_Generic_List_ChaldeaGatePickupEntity__o *__fastcall ChaldeaGa
     else
     {
 LABEL_11:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -142,37 +142,37 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v27 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_ChaldeaGatePickupEntity__TypeInfo, 0LL);
+      v27 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_ChaldeaGatePickupEntity__TypeInfo, 0LL);
     }
     v28 = (Il2CppObject *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(
                             Enumerator,
                             *(_QWORD *)(v27 + 8));
     v36 = (int64_t)v28;
     if ( !v28 )
-      sub_1C13F80(0LL, v29);
+      sub_1C1AE30(0LL, v29);
     if ( v17 >= (__int64)v28[2].klass && v17 <= (__int64)v28[2].monitor )
     {
       if ( !v14 )
-        sub_1C13F80(v28, v29);
+        sub_1C1AE30(v28, v29);
       items = v14->fields._items;
       v38 = Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Add__;
       ++v14->fields._version;
       if ( !items )
-        sub_1C13F80(v28, v29);
+        sub_1C1AE30(v28, v29);
       size = v14->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v14,
           v28,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
       }
       else
       {
         v40 = &items->obj.klass + size;
         v14->fields._size = size + 1;
         v40[4] = (Il2CppClass *)v36;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v40 + 4), v36, v30, v31, v32, v33, v34, v35);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v40 + 4), v36, v30, v31, v32, v33, v34, v35);
       }
     }
   }
@@ -193,7 +193,7 @@ LABEL_18:
   else
   {
 LABEL_32:
-    v44 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v44 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   Time = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v44)(
            Enumerator,
@@ -213,7 +213,7 @@ LABEL_32:
       v45 = ChaldeaGatePickupMaster___c_TypeInfo;
     }
     v47 = (Il2CppObject *)v45->static_fields->__9;
-    _9__0_0 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_ChaldeaGatePickupEntity__TypeInfo);
+    _9__0_0 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_ChaldeaGatePickupEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__0_0,
       v47,
@@ -221,15 +221,15 @@ LABEL_32:
       0LL);
     static_fields = ChaldeaGatePickupMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Comparison_ChaldeaGatePickupEntity__o *)_9__0_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v49, v50, v51, v52, v53, v54);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v49, v50, v51, v52, v53, v54);
   }
   if ( !v14 )
 LABEL_45:
-    sub_1C13F80(Time, v16);
-  System_Collections_Generic_List_object___Sort_56814736(
+    sub_1C1AE30(Time, v16);
+  System_Collections_Generic_List_object___Sort_56877908(
     v14,
     _9__0_0,
-    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Sort__);
+    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_ChaldeaGatePickupEntity__Sort__);
   return (System_Collections_Generic_List_ChaldeaGatePickupEntity__o *)v14;
 }
 
@@ -245,15 +245,15 @@ void __fastcall ChaldeaGatePickupMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB4446 & 1) == 0 )
+  if ( (byte_4BC7814 & 1) == 0 )
   {
-    sub_1C13D24(&ChaldeaGatePickupMaster___c_TypeInfo, v1);
-    byte_4BB4446 = 1;
+    sub_1C1ABD4(&ChaldeaGatePickupMaster___c_TypeInfo, v1);
+    byte_4BC7814 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(ChaldeaGatePickupMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(ChaldeaGatePickupMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ChaldeaGatePickupMaster___c_TypeInfo->static_fields->__9 = (struct ChaldeaGatePickupMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ChaldeaGatePickupMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -278,6 +278,6 @@ int32_t __fastcall ChaldeaGatePickupMaster___c___GetEnableEntityList_b__0_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   return b->fields.priority - a->fields.priority;
 }

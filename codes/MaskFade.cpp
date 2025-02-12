@@ -19,18 +19,18 @@ void __fastcall MaskFade__EndFadein(MaskFade_o *this, const MethodInfo *method)
   struct System_Action_o *v13; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4BB710C & 1) == 0 )
+  if ( (byte_4BCA4EE & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB710C = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BCA4EE = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_14;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        maskSprite,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -53,7 +53,7 @@ void __fastcall MaskFade__EndFadein(MaskFade_o *this, const MethodInfo *method)
         (maskSprite = (UnityEngine_Component_o *)this->fields.colliderBase) == 0LL) )
   {
 LABEL_14:
-    sub_1C13F80(maskSprite, method);
+    sub_1C1AE30(maskSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
   callbackFunc = this->fields.callbackFunc;
@@ -63,7 +63,7 @@ LABEL_14:
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C13CC8(p_callbackFunc, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1C1AB78(p_callbackFunc, 0LL, v6, v7, v8, v9, v10, v11);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v13->fields.m_target)(
       v13->fields.original_method_info,
       *(_QWORD *)&v13->fields.extra_arg);
@@ -88,12 +88,12 @@ void __fastcall MaskFade__EndFadeout(MaskFade_o *this, const MethodInfo *method)
   struct System_Action_o *v15; // x20
   struct System_Action_o *callbackFunc; // t1
 
-  if ( (byte_4BB7109 & 1) == 0 )
+  if ( (byte_4BCA4EB & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BB7109 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BCA4EB = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -108,7 +108,7 @@ void __fastcall MaskFade__EndFadeout(MaskFade_o *this, const MethodInfo *method)
       goto LABEL_16;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)maskSprite,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     maskSprite = (struct UISprite_o *)UnityEngine_Object__op_Inequality(
@@ -125,7 +125,7 @@ void __fastcall MaskFade__EndFadeout(MaskFade_o *this, const MethodInfo *method)
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
 LABEL_16:
-    sub_1C13F80(maskSprite, method);
+    sub_1C1AE30(maskSprite, method);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, float))maskSprite->klass->vtable._8_set_alpha.method)(
     maskSprite,
     maskSprite->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -137,7 +137,7 @@ LABEL_16:
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C13CC8(p_callbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78(p_callbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v15->fields.m_target)(
       v15->fields.original_method_info,
       *(_QWORD *)&v15->fields.extra_arg);
@@ -187,16 +187,16 @@ bool __fastcall MaskFade__FadeChangeColor(
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v42; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4BB710A & 1) == 0 )
+  if ( (byte_4BCA4EC & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, v13);
-    sub_1C13D24(&FadeLogger_TypeInfo, v14);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C13D24(&StringLiteral_6114/*"EndExecuteSubCameraRoll"*/, v16);
-    sub_1C13D24(&StringLiteral_25760/*"ㇰ㈀"*/, v17);
-    sub_1C13D24(&StringLiteral_6711/*"FaceBattle/DownloadFaceBattle"*/, v18);
-    byte_4BB710A = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, v13);
+    sub_1C1ABD4(&FadeLogger_TypeInfo, v14);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C1ABD4(&StringLiteral_6118/*"EndFadeout"*/, v16);
+    sub_1C1ABD4(&StringLiteral_25782/*"実行中"*/, v17);
+    sub_1C1ABD4(&StringLiteral_6714/*"FadeChangeColor"*/, v18);
+    byte_4BCA4EC = 1;
   }
   if ( !this->fields.isExecuteMask )
     goto LABEL_13;
@@ -205,7 +205,7 @@ bool __fastcall MaskFade__FadeChangeColor(
     goto LABEL_34;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)maskSprite,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   maskSprite = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -217,7 +217,7 @@ bool __fastcall MaskFade__FadeChangeColor(
   {
 LABEL_13:
     this->fields.callbackFunc = callback;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       (int64_t)callback,
@@ -275,7 +275,7 @@ LABEL_13:
         if ( v24 )
         {
           v24->fields.eventReceiver = (struct UnityEngine_GameObject_o *)maskSprite;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&v24->fields.eventReceiver,
             maskSprite,
             v25,
@@ -284,9 +284,9 @@ LABEL_13:
             v28,
             v29,
             v30);
-          v31 = StringLiteral_6114/*"EndExecuteSubCameraRoll"*/;
-          v24->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6114/*"EndExecuteSubCameraRoll"*/;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&v24->fields.callWhenFinished, v31, v32, v33, v34, v35, v36, v37);
+          v31 = StringLiteral_6118/*"EndFadeout"*/;
+          v24->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6118/*"EndFadeout"*/;
+          sub_1C1AB78((PartyOrganizationUtility_o *)&v24->fields.callWhenFinished, v31, v32, v33, v34, v35, v36, v37);
           return 1;
         }
       }
@@ -307,15 +307,15 @@ LABEL_26:
       }
     }
 LABEL_34:
-    sub_1C13F80(maskSprite, *(_QWORD *)&kind);
+    sub_1C1AE30(maskSprite, *(_QWORD *)&kind);
   }
   v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
   FadeLogger__CreateFadeLogText(
-    (System_String_o *)StringLiteral_6711/*"FaceBattle/DownloadFaceBattle"*/,
+    (System_String_o *)StringLiteral_6714/*"FadeChangeColor"*/,
     kind,
-    (System_String_o *)StringLiteral_25760/*"ㇰ㈀"*/,
+    (System_String_o *)StringLiteral_25782/*"実行中"*/,
     duration,
     v21,
     0LL);
@@ -368,24 +368,24 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
   UnityEngine_Color_o value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v46; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4BB710B & 1) == 0 )
+  if ( (byte_4BCA4ED & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, callback);
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, v7);
-    sub_1C13D24(&FadeLogger_TypeInfo, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_6717/*"FadeOutBGM"*/, v10);
-    sub_1C13D24(&StringLiteral_25760/*"ㇰ㈀"*/, v11);
-    sub_1C13D24(&StringLiteral_6113/*"EndExecuteSubCamera"*/, v12);
-    sub_1C13D24(&StringLiteral_25758/*"㆐ㆠ"*/, v13);
-    byte_4BB710B = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, callback);
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, v7);
+    sub_1C1ABD4(&FadeLogger_TypeInfo, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_6720/*"Fadein"*/, v10);
+    sub_1C1ABD4(&StringLiteral_25782/*"実行中"*/, v11);
+    sub_1C1ABD4(&StringLiteral_6117/*"EndFadein"*/, v12);
+    sub_1C1ABD4(&StringLiteral_25780/*"完了状態"*/, v13);
+    byte_4BCA4ED = 1;
   }
   maskSprite = (int64_t)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_33;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)maskSprite,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( !this->fields.isExecuteMask )
   {
     v25 = BalanceConfig_TypeInfo;
@@ -410,14 +410,14 @@ bool __fastcall MaskFade__Fadein(MaskFade_o *this, float duration, System_Action
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
           if ( !FadeLogger_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
-          v24 = &StringLiteral_25758/*"㆐ㆠ"*/;
+          v24 = &StringLiteral_25780/*"完了状態"*/;
           goto LABEL_32;
         }
       }
     }
 LABEL_21:
     this->fields.callbackFunc = callback;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       v15,
@@ -453,16 +453,16 @@ LABEL_28:
     if ( v30 )
     {
       v30->fields.eventReceiver = (struct UnityEngine_GameObject_o *)maskSprite;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&v30->fields.eventReceiver, maskSprite, v31, v32, v33, v34, v35, v36);
-      v37 = StringLiteral_6113/*"EndExecuteSubCamera"*/;
-      v30->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6113/*"EndExecuteSubCamera"*/;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&v30->fields.callWhenFinished, v37, v38, v39, v40, v41, v42, v43);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&v30->fields.eventReceiver, maskSprite, v31, v32, v33, v34, v35, v36);
+      v37 = StringLiteral_6117/*"EndFadein"*/;
+      v30->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6117/*"EndFadein"*/;
+      sub_1C1AB78((PartyOrganizationUtility_o *)&v30->fields.callWhenFinished, v37, v38, v39, v40, v41, v42, v43);
       result = 1;
       this->fields.isExecuteMask = 1;
       return result;
     }
 LABEL_33:
-    sub_1C13F80(maskSprite, callback);
+    sub_1C1AE30(maskSprite, callback);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -477,10 +477,10 @@ LABEL_33:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
-  v24 = &StringLiteral_25760/*"ㇰ㈀"*/;
+  v24 = &StringLiteral_25782/*"実行中"*/;
 LABEL_32:
   FadeLogger__CreateFadeLogText(
-    (System_String_o *)StringLiteral_6717/*"FadeOutBGM"*/,
+    (System_String_o *)StringLiteral_6720/*"Fadein"*/,
     maskKind,
     (System_String_o *)*v24,
     duration,
@@ -540,24 +540,24 @@ bool __fastcall MaskFade__Fadeout(
   UnityEngine_Color_o v48; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v49; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4BB7108 & 1) == 0 )
+  if ( (byte_4BCA4EA & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, v9);
-    sub_1C13D24(&FadeLogger_TypeInfo, v10);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C13D24(&StringLiteral_6719/*"FadeStart"*/, v12);
-    sub_1C13D24(&StringLiteral_6114/*"EndExecuteSubCameraRoll"*/, v13);
-    sub_1C13D24(&StringLiteral_25760/*"ㇰ㈀"*/, v14);
-    sub_1C13D24(&StringLiteral_25758/*"㆐ㆠ"*/, v15);
-    byte_4BB7108 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, v9);
+    sub_1C1ABD4(&FadeLogger_TypeInfo, v10);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C1ABD4(&StringLiteral_6722/*"Fadeout"*/, v12);
+    sub_1C1ABD4(&StringLiteral_6118/*"EndFadeout"*/, v13);
+    sub_1C1ABD4(&StringLiteral_25782/*"実行中"*/, v14);
+    sub_1C1ABD4(&StringLiteral_25780/*"完了状態"*/, v15);
+    byte_4BCA4EA = 1;
   }
   maskSprite = (int64_t)this->fields.maskSprite;
   if ( !maskSprite )
     goto LABEL_47;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)maskSprite,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
   if ( !this->fields.isExecuteMask )
   {
     v26 = BalanceConfig_TypeInfo;
@@ -581,14 +581,14 @@ bool __fastcall MaskFade__Fadeout(
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
           if ( !FadeLogger_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
-          v25 = &StringLiteral_25758/*"㆐ㆠ"*/;
+          v25 = &StringLiteral_25780/*"完了状態"*/;
           goto LABEL_44;
         }
       }
     }
 LABEL_21:
     this->fields.callbackFunc = callback;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       v17,
@@ -650,7 +650,7 @@ LABEL_21:
         if ( v29 )
         {
           v29->fields.eventReceiver = (struct UnityEngine_GameObject_o *)maskSprite;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&v29->fields.eventReceiver,
             maskSprite,
             v30,
@@ -659,9 +659,9 @@ LABEL_21:
             v33,
             v34,
             v35);
-          v36 = StringLiteral_6114/*"EndExecuteSubCameraRoll"*/;
-          v29->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6114/*"EndExecuteSubCameraRoll"*/;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&v29->fields.callWhenFinished, v36, v37, v38, v39, v40, v41, v42);
+          v36 = StringLiteral_6118/*"EndFadeout"*/;
+          v29->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6118/*"EndFadeout"*/;
+          sub_1C1AB78((PartyOrganizationUtility_o *)&v29->fields.callWhenFinished, v36, v37, v38, v39, v40, v41, v42);
           return 1;
         }
       }
@@ -682,7 +682,7 @@ LABEL_34:
       }
     }
 LABEL_47:
-    sub_1C13F80(maskSprite, *(_QWORD *)&kind);
+    sub_1C1AE30(maskSprite, *(_QWORD *)&kind);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -696,10 +696,10 @@ LABEL_47:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !FadeLogger_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
-  v25 = &StringLiteral_25760/*"ㇰ㈀"*/;
+  v25 = &StringLiteral_25782/*"実行中"*/;
 LABEL_44:
   FadeLogger__CreateFadeLogText(
-    (System_String_o *)StringLiteral_6719/*"FadeStart"*/,
+    (System_String_o *)StringLiteral_6722/*"Fadeout"*/,
     kind,
     (System_String_o *)*v25,
     duration,
@@ -726,11 +726,11 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
   UnityEngine_Component_o *maskSprite; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4BB7107 & 1) == 0 )
+  if ( (byte_4BCA4E9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_TweenColor___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB7107 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_TweenColor___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BCA4E9 = 1;
   }
   if ( this->fields.isExecuteMask )
   {
@@ -739,7 +739,7 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
       goto LABEL_15;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          maskSprite,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     maskSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -750,7 +750,7 @@ void __fastcall MaskFade__Init(MaskFade_o *this, const MethodInfo *method)
     {
       if ( !Component_object || (maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite) == 0LL )
 LABEL_15:
-        sub_1C13F80(maskSprite, method);
+        sub_1C1AE30(maskSprite, method);
       UIWidget__set_color((UIWidget_o *)maskSprite, (UnityEngine_Color_o)Component_object[9], 0LL);
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
     }
@@ -783,7 +783,7 @@ bool __fastcall MaskFade__IsDisp(MaskFade_o *this, const MethodInfo *method)
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return ((float (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))maskSprite->klass->vtable._7_get_alpha.method)(
            maskSprite,
            maskSprite->klass->vtable._8_set_alpha.methodPtr) > 0.0;
@@ -798,7 +798,7 @@ bool __fastcall MaskFade__IsOnTop(MaskFade_o *this, const MethodInfo *method)
     return 0;
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return ((float (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))maskSprite->klass->vtable._7_get_alpha.method)(
            maskSprite,
            maskSprite->klass->vtable._8_set_alpha.methodPtr) >= 1.0;
@@ -816,7 +816,7 @@ void __fastcall MaskFade__SetInitColor(MaskFade_o *this, int32_t kind, const Met
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C13F80(0LL, kind);
+    sub_1C1AE30(0LL, kind);
   if ( kind == 1 )
   {
     r = 0.0;
@@ -846,7 +846,7 @@ void __fastcall MaskFade__SetMaskCollider(MaskFade_o *this, bool isEnable, const
 
   colliderBase = this->fields.colliderBase;
   if ( !colliderBase )
-    sub_1C13F80(0LL, isEnable);
+    sub_1C1AE30(0LL, isEnable);
   UnityEngine_GameObject__SetActive(colliderBase, isEnable, 0LL);
 }
 
@@ -891,7 +891,7 @@ int32_t __fastcall MaskFade__get_Depth(MaskFade_o *this, const MethodInfo *metho
 
   maskSprite = this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   return maskSprite->fields.mDepth;
 }
 
@@ -902,6 +902,6 @@ void __fastcall MaskFade__set_Depth(MaskFade_o *this, int32_t value, const Metho
 
   maskSprite = (UIWidget_o *)this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C13F80(0LL, value);
+    sub_1C1AE30(0LL, value);
   UIWidget__set_depth(maskSprite, value, 0LL);
 }

@@ -29,18 +29,18 @@ void __fastcall WarBoardBGEffectComponent__Awake(WarBoardBGEffectComponent_o *th
   FollowerInfo_o *v21; // x6
   PartyListViewItem_o *v22; // x7
 
-  if ( (byte_4BB2026 & 1) == 0 )
+  if ( (byte_4BC53E4 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB2026 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC53E4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   this->fields.simpleAnimationComponent = (struct SimpleAnimation_o *)Component_object;
   p_simpleAnimationComponent = &this->fields.simpleAnimationComponent;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.simpleAnimationComponent,
     (int64_t)Component_object,
     v6,
@@ -70,7 +70,7 @@ void __fastcall WarBoardBGEffectComponent__Awake(WarBoardBGEffectComponent_o *th
         {
           name = UnityEngine_Object__get_name(v13, 0LL);
           this->fields.currentAnimationName = name;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.currentAnimationName,
             (int64_t)name,
             v17,
@@ -83,7 +83,7 @@ void __fastcall WarBoardBGEffectComponent__Awake(WarBoardBGEffectComponent_o *th
         }
       }
 LABEL_14:
-      sub_1C13F80(v13, v14);
+      sub_1C1AE30(v13, v14);
     }
   }
 }
@@ -126,13 +126,13 @@ void __fastcall WarBoardBGEffectComponent__NextPlayAnimation(
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB2025 & 1) == 0 )
+  if ( (byte_4BC53E3 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v3);
-    sub_1C13D24(&StringLiteral_16806/*"_enemy"*/, v4);
-    sub_1C13D24(&StringLiteral_16791/*"__visual"*/, v5);
-    byte_4BB2025 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v3);
+    sub_1C1ABD4(&StringLiteral_16820/*"_loop"*/, v4);
+    sub_1C1ABD4(&StringLiteral_16805/*"_end"*/, v5);
+    byte_4BC53E3 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -154,7 +154,7 @@ LABEL_42:
         goto LABEL_43;
       }
       v15 = this->fields.simpleAnimationComponent;
-      v16 = System_String__Concat_62967944(this->fields.animationName, (System_String_o *)StringLiteral_16806/*"_enemy"*/, 0LL);
+      v16 = System_String__Concat_63040368(this->fields.animationName, (System_String_o *)StringLiteral_16820/*"_loop"*/, 0LL);
       if ( v15 )
       {
         Item = SimpleAnimation__get_Item(v15, v16, 0LL);
@@ -178,7 +178,7 @@ LABEL_35:
         else
         {
 LABEL_39:
-          p_method = sub_1C65D04(Item, SimpleAnimation_State_TypeInfo, 9LL);
+          p_method = sub_1C6CBB4(Item, SimpleAnimation_State_TypeInfo, 9LL);
         }
         v16 = (System_String_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))p_method)(
                                    Item,
@@ -196,7 +196,7 @@ LABEL_39:
         goto LABEL_42;
       }
       v20 = this->fields.simpleAnimationComponent;
-      v16 = System_String__Concat_62967944(this->fields.animationName, (System_String_o *)StringLiteral_16791/*"__visual"*/, 0LL);
+      v16 = System_String__Concat_63040368(this->fields.animationName, (System_String_o *)StringLiteral_16805/*"_end"*/, 0LL);
       if ( v20 )
       {
         v16 = (System_String_o *)SimpleAnimation__get_Item(v20, v16, 0LL);
@@ -221,7 +221,7 @@ LABEL_39:
         else
         {
 LABEL_22:
-          v25 = sub_1C65D04(v16, SimpleAnimation_State_TypeInfo, 9LL);
+          v25 = sub_1C6CBB4(v16, SimpleAnimation_State_TypeInfo, 9LL);
         }
         v26 = (System_String_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))v25)(
                                    Item,
@@ -260,7 +260,7 @@ LABEL_26:
       }
     }
 LABEL_45:
-    sub_1C13F80(v16, v17);
+    sub_1C1AE30(v16, v17);
   }
   if ( status == 4 && !this->fields.loop )
     this->fields.status = 5;
@@ -268,7 +268,7 @@ LABEL_45:
   p_requestAnimation = &this->fields.requestAnimation;
   v17 = 0LL;
 LABEL_43:
-  sub_1C13CC8((PartyOrganizationUtility_o *)p_requestAnimation, (int64_t)v17, v8, v9, v10, v11, v12, v13);
+  sub_1C1AB78((PartyOrganizationUtility_o *)p_requestAnimation, (int64_t)v17, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -288,12 +288,12 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
   const MethodInfo *v12; // x3
 
   v4 = this;
-  if ( (byte_4BB2023 & 1) == 0 )
+  if ( (byte_4BC53E1 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_WarBoardBGEffectComponent___, eventStr);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    this = (WarBoardBGEffectComponent_o *)sub_1C13D24(&StringLiteral_24473/*"treasureDeviceRuby"*/, v6);
-    byte_4BB2023 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_WarBoardBGEffectComponent___, eventStr);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    this = (WarBoardBGEffectComponent_o *)sub_1C1ABD4(&StringLiteral_24493/*"true"*/, v6);
+    byte_4BC53E1 = 1;
   }
   if ( v4->fields.oldStatus == v4->fields.status )
   {
@@ -308,7 +308,7 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
       v7 = *(System_String_o **)&this->fields.status;
       v9 = System_String__op_Equality(
              *(System_String_o **)&this->fields.totaltime,
-             (System_String_o *)StringLiteral_24473/*"treasureDeviceRuby"*/,
+             (System_String_o *)StringLiteral_24493/*"true"*/,
              0LL);
       v10 = (UnityEngine_Object_o *)UnityEngine_GameObject__Find(simpleAnimationComponent, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -320,7 +320,7 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
           goto LABEL_17;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v10,
-                             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_WarBoardBGEffectComponent___);
+                             (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_WarBoardBGEffectComponent___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (WarBoardBGEffectComponent_o *)UnityEngine_Object__op_Inequality(
@@ -335,7 +335,7 @@ void __fastcall WarBoardBGEffectComponent__OtherObjectPlayAnimation(
             return;
           }
 LABEL_17:
-          sub_1C13F80(this, eventStr);
+          sub_1C1AE30(this, eventStr);
         }
       }
     }
@@ -349,10 +349,10 @@ void __fastcall WarBoardBGEffectComponent__PauseAnimation(WarBoardBGEffectCompon
   __int64 v4; // x1
   SimpleAnimation_o *v5; // x0
 
-  if ( (byte_4BB2021 & 1) == 0 )
+  if ( (byte_4BC53DF & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB2021 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC53DF = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -361,8 +361,8 @@ void __fastcall WarBoardBGEffectComponent__PauseAnimation(WarBoardBGEffectCompon
   {
     v5 = this->fields.simpleAnimationComponent;
     if ( !v5 )
-      sub_1C13F80(0LL, v4);
-    SimpleAnimation__Stop_65103744(v5, this->fields.currentAnimationName, 0LL);
+      sub_1C1AE30(0LL, v4);
+    SimpleAnimation__Stop_65176168(v5, this->fields.currentAnimationName, 0LL);
     this->fields.status = 2;
   }
 }
@@ -411,13 +411,13 @@ void __fastcall WarBoardBGEffectComponent__PlayAnimation(
   struct System_String_o *v40; // x1
 
   v5 = animName;
-  if ( (byte_4BB2024 & 1) == 0 )
+  if ( (byte_4BC53E2 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, animName);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_16827/*"_movie"*/, v8);
-    sub_1C13D24(&StringLiteral_1/*""*/, v9);
-    byte_4BB2024 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, animName);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_16841/*"_start"*/, v8);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v9);
+    byte_4BC53E2 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -436,10 +436,10 @@ void __fastcall WarBoardBGEffectComponent__PlayAnimation(
       SimpleAnimation__Stop(v19, 0LL);
     }
     v20 = this->fields.simpleAnimationComponent;
-    v19 = (SimpleAnimation_o *)System_String__Concat_62967944(v5, (System_String_o *)StringLiteral_16827/*"_movie"*/, 0LL);
+    v19 = (SimpleAnimation_o *)System_String__Concat_63040368(v5, (System_String_o *)StringLiteral_16841/*"_start"*/, 0LL);
     if ( !v20 )
 LABEL_37:
-      sub_1C13F80(v19, v11);
+      sub_1C1AE30(v19, v11);
     Item = SimpleAnimation__get_Item(v20, (System_String_o *)v19, 0LL);
     if ( Item )
     {
@@ -480,7 +480,7 @@ LABEL_26:
         else
         {
 LABEL_30:
-          v39 = sub_1C65D04(v23, SimpleAnimation_State_TypeInfo, 9LL);
+          v39 = sub_1C6CBB4(v23, SimpleAnimation_State_TypeInfo, 9LL);
         }
         v19 = (SimpleAnimation_o *)(*(__int64 (__fastcall **)(SimpleAnimation_State_o *, _QWORD))v39)(
                                      v23,
@@ -490,7 +490,7 @@ LABEL_30:
           v40 = (struct System_String_o *)v19;
 LABEL_34:
           this->fields.requestAnimation = v40;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.requestAnimation,
             (int64_t)v40,
             v28,
@@ -536,14 +536,14 @@ LABEL_34:
       }
     }
 LABEL_24:
-    p_method = sub_1C65D04(v23, v25, 13LL);
+    p_method = sub_1C6CBB4(v23, v25, 13LL);
     goto LABEL_26;
   }
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   this->fields.requestAnimation = (struct System_String_o *)StringLiteral_1/*""*/;
   p_animationName = &this->fields.requestAnimation;
 LABEL_35:
-  sub_1C13CC8((PartyOrganizationUtility_o *)p_animationName, (int64_t)v5, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)p_animationName, (int64_t)v5, v12, v13, v14, v15, v16, v17);
   this->fields.totaltime = 0.0;
   this->fields.loop = 1;
   this->fields.status = 4;
@@ -577,13 +577,13 @@ void __fastcall WarBoardBGEffectComponent__ResumeAnimation(
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4BB2022 & 1) == 0 )
+  if ( (byte_4BC53E0 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, animName);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_16806/*"_enemy"*/, v7);
-    sub_1C13D24(&StringLiteral_1/*""*/, v8);
-    byte_4BB2022 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, animName);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_16820/*"_loop"*/, v7);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
+    byte_4BC53E0 = 1;
   }
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -591,7 +591,7 @@ void __fastcall WarBoardBGEffectComponent__ResumeAnimation(
   if ( UnityEngine_Object__op_Inequality(simpleAnimationComponent, 0LL, 0LL) )
   {
     this->fields.status = 4;
-    State = System_String__Concat_62967944(animName, (System_String_o *)StringLiteral_16806/*"_enemy"*/, 0LL);
+    State = System_String__Concat_63040368(animName, (System_String_o *)StringLiteral_16820/*"_loop"*/, 0LL);
     if ( !this->fields.simpleAnimationComponent )
       goto LABEL_21;
     currentAnimationName = State;
@@ -624,16 +624,16 @@ void __fastcall WarBoardBGEffectComponent__ResumeAnimation(
     else
     {
 LABEL_16:
-      v19 = sub_1C65D04(State, SimpleAnimation_State_TypeInfo, 4LL);
+      v19 = sub_1C6CBB4(State, SimpleAnimation_State_TypeInfo, 4LL);
     }
     (*(void (__fastcall **)(System_String_o *, _QWORD, long double))v19)(v16, *(_QWORD *)(v19 + 8), v3);
     State = (System_String_o *)this->fields.simpleAnimationComponent;
     if ( !State )
 LABEL_21:
-      sub_1C13F80(State, v11);
-    SimpleAnimation__Play_65106228((SimpleAnimation_o *)State, currentAnimationName, 0LL);
+      sub_1C1AE30(State, v11);
+    SimpleAnimation__Play_65178652((SimpleAnimation_o *)State, currentAnimationName, 0LL);
     this->fields.currentAnimationName = currentAnimationName;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.currentAnimationName,
       (int64_t)currentAnimationName,
       v20,
@@ -659,11 +659,11 @@ void __fastcall WarBoardBGEffectComponent__Stop(WarBoardBGEffectComponent_o *thi
   SimpleAnimation_State_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB2020 & 1) == 0 )
+  if ( (byte_4BC53DE & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v3);
-    byte_4BB2020 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v3);
+    byte_4BC53DE = 1;
   }
   this->fields.loop = 0;
   simpleAnimationComponent = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
@@ -673,7 +673,7 @@ void __fastcall WarBoardBGEffectComponent__Stop(WarBoardBGEffectComponent_o *thi
   {
     v6 = this->fields.simpleAnimationComponent;
     if ( !v6 )
-      sub_1C13F80(0LL, v5);
+      sub_1C1AE30(0LL, v5);
     Item = SimpleAnimation__get_Item(v6, this->fields.currentAnimationName, 0LL);
     if ( Item )
     {
@@ -695,7 +695,7 @@ void __fastcall WarBoardBGEffectComponent__Stop(WarBoardBGEffectComponent_o *thi
       else
       {
 LABEL_12:
-        p_method = sub_1C65D04(Item, SimpleAnimation_State_TypeInfo, 18LL);
+        p_method = sub_1C6CBB4(Item, SimpleAnimation_State_TypeInfo, 18LL);
       }
       (*(void (__fastcall **)(SimpleAnimation_State_o *, __int64, _QWORD))p_method)(v9, 1LL, *(_QWORD *)(p_method + 8));
     }
@@ -713,10 +713,10 @@ void __fastcall WarBoardBGEffectComponent__StopAnimation(
   const MethodInfo *v6; // x1
   SimpleAnimation_o *v7; // x0
 
-  if ( (byte_4BB201F & 1) == 0 )
+  if ( (byte_4BC53DD & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, playAfterCurrentAnim);
-    byte_4BB201F = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, playAfterCurrentAnim);
+    byte_4BC53DD = 1;
   }
   this->fields.status = 5;
   this->fields.loop = 0;
@@ -733,7 +733,7 @@ void __fastcall WarBoardBGEffectComponent__StopAnimation(
     {
       v7 = this->fields.simpleAnimationComponent;
       if ( !v7 )
-        sub_1C13F80(0LL, v6);
+        sub_1C1AE30(0LL, v6);
       SimpleAnimation__Stop(v7, 0LL);
     }
   }
@@ -787,12 +787,12 @@ void __fastcall WarBoardBGEffectComponent__Update(WarBoardBGEffectComponent_o *t
   PartyListViewItem_o *v45; // x7
   float v46; // s0
 
-  if ( (byte_4BB2027 & 1) == 0 )
+  if ( (byte_4BC53E5 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v4);
-    sub_1C13D24(&StringLiteral_1/*""*/, v5);
-    byte_4BB2027 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v4);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v5);
+    byte_4BC53E5 = 1;
   }
   status = this->fields.status;
   this->fields.oldStatus = status;
@@ -816,7 +816,7 @@ void __fastcall WarBoardBGEffectComponent__Update(WarBoardBGEffectComponent_o *t
         if ( this->fields.status == 5 )
         {
           this->fields.playAnimation = 0LL;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.playAnimation, 0LL, v12, v13, v14, v15, v16, v17);
+          sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.playAnimation, 0LL, v12, v13, v14, v15, v16, v17);
         }
       }
       if ( this->fields.endtime < this->fields.totaltime )
@@ -843,7 +843,7 @@ void __fastcall WarBoardBGEffectComponent__Update(WarBoardBGEffectComponent_o *t
       p_playAnimation = &this->fields.playAnimation;
       v38 = 0LL;
 LABEL_40:
-      sub_1C13CC8((PartyOrganizationUtility_o *)p_playAnimation, (int64_t)v38, v19, v20, v21, v22, v23, v24);
+      sub_1C1AB78((PartyOrganizationUtility_o *)p_playAnimation, (int64_t)v38, v19, v20, v21, v22, v23, v24);
       goto LABEL_41;
     }
     v25 = (UnityEngine_Object_o *)this->fields.simpleAnimationComponent;
@@ -864,7 +864,7 @@ LABEL_41:
             this->fields.endtime = v46;
         }
         *p_requestAnimation = 0LL;
-        sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.requestAnimation, 0LL, v26, v27, v28, v29, v30, v31);
+        sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.requestAnimation, 0LL, v26, v27, v28, v29, v30, v31);
         return;
       }
       State = this->fields.simpleAnimationComponent;
@@ -892,20 +892,20 @@ LABEL_41:
           else
           {
 LABEL_34:
-            v36 = sub_1C65D04(State, SimpleAnimation_State_TypeInfo, 4LL);
+            v36 = sub_1C6CBB4(State, SimpleAnimation_State_TypeInfo, 4LL);
           }
           (*(void (__fastcall **)(SimpleAnimation_o *, _QWORD, long double))v36)(v33, *(_QWORD *)(v36 + 8), v2);
           State = this->fields.simpleAnimationComponent;
           if ( State )
           {
-            SimpleAnimation__Rewind_65108488(State, this->fields.requestAnimation, 0LL);
+            SimpleAnimation__Rewind_65180912(State, this->fields.requestAnimation, 0LL);
             State = this->fields.simpleAnimationComponent;
             if ( State )
             {
-              SimpleAnimation__Play_65106228(State, this->fields.requestAnimation, 0LL);
+              SimpleAnimation__Play_65178652(State, this->fields.requestAnimation, 0LL);
               requestAnimation = this->fields.requestAnimation;
               this->fields.currentAnimationName = requestAnimation;
-              sub_1C13CC8(
+              sub_1C1AB78(
                 (PartyOrganizationUtility_o *)&this->fields.currentAnimationName,
                 (int64_t)requestAnimation,
                 v40,
@@ -924,6 +924,6 @@ LABEL_34:
       }
     }
 LABEL_45:
-    sub_1C13F80(State, v10);
+    sub_1C1AE30(State, v10);
   }
 }

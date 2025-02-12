@@ -154,86 +154,86 @@ void __fastcall ScrTerminalMap___cctor(const MethodInfo *method)
   PartyListViewItem_o *v152; // x7
   struct ScrTerminalMap_StaticFields *v153; // x8
 
-  if ( (byte_4BB1997 & 1) == 0 )
+  if ( (byte_4BC4D53 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_9027/*"ManagedStream object must be seekable (stream.CanSeek must return true)"*/, v8);
-    sub_1C13D24(&StringLiteral_11137/*"Quick!"*/, v9);
-    sub_1C13D24(&StringLiteral_9052/*"MapGimmickPath_{0}"*/, v10);
-    sub_1C13D24(&StringLiteral_15843/*"WarBoardForcePassiveEveryBattle"*/, v11);
-    sub_1C13D24(&StringLiteral_13831/*"Templates"*/, v12);
-    sub_1C13D24(&StringLiteral_9046/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/, v13);
-    sub_1C13D24(&StringLiteral_1483/*"3DMap"*/, v14);
-    sub_1C13D24(&StringLiteral_20777/*"img_questmap_{0:D6}"*/, v15);
-    sub_1C13D24(&StringLiteral_9026/*"ManagedStream object must be readable (stream.CanRead must return true)"*/, v16);
-    sub_1C13D24(&StringLiteral_13832/*"Temporary Redirect"*/, v17);
-    sub_1C13D24(&StringLiteral_19670/*"f_1000012"*/, v18);
-    sub_1C13D24(&StringLiteral_1482/*"350"*/, v19);
-    sub_1C13D24(&StringLiteral_9049/*"MapGimmickEffect_SpotCooltime"*/, v20);
-    sub_1C13D24(&StringLiteral_20763/*"img_questboard_hero01"*/, v21);
-    sub_1C13D24(&StringLiteral_13828/*"TempStandFigurenRednerTexture"*/, v22);
-    sub_1C13D24(&StringLiteral_11004/*"PurchaseResult NotFound Error"*/, v23);
-    sub_1C13D24(&StringLiteral_11005/*"PurchaseResult NotFound."*/, v24);
-    byte_4BB1997 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_9033/*"MapEffect_{0:D6}_{1:D2}"*/, v8);
+    sub_1C1ABD4(&StringLiteral_11148/*"RAID_TIME_OVER_NOTICE_"*/, v9);
+    sub_1C1ABD4(&StringLiteral_9058/*"MapSpotPath_{0}"*/, v10);
+    sub_1C1ABD4(&StringLiteral_15857/*"Water"*/, v11);
+    sub_1C1ABD4(&StringLiteral_13843/*"Terminal/QuestMap/Capter{0:D4}"*/, v12);
+    sub_1C1ABD4(&StringLiteral_9052/*"MapGimmickPath_{0}"*/, v13);
+    sub_1C1ABD4(&StringLiteral_1484/*"3DSpot"*/, v14);
+    sub_1C1ABD4(&StringLiteral_20791/*"img_road{0:D4}_{1:D2}"*/, v15);
+    sub_1C1ABD4(&StringLiteral_9032/*"MapEffect_{0:D4}_{1:D2}"*/, v16);
+    sub_1C1ABD4(&StringLiteral_13844/*"Terminal/QuestMap/Capter{0:D4}_{1:D4}"*/, v17);
+    sub_1C1ABD4(&StringLiteral_19684/*"fadeIn"*/, v18);
+    sub_1C1ABD4(&StringLiteral_1483/*"3DMap"*/, v19);
+    sub_1C1ABD4(&StringLiteral_9055/*"MapGimmick_{0:D4}"*/, v20);
+    sub_1C1ABD4(&StringLiteral_20777/*"img_questmap_{0:D6}"*/, v21);
+    sub_1C1ABD4(&StringLiteral_13840/*"Terminal/MapImgs/"*/, v22);
+    sub_1C1ABD4(&StringLiteral_11013/*"QMap_Cap{0:D4}_Atlas"*/, v23);
+    sub_1C1ABD4(&StringLiteral_11014/*"QMap_Cap{0:D4}_{1:D4}_Atlas"*/, v24);
+    byte_4BC4D53 = 1;
   }
-  ScrTerminalMap_TypeInfo->static_fields->RAID_TIME_OVER_NOTICE_KEY = (struct System_String_o *)StringLiteral_11137/*"Quick!"*/;
-  sub_1C13CC8(
+  ScrTerminalMap_TypeInfo->static_fields->RAID_TIME_OVER_NOTICE_KEY = (struct System_String_o *)StringLiteral_11148/*"RAID_TIME_OVER_NOTICE_"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ScrTerminalMap_TypeInfo->static_fields,
-    StringLiteral_11137/*"Quick!"*/,
+    StringLiteral_11148/*"RAID_TIME_OVER_NOTICE_"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v25 = StringLiteral_13828/*"TempStandFigurenRednerTexture"*/;
+  v25 = StringLiteral_13840/*"Terminal/MapImgs/"*/;
   static_fields = ScrTerminalMap_TypeInfo->static_fields;
-  static_fields->MAP_IMAGE_ASSET_PATH = (struct System_String_o *)StringLiteral_13828/*"TempStandFigurenRednerTexture"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->MAP_IMAGE_ASSET_PATH, v25, v27, v28, v29, v30, v31, v32);
-  v33 = StringLiteral_13831/*"Templates"*/;
+  static_fields->MAP_IMAGE_ASSET_PATH = (struct System_String_o *)StringLiteral_13840/*"Terminal/MapImgs/"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->MAP_IMAGE_ASSET_PATH, v25, v27, v28, v29, v30, v31, v32);
+  v33 = StringLiteral_13843/*"Terminal/QuestMap/Capter{0:D4}"*/;
   v34 = ScrTerminalMap_TypeInfo->static_fields;
-  v34->ASSETS_NAME_PACK = (struct System_String_o *)StringLiteral_13831/*"Templates"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v34->ASSETS_NAME_PACK, v33, v35, v36, v37, v38, v39, v40);
-  v41 = StringLiteral_13832/*"Temporary Redirect"*/;
+  v34->ASSETS_NAME_PACK = (struct System_String_o *)StringLiteral_13843/*"Terminal/QuestMap/Capter{0:D4}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v34->ASSETS_NAME_PACK, v33, v35, v36, v37, v38, v39, v40);
+  v41 = StringLiteral_13844/*"Terminal/QuestMap/Capter{0:D4}_{1:D4}"*/;
   v42 = ScrTerminalMap_TypeInfo->static_fields;
-  v42->ASSETS_NAME_PACK_MULTI_MAP = (struct System_String_o *)StringLiteral_13832/*"Temporary Redirect"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v42->ASSETS_NAME_PACK_MULTI_MAP, v41, v43, v44, v45, v46, v47, v48);
-  v49 = StringLiteral_20763/*"img_questboard_hero01"*/;
+  v42->ASSETS_NAME_PACK_MULTI_MAP = (struct System_String_o *)StringLiteral_13844/*"Terminal/QuestMap/Capter{0:D4}_{1:D4}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v42->ASSETS_NAME_PACK_MULTI_MAP, v41, v43, v44, v45, v46, v47, v48);
+  v49 = StringLiteral_20777/*"img_questmap_{0:D6}"*/;
   v50 = ScrTerminalMap_TypeInfo->static_fields;
-  v50->ASSETS_NAME_BG = (struct System_String_o *)StringLiteral_20763/*"img_questboard_hero01"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v50->ASSETS_NAME_BG, v49, v51, v52, v53, v54, v55, v56);
-  v57 = StringLiteral_11004/*"PurchaseResult NotFound Error"*/;
+  v50->ASSETS_NAME_BG = (struct System_String_o *)StringLiteral_20777/*"img_questmap_{0:D6}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v50->ASSETS_NAME_BG, v49, v51, v52, v53, v54, v55, v56);
+  v57 = StringLiteral_11013/*"QMap_Cap{0:D4}_Atlas"*/;
   v58 = ScrTerminalMap_TypeInfo->static_fields;
-  v58->ASSETS_NAME_ATLAS = (struct System_String_o *)StringLiteral_11004/*"PurchaseResult NotFound Error"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v58->ASSETS_NAME_ATLAS, v57, v59, v60, v61, v62, v63, v64);
-  v65 = StringLiteral_11005/*"PurchaseResult NotFound."*/;
+  v58->ASSETS_NAME_ATLAS = (struct System_String_o *)StringLiteral_11013/*"QMap_Cap{0:D4}_Atlas"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v58->ASSETS_NAME_ATLAS, v57, v59, v60, v61, v62, v63, v64);
+  v65 = StringLiteral_11014/*"QMap_Cap{0:D4}_{1:D4}_Atlas"*/;
   v66 = ScrTerminalMap_TypeInfo->static_fields;
-  v66->ASSETS_NAME_ATLAS_MULTI_MAP = (struct System_String_o *)StringLiteral_11005/*"PurchaseResult NotFound."*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v66->ASSETS_NAME_ATLAS_MULTI_MAP, v65, v67, v68, v69, v70, v71, v72);
-  v73 = StringLiteral_9026/*"ManagedStream object must be readable (stream.CanRead must return true)"*/;
+  v66->ASSETS_NAME_ATLAS_MULTI_MAP = (struct System_String_o *)StringLiteral_11014/*"QMap_Cap{0:D4}_{1:D4}_Atlas"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v66->ASSETS_NAME_ATLAS_MULTI_MAP, v65, v67, v68, v69, v70, v71, v72);
+  v73 = StringLiteral_9032/*"MapEffect_{0:D4}_{1:D2}"*/;
   v74 = ScrTerminalMap_TypeInfo->static_fields;
-  v74->ASSETS_NAME_MAP_EFFECT = (struct System_String_o *)StringLiteral_9026/*"ManagedStream object must be readable (stream.CanRead must return true)"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v74->ASSETS_NAME_MAP_EFFECT, v73, v75, v76, v77, v78, v79, v80);
-  v81 = StringLiteral_9027/*"ManagedStream object must be seekable (stream.CanSeek must return true)"*/;
+  v74->ASSETS_NAME_MAP_EFFECT = (struct System_String_o *)StringLiteral_9032/*"MapEffect_{0:D4}_{1:D2}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v74->ASSETS_NAME_MAP_EFFECT, v73, v75, v76, v77, v78, v79, v80);
+  v81 = StringLiteral_9033/*"MapEffect_{0:D6}_{1:D2}"*/;
   v82 = ScrTerminalMap_TypeInfo->static_fields;
-  v82->ASSETS_NAME_MAP_EFFECT_UPPER = (struct System_String_o *)StringLiteral_9027/*"ManagedStream object must be seekable (stream.CanSeek must return true)"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v82->ASSETS_NAME_MAP_EFFECT_UPPER, v81, v83, v84, v85, v86, v87, v88);
+  v82->ASSETS_NAME_MAP_EFFECT_UPPER = (struct System_String_o *)StringLiteral_9033/*"MapEffect_{0:D6}_{1:D2}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v82->ASSETS_NAME_MAP_EFFECT_UPPER, v81, v83, v84, v85, v86, v87, v88);
   v89 = ScrTerminalMap_TypeInfo->static_fields;
-  v90 = StringLiteral_9049/*"MapGimmickEffect_SpotCooltime"*/;
-  v89->ASSETS_NAME_MAP_GIMMICK = (struct System_String_o *)StringLiteral_9049/*"MapGimmickEffect_SpotCooltime"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v89->ASSETS_NAME_MAP_GIMMICK, v90, v91, v92, v93, v94, v95, v96);
+  v90 = StringLiteral_9055/*"MapGimmick_{0:D4}"*/;
+  v89->ASSETS_NAME_MAP_GIMMICK = (struct System_String_o *)StringLiteral_9055/*"MapGimmick_{0:D4}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v89->ASSETS_NAME_MAP_GIMMICK, v90, v91, v92, v93, v94, v95, v96);
   v97 = ScrTerminalMap_TypeInfo->static_fields;
-  v98 = StringLiteral_20777/*"img_questmap_{0:D6}"*/;
-  v97->ASSETS_NAME_SPOT_ROAD = (struct System_String_o *)StringLiteral_20777/*"img_questmap_{0:D6}"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v97->ASSETS_NAME_SPOT_ROAD, v98, v99, v100, v101, v102, v103, v104);
+  v98 = StringLiteral_20791/*"img_road{0:D4}_{1:D2}"*/;
+  v97->ASSETS_NAME_SPOT_ROAD = (struct System_String_o *)StringLiteral_20791/*"img_road{0:D4}_{1:D2}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v97->ASSETS_NAME_SPOT_ROAD, v98, v99, v100, v101, v102, v103, v104);
   v105 = ScrTerminalMap_TypeInfo->static_fields;
-  v106 = StringLiteral_9052/*"MapGimmickPath_{0}"*/;
-  v105->ASSETS_NAME_SPOT_PATH = (struct System_String_o *)StringLiteral_9052/*"MapGimmickPath_{0}"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v105->ASSETS_NAME_SPOT_PATH, v106, v107, v108, v109, v110, v111, v112);
+  v106 = StringLiteral_9058/*"MapSpotPath_{0}"*/;
+  v105->ASSETS_NAME_SPOT_PATH = (struct System_String_o *)StringLiteral_9058/*"MapSpotPath_{0}"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v105->ASSETS_NAME_SPOT_PATH, v106, v107, v108, v109, v110, v111, v112);
   v113 = ScrTerminalMap_TypeInfo->static_fields;
-  v114 = StringLiteral_9046/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/;
-  v113->ASSETS_NAME_MAP_GIMMICK_PATH = (struct System_String_o *)StringLiteral_9046/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/;
-  sub_1C13CC8(
+  v114 = StringLiteral_9052/*"MapGimmickPath_{0}"*/;
+  v113->ASSETS_NAME_MAP_GIMMICK_PATH = (struct System_String_o *)StringLiteral_9052/*"MapGimmickPath_{0}"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v113->ASSETS_NAME_MAP_GIMMICK_PATH,
     v114,
     v115,
@@ -243,21 +243,21 @@ void __fastcall ScrTerminalMap___cctor(const MethodInfo *method)
     v119,
     v120);
   v121 = ScrTerminalMap_TypeInfo->static_fields;
-  v122 = StringLiteral_19670/*"f_1000012"*/;
-  v121->FIRST_FADE_TYPE_DURATION = (struct System_String_o *)StringLiteral_19670/*"f_1000012"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v121->FIRST_FADE_TYPE_DURATION, v122, v123, v124, v125, v126, v127, v128);
+  v122 = StringLiteral_19684/*"fadeIn"*/;
+  v121->FIRST_FADE_TYPE_DURATION = (struct System_String_o *)StringLiteral_19684/*"fadeIn"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v121->FIRST_FADE_TYPE_DURATION, v122, v123, v124, v125, v126, v127, v128);
   v129 = ScrTerminalMap_TypeInfo->static_fields;
-  v130 = StringLiteral_15843/*"WarBoardForcePassiveEveryBattle"*/;
-  v129->MAP_DISP_LAYER_DEFAULT = (struct System_String_o *)StringLiteral_15843/*"WarBoardForcePassiveEveryBattle"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v129->MAP_DISP_LAYER_DEFAULT, v130, v131, v132, v133, v134, v135, v136);
+  v130 = StringLiteral_15857/*"Water"*/;
+  v129->MAP_DISP_LAYER_DEFAULT = (struct System_String_o *)StringLiteral_15857/*"Water"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v129->MAP_DISP_LAYER_DEFAULT, v130, v131, v132, v133, v134, v135, v136);
   v137 = ScrTerminalMap_TypeInfo->static_fields;
-  v138 = StringLiteral_1482/*"350"*/;
-  v137->MAP_DISP_LAYER_MODEL = (struct System_String_o *)StringLiteral_1482/*"350"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v137->MAP_DISP_LAYER_MODEL, v138, v139, v140, v141, v142, v143, v144);
+  v138 = StringLiteral_1483/*"3DMap"*/;
+  v137->MAP_DISP_LAYER_MODEL = (struct System_String_o *)StringLiteral_1483/*"3DMap"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v137->MAP_DISP_LAYER_MODEL, v138, v139, v140, v141, v142, v143, v144);
   v145 = ScrTerminalMap_TypeInfo->static_fields;
-  v146 = StringLiteral_1483/*"3DMap"*/;
-  v145->MAP_DISP_LAYER_SPOT = (struct System_String_o *)StringLiteral_1483/*"3DMap"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v145->MAP_DISP_LAYER_SPOT, v146, v147, v148, v149, v150, v151, v152);
+  v146 = StringLiteral_1484/*"3DSpot"*/;
+  v145->MAP_DISP_LAYER_SPOT = (struct System_String_o *)StringLiteral_1484/*"3DSpot"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v145->MAP_DISP_LAYER_SPOT, v146, v147, v148, v149, v150, v151, v152);
   v153 = ScrTerminalMap_TypeInfo->static_fields;
   *(_QWORD *)&v153->AUTO_QUEST_SQUARE_INDEX_1 = 0x1000000006LL;
   v153->AUTO_QUEST_SQUARE_INDEX_3 = 11;
@@ -313,43 +313,43 @@ void __fastcall ScrTerminalMap___ctor(ScrTerminalMap_o *this, const MethodInfo *
   FollowerInfo_o *v47; // x6
   PartyListViewItem_o *v48; // x7
 
-  if ( (byte_4BB1996 & 1) == 0 )
+  if ( (byte_4BC4D52 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent___ctor__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapEffectComponent___ctor__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas___ctor__, v6);
-    sub_1C13D24(&System_Collections_Generic_List_UIAtlas__TypeInfo, v7);
-    sub_1C13D24(&System_Collections_Generic_List_MapGimmickComponent__TypeInfo, v8);
-    sub_1C13D24(&System_Collections_Generic_List_MapEffectComponent__TypeInfo, v9);
-    sub_1C13D24(&System_Collections_Generic_List_GameObject__TypeInfo, v10);
-    sub_1C13D24(&System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo, v11);
-    sub_1C13D24(&MapModelManager_TypeInfo, v12);
-    byte_4BB1996 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent___ctor__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapEffectComponent___ctor__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_UIAtlas___ctor__, v6);
+    sub_1C1ABD4(&System_Collections_Generic_List_UIAtlas__TypeInfo, v7);
+    sub_1C1ABD4(&System_Collections_Generic_List_MapGimmickComponent__TypeInfo, v8);
+    sub_1C1ABD4(&System_Collections_Generic_List_MapEffectComponent__TypeInfo, v9);
+    sub_1C1ABD4(&System_Collections_Generic_List_GameObject__TypeInfo, v10);
+    sub_1C1ABD4(&System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo, v11);
+    sub_1C1ABD4(&MapModelManager_TypeInfo, v12);
+    byte_4BC4D52 = 1;
   }
   this->fields.PLAYER_ICON_POS.fields.z = 0.0;
   *(_QWORD *)&this->fields.currentWarId = -1LL;
   *(_QWORD *)&this->fields.PLAYER_ICON_POS.fields.x = 0x4220000000000000LL;
   this->fields.currentAssetId = -1;
-  v13 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.assetsAtlases = (struct System_Collections_Generic_List_UIAtlas__o *)v13;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.assetsAtlases, (int64_t)v13, v14, v15, v16, v17, v18, v19);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.assetsAtlases, (int64_t)v13, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
   this->fields.spotList = (struct System_Collections_Generic_List_SrcSpotBasePrefab__o *)v20;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.spotList, (int64_t)v20, v21, v22, v23, v24, v25, v26);
-  v27 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_MapGimmickComponent__TypeInfo);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.spotList, (int64_t)v20, v21, v22, v23, v24, v25, v26);
+  v27 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_MapGimmickComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v27,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_MapGimmickComponent___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_MapGimmickComponent___ctor__);
   this->fields.gimmickList = (struct System_Collections_Generic_List_MapGimmickComponent__o *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.gimmickList, (int64_t)v27, v28, v29, v30, v31, v32, v33);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.gimmickList, (int64_t)v27, v28, v29, v30, v31, v32, v33);
   *(_QWORD *)&this->fields.requestFocusSpotId = -1LL;
   v34 = MapModelManager_TypeInfo;
   if ( !MapModelManager_TypeInfo->_2.cctor_finished )
@@ -358,12 +358,12 @@ void __fastcall ScrTerminalMap___ctor(ScrTerminalMap_o *this, const MethodInfo *
     v34 = MapModelManager_TypeInfo;
   }
   this->fields.currentMapLayerId = v34->static_fields->LAYER_LOWER_ID;
-  v35 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_GameObject__TypeInfo);
+  v35 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v35,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.mapEffectPrefabList = (struct System_Collections_Generic_List_GameObject__o *)v35;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.mapEffectPrefabList,
     (int64_t)v35,
     v36,
@@ -372,12 +372,12 @@ void __fastcall ScrTerminalMap___ctor(ScrTerminalMap_o *this, const MethodInfo *
     v39,
     v40,
     v41);
-  v42 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_MapEffectComponent__TypeInfo);
+  v42 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_MapEffectComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v42,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_MapEffectComponent___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_MapEffectComponent___ctor__);
   this->fields.mapEffectList = (struct System_Collections_Generic_List_MapEffectComponent__o *)v42;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapEffectList, (int64_t)v42, v43, v44, v45, v46, v47, v48);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapEffectList, (int64_t)v42, v43, v44, v45, v46, v47, v48);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -395,18 +395,18 @@ void __fastcall ScrTerminalMap__AfterActionPlay(ScrTerminalMap_o *this, const Me
   EventMapManagerInterface_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB193C & 1) == 0 )
+  if ( (byte_4BC4CF8 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__AfterActionPlay_b__339_0__, v4);
-    byte_4BB193C = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__AfterActionPlay_b__339_0__, v4);
+    byte_4BC4CF8 = 1;
   }
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
-  v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScrTerminalMap__AfterActionPlay_b__339_0__, 0LL);
   if ( !eventMapManagerInterface_k__BackingField )
-    sub_1C13F80(v7, v8);
+    sub_1C1AE30(v7, v8);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v10 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -424,7 +424,7 @@ void __fastcall ScrTerminalMap__AfterActionPlay(ScrTerminalMap_o *this, const Me
   else
   {
 LABEL_8:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 6LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 6LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -437,10 +437,10 @@ void __fastcall ScrTerminalMap__AllMaskEnd(ScrTerminalMap_o *this, const MethodI
 {
   UnityEngine_GameObject_o *allMaskPanel; // x0
 
-  if ( (byte_4BB1935 & 1) == 0 )
+  if ( (byte_4BC4CF1 & 1) == 0 )
   {
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
-    byte_4BB1935 = 1;
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
+    byte_4BC4CF1 = 1;
   }
   allMaskPanel = (UnityEngine_GameObject_o *)this->fields.allMaskPanel;
   if ( !allMaskPanel
@@ -450,12 +450,12 @@ void __fastcall ScrTerminalMap__AllMaskEnd(ScrTerminalMap_o *this, const MethodI
           1.0),
         (allMaskPanel = this->fields.allMaskObj) == 0LL) )
   {
-    sub_1C13F80(allMaskPanel, method);
+    sub_1C1AE30(allMaskPanel, method);
   }
   UnityEngine_GameObject__SetActive(allMaskPanel, 1, 0LL);
   GameObjectExtensions__SafeGetComponent_object_(
     this->fields.allMaskObj,
-    (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+    (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
   TweenAlpha__Begin(this->fields.allMaskObj, 0.25, 0.0, 0LL);
 }
 
@@ -470,10 +470,10 @@ void __fastcall ScrTerminalMap__AllMaskStart(
   UnityEngine_GameObject_o *spotMaskObj; // x0
   void (__fastcall *castClass)(float); // x2
 
-  if ( (byte_4BB1934 & 1) == 0 )
+  if ( (byte_4BC4CF0 & 1) == 0 )
   {
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, isClearMask);
-    byte_4BB1934 = 1;
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, isClearMask);
+    byte_4BC4CF0 = 1;
   }
   spotMaskObj = this->fields.spotMaskObj;
   if ( !spotMaskObj )
@@ -482,7 +482,7 @@ void __fastcall ScrTerminalMap__AllMaskStart(
   {
     GameObjectExtensions__SafeGetComponent_object_(
       this->fields.spotMaskObj,
-      (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+      (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
     TweenAlpha__Begin(this->fields.spotMaskObj, 0.25, 0.0, 0LL);
   }
   spotMaskObj = this->fields.allMaskObj;
@@ -491,7 +491,7 @@ void __fastcall ScrTerminalMap__AllMaskStart(
         (spotMaskObj = (UnityEngine_GameObject_o *)this->fields.allMaskPanel) == 0LL) )
   {
 LABEL_12:
-    sub_1C13F80(spotMaskObj, isClearMask);
+    sub_1C1AE30(spotMaskObj, isClearMask);
   }
   castClass = (void (__fastcall *)(float))spotMaskObj->klass[1]._1.castClass;
   if ( isFixedAllMask )
@@ -505,7 +505,7 @@ LABEL_12:
     {
       GameObjectExtensions__SafeGetComponent_object_(
         this->fields.allMaskObj,
-        (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+        (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
       TweenAlpha__Begin(this->fields.allMaskObj, 0.25, 1.0, 0LL);
     }
   }
@@ -533,11 +533,11 @@ void __fastcall ScrTerminalMap__AttachBillBoard(
   struct UnityEngine_Vector3_o *p_PLAYER_ICON_POS; // x19
 
   v4 = this;
-  if ( (byte_4BB1927 & 1) == 0 )
+  if ( (byte_4BC4CE3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_BillBoard___, targetObject);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    byte_4BB1927 = 1;
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_BillBoard___, targetObject);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    byte_4BC4CE3 = 1;
   }
   mapModelManager = v4->fields.mapModelManager;
   if ( !mapModelManager )
@@ -561,12 +561,12 @@ void __fastcall ScrTerminalMap__AttachBillBoard(
     {
       this = (ScrTerminalMap_o *)GameObjectExtensions__SafeGetComponent_object_(
                                    targetObject,
-                                   (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_BillBoard___);
+                                   (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_BillBoard___);
       if ( this )
       {
         *(_QWORD *)&this->fields.PLAYER_ICON_POS.fields.x = cameraInstance;
         p_PLAYER_ICON_POS = &this->fields.PLAYER_ICON_POS;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&this->fields.PLAYER_ICON_POS,
           (int64_t)cameraInstance,
           v11,
@@ -579,7 +579,7 @@ void __fastcall ScrTerminalMap__AttachBillBoard(
         return;
       }
 LABEL_15:
-      sub_1C13F80(this, targetObject);
+      sub_1C1AE30(this, targetObject);
     }
   }
 }
@@ -615,15 +615,15 @@ void __fastcall ScrTerminalMap__AttachEventMapManager(ScrTerminalMap_o *this, co
   EventMapManagerInterface_c **v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4BB18FE & 1) == 0 )
+  if ( (byte_4BC4CBA & 1) == 0 )
   {
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, method);
-    byte_4BB18FE = 1;
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, method);
+    byte_4BC4CBA = 1;
   }
   ScrTerminalMap__DetachEventMapManager(this, method);
   v3 = EventMapManagerFactory__AttachToTerminalMap(this, this->fields.mMapInfo, this->fields.mWarInfo, 0LL);
   this->fields._eventMapManagerInterface_k__BackingField = v3;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._eventMapManagerInterface_k__BackingField,
     (int64_t)v3,
     v4,
@@ -660,7 +660,7 @@ void __fastcall ScrTerminalMap__AttachEventMapManager(ScrTerminalMap_o *this, co
   else
   {
 LABEL_8:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 0LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 0LL);
   }
   v10 = (*(__int64 (__fastcall **)(struct EventMapManagerInterface_o *, ScrTerminalMap_o *, struct MapControl_MapInfo_o *, struct MapControl_WarInfo_o *, struct MapCamera_o *, struct UnityEngine_GameObject_o *, struct UnityEngine_GameObject_o *, struct UnityEngine_GameObject_o *, struct UnityEngine_GameObject_o *, struct UnityEngine_GameObject_o *, _QWORD))p_method)(
           eventMapManagerInterface_k__BackingField,
@@ -677,7 +677,7 @@ LABEL_8:
   v25 = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !v25 )
 LABEL_18:
-    sub_1C13F80(v10, v11);
+    sub_1C1AE30(v10, v11);
   v26 = v25->klass;
   v27 = *(unsigned __int16 *)(&v25->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&v25->klass->_2.bitflags2 + 3) )
@@ -695,7 +695,7 @@ LABEL_18:
   else
   {
 LABEL_15:
-    v29 = sub_1C65D04(v25, EventMapManagerInterface_TypeInfo, 1LL);
+    v29 = sub_1C6CBB4(v25, EventMapManagerInterface_TypeInfo, 1LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8));
 }
@@ -755,11 +755,11 @@ void __fastcall ScrTerminalMap__Awake(ScrTerminalMap_o *this, const MethodInfo *
   PartyListViewItem_o *v52; // x7
   struct UnityEngine_GameObject_o *subRootRoadP; // x1
 
-  if ( (byte_4BB18E6 & 1) == 0 )
+  if ( (byte_4BC4CA2 & 1) == 0 )
   {
-    sub_1C13D24(&EventMapManagerIdle_TypeInfo, method);
-    sub_1C13D24(&MapModelManager_TypeInfo, v3);
-    byte_4BB18E6 = 1;
+    sub_1C1ABD4(&EventMapManagerIdle_TypeInfo, method);
+    sub_1C1ABD4(&MapModelManager_TypeInfo, v3);
+    byte_4BC4CA2 = 1;
   }
   spotMaskObj = (char *)this->fields.spotMaskObj;
   this->fields._IsCheckExpiration_k__BackingField = 0;
@@ -771,10 +771,10 @@ void __fastcall ScrTerminalMap__Awake(ScrTerminalMap_o *this, const MethodInfo *
   this->fields.eventBoardGameSquareCount = 0;
   this->fields._currentMapImageW_k__BackingField = 0;
   this->fields._currentMapImageH_k__BackingField = 0;
-  v6 = (EventMapManagerIdle_o *)sub_1C13F70(EventMapManagerIdle_TypeInfo);
+  v6 = (EventMapManagerIdle_o *)sub_1C1AE20(EventMapManagerIdle_TypeInfo);
   EventMapManagerIdle___ctor(v6, 0LL);
   this->fields._eventMapManagerInterface_k__BackingField = (struct EventMapManagerInterface_o *)v6;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._eventMapManagerInterface_k__BackingField,
     (int64_t)v6,
     v7,
@@ -783,40 +783,40 @@ void __fastcall ScrTerminalMap__Awake(ScrTerminalMap_o *this, const MethodInfo *
     v10,
     v11,
     v12);
-  v13 = (MapModelManager_o *)sub_1C13F70(MapModelManager_TypeInfo);
+  v13 = (MapModelManager_o *)sub_1C1AE20(MapModelManager_TypeInfo);
   MapModelManager___ctor(v13, 0LL);
   this->fields.mapModelManager = v13;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapModelManager, (int64_t)v13, v14, v15, v16, v17, v18, v19);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapModelManager, (int64_t)v13, v14, v15, v16, v17, v18, v19);
   spotMaskObj = (char *)this->fields.mapModelManager;
   if ( !spotMaskObj )
     goto LABEL_10;
   *((_QWORD *)spotMaskObj + 2) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(spotMaskObj + 16), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(spotMaskObj + 16), (int64_t)this, v20, v21, v22, v23, v24, v25);
   spotMaskObj = (char *)this->fields.mapModelManager;
   if ( !spotMaskObj )
     goto LABEL_10;
   mapModelScreen = this->fields.mapModelScreen;
   *((_QWORD *)spotMaskObj + 7) = mapModelScreen;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(spotMaskObj + 56), (int64_t)mapModelScreen, v26, v27, v28, v29, v30, v31);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(spotMaskObj + 56), (int64_t)mapModelScreen, v26, v27, v28, v29, v30, v31);
   spotMaskObj = (char *)this->fields.mapModelManager;
   if ( !spotMaskObj )
     goto LABEL_10;
   spotModelScreen = this->fields.spotModelScreen;
   *((_QWORD *)spotMaskObj + 8) = spotModelScreen;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(spotMaskObj + 64), (int64_t)spotModelScreen, v33, v34, v35, v36, v37, v38);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(spotMaskObj + 64), (int64_t)spotModelScreen, v33, v34, v35, v36, v37, v38);
   spotMaskObj = (char *)this->fields.mapModelManager;
   if ( !spotMaskObj
     || (dispRoot = this->fields.dispRoot,
         *((_QWORD *)spotMaskObj + 9) = dispRoot,
-        sub_1C13CC8((PartyOrganizationUtility_o *)(spotMaskObj + 72), (int64_t)dispRoot, v40, v41, v42, v43, v44, v45),
+        sub_1C1AB78((PartyOrganizationUtility_o *)(spotMaskObj + 72), (int64_t)dispRoot, v40, v41, v42, v43, v44, v45),
         (spotMaskObj = (char *)this->fields.mapModelManager) == 0LL) )
   {
 LABEL_10:
-    sub_1C13F80(spotMaskObj, method);
+    sub_1C1AE30(spotMaskObj, method);
   }
   subRootRoadP = this->fields.subRootRoadP;
   *((_QWORD *)spotMaskObj + 10) = subRootRoadP;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(spotMaskObj + 80), (int64_t)subRootRoadP, v47, v48, v49, v50, v51, v52);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(spotMaskObj + 80), (int64_t)subRootRoadP, v47, v48, v49, v50, v51, v52);
 }
 
 
@@ -846,25 +846,25 @@ void __fastcall ScrTerminalMap__BeginRaidUpdateRequest(
   PartyListViewItem_o *v23; // x7
   NetworkManager_ResultCallbackFunc_o *v24; // x19
 
-  if ( (byte_4BB18EE & 1) == 0 )
+  if ( (byte_4BC4CAA & 1) == 0 )
   {
-    sub_1C13D24(&Method_NetworkManager_getRequest_RaidAutoUpdateRequest___, callback);
-    sub_1C13D24(&NetworkManager_TypeInfo, v5);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass248_0__BeginRaidUpdateRequest_b__0__, v7);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass248_0_TypeInfo, v8);
-    byte_4BB18EE = 1;
+    sub_1C1ABD4(&Method_NetworkManager_getRequest_RaidAutoUpdateRequest___, callback);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass248_0__BeginRaidUpdateRequest_b__0__, v7);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass248_0_TypeInfo, v8);
+    byte_4BC4CAA = 1;
   }
-  v9 = sub_1C13F70(ScrTerminalMap___c__DisplayClass248_0_TypeInfo);
+  v9 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass248_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass248_0___ctor((ScrTerminalMap___c__DisplayClass248_0_o *)v9, 0LL);
   if ( !v9 )
     goto LABEL_8;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)callback, v18, v19, v20, v21, v22, v23);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)callback, v18, v19, v20, v21, v22, v23);
   this->fields._IsCheckExpiration_k__BackingField = 0;
-  v24 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v24 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v24,
     (Il2CppObject *)v9,
@@ -874,10 +874,10 @@ void __fastcall ScrTerminalMap__BeginRaidUpdateRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v24,
-                     (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_RaidAutoUpdateRequest___);
+                     (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_RaidAutoUpdateRequest___);
   if ( !Request_object )
 LABEL_8:
-    sub_1C13F80(Request_object, v11);
+    sub_1C1AE30(Request_object, v11);
   RequestBase__beginRequest((RequestBase_o *)Request_object, 0LL);
 }
 
@@ -891,7 +891,7 @@ void __fastcall ScrTerminalMap__ChangeBoardGameDiceButttonActive(ScrTerminalMap_
   __int64 v7; // x1
   TerminalPramsManager_c *v8; // x0
   AssetData_o *mapAssetData; // x0
-  Il2CppObject *Object_object__49747248; // x20
+  Il2CppObject *Object_object__49812820; // x20
   Il2CppObject *v11; // x0
   int64_t v12; // x2
   int32_t v13; // w3
@@ -902,21 +902,21 @@ void __fastcall ScrTerminalMap__ChangeBoardGameDiceButttonActive(ScrTerminalMap_
   __int64 v18; // x1
   TerminalPramsManager_c *v19; // x0
 
-  if ( (byte_4BB197A & 1) == 0 )
+  if ( (byte_4BC4D36 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, method);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_9033/*"MapEffect_{0:D6}_{1:D2}"*/, v7);
-    byte_4BB197A = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, method);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_9039/*"MapGimmickEffect_GappolyButtonActive"*/, v7);
+    byte_4BC4D36 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19DB )
+  if ( !byte_4BC4D97 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19DB = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D97 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -929,21 +929,21 @@ void __fastcall ScrTerminalMap__ChangeBoardGameDiceButttonActive(ScrTerminalMap_
   mapAssetData = this->fields.mapAssetData;
   if ( !mapAssetData )
     goto LABEL_25;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               mapAssetData,
-                              (System_String_o *)StringLiteral_9033/*"MapEffect_{0:D6}_{1:D2}"*/,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (System_String_o *)StringLiteral_9039/*"MapGimmickEffect_GappolyButtonActive"*/,
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v11 = UnityEngine_Object__Instantiate_object_(
-            Object_object__49747248,
-            (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            Object_object__49812820,
+            (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     this->fields._EventBoardDiceButtonEffectObj_k__BackingField = (struct UnityEngine_GameObject_o *)v11;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields._EventBoardDiceButtonEffectObj_k__BackingField,
       (int64_t)v11,
       v12,
@@ -957,16 +957,16 @@ void __fastcall ScrTerminalMap__ChangeBoardGameDiceButttonActive(ScrTerminalMap_
             0LL,
             0LL) )
     {
-      GameObjectExtensions__SafeSetParent_34717732(
+      GameObjectExtensions__SafeSetParent_34762256(
         this->fields._EventBoardDiceButtonEffectObj_k__BackingField,
         this->fields.rootEventObjP,
         0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19DC )
+      if ( !byte_4BC4D98 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v18);
-        byte_4BB19DC = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v18);
+        byte_4BC4D98 = 1;
       }
       v19 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1002,28 +1002,28 @@ void __fastcall ScrTerminalMap__ChangeMapUIStateDelayCall(
   System_Action_o *v16; // x20
   System_Collections_IEnumerator_o *v17; // x1
 
-  if ( (byte_4BB1995 & 1) == 0 )
+  if ( (byte_4BC4D51 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&state);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass439_0__ChangeMapUIStateDelayCall_b__0__, v5);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass439_0_TypeInfo, v6);
-    byte_4BB1995 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&state);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass439_0__ChangeMapUIStateDelayCall_b__0__, v5);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass439_0_TypeInfo, v6);
+    byte_4BC4D51 = 1;
   }
-  v7 = sub_1C13F70(ScrTerminalMap___c__DisplayClass439_0_TypeInfo);
+  v7 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass439_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass439_0___ctor((ScrTerminalMap___c__DisplayClass439_0_o *)v7, 0LL);
   if ( !v7 )
-    sub_1C13F80(v8, v9);
+    sub_1C1AE30(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
   *(_DWORD *)(v7 + 24) = state;
-  v16 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v7,
     Method_ScrTerminalMap___c__DisplayClass439_0__ChangeMapUIStateDelayCall_b__0__,
     0LL);
   v17 = BasicHelper__WaitForEndOfFrameCall(v16, 0LL);
-  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v17, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70779684((UnityEngine_MonoBehaviour_o *)this, v17, 0LL);
 }
 
 
@@ -1059,24 +1059,24 @@ void __fastcall ScrTerminalMap__ChangeSceneOnActionEnd(ScrTerminalMap_o *this, c
   SceneJumpInfo_o *v30; // x19
   QuestPhaseEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB194B & 1) == 0 )
+  if ( (byte_4BC4D07 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_QuestPhaseMaster___, method);
-    sub_1C13D24(&DataManager_TypeInfo, v3);
-    sub_1C13D24(&SceneJumpInfo_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_1/*""*/, v8);
-    byte_4BB194B = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_QuestPhaseMaster___, method);
+    sub_1C1ABD4(&DataManager_TypeInfo, v3);
+    sub_1C1ABD4(&SceneJumpInfo_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
+    byte_4BC4D07 = 1;
   }
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D5 )
+  if ( !byte_4BC4D91 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19D5 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D91 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1088,10 +1088,10 @@ void __fastcall ScrTerminalMap__ChangeSceneOnActionEnd(ScrTerminalMap_o *this, c
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19D5 )
+    if ( !byte_4BC4D91 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-      byte_4BB19D5 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+      byte_4BC4D91 = 1;
     }
     v12 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1114,7 +1114,7 @@ void __fastcall ScrTerminalMap__ChangeSceneOnActionEnd(ScrTerminalMap_o *this, c
     if ( v19 )
     {
       if ( !(_DWORD)v19 )
-        sub_1C13F88(SceneMoveQuestClearedInfo_k__BackingField, v10);
+        sub_1C1AE38(SceneMoveQuestClearedInfo_k__BackingField, v10);
       v21 = System_Int32__Parse(*((System_String_o **)SceneMoveQuestClearedInfo_k__BackingField + 4), 0LL);
       if ( *((int *)v20 + 6) >= 2 )
       {
@@ -1123,10 +1123,10 @@ LABEL_27:
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
         v23 = (PartyOrganizationUtility_c *)StringLiteral_1/*""*/;
-        if ( !byte_4BB19D6 )
+        if ( !byte_4BC4D92 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-          byte_4BB19D6 = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+          byte_4BC4D92 = 1;
         }
         v24 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -1136,10 +1136,10 @@ LABEL_27:
         }
         p_SceneMoveQuestClearedInfo_k__BackingField = (PartyOrganizationUtility_o *)&v24->static_fields->_SceneMoveQuestClearedInfo_k__BackingField;
         p_SceneMoveQuestClearedInfo_k__BackingField->klass = v23;
-        sub_1C13CC8(p_SceneMoveQuestClearedInfo_k__BackingField, (int64_t)v23, v13, v14, v15, v16, v17, v18);
+        sub_1C1AB78(p_SceneMoveQuestClearedInfo_k__BackingField, (int64_t)v23, v13, v14, v15, v16, v17, v18);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        SceneMoveQuestClearedInfo_k__BackingField = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+        SceneMoveQuestClearedInfo_k__BackingField = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
         if ( !SceneMoveQuestClearedInfo_k__BackingField )
           goto LABEL_48;
         if ( QuestPhaseMaster__TryGetEntity(
@@ -1159,7 +1159,7 @@ LABEL_27:
           if ( *((int *)SceneMoveQuestClearedInfo_k__BackingField + 6) >= 1
             && *((_DWORD *)SceneMoveQuestClearedInfo_k__BackingField + 8) == 72 )
           {
-            SceneMoveQuestClearedInfo_k__BackingField = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+            SceneMoveQuestClearedInfo_k__BackingField = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
             if ( !SceneMoveQuestClearedInfo_k__BackingField )
               goto LABEL_48;
             WarID_ByQuestID = QuestTree__GetWarID_ByQuestID(
@@ -1168,9 +1168,9 @@ LABEL_27:
                                 0LL);
             EventID = WarMaster__getEventID(WarID_ByQuestID, 0LL);
             v29 = v26[6] < 2 ? 1 : v26[9] + 1;
-            v30 = (SceneJumpInfo_o *)sub_1C13F70(SceneJumpInfo_TypeInfo);
-            SceneJumpInfo___ctor_39818088(v30, (System_String_o *)StringLiteral_1/*""*/, EventID, v29, 0LL);
-            SceneMoveQuestClearedInfo_k__BackingField = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+            v30 = (SceneJumpInfo_o *)sub_1C1AE20(SceneJumpInfo_TypeInfo);
+            SceneJumpInfo___ctor_39871980(v30, (System_String_o *)StringLiteral_1/*""*/, EventID, v29, 0LL);
+            SceneMoveQuestClearedInfo_k__BackingField = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
             if ( !SceneMoveQuestClearedInfo_k__BackingField )
               goto LABEL_48;
             AvalonSceneManager__transitionScene(
@@ -1202,7 +1202,7 @@ LABEL_27:
       return;
     }
 LABEL_48:
-    sub_1C13F80(SceneMoveQuestClearedInfo_k__BackingField, v10);
+    sub_1C1AE30(SceneMoveQuestClearedInfo_k__BackingField, v10);
   }
 }
 
@@ -1245,28 +1245,28 @@ void __fastcall ScrTerminalMap__CheckAndWarningEventQuestBoardAllClear(
   System_String_o *v35; // x24
   CommonConfirmDialog_ClickDelegate_o *v36; // x25
 
-  if ( (byte_4BB1968 & 1) == 0 )
+  if ( (byte_4BC4D24 & 1) == 0 )
   {
-    sub_1C13D24(&CommonConfirmDialog_ClickDelegate_TypeInfo, callback);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass385_0__CheckAndWarningEventQuestBoardAllClear_b__0__, v7);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass385_0_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_5656/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, v9);
-    sub_1C13D24(&StringLiteral_5658/*"EVENT_BANNER_WINDOW_MESSAGE"*/, v10);
-    sub_1C13D24(&StringLiteral_5659/*"EVENT_BANNER_WINDOW_TITLE"*/, v11);
-    sub_1C13D24(&StringLiteral_5657/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, v12);
-    byte_4BB1968 = 1;
+    sub_1C1ABD4(&CommonConfirmDialog_ClickDelegate_TypeInfo, callback);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass385_0__CheckAndWarningEventQuestBoardAllClear_b__0__, v7);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass385_0_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_5660/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_CANCEL"*/, v9);
+    sub_1C1ABD4(&StringLiteral_5662/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE"*/, v10);
+    sub_1C1ABD4(&StringLiteral_5663/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_TITLE"*/, v11);
+    sub_1C1ABD4(&StringLiteral_5661/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE"*/, v12);
+    byte_4BC4D24 = 1;
   }
-  v13 = sub_1C13F70(ScrTerminalMap___c__DisplayClass385_0_TypeInfo);
+  v13 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass385_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass385_0___ctor((ScrTerminalMap___c__DisplayClass385_0_o *)v13, 0LL);
   if ( !v13 )
     goto LABEL_13;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 24) = callback;
   v22 = v13 + 24;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)callback, v23, v24, v25, v26, v27, v28);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)callback, v23, v24, v25, v26, v27, v28);
   IsEventBoardGameQuestAllClear = ScrTerminalMap__IsEventBoardGameQuestAllClear(this, v29);
   if ( IsEventBoardGameQuestAllClear )
   {
@@ -1274,14 +1274,14 @@ void __fastcall ScrTerminalMap__CheckAndWarningEventQuestBoardAllClear(
     if ( mapCamera )
     {
       mapCamera->fields._IsTouchEnable_k__BackingField = 0;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_BANNER_WINDOW_TITLE"*/, 0LL);
-      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5658/*"EVENT_BANNER_WINDOW_MESSAGE"*/, 0LL);
-      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5657/*"EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT"*/, 0LL);
-      v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5656/*"EVENT_ASSIST_SKILL_LEVEL_FORMAT"*/, 0LL);
-      v36 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C13F70(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_5663/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_TITLE"*/, 0LL);
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_5662/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE"*/, 0LL);
+      v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5661/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE"*/, 0LL);
+      v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5660/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_CANCEL"*/, 0LL);
+      v36 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C1AE20(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
         v36,
         (Il2CppObject *)v13,
@@ -1312,7 +1312,7 @@ void __fastcall ScrTerminalMap__CheckAndWarningEventQuestBoardAllClear(
       }
     }
 LABEL_13:
-    sub_1C13F80(IsEventBoardGameQuestAllClear, v15);
+    sub_1C1AE30(IsEventBoardGameQuestAllClear, v15);
   }
   if ( *(_QWORD *)v22 )
     (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v22 + 24LL))(
@@ -1327,7 +1327,7 @@ bool __fastcall ScrTerminalMap__CheckNoticeLoginQuest(ScrTerminalMap_o *this, co
 
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene || (this = (ScrTerminalMap_o *)terminalScene->fields.mTerminalList) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   return ScrTerminalListTop__CheckNoticeLoginQuest((ScrTerminalListTop_o *)this, 0LL);
 }
 
@@ -1373,24 +1373,24 @@ void __fastcall ScrTerminalMap__CheckRaidTimeLimit(ScrTerminalMap_o *this, const
   System_String_o *v39; // x19
   System_String_o *v40; // x19
 
-  if ( (byte_4BB18F2 & 1) == 0 )
+  if ( (byte_4BC4CAE & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&CondType_TypeInfo, v3);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventRaidMaster___, v4);
-    sub_1C13D24(&Method_DataManager_GetMaster_QuestReleaseMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v7);
-    sub_1C13D24(&NetworkManager_TypeInfo, v8);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass252_0__CheckRaidTimeLimit_b__0__, v11);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass252_0_TypeInfo, v12);
-    sub_1C13D24(&StringLiteral_5797/*"EVENT_RAID_REST_COUNT_AFTER"*/, v13);
-    sub_1C13D24(&StringLiteral_1/*""*/, v14);
-    byte_4BB18F2 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&CondType_TypeInfo, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventRaidMaster___, v4);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_QuestReleaseMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v7);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass252_0__CheckRaidTimeLimit_b__0__, v11);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass252_0_TypeInfo, v12);
+    sub_1C1ABD4(&StringLiteral_5801/*"EVENT_RAID_TIME_OVER_NOTICE_"*/, v13);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v14);
+    byte_4BC4CAE = 1;
   }
-  v15 = (ScrTerminalMap___c__DisplayClass252_0_o *)sub_1C13F70(ScrTerminalMap___c__DisplayClass252_0_TypeInfo);
+  v15 = (ScrTerminalMap___c__DisplayClass252_0_o *)sub_1C1AE20(ScrTerminalMap___c__DisplayClass252_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass252_0___ctor(v15, 0LL);
   if ( this->fields.isRaidMap )
   {
@@ -1401,7 +1401,7 @@ void __fastcall ScrTerminalMap__CheckRaidTimeLimit(ScrTerminalMap_o *this, const
     p_eventId = &v15->fields.eventId;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventRaidMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventRaidMaster___);
+    Master_object = (EventRaidMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventRaidMaster___);
     if ( !Master_object )
       goto LABEL_48;
     v20 = Master_object;
@@ -1416,10 +1416,10 @@ void __fastcall ScrTerminalMap__CheckRaidTimeLimit(ScrTerminalMap_o *this, const
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         if ( v24 - NetworkManager__getTime(0LL) <= 0 )
         {
-          if ( !byte_4BB19BC )
+          if ( !byte_4BC4D78 )
           {
-            sub_1C13D24(&RaidAutoUpdateRequest_TypeInfo, v25);
-            byte_4BB19BC = 1;
+            sub_1C1ABD4(&RaidAutoUpdateRequest_TypeInfo, v25);
+            byte_4BC4D78 = 1;
           }
           if ( RaidAutoUpdateRequest_TypeInfo->static_fields->accessCompletedTimeEventMap >= v24 )
           {
@@ -1431,7 +1431,7 @@ void __fastcall ScrTerminalMap__CheckRaidTimeLimit(ScrTerminalMap_o *this, const
             {
               if ( !DataManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-              Master_object = (EventRaidMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
+              Master_object = (EventRaidMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_QuestReleaseMaster___);
               if ( !LODWORD(v26->fields._MasterName_k__BackingField) )
                 goto LABEL_49;
               if ( !Master_object )
@@ -1455,12 +1455,12 @@ void __fastcall ScrTerminalMap__CheckRaidTimeLimit(ScrTerminalMap_o *this, const
                     return;
                   if ( !CondType_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-                  if ( !CondType__IsQuestClear_38735352(v29, -1, 0, 0LL) )
+                  if ( !CondType__IsQuestClear_38787928(v29, -1, 0, 0LL) )
                     return;
                   goto LABEL_31;
                 }
 LABEL_49:
-                sub_1C13F88(Master_object, v17);
+                sub_1C1AE38(Master_object, v17);
               }
             }
 LABEL_31:
@@ -1475,10 +1475,10 @@ LABEL_31:
               }
               RAID_TIME_OVER_NOTICE_KEY = v30->static_fields->RAID_TIME_OVER_NOTICE_KEY;
               v32 = System_Int32__ToString((int)v15 + 16, 0LL);
-              v33 = System_String__Concat_62967944(RAID_TIME_OVER_NOTICE_KEY, v32, 0LL);
-              if ( UnityEngine_PlayerPrefs__GetInt_70679696(v33, 0LL) <= 0 )
+              v33 = System_String__Concat_63040368(RAID_TIME_OVER_NOTICE_KEY, v32, 0LL);
+              if ( UnityEngine_PlayerPrefs__GetInt_70752120(v33, 0LL) <= 0 )
               {
-                v34 = sub_1C13F70(System_Action_TypeInfo);
+                v34 = sub_1C1AE20(System_Action_TypeInfo);
                 System_Action___ctor(
                   (System_Action_o *)v34,
                   (Il2CppObject *)v15,
@@ -1490,18 +1490,18 @@ LABEL_31:
                 if ( !ScrTerminalMap__IsDialogOnActive((const MethodInfo *)v35) )
                 {
                   v36 = System_Int32__ToString((int)v15 + 16, 0LL);
-                  v37 = System_String__Concat_62967944((System_String_o *)StringLiteral_5797/*"EVENT_RAID_REST_COUNT_AFTER"*/, v36, 0LL);
+                  v37 = System_String__Concat_63040368((System_String_o *)StringLiteral_5801/*"EVENT_RAID_TIME_OVER_NOTICE_"*/, v36, 0LL);
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   Master_object = (EventRaidMaster_o *)LocalizationManager__ContainsKey(v37, 0LL);
                   if ( ((unsigned __int8)Master_object & 1) != 0 )
                   {
                     v38 = System_Int32__ToString((int32_t)p_eventId, 0LL);
-                    v39 = System_String__Concat_62967944((System_String_o *)StringLiteral_5797/*"EVENT_RAID_REST_COUNT_AFTER"*/, v38, 0LL);
+                    v39 = System_String__Concat_63040368((System_String_o *)StringLiteral_5801/*"EVENT_RAID_TIME_OVER_NOTICE_"*/, v38, 0LL);
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     v40 = LocalizationManager__Get(v39, 0LL);
-                    Master_object = (EventRaidMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                    Master_object = (EventRaidMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
                     if ( Master_object )
                     {
                       CommonUI__OpenNotificationDialog(
@@ -1529,7 +1529,7 @@ LABEL_31:
                     return;
                   }
 LABEL_48:
-                  sub_1C13F80(Master_object, v17);
+                  sub_1C1AE30(Master_object, v17);
                 }
               }
             }
@@ -1561,11 +1561,11 @@ void __fastcall ScrTerminalMap__CheckUpdateRequest(
   TerminalPramsManager_c *v17; // x0
   struct TerminalPramsManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4BB18EB & 1) == 0 )
+  if ( (byte_4BC4CA7 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, isFromTerminal);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB18EB = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, isFromTerminal);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4CA7 = 1;
   }
   v8 = ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -1603,7 +1603,7 @@ LABEL_14:
   {
     ScrTerminalMap__BeginRaidUpdateRequest(this, callback, v10);
     v14 = ScrTerminalMap__WaitConnecting(v12, v13);
-    UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v14, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_70779684((UnityEngine_MonoBehaviour_o *)this, v14, 0LL);
     return;
   }
   if ( RaidAutoUpdateRequest__IsExpirationDateUpdateEventMap(0LL) )
@@ -1650,12 +1650,12 @@ void __fastcall ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this
   UnityEngine_Object_o *v14; // x19
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4BB1952 & 1) == 0 )
+  if ( (byte_4BC4D0E & 1) == 0 )
   {
-    sub_1C13D24(&CTouch_TypeInfo, method);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BB1952 = 1;
+    sub_1C1ABD4(&CTouch_TypeInfo, method);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BC4D0E = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -1667,7 +1667,7 @@ void __fastcall ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this
   if ( !*(_QWORD *)&mCamera )
     goto LABEL_19;
   v9 = 0;
-  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__ScreenToWorldPoint_70527984(
+  *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__ScreenToWorldPoint_70600408(
                                      (UnityEngine_Camera_o *)*(_QWORD *)&mCamera,
                                      *(UnityEngine_Vector3_o *)&TouchPos.fields.x,
                                      0LL);
@@ -1690,7 +1690,7 @@ void __fastcall ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v14,
-                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                           (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       mCamera = (UnityEngine_Vector2_o)UnityEngine_Object__op_Equality(
@@ -1706,7 +1706,7 @@ void __fastcall ScrTerminalMap__ClickSpotOnMapModelScreen(ScrTerminalMap_o *this
       }
     }
 LABEL_19:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C13F80)(mCamera, v6);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C1AE30)(mCamera, v6);
   }
 }
 
@@ -1735,7 +1735,7 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__ConvertLocalToScreenPosition(
   x = localPostion.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1C13F80(0LL, v8);
+    sub_1C1AE30(0LL, v8);
   v13.fields.x = x;
   v13.fields.y = y;
   v13.fields.z = z;
@@ -1775,11 +1775,11 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__ConvertWorldToScreenPosition(
   y = worldPostion.fields.y;
   x = worldPostion.fields.x;
   v6 = this;
-  if ( (byte_4BB192F & 1) == 0 )
+  if ( (byte_4BC4CEB & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UITexture___, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BB192F = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UITexture___, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4BC4CEB = 1;
   }
   mapModelManager = v6->fields.mapModelManager;
   if ( !mapModelManager )
@@ -1801,7 +1801,7 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__ConvertWorldToScreenPosition(
         v16.fields.x = x;
         v16.fields.y = y;
         v16.fields.z = z;
-        v17 = UnityEngine_Camera__WorldToScreenPoint_70527960((UnityEngine_Camera_o *)this, v16, 0LL);
+        v17 = UnityEngine_Camera__WorldToScreenPoint_70600384((UnityEngine_Camera_o *)this, v16, 0LL);
         this = (ScrTerminalMap_o *)v6->fields.mapModelScreen;
         v15 = v17.fields.x;
         v14 = v17.fields.y;
@@ -1809,7 +1809,7 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__ConvertWorldToScreenPosition(
         {
           this = (ScrTerminalMap_o *)UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)this,
-                                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
           if ( this )
           {
             v11 = vadd_f32(
@@ -1822,12 +1822,12 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__ConvertWorldToScreenPosition(
       }
     }
 LABEL_16:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
-  if ( !byte_4BAEDA1 )
+  if ( !byte_4BC2141 )
   {
-    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BAEDA1 = 1;
+    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4BC2141 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v11 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -1872,47 +1872,47 @@ void __fastcall ScrTerminalMap__CreateMapEff(ScrTerminalMap_o *this, const Metho
   System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4BB18F5 & 1) == 0 )
+  if ( (byte_4BC4CB1 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapEffectComponent__Add__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BB18F5 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapEffectComponent__Add__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    byte_4BC4CB1 = 1;
   }
   memset(&v30, 0, sizeof(v30));
   mapEffectPrefabList = this->fields.mapEffectPrefabList;
   if ( !mapEffectPrefabList )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     (System_Collections_Generic_List_object__o *)mapEffectPrefabList,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v30 = v29;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v30,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v30.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v12 = UnityEngine_Object__Instantiate_object_(
             current,
-            (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v12 )
-      sub_1C13F80(0LL, v13);
+      sub_1C1AE30(0LL, v13);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v12,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_MapEffectComponent___);
     v15 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
     if ( !v15 )
     {
       if ( !Component_object )
-        sub_1C13F80(v15, v16);
+        sub_1C1AE30(v15, v16);
       MapEffectComponent__Setup(
         (MapEffectComponent_o *)Component_object,
         this->fields.rootEffectP,
@@ -1920,32 +1920,32 @@ void __fastcall ScrTerminalMap__CreateMapEff(ScrTerminalMap_o *this, const Metho
         0LL);
       mapEffectList = (System_Collections_Generic_List_object__o *)this->fields.mapEffectList;
       if ( !mapEffectList )
-        sub_1C13F80(0LL, v17);
+        sub_1C1AE30(0LL, v17);
       items = mapEffectList->fields._items;
       v26 = Method_System_Collections_Generic_List_MapEffectComponent__Add__;
       ++mapEffectList->fields._version;
       if ( !items )
-        sub_1C13F80(mapEffectList, v17);
+        sub_1C1AE30(mapEffectList, v17);
       size = mapEffectList->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           mapEffectList,
           Component_object,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         mapEffectList->fields._size = size + 1;
         v28[4] = (Il2CppClass *)Component_object;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v28 + 4), (int64_t)Component_object, v18, v19, v20, v21, v22, v23);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v28 + 4), (int64_t)Component_object, v18, v19, v20, v21, v22, v23);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v30,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
 }
 
 
@@ -2013,21 +2013,21 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
   UnityEngine_Quaternion_o v62; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
   v6 = this;
-  if ( (byte_4BB1926 & 1) == 0 )
+  if ( (byte_4BC4CE2 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_MapGimmickPathMaster___, mapGimmickInfo);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&Method_UnityEngine_GameObject_AddComponent_MapGimmickComponent___, v8);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___, v9);
-    sub_1C13D24(&UnityEngine_GameObject_TypeInfo, v10);
-    sub_1C13D24(&int_TypeInfo, v11);
-    sub_1C13D24(&EventMapGimmickMoveManager_MapGimmickMoveData_TypeInfo, v12);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject____77555760, v13);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v14);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
-    sub_1C13D24(&Method_ScrTerminalMap__CreateMapGimmick_b__311_0__, v16);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&StringLiteral_9048/*"MapGimmickEffect_GappolyStopPiecePanel"*/, v17);
-    byte_4BB1926 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_MapGimmickPathMaster___, mapGimmickInfo);
+    sub_1C1ABD4(&DataManager_TypeInfo, v7);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_AddComponent_MapGimmickComponent___, v8);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___, v9);
+    sub_1C1ABD4(&UnityEngine_GameObject_TypeInfo, v10);
+    sub_1C1ABD4(&int_TypeInfo, v11);
+    sub_1C1ABD4(&EventMapGimmickMoveManager_MapGimmickMoveData_TypeInfo, v12);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject____77632840, v13);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v14);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
+    sub_1C1ABD4(&Method_ScrTerminalMap__CreateMapGimmick_b__311_0__, v16);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&StringLiteral_9054/*"MapGimmick_{0:0000}"*/, v17);
+    byte_4BC4CE2 = 1;
   }
   if ( !mapGimmickInfo )
     goto LABEL_47;
@@ -2046,14 +2046,14 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
     {
       currentWarId = v6->fields.currentWarId;
       v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentWarId, v21, v22, v23);
-      v26 = System_String__Format((System_String_o *)StringLiteral_9048/*"MapGimmickEffect_GappolyStopPiecePanel"*/, v25, 0LL);
-      v24 = (Il2CppObject *)sub_1C13F70(UnityEngine_GameObject_TypeInfo);
+      v26 = System_String__Format((System_String_o *)StringLiteral_9054/*"MapGimmick_{0:0000}"*/, v25, 0LL);
+      v24 = (Il2CppObject *)sub_1C1AE20(UnityEngine_GameObject_TypeInfo);
       UnityEngine_GameObject___ctor((UnityEngine_GameObject_o *)v24, v26, 0LL);
       if ( !v24 )
         goto LABEL_47;
       this = (ScrTerminalMap_o *)UnityEngine_GameObject__AddComponent_object_(
                                    (UnityEngine_GameObject_o *)v24,
-                                   (const MethodInfo_2FDF914 *)Method_UnityEngine_GameObject_AddComponent_MapGimmickComponent___);
+                                   (const MethodInfo_2FEFAD8 *)Method_UnityEngine_GameObject_AddComponent_MapGimmickComponent___);
       if ( !this )
         goto LABEL_47;
       MapGimmickComponent__InitDefaultParam((MapGimmickComponent_o *)this, 0LL);
@@ -2062,19 +2062,19 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
   else
   {
     v27 = (Il2CppObject *)v6->fields.mapGimmickPrefab;
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, mapGimmickInfo);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, mapGimmickInfo);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
     y = static_fields->zeroVector.fields.y;
     z = static_fields->zeroVector.fields.z;
-    if ( !byte_4BAEDA7 )
+    if ( !byte_4BC2147 )
     {
-      sub_1C13D24(&UnityEngine_Quaternion_TypeInfo, mapGimmickInfo);
-      byte_4BAEDA7 = 1;
+      sub_1C1ABD4(&UnityEngine_Quaternion_TypeInfo, mapGimmickInfo);
+      byte_4BC2147 = 1;
     }
     v32 = UnityEngine_Quaternion_TypeInfo->static_fields;
     v34 = v32->identityQuaternion.fields.x;
@@ -2090,11 +2090,11 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
     v62.fields.y = v33;
     v62.fields.z = v36;
     v62.fields.w = w;
-    v24 = UnityEngine_Object__Instantiate_object__50417632(
+    v24 = UnityEngine_Object__Instantiate_object__50483620(
             v27,
             v59,
             v62,
-            (const MethodInfo_3014FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77555760);
+            (const MethodInfo_30251A4 *)Method_UnityEngine_Object_Instantiate_GameObject____77632840);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2117,7 +2117,7 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
       v40 = 168LL;
       if ( v39 )
         v40 = 184LL;
-      GameObjectExtensions__SafeSetParent_34717732(
+      GameObjectExtensions__SafeSetParent_34762256(
         (UnityEngine_GameObject_o *)v24,
         *(UnityEngine_GameObject_o **)((char *)&v6->klass + v40),
         0LL);
@@ -2132,7 +2132,7 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
       v43 = 168LL;
       if ( v42 )
         v43 = 176LL;
-      GameObjectExtensions__SafeSetParent_34717732(
+      GameObjectExtensions__SafeSetParent_34762256(
         (UnityEngine_GameObject_o *)v24,
         *(UnityEngine_GameObject_o **)((char *)&v6->klass + v43),
         0LL);
@@ -2146,7 +2146,7 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
+        this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
         if ( !this )
           goto LABEL_47;
         MapGimmickPathEntity = MapGimmickPathMaster__GetMapGimmickPathEntity(
@@ -2163,7 +2163,7 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
           {
             id = v20->fields.id;
             moveTime = v46->fields.moveTime;
-            v50 = (EventMapGimmickMoveManager_MapGimmickMoveData_o *)sub_1C13F70(EventMapGimmickMoveManager_MapGimmickMoveData_TypeInfo);
+            v50 = (EventMapGimmickMoveManager_MapGimmickMoveData_o *)sub_1C1AE20(EventMapGimmickMoveManager_MapGimmickMoveData_TypeInfo);
             EventMapGimmickMoveManager_MapGimmickMoveData___ctor(
               v50,
               id,
@@ -2185,13 +2185,13 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
     }
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v24,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
     mapCamera = v6->fields.mapCamera;
     assetsAtlases = v6->fields.assetsAtlases;
     mapAssetData = v6->fields.mapAssetData;
     mapMultiAssetData = v6->fields.mapMultiAssetData;
     v37 = (MapGimmickComponent_o *)Component_object;
-    v56 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v56 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v56,
       (Il2CppObject *)v6,
@@ -2211,7 +2211,7 @@ MapGimmickComponent_o *__fastcall ScrTerminalMap__CreateMapGimmick(
       return v37;
     }
 LABEL_47:
-    sub_1C13F80(this, mapGimmickInfo);
+    sub_1C1AE30(this, mapGimmickInfo);
   }
   return v37;
 }
@@ -2240,22 +2240,22 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__CreatePathLengthObject(
   Il2CppObject *v20; // x0
   int64_t v21; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB1924 & 1) == 0 )
+  if ( (byte_4BC4CE0 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UILabel___, length);
-    sub_1C13D24(&long_TypeInfo, v5);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v6);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_5784/*"EVENT_PROGRESS_VALUE"*/, v9);
-    byte_4BB1924 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UILabel___, length);
+    sub_1C1ABD4(&long_TypeInfo, v5);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_5788/*"EVENT_RACE_PATH_LENGTH"*/, v9);
+    byte_4BC4CE0 = 1;
   }
   pfbPathLength = (Il2CppObject *)this->fields.pfbPathLength;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__Instantiate_object_(
           pfbPathLength,
-          (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   v13 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0LL, 0LL);
   result = 0LL;
   if ( !v13 )
@@ -2264,16 +2264,16 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__CreatePathLengthObject(
       goto LABEL_12;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v11,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5784/*"EVENT_PROGRESS_VALUE"*/, 0LL);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5788/*"EVENT_RACE_PATH_LENGTH"*/, 0LL);
     v21 = length;
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v21, v17, v18, v19);
     result = (UnityEngine_GameObject_o *)System_String__Format(v16, v20, 0LL);
     if ( !Component_object )
 LABEL_12:
-      sub_1C13F80(result, v12);
+      sub_1C1AE30(result, v12);
     UILabel__set_text((UILabel_o *)Component_object, (System_String_o *)result, 0LL);
     return (UnityEngine_GameObject_o *)v11;
   }
@@ -2297,22 +2297,22 @@ System_String_o *__fastcall ScrTerminalMap__CreateSaveKey_PlayerIcon(
 
   v10 = mapId;
   v11 = warId;
-  if ( (byte_4BB18E1 & 1) == 0 )
+  if ( (byte_4BC4C9D & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_16374/*"^c"*/, *(_QWORD *)&mapId);
-    sub_1C13D24(&StringLiteral_13846/*"TerminalBeforeEventActivityPoint"*/, v4);
-    byte_4BB18E1 = 1;
+    sub_1C1ABD4(&StringLiteral_16388/*"_"*/, *(_QWORD *)&mapId);
+    sub_1C1ABD4(&StringLiteral_13858/*"TerminalPlayerIcon"*/, v4);
+    byte_4BC4C9D = 1;
   }
   v5 = System_Int32__ToString((int32_t)&v11, 0LL);
   v6 = mapId < 1;
   v7 = v5;
   if ( v6 )
-    return System_String__Concat_62967944((System_String_o *)StringLiteral_13846/*"TerminalBeforeEventActivityPoint"*/, v5, 0LL);
+    return System_String__Concat_63040368((System_String_o *)StringLiteral_13858/*"TerminalPlayerIcon"*/, v5, 0LL);
   v8 = System_Int32__ToString((int32_t)&v10, 0LL);
-  return System_String__Concat_62981208(
-           (System_String_o *)StringLiteral_13846/*"TerminalBeforeEventActivityPoint"*/,
+  return System_String__Concat_63053632(
+           (System_String_o *)StringLiteral_13858/*"TerminalPlayerIcon"*/,
            v7,
-           (System_String_o *)StringLiteral_16374/*"^c"*/,
+           (System_String_o *)StringLiteral_16388/*"_"*/,
            v8,
            0LL);
 }
@@ -2324,13 +2324,13 @@ System_String_o *__fastcall ScrTerminalMap__CreateSaveKey_PlayerMap(int32_t warI
   int32_t v4; // [xsp+Ch] [xbp-14h] BYREF
 
   v4 = warId;
-  if ( (byte_4BB18E3 & 1) == 0 )
+  if ( (byte_4BC4C9F & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_13847/*"TerminalBeforeEventActivityPointGauge"*/, method);
-    byte_4BB18E3 = 1;
+    sub_1C1ABD4(&StringLiteral_13859/*"TerminalPlayerMap"*/, method);
+    byte_4BC4C9F = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0LL);
-  return System_String__Concat_62967944((System_String_o *)StringLiteral_13847/*"TerminalBeforeEventActivityPointGauge"*/, v2, 0LL);
+  return System_String__Concat_63040368((System_String_o *)StringLiteral_13859/*"TerminalPlayerMap"*/, v2, 0LL);
 }
 
 
@@ -2344,14 +2344,14 @@ void __fastcall ScrTerminalMap__DestroyChildObjects(
   UnityEngine_Object_o *Child; // x21
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4BB1912 & 1) == 0 )
+  if ( (byte_4BC4CCE & 1) == 0 )
   {
-    this = (ScrTerminalMap_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, pearentObj);
-    byte_4BB1912 = 1;
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, pearentObj);
+    byte_4BC4CCE = 1;
   }
   if ( !pearentObj || (this = (ScrTerminalMap_o *)UnityEngine_GameObject__get_transform(pearentObj, 0LL)) == 0LL )
 LABEL_16:
-    sub_1C13F80(this, pearentObj);
+    sub_1C1AE30(this, pearentObj);
   v4 = this;
   if ( UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)this, 0LL) >= 1 )
   {
@@ -2371,7 +2371,7 @@ LABEL_16:
                                                0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+        UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
       }
       ++v5;
     }
@@ -2396,10 +2396,10 @@ void __fastcall ScrTerminalMap__DestroyCooltimeObject(ScrTerminalMap_o *this, co
   UnityEngine_Object_o *coolTimeButtonObj; // x20
   UnityEngine_Object_o *v15; // x19
 
-  if ( (byte_4BB1987 & 1) == 0 )
+  if ( (byte_4BC4D43 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1987 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4D43 = 1;
   }
   eventQuestCooltimeComponent = (UnityEngine_Object_o *)this->fields.eventQuestCooltimeComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2411,15 +2411,15 @@ void __fastcall ScrTerminalMap__DestroyCooltimeObject(ScrTerminalMap_o *this, co
     if ( !*p_eventQuestCooltimeComponent
       || (EventQuestCooltimeComponent__DestroyObjects(v12, 0LL), (v12 = *p_eventQuestCooltimeComponent) == 0LL) )
     {
-      sub_1C13F80(v12, v5);
+      sub_1C1AE30(v12, v5);
     }
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v12, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   }
   this->fields.eventQuestCooltimeComponent = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventQuestCooltimeComponent, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventQuestCooltimeComponent, 0LL, v6, v7, v8, v9, v10, v11);
   coolTimeButtonObj = (UnityEngine_Object_o *)this->fields.coolTimeButtonObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2428,7 +2428,7 @@ void __fastcall ScrTerminalMap__DestroyCooltimeObject(ScrTerminalMap_o *this, co
     v15 = (UnityEngine_Object_o *)this->fields.coolTimeButtonObj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v15, 0LL);
+    UnityEngine_Object__Destroy_70794412(v15, 0LL);
   }
 }
 
@@ -2438,10 +2438,10 @@ void __fastcall ScrTerminalMap__DestroyEventActionEffect(ScrTerminalMap_o *this,
   UnityEngine_Object_o *eventActionEffect; // x20
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4BB18F4 & 1) == 0 )
+  if ( (byte_4BC4CB0 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB18F4 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4CB0 = 1;
   }
   eventActionEffect = (UnityEngine_Object_o *)this->fields.eventActionEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2451,7 +2451,7 @@ void __fastcall ScrTerminalMap__DestroyEventActionEffect(ScrTerminalMap_o *this,
     v4 = (UnityEngine_Object_o *)this->fields.eventActionEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v4, 0LL);
+    UnityEngine_Object__Destroy_70794412(v4, 0LL);
   }
 }
 
@@ -2485,7 +2485,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
   BattleSetupInfo_o *v27; // x5
   FollowerInfo_o *v28; // x6
   PartyListViewItem_o *v29; // x7
-  System_String_o *VoiceAssetName_41015788; // x20
+  System_String_o *VoiceAssetName_41071744; // x20
   struct System_Int32_array *EventBoardGameArrivalVoiceSvtIdList_k__BackingField; // x8
   unsigned __int64 v32; // x23
   __int64 v33; // x24
@@ -2498,12 +2498,12 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
   FollowerInfo_o *v40; // x6
   PartyListViewItem_o *v41; // x7
 
-  if ( (byte_4BB195F & 1) == 0 )
+  if ( (byte_4BC4D1B & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestReleaseEntity__Clear__, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C13D24(&SoundManager_TypeInfo, v4);
-    byte_4BB195F = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestReleaseEntity__Clear__, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C1ABD4(&SoundManager_TypeInfo, v4);
+    byte_4BC4D1B = 1;
   }
   EventBoardQuestReleaseList_k__BackingField = this->fields._EventBoardQuestReleaseList_k__BackingField;
   if ( EventBoardQuestReleaseList_k__BackingField )
@@ -2523,7 +2523,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     v9 = (UnityEngine_Object_o *)this->fields._EventBoardGameObj_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v9, 0LL);
+    UnityEngine_Object__Destroy_70794412(v9, 0LL);
   }
   EventBoardPieceObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardPieceObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2533,7 +2533,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     v11 = (UnityEngine_Object_o *)this->fields._EventBoardPieceObj_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v11, 0LL);
+    UnityEngine_Object__Destroy_70794412(v11, 0LL);
   }
   EventBoardQuestArrivalPanelObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardQuestArrivalPanelObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2543,7 +2543,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     v13 = (UnityEngine_Object_o *)this->fields._EventBoardQuestArrivalPanelObj_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v13, 0LL);
+    UnityEngine_Object__Destroy_70794412(v13, 0LL);
   }
   EventBoardStopPanelObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardStopPanelObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2553,7 +2553,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     v15 = (UnityEngine_Object_o *)this->fields._EventBoardStopPanelObj_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v15, 0LL);
+    UnityEngine_Object__Destroy_70794412(v15, 0LL);
   }
   EventBoardDiceButtonEffectObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardDiceButtonEffectObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2563,7 +2563,7 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     v17 = (UnityEngine_Object_o *)this->fields._EventBoardDiceButtonEffectObj_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v17, 0LL);
+    UnityEngine_Object__Destroy_70794412(v17, 0LL);
   }
   diceCounterComponent = (UnityEngine_Object_o *)this->fields.diceCounterComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2573,13 +2573,13 @@ void __fastcall ScrTerminalMap__DestroyEventBoardGameObj(ScrTerminalMap_o *this,
     EventBoardDiceVoiceServantId = this->fields.diceCounterComponent;
     if ( !EventBoardDiceVoiceServantId )
 LABEL_57:
-      sub_1C13F80(EventBoardDiceVoiceServantId, v19);
+      sub_1C1AE30(EventBoardDiceVoiceServantId, v19);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)EventBoardDiceVoiceServantId,
                                            0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   }
   ScrTerminalMap__SetActiveDiceButton(this, 0, v20);
   EventBoardDiceVoiceServantId = (struct EventBoardGameDiceCounter_o *)ScrTerminalMap__GetEventBoardDiceVoiceServantId(
@@ -2587,10 +2587,10 @@ LABEL_57:
                                                                          v23);
   if ( (_DWORD)EventBoardDiceVoiceServantId )
   {
-    VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788((int32_t)EventBoardDiceVoiceServantId, 0LL);
+    VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744((int32_t)EventBoardDiceVoiceServantId, 0LL);
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__releaseAudioAssetStorage(VoiceAssetName_41015788, 0LL);
+    SoundManager__releaseAudioAssetStorage(VoiceAssetName_41071744, 0LL);
   }
   EventBoardGameArrivalVoiceSvtIdList_k__BackingField = this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField;
   if ( EventBoardGameArrivalVoiceSvtIdList_k__BackingField
@@ -2601,11 +2601,11 @@ LABEL_57:
     while ( 1 )
     {
       if ( v32 >= EventBoardGameArrivalVoiceSvtIdList_k__BackingField->max_length )
-        sub_1C13F88(EventBoardDiceVoiceServantId, v19);
+        sub_1C1AE38(EventBoardDiceVoiceServantId, v19);
       EventBoardDiceVoiceServantId = (struct EventBoardGameDiceCounter_o *)(unsigned int)EventBoardGameArrivalVoiceSvtIdList_k__BackingField->m_Items[v32 + 1];
       if ( (int)EventBoardDiceVoiceServantId >= 1 )
       {
-        v34 = ServantVoiceEntity__getVoiceAssetName_41015788((int32_t)EventBoardDiceVoiceServantId, 0LL);
+        v34 = ServantVoiceEntity__getVoiceAssetName_41071744((int32_t)EventBoardDiceVoiceServantId, 0LL);
         if ( !SoundManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
         SoundManager__releaseAudioAssetStorage(v34, 0LL);
@@ -2620,7 +2620,7 @@ LABEL_57:
   if ( this->fields._EventBoardDiceVoiceInfo_k__BackingField )
   {
     this->fields._EventBoardDiceVoiceInfo_k__BackingField = 0LL;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields._EventBoardDiceVoiceInfo_k__BackingField,
       0LL,
       v24,
@@ -2636,7 +2636,7 @@ LABEL_57:
   if ( UnityEngine_Object__op_Inequality(eventBoardGameSpotPrefab, 0LL, 0LL) )
   {
     this->fields.eventBoardGameSpotPrefab = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventBoardGameSpotPrefab, 0LL, v36, v37, v38, v39, v40, v41);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventBoardGameSpotPrefab, 0LL, v36, v37, v38, v39, v40, v41);
   }
 }
 
@@ -2659,15 +2659,15 @@ void __fastcall ScrTerminalMap__DestroyMapEff(ScrTerminalMap_o *this, const Meth
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4BB18F6 & 1) == 0 )
+  if ( (byte_4BC4CB2 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__get_Current__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapEffectComponent__Clear__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapEffectComponent__GetEnumerator__, v6);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BB18F6 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__get_Current__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapEffectComponent__Clear__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapEffectComponent__GetEnumerator__, v6);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4BC4CB2 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   mapEffectList = (System_Collections_Generic_List_object__o *)this->fields.mapEffectList;
@@ -2676,14 +2676,14 @@ void __fastcall ScrTerminalMap__DestroyMapEff(ScrTerminalMap_o *this, const Meth
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v16,
       mapEffectList,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapEffectComponent__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapEffectComponent__GetEnumerator__);
     v17 = v16;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v17,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__MoveNext__) )
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__MoveNext__) )
     {
       if ( !v17.fields._current )
-        sub_1C13F80(0LL, v9);
+        sub_1C1AE30(0LL, v9);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                              (UnityEngine_Component_o *)v17.fields._current,
                                              0LL);
@@ -2693,15 +2693,15 @@ void __fastcall ScrTerminalMap__DestroyMapEff(ScrTerminalMap_o *this, const Meth
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+        UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v17,
-      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__Dispose__);
+      (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapEffectComponent__Dispose__);
     v13 = this->fields.mapEffectList;
     if ( !v13 )
-      sub_1C13F80(v11, v12);
+      sub_1C1AE30(v11, v12);
     size = v13->fields._size;
     v15 = v13->fields._version + 1;
     v13->fields._size = 0;
@@ -2758,11 +2758,11 @@ void __fastcall ScrTerminalMap__DestroyMapObjs(ScrTerminalMap_o *this, const Met
   const MethodInfo *v44; // x1
   const MethodInfo *v45; // x1
 
-  if ( (byte_4BB1911 & 1) == 0 )
+  if ( (byte_4BC4CCD & 1) == 0 )
   {
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1911 = 1;
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC4CCD = 1;
   }
   mapButtonGrid = (UnityEngine_Object_o *)this->fields.mapButtonGrid;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2789,10 +2789,10 @@ void __fastcall ScrTerminalMap__DestroyMapObjs(ScrTerminalMap_o *this, const Met
     mScrl = v8->fields.mScrl;
     if ( mScrl )
     {
-      if ( !byte_4BAEC9A )
+      if ( !byte_4BC203A )
       {
-        sub_1C13D24(&UnityEngine_Vector2_TypeInfo, v5);
-        byte_4BAEC9A = 1;
+        sub_1C1ABD4(&UnityEngine_Vector2_TypeInfo, v5);
+        byte_4BC203A = 1;
       }
       MapScroll__SetScrlPos(mScrl, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0LL);
     }
@@ -2857,7 +2857,7 @@ void __fastcall ScrTerminalMap__DestroyMapObjs(ScrTerminalMap_o *this, const Met
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
 LABEL_61:
-    sub_1C13F80(v6, v5);
+    sub_1C1AE30(v6, v5);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v41 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -2875,7 +2875,7 @@ LABEL_61:
   else
   {
 LABEL_58:
-    p_method = sub_1C65D04(
+    p_method = sub_1C6CBB4(
                  this->fields._eventMapManagerInterface_k__BackingField,
                  EventMapManagerInterface_TypeInfo,
                  10LL);
@@ -2905,10 +2905,10 @@ void __fastcall ScrTerminalMap__DestroySpotCooltimeObjects(ScrTerminalMap_o *thi
   UnityEngine_Object_o *rewardReceiveButtonObj; // x20
   UnityEngine_Object_o *v16; // x19
 
-  if ( (byte_4BB1988 & 1) == 0 )
+  if ( (byte_4BC4D44 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1988 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4D44 = 1;
   }
   eventSpotCooltimeComponent = (UnityEngine_Object_o *)this->fields.eventSpotCooltimeComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2919,15 +2919,15 @@ void __fastcall ScrTerminalMap__DestroySpotCooltimeObjects(ScrTerminalMap_o *thi
     if ( !v11
       || (EventSpotCooltimeComponent__DestroyObjects(v11, 0LL), (v11 = this->fields.eventSpotCooltimeComponent) == 0LL) )
     {
-      sub_1C13F80(v11, v4);
+      sub_1C1AE30(v11, v4);
     }
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v11, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   }
   this->fields.eventQuestCooltimeComponent = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventQuestCooltimeComponent, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventQuestCooltimeComponent, 0LL, v5, v6, v7, v8, v9, v10);
   coolTimeButtonObj = (UnityEngine_Object_o *)this->fields.coolTimeButtonObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2936,7 +2936,7 @@ void __fastcall ScrTerminalMap__DestroySpotCooltimeObjects(ScrTerminalMap_o *thi
     v14 = (UnityEngine_Object_o *)this->fields.coolTimeButtonObj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v14, 0LL);
+    UnityEngine_Object__Destroy_70794412(v14, 0LL);
   }
   rewardReceiveButtonObj = (UnityEngine_Object_o *)this->fields.rewardReceiveButtonObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2946,7 +2946,7 @@ void __fastcall ScrTerminalMap__DestroySpotCooltimeObjects(ScrTerminalMap_o *thi
     v16 = (UnityEngine_Object_o *)this->fields.rewardReceiveButtonObj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v16, 0LL);
+    UnityEngine_Object__Destroy_70794412(v16, 0LL);
   }
 }
 
@@ -2969,15 +2969,15 @@ void __fastcall ScrTerminalMap__DetachEventMapManager(ScrTerminalMap_o *this, co
   PartyListViewItem_o *v15; // x7
 
   v2 = this;
-  if ( (byte_4BB18FF & 1) == 0 )
+  if ( (byte_4BC4CBB & 1) == 0 )
   {
-    sub_1C13D24(&EventMapManagerIdle_TypeInfo, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&EventMapManagerInterface_TypeInfo, v3);
-    byte_4BB18FF = 1;
+    sub_1C1ABD4(&EventMapManagerIdle_TypeInfo, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v3);
+    byte_4BC4CBB = 1;
   }
   eventMapManagerInterface_k__BackingField = v2->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v6 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -2995,16 +2995,16 @@ void __fastcall ScrTerminalMap__DetachEventMapManager(ScrTerminalMap_o *this, co
   else
   {
 LABEL_8:
-    v8 = sub_1C65D04(v2->fields._eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 11LL);
+    v8 = sub_1C6CBB4(v2->fields._eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 11LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, _QWORD))v8)(
     eventMapManagerInterface_k__BackingField,
     *(_QWORD *)(v8 + 8));
   EventMapManagerFactory__DetachFromTerminalMap(v2, 0LL);
-  v9 = (EventMapManagerIdle_o *)sub_1C13F70(EventMapManagerIdle_TypeInfo);
+  v9 = (EventMapManagerIdle_o *)sub_1C1AE20(EventMapManagerIdle_TypeInfo);
   EventMapManagerIdle___ctor(v9, 0LL);
   v2->fields._eventMapManagerInterface_k__BackingField = (struct EventMapManagerInterface_o *)v9;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v2->fields._eventMapManagerInterface_k__BackingField,
     (int64_t)v9,
     v10,
@@ -3025,7 +3025,7 @@ void __fastcall ScrTerminalMap__EndBoardGameDiceEffect(ScrTerminalMap_o *this, c
   UnityEngine_RenderSettings__set_ambientLight(this->fields.eventBoardGameColorBuffer, 0LL);
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   TerminalSceneComponent__SetDirectionalLightActive(terminalScene, 1, 0LL);
   ScrTerminalMap__PlayBoardGamePieceEffect(this, v5);
 }
@@ -3054,7 +3054,7 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
   BattleSetupInfo_o *v21; // x5
   FollowerInfo_o *v22; // x6
   PartyListViewItem_o *v23; // x7
-  Il2CppObject *Object_object__49747248; // x20
+  Il2CppObject *Object_object__49812820; // x20
   Il2CppObject *v25; // x20
   Il2CppObject *v26; // x20
   System_Action_o *v27; // x21
@@ -3071,23 +3071,23 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
   UserEventEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB1973 & 1) == 0 )
+  if ( (byte_4BC4D2F & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v3);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v4);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Animation___, v5);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v6);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v7);
-    sub_1C13D24(&NetworkManager_TypeInfo, v8);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap__EndBoardGamePieceEffect_b__398_0__, v11);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    sub_1C13D24(&StringLiteral_10830/*"Play Integrity is only supported on Android platforms."*/, v14);
-    sub_1C13D24(&StringLiteral_9045/*"MapGimmickEffect_GappolyQuestArrival"*/, v15);
-    byte_4BB1973 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v4);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v5);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v6);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v7);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap__EndBoardGamePieceEffect_b__398_0__, v11);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    sub_1C1ABD4(&StringLiteral_10839/*"PlayBoardGameStopPiecePanel"*/, v14);
+    sub_1C1ABD4(&StringLiteral_9051/*"MapGimmickEffect_StopPiece"*/, v15);
+    byte_4BC4D2F = 1;
   }
   entity = 0LL;
   EventBoardPieceObj_k__BackingField = this->fields._EventBoardPieceObj_k__BackingField;
@@ -3095,14 +3095,14 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
     goto LABEL_45;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        EventBoardPieceObj_k__BackingField,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988((UnityEngine_Object_o *)Component_object, 0LL);
+    UnityEngine_Object__Destroy_70794412((UnityEngine_Object_o *)Component_object, 0LL);
   }
   if ( !System_String__IsNullOrEmpty(this->fields.animationNameBuffer, 0LL) )
   {
@@ -3111,35 +3111,35 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
       goto LABEL_45;
     EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                        EventBoardPieceObj_k__BackingField,
-                                                                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                                                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     if ( !EventBoardPieceObj_k__BackingField )
       goto LABEL_45;
-    UnityEngine_Animation__Stop_70465540(
+    UnityEngine_Animation__Stop_70537964(
       (UnityEngine_Animation_o *)EventBoardPieceObj_k__BackingField,
       this->fields.animationNameBuffer,
       0LL);
     this->fields.animationNameBuffer = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.animationNameBuffer, 0LL, v18, v19, v20, v21, v22, v23);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.animationNameBuffer, 0LL, v18, v19, v20, v21, v22, v23);
   }
   EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)this->fields.mapAssetData;
   if ( !EventBoardPieceObj_k__BackingField )
     goto LABEL_45;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               (AssetData_o *)EventBoardPieceObj_k__BackingField,
-                              (System_String_o *)StringLiteral_9045/*"MapGimmickEffect_GappolyQuestArrival"*/,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (System_String_o *)StringLiteral_9051/*"MapGimmickEffect_StopPiece"*/,
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v25 = UnityEngine_Object__Instantiate_object_(
-          Object_object__49747248,
-          (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          Object_object__49812820,
+          (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                                                      (UnityEngine_Object_o *)v25,
                                                                      0LL,
                                                                      0LL);
   if ( ((unsigned __int8)EventBoardPieceObj_k__BackingField & 1) != 0 )
   {
-    GameObjectExtensions__SafeSetParent_34717732(
+    GameObjectExtensions__SafeSetParent_34762256(
       (UnityEngine_GameObject_o *)v25,
       this->fields._EventBoardPieceObj_k__BackingField,
       0LL);
@@ -3150,23 +3150,23 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
     goto LABEL_45;
   v26 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)v25,
-          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+          (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v26, 0LL, 0LL) )
   {
-    v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_ScrTerminalMap__EndBoardGamePieceEffect_b__398_0__, 0LL);
     if ( !v26 )
       goto LABEL_45;
     v26[2].monitor = v27;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v26[2].monitor, (int64_t)v27, v28, v29, v30, v31, v32, v33);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v26[2].monitor, (int64_t)v27, v28, v29, v30, v31, v32, v33);
   }
   else
   {
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10830/*"Play Integrity is only supported on Android platforms."*/,
+      (System_String_o *)StringLiteral_10839/*"PlayBoardGameStopPiecePanel"*/,
       0.3,
       0LL);
   }
@@ -3174,18 +3174,18 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
   if ( !EventBoardPieceObj_k__BackingField )
     goto LABEL_45;
   EventId = MapControl_WarInfo__GetEventId((MapControl_WarInfo_o *)EventBoardPieceObj_k__BackingField, 0LL);
-  EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !EventBoardPieceObj_k__BackingField )
     goto LABEL_45;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)EventBoardPieceObj_k__BackingField,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC2585 = 1;
   }
   EventBoardPieceObj_k__BackingField = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3206,14 +3206,14 @@ void __fastcall ScrTerminalMap__EndBoardGamePieceEffect(ScrTerminalMap_o *this, 
     return;
   if ( !entity )
 LABEL_45:
-    sub_1C13F80(EventBoardPieceObj_k__BackingField, method);
+    sub_1C1AE30(EventBoardPieceObj_k__BackingField, method);
   value = entity->fields.value;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D8 )
+  if ( !byte_4BC4D94 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19D8 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D94 = 1;
   }
   v37 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3258,32 +3258,32 @@ void __fastcall ScrTerminalMap__EndRequestDiceUse(
   System_Action_o *v30; // x23
   System_Collections_IEnumerator_o *v31; // x1
 
-  if ( (byte_4BB196E & 1) == 0 )
+  if ( (byte_4BC4D2A & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, result);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v6);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v7);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass391_0__EndRequestDiceUse_b__0__, v8);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass391_0_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v10);
-    byte_4BB196E = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, result);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v6);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass391_0__EndRequestDiceUse_b__0__, v8);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass391_0_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v10);
+    byte_4BC4D2A = 1;
   }
-  v11 = sub_1C13F70(ScrTerminalMap___c__DisplayClass391_0_TypeInfo);
+  v11 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass391_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass391_0___ctor((ScrTerminalMap___c__DisplayClass391_0_o *)v11, 0LL);
   if ( !v11 )
     goto LABEL_11;
   *(_QWORD *)(v11 + 16) = result;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)result, v14, v15, v16, v17, v18, v19);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)result, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 24) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   CommonUI__CloseEventItemListDialog((CommonUI_o *)Instance, 0LL);
   Instance = (Il2CppObject *)System_String__op_Equality(
                                *(System_String_o **)(v11 + 16),
-                               (System_String_o *)StringLiteral_22421/*"newAttributes"*/,
+                               (System_String_o *)StringLiteral_22437/*"ng"*/,
                                0LL);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
@@ -3291,7 +3291,7 @@ void __fastcall ScrTerminalMap__EndRequestDiceUse(
     if ( mapCamera )
     {
       mapCamera->fields._IsTouchEnable_k__BackingField = 1;
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( Instance )
       {
         MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0LL);
@@ -3299,12 +3299,12 @@ void __fastcall ScrTerminalMap__EndRequestDiceUse(
       }
     }
 LABEL_11:
-    sub_1C13F80(Instance, v13);
+    sub_1C1AE30(Instance, v13);
   }
-  v27 = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  v27 = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   currentWarId = this->fields.currentWarId;
   v29 = (QuestTree_o *)v27;
-  v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v30,
     (Il2CppObject *)v11,
@@ -3313,7 +3313,7 @@ LABEL_11:
   if ( !v29 )
     goto LABEL_11;
   v31 = QuestTree__mfBaseTreeUpdateWithOpenCheck(v29, currentWarId, v30, 0LL);
-  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v31, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70779684((UnityEngine_MonoBehaviour_o *)this, v31, 0LL);
 }
 
 
@@ -3393,34 +3393,34 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
   EventDetailEntity_o *eventDetailEntity; // [xsp+0h] [xbp-40h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB193D & 1) == 0 )
+  if ( (byte_4BC4CF9 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventMaster___, v4);
-    sub_1C13D24(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v7);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v8);
-    sub_1C13D24(&EventInfoUIProgressControl_TypeInfo, v9);
-    sub_1C13D24(&Method_ScrTerminalMap_EventScriptPlay__, v10);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v11);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__0__, v13);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__1__, v14);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__2__, v15);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__3__, v16);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass340_0_TypeInfo, v17);
-    byte_4BB193D = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventMaster___, v4);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v7);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v8);
+    sub_1C1ABD4(&EventInfoUIProgressControl_TypeInfo, v9);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EventScriptPlay__, v10);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v11);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__0__, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__1__, v14);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__2__, v15);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__3__, v16);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass340_0_TypeInfo, v17);
+    byte_4BC4CF9 = 1;
   }
   eventDetailEntity = 0LL;
   entity = 0LL;
-  v18 = sub_1C13F70(ScrTerminalMap___c__DisplayClass340_0_TypeInfo);
+  v18 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass340_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass340_0___ctor((ScrTerminalMap___c__DisplayClass340_0_o *)v18, 0LL);
   if ( !v18 )
     goto LABEL_96;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
   mapButtonGrid = this->fields.mapButtonGrid;
   if ( !mapButtonGrid )
     goto LABEL_96;
@@ -3429,38 +3429,38 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
   if ( !mWarEnt )
     goto LABEL_96;
   *(_DWORD *)(v18 + 24) = mWarEnt->fields.eventId;
-  mapButtonGrid = (MapButtonControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  mapButtonGrid = (MapButtonControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !mapButtonGrid )
     goto LABEL_96;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)mapButtonGrid, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  mapButtonGrid = (MapButtonControl_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventMaster___);
+  mapButtonGrid = (MapButtonControl_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventMaster___);
   if ( !mapButtonGrid )
     goto LABEL_96;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)mapButtonGrid,
           &entity,
           *(_DWORD *)(v18 + 24),
-          (const MethodInfo_3238670 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     goto LABEL_92;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  mapButtonGrid = (MapButtonControl_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  mapButtonGrid = (MapButtonControl_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !mapButtonGrid )
     goto LABEL_96;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)mapButtonGrid,
           (Il2CppObject **)&eventDetailEntity,
           *(_DWORD *)(v18 + 24),
-          (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     goto LABEL_92;
   mapButtonGrid = (MapButtonControl_o *)eventDetailEntity;
   if ( !eventDetailEntity )
     goto LABEL_96;
   if ( EventDetailEntity__isGroupRanking(eventDetailEntity, 0LL) )
   {
-    v34 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v34,
       (Il2CppObject *)v18,
@@ -3479,7 +3479,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
   {
     if ( EventDetailEntity__IsQuestCooltime(eventDetailEntity, 0LL) )
     {
-      v41 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v41 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v41, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
       ScrTerminalMap__HarvestGrowthDialogOpen(this, v41, v42);
       return;
@@ -3489,7 +3489,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
       j_il2cpp_runtime_class_init_0(EventInfoUIProgressControl_TypeInfo);
     if ( EventInfoUIProgressControl__IsDispEventProgress(v45, 0LL) )
     {
-      v46 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v46 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v46, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
       ScrTerminalMap__PlayEventProgressEffect(this, v46, v47);
       return;
@@ -3501,7 +3501,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
     {
       titleInfoControl = this->fields.titleInfoControl;
       v49 = *(_DWORD *)(v18 + 24);
-      v50 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v50 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v50, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
       if ( !titleInfoControl )
         goto LABEL_96;
@@ -3515,10 +3515,10 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB1430 )
+      if ( !byte_4BC47EA )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
-        byte_4BB1430 = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v20);
+        byte_4BC47EA = 1;
       }
       mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3529,7 +3529,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
       v51 = this->fields.titleInfoControl;
       if ( SLODWORD(mapButtonGrid[1].fields.buttons->bounds) < 1 )
       {
-        v58 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v58 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v58,
           (Il2CppObject *)v18,
@@ -3546,7 +3546,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
       if ( !v51 )
         goto LABEL_96;
       TitleInfoControl__RedisplayEventUI(this->fields.titleInfoControl, 0LL);
-      v52 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v52 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v52, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
       ScrTerminalMap__EventAreaImproveResultDialogOpen(this, v52, v53);
       return;
@@ -3557,7 +3557,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
     if ( EventDetailEntity__IsPersonalBoss(eventDetailEntity, 0LL) )
     {
       v54 = this->fields.titleInfoControl;
-      v55 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v55 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(
         v55,
         (Il2CppObject *)v18,
@@ -3580,10 +3580,10 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
     {
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB1258 )
+      if ( !byte_4BC4612 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
-        byte_4BB1258 = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v20);
+        byte_4BC4612 = 1;
       }
       v56 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3606,7 +3606,7 @@ void __fastcall ScrTerminalMap__EventActionPlay(ScrTerminalMap_o *this, const Me
     {
 LABEL_67:
       v57 = this->fields.titleInfoControl;
-      v38 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v38 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v38, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
       if ( v57 )
       {
@@ -3614,14 +3614,14 @@ LABEL_67:
         goto LABEL_24;
       }
 LABEL_96:
-      sub_1C13F80(mapButtonGrid, v20);
+      sub_1C1AE30(mapButtonGrid, v20);
     }
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19CC )
+    if ( !byte_4BC4D88 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
-      byte_4BB19CC = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v20);
+      byte_4BC4D88 = 1;
     }
     v59 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3633,13 +3633,13 @@ LABEL_96:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19CC )
+      if ( !byte_4BC4D88 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
-        byte_4BB19CC = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v20);
+        byte_4BC4D88 = 1;
       }
       mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -3654,7 +3654,7 @@ LABEL_96:
              (int32_t)mapButtonGrid[1].fields.buttons->m_Items[20],
              0LL) )
       {
-        v61 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v61 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(v61, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
         ScrTerminalMap__SkillGetDialogOpen(this, v61, v62);
         return;
@@ -3675,11 +3675,11 @@ LABEL_92:
     }
     p_eventConquestInfos = (PartyOrganizationUtility_o *)&v64->static_fields->eventConquestInfos;
     p_eventConquestInfos->klass = 0LL;
-    sub_1C13CC8(p_eventConquestInfos, 0LL, (int64_t)v28, v29, v30, v31, v32, v33);
+    sub_1C1AB78(p_eventConquestInfos, 0LL, (int64_t)v28, v29, v30, v31, v32, v33);
     TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(0LL);
     p_eventHarvestGrowthInfo = (PartyOrganizationUtility_o *)&TerminalPramsManager_TypeInfo->static_fields->eventHarvestGrowthInfo;
     p_eventHarvestGrowthInfo->klass = 0LL;
-    sub_1C13CC8(p_eventHarvestGrowthInfo, 0LL, v67, v68, v69, v70, v71, v72);
+    sub_1C1AB78(p_eventHarvestGrowthInfo, 0LL, v67, v68, v69, v70, v71, v72);
     TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(0LL);
     TerminalPramsManager__MapModelClearQuestInfo_SaveData(0LL);
     ScrTerminalMap__EventScriptPlay(this, v73);
@@ -3688,7 +3688,7 @@ LABEL_92:
   if ( EventDetailEntity__IsMakeFarm(eventDetailEntity, 0LL) )
   {
     v37 = this->fields.titleInfoControl;
-    v38 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v38 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v38,
       (Il2CppObject *)v18,
@@ -3705,7 +3705,7 @@ LABEL_25:
     }
     goto LABEL_96;
   }
-  v43 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v43 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v43, (Il2CppObject *)this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
   ScrTerminalMap__ProductivityGrowthDialogOpen(this, v43, v44);
 }
@@ -3734,27 +3734,27 @@ void __fastcall ScrTerminalMap__EventAreaImproveResultDialogOpen(
   UnityEngine_GameObject_o *mActionPanel; // x21
   System_Action_o *v21; // x22
 
-  if ( (byte_4BB1940 & 1) == 0 )
+  if ( (byte_4BC4CFC & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass343_0__EventAreaImproveResultDialogOpen_b__0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass343_0_TypeInfo, v7);
-    byte_4BB1940 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass343_0__EventAreaImproveResultDialogOpen_b__0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass343_0_TypeInfo, v7);
+    byte_4BC4CFC = 1;
   }
-  v8 = sub_1C13F70(ScrTerminalMap___c__DisplayClass343_0_TypeInfo);
+  v8 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass343_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass343_0___ctor((ScrTerminalMap___c__DisplayClass343_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_14;
   *(_QWORD *)(v8 + 16) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v10);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v10);
+    byte_4BC2713 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -3766,7 +3766,7 @@ void __fastcall ScrTerminalMap__EventAreaImproveResultDialogOpen(
   if ( !mInstance
     || (mTerminalList = mInstance->fields.mTerminalList) == 0LL
     || (mActionPanel = mTerminalList->fields.mActionPanel,
-        v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v21 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(
           v21,
           (Il2CppObject *)v8,
@@ -3775,7 +3775,7 @@ void __fastcall ScrTerminalMap__EventAreaImproveResultDialogOpen(
         !titleInfoControl) )
   {
 LABEL_14:
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
   TitleInfoControl__EventAreaImproveResultDialogOpen(titleInfoControl, mActionPanel, v21, 0LL);
 }
@@ -3801,26 +3801,26 @@ void __fastcall ScrTerminalMap__EventBoardCameraAction(
   int v18; // s0
   float v21; // s4
 
-  if ( (byte_4BB1969 & 1) == 0 )
+  if ( (byte_4BC4D25 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantMaster___, callback);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantStrMaster___, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, v11);
-    byte_4BB1969 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantMaster___, callback);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantStrMaster___, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/, v11);
+    byte_4BC4D25 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantMaster___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantMaster___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantStrMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
   v15 = (ConstantStrMaster_o *)Instance;
   RateValue = 1.0;
   if ( !isZoomUp )
@@ -3829,18 +3829,18 @@ void __fastcall ScrTerminalMap__EventBoardCameraAction(
       goto LABEL_12;
     RateValue = ConstantMaster__GetRateValue(
                   (ConstantMaster_o *)MasterData_object,
-                  (System_String_o *)StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/,
+                  (System_String_o *)StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/,
                   1.8,
                   0LL);
   }
   if ( !v15 )
 LABEL_12:
-    sub_1C13F80(Instance, v13);
-  *(UnityEngine_Vector3_o *)&v18 = ConstantStrMaster__GetValueVector3(v15, (System_String_o *)StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, 0LL);
+    sub_1C1AE30(Instance, v13);
+  *(UnityEngine_Vector3_o *)&v18 = ConstantStrMaster__GetValueVector3(v15, (System_String_o *)StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/, 0LL);
   v21 = 0.0;
   if ( !isForce )
     v21 = 0.25;
-  ScrTerminalMap__EventBoardCameraAction_35590956(this, *(UnityEngine_Vector3_o *)&v18, RateValue, v21, callback, v17);
+  ScrTerminalMap__EventBoardCameraAction_35637928(this, *(UnityEngine_Vector3_o *)&v18, RateValue, v21, callback, v17);
 }
 
 
@@ -3869,31 +3869,31 @@ System_Collections_IEnumerator_o *__fastcall ScrTerminalMap__EventBoardCameraAct
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4BB1976 & 1) == 0 )
+  if ( (byte_4BC4D32 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_TypeInfo, *(_QWORD *)&squareId);
-    byte_4BB1976 = 1;
+    sub_1C1ABD4(&ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_TypeInfo, *(_QWORD *)&squareId);
+    byte_4BC4D32 = 1;
   }
-  v11 = sub_1C13F70(ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_TypeInfo);
+  v11 = sub_1C1AE20(ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_TypeInfo);
   ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401___ctor(
     (ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_o *)v11,
     0,
     0LL);
   if ( !v11 )
-    sub_1C13F80(v12, v13);
+    sub_1C1AE30(v12, v13);
   *(_QWORD *)(v11 + 40) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 40), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 40), (int64_t)this, v14, v15, v16, v17, v18, v19);
   *(_DWORD *)(v11 + 48) = squareId;
   *(_DWORD *)(v11 + 52) = clearCount;
   *(_DWORD *)(v11 + 56) = maxClearCount;
   *(_QWORD *)(v11 + 32) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)callback, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 32), (int64_t)callback, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v11;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScrTerminalMap__EventBoardCameraAction_35590956(
+void __fastcall ScrTerminalMap__EventBoardCameraAction_35637928(
         ScrTerminalMap_o *this,
         UnityEngine_Vector3_o cameraPosition,
         float zoomScale,
@@ -3912,7 +3912,7 @@ void __fastcall ScrTerminalMap__EventBoardCameraAction_35590956(
   struct MapCamera_o *v18; // x8
   struct MapCamera_o *v19; // x8
   MapCamera_o *v20; // x20
-  const MethodInfo_374D684 *v21; // x2
+  const MethodInfo_375CF8C *v21; // x2
   System_Nullable_float__o size; // [xsp+8h] [xbp-68h] BYREF
   System_Nullable_Vector3__o v23; // [xsp+10h] [xbp-60h] BYREF
   System_Nullable_float__o p_size; // 0:x0.8
@@ -3923,12 +3923,12 @@ void __fastcall ScrTerminalMap__EventBoardCameraAction_35590956(
   z = cameraPosition.fields.z;
   y = cameraPosition.fields.y;
   x = cameraPosition.fields.x;
-  if ( (byte_4BB196A & 1) == 0 )
+  if ( (byte_4BC4D26 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Nullable_Vector3___ctor__, callback);
-    sub_1C13D24(&Method_System_Nullable_float___ctor__, v13);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v14);
-    byte_4BB196A = 1;
+    sub_1C1ABD4(&Method_System_Nullable_Vector3___ctor__, callback);
+    sub_1C1ABD4(&Method_System_Nullable_float___ctor__, v13);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v14);
+    byte_4BC4D26 = 1;
   }
   mapCamera = (UnityEngine_Object_o *)this->fields.mapCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3965,10 +3965,10 @@ void __fastcall ScrTerminalMap__EventBoardCameraAction_35590956(
     System_Nullable_Vector3____ctor(v26, v27, v21);
     p_size = (System_Nullable_float__o)&size;
     size = 0LL;
-    System_Nullable_float____ctor(p_size, zoomScale, (const MethodInfo_374B620 *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(p_size, zoomScale, (const MethodInfo_375AF28 *)Method_System_Nullable_float___ctor__);
     if ( !v20 )
 LABEL_13:
-      sub_1C13F80(mZoom, v17);
+      sub_1C1AE30(mZoom, v17);
     v25 = size;
     MapCamera__StartAutoWork(v20, actTime, v23, v25, 5, callback, 0LL);
   }
@@ -4056,7 +4056,7 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
   __int64 v80; // x8
   AssetData_o *mapAssetData; // x21
   Il2CppObject *v82; // x0
-  Il2CppObject *Object_object__49747248; // x21
+  Il2CppObject *Object_object__49812820; // x21
   struct TerminalSceneComponent_o *terminalScene; // x8
   struct ScrTerminalListTop_o *mTerminalList; // x8
   UnityEngine_GameObject_o *v86; // x19
@@ -4199,54 +4199,54 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
   System_Int64_array *v223; // [xsp+70h] [xbp-80h] BYREF
   EventRaceEntity_o *entity; // [xsp+78h] [xbp-78h] BYREF
 
-  if ( (byte_4BB194C & 1) == 0 )
+  if ( (byte_4BC4D08 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&index);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v5);
-    sub_1C13D24(&BalanceConfig_TypeInfo, v6);
-    sub_1C13D24(&ScriptManager_CallbackFunc_TypeInfo, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, v8);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaceMaster___, v9);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaceResultMaster___, v10);
-    sub_1C13D24(&Method_DataManager_GetMasterData_GiftMaster___, v11);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v12);
-    sub_1C13D24(&Method_DataManager_GetMasterData_SpotPathMaster___, v13);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventRaceMaster___, v14);
-    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v15);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventRaceResultEffect___, v16);
-    sub_1C13D24(&int_TypeInfo, v17);
-    sub_1C13D24(&long___TypeInfo, v18);
-    sub_1C13D24(&long_TypeInfo, v19);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, v20);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v21);
-    sub_1C13D24(&object___TypeInfo, v22);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v23);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v24);
-    sub_1C13D24(&ScriptManager_TypeInfo, v25);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
-    sub_1C13D24(&System_Text_StringBuilder_TypeInfo, v27);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v28);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass356_0__EventScriptCaller_b__1__, v29);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass356_0_TypeInfo, v30);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass356_1__EventScriptCaller_b__0__, v31);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass356_1_TypeInfo, v32);
-    sub_1C13D24(&StringLiteral_6354/*"EventPointGaugeRoot"*/, v33);
-    sub_1C13D24(&StringLiteral_5786/*"EVENT_QPPOINT_NEXT_FORMAT"*/, v34);
-    sub_1C13D24(&StringLiteral_5787/*"EVENT_RACE_BOOST_COUNT"*/, v35);
-    sub_1C13D24(&StringLiteral_5788/*"EVENT_RACE_PATH_LENGTH"*/, v36);
-    byte_4BB194C = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v5);
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, v6);
+    sub_1C1ABD4(&ScriptManager_CallbackFunc_TypeInfo, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventMaster___, v8);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRaceMaster___, v9);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRaceResultMaster___, v10);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_GiftMaster___, v11);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, v12);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_SpotPathMaster___, v13);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventRaceMaster___, v14);
+    sub_1C1ABD4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v15);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventRaceResultEffect___, v16);
+    sub_1C1ABD4(&int_TypeInfo, v17);
+    sub_1C1ABD4(&long___TypeInfo, v18);
+    sub_1C1ABD4(&long_TypeInfo, v19);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__Add__, v20);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v21);
+    sub_1C1ABD4(&object___TypeInfo, v22);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v23);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v24);
+    sub_1C1ABD4(&ScriptManager_TypeInfo, v25);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
+    sub_1C1ABD4(&System_Text_StringBuilder_TypeInfo, v27);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v28);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass356_0__EventScriptCaller_b__1__, v29);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass356_0_TypeInfo, v30);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass356_1__EventScriptCaller_b__0__, v31);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass356_1_TypeInfo, v32);
+    sub_1C1ABD4(&StringLiteral_6358/*"EventRaceResultEffect_{0}"*/, v33);
+    sub_1C1ABD4(&StringLiteral_5790/*"EVENT_RACE_RESULT_REWARD_DLG_ITEM"*/, v34);
+    sub_1C1ABD4(&StringLiteral_5791/*"EVENT_RACE_RESULT_REWARD_DLG_MESSAGE"*/, v35);
+    sub_1C1ABD4(&StringLiteral_5792/*"EVENT_RACE_RESULT_REWARD_DLG_TITLE"*/, v36);
+    byte_4BC4D08 = 1;
   }
   v223 = 0LL;
   entity = 0LL;
   v221 = 0LL;
   goalTime = 0LL;
-  v37 = sub_1C13F70(ScrTerminalMap___c__DisplayClass356_0_TypeInfo);
+  v37 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass356_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass356_0___ctor((ScrTerminalMap___c__DisplayClass356_0_o *)v37, 0LL);
   if ( !v37 )
     goto LABEL_144;
   *(_QWORD *)(v37 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v37 + 16), (int64_t)this, v40, v41, v42, v43, v44, v45);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v37 + 16), (int64_t)this, v40, v41, v42, v43, v44, v45);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   eventScriptCallingList = this->fields.eventScriptCallingList;
   if ( !eventScriptCallingList )
     goto LABEL_144;
@@ -4256,19 +4256,19 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
   v54 = (DataManager_o *)Instance;
   *(_QWORD *)(v37 + 24) = v53;
   v55 = (EventScriptEntity_o **)(v37 + 24);
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v37 + 24), v53, v46, v47, v48, v49, v50, v51);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v37 + 24), v53, v46, v47, v48, v49, v50, v51);
   v56 = *(_QWORD *)(v37 + 24);
   if ( !v56 )
     goto LABEL_144;
   v57 = *(_DWORD *)(v56 + 16);
   v58 = *(_DWORD *)(v56 + 40);
-  v59 = sub_1C13F70(ScrTerminalMap___c__DisplayClass356_1_TypeInfo);
+  v59 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass356_1_TypeInfo);
   ScrTerminalMap___c__DisplayClass356_1___ctor((ScrTerminalMap___c__DisplayClass356_1_o *)v59, 0LL);
   if ( !v59 )
     goto LABEL_144;
   *(_QWORD *)(v59 + 24) = v37;
   v66 = (Il2CppObject **)(v59 + 24);
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v59 + 24), v37, v60, v61, v62, v63, v64, v65);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v59 + 24), v37, v60, v61, v62, v63, v64, v65);
   if ( !*(_QWORD *)(v59 + 24) )
     goto LABEL_144;
   v70 = *(_QWORD *)(*(_QWORD *)(v59 + 24) + 24LL);
@@ -4285,7 +4285,7 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
       v73 = *(_DWORD *)(v70 + 44);
       Instance = (__int64)DataManager__GetMasterData_object_(
                             v54,
-                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
       if ( !Instance )
         goto LABEL_144;
       RankedGroupId = EventRaceResultMaster__GetRankedGroupId(
@@ -4297,7 +4297,7 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
                         0LL);
       Instance = (__int64)DataManager__GetMasterData_object_(
                             v54,
-                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceMaster___);
       if ( !Instance )
         goto LABEL_144;
       Instance = EventRaceMaster__GetGroupIndex((EventRaceMaster_o *)Instance, v57, v72, RankedGroupId, 0LL);
@@ -4324,7 +4324,7 @@ void __fastcall ScrTerminalMap__EventScriptCaller(ScrTerminalMap_o *this, int32_
             v79 = *(_QWORD *)(v77 + 8LL * (unsigned int)Instance + 32);
 LABEL_44:
             v90 = goalTime;
-            v91 = (ScriptManager_CallbackFunc_o *)sub_1C13F70(ScriptManager_CallbackFunc_TypeInfo);
+            v91 = (ScriptManager_CallbackFunc_o *)sub_1C1AE20(ScriptManager_CallbackFunc_TypeInfo);
             ScriptManager_CallbackFunc___ctor(
               v91,
               v75,
@@ -4353,22 +4353,22 @@ LABEL_41:
   mapAssetData = this->fields.mapAssetData;
   v220 = *(_QWORD *)(v80 + 32);
   v82 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v220, v67, v68, v69);
-  Instance = (__int64)System_String__Format((System_String_o *)StringLiteral_6354/*"EventPointGaugeRoot"*/, v82, 0LL);
+  Instance = (__int64)System_String__Format((System_String_o *)StringLiteral_6358/*"EventRaceResultEffect_{0}"*/, v82, 0LL);
   if ( !mapAssetData )
     goto LABEL_144;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               mapAssetData,
                               (System_String_o *)Instance,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
     goto LABEL_41;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Instance = (__int64)UnityEngine_Object__Instantiate_object_(
-                        Object_object__49747248,
-                        (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                        Object_object__49812820,
+                        (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene )
     goto LABEL_144;
@@ -4376,7 +4376,7 @@ LABEL_41:
   if ( !mTerminalList )
     goto LABEL_144;
   v86 = (UnityEngine_GameObject_o *)Instance;
-  GameObjectExtensions__SafeSetParent_34717732(
+  GameObjectExtensions__SafeSetParent_34762256(
     (UnityEngine_GameObject_o *)Instance,
     mTerminalList->fields.mActionPanel,
     0LL);
@@ -4386,14 +4386,14 @@ LABEL_41:
     goto LABEL_144;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         v54,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( !Instance )
     goto LABEL_144;
   if ( !EventRaceMaster__TryGetEntity((EventRaceMaster_o *)Instance, &entity, v57, v72, 0LL) )
     goto LABEL_41;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         v54,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
   if ( !Instance )
     goto LABEL_144;
   Instance = (__int64)EventRaceResultMaster__GetRankDatas((EventRaceResultMaster_o *)Instance, v57, v72, &v223, 0LL);
@@ -4412,18 +4412,18 @@ LABEL_41:
   v211 = v86;
   v212 = v59;
   eventId = v57;
-  restDistances = (System_Int64_array *)sub_1C13DCC(long___TypeInfo, v88);
+  restDistances = (System_Int64_array *)sub_1C1AC7C(long___TypeInfo, v88);
   MasterData_object = DataManager__GetMasterData_object_(
                         v54,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_GiftMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_GiftMaster___);
   v93 = DataManager__GetMasterData_object_(
           v54,
-          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
+          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___);
   v213 = v54;
   v214 = (SpotPathMaster_o *)DataManager__GetMasterData_object_(
                                v54,
-                               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SpotPathMaster___);
-  v94 = (System_Text_StringBuilder_o *)sub_1C13F70(System_Text_StringBuilder_TypeInfo);
+                               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_SpotPathMaster___);
+  v94 = (System_Text_StringBuilder_o *)sub_1C1AE20(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v94, 0LL);
   v95 = 0LL;
   v216 = v89;
@@ -4475,12 +4475,12 @@ LABEL_41:
                      (DataMasterBase_TMaster__TEntity__PKType__o *)v93,
                      &v221,
                      *(_DWORD *)(v104 + 24),
-                     (const MethodInfo_3238670 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                     (const MethodInfo_32486C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
         if ( (Instance & 1) != 0 )
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5786/*"EVENT_QPPOINT_NEXT_FORMAT"*/, 0LL);
+          Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5790/*"EVENT_RACE_RESULT_REWARD_DLG_ITEM"*/, 0LL);
           if ( !v221 )
             goto LABEL_144;
           v107 = (System_String_o *)Instance;
@@ -4493,10 +4493,10 @@ LABEL_41:
           v112 = (Il2CppObject *)Instance;
           LODWORD(v220) = *(_DWORD *)(*(_QWORD *)v105 + 28LL);
           v113 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v220, v109, v110, v111);
-          Instance = (__int64)System_String__Format_62982384(v107, v108, v112, v113, 0LL);
+          Instance = (__int64)System_String__Format_63054808(v107, v108, v112, v113, 0LL);
           if ( !v94 )
             goto LABEL_144;
-          Instance = (__int64)System_Text_StringBuilder__Append_62129096(v94, (System_String_o *)Instance, 0LL);
+          Instance = (__int64)System_Text_StringBuilder__Append_62201520(v94, (System_String_o *)Instance, 0LL);
         }
         if ( v101 == v102 )
           break;
@@ -4511,7 +4511,7 @@ LABEL_41:
   v210 = (GiftMaster_o *)MasterData_object;
   v114 = DataManager__GetMasterData_object_(
            v213,
-           (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+           (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( (int)*(_QWORD *)&v89->max_length >= 1 )
   {
     v115 = (EventRaceMaster_o *)v114;
@@ -4549,14 +4549,14 @@ LABEL_41:
         goto LABEL_107;
     }
 LABEL_144:
-    sub_1C13F80(Instance, v39);
+    sub_1C1AE30(Instance, v39);
   }
 LABEL_88:
-  v123 = (System_Text_StringBuilder_o *)sub_1C13F70(System_Text_StringBuilder_TypeInfo);
+  v123 = (System_Text_StringBuilder_o *)sub_1C1AE20(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v123, 0LL);
   Instance = (__int64)DataManager__GetMasterData_object_(
                         v213,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventRaceMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventRaceMaster___);
   if ( !entity )
     goto LABEL_144;
   if ( !Instance )
@@ -4592,13 +4592,13 @@ LABEL_88:
                    (DataMasterBase_TMaster__TEntity__PKType__o *)v93,
                    &v221,
                    *(_DWORD *)(v129 + 24),
-                   (const MethodInfo_3238670 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                   (const MethodInfo_32486C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
       if ( (Instance & 1) != 0 )
       {
         v132 = v123;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5786/*"EVENT_QPPOINT_NEXT_FORMAT"*/, 0LL);
+        Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5790/*"EVENT_RACE_RESULT_REWARD_DLG_ITEM"*/, 0LL);
         if ( !v221 )
           goto LABEL_144;
         v133 = (System_String_o *)Instance;
@@ -4611,11 +4611,11 @@ LABEL_88:
         v138 = (Il2CppObject *)Instance;
         v220 = termIda * *(int *)(*(_QWORD *)v130 + 28LL);
         v139 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v220, v135, v136, v137);
-        Instance = (__int64)System_String__Format_62982384(v133, v134, v138, v139, 0LL);
+        Instance = (__int64)System_String__Format_63054808(v133, v134, v138, v139, 0LL);
         if ( !v132 )
           goto LABEL_144;
         v123 = v132;
-        Instance = (__int64)System_Text_StringBuilder__Append_62129096(v132, (System_String_o *)Instance, 0LL);
+        Instance = (__int64)System_Text_StringBuilder__Append_62201520(v132, (System_String_o *)Instance, 0LL);
       }
       if ( v126 == v127 )
         break;
@@ -4633,7 +4633,7 @@ LABEL_88:
   eventScriptMessages = (System_Collections_Generic_List_object__o *)v140->static_fields->eventScriptMessages;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5788/*"EVENT_RACE_PATH_LENGTH"*/, 0LL);
+  Instance = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5792/*"EVENT_RACE_RESULT_REWARD_DLG_TITLE"*/, 0LL);
   if ( !eventScriptMessages )
     goto LABEL_144;
   items = eventScriptMessages->fields._items;
@@ -4648,18 +4648,18 @@ LABEL_88:
     System_Collections_Generic_List_object___AddWithResize(
       eventScriptMessages,
       (Il2CppObject *)Instance,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v150[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v150[4] + 192LL) + 112LL));
   }
   else
   {
     v153 = &items->obj.klass + size;
     eventScriptMessages->fields._size = size + 1;
     v153[4] = (Il2CppClass *)v152;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v153 + 4), v152, v143, v144, v145, v146, v147, v148);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v153 + 4), v152, v143, v144, v145, v146, v147, v148);
   }
   Instance = (__int64)DataManager__GetMasterData_object_(
                         v213,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_144;
   Instance = (__int64)EventMaster__GetEventName((EventMaster_o *)Instance, eventId, 0LL);
@@ -4668,31 +4668,31 @@ LABEL_88:
   name = entity->fields.name;
   v155 = Instance;
   v156 = (System_Collections_Generic_List_object__o *)TerminalPramsManager_TypeInfo->static_fields->eventScriptMessages;
-  v157 = LocalizationManager__Get((System_String_o *)StringLiteral_5787/*"EVENT_RACE_BOOST_COUNT"*/, 0LL);
-  Instance = sub_1C13DCC(object___TypeInfo, 4LL);
+  v157 = LocalizationManager__Get((System_String_o *)StringLiteral_5791/*"EVENT_RACE_RESULT_REWARD_DLG_MESSAGE"*/, 0LL);
+  Instance = sub_1C1AC7C(object___TypeInfo, 4LL);
   if ( !Instance )
     goto LABEL_144;
   v164 = (System_Object_array *)Instance;
   if ( v155 )
   {
-    Instance = sub_1C13E60(v155, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
+    Instance = sub_1C1AD10(v155, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
     if ( !Instance )
       goto LABEL_145;
   }
   if ( !v164->max_length )
     goto LABEL_107;
   v164->m_Items[0] = (Il2CppObject *)v155;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v164->m_Items, v155, v158, v159, v160, v161, v162, v163);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v164->m_Items, v155, v158, v159, v160, v161, v162, v163);
   if ( name )
   {
-    Instance = sub_1C13E60(name, v164->obj.klass->_1.element_class);
+    Instance = sub_1C1AD10(name, v164->obj.klass->_1.element_class);
     if ( !Instance )
       goto LABEL_145;
   }
   if ( v164->max_length <= 1 )
     goto LABEL_107;
   v164->m_Items[1] = (Il2CppObject *)name;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v164->m_Items[1], (int64_t)name, v165, v166, v167, v168, v169, v170);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v164->m_Items[1], (int64_t)name, v165, v166, v167, v168, v169, v170);
   if ( !v94 )
     goto LABEL_144;
   Instance = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v94->klass->vtable._3_ToString.method)(
@@ -4701,14 +4701,14 @@ LABEL_88:
   v177 = Instance;
   if ( Instance )
   {
-    Instance = sub_1C13E60(Instance, v164->obj.klass->_1.element_class);
+    Instance = sub_1C1AD10(Instance, v164->obj.klass->_1.element_class);
     if ( !Instance )
       goto LABEL_145;
   }
   if ( v164->max_length <= 2 )
     goto LABEL_107;
   v164->m_Items[2] = (Il2CppObject *)v177;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v164->m_Items[2], v177, v171, v172, v173, v174, v175, v176);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v164->m_Items[2], v177, v171, v172, v173, v174, v175, v176);
   if ( !v141 )
     goto LABEL_144;
   Instance = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v141->klass->vtable._3_ToString.method)(
@@ -4717,20 +4717,20 @@ LABEL_88:
   v184 = Instance;
   if ( Instance )
   {
-    Instance = sub_1C13E60(Instance, v164->obj.klass->_1.element_class);
+    Instance = sub_1C1AD10(Instance, v164->obj.klass->_1.element_class);
     if ( !Instance )
     {
 LABEL_145:
-      v209 = sub_1C13FA4();
-      sub_1C13E4C(v209, 0LL);
+      v209 = sub_1C1AE54();
+      sub_1C1ACFC(v209, 0LL);
     }
   }
   if ( v164->max_length <= 3 )
 LABEL_107:
-    sub_1C13F88(Instance, v39);
+    sub_1C1AE38(Instance, v39);
   v164->m_Items[3] = (Il2CppObject *)v184;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v164->m_Items[3], v184, v178, v179, v180, v181, v182, v183);
-  Instance = (__int64)System_String__Format_62982452(v157, v164, 0LL);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v164->m_Items[3], v184, v178, v179, v180, v181, v182, v183);
+  Instance = (__int64)System_String__Format_63054876(v157, v164, 0LL);
   if ( !v156 )
     goto LABEL_144;
   v191 = v156->fields._items;
@@ -4745,22 +4745,22 @@ LABEL_107:
     System_Collections_Generic_List_object___AddWithResize(
       v156,
       (Il2CppObject *)Instance,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
   }
   else
   {
     v195 = &v191->obj.klass + v193;
     v156->fields._size = v193 + 1;
     v195[4] = (Il2CppClass *)v194;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v195 + 4), v194, v185, v186, v187, v188, v189, v190);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v195 + 4), v194, v185, v186, v187, v188, v189, v190);
   }
   if ( !v211 )
     goto LABEL_144;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v211,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventRaceResultEffect___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventRaceResultEffect___);
   *(_QWORD *)(v212 + 16) = Component_object;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v212 + 16), (int64_t)Component_object, v197, v198, v199, v200, v201, v202);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v212 + 16), (int64_t)Component_object, v197, v198, v199, v200, v201, v202);
   v203 = *(_QWORD *)(v212 + 24);
   if ( !v203 )
     goto LABEL_144;
@@ -4770,7 +4770,7 @@ LABEL_107:
   v205 = *(_DWORD *)(v204 + 16);
   v206 = *(EventRaceResultEffect_o **)(v212 + 16);
   v207 = v223;
-  v208 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v208 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v208,
     (Il2CppObject *)v212,
@@ -4805,22 +4805,22 @@ void __fastcall ScrTerminalMap__EventScriptPlay(ScrTerminalMap_o *this, const Me
   System_Action_o *v21; // x21
   const MethodInfo *v22; // x1
 
-  if ( (byte_4BB1948 & 1) == 0 )
+  if ( (byte_4BC4D04 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__EventScriptPlay_b__352_0__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v6);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB1948 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__EventScriptPlay_b__352_0__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v6);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4D04 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D4 )
+  if ( !byte_4BC4D90 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19D4 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D90 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4829,7 +4829,7 @@ void __fastcall ScrTerminalMap__EventScriptPlay(ScrTerminalMap_o *this, const Me
     v8 = TerminalPramsManager_TypeInfo;
   }
   v8->static_fields->_EventActionQuestId_k__BackingField = 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0LL);
@@ -4837,7 +4837,7 @@ void __fastcall ScrTerminalMap__EventScriptPlay(ScrTerminalMap_o *this, const Me
   if ( eventScriptCallingList && *(_QWORD *)&eventScriptCallingList->max_length )
   {
     this->fields.eventScriptCallingIdx = 0;
-    v18 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v18 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v19 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -4845,7 +4845,7 @@ void __fastcall ScrTerminalMap__EventScriptPlay(ScrTerminalMap_o *this, const Me
       v19 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v19->static_fields->DEFAULT_FADE_TIME;
-    v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v21 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v21, (Il2CppObject *)this, Method_ScrTerminalMap__EventScriptPlay_b__352_0__, 0LL);
     if ( v18 )
     {
@@ -4853,10 +4853,10 @@ void __fastcall ScrTerminalMap__EventScriptPlay(ScrTerminalMap_o *this, const Me
       return;
     }
 LABEL_17:
-    sub_1C13F80(Instance, v10);
+    sub_1C1AE30(Instance, v10);
   }
   this->fields.eventScriptCallingList = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventScriptCallingList, 0LL, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventScriptCallingList, 0LL, v11, v12, v13, v14, v15, v16);
   ScrTerminalMap__OnEveryActionEnd(this, v22);
 }
 
@@ -4869,12 +4869,12 @@ void __fastcall ScrTerminalMap__FadeOutSpotMask(ScrTerminalMap_o *this, const Me
   UITweener_o *v6; // x20
   EventDelegate_Callback_o *v7; // x21
 
-  if ( (byte_4BB1936 & 1) == 0 )
+  if ( (byte_4BC4CF2 & 1) == 0 )
   {
-    sub_1C13D24(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__FadeOutSpotMask_b__328_0__, v4);
-    byte_4BB1936 = 1;
+    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, method);
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__FadeOutSpotMask_b__328_0__, v4);
+    byte_4BC4CF2 = 1;
   }
   spotMaskObj = this->fields.spotMaskObj;
   if ( !spotMaskObj )
@@ -4884,9 +4884,9 @@ void __fastcall ScrTerminalMap__FadeOutSpotMask(ScrTerminalMap_o *this, const Me
     this->fields.isFadingSpotmask = 1;
     GameObjectExtensions__SafeGetComponent_object_(
       this->fields.spotMaskObj,
-      (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+      (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
     v6 = (UITweener_o *)TweenAlpha__Begin(this->fields.spotMaskObj, 0.25, 0.0, 0LL);
-    v7 = (EventDelegate_Callback_o *)sub_1C13F70(EventDelegate_Callback_TypeInfo);
+    v7 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v7, (Il2CppObject *)this, Method_ScrTerminalMap__FadeOutSpotMask_b__328_0__, 0LL);
     if ( v6 )
     {
@@ -4894,7 +4894,7 @@ void __fastcall ScrTerminalMap__FadeOutSpotMask(ScrTerminalMap_o *this, const Me
       return;
     }
 LABEL_8:
-    sub_1C13F80(spotMaskObj, method);
+    sub_1C1AE30(spotMaskObj, method);
   }
 }
 
@@ -4911,20 +4911,20 @@ void __fastcall ScrTerminalMap__Fadein_MapDisp_Start(ScrTerminalMap_o *this, con
   ScrTerminalMap_c *v10; // x8
   int32_t v11; // w20
 
-  if ( (byte_4BB195E & 1) == 0 )
+  if ( (byte_4BC4D1A & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, method);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-    byte_4BB195E = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, method);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+    byte_4BC4D1A = 1;
   }
   if ( ScrTerminalMap__IsEventBoardGame(this, method) )
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19BF )
+    if ( !byte_4BC4D7B )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-      byte_4BB19BF = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+      byte_4BC4D7B = 1;
     }
     v6 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4943,10 +4943,10 @@ void __fastcall ScrTerminalMap__Fadein_MapDisp_Start(ScrTerminalMap_o *this, con
       goto LABEL_22;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19BF )
+    if ( !byte_4BC4D7B )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-      byte_4BB19BF = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+      byte_4BC4D7B = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -4973,21 +4973,21 @@ void __fastcall ScrTerminalMap__ForceOffSpotLarge(ScrTerminalMap_o *this, const 
   __int64 v3; // x1
   UnityEngine_GameObject_o *spotMaskObj; // x0
 
-  if ( (byte_4BB1933 & 1) == 0 )
+  if ( (byte_4BC4CEF & 1) == 0 )
   {
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
-    byte_4BB1933 = 1;
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
+    byte_4BC4CEF = 1;
   }
   GameObjectExtensions__SafeGetComponent_object_(
     this->fields.spotMaskObj,
-    (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+    (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
   TweenAlpha__Begin(this->fields.spotMaskObj, 0.0, 0.0, 0LL);
   spotMaskObj = this->fields.spotMaskObj;
   if ( !spotMaskObj
     || (UnityEngine_GameObject__SetActive(spotMaskObj, 0, 0LL),
         (spotMaskObj = (UnityEngine_GameObject_o *)this->fields.spotLargeComponent) == 0LL) )
   {
-    sub_1C13F80(spotMaskObj, v3);
+    sub_1C1AE30(spotMaskObj, v3);
   }
   SpotLargeComponent__ForceOff((SpotLargeComponent_o *)spotMaskObj, 0LL);
 }
@@ -5004,7 +5004,7 @@ void __fastcall ScrTerminalMap__FrameInUI(ScrTerminalMap_o *this, const MethodIn
         (terminalScene = this->fields.terminalScene) == 0LL)
     || (titleInfoControl = (TitleInfoControl_o *)terminalScene->fields.mPlayerStatus) == 0LL )
   {
-    sub_1C13F80(titleInfoControl, method);
+    sub_1C1AE30(titleInfoControl, method);
   }
   ScrPlayerStatus__FrameIn((ScrPlayerStatus_o *)titleInfoControl, 0, 0LL);
   MainMenuBar__FrameIn(0, 0LL);
@@ -5024,7 +5024,7 @@ void __fastcall ScrTerminalMap__FrameOutUI(ScrTerminalMap_o *this, bool isForce,
         (terminalScene = this->fields.terminalScene) == 0LL)
     || (titleInfoControl = (TitleInfoControl_o *)terminalScene->fields.mPlayerStatus) == 0LL )
   {
-    sub_1C13F80(titleInfoControl, isForce);
+    sub_1C1AE30(titleInfoControl, isForce);
   }
   v7 = isForce;
   ScrPlayerStatus__FrameOut((ScrPlayerStatus_o *)titleInfoControl, v7, 0LL);
@@ -5045,10 +5045,10 @@ System_String_o *__fastcall ScrTerminalMap__GetAssetAtlasName(
 {
   ScrTerminalMap_c *v4; // x0
 
-  if ( (byte_4BB1904 & 1) == 0 )
+  if ( (byte_4BC4CC0 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, assetId);
-    byte_4BB1904 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, assetId);
+    byte_4BC4CC0 = 1;
   }
   v4 = ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -5085,14 +5085,14 @@ System_String_o *__fastcall ScrTerminalMap__GetAssetMultiMapName(
   Il2CppObject *v16; // x0
   int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB1907 & 1) == 0 )
+  if ( (byte_4BC4CC3 & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, assetId);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&ScrTerminalMap_TypeInfo, v6);
-    byte_4BB1907 = 1;
+    sub_1C1ABD4(&int_TypeInfo, assetId);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v6);
+    byte_4BC4CC3 = 1;
   }
   if ( !mapEntity )
-    sub_1C13F80(this, assetId);
+    sub_1C1AE30(this, assetId);
   OverwriteMapAssetId = MapEntity__GetOverwriteMapAssetId(mapEntity, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(OverwriteMapAssetId, 0LL);
   if ( !IsNullOrEmpty )
@@ -5109,7 +5109,7 @@ System_String_o *__fastcall ScrTerminalMap__GetAssetMultiMapName(
   ASSETS_NAME_PACK_MULTI_MAP = v14->static_fields->ASSETS_NAME_PACK_MULTI_MAP;
   v18 = ReferrerMapId;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v10, v11, v12);
-  return System_String__Format_62982316(ASSETS_NAME_PACK_MULTI_MAP, assetId, v16, 0LL);
+  return System_String__Format_63054740(ASSETS_NAME_PACK_MULTI_MAP, assetId, v16, 0LL);
 }
 
 
@@ -5120,10 +5120,10 @@ System_String_o *__fastcall ScrTerminalMap__GetAssetName(
 {
   ScrTerminalMap_c *v4; // x0
 
-  if ( (byte_4BB1906 & 1) == 0 )
+  if ( (byte_4BC4CC2 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, assetId);
-    byte_4BB1906 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, assetId);
+    byte_4BC4CC2 = 1;
   }
   v4 = ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -5168,31 +5168,31 @@ System_String_o *__fastcall ScrTerminalMap__GetBoardGamePieceAnimationNameBySqua
   __int64 v8; // x1
   __int64 *v9; // x8
 
-  if ( (byte_4BB197B & 1) == 0 )
+  if ( (byte_4BC4D37 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_9038/*"MapGimmickEffect_GappolyBoard"*/, *(_QWORD *)&startSquareId);
-    sub_1C13D24(&StringLiteral_9036/*"MapGimmickEffect_EventQuestCooltime"*/, v6);
-    sub_1C13D24(&StringLiteral_9035/*"MapGimmickEffect_"*/, v7);
-    sub_1C13D24(&StringLiteral_9037/*"MapGimmickEffect_EventSpotCooltime"*/, v8);
-    byte_4BB197B = 1;
+    sub_1C1ABD4(&StringLiteral_9044/*"MapGimmickEffect_GappolyPiece_4"*/, *(_QWORD *)&startSquareId);
+    sub_1C1ABD4(&StringLiteral_9042/*"MapGimmickEffect_GappolyPiece_2"*/, v6);
+    sub_1C1ABD4(&StringLiteral_9041/*"MapGimmickEffect_GappolyPiece_1"*/, v7);
+    sub_1C1ABD4(&StringLiteral_9043/*"MapGimmickEffect_GappolyPiece_3"*/, v8);
+    byte_4BC4D37 = 1;
   }
   if ( endSquareId != 11 )
     goto LABEL_7;
   if ( startSquareId == 6 )
   {
-    v9 = &StringLiteral_9037/*"MapGimmickEffect_EventSpotCooltime"*/;
+    v9 = &StringLiteral_9043/*"MapGimmickEffect_GappolyPiece_3"*/;
     return (System_String_o *)*v9;
   }
   if ( startSquareId == 16 )
   {
-    v9 = &StringLiteral_9038/*"MapGimmickEffect_GappolyBoard"*/;
+    v9 = &StringLiteral_9044/*"MapGimmickEffect_GappolyPiece_4"*/;
   }
   else
   {
 LABEL_7:
-    v9 = (__int64 *)&StringLiteral_9035/*"MapGimmickEffect_"*/;
+    v9 = (__int64 *)&StringLiteral_9041/*"MapGimmickEffect_GappolyPiece_1"*/;
     if ( (unsigned int)(startSquareId - 1) > 9 )
-      v9 = (__int64 *)&StringLiteral_9036/*"MapGimmickEffect_EventQuestCooltime"*/;
+      v9 = (__int64 *)&StringLiteral_9042/*"MapGimmickEffect_GappolyPiece_2"*/;
   }
   return (System_String_o *)*v9;
 }
@@ -5234,76 +5234,76 @@ void __fastcall ScrTerminalMap__GetBoardGameSquareClearCountAndMaxCount(
   Il2CppObject *entity; // [xsp+28h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4BB197C & 1) == 0 )
+  if ( (byte_4BC4D38 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, *(_QWORD *)&squareId);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserQuestMaster___, v9);
-    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v11);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v14);
-    sub_1C13D24(&NetworkManager_TypeInfo, v15);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_4BB197C = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestMaster___, *(_QWORD *)&squareId);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserQuestMaster___, v9);
+    sub_1C1ABD4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v11);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v14);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v15);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_4BC4D38 = 1;
   }
   memset(&v35, 0, sizeof(v35));
   v33 = 0LL;
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this->fields.mWarInfo
     || (v19 = (DataManager_o *)Instance,
         Instance = (Il2CppObject *)MapControl_WarInfo__GetEventId(this->fields.mWarInfo, 0LL),
         !v19)
     || (MasterData_object = DataManager__GetMasterData_object_(
                               v19,
-                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___),
+                              (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestMaster___),
         Instance = DataManager__GetMasterData_object_(
                      v19,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserQuestMaster___),
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserQuestMaster___),
         *clearCount = 0,
         *maxClearCount = 0,
         (EventBoardQuestReleaseList_k__BackingField = this->fields._EventBoardQuestReleaseList_k__BackingField) == 0LL) )
   {
-    sub_1C13F80(Instance, v18);
+    sub_1C1AE30(Instance, v18);
   }
   v22 = (UserQuestMaster_o *)Instance;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v32,
     (System_Collections_Generic_List_object__o *)EventBoardQuestReleaseList_k__BackingField,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   v23 = (Il2CppClass *)squareId;
   v35 = v32;
   while ( 1 )
   {
     v24 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v35,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v24 )
       break;
     if ( !v35.fields._current )
-      sub_1C13F80(v24, v25);
+      sub_1C1AE30(v24, v25);
     if ( v35.fields._current[2].klass == v23 )
     {
       if ( !MasterData_object )
-        sub_1C13F80(v24, v25);
+        sub_1C1AE30(v24, v25);
       klass = (int32_t)v35.fields._current[1].klass;
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              &entity,
              klass,
-             (const MethodInfo_3238670 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+             (const MethodInfo_32486C4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
       {
         if ( !entity )
-          sub_1C13F80(0LL, v27);
+          sub_1C1AE30(0LL, v27);
         if ( !QuestEntity__HasFlag((QuestEntity_o *)entity, 0x8000000000LL, 0LL) )
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BAF1E5 )
+          if ( !byte_4BC2585 )
           {
-            sub_1C13D24(&NetworkManager_TypeInfo, v28);
-            byte_4BAF1E5 = 1;
+            sub_1C1ABD4(&NetworkManager_TypeInfo, v28);
+            byte_4BC2585 = 1;
           }
           v29 = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -5312,11 +5312,11 @@ void __fastcall ScrTerminalMap__GetBoardGameSquareClearCountAndMaxCount(
             v29 = NetworkManager_TypeInfo;
           }
           if ( !v22 )
-            sub_1C13F80(v29, v28);
+            sub_1C1AE30(v29, v28);
           if ( UserQuestMaster__TryGetEntity(v22, &v33, v29->static_fields->userIdNumber, klass, 0LL) )
           {
             if ( !v33 )
-              sub_1C13F80(0LL, v30);
+              sub_1C1AE30(0LL, v30);
             v31 = *clearCount;
             *clearCount = UserQuestEntity__getClearNum(v33, 0LL) + v31;
           }
@@ -5327,7 +5327,7 @@ void __fastcall ScrTerminalMap__GetBoardGameSquareClearCountAndMaxCount(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
 }
 
 
@@ -5344,32 +5344,32 @@ int32_t __fastcall ScrTerminalMap__GetEventBoardDiceVoiceServantId(ScrTerminalMa
   ScrTerminalMap_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BB1982 & 1) == 0 )
+  if ( (byte_4BC4D3E & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, method);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Any_KeyValuePair_string__object____, v3);
-    sub_1C13D24(&string_TypeInfo, v4);
-    sub_1C13D24(&StringLiteral_24096/*"superBossUi"*/, v5);
-    byte_4BB1982 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, method);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_KeyValuePair_string__object____, v3);
+    sub_1C1ABD4(&string_TypeInfo, v4);
+    sub_1C1ABD4(&StringLiteral_24116/*"svtId"*/, v5);
+    byte_4BC4D3E = 1;
   }
   EventBoardDiceVoiceInfo_k__BackingField = this->fields._EventBoardDiceVoiceInfo_k__BackingField;
   if ( !EventBoardDiceVoiceInfo_k__BackingField
     || !System_Linq_Enumerable__Any_KeyValuePair_object__object__(
           (System_Collections_Generic_IEnumerable_TSource__o *)EventBoardDiceVoiceInfo_k__BackingField,
-          (const MethodInfo_2F99EAC *)Method_System_Linq_Enumerable_Any_KeyValuePair_string__object____) )
+          (const MethodInfo_2FA9ED0 *)Method_System_Linq_Enumerable_Any_KeyValuePair_string__object____) )
   {
     return 0;
   }
   v8 = this->fields._EventBoardDiceVoiceInfo_k__BackingField;
   if ( !v8 )
-    sub_1C13F80(0LL, v7);
+    sub_1C1AE30(0LL, v7);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v8,
-           (Il2CppObject *)StringLiteral_24096/*"superBossUi"*/,
-           (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (Il2CppObject *)StringLiteral_24116/*"svtId"*/,
+           (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
     return System_Int32__Parse((System_String_o *)Item, 0LL);
-  sub_1C14240(Item);
+  sub_1C1B0F0(Item);
   ScrTerminalMap__SetupEventBoardGame(v11, v12);
   return result;
 }
@@ -5386,12 +5386,12 @@ int32_t __fastcall ScrTerminalMap__GetEventBoardGameSpotId(ScrTerminalMap_o *thi
   DataMasterBase_TMaster__TEntity__PKType__o *v9; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4BB1956 & 1) == 0 )
+  if ( (byte_4BC4D12 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BB1956 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BC4D12 = 1;
   }
   entity = 0LL;
   mWarInfo = this->fields.mWarInfo;
@@ -5399,12 +5399,12 @@ int32_t __fastcall ScrTerminalMap__GetEventBoardGameSpotId(ScrTerminalMap_o *thi
   {
     if ( MapControl_WarInfo__GetEventId(mWarInfo, 0LL) >= 1 )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_13;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                   (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventDetailMaster___);
       v8 = this->fields.mWarInfo;
       if ( !v8 )
         goto LABEL_13;
@@ -5416,7 +5416,7 @@ int32_t __fastcall ScrTerminalMap__GetEventBoardGameSpotId(ScrTerminalMap_o *thi
              v9,
              &entity,
              (int32_t)Instance,
-             (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+             (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
       {
         Instance = entity;
         if ( entity )
@@ -5425,7 +5425,7 @@ int32_t __fastcall ScrTerminalMap__GetEventBoardGameSpotId(ScrTerminalMap_o *thi
           return (int)mWarInfo;
         }
 LABEL_13:
-        sub_1C13F80(Instance, v7);
+        sub_1C1AE30(Instance, v7);
       }
     }
     LODWORD(mWarInfo) = 0;
@@ -5452,12 +5452,12 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetEventBoardSquareObject(
   System_String_o *v14; // x0
   int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB1980 & 1) == 0 )
+  if ( (byte_4BC4D3C & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&index);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_23846/*"spring"*/, v6);
-    byte_4BB1980 = 1;
+    sub_1C1ABD4(&int_TypeInfo, *(_QWORD *)&index);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_23866/*"square_{0:D2}"*/, v6);
+    byte_4BC4D3C = 1;
   }
   EventBoardGameObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardGameObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5468,7 +5468,7 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetEventBoardSquareObject(
   {
     v15 = index;
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8, v9, v10);
-    v14 = System_String__Format((System_String_o *)StringLiteral_23846/*"spring"*/, v13, 0LL);
+    v14 = System_String__Format((System_String_o *)StringLiteral_23866/*"square_{0:D2}"*/, v13, 0LL);
     return GameObjectExtensions__FindDeepWithLog(this->fields._EventBoardGameObj_k__BackingField, v14, 0, 0LL);
   }
   return result;
@@ -5489,10 +5489,10 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__GetEventBoardSquarePos(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB197F & 1) == 0 )
+  if ( (byte_4BC4D3B & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4BB197F = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4BC4D3B = 1;
   }
   EventBoardSquareObject = ScrTerminalMap__GetEventBoardSquareObject(this, index, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5503,10 +5503,10 @@ UnityEngine_Vector3_o __fastcall ScrTerminalMap__GetEventBoardSquarePos(
   }
   else
   {
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -5527,15 +5527,15 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__GetFocusSpot(ScrTerminalMap_o *t
   __int64 v5; // x1
   UnityEngine_Object_o *monitor; // x20
 
-  if ( (byte_4BB18E5 & 1) == 0 )
+  if ( (byte_4BC4CA1 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v3);
-    byte_4BB18E5 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v3);
+    byte_4BC4CA1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v5);
+    sub_1C1AE30(0LL, v5);
   monitor = (UnityEngine_Object_o *)Instance[11].monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -5560,16 +5560,16 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetMapGimmickPathBaseObject
   System_String_o *ASSETS_NAME_MAP_GIMMICK_PATH; // x21
   Il2CppObject *v14; // x0
   System_String_o *v15; // x21
-  Il2CppObject *Object_object__49747248; // x20
+  Il2CppObject *Object_object__49812820; // x20
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB1923 & 1) == 0 )
+  if ( (byte_4BC4CDF & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, mapGimmickPathEnt);
-    sub_1C13D24(&int_TypeInfo, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v10);
-    byte_4BB1923 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, mapGimmickPathEnt);
+    sub_1C1ABD4(&int_TypeInfo, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v10);
+    byte_4BC4CDF = 1;
   }
   v11 = (System_String_o *)ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -5582,29 +5582,29 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetMapGimmickPathBaseObject
         v11 = System_String__Format(ASSETS_NAME_MAP_GIMMICK_PATH, v14, 0LL),
         !assetData) )
   {
-    sub_1C13F80(v11, mapGimmickPathEnt);
+    sub_1C1AE30(v11, mapGimmickPathEnt);
   }
   v15 = v11;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               assetData,
                               v11,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
   {
     if ( !multiAssetData )
       return 0LL;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 multiAssetData,
                                 v15,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
       return 0LL;
   }
-  return (UnityEngine_GameObject_o *)Object_object__49747248;
+  return (UnityEngine_GameObject_o *)Object_object__49812820;
 }
 
 
@@ -5625,17 +5625,17 @@ System_String_o *__fastcall ScrTerminalMap__GetMapModelEntryAnimationName(
   Il2CppObject *Master_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BB1954 & 1) == 0 )
+  if ( (byte_4BC4D10 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_QuestPhaseMaster___, *(_QWORD *)&clearQuestId);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    byte_4BB1954 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_QuestPhaseMaster___, *(_QWORD *)&clearQuestId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    byte_4BC4D10 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Master_object )
-    sub_1C13F80(0LL, v8);
+    sub_1C1AE30(0LL, v8);
   return QuestPhaseMaster__GetMapModelEntryAnimationName(
            (QuestPhaseMaster_o *)Master_object,
            clearQuestId,
@@ -5663,14 +5663,14 @@ System_String_o *__fastcall ScrTerminalMap__GetMultiMapAssetAtlasName(
   Il2CppObject *v16; // x0
   int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB1905 & 1) == 0 )
+  if ( (byte_4BC4CC1 & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, assetId);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&ScrTerminalMap_TypeInfo, v6);
-    byte_4BB1905 = 1;
+    sub_1C1ABD4(&int_TypeInfo, assetId);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v6);
+    byte_4BC4CC1 = 1;
   }
   if ( !mapEntity )
-    sub_1C13F80(this, assetId);
+    sub_1C1AE30(this, assetId);
   OverwriteMapAssetId = MapEntity__GetOverwriteMapAssetId(mapEntity, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(OverwriteMapAssetId, 0LL);
   if ( !IsNullOrEmpty )
@@ -5687,7 +5687,7 @@ System_String_o *__fastcall ScrTerminalMap__GetMultiMapAssetAtlasName(
   ASSETS_NAME_ATLAS_MULTI_MAP = v14->static_fields->ASSETS_NAME_ATLAS_MULTI_MAP;
   v18 = ReferrerMapId;
   v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v10, v11, v12);
-  return System_String__Format_62982316(ASSETS_NAME_ATLAS_MULTI_MAP, assetId, v16, 0LL);
+  return System_String__Format_63054740(ASSETS_NAME_ATLAS_MULTI_MAP, assetId, v16, 0LL);
 }
 
 
@@ -5706,10 +5706,10 @@ int32_t __fastcall ScrTerminalMap__GetPlayerSpotId(ScrTerminalMap_o *this, const
   struct MapControl_WarInfo_o *v7; // x8
   System_String_o *v8; // x19
 
-  if ( (byte_4BB1917 & 1) == 0 )
+  if ( (byte_4BC4CD3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__, method);
-    byte_4BB1917 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__, method);
+    byte_4BC4CD3 = 1;
   }
   mWarInfo = (System_Collections_Generic_List_object__o *)this->fields.mWarInfo;
   if ( !mWarInfo )
@@ -5721,7 +5721,7 @@ int32_t __fastcall ScrTerminalMap__GetPlayerSpotId(ScrTerminalMap_o *this, const
     if ( ((unsigned __int8)mWarInfo & 1) != 0 )
     {
       v6 = SaveKey_PlayerIcon;
-      return UnityEngine_PlayerPrefs__GetInt_70679696(v6, 0LL);
+      return UnityEngine_PlayerPrefs__GetInt_70752120(v6, 0LL);
     }
     v7 = this->fields.mWarInfo;
     if ( v7 )
@@ -5732,7 +5732,7 @@ int32_t __fastcall ScrTerminalMap__GetPlayerSpotId(ScrTerminalMap_o *this, const
         mWarInfo = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   mWarInfo,
                                                                   0,
-                                                                  (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
+                                                                  (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_MapControl_MapInfo__get_Item__);
         if ( mWarInfo )
         {
           if ( HIDWORD(mWarInfo->fields._items) != this->fields.currentMapId )
@@ -5742,14 +5742,14 @@ int32_t __fastcall ScrTerminalMap__GetPlayerSpotId(ScrTerminalMap_o *this, const
       }
     }
 LABEL_15:
-    sub_1C13F80(mWarInfo, method);
+    sub_1C1AE30(mWarInfo, method);
   }
 LABEL_11:
   v8 = ScrTerminalMap__GetSaveKey_PlayerIcon(this, 0, v4);
   if ( UnityEngine_PlayerPrefs__HasKey(v8, 0LL) )
   {
     v6 = v8;
-    return UnityEngine_PlayerPrefs__GetInt_70679696(v6, 0LL);
+    return UnityEngine_PlayerPrefs__GetInt_70752120(v6, 0LL);
   }
   return -1;
 }
@@ -5761,13 +5761,13 @@ System_String_o *__fastcall ScrTerminalMap__GetSaveKey_BaseMap(ScrTerminalMap_o 
   System_String_o *v3; // x0
 
   v2 = (int)this;
-  if ( (byte_4BB18E4 & 1) == 0 )
+  if ( (byte_4BC4CA0 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_13833/*"Terminal/Atlas/TerminalAtlas"*/, method);
-    byte_4BB18E4 = 1;
+    sub_1C1ABD4(&StringLiteral_13845/*"TerminalBaseMap"*/, method);
+    byte_4BC4CA0 = 1;
   }
   v3 = System_Int32__ToString(v2 + 44, 0LL);
-  return System_String__Concat_62967944((System_String_o *)StringLiteral_13833/*"Terminal/Atlas/TerminalAtlas"*/, v3, 0LL);
+  return System_String__Concat_63040368((System_String_o *)StringLiteral_13845/*"TerminalBaseMap"*/, v3, 0LL);
 }
 
 
@@ -5780,10 +5780,10 @@ System_String_o *__fastcall ScrTerminalMap__GetSaveKey_PlayerIcon(
   int32_t currentWarId; // w19
   int32_t currentMapId; // w20
 
-  if ( (byte_4BB18E0 & 1) == 0 )
+  if ( (byte_4BC4C9C & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, isMultiMap);
-    byte_4BB18E0 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, isMultiMap);
+    byte_4BC4C9C = 1;
   }
   currentWarId = this->fields.currentWarId;
   if ( isMultiMap )
@@ -5806,10 +5806,10 @@ System_String_o *__fastcall ScrTerminalMap__GetSaveKey_PlayerMap(ScrTerminalMap_
 {
   int32_t currentWarId; // w19
 
-  if ( (byte_4BB18E2 & 1) == 0 )
+  if ( (byte_4BC4C9E & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, method);
-    byte_4BB18E2 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, method);
+    byte_4BC4C9E = 1;
   }
   currentWarId = this->fields.currentWarId;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -5830,18 +5830,18 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetSpotGameObject(
   System_String_o *v8; // x19
   UnityEngine_Object_o *v9; // x19
 
-  if ( (byte_4BB1919 & 1) == 0 )
+  if ( (byte_4BC4CD5 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&spotId);
-    sub_1C13D24(&SrcSpotBasePrefab_TypeInfo, v5);
-    byte_4BB1919 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&SrcSpotBasePrefab_TypeInfo, v5);
+    byte_4BC4CD5 = 1;
   }
   if ( !SrcSpotBasePrefab_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SrcSpotBasePrefab_TypeInfo);
   GobjName = SrcSpotBasePrefab__GetGobjName(spotId, 0LL);
   if ( !this->fields.mapModelManager )
 LABEL_17:
-    sub_1C13F80(GobjName, v7);
+    sub_1C1AE30(GobjName, v7);
   v8 = GobjName;
   if ( MapModelManager__get_IsMapModel(this->fields.mapModelManager, 0LL) )
   {
@@ -5891,16 +5891,16 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetSpotPathBaseObject(
   System_String_o *ASSETS_NAME_SPOT_PATH; // x21
   Il2CppObject *v14; // x0
   System_String_o *v15; // x21
-  Il2CppObject *Object_object__49747248; // x20
+  Il2CppObject *Object_object__49812820; // x20
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB1922 & 1) == 0 )
+  if ( (byte_4BC4CDE & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, spotPathEnt);
-    sub_1C13D24(&int_TypeInfo, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v10);
-    byte_4BB1922 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, spotPathEnt);
+    sub_1C1ABD4(&int_TypeInfo, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v10);
+    byte_4BC4CDE = 1;
   }
   v11 = (System_String_o *)ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -5913,29 +5913,29 @@ UnityEngine_GameObject_o *__fastcall ScrTerminalMap__GetSpotPathBaseObject(
         v11 = System_String__Format(ASSETS_NAME_SPOT_PATH, v14, 0LL),
         !assetData) )
   {
-    sub_1C13F80(v11, spotPathEnt);
+    sub_1C1AE30(v11, spotPathEnt);
   }
   v15 = v11;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               assetData,
                               v11,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
   {
     if ( !multiAssetData )
       return 0LL;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 multiAssetData,
                                 v15,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+    if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
       return 0LL;
   }
-  return (UnityEngine_GameObject_o *)Object_object__49747248;
+  return (UnityEngine_GameObject_o *)Object_object__49812820;
 }
 
 
@@ -5954,20 +5954,20 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__GetSpotPrefab(
   System_Collections_Generic_List_object__o *spotList; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4BB1918 & 1) == 0 )
+  if ( (byte_4BC4CD4 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__, *(_QWORD *)&spotId);
-    sub_1C13D24(&System_Predicate_SrcSpotBasePrefab__TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass292_0__GetSpotPrefab_b__0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass292_0_TypeInfo, v7);
-    byte_4BB1918 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&System_Predicate_SrcSpotBasePrefab__TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass292_0__GetSpotPrefab_b__0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass292_0_TypeInfo, v7);
+    byte_4BC4CD4 = 1;
   }
-  v8 = (ScrTerminalMap___c__DisplayClass292_0_o *)sub_1C13F70(ScrTerminalMap___c__DisplayClass292_0_TypeInfo);
+  v8 = (ScrTerminalMap___c__DisplayClass292_0_o *)sub_1C1AE20(ScrTerminalMap___c__DisplayClass292_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass292_0___ctor(v8, 0LL);
   if ( !v8
     || (v8->fields.spotId = spotId,
         spotList = (System_Collections_Generic_List_object__o *)this->fields.spotList,
-        v12 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_SrcSpotBasePrefab__TypeInfo),
+        v12 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_SrcSpotBasePrefab__TypeInfo),
         System_Predicate_object____ctor(
           v12,
           (Il2CppObject *)v8,
@@ -5975,12 +5975,12 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__GetSpotPrefab(
           0LL),
         !spotList) )
   {
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
   return (SrcSpotBasePrefab_o *)System_Collections_Generic_List_object___Find(
                                   spotList,
                                   (System_Predicate_T__o *)v12,
-                                  (const MethodInfo_362D834 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
+                                  (const MethodInfo_363CEF8 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
 }
 
 
@@ -5991,19 +5991,19 @@ int64_t __fastcall ScrTerminalMap__GetTimeLimitAt(ScrTerminalMap_o *this, int32_
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BB18F1 & 1) == 0 )
+  if ( (byte_4BC4CAD & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BB18F1 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BC4CAD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0LL )
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0LL )
   {
-    sub_1C13F80(Instance, v6);
+    sub_1C1AE30(Instance, v6);
   }
   return EventRaidMaster__GetEventRaidTimeLimitAt((EventRaidMaster_o *)Instance, eventId, 0LL);
 }
@@ -6016,21 +6016,21 @@ int32_t __fastcall ScrTerminalMap__GetUsedDiceItemId(ScrTerminalMap_o *this, con
   DataManager_o *eventBoardGameUsingItem; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BB1983 & 1) == 0 )
+  if ( (byte_4BC4D3F & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ItemEntity__get_Item__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BB1983 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ItemEntity__get_Item__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BC4D3F = 1;
   }
   eventBoardGameUsingItem = (DataManager_o *)this->fields.eventBoardGameUsingItem;
   if ( !eventBoardGameUsingItem )
   {
-    eventBoardGameUsingItem = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    eventBoardGameUsingItem = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !eventBoardGameUsingItem
       || (eventBoardGameUsingItem = (DataManager_o *)DataManager__GetMasterData_object_(
                                                        eventBoardGameUsingItem,
-                                                       (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
+                                                       (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___)) == 0LL
       || (eventBoardGameUsingItem = (DataManager_o *)ItemMaster__GetEntityListByType(
                                                        (ItemMaster_o *)eventBoardGameUsingItem,
                                                        26,
@@ -6038,9 +6038,9 @@ int32_t __fastcall ScrTerminalMap__GetUsedDiceItemId(ScrTerminalMap_o *this, con
       || (eventBoardGameUsingItem = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                                        (System_Collections_Generic_List_object__o *)eventBoardGameUsingItem,
                                                        0,
-                                                       (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_ItemEntity__get_Item__)) == 0LL )
+                                                       (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_ItemEntity__get_Item__)) == 0LL )
     {
-      sub_1C13F80(eventBoardGameUsingItem, v6);
+      sub_1C1AE30(eventBoardGameUsingItem, v6);
     }
   }
   return eventBoardGameUsingItem->fields.m_CachedPtr;
@@ -6070,27 +6070,27 @@ void __fastcall ScrTerminalMap__HarvestGrowthDialogOpen(
   UnityEngine_GameObject_o *mActionPanel; // x21
   System_Action_o *v21; // x22
 
-  if ( (byte_4BB193F & 1) == 0 )
+  if ( (byte_4BC4CFB & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass342_0__HarvestGrowthDialogOpen_b__0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass342_0_TypeInfo, v7);
-    byte_4BB193F = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass342_0__HarvestGrowthDialogOpen_b__0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass342_0_TypeInfo, v7);
+    byte_4BC4CFB = 1;
   }
-  v8 = sub_1C13F70(ScrTerminalMap___c__DisplayClass342_0_TypeInfo);
+  v8 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass342_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass342_0___ctor((ScrTerminalMap___c__DisplayClass342_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_14;
   *(_QWORD *)(v8 + 16) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v10);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v10);
+    byte_4BC2713 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -6102,7 +6102,7 @@ void __fastcall ScrTerminalMap__HarvestGrowthDialogOpen(
   if ( !mInstance
     || (mTerminalList = mInstance->fields.mTerminalList) == 0LL
     || (mActionPanel = mTerminalList->fields.mActionPanel,
-        v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v21 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(
           v21,
           (Il2CppObject *)v8,
@@ -6111,7 +6111,7 @@ void __fastcall ScrTerminalMap__HarvestGrowthDialogOpen(
         !titleInfoControl) )
   {
 LABEL_14:
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
   TitleInfoControl__EventHarvestGrowthDialogOpen(titleInfoControl, mActionPanel, v21, 0LL);
 }
@@ -6137,25 +6137,25 @@ void __fastcall ScrTerminalMap__InitCheckUpdateRequest(
   _BOOL4 IsEventMapLoading; // w9
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB18EA & 1) == 0 )
+  if ( (byte_4BC4CA6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, callback);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB18EA = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventDetailMaster___, callback);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4CA6 = 1;
   }
   entity = 0LL;
   mWarInfo = this->fields.mWarInfo;
   this->fields._IsCheckExpiration_k__BackingField = 0;
   if ( !mWarInfo )
     goto LABEL_29;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !this->fields.mWarInfo )
     goto LABEL_31;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -6166,7 +6166,7 @@ void __fastcall ScrTerminalMap__InitCheckUpdateRequest(
           v11,
           &entity,
           (int32_t)Instance,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     goto LABEL_29;
   Instance = entity;
   if ( !entity )
@@ -6181,14 +6181,14 @@ LABEL_29:
   Instance = entity;
   if ( !entity )
 LABEL_31:
-    sub_1C13F80(Instance, v10);
+    sub_1C1AE30(Instance, v10);
   this->fields.isRaidMap = EventDetailEntity__IsRaid((EventDetailEntity_o *)entity, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BA )
+  if ( !byte_4BC4D76 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    byte_4BB19BA = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    byte_4BC4D76 = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6203,10 +6203,10 @@ LABEL_31:
   }
   if ( !v14->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v14);
-  if ( !byte_4BB19BB )
+  if ( !byte_4BC4D77 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    byte_4BB19BB = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    byte_4BC4D77 = 1;
   }
   v15 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6236,7 +6236,7 @@ void __fastcall ScrTerminalMap__InitMapCamera(ScrTerminalMap_o *this, const Meth
 
   mapCamera = this->fields.mapCamera;
   if ( !mapCamera )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   MapCamera__Init(mapCamera, 0LL);
 }
 
@@ -6252,7 +6252,7 @@ void __fastcall ScrTerminalMap__InitTitleInfo(ScrTerminalMap_o *this, const Meth
     || (TitleInfoControl__setTitleImg(titleInfoControl, 1, 1, 0, 0LL),
         (titleInfoControl = this->fields.titleInfoControl) == 0LL) )
   {
-    sub_1C13F80(titleInfoControl, method);
+    sub_1C1AE30(titleInfoControl, method);
   }
   TitleInfoControl__setBackBtnColliderEnable(titleInfoControl, 1, 0LL);
 }
@@ -6264,10 +6264,10 @@ bool __fastcall ScrTerminalMap__IsActive_SpotCooltimeRewardDialog(ScrTerminalMap
   __int64 v4; // x1
   EventSpotCooltimeComponent_o *v5; // x0
 
-  if ( (byte_4BB1990 & 1) == 0 )
+  if ( (byte_4BC4D4C & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1990 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4D4C = 1;
   }
   eventSpotCooltimeComponent = (UnityEngine_Object_o *)this->fields.eventSpotCooltimeComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -6276,7 +6276,7 @@ bool __fastcall ScrTerminalMap__IsActive_SpotCooltimeRewardDialog(ScrTerminalMap
     return 0;
   v5 = this->fields.eventSpotCooltimeComponent;
   if ( !v5 )
-    sub_1C13F80(0LL, v4);
+    sub_1C1AE30(0LL, v4);
   return EventSpotCooltimeComponent__IsActive_SpotCooltimeRewardDialog(v5, 0LL);
 }
 
@@ -6296,7 +6296,7 @@ bool __fastcall ScrTerminalMap__IsAllMaskActive(ScrTerminalMap_o *this, const Me
                allMaskObj,
                allMaskObj->klass[1]._1.element_class) > 0.0;
 LABEL_6:
-    sub_1C13F80(allMaskObj, method);
+    sub_1C1AE30(allMaskObj, method);
   }
   return 0;
 }
@@ -6316,12 +6316,12 @@ bool __fastcall ScrTerminalMap__IsCreateBoardGameGimmick(ScrTerminalMap_o *this,
   ScrTerminalMap_c *v13; // x8
   int32_t v14; // w19
 
-  if ( (byte_4BB1915 & 1) == 0 )
+  if ( (byte_4BC4CD1 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB1915 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4CD1 = 1;
   }
   if ( !ScrTerminalMap__IsEventBoardGame(this, method) || !ScrTerminalMap__IsDispEventBoardGameUI(this, v5) )
     return 0;
@@ -6332,10 +6332,10 @@ bool __fastcall ScrTerminalMap__IsCreateBoardGameGimmick(ScrTerminalMap_o *this,
     return 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4D7B = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6354,10 +6354,10 @@ bool __fastcall ScrTerminalMap__IsCreateBoardGameGimmick(ScrTerminalMap_o *this,
     return 1;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4D7B = 1;
   }
   v12 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6394,21 +6394,21 @@ bool __fastcall ScrTerminalMap__IsDataLostBattleAutoReset(
   int32_t v14; // w20
   System_Collections_Generic_List_EventDataLostBattleResetEntity__o *DataLostBattleResetEntities; // x0
 
-  if ( (byte_4BB1944 & 1) == 0 )
+  if ( (byte_4BC4D00 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDataLostBattleMaster___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___, v6);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__, v8);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    byte_4BB1944 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDataLostBattleMaster___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___, v6);
+    sub_1C1ABD4(&DataManager_TypeInfo, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__, v8);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    byte_4BC4D00 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19CD )
+  if ( !byte_4BC4D89 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4BB19CD = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4BC4D89 = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6420,7 +6420,7 @@ bool __fastcall ScrTerminalMap__IsDataLostBattleAutoReset(
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
   if ( !Master_object )
     goto LABEL_20;
   EventDataLostBattleId = EventDataLostBattleMaster__GetEventDataLostBattleId(
@@ -6433,10 +6433,10 @@ bool __fastcall ScrTerminalMap__IsDataLostBattleAutoReset(
   v14 = EventDataLostBattleId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
   if ( !Master_object )
 LABEL_20:
-    sub_1C13F80(Master_object, v12);
+    sub_1C1AE30(Master_object, v12);
   DataLostBattleResetEntities = EventDataLostBattleResetMaster__GetDataLostBattleResetEntities(
                                   (EventDataLostBattleResetMaster_o *)Master_object,
                                   v14,
@@ -6455,14 +6455,14 @@ bool __fastcall ScrTerminalMap__IsDialogOnActive(const MethodInfo *method)
   __int64 v3; // x1
   CommonUI_o *v4; // x19
 
-  if ( (byte_4BB18F3 & 1) == 0 )
+  if ( (byte_4BC4CAF & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v1);
-    byte_4BB18F3 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v1);
+    byte_4BC4CAF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   v4 = (CommonUI_o *)Instance;
   return CommonUI__IsActive_UserPresentBoxWindow((CommonUI_o *)Instance, 0LL)
       || CommonUI__IsActive_ApRecvDlgComp(v4, 0LL)
@@ -6487,13 +6487,13 @@ bool __fastcall ScrTerminalMap__IsDispEventBoardGameUI(ScrTerminalMap_o *this, c
   System_Int32_array *EventBoardGameMapIdList; // x20
   System_Func_int__bool__o *v8; // x21
 
-  if ( (byte_4BB1957 & 1) == 0 )
+  if ( (byte_4BC4D13 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    sub_1C13D24(&Method_BasicHelper_Any_int____77470256, v3);
-    sub_1C13D24(&System_Func_int__bool__TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__IsDispEventBoardGameUI_b__368_0__, v5);
-    byte_4BB1957 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    sub_1C1ABD4(&Method_BasicHelper_Any_int____77547112, v3);
+    sub_1C1ABD4(&System_Func_int__bool__TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__IsDispEventBoardGameUI_b__368_0__, v5);
+    byte_4BC4D13 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -6509,12 +6509,12 @@ bool __fastcall ScrTerminalMap__IsDispEventBoardGameUI(ScrTerminalMap_o *this, c
     j_il2cpp_runtime_class_init_0(v6);
     EventBoardGameMapIdList = BalanceConfig_TypeInfo->static_fields->EventBoardGameMapIdList;
   }
-  v8 = (System_Func_int__bool__o *)sub_1C13F70(System_Func_int__bool__TypeInfo);
+  v8 = (System_Func_int__bool__o *)sub_1C1AE20(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(v8, (Il2CppObject *)this, Method_ScrTerminalMap__IsDispEventBoardGameUI_b__368_0__, 0LL);
-  return BasicHelper__Any_int__49783128(
+  return BasicHelper__Any_int__49848700(
            EventBoardGameMapIdList,
            (System_Func_T__bool__o *)v8,
-           (const MethodInfo_2F7A158 *)Method_BasicHelper_Any_int____77470256);
+           (const MethodInfo_2F8A17C *)Method_BasicHelper_Any_int____77547112);
 }
 
 
@@ -6523,10 +6523,10 @@ bool __fastcall ScrTerminalMap__IsEnabledToUseEventItem(ScrTerminalMap_o *this, 
   MapControl_WarInfo_o *mWarInfo; // x0
   int32_t EventId; // w19
 
-  if ( (byte_4BB1958 & 1) == 0 )
+  if ( (byte_4BC4D14 & 1) == 0 )
   {
-    sub_1C13D24(&CondType_TypeInfo, method);
-    byte_4BB1958 = 1;
+    sub_1C1ABD4(&CondType_TypeInfo, method);
+    byte_4BC4D14 = 1;
   }
   mWarInfo = this->fields.mWarInfo;
   if ( mWarInfo )
@@ -6551,12 +6551,12 @@ bool __fastcall ScrTerminalMap__IsEventBoardGame(ScrTerminalMap_o *this, const M
   DataMasterBase_TMaster__TEntity__PKType__o *v9; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4BB1955 & 1) == 0 )
+  if ( (byte_4BC4D11 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BB1955 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BC4D11 = 1;
   }
   entity = 0LL;
   mWarInfo = this->fields.mWarInfo;
@@ -6564,12 +6564,12 @@ bool __fastcall ScrTerminalMap__IsEventBoardGame(ScrTerminalMap_o *this, const M
   {
     if ( MapControl_WarInfo__GetEventId(mWarInfo, 0LL) >= 1 )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_13;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                   (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventDetailMaster___);
       v8 = this->fields.mWarInfo;
       if ( !v8 )
         goto LABEL_13;
@@ -6581,7 +6581,7 @@ bool __fastcall ScrTerminalMap__IsEventBoardGame(ScrTerminalMap_o *this, const M
              v9,
              &entity,
              (int32_t)Instance,
-             (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+             (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
       {
         Instance = entity;
         if ( entity )
@@ -6590,7 +6590,7 @@ bool __fastcall ScrTerminalMap__IsEventBoardGame(ScrTerminalMap_o *this, const M
           return (unsigned __int8)mWarInfo & 1;
         }
 LABEL_13:
-        sub_1C13F80(Instance, v7);
+        sub_1C1AE30(Instance, v7);
       }
     }
     LOBYTE(mWarInfo) = 0;
@@ -6625,17 +6625,17 @@ bool __fastcall ScrTerminalMap__IsEventBoardGameNextMapDisp(
   QuestEntity_o *v23; // [xsp+0h] [xbp-50h] BYREF
   UserEventEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BB197E & 1) == 0 )
+  if ( (byte_4BC4D3A & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, *(_QWORD *)&questId);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, v5);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
-    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v7);
-    sub_1C13D24(&NetworkManager_TypeInfo, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1C13D24(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v10);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v11);
-    byte_4BB197E = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, *(_QWORD *)&questId);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestMaster___, v5);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
+    sub_1C1ABD4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v7);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1C1ABD4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v10);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v11);
+    byte_4BC4D3A = 1;
   }
   v23 = 0LL;
   entity = 0LL;
@@ -6643,22 +6643,22 @@ bool __fastcall ScrTerminalMap__IsEventBoardGameNextMapDisp(
   if ( !mWarInfo )
     goto LABEL_57;
   EventId = MapControl_WarInfo__GetEventId(mWarInfo, 0LL);
-  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mWarInfo )
     goto LABEL_57;
   v14 = (DataManager_o *)mWarInfo;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)mWarInfo,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestMaster___);
   v16 = DataManager__GetMasterData_object_(
           v14,
-          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
+    byte_4BC2585 = 1;
   }
   mWarInfo = (MapControl_WarInfo_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -6678,10 +6678,10 @@ bool __fastcall ScrTerminalMap__IsEventBoardGameNextMapDisp(
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19BF )
+    if ( !byte_4BC4D7B )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
-      byte_4BB19BF = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
+      byte_4BC4D7B = 1;
     }
     mWarInfo = (MapControl_WarInfo_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6693,10 +6693,10 @@ bool __fastcall ScrTerminalMap__IsEventBoardGameNextMapDisp(
       goto LABEL_27;
     if ( !LODWORD(mWarInfo[3].fields.mapInfoList) )
       j_il2cpp_runtime_class_init_0(mWarInfo);
-    if ( !byte_4BB19BF )
+    if ( !byte_4BC4D7B )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
-      byte_4BB19BF = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
+      byte_4BC4D7B = 1;
     }
     mWarInfo = (MapControl_WarInfo_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6719,7 +6719,7 @@ LABEL_27:
           (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
           (Il2CppObject **)&v23,
           questId,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
     return 1;
   mWarInfo = (MapControl_WarInfo_o *)v23;
   if ( !v23 )
@@ -6732,13 +6732,13 @@ LABEL_27:
   spotId = v23->fields.spotId;
   if ( spotId != ScrTerminalMap__GetEventBoardGameSpotId(this, *(const MethodInfo **)&questId) )
     return 0;
-  mWarInfo = (MapControl_WarInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  mWarInfo = (MapControl_WarInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   v18 = (clsQuestCheck_o *)mWarInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
   if ( !v18 )
 LABEL_57:
-    sub_1C13F80(mWarInfo, *(_QWORD *)&questId);
+    sub_1C1AE30(mWarInfo, *(_QWORD *)&questId);
   if ( !clsQuestCheck__CheckQuestPlayableNow(
           v18,
           BalanceConfig_TypeInfo->static_fields->EventBoardGameNextBoardQuestId,
@@ -6746,10 +6746,10 @@ LABEL_57:
     return 1;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB181A )
+  if ( !byte_4BC4BD6 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v19);
-    byte_4BB181A = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v19);
+    byte_4BC4BD6 = 1;
   }
   v20 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6761,10 +6761,10 @@ LABEL_57:
     return 1;
   if ( !v20->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v20);
-  if ( !byte_4BB14A2 )
+  if ( !byte_4BC4856 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v19);
-    byte_4BB14A2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v19);
+    byte_4BC4856 = 1;
   }
   v21 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -6784,10 +6784,10 @@ bool __fastcall ScrTerminalMap__IsEventBoardGameQuestAllClear(ScrTerminalMap_o *
   struct ScrTerminalMap_StaticFields *static_fields; // x8
   int32_t maxClearCount[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB196B & 1) == 0 )
+  if ( (byte_4BC4D27 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, method);
-    byte_4BB196B = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, method);
+    byte_4BC4D27 = 1;
   }
   v4 = 1;
   while ( 1 )
@@ -6840,7 +6840,7 @@ bool __fastcall ScrTerminalMap__IsMapModel(ScrTerminalMap_o *this, const MethodI
 
   mapModelManager = this->fields.mapModelManager;
   if ( !mapModelManager )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return MapModelManager__get_IsMapModel(mapModelManager, 0LL);
 }
 
@@ -6858,14 +6858,14 @@ bool __fastcall ScrTerminalMap__IsNeedMapUpdateOnSchedule(
   MapControl_WarInfo_o *WarInfoByWarID; // x0
   MapControl_WarInfo_o *v9; // x19
 
-  if ( (byte_4BB18EC & 1) == 0 )
+  if ( (byte_4BC4CA8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_MapUpdateScheduleMaster___, *(_QWORD *)&warId);
-    sub_1C13D24(&DataManager_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v5);
-    byte_4BB18EC = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_MapUpdateScheduleMaster___, *(_QWORD *)&warId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v5);
+    byte_4BC4CA8 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   WarInfoByWarID = QuestTree__mfGetWarInfoByWarID((QuestTree_o *)Instance, warId, 0LL);
@@ -6876,11 +6876,11 @@ bool __fastcall ScrTerminalMap__IsNeedMapUpdateOnSchedule(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
+      Instance = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_MapUpdateScheduleMaster___);
       if ( Instance )
         return MapUpdateScheduleMaster__IsNeedMapUpdate((MapUpdateScheduleMaster_o *)Instance, v9, 0LL);
 LABEL_11:
-      sub_1C13F80(Instance, v7);
+      sub_1C1AE30(Instance, v7);
     }
   }
   return 0;
@@ -6900,12 +6900,12 @@ bool __fastcall ScrTerminalMap__IsSkipCreateBoardGameGimmick(
   __int64 v9; // x20
   __int64 v10; // x23
 
-  if ( (byte_4BB1916 & 1) == 0 )
+  if ( (byte_4BC4CD2 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestReleaseMaster___, mapGimmickInfo);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v4);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BB1916 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestReleaseMaster___, mapGimmickInfo);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v4);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4BC4CD2 = 1;
   }
   if ( !mapGimmickInfo )
     goto LABEL_28;
@@ -6915,12 +6915,12 @@ bool __fastcall ScrTerminalMap__IsSkipCreateBoardGameGimmick(
   v6 = this;
   if ( LODWORD(this->fields.PLAYER_ICON_POS.fields.z) == 17 )
   {
-    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_28;
     this = (ScrTerminalMap_o *)DataManager__GetMasterData_object_(
                                  (DataManager_o *)this,
-                                 (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+                                 (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
     if ( !this )
       goto LABEL_28;
     this = (ScrTerminalMap_o *)QuestReleaseMaster__getListByQuestID(
@@ -6935,14 +6935,14 @@ bool __fastcall ScrTerminalMap__IsSkipCreateBoardGameGimmick(
   }
   if ( v6->fields.currentAssetId != 17 )
     goto LABEL_14;
-  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (ScrTerminalMap_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)this,
-                                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestReleaseMaster___)) == 0LL )
+                                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestReleaseMaster___)) == 0LL )
   {
 LABEL_28:
-    sub_1C13F80(this, mapGimmickInfo);
+    sub_1C1AE30(this, mapGimmickInfo);
   }
   this = (ScrTerminalMap_o *)QuestReleaseMaster__getListByQuestID(
                                (QuestReleaseMaster_o *)this,
@@ -6960,7 +6960,7 @@ LABEL_25:
   while ( 1 )
   {
     if ( (unsigned int)v9 >= (unsigned int)m_CancellationTokenSource )
-      sub_1C13F88(this, mapGimmickInfo);
+      sub_1C1AE38(this, mapGimmickInfo);
     v10 = *((_QWORD *)&v7->fields.PLAYER_ICON_POS.fields.x + v9);
     if ( !v10 )
       goto LABEL_28;
@@ -7046,37 +7046,37 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
   UserEventEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Vector3_o EventBoardSquarePos; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB1979 & 1) == 0 )
+  if ( (byte_4BC4D35 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventBoardGameCellMaster___, v5);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v8);
-    sub_1C13D24(&NetworkManager_TypeInfo, v9);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__0__, v14);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass404_0_TypeInfo, v15);
-    byte_4BB1979 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventBoardGameCellMaster___, v5);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v6);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v8);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v9);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__0__, v14);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass404_0_TypeInfo, v15);
+    byte_4BC4D35 = 1;
   }
   entity = 0LL;
-  v16 = sub_1C13F70(ScrTerminalMap___c__DisplayClass404_0_TypeInfo);
+  v16 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass404_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass404_0___ctor((ScrTerminalMap___c__DisplayClass404_0_o *)v16, 0LL);
   if ( !v16 )
     goto LABEL_41;
   *(_QWORD *)(v16 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)this, v19, v20, v21, v22, v23, v24);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)this, v19, v20, v21, v22, v23, v24);
   *(_QWORD *)(v16 + 56) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 56), (int64_t)callback, v25, v26, v27, v28, v29, v30);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v16 + 56), (int64_t)callback, v25, v26, v27, v28, v29, v30);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v18);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v18);
+    byte_4BC4D7B = 1;
   }
   v31 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -7090,18 +7090,18 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
   if ( !mWarInfo )
     goto LABEL_41;
   EventId = MapControl_WarInfo__GetEventId(mWarInfo, 0LL);
-  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mWarInfo )
     goto LABEL_41;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)mWarInfo,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v18);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v18);
+    byte_4BC2585 = 1;
   }
   mWarInfo = (MapControl_WarInfo_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -7130,12 +7130,12 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
   }
   if ( *(_DWORD *)(v16 + 48) != value )
   {
-    mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !mWarInfo )
       goto LABEL_41;
     mWarInfo = (MapControl_WarInfo_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)mWarInfo,
-                                         (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventBoardGameCellMaster___);
+                                         (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventBoardGameCellMaster___);
     if ( !mWarInfo )
       goto LABEL_41;
     EntityFromEventIdAndCellId = EventBoardGameCellMaster__GetEntityFromEventIdAndCellId(
@@ -7151,7 +7151,7 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
         v37 = *(_DWORD *)(v16 + 52);
         *(UnityEngine_Vector3_o *)(v16 + 24) = EventBoardSquarePos;
         *(UnityEngine_Vector3_o *)(v16 + 36) = ScrTerminalMap__GetEventBoardSquarePos(this, v37, v38);
-        mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( mWarInfo )
         {
           CommonUI__SetFadeMaskCollider((CommonUI_o *)mWarInfo, 1, 0LL);
@@ -7161,13 +7161,13 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)mWarInfo,
-                                 (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                 (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             v41 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
             if ( v41 )
             {
-              v43 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+              v43 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
               System_Action___ctor(
                 v43,
                 (Il2CppObject *)v16,
@@ -7176,7 +7176,7 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
               if ( !Component_object )
                 goto LABEL_41;
               Component_object[2].klass = (Il2CppClass *)v43;
-              sub_1C13CC8(
+              sub_1C1AB78(
                 (PartyOrganizationUtility_o *)&Component_object[2],
                 (int64_t)v43,
                 v44,
@@ -7192,7 +7192,7 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
                                                       *(_DWORD *)(v16 + 52),
                                                       v42);
             this->fields.animationNameBuffer = BoardGamePieceAnimationNameBySquareId;
-            sub_1C13CC8(
+            sub_1C1AB78(
               (PartyOrganizationUtility_o *)&this->fields.animationNameBuffer,
               (int64_t)BoardGamePieceAnimationNameBySquareId,
               v51,
@@ -7206,10 +7206,10 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
             {
               mWarInfo = (MapControl_WarInfo_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)mWarInfo,
-                                                   (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                                   (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
               if ( mWarInfo )
               {
-                UnityEngine_Animation__Play_70466396(
+                UnityEngine_Animation__Play_70538820(
                   (UnityEngine_Animation_o *)mWarInfo,
                   this->fields.animationNameBuffer,
                   0LL);
@@ -7219,7 +7219,7 @@ void __fastcall ScrTerminalMap__JumpEventBoardGamePiece(
           }
         }
 LABEL_41:
-        sub_1C13F80(mWarInfo, v18);
+        sub_1C1AE30(mWarInfo, v18);
       }
     }
   }
@@ -7238,7 +7238,7 @@ void __fastcall ScrTerminalMap__LoadAssetsAtlases(
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  Il2CppObject *Object_object__49747248; // x22
+  Il2CppObject *Object_object__49812820; // x22
   int64_t v11; // x2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -7270,33 +7270,33 @@ void __fastcall ScrTerminalMap__LoadAssetsAtlases(
   int v39; // [xsp+Ch] [xbp-44h] BYREF
 
   v6 = this;
-  if ( (byte_4BB1903 & 1) == 0 )
+  if ( (byte_4BC4CBF & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, assetData);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas__Add__, v8);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BB1903 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, assetData);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_UIAtlas__Add__, v8);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    byte_4BC4CBF = 1;
   }
   if ( !assetData )
     goto LABEL_25;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               assetData,
                               atlasName,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(
-                               (UnityEngine_Object_o *)Object_object__49747248,
+                               (UnityEngine_Object_o *)Object_object__49812820,
                                0LL,
                                0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( Object_object__49747248 )
+    if ( Object_object__49812820 )
     {
       this = (ScrTerminalMap_o *)UnityEngine_GameObject__GetComponent_object_(
-                                   (UnityEngine_GameObject_o *)Object_object__49747248,
-                                   (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                   (UnityEngine_GameObject_o *)Object_object__49812820,
+                                   (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       assetsAtlases = (System_Collections_Generic_List_object__o *)v6->fields.assetsAtlases;
       if ( assetsAtlases )
       {
@@ -7312,31 +7312,31 @@ void __fastcall ScrTerminalMap__LoadAssetsAtlases(
             System_Collections_Generic_List_object___AddWithResize(
               assetsAtlases,
               (Il2CppObject *)this,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &items->obj.klass + size;
             assetsAtlases->fields._size = size + 1;
             v22[4] = (Il2CppClass *)v21;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 4), (int64_t)v21, v11, v12, v13, v14, v15, v16);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v22 + 4), (int64_t)v21, v11, v12, v13, v14, v15, v16);
           }
           return;
         }
       }
     }
 LABEL_25:
-    sub_1C13F80(this, assetData);
+    sub_1C1AE30(this, assetData);
   }
   for ( i = 1; ; i = v39 + 1 )
   {
     v39 = i;
     v24 = System_Int32__ToString((int32_t)&v39, 0LL);
-    v25 = System_String__Concat_62967944(atlasName, v24, 0LL);
-    v26 = AssetData__GetObject_object__49747248(
+    v25 = System_String__Concat_63040368(atlasName, v24, 0LL);
+    v26 = AssetData__GetObject_object__49812820(
             assetData,
             v25,
-            (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+            (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (ScrTerminalMap_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v26, 0LL, 0LL);
@@ -7346,7 +7346,7 @@ LABEL_25:
       goto LABEL_25;
     this = (ScrTerminalMap_o *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)v26,
-                                 (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                 (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     v33 = (System_Collections_Generic_List_object__o *)v6->fields.assetsAtlases;
     if ( !v33 )
       goto LABEL_25;
@@ -7362,14 +7362,14 @@ LABEL_25:
       System_Collections_Generic_List_object___AddWithResize(
         v33,
         (Il2CppObject *)this,
-        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+        *(const MethodInfo_363C890 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
     }
     else
     {
       v38 = &v34->obj.klass + v36;
       v33->fields._size = v36 + 1;
       v38[4] = (Il2CppClass *)v37;
-      sub_1C13CC8((PartyOrganizationUtility_o *)(v38 + 4), (int64_t)v37, v27, v28, v29, v30, v31, v32);
+      sub_1C1AB78((PartyOrganizationUtility_o *)(v38 + 4), (int64_t)v37, v27, v28, v29, v30, v31, v32);
     }
   }
 }
@@ -7392,7 +7392,7 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
   struct EventQuestCooltimeComponent_o **p_eventQuestCooltimeComponent; // x21
   UnityEngine_GameObject_o *Instance; // x0
   __int64 v16; // x1
-  Il2CppObject *Object_object__49747248; // x22
+  Il2CppObject *Object_object__49812820; // x22
   Il2CppObject *Component_object; // x0
   int64_t v19; // x2
   int32_t v20; // w3
@@ -7416,18 +7416,18 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
   UnityEngine_GameObject_o *v38; // x19
   UnityEngine_GameObject_o *v39; // x0
 
-  if ( (byte_4BB190B & 1) == 0 )
+  if ( (byte_4BC4CC7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, assetData);
-    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v5);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventInfoCooltimeNoticeButton___, v6);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventQuestCooltimeComponent___, v7);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&StringLiteral_6334/*"EventExitMove2"*/, v11);
-    sub_1C13D24(&StringLiteral_9030/*"Map Touch Enable"*/, v12);
-    byte_4BB190B = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, assetData);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v5);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventInfoCooltimeNoticeButton___, v6);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventQuestCooltimeComponent___, v7);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&StringLiteral_6338/*"EventHarvestNoticeButton"*/, v11);
+    sub_1C1ABD4(&StringLiteral_9036/*"MapGimmickEffect_EventQuestCooltime"*/, v12);
+    byte_4BC4CC7 = 1;
   }
   eventQuestCooltimeComponent = (UnityEngine_Object_o *)this->fields.eventQuestCooltimeComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -7438,22 +7438,22 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
   {
     if ( !assetData )
       goto LABEL_32;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 assetData,
-                                (System_String_o *)StringLiteral_9030/*"Map Touch Enable"*/,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (System_String_o *)StringLiteral_9036/*"MapGimmickEffect_EventQuestCooltime"*/,
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Instance = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                             Object_object__49747248,
-                                             (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             Object_object__49812820,
+                                             (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !Instance )
       goto LABEL_32;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Instance,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventQuestCooltimeComponent___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventQuestCooltimeComponent___);
     *p_eventQuestCooltimeComponent = (struct EventQuestCooltimeComponent_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.eventQuestCooltimeComponent,
       (int64_t)Component_object,
       v19,
@@ -7466,15 +7466,15 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
     if ( !*p_eventQuestCooltimeComponent )
       goto LABEL_32;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-    GameObjectExtensions__SetParent_34717612(gameObject, this->fields.rootEventObjP, 0LL);
+    GameObjectExtensions__SetParent_34762136(gameObject, this->fields.rootEventObjP, 0LL);
     Instance = (UnityEngine_GameObject_o *)this->fields.eventQuestCooltimeComponent;
     if ( !Instance )
       goto LABEL_32;
     v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-    if ( !byte_4BAEDA6 )
+    if ( !byte_4BC2146 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v26);
-      byte_4BAEDA6 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v26);
+      byte_4BC2146 = 1;
     }
     GameObjectExtensions__SetLocalScale(v27, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   }
@@ -7494,12 +7494,12 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(coolTimeButtonObj, 0LL, 0LL) )
   {
-    Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_32;
     Instance = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)Instance,
-                                             (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                             (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
     if ( !Instance )
       goto LABEL_32;
     Instance = (UnityEngine_GameObject_o *)CommonReleaseMaster__IsOpen(
@@ -7513,17 +7513,17 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
       if ( assetData )
       {
         p_coolTimeButtonObj = &this->fields.coolTimeButtonObj;
-        v30 = AssetData__GetObject_object__49747248(
+        v30 = AssetData__GetObject_object__49812820(
                 assetData,
-                (System_String_o *)StringLiteral_6334/*"EventExitMove2"*/,
-                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                (System_String_o *)StringLiteral_6338/*"EventHarvestNoticeButton"*/,
+                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v31 = UnityEngine_Object__Instantiate_object_(
                 v30,
-                (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         this->fields.coolTimeButtonObj = (struct UnityEngine_GameObject_o *)v31;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&this->fields.coolTimeButtonObj,
           (int64_t)v31,
           v32,
@@ -7537,13 +7537,13 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
         {
           v38 = *p_coolTimeButtonObj;
           v39 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-          GameObjectExtensions__SafeSetParent_34717732(v38, v39, 0LL);
+          GameObjectExtensions__SafeSetParent_34762256(v38, v39, 0LL);
           Instance = *p_coolTimeButtonObj;
           if ( *p_coolTimeButtonObj )
           {
             Instance = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      Instance,
-                                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoCooltimeNoticeButton___);
+                                                     (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoCooltimeNoticeButton___);
             if ( Instance )
             {
               ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, const char *))Instance->klass[1]._1.gc_desc)(
@@ -7556,7 +7556,7 @@ void __fastcall ScrTerminalMap__LoadCooltimeMapObject(
         }
       }
 LABEL_32:
-      sub_1C13F80(Instance, v16);
+      sub_1C1AE30(Instance, v16);
     }
   }
 }
@@ -7570,28 +7570,28 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameDiceAsset(ScrTerminalMap_o *th
   Il2CppObject *Instance; // x20
   const MethodInfo *v7; // x1
   int32_t EventBoardDiceVoiceServantId; // w0
-  System_String_o *VoiceAssetName_41015788; // x21
+  System_String_o *VoiceAssetName_41071744; // x21
   System_Action_o *v10; // x22
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4BB195A & 1) == 0 )
+  if ( (byte_4BC4D16 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_0__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
-    byte_4BB195A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_0__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
+    byte_4BC4D16 = 1;
   }
   if ( ScrTerminalMap__IsEventBoardGame(this, method) && ScrTerminalMap__IsDispEventBoardGameUI(this, v5) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     EventBoardDiceVoiceServantId = ScrTerminalMap__GetEventBoardDiceVoiceServantId(this, v7);
-    VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(EventBoardDiceVoiceServantId, 0LL);
-    v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(EventBoardDiceVoiceServantId, 0LL);
+    v10 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_0__, 0LL);
     if ( !Instance )
-      sub_1C13F80(v11, v12);
-    SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, VoiceAssetName_41015788, v10, 1, 0LL);
+      sub_1C1AE30(v11, v12);
+    SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, VoiceAssetName_41071744, v10, 1, 0LL);
   }
 }
 
@@ -7610,7 +7610,7 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
   const MethodInfo *v11; // x1
   UnityEngine_GameObject_o *EventBoardQuestArrivalPanelObj_k__BackingField; // x0
   __int64 v13; // x1
-  Il2CppObject *Object_object__49747248; // x21
+  Il2CppObject *Object_object__49812820; // x21
   Il2CppObject *v15; // x0
   int64_t v16; // x2
   int32_t v17; // w3
@@ -7645,37 +7645,37 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
   PartyListViewItem_o *v46; // x7
   const MethodInfo *v47; // x1
 
-  if ( (byte_4BB190A & 1) == 0 )
+  if ( (byte_4BC4CC6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, assetData);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_9040/*"MapGimmickEffect_GappolyPiece"*/, v7);
-    sub_1C13D24(&StringLiteral_9034/*"MapGimmickActionEffect_"*/, v8);
-    sub_1C13D24(&StringLiteral_9032/*"MapEffect_{0:D4}_{1:D2}"*/, v9);
-    sub_1C13D24(&StringLiteral_9041/*"MapGimmickEffect_GappolyPiece_1"*/, v10);
-    byte_4BB190A = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, assetData);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_9046/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/, v7);
+    sub_1C1ABD4(&StringLiteral_9040/*"MapGimmickEffect_GappolyPiece"*/, v8);
+    sub_1C1ABD4(&StringLiteral_9038/*"MapGimmickEffect_GappolyBoard"*/, v9);
+    sub_1C1ABD4(&StringLiteral_9047/*"MapGimmickEffect_GappolyStopPanel"*/, v10);
+    byte_4BC4CC6 = 1;
   }
   if ( ScrTerminalMap__IsDispEventBoardGameUI(this, (const MethodInfo *)assetData) )
   {
     ScrTerminalMap__SetupDiceButton(this, v11);
     if ( assetData )
     {
-      Object_object__49747248 = AssetData__GetObject_object__49747248(
+      Object_object__49812820 = AssetData__GetObject_object__49812820(
                                   assetData,
-                                  (System_String_o *)StringLiteral_9032/*"MapEffect_{0:D4}_{1:D2}"*/,
-                                  (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                  (System_String_o *)StringLiteral_9038/*"MapGimmickEffect_GappolyBoard"*/,
+                                  (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v15 = UnityEngine_Object__Instantiate_object_(
-                Object_object__49747248,
-                (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                Object_object__49812820,
+                (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         this->fields._EventBoardGameObj_k__BackingField = (struct UnityEngine_GameObject_o *)v15;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&this->fields._EventBoardGameObj_k__BackingField,
           (int64_t)v15,
           v16,
@@ -7684,15 +7684,15 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
           v19,
           v20,
           v21);
-        GameObjectExtensions__SafeSetParent_34717732(
+        GameObjectExtensions__SafeSetParent_34762256(
           this->fields._EventBoardGameObj_k__BackingField,
           this->fields.rootEventObjP,
           0LL);
       }
-      v22 = AssetData__GetObject_object__49747248(
+      v22 = AssetData__GetObject_object__49812820(
               assetData,
-              (System_String_o *)StringLiteral_9034/*"MapGimmickActionEffect_"*/,
-              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+              (System_String_o *)StringLiteral_9040/*"MapGimmickEffect_GappolyPiece"*/,
+              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v22, 0LL, 0LL) )
@@ -7701,9 +7701,9 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v23 = UnityEngine_Object__Instantiate_object_(
                 v22,
-                (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         this->fields._EventBoardPieceObj_k__BackingField = (struct UnityEngine_GameObject_o *)v23;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&this->fields._EventBoardPieceObj_k__BackingField,
           (int64_t)v23,
           v24,
@@ -7712,15 +7712,15 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
           v27,
           v28,
           v29);
-        GameObjectExtensions__SafeSetParent_34717732(
+        GameObjectExtensions__SafeSetParent_34762256(
           this->fields._EventBoardPieceObj_k__BackingField,
           this->fields.rootEventObjP,
           0LL);
       }
-      v30 = AssetData__GetObject_object__49747248(
+      v30 = AssetData__GetObject_object__49812820(
               assetData,
-              (System_String_o *)StringLiteral_9040/*"MapGimmickEffect_GappolyPiece"*/,
-              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+              (System_String_o *)StringLiteral_9046/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/,
+              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v30, 0LL, 0LL) )
@@ -7729,9 +7729,9 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v31 = UnityEngine_Object__Instantiate_object_(
               v30,
-              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       this->fields._EventBoardQuestArrivalPanelObj_k__BackingField = (struct UnityEngine_GameObject_o *)v31;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields._EventBoardQuestArrivalPanelObj_k__BackingField,
         (int64_t)v31,
         v32,
@@ -7740,7 +7740,7 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
         v35,
         v36,
         v37);
-      GameObjectExtensions__SafeSetParent_34717732(
+      GameObjectExtensions__SafeSetParent_34762256(
         this->fields._EventBoardQuestArrivalPanelObj_k__BackingField,
         this->fields.rootEventObjP,
         0LL);
@@ -7749,10 +7749,10 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameMapObject(
       {
         UnityEngine_GameObject__SetActive(EventBoardQuestArrivalPanelObj_k__BackingField, 0, 0LL);
 LABEL_24:
-        v38 = AssetData__GetObject_object__49747248(
+        v38 = AssetData__GetObject_object__49812820(
                 assetData,
-                (System_String_o *)StringLiteral_9041/*"MapGimmickEffect_GappolyPiece_1"*/,
-                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                (System_String_o *)StringLiteral_9047/*"MapGimmickEffect_GappolyStopPanel"*/,
+                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v38, 0LL, 0LL) )
@@ -7761,9 +7761,9 @@ LABEL_24:
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           v40 = UnityEngine_Object__Instantiate_object_(
                   v38,
-                  (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                  (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
           this->fields._EventBoardStopPanelObj_k__BackingField = (struct UnityEngine_GameObject_o *)v40;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields._EventBoardStopPanelObj_k__BackingField,
             (int64_t)v40,
             v41,
@@ -7772,7 +7772,7 @@ LABEL_24:
             v44,
             v45,
             v46);
-          GameObjectExtensions__SafeSetParent_34717732(
+          GameObjectExtensions__SafeSetParent_34762256(
             this->fields._EventBoardStopPanelObj_k__BackingField,
             this->fields.rootEventObjP,
             0LL);
@@ -7782,7 +7782,7 @@ LABEL_24:
         return;
       }
     }
-    sub_1C13F80(EventBoardQuestArrivalPanelObj_k__BackingField, v13);
+    sub_1C1AE30(EventBoardQuestArrivalPanelObj_k__BackingField, v13);
   }
 }
 
@@ -7813,28 +7813,28 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameVoiceInfo(ScrTerminalMap_o *th
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4BB1959 & 1) == 0 )
+  if ( (byte_4BC4D15 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
-    sub_1C13D24(&Method_JsonManager_Deserialize_Dictionary_string__object____, v3);
-    sub_1C13D24(&JsonManager_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1C13D24(&StringLiteral_5667/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/, v6);
-    sub_1C13D24(&StringLiteral_5662/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE"*/, v7);
-    byte_4BB1959 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
+    sub_1C1ABD4(&Method_JsonManager_Deserialize_Dictionary_string__object____, v3);
+    sub_1C1ABD4(&JsonManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C1ABD4(&StringLiteral_5671/*"EVENT_BOARD_GAME_QUEST_ARRIVAL_VOICE_SVT_ID_LIST"*/, v6);
+    sub_1C1ABD4(&StringLiteral_5666/*"EVENT_BOARD_GAME_DICE_VOICE_INFO"*/, v7);
+    byte_4BC4D15 = 1;
   }
   if ( ScrTerminalMap__IsEventBoardGame(this, method) && ScrTerminalMap__IsDispEventBoardGameUI(this, v8) )
   {
-    Value = (Il2CppObject *)ConstantStrMaster__getValue((System_String_o *)StringLiteral_5662/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE"*/, 0LL);
+    Value = (Il2CppObject *)ConstantStrMaster__getValue((System_String_o *)StringLiteral_5666/*"EVENT_BOARD_GAME_DICE_VOICE_INFO"*/, 0LL);
     if ( !System_String__IsNullOrEmpty((System_String_o *)Value, 0LL) )
     {
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v10 = JsonManager__Deserialize_object_(
               Value,
-              (const MethodInfo_2FF6B7C *)Method_JsonManager_Deserialize_Dictionary_string__object____);
+              (const MethodInfo_3006D40 *)Method_JsonManager_Deserialize_Dictionary_string__object____);
       this->fields._EventBoardDiceVoiceInfo_k__BackingField = (struct System_Collections_Generic_Dictionary_string__object__o *)v10;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields._EventBoardDiceVoiceInfo_k__BackingField,
         (int64_t)v10,
         v11,
@@ -7843,21 +7843,21 @@ void __fastcall ScrTerminalMap__LoadEventBoardGameVoiceInfo(ScrTerminalMap_o *th
         v14,
         v15,
         v16);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance
         || (Instance = DataManager__GetMasterData_object_(
                          (DataManager_o *)Instance,
-                         (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                         (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
       {
-        sub_1C13F80(Instance, v18);
+        sub_1C1AE30(Instance, v18);
       }
       ValueArray = ConstantStrMaster__GetValueArray(
                      (ConstantStrMaster_o *)Instance,
-                     (System_String_o *)StringLiteral_5667/*"EVENT_BOARD_GAME_MAP_ID_LIST"*/,
+                     (System_String_o *)StringLiteral_5671/*"EVENT_BOARD_GAME_QUEST_ARRIVAL_VOICE_SVT_ID_LIST"*/,
                      0LL,
                      0LL);
       this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField = ValueArray;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField,
         (int64_t)ValueArray,
         v20,
@@ -7884,18 +7884,18 @@ void __fastcall ScrTerminalMap__LoadEventMap(ScrTerminalMap_o *this, const Metho
   EventMapManagerInterface_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB18FD & 1) == 0 )
+  if ( (byte_4BC4CB9 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventMap_b__265_0__, v4);
-    byte_4BB18FD = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventMap_b__265_0__, v4);
+    byte_4BC4CB9 = 1;
   }
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
-  v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScrTerminalMap__LoadEventMap_b__265_0__, 0LL);
   if ( !eventMapManagerInterface_k__BackingField )
-    sub_1C13F80(v7, v8);
+    sub_1C1AE30(v7, v8);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v10 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -7913,7 +7913,7 @@ void __fastcall ScrTerminalMap__LoadEventMap(ScrTerminalMap_o *this, const Metho
   else
   {
 LABEL_8:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 2LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 2LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -7943,11 +7943,11 @@ void __fastcall ScrTerminalMap__LoadEventMapObject(
   EventMapManagerInterface_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB1909 & 1) == 0 )
+  if ( (byte_4BC4CC5 & 1) == 0 )
   {
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, assetData);
-    sub_1C13D24(&EventQuestCooltimeComponent_TypeInfo, v5);
-    byte_4BB1909 = 1;
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, assetData);
+    sub_1C1ABD4(&EventQuestCooltimeComponent_TypeInfo, v5);
+    byte_4BC4CC5 = 1;
   }
   IsEventBoardGame = ScrTerminalMap__IsEventBoardGame(this, (const MethodInfo *)assetData);
   if ( IsEventBoardGame )
@@ -7980,7 +7980,7 @@ void __fastcall ScrTerminalMap__LoadEventMapObject(
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
 LABEL_22:
-    sub_1C13F80(IsEventBoardGame, v7);
+    sub_1C1AE30(IsEventBoardGame, v7);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v17 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -7998,7 +7998,7 @@ LABEL_22:
   else
   {
 LABEL_19:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 3LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 3LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, AssetData_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -8013,18 +8013,18 @@ void __fastcall ScrTerminalMap__LoadFinishMapPack(ScrTerminalMap_o *this, const 
   __int64 v4; // x1
   TerminalPramsManager_c *v5; // x0
 
-  if ( (byte_4BB1900 & 1) == 0 )
+  if ( (byte_4BC4CBC & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_19408/*"evChange_Map"*/, v4);
-    byte_4BB1900 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_19422/*"evTexLoad_Finish"*/, v4);
+    byte_4BC4CBC = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BD )
+  if ( !byte_4BC4D79 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BD = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D79 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8033,7 +8033,7 @@ void __fastcall ScrTerminalMap__LoadFinishMapPack(ScrTerminalMap_o *this, const 
     v5 = TerminalPramsManager_TypeInfo;
   }
   v5->static_fields->isInvisibleConnectAndLoad = 0;
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19408/*"evChange_Map"*/, v2);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19422/*"evTexLoad_Finish"*/, v2);
 }
 
 
@@ -8126,7 +8126,7 @@ void __fastcall ScrTerminalMap__LoadMap(ScrTerminalMap_o *this, const MethodInfo
   ScrTerminalMap_c *v87; // x0
   System_String_o *ASSETS_NAME_MAP_GIMMICK; // x20
   Il2CppObject *v89; // x0
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v91; // x2
   int32_t v92; // w3
   System_String_o *v93; // x4
@@ -8139,28 +8139,28 @@ void __fastcall ScrTerminalMap__LoadMap(ScrTerminalMap_o *this, const MethodInfo
   int32_t v100; // [xsp+8h] [xbp-48h] BYREF
   int32_t currentAssetId; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BB18FB & 1) == 0 )
+  if ( (byte_4BC4CB7 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v3);
-    sub_1C13D24(&AssetManager_TypeInfo, v4);
-    sub_1C13D24(&int_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v6);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__0__, v10);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass262_0_TypeInfo, v11);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass262_1__LoadMap_b__1__, v12);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass262_1_TypeInfo, v13);
-    byte_4BB18FB = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v3);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v4);
+    sub_1C1ABD4(&int_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v6);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__0__, v10);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass262_0_TypeInfo, v11);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass262_1__LoadMap_b__1__, v12);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass262_1_TypeInfo, v13);
+    byte_4BC4CB7 = 1;
   }
-  v14 = sub_1C13F70(ScrTerminalMap___c__DisplayClass262_0_TypeInfo);
+  v14 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass262_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass262_0___ctor((ScrTerminalMap___c__DisplayClass262_0_o *)v14, 0LL);
   if ( !v14 )
     goto LABEL_40;
   *(_QWORD *)(v14 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)this, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v14 + 16), (int64_t)this, v17, v18, v19, v20, v21, v22);
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene )
     goto LABEL_40;
@@ -8180,16 +8180,16 @@ void __fastcall ScrTerminalMap__LoadMap(ScrTerminalMap_o *this, const MethodInfo
   v30 = (ScrTerminalMap_o *)j_il2cpp_value_box_0(int_TypeInfo, &currentAssetId, v27, v28, v29);
   AssetName = ScrTerminalMap__GetAssetName(v30, (Il2CppObject *)v30, v31);
   *(_QWORD *)(v14 + 24) = AssetName;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 24), (int64_t)AssetName, v33, v34, v35, v36, v37, v38);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v14 + 24), (int64_t)AssetName, v33, v34, v35, v36, v37, v38);
   mapAssetData = this->fields.mapAssetData;
   if ( mapAssetData && System_String__op_Equality(mapAssetData->fields.name, *(System_String_o **)(v14 + 24), 0LL) )
   {
-    v41 = sub_1C13F70(ScrTerminalMap___c__DisplayClass262_1_TypeInfo);
+    v41 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass262_1_TypeInfo);
     ScrTerminalMap___c__DisplayClass262_1___ctor((ScrTerminalMap___c__DisplayClass262_1_o *)v41, 0LL);
     if ( !v41 )
       goto LABEL_40;
     *(_QWORD *)(v41 + 24) = v14;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v41 + 24), v14, v42, v43, v44, v45, v46, v47);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v41 + 24), v14, v42, v43, v44, v45, v46, v47);
     mWarInfo = this->fields.mWarInfo;
     if ( mWarInfo )
       IsMultiMap = MapControl_WarInfo__IsMultiMap(mWarInfo, 0LL);
@@ -8199,7 +8199,7 @@ void __fastcall ScrTerminalMap__LoadMap(ScrTerminalMap_o *this, const MethodInfo
     v62 = (ScrTerminalMap_o *)j_il2cpp_value_box_0(int_TypeInfo, &v100, v48, v49, v50);
     AssetMultiMapName = ScrTerminalMap__GetAssetMultiMapName(v62, (Il2CppObject *)v62, this->fields.mMapEnt, v63);
     *(_QWORD *)(v41 + 16) = AssetMultiMapName;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v41 + 16), (int64_t)AssetMultiMapName, v65, v66, v67, v68, v69, v70);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v41 + 16), (int64_t)AssetMultiMapName, v65, v66, v67, v68, v69, v70);
     ScrTerminalMap__SetupFeildConfiguration(this, v71);
     if ( IsMultiMap )
     {
@@ -8220,15 +8220,15 @@ LABEL_30:
         {
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_38935320(v75, 0LL);
+          AssetManager__releaseAsset_38988476(v75, 0LL);
           *p_mapMultiAssetData = 0LL;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v76, v77, v78, v79, v80, v81);
+          sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v76, v77, v78, v79, v80, v81);
         }
 LABEL_34:
         mapModelManager = this->fields.mapModelManager;
         currentMapId = this->fields.currentMapId;
         v57 = this->fields.currentAssetId;
-        v59 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v59 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v59,
           (Il2CppObject *)v41,
@@ -8240,7 +8240,7 @@ LABEL_34:
           goto LABEL_22;
         }
 LABEL_40:
-        sub_1C13F80(mActionBgColl, v16);
+        sub_1C1AE30(mActionBgColl, v16);
       }
     }
     ScrTerminalMap__LoadMapEffectPrefab(this, this->fields.mapAssetData, v72);
@@ -8257,21 +8257,21 @@ LABEL_40:
     mActionBgColl = (UnityEngine_Component_o *)System_String__Format(ASSETS_NAME_MAP_GIMMICK, v89, 0LL);
     if ( this->fields.mapAssetData )
     {
-      Object_object__49747248 = AssetData__GetObject_object__49747248(
+      Object_object__49812820 = AssetData__GetObject_object__49812820(
                                   this->fields.mapAssetData,
                                   (System_String_o *)mActionBgColl,
-                                  (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
-      this->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49747248;
-      sub_1C13CC8(
+                                  (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
+      this->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49812820;
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields.mapGimmickPrefab,
-        (int64_t)Object_object__49747248,
+        (int64_t)Object_object__49812820,
         v91,
         v92,
         v93,
         v94,
         v95,
         v96);
-      v97 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v97 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v97, (Il2CppObject *)this, Method_ScrTerminalMap_LoadEventMap__, 0LL);
       ScrTerminalMap__LoadMapImgTex(this, v97, v98);
       goto LABEL_23;
@@ -8281,10 +8281,10 @@ LABEL_40:
   ScrTerminalMap__ReleaseMap(this, 1, v39);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB18D8 )
+  if ( !byte_4BC4C94 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v53);
-    byte_4BB18D8 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v53);
+    byte_4BC4C94 = 1;
   }
   v54 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -8293,14 +8293,14 @@ LABEL_40:
     v54 = TerminalPramsManager_TypeInfo;
   }
   isInvisibleConnectAndLoad = v54->static_fields->isInvisibleConnectAndLoad;
-  mActionBgColl = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  mActionBgColl = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !mActionBgColl )
     goto LABEL_40;
   CommonUI__SetLoadMode((CommonUI_o *)mActionBgColl, !isInvisibleConnectAndLoad, 0LL);
   v56 = this->fields.mapModelManager;
   currentMapId = this->fields.currentMapId;
   v57 = this->fields.currentAssetId;
-  v59 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v59 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v59, (Il2CppObject *)v14, Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__0__, 0LL);
   if ( !v56 )
     goto LABEL_40;
@@ -8337,7 +8337,7 @@ void __fastcall ScrTerminalMap__LoadMapEffectPrefab(
   __int64 v22; // x4
   Il2CppObject *v23; // x0
   MethodInfo *mapEffectPrefabList; // x0
-  Il2CppObject *Object_object__49747248; // x21
+  Il2CppObject *Object_object__49812820; // x21
   int64_t v26; // x2
   int32_t v27; // w3
   System_String_o *v28; // x4
@@ -8351,19 +8351,19 @@ void __fastcall ScrTerminalMap__LoadMapEffectPrefab(
   int v36; // [xsp+8h] [xbp-68h] BYREF
   int32_t v37; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4BB1908 & 1) == 0 )
+  if ( (byte_4BC4CC4 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, assetData);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Any_GameObject___, v5);
-    sub_1C13D24(&int_TypeInfo, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v9);
-    byte_4BB1908 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, assetData);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_GameObject___, v5);
+    sub_1C1ABD4(&int_TypeInfo, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v9);
+    byte_4BC4CC4 = 1;
   }
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.mapEffectPrefabList,
-          (const MethodInfo_2F9A90C *)Method_System_Linq_Enumerable_Any_GameObject___) )
+          (const MethodInfo_2FAA930 *)Method_System_Linq_Enumerable_Any_GameObject___) )
   {
     for ( i = 1; ; ++i )
     {
@@ -8383,18 +8383,18 @@ void __fastcall ScrTerminalMap__LoadMapEffectPrefab(
       v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37, v11, v12, v13);
       v36 = i;
       v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36, v20, v21, v22);
-      mapEffectPrefabList = (MethodInfo *)System_String__Format_62982316(ASSETS_NAME_MAP_EFFECT, v19, v23, 0LL);
+      mapEffectPrefabList = (MethodInfo *)System_String__Format_63054740(ASSETS_NAME_MAP_EFFECT, v19, v23, 0LL);
       v10 = mapEffectPrefabList;
       if ( !assetData )
 LABEL_21:
-        sub_1C13F80(mapEffectPrefabList, v10);
-      Object_object__49747248 = AssetData__GetObject_object__49747248(
+        sub_1C1AE30(mapEffectPrefabList, v10);
+      Object_object__49812820 = AssetData__GetObject_object__49812820(
                                   assetData,
                                   (System_String_o *)mapEffectPrefabList,
-                                  (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                  (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
         break;
       mapEffectPrefabList = (MethodInfo *)this->fields.mapEffectPrefabList;
       if ( !mapEffectPrefabList )
@@ -8409,17 +8409,17 @@ LABEL_21:
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)mapEffectPrefabList,
-          Object_object__49747248,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+          Object_object__49812820,
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
       }
       else
       {
         v35 = (__int64)invoker_method + 8 * name_low;
         LODWORD(mapEffectPrefabList->name) = name_low + 1;
-        *(_QWORD *)(v35 + 32) = Object_object__49747248;
-        sub_1C13CC8(
+        *(_QWORD *)(v35 + 32) = Object_object__49812820;
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)(v35 + 32),
-          (int64_t)Object_object__49747248,
+          (int64_t)Object_object__49812820,
           v26,
           v27,
           v28,
@@ -8493,7 +8493,7 @@ void __fastcall ScrTerminalMap__LoadMapImgTex(
   ScrTerminalMap_o *v57; // x0
   UnityEngine_Texture2D_o *v58; // x1
   UnityEngine_Object_o *currentMapTexture_k__BackingField; // x22
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v61; // x2
   int32_t v62; // w3
   System_String_o *v63; // x4
@@ -8503,27 +8503,27 @@ void __fastcall ScrTerminalMap__LoadMapImgTex(
   struct UnityEngine_Texture2D_o *v67; // x23
   int32_t currentMapImageId; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BB190D & 1) == 0 )
+  if ( (byte_4BC4CC9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_Texture2D____77466824, endCallback);
-    sub_1C13D24(&AssetManager_TypeInfo, v5);
-    sub_1C13D24(&int_TypeInfo, v6);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v9);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass281_0__LoadMapImgTex_b__0__, v10);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass281_0_TypeInfo, v11);
-    byte_4BB190D = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_Texture2D____77543664, endCallback);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v5);
+    sub_1C1ABD4(&int_TypeInfo, v6);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v9);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass281_0__LoadMapImgTex_b__0__, v10);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass281_0_TypeInfo, v11);
+    byte_4BC4CC9 = 1;
   }
-  v12 = sub_1C13F70(ScrTerminalMap___c__DisplayClass281_0_TypeInfo);
+  v12 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass281_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass281_0___ctor((ScrTerminalMap___c__DisplayClass281_0_o *)v12, 0LL);
   if ( !v12 )
     goto LABEL_28;
   *(_QWORD *)(v12 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
   *(_QWORD *)(v12 + 32) = endCallback;
   v21 = (System_Action_o **)(v12 + 32);
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 32), (int64_t)endCallback, v22, v23, v24, v25, v26, v27);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 32), (int64_t)endCallback, v22, v23, v24, v25, v26, v27);
   v31 = ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
   {
@@ -8535,8 +8535,8 @@ void __fastcall ScrTerminalMap__LoadMapImgTex(
   v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentMapImageId, v28, v29, v30);
   v34 = System_String__Format(ASSETS_NAME_BG, v33, 0LL);
   *(_QWORD *)(v12 + 24) = v34;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)v34, v35, v36, v37, v38, v39, v40);
-  v41 = System_String__Concat_62967944(
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)v34, v35, v36, v37, v38, v39, v40);
+  v41 = System_String__Concat_63040368(
           ScrTerminalMap_TypeInfo->static_fields->MAP_IMAGE_ASSET_PATH,
           *(System_String_o **)(v12 + 24),
           0LL);
@@ -8560,14 +8560,14 @@ void __fastcall ScrTerminalMap__LoadMapImgTex(
           mapModelManager = *p_mapImgAssetData;
           if ( !*p_mapImgAssetData )
             goto LABEL_28;
-          Object_object__49747248 = AssetData__GetObject_object__49747248(
+          Object_object__49812820 = AssetData__GetObject_object__49812820(
                                       mapModelManager,
                                       *(System_String_o **)(v12 + 24),
-                                      (const MethodInfo_2F71530 *)Method_AssetData_GetObject_Texture2D____77466824);
-          this->fields._currentMapTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__49747248;
-          sub_1C13CC8(
+                                      (const MethodInfo_2F81554 *)Method_AssetData_GetObject_Texture2D____77543664);
+          this->fields._currentMapTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__49812820;
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields._currentMapTexture_k__BackingField,
-            (int64_t)Object_object__49747248,
+            (int64_t)Object_object__49812820,
             v61,
             v62,
             v63,
@@ -8587,7 +8587,7 @@ void __fastcall ScrTerminalMap__LoadMapImgTex(
           goto LABEL_26;
         }
 LABEL_28:
-        sub_1C13F80(mapModelManager, v14);
+        sub_1C1AE30(mapModelManager, v14);
       }
     }
     v45 = *p_mapImgAssetData;
@@ -8595,12 +8595,12 @@ LABEL_28:
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_38935320(v45, 0LL);
+      AssetManager__releaseAsset_38988476(v45, 0LL);
       *p_mapImgAssetData = 0LL;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapImgAssetData, 0LL, v46, v47, v48, v49, v50, v51);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapImgAssetData, 0LL, v46, v47, v48, v49, v50, v51);
     }
   }
-  v52 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v52 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v52,
     (Il2CppObject *)v12,
@@ -8651,20 +8651,20 @@ void __fastcall ScrTerminalMap__LoadMapUseVoiceData(ScrTerminalMap_o *this, cons
   unsigned __int64 v15; // x22
   int32_t v16; // w20
   Il2CppObject *Instance; // x19
-  System_String_o *VoiceAssetName_41015788; // x0
+  System_String_o *VoiceAssetName_41071744; // x0
   __int64 v19; // x1
 
-  if ( (byte_4BB190E & 1) == 0 )
+  if ( (byte_4BC4CCA & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
-    byte_4BB190E = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
+    byte_4BC4CCA = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
   {
     UseVoiceSvtIDList = MapEntity__GetUseVoiceSvtIDList(mMapEnt, 0LL);
     this->fields.useVoiceSvtIDList = UseVoiceSvtIDList;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.useVoiceSvtIDList,
       (int64_t)UseVoiceSvtIDList,
       v5,
@@ -8683,13 +8683,13 @@ void __fastcall ScrTerminalMap__LoadMapUseVoiceData(ScrTerminalMap_o *this, cons
         do
         {
           if ( v15 >= (unsigned int)v14 )
-            sub_1C13F88(v11, v12);
+            sub_1C1AE38(v11, v12);
           v16 = v13->m_Items[v15 + 1];
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-          VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(v16, 0LL);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+          VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(v16, 0LL);
           if ( !Instance )
-            sub_1C13F80(VoiceAssetName_41015788, v19);
-          SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, VoiceAssetName_41015788, 0LL, 1, 0LL);
+            sub_1C1AE30(VoiceAssetName_41071744, v19);
+          SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, VoiceAssetName_41071744, 0LL, 1, 0LL);
           LODWORD(v14) = v13->max_length;
           ++v15;
         }
@@ -8721,7 +8721,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
   EventSpotCooltimeComponent_o **p_eventSpotCooltimeComponent; // x22
   UnityEngine_GameObject_o *Master_object; // x0
   __int64 v20; // x1
-  Il2CppObject *Object_object__49747248; // x23
+  Il2CppObject *Object_object__49812820; // x23
   Il2CppObject *Component_object; // x0
   int64_t v23; // x2
   int32_t v24; // w3
@@ -8761,20 +8761,20 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
   UnityEngine_GameObject_o *v58; // x21
   UnityEngine_GameObject_o *v59; // x0
 
-  if ( (byte_4BB190C & 1) == 0 )
+  if ( (byte_4BC4CC8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonReleaseMaster___, v7);
-    sub_1C13D24(&DataManager_TypeInfo, v8);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___, v9);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___, v10);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventSpotCooltimeComponent___, v11);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v13);
-    sub_1C13D24(&StringLiteral_9031/*"MapBtnPrefab"*/, v14);
-    sub_1C13D24(&StringLiteral_6366/*"EventReward/EventRewardAtlas"*/, v15);
-    sub_1C13D24(&StringLiteral_6367/*"EventRewardScene"*/, v16);
-    byte_4BB190C = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v7);
+    sub_1C1ABD4(&DataManager_TypeInfo, v8);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___, v9);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___, v10);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventSpotCooltimeComponent___, v11);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v13);
+    sub_1C1ABD4(&StringLiteral_9037/*"MapGimmickEffect_EventSpotCooltime"*/, v14);
+    sub_1C1ABD4(&StringLiteral_6370/*"EventSpotCooltimeNoticeButton"*/, v15);
+    sub_1C1ABD4(&StringLiteral_6371/*"EventSpotCooltimeRewardReceiveButton"*/, v16);
+    byte_4BC4CC8 = 1;
   }
   eventSpotCooltimeComponent = (UnityEngine_Object_o *)this->fields.eventSpotCooltimeComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -8785,22 +8785,22 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
   {
     if ( !assetData )
       goto LABEL_63;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 assetData,
-                                (System_String_o *)StringLiteral_9031/*"MapBtnPrefab"*/,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (System_String_o *)StringLiteral_9037/*"MapGimmickEffect_EventSpotCooltime"*/,
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Master_object = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                                  Object_object__49747248,
-                                                  (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                  Object_object__49812820,
+                                                  (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !Master_object )
       goto LABEL_63;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Master_object,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventSpotCooltimeComponent___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventSpotCooltimeComponent___);
     *p_eventSpotCooltimeComponent = (EventSpotCooltimeComponent_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.eventSpotCooltimeComponent,
       (int64_t)Component_object,
       v23,
@@ -8813,15 +8813,15 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
     if ( !*p_eventSpotCooltimeComponent )
       goto LABEL_63;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-    GameObjectExtensions__SetParent_34717612(gameObject, this->fields.rootEventObjP, 0LL);
+    GameObjectExtensions__SetParent_34762136(gameObject, this->fields.rootEventObjP, 0LL);
     Master_object = (UnityEngine_GameObject_o *)this->fields.eventSpotCooltimeComponent;
     if ( !Master_object )
       goto LABEL_63;
     v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-    if ( !byte_4BAEDA6 )
+    if ( !byte_4BC2146 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v30);
-      byte_4BAEDA6 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v30);
+      byte_4BC2146 = 1;
     }
     GameObjectExtensions__SetLocalScale(v31, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   }
@@ -8844,10 +8844,10 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
   {
     if ( !assetData )
       goto LABEL_63;
-    v33 = AssetData__GetObject_object__49747248(
+    v33 = AssetData__GetObject_object__49812820(
             assetData,
-            (System_String_o *)StringLiteral_6366/*"EventReward/EventRewardAtlas"*/,
-            (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+            (System_String_o *)StringLiteral_6370/*"EventSpotCooltimeNoticeButton"*/,
+            (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Master_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v33, 0LL, 0LL);
@@ -8857,7 +8857,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
         goto LABEL_63;
       v34 = UnityEngine_GameObject__GetComponent_object_(
               (UnityEngine_GameObject_o *)v33,
-              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___);
+              (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Master_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -8874,7 +8874,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
                                      0LL);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+        Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
         if ( !Master_object )
           goto LABEL_63;
         if ( CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, CommonReleaseIdByEventId, 0LL, 0, 0LL) )
@@ -8884,9 +8884,9 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           v37 = UnityEngine_Object__Instantiate_object_(
                   v33,
-                  (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                  (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
           this->fields.coolTimeButtonObj = (struct UnityEngine_GameObject_o *)v37;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.coolTimeButtonObj,
             (int64_t)v37,
             v38,
@@ -8900,13 +8900,13 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
             goto LABEL_63;
           v44 = *p_coolTimeButtonObj;
           v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-          GameObjectExtensions__SafeSetParent_34717732(v44, v45, 0LL);
+          GameObjectExtensions__SafeSetParent_34762256(v44, v45, 0LL);
           Master_object = *p_coolTimeButtonObj;
           if ( !*p_coolTimeButtonObj )
             goto LABEL_63;
           Master_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                         Master_object,
-                                                        (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___);
+                                                        (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeNoticeButton___);
           if ( !Master_object )
             goto LABEL_63;
           EventInfoSpotCooltimeNoticeButton__Initialization(
@@ -8925,10 +8925,10 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
   {
     if ( !assetData )
       goto LABEL_63;
-    v47 = AssetData__GetObject_object__49747248(
+    v47 = AssetData__GetObject_object__49812820(
             assetData,
-            (System_String_o *)StringLiteral_6367/*"EventRewardScene"*/,
-            (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+            (System_String_o *)StringLiteral_6371/*"EventSpotCooltimeRewardReceiveButton"*/,
+            (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Master_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v47, 0LL, 0LL);
@@ -8938,7 +8938,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
         goto LABEL_63;
       v48 = UnityEngine_GameObject__GetComponent_object_(
               (UnityEngine_GameObject_o *)v47,
-              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___);
+              (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Master_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -8955,7 +8955,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
                 0LL);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+        Master_object = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
         if ( !Master_object )
           goto LABEL_63;
         if ( CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, v49, 0LL, 0, 0LL) )
@@ -8965,9 +8965,9 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           v51 = UnityEngine_Object__Instantiate_object_(
                   v47,
-                  (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                  (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
           this->fields.rewardReceiveButtonObj = (struct UnityEngine_GameObject_o *)v51;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.rewardReceiveButtonObj,
             (int64_t)v51,
             v52,
@@ -8981,13 +8981,13 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
           {
             v58 = *p_rewardReceiveButtonObj;
             v59 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-            GameObjectExtensions__SafeSetParent_34717732(v58, v59, 0LL);
+            GameObjectExtensions__SafeSetParent_34762256(v58, v59, 0LL);
             Master_object = *p_rewardReceiveButtonObj;
             if ( *p_rewardReceiveButtonObj )
             {
               Master_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                             Master_object,
-                                                            (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___);
+                                                            (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventInfoSpotCooltimeRewardReceiveButton___);
               if ( Master_object )
               {
                 EventInfoSpotCooltimeRewardReceiveButton__Initialization(
@@ -9003,7 +9003,7 @@ void __fastcall ScrTerminalMap__LoadSpotCooltimeMapObject(
             }
           }
 LABEL_63:
-          sub_1C13F80(Master_object, v20);
+          sub_1C1AE30(Master_object, v20);
         }
       }
     }
@@ -9059,40 +9059,40 @@ System_String_o *__fastcall ScrTerminalMap__LotteryEventBoardDiceVoiceCueName(
   int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
   v20 = diceItemId;
-  if ( (byte_4BB1984 & 1) == 0 )
+  if ( (byte_4BC4D40 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, *(_QWORD *)&diceItemId);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    sub_1C13D24(&System_Random_TypeInfo, v5);
-    sub_1C13D24(&string_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_21224/*"iso-ir-149"*/, v7);
-    sub_1C13D24(&StringLiteral_1244/*"0_"*/, v8);
-    sub_1C13D24(&StringLiteral_1/*""*/, v9);
-    byte_4BB1984 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, *(_QWORD *)&diceItemId);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1C1ABD4(&System_Random_TypeInfo, v5);
+    sub_1C1ABD4(&string_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_21238/*"item"*/, v7);
+    sub_1C1ABD4(&StringLiteral_1244/*"0_"*/, v8);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v9);
+    byte_4BC4D40 = 1;
   }
   v10 = System_Int32__ToString((int32_t)&v20, 0LL);
-  v11 = (Il2CppObject *)System_String__Concat_62967944((System_String_o *)StringLiteral_21224/*"iso-ir-149"*/, v10, 0LL);
+  v11 = (Il2CppObject *)System_String__Concat_63040368((System_String_o *)StringLiteral_21238/*"item"*/, v10, 0LL);
   if ( this->fields._EventBoardDiceVoiceInfo_k__BackingField )
   {
     v12 = v11;
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)this->fields._EventBoardDiceVoiceInfo_k__BackingField,
            v11,
-           (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
       EventBoardDiceVoiceInfo_k__BackingField = (System_Collections_Generic_Dictionary_object__object__o *)this->fields._EventBoardDiceVoiceInfo_k__BackingField;
       if ( EventBoardDiceVoiceInfo_k__BackingField )
       {
-        EventBoardDiceVoiceInfo_k__BackingField = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(EventBoardDiceVoiceInfo_k__BackingField, v12, (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+        EventBoardDiceVoiceInfo_k__BackingField = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(EventBoardDiceVoiceInfo_k__BackingField, v12, (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( EventBoardDiceVoiceInfo_k__BackingField )
         {
           if ( (System_String_c *)EventBoardDiceVoiceInfo_k__BackingField->klass != string_TypeInfo )
           {
-            sub_1C14240(EventBoardDiceVoiceInfo_k__BackingField);
+            sub_1C1B0F0(EventBoardDiceVoiceInfo_k__BackingField);
             goto LABEL_16;
           }
           v15 = System_String__Split((System_String_o *)EventBoardDiceVoiceInfo_k__BackingField, 0x2Fu, 0, 0LL);
-          v16 = (System_Random_o *)sub_1C13F70(System_Random_TypeInfo);
+          v16 = (System_Random_o *)sub_1C1AE20(System_Random_TypeInfo);
           System_Random___ctor(v16, 0LL);
           if ( v15 && v16 )
           {
@@ -9101,13 +9101,13 @@ System_String_o *__fastcall ScrTerminalMap__LotteryEventBoardDiceVoiceCueName(
                     v15->max_length,
                     v16->klass->vtable._8_NextDouble.methodPtr);
             if ( (unsigned int)v17 < v15->max_length )
-              return System_String__Concat_62967944((System_String_o *)StringLiteral_1244/*"0_"*/, v15->m_Items[(int)v17], 0LL);
+              return System_String__Concat_63040368((System_String_o *)StringLiteral_1244/*"0_"*/, v15->m_Items[(int)v17], 0LL);
 LABEL_16:
-            sub_1C13F88(v17, v18);
+            sub_1C1AE38(v17, v18);
           }
         }
       }
-      sub_1C13F80(EventBoardDiceVoiceInfo_k__BackingField, v13);
+      sub_1C1AE30(EventBoardDiceVoiceInfo_k__BackingField, v13);
     }
   }
   return (System_String_o *)StringLiteral_1/*""*/;
@@ -9137,27 +9137,27 @@ void __fastcall ScrTerminalMap__MakeFarmGrowthDialogOpen(
   UnityEngine_GameObject_o *mActionPanel; // x21
   System_Action_o *v21; // x22
 
-  if ( (byte_4BB1941 & 1) == 0 )
+  if ( (byte_4BC4CFD & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass344_0__MakeFarmGrowthDialogOpen_b__0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass344_0_TypeInfo, v7);
-    byte_4BB1941 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass344_0__MakeFarmGrowthDialogOpen_b__0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass344_0_TypeInfo, v7);
+    byte_4BC4CFD = 1;
   }
-  v8 = sub_1C13F70(ScrTerminalMap___c__DisplayClass344_0_TypeInfo);
+  v8 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass344_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass344_0___ctor((ScrTerminalMap___c__DisplayClass344_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_14;
   *(_QWORD *)(v8 + 16) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)callback, v11, v12, v13, v14, v15, v16);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v10);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v10);
+    byte_4BC2713 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -9169,7 +9169,7 @@ void __fastcall ScrTerminalMap__MakeFarmGrowthDialogOpen(
   if ( !mInstance
     || (mTerminalList = mInstance->fields.mTerminalList) == 0LL
     || (mActionPanel = mTerminalList->fields.mActionPanel,
-        v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v21 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(
           v21,
           (Il2CppObject *)v8,
@@ -9178,7 +9178,7 @@ void __fastcall ScrTerminalMap__MakeFarmGrowthDialogOpen(
         !titleInfoControl) )
   {
 LABEL_14:
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
   TitleInfoControl__MakeFarmGrowthDialogOpen(titleInfoControl, mActionPanel, v21, 0LL);
 }
@@ -9219,28 +9219,28 @@ void __fastcall ScrTerminalMap__MapTouchEnableAuto(ScrTerminalMap_o *this, const
   const MethodInfo *v33; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB193B & 1) == 0 )
+  if ( (byte_4BC4CF7 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMaster_SpotMaster___, v3);
-    sub_1C13D24(&DataManager_TypeInfo, v4);
-    sub_1C13D24(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__, v5);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v6);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C13D24(&Method_ScrTerminalMap__MapTouchEnableAuto_b__338_0__, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v10);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v11);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    byte_4BB193B = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_SpotMaster___, v3);
+    sub_1C1ABD4(&DataManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__, v5);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v6);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C1ABD4(&Method_ScrTerminalMap__MapTouchEnableAuto_b__338_0__, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v10);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v11);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    byte_4BC4CF7 = 1;
   }
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   v13 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9252,10 +9252,10 @@ void __fastcall ScrTerminalMap__MapTouchEnableAuto(ScrTerminalMap_o *this, const
     goto LABEL_87;
   if ( !v13->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v13);
-  if ( !byte_4BB19BE )
+  if ( !byte_4BC4D7A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BE = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D7A = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9270,10 +9270,10 @@ void __fastcall ScrTerminalMap__MapTouchEnableAuto(ScrTerminalMap_o *this, const
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BAF44D )
+    if ( !byte_4BC27F4 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BAF44D = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC27F4 = 1;
     }
     v20 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9308,7 +9308,7 @@ void __fastcall ScrTerminalMap__MapTouchEnableAuto(ScrTerminalMap_o *this, const
   else
   {
 LABEL_42:
-    p_method = sub_1C65D04(
+    p_method = sub_1C6CBB4(
                  this->fields._eventMapManagerInterface_k__BackingField,
                  EventMapManagerInterface_TypeInfo,
                  5LL);
@@ -9319,10 +9319,10 @@ LABEL_42:
     goto LABEL_87;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19CA )
+  if ( !byte_4BC4D86 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19CA = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D86 = 1;
   }
   v26 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9334,10 +9334,10 @@ LABEL_42:
   {
     if ( !v26->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v26);
-    if ( !byte_4BB19CB )
+    if ( !byte_4BC4D87 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB19CB = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4D87 = 1;
     }
     v27 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9350,13 +9350,13 @@ LABEL_42:
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   IsEventBoardGame = (QuestTree_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9370,19 +9370,19 @@ LABEL_42:
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           (int32_t)IsEventBoardGame[1].fields.questReleaseEntList->fields._items,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
     goto LABEL_87;
-  IsEventBoardGame = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  IsEventBoardGame = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !IsEventBoardGame )
     goto LABEL_84;
   if ( !QuestTree__IsSpotSatisfyingDisplayCond(IsEventBoardGame, (SpotEntity_o *)entity, 1, 0LL) )
     goto LABEL_87;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9403,7 +9403,7 @@ LABEL_42:
     goto LABEL_84;
   IsEventBoardGame = (QuestTree_o *)UnityEngine_GameObject__GetComponent_object_(
                                       (UnityEngine_GameObject_o *)SpotGameObject,
-                                      (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                      (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !IsEventBoardGame )
     goto LABEL_84;
   if ( !UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)IsEventBoardGame, 0LL) )
@@ -9411,10 +9411,10 @@ LABEL_42:
 LABEL_87:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB1256 )
+    if ( !byte_4BC4610 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB1256 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4610 = 1;
     }
     v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -9424,11 +9424,11 @@ LABEL_87:
     }
     v15->static_fields->_SpotId_k__BackingField = -1;
     this->fields.isEventBoardGameQuestListView = 0;
-    if ( !byte_4BB15BC )
+    if ( !byte_4BC4977 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
       v15 = TerminalPramsManager_TypeInfo;
-      byte_4BB15BC = 1;
+      byte_4BC4977 = 1;
     }
     if ( !v15->_2.cctor_finished )
     {
@@ -9436,8 +9436,8 @@ LABEL_87:
       v15 = TerminalPramsManager_TypeInfo;
     }
     v15->static_fields->_IsFromRecollectionBoard_k__BackingField = 0;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-    v17 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    v17 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_ScrTerminalMap__MapTouchEnableAuto_b__338_0__, 0LL);
     if ( Instance )
     {
@@ -9445,7 +9445,7 @@ LABEL_87:
       return;
     }
 LABEL_84:
-    sub_1C13F80(IsEventBoardGame, method);
+    sub_1C1AE30(IsEventBoardGame, method);
   }
   this->fields.isEventBoardGameQuestListView = 0;
   ScrTerminalMap__EventActionPlay(this, method);
@@ -9499,25 +9499,25 @@ void __fastcall ScrTerminalMap__MovePlayerIcon(
   EasingObject_o *v45; // x21
   System_Action_o *v46; // x22
 
-  if ( (byte_4BB18F8 & 1) == 0 )
+  if ( (byte_4BC4CB4 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, spotObject);
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v11);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v12);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass259_0__MovePlayerIcon_b__0__, v13);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass259_0__MovePlayerIcon_b__1__, v14);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass259_0_TypeInfo, v15);
-    byte_4BB18F8 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, spotObject);
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v11);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v12);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass259_0__MovePlayerIcon_b__0__, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass259_0__MovePlayerIcon_b__1__, v14);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass259_0_TypeInfo, v15);
+    byte_4BC4CB4 = 1;
   }
-  v16 = sub_1C13F70(ScrTerminalMap___c__DisplayClass259_0_TypeInfo);
+  v16 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass259_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass259_0___ctor((ScrTerminalMap___c__DisplayClass259_0_o *)v16, 0LL);
   if ( !v16 )
     goto LABEL_14;
   *(_QWORD *)(v16 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)this, v19, v20, v21, v22, v23, v24);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)this, v19, v20, v21, v22, v23, v24);
   *(_QWORD *)(v16 + 32) = endFunc;
   *(_DWORD *)(v16 + 24) = spotId;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 32), (int64_t)endFunc, v25, v26, v27, v28, v29, v30);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v16 + 32), (int64_t)endFunc, v25, v26, v27, v28, v29, v30);
   playerIcon = (UnityEngine_Object_o *)this->fields.playerIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -9525,13 +9525,13 @@ void __fastcall ScrTerminalMap__MovePlayerIcon(
   {
     Component_object = GameObjectExtensions__SafeGetComponent_object_(
                          this->fields.playerIcon,
-                         (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                         (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
     *(_QWORD *)(v16 + 64) = Component_object;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v16 + 64), (int64_t)Component_object, v35, v36, v37, v38, v39, v40);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v16 + 64), (int64_t)Component_object, v35, v36, v37, v38, v39, v40);
     *(UnityEngine_Vector3_o *)(v16 + 40) = GameObjectExtensions__GetPosition(this->fields.playerIcon, 0LL);
     ScrTerminalMap__SetPlayerIcon(this, spotObject, v41);
     *(UnityEngine_Vector3_o *)(v16 + 52) = GameObjectExtensions__GetPosition(this->fields.playerIcon, 0LL);
-    v42 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v42 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v42,
       (Il2CppObject *)v16,
@@ -9549,7 +9549,7 @@ void __fastcall ScrTerminalMap__MovePlayerIcon(
       goto LABEL_13;
     }
     v45 = *(EasingObject_o **)(v16 + 64);
-    v46 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v46 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v46,
       (Il2CppObject *)v16,
@@ -9561,7 +9561,7 @@ void __fastcall ScrTerminalMap__MovePlayerIcon(
       return;
     }
 LABEL_14:
-    sub_1C13F80(v17, v18);
+    sub_1C1AE30(v17, v18);
   }
   ScrTerminalMap__SetPlayerIcon(this, spotObject, v32);
   v33 = *(System_Action_o **)(v16 + 32);
@@ -9582,26 +9582,26 @@ void __fastcall ScrTerminalMap__OnClickMonoplyBoard(ScrTerminalMap_o *this, cons
   System_Action_o *v10; // x20
   const MethodInfo *v11; // x2
 
-  if ( (byte_4BB1967 & 1) == 0 )
+  if ( (byte_4BC4D23 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap_OnClickMonoplyBoard__, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__OnClickMonoplyBoard_b__384_0__, v4);
-    byte_4BB1967 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap_OnClickMonoplyBoard__, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OnClickMonoplyBoard_b__384_0__, v4);
+    byte_4BC4D23 = 1;
   }
   diceButton = (UnityEngine_Behaviour_o *)this->fields.diceButton;
   if ( !diceButton )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   enabled = UnityEngine_Behaviour__get_enabled(diceButton, 0LL);
   v7 = Method_ScrTerminalMap_OnClickMonoplyBoard__;
   v8 = enabled;
   if ( (*((_BYTE *)Method_ScrTerminalMap_OnClickMonoplyBoard__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C13D3C(Method_ScrTerminalMap_OnClickMonoplyBoard__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1C13D08(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C1ABEC(Method_ScrTerminalMap_OnClickMonoplyBoard__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v7, v7[4]);
   if ( v8 )
   {
     OverwriteAssetSoundName__PlayCommonSe(v9, 18, 0, 0LL);
-    v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrTerminalMap__OnClickMonoplyBoard_b__384_0__, 0LL);
     ScrTerminalMap__CheckAndWarningEventQuestBoardAllClear(this, v10, v11);
   }
@@ -9636,13 +9636,13 @@ void __fastcall ScrTerminalMap__OnEndEventScripts(
   NetworkManager_ResultCallbackFunc_o *v10; // x21
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4BB194D & 1) == 0 )
+  if ( (byte_4BC4D09 & 1) == 0 )
   {
-    sub_1C13D24(&Method_NetworkManager_getRequest_EventScriptFlagRequest___, nowEventScriptEnt);
-    sub_1C13D24(&NetworkManager_TypeInfo, v5);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_ScrTerminalMap__OnEndEventScripts_b__357_0__, v7);
-    byte_4BB194D = 1;
+    sub_1C1ABD4(&Method_NetworkManager_getRequest_EventScriptFlagRequest___, nowEventScriptEnt);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_ScrTerminalMap__OnEndEventScripts_b__357_0__, v7);
+    byte_4BC4D09 = 1;
   }
   monitor = v4[32].monitor;
   if ( !monitor )
@@ -9657,16 +9657,16 @@ void __fastcall ScrTerminalMap__OnEndEventScripts(
   if ( !this )
     goto LABEL_12;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v10, v4, Method_ScrTerminalMap__OnEndEventScripts_b__357_0__, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   this = (ScrTerminalMap_o *)NetworkManager__getRequest_object_(
                                v10,
-                               (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_EventScriptFlagRequest___);
+                               (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_EventScriptFlagRequest___);
   if ( !nowEventScriptEnt || !this )
 LABEL_12:
-    sub_1C13F80(this, nowEventScriptEnt);
+    sub_1C1AE30(this, nowEventScriptEnt);
   EventScriptFlagRequest__beginRequest(
     (EventScriptFlagRequest_o *)this,
     nowEventScriptEnt->fields.eventId,
@@ -9694,13 +9694,13 @@ void __fastcall ScrTerminalMap__OnEveryActionEnd(ScrTerminalMap_o *this, const M
   const MethodInfo *v16; // x2
 
   v2 = this;
-  if ( (byte_4BB194A & 1) == 0 )
+  if ( (byte_4BC4D06 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_0__, v4);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v5);
-    byte_4BB194A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_0__, v4);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v5);
+    byte_4BC4D06 = 1;
   }
   terminalScene = v2->fields.terminalScene;
   if ( !terminalScene )
@@ -9735,7 +9735,7 @@ void __fastcall ScrTerminalMap__OnEveryActionEnd(ScrTerminalMap_o *this, const M
   else
   {
 LABEL_12:
-    p_method = sub_1C65D04(v2->fields._eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 8LL);
+    p_method = sub_1C6CBB4(v2->fields._eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -9758,16 +9758,16 @@ LABEL_12:
   ScrTerminalListTop__RequestChangeTerminalListBG((ScrTerminalListTop_o *)this, 0, 0LL);
   if ( v2->fields.isPlayingDataLostBattleResetEffect )
   {
-    this = (ScrTerminalMap_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    this = (ScrTerminalMap_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
     if ( this )
     {
       MissionNotifyManager__CancelPause((MissionNotifyManager_o *)this, 0LL);
       return;
     }
 LABEL_22:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
-  v15 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v15, (Il2CppObject *)v2, Method_ScrTerminalMap__OnEveryActionEnd_b__354_0__, 0LL);
   ScrTerminalMap__showEventScriptDlgs(v2, v15, v16);
 }
@@ -9783,22 +9783,22 @@ void __fastcall ScrTerminalMap__OnMapTouchDisableFinished(ScrTerminalMap_o *this
   void *v7; // x8
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4BB1950 & 1) == 0 )
+  if ( (byte_4BC4D0C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_ScrTerminalMap__OnMapTouchDisableFinished_b__360_0__, v3);
-    byte_4BB1950 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_ScrTerminalMap__OnMapTouchDisableFinished_b__360_0__, v3);
+    byte_4BC4D0C = 1;
   }
   monitor = v2[32].monitor;
   if ( !monitor
     || (v5 = (ScrTerminalListTop_o *)*((_QWORD *)monitor + 32),
-        v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v6, v2, Method_ScrTerminalMap__OnMapTouchDisableFinished_b__360_0__, 0LL),
         !v5)
     || (ScrTerminalListTop__CheckLimitCountUnSealQuestOpen(v5, v6, 0LL), (v7 = v2[32].monitor) == 0LL)
     || (this = (ScrTerminalMap_o *)*((_QWORD *)v7 + 32)) == 0LL )
   {
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   ScrTerminalListTop__SetBackMaskActive((ScrTerminalListTop_o *)this, 1, 0LL);
 }
@@ -9833,15 +9833,15 @@ void __fastcall ScrTerminalMap__OnTouchDisp(ScrTerminalMap_o *this, const Method
   int32_t MapUIState_k__BackingField; // w8
   const MethodInfo *v28; // x2
 
-  if ( (byte_4BB1994 & 1) == 0 )
+  if ( (byte_4BC4D50 & 1) == 0 )
   {
-    sub_1C13D24(&Method_BasicHelper_Any_MapGimmickComponent___, method);
-    sub_1C13D24(&CTouch_TypeInfo, v3);
-    sub_1C13D24(&System_Func_MapGimmickComponent__bool__TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap_OnTouchDisp__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__OnTouchDisp_b__438_0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v7);
-    byte_4BB1994 = 1;
+    sub_1C1ABD4(&Method_BasicHelper_Any_MapGimmickComponent___, method);
+    sub_1C1ABD4(&CTouch_TypeInfo, v3);
+    sub_1C1ABD4(&System_Func_MapGimmickComponent__bool__TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap_OnTouchDisp__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__OnTouchDisp_b__438_0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v7);
+    byte_4BC4D50 = 1;
   }
   beginTouch = this->fields.beginTouch;
   if ( !CTouch_TypeInfo->_2.cctor_finished )
@@ -9888,11 +9888,11 @@ LABEL_15:
           v14 = ScrTerminalMap___c_TypeInfo;
         }
         v16 = (Il2CppObject *)v14->static_fields->__9;
-        _9__438_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_MapGimmickComponent__bool__TypeInfo);
+        _9__438_0 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_MapGimmickComponent__bool__TypeInfo);
         System_Func_object__bool____ctor(_9__438_0, v16, Method_ScrTerminalMap___c__OnTouchDisp_b__438_0__, 0LL);
         static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
         static_fields->__9__438_0 = (struct System_Func_MapGimmickComponent__bool__o *)_9__438_0;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&static_fields->__9__438_0,
           (int64_t)_9__438_0,
           v18,
@@ -9905,13 +9905,13 @@ LABEL_15:
       if ( !BasicHelper__Any_object_(
               gimmickList,
               (System_Func_T__bool__o *)_9__438_0,
-              (const MethodInfo_2F7A3D8 *)Method_BasicHelper_Any_MapGimmickComponent___) )
+              (const MethodInfo_2F8A3FC *)Method_BasicHelper_Any_MapGimmickComponent___) )
       {
 LABEL_26:
         v24 = Method_ScrTerminalMap_OnTouchDisp__;
         if ( (*((_BYTE *)Method_ScrTerminalMap_OnTouchDisp__ + 83) & 2) != 0 )
-          v24 = (_QWORD *)sub_1C13D3C(Method_ScrTerminalMap_OnTouchDisp__);
-        v25 = (System_Reflection_MethodBase_o *)sub_1C13D08(v24, v24[4]);
+          v24 = (_QWORD *)sub_1C1ABEC(Method_ScrTerminalMap_OnTouchDisp__);
+        v25 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v24, v24[4]);
         OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0, 0LL);
         MapUIState_k__BackingField = this->fields._MapUIState_k__BackingField;
         if ( !MapUIState_k__BackingField )
@@ -9932,7 +9932,7 @@ LABEL_26:
           goto LABEL_15;
         }
 LABEL_33:
-        sub_1C13F80(isDrag, v10);
+        sub_1C1AE30(isDrag, v10);
       }
     }
   }
@@ -9964,47 +9964,47 @@ void __fastcall ScrTerminalMap__OpenDiceSelectDialog(ScrTerminalMap_o *this, con
   EventItemSelectDlgComponent_CallbackFunc_o *v19; // x24
   System_Action_o *v20; // x25
 
-  if ( (byte_4BB196C & 1) == 0 )
+  if ( (byte_4BC4D28 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&EventItemSelectDlgComponent_CallbackFunc_TypeInfo, v3);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v4);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_0__, v6);
-    sub_1C13D24(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_1__, v7);
-    sub_1C13D24(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_2__, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&StringLiteral_5661/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE"*/, v11);
-    sub_1C13D24(&StringLiteral_1/*""*/, v12);
-    byte_4BB196C = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&EventItemSelectDlgComponent_CallbackFunc_TypeInfo, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, v4);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_0__, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_1__, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_2__, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&StringLiteral_5665/*"EVENT_BOARD_GAME_DICE_SELECT"*/, v11);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v12);
+    byte_4BC4D28 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_9;
   EntityListByType = ItemMaster__GetEntityListByType((ItemMaster_o *)Instance, 26, 0LL);
-  v16 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v16 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5661/*"EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE"*/, 0LL);
-  v18 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5665/*"EVENT_BOARD_GAME_DICE_SELECT"*/, 0LL);
+  v18 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v18, (Il2CppObject *)this, Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_0__, 0LL);
-  v19 = (EventItemSelectDlgComponent_CallbackFunc_o *)sub_1C13F70(EventItemSelectDlgComponent_CallbackFunc_TypeInfo);
+  v19 = (EventItemSelectDlgComponent_CallbackFunc_o *)sub_1C1AE20(EventItemSelectDlgComponent_CallbackFunc_TypeInfo);
   EventItemSelectDlgComponent_CallbackFunc___ctor(
     v19,
     (Il2CppObject *)this,
     Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_1__,
     0LL);
-  v20 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_ScrTerminalMap__OpenDiceSelectDialog_b__389_2__, 0LL);
   if ( !v16 )
 LABEL_9:
-    sub_1C13F80(Instance, v14);
+    sub_1C1AE30(Instance, v14);
   CommonUI__OpenEventItemSelectDialog(
     (CommonUI_o *)v16,
     EntityListByType,
@@ -10040,7 +10040,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
   AssetData_o *boardGameDiceAssetData; // x23
   System_String_o *v21; // x0
   System_String_o *v22; // x0
-  Il2CppObject *Object_object__49747248; // x23
+  Il2CppObject *Object_object__49812820; // x23
   Il2CppObject *v24; // x23
   TerminalSceneComponent_o *terminalScene; // x0
   __int64 v26; // x1
@@ -10078,39 +10078,39 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
   UnityEngine_Color_o v58; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v57 = actionType;
-  if ( (byte_4BB196F & 1) == 0 )
+  if ( (byte_4BC4D2B & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&actionType);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v10);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, v11);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceCounter___, v12);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceEffectAction___, v13);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C13D24(&Method_ScrTerminalMap_EndBoardGameDiceEffect__, v16);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v17);
-    sub_1C13D24(&StringLiteral_17487/*"bit_camera_shutter"*/, v18);
-    sub_1C13D24(&StringLiteral_5397/*"Device Default ("*/, v19);
-    byte_4BB196F = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&actionType);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v10);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, v11);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceCounter___, v12);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceEffectAction___, v13);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EndBoardGameDiceEffect__, v16);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v17);
+    sub_1C1ABD4(&StringLiteral_17501/*"bit_diceroll_"*/, v18);
+    sub_1C1ABD4(&StringLiteral_5401/*"DiceCounter"*/, v19);
+    byte_4BC4D2B = 1;
   }
   boardGameDiceAssetData = this->fields.boardGameDiceAssetData;
   if ( !boardGameDiceAssetData )
     goto LABEL_10;
   v21 = System_Int32__ToString((int32_t)&v57, 0LL);
-  v22 = System_String__Concat_62967944((System_String_o *)StringLiteral_17487/*"bit_camera_shutter"*/, v21, 0LL);
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  v22 = System_String__Concat_63040368((System_String_o *)StringLiteral_17501/*"bit_diceroll_"*/, v21, 0LL);
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               boardGameDiceAssetData,
                               v22,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
     goto LABEL_10;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v24 = UnityEngine_Object__Instantiate_object_(
-          Object_object__49747248,
-          (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          Object_object__49812820,
+          (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   terminalScene = (TerminalSceneComponent_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v24, 0LL, 0LL);
   if ( ((unsigned __int8)terminalScene & 1) != 0 )
     goto LABEL_10;
@@ -10118,7 +10118,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
     goto LABEL_53;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v24,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceEffectAction___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceEffectAction___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -10128,7 +10128,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
     v33 = ScrTerminalMap__LotteryEventBoardDiceVoiceCueName(this, UsedDiceItemId, v32);
     v34 = this->fields.boardGameDiceAssetData;
     v35 = v33;
-    v36 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v36 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v36, (Il2CppObject *)this, Method_ScrTerminalMap_EndBoardGameDiceEffect__, 0LL);
     if ( !Component_object )
       goto LABEL_53;
@@ -10144,7 +10144,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
   }
   v37 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)v24,
-          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+          (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   terminalScene = (TerminalSceneComponent_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v37, 0LL, 0LL);
@@ -10167,16 +10167,16 @@ void __fastcall ScrTerminalMap__PlayBoardGameDiceEffect(
   v38 = this->fields.terminalScene;
   if ( !v38 )
     goto LABEL_53;
-  GameObjectExtensions__SafeSetParent_34717732((UnityEngine_GameObject_o *)v24, v38->fields.mEffectPanel, 0LL);
+  GameObjectExtensions__SafeSetParent_34762256((UnityEngine_GameObject_o *)v24, v38->fields.mEffectPanel, 0LL);
   maxClearCount = 0;
   clearCount = 0;
   ScrTerminalMap__GetBoardGameSquareClearCountAndMaxCount(this, 1, &clearCount, &maxClearCount, v39);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v40);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v40);
+    byte_4BC4D7B = 1;
   }
   v41 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10221,7 +10221,7 @@ LABEL_43:
           v54 = this->fields.terminalScene;
           if ( v54 )
           {
-            GameObjectExtensions__SafeSetParent_34717732(
+            GameObjectExtensions__SafeSetParent_34762256(
               (UnityEngine_GameObject_o *)terminalScene,
               v54->fields.mEffectPanel,
               0LL);
@@ -10231,15 +10231,15 @@ LABEL_43:
       }
     }
 LABEL_53:
-    sub_1C13F80(terminalScene, v26);
+    sub_1C1AE30(terminalScene, v26);
   }
   terminalScene = (TerminalSceneComponent_o *)this->fields.boardGameDiceAssetData;
   if ( !terminalScene )
     goto LABEL_53;
-  v44 = AssetData__GetObject_object__49747248(
+  v44 = AssetData__GetObject_object__49812820(
           (AssetData_o *)terminalScene,
-          (System_String_o *)StringLiteral_5397/*"Device Default ("*/,
-          (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+          (System_String_o *)StringLiteral_5401/*"DiceCounter"*/,
+          (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v44, 0LL, 0LL) )
@@ -10248,7 +10248,7 @@ LABEL_53:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v45 = UnityEngine_Object__Instantiate_object_(
             v44,
-            (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     terminalScene = (TerminalSceneComponent_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v45, 0LL, 0LL);
     if ( ((unsigned __int8)terminalScene & 1) == 0 )
     {
@@ -10256,9 +10256,9 @@ LABEL_53:
         goto LABEL_53;
       v46 = UnityEngine_GameObject__GetComponent_object_(
               (UnityEngine_GameObject_o *)v45,
-              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceCounter___);
+              (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameDiceCounter___);
       *p_diceCounterComponent = (struct EventBoardGameDiceCounter_o *)v46;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields.diceCounterComponent,
         (int64_t)v46,
         v47,
@@ -10293,14 +10293,14 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffect(ScrTerminalMap_o *this,
   int32_t clearCount[2]; // [xsp+0h] [xbp-40h] BYREF
   UserEventEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB1970 & 1) == 0 )
+  if ( (byte_4BC4D2C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, method);
-    sub_1C13D24(&NetworkManager_TypeInfo, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    byte_4BB1970 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, method);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    byte_4BC4D2C = 1;
   }
   *(_QWORD *)clearCount = 0LL;
   entity = 0LL;
@@ -10310,10 +10310,10 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffect(ScrTerminalMap_o *this,
   EventId = MapControl_WarInfo__GetEventId(mWarInfo, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4D7B = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10324,18 +10324,18 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffect(ScrTerminalMap_o *this,
   EventBoardGameSquareIndex_k__BackingField = v10->static_fields->_EventBoardGameSquareIndex_k__BackingField;
   this->fields.endSquareIndex = 1;
   this->fields.currentSquareIndex = EventBoardGameSquareIndex_k__BackingField;
-  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mWarInfo )
     goto LABEL_31;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)mWarInfo,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC2585 = 1;
   }
   mWarInfo = (MapControl_WarInfo_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -10365,7 +10365,7 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffect(ScrTerminalMap_o *this,
   mWarInfo = (MapControl_WarInfo_o *)this->fields._EventBoardStopPanelObj_k__BackingField;
   if ( !mWarInfo )
 LABEL_31:
-    sub_1C13F80(mWarInfo, method);
+    sub_1C1AE30(mWarInfo, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mWarInfo, clearCount[1] < clearCount[0], 0LL);
   diceCounterComponent = (UnityEngine_Object_o *)this->fields.diceCounterComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -10443,23 +10443,23 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
   PartyListViewItem_o *v51; // x7
   UnityEngine_Vector3_o EventBoardSquarePos; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB1972 & 1) == 0 )
+  if ( (byte_4BC4D2E & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v4);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v5);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass397_0__PlayBoardGamePieceEffectSub_b__0__, v7);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass397_0_TypeInfo, v8);
-    byte_4BB1972 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v4);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v5);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass397_0__PlayBoardGamePieceEffectSub_b__0__, v7);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass397_0_TypeInfo, v8);
+    byte_4BC4D2E = 1;
   }
-  v9 = sub_1C13F70(ScrTerminalMap___c__DisplayClass397_0_TypeInfo);
+  v9 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass397_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass397_0___ctor((ScrTerminalMap___c__DisplayClass397_0_o *)v9, 0LL);
   if ( !v9 )
     goto LABEL_34;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(UnityEngine_Vector3_o *)(v9 + 24) = ScrTerminalMap__GetEventBoardSquarePos(
                                           this,
                                           this->fields.currentSquareIndex,
@@ -10486,14 +10486,14 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
     goto LABEL_34;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)EventBoardPieceObj_k__BackingField,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988((UnityEngine_Object_o *)Component_object, 0LL);
+    UnityEngine_Object__Destroy_70794412((UnityEngine_Object_o *)Component_object, 0LL);
   }
   p_animationNameBuffer = &this->fields.animationNameBuffer;
   if ( !System_String__IsNullOrEmpty(this->fields.animationNameBuffer, 0LL) )
@@ -10503,27 +10503,27 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
       goto LABEL_34;
     EventBoardPieceObj_k__BackingField = (EventBoardGameDiceCounter_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                           (UnityEngine_GameObject_o *)EventBoardPieceObj_k__BackingField,
-                                                                          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                                                          (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     if ( !EventBoardPieceObj_k__BackingField )
       goto LABEL_34;
-    UnityEngine_Animation__Stop_70465540(
+    UnityEngine_Animation__Stop_70537964(
       (UnityEngine_Animation_o *)EventBoardPieceObj_k__BackingField,
       *p_animationNameBuffer,
       0LL);
     *p_animationNameBuffer = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.animationNameBuffer, 0LL, v26, v27, v28, v29, v30, v31);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.animationNameBuffer, 0LL, v26, v27, v28, v29, v30, v31);
   }
   EventBoardPieceObj_k__BackingField = (EventBoardGameDiceCounter_o *)this->fields._EventBoardPieceObj_k__BackingField;
   if ( !EventBoardPieceObj_k__BackingField )
     goto LABEL_34;
   v32 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)EventBoardPieceObj_k__BackingField,
-          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+          (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v32, 0LL, 0LL) )
   {
-    v34 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v34 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v34,
       (Il2CppObject *)v9,
@@ -10532,7 +10532,7 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
     if ( !v32 )
       goto LABEL_34;
     v32[2].klass = (Il2CppClass *)v34;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v32[2], (int64_t)v34, v35, v36, v37, v38, v39, v40);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v32[2], (int64_t)v34, v35, v36, v37, v38, v39, v40);
   }
   else
   {
@@ -10550,7 +10550,7 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
                                             this->fields.currentSquareIndex,
                                             v42);
   this->fields.animationNameBuffer = BoardGamePieceAnimationNameBySquareId;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.animationNameBuffer,
     (int64_t)BoardGamePieceAnimationNameBySquareId,
     v46,
@@ -10563,12 +10563,12 @@ void __fastcall ScrTerminalMap__PlayBoardGamePieceEffectSub(ScrTerminalMap_o *th
   if ( !EventBoardPieceObj_k__BackingField
     || (EventBoardPieceObj_k__BackingField = (EventBoardGameDiceCounter_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               (UnityEngine_GameObject_o *)EventBoardPieceObj_k__BackingField,
-                                                                              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL )
+                                                                              (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL )
   {
 LABEL_34:
-    sub_1C13F80(EventBoardPieceObj_k__BackingField, v11);
+    sub_1C1AE30(EventBoardPieceObj_k__BackingField, v11);
   }
-  UnityEngine_Animation__Play_70466396(
+  UnityEngine_Animation__Play_70538820(
     (UnityEngine_Animation_o *)EventBoardPieceObj_k__BackingField,
     *p_animationNameBuffer,
     0LL);
@@ -10613,7 +10613,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
   const MethodInfo *v36; // x2
   TerminalPramsManager_c *v37; // x0
   const MethodInfo *v38; // x1
-  Il2CppObject *Object_object__49747248; // x22
+  Il2CppObject *Object_object__49812820; // x22
   Il2CppObject *Component_object; // x21
   Il2CppObject *v41; // x21
   System_Action_o *v42; // x22
@@ -10625,29 +10625,29 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
   PartyListViewItem_o *v48; // x7
   const MethodInfo *v49; // x4
 
-  if ( (byte_4BB1975 & 1) == 0 )
+  if ( (byte_4BC4D31 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&squareId);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v9);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v10);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v11);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v12);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass400_0__PlayBoardGameQuestArrivalEffect_b__0__, v14);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass400_0_TypeInfo, v15);
-    sub_1C13D24(&StringLiteral_9039/*"MapGimmickEffect_GappolyButtonActive"*/, v16);
-    byte_4BB1975 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&squareId);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v9);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v10);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v11);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass400_0__PlayBoardGameQuestArrivalEffect_b__0__, v14);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass400_0_TypeInfo, v15);
+    sub_1C1ABD4(&StringLiteral_9045/*"MapGimmickEffect_GappolyQuestArrival"*/, v16);
+    byte_4BC4D31 = 1;
   }
-  v17 = sub_1C13F70(ScrTerminalMap___c__DisplayClass400_0_TypeInfo);
+  v17 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass400_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass400_0___ctor((ScrTerminalMap___c__DisplayClass400_0_o *)v17, 0LL);
   if ( !v17 )
     goto LABEL_33;
   *(_BYTE *)(v17 + 16) = isAuto;
   *(_QWORD *)(v17 + 24) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v17 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 24), (int64_t)this, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v17 + 48) = callback;
   *(_DWORD *)(v17 + 32) = squareId;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v17 + 48), (int64_t)callback, v26, v27, v28, v29, v30, v31);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 48), (int64_t)callback, v26, v27, v28, v29, v30, v31);
   diceCounterComponent = (UnityEngine_Object_o *)this->fields.diceCounterComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -10678,10 +10678,10 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB1251 )
+    if ( !byte_4BC460B )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v35);
-      byte_4BB1251 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v35);
+      byte_4BC460B = 1;
     }
     v37 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10695,21 +10695,21 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
     gameObject = (UnityEngine_Component_o *)this->fields.mapAssetData;
     if ( !gameObject )
       goto LABEL_33;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 (AssetData_o *)gameObject,
-                                (System_String_o *)StringLiteral_9039/*"MapGimmickEffect_GappolyButtonActive"*/,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (System_String_o *)StringLiteral_9045/*"MapGimmickEffect_GappolyQuestArrival"*/,
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Component_object = 0LL;
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v41 = UnityEngine_Object__Instantiate_object_(
-              Object_object__49747248,
-              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      GameObjectExtensions__SafeSetParent_34717732(
+              Object_object__49812820,
+              (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      GameObjectExtensions__SafeSetParent_34762256(
         (UnityEngine_GameObject_o *)v41,
         this->fields._EventBoardPieceObj_k__BackingField,
         0LL);
@@ -10717,10 +10717,10 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v41,
-                             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                             (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
         if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
           goto LABEL_28;
-        v42 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v42 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v42,
           (Il2CppObject *)v17,
@@ -10729,7 +10729,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
         if ( Component_object )
         {
           Component_object[2].monitor = v42;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&Component_object[2].monitor,
             (int64_t)v42,
             v43,
@@ -10742,7 +10742,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameQuestArrivalEffect(
         }
       }
 LABEL_33:
-      sub_1C13F80(gameObject, v19);
+      sub_1C1AE30(gameObject, v19);
     }
   }
 LABEL_28:
@@ -10772,7 +10772,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameStopPiecePanel(ScrTerminalMap_o *th
   __int64 v9; // x1
   __int64 v10; // x1
   AssetData_o *mapAssetData; // x0
-  Il2CppObject *Object_object__49747248; // x20
+  Il2CppObject *Object_object__49812820; // x20
   Il2CppObject *v13; // x20
   Il2CppObject *Component_object; // x20
   System_Action_o *v15; // x21
@@ -10787,38 +10787,38 @@ void __fastcall ScrTerminalMap__PlayBoardGameStopPiecePanel(ScrTerminalMap_o *th
   System_Action_o *v24; // x21
   const MethodInfo *v25; // x4
 
-  if ( (byte_4BB1974 & 1) == 0 )
+  if ( (byte_4BC4D30 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v3);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v4);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap_FrameInUI__, v7);
-    sub_1C13D24(&Method_ScrTerminalMap__PlayBoardGameStopPiecePanel_b__399_0__, v8);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_9042/*"MapGimmickEffect_GappolyPiece_2"*/, v10);
-    byte_4BB1974 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v3);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v4);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap_FrameInUI__, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap__PlayBoardGameStopPiecePanel_b__399_0__, v8);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_9048/*"MapGimmickEffect_GappolyStopPiecePanel"*/, v10);
+    byte_4BC4D30 = 1;
   }
   if ( this->fields.isForceStopPieceEffect )
   {
     mapAssetData = this->fields.mapAssetData;
     if ( !mapAssetData )
       goto LABEL_21;
-    Object_object__49747248 = AssetData__GetObject_object__49747248(
+    Object_object__49812820 = AssetData__GetObject_object__49812820(
                                 mapAssetData,
-                                (System_String_o *)StringLiteral_9042/*"MapGimmickEffect_GappolyPiece_2"*/,
-                                (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                (System_String_o *)StringLiteral_9048/*"MapGimmickEffect_GappolyStopPiecePanel"*/,
+                                (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49747248, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__49812820, 0LL, 0LL) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v13 = UnityEngine_Object__Instantiate_object_(
-              Object_object__49747248,
-              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      GameObjectExtensions__SafeSetParent_34717732(
+              Object_object__49812820,
+              (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      GameObjectExtensions__SafeSetParent_34762256(
         (UnityEngine_GameObject_o *)v13,
         this->fields._EventBoardPieceObj_k__BackingField,
         0LL);
@@ -10826,10 +10826,10 @@ void __fastcall ScrTerminalMap__PlayBoardGameStopPiecePanel(ScrTerminalMap_o *th
         goto LABEL_21;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)v13,
-                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                           (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
       {
-        v15 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v15 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v15,
           (Il2CppObject *)this,
@@ -10838,7 +10838,7 @@ void __fastcall ScrTerminalMap__PlayBoardGameStopPiecePanel(ScrTerminalMap_o *th
         if ( Component_object )
         {
           Component_object[2].monitor = v15;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&Component_object[2].monitor,
             (int64_t)v15,
             v16,
@@ -10850,16 +10850,16 @@ void __fastcall ScrTerminalMap__PlayBoardGameStopPiecePanel(ScrTerminalMap_o *th
           return;
         }
 LABEL_21:
-        sub_1C13F80(mapAssetData, method);
+        sub_1C1AE30(mapAssetData, method);
       }
     }
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D7B = 1;
   }
   v22 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10868,7 +10868,7 @@ LABEL_21:
     v22 = TerminalPramsManager_TypeInfo;
   }
   EventBoardGameSquareIndex_k__BackingField = v22->static_fields->_EventBoardGameSquareIndex_k__BackingField;
-  v24 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)this, Method_ScrTerminalMap_FrameInUI__, 0LL);
   ScrTerminalMap__PlayBoardGameQuestArrivalEffect(this, EventBoardGameSquareIndex_k__BackingField, v24, 0, v25);
 }
@@ -10883,19 +10883,19 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameArrivalEffectAuto(ScrTerminalM
   System_Action_o *v7; // x21
   const MethodInfo *v8; // x4
 
-  if ( (byte_4BB195C & 1) == 0 )
+  if ( (byte_4BC4D18 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__PlayEventBoardGameArrivalEffectAuto_b__373_0__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB195C = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__PlayEventBoardGameArrivalEffectAuto_b__373_0__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4D18 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D7B = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -10904,7 +10904,7 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameArrivalEffectAuto(ScrTerminalM
     v5 = TerminalPramsManager_TypeInfo;
   }
   EventBoardGameSquareIndex_k__BackingField = v5->static_fields->_EventBoardGameSquareIndex_k__BackingField;
-  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v7,
     (Il2CppObject *)this,
@@ -10936,23 +10936,23 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameQuestArrivalVoice(ScrTerminalM
   struct System_Int32_array *v19; // x8
   struct System_Int32_array *v20; // x8
   struct System_Int32_array *v21; // x8
-  System_String_o *VoiceAssetName_41015788; // x0
+  System_String_o *VoiceAssetName_41071744; // x0
   SeManager_c *v23; // x8
   System_String_o *v24; // x19
   float DEFAULT_VOLUME; // s8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4BB1985 & 1) == 0 )
+  if ( (byte_4BC4D41 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantMaster___, method);
-    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
-    sub_1C13D24(&System_Random_TypeInfo, v4);
-    sub_1C13D24(&SeManager_TypeInfo, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C13D24(&SoundManager_TypeInfo, v7);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&StringLiteral_1260/*"0_M040"*/, v8);
-    byte_4BB1985 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v3);
+    sub_1C1ABD4(&System_Random_TypeInfo, v4);
+    sub_1C1ABD4(&SeManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C1ABD4(&SoundManager_TypeInfo, v7);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&StringLiteral_1260/*"0_M040"*/, v8);
+    byte_4BC4D41 = 1;
   }
   EventBoardGameArrivalVoiceSvtIdList_k__BackingField = v2->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField;
   if ( !EventBoardGameArrivalVoiceSvtIdList_k__BackingField )
@@ -10962,12 +10962,12 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameQuestArrivalVoice(ScrTerminalM
   v10 = EventBoardGameArrivalVoiceSvtIdList_k__BackingField->m_Items[2];
   if ( v10 >= 1 )
   {
-    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_32;
     this = (ScrTerminalMap_o *)DataManager__GetMasterData_object_(
                                  (DataManager_o *)this,
-                                 (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                 (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !this )
       goto LABEL_32;
     this = (ScrTerminalMap_o *)UserServantMaster__getOrganizationList((UserServantMaster_o *)this, 0LL);
@@ -10992,7 +10992,7 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameQuestArrivalVoice(ScrTerminalM
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v26.fields.currentCryptoKey = v17;
         *(_QWORD *)&v26.fields.fakeValue = v16;
-        this = (ScrTerminalMap_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v26, 0LL);
+        this = (ScrTerminalMap_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47556128(v26, 0LL);
         if ( (_DWORD)this == v10 )
         {
           this = (ScrTerminalMap_o *)UserServantEntity__IsEventJoin((UserServantEntity_o *)v15, 0LL);
@@ -11006,7 +11006,7 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameQuestArrivalVoice(ScrTerminalM
       while ( v13 < m_CancellationTokenSource );
       if ( (v14 & 1) != 0 )
       {
-        v18 = (System_Random_o *)sub_1C13F70(System_Random_TypeInfo);
+        v18 = (System_Random_o *)sub_1C1AE20(System_Random_TypeInfo);
         System_Random___ctor(v18, 0LL);
         v19 = v2->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField;
         if ( v19 )
@@ -11026,12 +11026,12 @@ void __fastcall ScrTerminalMap__PlayEventBoardGameQuestArrivalVoice(ScrTerminalM
                 goto LABEL_27;
               }
 LABEL_33:
-              sub_1C13F88(this, method);
+              sub_1C1AE38(this, method);
             }
           }
         }
 LABEL_32:
-        sub_1C13F80(this, method);
+        sub_1C1AE30(this, method);
       }
     }
   }
@@ -11042,9 +11042,9 @@ LABEL_25:
   if ( !v21->max_length )
     goto LABEL_33;
 LABEL_27:
-  VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(v21->m_Items[1], 0LL);
+  VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(v21->m_Items[1], 0LL);
   v23 = SeManager_TypeInfo;
-  v24 = VoiceAssetName_41015788;
+  v24 = VoiceAssetName_41071744;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
@@ -11053,7 +11053,7 @@ LABEL_27:
   DEFAULT_VOLUME = v23->static_fields->DEFAULT_VOLUME;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playVoice_39857168(v24, (System_String_o *)StringLiteral_1260/*"0_M040"*/, DEFAULT_VOLUME, 0LL, 0, 0LL);
+  SoundManager__playVoice_39911060(v24, (System_String_o *)StringLiteral_1260/*"0_M040"*/, DEFAULT_VOLUME, 0LL, 0, 0LL);
 }
 
 
@@ -11066,7 +11066,7 @@ void __fastcall ScrTerminalMap__PlayEventProgressEffect(
 
   titleInfoControl = this->fields.titleInfoControl;
   if ( !titleInfoControl )
-    sub_1C13F80(0LL, callback);
+    sub_1C1AE30(0LL, callback);
   TitleInfoControl__StartEventUIAnimation(titleInfoControl, 1, callback, 0LL);
 }
 
@@ -11102,34 +11102,34 @@ void __fastcall ScrTerminalMap__PlayMapModelEntryAnimation(
   __int64 v29; // x1
   TerminalPramsManager_c *v30; // x0
 
-  if ( (byte_4BB1953 & 1) == 0 )
+  if ( (byte_4BC4D0F & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, animName);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass364_0__PlayMapModelEntryAnimation_b__0__, v9);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass364_0_TypeInfo, v10);
-    byte_4BB1953 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, animName);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass364_0__PlayMapModelEntryAnimation_b__0__, v9);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass364_0_TypeInfo, v10);
+    byte_4BC4D0F = 1;
   }
-  v11 = sub_1C13F70(ScrTerminalMap___c__DisplayClass364_0_TypeInfo);
+  v11 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass364_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass364_0___ctor((ScrTerminalMap___c__DisplayClass364_0_o *)v11, 0LL);
   if ( !v11 )
     goto LABEL_16;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)this, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v11 + 24) = endAction;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)endAction, v20, v21, v22, v23, v24, v25);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)endAction, v20, v21, v22, v23, v24, v25);
   ScrTerminalMap__FrameOutUI(this, 1, v26);
   mapButtonGrid = this->fields.mapButtonGrid;
   if ( !mapButtonGrid )
     goto LABEL_16;
   MapButtonControl__FrameOut(mapButtonGrid, 0LL);
-  mapButtonGrid = (MapButtonControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  mapButtonGrid = (MapButtonControl_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !mapButtonGrid )
     goto LABEL_16;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)mapButtonGrid, 0LL);
   mapModelManager = this->fields.mapModelManager;
-  v28 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v28 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v28,
     (Il2CppObject *)v11,
@@ -11142,15 +11142,15 @@ void __fastcall ScrTerminalMap__PlayMapModelEntryAnimation(
         (mapButtonGrid = (MapButtonControl_o *)this->fields.spotModelScreen) == 0LL) )
   {
 LABEL_16:
-    sub_1C13F80(mapButtonGrid, v13);
+    sub_1C1AE30(mapButtonGrid, v13);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mapButtonGrid, 0, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1256 )
+  if ( !byte_4BC4610 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v29);
-    byte_4BB1256 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v29);
+    byte_4BC4610 = 1;
   }
   v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -11171,7 +11171,7 @@ void __fastcall ScrTerminalMap__ProcessMapCamera(
 
   mapCamera = this->fields.mapCamera;
   if ( !mapCamera )
-    sub_1C13F80(0LL, isMapTouchEnabled);
+    sub_1C1AE30(0LL, isMapTouchEnabled);
   MapCamera__Process(mapCamera, isMapTouchEnabled, 0LL);
 }
 
@@ -11205,29 +11205,29 @@ void __fastcall ScrTerminalMap__ProductivityGrowthDialogOpen(
   UnityEngine_GameObject_o *mActionPanel; // x21
   System_Action_o *v27; // x22
 
-  if ( (byte_4BB193E & 1) == 0 )
+  if ( (byte_4BC4CFA & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass341_0__ProductivityGrowthDialogOpen_b__0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass341_0_TypeInfo, v7);
-    byte_4BB193E = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass341_0__ProductivityGrowthDialogOpen_b__0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass341_0_TypeInfo, v7);
+    byte_4BC4CFA = 1;
   }
-  v8 = sub_1C13F70(ScrTerminalMap___c__DisplayClass341_0_TypeInfo);
+  v8 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass341_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass341_0___ctor((ScrTerminalMap___c__DisplayClass341_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_14;
   *(_QWORD *)(v8 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)(v8 + 24) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)callback, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)callback, v17, v18, v19, v20, v21, v22);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v10);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v10);
+    byte_4BC2713 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -11239,7 +11239,7 @@ void __fastcall ScrTerminalMap__ProductivityGrowthDialogOpen(
   if ( !mInstance
     || (mTerminalList = mInstance->fields.mTerminalList) == 0LL
     || (mActionPanel = mTerminalList->fields.mActionPanel,
-        v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v27 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(
           v27,
           (Il2CppObject *)v8,
@@ -11248,7 +11248,7 @@ void __fastcall ScrTerminalMap__ProductivityGrowthDialogOpen(
         !titleInfoControl) )
   {
 LABEL_14:
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
   TitleInfoControl__EventProductivityGrowthDialogOpen(titleInfoControl, mActionPanel, v27, 0LL);
 }
@@ -11263,7 +11263,7 @@ void __fastcall ScrTerminalMap__Quit(ScrTerminalMap_o *this, int32_t quitType, c
   {
     mapButtonGrid = this->fields.mapButtonGrid;
     if ( !mapButtonGrid )
-      sub_1C13F80(0LL, quitType);
+      sub_1C1AE30(0LL, quitType);
     MapButtonControl__DestroyButtons(mapButtonGrid, 0LL);
   }
   ScrTerminalMap__DestroyEventActionEffect(this, *(const MethodInfo **)&quitType);
@@ -11345,14 +11345,14 @@ void __fastcall ScrTerminalMap__ReleaseMap(ScrTerminalMap_o *this, bool isReleas
   EventMapManagerInterface_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB1913 & 1) == 0 )
+  if ( (byte_4BC4CCF & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, isReleaseAseets);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject__Clear__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    byte_4BB1913 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, isReleaseAseets);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GameObject__Clear__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    byte_4BC4CCF = 1;
   }
   allMaskObj = (UnityEngine_Object_o *)this->fields.allMaskObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -11368,7 +11368,7 @@ void __fastcall ScrTerminalMap__ReleaseMap(ScrTerminalMap_o *this, bool isReleas
   if ( !isReleaseAseets )
     return;
   this->fields._currentMapTexture_k__BackingField = 0LL;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._currentMapTexture_k__BackingField,
     0LL,
     v12,
@@ -11396,24 +11396,24 @@ void __fastcall ScrTerminalMap__ReleaseMap(ScrTerminalMap_o *this, bool isReleas
   if ( (int)v27 >= 1 )
     System_Array__Clear((System_Array_o *)mapEffectPrefabList->fields._items, 0, v27, 0LL);
   this->fields.mapGimmickPrefab = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapGimmickPrefab, 0LL, v27, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapGimmickPrefab, 0LL, v27, v18, v19, v20, v21, v22);
   mapAssetData = this->fields.mapAssetData;
   if ( mapAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapAssetData, 0LL);
     this->fields.mapAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapAssetData, 0LL, v30, v31, v32, v33, v34, v35);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapAssetData, 0LL, v30, v31, v32, v33, v34, v35);
   }
   mapMultiAssetData = this->fields.mapMultiAssetData;
   if ( mapMultiAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapMultiAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapMultiAssetData, 0LL);
     this->fields.mapMultiAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v37, v38, v39, v40, v41, v42);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v37, v38, v39, v40, v41, v42);
   }
   mapModelManager = (UnityEngine_GameObject_o *)this->fields.mapModelManager;
   if ( mapModelManager )
@@ -11433,41 +11433,41 @@ void __fastcall ScrTerminalMap__ReleaseMap(ScrTerminalMap_o *this, bool isReleas
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapImgAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapImgAssetData, 0LL);
     this->fields.mapImgAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapImgAssetData, 0LL, v44, v45, v46, v47, v48, v49);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapImgAssetData, 0LL, v44, v45, v46, v47, v48, v49);
   }
   mapInfoAssetData = this->fields.mapInfoAssetData;
   if ( mapInfoAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapInfoAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapInfoAssetData, 0LL);
     this->fields.mapInfoAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapInfoAssetData, 0LL, v51, v52, v53, v54, v55, v56);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapInfoAssetData, 0LL, v51, v52, v53, v54, v55, v56);
   }
   mapInfoEffectAssetData = this->fields.mapInfoEffectAssetData;
   if ( mapInfoEffectAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapInfoEffectAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapInfoEffectAssetData, 0LL);
     this->fields.mapInfoEffectAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapInfoEffectAssetData, 0LL, v58, v59, v60, v61, v62, v63);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapInfoEffectAssetData, 0LL, v58, v59, v60, v61, v62, v63);
   }
   boardGameDiceAssetData = this->fields.boardGameDiceAssetData;
   if ( boardGameDiceAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(boardGameDiceAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(boardGameDiceAssetData, 0LL);
     this->fields.boardGameDiceAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.boardGameDiceAssetData, 0LL, v65, v66, v67, v68, v69, v70);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.boardGameDiceAssetData, 0LL, v65, v66, v67, v68, v69, v70);
   }
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
 LABEL_52:
-    sub_1C13F80(mapModelManager, v10);
+    sub_1C1AE30(mapModelManager, v10);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v73 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -11485,7 +11485,7 @@ LABEL_52:
   else
   {
 LABEL_48:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 9LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 9LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -11505,13 +11505,13 @@ void __fastcall ScrTerminalMap__ReleaseMapUseVoiceData(ScrTerminalMap_o *this, c
   struct System_Int32_array *useVoiceSvtIDList; // x21
   __int64 v10; // x8
   unsigned __int64 v11; // x22
-  System_String_o *VoiceAssetName_41015788; // x20
+  System_String_o *VoiceAssetName_41071744; // x20
 
   v8 = this;
-  if ( (byte_4BB190F & 1) == 0 )
+  if ( (byte_4BC4CCB & 1) == 0 )
   {
-    this = (ScrTerminalMap_o *)sub_1C13D24(&SoundManager_TypeInfo, method);
-    byte_4BB190F = 1;
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&SoundManager_TypeInfo, method);
+    byte_4BC4CCB = 1;
   }
   if ( v8->fields.mMapEnt )
   {
@@ -11525,13 +11525,13 @@ void __fastcall ScrTerminalMap__ReleaseMapUseVoiceData(ScrTerminalMap_o *this, c
         do
         {
           if ( v11 >= (unsigned int)v10 )
-            sub_1C13F88(this, method);
-          VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(
+            sub_1C1AE38(this, method);
+          VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(
                                       useVoiceSvtIDList->m_Items[v11 + 1],
                                       0LL);
           if ( !SoundManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-          SoundManager__releaseAudioAssetStorage(VoiceAssetName_41015788, 0LL);
+          SoundManager__releaseAudioAssetStorage(VoiceAssetName_41071744, 0LL);
           LODWORD(v10) = useVoiceSvtIDList->max_length;
           ++v11;
         }
@@ -11540,7 +11540,7 @@ void __fastcall ScrTerminalMap__ReleaseMapUseVoiceData(ScrTerminalMap_o *this, c
     }
   }
   v8->fields.useVoiceSvtIDList = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v8->fields.useVoiceSvtIDList, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v8->fields.useVoiceSvtIDList, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -11561,25 +11561,25 @@ void __fastcall ScrTerminalMap__RequestDiceUse(
   Il2CppObject *Instance; // x0
   __int64 v16; // x1
 
-  if ( (byte_4BB196D & 1) == 0 )
+  if ( (byte_4BC4D29 & 1) == 0 )
   {
-    sub_1C13D24(&Method_NetworkManager_getRequest_ItemUseRequest___, *(_QWORD *)&itemId);
-    sub_1C13D24(&NetworkManager_TypeInfo, v9);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap_EndRequestDiceUse__, v11);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v12);
-    byte_4BB196D = 1;
+    sub_1C1ABD4(&Method_NetworkManager_getRequest_ItemUseRequest___, *(_QWORD *)&itemId);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v9);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EndRequestDiceUse__, v11);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v12);
+    byte_4BC4D29 = 1;
   }
-  v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v13, (Il2CppObject *)this, Method_ScrTerminalMap_EndRequestDiceUse__, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v13,
-                     (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_ItemUseRequest___);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+                     (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_ItemUseRequest___);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance || (MissionNotifyManager__StartPause((MissionNotifyManager_o *)Instance, 0LL), !Request_object) )
-    sub_1C13F80(Instance, v16);
+    sub_1C1AE30(Instance, v16);
   ItemUseRequest__beginRequest((ItemUseRequest_o *)Request_object, itemId, num, eventId, 0LL);
 }
 
@@ -11617,20 +11617,20 @@ bool __fastcall ScrTerminalMap__RequestMapChange(
   Il2CppObject *entity; // [xsp+38h] [xbp-38h] BYREF
 
   v8 = this;
-  if ( (byte_4BB1937 & 1) == 0 )
+  if ( (byte_4BC4CF3 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&mapId);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventMaster___, v9);
-    sub_1C13D24(&DataManager_TypeInfo, v10);
-    sub_1C13D24(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v11);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v12);
-    sub_1C13D24(&Method_ScrTerminalListTop_RefreshTerminalScene__, v13);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v15);
-    sub_1C13D24(&StringLiteral_5805/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, v16);
-    sub_1C13D24(&StringLiteral_19394/*"es-UY"*/, v17);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&StringLiteral_1/*""*/, v18);
-    byte_4BB1937 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&mapId);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventMaster___, v9);
+    sub_1C1ABD4(&DataManager_TypeInfo, v10);
+    sub_1C1ABD4(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v11);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v12);
+    sub_1C1ABD4(&Method_ScrTerminalListTop_RefreshTerminalScene__, v13);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v15);
+    sub_1C1ABD4(&StringLiteral_5809/*"EVENT_REWARD_END_MESSAGE"*/, v16);
+    sub_1C1ABD4(&StringLiteral_19408/*"evChange_Map"*/, v17);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v18);
+    byte_4BC4CF3 = 1;
   }
   entity = 0LL;
   mMapInfo = v8->fields.mMapInfo;
@@ -11645,7 +11645,7 @@ bool __fastcall ScrTerminalMap__RequestMapChange(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventMaster___);
+    this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventMaster___);
     v21 = v8->fields.mWarEnt;
     if ( !v21 || !this )
       goto LABEL_25;
@@ -11653,17 +11653,17 @@ bool __fastcall ScrTerminalMap__RequestMapChange(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            &entity,
            v21->fields.eventId,
-           (const MethodInfo_3238670 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+           (const MethodInfo_32486C4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     {
       this = (ScrTerminalMap_o *)entity;
       if ( entity )
       {
         if ( EventEntity__IsOpen((EventEntity_o *)entity, 0, 0LL) )
           goto LABEL_14;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (ScrTerminalMap_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5805/*"EVENT_REWARD_ASSIST_SKILL_LV"*/, 0LL);
+        this = (ScrTerminalMap_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5809/*"EVENT_REWARD_END_MESSAGE"*/, 0LL);
         if ( entity )
         {
           v25 = this;
@@ -11674,7 +11674,7 @@ bool __fastcall ScrTerminalMap__RequestMapChange(
           {
             mTerminalList = (Il2CppObject *)terminalScene->fields.mTerminalList;
             v29 = this;
-            v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+            v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
             System_Action___ctor(v30, mTerminalList, Method_ScrTerminalListTop_RefreshTerminalScene__, 0LL);
             if ( Instance )
             {
@@ -11700,7 +11700,7 @@ bool __fastcall ScrTerminalMap__RequestMapChange(
         }
       }
 LABEL_25:
-      sub_1C13F80(this, *(_QWORD *)&mapId);
+      sub_1C1AE30(this, *(_QWORD *)&mapId);
     }
     return 0;
   }
@@ -11711,7 +11711,7 @@ LABEL_14:
   v8->fields.requestedMapId = mapId;
   v8->fields.requestFocusSpotId = focusSpotd;
   v8->fields.requestPlayerSpotId = playerSpotId;
-  ScrTerminalMap__mfCallFsmEvent(v8, (System_String_o *)StringLiteral_19394/*"es-UY"*/, v22);
+  ScrTerminalMap__mfCallFsmEvent(v8, (System_String_o *)StringLiteral_19408/*"evChange_Map"*/, v22);
   return 1;
 }
 
@@ -11766,7 +11766,7 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
   float v49; // s13
   const MethodInfo *v50; // x1
   float Camera2DResetDuration; // s14
-  const MethodInfo_374D684 *v52; // x2
+  const MethodInfo_375CF8C *v52; // x2
   const MethodInfo *v53; // x1
   MapModelManager_o *v54; // x23
   float v55; // s11
@@ -11787,22 +11787,22 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
   UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v71; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4BB1938 & 1) == 0 )
+  if ( (byte_4BC4CF4 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&layer);
-    sub_1C13D24(&Method_System_Nullable_Vector3___ctor__, v5);
-    sub_1C13D24(&Method_System_Nullable_float___ctor__, v6);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass334_0__RequestMapMove_b__0__, v8);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass334_0_TypeInfo, v9);
-    byte_4BB1938 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&layer);
+    sub_1C1ABD4(&Method_System_Nullable_Vector3___ctor__, v5);
+    sub_1C1ABD4(&Method_System_Nullable_float___ctor__, v6);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass334_0__RequestMapMove_b__0__, v8);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass334_0_TypeInfo, v9);
+    byte_4BC4CF4 = 1;
   }
-  v10 = sub_1C13F70(ScrTerminalMap___c__DisplayClass334_0_TypeInfo);
+  v10 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass334_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass334_0___ctor((ScrTerminalMap___c__DisplayClass334_0_o *)v10, 0LL);
   if ( !v10 )
     goto LABEL_32;
   *(_QWORD *)(v10 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
   mapModelManager = this->fields.mapModelManager;
   if ( !mapModelManager )
     goto LABEL_32;
@@ -11828,10 +11828,10 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
     x = LocationPostion.fields.x;
     y = LocationPostion.fields.y;
     z = LocationPostion.fields.z;
-    if ( !byte_4BAED9F )
+    if ( !byte_4BC213F )
     {
-      sub_1C13D24(&System_Math_TypeInfo, v27);
-      byte_4BAED9F = 1;
+      sub_1C1ABD4(&System_Math_TypeInfo, v27);
+      byte_4BC213F = 1;
     }
     v31 = v25 - y;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -11844,10 +11844,10 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
       MapCameraMoveTimeConstant = ScrTerminalMap__get_MapCameraMoveTimeConstant(this, v27);
       MapCameraMoveTimeCoefficient = ScrTerminalMap__get_MapCameraMoveTimeCoefficient(this, v34);
       MapCameraMoveTimeLogarithmBase = ScrTerminalMap__get_MapCameraMoveTimeLogarithmBase(this, v36);
-      if ( !byte_4BB19C5 )
+      if ( !byte_4BC4D81 )
       {
-        sub_1C13D24(&System_Math_TypeInfo, v37);
-        byte_4BB19C5 = 1;
+        sub_1C1ABD4(&System_Math_TypeInfo, v37);
+        byte_4BC4D81 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -11860,7 +11860,7 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
       if ( mapModelManager )
       {
         MapButtonControl__UpdateButtonSprite((MapButtonControl_o *)mapModelManager, 0LL);
-        v40 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v40 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v40,
           (Il2CppObject *)v10,
@@ -11905,7 +11905,7 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
               System_Nullable_float____ctor(
                 p_size,
                 v49,
-                (const MethodInfo_374B620 *)Method_System_Nullable_float___ctor__);
+                (const MethodInfo_375AF28 *)Method_System_Nullable_float___ctor__);
               mapModelManager = (MapModelManager_o *)ScrTerminalMap__get_MapCameraMoveEasingType(this, v53);
               if ( !mapCamera )
                 goto LABEL_32;
@@ -11936,14 +11936,14 @@ void __fastcall ScrTerminalMap__RequestMapMove(ScrTerminalMap_o *this, int32_t l
         }
       }
 LABEL_32:
-      sub_1C13F80(mapModelManager, v12);
+      sub_1C1AE30(mapModelManager, v12);
     }
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScrTerminalMap__RequestMapMove_35559588(
+void __fastcall ScrTerminalMap__RequestMapMove_35606560(
         ScrTerminalMap_o *this,
         int32_t layer,
         float duration,
@@ -11985,22 +11985,22 @@ void __fastcall ScrTerminalMap__RequestMapMove_35559588(
   UnityEngine_Vector3_o LocationPostion; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB1939 & 1) == 0 )
+  if ( (byte_4BC4CF5 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&layer);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass335_0__RequestMapMove_b__0__, v11);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass335_0_TypeInfo, v12);
-    byte_4BB1939 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&layer);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass335_0__RequestMapMove_b__0__, v11);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass335_0_TypeInfo, v12);
+    byte_4BC4CF5 = 1;
   }
-  v13 = sub_1C13F70(ScrTerminalMap___c__DisplayClass335_0_TypeInfo);
+  v13 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass335_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass335_0___ctor((ScrTerminalMap___c__DisplayClass335_0_o *)v13, 0LL);
   if ( !v13 )
     goto LABEL_19;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 40) = endAction;
   *(_DWORD *)(v13 + 24) = layer;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 40), (int64_t)endAction, v22, v23, v24, v25, v26, v27);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 40), (int64_t)endAction, v22, v23, v24, v25, v26, v27);
   mapModelManager = this->fields.mapModelManager;
   if ( !mapModelManager )
     goto LABEL_19;
@@ -12026,10 +12026,10 @@ void __fastcall ScrTerminalMap__RequestMapMove_35559588(
     x = LocationPostion.fields.x;
     y = LocationPostion.fields.y;
     z = LocationPostion.fields.z;
-    if ( !byte_4BAED9F )
+    if ( !byte_4BC213F )
     {
-      sub_1C13D24(&System_Math_TypeInfo, v36);
-      byte_4BAED9F = 1;
+      sub_1C1ABD4(&System_Math_TypeInfo, v36);
+      byte_4BC213F = 1;
     }
     v40 = v34 - y;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -12038,7 +12038,7 @@ void __fastcall ScrTerminalMap__RequestMapMove_35559588(
            (float)((float)(v35 - z) * (float)(v35 - z))
          + (float)((float)((float)(v33 - x) * (float)(v33 - x)) + (float)(v40 * v40))) > 0.0 )
     {
-      v41 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v41 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(
         v41,
         (Il2CppObject *)v13,
@@ -12067,7 +12067,7 @@ void __fastcall ScrTerminalMap__RequestMapMove_35559588(
         }
       }
 LABEL_19:
-      sub_1C13F80(mapModelManager, v15);
+      sub_1C1AE30(mapModelManager, v15);
     }
   }
   ActionExtensions__Call(*(System_Action_o **)(v13 + 40), 0LL);
@@ -12081,10 +12081,10 @@ void __fastcall ScrTerminalMap__SetActiveDiceButton(ScrTerminalMap_o *this, bool
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4BB1964 & 1) == 0 )
+  if ( (byte_4BC4D20 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, isActive);
-    byte_4BB1964 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isActive);
+    byte_4BC4D20 = 1;
   }
   diceButton = (UnityEngine_Object_o *)this->fields.diceButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -12095,7 +12095,7 @@ void __fastcall ScrTerminalMap__SetActiveDiceButton(ScrTerminalMap_o *this, bool
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
     {
-      sub_1C13F80(gameObject, v6);
+      sub_1C1AE30(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isActive, 0LL);
   }
@@ -12245,77 +12245,77 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
   Il2CppObject *entity; // [xsp+48h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v140; // [xsp+50h] [xbp-90h] BYREF
 
-  if ( (byte_4BB197D & 1) == 0 )
+  if ( (byte_4BC4D39 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventBoardGameTokenRewardMaster___, *(_QWORD *)&squareId);
-    sub_1C13D24(&Method_DataManager_GetMasterData_GiftMaster___, v5);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, v6);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserQuestMaster___, v7);
-    sub_1C13D24(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v8);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventBoardGameTokenRewardMaster___, *(_QWORD *)&squareId);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_GiftMaster___, v5);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestMaster___, v6);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserQuestMaster___, v7);
+    sub_1C1ABD4(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v8);
+    sub_1C1ABD4(
       &Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__getEntitys_EventBoardGameTokenRewardEntity___,
       v9);
-    sub_1C13D24(&Method_DataMasterBase_GiftMaster__GiftEntity__string__getEntitys_GiftEntity___, v10);
-    sub_1C13D24(&Method_System_Linq_Enumerable_OrderByDescending_QuestEntity__int___, v11);
-    sub_1C13D24(&Method_System_Linq_Enumerable_SingleOrDefault_EventBoardGameTokenRewardEntity___, v12);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_EventBoardGameTokenRewardEntity___, v13);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_GiftEntity___, v14);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_QuestEntity___, v15);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_GiftEntity___, v16);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v17);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__Dispose__, v18);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__MoveNext__, v19);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v20);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v21);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__get_Current__, v22);
-    sub_1C13D24(&System_Func_GiftEntity__bool__TypeInfo, v23);
-    sub_1C13D24(&System_Func_EventBoardGameTokenRewardEntity__bool__TypeInfo, v24);
-    sub_1C13D24(&System_Func_QuestEntity__int__TypeInfo, v25);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v26);
-    sub_1C13D24(&int_TypeInfo, v27);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestEntity__Add__, v28);
-    sub_1C13D24(&Method_System_Collections_Generic_List_bool__Add__, v29);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v30);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestEntity__GetEnumerator__, v31);
-    sub_1C13D24(&Method_System_Collections_Generic_List_bool___ctor__, v32);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestEntity___ctor__, v33);
-    sub_1C13D24(&Method_System_Collections_Generic_List_bool__get_Count__, v34);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v35);
-    sub_1C13D24(&Method_System_Collections_Generic_List_bool__get_Item__, v36);
-    sub_1C13D24(&System_Collections_Generic_List_bool__TypeInfo, v37);
-    sub_1C13D24(&System_Collections_Generic_List_QuestEntity__TypeInfo, v38);
-    sub_1C13D24(&NetworkManager_TypeInfo, v39);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v40);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v41);
-    sub_1C13D24(&Method_ScrTerminalMap___c__SetBoardGameSquareHaveToken_b__409_0__, v42);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass409_0__SetBoardGameSquareHaveToken_b__1__, v43);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass409_0__SetBoardGameSquareHaveToken_b__2__, v44);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass409_0_TypeInfo, v45);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v46);
-    sub_1C13D24(&StringLiteral_24371/*"titleFontSize"*/, v47);
-    byte_4BB197D = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GiftMaster__GiftEntity__string__getEntitys_GiftEntity___, v10);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_OrderByDescending_QuestEntity__int___, v11);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_SingleOrDefault_EventBoardGameTokenRewardEntity___, v12);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_EventBoardGameTokenRewardEntity___, v13);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_GiftEntity___, v14);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_QuestEntity___, v15);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_GiftEntity___, v16);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v17);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__Dispose__, v18);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__MoveNext__, v19);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v20);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v21);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestEntity__get_Current__, v22);
+    sub_1C1ABD4(&System_Func_GiftEntity__bool__TypeInfo, v23);
+    sub_1C1ABD4(&System_Func_EventBoardGameTokenRewardEntity__bool__TypeInfo, v24);
+    sub_1C1ABD4(&System_Func_QuestEntity__int__TypeInfo, v25);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v26);
+    sub_1C1ABD4(&int_TypeInfo, v27);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestEntity__Add__, v28);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_bool__Add__, v29);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v30);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestEntity__GetEnumerator__, v31);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_bool___ctor__, v32);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestEntity___ctor__, v33);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_bool__get_Count__, v34);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v35);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_bool__get_Item__, v36);
+    sub_1C1ABD4(&System_Collections_Generic_List_bool__TypeInfo, v37);
+    sub_1C1ABD4(&System_Collections_Generic_List_QuestEntity__TypeInfo, v38);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v39);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v40);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v41);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__SetBoardGameSquareHaveToken_b__409_0__, v42);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass409_0__SetBoardGameSquareHaveToken_b__1__, v43);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass409_0__SetBoardGameSquareHaveToken_b__2__, v44);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass409_0_TypeInfo, v45);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v46);
+    sub_1C1ABD4(&StringLiteral_24391/*"token_{0:D2}"*/, v47);
+    byte_4BC4D39 = 1;
   }
   memset(&v140, 0, sizeof(v140));
   entity = 0LL;
   memset(&v138, 0, sizeof(v138));
   v137 = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_82;
   v50 = Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestMaster___);
   v52 = DataManager__GetMasterData_object_(
           v50,
-          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserQuestMaster___);
+          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v50,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventBoardGameTokenRewardMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventBoardGameTokenRewardMaster___);
   if ( !Instance )
     goto LABEL_82;
   v53 = Instance;
-  v54 = sub_1C13E58(*((_QWORD *)&Instance->klass->vtable._1_Finalize.methodPtr
+  v54 = sub_1C1AD08(*((_QWORD *)&Instance->klass->vtable._1_Finalize.methodPtr
                     + 2
                     * *((unsigned __int16 *)Method_DataMasterBase_EventBoardGameTokenRewardMaster__EventBoardGameTokenRewardEntity__string__getEntitys_EventBoardGameTokenRewardEntity___
                       + 40)));
@@ -12324,15 +12324,15 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
                                                                v54);
   v56 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                                v55,
-                                                               (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_EventBoardGameTokenRewardEntity___);
+                                                               (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_EventBoardGameTokenRewardEntity___);
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 v50,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !Instance )
     goto LABEL_82;
   v135 = squareId;
   v57 = Instance;
-  v58 = sub_1C13E58(*((_QWORD *)&Instance->klass->vtable._1_Finalize.methodPtr
+  v58 = sub_1C1AD08(*((_QWORD *)&Instance->klass->vtable._1_Finalize.methodPtr
                     + 2
                     * *((unsigned __int16 *)Method_DataMasterBase_GiftMaster__GiftEntity__string__getEntitys_GiftEntity___
                       + 40)));
@@ -12341,69 +12341,69 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
                                                                v58);
   v60 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                                v59,
-                                                               (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
-  v61 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_QuestEntity__TypeInfo);
+                                                               (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
+  v61 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_QuestEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v61,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_QuestEntity___ctor__);
-  v62 = (System_Collections_Generic_List_bool__o *)sub_1C13F70(System_Collections_Generic_List_bool__TypeInfo);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_QuestEntity___ctor__);
+  v62 = (System_Collections_Generic_List_bool__o *)sub_1C1AE20(System_Collections_Generic_List_bool__TypeInfo);
   System_Collections_Generic_List_bool____ctor(
     v62,
-    (const MethodInfo_35E3934 *)Method_System_Collections_Generic_List_bool___ctor__);
+    (const MethodInfo_35F2FF8 *)Method_System_Collections_Generic_List_bool___ctor__);
   Instance = (DataManager_o *)this->fields._EventBoardQuestReleaseList_k__BackingField;
   if ( !Instance )
     goto LABEL_82;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v136,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   v140 = v136;
   while ( 1 )
   {
     v63 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v140,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v63 )
       break;
     if ( !v140.fields._current )
-      sub_1C13F80(v63, v64);
+      sub_1C1AE30(v63, v64);
     if ( v140.fields._current[2].klass == (Il2CppClass *)v135 )
     {
       if ( !MasterData_object )
-        sub_1C13F80(v63, v64);
+        sub_1C1AE30(v63, v64);
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              &entity,
              (int32_t)v140.fields._current[1].klass,
-             (const MethodInfo_3238670 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
+             (const MethodInfo_32486C4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__) )
       {
         if ( !entity )
-          sub_1C13F80(0LL, v65);
+          sub_1C1AE30(0LL, v65);
         HasFlag = QuestEntity__HasFlag((QuestEntity_o *)entity, 0x8000000000LL, 0LL);
         if ( !HasFlag )
         {
           if ( !v61 )
-            sub_1C13F80(HasFlag, v67);
+            sub_1C1AE30(HasFlag, v67);
           v74 = entity;
           items = v61->fields._items;
           v76 = Method_System_Collections_Generic_List_QuestEntity__Add__;
           ++v61->fields._version;
           if ( !items )
-            sub_1C13F80(HasFlag, v74);
+            sub_1C1AE30(HasFlag, v74);
           size = v61->fields._size;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v61,
               v74,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v76[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v76[4] + 192LL) + 112LL));
           }
           else
           {
             v78 = &items->obj.klass + size;
             v61->fields._size = size + 1;
             v78[4] = (Il2CppClass *)v74;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v78 + 4), (int64_t)v74, v68, v69, v70, v71, v72, v73);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v78 + 4), (int64_t)v74, v68, v69, v70, v71, v72, v73);
           }
         }
       }
@@ -12411,7 +12411,7 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v140,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   v79 = ScrTerminalMap___c_TypeInfo;
   if ( !ScrTerminalMap___c_TypeInfo->_2.cctor_finished )
   {
@@ -12427,7 +12427,7 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
       v79 = ScrTerminalMap___c_TypeInfo;
     }
     v81 = (Il2CppObject *)v79->static_fields->__9;
-    _9__409_0 = (System_Func_object__int__o *)sub_1C13F70(System_Func_QuestEntity__int__TypeInfo);
+    _9__409_0 = (System_Func_object__int__o *)sub_1C1AE20(System_Func_QuestEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__409_0,
       v81,
@@ -12435,7 +12435,7 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
       0LL);
     static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
     static_fields->__9__409_0 = (struct System_Func_QuestEntity__int__o *)_9__409_0;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&static_fields->__9__409_0,
       (int64_t)_9__409_0,
       v83,
@@ -12448,35 +12448,35 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
   v89 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v61,
                                                                (System_Func_TSource__TKey__o *)_9__409_0,
-                                                               (const MethodInfo_2FB895C *)Method_System_Linq_Enumerable_OrderByDescending_QuestEntity__int___);
+                                                               (const MethodInfo_2FC8A98 *)Method_System_Linq_Enumerable_OrderByDescending_QuestEntity__int___);
   Instance = (DataManager_o *)System_Linq_Enumerable__ToList_object_(
                                 v89,
-                                (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_QuestEntity___);
+                                (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_QuestEntity___);
   if ( !Instance )
     goto LABEL_82;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v136,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_QuestEntity__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_QuestEntity__GetEnumerator__);
   v138 = v136;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v138,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__MoveNext__) )
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__MoveNext__) )
   {
     current = v138.fields._current;
-    v91 = sub_1C13F70(ScrTerminalMap___c__DisplayClass409_0_TypeInfo);
+    v91 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass409_0_TypeInfo);
     ScrTerminalMap___c__DisplayClass409_0___ctor((ScrTerminalMap___c__DisplayClass409_0_o *)v91, 0LL);
     if ( !current )
-      sub_1C13F80(v92, v93);
+      sub_1C1AE30(v92, v93);
     if ( !v91 )
-      sub_1C13F80(v92, v93);
+      sub_1C1AE30(v92, v93);
     *(_DWORD *)(v91 + 16) = current[1].klass;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BAF1E5 )
+    if ( !byte_4BC2585 )
     {
-      sub_1C13D24(&NetworkManager_TypeInfo, v93);
-      byte_4BAF1E5 = 1;
+      sub_1C1ABD4(&NetworkManager_TypeInfo, v93);
+      byte_4BC2585 = 1;
     }
     v94 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -12485,7 +12485,7 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
       v94 = NetworkManager_TypeInfo;
     }
     if ( !v52 )
-      sub_1C13F80(v94, v93);
+      sub_1C1AE30(v94, v93);
     if ( UserQuestMaster__TryGetEntity(
            (UserQuestMaster_o *)v52,
            &v137,
@@ -12494,28 +12494,28 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
            0LL) )
     {
       if ( !v137 )
-        sub_1C13F80(0LL, v95);
+        sub_1C1AE30(0LL, v95);
       v96 = UserQuestEntity__getClearNum(v137, 0LL) > 0;
     }
     else
     {
       v96 = 0;
     }
-    v97 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_EventBoardGameTokenRewardEntity__bool__TypeInfo);
+    v97 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventBoardGameTokenRewardEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v97,
       (Il2CppObject *)v91,
       Method_ScrTerminalMap___c__DisplayClass409_0__SetBoardGameSquareHaveToken_b__1__,
       0LL);
-    v98 = System_Linq_Enumerable__SingleOrDefault_object__50096968(
+    v98 = System_Linq_Enumerable__SingleOrDefault_object__50162820(
             v56,
             (System_Func_TSource__bool__o *)v97,
-            (const MethodInfo_2FC6B48 *)Method_System_Linq_Enumerable_SingleOrDefault_EventBoardGameTokenRewardEntity___);
+            (const MethodInfo_2FD6C84 *)Method_System_Linq_Enumerable_SingleOrDefault_EventBoardGameTokenRewardEntity___);
     *(_QWORD *)(v91 + 24) = v98;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v91 + 24), (int64_t)v98, v99, v100, v101, v102, v103, v104);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v91 + 24), (int64_t)v98, v99, v100, v101, v102, v103, v104);
     if ( *(_QWORD *)(v91 + 24) )
     {
-      v107 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_GiftEntity__bool__TypeInfo);
+      v107 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_GiftEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v107,
         (Il2CppObject *)v91,
@@ -12524,13 +12524,13 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
       v108 = System_Linq_Enumerable__Where_object_(
                v60,
                (System_Func_TSource__bool__o *)v107,
-               (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
+               (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
       v109 = System_Linq_Enumerable__ToList_object_(
                v108,
-               (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
+               (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
       v111 = v109;
       if ( !v109 )
-        sub_1C13F80(0LL, v110);
+        sub_1C1AE30(0LL, v110);
       v112 = v109->fields._size;
       if ( v112 )
       {
@@ -12539,19 +12539,19 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
           for ( i = 0; i < v112; ++i )
           {
             if ( !v62 )
-              sub_1C13F80(v109, v110);
+              sub_1C1AE30(v109, v110);
             v114 = v62->fields._items;
             v115 = Method_System_Collections_Generic_List_bool__Add__;
             ++v62->fields._version;
             if ( !v114 )
-              sub_1C13F80(v109, v110);
+              sub_1C1AE30(v109, v110);
             v116 = v62->fields._size;
             if ( (unsigned int)v116 >= v114->max_length )
             {
               System_Collections_Generic_List_bool___AddWithResize(
                 v62,
                 v96,
-                *(const MethodInfo_35E4198 **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
+                *(const MethodInfo_35F385C **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
               v112 = v111->fields._size;
             }
             else
@@ -12565,12 +12565,12 @@ void __fastcall ScrTerminalMap__SetBoardGameSquareHaveToken(
       else
       {
         if ( !v62 )
-          sub_1C13F80(v109, v110);
+          sub_1C1AE30(v109, v110);
         v117 = v62->fields._items;
         v118 = Method_System_Collections_Generic_List_bool__Add__;
         ++v62->fields._version;
         if ( !v117 )
-          sub_1C13F80(v109, v110);
+          sub_1C1AE30(v109, v110);
         v119 = v62->fields._size;
         if ( (unsigned int)v119 < v117->max_length )
           goto LABEL_61;
@@ -12578,18 +12578,18 @@ LABEL_57:
         System_Collections_Generic_List_bool___AddWithResize(
           v62,
           v96,
-          *(const MethodInfo_35E4198 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
+          *(const MethodInfo_35F385C **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
       }
     }
     else
     {
       if ( !v62 )
-        sub_1C13F80(v105, v106);
+        sub_1C1AE30(v105, v106);
       v117 = v62->fields._items;
       v118 = Method_System_Collections_Generic_List_bool__Add__;
       ++v62->fields._version;
       if ( !v117 )
-        sub_1C13F80(v105, v106);
+        sub_1C1AE30(v105, v106);
       v119 = v62->fields._size;
       if ( (unsigned int)v119 >= v117->max_length )
         goto LABEL_57;
@@ -12600,10 +12600,10 @@ LABEL_61:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v138,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_QuestEntity__Dispose__);
   if ( !v62 )
 LABEL_82:
-    sub_1C13F80(Instance, v49);
+    sub_1C1AE30(Instance, v49);
   if ( v62->fields._size >= 1 )
   {
     v121 = 0;
@@ -12613,7 +12613,7 @@ LABEL_82:
       EventBoardSquareObject = ScrTerminalMap__GetEventBoardSquareObject(this, v135, v120);
       LODWORD(v136.fields._list) = v121 + 1;
       v127 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v136, v124, v125, v126);
-      v128 = System_String__Format((System_String_o *)StringLiteral_24371/*"titleFontSize"*/, v127, 0LL);
+      v128 = System_String__Format((System_String_o *)StringLiteral_24391/*"token_{0:D2}"*/, v127, 0LL);
       GameObjectWithLog = (UnityEngine_Object_o *)GameObjectExtensions__FindGameObjectWithLog(
                                                     EventBoardSquareObject,
                                                     v128,
@@ -12627,11 +12627,11 @@ LABEL_82:
         goto LABEL_82;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)GameObjectWithLog,
-                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       Instance = (DataManager_o *)System_Collections_Generic_List_bool___get_Item(
                                     v62,
                                     v121,
-                                    (const MethodInfo_35E3E98 *)Method_System_Collections_Generic_List_bool__get_Item__);
+                                    (const MethodInfo_35F355C *)Method_System_Collections_Generic_List_bool__get_Item__);
       v131 = ((unsigned __int8)Instance & 1) != 0 ? 0.5 : 1.0;
       if ( !Component_object )
         goto LABEL_82;
@@ -12654,20 +12654,20 @@ void __fastcall ScrTerminalMap__SetCore(
   PlayMakerFSM_o *MyFsmP; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BB18E9 & 1) == 0 )
+  if ( (byte_4BC4CA5 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_12800/*"SecureString is read-only."*/, obj);
-    byte_4BB18E9 = 1;
+    sub_1C1ABD4(&StringLiteral_12812/*"SelectCore"*/, obj);
+    byte_4BC4CA5 = 1;
   }
   MyFsmP = ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)obj);
   if ( !MyFsmP
     || (MyFsmP = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(MyFsmP, 0LL)) == 0LL
     || (MyFsmP = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmGameObject(
                                      (HutongGames_PlayMaker_FsmVariables_o *)MyFsmP,
-                                     (System_String_o *)StringLiteral_12800/*"SecureString is read-only."*/,
+                                     (System_String_o *)StringLiteral_12812/*"SelectCore"*/,
                                      0LL)) == 0LL )
   {
-    sub_1C13F80(MyFsmP, v6);
+    sub_1C1AE30(MyFsmP, v6);
   }
   HutongGames_PlayMaker_FsmGameObject__set_Value((HutongGames_PlayMaker_FsmGameObject_o *)MyFsmP, obj, 0LL);
 }
@@ -12681,19 +12681,19 @@ void __fastcall ScrTerminalMap__SetDiceButton(ScrTerminalMap_o *this, const Meth
   bool v6; // w1
   TerminalPramsManager_c *v7; // x0
 
-  if ( (byte_4BB1965 & 1) == 0 )
+  if ( (byte_4BC4D21 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1965 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D21 = 1;
   }
   if ( !ScrTerminalMap__IsEnabledToUseEventItem(this, method) )
     goto LABEL_11;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB181A )
+  if ( !byte_4BC4BD6 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-    byte_4BB181A = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+    byte_4BC4BD6 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12705,10 +12705,10 @@ void __fastcall ScrTerminalMap__SetDiceButton(ScrTerminalMap_o *this, const Meth
   {
     if ( !v5->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v5);
-    if ( !byte_4BB19DB )
+    if ( !byte_4BC4D97 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-      byte_4BB19DB = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+      byte_4BC4D97 = 1;
     }
     v7 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -12736,7 +12736,7 @@ void __fastcall ScrTerminalMap__SetDirectionalLightActive(
 
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene )
-    sub_1C13F80(0LL, isActive);
+    sub_1C1AE30(0LL, isActive);
   TerminalSceneComponent__SetDirectionalLightActive(terminalScene, isActive, 0LL);
 }
 
@@ -12786,7 +12786,7 @@ void __fastcall ScrTerminalMap__SetDisp(ScrTerminalMap_o *this, bool isDisp, con
         !titleInfoControl) )
   {
 LABEL_12:
-    sub_1C13F80(dispRoot, isDisp);
+    sub_1C1AE30(dispRoot, isDisp);
   }
   TitleInfoControl__SetDispChangeBtn(titleInfoControl, (unsigned __int8)dispRoot & 1, 0LL);
 }
@@ -12836,15 +12836,15 @@ void __fastcall ScrTerminalMap__SetDispMapUI(ScrTerminalMap_o *this, bool isDisp
   System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BB1991 & 1) == 0 )
+  if ( (byte_4BC4D4D & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, isDisp);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v6);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v8);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BB1991 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, isDisp);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v6);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v8);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
+    byte_4BC4D4D = 1;
   }
   memset(&v44, 0, sizeof(v44));
   mapModelManager = (UnityEngine_GameObject_o *)this->fields.mapModelManager;
@@ -12911,17 +12911,17 @@ LABEL_14:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v43,
     (System_Collections_Generic_List_object__o *)mapModelManager,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
   v44 = v43;
   while ( 1 )
   {
     v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v44,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
     if ( !v15 )
       break;
     if ( !v44.fields._current )
-      sub_1C13F80(v15, v16);
+      sub_1C1AE30(v15, v16);
     SpotPrefab = ScrTerminalMap__GetSpotPrefab(this, (int32_t)v44.fields._current[1].klass, v17);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -12931,42 +12931,42 @@ LABEL_14:
       if ( isDisp )
       {
         if ( !SpotPrefab )
-          sub_1C13F80(v19, v20);
+          sub_1C1AE30(v19, v20);
         SrcSpotBasePrefab__UpdateDisp(SpotPrefab, 1, 0LL);
         SrcSpotBasePrefab__SetBtnColliderEnable(SpotPrefab, 1, 0LL);
       }
       else
       {
         if ( !SpotPrefab )
-          sub_1C13F80(v19, v20);
+          sub_1C1AE30(v19, v20);
         mSpotNameLabel = (UnityEngine_Component_o *)SpotPrefab->fields.mSpotNameLabel;
         if ( !mSpotNameLabel )
-          sub_1C13F80(0LL, v20);
+          sub_1C1AE30(0LL, v20);
         transform = UnityEngine_Component__get_transform(mSpotNameLabel, 0LL);
         if ( !transform )
-          sub_1C13F80(0LL, v23);
+          sub_1C1AE30(0LL, v23);
         parent = UnityEngine_Transform__get_parent(transform, 0LL);
         if ( !parent )
-          sub_1C13F80(0LL, v25);
+          sub_1C1AE30(0LL, v25);
         v26 = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(parent, 0LL);
         if ( !v26 )
-          sub_1C13F80(0LL, v27);
+          sub_1C1AE30(0LL, v27);
         gameObject = UnityEngine_Component__get_gameObject(v26, 0LL);
         if ( !gameObject )
-          sub_1C13F80(0LL, v29);
+          sub_1C1AE30(0LL, v29);
         UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
         mcSpotNextSp = (UnityEngine_Component_o *)SpotPrefab->fields.mcSpotNextSp;
         if ( !mcSpotNextSp )
-          sub_1C13F80(0LL, v30);
+          sub_1C1AE30(0LL, v30);
         v32 = UnityEngine_Component__get_transform(mcSpotNextSp, 0LL);
         if ( !v32 )
-          sub_1C13F80(0LL, v33);
+          sub_1C1AE30(0LL, v33);
         v34 = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(v32, 0LL);
         if ( !v34 )
-          sub_1C13F80(0LL, v35);
+          sub_1C1AE30(0LL, v35);
         v36 = UnityEngine_Component__get_gameObject(v34, 0LL);
         if ( !v36 )
-          sub_1C13F80(0LL, v37);
+          sub_1C1AE30(0LL, v37);
         UnityEngine_GameObject__SetActive(v36, 0, 0LL);
         SrcSpotBasePrefab__SetDispNoticeNumber(SpotPrefab, 0, 0LL);
         SrcSpotBasePrefab__SetBtnColliderEnable(SpotPrefab, 0, 0LL);
@@ -12975,11 +12975,11 @@ LABEL_14:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
 LABEL_68:
-    sub_1C13F80(mapModelManager, isDisp);
+    sub_1C1AE30(mapModelManager, isDisp);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v40 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -12997,7 +12997,7 @@ LABEL_68:
   else
   {
 LABEL_53:
-    v42 = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 12LL);
+    v42 = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 12LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, bool, _QWORD))v42)(
     eventMapManagerInterface_k__BackingField,
@@ -13027,34 +13027,34 @@ void __fastcall ScrTerminalMap__SetDispSpotIcon(ScrTerminalMap_o *this, bool isD
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BB1992 & 1) == 0 )
+  if ( (byte_4BC4D4E & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, isDisp);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    byte_4BB1992 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, isDisp);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    byte_4BC4D4E = 1;
   }
   memset(&v21, 0, sizeof(v21));
   mMapInfo = this->fields.mMapInfo;
   if ( !mMapInfo || (mMapInfo = (MapControl_MapInfo_o *)MapControl_MapInfo__GetSpotList(mMapInfo, 0LL)) == 0LL )
-    sub_1C13F80(mMapInfo, isDisp);
+    sub_1C1AE30(mMapInfo, isDisp);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)mMapInfo,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
   v10 = isDisp;
   v21 = v20;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v21,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
     if ( !v11 )
       break;
     if ( !v21.fields._current )
-      sub_1C13F80(v11, v12);
+      sub_1C1AE30(v11, v12);
     SpotPrefab = ScrTerminalMap__GetSpotPrefab(this, (int32_t)v21.fields._current[1].klass, v13);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -13062,19 +13062,19 @@ void __fastcall ScrTerminalMap__SetDispSpotIcon(ScrTerminalMap_o *this, bool isD
     if ( v15 )
     {
       if ( !SpotPrefab )
-        sub_1C13F80(v15, v16);
+        sub_1C1AE30(v15, v16);
       mcSpotSprite = (UnityEngine_Component_o *)SpotPrefab->fields.mcSpotSprite;
       if ( !mcSpotSprite )
-        sub_1C13F80(0LL, v16);
+        sub_1C1AE30(0LL, v16);
       gameObject = UnityEngine_Component__get_gameObject(mcSpotSprite, 0LL);
       if ( !gameObject )
-        sub_1C13F80(0LL, v19);
+        sub_1C1AE30(0LL, v19);
       UnityEngine_GameObject__SetActive(gameObject, v10, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
 }
 
 
@@ -13090,11 +13090,11 @@ void __fastcall ScrTerminalMap__SetEnabledDiceButton(ScrTerminalMap_o *this, boo
   TerminalPramsManager_c *v11; // x0
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BB1963 & 1) == 0 )
+  if ( (byte_4BC4D1F & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, isEnabled);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    byte_4BB1963 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isEnabled);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    byte_4BC4D1F = 1;
   }
   diceButton = (UnityEngine_Object_o *)this->fields.diceButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13116,15 +13116,15 @@ void __fastcall ScrTerminalMap__SetEnabledDiceButton(ScrTerminalMap_o *this, boo
           (diceButtonArrow = (UnityEngine_Behaviour_o *)this->fields.diceButtonArrow) == 0LL) )
     {
 LABEL_20:
-      sub_1C13F80(diceButtonArrow, v7);
+      sub_1C1AE30(diceButtonArrow, v7);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)diceButtonArrow, isEnabled, 0LL);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19DA )
+    if ( !byte_4BC4D96 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-      byte_4BB19DA = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+      byte_4BC4D96 = 1;
     }
     v11 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13161,14 +13161,14 @@ void __fastcall ScrTerminalMap__SetEventBoardClearMarker(
   Il2CppObject *v22; // x0
   int v23; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB1981 & 1) == 0 )
+  if ( (byte_4BC4D3D & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, *(_QWORD *)&index);
-    sub_1C13D24(&int_TypeInfo, v9);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_18283/*"class_b_"*/, v11);
-    sub_1C13D24(&StringLiteral_18284/*"class_board"*/, v12);
-    byte_4BB1981 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, *(_QWORD *)&index);
+    sub_1C1ABD4(&int_TypeInfo, v9);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C1ABD4(&StringLiteral_18297/*"clear_marker"*/, v11);
+    sub_1C1ABD4(&StringLiteral_18298/*"clear_marker_{0:D2}"*/, v12);
+    byte_4BC4D3D = 1;
   }
   EventBoardSquareObject = ScrTerminalMap__GetEventBoardSquareObject(this, index, *(const MethodInfo **)&clearCount);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13177,7 +13177,7 @@ void __fastcall ScrTerminalMap__SetEventBoardClearMarker(
   {
     GameObjectWithLog = (UnityEngine_Object_o *)GameObjectExtensions__FindGameObjectWithLog(
                                                   EventBoardSquareObject,
-                                                  (System_String_o *)StringLiteral_18283/*"class_b_"*/,
+                                                  (System_String_o *)StringLiteral_18297/*"clear_marker"*/,
                                                   0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -13188,16 +13188,16 @@ void __fastcall ScrTerminalMap__SetEventBoardClearMarker(
         goto LABEL_15;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)GameObjectWithLog,
-                           (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       v21 = maxClearCount - clearCount;
       if ( maxClearCount < clearCount )
         v21 = 0;
       v23 = v21;
       v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v17, v18, v19);
-      v15 = System_String__Format((System_String_o *)StringLiteral_18284/*"class_board"*/, v22, 0LL);
+      v15 = System_String__Format((System_String_o *)StringLiteral_18298/*"clear_marker_{0:D2}"*/, v22, 0LL);
       if ( !Component_object )
 LABEL_15:
-        sub_1C13F80(v15, v16);
+        sub_1C1AE30(v15, v16);
       UISprite__set_spriteName((UISprite_o *)Component_object, v15, 0LL);
     }
   }
@@ -13214,10 +13214,10 @@ void __fastcall ScrTerminalMap__SetEventBoardGameSpotBadge(
   __int64 v6; // x1
   SrcSpotBasePrefab_o *v7; // x0
 
-  if ( (byte_4BB1961 & 1) == 0 )
+  if ( (byte_4BC4D1D & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&questCount);
-    byte_4BB1961 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&questCount);
+    byte_4BC4D1D = 1;
   }
   eventBoardGameSpotPrefab = (UnityEngine_Object_o *)this->fields.eventBoardGameSpotPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13226,7 +13226,7 @@ void __fastcall ScrTerminalMap__SetEventBoardGameSpotBadge(
   {
     v7 = this->fields.eventBoardGameSpotPrefab;
     if ( !v7 )
-      sub_1C13F80(0LL, v6);
+      sub_1C1AE30(0LL, v6);
     SrcSpotBasePrefab__mfSetQuestCount(v7, questCount, 0LL);
   }
 }
@@ -13243,11 +13243,11 @@ void __fastcall ScrTerminalMap__SetEventBoardQuestArrivalPanel(ScrTerminalMap_o 
   __int64 v9; // x1
   _BOOL8 v10; // x1
 
-  if ( (byte_4BB1966 & 1) == 0 )
+  if ( (byte_4BC4D22 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-    byte_4BB1966 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+    byte_4BC4D22 = 1;
   }
   EventBoardQuestArrivalPanelObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardQuestArrivalPanelObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13274,10 +13274,10 @@ void __fastcall ScrTerminalMap__SetEventBoardQuestArrivalPanel(ScrTerminalMap_o 
       {
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4BB181A )
+        if ( !byte_4BC4BD6 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-          byte_4BB181A = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+          byte_4BC4BD6 = 1;
         }
         IsEnabledToUseEventItem = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13288,7 +13288,7 @@ void __fastcall ScrTerminalMap__SetEventBoardQuestArrivalPanel(ScrTerminalMap_o 
         v10 = !IsEnabledToUseEventItem->static_fields->_IsPlayScriptWithMap_k__BackingField;
       }
       if ( !v7 )
-        sub_1C13F80(IsEnabledToUseEventItem, v10);
+        sub_1C1AE30(IsEnabledToUseEventItem, v10);
       UnityEngine_GameObject__SetActive(v7, v10, 0LL);
       this->fields.isWaitingViewEventBoardQuestArrivalPanel = 0;
     }
@@ -13316,10 +13316,10 @@ void __fastcall ScrTerminalMap__SetMapBgTexture(
   struct MapCamera_o *mapCamera; // x8
   UnityEngine_GameObject_o *v14; // x21
 
-  if ( (byte_4BB1910 & 1) == 0 )
+  if ( (byte_4BC4CCC & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, tex);
-    byte_4BB1910 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, tex);
+    byte_4BC4CCC = 1;
   }
   if ( isMapModel )
   {
@@ -13382,7 +13382,7 @@ void __fastcall ScrTerminalMap__SetMapBgTexture(
   }
   if ( !v14 )
 LABEL_25:
-    sub_1C13F80(mapModelBg, tex);
+    sub_1C1AE30(mapModelBg, tex);
   UnityEngine_GameObject__SetActive(v14, (unsigned __int8)mapModelBg & 1, 0LL);
 }
 
@@ -13396,10 +13396,10 @@ void __fastcall ScrTerminalMap__SetMapButtonNextBySpotInfo(
   __int64 v6; // x1
   MapButtonControl_o *v7; // x0
 
-  if ( (byte_4BB1993 & 1) == 0 )
+  if ( (byte_4BC4D4F & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, spotInfo);
-    byte_4BB1993 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, spotInfo);
+    byte_4BC4D4F = 1;
   }
   mapButtonGrid = (UnityEngine_Object_o *)this->fields.mapButtonGrid;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13408,7 +13408,7 @@ void __fastcall ScrTerminalMap__SetMapButtonNextBySpotInfo(
   {
     v7 = this->fields.mapButtonGrid;
     if ( !v7 )
-      sub_1C13F80(0LL, v6);
+      sub_1C1AE30(0LL, v6);
     MapButtonControl__SetNext(v7, this->fields.mWarInfo, this->fields.mMapInfo, spotInfo, 0LL);
   }
 }
@@ -13435,10 +13435,10 @@ void __fastcall ScrTerminalMap__SetMapCamera(
   y = pos.fields.y;
   x = pos.fields.x;
   v10 = this;
-  if ( (byte_4BB191E & 1) == 0 )
+  if ( (byte_4BC4CDA & 1) == 0 )
   {
-    this = (ScrTerminalMap_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, endAction);
-    byte_4BB191E = 1;
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&TerminalPramsManager_TypeInfo, endAction);
+    byte_4BC4CDA = 1;
   }
   mapCamera = v10->fields.mapCamera;
   if ( !mapCamera )
@@ -13451,7 +13451,7 @@ void __fastcall ScrTerminalMap__SetMapCamera(
     || (MapZoom__SetZoomSize(mZoom, ZoomSize, 1, 0, 0LL), (this = (ScrTerminalMap_o *)v10->fields.mapCamera) == 0LL) )
   {
 LABEL_9:
-    sub_1C13F80(this, endAction);
+    sub_1C1AE30(this, endAction);
   }
   v14.fields.z = z;
   v14.fields.x = x;
@@ -13469,7 +13469,7 @@ void __fastcall ScrTerminalMap__SetMapCameraTouchEnable(
 
   mapCamera = this->fields.mapCamera;
   if ( !mapCamera )
-    sub_1C13F80(this, isEnable);
+    sub_1C1AE30(this, isEnable);
   mapCamera->fields._IsTouchEnable_k__BackingField = isEnable;
 }
 
@@ -13489,7 +13489,7 @@ void __fastcall ScrTerminalMap__SetMapCamera_FocusSpot(
   int v13; // s0
 
   if ( !spot )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)spot, 0LL);
   *(UnityEngine_Vector3_o *)&v13 = GameObjectExtensions__GetLocalPosition(gameObject, 0LL);
   if ( isMapModel )
@@ -13520,7 +13520,7 @@ void __fastcall ScrTerminalMap__SetMapCamera_TutorialFocusSpot(
         *(UnityEngine_Vector3_o *)&v9 = GameObjectExtensions__GetLocalPosition(gameObject, 0LL),
         (mcSpotSprite = spot->fields.mcSpotSprite) == 0LL) )
   {
-    sub_1C13F80(this, spot);
+    sub_1C1AE30(this, spot);
   }
   v13 = v10 + (float)(mcSpotSprite->fields.mHeight / 2);
   ScrTerminalMap__SetMapCamera(this, *(UnityEngine_Vector3_o *)&v9, time, 0LL, v8);
@@ -13546,12 +13546,12 @@ void __fastcall ScrTerminalMap__SetPlayerIcon(
   __int64 v16; // x1
   UnityEngine_Object_o *v17; // x0
 
-  if ( (byte_4BB18F7 & 1) == 0 )
+  if ( (byte_4BC4CB3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, spotObject);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_13137/*"Specify Name, Tag, or both."*/, v6);
-    byte_4BB18F7 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, spotObject);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_13149/*"Spot_Player"*/, v6);
+    byte_4BC4CB3 = 1;
   }
   playerIcon = (UnityEngine_Object_o *)this->fields.playerIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -13563,18 +13563,18 @@ void __fastcall ScrTerminalMap__SetPlayerIcon(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__Instantiate_object_(
            pfbPlayerP,
-           (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     this->fields.playerIcon = (struct UnityEngine_GameObject_o *)v9;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.playerIcon, (int64_t)v9, v10, v11, v12, v13, v14, v15);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.playerIcon, (int64_t)v9, v10, v11, v12, v13, v14, v15);
   }
-  GameObjectExtensions__SetParent_34717612(this->fields.playerIcon, spotObject, 0LL);
+  GameObjectExtensions__SetParent_34762136(this->fields.playerIcon, spotObject, 0LL);
   GameObjectExtensions__SetLocalPosition(this->fields.playerIcon, this->fields.PLAYER_ICON_POS, 0LL);
   GameObjectExtensions__ResetLocalRotation(this->fields.playerIcon, 0LL);
-  GameObjectExtensions__SetLocalScale_34714068(this->fields.playerIcon, 0.8, 0.8, 1.0, 0LL);
+  GameObjectExtensions__SetLocalScale_34758592(this->fields.playerIcon, 0.8, 0.8, 1.0, 0LL);
   v17 = (UnityEngine_Object_o *)this->fields.playerIcon;
   if ( !v17 )
-    sub_1C13F80(0LL, v16);
-  UnityEngine_Object__set_name(v17, (System_String_o *)StringLiteral_13137/*"Specify Name, Tag, or both."*/, 0LL);
+    sub_1C1AE30(0LL, v16);
+  UnityEngine_Object__set_name(v17, (System_String_o *)StringLiteral_13149/*"Spot_Player"*/, 0LL);
 }
 
 
@@ -13590,7 +13590,7 @@ void __fastcall ScrTerminalMap__SetSpotClickAct(
   PartyListViewItem_o *v7; // x7
 
   this->fields.mSpotClickAct = action;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.mSpotClickAct,
     (int64_t)action,
     (int64_t)method,
@@ -13620,15 +13620,15 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
   const MethodInfo *v16; // x2
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB1960 & 1) == 0 )
+  if ( (byte_4BC4D1C & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, method);
-    sub_1C13D24(&BalanceConfig_TypeInfo, v3);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v4);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5);
-    sub_1C13D24(&StringLiteral_17173/*"argumentType"*/, v6);
-    sub_1C13D24(&StringLiteral_20014/*"gMonth"*/, v7);
-    byte_4BB1960 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, method);
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, v3);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___, v4);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v5);
+    sub_1C1ABD4(&StringLiteral_17187/*"arrow"*/, v6);
+    sub_1C1ABD4(&StringLiteral_20028/*"game1_button"*/, v7);
+    byte_4BC4D1C = 1;
   }
   diceButton = (UnityEngine_Component_o *)this->fields.diceButton;
   if ( !diceButton )
@@ -13638,12 +13638,12 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
     goto LABEL_20;
   Component_object = (UISprite_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)diceButton,
-                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                     (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   diceButton = (UnityEngine_Component_o *)AtlasManager__SetEventUI(
                                             Component_object,
-                                            (System_String_o *)StringLiteral_20014/*"gMonth"*/,
+                                            (System_String_o *)StringLiteral_20028/*"game1_button"*/,
                                             0LL);
   if ( !Component_object )
     goto LABEL_20;
@@ -13660,7 +13660,7 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
   if ( !v10 )
     goto LABEL_20;
   if ( v10[6] < 3u )
-    sub_1C13F88(diceButton, method);
+    sub_1C1AE38(diceButton, method);
   diceButton = (UnityEngine_Component_o *)this->fields.diceButton;
   if ( !diceButton )
     goto LABEL_20;
@@ -13668,7 +13668,7 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
   v12 = (float)(int)v10[9];
   v13 = (float)(int)v10[10];
   gameObject = UnityEngine_Component__get_gameObject(diceButton, 0LL);
-  GameObjectExtensions__SetLocalPosition_34711888(gameObject, v11, v12, v13, 0LL);
+  GameObjectExtensions__SetLocalPosition_34756412(gameObject, v11, v12, v13, 0LL);
   diceButton = (UnityEngine_Component_o *)this->fields.diceButton;
   if ( !diceButton )
     goto LABEL_20;
@@ -13677,7 +13677,7 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
     goto LABEL_20;
   diceButton = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                             (UnityEngine_GameObject_o *)diceButton,
-                                            (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                            (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
   if ( !diceButton )
     goto LABEL_20;
   v17.fields.y = (float)Component_object->fields.mHeight;
@@ -13691,15 +13691,15 @@ void __fastcall ScrTerminalMap__SetupDiceButton(ScrTerminalMap_o *this, const Me
                                                   0LL)) == 0LL
     || (v15 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)diceButton,
-                (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___),
+                (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___),
         diceButton = (UnityEngine_Component_o *)AtlasManager__SetEventUI(
                                                   (UISprite_o *)v15,
-                                                  (System_String_o *)StringLiteral_17173/*"argumentType"*/,
+                                                  (System_String_o *)StringLiteral_17187/*"arrow"*/,
                                                   0LL),
         !v15) )
   {
 LABEL_20:
-    sub_1C13F80(diceButton, method);
+    sub_1C1AE30(diceButton, method);
   }
   ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v15->klass->vtable[33].method)(
     v15,
@@ -13771,21 +13771,21 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
   UserEventEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Vector3_o EventBoardSquarePos; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB195B & 1) == 0 )
+  if ( (byte_4BC4D17 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventBoardGameCellMaster___, v3);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestReleaseMaster___, v4);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v5);
-    sub_1C13D24(&NetworkManager_TypeInfo, v6);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap___c__SetupEventBoardGame_b__372_0__, v11);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v12);
-    sub_1C13D24(&StringLiteral_10837/*"PlayBgmForPlaying"*/, v13);
-    byte_4BB195B = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventBoardGameCellMaster___, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestReleaseMaster___, v4);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v5);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v6);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__SetupEventBoardGame_b__372_0__, v11);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v12);
+    sub_1C1ABD4(&StringLiteral_10846/*"PlayEventBoardGameArrivalEffectAuto"*/, v13);
+    byte_4BC4D17 = 1;
   }
   *(_QWORD *)clearCount = 0LL;
   entity = 0LL;
@@ -13800,13 +13800,13 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
       if ( !mWarInfo )
         goto LABEL_100;
       EventId = MapControl_WarInfo__GetEventId(mWarInfo, 0LL);
-      mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      mWarInfo = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !mWarInfo )
         goto LABEL_100;
       v19 = (DataManager_o *)mWarInfo;
       mWarInfo = (MapControl_WarInfo_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)mWarInfo,
-                                           (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventBoardGameCellMaster___);
+                                           (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventBoardGameCellMaster___);
       if ( !mWarInfo )
         goto LABEL_100;
       this->fields.eventBoardGameSquareCount = EventBoardGameCellMaster__GetBoardSquareCount(
@@ -13815,13 +13815,13 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
                                                  0LL);
       MasterData_object = DataManager__GetMasterData_object_(
                             v19,
-                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BAF1E5 )
+      if ( !byte_4BC2585 )
       {
-        sub_1C13D24(&NetworkManager_TypeInfo, v16);
-        byte_4BAF1E5 = 1;
+        sub_1C1ABD4(&NetworkManager_TypeInfo, v16);
+        byte_4BC2585 = 1;
       }
       mWarInfo = (MapControl_WarInfo_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -13839,10 +13839,10 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
         0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19BF )
+      if ( !byte_4BC4D7B )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-        byte_4BB19BF = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+        byte_4BC4D7B = 1;
       }
       v22 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13857,10 +13857,10 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
           value = entity->fields.value;
           if ( !v22->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(v22);
-          if ( !byte_4BB19D8 )
+          if ( !byte_4BC4D94 )
           {
-            sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-            byte_4BB19D8 = 1;
+            sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+            byte_4BC4D94 = 1;
           }
           v23 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13874,10 +13874,10 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
         {
           if ( !v22->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(v22);
-          if ( !byte_4BB19D8 )
+          if ( !byte_4BC4D94 )
           {
-            sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-            byte_4BB19D8 = 1;
+            sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+            byte_4BC4D94 = 1;
           }
           v23 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13894,10 +13894,10 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
       {
         if ( !v22->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v22);
-        if ( !byte_4BB19BF )
+        if ( !byte_4BC4D7B )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-          byte_4BB19BF = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+          byte_4BC4D7B = 1;
         }
         v23 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13909,10 +13909,10 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
       }
       if ( !v23->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v23);
-      if ( !byte_4BB19BF )
+      if ( !byte_4BC4D7B )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-        byte_4BB19BF = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+        byte_4BC4D7B = 1;
       }
       mWarInfo = (MapControl_WarInfo_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13929,17 +13929,17 @@ void __fastcall ScrTerminalMap__SetupEventBoardGame(ScrTerminalMap_o *this, cons
       GameObjectExtensions__SetPosition(v26, EventBoardSquarePos, 0LL);
       mWarInfo = (MapControl_WarInfo_o *)DataManager__GetMasterData_object_(
                                            v19,
-                                           (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
+                                           (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestReleaseMaster___);
       if ( !mWarInfo )
 LABEL_100:
-        sub_1C13F80(mWarInfo, v16);
+        sub_1C1AE30(mWarInfo, v16);
       ListByTargetAndCondType = QuestReleaseMaster__getListByTargetAndCondType(
                                   (QuestReleaseMaster_o *)mWarInfo,
                                   EventId,
                                   116,
                                   0LL);
       this->fields._EventBoardQuestReleaseList_k__BackingField = ListByTargetAndCondType;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields._EventBoardQuestReleaseList_k__BackingField,
         (int64_t)ListByTargetAndCondType,
         v28,
@@ -13951,10 +13951,10 @@ LABEL_100:
       ScrTerminalMap__SetDiceButton(this, v34);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB14A2 )
+      if ( !byte_4BC4856 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v35);
-        byte_4BB14A2 = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v35);
+        byte_4BC4856 = 1;
       }
       v37 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -13967,7 +13967,7 @@ LABEL_100:
         ScrTerminalMap__EventBoardCameraAction(this, 0LL, 0, 1, v36);
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10837/*"PlayBgmForPlaying"*/,
+          (System_String_o *)StringLiteral_10846/*"PlayEventBoardGameArrivalEffectAuto"*/,
           0.25,
           0LL);
       }
@@ -13999,10 +13999,10 @@ LABEL_100:
       }
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19BF )
+      if ( !byte_4BC4D7B )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-        byte_4BB19BF = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+        byte_4BC4D7B = 1;
       }
       v44 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14021,10 +14021,10 @@ LABEL_100:
         goto LABEL_92;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19BF )
+      if ( !byte_4BC4D7B )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-        byte_4BB19BF = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+        byte_4BC4D7B = 1;
       }
       v47 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14057,11 +14057,11 @@ LABEL_92:
             v50 = ScrTerminalMap___c_TypeInfo;
           }
           v52 = (Il2CppObject *)v50->static_fields->__9;
-          _9__372_0 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+          _9__372_0 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
           System_Action___ctor(_9__372_0, v52, Method_ScrTerminalMap___c__SetupEventBoardGame_b__372_0__, 0LL);
           v53 = ScrTerminalMap___c_TypeInfo->static_fields;
           v53->__9__372_0 = _9__372_0;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&v53->__9__372_0, (int64_t)_9__372_0, v54, v55, v56, v57, v58, v59);
+          sub_1C1AB78((PartyOrganizationUtility_o *)&v53->__9__372_0, (int64_t)_9__372_0, v54, v55, v56, v57, v58, v59);
         }
         ScrTerminalMap__EventBoardCameraAction(this, _9__372_0, 0, 0, v38);
       }
@@ -14098,7 +14098,7 @@ void __fastcall ScrTerminalMap__SetupFeildConfiguration(ScrTerminalMap_o *this, 
       }
     }
 LABEL_12:
-    sub_1C13F80(mapModelManager, method);
+    sub_1C1AE30(mapModelManager, method);
   }
   v5.fields.r = 1.0;
   v5.fields.g = 1.0;
@@ -14129,7 +14129,7 @@ void __fastcall ScrTerminalMap__SetupMapGimmickBasePrefab(
         AssetData_o *multiAssetData,
         const MethodInfo *method)
 {
-  ScrTerminalMap_o *v8; // x19
+  PartyOrganizationUtility_o *v8; // x19
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x1
@@ -14145,14 +14145,14 @@ void __fastcall ScrTerminalMap__SetupMapGimmickBasePrefab(
   Il2CppObject *v21; // x1
   System_String_o *v22; // x0
   ScrTerminalMap_o *v23; // x22
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v25; // x2
   int32_t v26; // w3
   System_String_o *v27; // x4
   BattleSetupInfo_o *v28; // x5
   FollowerInfo_o *v29; // x6
   PartyListViewItem_o *v30; // x7
-  UnityEngine_Object_o *mapGimmickPrefab; // x21
+  UnityEngine_Object_o *klass; // x21
   Il2CppObject *v32; // x0
   int64_t v33; // x2
   int32_t v34; // w3
@@ -14160,16 +14160,16 @@ void __fastcall ScrTerminalMap__SetupMapGimmickBasePrefab(
   BattleSetupInfo_o *v36; // x5
   FollowerInfo_o *v37; // x6
   PartyListViewItem_o *v38; // x7
-  int32_t currentAssetId; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t SelectedInitPosition_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  v8 = this;
-  if ( (byte_4BB18FC & 1) == 0 )
+  v8 = (PartyOrganizationUtility_o *)this;
+  if ( (byte_4BC4CB8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, mapEnt);
-    sub_1C13D24(&int_TypeInfo, v9);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&ScrTerminalMap_TypeInfo, v11);
-    byte_4BB18FC = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, mapEnt);
+    sub_1C1ABD4(&int_TypeInfo, v9);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v10);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v11);
+    byte_4BC4CB8 = 1;
   }
   if ( !mapEnt )
     goto LABEL_16;
@@ -14186,8 +14186,8 @@ void __fastcall ScrTerminalMap__SetupMapGimmickBasePrefab(
   ASSETS_NAME_MAP_GIMMICK = static_fields->ASSETS_NAME_MAP_GIMMICK;
   if ( v18 )
   {
-    currentAssetId = v8->fields.currentAssetId;
-    v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currentAssetId, v14, v15, v16);
+    SelectedInitPosition_k__BackingField = v8->fields._SelectedInitPosition_k__BackingField;
+    v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &SelectedInitPosition_k__BackingField, v14, v15, v16);
     v22 = ASSETS_NAME_MAP_GIMMICK;
   }
   else
@@ -14199,47 +14199,31 @@ void __fastcall ScrTerminalMap__SetupMapGimmickBasePrefab(
   v23 = this;
   if ( !multiAssetData )
     goto LABEL_13;
-  Object_object__49747248 = AssetData__GetObject_object__49747248(
+  Object_object__49812820 = AssetData__GetObject_object__49812820(
                               multiAssetData,
                               (System_String_o *)this,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
-  v8->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49747248;
-  sub_1C13CC8(
-    (PartyOrganizationUtility_o *)&v8->fields.mapGimmickPrefab,
-    (int64_t)Object_object__49747248,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
-  mapGimmickPrefab = (UnityEngine_Object_o *)v8->fields.mapGimmickPrefab;
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
+  v8[3].klass = (PartyOrganizationUtility_c *)Object_object__49812820;
+  sub_1C1AB78(v8 + 3, (int64_t)Object_object__49812820, v25, v26, v27, v28, v29, v30);
+  klass = (UnityEngine_Object_o *)v8[3].klass;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(mapGimmickPrefab, 0LL, 0LL);
+  this = (ScrTerminalMap_o *)UnityEngine_Object__op_Inequality(klass, 0LL, 0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
 LABEL_13:
     if ( assetData )
     {
-      v32 = AssetData__GetObject_object__49747248(
+      v32 = AssetData__GetObject_object__49812820(
               assetData,
               (System_String_o *)v23,
-              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
-      v8->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)v32;
-      sub_1C13CC8(
-        (PartyOrganizationUtility_o *)&v8->fields.mapGimmickPrefab,
-        (int64_t)v32,
-        v33,
-        v34,
-        v35,
-        v36,
-        v37,
-        v38);
+              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
+      v8[3].klass = (PartyOrganizationUtility_c *)v32;
+      sub_1C1AB78(v8 + 3, (int64_t)v32, v33, v34, v35, v36, v37, v38);
       return;
     }
 LABEL_16:
-    sub_1C13F80(this, mapEnt);
+    sub_1C1AE30(this, mapEnt);
   }
 }
 
@@ -14275,22 +14259,22 @@ void __fastcall ScrTerminalMap__ShowActivePlayerIcon(ScrTerminalMap_o *this, con
   EasingObject_o *v29; // x21
   System_Action_o *v30; // x22
 
-  if ( (byte_4BB1947 & 1) == 0 )
+  if ( (byte_4BC4D03 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass351_0__ShowActivePlayerIcon_b__0__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass351_0__ShowActivePlayerIcon_b__1__, v6);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass351_0_TypeInfo, v7);
-    byte_4BB1947 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass351_0__ShowActivePlayerIcon_b__0__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass351_0__ShowActivePlayerIcon_b__1__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass351_0_TypeInfo, v7);
+    byte_4BC4D03 = 1;
   }
-  v8 = sub_1C13F70(ScrTerminalMap___c__DisplayClass351_0_TypeInfo);
+  v8 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass351_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass351_0___ctor((ScrTerminalMap___c__DisplayClass351_0_o *)v8, 0LL);
   if ( !v8 )
     goto LABEL_15;
   *(_QWORD *)(v8 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
   playerIcon = (UnityEngine_Object_o *)this->fields.playerIcon;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -14303,13 +14287,13 @@ void __fastcall ScrTerminalMap__ShowActivePlayerIcon(ScrTerminalMap_o *this, con
         return;
       Component_object = GameObjectExtensions__SafeGetComponent_object_(
                            this->fields.playerIcon,
-                           (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                           (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
       *(_QWORD *)(v8 + 48) = Component_object;
-      sub_1C13CC8((PartyOrganizationUtility_o *)(v8 + 48), (int64_t)Component_object, v19, v20, v21, v22, v23, v24);
-      if ( !byte_4BAEDA1 )
+      sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 48), (int64_t)Component_object, v19, v20, v21, v22, v23, v24);
+      if ( !byte_4BC2141 )
       {
-        sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v10);
-        byte_4BAEDA1 = 1;
+        sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v10);
+        byte_4BC2141 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v26 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -14323,14 +14307,14 @@ void __fastcall ScrTerminalMap__ShowActivePlayerIcon(ScrTerminalMap_o *this, con
       {
         UnityEngine_GameObject__SetActive(v9, 1, 0LL);
         GameObjectExtensions__SetLocalScale(this->fields.playerIcon, *(UnityEngine_Vector3_o *)(v8 + 36), 0LL);
-        v28 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v28 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v28,
           (Il2CppObject *)v8,
           Method_ScrTerminalMap___c__DisplayClass351_0__ShowActivePlayerIcon_b__0__,
           0LL);
         v29 = *(EasingObject_o **)(v8 + 48);
-        v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v30,
           (Il2CppObject *)v8,
@@ -14344,7 +14328,7 @@ void __fastcall ScrTerminalMap__ShowActivePlayerIcon(ScrTerminalMap_o *this, con
       }
     }
 LABEL_15:
-    sub_1C13F80(v9, v10);
+    sub_1C1AE30(v9, v10);
   }
 }
 
@@ -14378,7 +14362,7 @@ void __fastcall ScrTerminalMap__ShowEventRaceBoostEffect(
   int32_t ImageId; // w22
   TerminalPramsManager_c *v26; // x0
   PartyOrganizationUtility_o *v27; // x0
-  Il2CppObject *Object_object__49747248; // x23
+  Il2CppObject *Object_object__49812820; // x23
   Il2CppObject *v29; // x0
   int64_t v30; // x2
   int32_t v31; // w3
@@ -14408,29 +14392,29 @@ void __fastcall ScrTerminalMap__ShowEventRaceBoostEffect(
   QuestRacePointEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB194E & 1) == 0 )
+  if ( (byte_4BC4D0A & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v10);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestRacePointMaster___, v11);
-    sub_1C13D24(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v12);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_EventRaceBoostEffect___, v13);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v17);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v18);
-    sub_1C13D24(&StringLiteral_6352/*"EventMoveEnd"*/, v19);
-    byte_4BB194E = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, v10);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestRacePointMaster___, v11);
+    sub_1C1ABD4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v12);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_EventRaceBoostEffect___, v13);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v17);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v18);
+    sub_1C1ABD4(&StringLiteral_6356/*"EventRaceBoostEffect"*/, v19);
+    byte_4BC4D0A = 1;
   }
   v54 = 0LL;
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BE )
+  if ( !byte_4BC4D7A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4BB19BE = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4BC4D7A = 1;
   }
   v20 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14441,7 +14425,7 @@ void __fastcall ScrTerminalMap__ShowEventRaceBoostEffect(
   eventRaceBoost_k__BackingField = (int *)v20->static_fields->_eventRaceBoost_k__BackingField;
   if ( eventRaceBoost_k__BackingField && eventRaceBoost_k__BackingField[4] >= 1 )
   {
-    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( !Instance )
       goto LABEL_48;
     Instance = (QuestTree_o *)QuestTree__GetQuestInfo(Instance, eventRaceBoost_k__BackingField[7], 0LL);
@@ -14451,12 +14435,12 @@ void __fastcall ScrTerminalMap__ShowEventRaceBoostEffect(
     if ( SpotID >= 1 )
     {
       v24 = SpotID;
-      Instance = (QuestTree_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (QuestTree_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_48;
       Instance = (QuestTree_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestRacePointMaster___);
+                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestRacePointMaster___);
       if ( !Instance )
         goto LABEL_48;
       if ( QuestRacePointMaster__TryGetEntity(
@@ -14468,19 +14452,19 @@ void __fastcall ScrTerminalMap__ShowEventRaceBoostEffect(
       {
         if ( eventRaceBoost_k__BackingField[8] < 1 )
           goto LABEL_31;
-        Instance = (QuestTree_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (QuestTree_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_48;
         Instance = (QuestTree_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___);
         if ( !Instance )
           goto LABEL_48;
         if ( DataMasterBase_object__object__int___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                (Il2CppObject **)&v54,
                eventRaceBoost_k__BackingField[8],
-               (const MethodInfo_3238670 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+               (const MethodInfo_32486C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
         {
           Instance = (QuestTree_o *)v54;
           if ( !v54 )
@@ -14495,17 +14479,17 @@ LABEL_31:
         Instance = (QuestTree_o *)this->fields.mapAssetData;
         if ( Instance )
         {
-          Object_object__49747248 = AssetData__GetObject_object__49747248(
+          Object_object__49812820 = AssetData__GetObject_object__49812820(
                                       (AssetData_o *)Instance,
-                                      (System_String_o *)StringLiteral_6352/*"EventMoveEnd"*/,
-                                      (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
+                                      (System_String_o *)StringLiteral_6356/*"EventRaceBoostEffect"*/,
+                                      (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           v29 = UnityEngine_Object__Instantiate_object_(
-                  Object_object__49747248,
-                  (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                  Object_object__49812820,
+                  (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
           this->fields.eventActionEffect = (struct UnityEngine_GameObject_o *)v29;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.eventActionEffect,
             (int64_t)v29,
             v30,
@@ -14529,7 +14513,7 @@ LABEL_31:
           {
             Instance = (QuestTree_o *)UnityEngine_GameObject__GetComponent_object_(
                                         (UnityEngine_GameObject_o *)Instance,
-                                        (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_EventRaceBoostEffect___);
+                                        (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_EventRaceBoostEffect___);
             eventScriptCallingList = this->fields.eventScriptCallingList;
             v42 = (EventRaceBoostEffect_o *)Instance;
             v43 = !eventScriptCallingList || eventScriptCallingList->max_length == 0;
@@ -14550,10 +14534,10 @@ LABEL_31:
                   0LL);
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                if ( !byte_4BB19D7 )
+                if ( !byte_4BC4D93 )
                 {
-                  sub_1C13D24(&TerminalPramsManager_TypeInfo, v45);
-                  byte_4BB19D7 = 1;
+                  sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v45);
+                  byte_4BC4D93 = 1;
                 }
                 v52 = TerminalPramsManager_TypeInfo;
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14563,23 +14547,23 @@ LABEL_31:
                 }
                 p_eventRaceBoost_k__BackingField = (PartyOrganizationUtility_o *)&v52->static_fields->_eventRaceBoost_k__BackingField;
                 p_eventRaceBoost_k__BackingField->klass = 0LL;
-                sub_1C13CC8(p_eventRaceBoost_k__BackingField, 0LL, v46, v47, v48, v49, v50, v51);
+                sub_1C1AB78(p_eventRaceBoost_k__BackingField, 0LL, v46, v47, v48, v49, v50, v51);
                 return;
               }
             }
           }
         }
 LABEL_48:
-        sub_1C13F80(Instance, *(_QWORD *)&eventId);
+        sub_1C1AE30(Instance, *(_QWORD *)&eventId);
       }
     }
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D7 )
+  if ( !byte_4BC4D93 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4BB19D7 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4BC4D93 = 1;
   }
   v26 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14589,7 +14573,7 @@ LABEL_48:
   }
   v27 = (PartyOrganizationUtility_o *)&v26->static_fields->_eventRaceBoost_k__BackingField;
   v27->klass = 0LL;
-  sub_1C13CC8(v27, 0LL, (int64_t)callback, (int32_t)method, v4, v5, v6, v7);
+  sub_1C1AB78(v27, 0LL, (int64_t)callback, (int32_t)method, v4, v5, v6, v7);
   ActionExtensions__Call(callback, 0LL);
 }
 
@@ -14620,28 +14604,28 @@ void __fastcall ScrTerminalMap__SkillGetDialogOpen(
   int32_t QuestId_k__BackingField; // w22
   System_Action_o *v24; // x23
 
-  if ( (byte_4BB1942 & 1) == 0 )
+  if ( (byte_4BC4CFE & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass345_0__SkillGetDialogOpen_b__0__, v7);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass345_0_TypeInfo, v8);
-    byte_4BB1942 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass345_0__SkillGetDialogOpen_b__0__, v7);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass345_0_TypeInfo, v8);
+    byte_4BC4CFE = 1;
   }
-  v9 = sub_1C13F70(ScrTerminalMap___c__DisplayClass345_0_TypeInfo);
+  v9 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass345_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass345_0___ctor((ScrTerminalMap___c__DisplayClass345_0_o *)v9, 0LL);
   if ( !v9 )
     goto LABEL_20;
   *(_QWORD *)(v9 + 16) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)callback, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)callback, v12, v13, v14, v15, v16, v17);
   titleInfoControl = this->fields.titleInfoControl;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v11);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v11);
+    byte_4BC2713 = 1;
   }
   v10 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -14658,10 +14642,10 @@ void __fastcall ScrTerminalMap__SkillGetDialogOpen(
   mActionPanel = mTerminalList->fields.mActionPanel;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF44D )
+  if ( !byte_4BC27F4 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v11);
-    byte_4BAF44D = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v11);
+    byte_4BC27F4 = 1;
   }
   v22 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14670,7 +14654,7 @@ void __fastcall ScrTerminalMap__SkillGetDialogOpen(
     v22 = TerminalPramsManager_TypeInfo;
   }
   QuestId_k__BackingField = v22->static_fields->_QuestId_k__BackingField;
-  v24 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(
     v24,
     (Il2CppObject *)v9,
@@ -14678,7 +14662,7 @@ void __fastcall ScrTerminalMap__SkillGetDialogOpen(
     0LL);
   if ( !titleInfoControl )
 LABEL_20:
-    sub_1C13F80(v10, v11);
+    sub_1C1AE30(v10, v11);
   TitleInfoControl__EventSkillGetDialogOpen(titleInfoControl, mActionPanel, QuestId_k__BackingField, v24, 0LL);
 }
 
@@ -14688,10 +14672,10 @@ void __fastcall ScrTerminalMap__SpotMaskEnd_FadeEnd(ScrTerminalMap_o *this, cons
   UnityEngine_GameObject_o *spotMaskObj; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4BB1932 & 1) == 0 )
+  if ( (byte_4BC4CEE & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_11725/*"SELECT_PARTY_EQUIP"*/, method);
-    byte_4BB1932 = 1;
+    sub_1C1ABD4(&StringLiteral_11736/*"SEND_MES_END"*/, method);
+    byte_4BC4CEE = 1;
   }
   if ( !this->fields.isFadingSpotmask )
   {
@@ -14703,9 +14687,9 @@ void __fastcall ScrTerminalMap__SpotMaskEnd_FadeEnd(ScrTerminalMap_o *this, cons
   spotMaskObj = (UnityEngine_GameObject_o *)this->fields.titleInfoControl;
   if ( !spotMaskObj )
 LABEL_8:
-    sub_1C13F80(spotMaskObj, method);
+    sub_1C1AE30(spotMaskObj, method);
   TitleInfoControl__SetDispChangeBtn((TitleInfoControl_o *)spotMaskObj, 1, 0LL);
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_11725/*"SELECT_PARTY_EQUIP"*/, v4);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_11736/*"SEND_MES_END"*/, v4);
 }
 
 
@@ -14713,12 +14697,12 @@ void __fastcall ScrTerminalMap__SpotMaskStart_FadeEnd(ScrTerminalMap_o *this, co
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4BB1930 & 1) == 0 )
+  if ( (byte_4BC4CEC & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_11725/*"SELECT_PARTY_EQUIP"*/, method);
-    byte_4BB1930 = 1;
+    sub_1C1ABD4(&StringLiteral_11736/*"SEND_MES_END"*/, method);
+    byte_4BC4CEC = 1;
   }
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_11725/*"SELECT_PARTY_EQUIP"*/, v2);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_11736/*"SEND_MES_END"*/, v2);
 }
 
 
@@ -14733,16 +14717,16 @@ void __fastcall ScrTerminalMap__Start(ScrTerminalMap_o *this, const MethodInfo *
   PartyListViewItem_o *v9; // x7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4BB18E7 & 1) == 0 )
+  if ( (byte_4BC4CA3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
-    byte_4BB18E7 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
+    byte_4BC4CA3 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
   this->fields.targetFsm = (struct PlayMakerFSM_o *)Component_object;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.targetFsm, (int64_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.targetFsm, (int64_t)Component_object, v4, v5, v6, v7, v8, v9);
   ScrTerminalMap__InitTitleInfo(this, v10);
 }
 
@@ -14753,11 +14737,11 @@ void __fastcall ScrTerminalMap__StartBoardGamePieceEffectSub(ScrTerminalMap_o *t
   UnityEngine_Object_o *EventBoardPieceObj_k__BackingField; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BB1971 & 1) == 0 )
+  if ( (byte_4BC4D2D & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_10829/*"Play "*/, v3);
-    byte_4BB1971 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_10838/*"PlayBoardGamePieceEffectSub"*/, v3);
+    byte_4BC4D2D = 1;
   }
   EventBoardPieceObj_k__BackingField = (UnityEngine_Object_o *)this->fields._EventBoardPieceObj_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -14775,7 +14759,7 @@ void __fastcall ScrTerminalMap__StartBoardGamePieceEffectSub(ScrTerminalMap_o *t
   {
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10829/*"Play "*/,
+      (System_String_o *)StringLiteral_10838/*"PlayBoardGamePieceEffectSub"*/,
       0.067,
       0LL);
   }
@@ -14835,32 +14819,32 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   int32_t v51; // w21
   NetworkManager_ResultCallbackFunc_o *v52; // x23
 
-  if ( (byte_4BB1945 & 1) == 0 )
+  if ( (byte_4BC4D01 & 1) == 0 )
   {
-    sub_1C13D24(&DataLostResetManager_ClickDelegate_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C13D24(&DataLostResetManager_TypeInfo, v9);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDataLostBattleMaster___, v10);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___, v11);
-    sub_1C13D24(&DataManager_TypeInfo, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__, v14);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
-    sub_1C13D24(&Method_ScrTerminalMap_StartDataLostBattleResetEffect__, v16);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v17);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v18);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v19);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass349_0__StartDataLostBattleReset_b__0__, v20);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass349_0_TypeInfo, v21);
-    byte_4BB1945 = 1;
+    sub_1C1ABD4(&DataLostResetManager_ClickDelegate_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&DataLostResetManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDataLostBattleMaster___, v10);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___, v11);
+    sub_1C1ABD4(&DataManager_TypeInfo, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__, v14);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
+    sub_1C1ABD4(&Method_ScrTerminalMap_StartDataLostBattleResetEffect__, v16);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v17);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v18);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v19);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass349_0__StartDataLostBattleReset_b__0__, v20);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass349_0_TypeInfo, v21);
+    byte_4BC4D01 = 1;
   }
-  v22 = sub_1C13F70(ScrTerminalMap___c__DisplayClass349_0_TypeInfo);
+  v22 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass349_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass349_0___ctor((ScrTerminalMap___c__DisplayClass349_0_o *)v22, 0LL);
   if ( !v22 )
     goto LABEL_42;
   *(_QWORD *)(v22 + 24) = this;
   *(_DWORD *)(v22 + 16) = eventId;
   *(_DWORD *)(v22 + 20) = warId;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)this, v25, v26, v27, v28, v29, v30);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)this, v25, v26, v27, v28, v29, v30);
   if ( !ScrTerminalMap__IsDataLostBattleAutoReset(v31, *(_DWORD *)(v22 + 16), *(_DWORD *)(v22 + 20), v32) )
   {
     ActionExtensions__Call(endAction, 0LL);
@@ -14868,7 +14852,7 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   }
   this->fields.isPlayingDataLostBattleResetEffect = 1;
   this->fields.dataLostBattleResetEffectEndAct = endAction;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.dataLostBattleResetEffectEndAct,
     (int64_t)endAction,
     v33,
@@ -14879,7 +14863,7 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
     v38);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
   if ( !Master_object )
     goto LABEL_42;
   EventDataLostBattleId = EventDataLostBattleMaster__GetEventDataLostBattleId(
@@ -14887,7 +14871,7 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
                             *(_DWORD *)(v22 + 20),
                             *(_DWORD *)(v22 + 16),
                             0LL);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
   if ( !Master_object )
     goto LABEL_42;
   Master_object = EventDataLostBattleResetMaster__GetDataLostBattleResetEntities(
@@ -14902,7 +14886,7 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   {
     v41 = *(_DWORD *)(v22 + 16);
     v42 = *(_DWORD *)(v22 + 20);
-    v43 = (DataLostResetManager_ClickDelegate_o *)sub_1C13F70(DataLostResetManager_ClickDelegate_TypeInfo);
+    v43 = (DataLostResetManager_ClickDelegate_o *)sub_1C1AE20(DataLostResetManager_ClickDelegate_TypeInfo);
     DataLostResetManager_ClickDelegate___ctor(
       v43,
       (Il2CppObject *)v22,
@@ -14913,16 +14897,16 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
     DataLostResetManager__OpenResetSelectDialog(v41, v42, 1, v43, 0LL);
     return;
   }
-  Master_object = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Master_object = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_42;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)Master_object, 0LL);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v24);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v24);
+    byte_4BC2713 = 1;
   }
   Master_object = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -14939,10 +14923,10 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   TitleInfoControl__SetTouchEnable((TitleInfoControl_o *)Master_object, 0, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19CE )
+  if ( !byte_4BC4D8A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v45);
-    byte_4BB19CE = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v45);
+    byte_4BC4D8A = 1;
   }
   v46 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -14952,11 +14936,11 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   }
   v46->static_fields->_IsStopMasterFaceOverwrite_k__BackingField = 1;
   v47 = *(_DWORD *)(v22 + 16);
-  if ( !byte_4BB19CF )
+  if ( !byte_4BC4D8B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v45);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v45);
     v46 = TerminalPramsManager_TypeInfo;
-    byte_4BB19CF = 1;
+    byte_4BC4D8B = 1;
   }
   if ( !v46->_2.cctor_finished )
   {
@@ -14965,11 +14949,11 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   }
   v46->static_fields->_DataLostBattleEventId_k__BackingField = v47;
   v48 = *(_DWORD *)(v22 + 20);
-  if ( !byte_4BB19D0 )
+  if ( !byte_4BC4D8C )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v45);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v45);
     v46 = TerminalPramsManager_TypeInfo;
-    byte_4BB19D0 = 1;
+    byte_4BC4D8C = 1;
   }
   if ( !v46->_2.cctor_finished )
   {
@@ -14982,12 +14966,12 @@ void __fastcall ScrTerminalMap__StartDataLostBattleReset(
   Master_object = System_Collections_Generic_List_object___get_Item(
                     v40,
                     0,
-                    (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+                    (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
   if ( !Master_object )
 LABEL_42:
-    sub_1C13F80(Master_object, v24);
+    sub_1C1AE30(Master_object, v24);
   v51 = *((_DWORD *)Master_object + 5);
-  v52 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v52 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v52,
     (Il2CppObject *)this,
@@ -15014,20 +14998,20 @@ void __fastcall ScrTerminalMap__StartDataLostBattleResetEffect(
   int32_t DataLostBattleWarId_k__BackingField; // w20
   System_Action_o *v12; // x22
 
-  if ( (byte_4BB1946 & 1) == 0 )
+  if ( (byte_4BC4D02 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, result);
-    sub_1C13D24(&DataLostResetManager_TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__StartDataLostBattleResetEffect_b__350_0__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    byte_4BB1946 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, result);
+    sub_1C1ABD4(&DataLostResetManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__StartDataLostBattleResetEffect_b__350_0__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    byte_4BC4D02 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D1 )
+  if ( !byte_4BC4D8D )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, result);
-    byte_4BB19D1 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, result);
+    byte_4BC4D8D = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15037,10 +15021,10 @@ void __fastcall ScrTerminalMap__StartDataLostBattleResetEffect(
   }
   v7->static_fields->_IsDataLostBattleAutoReset_k__BackingField = 0;
   TerminalPramsManager__IsDataLostBattleAutoReset_SaveData(0LL);
-  if ( !byte_4BB19D2 )
+  if ( !byte_4BC4D8E )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BB19D2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4D8E = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15049,11 +15033,11 @@ void __fastcall ScrTerminalMap__StartDataLostBattleResetEffect(
     v9 = TerminalPramsManager_TypeInfo;
   }
   DataLostBattleEventId_k__BackingField = v9->static_fields->_DataLostBattleEventId_k__BackingField;
-  if ( !byte_4BB19D3 )
+  if ( !byte_4BC4D8F )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
     v9 = TerminalPramsManager_TypeInfo;
-    byte_4BB19D3 = 1;
+    byte_4BC4D8F = 1;
   }
   if ( !v9->_2.cctor_finished )
   {
@@ -15061,7 +15045,7 @@ void __fastcall ScrTerminalMap__StartDataLostBattleResetEffect(
     v9 = TerminalPramsManager_TypeInfo;
   }
   DataLostBattleWarId_k__BackingField = v9->static_fields->_DataLostBattleWarId_k__BackingField;
-  v12 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ScrTerminalMap__StartDataLostBattleResetEffect_b__350_0__, 0LL);
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
@@ -15107,22 +15091,22 @@ void __fastcall ScrTerminalMap__StartEventQuestCheckNewOpen(
   System_Nullable_float__o p_messagePosY; // 0:x0.8
   System_Nullable_float__o v30; // 0:x5.8
 
-  if ( (byte_4BB1943 & 1) == 0 )
+  if ( (byte_4BC4CFF & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, eventDetailEntity);
-    sub_1C13D24(&Method_DataManager_GetMaster_QuestReleaseMaster___, v4);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&Method_System_Nullable_float___ctor__, v6);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1C13D24(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v8);
-    sub_1C13D24(&Method_ScrTerminalMap___c__StartEventQuestCheckNewOpen_b__346_0__, v9);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_7062/*"GET"*/, v11);
-    byte_4BB1943 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, eventDetailEntity);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_QuestReleaseMaster___, v4);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_System_Nullable_float___ctor__, v6);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1C1ABD4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v8);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__StartEventQuestCheckNewOpen_b__346_0__, v9);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v10);
+    sub_1C1ABD4(&StringLiteral_7065/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/, v11);
+    byte_4BC4CFF = 1;
   }
   if ( eventDetailEntity && EventDetailEntity__IsEventPanel(eventDetailEntity, 0LL) )
   {
-    Instance = (System_Int32_array *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    Instance = (System_Int32_array *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( Instance )
     {
       Instance = clsQuestCheck__GetNewPlayableEventQuestId(
@@ -15136,17 +15120,17 @@ void __fastcall ScrTerminalMap__StartEventQuestCheckNewOpen(
           return;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Instance = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
+        Instance = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_QuestReleaseMaster___);
         if ( !v14->max_length )
           goto LABEL_24;
         if ( !Instance )
           goto LABEL_23;
         if ( !QuestReleaseMaster__IsContainCondType((QuestReleaseMaster_o *)Instance, v14->m_Items[1], 143, 0LL) )
           return;
-        Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !v14->max_length )
 LABEL_24:
-          sub_1C13F88(Instance, v13);
+          sub_1C1AE38(Instance, v13);
         v15 = (CommonUI_o *)Instance;
         v16 = v14->m_Items[1];
         v17 = ScrTerminalMap___c_TypeInfo;
@@ -15156,7 +15140,7 @@ LABEL_24:
           v17 = ScrTerminalMap___c_TypeInfo;
         }
         _9__346_0 = v17->static_fields->__9__346_0;
-        v19 = (System_String_o *)StringLiteral_7062/*"GET"*/;
+        v19 = (System_String_o *)StringLiteral_7065/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/;
         if ( !_9__346_0 )
         {
           if ( !v17->_2.cctor_finished )
@@ -15165,11 +15149,11 @@ LABEL_24:
             v17 = ScrTerminalMap___c_TypeInfo;
           }
           v20 = (Il2CppObject *)v17->static_fields->__9;
-          _9__346_0 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+          _9__346_0 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
           System_Action___ctor(_9__346_0, v20, Method_ScrTerminalMap___c__StartEventQuestCheckNewOpen_b__346_0__, 0LL);
           static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
           static_fields->__9__346_0 = _9__346_0;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&static_fields->__9__346_0,
             (int64_t)_9__346_0,
             v22,
@@ -15184,7 +15168,7 @@ LABEL_24:
         System_Nullable_float____ctor(
           p_messagePosY,
           30.0,
-          (const MethodInfo_374B620 *)Method_System_Nullable_float___ctor__);
+          (const MethodInfo_375AF28 *)Method_System_Nullable_float___ctor__);
         if ( v15 )
         {
           v30 = messagePosY;
@@ -15194,7 +15178,7 @@ LABEL_24:
       }
     }
 LABEL_23:
-    sub_1C13F80(Instance, v13);
+    sub_1C1AE30(Instance, v13);
   }
 }
 
@@ -15209,11 +15193,11 @@ void __fastcall ScrTerminalMap__StartRaidAnimation(ScrTerminalMap_o *this, const
   System_Action_o *v7; // x22
 
   v2 = this;
-  if ( (byte_4BB18F0 & 1) == 0 )
+  if ( (byte_4BC4CAC & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_ScrTerminalMap__StartRaidAnimation_b__250_0__, v3);
-    byte_4BB18F0 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_ScrTerminalMap__StartRaidAnimation_b__250_0__, v3);
+    byte_4BC4CAC = 1;
   }
   if ( v2->fields.isRaidMap )
   {
@@ -15221,11 +15205,11 @@ void __fastcall ScrTerminalMap__StartRaidAnimation(ScrTerminalMap_o *this, const
     if ( !mWarEnt
       || (titleInfoControl = v2->fields.titleInfoControl,
           eventId = mWarEnt->fields.eventId,
-          v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+          v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
           System_Action___ctor(v7, (Il2CppObject *)v2, Method_ScrTerminalMap__StartRaidAnimation_b__250_0__, 0LL),
           !titleInfoControl) )
     {
-      sub_1C13F80(this, method);
+      sub_1C1AE30(this, method);
     }
     TitleInfoControl__PlayEventRaidDefeatedEffect(titleInfoControl, eventId, 1, v7, 0LL);
   }
@@ -15244,19 +15228,19 @@ void __fastcall ScrTerminalMap__TerminalSceneRefresh(
   int32_t warId; // w21
   int32_t v9; // w2
 
-  if ( (byte_4BB18ED & 1) == 0 )
+  if ( (byte_4BC4CA9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isFromTerminal);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    byte_4BB18ED = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, isFromTerminal);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    byte_4BC4CA9 = 1;
   }
   this->fields._IsCheckExpiration_k__BackingField = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF54B )
+  if ( !byte_4BC28F4 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, isFromTerminal);
-    byte_4BAF54B = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, isFromTerminal);
+    byte_4BC28F4 = 1;
   }
   Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15264,16 +15248,16 @@ void __fastcall ScrTerminalMap__TerminalSceneRefresh(
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
   }
-  *(_BYTE *)(*(_QWORD *)&Instance[1].fields.fadeType + 718LL) = 1;
+  *(_BYTE *)(*(_QWORD *)&Instance[1].fields.fadeType + 717LL) = 1;
   mWarInfo = this->fields.mWarInfo;
   if ( !mWarInfo )
     goto LABEL_23;
   warId = mWarInfo->fields.warId;
-  if ( !byte_4BB1257 )
+  if ( !byte_4BC4611 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, isFromTerminal);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, isFromTerminal);
     Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
-    byte_4BB1257 = 1;
+    byte_4BC4611 = 1;
   }
   if ( !Instance[2].fields.m_CachedPtr )
   {
@@ -15281,23 +15265,23 @@ void __fastcall ScrTerminalMap__TerminalSceneRefresh(
     Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
   }
   *(_DWORD *)(*(_QWORD *)&Instance[1].fields.fadeType + 4LL) = warId;
-  if ( !byte_4BB19BB )
+  if ( !byte_4BC4D77 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, isFromTerminal);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, isFromTerminal);
     Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
-    byte_4BB19BB = 1;
+    byte_4BC4D77 = 1;
   }
   if ( !Instance[2].fields.m_CachedPtr )
   {
     j_il2cpp_runtime_class_init_0(Instance);
     Instance = (AvalonSceneManager_o *)TerminalPramsManager_TypeInfo;
   }
-  *(_BYTE *)(*(_QWORD *)&Instance[1].fields.fadeType + 721LL) = 0;
+  *(_BYTE *)(*(_QWORD *)&Instance[1].fields.fadeType + 720LL) = 0;
   TopHomeRequest__clearExpirationDate(0LL);
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
 LABEL_23:
-    sub_1C13F80(Instance, isFromTerminal);
+    sub_1C1AE30(Instance, isFromTerminal);
   if ( isFromTerminal )
     v9 = 2;
   else
@@ -15372,43 +15356,43 @@ bool __fastcall ScrTerminalMap__TryAutoQuest(ScrTerminalMap_o *this, const Metho
   System_Collections_Generic_List_Enumerator_object__o v65; // [xsp+20h] [xbp-70h] BYREF
   UserEventEntity_o *entity; // [xsp+48h] [xbp-48h] BYREF
 
-  if ( (byte_4BB1986 & 1) == 0 )
+  if ( (byte_4BC4D42 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestPhaseMaster___, method);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v3);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_QuestReleaseEntity___, v4);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_QuestReleaseEntity___, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v8);
-    sub_1C13D24(&System_Func_QuestReleaseEntity__bool__TypeInfo, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v10);
-    sub_1C13D24(&NetworkManager_TypeInfo, v11);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v12);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v13);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1C13D24(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v16);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v17);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v18);
-    sub_1C13D24(&Method_ScrTerminalMap___c__TryAutoQuest_b__418_0__, v19);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v20);
-    byte_4BB1986 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestPhaseMaster___, method);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v3);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_QuestReleaseEntity___, v4);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_QuestReleaseEntity___, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__get_Current__, v8);
+    sub_1C1ABD4(&System_Func_QuestReleaseEntity__bool__TypeInfo, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__, v10);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v11);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v12);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v13);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1C1ABD4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v16);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v17);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v18);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__TryAutoQuest_b__418_0__, v19);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v20);
+    byte_4BC4D42 = 1;
   }
   entity = 0LL;
   memset(&v65, 0, sizeof(v65));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_67;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v22);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v22);
+    byte_4BC2585 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -15455,12 +15439,12 @@ bool __fastcall ScrTerminalMap__TryAutoQuest(ScrTerminalMap_o *this, const Metho
     if ( value != static_fields->AUTO_QUEST_SQUARE_INDEX_2 )
       return 0;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_67;
   v28 = DataManager__GetMasterData_object_(
           Instance,
-          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   v29 = ScrTerminalMap___c_TypeInfo;
   EventBoardQuestReleaseList_k__BackingField = this->fields._EventBoardQuestReleaseList_k__BackingField;
   v31 = (QuestPhaseMaster_o *)v28;
@@ -15478,43 +15462,43 @@ bool __fastcall ScrTerminalMap__TryAutoQuest(ScrTerminalMap_o *this, const Metho
       v29 = ScrTerminalMap___c_TypeInfo;
     }
     v33 = (Il2CppObject *)v29->static_fields->__9;
-    _9__418_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_QuestReleaseEntity__bool__TypeInfo);
+    _9__418_0 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_QuestReleaseEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__418_0, v33, Method_ScrTerminalMap___c__TryAutoQuest_b__418_0__, 0LL);
     v34 = ScrTerminalMap___c_TypeInfo->static_fields;
     v34->__9__418_0 = (struct System_Func_QuestReleaseEntity__bool__o *)_9__418_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v34->__9__418_0, (int64_t)_9__418_0, v35, v36, v37, v38, v39, v40);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v34->__9__418_0, (int64_t)_9__418_0, v35, v36, v37, v38, v39, v40);
   }
   v41 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)EventBoardQuestReleaseList_k__BackingField,
           (System_Func_TSource__bool__o *)_9__418_0,
-          (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_QuestReleaseEntity___);
+          (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_QuestReleaseEntity___);
   Instance = (DataManager_o *)System_Linq_Enumerable__ToList_object_(
                                 v41,
-                                (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_QuestReleaseEntity___);
+                                (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_QuestReleaseEntity___);
   if ( !Instance )
 LABEL_67:
-    sub_1C13F80(Instance, v22);
+    sub_1C1AE30(Instance, v22);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v64,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_QuestReleaseEntity__GetEnumerator__);
   v65 = v64;
   do
   {
     v42 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v65,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__MoveNext__);
     if ( !v42 )
     {
       v62 = 4;
       goto LABEL_62;
     }
     current = v65.fields._current;
-    v44 = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    v44 = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( !current )
-      sub_1C13F80(v44, v45);
+      sub_1C1AE30(v44, v45);
     if ( !v44 )
-      sub_1C13F80(0LL, v45);
+      sub_1C1AE30(0LL, v45);
   }
   while ( !clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)v44, (int32_t)current[1].klass, 0LL) );
   diceCounterComponent = (UnityEngine_Object_o *)this->fields.diceCounterComponent;
@@ -15525,22 +15509,22 @@ LABEL_67:
   {
     v49 = (UnityEngine_Component_o *)this->fields.diceCounterComponent;
     if ( !v49 )
-      sub_1C13F80(0LL, v48);
+      sub_1C1AE30(0LL, v48);
     gameObject = UnityEngine_Component__get_gameObject(v49, 0LL);
     if ( !gameObject )
-      sub_1C13F80(0LL, v51);
+      sub_1C1AE30(0LL, v51);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   }
   if ( !v31 )
-    sub_1C13F80(v47, v48);
+    sub_1C1AE30(v47, v48);
   List = QuestPhaseMaster__getList(v31, (int32_t)current[1].klass, 0LL);
   klass = (int32_t)current[1].klass;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1251 )
+  if ( !byte_4BC460B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v52);
-    byte_4BB1251 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v52);
+    byte_4BC460B = 1;
   }
   v55 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15551,10 +15535,10 @@ LABEL_67:
   v55->static_fields->_QuestId_k__BackingField = klass;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v52);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v52);
+    byte_4BC2713 = 1;
   }
   v56 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -15564,27 +15548,27 @@ LABEL_67:
   }
   mInstance = v56->static_fields->mInstance;
   if ( !mInstance )
-    sub_1C13F80(v56, v52);
+    sub_1C1AE30(v56, v52);
   if ( !List )
-    sub_1C13F80(v56, v52);
+    sub_1C1AE30(v56, v52);
   if ( !List->max_length )
-    sub_1C13F88(v56, v52);
+    sub_1C1AE38(v56, v52);
   v58 = List->m_Items[0];
   if ( !v58 )
-    sub_1C13F80(v56, v52);
+    sub_1C1AE30(v56, v52);
   mTerminalList = mInstance->fields.mTerminalList;
   if ( !mTerminalList )
-    sub_1C13F80(0LL, v52);
+    sub_1C1AE30(0LL, v52);
   ScrTerminalListTop__StartQuest(mTerminalList, v58->fields.phase, v58, 0LL);
-  v60 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v60 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !v60 )
-    sub_1C13F80(0LL, v61);
+    sub_1C1AE30(0LL, v61);
   CommonUI__SetFadeMaskCollider((CommonUI_o *)v60, 0, 0LL);
   v62 = 9;
 LABEL_62:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v65,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_QuestReleaseEntity__Dispose__);
   return v42 && v62 == 9;
 }
 
@@ -15606,14 +15590,14 @@ void __fastcall ScrTerminalMap__Update(ScrTerminalMap_o *this, const MethodInfo 
   bool v15; // cf
   unsigned int v16; // w8
 
-  if ( (byte_4BB18E8 & 1) == 0 )
+  if ( (byte_4BC4CA4 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap_UpdateEventRaidUI__, v4);
-    sub_1C13D24(&StringLiteral_9023/*"Maltese (Malta)"*/, v5);
-    sub_1C13D24(&StringLiteral_9024/*"ManaPrism"*/, v6);
-    byte_4BB18E8 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap_UpdateEventRaidUI__, v4);
+    sub_1C1ABD4(&StringLiteral_9029/*"Map Touch Disable"*/, v5);
+    sub_1C1ABD4(&StringLiteral_9030/*"Map Touch Enable"*/, v6);
+    byte_4BC4CA4 = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -15622,13 +15606,13 @@ void __fastcall ScrTerminalMap__Update(ScrTerminalMap_o *this, const MethodInfo 
   if ( v8 )
   {
     if ( !MyFsmP )
-      sub_1C13F80(v8, v9);
+      sub_1C1AE30(v8, v9);
     ActiveStateName = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)MyFsmP, 0LL);
-    if ( System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_9024/*"ManaPrism"*/, 0LL)
+    if ( System_String__op_Equality(ActiveStateName, (System_String_o *)StringLiteral_9030/*"Map Touch Enable"*/, 0LL)
       || (v11 = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)MyFsmP, 0LL),
-          System_String__op_Equality(v11, (System_String_o *)StringLiteral_9023/*"Maltese (Malta)"*/, 0LL)) )
+          System_String__op_Equality(v11, (System_String_o *)StringLiteral_9029/*"Map Touch Disable"*/, 0LL)) )
     {
-      v12 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v12, (Il2CppObject *)this, Method_ScrTerminalMap_UpdateEventRaidUI__, 0LL);
       ScrTerminalMap__CheckUpdateRequest(this, 0, v12, v13);
     }
@@ -15666,53 +15650,53 @@ void __fastcall ScrTerminalMap__UpdateAllMapGimmickComponent(ScrTerminalMap_o *t
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BB191C & 1) == 0 )
+  if ( (byte_4BC4CD8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__get_Current__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__, v5);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
-    byte_4BB191C = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__get_Current__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
+    byte_4BC4CD8 = 1;
   }
   memset(&v24, 0, sizeof(v24));
   gimmickList = (System_Collections_Generic_List_object__o *)this->fields.gimmickList;
   if ( !gimmickList )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     gimmickList,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__);
   v24 = v23;
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v24,
-           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__);
+           (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__);
     if ( !v8 )
       break;
     current = v24.fields._current;
     if ( !v24.fields._current )
-      sub_1C13F80(v8, v9);
+      sub_1C1AE30(v8, v9);
     v12 = v24.fields._current + 7;
     klass = v24.fields._current[7].klass;
     if ( !klass )
-      sub_1C13F80(v8, v9);
+      sub_1C1AE30(v8, v9);
     name_high = HIDWORD(klass->_1.name);
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( !Instance )
-      sub_1C13F80(0LL, v15);
+      sub_1C1AE30(0LL, v15);
     MapGimmickInfo = QuestTree__GetMapGimmickInfo((QuestTree_o *)Instance, name_high, 0LL);
     if ( MapGimmickInfo )
     {
       v12->klass = (Il2CppClass *)MapGimmickInfo;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&current[7], (int64_t)MapGimmickInfo, v17, v18, v19, v20, v21, v22);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&current[7], (int64_t)MapGimmickInfo, v17, v18, v19, v20, v21, v22);
       MapGimmickComponent__ResetOldDispTime((MapGimmickComponent_o *)current, 0LL);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__);
 }
 
 
@@ -15747,7 +15731,7 @@ void __fastcall ScrTerminalMap__UpdateAllMovingSpotPosition(
       {
         v7 = this->fields.eventSpotMoveManager;
         if ( !v7 )
-          sub_1C13F80(0LL, v6);
+          sub_1C1AE30(0LL, v6);
         EventSpotMoveManager__UpdateAllSpotPosition(v7, isFocedMove, 0LL);
       }
     }
@@ -15766,33 +15750,33 @@ void __fastcall ScrTerminalMap__UpdateAllRaidProgressMapGimmickDisplay(
   __int64 v7; // x1
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB191D & 1) == 0 )
+  if ( (byte_4BC4CD9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__get_Current__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__, v5);
-    byte_4BB191D = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__get_Current__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__, v5);
+    byte_4BC4CD9 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   gimmickList = (System_Collections_Generic_List_object__o *)this->fields.gimmickList;
   if ( !gimmickList )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     gimmickList,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapGimmickComponent__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__) )
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__MoveNext__) )
   {
     if ( !v8.fields._current )
-      sub_1C13F80(0LL, v7);
+      sub_1C1AE30(0LL, v7);
     MapGimmickComponent__SetDisplayByRaidProgress((MapGimmickComponent_o *)v8.fields._current, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapGimmickComponent__Dispose__);
 }
 
 
@@ -15807,36 +15791,36 @@ void __fastcall ScrTerminalMap__UpdateAllSpotGameObject(ScrTerminalMap_o *this, 
   const MethodInfo *v9; // x2
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB191B & 1) == 0 )
+  if ( (byte_4BC4CD7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v5);
-    byte_4BB191B = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v5);
+    byte_4BC4CD7 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   mMapInfo = this->fields.mMapInfo;
   if ( !mMapInfo || (mMapInfo = (MapControl_MapInfo_o *)MapControl_MapInfo__GetSpotList(mMapInfo, 0LL)) == 0LL )
-    sub_1C13F80(mMapInfo, method);
+    sub_1C1AE30(mMapInfo, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     (System_Collections_Generic_List_object__o *)mMapInfo,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v10,
-           (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
+           (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
     if ( !v7 )
       break;
     if ( !v10.fields._current )
-      sub_1C13F80(v7, v8);
+      sub_1C1AE30(v7, v8);
     ScrTerminalMap__UpdateSpotGameObject(this, (int32_t)v10.fields._current[1].klass, v9);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v10,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
 }
 
 
@@ -15846,7 +15830,7 @@ void __fastcall ScrTerminalMap__UpdateAreaBoardList(ScrTerminalMap_o *this, cons
 
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene || (this = (ScrTerminalMap_o *)terminalScene->fields.mTerminalList) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   ScrTerminalListTop__UpdateAreaQuestInfoList((ScrTerminalListTop_o *)this, 0LL);
 }
 
@@ -15894,22 +15878,22 @@ void __fastcall ScrTerminalMap__UpdateBoardGameSquare(
   struct MapCamera_o *v41; // x8
   TerminalPramsManager_c *v42; // x0
 
-  if ( (byte_4BB1977 & 1) == 0 )
+  if ( (byte_4BC4D33 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_MapControl_MapGimmickInfo__TypeInfo, *(_QWORD *)&squareId);
-    sub_1C13D24(&Method_BasicHelper_ForEach_MapControl_MapGimmickInfo___, v9);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Where_MapControl_MapGimmickInfo___, v10);
-    sub_1C13D24(&System_Func_MapControl_MapGimmickInfo__bool__TypeInfo, v11);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v12);
-    sub_1C13D24(&Method_ScrTerminalMap__UpdateBoardGameSquare_b__402_1__, v13);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v15);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v16);
-    sub_1C13D24(&Method_ScrTerminalMap___c__UpdateBoardGameSquare_b__402_0__, v17);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v18);
-    byte_4BB1977 = 1;
+    sub_1C1ABD4(&System_Action_MapControl_MapGimmickInfo__TypeInfo, *(_QWORD *)&squareId);
+    sub_1C1ABD4(&Method_BasicHelper_ForEach_MapControl_MapGimmickInfo___, v9);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_MapControl_MapGimmickInfo___, v10);
+    sub_1C1ABD4(&System_Func_MapControl_MapGimmickInfo__bool__TypeInfo, v11);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v12);
+    sub_1C1ABD4(&Method_ScrTerminalMap__UpdateBoardGameSquare_b__402_1__, v13);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v15);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v16);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__UpdateBoardGameSquare_b__402_0__, v17);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v18);
+    byte_4BC4D33 = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_28;
   MissionNotifyManager__EndPause(Instance, 0LL);
@@ -15935,11 +15919,11 @@ void __fastcall ScrTerminalMap__UpdateBoardGameSquare(
       v24 = ScrTerminalMap___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v24->static_fields->__9;
-    _9__402_0 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_MapControl_MapGimmickInfo__bool__TypeInfo);
+    _9__402_0 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_MapControl_MapGimmickInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__402_0, v27, Method_ScrTerminalMap___c__UpdateBoardGameSquare_b__402_0__, 0LL);
     static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
     static_fields->__9__402_0 = (struct System_Func_MapControl_MapGimmickInfo__bool__o *)_9__402_0;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&static_fields->__9__402_0,
       (int64_t)_9__402_0,
       v29,
@@ -15952,13 +15936,13 @@ void __fastcall ScrTerminalMap__UpdateBoardGameSquare(
   v35 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                          v25,
                                                          (System_Func_TSource__bool__o *)_9__402_0,
-                                                         (const MethodInfo_2FCEBC0 *)Method_System_Linq_Enumerable_Where_MapControl_MapGimmickInfo___);
-  v36 = (System_Action_object__o *)sub_1C13F70(System_Action_MapControl_MapGimmickInfo__TypeInfo);
+                                                         (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_MapControl_MapGimmickInfo___);
+  v36 = (System_Action_object__o *)sub_1C1AE20(System_Action_MapControl_MapGimmickInfo__TypeInfo);
   System_Action_object____ctor(v36, (Il2CppObject *)this, Method_ScrTerminalMap__UpdateBoardGameSquare_b__402_1__, 0LL);
   BasicHelper__ForEach_object_(
     v35,
     (System_Action_T__o *)v36,
-    (const MethodInfo_2F7C3C8 *)Method_BasicHelper_ForEach_MapControl_MapGimmickInfo___);
+    (const MethodInfo_2F8C3EC *)Method_BasicHelper_ForEach_MapControl_MapGimmickInfo___);
   if ( ScrTerminalMap__IsEnabledToUseEventItem(this, v37) )
     ScrTerminalMap__ChangeBoardGameDiceButttonActive(this, v38);
   else
@@ -15976,10 +15960,10 @@ void __fastcall ScrTerminalMap__UpdateBoardGameSquare(
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB14A2 )
+  if ( !byte_4BC4856 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v20);
-    byte_4BB14A2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v20);
+    byte_4BC4856 = 1;
   }
   v42 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -15989,14 +15973,14 @@ void __fastcall ScrTerminalMap__UpdateBoardGameSquare(
   }
   if ( !v42->static_fields->_IsPlayEventBoardGameArrivalEffectAuto_k__BackingField )
   {
-    Instance = (MissionNotifyManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (MissionNotifyManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetFadeMaskCollider((CommonUI_o *)Instance, 0, 0LL);
       return;
     }
 LABEL_28:
-    sub_1C13F80(Instance, v20);
+    sub_1C1AE30(Instance, v20);
   }
 }
 
@@ -16007,7 +15991,7 @@ void __fastcall ScrTerminalMap__UpdateCaldeaFolderBoardList(ScrTerminalMap_o *th
 
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene || (this = (ScrTerminalMap_o *)terminalScene->fields.mTerminalList) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   ScrTerminalListTop__UpdateCaldeaFolderInfoList((ScrTerminalListTop_o *)this, 1, 0LL);
 }
 
@@ -16029,21 +16013,21 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
   TerminalPramsManager_c *v14; // x0
   TerminalPramsManager_c *v15; // x0
 
-  if ( (byte_4BB1978 & 1) == 0 )
+  if ( (byte_4BC4D34 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, callback);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_4486/*"Cf"*/, v7);
-    sub_1C13D24(&StringLiteral_12923/*"SetAutoLabel"*/, v8);
-    byte_4BB1978 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, callback);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_4489/*"ChangeBoardGameDiceButttonActive"*/, v7);
+    sub_1C1ABD4(&StringLiteral_12935/*"SetEventBoardQuestArrivalPanel"*/, v8);
+    byte_4BC4D34 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB14A2 )
+  if ( !byte_4BC4856 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, callback);
-    byte_4BB14A2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, callback);
+    byte_4BC4856 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16053,7 +16037,7 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
   }
   if ( v9->static_fields->_IsPlayEventBoardGameArrivalEffectAuto_k__BackingField )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_36;
     CommonUI__SetFadeMaskCollider(Instance, 1, 0LL);
@@ -16062,7 +16046,7 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
   if ( this->fields.isWaitingViewEventBoardQuestArrivalPanel )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12923/*"SetAutoLabel"*/,
+      (System_String_o *)StringLiteral_12935/*"SetEventBoardQuestArrivalPanel"*/,
       1.0,
       0LL);
   diceButton = (UnityEngine_Object_o *)this->fields.diceButton;
@@ -16080,10 +16064,10 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
         {
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4BB19DB )
+          if ( !byte_4BC4D97 )
           {
-            sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-            byte_4BB19DB = 1;
+            sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+            byte_4BC4D97 = 1;
           }
           v14 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16095,10 +16079,10 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
           {
             if ( !v14->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(v14);
-            if ( !byte_4BB181A )
+            if ( !byte_4BC4BD6 )
             {
-              sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-              byte_4BB181A = 1;
+              sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+              byte_4BC4BD6 = 1;
             }
             v15 = TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16109,7 +16093,7 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
             if ( !v15->static_fields->_IsPlayScriptWithMap_k__BackingField )
               UnityEngine_MonoBehaviour__Invoke(
                 (UnityEngine_MonoBehaviour_o *)this,
-                (System_String_o *)StringLiteral_4486/*"Cf"*/,
+                (System_String_o *)StringLiteral_4489/*"ChangeBoardGameDiceButttonActive"*/,
                 1.0,
                 0LL);
           }
@@ -16118,7 +16102,7 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGame(
       }
     }
 LABEL_36:
-    sub_1C13F80(Instance, v11);
+    sub_1C1AE30(Instance, v11);
   }
 }
 
@@ -16135,18 +16119,18 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGameSpot(ScrTerminalMap_o *this,
   struct SrcSpotBasePrefab_o *v10; // x8
   struct MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x8
 
-  if ( (byte_4BB1962 & 1) == 0 )
+  if ( (byte_4BC4D1E & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v3);
-    byte_4BB1962 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v3);
+    byte_4BC4D1E = 1;
   }
   eventBoardGameSpotPrefab = (UnityEngine_Object_o *)this->fields.eventBoardGameSpotPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(eventBoardGameSpotPrefab, 0LL, 0LL) )
   {
-    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = (QuestTree_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     v7 = this->fields.eventBoardGameSpotPrefab;
     if ( !v7 || !Instance )
       goto LABEL_14;
@@ -16161,7 +16145,7 @@ void __fastcall ScrTerminalMap__UpdateEventBoardGameSpot(ScrTerminalMap_o *this,
       || (mMapCtrl_SpotInfo = v10->fields.mMapCtrl_SpotInfo) == 0LL )
     {
 LABEL_14:
-      sub_1C13F80(Instance, v6);
+      sub_1C1AE30(Instance, v6);
     }
     mMapCtrl_SpotInfo->fields._IsNext_k__BackingField = v9->fields._IsNext_k__BackingField;
   }
@@ -16194,7 +16178,7 @@ void __fastcall ScrTerminalMap__UpdateMapButtonBadge(ScrTerminalMap_o *this, con
 
   mapButtonGrid = this->fields.mapButtonGrid;
   if ( !mapButtonGrid )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   MapButtonControl__UpdateBadge(mapButtonGrid, this->fields.mWarInfo, this->fields.mMapInfo, 0LL);
 }
 
@@ -16211,12 +16195,12 @@ void __fastcall ScrTerminalMap__UpdateSpotGameObject(ScrTerminalMap_o *this, int
   _BYTE *v11; // x19
   struct MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x8
 
-  if ( (byte_4BB191A & 1) == 0 )
+  if ( (byte_4BC4CD6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, *(_QWORD *)&spotId);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
-    byte_4BB191A = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
+    byte_4BC4CD6 = 1;
   }
   SpotGameObject = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotGameObject(this, spotId, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -16228,12 +16212,12 @@ void __fastcall ScrTerminalMap__UpdateSpotGameObject(ScrTerminalMap_o *this, int
       goto LABEL_16;
     Component_object = (SrcSpotBasePrefab_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 (UnityEngine_GameObject_o *)SpotGameObject,
-                                                (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                                                (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
     {
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( Instance )
       {
         Instance = QuestTree__GetSpotInfo((QuestTree_o *)Instance, spotId, 0LL);
@@ -16252,7 +16236,7 @@ void __fastcall ScrTerminalMap__UpdateSpotGameObject(ScrTerminalMap_o *this, int
         }
       }
 LABEL_16:
-      sub_1C13F80(Instance, v9);
+      sub_1C1AE30(Instance, v9);
     }
   }
 }
@@ -16273,13 +16257,13 @@ void __fastcall ScrTerminalMap__ViewEventBoardGameQuestListAuto(ScrTerminalMap_o
   const MethodInfo *v13; // x2
   TerminalPramsManager_c *v14; // x0
 
-  if ( (byte_4BB195D & 1) == 0 )
+  if ( (byte_4BC4D19 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v4);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    byte_4BB195D = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v4);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    byte_4BC4D19 = 1;
   }
   eventBoardGameSpotPrefab = (UnityEngine_Object_o *)this->fields.eventBoardGameSpotPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -16299,7 +16283,7 @@ void __fastcall ScrTerminalMap__ViewEventBoardGameQuestListAuto(ScrTerminalMap_o
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)SpotGameObject, 0LL, 0LL) )
     {
       ScrTerminalMap__smfSpotBtn_Click(this, SpotGameObject, v13);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       CommonUI__SetFadeMaskCollider((CommonUI_o *)Instance, 0, 0LL);
@@ -16307,10 +16291,10 @@ void __fastcall ScrTerminalMap__ViewEventBoardGameQuestListAuto(ScrTerminalMap_o
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D9 )
+  if ( !byte_4BC4D95 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BB19D9 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4D95 = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16319,10 +16303,10 @@ void __fastcall ScrTerminalMap__ViewEventBoardGameQuestListAuto(ScrTerminalMap_o
     v14 = TerminalPramsManager_TypeInfo;
   }
   v14->static_fields->_IsPlayEventBoardGameArrivalEffectAuto_k__BackingField = 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
 LABEL_21:
-    sub_1C13F80(Instance, v8);
+    sub_1C1AE30(Instance, v8);
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)Instance, 0LL);
 }
 
@@ -16333,12 +16317,12 @@ System_Collections_IEnumerator_o *__fastcall ScrTerminalMap__WaitConnecting(
 {
   ScrTerminalMap__WaitConnecting_d__249_o *v2; // x19
 
-  if ( (byte_4BB18EF & 1) == 0 )
+  if ( (byte_4BC4CAB & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap__WaitConnecting_d__249_TypeInfo, method);
-    byte_4BB18EF = 1;
+    sub_1C1ABD4(&ScrTerminalMap__WaitConnecting_d__249_TypeInfo, method);
+    byte_4BC4CAB = 1;
   }
-  v2 = (ScrTerminalMap__WaitConnecting_d__249_o *)sub_1C13F70(ScrTerminalMap__WaitConnecting_d__249_TypeInfo);
+  v2 = (ScrTerminalMap__WaitConnecting_d__249_o *)sub_1C1AE20(ScrTerminalMap__WaitConnecting_d__249_TypeInfo);
   ScrTerminalMap__WaitConnecting_d__249___ctor(v2, 0, 0LL);
   return (System_Collections_IEnumerator_o *)v2;
 }
@@ -16358,17 +16342,17 @@ System_Collections_IEnumerator_o *__fastcall ScrTerminalMap__WaitScriptLoad(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB192B & 1) == 0 )
+  if ( (byte_4BC4CE7 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap__WaitScriptLoad_d__316_TypeInfo, method);
-    byte_4BB192B = 1;
+    sub_1C1ABD4(&ScrTerminalMap__WaitScriptLoad_d__316_TypeInfo, method);
+    byte_4BC4CE7 = 1;
   }
-  v3 = sub_1C13F70(ScrTerminalMap__WaitScriptLoad_d__316_TypeInfo);
+  v3 = sub_1C1AE20(ScrTerminalMap__WaitScriptLoad_d__316_TypeInfo);
   ScrTerminalMap__WaitScriptLoad_d__316___ctor((ScrTerminalMap__WaitScriptLoad_d__316_o *)v3, 0, 0LL);
   if ( !v3 )
-    sub_1C13F80(v4, v5);
+    sub_1C1AE30(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -16382,18 +16366,18 @@ void __fastcall ScrTerminalMap___AfterActionPlay_b__339_0(ScrTerminalMap_o *this
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BB19A1 & 1) == 0 )
+  if ( (byte_4BC4D5D & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__AfterActionPlay_b__339_1__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v4);
-    byte_4BB19A1 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__AfterActionPlay_b__339_1__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v4);
+    byte_4BC4D5D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-  v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScrTerminalMap__AfterActionPlay_b__339_1__, 0LL);
   if ( !Instance )
-    sub_1C13F80(v7, v8);
+    sub_1C1AE30(v7, v8);
   QuestAfterAction__Play((QuestAfterAction_o *)Instance, v6, 0LL);
 }
 
@@ -16411,18 +16395,18 @@ void __fastcall ScrTerminalMap___AfterActionPlay_b__339_1(ScrTerminalMap_o *this
   EventMapManagerInterface_c **p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BB19A2 & 1) == 0 )
+  if ( (byte_4BC4D5E & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap_EventActionPlay__, v4);
-    byte_4BB19A2 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EventActionPlay__, v4);
+    byte_4BC4D5E = 1;
   }
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
-  v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScrTerminalMap_EventActionPlay__, 0LL);
   if ( !eventMapManagerInterface_k__BackingField )
-    sub_1C13F80(v7, v8);
+    sub_1C1AE30(v7, v8);
   klass = eventMapManagerInterface_k__BackingField->klass;
   v10 = *(unsigned __int16 *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&eventMapManagerInterface_k__BackingField->klass->_2.bitflags2 + 3) )
@@ -16440,7 +16424,7 @@ void __fastcall ScrTerminalMap___AfterActionPlay_b__339_1(ScrTerminalMap_o *this
   else
   {
 LABEL_8:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 7LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 7LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -16458,7 +16442,7 @@ void __fastcall ScrTerminalMap___CreateMapGimmick_b__311_0(
 
   titleInfoControl = this->fields.titleInfoControl;
   if ( !titleInfoControl )
-    sub_1C13F80(0LL, result);
+    sub_1C1AE30(0LL, result);
   TitleInfoControl__UpdateEventInfo(titleInfoControl, 0LL, 0LL);
 }
 
@@ -16489,7 +16473,7 @@ void __fastcall ScrTerminalMap___FadeOutSpotMask_b__328_0(ScrTerminalMap_o *this
     spotMaskObj = this->fields.spotMaskObj;
     this->fields.isFadingSpotmask = 0;
     if ( !spotMaskObj )
-      sub_1C13F80(this, method);
+      sub_1C1AE30(this, method);
     UnityEngine_GameObject__SetActive(spotMaskObj, 0, 0LL);
   }
 }
@@ -16512,32 +16496,32 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_0(ScrTermina
   __int64 v6; // x1
   struct System_Int32_array *EventBoardGameArrivalVoiceSvtIdList_k__BackingField; // x8
   SoundManager_o *v8; // x20
-  System_String_o *VoiceAssetName_41015788; // x21
+  System_String_o *VoiceAssetName_41071744; // x21
   System_Action_o *v10; // x22
 
-  if ( (byte_4BB19B0 & 1) == 0 )
+  if ( (byte_4BC4D6C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_1__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
-    byte_4BB19B0 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_1__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v4);
+    byte_4BC4D6C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   EventBoardGameArrivalVoiceSvtIdList_k__BackingField = this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField;
   if ( !EventBoardGameArrivalVoiceSvtIdList_k__BackingField )
     goto LABEL_7;
   if ( !EventBoardGameArrivalVoiceSvtIdList_k__BackingField->max_length )
-    sub_1C13F88(Instance, v6);
+    sub_1C1AE38(Instance, v6);
   v8 = (SoundManager_o *)Instance;
-  VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(
+  VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(
                               EventBoardGameArrivalVoiceSvtIdList_k__BackingField->m_Items[1],
                               0LL);
-  v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_1__, 0LL);
   if ( !v8 )
 LABEL_7:
-    sub_1C13F80(Instance, v6);
-  SoundManager__LoadAudioAssetStorage(v8, VoiceAssetName_41015788, v10, 1, 0LL);
+    sub_1C1AE30(Instance, v6);
+  SoundManager__LoadAudioAssetStorage(v8, VoiceAssetName_41071744, v10, 1, 0LL);
 }
 
 
@@ -16553,55 +16537,55 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_1(ScrTermina
   Il2CppClass *klass; // x8
   Il2CppClass *v10; // x8
   SoundManager_o *v11; // x20
-  System_String_o *VoiceAssetName_41015788; // x21
+  System_String_o *VoiceAssetName_41071744; // x21
   System_Action_o *v13; // x22
   AssetLoader_LoadEndDataHandler_o *v14; // x20
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4BB19B1 & 1) == 0 )
+  if ( (byte_4BC4D6D & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AssetManager_TypeInfo, v3);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_2__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_3__, v6);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v7);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&StringLiteral_5981/*"Effect/Combine"*/, v8);
-    byte_4BB19B1 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v3);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_2__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_3__, v6);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v7);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&StringLiteral_5985/*"Effect/Dice"*/, v8);
+    byte_4BC4D6D = 1;
   }
   klass = v2[46].klass;
   if ( !klass )
     goto LABEL_13;
   if ( LODWORD(klass->_1.namespaze) <= 1 )
 LABEL_14:
-    sub_1C13F88(this, method);
+    sub_1C1AE38(this, method);
   if ( SHIDWORD(klass->_1.byval_arg.data) >= 1 )
   {
-    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     v10 = v2[46].klass;
     if ( !v10 )
       goto LABEL_13;
     if ( LODWORD(v10->_1.namespaze) > 1 )
     {
       v11 = (SoundManager_o *)this;
-      VoiceAssetName_41015788 = ServantVoiceEntity__getVoiceAssetName_41015788(HIDWORD(v10->_1.byval_arg.data), 0LL);
-      v13 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      VoiceAssetName_41071744 = ServantVoiceEntity__getVoiceAssetName_41071744(HIDWORD(v10->_1.byval_arg.data), 0LL);
+      v13 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v13, v2, Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_2__, 0LL);
       if ( v11 )
       {
-        SoundManager__LoadAudioAssetStorage(v11, VoiceAssetName_41015788, v13, 1, 0LL);
+        SoundManager__LoadAudioAssetStorage(v11, VoiceAssetName_41071744, v13, 1, 0LL);
         return;
       }
 LABEL_13:
-      sub_1C13F80(this, method);
+      sub_1C1AE30(this, method);
     }
     goto LABEL_14;
   }
-  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v14 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v14, v2, Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_3__, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5981/*"Effect/Combine"*/, v14, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5985/*"Effect/Dice"*/, v14, 1, 0LL);
 }
 
 
@@ -16612,15 +16596,15 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_2(ScrTermina
   __int64 v5; // x1
   AssetLoader_LoadEndDataHandler_o *v6; // x20
 
-  if ( (byte_4BB19B2 & 1) == 0 )
+  if ( (byte_4BC4D6E & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, method);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_4__, v4);
-    sub_1C13D24(&StringLiteral_5981/*"Effect/Combine"*/, v5);
-    byte_4BB19B2 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, method);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__LoadEventBoardGameDiceAsset_b__371_4__, v4);
+    sub_1C1ABD4(&StringLiteral_5985/*"Effect/Dice"*/, v5);
+    byte_4BC4D6E = 1;
   }
-  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v6,
     (Il2CppObject *)this,
@@ -16628,7 +16612,7 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_2(ScrTermina
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5981/*"Effect/Combine"*/, v6, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5985/*"Effect/Dice"*/, v6, 1, 0LL);
 }
 
 
@@ -16644,7 +16628,7 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_3(
   PartyListViewItem_o *v7; // x7
 
   this->fields.boardGameDiceAssetData = effectData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.boardGameDiceAssetData,
     (int64_t)effectData,
     (int64_t)method,
@@ -16668,7 +16652,7 @@ void __fastcall ScrTerminalMap___LoadEventBoardGameDiceAsset_b__371_4(
   PartyListViewItem_o *v7; // x7
 
   this->fields.boardGameDiceAssetData = effectData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.boardGameDiceAssetData,
     (int64_t)effectData,
     (int64_t)method,
@@ -16711,16 +16695,16 @@ void __fastcall ScrTerminalMap___MapTouchEnableAuto_b__338_0(ScrTerminalMap_o *t
   System_Action_o *v28; // x21
 
   v2 = this;
-  if ( (byte_4BB19A0 & 1) == 0 )
+  if ( (byte_4BC4D5C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__MapTouchEnableAuto_b__338_2__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__MapTouchEnableAuto_b__338_1__, v7);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v8);
-    byte_4BB19A0 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__MapTouchEnableAuto_b__338_2__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__MapTouchEnableAuto_b__338_1__, v7);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v8);
+    byte_4BC4D5C = 1;
   }
   terminalScene = v2->fields.terminalScene;
   if ( !terminalScene )
@@ -16734,10 +16718,10 @@ void __fastcall ScrTerminalMap___MapTouchEnableAuto_b__338_0(ScrTerminalMap_o *t
   QuestBoardListViewManager__SetOutPosition((QuestBoardListViewManager_o *)this, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1803 )
+  if ( !byte_4BC4BBF )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1803 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4BBF = 1;
   }
   this = (ScrTerminalMap_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16769,11 +16753,11 @@ void __fastcall ScrTerminalMap___MapTouchEnableAuto_b__338_0(ScrTerminalMap_o *t
         this = (ScrTerminalMap_o *)ScrTerminalMap___c_TypeInfo;
       }
       klass = (Il2CppObject *)this->fields.subRootGimmickP->klass;
-      monitor = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      monitor = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(monitor, klass, Method_ScrTerminalMap___c__MapTouchEnableAuto_b__338_1__, 0LL);
       static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
       static_fields->__9__338_1 = monitor;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&static_fields->__9__338_1,
         (int64_t)monitor,
         v17,
@@ -16787,7 +16771,7 @@ void __fastcall ScrTerminalMap___MapTouchEnableAuto_b__338_0(ScrTerminalMap_o *t
       goto LABEL_30;
     QuestBoardListViewManager__SetMode(mQuestBoardListViewManager, 0, monitor, 0, 0, 0LL);
   }
-  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !this )
     goto LABEL_30;
   if ( LOBYTE(this->fields.rootEffectP) )
@@ -16804,11 +16788,11 @@ void __fastcall ScrTerminalMap___MapTouchEnableAuto_b__338_0(ScrTerminalMap_o *t
     v26 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v26->static_fields->DEFAULT_FADE_TIME;
-  v28 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v28 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v28, (Il2CppObject *)v2, Method_ScrTerminalMap__MapTouchEnableAuto_b__338_2__, 0LL);
   if ( !v25 )
 LABEL_30:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   TerminalSceneComponent__Fadein_MapDisp(v25, DEFAULT_FADE_TIME, v28, 0LL);
 }
 
@@ -16842,16 +16826,16 @@ void __fastcall ScrTerminalMap___OnClickMonoplyBoard_b__384_0(ScrTerminalMap_o *
   System_Action_o *v27; // x20
   const MethodInfo *v28; // x4
 
-  if ( (byte_4BB19B4 & 1) == 0 )
+  if ( (byte_4BC4D70 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap_OpenDiceSelectDialog__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    byte_4BB19B4 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap_OpenDiceSelectDialog__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    byte_4BC4D70 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   CommonUI__SetFadeMaskCollider(Instance, 1, 0LL);
@@ -16869,7 +16853,7 @@ void __fastcall ScrTerminalMap___OnClickMonoplyBoard_b__384_0(ScrTerminalMap_o *
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
       this->fields.spotTouchObj = gameObject;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&this->fields.spotTouchObj,
         (int64_t)gameObject,
         v12,
@@ -16884,10 +16868,10 @@ void __fastcall ScrTerminalMap___OnClickMonoplyBoard_b__384_0(ScrTerminalMap_o *
         miSpotID = v19->fields.miSpotID;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4BB1256 )
+        if ( !byte_4BC4610 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-          byte_4BB1256 = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+          byte_4BC4610 = 1;
         }
         v21 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16902,10 +16886,10 @@ void __fastcall ScrTerminalMap___OnClickMonoplyBoard_b__384_0(ScrTerminalMap_o *
         {
           IsMultiMap = MapControl_WarInfo__IsMultiMap((MapControl_WarInfo_o *)Instance, 0LL);
           SaveKey_PlayerIcon = ScrTerminalMap__GetSaveKey_PlayerIcon(this, IsMultiMap, v23);
-          if ( !byte_4BB1430 )
+          if ( !byte_4BC47EA )
           {
-            sub_1C13D24(&TerminalPramsManager_TypeInfo, v24);
-            byte_4BB1430 = 1;
+            sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v24);
+            byte_4BC47EA = 1;
           }
           v26 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16919,10 +16903,10 @@ void __fastcall ScrTerminalMap___OnClickMonoplyBoard_b__384_0(ScrTerminalMap_o *
       }
     }
 LABEL_23:
-    sub_1C13F80(Instance, v8);
+    sub_1C1AE30(Instance, v8);
   }
 LABEL_22:
-  v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)this, Method_ScrTerminalMap_OpenDiceSelectDialog__, 0LL);
   ScrTerminalMap__EventBoardCameraAction(this, v27, 0, 0, v28);
 }
@@ -16946,11 +16930,11 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
   TerminalPramsManager_c *v13; // x0
 
   v8 = this;
-  if ( (byte_4BB19A8 & 1) == 0 )
+  if ( (byte_4BC4D64 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, result);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    byte_4BB19A8 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, result);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    byte_4BC4D64 = 1;
   }
   eventScriptCallingList = v8->fields.eventScriptCallingList;
   v11 = (unsigned int)(v8->fields.eventScriptCallingIdx + 1);
@@ -16963,7 +16947,7 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
     return;
   }
   v8->fields.eventScriptCallingList = 0LL;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v8->fields.eventScriptCallingList,
     0LL,
     (int64_t)method,
@@ -16974,10 +16958,10 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
     v7);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF54B )
+  if ( !byte_4BC28F4 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    byte_4BAF54B = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    byte_4BC28F4 = 1;
   }
   v13 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -16986,11 +16970,11 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
     v13 = TerminalPramsManager_TypeInfo;
   }
   v13->static_fields->_IsAutoResume_k__BackingField = 1;
-  if ( !byte_4BB1256 )
+  if ( !byte_4BC4610 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
     v13 = TerminalPramsManager_TypeInfo;
-    byte_4BB1256 = 1;
+    byte_4BC4610 = 1;
   }
   if ( !v13->_2.cctor_finished )
   {
@@ -16998,11 +16982,11 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
     v13 = TerminalPramsManager_TypeInfo;
   }
   v13->static_fields->_SpotId_k__BackingField = -1;
-  if ( !byte_4BB1251 )
+  if ( !byte_4BC460B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
     v13 = TerminalPramsManager_TypeInfo;
-    byte_4BB1251 = 1;
+    byte_4BC460B = 1;
   }
   if ( !v13->_2.cctor_finished )
   {
@@ -17010,10 +16994,10 @@ void __fastcall ScrTerminalMap___OnEndEventScripts_b__357_0(
     v13 = TerminalPramsManager_TypeInfo;
   }
   v13->static_fields->_QuestId_k__BackingField = -1;
-  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this )
 LABEL_22:
-    sub_1C13F80(this, v11);
+    sub_1C1AE30(this, v11);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)this, 34, 1, 0LL, 0, 0LL);
 }
 
@@ -17042,24 +17026,24 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_0(ScrTerminalMap_o *thi
   TerminalPramsManager_c *v22; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB19A4 & 1) == 0 )
+  if ( (byte_4BC4D60 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
-    sub_1C13D24(&DataManager_TypeInfo, v4);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_1__, v6);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BB19A4 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
+    sub_1C1ABD4(&DataManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_1__, v6);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4D60 = 1;
   }
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB183D )
+  if ( !byte_4BC4BF9 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB183D = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4BF9 = 1;
   }
   if ( TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
@@ -17070,10 +17054,10 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_0(ScrTerminalMap_o *thi
 LABEL_25:
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB1430 )
+    if ( !byte_4BC47EA )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v14);
-      byte_4BB1430 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v14);
+      byte_4BC47EA = 1;
     }
     v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17085,7 +17069,7 @@ LABEL_25:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDetailMaster___);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDetailMaster___);
       mWarEnt = this->fields.mWarEnt;
       if ( !mWarEnt || !Master_object )
         goto LABEL_73;
@@ -17093,7 +17077,7 @@ LABEL_25:
              Master_object,
              &entity,
              mWarEnt->fields.eventId,
-             (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+             (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
       {
         Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
         if ( !entity )
@@ -17106,10 +17090,10 @@ LABEL_25:
       }
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB14A2 )
+      if ( !byte_4BC4856 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-        byte_4BB14A2 = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+        byte_4BC4856 = 1;
       }
       v20 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17121,10 +17105,10 @@ LABEL_25:
       {
         if ( !v20->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v20);
-        if ( !byte_4BB19DD )
+        if ( !byte_4BC4D99 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-          byte_4BB19DD = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+          byte_4BC4D99 = 1;
         }
         v21 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17136,10 +17120,10 @@ LABEL_25:
         {
           if ( !v21->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(v21);
-          if ( !byte_4BB182C )
+          if ( !byte_4BC4BE8 )
           {
-            sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-            byte_4BB182C = 1;
+            sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+            byte_4BC4BE8 = 1;
           }
           v22 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17156,14 +17140,14 @@ LABEL_25:
     {
 LABEL_40:
       terminalScene = this->fields.terminalScene;
-      v19 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v19 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v19, (Il2CppObject *)this, Method_ScrTerminalMap__OnEveryActionEnd_b__354_1__, 0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB19DE )
+      if ( !byte_4BC4D9A )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-        byte_4BB19DE = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+        byte_4BC4D9A = 1;
       }
       Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17196,10 +17180,10 @@ LABEL_40:
       goto LABEL_25;
   }
 LABEL_9:
-  if ( !byte_4BB14A2 )
+  if ( !byte_4BC4856 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB14A2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4856 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17211,10 +17195,10 @@ LABEL_9:
   {
     if ( !v9->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v9);
-    if ( !byte_4BB19DD )
+    if ( !byte_4BC4D99 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB19DD = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4D99 = 1;
     }
     v10 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17225,14 +17209,14 @@ LABEL_9:
     if ( !v10->static_fields->_IsDataLostBattleNoticePause_k__BackingField )
     {
 LABEL_21:
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( Master_object )
       {
         MissionNotifyManager__CancelPause((MissionNotifyManager_o *)Master_object, 0LL);
         return;
       }
 LABEL_73:
-      sub_1C13F80(Master_object, v12);
+      sub_1C1AE30(Master_object, v12);
     }
   }
 }
@@ -17247,32 +17231,33 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_1(ScrTerminalMap_o *thi
   System_Action_o *v7; // x21
   __int64 v8; // x1
   TerminalPramsManager_c *v9; // x0
+  TerminalPramsManager_c *v10; // x0
 
-  if ( (byte_4BB19A5 & 1) == 0 )
+  if ( (byte_4BC4D61 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_2__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB19A5 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_2__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4D61 = 1;
   }
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene
     || (TerminalSceneComponent__PlayTutorial(terminalScene, 0LL), (terminalScene = this->fields.terminalScene) == 0LL)
     || (TerminalSceneComponent__PlayRaidTutorial(terminalScene, 0LL),
         v6 = this->fields.terminalScene,
-        v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v7, (Il2CppObject *)this, Method_ScrTerminalMap__OnEveryActionEnd_b__354_2__, 0LL),
         !v6) )
   {
-    sub_1C13F80(terminalScene, method);
+    sub_1C1AE30(terminalScene, method);
   }
   TerminalSceneComponent__PlayEventTutorial(v6, v7, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF54B )
+  if ( !byte_4BC4D9B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BAF54B = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4D9B = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17280,7 +17265,23 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_1(ScrTerminalMap_o *thi
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     v9 = TerminalPramsManager_TypeInfo;
   }
-  v9->static_fields->_IsAutoResume_k__BackingField = 0;
+  if ( !v9->static_fields->_IsMoveFolderByQuestAfterAction_k__BackingField )
+  {
+    if ( !v9->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v9);
+    if ( !byte_4BC28F4 )
+    {
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+      byte_4BC28F4 = 1;
+    }
+    v10 = TerminalPramsManager_TypeInfo;
+    if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+      v10 = TerminalPramsManager_TypeInfo;
+    }
+    v10->static_fields->_IsAutoResume_k__BackingField = 0;
+  }
 }
 
 
@@ -17293,20 +17294,20 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_2(ScrTerminalMap_o *thi
   System_Action_o *v6; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4BB19A6 & 1) == 0 )
+  if ( (byte_4BC4D62 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_3__, v3);
-    byte_4BB19A6 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_ScrTerminalMap__OnEveryActionEnd_b__354_3__, v3);
+    byte_4BC4D62 = 1;
   }
   monitor = v2[32].monitor;
   if ( !monitor
     || (v5 = (ScrTerminalListTop_o *)*((_QWORD *)monitor + 32),
-        v6 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v6 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v6, v2, Method_ScrTerminalMap__OnEveryActionEnd_b__354_3__, 0LL),
         !v5) )
   {
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   ScrTerminalListTop__CheckLimitCountUnSealQuestOpen(v5, v6, 0LL);
 }
@@ -17321,18 +17322,18 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_3(ScrTerminalMap_o *thi
   Il2CppObject *Instance; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BB19A7 & 1) == 0 )
+  if ( (byte_4BC4D63 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-    byte_4BB19A7 = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+    byte_4BC4D63 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB14A2 )
+  if ( !byte_4BC4856 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB14A2 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4856 = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17344,10 +17345,10 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_3(ScrTerminalMap_o *thi
   {
     if ( !v4->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v4);
-    if ( !byte_4BB19DD )
+    if ( !byte_4BC4D99 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB19DD = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4D99 = 1;
     }
     v5 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17359,10 +17360,10 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_3(ScrTerminalMap_o *thi
     {
       if ( !v5->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v5);
-      if ( !byte_4BB19DE )
+      if ( !byte_4BC4D9A )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-        byte_4BB19DE = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+        byte_4BC4D9A = 1;
       }
       v6 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17372,9 +17373,9 @@ void __fastcall ScrTerminalMap___OnEveryActionEnd_b__354_3(ScrTerminalMap_o *thi
       }
       if ( !v6->static_fields->_IsPlayGetEffect_k__BackingField )
       {
-        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+        Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
         if ( !Instance )
-          sub_1C13F80(0LL, v8);
+          sub_1C1AE30(0LL, v8);
         MissionNotifyManager__CancelPause((MissionNotifyManager_o *)Instance, 0LL);
       }
     }
@@ -17390,10 +17391,10 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_0(ScrTerminalMap_o 
   struct MapCamera_o *v4; // x8
 
   v2 = this;
-  if ( (byte_4BB19B5 & 1) == 0 )
+  if ( (byte_4BC4D71 & 1) == 0 )
   {
-    this = (ScrTerminalMap_o *)sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4BB19B5 = 1;
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4BC4D71 = 1;
   }
   mapCamera = v2->fields.mapCamera;
   if ( !mapCamera
@@ -17401,9 +17402,9 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_0(ScrTerminalMap_o 
     || (MapZoom__Stop((MapZoom_o *)this, 1, 0LL), (v4 = v2->fields.mapCamera) == 0LL)
     || (this = (ScrTerminalMap_o *)v4->fields.mScrl) == 0LL
     || (MapScroll__Stop((MapScroll_o *)this, 1, 0LL),
-        (this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   CommonUI__SetFadeMaskCollider((CommonUI_o *)this, 0, 0LL);
 }
@@ -17429,18 +17430,18 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_1(
   int32_t EventId; // w3
   const MethodInfo *v19; // x4
 
-  if ( (byte_4BB19B6 & 1) == 0 )
+  if ( (byte_4BC4D72 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, selectedItem);
-    byte_4BB19B6 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, selectedItem);
+    byte_4BC4D72 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetFadeMaskCollider(Instance, 1, 0LL),
         ScrTerminalMap__SetEnabledDiceButton(this, 0, v9),
         ScrTerminalMap__FrameOutUI(this, 0, v10),
         this->fields.eventBoardGameUsingItem = selectedItem,
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&this->fields.eventBoardGameUsingItem,
           (int64_t)selectedItem,
           v11,
@@ -17452,7 +17453,7 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_1(
         !selectedItem)
     || (Instance = (CommonUI_o *)this->fields.mWarInfo) == 0LL )
   {
-    sub_1C13F80(Instance, v8);
+    sub_1C1AE30(Instance, v8);
   }
   id = selectedItem->fields.id;
   EventId = MapControl_WarInfo__GetEventId((MapControl_WarInfo_o *)Instance, 0LL);
@@ -17468,11 +17469,11 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_2(ScrTerminalMap_o 
   TerminalPramsManager_c *v5; // x0
 
   v2 = this;
-  if ( (byte_4BB19B7 & 1) == 0 )
+  if ( (byte_4BC4D73 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, v3);
-    byte_4BB19B7 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v3);
+    byte_4BC4D73 = 1;
   }
   mapCamera = v2->fields.mapCamera;
   if ( !mapCamera )
@@ -17480,10 +17481,10 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_2(ScrTerminalMap_o 
   mapCamera->fields._IsTouchEnable_k__BackingField = 1;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1256 )
+  if ( !byte_4BC4610 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1256 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4610 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17492,10 +17493,10 @@ void __fastcall ScrTerminalMap___OpenDiceSelectDialog_b__389_2(ScrTerminalMap_o 
     v5 = TerminalPramsManager_TypeInfo;
   }
   v5->static_fields->_SpotId_k__BackingField = -1;
-  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
 LABEL_12:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   CommonUI__CloseEventItemListDialog((CommonUI_o *)this, 0LL);
 }
 
@@ -17509,19 +17510,19 @@ void __fastcall ScrTerminalMap___PlayBoardGameStopPiecePanel_b__399_0(ScrTermina
   System_Action_o *v7; // x21
   const MethodInfo *v8; // x4
 
-  if ( (byte_4BB19B8 & 1) == 0 )
+  if ( (byte_4BC4D74 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap_FrameInUI__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB19B8 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap_FrameInUI__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4D74 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D7B = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17530,7 +17531,7 @@ void __fastcall ScrTerminalMap___PlayBoardGameStopPiecePanel_b__399_0(ScrTermina
     v5 = TerminalPramsManager_TypeInfo;
   }
   EventBoardGameSquareIndex_k__BackingField = v5->static_fields->_EventBoardGameSquareIndex_k__BackingField;
-  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_ScrTerminalMap_FrameInUI__, 0LL);
   ScrTerminalMap__PlayBoardGameQuestArrivalEffect(this, EventBoardGameSquareIndex_k__BackingField, v7, 0, v8);
 }
@@ -17540,14 +17541,14 @@ void __fastcall ScrTerminalMap___PlayEventBoardGameArrivalEffectAuto_b__373_0(
         ScrTerminalMap_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB19B3 & 1) == 0 )
+  if ( (byte_4BC4D6F & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_15575/*"VertexLit"*/, method);
-    byte_4BB19B3 = 1;
+    sub_1C1ABD4(&StringLiteral_15587/*"ViewEventBoardGameQuestListAuto"*/, method);
+    byte_4BC4D6F = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15575/*"VertexLit"*/,
+    (System_String_o *)StringLiteral_15587/*"ViewEventBoardGameQuestListAuto"*/,
     1.0,
     0LL);
 }
@@ -17564,14 +17565,14 @@ void __fastcall ScrTerminalMap___StartDataLostBattleResetEffect_b__350_0(
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB19A3 & 1) == 0 )
+  if ( (byte_4BC4D5F & 1) == 0 )
   {
-    sub_1C13D24(&DataLostResetManager_TypeInfo, method);
-    byte_4BB19A3 = 1;
+    sub_1C1ABD4(&DataLostResetManager_TypeInfo, method);
+    byte_4BC4D5F = 1;
   }
   ActionExtensions__Call(this->fields.dataLostBattleResetEffectEndAct, 0LL);
   this->fields.dataLostBattleResetEffectEndAct = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.dataLostBattleResetEffectEndAct, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.dataLostBattleResetEffectEndAct, 0LL, v3, v4, v5, v6, v7, v8);
   this->fields.isPlayingDataLostBattleResetEffect = 0;
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
@@ -17623,24 +17624,24 @@ void __fastcall ScrTerminalMap___UpdateBoardGameSquare_b__402_1(
   int64_t v34; // x1
   Il2CppClass **v35; // x0
 
-  if ( (byte_4BB19B9 & 1) == 0 )
+  if ( (byte_4BC4D75 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__Add__, x);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__FindIndex__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__, v6);
-    sub_1C13D24(&System_Predicate_MapGimmickComponent__TypeInfo, v7);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass402_0__UpdateBoardGameSquare_b__2__, v8);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass402_0_TypeInfo, v9);
-    byte_4BB19B9 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__Add__, x);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__FindIndex__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__, v6);
+    sub_1C1ABD4(&System_Predicate_MapGimmickComponent__TypeInfo, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass402_0__UpdateBoardGameSquare_b__2__, v8);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass402_0_TypeInfo, v9);
+    byte_4BC4D75 = 1;
   }
-  v10 = sub_1C13F70(ScrTerminalMap___c__DisplayClass402_0_TypeInfo);
+  v10 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass402_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass402_0___ctor((ScrTerminalMap___c__DisplayClass402_0_o *)v10, 0LL);
   if ( !v10 )
     goto LABEL_19;
   *(_QWORD *)(v10 + 16) = x;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)x, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)x, v13, v14, v15, v16, v17, v18);
   gimmickList = (System_Collections_Generic_List_object__o *)this->fields.gimmickList;
-  v20 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_MapGimmickComponent__TypeInfo);
+  v20 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_MapGimmickComponent__TypeInfo);
   System_Predicate_object____ctor(
     v20,
     (Il2CppObject *)v10,
@@ -17651,7 +17652,7 @@ void __fastcall ScrTerminalMap___UpdateBoardGameSquare_b__402_1(
   Index = System_Collections_Generic_List_object___FindIndex(
             gimmickList,
             (System_Predicate_T__o *)v20,
-            (const MethodInfo_362DA24 *)Method_System_Collections_Generic_List_MapGimmickComponent__FindIndex__);
+            (const MethodInfo_363D0E8 *)Method_System_Collections_Generic_List_MapGimmickComponent__FindIndex__);
   v22 = (System_Collections_Generic_List_object__o *)this->fields.gimmickList;
   if ( (_DWORD)Index != -1 )
   {
@@ -17661,7 +17662,7 @@ void __fastcall ScrTerminalMap___UpdateBoardGameSquare_b__402_1(
       Index = (int64_t)System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)this->fields.gimmickList,
                          Index,
-                         (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__);
+                         (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__);
       if ( Index )
       {
         v24 = *(Il2CppObject **)(Index + 112);
@@ -17675,7 +17676,7 @@ void __fastcall ScrTerminalMap___UpdateBoardGameSquare_b__402_1(
             Index = (int64_t)System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)Index,
                                v23,
-                               (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__);
+                               (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_MapGimmickComponent__get_Item__);
             if ( Index )
             {
               MapGimmickComponent__SetDispAnim((MapGimmickComponent_o *)Index, 1, 0LL);
@@ -17686,7 +17687,7 @@ void __fastcall ScrTerminalMap___UpdateBoardGameSquare_b__402_1(
       }
     }
 LABEL_19:
-    sub_1C13F80(Index, v12);
+    sub_1C1AE30(Index, v12);
   }
   Index = (int64_t)ScrTerminalMap__CreateMapGimmick(this, *(MapControl_MapGimmickInfo_o **)(v10 + 16), 0, v21);
   if ( !v22 )
@@ -17703,14 +17704,14 @@ LABEL_19:
     System_Collections_Generic_List_object___AddWithResize(
       v22,
       (Il2CppObject *)Index,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
   }
   else
   {
     v22->fields._size = size + 1;
     v35 = &items->obj.klass + size;
     v35[4] = (Il2CppClass *)v34;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v35 + 4), v34, v25, v26, v27, v28, v29, v30);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v35 + 4), v34, v25, v26, v27, v28, v29, v30);
   }
 }
 
@@ -17725,19 +17726,19 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_0(ScrTerminalMap_o *
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4BB19A9 & 1) == 0 )
+  if ( (byte_4BC4D65 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_1__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB19A9 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_1__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4D65 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB14A4 )
+  if ( !byte_4BC4858 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB14A4 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4858 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17747,10 +17748,10 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_0(ScrTerminalMap_o *
   }
   v5->static_fields->_IsBackQuestBoardDisable_k__BackingField = 1;
   terminalScene = this->fields.terminalScene;
-  v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_1__, 0LL);
   if ( !terminalScene )
-    sub_1C13F80(v8, v9);
+    sub_1C1AE30(v8, v9);
   TerminalSceneComponent__CheckRewardPopupChain(terminalScene, v7, 1, 0, 0LL);
 }
 
@@ -17787,29 +17788,29 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_1(ScrTerminalMap_o *
   System_Action_o *v30; // x22
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB19AA & 1) == 0 )
+  if ( (byte_4BC4D66 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
-    sub_1C13D24(&DataManager_TypeInfo, v4);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1C13D24(&EventInfoUIProgressControl_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_2__, v7);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_3__, v8);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_4__, v9);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_5__, v10);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_6__, v11);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v12);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    byte_4BB19AA = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventDetailMaster___, v3);
+    sub_1C1ABD4(&DataManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1C1ABD4(&EventInfoUIProgressControl_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_2__, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_3__, v8);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_4__, v9);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_5__, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_6__, v11);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v12);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    byte_4BC4D66 = 1;
   }
   entity = 0LL;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1250 )
+  if ( !byte_4BC460A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1250 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC460A = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -17823,26 +17824,26 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_1(ScrTerminalMap_o *
   v17 = EventID;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (MissionNotifyManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  Master_object = (MissionNotifyManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !Master_object )
     goto LABEL_49;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          v17,
-         (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     Master_object = (MissionNotifyManager_o *)entity;
     if ( !entity )
       goto LABEL_49;
     if ( EventDetailEntity__IsEventUiCushion((EventDetailEntity_o *)entity, 0LL) )
     {
-      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( Master_object )
       {
         MissionNotifyManager__StartPause(Master_object, 0LL);
         titleInfoControl = this->fields.titleInfoControl;
-        v21 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+        v21 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(v21, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_2__, 0LL);
         if ( titleInfoControl )
         {
@@ -17851,7 +17852,7 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_1(ScrTerminalMap_o *
         }
       }
 LABEL_49:
-      sub_1C13F80(Master_object, v19);
+      sub_1C1AE30(Master_object, v19);
     }
     Master_object = (MissionNotifyManager_o *)entity;
     if ( !entity )
@@ -17874,7 +17875,7 @@ LABEL_49:
     if ( EventDetailEntity__IsEventHappiness((EventDetailEntity_o *)entity, 0LL) )
     {
 LABEL_27:
-      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( !Master_object )
         goto LABEL_49;
       MissionNotifyManager__StartPause(Master_object, 0LL);
@@ -17883,7 +17884,7 @@ LABEL_27:
         goto LABEL_49;
       TerminalSceneComponent__SetActionBGColl((TerminalSceneComponent_o *)Master_object, 1, 0LL, 0LL);
       v22 = this->fields.titleInfoControl;
-      v23 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v23 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v23, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_3__, 0LL);
       if ( !v22 )
         goto LABEL_49;
@@ -17895,7 +17896,7 @@ LABEL_27:
       goto LABEL_49;
     if ( EventDetailEntity__IsPersonalBoss((EventDetailEntity_o *)entity, 0LL) )
     {
-      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( !Master_object )
         goto LABEL_49;
       MissionNotifyManager__StartPause(Master_object, 0LL);
@@ -17903,7 +17904,7 @@ LABEL_27:
       if ( !terminalScene )
         goto LABEL_49;
       mTerminalList = terminalScene->fields.mTerminalList;
-      v26 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v26 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v26, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_4__, 0LL);
       if ( !mTerminalList )
         goto LABEL_49;
@@ -17914,7 +17915,7 @@ LABEL_27:
       j_il2cpp_runtime_class_init_0(EventInfoUIProgressControl_TypeInfo);
     if ( EventInfoUIProgressControl__IsDispEventProgress(v17, 0LL) )
     {
-      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+      Master_object = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
       if ( !Master_object )
         goto LABEL_49;
       MissionNotifyManager__StartPause(Master_object, 0LL);
@@ -17922,7 +17923,7 @@ LABEL_27:
       if ( !Master_object )
         goto LABEL_49;
       TerminalSceneComponent__SetActionBGColl((TerminalSceneComponent_o *)Master_object, 1, 0LL, 0LL);
-      v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v27 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v27, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_5__, 0LL);
       ScrTerminalMap__PlayEventProgressEffect(this, v27, v28);
       return;
@@ -17933,7 +17934,7 @@ LABEL_27:
     if ( EventDetailEntity__IsMakeFarm((EventDetailEntity_o *)entity, 0LL) )
     {
       v29 = this->fields.titleInfoControl;
-      v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v30, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_6__, 0LL);
       if ( !v29 )
         goto LABEL_49;
@@ -17952,14 +17953,14 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_2(ScrTerminalMap_o *
   __int64 v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BB19AB & 1) == 0 )
+  if ( (byte_4BC4D67 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4BB19AB = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    byte_4BC4D67 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v4);
+    sub_1C1AE30(0LL, v4);
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)Instance, 0LL);
   ScrTerminalMap__OnMapTouchDisableFinished(this, v5);
 }
@@ -17970,17 +17971,17 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_3(ScrTerminalMap_o *
   TerminalSceneComponent_o *terminalScene; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4BB19AC & 1) == 0 )
+  if ( (byte_4BC4D68 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4BB19AC = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    byte_4BC4D68 = 1;
   }
   terminalScene = this->fields.terminalScene;
   if ( !terminalScene
     || (TerminalSceneComponent__SetActionBGColl(terminalScene, 0, 0LL, 0LL),
-        (terminalScene = (TerminalSceneComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0LL) )
+        (terminalScene = (TerminalSceneComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0LL) )
   {
-    sub_1C13F80(terminalScene, method);
+    sub_1C1AE30(terminalScene, method);
   }
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)terminalScene, 0LL);
   ScrTerminalMap__OnMapTouchDisableFinished(this, v4);
@@ -17993,14 +17994,14 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_4(ScrTerminalMap_o *
   __int64 v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BB19AD & 1) == 0 )
+  if ( (byte_4BC4D69 & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4BB19AD = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    byte_4BC4D69 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v4);
+    sub_1C1AE30(0LL, v4);
   MissionNotifyManager__CancelPause((MissionNotifyManager_o *)Instance, 0LL);
   ScrTerminalMap__OnMapTouchDisableFinished(this, v5);
 }
@@ -18012,17 +18013,17 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_5(ScrTerminalMap_o *
   __int64 v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BB19AE & 1) == 0 )
+  if ( (byte_4BC4D6A & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4BB19AE = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    byte_4BC4D6A = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance
     || (MissionNotifyManager__CancelPause(Instance, 0LL),
         (Instance = (MissionNotifyManager_o *)this->fields.terminalScene) == 0LL) )
   {
-    sub_1C13F80(Instance, v4);
+    sub_1C1AE30(Instance, v4);
   }
   TerminalSceneComponent__SetActionBGColl((TerminalSceneComponent_o *)Instance, 0, 0LL, 0LL);
   ScrTerminalMap__OnMapTouchDisableFinished(this, v5);
@@ -18046,12 +18047,12 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_6(ScrTerminalMap_o *
   PartyListViewItem_o *v15; // x7
   const MethodInfo *v16; // x1
 
-  if ( (byte_4BB19AF & 1) == 0 )
+  if ( (byte_4BC4D6B & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap___c__mcbfMapTouchDisable_b__359_7__, v3);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v4);
-    byte_4BB19AF = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__mcbfMapTouchDisable_b__359_7__, v3);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v4);
+    byte_4BC4D6B = 1;
   }
   v5 = ScrTerminalMap___c_TypeInfo;
   terminalScene = this->fields.terminalScene;
@@ -18069,11 +18070,11 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_6(ScrTerminalMap_o *
       v5 = ScrTerminalMap___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__359_7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__359_7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(_9__359_7, v8, Method_ScrTerminalMap___c__mcbfMapTouchDisable_b__359_7__, 0LL);
     static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
     static_fields->__9__359_7 = _9__359_7;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&static_fields->__9__359_7,
       (int64_t)_9__359_7,
       v10,
@@ -18084,7 +18085,7 @@ void __fastcall ScrTerminalMap___mcbfMapTouchDisable_b__359_6(ScrTerminalMap_o *
       v15);
   }
   if ( !terminalScene )
-    sub_1C13F80(v5, method);
+    sub_1C1AE30(v5, method);
   TerminalSceneComponent__CheckOpenCampaignDirectBonus(terminalScene, _9__359_7, 0LL);
   ScrTerminalMap__OnMapTouchDisableFinished(this, v16);
 }
@@ -18094,17 +18095,17 @@ void __fastcall ScrTerminalMap___mcbfMapTouchEnable_b__337_0(ScrTerminalMap_o *t
 {
   TerminalPramsManager_c *v3; // x0
 
-  if ( (byte_4BB199F & 1) == 0 )
+  if ( (byte_4BC4D5B & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB199F = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D5B = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1498 )
+  if ( !byte_4BC484C )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1498 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC484C = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18113,11 +18114,11 @@ void __fastcall ScrTerminalMap___mcbfMapTouchEnable_b__337_0(ScrTerminalMap_o *t
     v3 = TerminalPramsManager_TypeInfo;
   }
   v3->static_fields->_IsQuestClear_k__BackingField = 0;
-  if ( !byte_4BB1499 )
+  if ( !byte_4BC484D )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4BB1499 = 1;
+    byte_4BC484D = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -18131,14 +18132,14 @@ void __fastcall ScrTerminalMap___mcbfMapTouchEnable_b__337_0(ScrTerminalMap_o *t
 
 void __fastcall ScrTerminalMap___mcbfMapTouchEnable_b__337_1(ScrTerminalMap_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB199E & 1) == 0 )
+  if ( (byte_4BC4D5A & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_9053/*"MapGimmick_"*/, method);
-    byte_4BB199E = 1;
+    sub_1C1ABD4(&StringLiteral_9059/*"MapTouchEnableAuto"*/, method);
+    byte_4BC4D5A = 1;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_9053/*"MapGimmick_"*/,
+    (System_String_o *)StringLiteral_9059/*"MapTouchEnableAuto"*/,
     1.0,
     0LL);
 }
@@ -18149,19 +18150,19 @@ void __fastcall ScrTerminalMap___mcbfSpotMaskStart_b__319_0(ScrTerminalMap_o *th
   __int64 v3; // x1
   TitleInfoControl_o *titleInfoControl; // x0
 
-  if ( (byte_4BB199D & 1) == 0 )
+  if ( (byte_4BC4D59 & 1) == 0 )
   {
-    sub_1C13D24(&TutorialFlag_TypeInfo, method);
-    byte_4BB199D = 1;
+    sub_1C1ABD4(&TutorialFlag_TypeInfo, method);
+    byte_4BC4D59 = 1;
   }
   ScrTerminalMap__SpotMaskStart_FadeEnd(this, method);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_38831432(102, 0LL) )
+  if ( TutorialFlag__Get_38884588(102, 0LL) )
   {
     titleInfoControl = this->fields.titleInfoControl;
     if ( !titleInfoControl )
-      sub_1C13F80(0LL, v3);
+      sub_1C1AE30(0LL, v3);
     TitleInfoControl__setBackBtnColliderEnable(titleInfoControl, 1, 0LL);
   }
 }
@@ -18172,14 +18173,14 @@ void __fastcall ScrTerminalMap___mcbfWhiteOut_b__318_0(ScrTerminalMap_o *this, c
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x2
 
-  if ( (byte_4BB199C & 1) == 0 )
+  if ( (byte_4BC4D58 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_7101/*"GO_BATTLE"*/, method);
-    byte_4BB199C = 1;
+    sub_1C1ABD4(&StringLiteral_7104/*"GO_NEXT"*/, method);
+    byte_4BC4D58 = 1;
   }
   ScrTerminalMap__DestroyMapObjs(this, method);
   ScrTerminalMap__InitTitleInfo(this, v3);
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7101/*"GO_BATTLE"*/, v4);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7104/*"GO_NEXT"*/, v4);
 }
 
 
@@ -18187,13 +18188,13 @@ void __fastcall ScrTerminalMap___smfMap2d_SpotMarkCreate_b__288_0(ScrTerminalMap
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4BB199B & 1) == 0 )
+  if ( (byte_4BC4D57 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_19403/*"euc-kr"*/, method);
-    byte_4BB199B = 1;
+    sub_1C1ABD4(&StringLiteral_19417/*"evMap2D_Mark_Create_Finish"*/, method);
+    byte_4BC4D57 = 1;
   }
   ScrTerminalMap__SetupEventBoardGame(this, method);
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19403/*"euc-kr"*/, v3);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19417/*"evMap2D_Mark_Create_Finish"*/, v3);
 }
 
 
@@ -18211,19 +18212,19 @@ void __fastcall ScrTerminalMap___smfSetMapChange_b__269_0(ScrTerminalMap_o *this
   AssetLoader_LoadEndDataHandler_o *v12; // x21
   int32_t currentAssetId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB1998 & 1) == 0 )
+  if ( (byte_4BC4D54 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, method);
-    sub_1C13D24(&int_TypeInfo, v3);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__smfSetMapChange_b__269_1__, v5);
-    byte_4BB1998 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, method);
+    sub_1C1ABD4(&int_TypeInfo, v3);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__smfSetMapChange_b__269_1__, v5);
+    byte_4BC4D54 = 1;
   }
   ScrTerminalMap__SetupFeildConfiguration(this, method);
   currentAssetId = this->fields.currentAssetId;
   v9 = (ScrTerminalMap_o *)j_il2cpp_value_box_0(int_TypeInfo, &currentAssetId, v6, v7, v8);
   AssetName = ScrTerminalMap__GetAssetName(v9, (Il2CppObject *)v9, v10);
-  v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v12,
     (Il2CppObject *)this,
@@ -18270,18 +18271,18 @@ void __fastcall ScrTerminalMap___smfSetMapChange_b__269_1(
   int32_t v32; // [xsp+8h] [xbp-28h] BYREF
   int32_t currentAssetId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BB1999 & 1) == 0 )
+  if ( (byte_4BC4D55 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, assetData);
-    sub_1C13D24(&AssetManager_TypeInfo, v10);
-    sub_1C13D24(&int_TypeInfo, v11);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v12);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v13);
-    sub_1C13D24(&Method_ScrTerminalMap__smfSetMapChange_b__269_2__, v14);
-    byte_4BB1999 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, assetData);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v10);
+    sub_1C1ABD4(&int_TypeInfo, v11);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v12);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap__smfSetMapChange_b__269_2__, v14);
+    byte_4BC4D55 = 1;
   }
   this->fields.mapAssetData = assetData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.mapAssetData,
     (int64_t)assetData,
     (int64_t)method,
@@ -18296,7 +18297,7 @@ void __fastcall ScrTerminalMap___smfSetMapChange_b__269_1(
   currentAssetId = this->fields.currentAssetId;
   v19 = (ScrTerminalMap_o *)j_il2cpp_value_box_0(int_TypeInfo, &currentAssetId, v15, v16, v17);
   AssetMultiMapName = ScrTerminalMap__GetAssetMultiMapName(v19, (Il2CppObject *)v19, this->fields.mMapEnt, v20);
-  v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v22,
     (Il2CppObject *)this,
@@ -18314,7 +18315,7 @@ LABEL_8:
     ScrTerminalMap__LoadAssetsAtlases(this, mapAssetData, AssetAtlasName, v27);
     ScrTerminalMap__LoadMapEffectPrefab(this, this->fields.mapAssetData, v28);
     ScrTerminalMap__LoadEventMapObject(this, this->fields.mapAssetData, v29);
-    v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v30, (Il2CppObject *)this, Method_ScrTerminalMap_LoadEventMap__, 0LL);
     ScrTerminalMap__LoadMapImgTex(this, v30, v31);
   }
@@ -18356,15 +18357,15 @@ void __fastcall ScrTerminalMap___smfSetMapChange_b__269_2(
   int32_t v32; // [xsp+8h] [xbp-38h] BYREF
   int32_t currentAssetId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB199A & 1) == 0 )
+  if ( (byte_4BC4D56 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, multiAssetData);
-    sub_1C13D24(&int_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v11);
-    byte_4BB199A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, multiAssetData);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v11);
+    byte_4BC4D56 = 1;
   }
   this->fields.mapMultiAssetData = multiAssetData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData,
     (int64_t)multiAssetData,
     (int64_t)method,
@@ -18389,7 +18390,7 @@ void __fastcall ScrTerminalMap___smfSetMapChange_b__269_2(
   ScrTerminalMap__LoadAssetsAtlases(this, mapMultiAssetData, MultiMapAssetAtlasName, v27);
   ScrTerminalMap__LoadMapEffectPrefab(this, this->fields.mapAssetData, v28);
   ScrTerminalMap__LoadEventMapObject(this, this->fields.mapAssetData, v29);
-  v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v30, (Il2CppObject *)this, Method_ScrTerminalMap_LoadEventMap__, 0LL);
   ScrTerminalMap__LoadMapImgTex(this, v30, v31);
 }
@@ -18400,16 +18401,16 @@ void __fastcall ScrTerminalMap__afterFadeInMapDisp(ScrTerminalMap_o *this, const
   MapButtonControl_o *mapButtonGrid; // x0
   const MethodInfo *v4; // x2
 
-  if ( (byte_4BB192C & 1) == 0 )
+  if ( (byte_4BC4CE8 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_7101/*"GO_BATTLE"*/, method);
-    byte_4BB192C = 1;
+    sub_1C1ABD4(&StringLiteral_7104/*"GO_NEXT"*/, method);
+    byte_4BC4CE8 = 1;
   }
   mapButtonGrid = this->fields.mapButtonGrid;
   if ( !mapButtonGrid )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   MapButtonControl__FrameIn(mapButtonGrid, 0LL);
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7101/*"GO_BATTLE"*/, v4);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7104/*"GO_NEXT"*/, v4);
 }
 
 
@@ -18445,33 +18446,33 @@ void __fastcall ScrTerminalMap__eventInfoAssetLoad(
   AssetLoader_LoadEndDataHandler_o *v29; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB1902 & 1) == 0 )
+  if ( (byte_4BC4CBE & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, callback);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, v5);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v6);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass270_0__eventInfoAssetLoad_b__0__, v9);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass270_0_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_13825/*"Telugu (India)"*/, v11);
-    byte_4BB1902 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, callback);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventDetailMaster___, v5);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v6);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass270_0__eventInfoAssetLoad_b__0__, v9);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass270_0_TypeInfo, v10);
+    sub_1C1ABD4(&StringLiteral_13837/*"Terminal/Info"*/, v11);
+    byte_4BC4CBE = 1;
   }
   entity = 0LL;
-  v12 = sub_1C13F70(ScrTerminalMap___c__DisplayClass270_0_TypeInfo);
+  v12 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass270_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass270_0___ctor((ScrTerminalMap___c__DisplayClass270_0_o *)v12, 0LL);
   if ( !v12 )
     goto LABEL_15;
   *(_QWORD *)(v12 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
   *(_QWORD *)(v12 + 24) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)callback, v21, v22, v23, v24, v25, v26);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)callback, v21, v22, v23, v24, v25, v26);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   mWarInfo = this->fields.mWarInfo;
   if ( !mWarInfo )
     goto LABEL_15;
@@ -18483,19 +18484,19 @@ void __fastcall ScrTerminalMap__eventInfoAssetLoad(
                                v28,
                                &entity,
                                (int32_t)Instance,
-                               (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+                               (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     goto LABEL_10;
   if ( !entity )
 LABEL_15:
-    sub_1C13F80(Instance, v14);
+    sub_1C1AE30(Instance, v14);
   if ( HIDWORD(entity[9].klass) != 6 )
   {
     ActionExtensions__Call(*(System_Action_o **)(v12 + 24), 0LL);
     return;
   }
 LABEL_10:
-  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v29,
     (Il2CppObject *)v12,
@@ -18503,7 +18504,7 @@ LABEL_10:
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13825/*"Telugu (India)"*/, v29, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13837/*"Terminal/Info"*/, v29, 1, 0LL);
 }
 
 
@@ -18542,10 +18543,10 @@ float __fastcall ScrTerminalMap__get_Camera2DResetDuration(ScrTerminalMap_o *thi
   MapEntity_o *mMapEnt; // x0
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_4BB18DF & 1) == 0 )
+  if ( (byte_4BC4C9B & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    byte_4BB18DF = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    byte_4BC4C9B = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
@@ -18641,10 +18642,10 @@ int32_t __fastcall ScrTerminalMap__get_MapCameraMoveEasingType(ScrTerminalMap_o 
   MapEntity_o *mMapEnt; // x0
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_4BB18DE & 1) == 0 )
+  if ( (byte_4BC4C9A & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    byte_4BB18DE = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    byte_4BC4C9A = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
@@ -18664,10 +18665,10 @@ float __fastcall ScrTerminalMap__get_MapCameraMoveTimeCoefficient(ScrTerminalMap
   MapEntity_o *mMapEnt; // x0
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_4BB18DC & 1) == 0 )
+  if ( (byte_4BC4C98 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    byte_4BB18DC = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    byte_4BC4C98 = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
@@ -18687,10 +18688,10 @@ float __fastcall ScrTerminalMap__get_MapCameraMoveTimeConstant(ScrTerminalMap_o 
   MapEntity_o *mMapEnt; // x0
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_4BB18DB & 1) == 0 )
+  if ( (byte_4BC4C97 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    byte_4BB18DB = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    byte_4BC4C97 = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
@@ -18710,10 +18711,10 @@ int32_t __fastcall ScrTerminalMap__get_MapCameraMoveTimeLogarithmBase(ScrTermina
   MapEntity_o *mMapEnt; // x0
   BalanceConfig_c *v5; // x0
 
-  if ( (byte_4BB18DD & 1) == 0 )
+  if ( (byte_4BC4C99 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, method);
-    byte_4BB18DD = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
+    byte_4BC4C99 = 1;
   }
   mMapEnt = this->fields.mMapEnt;
   if ( mMapEnt )
@@ -18795,10 +18796,10 @@ SubmarineMapManager_o *__fastcall ScrTerminalMap__get_submarineEventMap(
   struct EventMapManagerInterface_o *eventMapManagerInterface_k__BackingField; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BB18DA & 1) == 0 )
+  if ( (byte_4BC4C96 & 1) == 0 )
   {
-    sub_1C13D24(&SubmarineMapManager_TypeInfo, method);
-    byte_4BB18DA = 1;
+    sub_1C1ABD4(&SubmarineMapManager_TypeInfo, method);
+    byte_4BC4C96 = 1;
   }
   eventMapManagerInterface_k__BackingField = this->fields._eventMapManagerInterface_k__BackingField;
   if ( !eventMapManagerInterface_k__BackingField )
@@ -18831,30 +18832,30 @@ void __fastcall ScrTerminalMap__mcbfCheckSceneStatus(ScrTerminalMap_o *this, con
   TerminalPramsManager_c *v17; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BB198F & 1) == 0 )
+  if ( (byte_4BC4D4B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_WarMaster___, method);
-    sub_1C13D24(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_5857/*"EV_GIFT_PROC_FIN"*/, v6);
-    sub_1C13D24(&StringLiteral_5855/*"EVENT_WIN"*/, v7);
-    sub_1C13D24(&StringLiteral_5856/*"EV_GIFT_EXIT"*/, v8);
-    byte_4BB198F = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_WarMaster___, method);
+    sub_1C1ABD4(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_5861/*"EV_SCENE_STATUS_RESUME_FROM_SCRIPT"*/, v6);
+    sub_1C1ABD4(&StringLiteral_5859/*"EV_SCENE_STATUS_INIT"*/, v7);
+    sub_1C1ABD4(&StringLiteral_5860/*"EV_SCENE_STATUS_RESUME"*/, v8);
+    byte_4BC4D4B = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_33;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_WarMaster___);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_WarMaster___);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1250 )
+  if ( !byte_4BC460A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-    byte_4BB1250 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+    byte_4BC460A = 1;
   }
   Instance = (DataManager_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18864,12 +18865,12 @@ void __fastcall ScrTerminalMap__mcbfCheckSceneStatus(ScrTerminalMap_o *this, con
   }
   if ( !MasterData_object )
 LABEL_33:
-    sub_1C13F80(Instance, v10);
+    sub_1C1AE30(Instance, v10);
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
           &entity,
           *(_DWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 4LL),
-          (const MethodInfo_3238670 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
     goto LABEL_23;
   Instance = (DataManager_o *)entity;
   if ( !entity )
@@ -18878,10 +18879,10 @@ LABEL_33:
     goto LABEL_23;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1805 )
+  if ( !byte_4BC4BC1 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    byte_4BB1805 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    byte_4BC4BC1 = 1;
   }
   v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18894,19 +18895,19 @@ LABEL_33:
   {
     if ( meSceneStatus == 3 )
     {
-      v16 = &StringLiteral_5857/*"EV_GIFT_PROC_FIN"*/;
+      v16 = &StringLiteral_5861/*"EV_SCENE_STATUS_RESUME_FROM_SCRIPT"*/;
       goto LABEL_31;
     }
 LABEL_23:
-    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_5855/*"EVENT_WIN"*/, v12);
+    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_5859/*"EV_SCENE_STATUS_INIT"*/, v12);
     return;
   }
   if ( !v14->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v14);
-  if ( !byte_4BB14A4 )
+  if ( !byte_4BC4858 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    byte_4BB14A4 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    byte_4BC4858 = 1;
   }
   v17 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18915,7 +18916,7 @@ LABEL_23:
     v17 = TerminalPramsManager_TypeInfo;
   }
   v17->static_fields->_IsBackQuestBoardDisable_k__BackingField = 1;
-  v16 = &StringLiteral_5856/*"EV_GIFT_EXIT"*/;
+  v16 = &StringLiteral_5860/*"EV_SCENE_STATUS_RESUME"*/;
 LABEL_31:
   ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)*v16, v12);
   Instance = (DataManager_o *)this->fields.titleInfoControl;
@@ -18942,15 +18943,15 @@ void __fastcall ScrTerminalMap__mcbfMapTouchDisable(ScrTerminalMap_o *this, cons
   ScrTerminalListTop_o *v15; // x20
   System_Action_o *v16; // x21
 
-  if ( (byte_4BB194F & 1) == 0 )
+  if ( (byte_4BC4D0B & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap_OnMapTouchDisableFinished__, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_0__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v7);
-    byte_4BB194F = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap_OnMapTouchDisableFinished__, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_0__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v7);
+    byte_4BC4D0B = 1;
   }
   ScrTerminalMap__SetupFeildConfiguration(this, method);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -18965,7 +18966,7 @@ void __fastcall ScrTerminalMap__mcbfMapTouchDisable(ScrTerminalMap_o *this, cons
       v10 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-    v12 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v12, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchDisable_b__359_0__, 0LL);
     if ( terminalScene )
     {
@@ -18973,14 +18974,14 @@ void __fastcall ScrTerminalMap__mcbfMapTouchDisable(ScrTerminalMap_o *this, cons
       goto LABEL_19;
     }
 LABEL_21:
-    sub_1C13F80(v13, v8);
+    sub_1C1AE30(v13, v8);
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v8);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v8);
+    byte_4BC2713 = 1;
   }
   v13 = (TerminalSceneComponent_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -18992,7 +18993,7 @@ LABEL_21:
   if ( !v14 )
     goto LABEL_21;
   v15 = *(ScrTerminalListTop_o **)(v14 + 256);
-  v16 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_ScrTerminalMap_OnMapTouchDisableFinished__, 0LL);
   if ( !v15 )
     goto LABEL_21;
@@ -19035,23 +19036,23 @@ void __fastcall ScrTerminalMap__mcbfMapTouchEnable(ScrTerminalMap_o *this, const
   __int64 v28; // x1
   TerminalPramsManager_c *v29; // x0
 
-  if ( (byte_4BB193A & 1) == 0 )
+  if ( (byte_4BC4CF6 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventMaster___, v3);
-    sub_1C13D24(&NetworkManager_TypeInfo, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_0__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_1__, v6);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-    sub_1C13D24(&TutorialFlag_TypeInfo, v11);
-    byte_4BB193A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventMaster___, v3);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_0__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_1__, v6);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+    sub_1C1ABD4(&TutorialFlag_TypeInfo, v11);
+    byte_4BC4CF6 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_38831432(102, 0LL) )
+  if ( TutorialFlag__Get_38884588(102, 0LL) )
     MainMenuBar__SetMenuBtnColliderEnable(1, 0, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
@@ -19066,10 +19067,10 @@ void __fastcall ScrTerminalMap__mcbfMapTouchEnable(ScrTerminalMap_o *this, const
       goto LABEL_65;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19C6 )
+    if ( !byte_4BC4D82 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-      byte_4BB19C6 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+      byte_4BC4D82 = 1;
     }
     v16 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19079,18 +19080,18 @@ void __fastcall ScrTerminalMap__mcbfMapTouchEnable(ScrTerminalMap_o *this, const
     }
     if ( eventId != v16->static_fields->_TimeStatusEventId_k__BackingField )
       goto LABEL_65;
-    IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !IsAuto )
       goto LABEL_67;
     MasterData_object = DataManager__GetMasterData_object_(
                           IsAuto,
-                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventMaster___);
+                          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BAF1E5 )
+    if ( !byte_4BC2585 )
     {
-      sub_1C13D24(&NetworkManager_TypeInfo, v13);
-      byte_4BAF1E5 = 1;
+      sub_1C1ABD4(&NetworkManager_TypeInfo, v13);
+      byte_4BC2585 = 1;
     }
     IsAuto = (DataManager_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -19113,10 +19114,10 @@ void __fastcall ScrTerminalMap__mcbfMapTouchEnable(ScrTerminalMap_o *this, const
     m_CancellationTokenSource_high = HIDWORD(IsAuto->fields.m_CancellationTokenSource);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19C7 )
+    if ( !byte_4BC4D83 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-      byte_4BB19C7 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+      byte_4BC4D83 = 1;
     }
     v20 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19130,18 +19131,18 @@ LABEL_65:
       ScrTerminalMap__MapTouchEnableAuto(this, v13);
       return;
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v22 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v22 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_1__, 0LL);
     if ( Instance )
     {
       CommonUI__maskFadeout((CommonUI_o *)Instance, 2, 0.5, v22, 0LL);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4BB183B )
+      if ( !byte_4BC4BF7 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, v23);
-        byte_4BB183B = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v23);
+        byte_4BC4BF7 = 1;
       }
       v24 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19154,14 +19155,14 @@ LABEL_65:
       return;
     }
 LABEL_67:
-    sub_1C13F80(IsAuto, v13);
+    sub_1C1AE30(IsAuto, v13);
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1256 )
+  if ( !byte_4BC4610 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
-    byte_4BB1256 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
+    byte_4BC4610 = 1;
   }
   v25 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19170,11 +19171,11 @@ LABEL_67:
     v25 = TerminalPramsManager_TypeInfo;
   }
   v25->static_fields->_SpotId_k__BackingField = -1;
-  if ( !byte_4BB19C8 )
+  if ( !byte_4BC4D84 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v13);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v13);
     v25 = TerminalPramsManager_TypeInfo;
-    byte_4BB19C8 = 1;
+    byte_4BC4D84 = 1;
   }
   if ( !v25->_2.cctor_finished )
   {
@@ -19186,26 +19187,26 @@ LABEL_67:
     ScrTerminalMap__EventActionPlay(this, v13);
     return;
   }
-  IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !IsAuto )
     goto LABEL_67;
   QuestAfterAction__Init((QuestAfterAction_o *)IsAuto, 0LL);
-  IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  IsAuto = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !IsAuto )
     goto LABEL_67;
   QuestAfterAction__CreateCommandBuf((QuestAfterAction_o *)IsAuto, 0, 0LL);
-  v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-  v27 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  v27 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfMapTouchEnable_b__337_0__, 0LL);
   if ( !v26 )
     goto LABEL_67;
   QuestAfterAction__Play((QuestAfterAction_o *)v26, v27, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19C9 )
+  if ( !byte_4BC4D85 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v28);
-    byte_4BB19C9 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v28);
+    byte_4BC4D85 = 1;
   }
   v29 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19230,12 +19231,12 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskEnd(ScrTerminalMap_o *this, const Me
   System_Action_o *v10; // x21
   struct TerminalSceneComponent_o *v11; // x8
 
-  if ( (byte_4BB1931 & 1) == 0 )
+  if ( (byte_4BC4CED & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfSpotMaskEnd_b__323_0__, v4);
-    byte_4BB1931 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfSpotMaskEnd_b__323_0__, v4);
+    byte_4BC4CED = 1;
   }
   spotMaskObj = this->fields.spotMaskObj;
   if ( !spotMaskObj )
@@ -19259,10 +19260,10 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskEnd(ScrTerminalMap_o *this, const Me
     {
       GameObjectExtensions__SafeGetComponent_object_(
         this->fields.spotMaskObj,
-        (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+        (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
       TweenAlpha__Begin(this->fields.spotMaskObj, 0.25, 0.0, 0LL);
       spotLargeComponent = this->fields.spotLargeComponent;
-      v10 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfSpotMaskEnd_b__323_0__, 0LL);
       if ( spotLargeComponent )
       {
@@ -19270,7 +19271,7 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskEnd(ScrTerminalMap_o *this, const Me
         return;
       }
 LABEL_15:
-      sub_1C13F80(spotMaskObj, method);
+      sub_1C1AE30(spotMaskObj, method);
     }
   }
   else
@@ -19309,13 +19310,13 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const 
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB192E & 1) == 0 )
+  if ( (byte_4BC4CEA & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v4);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfSpotMaskStart_b__319_0__, v5);
-    byte_4BB192E = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v3);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfSpotMaskStart_b__319_0__, v5);
+    byte_4BC4CEA = 1;
   }
   spotMaskObj = this->fields.spotMaskObj;
   if ( !spotMaskObj )
@@ -19335,7 +19336,7 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const 
   UnityEngine_GameObject__SetActive(spotMaskObj, 1, 0LL);
   GameObjectExtensions__SafeGetComponent_object_(
     this->fields.spotMaskObj,
-    (const MethodInfo_2FE14E4 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+    (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
   TweenAlpha__Begin(this->fields.spotMaskObj, 0.25, 1.0, 0LL);
   spotMaskObj = (UnityEngine_GameObject_o *)this->fields.mapModelManager;
   if ( !spotMaskObj )
@@ -19351,10 +19352,10 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const 
   }
   else
   {
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, method);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, method);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -19367,18 +19368,18 @@ void __fastcall ScrTerminalMap__mcbfSpotMaskStart(ScrTerminalMap_o *this, const 
   spotLargeComponent = this->fields.spotLargeComponent;
   spotMaskObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                               spotMaskObj,
-                                              (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                                              (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
   mapModelManager = this->fields.mapModelManager;
   if ( !mapModelManager
     || (MapModelCamera_k__BackingField = mapModelManager->fields._MapModelCamera_k__BackingField,
         mapCamera = this->fields.mapCamera,
         v17 = (SrcSpotBasePrefab_o *)spotMaskObj,
-        v18 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v18 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v18, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfSpotMaskStart_b__319_0__, 0LL),
         !spotLargeComponent) )
   {
 LABEL_18:
-    sub_1C13F80(spotMaskObj, method);
+    sub_1C1AE30(spotMaskObj, method);
   }
   v21.fields.x = x;
   v21.fields.y = y;
@@ -19461,22 +19462,22 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
   System_String_o *fadeType; // [xsp+18h] [xbp-58h] BYREF
   UnityEngine_Vector2_o v64; // 0:s0.4,4:s1.4
 
-  if ( (byte_4BB192A & 1) == 0 )
+  if ( (byte_4BC4CE6 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantMaster___, v4);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ConstantStrMaster___, v5);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventScriptMaster___, v6);
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v7);
-    sub_1C13D24(&Method_ScrTerminalMap_afterFadeInMapDisp__, v8);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v11);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v12);
-    sub_1C13D24(&StringLiteral_7101/*"GO_BATTLE"*/, v13);
-    sub_1C13D24(&StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/, v14);
-    byte_4BB192A = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantMaster___, v4);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantStrMaster___, v5);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventScriptMaster___, v6);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap_afterFadeInMapDisp__, v8);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v11);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v12);
+    sub_1C1ABD4(&StringLiteral_7104/*"GO_NEXT"*/, v13);
+    sub_1C1ABD4(&StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/, v14);
+    byte_4BC4CE6 = 1;
   }
   fadeType = 0LL;
   fadeTime = 0;
@@ -19491,12 +19492,12 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     this,
     this->fields.mapAssetData,
     0LL);
-  mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mapButtonGrid )
     goto LABEL_132;
   mapButtonGrid = (MapButtonControl_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)mapButtonGrid,
-                                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventScriptMaster___);
+                                          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventScriptMaster___);
   mWarEnt = this->fields.mWarEnt;
   if ( !mWarEnt )
     goto LABEL_132;
@@ -19504,7 +19505,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     goto LABEL_132;
   Available = EventScriptMaster__GetAvailable((EventScriptMaster_o *)mapButtonGrid, mWarEnt->fields.eventId, 0LL);
   this->fields.eventScriptCallingList = Available;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.eventScriptCallingList,
     (int64_t)Available,
     v18,
@@ -19521,10 +19522,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB1256 )
+    if ( !byte_4BC4610 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB1256 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4610 = 1;
     }
     v25 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19552,7 +19553,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
           j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo);
         if ( !v26 )
           goto LABEL_132;
-        mapButtonGrid = (MapButtonControl_o *)System_String__Equals_62976260(
+        mapButtonGrid = (MapButtonControl_o *)System_String__Equals_63048684(
                                                 v26,
                                                 ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION,
                                                 0LL);
@@ -19567,10 +19568,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     }
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB19C0 )
+    if ( !byte_4BC4D7C )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB19C0 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4D7C = 1;
     }
     mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19582,10 +19583,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     {
       if ( !mapButtonGrid[2].fields.m_CachedPtr )
         j_il2cpp_runtime_class_init_0(mapButtonGrid);
-      if ( !byte_4BB19C1 )
+      if ( !byte_4BC4D7D )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-        byte_4BB19C1 = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+        byte_4BC4D7D = 1;
       }
       mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19598,10 +19599,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
         v28 = this->fields.terminalScene;
         if ( !mapButtonGrid[2].fields.m_CachedPtr )
           j_il2cpp_runtime_class_init_0(mapButtonGrid);
-        if ( !byte_4BB19C1 )
+        if ( !byte_4BC4D7D )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-          byte_4BB19C1 = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+          byte_4BC4D7D = 1;
         }
         mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19612,11 +19613,11 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
         if ( !v28 )
           goto LABEL_132;
         v28->fields._FirstFadeTime_k__BackingField = *((float *)&mapButtonGrid[1].fields.buttons->m_Items[16] + 1);
-        if ( !byte_4BB19C2 )
+        if ( !byte_4BC4D7E )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
           mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
-          byte_4BB19C2 = 1;
+          byte_4BC4D7E = 1;
         }
         if ( !mapButtonGrid[2].fields.m_CachedPtr )
         {
@@ -19624,11 +19625,11 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
           mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
         }
         BYTE1(mapButtonGrid[1].fields.buttons->m_Items[16]) = 0;
-        if ( !byte_4BB19C3 )
+        if ( !byte_4BC4D7F )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
           mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
-          byte_4BB19C3 = 1;
+          byte_4BC4D7F = 1;
         }
         if ( !mapButtonGrid[2].fields.m_CachedPtr )
         {
@@ -19640,10 +19641,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     }
     if ( !mapButtonGrid[2].fields.m_CachedPtr )
       j_il2cpp_runtime_class_init_0(mapButtonGrid);
-    if ( !byte_4BB183D )
+    if ( !byte_4BC4BF9 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-      byte_4BB183D = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+      byte_4BC4BF9 = 1;
     }
     v29 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19655,10 +19656,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
     {
       if ( !v29->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(v29);
-      if ( !byte_4BB183C )
+      if ( !byte_4BC4BF8 )
       {
-        sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-        byte_4BB183C = 1;
+        sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+        byte_4BC4BF8 = 1;
       }
       v30 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19670,10 +19671,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
       {
         if ( !v30->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(v30);
-        if ( !byte_4BB19C4 )
+        if ( !byte_4BC4D80 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-          byte_4BB19C4 = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+          byte_4BC4D80 = 1;
         }
         v31 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19683,18 +19684,18 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
         }
         if ( (v31->static_fields->_QuestMessageScriptQuestPhase_k__BackingField & 0x80000000) == 0 )
         {
-          mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( mapButtonGrid )
           {
             MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)mapButtonGrid,
-                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            if ( !byte_4BB183C )
+            if ( !byte_4BC4BF8 )
             {
-              sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-              byte_4BB183C = 1;
+              sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+              byte_4BC4BF8 = 1;
             }
             mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
             if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19708,24 +19709,24 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                        (QuestPhaseMaster_o *)MasterData_object,
                        (int32_t)mapButtonGrid[1].fields.buttons->m_Items[87],
                        0LL);
-              mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( mapButtonGrid )
               {
                 v34 = DataManager__GetMasterData_object_(
                         (DataManager_o *)mapButtonGrid,
-                        (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantMaster___);
-                mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantMaster___);
+                mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( mapButtonGrid )
                 {
                   mapButtonGrid = (MapButtonControl_o *)DataManager__GetMasterData_object_(
                                                           (DataManager_o *)mapButtonGrid,
-                                                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ConstantStrMaster___);
+                                                          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantStrMaster___);
                   if ( v34 )
                   {
                     v35 = (ConstantStrMaster_o *)mapButtonGrid;
                     RateValue = ConstantMaster__GetRateValue(
                                   (ConstantMaster_o *)v34,
-                                  (System_String_o *)StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/,
+                                  (System_String_o *)StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/,
                                   1.8,
                                   0LL);
                     if ( v35 )
@@ -19733,7 +19734,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                       v37 = RateValue;
                       *(UnityEngine_Vector3_o *)&v38 = ConstantStrMaster__GetValueVector3(
                                                          v35,
-                                                         (System_String_o *)StringLiteral_5664/*"EVENT_BOARD_GAME_DICE_BUTTON_POS"*/,
+                                                         (System_String_o *)StringLiteral_5668/*"EVENT_BOARD_GAME_MAP_POSITION"*/,
                                                          0LL);
                       mapCamera = this->fields.mapCamera;
                       if ( mapCamera )
@@ -19755,10 +19756,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                               MapScroll__SetScrlPos((MapScroll_o *)mapButtonGrid, v64, 0LL);
                               if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
                                 j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-                              if ( !byte_4BAF374 )
+                              if ( !byte_4BC2713 )
                               {
-                                sub_1C13D24(&TerminalSceneComponent_TypeInfo, method);
-                                byte_4BAF374 = 1;
+                                sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, method);
+                                byte_4BC2713 = 1;
                               }
                               mapButtonGrid = (MapButtonControl_o *)TerminalSceneComponent_TypeInfo;
                               if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -19770,10 +19771,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                               if ( klass )
                               {
                                 v45 = *(ScrTerminalListTop_o **)&klass->_2.static_fields_size;
-                                if ( !byte_4BB19C4 )
+                                if ( !byte_4BC4D80 )
                                 {
-                                  sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-                                  byte_4BB19C4 = 1;
+                                  sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+                                  byte_4BC4D80 = 1;
                                 }
                                 mapButtonGrid = (MapButtonControl_o *)TerminalPramsManager_TypeInfo;
                                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -19784,7 +19785,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                                 if ( List )
                                 {
                                   if ( !List->max_length )
-                                    sub_1C13F88(mapButtonGrid, method);
+                                    sub_1C1AE38(mapButtonGrid, method);
                                   if ( v45 )
                                   {
                                     ScrTerminalListTop__ResumeQuestScriptWithMap(
@@ -19793,7 +19794,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
                                       List->m_Items[0],
                                       0LL);
                                     v47 = ScrTerminalMap__WaitScriptLoad(this, v46);
-                                    UnityEngine_MonoBehaviour__StartCoroutine_70707260(
+                                    UnityEngine_MonoBehaviour__StartCoroutine_70779684(
                                       (UnityEngine_MonoBehaviour_o *)this,
                                       v47,
                                       0LL);
@@ -19812,7 +19813,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteIn_ToMap(ScrTerminalMap_o *this, const 
             }
           }
 LABEL_132:
-          sub_1C13F80(mapButtonGrid, method);
+          sub_1C1AE30(mapButtonGrid, method);
         }
       }
     }
@@ -19820,7 +19821,7 @@ LABEL_132:
     if ( !mapButtonGrid )
       goto LABEL_132;
     MapButtonControl__FrameIn(mapButtonGrid, 0LL);
-    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7101/*"GO_BATTLE"*/, v61);
+    ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7104/*"GO_NEXT"*/, v61);
   }
   else
   {
@@ -19857,11 +19858,11 @@ LABEL_132:
       j_il2cpp_runtime_class_init_0(ScrTerminalMap_TypeInfo);
     if ( !v52 )
       goto LABEL_132;
-    if ( System_String__Equals_62976260(v52, ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION, 0LL) )
+    if ( System_String__Equals_63048684(v52, ScrTerminalMap_TypeInfo->static_fields->FIRST_FADE_TYPE_DURATION, 0LL) )
     {
       v53 = this->fields.terminalScene;
       v54 = fadeTime;
-      v55 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v55 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v55, (Il2CppObject *)this, Method_ScrTerminalMap_afterFadeInMapDisp__, 0LL);
       if ( !v53 )
         goto LABEL_132;
@@ -19879,7 +19880,7 @@ LABEL_125:
         v59 = AvalonSceneManager_TypeInfo;
       }
       DEFAULT_FADE_TIME = v59->static_fields->DEFAULT_FADE_TIME;
-      v55 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      v55 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(v55, (Il2CppObject *)this, Method_ScrTerminalMap_afterFadeInMapDisp__, 0LL);
       if ( !v58 )
         goto LABEL_132;
@@ -19903,19 +19904,19 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut(ScrTerminalMap_o *this, const Metho
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v11; // x21
 
-  if ( (byte_4BB192D & 1) == 0 )
+  if ( (byte_4BC4CE9 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfWhiteOut_b__318_0__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4BB192D = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfWhiteOut_b__318_0__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4BC4CE9 = 1;
   }
   mapButtonGrid = this->fields.mapButtonGrid;
   if ( !mapButtonGrid )
     goto LABEL_8;
   MapButtonControl__FrameOut(mapButtonGrid, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = AvalonSceneManager_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -19924,11 +19925,11 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut(ScrTerminalMap_o *this, const Metho
     v8 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v8->static_fields->DEFAULT_FADE_TIME;
-  v11 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ScrTerminalMap__mcbfWhiteOut_b__318_0__, 0LL);
   if ( !v9 )
 LABEL_8:
-    sub_1C13F80(mapButtonGrid, method);
+    sub_1C1AE30(mapButtonGrid, method);
   CommonUI__maskFadeout(v9, 2, DEFAULT_FADE_TIME, v11, 0LL);
 }
 
@@ -19972,7 +19973,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
   MapControl_MapInfo_o *v37; // x22
   System_String_o *SaveKey_BaseMap; // x23
   const MethodInfo *v39; // x1
-  int32_t Int_70679696; // w0
+  int32_t Int_70752120; // w0
   int64_t v41; // x23
   System_String_o *v42; // x0
   MapControl_MapInfo_o *v43; // x0
@@ -20027,23 +20028,23 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
   TerminalSceneComponent_o *v92; // x20
   TerminalSceneComponent_PlayChapterStartCallback_o *v93; // x21
 
-  if ( (byte_4BB1928 & 1) == 0 )
+  if ( (byte_4BC4CE4 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalSceneComponent_PlayChapterStartCallback_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap__mcbfWhiteOut_ToMap_b__313_0__, v3);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v5);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v7);
-    byte_4BB1928 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_PlayChapterStartCallback_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap__mcbfWhiteOut_ToMap_b__313_0__, v3);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v5);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v6);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v7);
+    byte_4BC4CE4 = 1;
   }
   *(_WORD *)&this->fields.isFirstFade = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1250 )
+  if ( !byte_4BC460A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1250 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC460A = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -20052,13 +20053,13 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
     v8 = TerminalPramsManager_TypeInfo;
   }
   this->fields.currentWarId = v8->static_fields->_WarId_k__BackingField;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
     goto LABEL_64;
   WarInfoByWarID = QuestTree__mfGetWarInfoByWarID((QuestTree_o *)Instance, this->fields.currentWarId, 0LL);
   p_mWarInfo = &this->fields.mWarInfo;
   this->fields.mWarInfo = WarInfoByWarID;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.mWarInfo,
     (int64_t)WarInfoByWarID,
     v13,
@@ -20073,10 +20074,10 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
   Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)Instance, 0LL);
   p_mWarEnt = &this->fields.mWarEnt;
   this->fields.mWarEnt = Mine;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mWarEnt, (int64_t)Mine, v21, v22, v23, v24, v25, v26);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mWarEnt, (int64_t)Mine, v21, v22, v23, v24, v25, v26);
   p_mMapInfo = &this->fields.mMapInfo;
   this->fields.mMapInfo = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, 0LL, v28, v29, v30, v31, v32, v33);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, 0LL, v28, v29, v30, v31, v32, v33);
   Instance = this->fields.mWarInfo;
   if ( !Instance )
     goto LABEL_64;
@@ -20099,9 +20100,9 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
           if ( !TerminalPramsManager__IsAuto(0LL)
             || !UnityEngine_PlayerPrefs__HasKey(SaveKey_BaseMap, 0LL)
-            || (Int_70679696 = UnityEngine_PlayerPrefs__GetInt_70679696(SaveKey_BaseMap, 0LL),
+            || (Int_70752120 = UnityEngine_PlayerPrefs__GetInt_70752120(SaveKey_BaseMap, 0LL),
                 v41 = 0LL,
-                Int_70679696 != v37->fields.mapId) )
+                Int_70752120 != v37->fields.mapId) )
           {
             v42 = ScrTerminalMap__GetSaveKey_BaseMap(this, v39);
             UnityEngine_PlayerPrefs__SetInt(v42, v37->fields.mapId, 0LL);
@@ -20113,18 +20114,18 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
           v41 = 0LL;
         }
         v50 = *p_mWarInfo;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
         if ( Instance )
         {
           v51 = *((_DWORD *)Instance + 50);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
           if ( Instance )
           {
             if ( v50 )
             {
               ActionMap = MapControl_WarInfo__GetActionMap(v50, v51, *((_DWORD *)Instance + 51), 0LL);
               *p_mMapInfo = ActionMap;
-              sub_1C13CC8(
+              sub_1C1AB78(
                 (PartyOrganizationUtility_o *)&this->fields.mMapInfo,
                 (int64_t)ActionMap,
                 v53,
@@ -20136,14 +20137,14 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
               if ( !*p_mMapInfo )
               {
                 *p_mMapInfo = (struct MapControl_MapInfo_o *)v41;
-                sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, v41, v60, v61, v62, v63, v64, v65);
+                sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, v41, v60, v61, v62, v63, v64, v65);
               }
               SaveKey_PlayerMap = ScrTerminalMap__GetSaveKey_PlayerMap(this, v59);
               v67 = SaveKey_PlayerMap;
               if ( !this->fields.mMapInfo )
               {
                 if ( UnityEngine_PlayerPrefs__HasKey(SaveKey_PlayerMap, 0LL) )
-                  v10 = (const MethodInfo *)(unsigned int)UnityEngine_PlayerPrefs__GetInt_70679696(v67, 0LL);
+                  v10 = (const MethodInfo *)(unsigned int)UnityEngine_PlayerPrefs__GetInt_70752120(v67, 0LL);
                 else
                   v10 = 0LL;
                 Instance = *p_mWarInfo;
@@ -20151,7 +20152,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap(ScrTerminalMap_o *this, const
                   goto LABEL_64;
                 v68 = MapControl_WarInfo__GetMap((MapControl_WarInfo_o *)Instance, (int32_t)v10, 0LL);
                 *p_mMapInfo = v68;
-                sub_1C13CC8(
+                sub_1C1AB78(
                   (PartyOrganizationUtility_o *)&this->fields.mMapInfo,
                   (int64_t)v68,
                   v69,
@@ -20194,13 +20195,13 @@ LABEL_43:
       }
     }
 LABEL_64:
-    sub_1C13F80(Instance, v10);
+    sub_1C1AE30(Instance, v10);
   }
   if ( !v34 )
     goto LABEL_64;
   v43 = MapControl_WarInfo__GetMap(*p_mWarInfo, 0, 0LL);
   *p_mMapInfo = v43;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)v43, v44, v45, v46, v47, v48, v49);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)v43, v44, v45, v46, v47, v48, v49);
 LABEL_46:
   Instance = *p_mMapInfo;
   if ( !*p_mMapInfo )
@@ -20208,7 +20209,7 @@ LABEL_46:
   this->fields.currentMapId = *((_DWORD *)Instance + 5);
   v81 = MapControl_MapInfo__GetMine((MapControl_MapInfo_o *)Instance, 0LL);
   this->fields.mMapEnt = v81;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapEnt, (int64_t)v81, v82, v83, v84, v85, v86, v87);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapEnt, (int64_t)v81, v82, v83, v84, v85, v86, v87);
   terminalScene = this->fields.terminalScene;
   this->fields.requestedMapId = -1;
   if ( !terminalScene )
@@ -20223,7 +20224,7 @@ LABEL_46:
   TitleInfoControl__setHeaderBgImg((TitleInfoControl_o *)Instance, this->fields.currentWarId, 0LL);
   titleInfoControl = this->fields.titleInfoControl;
   mMapEnt = this->fields.mMapEnt;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !Instance )
     goto LABEL_64;
   if ( QuestAfterAction__IsActiveCommand((QuestAfterAction_o *)Instance, 0LL) )
@@ -20232,10 +20233,10 @@ LABEL_46:
     BeforeClearQuestIdForAction_k__BackingField = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF44C )
+  if ( !byte_4BC27F3 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v10);
-    byte_4BAF44C = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v10);
+    byte_4BC27F3 = 1;
   }
   Instance = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -20254,7 +20255,7 @@ LABEL_46:
     goto LABEL_64;
   TitleInfoControl__setTitleImgFromBanner(titleInfoControl, (int32_t)Instance, 1, 1, 0, 0LL);
   v92 = this->fields.terminalScene;
-  v93 = (TerminalSceneComponent_PlayChapterStartCallback_o *)sub_1C13F70(TerminalSceneComponent_PlayChapterStartCallback_TypeInfo);
+  v93 = (TerminalSceneComponent_PlayChapterStartCallback_o *)sub_1C1AE20(TerminalSceneComponent_PlayChapterStartCallback_TypeInfo);
   TerminalSceneComponent_PlayChapterStartCallback___ctor(
     v93,
     (Il2CppObject *)this,
@@ -20272,18 +20273,18 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap_End(ScrTerminalMap_o *this, c
   __int64 v4; // x1
   TerminalPramsManager_c *v5; // x0
 
-  if ( (byte_4BB1929 & 1) == 0 )
+  if ( (byte_4BC4CE5 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_7101/*"GO_BATTLE"*/, v4);
-    byte_4BB1929 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_7104/*"GO_NEXT"*/, v4);
+    byte_4BC4CE5 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB14A1 )
+  if ( !byte_4BC4855 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB14A1 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4855 = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -20292,7 +20293,7 @@ void __fastcall ScrTerminalMap__mcbfWhiteOut_ToMap_End(ScrTerminalMap_o *this, c
     v5 = TerminalPramsManager_TypeInfo;
   }
   v5->static_fields->meSceneStatus = 0;
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7101/*"GO_BATTLE"*/, v2);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_7104/*"GO_NEXT"*/, v2);
 }
 
 
@@ -20305,10 +20306,10 @@ void __fastcall ScrTerminalMap__mfCallFsmEvent(
   HutongGames_PlayMaker_Fsm_o *Fsm; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BB198A & 1) == 0 )
+  if ( (byte_4BC4D46 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, fsmEventName);
-    byte_4BB198A = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, fsmEventName);
+    byte_4BC4D46 = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)fsmEventName);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -20317,8 +20318,8 @@ void __fastcall ScrTerminalMap__mfCallFsmEvent(
   if ( ((unsigned __int8)Fsm & 1) == 0 )
   {
     if ( !MyFsmP || (Fsm = PlayMakerFSM__get_Fsm((PlayMakerFSM_o *)MyFsmP, 0LL)) == 0LL )
-      sub_1C13F80(Fsm, v7);
-    HutongGames_PlayMaker_Fsm__Event_64982800(Fsm, fsmEventName, 0LL);
+      sub_1C1AE30(Fsm, v7);
+    HutongGames_PlayMaker_Fsm__Event_65055224(Fsm, fsmEventName, 0LL);
   }
 }
 
@@ -20332,10 +20333,10 @@ int32_t __fastcall ScrTerminalMap__mfGetFsmValueInt(
   HutongGames_PlayMaker_FsmVariables_o *Fsm; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BB198C & 1) == 0 )
+  if ( (byte_4BC4D48 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, name);
-    byte_4BB198C = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, name);
+    byte_4BC4D48 = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)name);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -20348,7 +20349,7 @@ int32_t __fastcall ScrTerminalMap__mfGetFsmValueInt(
     || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)Fsm->fields.gameObjectVariables) == 0LL
     || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(Fsm, name, 0LL)) == 0LL )
   {
-    sub_1C13F80(Fsm, v7);
+    sub_1C1AE30(Fsm, v7);
   }
   return HutongGames_PlayMaker_FsmInt__get_Value((HutongGames_PlayMaker_FsmInt_o *)Fsm, 0LL);
 }
@@ -20378,11 +20379,11 @@ PlayMakerFSM_o *__fastcall ScrTerminalMap__mfGetMyFsmP(ScrTerminalMap_o *this, c
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BB1989 & 1) == 0 )
+  if ( (byte_4BC4D45 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB1989 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC4D45 = 1;
   }
   targetFsm = (UnityEngine_Object_o *)this->fields.targetFsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -20391,9 +20392,9 @@ PlayMakerFSM_o *__fastcall ScrTerminalMap__mfGetMyFsmP(ScrTerminalMap_o *this, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.targetFsm = (struct PlayMakerFSM_o *)Component_object;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&this->fields.targetFsm,
       (int64_t)Component_object,
       v6,
@@ -20486,21 +20487,21 @@ void __fastcall ScrTerminalMap__mfMap2d_Create_LineBySpotID(
   UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v65; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4BB1925 & 1) == 0 )
+  if ( (byte_4BC4CE1 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_SpotMaster___, spotRoadInfo);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__, v6);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_srcLineSprite___, v7);
-    sub_1C13D24(&int_TypeInfo, v8);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject____77555760, v9);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v11);
-    byte_4BB1925 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_SpotMaster___, spotRoadInfo);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__, v6);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_srcLineSprite___, v7);
+    sub_1C1ABD4(&int_TypeInfo, v8);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject____77632840, v9);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v11);
+    byte_4BC4CE1 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !spotRoadInfo )
     goto LABEL_32;
   v14 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -20512,26 +20513,26 @@ void __fastcall ScrTerminalMap__mfMap2d_Create_LineBySpotID(
   Entity = DataMasterBase_object__object__int___GetEntity(
              v14,
              *((_DWORD *)Master_object + 6),
-             (const MethodInfo_3238624 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+             (const MethodInfo_3248678 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
   v18 = DataMasterBase_object__object__int___GetEntity(
           v14,
           v15,
-          (const MethodInfo_3238624 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+          (const MethodInfo_3248678 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
   pfbLineP = (Il2CppObject *)this->fields.pfbLineP;
   v21 = v18;
-  if ( !byte_4BAEDA1 )
+  if ( !byte_4BC2141 )
   {
-    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v19);
-    byte_4BAEDA1 = 1;
+    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v19);
+    byte_4BC2141 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
   y = static_fields->zeroVector.fields.y;
   z = static_fields->zeroVector.fields.z;
-  if ( !byte_4BAEDA7 )
+  if ( !byte_4BC2147 )
   {
-    sub_1C13D24(&UnityEngine_Quaternion_TypeInfo, v19);
-    byte_4BAEDA7 = 1;
+    sub_1C1ABD4(&UnityEngine_Quaternion_TypeInfo, v19);
+    byte_4BC2147 = 1;
   }
   v26 = UnityEngine_Quaternion_TypeInfo->static_fields;
   v28 = v26->identityQuaternion.fields.x;
@@ -20547,27 +20548,27 @@ void __fastcall ScrTerminalMap__mfMap2d_Create_LineBySpotID(
   v65.fields.y = v27;
   v65.fields.z = v30;
   v65.fields.w = w;
-  v31 = UnityEngine_Object__Instantiate_object__50417632(
+  v31 = UnityEngine_Object__Instantiate_object__50483620(
           pfbLineP,
           v64,
           v65,
-          (const MethodInfo_3014FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77555760);
+          (const MethodInfo_30251A4 *)Method_UnityEngine_Object_Instantiate_GameObject____77632840);
   Master_object = srcLineSprite__GetGobjName(v16[4], 0LL);
   if ( !v31 )
     goto LABEL_32;
   UnityEngine_Object__set_name((UnityEngine_Object_o *)v31, (System_String_o *)Master_object, 0LL);
-  GameObjectExtensions__SetParent_34717612((UnityEngine_GameObject_o *)v31, this->fields.rootRoadP, 0LL);
+  GameObjectExtensions__SetParent_34762136((UnityEngine_GameObject_o *)v31, this->fields.rootRoadP, 0LL);
   GameObjectExtensions__ResetLocalScale((UnityEngine_GameObject_o *)v31, 0LL);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)v31,
-                       (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_srcLineSprite___);
+                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_srcLineSprite___);
   Master_object = (void *)UnityEngine_Object__op_Inequality(0LL, (UnityEngine_Object_o *)Component_object, 0LL);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !Component_object )
     goto LABEL_32;
   Component_object[8].klass = (Il2CppClass *)spotRoadInfo;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&Component_object[8], (int64_t)spotRoadInfo, v33, v34, v35, v36, v37, v38);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&Component_object[8], (int64_t)spotRoadInfo, v33, v34, v35, v36, v37, v38);
   v39 = 1.0;
   if ( !spotRoadInfo->fields.dispType )
     v39 = 0.0;
@@ -20592,7 +20593,7 @@ void __fastcall ScrTerminalMap__mfMap2d_Create_LineBySpotID(
     || (Master_object = MapControl_MapInfo__GetMine((MapControl_MapInfo_o *)Master_object, 0LL)) == 0LL )
   {
 LABEL_32:
-    sub_1C13F80(Master_object, v13);
+    sub_1C1AE30(Master_object, v13);
   }
   OverwriteMapAssetId = MapEntity__GetOverwriteMapAssetId((MapEntity_o *)Master_object, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(OverwriteMapAssetId, 0LL);
@@ -20618,7 +20619,7 @@ LABEL_32:
     v53 = int_TypeInfo;
   }
   v55 = (Il2CppObject *)j_il2cpp_value_box_0(v53, v54, v47, v48, v49);
-  v56 = System_String__Format_62982316(ASSETS_NAME_SPOT_ROAD, (Il2CppObject *)OverwriteMapAssetId, v55, 0LL);
+  v56 = System_String__Format_63054740(ASSETS_NAME_SPOT_ROAD, (Il2CppObject *)OverwriteMapAssetId, v55, 0LL);
   UIAtlasBySpriteName = UIAtlas__GetUIAtlasBySpriteName(this->fields.assetsAtlases, v56, 0LL);
   srcLineSprite__mfSetAtlas((srcLineSprite_o *)Component_object, UIAtlasBySpriteName, v56, 0LL);
   v58 = 1.0;
@@ -20650,20 +20651,20 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathByMapGimmick
   Il2CppObject *Component_object; // x19
   bool v19; // w8
 
-  if ( (byte_4BB1921 & 1) == 0 )
+  if ( (byte_4BC4CDD & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___, *(_QWORD *)&mapGimmickId);
-    sub_1C13D24(&Method_DataManager_GetMaster_MapGimmickPathMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4BB1921 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___, *(_QWORD *)&mapGimmickId);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_MapGimmickPathMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BC4CDD = 1;
   }
-  SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (Custom2dSplineMesh_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
+  result = (Custom2dSplineMesh_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_MapGimmickPathMaster___);
   if ( !result )
     goto LABEL_19;
   result = (Custom2dSplineMesh_o *)MapGimmickPathMaster__GetMapGimmickPathEntity(
@@ -20688,10 +20689,10 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathByMapGimmick
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v15 = UnityEngine_Object__Instantiate_object_(
               (Il2CppObject *)MapGimmickPathBaseObject,
-              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       rootPathP = this->fields.rootPathP;
       v17 = (UnityEngine_GameObject_o *)v15;
-      GameObjectExtensions__SetParent_34717612((UnityEngine_GameObject_o *)v15, rootPathP, 0LL);
+      GameObjectExtensions__SetParent_34762136((UnityEngine_GameObject_o *)v15, rootPathP, 0LL);
       GameObjectExtensions__ResetLocalScale(v17, 0LL);
       GameObjectExtensions__ResetLocalPosition(v17, 0LL);
       if ( v17 )
@@ -20704,7 +20705,7 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathByMapGimmick
           {
             Component_object = UnityEngine_Component__GetComponent_object_(
                                  (UnityEngine_Component_o *)result,
-                                 (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___);
+                                 (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___);
             v19 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
             result = 0LL;
             if ( v19 )
@@ -20719,7 +20720,7 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathByMapGimmick
         }
       }
 LABEL_19:
-      sub_1C13F80(result, v11);
+      sub_1C1AE30(result, v11);
     }
   }
   return result;
@@ -20779,36 +20780,36 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathBySpotId(
   int32_t data; // [xsp+4h] [xbp-4Ch] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BB1920 & 1) == 0 )
+  if ( (byte_4BC4CDC & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___, *(_QWORD *)&spotId);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRaceMaster___, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_SpotAddMaster___, v8);
-    sub_1C13D24(&Method_DataManager_GetMasterData_SpotPathMaster___, v9);
-    sub_1C13D24(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__, v10);
-    sub_1C13D24(&EventSpotMoveManager_TypeInfo, v11);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v13);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4BB1920 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRaceMaster___, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_SpotAddMaster___, v8);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_SpotPathMaster___, v9);
+    sub_1C1ABD4(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__, v10);
+    sub_1C1ABD4(&EventSpotMoveManager_TypeInfo, v11);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v13);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4BC4CDC = 1;
   }
   data = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   *pathLength = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)pathLength, 0LL, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)pathLength, 0LL, v16, v17, v18, v19, v20, v21);
   entity = 0LL;
   if ( !Instance )
     goto LABEL_47;
   MasterData_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                       (DataManager_o *)Instance,
-                                                                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SpotPathMaster___);
+                                                                      (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_SpotPathMaster___);
   if ( !MasterData_object )
     goto LABEL_47;
   v24 = DataMasterBase_object__object__int___TryGetEntity(
           MasterData_object,
           &entity,
           spotId,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int__TryGetEntity__);
   if ( !v24 )
     return 0LL;
   SpotPathBaseObject = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotPathBaseObject(
@@ -20827,8 +20828,8 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathBySpotId(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v29 = UnityEngine_Object__Instantiate_object_(
             (Il2CppObject *)SpotPathBaseObject,
-            (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-    GameObjectExtensions__SetParent_34717612((UnityEngine_GameObject_o *)v29, this->fields.rootPathP, 0LL);
+            (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    GameObjectExtensions__SetParent_34762136((UnityEngine_GameObject_o *)v29, this->fields.rootPathP, 0LL);
     GameObjectExtensions__ResetLocalScale((UnityEngine_GameObject_o *)v29, 0LL);
     GameObjectExtensions__ResetLocalPosition((UnityEngine_GameObject_o *)v29, 0LL);
     if ( !v29 )
@@ -20846,14 +20847,14 @@ Custom2dSplineMesh_o *__fastcall ScrTerminalMap__mfMap2d_Create_PathBySpotId(
       goto LABEL_47;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)MasterData_object,
-                         (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___);
+                         (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Custom2dSplineMesh___);
     v31 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
     result = 0LL;
     if ( !v31 )
     {
       MasterData_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                           (DataManager_o *)Instance,
-                                                                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_SpotAddMaster___);
+                                                                          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_SpotAddMaster___);
       if ( MasterData_object )
       {
         v32 = (SpotAddMaster_o *)MasterData_object;
@@ -20904,7 +20905,7 @@ LABEL_46:
             {
               MasterData_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                                   (DataManager_o *)Instance,
-                                                                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                                                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRaceMaster___);
               if ( entity && MasterData_object )
               {
                 GoalRate = EventRaceMaster__GetGoalRate(
@@ -20929,7 +20930,7 @@ LABEL_46:
                         v40 = (__int64)v39;
                       PathLengthObject = ScrTerminalMap__CreatePathLengthObject(this, v40, v38);
                       *pathLength = PathLengthObject;
-                      sub_1C13CC8(
+                      sub_1C1AB78(
                         (PartyOrganizationUtility_o *)pathLength,
                         (int64_t)PathLengthObject,
                         v42,
@@ -20953,7 +20954,7 @@ LABEL_46:
         }
       }
 LABEL_47:
-      sub_1C13F80(MasterData_object, v23);
+      sub_1C1AE30(MasterData_object, v23);
     }
   }
   return result;
@@ -21071,22 +21072,22 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
   UnityEngine_Vector3_o v109; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v110; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4BB191F & 1) == 0 )
+  if ( (byte_4BC4CDB & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_SpotAddMaster___, *(_QWORD *)&spotId);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v8);
-    sub_1C13D24(&NGUITools_TypeInfo, v9);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject____77555760, v10);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v12);
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, v13);
-    sub_1C13D24(&EventSpotMoveManager_SpotMoveData_TypeInfo, v14);
-    sub_1C13D24(&SrcSpotBasePrefab_TypeInfo, v15);
-    byte_4BB191F = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_SpotAddMaster___, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v7);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v8);
+    sub_1C1ABD4(&NGUITools_TypeInfo, v9);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject____77632840, v10);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v12);
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, v13);
+    sub_1C1ABD4(&EventSpotMoveManager_SpotMoveData_TypeInfo, v14);
+    sub_1C1ABD4(&SrcSpotBasePrefab_TypeInfo, v15);
+    byte_4BC4CDB = 1;
   }
   *(_QWORD *)ofsY = 0LL;
-  Instance = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = (int64_t)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
     goto LABEL_78;
   Instance = (int64_t)QuestTree__GetSpotInfo((QuestTree_o *)Instance, spotId, 0LL);
@@ -21106,13 +21107,13 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
     if ( SpotEntity__HasFlag(v21, 4, 0LL) )
     {
       v25 = ScrTerminalMap__mfMap2d_Create_PathBySpotId(this, spotId, &pathLength, v24);
-      v26 = sub_1C13F70(EventSpotMoveManager_SpotMoveData_TypeInfo);
+      v26 = sub_1C1AE20(EventSpotMoveManager_SpotMoveData_TypeInfo);
       EventSpotMoveManager_SpotMoveData___ctor((EventSpotMoveManager_SpotMoveData_o *)v26, 0LL);
       if ( !v26 )
         goto LABEL_78;
       *(_QWORD *)(v26 + 32) = v25;
       *(_DWORD *)(v26 + 16) = spotId;
-      sub_1C13CC8((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)v25, v27, v28, v29, v30, v31, v32);
+      sub_1C1AB78((PartyOrganizationUtility_o *)(v26 + 32), (int64_t)v25, v27, v28, v29, v30, v31, v32);
       Instance = (int64_t)this->fields.eventSpotMoveManager;
       if ( !Instance )
         goto LABEL_78;
@@ -21124,19 +21125,19 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
       v25 = 0LL;
     }
     pfbBaseP = (Il2CppObject *)this->fields.pfbBaseP;
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v23);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v23);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
     y = static_fields->zeroVector.fields.y;
     z = static_fields->zeroVector.fields.z;
-    if ( !byte_4BAEDA7 )
+    if ( !byte_4BC2147 )
     {
-      sub_1C13D24(&UnityEngine_Quaternion_TypeInfo, v23);
-      byte_4BAEDA7 = 1;
+      sub_1C1ABD4(&UnityEngine_Quaternion_TypeInfo, v23);
+      byte_4BC2147 = 1;
     }
     v38 = UnityEngine_Quaternion_TypeInfo->static_fields;
     v40 = v38->identityQuaternion.fields.x;
@@ -21152,11 +21153,11 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
     v110.fields.y = v39;
     v110.fields.z = v42;
     v110.fields.w = w;
-    v43 = UnityEngine_Object__Instantiate_object__50417632(
+    v43 = UnityEngine_Object__Instantiate_object__50483620(
             pfbBaseP,
             v104,
             v110,
-            (const MethodInfo_3014FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77555760);
+            (const MethodInfo_30251A4 *)Method_UnityEngine_Object_Instantiate_GameObject____77632840);
     id = v21->fields.id;
     v45 = (UnityEngine_Object_o *)v43;
     if ( !SrcSpotBasePrefab_TypeInfo->_2.cctor_finished )
@@ -21164,19 +21165,19 @@ SrcSpotBasePrefab_o *__fastcall ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
     Instance = (int64_t)SrcSpotBasePrefab__GetGobjName(id, 0LL);
     if ( !v45 )
 LABEL_78:
-      sub_1C13F80(Instance, v17);
+      sub_1C1AE30(Instance, v17);
     UnityEngine_Object__set_name(v45, (System_String_o *)Instance, 0LL);
     v46 = 136LL;
     if ( isMapModel )
       v46 = 144LL;
-    GameObjectExtensions__SetParent_34717612(
+    GameObjectExtensions__SetParent_34762136(
       (UnityEngine_GameObject_o *)v45,
       *(UnityEngine_GameObject_o **)((char *)&this->klass + v46),
       0LL);
-    if ( !byte_4BAEDA6 )
+    if ( !byte_4BC2146 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v47);
-      byte_4BAEDA6 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v47);
+      byte_4BC2146 = 1;
     }
     mMapEnt = this->fields.mMapEnt;
     v49 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -21192,10 +21193,10 @@ LABEL_78:
     }
     if ( !*(_DWORD *)(v20 + 20) )
     {
-      if ( !byte_4BAEDA1 )
+      if ( !byte_4BC2141 )
       {
-        sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v47);
-        byte_4BAEDA1 = 1;
+        sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v47);
+        byte_4BC2141 = 1;
       }
       v54 = UnityEngine_Vector3_TypeInfo->static_fields;
       v50 = v54->zeroVector.fields.x;
@@ -21227,7 +21228,7 @@ LABEL_78:
       if ( v26 )
       {
         *(_QWORD *)(v26 + 24) = v45;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v26 + 24), (int64_t)v45, v57, v58, v59, v60, v61, v62);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v26 + 24), (int64_t)v45, v57, v58, v59, v60, v61, v62);
       }
       if ( !v25 )
         goto LABEL_78;
@@ -21280,10 +21281,10 @@ LABEL_78:
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(v69, 0LL, 0LL) )
-      GameObjectExtensions__SafeSetParent_34717732(pathLength, (UnityEngine_GameObject_o *)v45, 0LL);
+      GameObjectExtensions__SafeSetParent_34762256(pathLength, (UnityEngine_GameObject_o *)v45, 0LL);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v45,
-                         (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                         (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(0LL, (UnityEngine_Object_o *)Component_object, 0LL) )
@@ -21292,7 +21293,7 @@ LABEL_78:
       ofsY[0] = v21->fields.nameOfsY;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_SpotAddMaster___);
+      Instance = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_SpotAddMaster___);
       if ( Instance )
       {
         SpotAddMaster__OverwriteNamePanelOffset((SpotAddMaster_o *)Instance, spotId, &ofsY[1], ofsY, 0LL);
@@ -21300,7 +21301,7 @@ LABEL_78:
         if ( Component_object )
         {
           Component_object[5].klass = (Il2CppClass *)Instance;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&Component_object[5], Instance, v70, v71, v72, v73, v74, v75);
+          sub_1C1AB78((PartyOrganizationUtility_o *)&Component_object[5], Instance, v70, v71, v72, v73, v74, v75);
           SrcSpotBasePrefab__mfSetSpotID((SrcSpotBasePrefab_o *)Component_object, spotId, 0LL);
           SrcSpotBasePrefab__mfSetQuestCount((SrcSpotBasePrefab_o *)Component_object, v18, 0LL);
           SrcSpotBasePrefab__SetFreeQuestCount((SrcSpotBasePrefab_o *)Component_object, v19, 0LL);
@@ -21315,7 +21316,7 @@ LABEL_78:
             -v21->fields.nextOfsY,
             0LL);
           Component_object[14].monitor = (void *)v20;
-          sub_1C13CC8((PartyOrganizationUtility_o *)&Component_object[14].monitor, v20, v77, v78, v79, v80, v81, v82);
+          sub_1C1AB78((PartyOrganizationUtility_o *)&Component_object[14].monitor, v20, v77, v78, v79, v80, v81, v82);
           Instance = (int64_t)this->fields.mMapEnt;
           if ( Instance )
           {
@@ -21330,10 +21331,10 @@ LABEL_78:
               goto LABEL_78;
             v91 = (int64_t)v90->fields._MapModelCamera_k__BackingField;
             Component_object[15].monitor = (void *)v91;
-            sub_1C13CC8((PartyOrganizationUtility_o *)&Component_object[15].monitor, v91, v83, v84, v85, v86, v87, v88);
+            sub_1C1AB78((PartyOrganizationUtility_o *)&Component_object[15].monitor, v91, v83, v84, v85, v86, v87, v88);
             subRootEffectP = this->fields.subRootEffectP;
             Component_object[16].klass = (Il2CppClass *)subRootEffectP;
-            sub_1C13CC8(
+            sub_1C1AB78(
               (PartyOrganizationUtility_o *)&Component_object[16],
               (int64_t)subRootEffectP,
               v93,
@@ -21349,7 +21350,7 @@ LABEL_78:
           if ( *(_DWORD *)(v20 + 20) == 2 )
             v99 = 0.5;
           SrcSpotBasePrefab__SetContrast((SrcSpotBasePrefab_o *)Component_object, v99, 0LL);
-          SrcSpotBasePrefab__SetTouchType_35726160((SrcSpotBasePrefab_o *)Component_object, 0LL);
+          SrcSpotBasePrefab__SetTouchType_35772428((SrcSpotBasePrefab_o *)Component_object, 0LL);
           Instance = (int64_t)this->fields.terminalScene;
           if ( Instance )
           {
@@ -21376,10 +21377,10 @@ void __fastcall ScrTerminalMap__mfSetFsmValueBool(
   HutongGames_PlayMaker_FsmVariables_o *Fsm; // x0
   __int64 v9; // x1
 
-  if ( (byte_4BB198D & 1) == 0 )
+  if ( (byte_4BC4D49 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, name);
-    byte_4BB198D = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, name);
+    byte_4BC4D49 = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)name);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -21392,7 +21393,7 @@ void __fastcall ScrTerminalMap__mfSetFsmValueBool(
       || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)Fsm->fields.gameObjectVariables) == 0LL
       || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)HutongGames_PlayMaker_FsmVariables__GetFsmBool(Fsm, name, 0LL)) == 0LL )
     {
-      sub_1C13F80(Fsm, v9);
+      sub_1C1AE30(Fsm, v9);
     }
     LOBYTE(Fsm->fields.vector3Variables) = value;
   }
@@ -21409,10 +21410,10 @@ void __fastcall ScrTerminalMap__mfSetFsmValueInt(
   HutongGames_PlayMaker_FsmVariables_o *Fsm; // x0
   __int64 v9; // x1
 
-  if ( (byte_4BB198B & 1) == 0 )
+  if ( (byte_4BC4D47 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, name);
-    byte_4BB198B = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, name);
+    byte_4BC4D47 = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)name);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -21425,7 +21426,7 @@ void __fastcall ScrTerminalMap__mfSetFsmValueInt(
       || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)Fsm->fields.gameObjectVariables) == 0LL
       || (Fsm = (HutongGames_PlayMaker_FsmVariables_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(Fsm, name, 0LL)) == 0LL )
     {
-      sub_1C13F80(Fsm, v9);
+      sub_1C1AE30(Fsm, v9);
     }
     LODWORD(Fsm->fields.vector3Variables) = value;
   }
@@ -21449,10 +21450,10 @@ void __fastcall ScrTerminalMap__mfSetFsmValueVector3(
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4BB198E & 1) == 0 )
+  if ( (byte_4BC4D4A & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, name);
-    byte_4BB198E = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, name);
+    byte_4BC4D4A = 1;
   }
   MyFsmP = (UnityEngine_Object_o *)ScrTerminalMap__mfGetMyFsmP(this, (const MethodInfo *)name);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -21468,7 +21469,7 @@ void __fastcall ScrTerminalMap__mfSetFsmValueVector3(
                                                           name,
                                                           0LL)) == 0LL )
     {
-      sub_1C13F80(Fsm, v11);
+      sub_1C1AE30(Fsm, v11);
     }
     *(float *)&Fsm->fields.vector3Variables = x;
     *((float *)&Fsm->fields.vector3Variables + 1) = y;
@@ -21498,7 +21499,7 @@ void __fastcall ScrTerminalMap__set_EventBoardDiceButtonEffectObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardDiceButtonEffectObj_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardDiceButtonEffectObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21522,7 +21523,7 @@ void __fastcall ScrTerminalMap__set_EventBoardDiceVoiceInfo(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardDiceVoiceInfo_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardDiceVoiceInfo_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21546,7 +21547,7 @@ void __fastcall ScrTerminalMap__set_EventBoardGameArrivalVoiceSvtIdList(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardGameArrivalVoiceSvtIdList_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21570,7 +21571,7 @@ void __fastcall ScrTerminalMap__set_EventBoardGameObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardGameObj_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardGameObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21594,7 +21595,7 @@ void __fastcall ScrTerminalMap__set_EventBoardPieceObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardPieceObj_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardPieceObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21618,7 +21619,7 @@ void __fastcall ScrTerminalMap__set_EventBoardQuestArrivalPanelObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardQuestArrivalPanelObj_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardQuestArrivalPanelObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21642,7 +21643,7 @@ void __fastcall ScrTerminalMap__set_EventBoardQuestReleaseList(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardQuestReleaseList_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardQuestReleaseList_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21666,7 +21667,7 @@ void __fastcall ScrTerminalMap__set_EventBoardStopPanelObj(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventBoardStopPanelObj_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._EventBoardStopPanelObj_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21720,7 +21721,7 @@ void __fastcall ScrTerminalMap__set_currentMapTexture(
   PartyListViewItem_o *v7; // x7
 
   this->fields._currentMapTexture_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._currentMapTexture_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21744,7 +21745,7 @@ void __fastcall ScrTerminalMap__set_eventMapManagerInterface(
   PartyListViewItem_o *v7; // x7
 
   this->fields._eventMapManagerInterface_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._eventMapManagerInterface_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -21793,26 +21794,26 @@ void __fastcall ScrTerminalMap__showEventScriptDlgs(
   Il2CppObject *Item; // x22
   System_Action_o *v35; // x23
 
-  if ( (byte_4BB1949 & 1) == 0 )
+  if ( (byte_4BC4D05 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__Clear__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass353_0__showEventScriptDlgs_b__0__, v10);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass353_0_TypeInfo, v11);
-    byte_4BB1949 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__Clear__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__get_Count__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__get_Item__, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass353_0__showEventScriptDlgs_b__0__, v10);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass353_0_TypeInfo, v11);
+    byte_4BC4D05 = 1;
   }
-  v12 = sub_1C13F70(ScrTerminalMap___c__DisplayClass353_0_TypeInfo);
+  v12 = sub_1C1AE20(ScrTerminalMap___c__DisplayClass353_0_TypeInfo);
   ScrTerminalMap___c__DisplayClass353_0___ctor((ScrTerminalMap___c__DisplayClass353_0_o *)v12, 0LL);
   if ( !v12 )
     goto LABEL_19;
   *(_QWORD *)(v12 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
   *(_QWORD *)(v12 + 24) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)callback, v21, v22, v23, v24, v25, v26);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)callback, v21, v22, v23, v24, v25, v26);
   eventScriptMessages = (System_Collections_Generic_List_object__o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
@@ -21824,7 +21825,7 @@ void __fastcall ScrTerminalMap__showEventScriptDlgs(
     goto LABEL_19;
   if ( v27->fields._size >= 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v31 = TerminalPramsManager_TypeInfo;
     v32 = (CommonUI_o *)Instance;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -21838,15 +21839,15 @@ void __fastcall ScrTerminalMap__showEventScriptDlgs(
       eventScriptMessages = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                            eventScriptMessages,
                                                                            0,
-                                                                           (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                           (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( TerminalPramsManager_TypeInfo->static_fields->eventScriptMessages )
       {
         v33 = (System_String_o *)eventScriptMessages;
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)TerminalPramsManager_TypeInfo->static_fields->eventScriptMessages,
                  1,
-                 (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
-        v35 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+                 (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_string__get_Item__);
+        v35 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
         System_Action___ctor(
           v35,
           (Il2CppObject *)v12,
@@ -21875,7 +21876,7 @@ void __fastcall ScrTerminalMap__showEventScriptDlgs(
       }
     }
 LABEL_19:
-    sub_1C13F80(eventScriptMessages, v14);
+    sub_1C1AE30(eventScriptMessages, v14);
   }
   if ( !eventScriptMessages[5].fields._size )
   {
@@ -21909,11 +21910,11 @@ void __fastcall ScrTerminalMap__smfMap2d_LoadStart(ScrTerminalMap_o *this, const
   System_Action_o *v13; // x20
   const MethodInfo *v14; // x2
 
-  if ( (byte_4BB18FA & 1) == 0 )
+  if ( (byte_4BC4CB6 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadMap__, v4);
-    byte_4BB18FA = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadMap__, v4);
+    byte_4BC4CB6 = 1;
   }
   ScrTerminalMap__ReleaseMap(this, 0, v2);
   mWarInfo = this->fields.mWarInfo;
@@ -21937,12 +21938,12 @@ void __fastcall ScrTerminalMap__smfMap2d_LoadStart(ScrTerminalMap_o *this, const
         !v11) )
   {
 LABEL_9:
-    sub_1C13F80(mWarEnt, v6);
+    sub_1C1AE30(mWarEnt, v6);
   }
   v12.n64_u64[0] = *(unsigned __int64 *)&v11->fields.mapImageW;
   *(int32x2_t *)&this->fields._currentMapImageW_k__BackingField = v12;
   *(float32x2_t *)&this->fields.mapImageOffsetX = vmul_f32(vcvt_f32_s32(v12), (float32x2_t)0x3F0000003F000000LL);
-  v13 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_ScrTerminalMap_LoadMap__, 0LL);
   ScrTerminalMap__InitCheckUpdateRequest(this, v13, v14);
 }
@@ -22271,60 +22272,60 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
   UnityEngine_Vector3_o v319; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4BB1914 & 1) == 0 )
+  if ( (byte_4BC4CD0 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventQuestCooltimeMaster___, v3);
-    sub_1C13D24(&Method_DataManager_GetMaster_MapCondMaster___, v4);
-    sub_1C13D24(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Any_EventSpotMoveManager_SpotMoveData___, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__, v11);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__, v14);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v15);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__, v16);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v17);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v18);
-    sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventQuestCooltimeMaster___, v3);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_MapCondMaster___, v4);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_EventSpotMoveManager_SpotMoveData___, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__, v11);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__, v14);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__, v15);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__, v16);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v17);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v18);
+    sub_1C1ABD4(
       &Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__get_Current__,
       v19);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__get_Current__, v20);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__get_Current__, v21);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v22);
-    sub_1C13D24(&EventMapGimmickMoveManager_TypeInfo, v23);
-    sub_1C13D24(&EventMapManagerInterface_TypeInfo, v24);
-    sub_1C13D24(&EventSpotMoveManager_TypeInfo, v25);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v26);
-    sub_1C13D24(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__, v27);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__Add__, v28);
-    sub_1C13D24(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Clear__, v29);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__Clear__, v30);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapGimmickComponent__Find__, v31);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__, v32);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__, v33);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__, v34);
-    sub_1C13D24(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v35);
-    sub_1C13D24(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__, v36);
-    sub_1C13D24(&MapModelManager_TypeInfo, v37);
-    sub_1C13D24(&MapZoom_TypeInfo, v38);
-    sub_1C13D24(&NGUITools_TypeInfo, v39);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v40);
-    sub_1C13D24(&System_Predicate_MapGimmickComponent__TypeInfo, v41);
-    sub_1C13D24(&Method_ScrTerminalMap__smfMap2d_SpotMarkCreate_b__288_0__, v42);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v43);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v44);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v45);
-    sub_1C13D24(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v46);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v47);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__1__, v48);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__2__, v49);
-    this = (ScrTerminalMap_o *)sub_1C13D24(&ScrTerminalMap___c__DisplayClass288_0_TypeInfo, v50);
-    byte_4BB1914 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__get_Current__, v20);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__get_Current__, v21);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__get_Current__, v22);
+    sub_1C1ABD4(&EventMapGimmickMoveManager_TypeInfo, v23);
+    sub_1C1ABD4(&EventMapManagerInterface_TypeInfo, v24);
+    sub_1C1ABD4(&EventSpotMoveManager_TypeInfo, v25);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v26);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__, v27);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__Add__, v28);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Clear__, v29);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__Clear__, v30);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapGimmickComponent__Find__, v31);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__, v32);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__, v33);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__, v34);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__, v35);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__, v36);
+    sub_1C1ABD4(&MapModelManager_TypeInfo, v37);
+    sub_1C1ABD4(&MapZoom_TypeInfo, v38);
+    sub_1C1ABD4(&NGUITools_TypeInfo, v39);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v40);
+    sub_1C1ABD4(&System_Predicate_MapGimmickComponent__TypeInfo, v41);
+    sub_1C1ABD4(&Method_ScrTerminalMap__smfMap2d_SpotMarkCreate_b__288_0__, v42);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v43);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v44);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v45);
+    sub_1C1ABD4(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v46);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v47);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__1__, v48);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__2__, v49);
+    this = (ScrTerminalMap_o *)sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass288_0_TypeInfo, v50);
+    byte_4BC4CD0 = 1;
   }
   memset(&v316, 0, sizeof(v316));
   memset(&i, 0, sizeof(i));
@@ -22363,10 +22364,10 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BE )
+  if ( !byte_4BC4D7A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19BE = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D7A = 1;
   }
   v60 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -22384,10 +22385,10 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
     this = (ScrTerminalMap_o *)v2->fields.eventSpotMoveManager;
     if ( !this )
     {
-      v62 = (EventSpotMoveManager_o *)sub_1C13F70(EventSpotMoveManager_TypeInfo);
+      v62 = (EventSpotMoveManager_o *)sub_1C1AE20(EventSpotMoveManager_TypeInfo);
       EventSpotMoveManager___ctor(v62, 0LL);
       v2->fields.eventSpotMoveManager = v62;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&v2->fields.eventSpotMoveManager,
         (int64_t)v62,
         v63,
@@ -22404,10 +22405,10 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
     this = (ScrTerminalMap_o *)v2->fields.eventMapGimmickMoveManager;
     if ( !this )
     {
-      v69 = (EventMapGimmickMoveManager_o *)sub_1C13F70(EventMapGimmickMoveManager_TypeInfo);
+      v69 = (EventMapGimmickMoveManager_o *)sub_1C1AE20(EventMapGimmickMoveManager_TypeInfo);
       EventMapGimmickMoveManager___ctor(v69, 0LL);
       v2->fields.eventMapGimmickMoveManager = v69;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&v2->fields.eventMapGimmickMoveManager,
         (int64_t)v69,
         v70,
@@ -22458,7 +22459,7 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v310,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__GetEnumerator__);
   v85 = 0;
   v86 = 0LL;
   v316 = v310;
@@ -22469,12 +22470,12 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
   {
     v87 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v316,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__MoveNext__);
     if ( !v87 )
       break;
     current = (MapControl_SpotInfo_o *)v316.fields._current;
     if ( !v316.fields._current )
-      sub_1C13F80(v87, v88);
+      sub_1C1AE30(v87, v88);
     SpotBySpotInfo = ScrTerminalMap__mfMap2d_Create_SpotBySpotInfo(
                        v2,
                        (int32_t)v316.fields._current[1].klass,
@@ -22514,19 +22515,19 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
         }
       }
       if ( !SpotBySpotInfo )
-        sub_1C13F80(IsNextDisp, v93);
+        sub_1C1AE30(IsNextDisp, v93);
       mMapCtrl_SpotInfo = SpotBySpotInfo->fields.mMapCtrl_SpotInfo;
       if ( !mMapCtrl_SpotInfo )
-        sub_1C13F80(0LL, v93);
+        sub_1C1AE30(0LL, v93);
       Mine = MapControl_SpotInfo__GetMine(mMapCtrl_SpotInfo, 0LL);
       if ( !Mine )
-        sub_1C13F80(0LL, v98);
+        sub_1C1AE30(0LL, v98);
       if ( SpotEntity__GetPrioredImgId(Mine, 0LL) )
         v86 = SpotBySpotInfo;
       if ( ScrTerminalMap__IsDispEventBoardGameUI(v2, v99) && current->fields.spotId == EventBoardGameSpotId )
       {
         p_eventBoardGameSpotPrefab->klass = (PartyOrganizationUtility_c *)SpotBySpotInfo;
-        sub_1C13CC8(p_eventBoardGameSpotPrefab, (int64_t)SpotBySpotInfo, v100, v101, v102, v103, v104, v105);
+        sub_1C1AB78(p_eventBoardGameSpotPrefab, (int64_t)SpotBySpotInfo, v100, v101, v102, v103, v104, v105);
       }
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -22535,26 +22536,26 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
     {
       v113 = (System_Collections_Generic_List_object__o *)v2->fields.spotList;
       if ( !v113 )
-        sub_1C13F80(0LL, v106);
+        sub_1C1AE30(0LL, v106);
       items = v113->fields._items;
       v115 = Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__;
       ++v113->fields._version;
       if ( !items )
-        sub_1C13F80(v113, v106);
+        sub_1C1AE30(v113, v106);
       v116 = v113->fields._size;
       if ( (unsigned int)v116 >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v113,
           (Il2CppObject *)SpotBySpotInfo,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
       }
       else
       {
         v117 = &items->obj.klass + v116;
         v113->fields._size = v116 + 1;
         v117[4] = (Il2CppClass *)SpotBySpotInfo;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)(v117 + 4),
           (int64_t)SpotBySpotInfo,
           v107,
@@ -22569,28 +22570,28 @@ void __fastcall ScrTerminalMap__smfMap2d_SpotMarkCreate(ScrTerminalMap_o *this, 
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality(eventQuestCooltimeComponent, 0LL, 0LL) )
         goto LABEL_82;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
-        sub_1C13F80(0LL, v121);
+        sub_1C1AE30(0LL, v121);
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventQuestCooltimeMaster___);
+                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventQuestCooltimeMaster___);
       if ( !MasterData_object )
-        sub_1C13F80(0LL, v123);
+        sub_1C1AE30(0LL, v123);
       EntityFromSpotId = UserEventQuestCooltimeMaster__GetEntityFromSpotId(
                            (UserEventQuestCooltimeMaster_o *)MasterData_object,
                            current->fields.spotId,
                            0LL);
       if ( EntityFromSpotId )
       {
-        v125 = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+        v125 = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
         if ( !v125 )
-          sub_1C13F80(0LL, v126);
+          sub_1C1AE30(0LL, v126);
         if ( clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)v125, EntityFromSpotId->fields.questId, 0LL) )
         {
           v128 = v2->fields.eventQuestCooltimeComponent;
           if ( !v128 )
-            sub_1C13F80(0LL, v127);
+            sub_1C1AE30(0LL, v127);
           EventQuestCooltimeComponent__SetSpot(v128, EntityFromSpotId, SpotBySpotInfo, 0LL);
           goto LABEL_82;
         }
@@ -22605,7 +22606,7 @@ LABEL_82:
         {
           v131 = ScrTerminalMap__get_submarineEventMap(v2, v130);
           if ( !v131 )
-            sub_1C13F80(0LL, v132);
+            sub_1C1AE30(0LL, v132);
           SubmarineMapManager__AdjustSpotPosition(v131, SpotBySpotInfo, 0LL);
         }
         eventSpotCooltimeComponent = (UnityEngine_Object_o *)v2->fields.eventSpotCooltimeComponent;
@@ -22615,13 +22616,13 @@ LABEL_82:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
+          Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserEventCooltimeRewardMaster___);
           v136 = v2->fields.mWarInfo;
           if ( !v136 )
-            sub_1C13F80(0LL, v134);
+            sub_1C1AE30(0LL, v134);
           EventId = MapControl_WarInfo__GetEventId(v136, 0LL);
           if ( !Master_object )
-            sub_1C13F80(EventId, (unsigned int)EventId);
+            sub_1C1AE30(EventId, (unsigned int)EventId);
           CurrentLevelEntity = UserEventCooltimeRewardMaster__GetCurrentLevelEntity(
                                  (UserEventCooltimeRewardMaster_o *)Master_object,
                                  EventId,
@@ -22631,7 +22632,7 @@ LABEL_82:
           {
             v139 = v2->fields.eventSpotCooltimeComponent;
             if ( !v139 )
-              sub_1C13F80(0LL, CurrentLevelEntity);
+              sub_1C1AE30(0LL, CurrentLevelEntity);
             EventSpotCooltimeComponent__SetSpot(v139, CurrentLevelEntity, SpotBySpotInfo, 0LL);
           }
         }
@@ -22640,7 +22641,7 @@ LABEL_82:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v316,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotInfo__Dispose__);
   requestPlayerSpotId = v2->fields.requestPlayerSpotId;
   if ( (requestPlayerSpotId & 0x80000000) == 0 )
   {
@@ -22654,7 +22655,7 @@ LABEL_82:
       {
         Component_object = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)SpotGameObject,
-                                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                                                     (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
         goto LABEL_103;
       }
       goto LABEL_311;
@@ -22682,7 +22683,7 @@ LABEL_103:
         goto LABEL_311;
       v144 = UnityEngine_GameObject__GetComponent_object_(
                (UnityEngine_GameObject_o *)v143,
-               (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+               (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
     }
     v2->fields.requestFocusSpotId = -1;
     if ( !IsMapModel )
@@ -22697,11 +22698,11 @@ LABEL_134:
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v310,
         (System_Collections_Generic_List_object__o *)this,
-        (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
+        (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
       for ( i = v310;
             System_Collections_Generic_List_Enumerator_object___MoveNext(
               &i,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
             ScrTerminalMap__mfMap2d_Create_LineBySpotID(v2, (MapControl_SpotRoadInfo_o *)i.fields._current, v147) )
       {
         ;
@@ -22718,11 +22719,11 @@ LABEL_134:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v310,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_SpotRoadInfo__GetEnumerator__);
   for ( i = v310;
         System_Collections_Generic_List_Enumerator_object___MoveNext(
           &i,
-          (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
+          (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__MoveNext__);
         MapModelManager__CreateModelLineBySpotId(
           mapModelManager,
           (MapControl_SpotRoadInfo_o *)i.fields._current,
@@ -22731,18 +22732,18 @@ LABEL_134:
   {
     mapModelManager = v2->fields.mapModelManager;
     if ( !mapModelManager )
-      sub_1C13F80(0LL, v145);
+      sub_1C1AE30(0LL, v145);
   }
 LABEL_139:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_SpotRoadInfo__Dispose__);
   this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
   if ( !this )
     goto LABEL_311;
   MapGimmickRootObject = MapModelManager__GetMapGimmickRootObject((MapModelManager_o *)this, 0LL);
   v2->fields.subRootGimmickP = MapGimmickRootObject;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v2->fields.subRootGimmickP,
     (int64_t)MapGimmickRootObject,
     v149,
@@ -22771,13 +22772,13 @@ LABEL_139:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v310,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
     v314 = v310;
     while ( 1 )
     {
       v158 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                &v314,
-               (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
+               (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__);
       if ( !v158 )
         break;
       v160 = v314.fields._current;
@@ -22794,26 +22795,26 @@ LABEL_139:
                                        v161);
         v170 = (int64_t)MapGimmick;
         if ( !v162 )
-          sub_1C13F80(MapGimmick, MapGimmick);
+          sub_1C1AE30(MapGimmick, MapGimmick);
         v171 = v162->fields._items;
         v172 = Method_System_Collections_Generic_List_MapGimmickComponent__Add__;
         ++v162->fields._version;
         if ( !v171 )
-          sub_1C13F80(MapGimmick, MapGimmick);
+          sub_1C1AE30(MapGimmick, MapGimmick);
         v173 = v162->fields._size;
         if ( (unsigned int)v173 >= v171->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v162,
             MapGimmick,
-            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
+            *(const MethodInfo_363C890 **)(*(_QWORD *)(v172[4] + 192LL) + 112LL));
         }
         else
         {
           v174 = &v171->obj.klass + v173;
           v162->fields._size = v173 + 1;
           v174[4] = (Il2CppClass *)v170;
-          sub_1C13CC8((PartyOrganizationUtility_o *)(v174 + 4), v170, v164, v165, v166, v167, v168, v169);
+          sub_1C1AB78((PartyOrganizationUtility_o *)(v174 + 4), v170, v164, v165, v166, v167, v168, v169);
         }
       }
     }
@@ -22829,11 +22830,11 @@ LABEL_139:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v310,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_MapControl_MapGimmickInfo__GetEnumerator__);
     v314 = v310;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v314,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__) )
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__MoveNext__) )
     {
       v176 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
       v177 = (Il2CppObject *)ScrTerminalMap__CreateMapGimmick(
@@ -22843,32 +22844,32 @@ LABEL_139:
                                v175);
       v184 = (int64_t)v177;
       if ( !v176 )
-        sub_1C13F80(v177, v177);
+        sub_1C1AE30(v177, v177);
       v185 = v176->fields._items;
       v186 = Method_System_Collections_Generic_List_MapGimmickComponent__Add__;
       ++v176->fields._version;
       if ( !v185 )
-        sub_1C13F80(v177, v177);
+        sub_1C1AE30(v177, v177);
       v187 = v176->fields._size;
       if ( (unsigned int)v187 >= v185->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v176,
           v177,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
       }
       else
       {
         v188 = &v185->obj.klass + v187;
         v176->fields._size = v187 + 1;
         v188[4] = (Il2CppClass *)v184;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v188 + 4), v184, v178, v179, v180, v181, v182, v183);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v188 + 4), v184, v178, v179, v180, v181, v182, v183);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v314,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_MapControl_MapGimmickInfo__Dispose__);
   if ( v2->fields.isRaidMap )
   {
     eventSpotMoveManager = v2->fields.eventSpotMoveManager;
@@ -22876,7 +22877,7 @@ LABEL_139:
     {
       this = (ScrTerminalMap_o *)System_Linq_Enumerable__Any_object_(
                                    (System_Collections_Generic_IEnumerable_TSource__o *)eventSpotMoveManager->fields.eventSpotMoveDataList,
-                                   (const MethodInfo_2F9A90C *)Method_System_Linq_Enumerable_Any_EventSpotMoveManager_SpotMoveData___);
+                                   (const MethodInfo_2FAA930 *)Method_System_Linq_Enumerable_Any_EventSpotMoveManager_SpotMoveData___);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         v190 = v2->fields.eventSpotMoveManager;
@@ -22888,43 +22889,43 @@ LABEL_139:
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v310,
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
+          (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventSpotMoveManager_SpotMoveData__GetEnumerator__);
         v313 = v310;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v313,
-                  (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
+                  (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__MoveNext__) )
         {
           v191 = v313.fields._current;
-          v192 = (ScrTerminalMap___c__DisplayClass288_0_o *)sub_1C13F70(ScrTerminalMap___c__DisplayClass288_0_TypeInfo);
+          v192 = (ScrTerminalMap___c__DisplayClass288_0_o *)sub_1C1AE20(ScrTerminalMap___c__DisplayClass288_0_TypeInfo);
           ScrTerminalMap___c__DisplayClass288_0___ctor(v192, 0LL);
           if ( !v191 )
-            sub_1C13F80(v193, v194);
+            sub_1C1AE30(v193, v194);
           v195 = v2->fields.eventSpotMoveManager;
           if ( !v195 )
-            sub_1C13F80(0LL, v194);
+            sub_1C1AE30(0LL, v194);
           SpotPathEntity = EventSpotMoveManager__GetSpotPathEntity(v195, (int32_t)v191[1].klass, 0LL);
           v197 = SpotPathEntity;
           if ( SpotPathEntity )
           {
             MapGimmickEffectId = SpotPathEntity__GetMapGimmickEffectId(SpotPathEntity, 0LL);
             if ( !v192 )
-              sub_1C13F80(MapGimmickEffectId, v199);
+              sub_1C1AE30(MapGimmickEffectId, v199);
             v192->fields.gimmickEffectId = MapGimmickEffectId;
             if ( (int)MapGimmickEffectId >= 1 )
             {
               v200 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
-              v201 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_MapGimmickComponent__TypeInfo);
+              v201 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_MapGimmickComponent__TypeInfo);
               System_Predicate_object____ctor(
                 v201,
                 (Il2CppObject *)v192,
                 Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__2__,
                 0LL);
               if ( !v200 )
-                sub_1C13F80(v202, v203);
+                sub_1C1AE30(v202, v203);
               v204 = System_Collections_Generic_List_object___Find(
                        v200,
                        (System_Predicate_T__o *)v201,
-                       (const MethodInfo_362D834 *)Method_System_Collections_Generic_List_MapGimmickComponent__Find__);
+                       (const MethodInfo_363CEF8 *)Method_System_Collections_Generic_List_MapGimmickComponent__Find__);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v204, 0LL, 0LL) )
@@ -22933,7 +22934,7 @@ LABEL_139:
                                                     (UnityEngine_GameObject_o *)v191[1].monitor,
                                                     0LL);
                 if ( !v204 )
-                  sub_1C13F80(v205, v206);
+                  sub_1C1AE30(v205, v206);
                 v210 = v207;
                 v211 = v208;
                 v212 = v209;
@@ -22943,7 +22944,7 @@ LABEL_139:
                 v318.fields.z = v212;
                 GameObjectExtensions__SetLocalPosition(v213, v318, 0LL);
                 v214 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v204, 0LL);
-                GameObjectExtensions__SafeSetParent_34717732(v214, (UnityEngine_GameObject_o *)v191[1].monitor, 0LL);
+                GameObjectExtensions__SafeSetParent_34762256(v214, (UnityEngine_GameObject_o *)v191[1].monitor, 0LL);
               }
             }
             MapGimmickId = SpotPathEntity__GetMapGimmickId(v197, 0LL);
@@ -22951,18 +22952,18 @@ LABEL_139:
             if ( MapGimmickId >= 1 )
             {
               v216 = (System_Collections_Generic_List_object__o *)v2->fields.gimmickList;
-              v217 = (System_Predicate_object__o *)sub_1C13F70(System_Predicate_MapGimmickComponent__TypeInfo);
+              v217 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_MapGimmickComponent__TypeInfo);
               System_Predicate_object____ctor(
                 v217,
                 (Il2CppObject *)v192,
                 Method_ScrTerminalMap___c__DisplayClass288_0__smfMap2d_SpotMarkCreate_b__1__,
                 0LL);
               if ( !v216 )
-                sub_1C13F80(v218, v219);
+                sub_1C1AE30(v218, v219);
               v220 = System_Collections_Generic_List_object___Find(
                        v216,
                        (System_Predicate_T__o *)v217,
-                       (const MethodInfo_362D834 *)Method_System_Collections_Generic_List_MapGimmickComponent__Find__);
+                       (const MethodInfo_363CEF8 *)Method_System_Collections_Generic_List_MapGimmickComponent__Find__);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v220, 0LL, 0LL) )
@@ -22971,7 +22972,7 @@ LABEL_139:
                                                     (UnityEngine_GameObject_o *)v191[1].monitor,
                                                     0LL);
                 if ( !v220 )
-                  sub_1C13F80(v221, v222);
+                  sub_1C1AE30(v221, v222);
                 v226 = v223;
                 v227 = v224;
                 v228 = v225;
@@ -22986,7 +22987,7 @@ LABEL_139:
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v313,
-          (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
+          (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventSpotMoveManager_SpotMoveData__Dispose__);
       }
     }
   }
@@ -23047,14 +23048,14 @@ LABEL_139:
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
     }
   }
-  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !this )
     goto LABEL_311;
   p_mFocusSpot = (UnityEngine_Object_o **)&v2->fields.mFocusSpot;
   if ( QuestAfterAction__IsActiveCommand((QuestAfterAction_o *)this, 0LL) )
   {
     *p_mFocusSpot = (UnityEngine_Object_o *)v235;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v241, v242, v243, v244, v245, v246);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v241, v242, v243, v244, v245, v246);
     v249 = MapZoom_TypeInfo;
     if ( !MapZoom_TypeInfo->_2.cctor_finished )
     {
@@ -23064,10 +23065,10 @@ LABEL_139:
     ZOOM_DEFAULT = v249->static_fields->ZOOM_DEFAULT;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4BB142F )
+    if ( !byte_4BC47E9 )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v248);
-      byte_4BB142F = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v248);
+      byte_4BC47E9 = 1;
     }
     v251 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23089,7 +23090,7 @@ LABEL_139:
   else if ( eventRaceBoost_k__BackingField )
   {
     *p_mFocusSpot = (UnityEngine_Object_o *)v235;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v241, v242, v243, v244, v245, v246);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v241, v242, v243, v244, v245, v246);
   }
   else
   {
@@ -23097,7 +23098,7 @@ LABEL_139:
     v252 = (PartyOrganizationUtility_o *)&v2->fields.mFocusSpot;
     *p_mFocusSpot = x;
 LABEL_233:
-    sub_1C13CC8(v252, v253, v241, v242, v243, v244, v245, v246);
+    sub_1C1AB78(v252, v253, v241, v242, v243, v244, v245, v246);
     v254 = *p_mFocusSpot;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -23109,10 +23110,10 @@ LABEL_233:
     goto LABEL_257;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   v256 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23124,10 +23125,10 @@ LABEL_233:
     goto LABEL_257;
   if ( !v256->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v256);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   v257 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23148,9 +23149,9 @@ LABEL_233:
       goto LABEL_311;
     v259 = UnityEngine_GameObject__GetComponent_object_(
              (UnityEngine_GameObject_o *)v258,
-             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+             (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
     *p_mFocusSpot = (UnityEngine_Object_o *)v259;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, (int64_t)v259, v260, v261, v262, v263, v264, v265);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, (int64_t)v259, v260, v261, v262, v263, v264, v265);
 LABEL_266:
     v268 = 0;
   }
@@ -23163,7 +23164,7 @@ LABEL_257:
     *(_QWORD *)&pos.fields.x = 0LL;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_MapCondMaster___);
+    this = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_MapCondMaster___);
     v266 = v2->fields.mMapInfo;
     if ( !v266 || !this )
       goto LABEL_311;
@@ -23202,7 +23203,7 @@ LABEL_257:
     if ( UnityEngine_Object__op_Equality(v273, 0LL, 0LL) )
     {
       *p_mFocusSpot = (UnityEngine_Object_o *)v235;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v274, v275, v276, v277, v278, v279);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, v235, v274, v275, v276, v277, v278, v279);
     }
     v280 = *p_mFocusSpot;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23210,7 +23211,7 @@ LABEL_257:
     if ( UnityEngine_Object__op_Equality(v280, 0LL, 0LL) )
     {
       *p_mFocusSpot = x;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, (int64_t)x, v281, v282, v283, v284, v285, v286);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.mFocusSpot, (int64_t)x, v281, v282, v283, v284, v285, v286);
     }
   }
   if ( IsMapModel )
@@ -23222,12 +23223,12 @@ LABEL_257:
                                      (MapModelManager_o *)this,
                                      v2->fields.mFocusSpot,
                                      0LL);
-    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !this )
       goto LABEL_311;
     if ( (HIDWORD(this->fields.rootEffectP) & 0x80000000) == 0 )
     {
-      this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+      this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
       if ( !this )
         goto LABEL_311;
       SpotPrefab = (UnityEngine_Object_o *)ScrTerminalMap__GetSpotPrefab(v2, HIDWORD(this->fields.rootEffectP), v287);
@@ -23236,7 +23237,7 @@ LABEL_257:
       if ( UnityEngine_Object__op_Inequality(SpotPrefab, 0LL, 0LL) )
       {
         v2->fields.mFocusSpot = (struct SrcSpotBasePrefab_o *)SpotPrefab;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&v2->fields.mFocusSpot,
           (int64_t)SpotPrefab,
           v289,
@@ -23253,14 +23254,14 @@ LABEL_257:
                                          v2->fields.mFocusSpot,
                                          0LL);
       }
-      this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+      this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
       if ( this )
       {
         HIDWORD(this->fields.rootEffectP) = -1;
         goto LABEL_290;
       }
 LABEL_311:
-      sub_1C13F80(this, method);
+      sub_1C1AE30(this, method);
     }
 LABEL_290:
     this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
@@ -23273,21 +23274,21 @@ LABEL_290:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v310,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
     v311 = v310;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v311,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__) )
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__) )
     {
       v296 = v311.fields._current;
       if ( !v311.fields._current )
-        sub_1C13F80(0LL, v295);
+        sub_1C1AE30(0LL, v295);
       LODWORD(v311.fields._current[15].klass) = v2->fields.currentMapLayerId;
       SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)v296, 1, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v311,
-      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
+      (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
     this = (ScrTerminalMap_o *)v2->fields.mapModelManager;
     if ( !this )
       goto LABEL_311;
@@ -23302,7 +23303,7 @@ LABEL_290:
       ScrTerminalMap__SetMapCamera_FocusSpot(v2, v2->fields.mFocusSpot, 0.001, IsMapModel, 0LL, v298);
   }
   eventMapManagerInterface_k__BackingField = v2->fields._eventMapManagerInterface_k__BackingField;
-  v300 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v300 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v300, (Il2CppObject *)v2, Method_ScrTerminalMap__smfMap2d_SpotMarkCreate_b__288_0__, 0LL);
   if ( !eventMapManagerInterface_k__BackingField )
     goto LABEL_311;
@@ -23323,7 +23324,7 @@ LABEL_290:
   else
   {
 LABEL_308:
-    p_method = sub_1C65D04(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 4LL);
+    p_method = sub_1C6CBB4(eventMapManagerInterface_k__BackingField, EventMapManagerInterface_TypeInfo, 4LL);
   }
   (*(void (__fastcall **)(struct EventMapManagerInterface_o *, System_Action_o *, _QWORD))p_method)(
     eventMapManagerInterface_k__BackingField,
@@ -23411,20 +23412,20 @@ void __fastcall ScrTerminalMap__smfSetMapChange(ScrTerminalMap_o *this, const Me
   FollowerInfo_o *v77; // x6
   PartyListViewItem_o *v78; // x7
 
-  if ( (byte_4BB1901 & 1) == 0 )
+  if ( (byte_4BC4CBD & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&AssetManager_TypeInfo, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_GameObject__Clear__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v11);
-    sub_1C13D24(&Method_ScrTerminalMap__smfSetMapChange_b__269_0__, v12);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v13);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v14);
-    byte_4BB1901 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_GameObject__Clear__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v11);
+    sub_1C1ABD4(&Method_ScrTerminalMap__smfSetMapChange_b__269_0__, v12);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v13);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v14);
+    byte_4BC4CBD = 1;
   }
   this->fields._currentMapTexture_k__BackingField = 0LL;
   *(_WORD *)&this->fields.isFirstFade = 0;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._currentMapTexture_k__BackingField,
     0LL,
     v2,
@@ -23457,18 +23458,18 @@ void __fastcall ScrTerminalMap__smfSetMapChange(ScrTerminalMap_o *this, const Me
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapAssetData, 0LL);
     this->fields.mapAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapAssetData, 0LL, v24, v25, v26, v27, v28, v29);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapAssetData, 0LL, v24, v25, v26, v27, v28, v29);
   }
   mapMultiAssetData = this->fields.mapMultiAssetData;
   if ( mapMultiAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_38935320(mapMultiAssetData, 0LL);
+    AssetManager__releaseAsset_38988476(mapMultiAssetData, 0LL);
     this->fields.mapMultiAssetData = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v31, v32, v33, v34, v35, v36);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mapMultiAssetData, 0LL, v31, v32, v33, v34, v35, v36);
   }
   mapModelManager = this->fields.mapModelManager;
   if ( mapModelManager )
@@ -23481,21 +23482,21 @@ void __fastcall ScrTerminalMap__smfSetMapChange(ScrTerminalMap_o *this, const Me
       goto LABEL_52;
     Map = MapControl_WarInfo__GetMap(this->fields.mWarInfo, (int32_t)requestedMapId, 0LL);
     this->fields.mMapInfo = Map;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)Map, v39, v40, v41, v42, v43, v44);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)Map, v39, v40, v41, v42, v43, v44);
 LABEL_22:
     v45 = 0;
     goto LABEL_28;
   }
-  mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !mapModelManager )
     goto LABEL_52;
   v46 = *((_DWORD *)mapModelManager + 50);
-  mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !mapModelManager || !mWarInfo )
     goto LABEL_52;
   ActionMap = MapControl_WarInfo__GetActionMap(mWarInfo, v46, *((_DWORD *)mapModelManager + 51), 0LL);
   this->fields.mMapInfo = ActionMap;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)ActionMap, v48, v49, v50, v51, v52, v53);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)ActionMap, v48, v49, v50, v51, v52, v53);
   if ( !this->fields.mMapInfo )
   {
     mapModelManager = this->fields.mWarInfo;
@@ -23503,8 +23504,8 @@ LABEL_22:
       goto LABEL_52;
     v72 = MapControl_WarInfo__GetMap((MapControl_WarInfo_o *)mapModelManager, this->fields.currentMapId, 0LL);
     this->fields.mMapInfo = v72;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)v72, v73, v74, v75, v76, v77, v78);
-    mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapInfo, (int64_t)v72, v73, v74, v75, v76, v77, v78);
+    mapModelManager = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
     if ( !mapModelManager )
       goto LABEL_52;
     QuestAfterAction__SkipToNextAction((QuestAfterAction_o *)mapModelManager, 0LL);
@@ -23519,7 +23520,7 @@ LABEL_28:
   Mine = MapControl_MapInfo__GetMine((MapControl_MapInfo_o *)mapModelManager, 0LL);
   p_mMapEnt = &this->fields.mMapEnt;
   this->fields.mMapEnt = Mine;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mMapEnt, (int64_t)Mine, v56, v57, v58, v59, v60, v61);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mMapEnt, (int64_t)Mine, v56, v57, v58, v59, v60, v61);
   mapModelManager = this->fields.mWarInfo;
   if ( !mapModelManager )
     goto LABEL_52;
@@ -23544,10 +23545,10 @@ LABEL_28:
   mMapEnt = this->fields.mMapEnt;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BAF44C )
+  if ( !byte_4BC27F3 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, requestedMapId);
-    byte_4BAF44C = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, requestedMapId);
+    byte_4BC27F3 = 1;
   }
   mapModelManager = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23580,11 +23581,11 @@ LABEL_28:
   v68 = this->fields.mapModelManager;
   currentMapId = this->fields.currentMapId;
   currentAssetId = this->fields.currentAssetId;
-  v71 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v71 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v71, (Il2CppObject *)this, Method_ScrTerminalMap__smfSetMapChange_b__269_0__, 0LL);
   if ( !v68 )
 LABEL_52:
-    sub_1C13F80(mapModelManager, requestedMapId);
+    sub_1C1AE30(mapModelManager, requestedMapId);
   MapModelManager__LoadMapModel(v68, currentAssetId, currentMapId, v71, 0LL);
 }
 
@@ -23625,17 +23626,17 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
   PartyListViewItem_o *v33; // x7
   const MethodInfo *v34; // x2
 
-  if ( (byte_4BB1951 & 1) == 0 )
+  if ( (byte_4BC4D0D & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_QuestMaster___, spotObject);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v10);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v12);
-    sub_1C13D24(&StringLiteral_19406/*"evCAPTER_CREATE_FINISH"*/, v13);
-    byte_4BB1951 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_QuestMaster___, spotObject);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___, v10);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v12);
+    sub_1C1ABD4(&StringLiteral_19420/*"evSpotSelect_GoQuestSelect"*/, v13);
+    byte_4BC4D0D = 1;
   }
   this->fields.spotTouchObj = spotObject;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.spotTouchObj,
     (int64_t)spotObject,
     (int64_t)method,
@@ -23648,17 +23649,17 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
     goto LABEL_39;
   Component_object = (MapControl_WarInfo_o *)UnityEngine_GameObject__GetComponent_object_(
                                                spotObject,
-                                               (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                                               (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
   if ( !Component_object )
     goto LABEL_39;
   v17 = Component_object;
   DEFAULT_WAR_CHECK_STATUS = Component_object[2].fields.DEFAULT_WAR_CHECK_STATUS;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1256 )
+  if ( !byte_4BC4610 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v15);
-    byte_4BB1256 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v15);
+    byte_4BC4610 = 1;
   }
   v19 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23678,7 +23679,7 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
   Component_object = (MapControl_WarInfo_o *)this->fields.titleInfoControl;
   if ( !Component_object )
     goto LABEL_39;
-  TitleInfoControl__setBackBtnSprite_38286168((TitleInfoControl_o *)Component_object, 1, 1, 0, 0LL);
+  TitleInfoControl__setBackBtnSprite_38338644((TitleInfoControl_o *)Component_object, 1, 1, 0, 0LL);
   Component_object = (MapControl_WarInfo_o *)this->fields.titleInfoControl;
   if ( !Component_object )
     goto LABEL_39;
@@ -23687,10 +23688,10 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
   if ( !Component_object )
     goto LABEL_39;
   TitleInfoControl__SetDispChangeBtn((TitleInfoControl_o *)Component_object, 0, 0LL);
-  if ( !byte_4BB19CB )
+  if ( !byte_4BC4D87 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v23);
-    byte_4BB19CB = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v23);
+    byte_4BC4D87 = 1;
   }
   v24 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23702,10 +23703,10 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
   {
     if ( !v24->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v24);
-    if ( !byte_4BB1803 )
+    if ( !byte_4BC4BBF )
     {
-      sub_1C13D24(&TerminalPramsManager_TypeInfo, v23);
-      byte_4BB1803 = 1;
+      sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v23);
+      byte_4BC4BBF = 1;
     }
     v25 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23715,18 +23716,18 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
     }
     if ( !v25->static_fields->_SelectedRecollectionWarId_k__BackingField )
     {
-      Component_object = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Component_object = (MapControl_WarInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( Component_object )
       {
         MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Component_object,
-                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_QuestMaster___);
+                              (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_QuestMaster___);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4BB19CB )
+        if ( !byte_4BC4D87 )
         {
-          sub_1C13D24(&TerminalPramsManager_TypeInfo, v15);
-          byte_4BB19CB = 1;
+          sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v15);
+          byte_4BC4D87 = 1;
         }
         Component_object = (MapControl_WarInfo_o *)TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -23756,26 +23757,26 @@ void __fastcall ScrTerminalMap__smfSpotBtn_Click(
         }
       }
 LABEL_39:
-      sub_1C13F80(Component_object, v15);
+      sub_1C1AE30(Component_object, v15);
     }
   }
 LABEL_38:
   ActionExtensions__Call(this->fields.mSpotClickAct, 0LL);
   this->fields.mSpotClickAct = 0LL;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.mSpotClickAct, 0LL, v28, v29, v30, v31, v32, v33);
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19406/*"evCAPTER_CREATE_FINISH"*/, v34);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mSpotClickAct, 0LL, v28, v29, v30, v31, v32, v33);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19420/*"evSpotSelect_GoQuestSelect"*/, v34);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall ScrTerminalMap__smfSpot_SetPos(ScrTerminalMap_o *this, int32_t spotId, const MethodInfo *method)
 {
-  if ( (byte_4BB18F9 & 1) == 0 )
+  if ( (byte_4BC4CB5 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_19407/*"evCAPTER_SELECT_FINISH"*/, *(_QWORD *)&spotId);
-    byte_4BB18F9 = 1;
+    sub_1C1ABD4(&StringLiteral_19421/*"evSpotSet_Finish"*/, *(_QWORD *)&spotId);
+    byte_4BC4CB5 = 1;
   }
-  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19407/*"evCAPTER_SELECT_FINISH"*/, method);
+  ScrTerminalMap__mfCallFsmEvent(this, (System_String_o *)StringLiteral_19421/*"evSpotSet_Finish"*/, method);
 }
 
 
@@ -23835,13 +23836,13 @@ bool __fastcall ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401__MoveNext(
   Il2CppObject *_8__1; // x21
   System_Action_o *v43; // x19
 
-  if ( (byte_4BB1AB4 & 1) == 0 )
+  if ( (byte_4BC4E6E & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass401_0__EventBoardCameraActionAuto_IE_b__0__, v3);
-    sub_1C13D24(&ScrTerminalMap___c__DisplayClass401_0_TypeInfo, v4);
-    sub_1C13D24(&UnityEngine_WaitForSeconds_TypeInfo, v5);
-    byte_4BB1AB4 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass401_0__EventBoardCameraActionAuto_IE_b__0__, v3);
+    sub_1C1ABD4(&ScrTerminalMap___c__DisplayClass401_0_TypeInfo, v4);
+    sub_1C1ABD4(&UnityEngine_WaitForSeconds_TypeInfo, v5);
+    byte_4BC4E6E = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -23849,7 +23850,7 @@ bool __fastcall ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401__MoveNext(
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
     _8__1 = (Il2CppObject *)this->fields.__8__1;
-    v43 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v43 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       v43,
       _8__1,
@@ -23862,33 +23863,33 @@ bool __fastcall ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401__MoveNext(
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v7 = (Il2CppObject *)sub_1C13F70(ScrTerminalMap___c__DisplayClass401_0_TypeInfo);
+    v7 = (Il2CppObject *)sub_1C1AE20(ScrTerminalMap___c__DisplayClass401_0_TypeInfo);
     System_Object___ctor(v7, 0LL);
     this->fields.__8__1 = (struct ScrTerminalMap___c__DisplayClass401_0_o *)v7;
     p__8__1 = &this->fields.__8__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__8__1, (int64_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__8__1, (int64_t)v7, v9, v10, v11, v12, v13, v14);
     v22 = this->fields.__8__1;
     if ( v22 )
     {
       callback = this->fields.callback;
       v22->fields.callback = callback;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&v22->fields, (int64_t)callback, v16, v17, v18, v19, v20, v21);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&v22->fields, (int64_t)callback, v16, v17, v18, v19, v20, v21);
       v22 = this->fields.__8__1;
       if ( v22 )
       {
         v30 = this->fields.__4__this;
         v22->fields.__4__this = v30;
-        sub_1C13CC8((PartyOrganizationUtility_o *)&v22->fields.__4__this, (int64_t)v30, v24, v25, v26, v27, v28, v29);
+        sub_1C1AB78((PartyOrganizationUtility_o *)&v22->fields.__4__this, (int64_t)v30, v24, v25, v26, v27, v28, v29);
         v31 = *p__8__1;
         if ( *p__8__1 )
         {
           *(_QWORD *)&v31->fields.squareId = *(_QWORD *)&this->fields.squareId;
           v31->fields.maxClearCount = this->fields.maxClearCount;
-          v32 = (UnityEngine_WaitForSeconds_o *)sub_1C13F70(UnityEngine_WaitForSeconds_TypeInfo);
+          v32 = (UnityEngine_WaitForSeconds_o *)sub_1C1AE20(UnityEngine_WaitForSeconds_TypeInfo);
           UnityEngine_WaitForSeconds___ctor(v32, 0.5, 0LL);
           this->fields.__2__current = (Il2CppObject *)v32;
           p__2__current = &this->fields.__2__current;
-          sub_1C13CC8((PartyOrganizationUtility_o *)p__2__current, (int64_t)v32, v34, v35, v36, v37, v38, v39);
+          sub_1C1AB78((PartyOrganizationUtility_o *)p__2__current, (int64_t)v32, v34, v35, v36, v37, v38, v39);
           result = 1;
           *((_DWORD *)p__2__current - 2) = 1;
           return result;
@@ -23896,7 +23897,7 @@ bool __fastcall ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401__MoveNext(
       }
     }
 LABEL_12:
-    sub_1C13F80(v22, v15);
+    sub_1C1AE30(v22, v15);
   }
   return 0;
 }
@@ -23918,11 +23919,11 @@ void __fastcall __noreturn ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
+  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C13D38(&Method_ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_System_Collections_IEnumerator_Reset__);
-  sub_1C13E4C(v3, v4);
+  v4 = sub_1C1ABE8(&Method_ScrTerminalMap__EventBoardCameraActionAuto_IE_d__401_System_Collections_IEnumerator_Reset__);
+  sub_1C1ACFC(v3, v4);
 }
 
 
@@ -23996,30 +23997,30 @@ bool __fastcall ScrTerminalMap__WaitConnecting_d__249__MoveNext(
   FollowerInfo_o *v40; // x6
   PartyListViewItem_o *v41; // x7
 
-  if ( (byte_4BB1AB5 & 1) == 0 )
+  if ( (byte_4BC4E6F & 1) == 0 )
   {
-    sub_1C13D24(&System_Func_bool__TypeInfo, method);
-    sub_1C13D24(&ManagerConfig_TypeInfo, v3);
-    sub_1C13D24(&NetworkManager_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__WaitConnecting_b__249_0__, v6);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v7);
-    sub_1C13D24(&UnityEngine_WaitForSeconds_TypeInfo, v8);
-    sub_1C13D24(&UnityEngine_WaitWhile_TypeInfo, v9);
-    byte_4BB1AB5 = 1;
+    sub_1C1ABD4(&System_Func_bool__TypeInfo, method);
+    sub_1C1ABD4(&ManagerConfig_TypeInfo, v3);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__WaitConnecting_b__249_0__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v7);
+    sub_1C1ABD4(&UnityEngine_WaitForSeconds_TypeInfo, v8);
+    sub_1C1ABD4(&UnityEngine_WaitWhile_TypeInfo, v9);
+    byte_4BC4E6F = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 2 )
   {
     this->fields.__1__state = -1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0LL);
       return 0;
     }
 LABEL_23:
-    sub_1C13F80(Instance, v23);
+    sub_1C1AE30(Instance, v23);
   }
   if ( _1__state != 1 )
   {
@@ -24033,11 +24034,11 @@ LABEL_23:
         v11 = ManagerConfig_TypeInfo;
       }
       SLOW_CONNECT_WAIT_TIME = v11->static_fields->SLOW_CONNECT_WAIT_TIME;
-      v13 = (UnityEngine_WaitForSeconds_o *)sub_1C13F70(UnityEngine_WaitForSeconds_TypeInfo);
+      v13 = (UnityEngine_WaitForSeconds_o *)sub_1C1AE20(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v13, SLOW_CONNECT_WAIT_TIME, 0LL);
       this->fields.__2__current = (Il2CppObject *)v13;
       p__2__current = &this->fields.__2__current;
-      sub_1C13CC8((PartyOrganizationUtility_o *)p__2__current, (int64_t)v13, v15, v16, v17, v18, v19, v20);
+      sub_1C1AB78((PartyOrganizationUtility_o *)p__2__current, (int64_t)v13, v15, v16, v17, v18, v19, v20);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
@@ -24049,7 +24050,7 @@ LABEL_23:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   if ( !NetworkManager__CommunicationIsBusy(0LL) )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL);
@@ -24068,11 +24069,11 @@ LABEL_23:
       v24 = ScrTerminalMap___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v24->static_fields->__9;
-    _9__249_0 = (System_Func_bool__o *)sub_1C13F70(System_Func_bool__TypeInfo);
+    _9__249_0 = (System_Func_bool__o *)sub_1C1AE20(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(_9__249_0, v26, Method_ScrTerminalMap___c__WaitConnecting_b__249_0__, 0LL);
     static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
     static_fields->__9__249_0 = _9__249_0;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&static_fields->__9__249_0,
       (int64_t)_9__249_0,
       v28,
@@ -24082,11 +24083,11 @@ LABEL_23:
       v32,
       v33);
   }
-  v34 = (UnityEngine_WaitWhile_o *)sub_1C13F70(UnityEngine_WaitWhile_TypeInfo);
+  v34 = (UnityEngine_WaitWhile_o *)sub_1C1AE20(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v34, _9__249_0, 0LL);
   this->fields.__2__current = (Il2CppObject *)v34;
   v35 = &this->fields.__2__current;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v35, (int64_t)v34, v36, v37, v38, v39, v40, v41);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v35, (int64_t)v34, v36, v37, v38, v39, v40, v41);
   *((_DWORD *)v35 - 2) = 2;
   return 1;
 }
@@ -24108,11 +24109,11 @@ void __fastcall __noreturn ScrTerminalMap__WaitConnecting_d__249__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
+  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C13D38(&Method_ScrTerminalMap__WaitConnecting_d__249_System_Collections_IEnumerator_Reset__);
-  sub_1C13E4C(v3, v4);
+  v4 = sub_1C1ABE8(&Method_ScrTerminalMap__WaitConnecting_d__249_System_Collections_IEnumerator_Reset__);
+  sub_1C1ACFC(v3, v4);
 }
 
 
@@ -24194,17 +24195,17 @@ bool __fastcall ScrTerminalMap__WaitScriptLoad_d__316__MoveNext(
   FollowerInfo_o *v48; // x6
   PartyListViewItem_o *v49; // x7
 
-  if ( (byte_4BB1AB6 & 1) == 0 )
+  if ( (byte_4BC4E70 & 1) == 0 )
   {
-    sub_1C13D24(&BgmManager_TypeInfo, method);
-    sub_1C13D24(&System_Func_bool__TypeInfo, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v4);
-    sub_1C13D24(&Method_ScrTerminalMap___c__WaitScriptLoad_b__316_0__, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__WaitScriptLoad_b__316_1__, v6);
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v7);
-    sub_1C13D24(&UnityEngine_WaitUntil_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_7101/*"GO_BATTLE"*/, v9);
-    byte_4BB1AB6 = 1;
+    sub_1C1ABD4(&BgmManager_TypeInfo, method);
+    sub_1C1ABD4(&System_Func_bool__TypeInfo, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v4);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__WaitScriptLoad_b__316_0__, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__WaitScriptLoad_b__316_1__, v6);
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v7);
+    sub_1C1ABD4(&UnityEngine_WaitUntil_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_7104/*"GO_NEXT"*/, v9);
+    byte_4BC4E70 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 2 )
@@ -24213,10 +24214,10 @@ bool __fastcall ScrTerminalMap__WaitScriptLoad_d__316__MoveNext(
     _4__this = this->fields.__4__this;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4BB1ABE )
+    if ( !byte_4BC4E78 )
     {
-      sub_1C13D24(&BgmManager_TypeInfo, method);
-      byte_4BB1ABE = 1;
+      sub_1C1ABD4(&BgmManager_TypeInfo, method);
+      byte_4BC4E78 = 1;
     }
     mapButtonGrid = (MapButtonControl_o *)BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -24236,12 +24237,12 @@ bool __fastcall ScrTerminalMap__WaitScriptLoad_d__316__MoveNext(
       if ( mapButtonGrid )
       {
         MapButtonControl__FrameIn(mapButtonGrid, 0LL);
-        ScrTerminalMap__mfCallFsmEvent(_4__this, (System_String_o *)StringLiteral_7101/*"GO_BATTLE"*/, 0LL);
+        ScrTerminalMap__mfCallFsmEvent(_4__this, (System_String_o *)StringLiteral_7104/*"GO_NEXT"*/, 0LL);
         return 0;
       }
     }
 LABEL_39:
-    sub_1C13F80(mapButtonGrid, method);
+    sub_1C1AE30(mapButtonGrid, method);
   }
   if ( _1__state != 1 )
   {
@@ -24263,11 +24264,11 @@ LABEL_39:
           v11 = ScrTerminalMap___c_TypeInfo;
         }
         v13 = (Il2CppObject *)v11->static_fields->__9;
-        _9__316_0 = (System_Func_bool__o *)sub_1C13F70(System_Func_bool__TypeInfo);
+        _9__316_0 = (System_Func_bool__o *)sub_1C1AE20(System_Func_bool__TypeInfo);
         System_Func_bool____ctor(_9__316_0, v13, Method_ScrTerminalMap___c__WaitScriptLoad_b__316_0__, 0LL);
         static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
         static_fields->__9__316_0 = _9__316_0;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&static_fields->__9__316_0,
           (int64_t)_9__316_0,
           v15,
@@ -24277,11 +24278,11 @@ LABEL_39:
           v19,
           v20);
       }
-      v21 = (UnityEngine_WaitUntil_o *)sub_1C13F70(UnityEngine_WaitUntil_TypeInfo);
+      v21 = (UnityEngine_WaitUntil_o *)sub_1C1AE20(UnityEngine_WaitUntil_TypeInfo);
       UnityEngine_WaitUntil___ctor(v21, _9__316_0, 0LL);
       this->fields.__2__current = (Il2CppObject *)v21;
       p__2__current = &this->fields.__2__current;
-      sub_1C13CC8((PartyOrganizationUtility_o *)p__2__current, (int64_t)v21, v23, v24, v25, v26, v27, v28);
+      sub_1C1AB78((PartyOrganizationUtility_o *)p__2__current, (int64_t)v21, v23, v24, v25, v26, v27, v28);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
@@ -24289,7 +24290,7 @@ LABEL_39:
     return 0;
   }
   this->fields.__1__state = -1;
-  mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  mapButtonGrid = (MapButtonControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !mapButtonGrid )
     goto LABEL_39;
   if ( ScriptManager__IsJumpLine((ScriptManager_o *)mapButtonGrid, 0LL) )
@@ -24313,17 +24314,17 @@ LABEL_39:
       v32 = ScrTerminalMap___c_TypeInfo;
     }
     v34 = (Il2CppObject *)v32->static_fields->__9;
-    _9__316_1 = (System_Func_bool__o *)sub_1C13F70(System_Func_bool__TypeInfo);
+    _9__316_1 = (System_Func_bool__o *)sub_1C1AE20(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(_9__316_1, v34, Method_ScrTerminalMap___c__WaitScriptLoad_b__316_1__, 0LL);
     v35 = ScrTerminalMap___c_TypeInfo->static_fields;
     v35->__9__316_1 = _9__316_1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v35->__9__316_1, (int64_t)_9__316_1, v36, v37, v38, v39, v40, v41);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v35->__9__316_1, (int64_t)_9__316_1, v36, v37, v38, v39, v40, v41);
   }
-  v42 = (UnityEngine_WaitUntil_o *)sub_1C13F70(UnityEngine_WaitUntil_TypeInfo);
+  v42 = (UnityEngine_WaitUntil_o *)sub_1C1AE20(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v42, _9__316_1, 0LL);
   this->fields.__2__current = (Il2CppObject *)v42;
   v43 = &this->fields.__2__current;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v43, (int64_t)v42, v44, v45, v46, v47, v48, v49);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v43, (int64_t)v42, v44, v45, v46, v47, v48, v49);
   *((_DWORD *)v43 - 2) = 2;
   return 1;
 }
@@ -24345,11 +24346,11 @@ void __fastcall __noreturn ScrTerminalMap__WaitScriptLoad_d__316__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
+  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C13D38(&Method_ScrTerminalMap__WaitScriptLoad_d__316_System_Collections_IEnumerator_Reset__);
-  sub_1C13E4C(v3, v4);
+  v4 = sub_1C1ABE8(&Method_ScrTerminalMap__WaitScriptLoad_d__316_System_Collections_IEnumerator_Reset__);
+  sub_1C1ACFC(v3, v4);
 }
 
 
@@ -24380,15 +24381,15 @@ void __fastcall ScrTerminalMap___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB1A8E & 1) == 0 )
+  if ( (byte_4BC4E49 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v1);
-    byte_4BB1A8E = 1;
+    sub_1C1ABD4(&ScrTerminalMap___c_TypeInfo, v1);
+    byte_4BC4E49 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(ScrTerminalMap___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(ScrTerminalMap___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ScrTerminalMap___c_TypeInfo->static_fields->__9 = (struct ScrTerminalMap___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ScrTerminalMap___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -24418,38 +24419,8 @@ bool __fastcall ScrTerminalMap___c___OnTouchDisp_b__438_0(
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return MapGimmickComponent__IsTouched(v, 0LL);
-}
-
-
-void __fastcall ScrTerminalMap___c___PlayMapModelEntryAnimation_b__364_1(
-        ScrTerminalMap___c_o *this,
-        const MethodInfo *method)
-{
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  TerminalPramsManager_c *v8; // x0
-  PartyOrganizationUtility_o *p_mQuestPhaseRewardInfos; // x0
-
-  if ( (byte_4BB1A93 & 1) == 0 )
-  {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1A93 = 1;
-  }
-  v8 = TerminalPramsManager_TypeInfo;
-  if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v8 = TerminalPramsManager_TypeInfo;
-  }
-  p_mQuestPhaseRewardInfos = (PartyOrganizationUtility_o *)&v8->static_fields->mQuestPhaseRewardInfos;
-  p_mQuestPhaseRewardInfos->klass = 0LL;
-  sub_1C13CC8(p_mQuestPhaseRewardInfos, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -24459,7 +24430,7 @@ int32_t __fastcall ScrTerminalMap___c___SetBoardGameSquareHaveToken_b__409_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return QuestEntity__getPriority(x, 0LL);
 }
 
@@ -24486,20 +24457,20 @@ bool __fastcall ScrTerminalMap___c___TryAutoQuest_b__418_0(
   int64_t value; // x19
   TerminalPramsManager_c *v5; // x0
 
-  if ( (byte_4BB1A95 & 1) == 0 )
+  if ( (byte_4BC4E4F & 1) == 0 )
   {
-    this = (ScrTerminalMap___c_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, x);
-    byte_4BB1A95 = 1;
+    this = (ScrTerminalMap___c_o *)sub_1C1ABD4(&TerminalPramsManager_TypeInfo, x);
+    byte_4BC4E4F = 1;
   }
   if ( !x )
-    sub_1C13F80(this, x);
+    sub_1C1AE30(this, x);
   value = x->fields.value;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19BF )
+  if ( !byte_4BC4D7B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, x);
-    byte_4BB19BF = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, x);
+    byte_4BC4D7B = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -24519,24 +24490,24 @@ bool __fastcall ScrTerminalMap___c___UpdateBoardGameSquare_b__402_0(
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4BB1A94 & 1) == 0 )
+  if ( (byte_4BC4E4E & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonTemplate_QuestTree__get_Instance__, x);
-    byte_4BB1A94 = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, x);
+    byte_4BC4E4E = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v5);
-  return QuestTree__CheckMapGimmickCond_35115208((QuestTree_o *)Instance, x, 0LL);
+    sub_1C1AE30(0LL, v5);
+  return QuestTree__CheckMapGimmickCond_35161012((QuestTree_o *)Instance, x, 0LL);
 }
 
 
 bool __fastcall ScrTerminalMap___c___WaitConnecting_b__249_0(ScrTerminalMap___c_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB1A8F & 1) == 0 )
+  if ( (byte_4BC4E4A & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BB1A8F = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC4E4A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -24549,14 +24520,14 @@ bool __fastcall ScrTerminalMap___c___WaitScriptLoad_b__316_0(ScrTerminalMap___c_
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4BB1A90 & 1) == 0 )
+  if ( (byte_4BC4E4B & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, method);
-    byte_4BB1A90 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, method);
+    byte_4BC4E4B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   return !ScriptManager__get_IsLoading((ScriptManager_o *)Instance, 0LL);
 }
 
@@ -24566,14 +24537,14 @@ bool __fastcall ScrTerminalMap___c___WaitScriptLoad_b__316_1(ScrTerminalMap___c_
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4BB1A91 & 1) == 0 )
+  if ( (byte_4BC4E4C & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, method);
-    byte_4BB1A91 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, method);
+    byte_4BC4E4C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v3);
+    sub_1C1AE30(0LL, v3);
   return !ScriptManager__IsJumpLine((ScriptManager_o *)Instance, 0LL);
 }
 
@@ -24583,21 +24554,21 @@ void __fastcall ScrTerminalMap___c___mcbfMapTouchDisable_b__359_7(ScrTerminalMap
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4BB1A92 & 1) == 0 )
+  if ( (byte_4BC4E4D & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4BB1A92 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_4BC4E4D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__ClearLoginResultData((CommonUI_o *)Instance, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
     || (CommonUI__ReleaseFortuneBonusAssetData((CommonUI_o *)Instance, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
     || (CommonUI__ReleaseSelectBonusDialogAsset((CommonUI_o *)Instance, 0LL),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
-    sub_1C13F80(Instance, v3);
+    sub_1C1AE30(Instance, v3);
   }
   CommonUI__ReleaseLoginBonusWithTransitionDialogAssetData((CommonUI_o *)Instance, 0LL);
 }
@@ -24623,7 +24594,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass248_0___BeginRaidUpdateRequest_b
   TopHomeRequest__UpdateAccessTime(0LL);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(v4, v5);
+    sub_1C1AE30(v4, v5);
   _4__this->fields._IsCheckExpiration_k__BackingField = 1;
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -24648,10 +24619,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass252_0___CheckRaidTimeLimit_b__0(
   System_String_o *v6; // x0
 
   v2 = (int)this;
-  if ( (byte_4BB1A96 & 1) == 0 )
+  if ( (byte_4BC4E50 & 1) == 0 )
   {
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, method);
-    byte_4BB1A96 = 1;
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, method);
+    byte_4BC4E50 = 1;
   }
   v3 = ScrTerminalMap_TypeInfo;
   if ( !ScrTerminalMap_TypeInfo->_2.cctor_finished )
@@ -24661,7 +24632,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass252_0___CheckRaidTimeLimit_b__0(
   }
   RAID_TIME_OVER_NOTICE_KEY = v3->static_fields->RAID_TIME_OVER_NOTICE_KEY;
   v5 = System_Int32__ToString(v2 + 16, 0LL);
-  v6 = System_String__Concat_62967944(RAID_TIME_OVER_NOTICE_KEY, v5, 0LL);
+  v6 = System_String__Concat_63040368(RAID_TIME_OVER_NOTICE_KEY, v5, 0LL);
   UnityEngine_PlayerPrefs__SetInt(v6, 1, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -24692,7 +24663,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass259_0___MovePlayerIcon_b__0(
         (v4 = v3->fields.__4__this) == 0LL)
     || (this = (ScrTerminalMap___c__DisplayClass259_0_o *)v4->fields.mWarInfo) == 0LL )
   {
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   IsMultiMap = MapControl_WarInfo__IsMultiMap((MapControl_WarInfo_o *)this, 0LL);
   SaveKey_PlayerIcon = ScrTerminalMap__GetSaveKey_PlayerIcon(v4, IsMultiMap, 0LL);
@@ -24712,7 +24683,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass259_0___MovePlayerIcon_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (easingObject = this->fields.easingObject) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   playerIcon = _4__this->fields.playerIcon;
   v5 = Easing__Func(this->fields.from, this->fields.to, easingObject->fields.mNow, 0, 0LL);
   GameObjectExtensions__SetPosition(playerIcon, v5, 0LL);
@@ -24743,29 +24714,29 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__0(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BB1A98 & 1) == 0 )
+  if ( (byte_4BC4E52 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, method);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__3__, v4);
-    byte_4BB1A98 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, method);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__3__, v4);
+    byte_4BC4E52 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   ScrTerminalMap__SetupFeildConfiguration(_4__this, 0LL);
   _9__3 = this->fields.__9__3;
   assetMapName = this->fields.assetMapName;
   if ( !_9__3 )
   {
-    _9__3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    _9__3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       _9__3,
       (Il2CppObject *)this,
       Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__3__,
       0LL);
     this->fields.__9__3 = _9__3;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__3, (int64_t)_9__3, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__9__3, (int64_t)_9__3, v8, v9, v10, v11, v12, v13);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -24807,18 +24778,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__2(
   int32_t currentAssetId; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = this;
-  if ( (byte_4BB1A97 & 1) == 0 )
+  if ( (byte_4BC4E51 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, multiAssetData);
-    sub_1C13D24(&int_TypeInfo, v10);
-    this = (ScrTerminalMap___c__DisplayClass262_0_o *)sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v11);
-    byte_4BB1A97 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, multiAssetData);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    this = (ScrTerminalMap___c__DisplayClass262_0_o *)sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v11);
+    byte_4BC4E51 = 1;
   }
   _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_12;
   _4__this->fields.mapMultiAssetData = multiAssetData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&_4__this->fields.mapMultiAssetData,
     (int64_t)multiAssetData,
     (int64_t)method,
@@ -24865,12 +24836,12 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__2(
           (AssetData_o *)this[4].fields.__9__2,
           0LL),
         v27 = (Il2CppObject *)v9->fields.__4__this,
-        v28 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v28 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v28, v27, Method_ScrTerminalMap_LoadEventMap__, 0LL),
         !v27) )
   {
 LABEL_12:
-    sub_1C13F80(this, multiAssetData);
+    sub_1C1AE30(this, multiAssetData);
   }
   ScrTerminalMap__LoadMapImgTex((ScrTerminalMap_o *)v27, v28, 0LL);
 }
@@ -24924,7 +24895,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__3(
   System_String_o *ASSETS_NAME_MAP_GIMMICK; // x20
   Il2CppObject *v45; // x0
   struct ScrTerminalMap_o *v46; // x20
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v48; // x2
   int32_t v49; // w3
   System_String_o *v50; // x4
@@ -24938,24 +24909,24 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__3(
   int32_t currentAssetId; // [xsp+Ch] [xbp-34h] BYREF
 
   v8 = asData;
-  if ( (byte_4BB1A99 & 1) == 0 )
+  if ( (byte_4BC4E53 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, asData);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v10);
-    sub_1C13D24(&AssetManager_TypeInfo, v11);
-    sub_1C13D24(&int_TypeInfo, v12);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v13);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v14);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v15);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v16);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__4__, v17);
-    byte_4BB1A99 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, asData);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v10);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v11);
+    sub_1C1ABD4(&int_TypeInfo, v12);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v13);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v14);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v15);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v16);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__4__, v17);
+    byte_4BC4E53 = 1;
   }
   _4__this = (__int64)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_25;
   *(_QWORD *)(_4__this + 248) = v8;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(_4__this + 248), (int64_t)v8, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(_4__this + 248), (int64_t)v8, (int64_t)method, v3, v4, v5, v6, v7);
   _4__this = (__int64)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_25;
@@ -24975,21 +24946,21 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__3(
   v26 = AssetMultiMapName;
   if ( !_9__4 )
   {
-    _9__4 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    _9__4 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       _9__4,
       (Il2CppObject *)this,
       Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__4__,
       0LL);
     this->fields.__9__4 = _9__4;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__4, (int64_t)_9__4, v27, v28, v29, v30, v31, v32);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__9__4, (int64_t)_9__4, v27, v28, v29, v30, v31, v32);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !AssetManager__loadAssetStorage(v26, _9__4, 1, 0LL) )
   {
 LABEL_13:
-    _4__this = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    _4__this = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( _4__this )
     {
       CommonUI__SetLoadMode((CommonUI_o *)_4__this, 0, 0LL);
@@ -25026,14 +24997,14 @@ LABEL_13:
                 _4__this = (__int64)v46->fields.mapAssetData;
                 if ( _4__this )
                 {
-                  Object_object__49747248 = AssetData__GetObject_object__49747248(
+                  Object_object__49812820 = AssetData__GetObject_object__49812820(
                                               (AssetData_o *)_4__this,
                                               (System_String_o *)asData,
-                                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
-                  v46->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49747248;
-                  sub_1C13CC8(
+                                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
+                  v46->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49812820;
+                  sub_1C1AB78(
                     (PartyOrganizationUtility_o *)&v46->fields.mapGimmickPrefab,
-                    (int64_t)Object_object__49747248,
+                    (int64_t)Object_object__49812820,
                     v48,
                     v49,
                     v50,
@@ -25041,7 +25012,7 @@ LABEL_13:
                     v52,
                     v53);
                   v54 = (Il2CppObject *)this->fields.__4__this;
-                  v55 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+                  v55 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
                   System_Action___ctor(v55, v54, Method_ScrTerminalMap_LoadEventMap__, 0LL);
                   if ( v54 )
                   {
@@ -25056,7 +25027,7 @@ LABEL_13:
       }
     }
 LABEL_25:
-    sub_1C13F80(_4__this, asData);
+    sub_1C1AE30(_4__this, asData);
   }
 }
 
@@ -25096,21 +25067,21 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__4(
   int32_t currentAssetId; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = this;
-  if ( (byte_4BB1A9A & 1) == 0 )
+  if ( (byte_4BC4E54 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, multiAssetData);
-    sub_1C13D24(&int_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v11);
-    this = (ScrTerminalMap___c__DisplayClass262_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, multiAssetData);
+    sub_1C1ABD4(&int_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v11);
+    this = (ScrTerminalMap___c__DisplayClass262_0_o *)sub_1C1ABD4(
                                                         &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                         v12);
-    byte_4BB1A9A = 1;
+    byte_4BC4E54 = 1;
   }
   _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_13;
   _4__this->fields.mapMultiAssetData = multiAssetData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&_4__this->fields.mapMultiAssetData,
     (int64_t)multiAssetData,
     (int64_t)method,
@@ -25119,7 +25090,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__4(
     v5,
     v6,
     v7);
-  this = (ScrTerminalMap___c__DisplayClass262_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (ScrTerminalMap___c__DisplayClass262_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_13;
   CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0LL);
@@ -25161,12 +25132,12 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_0___LoadMap_b__4(
           (AssetData_o *)this[4].fields.__9__2,
           0LL),
         v28 = (Il2CppObject *)v9->fields.__4__this,
-        v29 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo),
+        v29 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
         System_Action___ctor(v29, v28, Method_ScrTerminalMap_LoadEventMap__, 0LL),
         !v28) )
   {
 LABEL_13:
-    sub_1C13F80(this, multiAssetData);
+    sub_1C1AE30(this, multiAssetData);
   }
   ScrTerminalMap__LoadMapImgTex((ScrTerminalMap_o *)v28, v29, 0LL);
 }
@@ -25225,7 +25196,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
   Il2CppObject *v40; // x0
   struct ScrTerminalMap___c__DisplayClass262_0_o *v41; // x8
   struct ScrTerminalMap_o *v42; // x20
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v44; // x2
   int32_t v45; // w3
   System_String_o *v46; // x4
@@ -25239,20 +25210,20 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
   int32_t currentAssetId; // [xsp+Ch] [xbp-34h] BYREF
 
   v2 = this;
-  if ( (byte_4BB1A9B & 1) == 0 )
+  if ( (byte_4BC4E55 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, v3);
-    sub_1C13D24(&AssetManager_TypeInfo, v4);
-    sub_1C13D24(&int_TypeInfo, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v6);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1C13D24(&Method_ScrTerminalMap_LoadEventMap__, v8);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v9);
-    this = (ScrTerminalMap___c__DisplayClass262_1_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, v3);
+    sub_1C1ABD4(&AssetManager_TypeInfo, v4);
+    sub_1C1ABD4(&int_TypeInfo, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v6);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1C1ABD4(&Method_ScrTerminalMap_LoadEventMap__, v8);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v9);
+    this = (ScrTerminalMap___c__DisplayClass262_1_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__2__,
                                                         v10);
-    byte_4BB1A9B = 1;
+    byte_4BC4E55 = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -25278,14 +25249,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
   _9__2 = CS___8__locals1->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    _9__2 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       _9__2,
       (Il2CppObject *)CS___8__locals1,
       Method_ScrTerminalMap___c__DisplayClass262_0__LoadMap_b__2__,
       0LL);
     CS___8__locals1->fields.__9__2 = _9__2;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&CS___8__locals1->fields.__9__2,
       (int64_t)_9__2,
       v18,
@@ -25360,14 +25331,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
                         this = (ScrTerminalMap___c__DisplayClass262_1_o *)v42->fields.mapAssetData;
                         if ( this )
                         {
-                          Object_object__49747248 = AssetData__GetObject_object__49747248(
+                          Object_object__49812820 = AssetData__GetObject_object__49812820(
                                                       (AssetData_o *)this,
                                                       (System_String_o *)method,
-                                                      (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800);
-                          v42->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49747248;
-                          sub_1C13CC8(
+                                                      (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640);
+                          v42->fields.mapGimmickPrefab = (struct UnityEngine_GameObject_o *)Object_object__49812820;
+                          sub_1C1AB78(
                             (PartyOrganizationUtility_o *)&v42->fields.mapGimmickPrefab,
-                            (int64_t)Object_object__49747248,
+                            (int64_t)Object_object__49812820,
                             v44,
                             v45,
                             v46,
@@ -25378,7 +25349,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
                           if ( v50 )
                           {
                             v51 = (Il2CppObject *)v50->fields.__4__this;
-                            v52 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+                            v52 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
                             System_Action___ctor(v52, v51, Method_ScrTerminalMap_LoadEventMap__, 0LL);
                             if ( v51 )
                             {
@@ -25398,7 +25369,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass262_1___LoadMap_b__1(
       }
     }
 LABEL_30:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
 }
 
@@ -25436,19 +25407,19 @@ void __fastcall ScrTerminalMap___c__DisplayClass270_0___eventInfoAssetLoad_b__0(
   PartyListViewItem_o *v21; // x7
 
   v9 = this;
-  if ( (byte_4BB1A9C & 1) == 0 )
+  if ( (byte_4BC4E56 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, assetData);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass270_0__eventInfoAssetLoad_b__1__, v11);
-    this = (ScrTerminalMap___c__DisplayClass270_0_o *)sub_1C13D24(&StringLiteral_5988/*"Effect/Event/{0}/{1}"*/, v12);
-    byte_4BB1A9C = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, assetData);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v10);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass270_0__eventInfoAssetLoad_b__1__, v11);
+    this = (ScrTerminalMap___c__DisplayClass270_0_o *)sub_1C1ABD4(&StringLiteral_5992/*"Effect/Race"*/, v12);
+    byte_4BC4E56 = 1;
   }
   _4__this = v9->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(this, assetData);
+    sub_1C1AE30(this, assetData);
   _4__this->fields.mapInfoAssetData = assetData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&_4__this->fields.mapInfoAssetData,
     (int64_t)assetData,
     (int64_t)method,
@@ -25458,17 +25429,17 @@ void __fastcall ScrTerminalMap___c__DisplayClass270_0___eventInfoAssetLoad_b__0(
     v6,
     v7);
   _9__1 = v9->fields.__9__1;
-  v15 = (System_String_o *)StringLiteral_5988/*"Effect/Event/{0}/{1}"*/;
+  v15 = (System_String_o *)StringLiteral_5992/*"Effect/Race"*/;
   if ( !_9__1 )
   {
-    _9__1 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    _9__1 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       _9__1,
       (Il2CppObject *)v9,
       Method_ScrTerminalMap___c__DisplayClass270_0__eventInfoAssetLoad_b__1__,
       0LL);
     v9->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v9->fields.__9__1, (int64_t)_9__1, v16, v17, v18, v19, v20, v21);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v9->fields.__9__1, (int64_t)_9__1, v16, v17, v18, v19, v20, v21);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -25490,9 +25461,9 @@ void __fastcall ScrTerminalMap___c__DisplayClass270_0___eventInfoAssetLoad_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(this, effectData);
+    sub_1C1AE30(this, effectData);
   _4__this->fields.mapInfoEffectAssetData = effectData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&_4__this->fields.mapInfoEffectAssetData,
     (int64_t)effectData,
     (int64_t)method,
@@ -25526,7 +25497,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass281_0___LoadMapImgTex_b__0(
   ScrTerminalMap___c__DisplayClass281_0_o *v9; // x19
   struct ScrTerminalMap_o *_4__this; // x8
   struct ScrTerminalMap_o *v11; // x20
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
   int64_t v13; // x2
   int32_t v14; // w3
   System_String_o *v15; // x4
@@ -25540,18 +25511,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass281_0___LoadMapImgTex_b__0(
   bool IsMapModel; // w0
 
   v9 = this;
-  if ( (byte_4BB1A9D & 1) == 0 )
+  if ( (byte_4BC4E57 & 1) == 0 )
   {
-    this = (ScrTerminalMap___c__DisplayClass281_0_o *)sub_1C13D24(
-                                                        &Method_AssetData_GetObject_Texture2D____77466824,
+    this = (ScrTerminalMap___c__DisplayClass281_0_o *)sub_1C1ABD4(
+                                                        &Method_AssetData_GetObject_Texture2D____77543664,
                                                         mapImgData);
-    byte_4BB1A9D = 1;
+    byte_4BC4E57 = 1;
   }
   _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_8;
   _4__this->fields.mapImgAssetData = mapImgData;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&_4__this->fields.mapImgAssetData,
     (int64_t)mapImgData,
     (int64_t)method,
@@ -25563,14 +25534,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass281_0___LoadMapImgTex_b__0(
   v11 = v9->fields.__4__this;
   if ( !v11
     || (this = (ScrTerminalMap___c__DisplayClass281_0_o *)v11->fields.mapImgAssetData) == 0LL
-    || (Object_object__49747248 = AssetData__GetObject_object__49747248(
+    || (Object_object__49812820 = AssetData__GetObject_object__49812820(
                                     (AssetData_o *)this,
                                     v9->fields.textureName,
-                                    (const MethodInfo_2F71530 *)Method_AssetData_GetObject_Texture2D____77466824),
-        v11->fields._currentMapTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__49747248,
-        sub_1C13CC8(
+                                    (const MethodInfo_2F81554 *)Method_AssetData_GetObject_Texture2D____77543664),
+        v11->fields._currentMapTexture_k__BackingField = (struct UnityEngine_Texture2D_o *)Object_object__49812820,
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&v11->fields._currentMapTexture_k__BackingField,
-          (int64_t)Object_object__49747248,
+          (int64_t)Object_object__49812820,
           v13,
           v14,
           v15,
@@ -25580,7 +25551,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass281_0___LoadMapImgTex_b__0(
         (v19 = v9->fields.__4__this) == 0LL) )
   {
 LABEL_8:
-    sub_1C13F80(this, mapImgData);
+    sub_1C1AE30(this, mapImgData);
   }
   currentMapTexture_k__BackingField = v19->fields._currentMapTexture_k__BackingField;
   currentMapImageW_k__BackingField = v19->fields._currentMapImageW_k__BackingField;
@@ -25613,7 +25584,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass288_0___smfMap2d_SpotMarkCreate_
   struct MapControl_MapGimmickInfo_o *mMapCtrl_MapGimmickInfo; // x8
 
   if ( !n || (mMapCtrl_MapGimmickInfo = n->fields.mMapCtrl_MapGimmickInfo) == 0LL )
-    sub_1C13F80(this, n);
+    sub_1C1AE30(this, n);
   return mMapCtrl_MapGimmickInfo->fields.mapGimmickId == this->fields.gimmickId;
 }
 
@@ -25626,7 +25597,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass288_0___smfMap2d_SpotMarkCreate_
   struct MapControl_MapGimmickInfo_o *mMapCtrl_MapGimmickInfo; // x8
 
   if ( !n || (mMapCtrl_MapGimmickInfo = n->fields.mMapCtrl_MapGimmickInfo) == 0LL )
-    sub_1C13F80(this, n);
+    sub_1C1AE30(this, n);
   return mMapCtrl_MapGimmickInfo->fields.mapGimmickId == this->fields.gimmickEffectId;
 }
 
@@ -25645,7 +25616,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass292_0___GetSpotPrefab_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return n->fields.miSpotID == this->fields.spotId;
 }
 
@@ -25679,15 +25650,15 @@ void __fastcall ScrTerminalMap___c__DisplayClass334_0___RequestMapMove_b__0(
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4BB1A9E & 1) == 0 )
+  if ( (byte_4BC4E58 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v4);
-    this = (ScrTerminalMap___c__DisplayClass334_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v4);
+    this = (ScrTerminalMap___c__DisplayClass334_0_o *)sub_1C1ABD4(
                                                         &Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__,
                                                         v5);
-    byte_4BB1A9E = 1;
+    byte_4BC4E58 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   _4__this = v2->fields.__4__this;
@@ -25717,30 +25688,30 @@ void __fastcall ScrTerminalMap___c__DisplayClass334_0___RequestMapMove_b__0(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__);
     if ( !v11 )
       break;
     v13 = v2->fields.__4__this;
     if ( !v13 )
-      sub_1C13F80(v11, v12);
+      sub_1C1AE30(v11, v12);
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_1C13F80(0LL, v12);
+      sub_1C1AE30(0LL, v12);
     LODWORD(v16.fields._current[15].klass) = v13->fields.currentMapLayerId;
     SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)current, 1, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
   v15 = v2->fields.__4__this;
   if ( !v15 || (this = (ScrTerminalMap___c__DisplayClass334_0_o *)v15->fields.mapModelManager) == 0LL )
 LABEL_20:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   MapModelManager__UpdateLineDispAll((MapModelManager_o *)this, 0LL);
 }
 
@@ -25775,15 +25746,15 @@ void __fastcall ScrTerminalMap___c__DisplayClass335_0___RequestMapMove_b__0(
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4BB1A9F & 1) == 0 )
+  if ( (byte_4BC4E59 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v4);
-    this = (ScrTerminalMap___c__DisplayClass335_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__get_Current__, v4);
+    this = (ScrTerminalMap___c__DisplayClass335_0_o *)sub_1C1ABD4(
                                                         &Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__,
                                                         v5);
-    byte_4BB1A9F = 1;
+    byte_4BC4E59 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   _4__this = v2->fields.__4__this;
@@ -25821,30 +25792,30 @@ void __fastcall ScrTerminalMap___c__DisplayClass335_0___RequestMapMove_b__0(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v17,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
+    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__GetEnumerator__);
   while ( 1 )
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v17,
-            (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__);
+            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__MoveNext__);
     if ( !v12 )
       break;
     v14 = v2->fields.__4__this;
     if ( !v14 )
-      sub_1C13F80(v12, v13);
+      sub_1C1AE30(v12, v13);
     current = v17.fields._current;
     if ( !v17.fields._current )
-      sub_1C13F80(0LL, v13);
+      sub_1C1AE30(0LL, v13);
     LODWORD(v17.fields._current[15].klass) = v14->fields.currentMapLayerId;
     SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)current, 1, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v17,
-    (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
+    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_SrcSpotBasePrefab__Dispose__);
   v16 = v2->fields.__4__this;
   if ( !v16 || (this = (ScrTerminalMap___c__DisplayClass335_0_o *)v16->fields.mapModelManager) == 0LL )
 LABEL_22:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   MapModelManager__UpdateLineDispAll((MapModelManager_o *)this, 0LL);
   ActionExtensions__Call(v2->fields.endAction, 0LL);
 }
@@ -25866,7 +25837,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (ScrTerminalMap__ShowActivePlayerIcon(_4__this, 0LL), (_4__this = this->fields.__4__this) == 0LL) )
-    sub_1C13F80(_4__this, method);
+    sub_1C1AE30(_4__this, method);
   ScrTerminalMap__EventScriptPlay(_4__this, 0LL);
 }
 
@@ -25887,29 +25858,29 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__1(
   PartyListViewItem_o *v11; // x7
 
   v2 = this;
-  if ( (byte_4BB1AA0 & 1) == 0 )
+  if ( (byte_4BC4E5A & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap___c__DisplayClass340_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap___c__DisplayClass340_0_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__4__,
                                                         v3);
-    byte_4BB1AA0 = 1;
+    byte_4BC4E5A = 1;
   }
   _9__4 = v2->fields.__9__4;
   _4__this = v2->fields.__4__this;
   if ( !_9__4 )
   {
-    _9__4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__4 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__4,
       (Il2CppObject *)v2,
       Method_ScrTerminalMap___c__DisplayClass340_0__EventActionPlay_b__4__,
       0LL);
     v2->fields.__9__4 = _9__4;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.__9__4, (int64_t)_9__4, v6, v7, v8, v9, v10, v11);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.__9__4, (int64_t)_9__4, v6, v7, v8, v9, v10, v11);
   }
   if ( !_4__this )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   ScrTerminalMap__MakeFarmGrowthDialogOpen(_4__this, _9__4, 0LL);
 }
 
@@ -25924,17 +25895,17 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__2(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BB1AA2 & 1) == 0 )
+  if ( (byte_4BC4E5C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap_EventScriptPlay__, v3);
-    byte_4BB1AA2 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EventScriptPlay__, v3);
+    byte_4BC4E5C = 1;
   }
   _4__this = (Il2CppObject *)this->fields.__4__this;
-  v5 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v5, _4__this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
   if ( !_4__this )
-    sub_1C13F80(v6, v7);
+    sub_1C1AE30(v6, v7);
   ScrTerminalMap__EventAreaImproveResultDialogOpen((ScrTerminalMap_o *)_4__this, v5, 0LL);
 }
 
@@ -25952,18 +25923,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__3(
   System_Action_o *v8; // x22
 
   v2 = this;
-  if ( (byte_4BB1AA3 & 1) == 0 )
+  if ( (byte_4BC4E5D & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap___c__DisplayClass340_0_o *)sub_1C13D24(&Method_ScrTerminalMap_EventScriptPlay__, v3);
-    byte_4BB1AA3 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap___c__DisplayClass340_0_o *)sub_1C1ABD4(&Method_ScrTerminalMap_EventScriptPlay__, v3);
+    byte_4BC4E5D = 1;
   }
   _4__this = (Il2CppObject *)v2->fields.__4__this;
   if ( !_4__this || (monitor = _4__this[22].monitor) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   eventId = v2->fields.eventId;
   v7 = monitor[4];
-  v8 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v8, _4__this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
   ScrTerminalMap__StartDataLostBattleReset((ScrTerminalMap_o *)_4__this, eventId, v7, v8, 0LL);
 }
@@ -25981,19 +25952,19 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__4(
   int32_t eventId; // w19
   System_Action_o *v9; // x22
 
-  if ( (byte_4BB1AA1 & 1) == 0 )
+  if ( (byte_4BC4E5B & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_ScrTerminalMap_EventScriptPlay__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB1AA1 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_ScrTerminalMap_EventScriptPlay__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4E5B = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB1430 )
+  if ( !byte_4BC47EA )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1430 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC47EA = 1;
   }
   v5 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26011,11 +25982,11 @@ void __fastcall ScrTerminalMap___c__DisplayClass340_0___EventActionPlay_b__4(
   }
   klass = (TitleInfoControl_o *)_4__this[21].klass;
   eventId = this->fields.eventId;
-  v9 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v9, _4__this, Method_ScrTerminalMap_EventScriptPlay__, 0LL);
   if ( !klass )
 LABEL_14:
-    sub_1C13F80(v5, method);
+    sub_1C1AE30(v5, method);
   TitleInfoControl__ShowEventInfoReleaseCraftItemDialog(klass, eventId, v9, 0LL);
 }
 
@@ -26045,13 +26016,13 @@ void __fastcall ScrTerminalMap___c__DisplayClass341_0___ProductivityGrowthDialog
   PartyListViewItem_o *v12; // x7
 
   v2 = this;
-  if ( (byte_4BB1AA4 & 1) == 0 )
+  if ( (byte_4BC4E5E & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap___c__DisplayClass341_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap___c__DisplayClass341_0_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass341_0__ProductivityGrowthDialogOpen_b__1__,
                                                         v3);
-    byte_4BB1AA4 = 1;
+    byte_4BC4E5E = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -26060,18 +26031,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass341_0___ProductivityGrowthDialog
   _9__1 = v2->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v2,
       Method_ScrTerminalMap___c__DisplayClass341_0__ProductivityGrowthDialogOpen_b__1__,
       0LL);
     v2->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v7, v8, v9, v10, v11, v12);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   if ( !titleInfoControl )
 LABEL_8:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   TitleInfoControl__StartEventUIAnimation(titleInfoControl, 1, _9__1, 0LL);
 }
 
@@ -26089,10 +26060,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass341_0___ProductivityGrowthDialog
   TerminalPramsManager_c *v9; // x0
   PartyOrganizationUtility_o *p_eventConquestInfos; // x0
 
-  if ( (byte_4BB1AA5 & 1) == 0 )
+  if ( (byte_4BC4E5F & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1AA5 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4E5F = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26102,7 +26073,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass341_0___ProductivityGrowthDialog
   }
   p_eventConquestInfos = (PartyOrganizationUtility_o *)&v9->static_fields->eventConquestInfos;
   p_eventConquestInfos->klass = 0LL;
-  sub_1C13CC8(p_eventConquestInfos, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78(p_eventConquestInfos, 0LL, v2, v3, v4, v5, v6, v7);
   TerminalPramsManager__TerminalEventConquestInfosSave_SaveData(0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -26129,10 +26100,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass342_0___HarvestGrowthDialogOpen_
   TerminalPramsManager_c *v9; // x0
   PartyOrganizationUtility_o *p_eventHarvestGrowthInfo; // x0
 
-  if ( (byte_4BB1AA6 & 1) == 0 )
+  if ( (byte_4BC4E60 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1AA6 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4E60 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26142,7 +26113,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass342_0___HarvestGrowthDialogOpen_
   }
   p_eventHarvestGrowthInfo = (PartyOrganizationUtility_o *)&v9->static_fields->eventHarvestGrowthInfo;
   p_eventHarvestGrowthInfo->klass = 0LL;
-  sub_1C13CC8(p_eventHarvestGrowthInfo, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78(p_eventHarvestGrowthInfo, 0LL, v2, v3, v4, v5, v6, v7);
   TerminalPramsManager__TerminalEventHarvestGrowthInfosSave_SaveData(0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -26169,10 +26140,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass343_0___EventAreaImproveResultDi
   TerminalPramsManager_c *v9; // x0
   PartyOrganizationUtility_o *p_eventAreaImproveResultInfo; // x0
 
-  if ( (byte_4BB1AA7 & 1) == 0 )
+  if ( (byte_4BC4E61 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB1AA7 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4E61 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26182,7 +26153,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass343_0___EventAreaImproveResultDi
   }
   p_eventAreaImproveResultInfo = (PartyOrganizationUtility_o *)&v9->static_fields->eventAreaImproveResultInfo;
   p_eventAreaImproveResultInfo->klass = 0LL;
-  sub_1C13CC8(p_eventAreaImproveResultInfo, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78(p_eventAreaImproveResultInfo, 0LL, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
 
@@ -26257,14 +26228,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass349_0___StartDataLostBattleReset
   struct ScrTerminalMap_o *v25; // x8
 
   v4 = this;
-  if ( (byte_4BB1AA8 & 1) == 0 )
+  if ( (byte_4BC4E62 & 1) == 0 )
   {
-    sub_1C13D24(&DataLostResetManager_TypeInfo, *(_QWORD *)&resetIdx);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap_StartDataLostBattleResetEffect__, v6);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
-    this = (ScrTerminalMap___c__DisplayClass349_0_o *)sub_1C13D24(&TerminalPramsManager_TypeInfo, v8);
-    byte_4BB1AA8 = 1;
+    sub_1C1ABD4(&DataLostResetManager_TypeInfo, *(_QWORD *)&resetIdx);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap_StartDataLostBattleResetEffect__, v6);
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v7);
+    this = (ScrTerminalMap___c__DisplayClass349_0_o *)sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v8);
+    byte_4BC4E62 = 1;
   }
   if ( resetIdx == -1 )
   {
@@ -26276,7 +26247,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass349_0___StartDataLostBattleReset
       if ( v24 )
       {
         v24->fields.dataLostBattleResetEffectEndAct = 0LL;
-        sub_1C13CC8(
+        sub_1C1AB78(
           (PartyOrganizationUtility_o *)&v24->fields.dataLostBattleResetEffectEndAct,
           0LL,
           v18,
@@ -26294,18 +26265,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass349_0___StartDataLostBattleReset
       }
     }
 LABEL_26:
-    sub_1C13F80(this, *(_QWORD *)&resetIdx);
+    sub_1C1AE30(this, *(_QWORD *)&resetIdx);
   }
-  this = (ScrTerminalMap___c__DisplayClass349_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  this = (ScrTerminalMap___c__DisplayClass349_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !this )
     goto LABEL_26;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)this, 0LL);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19CE )
+  if ( !byte_4BC4D8A )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
-    byte_4BB19CE = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
+    byte_4BC4D8A = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26315,11 +26286,11 @@ LABEL_26:
   }
   v10->static_fields->_IsStopMasterFaceOverwrite_k__BackingField = 1;
   eventId = v4->fields.eventId;
-  if ( !byte_4BB19CF )
+  if ( !byte_4BC4D8B )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
     v10 = TerminalPramsManager_TypeInfo;
-    byte_4BB19CF = 1;
+    byte_4BC4D8B = 1;
   }
   if ( !v10->_2.cctor_finished )
   {
@@ -26328,11 +26299,11 @@ LABEL_26:
   }
   v10->static_fields->_DataLostBattleEventId_k__BackingField = eventId;
   warId = v4->fields.warId;
-  if ( !byte_4BB19D0 )
+  if ( !byte_4BC4D8C )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v9);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v9);
     v10 = TerminalPramsManager_TypeInfo;
-    byte_4BB19D0 = 1;
+    byte_4BC4D8C = 1;
   }
   if ( !v10->_2.cctor_finished )
   {
@@ -26343,7 +26314,7 @@ LABEL_26:
   v13 = v4->fields.eventId;
   v14 = v4->fields.warId;
   v15 = (Il2CppObject *)v4->fields.__4__this;
-  v16 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v16 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v16, v15, Method_ScrTerminalMap_StartDataLostBattleResetEffect__, 0LL);
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
@@ -26367,7 +26338,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass351_0___ShowActivePlayerIcon_b__
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   GameObjectExtensions__SetLocalScale(_4__this->fields.playerIcon, this->fields.endScale, 0LL);
 }
 
@@ -26383,7 +26354,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass351_0___ShowActivePlayerIcon_b__
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (easingObject = this->fields.easingObject) == 0LL )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   playerIcon = _4__this->fields.playerIcon;
   v5 = Easing__Func(this->fields.startScale, this->fields.endScale, easingObject->fields.mNow, 0, 0LL);
   GameObjectExtensions__SetLocalScale(playerIcon, v5, 0LL);
@@ -26417,14 +26388,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass353_0___showEventScriptDlgs_b__0
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4BB1AA9 & 1) == 0 )
+  if ( (byte_4BC4E63 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__RemoveRange__, v3);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v5);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass353_0__showEventScriptDlgs_b__1__, v6);
-    byte_4BB1AA9 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__RemoveRange__, v3);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass353_0__showEventScriptDlgs_b__1__, v6);
+    byte_4BC4E63 = 1;
   }
   v7 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -26439,25 +26410,25 @@ void __fastcall ScrTerminalMap___c__DisplayClass353_0___showEventScriptDlgs_b__0
     (System_Collections_Generic_List_object__o *)eventScriptMessages,
     0,
     2,
-    (const MethodInfo_362EA38 *)Method_System_Collections_Generic_List_string__RemoveRange__);
-  eventScriptMessages = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    (const MethodInfo_363E0FC *)Method_System_Collections_Generic_List_string__RemoveRange__);
+  eventScriptMessages = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   _9__1 = this->fields.__9__1;
   v10 = (CommonUI_o *)eventScriptMessages;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_ScrTerminalMap___c__DisplayClass353_0__showEventScriptDlgs_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v11, v12, v13, v14, v15, v16);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v11, v12, v13, v14, v15, v16);
   }
   if ( !v10 )
 LABEL_10:
-    sub_1C13F80(eventScriptMessages, method);
-  CommonUI__CloseNotificationDialog_31073520(v10, _9__1, 0LL);
+    sub_1C1AE30(eventScriptMessages, method);
+  CommonUI__CloseNotificationDialog_31101824(v10, _9__1, 0LL);
 }
 
 
@@ -26469,7 +26440,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass353_0___showEventScriptDlgs_b__1
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   ScrTerminalMap__showEventScriptDlgs(_4__this, this->fields.callback, 0LL);
 }
 
@@ -26491,7 +26462,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass356_0___EventScriptCaller_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(0LL, isExit);
+    sub_1C1AE30(0LL, isExit);
   ScrTerminalMap__OnEndEventScripts(_4__this, this->fields.eventScriptEntity, 0LL);
 }
 
@@ -26504,7 +26475,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass356_0___EventScriptCaller_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   ScrTerminalMap__OnEndEventScripts(_4__this, this->fields.eventScriptEntity, 0LL);
 }
 
@@ -26534,13 +26505,13 @@ void __fastcall ScrTerminalMap___c__DisplayClass356_1___EventScriptCaller_b__0(
   PartyListViewItem_o *v12; // x7
 
   v2 = this;
-  if ( (byte_4BB1AAA & 1) == 0 )
+  if ( (byte_4BC4E64 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap___c__DisplayClass356_1_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap___c__DisplayClass356_1_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass356_0__EventScriptCaller_b__2__,
                                                         v3);
-    byte_4BB1AAA = 1;
+    byte_4BC4E64 = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -26549,14 +26520,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass356_1___EventScriptCaller_b__0(
   _9__2 = CS___8__locals1->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)CS___8__locals1,
       Method_ScrTerminalMap___c__DisplayClass356_0__EventScriptCaller_b__2__,
       0LL);
     CS___8__locals1->fields.__9__2 = _9__2;
-    sub_1C13CC8(
+    sub_1C1AB78(
       (PartyOrganizationUtility_o *)&CS___8__locals1->fields.__9__2,
       (int64_t)_9__2,
       v7,
@@ -26568,7 +26539,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass356_1___EventScriptCaller_b__0(
   }
   if ( !effect )
 LABEL_8:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   EventRaceResultEffect__Play(effect, _9__2, 0LL);
 }
 
@@ -26587,90 +26558,38 @@ void __fastcall ScrTerminalMap___c__DisplayClass364_0___PlayMapModelEntryAnimati
 {
   ScrTerminalMap___c__DisplayClass364_0_o *v2; // x19
   __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct ScrTerminalMap_o *_4__this; // x8
-  struct ScrTerminalMap_o *v8; // x8
-  ScrTerminalMap___c_c *v9; // x8
-  CommonUI_o *v10; // x20
-  System_Action_o *_9__364_1; // x21
-  Il2CppObject *v12; // x22
-  struct ScrTerminalMap___c_StaticFields *static_fields; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  struct ScrTerminalMap_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4BB1AAB & 1) == 0 )
+  if ( (byte_4BC4E65 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1C13D24(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v4);
-    sub_1C13D24(&Method_ScrTerminalMap___c__PlayMapModelEntryAnimation_b__364_1__, v5);
-    this = (ScrTerminalMap___c__DisplayClass364_0_o *)sub_1C13D24(&ScrTerminalMap___c_TypeInfo, v6);
-    byte_4BB1AAB = 1;
+    sub_1C1ABD4(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
+    this = (ScrTerminalMap___c__DisplayClass364_0_o *)sub_1C1ABD4(
+                                                        &Method_SingletonTemplate_RewardMiniPopupExecutor__get_Instance__,
+                                                        v3);
+    byte_4BC4E65 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
-    goto LABEL_17;
+    goto LABEL_11;
   this = (ScrTerminalMap___c__DisplayClass364_0_o *)_4__this->fields.spotModelScreen;
   if ( !this )
-    goto LABEL_17;
+    goto LABEL_11;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   this = (ScrTerminalMap___c__DisplayClass364_0_o *)v2->fields.__4__this;
-  if ( !this )
-    goto LABEL_17;
-  ScrTerminalMap__FrameInUI((ScrTerminalMap_o *)this, 0LL);
-  v8 = v2->fields.__4__this;
-  if ( !v8 )
-    goto LABEL_17;
-  this = (ScrTerminalMap___c__DisplayClass364_0_o *)v8->fields.mapButtonGrid;
-  if ( !this )
-    goto LABEL_17;
-  MapButtonControl__FrameIn((MapButtonControl_o *)this, 0LL);
-  this = (ScrTerminalMap___c__DisplayClass364_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_386A7A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-  if ( !this )
-    goto LABEL_17;
-  MissionNotifyManager__EndPause((MissionNotifyManager_o *)this, 0LL);
-  this = (ScrTerminalMap___c__DisplayClass364_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v9 = ScrTerminalMap___c_TypeInfo;
-  v10 = (CommonUI_o *)this;
-  if ( !ScrTerminalMap___c_TypeInfo->_2.cctor_finished )
+  if ( !this
+    || (ScrTerminalMap__FrameInUI((ScrTerminalMap_o *)this, 0LL), (v5 = v2->fields.__4__this) == 0LL)
+    || (this = (ScrTerminalMap___c__DisplayClass364_0_o *)v5->fields.mapButtonGrid) == 0LL
+    || (MapButtonControl__FrameIn((MapButtonControl_o *)this, 0LL),
+        (this = (ScrTerminalMap___c__DisplayClass364_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0LL)
+    || (MissionNotifyManager__EndPause((MissionNotifyManager_o *)this, 0LL),
+        (this = (ScrTerminalMap___c__DisplayClass364_0_o *)SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_RewardMiniPopupExecutor__get_Instance__)) == 0LL) )
   {
-    j_il2cpp_runtime_class_init_0(ScrTerminalMap___c_TypeInfo);
-    v9 = ScrTerminalMap___c_TypeInfo;
+LABEL_11:
+    sub_1C1AE30(this, method);
   }
-  _9__364_1 = v9->static_fields->__9__364_1;
-  if ( !_9__364_1 )
-  {
-    if ( !v9->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(v9);
-      v9 = ScrTerminalMap___c_TypeInfo;
-    }
-    v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__364_1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
-    System_Action___ctor(_9__364_1, v12, Method_ScrTerminalMap___c__PlayMapModelEntryAnimation_b__364_1__, 0LL);
-    static_fields = ScrTerminalMap___c_TypeInfo->static_fields;
-    static_fields->__9__364_1 = _9__364_1;
-    sub_1C13CC8(
-      (PartyOrganizationUtility_o *)&static_fields->__9__364_1,
-      (int64_t)_9__364_1,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
-  }
-  if ( !v10 )
-LABEL_17:
-    sub_1C13F80(this, method);
-  CommonUI__OpenQuestPhaseReward(v10, _9__364_1, 0LL);
+  RewardMiniPopupExecutor__AddTaskOnBattleToTerminal((RewardMiniPopupExecutor_o *)this, 0LL);
   ActionExtensions__Call(v2->fields.endAction, 0LL);
 }
 
@@ -26695,12 +26614,12 @@ void __fastcall ScrTerminalMap___c__DisplayClass385_0___CheckAndWarningEventQues
   struct System_Action_o *callback; // x8
 
   v4 = this;
-  if ( (byte_4BB1AAC & 1) == 0 )
+  if ( (byte_4BC4E66 & 1) == 0 )
   {
-    this = (ScrTerminalMap___c__DisplayClass385_0_o *)sub_1C13D24(
+    this = (ScrTerminalMap___c__DisplayClass385_0_o *)sub_1C1ABD4(
                                                         &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                         isDecide);
-    byte_4BB1AAC = 1;
+    byte_4BC4E66 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -26718,10 +26637,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass385_0___CheckAndWarningEventQues
         *(_QWORD *)&callback->fields.extra_arg,
         method);
   }
-  this = (ScrTerminalMap___c__DisplayClass385_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (ScrTerminalMap___c__DisplayClass385_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
 LABEL_10:
-    sub_1C13F80(this, isDecide);
+    sub_1C1AE30(this, isDecide);
   CommonUI__CloseConfirmDialog((CommonUI_o *)this, 0LL);
 }
 
@@ -26766,17 +26685,17 @@ void __fastcall ScrTerminalMap___c__DisplayClass391_0___EndRequestDiceUse_b__0(
   FollowerInfo_o *v28; // x6
   PartyListViewItem_o *v29; // x7
 
-  if ( (byte_4BB1AAD & 1) == 0 )
+  if ( (byte_4BC4E67 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&System_Convert_TypeInfo, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
-    sub_1C13D24(&JsonManager_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass391_0__EndRequestDiceUse_b__1__, v7);
-    sub_1C13D24(&StringLiteral_18905/*"developerPayload"*/, v8);
-    sub_1C13D24(&StringLiteral_18906/*"device.machine"*/, v9);
-    byte_4BB1AAD = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&System_Convert_TypeInfo, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v5);
+    sub_1C1ABD4(&JsonManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass391_0__EndRequestDiceUse_b__1__, v7);
+    sub_1C1ABD4(&StringLiteral_18919/*"diceType"*/, v8);
+    sub_1C1ABD4(&StringLiteral_18920/*"diceValue"*/, v9);
+    byte_4BC4E67 = 1;
   }
   result = this->fields.result;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -26815,7 +26734,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass391_0___EndRequestDiceUse_b__0(
     goto LABEL_24;
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)ItemEntity__getScript(
                                                                             (ItemEntity_o *)Dictionary,
-                                                                            (System_String_o *)StringLiteral_18905/*"developerPayload"*/,
+                                                                            (System_String_o *)StringLiteral_18919/*"diceType"*/,
                                                                             1,
                                                                             0LL);
   if ( !v14 )
@@ -26823,14 +26742,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass391_0___EndRequestDiceUse_b__0(
   v19 = (int)Dictionary;
   Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                                                             v14,
-                                                                            (Il2CppObject *)StringLiteral_18906/*"device.machine"*/,
-                                                                            (const MethodInfo_32F2BA4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                                                            (Il2CppObject *)StringLiteral_18920/*"diceValue"*/,
+                                                                            (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   if ( ((unsigned __int8)Dictionary & 1) != 0 )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              v14,
-             (Il2CppObject *)StringLiteral_18906/*"device.machine"*/,
-             (const MethodInfo_32F2930 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_18920/*"diceValue"*/,
+             (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
     Dictionary = (System_Collections_Generic_Dictionary_object__object__o *)System_Convert__ToInt32(Item, 0LL);
@@ -26844,18 +26763,18 @@ void __fastcall ScrTerminalMap___c__DisplayClass391_0___EndRequestDiceUse_b__0(
   v23 = this->fields.__4__this;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_ScrTerminalMap___c__DisplayClass391_0__EndRequestDiceUse_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v24, v25, v26, v27, v28, v29);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v24, v25, v26, v27, v28, v29);
   }
   if ( !v23 )
 LABEL_24:
-    sub_1C13F80(Dictionary, v12);
+    sub_1C1AE30(Dictionary, v12);
   ScrTerminalMap__PlayBoardGameDiceEffect(v23, 1, v19, v21, _9__1, 0LL);
 }
 
@@ -26868,7 +26787,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass391_0___EndRequestDiceUse_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   ScrTerminalMap__EndBoardGameDiceEffect(_4__this, 0LL);
 }
 
@@ -26920,14 +26839,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass397_0___PlayBoardGamePieceEffect
   __int64 size; // x10
   Il2CppClass **v35; // x0
 
-  if ( (byte_4BB1AAE & 1) == 0 )
+  if ( (byte_4BC4E68 & 1) == 0 )
   {
-    sub_1C13D24(&EventDelegate_TypeInfo, method);
-    sub_1C13D24(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventDelegate__Add__, v4);
-    sub_1C13D24(&StringLiteral_13182/*"StandardErrorEncoding is only supported when standard error is redirected."*/, v5);
-    sub_1C13D24(&StringLiteral_6091/*"End tag mismatch: expected {0} but found {1}"*/, v6);
-    byte_4BB1AAE = 1;
+    sub_1C1ABD4(&EventDelegate_TypeInfo, method);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventDelegate__Add__, v4);
+    sub_1C1ABD4(&StringLiteral_13194/*"StartBoardGamePieceEffectSub"*/, v5);
+    sub_1C1ABD4(&StringLiteral_6095/*"EndBoardGamePieceEffect"*/, v6);
+    byte_4BC4E68 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -26947,7 +26866,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass397_0___PlayBoardGamePieceEffect
   v14 = v10;
   _4__this = (ScrTerminalMap_o *)UnityEngine_GameObject__AddComponent_object_(
                                    (UnityEngine_GameObject_o *)_4__this,
-                                   (const MethodInfo_2FDF914 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                   (const MethodInfo_2FEFAD8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !_4__this )
     goto LABEL_18;
   LOBYTE(_4__this->fields.subRootEffectP) = 1;
@@ -26975,11 +26894,11 @@ void __fastcall ScrTerminalMap___c__DisplayClass397_0___PlayBoardGamePieceEffect
   currentSquareIndex = v18->fields.currentSquareIndex;
   endSquareIndex = v18->fields.endSquareIndex;
   onFinished = (System_Collections_Generic_List_object__o *)v17->fields.onFinished;
-  v22 = (EventDelegate_o *)sub_1C13F70(EventDelegate_TypeInfo);
+  v22 = (EventDelegate_o *)sub_1C1AE20(EventDelegate_TypeInfo);
   v23 = currentSquareIndex == endSquareIndex;
   v24 = (Il2CppObject *)v22;
-  v25 = (System_String_o **)(v23 ? &StringLiteral_6091/*"End tag mismatch: expected {0} but found {1}"*/ : &StringLiteral_13182/*"StandardErrorEncoding is only supported when standard error is redirected."*/);
-  EventDelegate___ctor_47828340(v22, (UnityEngine_MonoBehaviour_o *)v18, *v25, 0LL);
+  v25 = (System_String_o **)(v23 ? &StringLiteral_6095/*"EndBoardGamePieceEffect"*/ : &StringLiteral_13194/*"StartBoardGamePieceEffectSub"*/);
+  EventDelegate___ctor_47893912(v22, (UnityEngine_MonoBehaviour_o *)v18, *v25, 0LL);
   if ( !onFinished
     || (items = onFinished->fields._items,
         v33 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -26987,7 +26906,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass397_0___PlayBoardGamePieceEffect
         !items) )
   {
 LABEL_18:
-    sub_1C13F80(_4__this, method);
+    sub_1C1AE30(_4__this, method);
   }
   size = onFinished->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -26995,14 +26914,14 @@ LABEL_18:
     System_Collections_Generic_List_object___AddWithResize(
       onFinished,
       v24,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
   }
   else
   {
     v35 = &items->obj.klass + size;
     onFinished->fields._size = size + 1;
     v35[4] = (Il2CppClass *)v24;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v35 + 4), (int64_t)v24, v26, v27, v28, v29, v30, v31);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v35 + 4), (int64_t)v24, v26, v27, v28, v29, v30, v31);
   }
   UITweener__PlayForward(v17, 0LL);
 }
@@ -27033,13 +26952,13 @@ void __fastcall ScrTerminalMap___c__DisplayClass400_0___PlayBoardGameQuestArriva
   PartyListViewItem_o *v12; // x7
 
   v2 = this;
-  if ( (byte_4BB1AAF & 1) == 0 )
+  if ( (byte_4BC4E69 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    this = (ScrTerminalMap___c__DisplayClass400_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    this = (ScrTerminalMap___c__DisplayClass400_0_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass400_0__PlayBoardGameQuestArrivalEffect_b__1__,
                                                         v3);
-    byte_4BB1AAF = 1;
+    byte_4BC4E69 = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)v2->fields.__4__this;
   if ( v2->fields.isAuto )
@@ -27053,23 +26972,23 @@ void __fastcall ScrTerminalMap___c__DisplayClass400_0___PlayBoardGameQuestArriva
              v2->fields.maxClearCount,
              v2->fields.callback,
              0LL);
-      UnityEngine_MonoBehaviour__StartCoroutine_70707260(_4__this, v5, 0LL);
+      UnityEngine_MonoBehaviour__StartCoroutine_70779684(_4__this, v5, 0LL);
       return;
     }
 LABEL_10:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   _9__1 = v2->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v2,
       Method_ScrTerminalMap___c__DisplayClass400_0__PlayBoardGameQuestArrivalEffect_b__1__,
       0LL);
     v2->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v7, v8, v9, v10, v11, v12);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   if ( !_4__this )
     goto LABEL_10;
@@ -27095,7 +27014,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass400_0___PlayBoardGameQuestArriva
           0LL),
         (EventBoardQuestArrivalPanelObj_k__BackingField = this->fields.__4__this) == 0LL) )
   {
-    sub_1C13F80(EventBoardQuestArrivalPanelObj_k__BackingField, v4);
+    sub_1C1AE30(EventBoardQuestArrivalPanelObj_k__BackingField, v4);
   }
   ScrTerminalMap__UpdateBoardGameSquare(
     EventBoardQuestArrivalPanelObj_k__BackingField,
@@ -27124,10 +27043,10 @@ void __fastcall ScrTerminalMap___c__DisplayClass401_0___EventBoardCameraActionAu
   UnityEngine_Object_o *EventBoardQuestArrivalPanelObj_k__BackingField; // x20
   struct ScrTerminalMap_o *v7; // x8
 
-  if ( (byte_4BB1AB0 & 1) == 0 )
+  if ( (byte_4BC4E6A & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1AB0 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC4E6A = 1;
   }
   ActionExtensions__Call(this->fields.callback, 0LL);
   _4__this = this->fields.__4__this;
@@ -27153,7 +27072,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass401_0___EventBoardCameraActionAu
       }
     }
 LABEL_12:
-    sub_1C13F80(v3, v4);
+    sub_1C1AE30(v3, v4);
   }
 LABEL_10:
   v3 = (UnityEngine_GameObject_o *)this->fields.__4__this;
@@ -27185,7 +27104,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass402_0___UpdateBoardGameSquare_b_
   struct MapControl_MapGimmickInfo_o *x; // x9
 
   if ( !y || (mMapCtrl_MapGimmickInfo = y->fields.mMapCtrl_MapGimmickInfo) == 0LL || (x = this->fields.x) == 0LL )
-    sub_1C13F80(this, y);
+    sub_1C1AE30(this, y);
   return mMapCtrl_MapGimmickInfo->fields.mapGimmickId == x->fields.mapGimmickId;
 }
 
@@ -27233,16 +27152,16 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   Il2CppClass **v30; // x0
 
   v2 = this;
-  if ( (byte_4BB1AB1 & 1) == 0 )
+  if ( (byte_4BC4E6B & 1) == 0 )
   {
-    sub_1C13D24(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C13D24(&EventDelegate_TypeInfo, v3);
-    sub_1C13D24(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
-    this = (ScrTerminalMap___c__DisplayClass404_0_o *)sub_1C13D24(
+    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, method);
+    sub_1C1ABD4(&EventDelegate_TypeInfo, v3);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
+    this = (ScrTerminalMap___c__DisplayClass404_0_o *)sub_1C1ABD4(
                                                         &Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__1__,
                                                         v6);
-    byte_4BB1AB1 = 1;
+    byte_4BC4E6B = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -27252,7 +27171,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
     goto LABEL_15;
   this = (ScrTerminalMap___c__DisplayClass404_0_o *)UnityEngine_GameObject__AddComponent_object_(
                                                       (UnityEngine_GameObject_o *)this,
-                                                      (const MethodInfo_2FDF914 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                                      (const MethodInfo_2FEFAD8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   if ( !this )
     goto LABEL_15;
   LOBYTE(this[1].fields.__9__1) = 1;
@@ -27277,17 +27196,17 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   _9__1 = v2->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (EventDelegate_Callback_o *)sub_1C13F70(EventDelegate_Callback_TypeInfo);
+    _9__1 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
       _9__1,
       (Il2CppObject *)v2,
       Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__1__,
       0LL);
     v2->fields.__9__1 = _9__1;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v14, v15, v16, v17, v18, v19);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v2->fields.__9__1, (int64_t)_9__1, v14, v15, v16, v17, v18, v19);
   }
-  v20 = (EventDelegate_o *)sub_1C13F70(EventDelegate_TypeInfo);
-  EventDelegate___ctor_47827852(v20, _9__1, 0LL);
+  v20 = (EventDelegate_o *)sub_1C1AE20(EventDelegate_TypeInfo);
+  EventDelegate___ctor_47893424(v20, _9__1, 0LL);
   if ( !onFinished
     || (items = onFinished->fields._items,
         v28 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -27295,7 +27214,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
         !items) )
   {
 LABEL_15:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   size = onFinished->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -27303,14 +27222,14 @@ LABEL_15:
     System_Collections_Generic_List_object___AddWithResize(
       onFinished,
       (Il2CppObject *)v20,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
   }
   else
   {
     v30 = &items->obj.klass + size;
     onFinished->fields._size = size + 1;
     v30[4] = (Il2CppClass *)v20;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v30 + 4), (int64_t)v20, v21, v22, v23, v24, v25, v26);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v30 + 4), (int64_t)v20, v21, v22, v23, v24, v25, v26);
   }
   UITweener__PlayForward(v11, 0LL);
 }
@@ -27349,15 +27268,15 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   int32_t v29; // w20
   TerminalPramsManager_c *v30; // x0
 
-  if ( (byte_4BB1AB2 & 1) == 0 )
+  if ( (byte_4BC4E6C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
-    sub_1C13D24(&ScrTerminalMap_TypeInfo, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    sub_1C13D24(&Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__2__, v7);
-    byte_4BB1AB2 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
+    sub_1C1ABD4(&ScrTerminalMap_TypeInfo, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    sub_1C1ABD4(&Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__2__, v7);
+    byte_4BC4E6C = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -27378,14 +27297,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
     v12 = this->fields.endIndex;
     if ( !_9__2 )
     {
-      _9__2 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+      _9__2 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
       System_Action___ctor(
         _9__2,
         (Il2CppObject *)this,
         Method_ScrTerminalMap___c__DisplayClass404_0__JumpEventBoardGamePiece_b__2__,
         0LL);
       this->fields.__9__2 = _9__2;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.__9__2, (int64_t)_9__2, v13, v14, v15, v16, v17, v18);
+      sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.__9__2, (int64_t)_9__2, v13, v14, v15, v16, v17, v18);
     }
     if ( v11 )
     {
@@ -27394,7 +27313,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
     }
     goto LABEL_30;
   }
-  _4__this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  _4__this = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !_4__this )
     goto LABEL_30;
   CommonUI__SetFadeMaskCollider((CommonUI_o *)_4__this, 0, 0LL);
@@ -27416,26 +27335,26 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
       goto LABEL_30;
     _4__this = (ScrTerminalMap_o *)UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)_4__this,
-                                     (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                     (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     v21 = this->fields.__4__this;
     if ( !v21 )
       goto LABEL_30;
     if ( !_4__this )
       goto LABEL_30;
-    UnityEngine_Animation__Stop_70465540((UnityEngine_Animation_o *)_4__this, v21->fields.animationNameBuffer, 0LL);
+    UnityEngine_Animation__Stop_70537964((UnityEngine_Animation_o *)_4__this, v21->fields.animationNameBuffer, 0LL);
     v28 = this->fields.__4__this;
     if ( !v28 )
       goto LABEL_30;
     v28->fields.animationNameBuffer = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v28->fields.animationNameBuffer, 0LL, v22, v23, v24, v25, v26, v27);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v28->fields.animationNameBuffer, 0LL, v22, v23, v24, v25, v26, v27);
   }
   v29 = this->fields.endIndex;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D8 )
+  if ( !byte_4BC4D94 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, method);
-    byte_4BB19D8 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, method);
+    byte_4BC4D94 = 1;
   }
   v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -27447,7 +27366,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   _4__this = this->fields.__4__this;
   if ( !_4__this )
 LABEL_30:
-    sub_1C13F80(_4__this, method);
+    sub_1C1AE30(_4__this, method);
   ScrTerminalMap__UpdateEventBoardGameSpot(_4__this, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -27474,14 +27393,14 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   int32_t endIndex; // w20
   TerminalPramsManager_c *v18; // x0
 
-  if ( (byte_4BB1AB3 & 1) == 0 )
+  if ( (byte_4BC4E6D & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v4);
-    byte_4BB1AB3 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v4);
+    byte_4BC4E6D = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_21;
   CommonUI__SetFadeMaskCollider(Instance, 0, 0LL);
@@ -27503,26 +27422,26 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
       goto LABEL_21;
     Instance = (CommonUI_o *)UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)Instance,
-                               (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                               (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     v9 = this->fields.__4__this;
     if ( !v9 )
       goto LABEL_21;
     if ( !Instance )
       goto LABEL_21;
-    UnityEngine_Animation__Stop_70465540((UnityEngine_Animation_o *)Instance, v9->fields.animationNameBuffer, 0LL);
+    UnityEngine_Animation__Stop_70537964((UnityEngine_Animation_o *)Instance, v9->fields.animationNameBuffer, 0LL);
     v16 = this->fields.__4__this;
     if ( !v16 )
       goto LABEL_21;
     v16->fields.animationNameBuffer = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&v16->fields.animationNameBuffer, 0LL, v10, v11, v12, v13, v14, v15);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&v16->fields.animationNameBuffer, 0LL, v10, v11, v12, v13, v14, v15);
   }
   endIndex = this->fields.endIndex;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4BB19D8 )
+  if ( !byte_4BC4D94 )
   {
-    sub_1C13D24(&TerminalPramsManager_TypeInfo, v6);
-    byte_4BB19D8 = 1;
+    sub_1C1ABD4(&TerminalPramsManager_TypeInfo, v6);
+    byte_4BC4D94 = 1;
   }
   v18 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -27534,7 +27453,7 @@ void __fastcall ScrTerminalMap___c__DisplayClass404_0___JumpEventBoardGamePiece_
   Instance = (CommonUI_o *)this->fields.__4__this;
   if ( !Instance )
 LABEL_21:
-    sub_1C13F80(Instance, v6);
+    sub_1C1AE30(Instance, v6);
   ScrTerminalMap__UpdateEventBoardGameSpot((ScrTerminalMap_o *)Instance, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }
@@ -27554,7 +27473,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass409_0___SetBoardGameSquareHaveTo
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return x->fields.questId == this->fields.questId;
 }
 
@@ -27577,7 +27496,7 @@ bool __fastcall ScrTerminalMap___c__DisplayClass409_0___SetBoardGameSquareHaveTo
     if ( rewardEnt )
       return x->fields.id == rewardEnt->fields.giftId;
 LABEL_6:
-    sub_1C13F80(this, x);
+    sub_1C1AE30(this, x);
   }
   return 0;
 }
@@ -27599,6 +27518,6 @@ void __fastcall ScrTerminalMap___c__DisplayClass439_0___ChangeMapUIStateDelayCal
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   _4__this->fields._MapUIState_k__BackingField = this->fields.state;
 }

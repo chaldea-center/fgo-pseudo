@@ -3,14 +3,14 @@ void __fastcall MyRoomRootComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BAFECD & 1) == 0 )
+  if ( (byte_4BC3283 & 1) == 0 )
   {
-    sub_1C13D24(&MyRoomRootComponent_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_8326/*"Jul"*/, v2);
-    byte_4BAFECD = 1;
+    sub_1C1ABD4(&MyRoomRootComponent_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_8329/*"JumpNewMaterial"*/, v2);
+    byte_4BC3283 = 1;
   }
-  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8326/*"Jul"*/;
-  sub_1C13CC8(MyRoomRootComponent_TypeInfo->static_fields);
+  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8329/*"JumpNewMaterial"*/;
+  sub_1C1AB78(MyRoomRootComponent_TypeInfo->static_fields);
 }
 
 
@@ -28,11 +28,11 @@ void __fastcall MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, co
   __int64 v6; // x1
   MyRoomControl_o *v7; // x19
 
-  if ( (byte_4BAFECC & 1) == 0 )
+  if ( (byte_4BC3282 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BAFECC = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC3282 = 1;
   }
   myRoomControl = (UnityEngine_Object_o *)this->fields.myRoomControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,12 +49,12 @@ void __fastcall MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, co
       goto LABEL_11;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+                                               (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
     v7 = (MyRoomControl_o *)gameObject;
   }
   if ( !v7 )
 LABEL_11:
-    sub_1C13F80(gameObject, v6);
+    sub_1C1AE30(gameObject, v6);
   MyRoomControl__quit(v7, 0LL);
   MyRoomControl__hideSerialCode(v7, 0LL);
   MyRoomControl__hideContinueDevice(v7, 0LL);
@@ -69,16 +69,16 @@ void __fastcall MyRoomRootComponent__beginInitialize(MyRoomRootComponent_o *this
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BAFEC9 & 1) == 0 )
+  if ( (byte_4BC327F & 1) == 0 )
   {
-    sub_1C13D24(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4BAFEC9 = 1;
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
+    byte_4BC327F = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 8, 35, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v4);
+    sub_1C1AE30(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
@@ -98,11 +98,11 @@ void __fastcall MyRoomRootComponent__beginResume(
   Il2CppClass *parent; // x8
 
   v4 = (SceneRootComponent_o *)this;
-  if ( (byte_4BAFECB & 1) == 0 )
+  if ( (byte_4BC3281 & 1) == 0 )
   {
-    sub_1C13D24(&BattleSetupInfo_TypeInfo, data);
-    this = (MyRoomRootComponent_o *)sub_1C13D24(&StringLiteral_11306/*"RESULT_FRIEND_TITLE"*/, v5);
-    byte_4BAFECB = 1;
+    sub_1C1ABD4(&BattleSetupInfo_TypeInfo, data);
+    this = (MyRoomRootComponent_o *)sub_1C1ABD4(&StringLiteral_11317/*"RETURN_BLACKLIST"*/, v5);
+    byte_4BC3281 = 1;
   }
   klass = v4[1].klass;
   if ( !klass )
@@ -124,7 +124,7 @@ void __fastcall MyRoomRootComponent__beginResume(
     p_interfaces_count = &klass->_2.interfaces_count;
     *(_QWORD *)&klass->_2.interfaces_count = 0LL;
   }
-  this = (MyRoomRootComponent_o *)sub_1C13CC8(p_interfaces_count);
+  this = (MyRoomRootComponent_o *)sub_1C1AB78(p_interfaces_count);
   v10 = v4[1].klass;
   if ( !v10 )
     goto LABEL_20;
@@ -139,14 +139,14 @@ LABEL_18:
   parent = v10->_1.parent;
   if ( !parent )
 LABEL_20:
-    sub_1C13F80(this, data);
+    sub_1C1AE30(this, data);
   if ( parent->_2.thread_static_fields_offset == 1 )
   {
     SceneRootComponent__beginFinish(v4, 0LL);
-    SceneRootComponent__sendMessage(v4, (System_String_o *)StringLiteral_11306/*"RESULT_FRIEND_TITLE"*/, 0LL);
+    SceneRootComponent__sendMessage(v4, (System_String_o *)StringLiteral_11317/*"RETURN_BLACKLIST"*/, 0LL);
     goto LABEL_18;
   }
-  SceneRootComponent__beginResume_39820256(v4, 0LL);
+  SceneRootComponent__beginResume_39874148(v4, 0LL);
 }
 
 
@@ -164,11 +164,11 @@ void __fastcall MyRoomRootComponent__beginStartUp(
   struct MyRoomControl_o *v10; // x8
 
   v3 = data;
-  if ( (byte_4BAFECA & 1) == 0 )
+  if ( (byte_4BC3280 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, data);
-    sub_1C13D24(&SceneJumpInfo_TypeInfo, v5);
-    byte_4BAFECA = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, data);
+    sub_1C1ABD4(&SceneJumpInfo_TypeInfo, v5);
+    byte_4BC3280 = 1;
   }
   MainMenuBar__setMenuActive(1, 0LL, 0LL);
   if ( v3 )
@@ -193,10 +193,10 @@ void __fastcall MyRoomRootComponent__beginStartUp(
     v10 = this->fields.myRoomControl;
     if ( !v10
       || (v10->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)v3,
-          sub_1C13CC8(&v10->fields.sceneJumpInfo),
+          sub_1C1AB78(&v10->fields.sceneJumpInfo),
           (v8 = this->fields.myRoomControl) == 0LL) )
     {
-      sub_1C13F80(v8, v9);
+      sub_1C1AE30(v8, v9);
     }
     MyRoomControl__startUp(v8, 0LL);
   }

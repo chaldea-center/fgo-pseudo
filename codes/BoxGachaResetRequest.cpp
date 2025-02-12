@@ -7,12 +7,12 @@ void __fastcall BoxGachaResetRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BB5F77 & 1) == 0 )
+  if ( (byte_4BC9359 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_17657/*"bossBattleInfo"*/, *(_QWORD *)&gachaId);
-    byte_4BB5F77 = 1;
+    sub_1C1ABD4(&StringLiteral_17671/*"boxGachaId"*/, *(_QWORD *)&gachaId);
+    byte_4BC9359 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17657/*"bossBattleInfo"*/, gachaId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17671/*"boxGachaId"*/, gachaId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -22,16 +22,16 @@ System_String_o *__fastcall BoxGachaResetRequest__getURL(BoxGachaResetRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB5F76 & 1) == 0 )
+  if ( (byte_4BC9358 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_17655/*"border-top-width"*/, v2);
-    byte_4BB5F76 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_17669/*"boxGacha/reset"*/, v2);
+    byte_4BC9358 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_17655/*"border-top-width"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_17669/*"boxGacha/reset"*/, 0LL);
 }
 
 
@@ -49,18 +49,18 @@ void __fastcall BoxGachaResetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BB5F78 & 1) == 0 )
+  if ( (byte_4BC935A & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB5F78 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC935A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(48, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ void __fastcall BoxGachaResetRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22421/*"newAttributes"*/,
+        StringLiteral_22437/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

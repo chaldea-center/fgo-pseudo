@@ -1,7 +1,7 @@
 void __fastcall MapShakerComponent___ctor(MapShakerComponent_o *this, const MethodInfo *method)
 {
   this->fields.shakeType = 1;
-  *(_OWORD *)&this->fields.MagnitudeXMax = xmmword_BF5F60;
+  *(_OWORD *)&this->fields.MagnitudeXMax = xmmword_BF9C00;
   this->fields.flag = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -13,10 +13,10 @@ void __fastcall MapShakerComponent__OnDisable(MapShakerComponent_o *this, const 
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x19
 
-  if ( (byte_4BB1438 & 1) == 0 )
+  if ( (byte_4BC47F2 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1438 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC47F2 = 1;
   }
   toShake = (UnityEngine_Object_o *)this->fields.toShake;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,10 +24,10 @@ void __fastcall MapShakerComponent__OnDisable(MapShakerComponent_o *this, const 
   if ( UnityEngine_Object__op_Inequality(toShake, 0LL, 0LL) )
   {
     v5 = this->fields.toShake;
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_4BC2141 = 1;
     }
     GameObjectExtensions__SetLocalPosition(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   }
@@ -67,10 +67,10 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
   UnityEngine_GameObject_o *v24; // x20
   float v25; // s0
 
-  if ( (byte_4BB1437 & 1) == 0 )
+  if ( (byte_4BC47F1 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB1437 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC47F1 = 1;
   }
   toShake = (UnityEngine_Object_o *)this->fields.toShake;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -103,7 +103,7 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
       this->fields.flag = -this->fields.flag;
       break;
     case 0:
-      v6 = UnityEngine_Random__Range_70681728(0, 2, 0LL);
+      v6 = UnityEngine_Random__Range_70754152(0, 2, 0LL);
       MagnitudeXMax = this->fields.MagnitudeXMax;
       MagnitudeXMin = this->fields.MagnitudeXMin;
       v9 = this->fields.toShake;
@@ -114,7 +114,7 @@ void __fastcall MapShakerComponent__Update(MapShakerComponent_o *this, const Met
       this->fields.flag = v10;
       v11 = UnityEngine_Random__Range(MagnitudeXMin, MagnitudeXMax, 0LL);
       GameObjectExtensions__SetLocalPositionX(v9, v11 * (float)this->fields.flag, 0LL);
-      v12 = UnityEngine_Random__Range_70681728(0, 2, 0LL);
+      v12 = UnityEngine_Random__Range_70754152(0, 2, 0LL);
       MagnitudeYMax = this->fields.MagnitudeYMax;
       MagnitudeYMin = this->fields.MagnitudeYMin;
       v15 = this->fields.toShake;
@@ -143,17 +143,17 @@ void __fastcall MapShakerComponent__getMap(MapShakerComponent_o *this, const Met
   struct ScrTerminalMap_o *mTerminalMap; // x8
   struct UnityEngine_GameObject_o *dispRoot; // x1
 
-  if ( (byte_4BB1439 & 1) == 0 )
+  if ( (byte_4BC47F3 & 1) == 0 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, method);
-    byte_4BB1439 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, method);
+    byte_4BC47F3 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4BAF374 )
+  if ( !byte_4BC2713 )
   {
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, method);
-    byte_4BAF374 = 1;
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, method);
+    byte_4BC2713 = 1;
   }
   v9 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -163,8 +163,8 @@ void __fastcall MapShakerComponent__getMap(MapShakerComponent_o *this, const Met
   }
   mInstance = v9->static_fields->mInstance;
   if ( !mInstance || (mTerminalMap = mInstance->fields.mTerminalMap) == 0LL )
-    sub_1C13F80(v9, method);
+    sub_1C1AE30(v9, method);
   dispRoot = mTerminalMap->fields.dispRoot;
   this->fields.toShake = dispRoot;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.toShake, (int64_t)dispRoot, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.toShake, (int64_t)dispRoot, v2, v3, v4, v5, v6, v7);
 }

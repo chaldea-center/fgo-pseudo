@@ -1,9 +1,9 @@
 void __fastcall TutorialNotificationMessage___ctor(TutorialNotificationMessage_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB3446 & 1) == 0 )
+  if ( (byte_4BC6812 & 1) == 0 )
   {
-    sub_1C13D24(&BaseDialog_TypeInfo, method);
-    byte_4BB3446 = 1;
+    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
+    byte_4BC6812 = 1;
   }
   this->fields.messageDefaultFontSize = -1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,11 +16,11 @@ void __fastcall TutorialNotificationMessage__Close(TutorialNotificationMessage_o
 {
   const MethodInfo *v2; // x2
 
-  TutorialNotificationMessage__Close_38573812(this, 0LL, v2);
+  TutorialNotificationMessage__Close_38626224(this, 0LL, v2);
 }
 
 
-void __fastcall TutorialNotificationMessage__Close_38573812(
+void __fastcall TutorialNotificationMessage__Close_38626224(
         TutorialNotificationMessage_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -33,14 +33,14 @@ void __fastcall TutorialNotificationMessage__Close_38573812(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4BB3444 & 1) == 0 )
+  if ( (byte_4BC6810 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, callback);
-    sub_1C13D24(&Method_TutorialNotificationMessage_EndClose__, v10);
-    byte_4BB3444 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, callback);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_EndClose__, v10);
+    byte_4BC6810 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -50,7 +50,7 @@ void __fastcall TutorialNotificationMessage__Close_38573812(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -73,7 +73,7 @@ void __fastcall TutorialNotificationMessage__EndClose(TutorialNotificationMessag
   TutorialNotificationMessage__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C13F80(0LL, v4);
+    sub_1C1AE30(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
@@ -81,7 +81,7 @@ void __fastcall TutorialNotificationMessage__EndClose(TutorialNotificationMessag
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C13CC8(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C1AB78(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v12->fields.m_target)(
       v12->fields.original_method_info,
       *(_QWORD *)&v12->fields.extra_arg);
@@ -119,11 +119,11 @@ void __fastcall TutorialNotificationMessage__EndOpen(TutorialNotificationMessage
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB3443 & 1) == 0 )
+  if ( (byte_4BC680F & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject___, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB3443 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC680F = 1;
   }
   touchObject = (UnityEngine_Object_o *)this->fields.touchObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -135,7 +135,7 @@ void __fastcall TutorialNotificationMessage__EndOpen(TutorialNotificationMessage
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     touchBase = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                               touchPrefab,
-                                              (const MethodInfo_3014D84 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !touchBase )
       goto LABEL_17;
     v8 = touchBase;
@@ -160,17 +160,17 @@ void __fastcall TutorialNotificationMessage__EndOpen(TutorialNotificationMessage
           !transform) )
     {
 LABEL_17:
-      sub_1C13F80(touchBase, v7);
+      sub_1C1AE30(touchBase, v7);
     }
     UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)touchBase, 0LL);
     v27.fields.x = x + this->fields.touchObjPos.fields.x;
     v27.fields.y = y + this->fields.touchObjPos.fields.y;
     v27.fields.z = z + this->fields.touchObjPos.fields.z;
     UnityEngine_Transform__set_localPosition(transform, v27, 0LL);
-    if ( !byte_4BAEDA7 )
+    if ( !byte_4BC2147 )
     {
-      sub_1C13D24(&UnityEngine_Quaternion_TypeInfo, v19);
-      byte_4BAEDA7 = 1;
+      sub_1C1ABD4(&UnityEngine_Quaternion_TypeInfo, v19);
+      byte_4BC2147 = 1;
     }
     UnityEngine_Transform__set_localRotation(
       transform,
@@ -181,7 +181,7 @@ LABEL_17:
     v28.fields.z = v18;
     UnityEngine_Transform__set_localScale(transform, v28, 0LL);
     this->fields.touchObject = v8;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.touchObject, (int64_t)v8, v20, v21, v22, v23, v24, v25);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.touchObject, (int64_t)v8, v20, v21, v22, v23, v24, v25);
   }
   this->fields.isButtonEnable = 1;
 }
@@ -207,7 +207,7 @@ void __fastcall TutorialNotificationMessage__EndTurorialRequest(
   if ( selectCallbackFunc )
   {
     p_selectCallbackFunc->klass = 0LL;
-    sub_1C13CC8(p_selectCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C1AB78(p_selectCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       *(_QWORD *)&v9->fields.extra_arg);
@@ -233,11 +233,11 @@ void __fastcall TutorialNotificationMessage__Init(TutorialNotificationMessage_o 
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( (byte_4BB343F & 1) == 0 )
+  if ( (byte_4BC680B & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_1/*""*/, v3);
-    byte_4BB343F = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v3);
+    byte_4BC680B = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -258,13 +258,13 @@ void __fastcall TutorialNotificationMessage__Init(TutorialNotificationMessage_o 
     v9 = (UnityEngine_Object_o *)*p_touchObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70721988(v9, 0LL);
+    UnityEngine_Object__Destroy_70794412(v9, 0LL);
     *p_touchObject = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.touchObject, 0LL, v10, v11, v12, v13, v14, v15);
-    if ( !byte_4BAEDA1 )
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.touchObject, 0LL, v10, v11, v12, v13, v14, v15);
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v5);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v5);
+      byte_4BC2141 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -281,7 +281,7 @@ void __fastcall TutorialNotificationMessage__Init(TutorialNotificationMessage_o 
         (maskSprite = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_19:
-    sub_1C13F80(maskSprite, v5);
+    sub_1C1AE30(maskSprite, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -325,23 +325,23 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
   struct System_Action_o *v33; // x20
   struct System_Action_o *selectCallbackFunc; // t1
 
-  if ( (byte_4BB3445 & 1) == 0 )
+  if ( (byte_4BC6811 & 1) == 0 )
   {
-    sub_1C13D24(&Method_NetworkManager_getRequest_TutorialSetRequest___, method);
-    sub_1C13D24(&NetworkManager_TypeInfo, v3);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    sub_1C13D24(&Method_TutorialNotificationMessage_EndTurorialRequest__, v6);
-    sub_1C13D24(&Method_TutorialNotificationMessage_OnClickClose__, v7);
-    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v8);
-    byte_4BB3445 = 1;
+    sub_1C1ABD4(&Method_NetworkManager_getRequest_TutorialSetRequest___, method);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v3);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_EndTurorialRequest__, v6);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_OnClickClose__, v7);
+    sub_1C1ABD4(&StringLiteral_22613/*"ok"*/, v8);
+    byte_4BC6811 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v9 = Method_TutorialNotificationMessage_OnClickClose__;
     if ( (*((_BYTE *)Method_TutorialNotificationMessage_OnClickClose__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1C13D3C(Method_TutorialNotificationMessage_OnClickClose__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C13D08(v9, v9[4]);
+      v9 = (_QWORD *)sub_1C1ABEC(Method_TutorialNotificationMessage_OnClickClose__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v9, v9[4]);
     OverwriteAssetSoundName__PlaySystemSe(v10, 1, 0, 0LL);
     p_touchObject = &this->fields.touchObject;
     touchObject = (UnityEngine_Object_o *)this->fields.touchObject;
@@ -353,13 +353,13 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
       v19 = (UnityEngine_Object_o *)*p_touchObject;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70721988(v19, 0LL);
+      UnityEngine_Object__Destroy_70794412(v19, 0LL);
       *p_touchObject = 0LL;
-      sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.touchObject, 0LL, v20, v21, v22, v23, v24, v25);
-      if ( !byte_4BAEDA1 )
+      sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.touchObject, 0LL, v20, v21, v22, v23, v24, v25);
+      if ( !byte_4BC2141 )
       {
-        sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v26);
-        byte_4BAEDA1 = 1;
+        sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v26);
+        byte_4BC2141 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       z = static_fields->zeroVector.fields.z;
@@ -374,7 +374,7 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
       if ( selectCallbackFunc )
       {
         p_selectCallbackFunc->klass = 0LL;
-        sub_1C13CC8(p_selectCallbackFunc, 0LL, v13, v14, v15, v16, v17, v18);
+        sub_1C1AB78(p_selectCallbackFunc, 0LL, v13, v14, v15, v16, v17, v18);
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v33->fields.m_target)(
           v33->fields.original_method_info,
           *(_QWORD *)&v33->fields.extra_arg);
@@ -382,7 +382,7 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
     }
     else
     {
-      v29 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v29 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v29,
         (Il2CppObject *)this,
@@ -392,9 +392,9 @@ void __fastcall TutorialNotificationMessage__OnClickClose(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
                          v29,
-                         (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+                         (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
       if ( !Request_object )
-        sub_1C13F80(0LL, v31);
+        sub_1C1AE30(0LL, v31);
       TutorialSetRequest__beginRequest((TutorialSetRequest_o *)Request_object, this->fields.flagId, 0LL);
     }
   }
@@ -437,17 +437,17 @@ void __fastcall TutorialNotificationMessage__Open(
   messageDefaultFontSize = fontSize;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4BB3440 & 1) == 0 )
+  if ( (byte_4BC680C & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, message);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v18);
-    sub_1C13D24(&Method_TutorialNotificationMessage_EndOpen__, v19);
-    sub_1C13D24(&Method_TutorialNotificationMessage__Open_b__13_0__, v20);
-    sub_1C13D24(&StringLiteral_1/*""*/, v21);
-    byte_4BB3440 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, message);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v18);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_EndOpen__, v19);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage__Open_b__13_0__, v20);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v21);
+    byte_4BC680C = 1;
   }
   this->fields.selectCallbackFunc = selectCallback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.selectCallbackFunc,
     (int64_t)selectCallback,
     *(int64_t *)&flagId,
@@ -457,10 +457,10 @@ void __fastcall TutorialNotificationMessage__Open(
     (FollowerInfo_o *)dispTouchSprite,
     (PartyListViewItem_o *)method);
   this->fields.flagId = flagId;
-  if ( !byte_4BAEDA1 )
+  if ( !byte_4BC2141 )
   {
-    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v22);
-    byte_4BAEDA1 = 1;
+    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v22);
+    byte_4BC2141 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -522,12 +522,12 @@ void __fastcall TutorialNotificationMessage__Open(
       }
     }
 LABEL_30:
-    sub_1C13F80(transform, v26);
+    sub_1C1AE30(transform, v26);
   }
 LABEL_26:
   TutorialNotificationMessage__setTutorialMaskActive(this, 1, v27);
   this->fields.isButtonEnable = 0;
-  v30 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   if ( dispTouchSprite )
     v31 = &Method_TutorialNotificationMessage_EndOpen__;
   else
@@ -568,14 +568,14 @@ void __fastcall TutorialNotificationMessage__OpenWithArrow(
   messageDefaultFontSize = fontSize;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4BB3442 & 1) == 0 )
+  if ( (byte_4BC680E & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, message);
-    sub_1C13D24(&StringLiteral_1/*""*/, v14);
-    byte_4BB3442 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, message);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v14);
+    byte_4BC680E = 1;
   }
   this->fields.selectCallbackFunc = 0LL;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.selectCallbackFunc,
     0LL,
     *(int64_t *)&fontSize,
@@ -585,10 +585,10 @@ void __fastcall TutorialNotificationMessage__OpenWithArrow(
     v7,
     v8);
   this->fields.flagId = -1;
-  if ( !byte_4BAEDA1 )
+  if ( !byte_4BC2141 )
   {
-    sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v15);
-    byte_4BAEDA1 = 1;
+    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v15);
+    byte_4BC2141 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -629,7 +629,7 @@ void __fastcall TutorialNotificationMessage__OpenWithArrow(
     || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL)) == 0LL )
   {
 LABEL_27:
-    sub_1C13F80(transform, v19);
+    sub_1C1AE30(transform, v19);
   }
   v24.fields.y = y + this->fields.messageDefaultPosition.fields.y;
   v24.fields.x = x + this->fields.messageDefaultPosition.fields.x;
@@ -655,7 +655,7 @@ LABEL_26:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall TutorialNotificationMessage__Open_38571772(
+void __fastcall TutorialNotificationMessage__Open_38624184(
         TutorialNotificationMessage_o *this,
         System_String_o *message,
         UnityEngine_Vector2_o messagePos,
@@ -707,19 +707,19 @@ void __fastcall TutorialNotificationMessage__Open_38571772(
   x = touchObjPos.fields.x;
   v18 = messagePos.fields.y;
   v19 = messagePos.fields.x;
-  if ( (byte_4BB3441 & 1) == 0 )
+  if ( (byte_4BC680D & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, message);
-    sub_1C13D24(&int_TypeInfo, v22);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v23);
-    sub_1C13D24(&Method_TutorialNotificationMessage_EndOpen__, v24);
-    sub_1C13D24(&Method_TutorialNotificationMessage__Open_b__14_0__, v25);
-    sub_1C13D24(&StringLiteral_1/*""*/, v26);
-    sub_1C13D24(&StringLiteral_3167/*"Back/"*/, v27);
-    byte_4BB3441 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, message);
+    sub_1C1ABD4(&int_TypeInfo, v22);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v23);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_EndOpen__, v24);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage__Open_b__14_0__, v25);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v26);
+    sub_1C1ABD4(&StringLiteral_3170/*"Back/back{0}"*/, v27);
+    byte_4BC680D = 1;
   }
   this->fields.selectCallbackFunc = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.selectCallbackFunc,
     (int64_t)callback,
     *(int64_t *)&dlgBgId,
@@ -860,7 +860,7 @@ void __fastcall TutorialNotificationMessage__Open_38571772(
     || (transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0LL)) == 0LL )
   {
 LABEL_50:
-    sub_1C13F80(transform, v29);
+    sub_1C1AE30(transform, v29);
   }
   v45.fields.y = v18 + this->fields.messageDefaultPosition.fields.y;
   v45.fields.x = v19 + this->fields.messageDefaultPosition.fields.x;
@@ -881,8 +881,8 @@ LABEL_43:
   backTexture = this->fields.backTexture;
   v42 = dlgBgId;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v34, v35, v36);
-  v39 = System_String__Format((System_String_o *)StringLiteral_3167/*"Back/"*/, v38, 0LL);
-  v40 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v39 = System_String__Format((System_String_o *)StringLiteral_3170/*"Back/back{0}"*/, v38, 0LL);
+  v40 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v40, (Il2CppObject *)this, Method_TutorialNotificationMessage__Open_b__14_0__, 0LL);
   if ( !backTexture )
     goto LABEL_50;
@@ -893,7 +893,7 @@ LABEL_47:
     if ( !transform )
       goto LABEL_50;
     ExUITexture__ClearImage((ExUITexture_o *)transform, 0LL);
-    v41 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v41 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     System_Action___ctor(v41, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndOpen__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v41, 1, 0LL);
   }
@@ -915,13 +915,13 @@ void __fastcall TutorialNotificationMessage___Open_b__14_0(
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4BB3447 & 1) == 0 )
+  if ( (byte_4BC6813 & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, method);
-    sub_1C13D24(&Method_TutorialNotificationMessage_EndOpen__, v3);
-    byte_4BB3447 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, method);
+    sub_1C1ABD4(&Method_TutorialNotificationMessage_EndOpen__, v3);
+    byte_4BC6813 = 1;
   }
-  v4 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v4, 1, 0LL);
 }
@@ -939,7 +939,7 @@ void __fastcall TutorialNotificationMessage__setTutorialMaskActive(
   if ( !maskSprite
     || (maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL)) == 0LL )
   {
-    sub_1C13F80(maskSprite, active);
+    sub_1C1AE30(maskSprite, active);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, active, 0LL);
 }

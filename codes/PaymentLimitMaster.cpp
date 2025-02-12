@@ -1,14 +1,14 @@
 void __fastcall PaymentLimitMaster___ctor(PaymentLimitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4B2C & 1) == 0 )
+  if ( (byte_4BC7EFF & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int___ctor__, method);
-    byte_4BB4B2C = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int___ctor__, method);
+    byte_4BC7EFF = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     512,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int___ctor__);
 }
 
 
@@ -31,13 +31,13 @@ int32_t __fastcall PaymentLimitMaster__GetBuyableCount(
   UserPaymentLimitEntity_o *v16; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4BB4B2B & 1) == 0 )
+  if ( (byte_4BC7EFE & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_UserPaymentLimitMaster___, *(_QWORD *)&limitId);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__, v6);
-    sub_1C13D24(&NetworkManager_TypeInfo, v7);
-    byte_4BB4B2B = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserPaymentLimitMaster___, *(_QWORD *)&limitId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__, v6);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v7);
+    byte_4BC7EFE = 1;
   }
   entity = 0LL;
   v16 = 0LL;
@@ -46,20 +46,20 @@ int32_t __fastcall PaymentLimitMaster__GetBuyableCount(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           &entity,
           limitId,
-          (const MethodInfo_3238670 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__) )
+          (const MethodInfo_32486C4 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__) )
   {
     LODWORD(klass_high) = -1;
     return (int)klass_high;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserPaymentLimitMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserPaymentLimitMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v8);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
+    byte_4BC2585 = 1;
   }
   klass_high = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ int32_t __fastcall PaymentLimitMaster__GetBuyableCount(
     return (int)klass_high;
   if ( !v16 )
 LABEL_22:
-    sub_1C13F80(klass_high, v8);
+    sub_1C1AE30(klass_high, v8);
   count = v16->fields.count;
   v13 = __OFSUB__((_DWORD)klass_high, count);
   v14 = (_DWORD)klass_high - count;
@@ -107,13 +107,13 @@ bool __fastcall PaymentLimitMaster__IsBuyable(PaymentLimitMaster_o *this, int32_
   UserPaymentLimitEntity_o *v12; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4BB4B2A & 1) == 0 )
+  if ( (byte_4BC7EFD & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_UserPaymentLimitMaster___, *(_QWORD *)&limitId);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__, v6);
-    sub_1C13D24(&NetworkManager_TypeInfo, v7);
-    byte_4BB4B2A = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserPaymentLimitMaster___, *(_QWORD *)&limitId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__, v6);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v7);
+    byte_4BC7EFD = 1;
   }
   entity = 0LL;
   v12 = 0LL;
@@ -122,17 +122,17 @@ bool __fastcall PaymentLimitMaster__IsBuyable(PaymentLimitMaster_o *this, int32_
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          limitId,
-         (const MethodInfo_3238670 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__) )
+         (const MethodInfo_32486C4 *)Method_DataMasterBase_PaymentLimitMaster__PaymentLimitEntity__int__TryGetEntity__) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserPaymentLimitMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserPaymentLimitMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BAF1E5 )
+    if ( !byte_4BC2585 )
     {
-      sub_1C13D24(&NetworkManager_TypeInfo, v8);
-      byte_4BAF1E5 = 1;
+      sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
+      byte_4BC2585 = 1;
     }
     v10 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -153,7 +153,7 @@ bool __fastcall PaymentLimitMaster__IsBuyable(PaymentLimitMaster_o *this, int32_
       if ( entity && v12 )
         return SHIDWORD(entity[1].klass) > v12->fields.count;
 LABEL_20:
-      sub_1C13F80(v10, v8);
+      sub_1C1AE30(v10, v8);
     }
   }
   return 1;

@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB439C & 1) == 0 )
+  if ( (byte_4BC776A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BB439C = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BC776A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -38,10 +38,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_4BB439A & 1) == 0 )
+  if ( (byte_4BC7768 & 1) == 0 )
   {
-    sub_1C13D24(&CondType_TypeInfo, method);
-    byte_4BB439A = 1;
+    sub_1C1ABD4(&CondType_TypeInfo, method);
+    byte_4BC7768 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -63,10 +63,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4BB439B & 1) == 0 )
+  if ( (byte_4BC7769 & 1) == 0 )
   {
-    sub_1C13D24(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4BB439B = 1;
+    sub_1C1ABD4(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4BC7769 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

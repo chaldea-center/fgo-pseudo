@@ -1,14 +1,14 @@
 void __fastcall WarBoardOnboardSkillMaster___ctor(WarBoardOnboardSkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB5718 & 1) == 0 )
+  if ( (byte_4BC8AF7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string___ctor__, method);
-    byte_4BB5718 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string___ctor__, method);
+    byte_4BC8AF7 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     362,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ WarBoardOnboardSkillEntity_o *__fastcall WarBoardOnboardSkillMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB5716 & 1) == 0 )
+  if ( (byte_4BC8AF5 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_4BB5716 = 1;
+    byte_4BC8AF5 = 1;
   }
   PK = (Il2CppObject *)WarBoardOnboardSkillEntity__CreatePK(stageId, idx, *(const MethodInfo **)&idx);
   return (WarBoardOnboardSkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            PK,
-                                           (const MethodInfo_323D0DC *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__GetEntity__);
+                                           (const MethodInfo_324D130 *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__GetEntity__);
 }
 
 
@@ -78,31 +78,31 @@ System_Collections_Generic_List_WarBoardOnboardSkillEntity__o *__fastcall WarBoa
   FollowerInfo_o *v40; // x6
   PartyListViewItem_o *v41; // x7
 
-  if ( (byte_4BB571A & 1) == 0 )
+  if ( (byte_4BC8AF9 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__,
       *(_QWORD *)&stageId);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__, v9);
-    sub_1C13D24(&System_Comparison_WarBoardOnboardSkillEntity__TypeInfo, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Add__, v11);
-    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Sort__, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity___ctor__, v13);
-    sub_1C13D24(&System_Collections_Generic_List_WarBoardOnboardSkillEntity__TypeInfo, v14);
-    sub_1C13D24(&Method_WarBoardOnboardSkillMaster___c__GetEntityList_b__4_0__, v15);
-    sub_1C13D24(&WarBoardOnboardSkillMaster___c_TypeInfo, v16);
-    byte_4BB571A = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__, v9);
+    sub_1C1ABD4(&System_Comparison_WarBoardOnboardSkillEntity__TypeInfo, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Add__, v11);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Sort__, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity___ctor__, v13);
+    sub_1C1ABD4(&System_Collections_Generic_List_WarBoardOnboardSkillEntity__TypeInfo, v14);
+    sub_1C1ABD4(&Method_WarBoardOnboardSkillMaster___c__GetEntityList_b__4_0__, v15);
+    sub_1C1ABD4(&WarBoardOnboardSkillMaster___c_TypeInfo, v16);
+    byte_4BC8AF9 = 1;
   }
-  v17 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_WarBoardOnboardSkillEntity__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_WarBoardOnboardSkillEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_25;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__);
   if ( Count >= 1 )
   {
     v21 = Count;
@@ -115,7 +115,7 @@ System_Collections_Generic_List_WarBoardOnboardSkillEntity__o *__fastcall WarBoa
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v22,
-               (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__);
+               (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__);
       if ( list )
       {
         v18 = (int64_t)list;
@@ -134,14 +134,14 @@ System_Collections_Generic_List_WarBoardOnboardSkillEntity__o *__fastcall WarBoa
             System_Collections_Generic_List_object___AddWithResize(
               v17,
               (Il2CppObject *)list,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
           }
           else
           {
             v32 = &items->obj.klass + size;
             v17->fields._size = size + 1;
             v32[4] = (Il2CppClass *)v18;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v32 + 4), v18, v23, v24, v25, v26, v27, v28);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v32 + 4), v18, v23, v24, v25, v26, v27, v28);
           }
         }
       }
@@ -149,7 +149,7 @@ System_Collections_Generic_List_WarBoardOnboardSkillEntity__o *__fastcall WarBoa
         goto LABEL_17;
     }
 LABEL_25:
-    sub_1C13F80(list, v18);
+    sub_1C1AE30(list, v18);
   }
 LABEL_17:
   list = WarBoardOnboardSkillMaster___c_TypeInfo;
@@ -167,18 +167,18 @@ LABEL_17:
       list = WarBoardOnboardSkillMaster___c_TypeInfo;
     }
     v34 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v33 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_WarBoardOnboardSkillEntity__TypeInfo);
+    v33 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_WarBoardOnboardSkillEntity__TypeInfo);
     System_Comparison_object____ctor(v33, v34, Method_WarBoardOnboardSkillMaster___c__GetEntityList_b__4_0__, 0LL);
     static_fields = WarBoardOnboardSkillMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Comparison_WarBoardOnboardSkillEntity__o *)v33;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)v33, v36, v37, v38, v39, v40, v41);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)v33, v36, v37, v38, v39, v40, v41);
   }
   if ( !v17 )
     goto LABEL_25;
-  System_Collections_Generic_List_object___Sort_56814736(
+  System_Collections_Generic_List_object___Sort_56877908(
     v17,
     v33,
-    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Sort__);
+    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_WarBoardOnboardSkillEntity__Sort__);
   return (System_Collections_Generic_List_WarBoardOnboardSkillEntity__o *)v17;
 }
 
@@ -199,20 +199,20 @@ bool __fastcall WarBoardOnboardSkillMaster__IsOnBoardSkillExist(
   bool v14; // w26
   Il2CppObject *Item; // x0
 
-  if ( (byte_4BB5719 & 1) == 0 )
+  if ( (byte_4BC8AF8 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__,
       *(_QWORD *)&stageId);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__, v9);
-    byte_4BB5719 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__, v9);
+    byte_4BC8AF8 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Count__);
   if ( Count >= 1 )
   {
     v12 = Count;
@@ -226,7 +226,7 @@ bool __fastcall WarBoardOnboardSkillMaster__IsOnBoardSkillExist(
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v13,
-               (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__);
+               (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_WarBoardOnboardSkillEntity__get_Item__);
       if ( !Item
         || LODWORD(Item[1].klass) != stageId
         || HIDWORD(Item[2].klass) != timing
@@ -239,7 +239,7 @@ bool __fastcall WarBoardOnboardSkillMaster__IsOnBoardSkillExist(
       return v14;
     }
 LABEL_15:
-    sub_1C13F80(list, *(_QWORD *)&stageId);
+    sub_1C1AE30(list, *(_QWORD *)&stageId);
   }
   return 0;
 }
@@ -255,19 +255,19 @@ bool __fastcall WarBoardOnboardSkillMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB5717 & 1) == 0 )
+  if ( (byte_4BC8AF6 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__TryGetEntity__,
       entity);
-    byte_4BB5717 = 1;
+    byte_4BC8AF6 = 1;
   }
   PK = (Il2CppObject *)WarBoardOnboardSkillEntity__CreatePK(stageId, idx, *(const MethodInfo **)&stageId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_WarBoardOnboardSkillMaster__WarBoardOnboardSkillEntity__string__TryGetEntity__);
 }
 
 
@@ -282,15 +282,15 @@ void __fastcall WarBoardOnboardSkillMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB571B & 1) == 0 )
+  if ( (byte_4BC8AFA & 1) == 0 )
   {
-    sub_1C13D24(&WarBoardOnboardSkillMaster___c_TypeInfo, v1);
-    byte_4BB571B = 1;
+    sub_1C1ABD4(&WarBoardOnboardSkillMaster___c_TypeInfo, v1);
+    byte_4BC8AFA = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(WarBoardOnboardSkillMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(WarBoardOnboardSkillMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardOnboardSkillMaster___c_TypeInfo->static_fields->__9 = (struct WarBoardOnboardSkillMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)WarBoardOnboardSkillMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -315,6 +315,6 @@ int32_t __fastcall WarBoardOnboardSkillMaster___c___GetEntityList_b__4_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   return a->fields.idx - b->fields.idx;
 }

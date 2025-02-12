@@ -47,21 +47,21 @@ void __fastcall HorizontalQuestInformationIconDraw___cctor(const MethodInfo *met
   FollowerInfo_o *v45; // x6
   PartyListViewItem_o *v46; // x7
 
-  if ( (byte_4BB15A7 & 1) == 0 )
+  if ( (byte_4BC4962 & 1) == 0 )
   {
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, v1);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_19326/*"enemyCountStartValue"*/, v9);
-    sub_1C13D24(&StringLiteral_23097/*"questboard_ap_"*/, v10);
-    sub_1C13D24(&StringLiteral_15369/*"Unknown property '{0}'."*/, v11);
-    sub_1C13D24(&StringLiteral_6160/*"EnemyShadowImageId"*/, v12);
-    sub_1C13D24(&StringLiteral_13605/*"TITLE_FLOW_OLD"*/, v13);
-    byte_4BB15A7 = 1;
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, v1);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_19340/*"enemy_icon_"*/, v9);
+    sub_1C1ABD4(&StringLiteral_23116/*"questinfo_enemy_brank"*/, v10);
+    sub_1C1ABD4(&StringLiteral_15381/*"Unlit/Transparent Colored"*/, v11);
+    sub_1C1ABD4(&StringLiteral_6164/*"Enemys/Icon/"*/, v12);
+    sub_1C1ABD4(&StringLiteral_13617/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, v13);
+    byte_4BC4962 = 1;
   }
-  HorizontalQuestInformationIconDraw_TypeInfo->static_fields->ENEMY_UNKNOWN_SP = (struct System_String_o *)StringLiteral_23097/*"questboard_ap_"*/;
-  sub_1C13CC8(
+  HorizontalQuestInformationIconDraw_TypeInfo->static_fields->ENEMY_UNKNOWN_SP = (struct System_String_o *)StringLiteral_23116/*"questinfo_enemy_brank"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)HorizontalQuestInformationIconDraw_TypeInfo->static_fields,
-    StringLiteral_23097/*"questboard_ap_"*/,
+    StringLiteral_23116/*"questinfo_enemy_brank"*/,
     v2,
     v3,
     v4,
@@ -70,10 +70,10 @@ void __fastcall HorizontalQuestInformationIconDraw___cctor(const MethodInfo *met
     v7);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13605/*"TITLE_FLOW_OLD"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13617/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, 0LL);
   static_fields = HorizontalQuestInformationIconDraw_TypeInfo->static_fields;
   static_fields->ENEMY_UNKNOWN_NAME = v14;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&static_fields->ENEMY_UNKNOWN_NAME,
     (int64_t)v14,
     v16,
@@ -82,20 +82,20 @@ void __fastcall HorizontalQuestInformationIconDraw___cctor(const MethodInfo *met
     v19,
     v20,
     v21);
-  v22 = StringLiteral_6160/*"EnemyShadowImageId"*/;
+  v22 = StringLiteral_6164/*"Enemys/Icon/"*/;
   v23 = HorizontalQuestInformationIconDraw_TypeInfo->static_fields;
-  v23->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_6160/*"EnemyShadowImageId"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v23->ENEMY_ICON_TEXTURE_PATH, v22, v24, v25, v26, v27, v28, v29);
-  v30 = StringLiteral_19326/*"enemyCountStartValue"*/;
+  v23->ENEMY_ICON_TEXTURE_PATH = (struct System_String_o *)StringLiteral_6164/*"Enemys/Icon/"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v23->ENEMY_ICON_TEXTURE_PATH, v22, v24, v25, v26, v27, v28, v29);
+  v30 = StringLiteral_19340/*"enemy_icon_"*/;
   v31 = HorizontalQuestInformationIconDraw_TypeInfo->static_fields;
-  v31->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_19326/*"enemyCountStartValue"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v31->ENEMY_ICON_TEXTURE_PREFIX, v30, v32, v33, v34, v35, v36, v37);
+  v31->ENEMY_ICON_TEXTURE_PREFIX = (struct System_String_o *)StringLiteral_19340/*"enemy_icon_"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v31->ENEMY_ICON_TEXTURE_PREFIX, v30, v32, v33, v34, v35, v36, v37);
   v38 = HorizontalQuestInformationIconDraw_TypeInfo;
-  HorizontalQuestInformationIconDraw_TypeInfo->static_fields->SHADOW_COLOR = (struct UnityEngine_Color_o)xmmword_BF5BD0;
-  v39 = StringLiteral_15369/*"Unknown property '{0}'."*/;
+  HorizontalQuestInformationIconDraw_TypeInfo->static_fields->SHADOW_COLOR = (struct UnityEngine_Color_o)xmmword_BF9870;
+  v39 = StringLiteral_15381/*"Unlit/Transparent Colored"*/;
   v40 = v38->static_fields;
-  v40->DEFAULT_SHADER = (struct System_String_o *)StringLiteral_15369/*"Unknown property '{0}'."*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v40->DEFAULT_SHADER, v39, v41, v42, v43, v44, v45, v46);
+  v40->DEFAULT_SHADER = (struct System_String_o *)StringLiteral_15381/*"Unlit/Transparent Colored"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v40->DEFAULT_SHADER, v39, v41, v42, v43, v44, v45, v46);
 }
 
 
@@ -153,26 +153,26 @@ void __fastcall HorizontalQuestInformationIconDraw__LoadEnemyTexture(
   AssetLoader_LoadEndDataHandler_o *v44; // x20
   int32_t v45; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BB15A4 & 1) == 0 )
+  if ( (byte_4BC495F & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, item);
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, v7);
-    sub_1C13D24(&int_TypeInfo, v8);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_1C13D24(&Method_HorizontalQuestInformationIconDraw___c__DisplayClass22_0__LoadEnemyTexture_b__0__, v11);
-    sub_1C13D24(&HorizontalQuestInformationIconDraw___c__DisplayClass22_0_TypeInfo, v12);
-    byte_4BB15A4 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, item);
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, v7);
+    sub_1C1ABD4(&int_TypeInfo, v8);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1C1ABD4(&Method_HorizontalQuestInformationIconDraw___c__DisplayClass22_0__LoadEnemyTexture_b__0__, v11);
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw___c__DisplayClass22_0_TypeInfo, v12);
+    byte_4BC495F = 1;
   }
-  v13 = sub_1C13F70(HorizontalQuestInformationIconDraw___c__DisplayClass22_0_TypeInfo);
+  v13 = sub_1C1AE20(HorizontalQuestInformationIconDraw___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_14;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 16), (int64_t)this, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v13 + 24) = callback;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)callback, v22, v23, v24, v25, v26, v27);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v13 + 24), (int64_t)callback, v22, v23, v24, v25, v26, v27);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__SetLoadMode(Instance, 1, 0LL);
@@ -189,12 +189,12 @@ void __fastcall HorizontalQuestInformationIconDraw__LoadEnemyTexture(
   v35 = System_String__Concat(ENEMY_ICON_TEXTURE_PREFIX, v34, 0LL);
   this->fields.enemyIconName = v35;
   p_enemyIconName = &this->fields.enemyIconName;
-  sub_1C13CC8((PartyOrganizationUtility_o *)p_enemyIconName, (int64_t)v35, v37, v38, v39, v40, v41, v42);
-  v43 = System_String__Concat_62967944(
+  sub_1C1AB78((PartyOrganizationUtility_o *)p_enemyIconName, (int64_t)v35, v37, v38, v39, v40, v41, v42);
+  v43 = System_String__Concat_63040368(
           HorizontalQuestInformationIconDraw_TypeInfo->static_fields->ENEMY_ICON_TEXTURE_PATH,
           *p_enemyIconName,
           0LL);
-  v44 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v44 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v44,
     (Il2CppObject *)v13,
@@ -204,14 +204,14 @@ void __fastcall HorizontalQuestInformationIconDraw__LoadEnemyTexture(
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !AssetManager__loadAssetStorage(v43, v44, 1, 0LL) )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetLoadMode(Instance, 0, 0LL);
       return;
     }
 LABEL_14:
-    sub_1C13F80(Instance, v15);
+    sub_1C1AE30(Instance, v15);
   }
 }
 
@@ -247,11 +247,11 @@ void __fastcall HorizontalQuestInformationIconDraw__ReleaseEnemyTexture(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4BB15A5 & 1) == 0 )
+  if ( (byte_4BC4960 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, method);
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, v3);
-    byte_4BB15A5 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, method);
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, v3);
+    byte_4BC4960 = 1;
   }
   p_enemyIconName = &this->fields.enemyIconName;
   if ( !System_String__IsNullOrEmpty(this->fields.enemyIconName, 0LL) )
@@ -262,15 +262,15 @@ void __fastcall HorizontalQuestInformationIconDraw__ReleaseEnemyTexture(
       j_il2cpp_runtime_class_init_0(HorizontalQuestInformationIconDraw_TypeInfo);
       v5 = HorizontalQuestInformationIconDraw_TypeInfo;
     }
-    v6 = System_String__Concat_62967944(v5->static_fields->ENEMY_ICON_TEXTURE_PATH, *p_enemyIconName, 0LL);
+    v6 = System_String__Concat_63040368(v5->static_fields->ENEMY_ICON_TEXTURE_PATH, *p_enemyIconName, 0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(v6, 0LL);
     this->fields.enemyIconAssetData = 0LL;
     p_enemyIconAssetData = (PartyOrganizationUtility_o *)&this->fields.enemyIconAssetData;
-    sub_1C13CC8(p_enemyIconAssetData, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78(p_enemyIconAssetData, 0LL, v8, v9, v10, v11, v12, v13);
     p_enemyIconAssetData->monitor = 0LL;
-    sub_1C13CC8((PartyOrganizationUtility_o *)p_enemyIconName, 0LL, v14, v15, v16, v17, v18, v19);
+    sub_1C1AB78((PartyOrganizationUtility_o *)p_enemyIconName, 0LL, v14, v15, v16, v17, v18, v19);
   }
 }
 
@@ -293,11 +293,11 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType(
   struct UISpriteAltMat_o *enemySp; // x8
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BB15A1 & 1) == 0 )
+  if ( (byte_4BC495C & 1) == 0 )
   {
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp);
-    this = (HorizontalQuestInformationIconDraw_o *)sub_1C13D24(&UnityEngine_Material_TypeInfo, v8);
-    byte_4BB15A1 = 1;
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp);
+    this = (HorizontalQuestInformationIconDraw_o *)sub_1C1ABD4(&UnityEngine_Material_TypeInfo, v8);
+    byte_4BC495C = 1;
   }
   switch ( dispTp )
   {
@@ -314,8 +314,8 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType(
           v13 = HorizontalQuestInformationIconListComponent__NewChocoMaterialForSprite(
                   iconListComponent,
                   *(const MethodInfo **)&dispTp);
-          v14 = (UnityEngine_Material_o *)sub_1C13F70(UnityEngine_Material_TypeInfo);
-          UnityEngine_Material___ctor_70585260(v14, v13, 0LL);
+          v14 = (UnityEngine_Material_o *)sub_1C1AE20(UnityEngine_Material_TypeInfo);
+          UnityEngine_Material___ctor_70657684(v14, v13, 0LL);
           UISpriteAltMat__SetMaterialKeepTexture(sp, v14, 0LL);
           return;
         }
@@ -338,7 +338,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType(
         goto LABEL_15;
       }
 LABEL_17:
-      sub_1C13F80(this, *(_QWORD *)&dispTp);
+      sub_1C1AE30(this, *(_QWORD *)&dispTp);
     case 1:
       if ( sp )
       {
@@ -369,12 +369,12 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispTypeEnemyTex(
   float v9; // s3
   struct UISpriteAltMat_o *enemySp; // x8
 
-  if ( (byte_4BB15A3 & 1) == 0 )
+  if ( (byte_4BC495E & 1) == 0 )
   {
-    this = (HorizontalQuestInformationIconDraw_o *)sub_1C13D24(
+    this = (HorizontalQuestInformationIconDraw_o *)sub_1C1ABD4(
                                                      &HorizontalQuestInformationIconDraw_TypeInfo,
                                                      *(_QWORD *)&dispTp);
-    byte_4BB15A3 = 1;
+    byte_4BC495E = 1;
   }
   switch ( dispTp )
   {
@@ -397,7 +397,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispTypeEnemyTex(
         goto LABEL_12;
       }
 LABEL_14:
-      sub_1C13F80(this, *(_QWORD *)&dispTp);
+      sub_1C1AE30(this, *(_QWORD *)&dispTp);
     case 1:
 LABEL_6:
       if ( texture )
@@ -416,7 +416,7 @@ LABEL_12:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35023200(
+void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35068964(
         HorizontalQuestInformationIconDraw_o *this,
         int32_t dispTp,
         UITexture_o *texture,
@@ -433,11 +433,11 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35023200(
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BB15A2 & 1) == 0 )
+  if ( (byte_4BC495D & 1) == 0 )
   {
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp);
-    this = (HorizontalQuestInformationIconDraw_o *)sub_1C13D24(&StringLiteral_16515/*"_IsProportion"*/, v8);
-    byte_4BB15A2 = 1;
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, *(_QWORD *)&dispTp);
+    this = (HorizontalQuestInformationIconDraw_o *)sub_1C1ABD4(&StringLiteral_16529/*"_MainTex"*/, v8);
+    byte_4BC495D = 1;
   }
   if ( dispTp == 3 )
   {
@@ -464,7 +464,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35023200(
         {
           UnityEngine_Material__SetTexture(
             v11,
-            (System_String_o *)StringLiteral_16515/*"_IsProportion"*/,
+            (System_String_o *)StringLiteral_16529/*"_MainTex"*/,
             (UnityEngine_Texture_o *)this,
             0LL);
           ((void (__fastcall *)(UITexture_o *, UnityEngine_Material_o *, Il2CppMethodPointer))texture->klass->vtable._25_set_material.method)(
@@ -506,7 +506,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35023200(
           j_il2cpp_runtime_class_init_0(HorizontalQuestInformationIconDraw_TypeInfo);
         if ( v9 )
         {
-          if ( !System_String__Equals_62976260(
+          if ( !System_String__Equals_63048684(
                   (System_String_o *)v9,
                   HorizontalQuestInformationIconDraw_TypeInfo->static_fields->DEFAULT_SHADER,
                   0LL) )
@@ -521,7 +521,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetDispType_35023200(
       }
     }
 LABEL_28:
-    sub_1C13F80(this, *(_QWORD *)&dispTp);
+    sub_1C1AE30(this, *(_QWORD *)&dispTp);
   }
   this = (HorizontalQuestInformationIconDraw_o *)HorizontalQuestInformationIconDraw_TypeInfo;
   if ( !HorizontalQuestInformationIconDraw_TypeInfo->_2.cctor_finished )
@@ -549,7 +549,7 @@ LABEL_28:
   this = (HorizontalQuestInformationIconDraw_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
   if ( !this )
     goto LABEL_28;
-  if ( !System_String__Equals_62976260(
+  if ( !System_String__Equals_63048684(
           (System_String_o *)this,
           HorizontalQuestInformationIconDraw_TypeInfo->static_fields->DEFAULT_SHADER,
           0LL) )
@@ -585,13 +585,13 @@ void __fastcall HorizontalQuestInformationIconDraw__SetEnemyName(
   AssetLoader_LoadEndDataHandler_o *v10; // x22
 
   v4 = this;
-  if ( (byte_4BB15A6 & 1) == 0 )
+  if ( (byte_4BC4961 & 1) == 0 )
   {
-    sub_1C13D24(&AssetManager_TypeInfo, item);
-    sub_1C13D24(&Method_HorizontalQuestInformationIconDraw__SetEnemyName_b__24_0__, v5);
-    sub_1C13D24(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
-    this = (HorizontalQuestInformationIconDraw_o *)sub_1C13D24(&ServantAssetLoadManager_TypeInfo, v7);
-    byte_4BB15A6 = 1;
+    sub_1C1ABD4(&AssetManager_TypeInfo, item);
+    sub_1C1ABD4(&Method_HorizontalQuestInformationIconDraw__SetEnemyName_b__24_0__, v5);
+    sub_1C1ABD4(&AssetLoader_LoadEndDataHandler_TypeInfo, v6);
+    this = (HorizontalQuestInformationIconDraw_o *)sub_1C1ABD4(&ServantAssetLoadManager_TypeInfo, v7);
+    byte_4BC4961 = 1;
   }
   if ( !item )
     goto LABEL_12;
@@ -601,7 +601,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetEnemyName(
     if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
     NameEffectPath = ServantAssetLoadManager__getNameEffectPath(enemyNameEffectId, 0LL);
-    v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1C13F70(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1C1AE20(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v10,
       (Il2CppObject *)v4,
@@ -614,7 +614,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetEnemyName(
   this = (HorizontalQuestInformationIconDraw_o *)v4->fields.textLb;
   if ( !this )
 LABEL_12:
-    sub_1C13F80(this, item);
+    sub_1C1AE30(this, item);
   UILabel__set_text((UILabel_o *)this, item->fields.nameText, 0LL);
 }
 
@@ -696,33 +696,33 @@ void __fastcall HorizontalQuestInformationIconDraw__SetItem(
   UILabel_o *holdNumTitleLb; // x21
   UILabel_o *holdNumCntLb; // x21
 
-  if ( (byte_4BB15A0 & 1) == 0 )
+  if ( (byte_4BC495B & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, item);
-    sub_1C13D24(&AtlasManager_TypeInfo, v9);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, v10);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserItemMaster___, v11);
-    sub_1C13D24(&HorizontalQuestInformationIconDraw_TypeInfo, v12);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v13);
-    sub_1C13D24(&NetworkManager_TypeInfo, v14);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C13D24(&ServantAssetLoadManager_TypeInfo, v16);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1C13D24(&TerminalSceneComponent_TypeInfo, v18);
-    sub_1C13D24(&Method_HorizontalQuestInformationIconDraw___c__DisplayClass18_0__SetItem_b__0__, v19);
-    sub_1C13D24(&HorizontalQuestInformationIconDraw___c__DisplayClass18_0_TypeInfo, v20);
-    sub_1C13D24(&StringLiteral_12211/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, v21);
-    byte_4BB15A0 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, item);
+    sub_1C1ABD4(&AtlasManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, v10);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserItemMaster___, v11);
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw_TypeInfo, v12);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v13);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v14);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C1ABD4(&ServantAssetLoadManager_TypeInfo, v16);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v18);
+    sub_1C1ABD4(&Method_HorizontalQuestInformationIconDraw___c__DisplayClass18_0__SetItem_b__0__, v19);
+    sub_1C1ABD4(&HorizontalQuestInformationIconDraw___c__DisplayClass18_0_TypeInfo, v20);
+    sub_1C1ABD4(&StringLiteral_12223/*"SHOP_BUY_ITEM_HOLD"*/, v21);
+    byte_4BC495B = 1;
   }
-  v22 = sub_1C13F70(HorizontalQuestInformationIconDraw___c__DisplayClass18_0_TypeInfo);
+  v22 = sub_1C1AE20(HorizontalQuestInformationIconDraw___c__DisplayClass18_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v22, 0LL);
   if ( !v22 )
     goto LABEL_119;
   *(_QWORD *)(v22 + 16) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)this, v25, v26, v27, v28, v29, v30);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v22 + 16), (int64_t)this, v25, v26, v27, v28, v29, v30);
   *(_QWORD *)(v22 + 24) = item;
   v31 = (QuestInformationListViewItem_o **)(v22 + 24);
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)item, v32, v33, v34, v35, v36, v37);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v22 + 24), (int64_t)item, v32, v33, v34, v35, v36, v37);
   if ( mode )
   {
     v38 = *v31;
@@ -749,10 +749,10 @@ void __fastcall HorizontalQuestInformationIconDraw__SetItem(
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)SvtImg, 1, 0LL);
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4BAF374 )
+          if ( !byte_4BC2713 )
           {
-            sub_1C13D24(&TerminalSceneComponent_TypeInfo, v41);
-            byte_4BAF374 = 1;
+            sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v41);
+            byte_4BC2713 = 1;
           }
           v42 = TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -768,10 +768,10 @@ void __fastcall HorizontalQuestInformationIconDraw__SetItem(
             enemySp = (UISprite_o *)this->fields.enemySp;
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-            if ( !byte_4BAF374 )
+            if ( !byte_4BC2713 )
             {
-              sub_1C13D24(&TerminalSceneComponent_TypeInfo, v24);
-              byte_4BAF374 = 1;
+              sub_1C1ABD4(&TerminalSceneComponent_TypeInfo, v24);
+              byte_4BC2713 = 1;
             }
             SvtImg = (UnityEngine_Component_o *)TerminalSceneComponent_TypeInfo;
             if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -806,7 +806,7 @@ void __fastcall HorizontalQuestInformationIconDraw__SetItem(
             }
           }
 LABEL_119:
-          sub_1C13F80(SvtImg, v24);
+          sub_1C1AE30(SvtImg, v24);
         }
         SvtImg = (UnityEngine_Component_o *)*v31;
         if ( !*v31 )
@@ -836,7 +836,7 @@ LABEL_119:
             j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
           Manager__loadCommandCard = ServantAssetLoadManager__loadCommandCard(v55, targetId, targetCnt, targetCnt, 0LL);
           *p_SvtImg = Manager__loadCommandCard;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.SvtImg,
             (int64_t)Manager__loadCommandCard,
             v59,
@@ -847,7 +847,7 @@ LABEL_119:
             v64);
           if ( !*v31 )
             goto LABEL_119;
-          HorizontalQuestInformationIconDraw__SetDispType_35023200(
+          HorizontalQuestInformationIconDraw__SetDispType_35068964(
             (HorizontalQuestInformationIconDraw_o *)SvtImg,
             (*v31)->fields.dispType,
             this->fields.SvtImg,
@@ -899,7 +899,7 @@ LABEL_119:
           else
           {
             v70 = *(QuestInformationListViewItem_o **)(v22 + 24);
-            v71 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+            v71 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
             System_Action___ctor(
               v71,
               (Il2CppObject *)v22,
@@ -940,7 +940,7 @@ LABEL_119:
             goto LABEL_119;
           if ( !itemIcon )
             goto LABEL_119;
-          ItemIconComponent__SetGift_39286592(itemIcon, (int32_t)SvtImg, (*v31)->fields.targetId, -1, 0, 0LL);
+          ItemIconComponent__SetGift_39340176(itemIcon, (int32_t)SvtImg, (*v31)->fields.targetId, -1, 0, 0LL);
           SvtImg = (UnityEngine_Component_o *)this->fields.itemIcon;
           if ( !SvtImg )
             goto LABEL_119;
@@ -955,12 +955,12 @@ LABEL_119:
           goto LABEL_119;
         if ( !QuestInformationListViewItem__isRewardItem((QuestInformationListViewItem_o *)SvtImg, 0LL) )
           goto LABEL_58;
-        SvtImg = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        SvtImg = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !SvtImg )
           goto LABEL_119;
         SvtImg = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)SvtImg,
-                                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
+                                              (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___);
         if ( !*v31 )
           goto LABEL_119;
         v50 = (ItemMaster_o *)SvtImg;
@@ -1039,18 +1039,18 @@ LABEL_63:
               }
               else
               {
-                SvtImg = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                SvtImg = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( !SvtImg )
                   goto LABEL_119;
                 MasterData_object = DataManager__GetMasterData_object_(
                                       (DataManager_o *)SvtImg,
-                                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                      (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserItemMaster___);
                 if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                if ( !byte_4BAF1E5 )
+                if ( !byte_4BC2585 )
                 {
-                  sub_1C13D24(&NetworkManager_TypeInfo, v24);
-                  byte_4BAF1E5 = 1;
+                  sub_1C1ABD4(&NetworkManager_TypeInfo, v24);
+                  byte_4BC2585 = 1;
                 }
                 SvtImg = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
                 if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1077,7 +1077,7 @@ LABEL_63:
           holdNumTitleLb = this->fields.holdNumTitleLb;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          SvtImg = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12211/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, 0LL);
+          SvtImg = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12223/*"SHOP_BUY_ITEM_HOLD"*/, 0LL);
           if ( holdNumTitleLb )
           {
             UILabel__set_text(holdNumTitleLb, (System_String_o *)SvtImg, 0LL);
@@ -1129,31 +1129,31 @@ void __fastcall HorizontalQuestInformationIconDraw___SetEnemyName_b__24_0(
   UnityEngine_Transform_o *transform; // x20
 
   v4 = this;
-  if ( (byte_4BB15A8 & 1) == 0 )
+  if ( (byte_4BC4963 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_GameObject____77466800, assetData);
-    sub_1C13D24(&Method_UnityEngine_Object_Instantiate_GameObject____77555680, v5);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v6);
-    this = (HorizontalQuestInformationIconDraw_o *)sub_1C13D24(&StringLiteral_23076/*"qualifiedName"*/, v7);
-    byte_4BB15A8 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_GameObject____77543640, assetData);
+    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject____77632760, v5);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v6);
+    this = (HorizontalQuestInformationIconDraw_o *)sub_1C1ABD4(&StringLiteral_23095/*"quest_info"*/, v7);
+    byte_4BC4963 = 1;
   }
   if ( !assetData
-    || (this = (HorizontalQuestInformationIconDraw_o *)AssetData__GetObject_object__49747248(
+    || (this = (HorizontalQuestInformationIconDraw_o *)AssetData__GetObject_object__49812820(
                                                          assetData,
-                                                         (System_String_o *)StringLiteral_23076/*"qualifiedName"*/,
-                                                         (const MethodInfo_2F71530 *)Method_AssetData_GetObject_GameObject____77466800),
+                                                         (System_String_o *)StringLiteral_23095/*"quest_info"*/,
+                                                         (const MethodInfo_2F81554 *)Method_AssetData_GetObject_GameObject____77543640),
         (textLb = (UnityEngine_Component_o *)v4->fields.textLb) == 0LL) )
   {
-    sub_1C13F80(this, assetData);
+    sub_1C1AE30(this, assetData);
   }
   v9 = (Il2CppObject *)this;
   transform = UnityEngine_Component__get_transform(textLb, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Instantiate_object__50417328(
+  UnityEngine_Object__Instantiate_object__50483316(
     v9,
     transform,
-    (const MethodInfo_3014EB0 *)Method_UnityEngine_Object_Instantiate_GameObject____77555680);
+    (const MethodInfo_3025074 *)Method_UnityEngine_Object_Instantiate_GameObject____77632760);
 }
 
 
@@ -1188,7 +1188,7 @@ void __fastcall HorizontalQuestInformationIconDraw___c__DisplayClass18_0___SetIt
     || (v7 = v3->fields.__4__this) == 0LL )
   {
 LABEL_8:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   HorizontalQuestInformationIconDraw__SetDispTypeEnemyTex(
     (HorizontalQuestInformationIconDraw_o *)this,
@@ -1228,25 +1228,25 @@ void __fastcall HorizontalQuestInformationIconDraw___c__DisplayClass22_0___LoadE
   struct HorizontalQuestInformationIconDraw_o *v19; // x8
   struct HorizontalQuestInformationIconDraw_o *v20; // x8
   AssetData_o *enemyIconAssetData; // x21
-  Il2CppObject *Object_object__49747248; // x0
+  Il2CppObject *Object_object__49812820; // x0
 
-  if ( (byte_4BB15A9 & 1) == 0 )
+  if ( (byte_4BC4964 & 1) == 0 )
   {
-    sub_1C13D24(&Method_AssetData_GetObject_Texture2D____77466824, assetData);
-    sub_1C13D24(&UnityEngine_Material_TypeInfo, v10);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_1C13D24(&StringLiteral_16780/*"__title-container"*/, v12);
-    sub_1C13D24(&StringLiteral_5068/*"Custom/Sprite-ScriptActionFigureSummonCombine"*/, v13);
-    sub_1C13D24(&StringLiteral_16520/*"_L"*/, v14);
-    byte_4BB15A9 = 1;
+    sub_1C1ABD4(&Method_AssetData_GetObject_Texture2D____77543664, assetData);
+    sub_1C1ABD4(&UnityEngine_Material_TypeInfo, v10);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
+    sub_1C1ABD4(&StringLiteral_16794/*"_alpha"*/, v12);
+    sub_1C1ABD4(&StringLiteral_5071/*"Custom/SpriteWithMask"*/, v13);
+    sub_1C1ABD4(&StringLiteral_16534/*"_MaskTex"*/, v14);
+    byte_4BC4964 = 1;
   }
   _4__this = (AssetData_o *)this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_13;
   _4__this[1].klass = (AssetData_c *)assetData;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&_4__this[1], (int64_t)assetData, (int64_t)method, v3, v4, v5, v6, v7);
-  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5068/*"Custom/Sprite-ScriptActionFigureSummonCombine"*/, 0LL);
-  v17 = (UnityEngine_Material_o *)sub_1C13F70(UnityEngine_Material_TypeInfo);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&_4__this[1], (int64_t)assetData, (int64_t)method, v3, v4, v5, v6, v7);
+  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5071/*"Custom/SpriteWithMask"*/, 0LL);
+  v17 = (UnityEngine_Material_o *)sub_1C1AE20(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v17, v16, 0LL);
   v18 = this->fields.__4__this;
   if ( !v18 )
@@ -1264,32 +1264,32 @@ void __fastcall HorizontalQuestInformationIconDraw___c__DisplayClass22_0___LoadE
   _4__this = v19->fields.enemyIconAssetData;
   if ( !_4__this )
     goto LABEL_13;
-  _4__this = (AssetData_o *)AssetData__GetObject_object__49747248(
+  _4__this = (AssetData_o *)AssetData__GetObject_object__49812820(
                               _4__this,
                               v19->fields.enemyIconName,
-                              (const MethodInfo_2F71530 *)Method_AssetData_GetObject_Texture2D____77466824);
+                              (const MethodInfo_2F81554 *)Method_AssetData_GetObject_Texture2D____77543664);
   if ( !v17
     || (UnityEngine_Material__set_mainTexture(v17, (UnityEngine_Texture_o *)_4__this, 0LL),
         (v20 = this->fields.__4__this) == 0LL)
     || (enemyIconAssetData = v20->fields.enemyIconAssetData,
-        _4__this = (AssetData_o *)System_String__Concat_62967944(
+        _4__this = (AssetData_o *)System_String__Concat_63040368(
                                     v20->fields.enemyIconName,
-                                    (System_String_o *)StringLiteral_16780/*"__title-container"*/,
+                                    (System_String_o *)StringLiteral_16794/*"_alpha"*/,
                                     0LL),
         !enemyIconAssetData)
-    || (Object_object__49747248 = AssetData__GetObject_object__49747248(
+    || (Object_object__49812820 = AssetData__GetObject_object__49812820(
                                     enemyIconAssetData,
                                     (System_String_o *)_4__this,
-                                    (const MethodInfo_2F71530 *)Method_AssetData_GetObject_Texture2D____77466824),
+                                    (const MethodInfo_2F81554 *)Method_AssetData_GetObject_Texture2D____77543664),
         UnityEngine_Material__SetTexture(
           v17,
-          (System_String_o *)StringLiteral_16520/*"_L"*/,
-          (UnityEngine_Texture_o *)Object_object__49747248,
+          (System_String_o *)StringLiteral_16534/*"_MaskTex"*/,
+          (UnityEngine_Texture_o *)Object_object__49812820,
           0LL),
-        (_4__this = (AssetData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
+        (_4__this = (AssetData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL) )
   {
 LABEL_13:
-    sub_1C13F80(_4__this, assetData);
+    sub_1C1AE30(_4__this, assetData);
   }
   CommonUI__SetLoadMode((CommonUI_o *)_4__this, 0, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);

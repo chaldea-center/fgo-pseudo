@@ -16,22 +16,22 @@ void __fastcall WarBoardAIEntity___ctor(WarBoardAIEntity_o *this, const MethodIn
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BB56AC & 1) == 0 )
+  if ( (byte_4BC8A8B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
-    sub_1C13D24(&int___TypeInfo, v3);
-    byte_4BB56AC = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
+    sub_1C1ABD4(&int___TypeInfo, v3);
+    byte_4BC8A8B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
   this->fields.id = 0;
-  v4 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
+  v4 = (struct System_Int32_array *)sub_1C1AC7C(int___TypeInfo, 0LL);
   this->fields.actionTrendIds = v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.actionTrendIds, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (struct System_Int32_array *)sub_1C13DCC(int___TypeInfo, 0LL);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.actionTrendIds, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (struct System_Int32_array *)sub_1C1AC7C(int___TypeInfo, 0LL);
   this->fields.ratingOffsetIds = v11;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.ratingOffsetIds, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.ratingOffsetIds, (int64_t)v11, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -62,28 +62,28 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetActionTrendIds(WarBoardAIEnt
   System_Int32_array *v19; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4BB56AD & 1) == 0 )
+  if ( (byte_4BC8A8C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_WarBoardActionTrendGroupMaster___, method);
-    sub_1C13D24(&DataManager_TypeInfo, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMaster_WarBoardActionTrendGroupMaster___, method);
+    sub_1C1ABD4(&DataManager_TypeInfo, v3);
+    sub_1C1ABD4(
       &Method_DataMasterBase_WarBoardActionTrendGroupMaster__WarBoardActionTrendGroupEntity__int__TryGetEntity__,
       v4);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int___ctor___77396904, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__get_Count__, v8);
-    sub_1C13D24(&System_Collections_Generic_HashSet_int__TypeInfo, v9);
-    sub_1C13D24(&int___TypeInfo, v10);
-    byte_4BB56AD = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int___ctor___77473576, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__get_Count__, v8);
+    sub_1C1ABD4(&System_Collections_Generic_HashSet_int__TypeInfo, v9);
+    sub_1C1ABD4(&int___TypeInfo, v10);
+    byte_4BC8A8C = 1;
   }
   entity = 0LL;
   actionTrendIds = (System_Collections_Generic_IEnumerable_T__o *)this->fields.actionTrendIds;
-  v12 = (System_Collections_Generic_HashSet_int__o *)sub_1C13F70(System_Collections_Generic_HashSet_int__TypeInfo);
-  System_Collections_Generic_HashSet_int____ctor_55444424(
+  v12 = (System_Collections_Generic_HashSet_int__o *)sub_1C1AE20(System_Collections_Generic_HashSet_int__TypeInfo);
+  System_Collections_Generic_HashSet_int____ctor_55507940(
     v12,
     actionTrendIds,
-    (const MethodInfo_34E03C8 *)Method_System_Collections_Generic_HashSet_int___ctor___77396904);
+    (const MethodInfo_34EFBE4 *)Method_System_Collections_Generic_HashSet_int___ctor___77473576);
   IsNullOrEmpty = (Il2CppObject *)BasicHelper__IsNullOrEmpty(
                                     (System_Collections_ICollection_o *)this->fields.actionTrendGroupIds,
                                     0LL);
@@ -99,18 +99,18 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetActionTrendIds(WarBoardAIEnt
       while ( 1 )
       {
         if ( v17 >= (unsigned int)v16 )
-          sub_1C13F88(IsNullOrEmpty, v14);
+          sub_1C1AE38(IsNullOrEmpty, v14);
         v18 = actionTrendGroupIds->m_Items[v17 + 1];
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_WarBoardActionTrendGroupMaster___);
+        IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_WarBoardActionTrendGroupMaster___);
         if ( !IsNullOrEmpty )
           break;
         IsNullOrEmpty = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)IsNullOrEmpty,
                                           &entity,
                                           v18,
-                                          (const MethodInfo_3238670 *)Method_DataMasterBase_WarBoardActionTrendGroupMaster__WarBoardActionTrendGroupEntity__int__TryGetEntity__);
+                                          (const MethodInfo_32486C4 *)Method_DataMasterBase_WarBoardActionTrendGroupMaster__WarBoardActionTrendGroupEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
         {
           if ( !entity || !v12 )
@@ -118,24 +118,24 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetActionTrendIds(WarBoardAIEnt
           System_Collections_Generic_HashSet_int___UnionWith(
             v12,
             (System_Collections_Generic_IEnumerable_T__o *)entity[1].monitor,
-            (const MethodInfo_34E14EC *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+            (const MethodInfo_34F0D08 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
         }
         LODWORD(v16) = actionTrendGroupIds->max_length;
         if ( (__int64)++v17 >= (int)v16 )
           goto LABEL_16;
       }
 LABEL_18:
-      sub_1C13F80(IsNullOrEmpty, v14);
+      sub_1C1AE30(IsNullOrEmpty, v14);
     }
   }
 LABEL_16:
   if ( !v12 )
     goto LABEL_18;
-  v19 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)v12->fields._count);
-  System_Collections_Generic_HashSet_int___CopyTo_55449620(
+  v19 = (System_Int32_array *)sub_1C1AC7C(int___TypeInfo, (unsigned int)v12->fields._count);
+  System_Collections_Generic_HashSet_int___CopyTo_55513136(
     v12,
     v19,
-    (const MethodInfo_34E1814 *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
+    (const MethodInfo_34F1030 *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
   return v19;
 }
 
@@ -161,28 +161,28 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetRatingOffsetIds(WarBoardAIEn
   System_Int32_array *v19; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4BB56AE & 1) == 0 )
+  if ( (byte_4BC8A8D & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_WarBoardRatingOffsetGroupMaster___, method);
-    sub_1C13D24(&DataManager_TypeInfo, v3);
-    sub_1C13D24(
+    sub_1C1ABD4(&Method_DataManager_GetMaster_WarBoardRatingOffsetGroupMaster___, method);
+    sub_1C1ABD4(&DataManager_TypeInfo, v3);
+    sub_1C1ABD4(
       &Method_DataMasterBase_WarBoardRatingOffsetGroupMaster__WarBoardRatingOffsetGroupEntity__int__TryGetEntity__,
       v4);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int___ctor___77396904, v7);
-    sub_1C13D24(&Method_System_Collections_Generic_HashSet_int__get_Count__, v8);
-    sub_1C13D24(&System_Collections_Generic_HashSet_int__TypeInfo, v9);
-    sub_1C13D24(&int___TypeInfo, v10);
-    byte_4BB56AE = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__CopyTo__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__UnionWith__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int___ctor___77473576, v7);
+    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__get_Count__, v8);
+    sub_1C1ABD4(&System_Collections_Generic_HashSet_int__TypeInfo, v9);
+    sub_1C1ABD4(&int___TypeInfo, v10);
+    byte_4BC8A8D = 1;
   }
   entity = 0LL;
   ratingOffsetIds = (System_Collections_Generic_IEnumerable_T__o *)this->fields.ratingOffsetIds;
-  v12 = (System_Collections_Generic_HashSet_int__o *)sub_1C13F70(System_Collections_Generic_HashSet_int__TypeInfo);
-  System_Collections_Generic_HashSet_int____ctor_55444424(
+  v12 = (System_Collections_Generic_HashSet_int__o *)sub_1C1AE20(System_Collections_Generic_HashSet_int__TypeInfo);
+  System_Collections_Generic_HashSet_int____ctor_55507940(
     v12,
     ratingOffsetIds,
-    (const MethodInfo_34E03C8 *)Method_System_Collections_Generic_HashSet_int___ctor___77396904);
+    (const MethodInfo_34EFBE4 *)Method_System_Collections_Generic_HashSet_int___ctor___77473576);
   IsNullOrEmpty = (Il2CppObject *)BasicHelper__IsNullOrEmpty(
                                     (System_Collections_ICollection_o *)this->fields.ratingOffsetGroupIds,
                                     0LL);
@@ -198,18 +198,18 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetRatingOffsetIds(WarBoardAIEn
       while ( 1 )
       {
         if ( v17 >= (unsigned int)v16 )
-          sub_1C13F88(IsNullOrEmpty, v14);
+          sub_1C1AE38(IsNullOrEmpty, v14);
         v18 = ratingOffsetGroupIds->m_Items[v17 + 1];
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_WarBoardRatingOffsetGroupMaster___);
+        IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_WarBoardRatingOffsetGroupMaster___);
         if ( !IsNullOrEmpty )
           break;
         IsNullOrEmpty = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)IsNullOrEmpty,
                                           &entity,
                                           v18,
-                                          (const MethodInfo_3238670 *)Method_DataMasterBase_WarBoardRatingOffsetGroupMaster__WarBoardRatingOffsetGroupEntity__int__TryGetEntity__);
+                                          (const MethodInfo_32486C4 *)Method_DataMasterBase_WarBoardRatingOffsetGroupMaster__WarBoardRatingOffsetGroupEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
         {
           if ( !entity || !v12 )
@@ -217,23 +217,23 @@ System_Int32_array *__fastcall WarBoardAIEntity__GetRatingOffsetIds(WarBoardAIEn
           System_Collections_Generic_HashSet_int___UnionWith(
             v12,
             (System_Collections_Generic_IEnumerable_T__o *)entity[1].monitor,
-            (const MethodInfo_34E14EC *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
+            (const MethodInfo_34F0D08 *)Method_System_Collections_Generic_HashSet_int__UnionWith__);
         }
         LODWORD(v16) = ratingOffsetGroupIds->max_length;
         if ( (__int64)++v17 >= (int)v16 )
           goto LABEL_16;
       }
 LABEL_18:
-      sub_1C13F80(IsNullOrEmpty, v14);
+      sub_1C1AE30(IsNullOrEmpty, v14);
     }
   }
 LABEL_16:
   if ( !v12 )
     goto LABEL_18;
-  v19 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, (unsigned int)v12->fields._count);
-  System_Collections_Generic_HashSet_int___CopyTo_55449620(
+  v19 = (System_Int32_array *)sub_1C1AC7C(int___TypeInfo, (unsigned int)v12->fields._count);
+  System_Collections_Generic_HashSet_int___CopyTo_55513136(
     v12,
     v19,
-    (const MethodInfo_34E1814 *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
+    (const MethodInfo_34F1030 *)Method_System_Collections_Generic_HashSet_int__CopyTo__);
   return v19;
 }

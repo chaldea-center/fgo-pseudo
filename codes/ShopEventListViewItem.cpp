@@ -34,46 +34,46 @@ void __fastcall ShopEventListViewItem___ctor(
   _BOOL4 isFinished; // w9
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BB0B86 & 1) == 0 )
+  if ( (byte_4BC3F43 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&index);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_ShopMaster___, v8);
-    sub_1C13D24(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v9);
-    sub_1C13D24(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v10);
-    sub_1C13D24(&Method_System_Linq_Enumerable_All_ShopEntity___, v11);
-    sub_1C13D24(&System_Func_ShopEntity__bool__TypeInfo, v12);
-    sub_1C13D24(&NetworkManager_TypeInfo, v13);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_1C13D24(&TitleInfoControl_TypeInfo, v15);
-    sub_1C13D24(&Method_ShopEventListViewItem___c__DisplayClass8_0___ctor_b__0__, v16);
-    sub_1C13D24(&ShopEventListViewItem___c__DisplayClass8_0_TypeInfo, v17);
-    byte_4BB0B86 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&index);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventMaster___, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ShopMaster___, v8);
+    sub_1C1ABD4(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v9);
+    sub_1C1ABD4(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v10);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_All_ShopEntity___, v11);
+    sub_1C1ABD4(&System_Func_ShopEntity__bool__TypeInfo, v12);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v13);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_1C1ABD4(&TitleInfoControl_TypeInfo, v15);
+    sub_1C1ABD4(&Method_ShopEventListViewItem___c__DisplayClass8_0___ctor_b__0__, v16);
+    sub_1C1ABD4(&ShopEventListViewItem___c__DisplayClass8_0_TypeInfo, v17);
+    byte_4BC3F43 = 1;
   }
   entity = 0LL;
-  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
   this->fields.eventId = eventId;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_37;
   v20 = DataMasterBase_object__object__int___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           eventId,
-          (const MethodInfo_3238624 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+          (const MethodInfo_3248678 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   this->fields.eventEntity = (struct EventEntity_o *)v20;
   p_eventEntity = &this->fields.eventEntity;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)v20, v22, v23, v24, v25, v26, v27);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)v20, v22, v23, v24, v25, v26, v27);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ShopMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ShopMaster___);
   if ( !Instance )
     goto LABEL_37;
   ShopMaster__GetEnableEventPeriod(
@@ -94,14 +94,14 @@ LABEL_10:
   }
   else
   {
-    v28 = (Il2CppObject *)sub_1C13F70(ShopEventListViewItem___c__DisplayClass8_0_TypeInfo);
+    v28 = (Il2CppObject *)sub_1C1AE20(ShopEventListViewItem___c__DisplayClass8_0_TypeInfo);
     System_Object___ctor(v28, 0LL);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_37;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ShopMaster___);
+                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ShopMaster___);
     if ( !Instance )
       goto LABEL_37;
     EventEntitiyList = (System_Collections_Generic_IEnumerable_TSource__o *)ShopMaster__GetEventEntitiyList(
@@ -118,12 +118,12 @@ LABEL_10:
       goto LABEL_37;
     if ( (__int64)Instance <= (*p_eventEntity)->fields.finishedAt )
     {
-      v31 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_ShopEntity__bool__TypeInfo);
+      v31 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_ShopEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(v31, v28, Method_ShopEventListViewItem___c__DisplayClass8_0___ctor_b__0__, 0LL);
       v30 = System_Linq_Enumerable__All_object_(
               EventEntitiyList,
               (System_Func_TSource__bool__o *)v31,
-              (const MethodInfo_2F994DC *)Method_System_Linq_Enumerable_All_ShopEntity___);
+              (const MethodInfo_2FA9500 *)Method_System_Linq_Enumerable_All_ShopEntity___);
     }
     else
     {
@@ -136,19 +136,19 @@ LABEL_10:
     goto LABEL_37;
   this->fields.closeValue = EventEntity__IsOpen((EventEntity_o *)Instance, 0, 0LL);
   this->fields.isLocked = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_37;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_37;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          eventId,
-         (const MethodInfo_3238670 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_32486C4 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     Instance = (DataManager_o *)entity;
     if ( !entity )
@@ -158,19 +158,19 @@ LABEL_10:
       v32 = entity;
       if ( !TitleInfoControl_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo);
-      if ( !TitleInfoControl__IsEnableEventShopButton_38355656((EventDetailEntity_o *)v32, 0LL) )
+      if ( !TitleInfoControl__IsEnableEventShopButton_38408132((EventDetailEntity_o *)v32, 0LL) )
         this->fields.isLocked = 1;
     }
   }
   this->fields.isClosedLimit = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL )
+                                      (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL )
   {
 LABEL_37:
-    sub_1C13F80(Instance, v19);
+    sub_1C1AE30(Instance, v19);
   }
   if ( ShopMaster__CloseLimitEventShop((ShopMaster_o *)Instance, eventId, 0LL) )
   {
@@ -195,7 +195,7 @@ bool __fastcall ShopEventListViewItem__SetSortValue(
   eventEntity = this->fields.eventEntity;
   this->fields.sortValue0 = this->fields.closeValue;
   if ( !eventEntity )
-    sub_1C13F80(this, sort);
+    sub_1C1AE30(this, sort);
   bannerPriority = eventEntity->fields.bannerPriority;
   index = this->fields.index;
   this->fields.sortValue1B = 0LL;
@@ -212,13 +212,13 @@ System_String_o *__fastcall ShopEventListViewItem__ToString(ShopEventListViewIte
 {
   System_String_o *NameText; // x0
 
-  if ( (byte_4BB0B89 & 1) == 0 )
+  if ( (byte_4BC3F46 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_8269/*"Italian (Italy)"*/, method);
-    byte_4BB0B89 = 1;
+    sub_1C1ABD4(&StringLiteral_8272/*"Item "*/, method);
+    byte_4BC3F46 = 1;
   }
   NameText = ShopEventListViewItem__get_NameText(this, method);
-  return System_String__Concat_62967944((System_String_o *)StringLiteral_8269/*"Italian (Italy)"*/, NameText, 0LL);
+  return System_String__Concat_63040368((System_String_o *)StringLiteral_8272/*"Item "*/, NameText, 0LL);
 }
 
 
@@ -242,10 +242,10 @@ System_String_o *__fastcall ShopEventListViewItem__get_DetailText(
   System_String_o **p_detail; // x8
   LocalizationManager_c *v5; // x0
 
-  if ( (byte_4BB0B88 & 1) == 0 )
+  if ( (byte_4BC3F45 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, method);
-    byte_4BB0B88 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+    byte_4BC3F45 = 1;
   }
   eventEntity = this->fields.eventEntity;
   if ( eventEntity )
@@ -256,10 +256,10 @@ System_String_o *__fastcall ShopEventListViewItem__get_DetailText(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4BAFD99 )
+    if ( !byte_4BC3142 )
     {
-      sub_1C13D24(&LocalizationManager_TypeInfo, method);
-      byte_4BAFD99 = 1;
+      sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+      byte_4BC3142 = 1;
     }
     v5 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -333,16 +333,16 @@ System_String_o *__fastcall ShopEventListViewItem__get_NameText(
 {
   EventEntity_o *eventEntity; // x0
 
-  if ( (byte_4BB0B87 & 1) == 0 )
+  if ( (byte_4BC3F44 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_19351/*"enumerable"*/, method);
-    byte_4BB0B87 = 1;
+    sub_1C1ABD4(&StringLiteral_19365/*"error"*/, method);
+    byte_4BC3F44 = 1;
   }
   eventEntity = this->fields.eventEntity;
   if ( eventEntity )
     return EventEntity__getEventName(eventEntity, 0LL);
   else
-    return (System_String_o *)StringLiteral_19351/*"enumerable"*/;
+    return (System_String_o *)StringLiteral_19365/*"error"*/;
 }
 
 
@@ -360,6 +360,6 @@ bool __fastcall ShopEventListViewItem___c__DisplayClass8_0____ctor_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return x->fields.closedAt < this->fields.nowTime;
 }

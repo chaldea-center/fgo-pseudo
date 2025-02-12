@@ -9,12 +9,12 @@ void __fastcall ServantLimitCombineRequest__beginRequest(
         int64_t baseUsrSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB60D7 & 1) == 0 )
+  if ( (byte_4BC94B9 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_17344/*"base64"*/, baseUsrSvtId);
-    byte_4BB60D7 = 1;
+    sub_1C1ABD4(&StringLiteral_17358/*"baseUserSvtId"*/, baseUsrSvtId);
+    byte_4BC94B9 = 1;
   }
-  RequestBase__addField_42309896((RequestBase_o *)this, (System_String_o *)StringLiteral_17344/*"base64"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField_42368496((RequestBase_o *)this, (System_String_o *)StringLiteral_17358/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall ServantLimitCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB60D6 & 1) == 0 )
+  if ( (byte_4BC94B8 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_18022/*"cannot be less than zero"*/, v2);
-    byte_4BB60D6 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_18036/*"card/combineLimit"*/, v2);
+    byte_4BC94B8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_18022/*"cannot be less than zero"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18036/*"card/combineLimit"*/, 0LL);
 }
 
 
@@ -52,12 +52,12 @@ void __fastcall ServantLimitCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BB60D8 & 1) == 0 )
+  if ( (byte_4BC94BA & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB60D8 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC94BA = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -71,7 +71,7 @@ void __fastcall ServantLimitCombineRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22421/*"newAttributes"*/;
+    v11 = (System_String_o *)StringLiteral_22437/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

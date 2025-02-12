@@ -1,13 +1,13 @@
 void __fastcall CommonRestrictionEntity___ctor(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4501 & 1) == 0 )
+  if ( (byte_4BC78CF & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BB4501 = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BC78CF = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3236140 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,15 +23,15 @@ bool __fastcall CommonRestrictionEntity__IsIncludedSvt(
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB4500 & 1) == 0 )
+  if ( (byte_4BC78CE & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Array_IndexOf_int___, *(_QWORD *)&baseSvtId);
-    byte_4BB4500 = 1;
+    sub_1C1ABD4(&Method_System_Array_IndexOf_int___, *(_QWORD *)&baseSvtId);
+    byte_4BC78CE = 1;
   }
   return System_Array__IndexOf_int_(
            this->fields.targetSvtIds,
            baseSvtId,
-           (const MethodInfo_308C194 *)Method_System_Array_IndexOf_int___) >= 0;
+           (const MethodInfo_309C358 *)Method_System_Array_IndexOf_int___) >= 0;
 }
 
 

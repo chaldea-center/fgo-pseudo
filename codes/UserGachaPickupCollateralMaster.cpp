@@ -2,17 +2,17 @@ void __fastcall UserGachaPickupCollateralMaster___ctor(
         UserGachaPickupCollateralMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB544F & 1) == 0 )
+  if ( (byte_4BC882E & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string___ctor__,
       method);
-    byte_4BB544F = 1;
+    byte_4BC882E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     35,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string___ctor__);
 }
 
 
@@ -27,12 +27,12 @@ UserGachaPickupCollateralEntity_o *__fastcall UserGachaPickupCollateralMaster__G
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB544D & 1) == 0 )
+  if ( (byte_4BC882C & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__GetEntity__,
       userId);
-    byte_4BB544D = 1;
+    byte_4BC882C = 1;
   }
   PK = (Il2CppObject *)UserGachaPickupCollateralEntity__CreatePK(
                          userId,
@@ -43,7 +43,7 @@ UserGachaPickupCollateralEntity_o *__fastcall UserGachaPickupCollateralMaster__G
   return (UserGachaPickupCollateralEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_323D0DC *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__GetEntity__);
+                                                (const MethodInfo_324D130 *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__GetEntity__);
 }
 
 
@@ -59,12 +59,12 @@ bool __fastcall UserGachaPickupCollateralMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB544E & 1) == 0 )
+  if ( (byte_4BC882D & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__TryGetEntity__,
       entity);
-    byte_4BB544E = 1;
+    byte_4BC882D = 1;
   }
   PK = (Il2CppObject *)UserGachaPickupCollateralEntity__CreatePK(
                          userId,
@@ -76,5 +76,5 @@ bool __fastcall UserGachaPickupCollateralMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_UserGachaPickupCollateralMaster__UserGachaPickupCollateralEntity__string__TryGetEntity__);
 }

@@ -50,21 +50,21 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BAF1D1 & 1) == 0 )
+  if ( (byte_4BC2571 & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, item);
-    sub_1C13D24(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&int_TypeInfo, v7);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, v9);
-    sub_1C13D24(&StringLiteral_5681/*"EVENT_COMBINE_COSTUME_LF"*/, v10);
-    sub_1C13D24(&StringLiteral_5680/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/, v11);
-    byte_4BAF1D1 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, item);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&int_TypeInfo, v7);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_8405/*"LEVEL_INFO"*/, v9);
+    sub_1C1ABD4(&StringLiteral_5685/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/, v10);
+    sub_1C1ABD4(&StringLiteral_5684/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/, v11);
+    byte_4BC2571 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item )
     goto LABEL_19;
   v14 = Master_object;
@@ -95,10 +95,10 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   UILabel__set_text((UILabel_o *)Master_object, item->fields._Name_k__BackingField, 0LL);
   if ( !CurrentEntity || !v18 )
     goto LABEL_19;
-  v20 = (System_String_o **)&StringLiteral_5681/*"EVENT_COMBINE_COSTUME_LF"*/;
+  v20 = (System_String_o **)&StringLiteral_5685/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
   levelLabel = this->fields.levelLabel;
   if ( CurrentEntity->fields.lv != v18->fields.lv )
-    v20 = (System_String_o **)&StringLiteral_5680/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/;
+    v20 = (System_String_o **)&StringLiteral_5684/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
   v22 = *v20;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -107,13 +107,13 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v24, v25, v26);
   v42 = v18->fields.lv;
   v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v28, v29, v30);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format_62982316(v23, v27, v31, 0LL);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format_63054740(v23, v27, v31, 0LL);
   if ( !levelLabel )
     goto LABEL_19;
   UILabel__set_text(levelLabel, (System_String_o *)Master_object, 0LL);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8402/*"LEVELUP_NOTICE_TITLE"*/, 0LL);
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_8405/*"LEVEL_INFO"*/, 0LL);
   v41 = CurrentEntity->fields.lv;
   v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v35, v36, v37);
   v39 = (Il2CppObject *)System_String__Format(v34, v38, 0LL);
@@ -122,7 +122,7 @@ void __fastcall CommandAssistListViewItemDraw__UpdateUi(
   Master_object = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_object )
 LABEL_19:
-    sub_1C13F80(Master_object, v13);
+    sub_1C1AE30(Master_object, v13);
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)Master_object,
     !item->fields._IsLast_k__BackingField,

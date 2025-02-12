@@ -10,22 +10,22 @@ System_Action_o *__fastcall SyncWidgetFromUILabel__ConvertTypeToAction(
   __int64 *v8; // x8
   System_Action_o *v9; // x20
 
-  if ( (byte_4BB5C09 & 1) == 0 )
+  if ( (byte_4BC8FEB & 1) == 0 )
   {
-    sub_1C13D24(&System_Action_TypeInfo, *(_QWORD *)&type);
-    sub_1C13D24(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__, v5);
-    sub_1C13D24(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__, v6);
-    byte_4BB5C09 = 1;
+    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&type);
+    sub_1C1ABD4(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__, v5);
+    sub_1C1ABD4(&Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__, v6);
+    byte_4BC8FEB = 1;
   }
   if ( type == 5 )
   {
-    v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     v8 = &Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_1__;
     goto LABEL_7;
   }
   if ( type == 4 )
   {
-    v7 = (System_Action_o *)sub_1C13F70(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
     v8 = &Method_SyncWidgetFromUILabel__ConvertTypeToAction_b__3_0__;
 LABEL_7:
     v9 = v7;
@@ -40,10 +40,10 @@ bool __fastcall SyncWidgetFromUILabel__DisabledSync(SyncWidgetFromUILabel_o *thi
 {
   UnityEngine_Object_o *syncFromLabel; // x19
 
-  if ( (byte_4BB5C08 & 1) == 0 )
+  if ( (byte_4BC8FEA & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB5C08 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC8FEA = 1;
   }
   syncFromLabel = (UnityEngine_Object_o *)this->fields.syncFromLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -67,10 +67,10 @@ void __fastcall SyncWidgetFromUILabel__InitSync(SyncWidgetFromUILabel_o *this, c
   int64_t v13; // x1
   struct UILabel_o **p_syncFromLabel; // x19
 
-  if ( (byte_4BB5C07 & 1) == 0 )
+  if ( (byte_4BC8FE9 & 1) == 0 )
   {
-    sub_1C13D24(&UILabel_TypeInfo, method);
-    byte_4BB5C07 = 1;
+    sub_1C1ABD4(&UILabel_TypeInfo, method);
+    byte_4BC8FE9 = 1;
   }
   syncFrom = this->fields.syncFrom;
   if ( syncFrom )
@@ -108,7 +108,7 @@ void __fastcall SyncWidgetFromUILabel__InitSync(SyncWidgetFromUILabel_o *this, c
     this->fields.syncFromLabel = 0LL;
     p_syncFromLabel = &this->fields.syncFromLabel;
   }
-  sub_1C13CC8((PartyOrganizationUtility_o *)p_syncFromLabel, v13, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)p_syncFromLabel, v13, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -126,7 +126,7 @@ void __fastcall SyncWidgetFromUILabel___ConvertTypeToAction_b__3_0(
   if ( !syncFromLabel
     || (self = this->fields.self, LODWORD(v5) = *(_QWORD *)&UILabel__get_printedSize(syncFromLabel, 0LL), !self) )
   {
-    sub_1C13F80(syncFromLabel, method);
+    sub_1C1AE30(syncFromLabel, method);
   }
   v6 = v5 + (float)(this->fields.blankSize.fields.x + this->fields.blankSize.fields.x);
   if ( v6 == INFINITY )
@@ -149,7 +149,7 @@ void __fastcall SyncWidgetFromUILabel___ConvertTypeToAction_b__3_1(
 
   syncFromLabel = this->fields.syncFromLabel;
   if ( !syncFromLabel || (self = this->fields.self, printedSize = UILabel__get_printedSize(syncFromLabel, 0LL), !self) )
-    sub_1C13F80(syncFromLabel, method);
+    sub_1C1AE30(syncFromLabel, method);
   v6 = printedSize.fields.y + (float)(this->fields.blankSize.fields.y + this->fields.blankSize.fields.y);
   if ( v6 == INFINITY )
     v7 = 0x80000000;

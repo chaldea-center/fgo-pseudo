@@ -36,36 +36,36 @@ void __fastcall Gender___cctor(const MethodInfo *method)
   FollowerInfo_o *v34; // x6
   PartyListViewItem_o *v35; // x7
 
-  if ( (byte_4BB3684 & 1) == 0 )
+  if ( (byte_4BC6A50 & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, v1);
-    sub_1C13D24(&string___TypeInfo, v2);
-    sub_1C13D24(&StringLiteral_6520/*"FATAL: An earlier pending exception from unmanaged code was missed and thus not thrown ("*/, v3);
-    sub_1C13D24(&StringLiteral_9911/*"ORT_LATE_PHASE_SECOND_FORM"*/, v4);
-    sub_1C13D24(&StringLiteral_8674/*"MAIN_MENU_BAR_SELECT_SUMMON"*/, v5);
-    byte_4BB3684 = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, v1);
+    sub_1C1ABD4(&string___TypeInfo, v2);
+    sub_1C1ABD4(&StringLiteral_6523/*"FEMALE"*/, v3);
+    sub_1C1ABD4(&StringLiteral_9917/*"OTHER"*/, v4);
+    sub_1C1ABD4(&StringLiteral_8678/*"MALE"*/, v5);
+    byte_4BC6A50 = 1;
   }
-  v6 = sub_1C13DCC(string___TypeInfo, 3LL);
+  v6 = sub_1C1AC7C(string___TypeInfo, 3LL);
   if ( !v6 )
-    sub_1C13F80(0LL, v7);
+    sub_1C1AE30(0LL, v7);
   v14 = v6;
   if ( !*(_DWORD *)(v6 + 24)
-    || (v15 = StringLiteral_8674/*"MAIN_MENU_BAR_SELECT_SUMMON"*/,
-        *(_QWORD *)(v6 + 32) = StringLiteral_8674/*"MAIN_MENU_BAR_SELECT_SUMMON"*/,
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v6 + 32), v15, v8, v9, v10, v11, v12, v13),
+    || (v15 = StringLiteral_8678/*"MALE"*/,
+        *(_QWORD *)(v6 + 32) = StringLiteral_8678/*"MALE"*/,
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v6 + 32), v15, v8, v9, v10, v11, v12, v13),
         *(_DWORD *)(v14 + 24) <= 1u)
-    || (v22 = StringLiteral_6520/*"FATAL: An earlier pending exception from unmanaged code was missed and thus not thrown ("*/,
-        *(_QWORD *)(v14 + 40) = StringLiteral_6520/*"FATAL: An earlier pending exception from unmanaged code was missed and thus not thrown ("*/,
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 40), v22, v16, v17, v18, v19, v20, v21),
+    || (v22 = StringLiteral_6523/*"FEMALE"*/,
+        *(_QWORD *)(v14 + 40) = StringLiteral_6523/*"FEMALE"*/,
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v14 + 40), v22, v16, v17, v18, v19, v20, v21),
         *(_DWORD *)(v14 + 24) <= 2u) )
   {
-    sub_1C13F88(v6, v7);
+    sub_1C1AE38(v6, v7);
   }
-  v29 = StringLiteral_9911/*"ORT_LATE_PHASE_SECOND_FORM"*/;
-  *(_QWORD *)(v14 + 48) = StringLiteral_9911/*"ORT_LATE_PHASE_SECOND_FORM"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v14 + 48), v29, v23, v24, v25, v26, v27, v28);
+  v29 = StringLiteral_9917/*"OTHER"*/;
+  *(_QWORD *)(v14 + 48) = StringLiteral_9917/*"OTHER"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v14 + 48), v29, v23, v24, v25, v26, v27, v28);
   Gender_TypeInfo->static_fields->nameList = (struct System_String_array *)v14;
-  sub_1C13CC8((PartyOrganizationUtility_o *)Gender_TypeInfo->static_fields, v14, v30, v31, v32, v33, v34, v35);
+  sub_1C1AB78((PartyOrganizationUtility_o *)Gender_TypeInfo->static_fields, v14, v30, v31, v32, v33, v34, v35);
 }
 
 
@@ -76,21 +76,21 @@ void __fastcall Gender___ctor(Gender_o *this, const MethodInfo *method)
 }
 
 
-void __fastcall Gender___ctor_38830020(Gender_o *this, int32_t type, const MethodInfo *method)
+void __fastcall Gender___ctor_38883176(Gender_o *this, int32_t type, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.type = type;
 }
 
 
-void __fastcall Gender___ctor_38830060(Gender_o *this, System_String_o *name, const MethodInfo *method)
+void __fastcall Gender___ctor_38883216(Gender_o *this, System_String_o *name, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BB3681 & 1) == 0 )
+  if ( (byte_4BC6A4D & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, name);
-    byte_4BB3681 = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, name);
+    byte_4BC6A4D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !Gender_TypeInfo->_2.cctor_finished )
@@ -118,7 +118,7 @@ int32_t __fastcall Gender__GetTreasureDeviceSequenceGenderType(int32_t genderSel
     case 2:
       return genderSelectType;
     case 3:
-      return UnityEngine_Random__Range_70681728(1, 3, 0LL);
+      return UnityEngine_Random__Range_70754152(1, 3, 0LL);
     case 4:
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
       if ( !SelfUserGame )
@@ -141,7 +141,7 @@ int32_t __fastcall Gender__GetTreasureDeviceSequenceGenderType(int32_t genderSel
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
       if ( !SelfUserGame )
 LABEL_14:
-        sub_1C13F80(SelfUserGame, v3);
+        sub_1C1AE30(SelfUserGame, v3);
       genderSelectType = SelfUserGame->fields.genderType;
       break;
     default:
@@ -158,10 +158,10 @@ int32_t __fastcall Gender__Parse(System_String_o *name, const MethodInfo *method
   Gender_c *v4; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4BB367F & 1) == 0 )
+  if ( (byte_4BC6A4B & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, method);
-    byte_4BB367F = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, method);
+    byte_4BC6A4B = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -175,7 +175,7 @@ int32_t __fastcall Gender__Parse(System_String_o *name, const MethodInfo *method
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_1C13F80(v4, method);
+      sub_1C1AE30(v4, method);
     if ( v3 >= (signed int)nameList->max_length )
       return 3;
     if ( !v4->_2.cctor_finished )
@@ -186,12 +186,12 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( v3 >= nameList->max_length )
-      sub_1C13F88(v4, method);
+      sub_1C1AE38(v4, method);
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_16;
     ++v3;
-    if ( System_String__Equals_62976260((System_String_o *)v4, name, 0LL) )
+    if ( System_String__Equals_63048684((System_String_o *)v4, name, 0LL) )
       return v3;
   }
 }
@@ -203,12 +203,12 @@ void __fastcall Gender__Set(Gender_o *this, int32_t type, const MethodInfo *meth
 }
 
 
-void __fastcall Gender__Set_38830304(Gender_o *this, System_String_o *name, const MethodInfo *method)
+void __fastcall Gender__Set_38883460(Gender_o *this, System_String_o *name, const MethodInfo *method)
 {
-  if ( (byte_4BB3683 & 1) == 0 )
+  if ( (byte_4BC6A4F & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, name);
-    byte_4BB3683 = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, name);
+    byte_4BC6A4F = 1;
   }
   if ( !Gender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Gender_TypeInfo);
@@ -222,10 +222,10 @@ int32_t __fastcall Gender__ToData(System_String_o *name, const MethodInfo *metho
   Gender_c *v4; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4BB3680 & 1) == 0 )
+  if ( (byte_4BC6A4C & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, method);
-    byte_4BB3680 = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, method);
+    byte_4BC6A4C = 1;
   }
   v3 = 0;
   while ( 1 )
@@ -239,7 +239,7 @@ int32_t __fastcall Gender__ToData(System_String_o *name, const MethodInfo *metho
     nameList = v4->static_fields->nameList;
     if ( !nameList )
 LABEL_16:
-      sub_1C13F80(v4, method);
+      sub_1C1AE30(v4, method);
     if ( v3 >= (signed int)nameList->max_length )
       return 3;
     if ( !v4->_2.cctor_finished )
@@ -250,12 +250,12 @@ LABEL_16:
         goto LABEL_16;
     }
     if ( v3 >= nameList->max_length )
-      sub_1C13F88(v4, method);
+      sub_1C1AE38(v4, method);
     v4 = (Gender_c *)nameList->m_Items[v3];
     if ( !v4 )
       goto LABEL_16;
     ++v3;
-    if ( System_String__Equals_62976260((System_String_o *)v4, name, 0LL) )
+    if ( System_String__Equals_63048684((System_String_o *)v4, name, 0LL) )
       return v3;
   }
 }
@@ -272,10 +272,10 @@ System_String_o *__fastcall Gender__ToName(int32_t type, const MethodInfo *metho
   Gender_c *v3; // x0
   struct System_String_array *nameList; // x8
 
-  if ( (byte_4BB367E & 1) == 0 )
+  if ( (byte_4BC6A4A & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, method);
-    byte_4BB367E = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, method);
+    byte_4BC6A4A = 1;
   }
   v3 = Gender_TypeInfo;
   if ( !Gender_TypeInfo->_2.cctor_finished )
@@ -285,9 +285,9 @@ System_String_o *__fastcall Gender__ToName(int32_t type, const MethodInfo *metho
   }
   nameList = v3->static_fields->nameList;
   if ( !nameList )
-    sub_1C13F80(v3, method);
+    sub_1C1AE30(v3, method);
   if ( type - 1 >= nameList->max_length )
-    sub_1C13F88(v3, method);
+    sub_1C1AE38(v3, method);
   return nameList->m_Items[type - 1];
 }
 
@@ -296,10 +296,10 @@ System_String_o *__fastcall Gender__ToString(Gender_o *this, const MethodInfo *m
 {
   int32_t type; // w19
 
-  if ( (byte_4BB3682 & 1) == 0 )
+  if ( (byte_4BC6A4E & 1) == 0 )
   {
-    sub_1C13D24(&Gender_TypeInfo, method);
-    byte_4BB3682 = 1;
+    sub_1C1ABD4(&Gender_TypeInfo, method);
+    byte_4BC6A4E = 1;
   }
   type = this->fields.type;
   if ( !Gender_TypeInfo->_2.cctor_finished )

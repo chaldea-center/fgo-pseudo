@@ -69,10 +69,10 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   }
   else
   {
-    if ( !byte_4BAEDA1 )
+    if ( !byte_4BC2141 )
     {
-      sub_1C13D24(&UnityEngine_Vector3_TypeInfo, is_disp);
-      byte_4BAEDA1 = 1;
+      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, is_disp);
+      byte_4BC2141 = 1;
     }
     p_mOrgScl = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = &p_mOrgScl->zeroVector.fields.y;

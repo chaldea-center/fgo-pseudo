@@ -33,17 +33,17 @@ void __fastcall WarBoardMovePerformance___ctor(
   v14 = from.fields.x;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   this->fields.target = target;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)target, v17, v18, v19, v20, v21, v22);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)target, v17, v18, v19, v20, v21, v22);
   this->fields.from.fields.x = v14;
   this->fields.from.fields.y = v13;
   this->fields.from.fields.z = v12;
   this->fields.to.fields.x = x;
   this->fields.to.fields.y = y;
   this->fields.to.fields.z = z;
-  if ( !byte_4BAEDA3 )
+  if ( !byte_4BC2143 )
   {
-    sub_1C13D24(&System_Math_TypeInfo, v23);
-    byte_4BAEDA3 = 1;
+    sub_1C1ABD4(&System_Math_TypeInfo, v23);
+    byte_4BC2143 = 1;
   }
   v24 = x - v14;
   v25 = y - v13;
@@ -67,16 +67,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardMovePerformance__Execute(
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BB251D & 1) == 0 )
+  if ( (byte_4BC58DB & 1) == 0 )
   {
-    sub_1C13D24(&WarBoardMovePerformance__Execute_d__7_TypeInfo, method);
-    byte_4BB251D = 1;
+    sub_1C1ABD4(&WarBoardMovePerformance__Execute_d__7_TypeInfo, method);
+    byte_4BC58DB = 1;
   }
-  v3 = sub_1C13F70(WarBoardMovePerformance__Execute_d__7_TypeInfo);
+  v3 = sub_1C1AE20(WarBoardMovePerformance__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -88,7 +88,7 @@ void __fastcall WarBoardMovePerformance__OnEnd(WarBoardMovePerformance_o *this, 
 
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_1C13F80(target, method);
+    sub_1C1AE30(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.to, 0LL);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -112,7 +112,7 @@ void __fastcall WarBoardMovePerformance__OnStart(WarBoardMovePerformance_o *this
       *(_QWORD *)&StartCallback->fields.extra_arg);
   target = this->fields.target;
   if ( !target || (target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(target, 0LL)) == 0LL )
-    sub_1C13F80(target, method);
+    sub_1C1AE30(target, method);
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)target, this->fields.from, 0LL);
 }
 
@@ -174,7 +174,7 @@ bool __fastcall WarBoardMovePerformance__Execute_d__7__MoveNext(
           !transform) )
     {
 LABEL_15:
-      sub_1C13F80(this, method);
+      sub_1C1AE30(this, method);
     }
     UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v18, 0LL);
     v11 = v10->fields._now_5__2;
@@ -193,7 +193,7 @@ LABEL_15:
   {
     v10->fields.__2__current = 0LL;
     p__2__current = (PartyOrganizationUtility_o *)&v10->fields.__2__current;
-    sub_1C13CC8(p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C1AB78(p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
     return result;
@@ -218,11 +218,11 @@ void __fastcall __noreturn WarBoardMovePerformance__Execute_d__7__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
+  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C13D38(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C13E4C(v3, v4);
+  v4 = sub_1C1ABE8(&Method_WarBoardMovePerformance__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C1ACFC(v3, v4);
 }
 
 

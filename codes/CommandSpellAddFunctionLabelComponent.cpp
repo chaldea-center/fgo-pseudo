@@ -49,20 +49,20 @@ void __fastcall CommandSpellAddFunctionLabelComponent__SetData(
   float v33; // s3
   ClassBoardCommandSpellEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BB7267 & 1) == 0 )
+  if ( (byte_4BCA649 & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, svtData);
-    sub_1C13D24(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v9);
-    sub_1C13D24(&DataManager_TypeInfo, v10);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v11);
-    sub_1C13D24(&StringLiteral_3791/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, v12);
-    sub_1C13D24(&StringLiteral_3790/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/, v13);
-    byte_4BB7267 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, svtData);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___, v9);
+    sub_1C1ABD4(&DataManager_TypeInfo, v10);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v11);
+    sub_1C1ABD4(&StringLiteral_3794/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, v12);
+    sub_1C1ABD4(&StringLiteral_3793/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/, v13);
+    byte_4BCA649 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
+  Master_object = (ClassBoardCommandSpellMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ClassBoardCommandSpellMaster___);
   if ( !Master_object )
     goto LABEL_37;
   v16 = Master_object;
@@ -114,7 +114,7 @@ void __fastcall CommandSpellAddFunctionLabelComponent__SetData(
       while ( 1 )
       {
         if ( v25 >= (unsigned int)max_length )
-          sub_1C13F88(Master_object, v15);
+          sub_1C1AE38(Master_object, v15);
         v26 = classBoardAddCommandSpells->m_Items[v25];
         if ( !v26 )
           goto LABEL_37;
@@ -153,7 +153,7 @@ void __fastcall CommandSpellAddFunctionLabelComponent__SetData(
   {
 LABEL_32:
     Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_3790/*"COMMAND_SPELL_ADD_FUNCTION_CAUTION_TEXT"*/,
+                                                        (System_String_o *)StringLiteral_3793/*"COMMAND_SPELL_CAN_ADD_FUNCTION"*/,
                                                         0LL);
     if ( addFunctionLabel )
     {
@@ -168,10 +168,10 @@ LABEL_32:
       }
     }
 LABEL_37:
-    sub_1C13F80(Master_object, v15);
+    sub_1C1AE30(Master_object, v15);
   }
 LABEL_28:
-  Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3791/*"COMMAND_SPELL_ADD_FUNCTION_TEXT"*/, 0LL);
+  Master_object = (ClassBoardCommandSpellMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3794/*"COMMAND_SPELL_CAN_NOT_ADD_FUNCTION"*/, 0LL);
   if ( !addFunctionLabel )
     goto LABEL_37;
   UILabel__set_text(addFunctionLabel, (System_String_o *)Master_object, 0LL);

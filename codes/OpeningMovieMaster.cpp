@@ -1,14 +1,14 @@
 void __fastcall OpeningMovieMaster___ctor(OpeningMovieMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4B04 & 1) == 0 )
+  if ( (byte_4BC7ED7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_OpeningMovieMaster__OpeningMovieEntity__int___ctor__, method);
-    byte_4BB4B04 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_OpeningMovieMaster__OpeningMovieEntity__int___ctor__, method);
+    byte_4BC7ED7 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     315,
-    (const MethodInfo_3236300 *)Method_DataMasterBase_OpeningMovieMaster__OpeningMovieEntity__int___ctor__);
+    (const MethodInfo_3246354 *)Method_DataMasterBase_OpeningMovieMaster__OpeningMovieEntity__int___ctor__);
 }
 
 
@@ -79,35 +79,35 @@ OpeningMovieEntity_array *__fastcall OpeningMovieMaster__GetEnableOpeningMovies(
   Il2CppObject *v66; // x21
   struct OpeningMovieMaster___c_StaticFields *v67; // x0
 
-  if ( (byte_4BB4B05 & 1) == 0 )
+  if ( (byte_4BC7ED8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, nowTime);
-    sub_1C13D24(&System_Comparison_OpeningMovieEntity__TypeInfo, v9);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v10);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v11);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__Add__, v13);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__, v14);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__, v15);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__, v16);
-    sub_1C13D24(&System_Collections_Generic_List_OpeningMovieEntity__TypeInfo, v17);
-    sub_1C13D24(&Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_0__, v18);
-    sub_1C13D24(&Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_1__, v19);
-    sub_1C13D24(&OpeningMovieMaster___c_TypeInfo, v20);
-    byte_4BB4B05 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, nowTime);
+    sub_1C1ABD4(&System_Comparison_OpeningMovieEntity__TypeInfo, v9);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v10);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v11);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__Add__, v13);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__, v14);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__, v15);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__, v16);
+    sub_1C1ABD4(&System_Collections_Generic_List_OpeningMovieEntity__TypeInfo, v17);
+    sub_1C1ABD4(&Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_0__, v18);
+    sub_1C1ABD4(&Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_1__, v19);
+    sub_1C1ABD4(&OpeningMovieMaster___c_TypeInfo, v20);
+    byte_4BC7ED8 = 1;
   }
-  v21 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_OpeningMovieEntity__TypeInfo);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_OpeningMovieEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v21,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_55;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v24);
+    sub_1C1AE30(0LL, v24);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -127,7 +127,7 @@ OpeningMovieEntity_array *__fastcall OpeningMovieMaster__GetEnableOpeningMovies(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -150,14 +150,14 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v33 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
+      v33 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
     }
     v34 = (OpeningMovieEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(
                                     Enumerator,
                                     *(_QWORD *)(v33 + 8));
     v36 = v34;
     if ( !v34 )
-      sub_1C13F80(0LL, v35);
+      sub_1C1AE30(0LL, v35);
     TargetTiming = OpeningMovieEntity__GetTargetTiming(v34, v35);
     if ( !TargetTiming || TargetTiming == timing )
     {
@@ -165,26 +165,26 @@ LABEL_16:
       if ( IsEnable )
       {
         if ( !v21 )
-          sub_1C13F80(IsEnable, v40);
+          sub_1C1AE30(IsEnable, v40);
         items = v21->fields._items;
         v48 = Method_System_Collections_Generic_List_OpeningMovieEntity__Add__;
         ++v21->fields._version;
         if ( !items )
-          sub_1C13F80(IsEnable, v40);
+          sub_1C1AE30(IsEnable, v40);
         size = v21->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v21,
             (Il2CppObject *)v36,
-            *(const MethodInfo_362D1CC **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+            *(const MethodInfo_363C890 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
         }
         else
         {
           v50 = &items->obj.klass + size;
           v21->fields._size = size + 1;
           v50[4] = (Il2CppClass *)v36;
-          sub_1C13CC8((PartyOrganizationUtility_o *)(v50 + 4), (int64_t)v36, v41, v42, v43, v44, v45, v46);
+          sub_1C1AB78((PartyOrganizationUtility_o *)(v50 + 4), (int64_t)v36, v41, v42, v43, v44, v45, v46);
         }
       }
     }
@@ -206,7 +206,7 @@ LABEL_16:
   else
   {
 LABEL_31:
-    v54 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v54 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (void *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v54)(
                    Enumerator,
@@ -230,14 +230,14 @@ LABEL_31:
           list = OpeningMovieMaster___c_TypeInfo;
         }
         v56 = (Il2CppObject *)**((_QWORD **)list + 23);
-        v55 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_OpeningMovieEntity__TypeInfo);
+        v55 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_OpeningMovieEntity__TypeInfo);
         System_Comparison_object____ctor(v55, v56, Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_1__, 0LL);
         v63 = (int64_t)v55;
         static_fields = OpeningMovieMaster___c_TypeInfo->static_fields;
         static_fields->__9__3_1 = (struct System_Comparison_OpeningMovieEntity__o *)v55;
         p__9__3_1 = (PartyOrganizationUtility_o *)&static_fields->__9__3_1;
 LABEL_47:
-        sub_1C13CC8(p__9__3_1, v63, v57, v58, v59, v60, v61, v62);
+        sub_1C1AB78(p__9__3_1, v63, v57, v58, v59, v60, v61, v62);
         goto LABEL_48;
       }
       goto LABEL_48;
@@ -245,9 +245,9 @@ LABEL_47:
     if ( v21 )
       return (OpeningMovieEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v21,
-                                           (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
+                                           (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
 LABEL_55:
-    sub_1C13F80(list, v22);
+    sub_1C1AE30(list, v22);
   }
   list = OpeningMovieMaster___c_TypeInfo;
   if ( !OpeningMovieMaster___c_TypeInfo->_2.cctor_finished )
@@ -264,7 +264,7 @@ LABEL_55:
       list = OpeningMovieMaster___c_TypeInfo;
     }
     v66 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v55 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_OpeningMovieEntity__TypeInfo);
+    v55 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_OpeningMovieEntity__TypeInfo);
     System_Comparison_object____ctor(v55, v66, Method_OpeningMovieMaster___c__GetEnableOpeningMovies_b__3_0__, 0LL);
     v63 = (int64_t)v55;
     v67 = OpeningMovieMaster___c_TypeInfo->static_fields;
@@ -275,13 +275,13 @@ LABEL_55:
 LABEL_48:
   if ( !v21 )
     goto LABEL_55;
-  System_Collections_Generic_List_object___Sort_56814736(
+  System_Collections_Generic_List_object___Sort_56877908(
     v21,
     v55,
-    (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__);
+    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__);
   return (OpeningMovieEntity_array *)System_Collections_Generic_List_object___ToArray(
                                        v21,
-                                       (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
+                                       (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
 }
 
 
@@ -344,40 +344,40 @@ OpeningMovieEntity_array *__fastcall OpeningMovieMaster__GetEnableOpeningMoviesA
   __int64 *v58; // x8
   System_Comparison_T__o *v59; // x19
 
-  if ( (byte_4BB4B07 & 1) == 0 )
+  if ( (byte_4BC7EDA & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, *(_QWORD *)&type);
-    sub_1C13D24(&System_Comparison_OpeningMovieEntity__TypeInfo, v11);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v12);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v13);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__Add__, v15);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__, v16);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__, v17);
-    sub_1C13D24(&Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__, v18);
-    sub_1C13D24(&System_Collections_Generic_List_OpeningMovieEntity__TypeInfo, v19);
-    sub_1C13D24(&Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__0__, v20);
-    sub_1C13D24(&Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__1__, v21);
-    sub_1C13D24(&OpeningMovieMaster___c__DisplayClass5_0_TypeInfo, v22);
-    byte_4BB4B07 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, *(_QWORD *)&type);
+    sub_1C1ABD4(&System_Comparison_OpeningMovieEntity__TypeInfo, v11);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v12);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v13);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__Add__, v15);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__, v16);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__, v17);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__, v18);
+    sub_1C1ABD4(&System_Collections_Generic_List_OpeningMovieEntity__TypeInfo, v19);
+    sub_1C1ABD4(&Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__0__, v20);
+    sub_1C1ABD4(&Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__1__, v21);
+    sub_1C1ABD4(&OpeningMovieMaster___c__DisplayClass5_0_TypeInfo, v22);
+    byte_4BC7EDA = 1;
   }
-  v23 = sub_1C13F70(OpeningMovieMaster___c__DisplayClass5_0_TypeInfo);
+  v23 = sub_1C1AE20(OpeningMovieMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v23, 0LL);
   if ( !v23 )
     goto LABEL_48;
   *(_DWORD *)(v23 + 16) = type;
-  v26 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_OpeningMovieEntity__TypeInfo);
+  v26 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_OpeningMovieEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v26,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_OpeningMovieEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_48;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v27);
+    sub_1C1AE30(0LL, v27);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -397,7 +397,7 @@ OpeningMovieEntity_array *__fastcall OpeningMovieMaster__GetEnableOpeningMoviesA
     else
     {
 LABEL_10:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -420,7 +420,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v36 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
+      v36 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
     }
     v37 = (OpeningMovieEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v36)(
                                     Enumerator,
@@ -437,12 +437,12 @@ LABEL_17:
           if ( v48 == 2 )
           {
             if ( !v26 )
-              sub_1C13F80(IsEnable, v41);
+              sub_1C1AE30(IsEnable, v41);
             items = v26->fields._items;
             v50 = Method_System_Collections_Generic_List_OpeningMovieEntity__Add__;
             ++v26->fields._version;
             if ( !items )
-              sub_1C13F80(IsEnable, v41);
+              sub_1C1AE30(IsEnable, v41);
             size = v26->fields._size;
             if ( (unsigned int)size >= items->max_length )
               goto LABEL_32;
@@ -450,17 +450,17 @@ LABEL_28:
             v52 = &items->obj.klass + size;
             v26->fields._size = size + 1;
             v52[4] = (Il2CppClass *)v39;
-            sub_1C13CC8((PartyOrganizationUtility_o *)(v52 + 4), v39, v42, v43, v44, v45, v46, v47);
+            sub_1C1AB78((PartyOrganizationUtility_o *)(v52 + 4), v39, v42, v43, v44, v45, v46, v47);
           }
           else if ( v48 == 1 && *(_DWORD *)(v39 + 52) == value )
           {
             if ( !v26 )
-              sub_1C13F80(IsEnable, v41);
+              sub_1C1AE30(IsEnable, v41);
             items = v26->fields._items;
             v50 = Method_System_Collections_Generic_List_OpeningMovieEntity__Add__;
             ++v26->fields._version;
             if ( !items )
-              sub_1C13F80(IsEnable, v41);
+              sub_1C1AE30(IsEnable, v41);
             size = v26->fields._size;
             if ( (unsigned int)size < items->max_length )
               goto LABEL_28;
@@ -468,7 +468,7 @@ LABEL_32:
             System_Collections_Generic_List_object___AddWithResize(
               v26,
               (Il2CppObject *)v39,
-              *(const MethodInfo_362D1CC **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
+              *(const MethodInfo_363C890 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
           }
         }
       }
@@ -491,34 +491,34 @@ LABEL_32:
   else
   {
 LABEL_38:
-    v56 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v56 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v56)(
                                                              Enumerator,
                                                              *(_QWORD *)(v56 + 8));
   if ( !sortType )
   {
-    v57 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_OpeningMovieEntity__TypeInfo);
+    v57 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_OpeningMovieEntity__TypeInfo);
     v58 = &Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__0__;
 LABEL_44:
     v59 = v57;
     System_Comparison_object____ctor(v57, (Il2CppObject *)v23, *v58, 0LL);
     if ( v26 )
     {
-      System_Collections_Generic_List_object___Sort_56814736(
+      System_Collections_Generic_List_object___Sort_56877908(
         v26,
         v59,
-        (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__);
+        (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_OpeningMovieEntity__Sort__);
       return (OpeningMovieEntity_array *)System_Collections_Generic_List_object___ToArray(
                                            v26,
-                                           (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
+                                           (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
     }
 LABEL_48:
-    sub_1C13F80(list, v25);
+    sub_1C1AE30(list, v25);
   }
   if ( sortType == 1 )
   {
-    v57 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_OpeningMovieEntity__TypeInfo);
+    v57 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_OpeningMovieEntity__TypeInfo);
     v58 = &Method_OpeningMovieMaster___c__DisplayClass5_0__GetEnableOpeningMoviesAndMaterialPos_b__1__;
     goto LABEL_44;
   }
@@ -526,7 +526,7 @@ LABEL_48:
     goto LABEL_48;
   return (OpeningMovieEntity_array *)System_Collections_Generic_List_object___ToArray(
                                        v26,
-                                       (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
+                                       (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_OpeningMovieEntity__ToArray__);
 }
 
 
@@ -558,22 +558,22 @@ OpeningMovieEntity_o *__fastcall OpeningMovieMaster__GetOpeningMovie(
   int32_t *v25; // x10
   __int64 v26; // x0
 
-  if ( (byte_4BB4B06 & 1) == 0 )
+  if ( (byte_4BC7ED9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, movieFileName);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v5);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v6);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v7);
-    byte_4BB4B06 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__, movieFileName);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v5);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, v6);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v7);
+    byte_4BC7ED9 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C13F80(0LL, movieFileName);
+    sub_1C1AE30(0LL, movieFileName);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_OpeningMovieEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v9);
+    sub_1C1AE30(0LL, v9);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -593,7 +593,7 @@ OpeningMovieEntity_o *__fastcall OpeningMovieMaster__GetOpeningMovie(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -616,18 +616,18 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v18 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
+      v18 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_OpeningMovieEntity__TypeInfo, 0LL);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             Enumerator,
             *(_QWORD *)(v18 + 8));
     v21 = (OpeningMovieEntity_o *)v19;
     if ( !v19 )
-      sub_1C13F80(0LL, v20);
+      sub_1C1AE30(0LL, v20);
     v22 = *(System_String_o **)(v19 + 32);
     if ( !v22 )
-      sub_1C13F80(0LL, v20);
-    if ( System_String__Equals_62976260(v22, movieFileName, 0LL) )
+      sub_1C1AE30(0LL, v20);
+    if ( System_String__Equals_63048684(v22, movieFileName, 0LL) )
       goto LABEL_23;
   }
   v21 = 0LL;
@@ -649,7 +649,7 @@ LABEL_23:
   else
   {
 LABEL_27:
-    v26 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v26 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
   return v21;
@@ -665,7 +665,7 @@ void __fastcall OpeningMovieMaster__SavePlayedOpeningMovie(
   OpeningMovieEntity_o *OpeningMovie; // x0
   OpeningMovieEntity_o *v7; // x20
   TitleRootComponent_c *v8; // x0
-  System_String_o *String_70680264; // x0
+  System_String_o *String_70752688; // x0
   __int64 v10; // x1
   System_String_o *v11; // x19
   System_String_c *klass; // x8
@@ -681,11 +681,11 @@ void __fastcall OpeningMovieMaster__SavePlayedOpeningMovie(
   TitleRootComponent_c *v22; // x0
   System_String_o *SAVE_KEY_PLAYED_MOVIE; // x19
 
-  if ( (byte_4BB4B08 & 1) == 0 )
+  if ( (byte_4BC7EDB & 1) == 0 )
   {
-    sub_1C13D24(&TitleRootComponent_TypeInfo, movieFileName);
-    sub_1C13D24(&StringLiteral_866/*","*/, v5);
-    byte_4BB4B08 = 1;
+    sub_1C1ABD4(&TitleRootComponent_TypeInfo, movieFileName);
+    sub_1C1ABD4(&StringLiteral_866/*","*/, v5);
+    byte_4BC7EDB = 1;
   }
   OpeningMovie = OpeningMovieMaster__GetOpeningMovie(this, movieFileName, method);
   if ( !OpeningMovie )
@@ -697,11 +697,11 @@ void __fastcall OpeningMovieMaster__SavePlayedOpeningMovie(
     j_il2cpp_runtime_class_init_0(TitleRootComponent_TypeInfo);
     v8 = TitleRootComponent_TypeInfo;
   }
-  String_70680264 = UnityEngine_PlayerPrefs__GetString_70680264(v8->static_fields->SAVE_KEY_PLAYED_MOVIE, 0LL);
-  if ( !String_70680264 )
+  String_70752688 = UnityEngine_PlayerPrefs__GetString_70752688(v8->static_fields->SAVE_KEY_PLAYED_MOVIE, 0LL);
+  if ( !String_70752688 )
     goto LABEL_23;
-  v11 = String_70680264;
-  if ( String_70680264->fields._stringLength < 1 )
+  v11 = String_70752688;
+  if ( String_70752688->fields._stringLength < 1 )
   {
     v22 = TitleRootComponent_TypeInfo;
     if ( !TitleRootComponent_TypeInfo->_2.cctor_finished )
@@ -714,12 +714,12 @@ void __fastcall OpeningMovieMaster__SavePlayedOpeningMovie(
     v21 = SAVE_KEY_PLAYED_MOVIE;
     goto LABEL_21;
   }
-  String_70680264 = (System_String_o *)System_String__Split(String_70680264, 0x2Cu, 0, 0LL);
-  if ( !String_70680264 )
+  String_70752688 = (System_String_o *)System_String__Split(String_70752688, 0x2Cu, 0, 0LL);
+  if ( !String_70752688 )
 LABEL_23:
-    sub_1C13F80(String_70680264, v10);
-  klass = String_70680264[1].klass;
-  v13 = String_70680264;
+    sub_1C1AE30(String_70752688, v10);
+  klass = String_70752688[1].klass;
+  v13 = String_70752688;
   p_fields = &v7->fields;
   if ( (int)klass < 1 )
   {
@@ -732,7 +732,7 @@ LABEL_14:
     }
     v18 = v17->static_fields->SAVE_KEY_PLAYED_MOVIE;
     v19 = System_Int32__ToString((int32_t)p_fields, 0LL);
-    v20 = System_String__Concat_62979204(v11, (System_String_o *)StringLiteral_866/*","*/, v19, 0LL);
+    v20 = System_String__Concat_63051628(v11, (System_String_o *)StringLiteral_866/*","*/, v19, 0LL);
     v21 = v18;
 LABEL_21:
     UnityEngine_PlayerPrefs__SetString(v21, v20, 0LL);
@@ -742,10 +742,10 @@ LABEL_21:
   while ( 1 )
   {
     if ( v15 >= (unsigned int)klass )
-      sub_1C13F88(String_70680264, v10);
+      sub_1C1AE38(String_70752688, v10);
     id = p_fields->id;
-    String_70680264 = (System_String_o *)System_Int32__Parse(*((System_String_o **)&v13[1].monitor + v15), 0LL);
-    if ( id == (_DWORD)String_70680264 )
+    String_70752688 = (System_String_o *)System_Int32__Parse(*((System_String_o **)&v13[1].monitor + v15), 0LL);
+    if ( id == (_DWORD)String_70752688 )
       break;
     LODWORD(klass) = v13[1].klass;
     if ( (__int64)++v15 >= (int)klass )
@@ -765,15 +765,15 @@ void __fastcall OpeningMovieMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB4B09 & 1) == 0 )
+  if ( (byte_4BC7EDC & 1) == 0 )
   {
-    sub_1C13D24(&OpeningMovieMaster___c_TypeInfo, v1);
-    byte_4BB4B09 = 1;
+    sub_1C1ABD4(&OpeningMovieMaster___c_TypeInfo, v1);
+    byte_4BC7EDC = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(OpeningMovieMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(OpeningMovieMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   OpeningMovieMaster___c_TypeInfo->static_fields->__9 = (struct OpeningMovieMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)OpeningMovieMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -798,7 +798,7 @@ int32_t __fastcall OpeningMovieMaster___c___GetEnableOpeningMovies_b__3_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   return a->fields.id - b->fields.id;
 }
 
@@ -814,7 +814,7 @@ int32_t __fastcall OpeningMovieMaster___c___GetEnableOpeningMovies_b__3_1(
   int32_t result; // w0
 
   if ( !b || !a )
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   priority = b->fields.priority;
   v5 = a->fields.priority;
   result = priority - v5;
@@ -856,7 +856,7 @@ int32_t __fastcall OpeningMovieMaster___c__DisplayClass5_0___GetEnableOpeningMov
       return a->fields.id - b->fields.id;
     }
 LABEL_9:
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   }
   if ( !b )
     goto LABEL_9;
@@ -888,7 +888,7 @@ int32_t __fastcall OpeningMovieMaster___c__DisplayClass5_0___GetEnableOpeningMov
       goto LABEL_8;
     }
 LABEL_11:
-    sub_1C13F80(this, a);
+    sub_1C1AE30(this, a);
   }
   if ( !b || !a )
     goto LABEL_11;

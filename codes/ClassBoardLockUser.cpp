@@ -3,16 +3,7 @@ void __fastcall ClassBoardLockUser___ctor(
         ClassBoardSquareEntity_o *masterEntity,
         const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  this->fields.squareEntity = masterEntity;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.squareEntity, (int64_t)masterEntity, v5, v6, v7, v8, v9, v10);
+  ClassBoardSquareUser___ctor((ClassBoardSquareUser_o *)this, masterEntity, 0LL);
 }
 
 
@@ -42,16 +33,16 @@ void __fastcall ClassBoardLockUser__RequestRelease(
   ClassBoardReleaseRequestData_o p_data; // 0:x0.8
   ClassBoardReleaseRequestData_o v24; // 0:x1.8
 
-  if ( (byte_4BB7D02 & 1) == 0 )
+  if ( (byte_4BCB0F6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
-    sub_1C13D24(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___, v5);
-    sub_1C13D24(&NetworkManager_TypeInfo, v6);
-    sub_1C13D24(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    byte_4BB7D02 = 1;
+    sub_1C1ABD4(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
+    sub_1C1ABD4(&Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___, v5);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v6);
+    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    byte_4BCB0F6 = 1;
   }
-  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1C13F70(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v9,
     (Il2CppObject *)this,
@@ -61,9 +52,9 @@ void __fastcall ClassBoardLockUser__RequestRelease(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v9,
-                     (const MethodInfo_3013AB4 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
+                     (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_ClassBoardReleaseLockRequest___);
   this->fields.releaseResponseCallback = callback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.releaseResponseCallback,
     (int64_t)callback,
     v11,
@@ -72,7 +63,7 @@ void __fastcall ClassBoardLockUser__RequestRelease(
     v14,
     v15,
     v16);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL), (squareEntity = this->fields.squareEntity) == 0LL)
     || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
@@ -82,7 +73,7 @@ void __fastcall ClassBoardLockUser__RequestRelease(
         ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0LL),
         !Request_object) )
   {
-    sub_1C13F80(Instance, v18);
+    sub_1C1AE30(Instance, v18);
   }
   v24 = data;
   ClassBoardReleaseLockRequest__beginRequest((ClassBoardReleaseLockRequest_o *)Request_object, v24, 0LL);

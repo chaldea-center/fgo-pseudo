@@ -38,32 +38,32 @@ void __fastcall UserPresentListViewItemDraw___cctor(const MethodInfo *method)
   FollowerInfo_o *v36; // x6
   PartyListViewItem_o *v37; // x7
 
-  if ( (byte_4BB3500 & 1) == 0 )
+  if ( (byte_4BC68CC & 1) == 0 )
   {
-    sub_1C13D24(&UserPresentListViewItemDraw_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_23317/*"returnRarePriShopIds"*/, v8);
-    sub_1C13D24(&StringLiteral_20686/*"img_list_cost"*/, v9);
-    sub_1C13D24(&StringLiteral_20687/*"img_list_costume_num"*/, v10);
-    sub_1C13D24(&StringLiteral_23318/*"returnType"*/, v11);
-    byte_4BB3500 = 1;
+    sub_1C1ABD4(&UserPresentListViewItemDraw_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_23337/*"ribon_present_important_1"*/, v8);
+    sub_1C1ABD4(&StringLiteral_20700/*"img_listboard_bg02"*/, v9);
+    sub_1C1ABD4(&StringLiteral_20701/*"img_listboard_bg03"*/, v10);
+    sub_1C1ABD4(&StringLiteral_23338/*"ribon_present_limited_period"*/, v11);
+    byte_4BC68CC = 1;
   }
   static_fields = UserPresentListViewItemDraw_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->BOARD_MSG_DEFAULT_OFFSET_Y = 0xFFFFFFEAFFFFFFF5LL;
-  v13 = StringLiteral_20686/*"img_list_cost"*/;
-  static_fields->BOARD_BG_SP_NAME_NORMAL = (struct System_String_o *)StringLiteral_20686/*"img_list_cost"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->BOARD_BG_SP_NAME_NORMAL, v13, v2, v3, v4, v5, v6, v7);
-  v14 = StringLiteral_20687/*"img_list_costume_num"*/;
+  v13 = StringLiteral_20700/*"img_listboard_bg02"*/;
+  static_fields->BOARD_BG_SP_NAME_NORMAL = (struct System_String_o *)StringLiteral_20700/*"img_listboard_bg02"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->BOARD_BG_SP_NAME_NORMAL, v13, v2, v3, v4, v5, v6, v7);
+  v14 = StringLiteral_20701/*"img_listboard_bg03"*/;
   v15 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v15->BOARD_BG_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_20687/*"img_list_costume_num"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v15->BOARD_BG_SP_NAME_IMPORTANT, v14, v16, v17, v18, v19, v20, v21);
-  v22 = StringLiteral_23318/*"returnType"*/;
+  v15->BOARD_BG_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_20701/*"img_listboard_bg03"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v15->BOARD_BG_SP_NAME_IMPORTANT, v14, v16, v17, v18, v19, v20, v21);
+  v22 = StringLiteral_23338/*"ribon_present_limited_period"*/;
   v23 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v23->ICON_SP_NAME_LIMITED = (struct System_String_o *)StringLiteral_23318/*"returnType"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v23->ICON_SP_NAME_LIMITED, v22, v24, v25, v26, v27, v28, v29);
-  v30 = StringLiteral_23317/*"returnRarePriShopIds"*/;
+  v23->ICON_SP_NAME_LIMITED = (struct System_String_o *)StringLiteral_23338/*"ribon_present_limited_period"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v23->ICON_SP_NAME_LIMITED, v22, v24, v25, v26, v27, v28, v29);
+  v30 = StringLiteral_23337/*"ribon_present_important_1"*/;
   v31 = UserPresentListViewItemDraw_TypeInfo->static_fields;
-  v31->ICON_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_23317/*"returnRarePriShopIds"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v31->ICON_SP_NAME_IMPORTANT, v30, v32, v33, v34, v35, v36, v37);
+  v31->ICON_SP_NAME_IMPORTANT = (struct System_String_o *)StringLiteral_23337/*"ribon_present_important_1"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v31->ICON_SP_NAME_IMPORTANT, v30, v32, v33, v34, v35, v36, v37);
   *(_QWORD *)&UserPresentListViewItemDraw_TypeInfo->static_fields->NAME_TEXT_WIDTH = 0xF43C38000LL;
 }
 
@@ -83,7 +83,7 @@ void __fastcall UserPresentListViewItemDraw__SetBlocked(
 
   blockObj = this->fields.blockObj;
   if ( !blockObj )
-    sub_1C13F80(0LL, val);
+    sub_1C1AE30(0LL, val);
   UnityEngine_GameObject__SetActive(blockObj, val, 0LL);
 }
 
@@ -97,7 +97,7 @@ void __fastcall UserPresentListViewItemDraw__SetCheck(
 
   checkObj = this->fields.checkObj;
   if ( !checkObj )
-    sub_1C13F80(0LL, val);
+    sub_1C1AE30(0LL, val);
   UnityEngine_GameObject__SetActive(checkObj, val, 0LL);
 }
 
@@ -117,11 +117,11 @@ void __fastcall UserPresentListViewItemDraw__SetCheckCnt(
   int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = count;
-  if ( (byte_4BB34FF & 1) == 0 )
+  if ( (byte_4BC68CB & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, *(_QWORD *)&count);
-    sub_1C13D24(&StringLiteral_1/*""*/, v4);
-    byte_4BB34FF = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&count);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
+    byte_4BC68CB = 1;
   }
   checkCntLabel = (UnityEngine_Object_o *)this->fields.checkCntLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -131,7 +131,7 @@ void __fastcall UserPresentListViewItemDraw__SetCheckCnt(
     v6 = this->fields.checkCntLabel;
     v7 = System_Int32__ToString((int32_t)&v10, 0LL);
     if ( !v6 )
-      sub_1C13F80(v7, v8);
+      sub_1C1AE30(v7, v8);
     if ( v7 )
       v9 = v7;
     else
@@ -153,12 +153,12 @@ void __fastcall UserPresentListViewItemDraw__SetInput(
   __int64 v9; // x1
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4BB34FC & 1) == 0 )
+  if ( (byte_4BC68C8 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_Collider___, v6);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BB34FC = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_Collider___, v6);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v7);
+    byte_4BC68C8 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -169,14 +169,14 @@ void __fastcall UserPresentListViewItemDraw__SetInput(
     if ( !Component_object
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                           Component_object,
-                                                          (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                          (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
           (Component_object = (UnityEngine_Component_o *)this->fields.checkRoot) == 0LL)
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           (UnityEngine_GameObject_o *)Component_object,
-                                                          (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0LL )
+                                                          (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_Collider___)) == 0LL )
     {
-      sub_1C13F80(Component_object, v9);
+      sub_1C1AE30(Component_object, v9);
     }
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
   }
@@ -241,16 +241,16 @@ void __fastcall UserPresentListViewItemDraw__SetItem(
   struct UserPresentBoxEntity_o *v56; // x8
   const MethodInfo *v57; // x2
 
-  if ( (byte_4BB34FB & 1) == 0 )
+  if ( (byte_4BC68C7 & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, item);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v7);
-    sub_1C13D24(&UserPresentBoxMaster_TypeInfo, v8);
-    sub_1C13D24(&UserPresentListViewItemDraw_TypeInfo, v9);
-    sub_1C13D24(&UserPresentListViewManager_TypeInfo, v10);
-    sub_1C13D24(&StringLiteral_10641/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, v11);
-    sub_1C13D24(&StringLiteral_1/*""*/, v12);
-    byte_4BB34FB = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, item);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v7);
+    sub_1C1ABD4(&UserPresentBoxMaster_TypeInfo, v8);
+    sub_1C1ABD4(&UserPresentListViewItemDraw_TypeInfo, v9);
+    sub_1C1ABD4(&UserPresentListViewManager_TypeInfo, v10);
+    sub_1C1ABD4(&StringLiteral_10650/*"PRESENT_INFO"*/, v11);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v12);
+    byte_4BC68C7 = 1;
   }
   if ( item && mode )
   {
@@ -281,12 +281,12 @@ void __fastcall UserPresentListViewItemDraw__SetItem(
       if ( !itemIcon )
         goto LABEL_79;
     }
-    ItemIconComponent__SetGift_39286592(itemIcon, giftType, objectId, -1, 0, 0LL);
+    ItemIconComponent__SetGift_39340176(itemIcon, giftType, objectId, -1, 0, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10641/*"PRESENT_BOX_SELECTABLE_LIST_CURRENT_HOLD"*/, 0LL);
+    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_10650/*"PRESENT_INFO"*/, 0LL);
     NameText = (Il2CppObject *)UserPresentListViewItem__get_NameText(item, v21);
-    itemIcon = (ItemIconComponent_o *)System_String__Format_62982316(
+    itemIcon = (ItemIconComponent_o *)System_String__Format_63054740(
                                         v20,
                                         NameText,
                                         (Il2CppObject *)item->fields.presentNum,
@@ -311,12 +311,12 @@ void __fastcall UserPresentListViewItemDraw__SetItem(
           goto LABEL_24;
         }
       }
-      sub_1C14240(manager);
+      sub_1C1B0F0(manager);
     }
     this->fields.mManager = manager;
     p_mManager = &this->fields.mManager;
 LABEL_24:
-    sub_1C13CC8((PartyOrganizationUtility_o *)p_mManager, (int64_t)manager, v23, v24, v25, v26, v27, v28);
+    sub_1C1AB78((PartyOrganizationUtility_o *)p_mManager, (int64_t)manager, v23, v24, v25, v26, v27, v28);
     v35 = item->fields.usrPresentEnt;
     if ( !v35 )
       goto LABEL_50;
@@ -465,7 +465,7 @@ LABEL_61:
                 j_il2cpp_runtime_class_init_0(UserPresentListViewItemDraw_TypeInfo);
               if ( nameTextLabel )
               {
-                UILabel__SetCondensedScale_48079996(
+                UILabel__SetCondensedScale_48145568(
                   nameTextLabel,
                   UserPresentListViewItemDraw_TypeInfo->static_fields->NAME_TEXT_WIDTH,
                   0.0,
@@ -513,7 +513,7 @@ LABEL_61:
       }
     }
 LABEL_79:
-    sub_1C13F80(itemIcon, giftType);
+    sub_1C1AE30(itemIcon, giftType);
   }
 }
 
@@ -581,33 +581,33 @@ void __fastcall UserPresentListViewItemDraw__SetItemInfo(
   UnityEngine_Color_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v61; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BB34FD & 1) == 0 )
+  if ( (byte_4BC68C9 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ItemMaster___, item);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
-    sub_1C13D24(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v6);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
-    sub_1C13D24(&NetworkManager_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&UserPresentBoxMaster_TypeInfo, v11);
-    sub_1C13D24(&StringLiteral_13581/*"TIME_REST_PRESENT_LIMITED"*/, v12);
-    sub_1C13D24(&StringLiteral_13569/*"TIME_REST6_TIMEOVER"*/, v13);
-    sub_1C13D24(&StringLiteral_12211/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, v14);
-    sub_1C13D24(&StringLiteral_13566/*"TIME_REST6_HOURS"*/, v15);
-    sub_1C13D24(&StringLiteral_13567/*"TIME_REST6_MINUTES"*/, v16);
-    sub_1C13D24(&StringLiteral_13568/*"TIME_REST6_OVER_YEARS"*/, v17);
-    sub_1C13D24(&StringLiteral_1/*""*/, v18);
-    sub_1C13D24(&StringLiteral_1212/*"0"*/, v19);
-    byte_4BB34FD = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ItemMaster___, item);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
+    sub_1C1ABD4(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v6);
+    sub_1C1ABD4(&DataManager_TypeInfo, v7);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v8);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&UserPresentBoxMaster_TypeInfo, v11);
+    sub_1C1ABD4(&StringLiteral_13593/*"TIME_REST_STRING"*/, v12);
+    sub_1C1ABD4(&StringLiteral_13581/*"TIME_REST_PRESENT_LIMITED"*/, v13);
+    sub_1C1ABD4(&StringLiteral_12223/*"SHOP_BUY_ITEM_HOLD"*/, v14);
+    sub_1C1ABD4(&StringLiteral_13578/*"TIME_REST_PRESENT"*/, v15);
+    sub_1C1ABD4(&StringLiteral_13579/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, v16);
+    sub_1C1ABD4(&StringLiteral_13580/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, v17);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v18);
+    sub_1C1ABD4(&StringLiteral_1212/*"0"*/, v19);
+    byte_4BC68C9 = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_126;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !item )
     goto LABEL_126;
   itemEnt = item->fields.itemEnt;
@@ -676,7 +676,7 @@ void __fastcall UserPresentListViewItemDraw__SetItemInfo(
         holdNumTitleLb = this->fields.holdNumTitleLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_12211/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, 0LL);
+        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_12223/*"SHOP_BUY_ITEM_HOLD"*/, 0LL);
         if ( !holdNumTitleLb )
           goto LABEL_126;
         UILabel__set_text(holdNumTitleLb, (System_String_o *)Instance, 0LL);
@@ -707,18 +707,18 @@ void __fastcall UserPresentListViewItemDraw__SetItemInfo(
           if ( type != 2 && type != 17 )
           {
 LABEL_107:
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_126;
             MasterData_object = DataManager__GetMasterData_object_(
                                   (DataManager_o *)Instance,
-                                  (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserItemMaster___);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4BAF1E5 )
+            if ( !byte_4BC2585 )
             {
-              sub_1C13D24(&NetworkManager_TypeInfo, v21);
-              byte_4BAF1E5 = 1;
+              sub_1C1ABD4(&NetworkManager_TypeInfo, v21);
+              byte_4BC2585 = 1;
             }
             Instance = NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -766,13 +766,13 @@ LABEL_15:
           {
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+            Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4BAF1E5 )
+            if ( !byte_4BC2585 )
             {
-              sub_1C13D24(&NetworkManager_TypeInfo, v21);
-              byte_4BAF1E5 = 1;
+              sub_1C1ABD4(&NetworkManager_TypeInfo, v21);
+              byte_4BC2585 = 1;
             }
             Instance = NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -862,7 +862,7 @@ LABEL_23:
     if ( v33 )
     {
 LABEL_31:
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13569/*"TIME_REST6_TIMEOVER"*/, 0LL);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13581/*"TIME_REST_PRESENT_LIMITED"*/, 0LL);
       if ( !resTimeLb )
         goto LABEL_126;
       UILabel__set_text(resTimeLb, (System_String_o *)Instance, 0LL);
@@ -890,7 +890,7 @@ LABEL_31:
         goto LABEL_126;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
       resLimitedTimeLbAlt = this->fields.resLimitedTimeLbAlt;
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13581/*"TIME_REST_PRESENT_LIMITED"*/, 0LL);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13593/*"TIME_REST_STRING"*/, 0LL);
       if ( !resLimitedTimeLbAlt )
         goto LABEL_126;
       UILabel__set_text(resLimitedTimeLbAlt, (System_String_o *)Instance, 0LL);
@@ -916,7 +916,7 @@ LABEL_31:
       goto LABEL_53;
     }
   }
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13566/*"TIME_REST6_HOURS"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13578/*"TIME_REST_PRESENT"*/, 0LL);
   if ( !resTimeLb )
     goto LABEL_126;
   UILabel__set_text(resTimeLb, (System_String_o *)Instance, 0LL);
@@ -976,7 +976,7 @@ LABEL_53:
         v45 = this->fields.resTimeLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13567/*"TIME_REST6_MINUTES"*/, 0LL);
+        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13579/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0LL);
         if ( !v45 )
           goto LABEL_126;
         UILabel__set_text(v45, (System_String_o *)Instance, 0LL);
@@ -984,14 +984,14 @@ LABEL_53:
       v46 = this->fields.resLimitedTimeLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13568/*"TIME_REST6_OVER_YEARS"*/, 0LL);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_13580/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0LL);
       if ( v46 )
       {
         UILabel__set_text(v46, (System_String_o *)Instance, 0LL);
         return;
       }
 LABEL_126:
-      sub_1C13F80(Instance, v21);
+      sub_1C1AE30(Instance, v21);
     }
   }
 }
@@ -1037,18 +1037,18 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v37; // 0:x0.16
   UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BB34FE & 1) == 0 )
+  if ( (byte_4BC68CA & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, item);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventServantMaster___, v5);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v6);
-    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1C13D24(&UserPresentBoxMaster_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_13566/*"TIME_REST6_HOURS"*/, v10);
-    sub_1C13D24(&StringLiteral_13567/*"TIME_REST6_MINUTES"*/, v11);
-    sub_1C13D24(&StringLiteral_13568/*"TIME_REST6_OVER_YEARS"*/, v12);
-    byte_4BB34FE = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventMaster___, item);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventServantMaster___, v5);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v6);
+    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1C1ABD4(&UserPresentBoxMaster_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_13578/*"TIME_REST_PRESENT"*/, v10);
+    sub_1C1ABD4(&StringLiteral_13579/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, v11);
+    sub_1C1ABD4(&StringLiteral_13580/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, v12);
+    byte_4BC68CA = 1;
   }
   holdNumTitleLb = this->fields.holdNumTitleLb;
   if ( !holdNumTitleLb )
@@ -1075,7 +1075,7 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
   resTimeLb = this->fields.resTimeLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13566/*"TIME_REST6_HOURS"*/, 0LL);
+  holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13578/*"TIME_REST_PRESENT"*/, 0LL);
   if ( !resTimeLb )
     goto LABEL_66;
   UILabel__set_text(resTimeLb, (System_String_o *)holdNumTitleLb, 0LL);
@@ -1139,12 +1139,12 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
     v19 = usrPresentEnt ? usrPresentEnt->fields.giftType : 0;
     if ( Gift__IsEventSvtJoin(v19, 0LL) )
     {
-      holdNumTitleLb = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      holdNumTitleLb = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !holdNumTitleLb )
         goto LABEL_66;
       holdNumTitleLb = DataManager__GetMasterData_object_(
                          (DataManager_o *)holdNumTitleLb,
-                         (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
+                         (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( !holdNumTitleLb )
         goto LABEL_66;
       holdNumTitleLb = EventMaster__GetEnableEntityList((EventMaster_o *)holdNumTitleLb, 12, 1, 0, 0LL);
@@ -1160,7 +1160,7 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
             while ( 1 )
             {
               if ( (unsigned int)v22 >= (unsigned int)v20 )
-                sub_1C13F88(holdNumTitleLb, item);
+                sub_1C1AE38(holdNumTitleLb, item);
               v23 = v21[v22 + 4];
               if ( !v23 )
                 break;
@@ -1170,12 +1170,12 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
               createdAt = v24->fields.createdAt;
               if ( *(_QWORD *)(v23 + 88) < createdAt && createdAt < *(_QWORD *)(v23 + 96) )
               {
-                holdNumTitleLb = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                holdNumTitleLb = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( !holdNumTitleLb )
                   break;
                 holdNumTitleLb = DataManager__GetMasterData_object_(
                                    (DataManager_o *)holdNumTitleLb,
-                                   (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventServantMaster___);
+                                   (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventServantMaster___);
                 v26 = item->fields.svtEnt;
                 if ( !v26 )
                   break;
@@ -1187,10 +1187,10 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                 *(_QWORD *)&v37.fields.currentCryptoKey = v30;
                 *(_QWORD *)&v37.fields.fakeValue = v29;
-                holdNumTitleLb = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v37, 0LL);
+                holdNumTitleLb = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47556128(v37, 0LL);
                 if ( !v27 )
                   break;
-                holdNumTitleLb = EventServantMaster__getEntity_40413824(v27, v28, (int32_t)holdNumTitleLb, 0LL);
+                holdNumTitleLb = EventServantMaster__getEntity_40467904(v27, v28, (int32_t)holdNumTitleLb, 0LL);
                 if ( holdNumTitleLb && *((_DWORD *)holdNumTitleLb + 6) == 2 )
                 {
                   v31 = this->fields.resLimitedTimeLb;
@@ -1208,7 +1208,7 @@ void __fastcall UserPresentListViewItemDraw__SetNormalInfo(
                 goto LABEL_56;
             }
 LABEL_66:
-            sub_1C13F80(holdNumTitleLb, item);
+            sub_1C1AE30(holdNumTitleLb, item);
           }
         }
       }
@@ -1229,12 +1229,12 @@ LABEL_56:
       v35 = this->fields.resTimeLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13567/*"TIME_REST6_MINUTES"*/, 0LL);
+      holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13579/*"TIME_REST_PRESENT_INDEFINITE_PERIOD"*/, 0LL);
       if ( !v35 )
         goto LABEL_66;
       UILabel__set_text(v35, (System_String_o *)holdNumTitleLb, 0LL);
       v36 = this->fields.resLimitedTimeLb;
-      holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13568/*"TIME_REST6_OVER_YEARS"*/, 0LL);
+      holdNumTitleLb = LocalizationManager__Get((System_String_o *)StringLiteral_13580/*"TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT"*/, 0LL);
       if ( !v36 )
         goto LABEL_66;
       UILabel__set_text(v36, (System_String_o *)holdNumTitleLb, 0LL);

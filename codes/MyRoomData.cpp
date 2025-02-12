@@ -17,21 +17,21 @@ UserPresentBoxEntity_array *__fastcall MyRoomData__getPresentList(MyRoomData_o *
   __int64 v5; // x1
   struct UserGameEntity_o *usrData; // x8
 
-  if ( (byte_4BAFEA8 & 1) == 0 )
+  if ( (byte_4BC325E & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BAFEA8 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserPresentBoxMaster___, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4BC325E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserPresentBoxMaster___),
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserPresentBoxMaster___),
         (usrData = this->fields.usrData) == 0LL)
     || !Instance )
   {
-    sub_1C13F80(Instance, v5);
+    sub_1C1AE30(Instance, v5);
   }
   return UserPresentBoxMaster__getVaildList((UserPresentBoxMaster_o *)Instance, usrData->fields.userId, 0LL);
 }
@@ -46,24 +46,24 @@ ServantEntity_o *__fastcall MyRoomData__getSvtData(MyRoomData_o *this, int32_t s
   __int64 v7; // x1
   ServantEntity_o *result; // x0
 
-  if ( (byte_4BAFEA5 & 1) == 0 )
+  if ( (byte_4BC325B & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1C13D24(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BAFEA5 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C1ABD4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4BC325B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v7);
+    sub_1C1AE30(0LL, v7);
   result = (ServantEntity_o *)DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( result )
     return (ServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                                 svtId,
-                                (const MethodInfo_3238624 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                (const MethodInfo_3248678 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   return result;
 }
 
@@ -80,18 +80,18 @@ int32_t __fastcall MyRoomData__getSvtFriendshipLv(MyRoomData_o *this, int32_t hS
   __int64 v11; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4BAFEA6 & 1) == 0 )
+  if ( (byte_4BC325C & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, *(_QWORD *)&hSvtId);
-    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4BAFEA6 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, *(_QWORD *)&hSvtId);
+    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4BC325C = 1;
   }
-  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (char *)DataManager__GetMasterData_object_(
                              (DataManager_o *)Instance,
-                             (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
+                             (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
         (usrData = this->fields.usrData) == 0LL)
     || !Instance
     || (Instance = (char *)UserServantCollectionMaster__GetEntityDefinitely(
@@ -100,7 +100,7 @@ int32_t __fastcall MyRoomData__getSvtFriendshipLv(MyRoomData_o *this, int32_t hS
                              hSvtId,
                              0LL)) == 0LL )
   {
-    sub_1C13F80(Instance, v8);
+    sub_1C1AE30(Instance, v8);
   }
   v10 = *(_QWORD *)(Instance + 100);
   v11 = *(_QWORD *)(Instance + 108);
@@ -108,7 +108,7 @@ int32_t __fastcall MyRoomData__getSvtFriendshipLv(MyRoomData_o *this, int32_t hS
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v10;
   *(_QWORD *)&v13.fields.fakeValue = v11;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47490608(v13, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47556128(v13, 0LL);
 }
 
 
@@ -124,18 +124,18 @@ ServantLimitEntity_o *__fastcall MyRoomData__getSvtLimitData(
   __int64 v8; // x1
   ServantLimitEntity_o *result; // x0
 
-  if ( (byte_4BAFEA7 & 1) == 0 )
+  if ( (byte_4BC325D & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_ServantLimitMaster___, *(_QWORD *)&svtId);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4BAFEA7 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_ServantLimitMaster___, *(_QWORD *)&svtId);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4BC325D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v8);
+    sub_1C1AE30(0LL, v8);
   result = (ServantLimitEntity_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)Instance,
-                                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( result )
     return ServantLimitMaster__GetEntity((ServantLimitMaster_o *)result, svtId, limitCnt, 0LL);
   return result;
@@ -148,19 +148,19 @@ int32_t __fastcall MyRoomData__getUserFriendSum(MyRoomData_o *this, const Method
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BAFEA2 & 1) == 0 )
+  if ( (byte_4BC3258 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_TblFriendMaster___, method);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BAFEA2 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_TblFriendMaster___, method);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4BC3258 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_TblFriendMaster___)) == 0LL )
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_TblFriendMaster___)) == 0LL )
   {
-    sub_1C13F80(Instance, v4);
+    sub_1C1AE30(Instance, v4);
   }
   return TblFriendMaster__GetFriendSum((TblFriendMaster_o *)Instance, 0LL);
 }
@@ -182,19 +182,19 @@ UserExpEntity_o *__fastcall MyRoomData__getUsrNextExpData(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BAFEA1 & 1) == 0 )
+  if ( (byte_4BC3257 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserExpMaster___, *(_QWORD *)&currentLv);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BAFEA1 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserExpMaster___, *(_QWORD *)&currentLv);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BC3257 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserExpMaster___)) == 0LL )
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserExpMaster___)) == 0LL )
   {
-    sub_1C13F80(Instance, v6);
+    sub_1C1AE30(Instance, v6);
   }
   return UserExpMaster__getEntityFromLevel((UserExpMaster_o *)Instance, currentLv + 1, 0LL);
 }
@@ -211,24 +211,24 @@ UserServantEntity_o *__fastcall MyRoomData__getUsrSvtData(
   __int64 v7; // x1
   UserServantEntity_o *result; // x0
 
-  if ( (byte_4BAFEA4 & 1) == 0 )
+  if ( (byte_4BC325A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantMaster___, usrSvtId);
-    sub_1C13D24(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v4);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BAFEA4 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserServantMaster___, usrSvtId);
+    sub_1C1ABD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v4);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4BC325A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C13F80(0LL, v7);
+    sub_1C1AE30(0LL, v7);
   result = (UserServantEntity_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                    (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( result )
     return (UserServantEntity_o *)DataMasterBase_object__object__long___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                                     usrSvtId,
-                                    (const MethodInfo_323AB80 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                    (const MethodInfo_324ABD4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   return result;
 }
 
@@ -244,20 +244,20 @@ System_Int32_array *__fastcall MyRoomData__getUsrSvtNum(MyRoomData_o *this, cons
   System_Int32_array *result; // x0
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BAFEA3 & 1) == 0 )
+  if ( (byte_4BC3259 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantMaster___, method);
-    sub_1C13D24(&int___TypeInfo, v2);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BAFEA3 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1C1ABD4(&int___TypeInfo, v2);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4BC3259 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
-  v4 = (System_Int32_array *)sub_1C13DCC(int___TypeInfo, 2LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v4 = (System_Int32_array *)sub_1C1AC7C(int___TypeInfo, 2LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL
     || (Instance = (Il2CppObject *)UserServantMaster__getCount(
                                      (UserServantMaster_o *)Instance,
                                      &servantEquipSum[1],
@@ -266,11 +266,11 @@ System_Int32_array *__fastcall MyRoomData__getUsrSvtNum(MyRoomData_o *this, cons
                                      0LL),
         !v4) )
   {
-    sub_1C13F80(Instance, v6);
+    sub_1C1AE30(Instance, v6);
   }
   max_length = v4->max_length;
   if ( !max_length || (v4->m_Items[1] = servantEquipSum[1], max_length == 1) )
-    sub_1C13F88(Instance, v6);
+    sub_1C1AE38(Instance, v6);
   result = v4;
   v4->m_Items[2] = servantEquipSum[0];
   return result;
@@ -305,29 +305,29 @@ void __fastcall MyRoomData__setUserInfoData(MyRoomData_o *this, const MethodInfo
   int64_t lateExp; // [xsp+10h] [xbp-30h] BYREF
   int64_t exp; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4BAFEA0 & 1) == 0 )
+  if ( (byte_4BC3256 & 1) == 0 )
   {
-    sub_1C13D24(&MstProfileData_TypeInfo, method);
-    byte_4BAFEA0 = 1;
+    sub_1C1ABD4(&MstProfileData_TypeInfo, method);
+    byte_4BC3256 = 1;
   }
   lateExp = 0LL;
   exp = 0LL;
   barExp = 0.0;
   this->fields.usrData = UserGameMaster__getSelfUserGame(0LL);
   p_usrData = &this->fields.usrData;
-  sub_1C13CC8(&this->fields.usrData);
-  v4 = (MstProfileData_o *)sub_1C13F70(MstProfileData_TypeInfo);
+  sub_1C1AB78(&this->fields.usrData);
+  v4 = (MstProfileData_o *)sub_1C1AE20(MstProfileData_TypeInfo);
   MstProfileData___ctor(v4, 0LL);
   this->fields.mstInfoData = v4;
   p_mstInfoData = &this->fields.mstInfoData;
-  ExpInfo = sub_1C13CC8(p_mstInfoData);
+  ExpInfo = sub_1C1AB78(p_mstInfoData);
   if ( !*p_usrData )
     goto LABEL_25;
   ExpInfo = (__int64)*p_mstInfoData;
   if ( !*p_mstInfoData )
     goto LABEL_25;
   *(_QWORD *)(ExpInfo + 16) = (*p_usrData)->fields.name;
-  sub_1C13CC8(ExpInfo + 16);
+  sub_1C1AB78(ExpInfo + 16);
   ExpInfo = (__int64)*p_usrData;
   if ( !*p_usrData )
     goto LABEL_25;
@@ -381,15 +381,15 @@ void __fastcall MyRoomData__setUserInfoData(MyRoomData_o *this, const MethodInfo
   v14 = *p_mstInfoData;
   if ( !*p_mstInfoData || (v14->fields.currentSvtNum = *(_DWORD *)(ExpInfo + 32), (v15 = *p_usrData) == 0LL) )
 LABEL_25:
-    sub_1C13F80(ExpInfo, v7);
+    sub_1C1AE30(ExpInfo, v7);
   v14->fields.maxSvtNum = v15->fields.svtKeep;
   if ( v13 <= 1 )
 LABEL_26:
-    sub_1C13F88(ExpInfo, v7);
+    sub_1C1AE38(ExpInfo, v7);
   v14->fields.currentSvtEpNum = *(_DWORD *)(ExpInfo + 36);
   v14->fields.maxSvtEqNum = v15->fields.svtEquipKeep;
   v14->fields.friendCode = v15->fields.friendCode;
-  ExpInfo = sub_1C13CC8(&v14->fields.friendCode);
+  ExpInfo = sub_1C1AB78(&v14->fields.friendCode);
   v16 = *p_usrData;
   if ( !*p_usrData )
     goto LABEL_25;
@@ -406,5 +406,5 @@ LABEL_26:
 void __fastcall MyRoomData__setUsrData(MyRoomData_o *this, const MethodInfo *method)
 {
   this->fields.usrData = UserGameMaster__getSelfUserGame(0LL);
-  sub_1C13CC8(&this->fields.usrData);
+  sub_1C1AB78(&this->fields.usrData);
 }

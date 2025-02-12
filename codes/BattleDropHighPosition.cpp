@@ -50,10 +50,10 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
           if ( localPosition.fields.y > 0.0 )
             return;
           rigidbodyComp = this->fields.rigidbodyComp;
-          if ( !byte_4BAEDA1 )
+          if ( !byte_4BC2141 )
           {
-            activeSelf = sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v5);
-            byte_4BAEDA1 = 1;
+            activeSelf = sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v5);
+            byte_4BC2141 = 1;
           }
           if ( rigidbodyComp )
           {
@@ -78,10 +78,10 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
     else
     {
       v9 = this->fields.rigidbodyComp;
-      if ( !byte_4BAEDA1 )
+      if ( !byte_4BC2141 )
       {
-        activeSelf = sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v5);
-        byte_4BAEDA1 = 1;
+        activeSelf = sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v5);
+        byte_4BC2141 = 1;
       }
       if ( v9 )
       {
@@ -90,7 +90,7 @@ void __fastcall BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *th
       }
     }
 LABEL_23:
-    sub_1C13F80(activeSelf, v5);
+    sub_1C1AE30(activeSelf, v5);
   }
 }
 
@@ -118,10 +118,10 @@ void __fastcall BattleDropHighPosition__Initialize(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4BB6CF3 & 1) == 0 )
+  if ( (byte_4BCA0D5 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB6CF3 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BCA0D5 = 1;
   }
   this->fields.movingFlag = 1;
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
@@ -142,10 +142,10 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       v11 = this->fields.startAcceleration.fields.x;
       v12.n64_u64[0] = *(unsigned __int64 *)&this->fields.startAcceleration.fields.y;
-      if ( !byte_4BAEDA1 )
+      if ( !byte_4BC2141 )
       {
-        sub_1C13D24(&UnityEngine_Vector3_TypeInfo, v9);
-        byte_4BAEDA1 = 1;
+        sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v9);
+        byte_4BC2141 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v14.n64_u64[0] = vsub_f32(v12, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -162,7 +162,7 @@ void __fastcall BattleDropHighPosition__Initialize(
         return;
       }
     }
-    sub_1C13F80(transform, v9);
+    sub_1C1AE30(transform, v9);
   }
 }
 

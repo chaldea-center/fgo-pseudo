@@ -12,7 +12,7 @@ void __fastcall WrapBattleSimpleAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.animation = simpleAnim;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)simpleAnim, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)simpleAnim, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -71,19 +71,19 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleSimpleAnimation__GetP
   int *v51; // x10
   __int64 v52; // x0
 
-  if ( (byte_4BB7A0B & 1) == 0 )
+  if ( (byte_4BCADF1 & 1) == 0 )
   {
-    sub_1C13D24(&System_IDisposable_TypeInfo, method);
-    sub_1C13D24(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, v3);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, v4);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v5);
-    sub_1C13D24(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v6);
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, v7);
-    byte_4BB7A0B = 1;
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, method);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, v3);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, v4);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v5);
+    sub_1C1ABD4(&WrapBattleBaseAnimation_SimpleData_TypeInfo, v6);
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, v7);
+    byte_4BCADF1 = 1;
   }
   animation = this->fields.animation;
   if ( !animation || (animation = (SimpleAnimation_o *)SimpleAnimation__GetStates(animation, 0LL)) == 0LL )
-    sub_1C13F80(animation, method);
+    sub_1C1AE30(animation, method);
   klass = animation->klass;
   v10 = animation;
   v11 = *(unsigned __int16 *)(&animation->klass->_2.bitflags2 + 3);
@@ -102,11 +102,11 @@ WrapBattleBaseAnimation_SimpleData_o *__fastcall WrapBattleSimpleAnimation__GetP
   else
   {
 LABEL_9:
-    v13 = sub_1C65D04(animation, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0LL);
+    v13 = sub_1C6CBB4(animation, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0LL);
   }
   v15 = (*(__int64 (__fastcall **)(SimpleAnimation_o *, _QWORD))v13)(v10, *(_QWORD *)(v13 + 8));
   if ( !v15 )
-    sub_1C13F80(0LL, v14);
+    sub_1C1AE30(0LL, v14);
   do
   {
     v16 = *(_QWORD *)v15;
@@ -126,7 +126,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v19 = sub_1C65D04(v15, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v19 = sub_1C6CBB4(v15, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8)) & 1) == 0 )
     {
@@ -150,12 +150,12 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v23 = sub_1C65D04(v15, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0LL);
+      v23 = sub_1C6CBB4(v15, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0LL);
     }
     v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v15, *(_QWORD *)(v23 + 8));
     v26 = v24;
     if ( !v24 )
-      sub_1C13F80(0LL, v25);
+      sub_1C1AE30(0LL, v25);
     v27 = *(_QWORD *)v24;
     v28 = *(unsigned __int16 *)(*(_QWORD *)v24 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v24 + 302LL) )
@@ -173,7 +173,7 @@ LABEL_23:
     else
     {
 LABEL_30:
-      v30 = sub_1C65D04(v24, SimpleAnimation_State_TypeInfo, 0LL);
+      v30 = sub_1C6CBB4(v24, SimpleAnimation_State_TypeInfo, 0LL);
     }
   }
   while ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 );
@@ -194,7 +194,7 @@ LABEL_30:
   else
   {
 LABEL_37:
-    v34 = sub_1C65D04(v26, SimpleAnimation_State_TypeInfo, 9LL);
+    v34 = sub_1C6CBB4(v26, SimpleAnimation_State_TypeInfo, 9LL);
   }
   v36 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
   v37 = *(_QWORD *)v26;
@@ -215,13 +215,13 @@ LABEL_37:
   else
   {
 LABEL_44:
-    v41 = sub_1C65D04(v26, SimpleAnimation_State_TypeInfo, 3LL);
+    v41 = sub_1C6CBB4(v26, SimpleAnimation_State_TypeInfo, 3LL);
   }
   v42 = COERCE_UNSIGNED_INT128(((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v41)(v26, *(_QWORD *)(v41 + 8)));
-  v35 = sub_1C13F70(WrapBattleBaseAnimation_SimpleData_TypeInfo);
+  v35 = sub_1C1AE20(WrapBattleBaseAnimation_SimpleData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v35, 0LL);
   *(_QWORD *)(v35 + 16) = v38;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v35 + 16), v38, v43, v44, v45, v46, v47, v48);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v35 + 16), v38, v43, v44, v45, v46, v47, v48);
   *(_DWORD *)(v35 + 24) = v42;
 LABEL_47:
   v49 = *(_QWORD *)v15;
@@ -241,7 +241,7 @@ LABEL_47:
   else
   {
 LABEL_51:
-    v52 = sub_1C65D04(v15, System_IDisposable_TypeInfo, 0LL);
+    v52 = sub_1C6CBB4(v15, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v52)(v15, *(_QWORD *)(v52 + 8));
   return (WrapBattleBaseAnimation_SimpleData_o *)v35;
@@ -264,10 +264,10 @@ void __fastcall WrapBattleSimpleAnimation__PlayAnimation(
   __int64 v12; // x0
 
   v4 = *(long double *)&timeline;
-  if ( (byte_4BB7A0A & 1) == 0 )
+  if ( (byte_4BCADF0 & 1) == 0 )
   {
-    sub_1C13D24(&SimpleAnimation_State_TypeInfo, animName);
-    byte_4BB7A0A = 1;
+    sub_1C1ABD4(&SimpleAnimation_State_TypeInfo, animName);
+    byte_4BCADF0 = 1;
   }
   animation = this->fields.animation;
   if ( !animation )
@@ -293,12 +293,12 @@ void __fastcall WrapBattleSimpleAnimation__PlayAnimation(
   else
   {
 LABEL_9:
-    v12 = sub_1C65D04(animation, SimpleAnimation_State_TypeInfo, 4LL);
+    v12 = sub_1C6CBB4(animation, SimpleAnimation_State_TypeInfo, 4LL);
   }
   (*(void (__fastcall **)(SimpleAnimation_o *, _QWORD, long double))v12)(v9, *(_QWORD *)(v12 + 8), v4);
   animation = this->fields.animation;
   if ( !animation || (SimpleAnimation__Sample(animation, 0LL), (animation = this->fields.animation) == 0LL) )
 LABEL_14:
-    sub_1C13F80(animation, animName);
-  SimpleAnimation__Play_65106228(animation, animName, 0LL);
+    sub_1C1AE30(animation, animName);
+  SimpleAnimation__Play_65178652(animation, animName, 0LL);
 }

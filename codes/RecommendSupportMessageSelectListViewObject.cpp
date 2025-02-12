@@ -2,10 +2,10 @@ void __fastcall RecommendSupportMessageSelectListViewObject___ctor(
         RecommendSupportMessageSelectListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB0833 & 1) == 0 )
+  if ( (byte_4BC3BEC & 1) == 0 )
   {
-    sub_1C13D24(&ListViewObject_TypeInfo, method);
-    byte_4BB0833 = 1;
+    sub_1C1ABD4(&ListViewObject_TypeInfo, method);
+    byte_4BC3BEC = 1;
   }
   this->fields.isUpdateDisplay = 1;
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -29,23 +29,23 @@ void __fastcall RecommendSupportMessageSelectListViewObject__Awake(
   FollowerInfo_o *v11; // x6
   PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4BB082D & 1) == 0 )
+  if ( (byte_4BC3BE6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewItemDraw___, method);
-    byte_4BB082D = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewItemDraw___, method);
+    byte_4BC3BE6 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewItemDraw___),
+                             (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportMessageSelectListViewItemDraw___),
         this->fields.itemDraw = (struct RecommendSupportMessageSelectListViewItemDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1C13CC8((PartyOrganizationUtility_o *)p_itemDraw, (int64_t)Component_object, v7, v8, v9, v10, v11, v12),
+        sub_1C1AB78((PartyOrganizationUtility_o *)p_itemDraw, (int64_t)Component_object, v7, v8, v9, v10, v11, v12),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0LL) )
   {
-    sub_1C13F80(dispObject, v3);
+    sub_1C1AE30(dispObject, v3);
   }
   RecommendSupportMessageSelectListViewItemDraw__Init((RecommendSupportMessageSelectListViewItemDraw_o *)dispObject, v3);
 }
@@ -58,10 +58,10 @@ RecommendSupportMessageSelectListViewItem_o *__fastcall RecommendSupportMessageS
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BB082F & 1) == 0 )
+  if ( (byte_4BC3BE8 & 1) == 0 )
   {
-    sub_1C13D24(&RecommendSupportMessageSelectListViewItem_TypeInfo, method);
-    byte_4BB082F = 1;
+    sub_1C1ABD4(&RecommendSupportMessageSelectListViewItem_TypeInfo, method);
+    byte_4BC3BE8 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -97,7 +97,7 @@ void __fastcall RecommendSupportMessageSelectListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C13F80(transform, v7);
+    sub_1C1AE30(transform, v7);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.isUpdateDisplay |= initMode == 3;
@@ -117,11 +117,11 @@ void __fastcall RecommendSupportMessageSelectListViewObject__OnClickSelect(
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4BB0832 & 1) == 0 )
+  if ( (byte_4BC3BEB & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_10045/*"OnClickListViewVoice"*/, v3);
-    byte_4BB0832 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_10051/*"OnClickSelectListView"*/, v3);
+    byte_4BC3BEB = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -134,14 +134,14 @@ void __fastcall RecommendSupportMessageSelectListViewObject__OnClickSelect(
       if ( !manager
         || (UnityEngine_Component__SendMessage(
               manager,
-              (System_String_o *)StringLiteral_10045/*"OnClickListViewVoice"*/,
+              (System_String_o *)StringLiteral_10051/*"OnClickSelectListView"*/,
               (Il2CppObject *)this,
               0LL),
             v7 = this->fields.itemDraw,
             manager = (UnityEngine_Component_o *)RecommendSupportMessageSelectListViewObject__GetItem(this, v8),
             !v7) )
       {
-        sub_1C13F80(manager, v5);
+        sub_1C1AE30(manager, v5);
       }
       RecommendSupportMessageSelectListViewItemDraw__SetItem(
         v7,
@@ -168,11 +168,11 @@ void __fastcall RecommendSupportMessageSelectListViewObject__OnDestroy(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BB082E & 1) == 0 )
+  if ( (byte_4BC3BE7 & 1) == 0 )
   {
-    sub_1C13D24(&NGUITools_TypeInfo, method);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB082E = 1;
+    sub_1C1ABD4(&NGUITools_TypeInfo, method);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC3BE7 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (PartyOrganizationUtility_o *)&this->fields.dragObject;
@@ -186,7 +186,7 @@ void __fastcall RecommendSupportMessageSelectListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1C13CC8(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -204,10 +204,10 @@ void __fastcall RecommendSupportMessageSelectListViewObject__SetInput(
   __int64 v9; // x1
   const MethodInfo *v10; // x3
 
-  if ( (byte_4BB0830 & 1) == 0 )
+  if ( (byte_4BC3BE9 & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, isInput);
-    byte_4BB0830 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isInput);
+    byte_4BC3BE9 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -218,7 +218,7 @@ void __fastcall RecommendSupportMessageSelectListViewObject__SetInput(
     v7 = this->fields.itemDraw;
     Item = RecommendSupportMessageSelectListViewObject__GetItem(this, v6);
     if ( !v7 )
-      sub_1C13F80(Item, v9);
+      sub_1C1AE30(Item, v9);
     RecommendSupportMessageSelectListViewItemDraw__SetInput(v7, Item, 0, v10);
   }
 }
@@ -231,11 +231,11 @@ void __fastcall RecommendSupportMessageSelectListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.isUpdateDisplay = 1;
-  ListViewObject__SetItem_41915964((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41974544((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewObject__SetItem_33489112(
+void __fastcall RecommendSupportMessageSelectListViewObject__SetItem_33532700(
         RecommendSupportMessageSelectListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -256,10 +256,10 @@ void __fastcall RecommendSupportMessageSelectListViewObject__SetupDisplay(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4BB0831 & 1) == 0 )
+  if ( (byte_4BC3BEA & 1) == 0 )
   {
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, method);
-    byte_4BB0831 = 1;
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
+    byte_4BC3BEA = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -270,7 +270,7 @@ void __fastcall RecommendSupportMessageSelectListViewObject__SetupDisplay(
     this->fields.isUpdateDisplay = 0;
     Item = RecommendSupportMessageSelectListViewObject__GetItem(this, v4);
     if ( !v5 )
-      sub_1C13F80(Item, v7);
+      sub_1C1AE30(Item, v7);
     RecommendSupportMessageSelectListViewItemDraw__SetItem(v5, Item, v8);
   }
 }

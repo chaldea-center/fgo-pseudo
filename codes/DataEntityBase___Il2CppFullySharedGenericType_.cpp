@@ -1,6 +1,6 @@
 void __fastcall DataEntityBase___Il2CppFullySharedGenericType____ctor(
         DataEntityBase_PKType__o *this,
-        const MethodInfo_32362F8 *method)
+        const MethodInfo_324634C *method)
 {
   DataEntityBase___ctor((DataEntityBase_o *)this, 0LL);
 }
@@ -8,7 +8,7 @@ void __fastcall DataEntityBase___Il2CppFullySharedGenericType____ctor(
 
 System_String_o *__fastcall DataEntityBase___Il2CppFullySharedGenericType___get_PrimaryKey(
         DataEntityBase_PKType__o *this,
-        const MethodInfo_32361C0 *method)
+        const MethodInfo_3246214 *method)
 {
   Il2CppClass *_2_PKType; // x0
   __int64 native_size; // x23
@@ -24,7 +24,7 @@ System_String_o *__fastcall DataEntityBase___Il2CppFullySharedGenericType___get_
   native_size = (unsigned int)_2_PKType->_2.native_size;
   v6 = _2_PKType->_2.native_size;
   if ( (BYTE5(_2_PKType->vtable[0].methodPtr) & 1) == 0 )
-    v6 = *(_DWORD *)(sub_1C65C00() + 252);
+    v6 = *(_DWORD *)(sub_1C6CAB0() + 252);
   v7 = (char *)v12 - (((unsigned int)(v6 + 16) + 15LL) & 0x1FFFFFFF0LL);
   memset((char *)v12 - ((native_size + 15) & 0x1FFFFFFF0LL), 0, native_size);
   klass = this->klass;
@@ -43,10 +43,10 @@ System_String_o *__fastcall DataEntityBase___Il2CppFullySharedGenericType___get_
   v10 = rgctx_data->_2_PKType;
   if ( (BYTE5(v10->vtable[0].methodPtr) & 1) == 0 )
   {
-    LODWORD(v10) = sub_1C65C00();
+    LODWORD(v10) = sub_1C6CAB0();
     rgctx_data = method->klass->rgctx_data;
   }
-  sub_1C1478C(
+  sub_1C1B63C(
     (int)v10,
     (int)rgctx_data[1]._0_DataEntityBase_PKType_,
     (int)v7,

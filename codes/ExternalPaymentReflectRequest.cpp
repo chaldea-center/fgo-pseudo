@@ -5,16 +5,16 @@ System_String_o *__fastcall ExternalPaymentReflectRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB601B & 1) == 0 )
+  if ( (byte_4BC93FD & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_19625/*"expandedName"*/, v2);
-    byte_4BB601B = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_19639/*"externalPayment/reflect"*/, v2);
+    byte_4BC93FD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19625/*"expandedName"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_19639/*"externalPayment/reflect"*/, 0LL);
 }
 
 
@@ -34,21 +34,21 @@ void __fastcall ExternalPaymentReflectRequest__requestCompleted(
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
   v4 = this;
-  if ( (byte_4BB601C & 1) == 0 )
+  if ( (byte_4BC93FE & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    this = (ExternalPaymentReflectRequest_o *)sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v5);
-    byte_4BB601C = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    this = (ExternalPaymentReflectRequest_o *)sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v5);
+    byte_4BC93FE = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !responseList->max_length )
-    sub_1C13F88(this, responseList);
+    sub_1C1AE38(this, responseList);
   v6 = responseList->m_Items[0];
   if ( !v6 )
 LABEL_15:
-    sub_1C13F80(this, responseList);
-  if ( ResponseData__checkError_42394144(v6, 0LL) )
+    sub_1C1AE30(this, responseList);
+  if ( ResponseData__checkError_42452820(v6, 0LL) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -74,7 +74,7 @@ LABEL_13:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v10 = StringLiteral_22421/*"newAttributes"*/;
+      v10 = StringLiteral_22437/*"ng"*/;
       goto LABEL_13;
     }
   }

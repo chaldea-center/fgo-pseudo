@@ -1,13 +1,13 @@
 void __fastcall UserBlacklistEntity___ctor(UserBlacklistEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB52E8 & 1) == 0 )
+  if ( (byte_4BC86C5 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BB52E8 = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BC86C5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall UserBlacklistEntity__CreatePK(
         int64_t targetUserId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB52E6 & 1) == 0 )
+  if ( (byte_4BC86C3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_long__long___, targetUserId);
-    byte_4BB52E6 = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_long__long___, targetUserId);
+    byte_4BC86C3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            targetUserId,
-           (const MethodInfo_2F8D81C *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_2F9D840 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
@@ -44,18 +44,18 @@ int64_t __fastcall UserBlacklistEntity__getOtherUserId(UserBlacklistEntity_o *th
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4BB52E7 & 1) == 0 )
+  if ( (byte_4BC86C4 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BB52E7 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC86C4 = 1;
   }
   userId = this->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BAF1E5 )
+  if ( !byte_4BC2585 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    byte_4BAF1E5 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    byte_4BC2585 = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )

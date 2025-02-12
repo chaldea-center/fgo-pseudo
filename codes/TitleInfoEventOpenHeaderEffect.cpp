@@ -1,9 +1,9 @@
 void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB29C2 & 1) == 0 )
+  if ( (byte_4BC5D80 & 1) == 0 )
   {
-    sub_1C13D24(&CommonEffectComponent_TypeInfo, method);
-    byte_4BB29C2 = 1;
+    sub_1C1ABD4(&CommonEffectComponent_TypeInfo, method);
+    byte_4BC5D80 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -67,22 +67,22 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   int32_t v29; // [xsp+Ch] [xbp-34h] BYREF
 
   v29 = eventId;
-  if ( (byte_4BB29C1 & 1) == 0 )
+  if ( (byte_4BC5D7F & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_16781/*"__toggle"*/, *(_QWORD *)&eventId);
-    sub_1C13D24(&StringLiteral_19135/*"ef_difference21"*/, v8);
-    byte_4BB29C1 = 1;
+    sub_1C1ABD4(&StringLiteral_16795/*"_anim"*/, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&StringLiteral_19149/*"ef_mapnamechange_"*/, v8);
+    byte_4BC5D7F = 1;
   }
   v9 = System_Int32__ToString((int32_t)&v29, 0LL);
-  v10 = System_String__Concat_62979204(
-          (System_String_o *)StringLiteral_19135/*"ef_difference21"*/,
+  v10 = System_String__Concat_63051628(
+          (System_String_o *)StringLiteral_19149/*"ef_mapnamechange_"*/,
           v9,
-          (System_String_o *)StringLiteral_16781/*"__toggle"*/,
+          (System_String_o *)StringLiteral_16795/*"_anim"*/,
           0LL);
   this->fields.baseName = v10;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.baseName, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.baseName, (int64_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.changeUiCallback,
     (int64_t)changeUiCallback,
     v17,
@@ -92,7 +92,7 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
     v21,
     v22);
   this->fields.animEndCallback = endCallback;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.animEndCallback,
     (int64_t)endCallback,
     v23,

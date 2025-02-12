@@ -1,14 +1,14 @@
 void __fastcall FunctionGroupMaster___ctor(FunctionGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB492E & 1) == 0 )
+  if ( (byte_4BC7CFE & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__, method);
-    byte_4BB492E = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__, method);
+    byte_4BC7CFE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     151,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ FunctionGroupEntity_o *__fastcall FunctionGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB492C & 1) == 0 )
+  if ( (byte_4BC7CFC & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__,
       *(_QWORD *)&funcId);
-    byte_4BB492C = 1;
+    byte_4BC7CFC = 1;
   }
   PK = (Il2CppObject *)FunctionGroupEntity__CreatePK(funcId, eventId, *(const MethodInfo **)&eventId);
   return (FunctionGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_323D0DC *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__);
+                                    (const MethodInfo_324D130 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__GetEntity__);
 }
 
 
@@ -46,15 +46,15 @@ bool __fastcall FunctionGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB492D & 1) == 0 )
+  if ( (byte_4BC7CFD & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__, entity);
-    byte_4BB492D = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__, entity);
+    byte_4BC7CFD = 1;
   }
   PK = (Il2CppObject *)FunctionGroupEntity__CreatePK(funcId, eventId, *(const MethodInfo **)&funcId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_FunctionGroupMaster__FunctionGroupEntity__string__TryGetEntity__);
 }

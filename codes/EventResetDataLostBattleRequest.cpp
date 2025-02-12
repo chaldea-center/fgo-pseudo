@@ -9,14 +9,14 @@ void __fastcall EventResetDataLostBattleRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4BB600D & 1) == 0 )
+  if ( (byte_4BC93EF & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_18749/*"darkorchid"*/, *(_QWORD *)&dataLostBattleId);
-    sub_1C13D24(&StringLiteral_20541/*"id attribute is required"*/, v7);
-    byte_4BB600D = 1;
+    sub_1C1ABD4(&StringLiteral_18763/*"dataLostBattleId"*/, *(_QWORD *)&dataLostBattleId);
+    sub_1C1ABD4(&StringLiteral_20555/*"idx"*/, v7);
+    byte_4BC93EF = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18749/*"darkorchid"*/, dataLostBattleId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20541/*"id attribute is required"*/, resetIdx, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18763/*"dataLostBattleId"*/, dataLostBattleId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20555/*"idx"*/, resetIdx, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -28,16 +28,16 @@ System_String_o *__fastcall EventResetDataLostBattleRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB600C & 1) == 0 )
+  if ( (byte_4BC93EE & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_19420/*"evSpotSelect_GoQuestSelect"*/, v2);
-    byte_4BB600C = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_19434/*"event/resetDataLostBattle"*/, v2);
+    byte_4BC93EE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_19420/*"evSpotSelect_GoQuestSelect"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_19434/*"event/resetDataLostBattle"*/, 0LL);
 }
 
 
@@ -55,17 +55,17 @@ void __fastcall EventResetDataLostBattleRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BB600E & 1) == 0 )
+  if ( (byte_4BC93F0 & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C13D24(&StringLiteral_22421/*"newAttributes"*/, v6);
-    byte_4BB600E = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
+    byte_4BC93F0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(124, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42394144(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -84,7 +84,7 @@ void __fastcall EventResetDataLostBattleRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22421/*"newAttributes"*/,
+        StringLiteral_22437/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

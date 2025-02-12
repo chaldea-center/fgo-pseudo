@@ -1,16 +1,16 @@
 void __fastcall UserEventQuestCooltimeMaster___ctor(UserEventQuestCooltimeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB53C7 & 1) == 0 )
+  if ( (byte_4BC87A4 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string___ctor__,
       method);
-    byte_4BB53C7 = 1;
+    byte_4BC87A4 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     321,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB53C5 & 1) == 0 )
+  if ( (byte_4BC87A2 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__GetEntity__,
       userId);
-    byte_4BB53C5 = 1;
+    byte_4BC87A2 = 1;
   }
   PK = (Il2CppObject *)UserEventQuestCooltimeEntity__CreatePK(
                          userId,
@@ -41,7 +41,7 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__GetEnti
   return (UserEventQuestCooltimeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_323D0DC *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__GetEntity__);
+                                             (const MethodInfo_324D130 *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__GetEntity__);
 }
 
 
@@ -75,22 +75,22 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__GetEnti
   System_Collections_Generic_IEnumerable_TSource__o *v26; // x20
   System_Func_object__bool__o *v27; // x21
 
-  if ( (byte_4BB53CA & 1) == 0 )
+  if ( (byte_4BC87A7 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___, *(_QWORD *)&spotId);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___, v5);
-    sub_1C13D24(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v6);
-    sub_1C13D24(&System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo, v7);
-    sub_1C13D24(&Method_UserEventQuestCooltimeMaster___c__GetEntityFromSpotId_b__5_0__, v8);
-    sub_1C13D24(&Method_UserEventQuestCooltimeMaster___c__DisplayClass5_0__GetEntityFromSpotId_b__1__, v9);
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c__DisplayClass5_0_TypeInfo, v10);
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c_TypeInfo, v11);
-    byte_4BB53CA = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___, *(_QWORD *)&spotId);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___, v5);
+    sub_1C1ABD4(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v6);
+    sub_1C1ABD4(&System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo, v7);
+    sub_1C1ABD4(&Method_UserEventQuestCooltimeMaster___c__GetEntityFromSpotId_b__5_0__, v8);
+    sub_1C1ABD4(&Method_UserEventQuestCooltimeMaster___c__DisplayClass5_0__GetEntityFromSpotId_b__1__, v9);
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c__DisplayClass5_0_TypeInfo, v10);
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c_TypeInfo, v11);
+    byte_4BC87A7 = 1;
   }
-  v12 = sub_1C13F70(UserEventQuestCooltimeMaster___c__DisplayClass5_0_TypeInfo);
+  v12 = sub_1C1AE20(UserEventQuestCooltimeMaster___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
-    sub_1C13F80(v13, v14);
+    sub_1C1AE30(v13, v14);
   *(_DWORD *)(v12 + 16) = spotId;
   list = this->fields.list;
   v16 = UserEventQuestCooltimeMaster___c_TypeInfo;
@@ -108,7 +108,7 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__GetEnti
       v16 = UserEventQuestCooltimeMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__5_0 = (System_Func_object__object__o *)sub_1C13F70(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
+    _9__5_0 = (System_Func_object__object__o *)sub_1C1AE20(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
     System_Func_object__object____ctor(
       _9__5_0,
       v18,
@@ -116,22 +116,22 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__GetEnti
       0LL);
     static_fields = UserEventQuestCooltimeMaster___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__o *)_9__5_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__5_0, (int64_t)_9__5_0, v20, v21, v22, v23, v24, v25);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__5_0, (int64_t)_9__5_0, v20, v21, v22, v23, v24, v25);
   }
   v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__5_0,
-                                                               (const MethodInfo_2FC0B08 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
-  v27 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2FD0C44 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
+  v27 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v27,
     (Il2CppObject *)v12,
     Method_UserEventQuestCooltimeMaster___c__DisplayClass5_0__GetEntityFromSpotId_b__1__,
     0LL);
-  return (UserEventQuestCooltimeEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50015312(
+  return (UserEventQuestCooltimeEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50081164(
                                              v26,
                                              (System_Func_TSource__bool__o *)v27,
-                                             (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___);
+                                             (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___);
 }
 
 
@@ -156,16 +156,16 @@ System_Collections_Generic_List_UserEventQuestCooltimeEntity__o *__fastcall User
   PartyListViewItem_o *v17; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4BB53C9 & 1) == 0 )
+  if ( (byte_4BC87A6 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___,
       method);
-    sub_1C13D24(&Method_System_Linq_Enumerable_ToList_UserEventQuestCooltimeEntity___, v3);
-    sub_1C13D24(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v4);
-    sub_1C13D24(&Method_UserEventQuestCooltimeMaster___c__GetEntityList_b__4_0__, v5);
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c_TypeInfo, v6);
-    byte_4BB53C9 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToList_UserEventQuestCooltimeEntity___, v3);
+    sub_1C1ABD4(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v4);
+    sub_1C1ABD4(&Method_UserEventQuestCooltimeMaster___c__GetEntityList_b__4_0__, v5);
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c_TypeInfo, v6);
+    byte_4BC87A6 = 1;
   }
   v7 = UserEventQuestCooltimeMaster___c_TypeInfo;
   list = this->fields.list;
@@ -183,7 +183,7 @@ System_Collections_Generic_List_UserEventQuestCooltimeEntity__o *__fastcall User
       v7 = UserEventQuestCooltimeMaster___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__4_0 = (System_Func_object__object__o *)sub_1C13F70(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
+    _9__4_0 = (System_Func_object__object__o *)sub_1C1AE20(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
     System_Func_object__object____ctor(
       _9__4_0,
       v10,
@@ -191,15 +191,15 @@ System_Collections_Generic_List_UserEventQuestCooltimeEntity__o *__fastcall User
       0LL);
     static_fields = UserEventQuestCooltimeMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__o *)_9__4_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)_9__4_0, v12, v13, v14, v15, v16, v17);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)_9__4_0, v12, v13, v14, v15, v16, v17);
   }
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_2FC0B08 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
+                                                               (const MethodInfo_2FD0C44 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
   return (System_Collections_Generic_List_UserEventQuestCooltimeEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                               v18,
-                                                                              (const MethodInfo_2FCCA90 *)Method_System_Linq_Enumerable_ToList_UserEventQuestCooltimeEntity___);
+                                                                              (const MethodInfo_2FDCC54 *)Method_System_Linq_Enumerable_ToList_UserEventQuestCooltimeEntity___);
 }
 
 
@@ -215,12 +215,12 @@ bool __fastcall UserEventQuestCooltimeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB53C6 & 1) == 0 )
+  if ( (byte_4BC87A3 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__TryGetEntity__,
       entity);
-    byte_4BB53C6 = 1;
+    byte_4BC87A3 = 1;
   }
   PK = (Il2CppObject *)UserEventQuestCooltimeEntity__CreatePK(
                          userId,
@@ -232,7 +232,7 @@ bool __fastcall UserEventQuestCooltimeMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_UserEventQuestCooltimeMaster__UserEventQuestCooltimeEntity__string__TryGetEntity__);
 }
 
 
@@ -268,22 +268,22 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__getEnti
   System_Collections_Generic_IEnumerable_TSource__o *v30; // x20
   System_Func_object__bool__o *v31; // x21
 
-  if ( (byte_4BB53C8 & 1) == 0 )
+  if ( (byte_4BC87A5 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___, *(_QWORD *)&eventId);
-    sub_1C13D24(&Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___, v9);
-    sub_1C13D24(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v10);
-    sub_1C13D24(&System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo, v11);
-    sub_1C13D24(&Method_UserEventQuestCooltimeMaster___c__getEntity_b__3_0__, v12);
-    sub_1C13D24(&Method_UserEventQuestCooltimeMaster___c__DisplayClass3_0__getEntity_b__1__, v13);
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c__DisplayClass3_0_TypeInfo, v14);
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c_TypeInfo, v15);
-    byte_4BB53C8 = 1;
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___, v9);
+    sub_1C1ABD4(&System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo, v10);
+    sub_1C1ABD4(&System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo, v11);
+    sub_1C1ABD4(&Method_UserEventQuestCooltimeMaster___c__getEntity_b__3_0__, v12);
+    sub_1C1ABD4(&Method_UserEventQuestCooltimeMaster___c__DisplayClass3_0__getEntity_b__1__, v13);
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c__DisplayClass3_0_TypeInfo, v14);
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c_TypeInfo, v15);
+    byte_4BC87A5 = 1;
   }
-  v16 = sub_1C13F70(UserEventQuestCooltimeMaster___c__DisplayClass3_0_TypeInfo);
+  v16 = sub_1C1AE20(UserEventQuestCooltimeMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v16, 0LL);
   if ( !v16 )
-    sub_1C13F80(v17, v18);
+    sub_1C1AE30(v17, v18);
   *(_DWORD *)(v16 + 16) = eventId;
   *(_DWORD *)(v16 + 20) = questId;
   *(_DWORD *)(v16 + 24) = phase;
@@ -303,26 +303,26 @@ UserEventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeMaster__getEnti
       v20 = UserEventQuestCooltimeMaster___c_TypeInfo;
     }
     v22 = (Il2CppObject *)v20->static_fields->__9;
-    _9__3_0 = (System_Func_object__object__o *)sub_1C13F70(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
+    _9__3_0 = (System_Func_object__object__o *)sub_1C1AE20(System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__TypeInfo);
     System_Func_object__object____ctor(_9__3_0, v22, Method_UserEventQuestCooltimeMaster___c__getEntity_b__3_0__, 0LL);
     static_fields = UserEventQuestCooltimeMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity__o *)_9__3_0;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v24, v25, v26, v27, v28, v29);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v24, v25, v26, v27, v28, v29);
   }
   v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_2FC0B08 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
-  v31 = (System_Func_object__bool__o *)sub_1C13F70(System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2FD0C44 *)Method_System_Linq_Enumerable_Select_UserEventQuestCooltimeEntity__UserEventQuestCooltimeEntity___);
+  v31 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_UserEventQuestCooltimeEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v31,
     (Il2CppObject *)v16,
     Method_UserEventQuestCooltimeMaster___c__DisplayClass3_0__getEntity_b__1__,
     0LL);
-  return (UserEventQuestCooltimeEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50015312(
+  return (UserEventQuestCooltimeEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50081164(
                                              v30,
                                              (System_Func_TSource__bool__o *)v31,
-                                             (const MethodInfo_2FB2C50 *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___);
+                                             (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventQuestCooltimeEntity___);
 }
 
 
@@ -337,15 +337,15 @@ void __fastcall UserEventQuestCooltimeMaster___c___cctor(const MethodInfo *metho
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB53CB & 1) == 0 )
+  if ( (byte_4BC87A8 & 1) == 0 )
   {
-    sub_1C13D24(&UserEventQuestCooltimeMaster___c_TypeInfo, v1);
-    byte_4BB53CB = 1;
+    sub_1C1ABD4(&UserEventQuestCooltimeMaster___c_TypeInfo, v1);
+    byte_4BC87A8 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(UserEventQuestCooltimeMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(UserEventQuestCooltimeMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   UserEventQuestCooltimeMaster___c_TypeInfo->static_fields->__9 = (struct UserEventQuestCooltimeMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)UserEventQuestCooltimeMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -406,7 +406,7 @@ bool __fastcall UserEventQuestCooltimeMaster___c__DisplayClass3_0___getEntity_b_
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   return entity->fields.eventId == this->fields.eventId
       && entity->fields.questId == this->fields.questId
       && entity->fields.phase == this->fields.phase;
@@ -434,7 +434,7 @@ bool __fastcall UserEventQuestCooltimeMaster___c__DisplayClass5_0___GetEntityFro
                                                                          entity,
                                                                          (const MethodInfo *)entity)) == 0LL) )
   {
-    sub_1C13F80(this, entity);
+    sub_1C1AE30(this, entity);
   }
   return LODWORD(this[2].klass) == v3->fields.spotId;
 }

@@ -45,42 +45,42 @@ void __fastcall ServantSkillStrengthStatus___cctor(const MethodInfo *method)
   FollowerInfo_o *v43; // x6
   PartyListViewItem_o *v44; // x7
 
-  if ( (byte_4BB05E0 & 1) == 0 )
+  if ( (byte_4BC3973 & 1) == 0 )
   {
-    sub_1C13D24(&ServantSkillStrengthStatus_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_4724/*"CommonUI/DownloadCommonUI"*/, v8);
-    sub_1C13D24(&StringLiteral_20513/*"icon_sealact_disable"*/, v9);
-    sub_1C13D24(&StringLiteral_20505/*"icon_popularitem_unknown"*/, v10);
-    sub_1C13D24(&StringLiteral_20512/*"icon_reward_step{0}"*/, v11);
-    sub_1C13D24(&StringLiteral_20506/*"icon_race_"*/, v12);
-    byte_4BB05E0 = 1;
+    sub_1C1ABD4(&ServantSkillStrengthStatus_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_4727/*"CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab"*/, v8);
+    sub_1C1ABD4(&StringLiteral_20527/*"icon_stateup_on"*/, v9);
+    sub_1C1ABD4(&StringLiteral_20519/*"icon_skill_off"*/, v10);
+    sub_1C1ABD4(&StringLiteral_20526/*"icon_stateup_off"*/, v11);
+    sub_1C1ABD4(&StringLiteral_20520/*"icon_skill_on"*/, v12);
+    byte_4BC3973 = 1;
   }
-  ServantSkillStrengthStatus_TypeInfo->static_fields->PATH = (struct System_String_o *)StringLiteral_4724/*"CommonUI/DownloadCommonUI"*/;
-  sub_1C13CC8(
+  ServantSkillStrengthStatus_TypeInfo->static_fields->PATH = (struct System_String_o *)StringLiteral_4727/*"CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ServantSkillStrengthStatus_TypeInfo->static_fields,
-    StringLiteral_4724/*"CommonUI/DownloadCommonUI"*/,
+    StringLiteral_4727/*"CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v13 = StringLiteral_20513/*"icon_sealact_disable"*/;
+  v13 = StringLiteral_20527/*"icon_stateup_on"*/;
   static_fields = ServantSkillStrengthStatus_TypeInfo->static_fields;
-  static_fields->ICON_NAME_ON = (struct System_String_o *)StringLiteral_20513/*"icon_sealact_disable"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&static_fields->ICON_NAME_ON, v13, v15, v16, v17, v18, v19, v20);
-  v21 = StringLiteral_20512/*"icon_reward_step{0}"*/;
+  static_fields->ICON_NAME_ON = (struct System_String_o *)StringLiteral_20527/*"icon_stateup_on"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->ICON_NAME_ON, v13, v15, v16, v17, v18, v19, v20);
+  v21 = StringLiteral_20526/*"icon_stateup_off"*/;
   v22 = ServantSkillStrengthStatus_TypeInfo->static_fields;
-  v22->ICON_NAME_OFF = (struct System_String_o *)StringLiteral_20512/*"icon_reward_step{0}"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v22->ICON_NAME_OFF, v21, v23, v24, v25, v26, v27, v28);
-  v29 = StringLiteral_20506/*"icon_race_"*/;
+  v22->ICON_NAME_OFF = (struct System_String_o *)StringLiteral_20526/*"icon_stateup_off"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v22->ICON_NAME_OFF, v21, v23, v24, v25, v26, v27, v28);
+  v29 = StringLiteral_20520/*"icon_skill_on"*/;
   v30 = ServantSkillStrengthStatus_TypeInfo->static_fields;
-  v30->ICON_SKILL_ON = (struct System_String_o *)StringLiteral_20506/*"icon_race_"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v30->ICON_SKILL_ON, v29, v31, v32, v33, v34, v35, v36);
-  v37 = StringLiteral_20505/*"icon_popularitem_unknown"*/;
+  v30->ICON_SKILL_ON = (struct System_String_o *)StringLiteral_20520/*"icon_skill_on"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v30->ICON_SKILL_ON, v29, v31, v32, v33, v34, v35, v36);
+  v37 = StringLiteral_20519/*"icon_skill_off"*/;
   v38 = ServantSkillStrengthStatus_TypeInfo->static_fields;
-  v38->ICON_SKILL_OFF = (struct System_String_o *)StringLiteral_20505/*"icon_popularitem_unknown"*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v38->ICON_SKILL_OFF, v37, v39, v40, v41, v42, v43, v44);
+  v38->ICON_SKILL_OFF = (struct System_String_o *)StringLiteral_20519/*"icon_skill_off"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v38->ICON_SKILL_OFF, v37, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -118,10 +118,10 @@ int32_t __fastcall ServantSkillStrengthStatus__GetStrengthenedCnt(
 {
   int v5; // w8
 
-  if ( (byte_4BB05DF & 1) == 0 )
+  if ( (byte_4BC3972 & 1) == 0 )
   {
-    sub_1C13D24(&ServantSkillStrengthStatus_TypeInfo, *(_QWORD *)&skillRecord);
-    byte_4BB05DF = 1;
+    sub_1C1ABD4(&ServantSkillStrengthStatus_TypeInfo, *(_QWORD *)&skillRecord);
+    byte_4BC3972 = 1;
   }
   if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
@@ -175,13 +175,13 @@ void __fastcall ServantSkillStrengthStatus__Set(
   int v43; // [xsp+1Ch] [xbp-84h]
   UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB05DD & 1) == 0 )
+  if ( (byte_4BC3970 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, skillNameLabel);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v17);
-    sub_1C13D24(&ServantSkillStrengthStatus_TypeInfo, v18);
-    sub_1C13D24(&StringLiteral_20511/*"icon_reward_limits_release"*/, v19);
-    byte_4BB05DD = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, skillNameLabel);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v17);
+    sub_1C1ABD4(&ServantSkillStrengthStatus_TypeInfo, v18);
+    sub_1C1ABD4(&StringLiteral_20525/*"icon_stateup"*/, v19);
+    byte_4BC3970 = 1;
   }
   if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
@@ -197,7 +197,7 @@ void __fastcall ServantSkillStrengthStatus__Set(
     {
       if ( !skillNameLabel || !addLabel )
         goto LABEL_68;
-      v30 = System_String__Concat_62967944(skillNameLabel->fields.mText, addLabel->fields.mText, 0LL);
+      v30 = System_String__Concat_63040368(skillNameLabel->fields.mText, addLabel->fields.mText, 0LL);
       UILabel__set_text(skillNameLabel, v30, 0LL);
     }
     if ( maxLabelWidth >= 1 )
@@ -234,7 +234,7 @@ void __fastcall ServantSkillStrengthStatus__Set(
       }
       if ( !skillNameLabel )
 LABEL_68:
-        sub_1C13F80(IsNullOrEmpty, v22);
+        sub_1C1AE30(IsNullOrEmpty, v22);
       if ( isFixScale )
         v23 = v43 * offset;
       else
@@ -283,7 +283,7 @@ LABEL_68:
     IsNullOrEmpty = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !IsNullOrEmpty )
       goto LABEL_68;
-    IsNullOrEmpty = UnityEngine_Transform__Find(IsNullOrEmpty, (System_String_o *)StringLiteral_20511/*"icon_reward_limits_release"*/, 0LL);
+    IsNullOrEmpty = UnityEngine_Transform__Find(IsNullOrEmpty, (System_String_o *)StringLiteral_20525/*"icon_stateup"*/, 0LL);
     if ( !IsNullOrEmpty )
       goto LABEL_68;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsNullOrEmpty, 0LL);
@@ -303,7 +303,7 @@ LABEL_68:
       v35 = (UnityEngine_GameObject_o *)IsNullOrEmpty;
       IsNullOrEmpty = (UnityEngine_Transform_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)IsNullOrEmpty,
-                                                   (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                   (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       v36 = ServantSkillStrengthStatus_TypeInfo;
       v37 = (UISprite_o *)IsNullOrEmpty;
       if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
@@ -398,12 +398,12 @@ void __fastcall ServantSkillStrengthStatus__SetVertical(
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BB05DE & 1) == 0 )
+  if ( (byte_4BC3971 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_GameObject_GetComponent_UISprite___, uISprite);
-    sub_1C13D24(&ServantSkillStrengthStatus_TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_20511/*"icon_reward_limits_release"*/, v10);
-    byte_4BB05DE = 1;
+    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, uISprite);
+    sub_1C1ABD4(&ServantSkillStrengthStatus_TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_20525/*"icon_stateup"*/, v10);
+    byte_4BC3971 = 1;
   }
   if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
@@ -437,7 +437,7 @@ void __fastcall ServantSkillStrengthStatus__SetVertical(
             {
               gameObject = (UnityEngine_GameObject_o *)UnityEngine_Transform__Find(
                                                          (UnityEngine_Transform_o *)gameObject,
-                                                         (System_String_o *)StringLiteral_20511/*"icon_reward_limits_release"*/,
+                                                         (System_String_o *)StringLiteral_20525/*"icon_stateup"*/,
                                                          0LL);
               if ( gameObject )
               {
@@ -461,7 +461,7 @@ void __fastcall ServantSkillStrengthStatus__SetVertical(
                     v22 = gameObject;
                     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                gameObject,
-                                                               (const MethodInfo_2FDF9FC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                               (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
                     v23 = ServantSkillStrengthStatus_TypeInfo;
                     v24 = (UISprite_o *)gameObject;
                     if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
@@ -495,7 +495,7 @@ void __fastcall ServantSkillStrengthStatus__SetVertical(
                     GameObjectExtensions__SetLocalScale(v27, v30, 0LL);
                     UIWidget__set_depth((UIWidget_o *)v24, uISprite->fields.mDepth, 0LL);
                     UIWidget__set_pivot((UIWidget_o *)v24, uISprite->fields.mPivot, 0LL);
-                    GameObjectExtensions__SetLocalPosition_34711784(v22, 0.0, v20 * (float)v19, 0LL);
+                    GameObjectExtensions__SetLocalPosition_34756308(v22, 0.0, v20 * (float)v19, 0LL);
                     gameObject = UnityEngine_GameObject__get_gameObject(v22, 0LL);
                     if ( !gameObject )
                       break;
@@ -509,7 +509,7 @@ void __fastcall ServantSkillStrengthStatus__SetVertical(
           }
         }
       }
-      sub_1C13F80(gameObject, v14);
+      sub_1C1AE30(gameObject, v14);
     }
   }
 }

@@ -9,18 +9,18 @@ void __fastcall CombineInitData___ctor(CombineInitData_o *this, const MethodInfo
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BB7F2E & 1) == 0 )
+  if ( (byte_4BCB322 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_int___ctor__, method);
-    sub_1C13D24(&System_Collections_Generic_List_int__TypeInfo, v3);
-    byte_4BB7F2E = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int___ctor__, method);
+    sub_1C1ABD4(&System_Collections_Generic_List_int__TypeInfo, v3);
+    byte_4BCB322 = 1;
   }
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C13F70(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C1AE20(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_360F954 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_361F018 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.eventIdList = v4;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.eventIdList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.eventIdList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -43,22 +43,22 @@ EventCampaignEntity_o *__fastcall CombineInitData__getCombineEventData(
   _QWORD *v15; // x9
   __int64 MasterName_k__BackingField_low; // x10
 
-  if ( (byte_4BB7F2D & 1) == 0 )
+  if ( (byte_4BCB321 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_EventCampaignMaster___, *(_QWORD *)&eventId);
-    sub_1C13D24(&DataManager_TypeInfo, v5);
-    sub_1C13D24(&Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__, v6);
-    sub_1C13D24(&Method_System_Collections_Generic_List_int__Add__, v7);
-    byte_4BB7F2D = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_EventCampaignMaster___, *(_QWORD *)&eventId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v5);
+    sub_1C1ABD4(&Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__, v6);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__Add__, v7);
+    byte_4BCB321 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_EventCampaignMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_EventCampaignMaster___);
   if ( !Master_object )
     goto LABEL_20;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__object___getEntitys(
                                                                   Master_object,
-                                                                  (const MethodInfo_323C360 *)Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
+                                                                  (const MethodInfo_324C3B4 *)Method_DataMasterBase_EventCampaignMaster__EventCampaignEntity__string__getEntitys__);
   if ( !Master_object )
     return 0LL;
   MasterName_k__BackingField = (int)Master_object->fields._MasterName_k__BackingField;
@@ -68,7 +68,7 @@ EventCampaignEntity_o *__fastcall CombineInitData__getCombineEventData(
   while ( 1 )
   {
     if ( (unsigned int)v11 >= MasterName_k__BackingField )
-      sub_1C13F88(Master_object, v9);
+      sub_1C1AE38(Master_object, v9);
     v12 = (EventCampaignEntity_o *)*((_QWORD *)&Master_object->fields.revision + v11);
     if ( !v12 )
       goto LABEL_20;
@@ -85,7 +85,7 @@ EventCampaignEntity_o *__fastcall CombineInitData__getCombineEventData(
         !v14) )
   {
 LABEL_20:
-    sub_1C13F80(Master_object, v9);
+    sub_1C1AE30(Master_object, v9);
   }
   MasterName_k__BackingField_low = SLODWORD(Master_object->fields._MasterName_k__BackingField);
   if ( (unsigned int)MasterName_k__BackingField_low >= *(_DWORD *)(v14 + 24) )
@@ -93,7 +93,7 @@ LABEL_20:
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)Master_object,
       eventId,
-      *(const MethodInfo_36101A8 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_361F86C **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
@@ -131,48 +131,48 @@ void __fastcall CombineInitData__getEventData(CombineInitData_o *this, const Met
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  if ( (byte_4BB7F2C & 1) == 0 )
+  if ( (byte_4BCB320 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventEntity__AddRange__, v3);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventEntity__ToArray__, v4);
-    sub_1C13D24(&Method_System_Collections_Generic_List_EventEntity___ctor___77410336, v5);
-    sub_1C13D24(&System_Collections_Generic_List_EventEntity__TypeInfo, v6);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4BB7F2C = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventEntity__AddRange__, v3);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventEntity__ToArray__, v4);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventEntity___ctor___77487032, v5);
+    sub_1C1ABD4(&System_Collections_Generic_List_EventEntity__TypeInfo, v6);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4BCB320 = 1;
   }
-  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (EventEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
+                                          (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventMaster___)) == 0LL
     || (v10 = (EventMaster_o *)Instance,
         EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)Instance, 5, 1, 0, 0LL),
         Instance = EventMaster__GetEnableEntityList(v10, 13, 1, 0, 0LL),
         !EnableEntityList)
     || (v12 = Instance) == 0LL
-    || (v13 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_EventEntity__TypeInfo),
-        System_Collections_Generic_List_object____ctor_56805896(
+    || (v13 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventEntity__TypeInfo),
+        System_Collections_Generic_List_object____ctor_56869068(
           v13,
           v12->max_length + EnableEntityList->max_length,
-          (const MethodInfo_362CA08 *)Method_System_Collections_Generic_List_EventEntity___ctor___77410336),
+          (const MethodInfo_363C0CC *)Method_System_Collections_Generic_List_EventEntity___ctor___77487032),
         !v13) )
   {
-    sub_1C13F80(Instance, v9);
+    sub_1C1AE30(Instance, v9);
   }
   System_Collections_Generic_List_object___AddRange(
     v13,
     (System_Collections_Generic_IEnumerable_T__o *)EnableEntityList,
-    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    (const MethodInfo_363CA9C *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
   System_Collections_Generic_List_object___AddRange(
     v13,
     (System_Collections_Generic_IEnumerable_T__o *)v12,
-    (const MethodInfo_362D3D8 *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
+    (const MethodInfo_363CA9C *)Method_System_Collections_Generic_List_EventEntity__AddRange__);
   v14 = (struct EventEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v13,
-                                      (const MethodInfo_362ED24 *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
+                                      (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_EventEntity__ToArray__);
   this->fields.combineEventList = v14;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.combineEventList, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.combineEventList, (int64_t)v14, v15, v16, v17, v18, v19, v20);
 }
 
 

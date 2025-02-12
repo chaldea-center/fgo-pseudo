@@ -10,15 +10,15 @@ System_String_o *__fastcall UserPresentListRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4BB612D & 1) == 0 )
+  if ( (byte_4BC950F & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_9287/*"MockGachaResponse"*/, v2);
-    byte_4BB612D = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_9293/*"MockUserPresentListResponse"*/, v2);
+    byte_4BC950F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9287/*"MockGachaResponse"*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9293/*"MockUserPresentListResponse"*/, 0LL);
 }
 
 
@@ -27,14 +27,14 @@ System_String_o *__fastcall UserPresentListRequest__getURL(UserPresentListReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB612C & 1) == 0 )
+  if ( (byte_4BC950E & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_22962/*"portrait_unknown"*/, v2);
-    byte_4BB612C = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_22980/*"present/list"*/, v2);
+    byte_4BC950E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_22962/*"portrait_unknown"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_22980/*"present/list"*/, 0LL);
 }

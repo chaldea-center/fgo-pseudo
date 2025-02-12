@@ -32,11 +32,11 @@ void __fastcall TutorialArrowMark__Init(
 
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4BB332C & 1) == 0 )
+  if ( (byte_4BC66F9 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_13677/*"TREASURE_BOX_USER_EVENT_ITEM"*/, v8);
-    byte_4BB332C = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_13689/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, v8);
+    byte_4BC66F9 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -60,7 +60,7 @@ void __fastcall TutorialArrowMark__Init(
   v10 = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13677/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0LL);
+  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13689/*"TUTORIAL_ARROW_MARK_MESSAGE"*/, 0LL);
   if ( !v10 )
     goto LABEL_17;
   UILabel__set_text(v10, (System_String_o *)messageLabel, 0LL);
@@ -98,7 +98,7 @@ void __fastcall TutorialArrowMark__Init(
                                                      0LL)) == 0LL) )
   {
 LABEL_17:
-    sub_1C13F80(messageLabel, method);
+    sub_1C1AE30(messageLabel, method);
   }
   v26.fields.x = x;
   v26.fields.y = y;

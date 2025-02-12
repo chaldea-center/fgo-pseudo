@@ -8,15 +8,15 @@ void __fastcall DataLostResetEffectComponent___ctor(DataLostResetEffectComponent
   PartyListViewItem_o *v7; // x7
   void *v9; // x1
 
-  if ( (byte_4BB3E2B & 1) == 0 )
+  if ( (byte_4BC71F9 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_1/*""*/, method);
-    byte_4BB3E2B = 1;
+    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
+    byte_4BC71F9 = 1;
   }
   this->fields.whiteOutTime = 1.5;
   *(_QWORD *)&this->fields.bgmFadeOutTime = 0x40D000003FC00000LL;
   v9 = StringLiteral_1/*""*/;
   this->fields.whiteOutSe = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.whiteOutSe, (int64_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.whiteOutSe, (int64_t)v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

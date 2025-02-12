@@ -31,27 +31,27 @@ void __fastcall AssetDataListInfo___ctor(AssetDataListInfo_o *this, const Method
   FollowerInfo_o *v31; // x6
   PartyListViewItem_o *v32; // x7
 
-  if ( (byte_4BB3734 & 1) == 0 )
+  if ( (byte_4BC6B00 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_AssetData___ctor__, method);
-    sub_1C13D24(&System_Collections_Generic_List_AssetData__TypeInfo, v9);
-    sub_1C13D24(&StringLiteral_1/*""*/, v10);
-    byte_4BB3734 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_AssetData___ctor__, method);
+    sub_1C1ABD4(&System_Collections_Generic_List_AssetData__TypeInfo, v9);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v10);
+    byte_4BC6B00 = 1;
   }
   v11 = StringLiteral_1/*""*/;
   this->fields.masterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v11, v2, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v11, v2, v3, v4, v5, v6, v7);
   v12 = StringLiteral_1/*""*/;
   this->fields.dateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.dateVersion, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.dateVersion, (int64_t)v12, v13, v14, v15, v16, v17, v18);
   v19 = StringLiteral_1/*""*/;
   this->fields.buildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.buildVersion, (int64_t)v19, v20, v21, v22, v23, v24, v25);
-  v26 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_AssetData__TypeInfo);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.buildVersion, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  v26 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v26,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_AssetData___ctor__);
   this->fields.dataList = (struct System_Collections_Generic_List_AssetData__o *)v26;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.dataList, (int64_t)v26, v27, v28, v29, v30, v31, v32);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.dataList, (int64_t)v26, v27, v28, v29, v30, v31, v32);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

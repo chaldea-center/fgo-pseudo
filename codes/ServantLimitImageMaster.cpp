@@ -1,14 +1,14 @@
 void __fastcall ServantLimitImageMaster___ctor(ServantLimitImageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB4F7D & 1) == 0 )
+  if ( (byte_4BC835A & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string___ctor__, method);
-    byte_4BB4F7D = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string___ctor__, method);
+    byte_4BC835A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     357,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ ServantLimitImageEntity_o *__fastcall ServantLimitImageMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB4F7B & 1) == 0 )
+  if ( (byte_4BC8358 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4BB4F7B = 1;
+    byte_4BC8358 = 1;
   }
   PK = (Il2CppObject *)ServantLimitImageEntity__CreatePK(svtId, limitCount, priority, *(const MethodInfo **)&priority);
   return (ServantLimitImageEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_323D0DC *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__GetEntity__);
+                                        (const MethodInfo_324D130 *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__GetEntity__);
 }
 
 
@@ -71,29 +71,29 @@ int32_t __fastcall ServantLimitImageMaster__GetLimitCountSealQuestToSvtId(
   int32_t *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4BB4F80 & 1) == 0 )
+  if ( (byte_4BC835D & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__,
       *(_QWORD *)&questId);
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v7);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4BB4F80 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v7);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4BC835D = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !this->fields.list )
-    sub_1C13F80(Master_object, v11);
+    sub_1C1AE30(Master_object, v11);
   v12 = (CommonReleaseMaster_o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v13);
+    sub_1C1AE30(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -113,7 +113,7 @@ int32_t __fastcall ServantLimitImageMaster__GetLimitCountSealQuestToSvtId(
     else
     {
 LABEL_11:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -136,14 +136,14 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v22 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
+      v22 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     v25 = v23;
     if ( !v23 )
-      sub_1C13F80(0LL, v24);
+      sub_1C1AE30(0LL, v24);
     v26 = *(_DWORD *)(v23 + 32);
     if ( v26 <= 0x2E && ((1LL << v26) & 0x400002000002LL) != 0 )
     {
@@ -153,7 +153,7 @@ LABEL_18:
     else if ( v26 == 113 )
     {
       if ( !v12 )
-        sub_1C13F80(v23, v24);
+        sub_1C1AE30(v23, v24);
       if ( CommonReleaseMaster__IsQuestContain(v12, questId, *(_DWORD *)(v23 + 36), 0LL) )
       {
 LABEL_28:
@@ -181,7 +181,7 @@ LABEL_30:
   else
   {
 LABEL_34:
-    v31 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   return v27;
@@ -195,39 +195,41 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedDialogMe
         int32_t limitCount,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  const MethodInfo *v4; // x4
   __int64 v8; // x1
+  __int64 v9; // x1
   Il2CppObject *LimitCountSealedServantName; // x19
-  System_String_o *v10; // x0
-  System_String_o *v11; // x20
-  System_String_o *v12; // x21
-  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v11; // x0
+  System_String_o *v12; // x20
+  System_String_o *v13; // x21
+  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  v14 = svtId;
-  if ( (byte_4BB4F81 & 1) == 0 )
+  v15 = svtId;
+  if ( (byte_4BC835E & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, *(_QWORD *)&svtId);
-    sub_1C13D24(&StringLiteral_8412/*"LIMITUP_MAX_TXT"*/, v7);
-    sub_1C13D24(&StringLiteral_8411/*"LIMITUP_CHECK_WARNING_SLIDER"*/, v8);
-    byte_4BB4F81 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, *(_QWORD *)&svtId);
+    sub_1C1ABD4(&StringLiteral_8415/*"LIMIT_COUNT_SEALED_MESSAGE_"*/, v8);
+    sub_1C1ABD4(&StringLiteral_8414/*"LIMIT_COUNT_SEALED_MESSAGE"*/, v9);
+    byte_4BC835E = 1;
   }
   LimitCountSealedServantName = (Il2CppObject *)ServantLimitImageMaster__GetLimitCountSealedServantName(
                                                   this,
                                                   svtId,
                                                   limitCount,
-                                                  method);
-  v10 = System_Int32__ToString((int32_t)&v14, 0LL);
-  v11 = System_String__Concat_62967944((System_String_o *)StringLiteral_8412/*"LIMITUP_MAX_TXT"*/, v10, 0LL);
+                                                  0,
+                                                  v4);
+  v11 = System_Int32__ToString((int32_t)&v15, 0LL);
+  v12 = System_String__Concat_63040368((System_String_o *)StringLiteral_8415/*"LIMIT_COUNT_SEALED_MESSAGE_"*/, v11, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get(v11, 0LL);
-  if ( System_String__op_Equality(v12, v11, 0LL) )
+  v13 = LocalizationManager__Get(v12, 0LL);
+  if ( System_String__op_Equality(v13, v12, 0LL) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_8411/*"LIMITUP_CHECK_WARNING_SLIDER"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8414/*"LIMIT_COUNT_SEALED_MESSAGE"*/, 0LL);
   }
-  return System_String__Format(v12, LimitCountSealedServantName, 0LL);
+  return System_String__Format(v13, LimitCountSealedServantName, 0LL);
 }
 
 
@@ -236,45 +238,46 @@ System_String_o *__fastcall ServantLimitImageMaster__GetLimitCountSealedServantN
         ServantLimitImageMaster_o *this,
         int32_t svtId,
         int32_t limitCount,
+        bool addIdentify,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   __int64 v9; // x1
-  System_String_o *v10; // x22
+  __int64 v10; // x1
+  __int64 v11; // x1
+  System_String_o *v12; // x23
   Il2CppObject *Master_object; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x3
-  Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
+  __int64 v14; // x1
+  const MethodInfo *v15; // x3
+  Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BB4F82 & 1) == 0 )
+  if ( (byte_4BC835F & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1C13D24(&DataManager_TypeInfo, v7);
-    sub_1C13D24(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v8);
-    sub_1C13D24(&StringLiteral_1/*""*/, v9);
-    byte_4BB4F82 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C1ABD4(&DataManager_TypeInfo, v9);
+    sub_1C1ABD4(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v10);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v11);
+    byte_4BC835F = 1;
   }
   entity = 0LL;
-  v10 = (System_String_o *)StringLiteral_1/*""*/;
+  v12 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_10;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          svtId,
-         (const MethodInfo_3238670 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_32486C4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
-    Master_object = (Il2CppObject *)ServantLimitImageMaster__GetServantLimitCountSealAfter(this, svtId, limitCount, v13);
+    Master_object = (Il2CppObject *)ServantLimitImageMaster__GetServantLimitCountSealAfter(this, svtId, limitCount, v15);
     if ( entity )
-      return ServantEntity__getName((ServantEntity_o *)entity, (int32_t)Master_object, -1, 0LL);
+      return ServantEntity__getName((ServantEntity_o *)entity, (int32_t)Master_object, -1, addIdentify, 0LL);
 LABEL_10:
-    sub_1C13F80(Master_object, v12);
+    sub_1C1AE30(Master_object, v14);
   }
-  return v10;
+  return v12;
 }
 
 
@@ -370,42 +373,42 @@ int32_t __fastcall ServantLimitImageMaster__GetServantLimitCountSealAfter(
   int64_t monitor_low; // x21
   System_Collections_Generic_List_Enumerator_object__o v70; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4BB4F7E & 1) == 0 )
+  if ( (byte_4BC835B & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__,
       *(_QWORD *)&svtId);
-    sub_1C13D24(&System_Comparison_ServantLimitImageEntity__TypeInfo, v7);
-    sub_1C13D24(&CondType_TypeInfo, v8);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__Dispose__, v9);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__MoveNext__, v10);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__get_Current__, v11);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v12);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v13);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ServantLimitImageEntity__Add__, v15);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ServantLimitImageEntity__GetEnumerator__, v16);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ServantLimitImageEntity__Sort__, v17);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ServantLimitImageEntity___ctor__, v18);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ServantLimitImageEntity__get_Count__, v19);
-    sub_1C13D24(&System_Collections_Generic_List_ServantLimitImageEntity__TypeInfo, v20);
-    sub_1C13D24(&Method_ServantLimitImageMaster___c__GetServantLimitCountSealAfter_b__4_0__, v21);
-    sub_1C13D24(&ServantLimitImageMaster___c_TypeInfo, v22);
-    byte_4BB4F7E = 1;
+    sub_1C1ABD4(&System_Comparison_ServantLimitImageEntity__TypeInfo, v7);
+    sub_1C1ABD4(&CondType_TypeInfo, v8);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__Dispose__, v9);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__MoveNext__, v10);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__get_Current__, v11);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v12);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v13);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ServantLimitImageEntity__Add__, v15);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ServantLimitImageEntity__GetEnumerator__, v16);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ServantLimitImageEntity__Sort__, v17);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ServantLimitImageEntity___ctor__, v18);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ServantLimitImageEntity__get_Count__, v19);
+    sub_1C1ABD4(&System_Collections_Generic_List_ServantLimitImageEntity__TypeInfo, v20);
+    sub_1C1ABD4(&Method_ServantLimitImageMaster___c__GetServantLimitCountSealAfter_b__4_0__, v21);
+    sub_1C1ABD4(&ServantLimitImageMaster___c_TypeInfo, v22);
+    byte_4BC835B = 1;
   }
   memset(&v70, 0, sizeof(v70));
-  v23 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_ServantLimitImageEntity__TypeInfo);
+  v23 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_ServantLimitImageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v23,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_ServantLimitImageEntity___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_ServantLimitImageEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_53;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v26);
+    sub_1C1AE30(0LL, v26);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -425,7 +428,7 @@ int32_t __fastcall ServantLimitImageMaster__GetServantLimitCountSealAfter(
     else
     {
 LABEL_9:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -448,37 +451,37 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v35 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
+      v35 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
     }
     v36 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v35)(
             Enumerator,
             *(_QWORD *)(v35 + 8));
     v44 = v36;
     if ( !v36 )
-      sub_1C13F80(0LL, v37);
+      sub_1C1AE30(0LL, v37);
     if ( *(_DWORD *)(v36 + 16) == svtId && *(_DWORD *)(v36 + 20) == limitCount )
     {
       if ( !v23 )
-        sub_1C13F80(v36, v37);
+        sub_1C1AE30(v36, v37);
       items = v23->fields._items;
       v46 = Method_System_Collections_Generic_List_ServantLimitImageEntity__Add__;
       ++v23->fields._version;
       if ( !items )
-        sub_1C13F80(v36, v37);
+        sub_1C1AE30(v36, v37);
       size = v23->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v23,
           (Il2CppObject *)v36,
-          *(const MethodInfo_362D1CC **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+          *(const MethodInfo_363C890 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
       }
       else
       {
         v48 = &items->obj.klass + size;
         v23->fields._size = size + 1;
         v48[4] = (Il2CppClass *)v44;
-        sub_1C13CC8((PartyOrganizationUtility_o *)(v48 + 4), v44, v38, v39, v40, v41, v42, v43);
+        sub_1C1AB78((PartyOrganizationUtility_o *)(v48 + 4), v44, v38, v39, v40, v41, v42, v43);
       }
     }
   }
@@ -499,14 +502,14 @@ LABEL_16:
   else
   {
 LABEL_30:
-    v52 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v52 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v52)(
                                                              Enumerator,
                                                              *(_QWORD *)(v52 + 8));
   if ( !v23 )
 LABEL_53:
-    sub_1C13F80(list, v24);
+    sub_1C1AE30(list, v24);
   if ( v23->fields._size > 0 )
   {
     v53 = ServantLimitImageMaster___c_TypeInfo;
@@ -524,7 +527,7 @@ LABEL_53:
         v53 = ServantLimitImageMaster___c_TypeInfo;
       }
       v55 = (Il2CppObject *)v53->static_fields->__9;
-      _9__4_0 = (System_Comparison_T__o *)sub_1C13F70(System_Comparison_ServantLimitImageEntity__TypeInfo);
+      _9__4_0 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_ServantLimitImageEntity__TypeInfo);
       System_Comparison_object____ctor(
         _9__4_0,
         v55,
@@ -532,7 +535,7 @@ LABEL_53:
         0LL);
       static_fields = ServantLimitImageMaster___c_TypeInfo->static_fields;
       static_fields->__9__4_0 = (struct System_Comparison_ServantLimitImageEntity__o *)_9__4_0;
-      sub_1C13CC8(
+      sub_1C1AB78(
         (PartyOrganizationUtility_o *)&static_fields->__9__4_0,
         (int64_t)_9__4_0,
         v57,
@@ -542,24 +545,24 @@ LABEL_53:
         v61,
         v62);
     }
-    System_Collections_Generic_List_object___Sort_56814736(
+    System_Collections_Generic_List_object___Sort_56877908(
       v23,
       _9__4_0,
-      (const MethodInfo_362EC90 *)Method_System_Collections_Generic_List_ServantLimitImageEntity__Sort__);
+      (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_ServantLimitImageEntity__Sort__);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v70,
       v23,
-      (const MethodInfo_362DCC4 *)Method_System_Collections_Generic_List_ServantLimitImageEntity__GetEnumerator__);
+      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_ServantLimitImageEntity__GetEnumerator__);
     while ( 1 )
     {
       v63 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v70,
-              (const MethodInfo_33BEBE8 *)Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__MoveNext__);
+              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__MoveNext__);
       if ( !v63 )
         break;
       current = v70.fields._current;
       if ( !v70.fields._current )
-        sub_1C13F80(v63, v64);
+        sub_1C1AE30(v63, v64);
       v67 = (int32_t)v70.fields._current[2].klass;
       klass_high = HIDWORD(v70.fields._current[2].klass);
       monitor_low = SLODWORD(v70.fields._current[2].monitor);
@@ -570,7 +573,7 @@ LABEL_53:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v70,
-      (const MethodInfo_33BEBE4 *)Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__Dispose__);
+      (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_ServantLimitImageEntity__Dispose__);
   }
   return limitCount;
 }
@@ -589,14 +592,14 @@ System_String_o *__fastcall ServantLimitImageMaster__GetServantStatusExplanation
   int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = svtId;
-  if ( (byte_4BB4F83 & 1) == 0 )
+  if ( (byte_4BC8360 & 1) == 0 )
   {
-    sub_1C13D24(&LocalizationManager_TypeInfo, key);
-    sub_1C13D24(&StringLiteral_16374/*"^c"*/, v5);
-    byte_4BB4F83 = 1;
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, key);
+    sub_1C1ABD4(&StringLiteral_16388/*"_"*/, v5);
+    byte_4BC8360 = 1;
   }
   v6 = System_Int32__ToString((int32_t)&v10, 0LL);
-  v7 = System_String__Concat_62979204(key, (System_String_o *)StringLiteral_16374/*"^c"*/, v6, 0LL);
+  v7 = System_String__Concat_63051628(key, (System_String_o *)StringLiteral_16388/*"_"*/, v6, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v8 = LocalizationManager__Get(v7, 0LL);
@@ -644,29 +647,29 @@ bool __fastcall ServantLimitImageMaster__IsCommonReleaseMultiClear(
   int32_t *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4BB4F84 & 1) == 0 )
+  if ( (byte_4BC8361 & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__,
       *(_QWORD *)&questId);
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v7);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4BB4F84 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v7);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4BC8361 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !this->fields.list )
-    sub_1C13F80(Master_object, v11);
+    sub_1C1AE30(Master_object, v11);
   v12 = (CommonReleaseMaster_o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v13);
+    sub_1C1AE30(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -686,7 +689,7 @@ bool __fastcall ServantLimitImageMaster__IsCommonReleaseMultiClear(
     else
     {
 LABEL_11:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -709,18 +712,18 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v22 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
+      v22 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     v25 = v23;
     if ( !v23 )
-      sub_1C13F80(0LL, v24);
+      sub_1C1AE30(0LL, v24);
     if ( *(_DWORD *)(v23 + 32) == 113 )
     {
       if ( !v12 )
-        sub_1C13F80(v23, v24);
+        sub_1C1AE30(v23, v24);
       if ( CommonReleaseMaster__IsQuestContain(v12, questId, *(_DWORD *)(v23 + 36), 0LL) )
       {
         IsOpen = CommonReleaseMaster__IsOpen(v12, *(_DWORD *)(v25 + 36), 0LL, 0, 0LL);
@@ -749,7 +752,7 @@ LABEL_26:
   else
   {
 LABEL_30:
-    v31 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   return v27 & IsOpen;
@@ -789,29 +792,29 @@ bool __fastcall ServantLimitImageMaster__IsLimitCountSealQuest(
   int32_t *v29; // x10
   __int64 v30; // x0
 
-  if ( (byte_4BB4F7F & 1) == 0 )
+  if ( (byte_4BC835C & 1) == 0 )
   {
-    sub_1C13D24(
+    sub_1C1ABD4(
       &Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__,
       *(_QWORD *)&questId);
-    sub_1C13D24(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
-    sub_1C13D24(&DataManager_TypeInfo, v6);
-    sub_1C13D24(&System_IDisposable_TypeInfo, v7);
-    sub_1C13D24(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
-    sub_1C13D24(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4BB4F7F = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMaster_CommonReleaseMaster___, v5);
+    sub_1C1ABD4(&DataManager_TypeInfo, v6);
+    sub_1C1ABD4(&System_IDisposable_TypeInfo, v7);
+    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, v8);
+    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4BC835C = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F8F418 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !this->fields.list )
-    sub_1C13F80(Master_object, v11);
+    sub_1C1AE30(Master_object, v11);
   v12 = (CommonReleaseMaster_o *)Master_object;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                 (const MethodInfo_31D2F00 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
+                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_ServantLimitImageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C13F80(0LL, v13);
+    sub_1C1AE30(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -831,7 +834,7 @@ bool __fastcall ServantLimitImageMaster__IsLimitCountSealQuest(
     else
     {
 LABEL_11:
-      p_method = sub_1C65D04(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -854,13 +857,13 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v22 = sub_1C65D04(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
+      v22 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_ServantLimitImageEntity__TypeInfo, 0LL);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     if ( !v23 )
-      sub_1C13F80(0LL, v24);
+      sub_1C1AE30(0LL, v24);
     v25 = *(_DWORD *)(v23 + 32);
     if ( v25 <= 0x2E && ((1LL << v25) & 0x400002000002LL) != 0 )
     {
@@ -870,7 +873,7 @@ LABEL_18:
     else if ( v25 == 113 )
     {
       if ( !v12 )
-        sub_1C13F80(v23, v24);
+        sub_1C1AE30(v23, v24);
       if ( CommonReleaseMaster__IsQuestContain(v12, questId, *(_DWORD *)(v23 + 36), 0LL) )
       {
 LABEL_28:
@@ -898,7 +901,7 @@ LABEL_30:
   else
   {
 LABEL_34:
-    v30 = sub_1C65D04(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   return v26;
@@ -926,17 +929,17 @@ bool __fastcall ServantLimitImageMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB4F7C & 1) == 0 )
+  if ( (byte_4BC8359 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__TryGetEntity__, entity);
-    byte_4BB4F7C = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__TryGetEntity__, entity);
+    byte_4BC8359 = 1;
   }
   PK = (Il2CppObject *)ServantLimitImageEntity__CreatePK(svtId, limitCount, priority, *(const MethodInfo **)&limitCount);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_ServantLimitImageMaster__ServantLimitImageEntity__string__TryGetEntity__);
 }
 
 
@@ -951,15 +954,15 @@ void __fastcall ServantLimitImageMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BB4F85 & 1) == 0 )
+  if ( (byte_4BC8362 & 1) == 0 )
   {
-    sub_1C13D24(&ServantLimitImageMaster___c_TypeInfo, v1);
-    byte_4BB4F85 = 1;
+    sub_1C1ABD4(&ServantLimitImageMaster___c_TypeInfo, v1);
+    byte_4BC8362 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C13F70(ServantLimitImageMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C1AE20(ServantLimitImageMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ServantLimitImageMaster___c_TypeInfo->static_fields->__9 = (struct ServantLimitImageMaster___c_o *)v2;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ServantLimitImageMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -984,6 +987,6 @@ int32_t __fastcall ServantLimitImageMaster___c___GetServantLimitCountSealAfter_b
         const MethodInfo *method)
 {
   if ( !y || !x )
-    sub_1C13F80(this, x);
+    sub_1C1AE30(this, x);
   return y->fields.priority - x->fields.priority;
 }

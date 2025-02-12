@@ -2,34 +2,31 @@ void __fastcall BaseAiActArgument___ctor(
         BaseAiActArgument_o *this,
         AiActEntity_o *aiActEnt,
         AiBaseEntity_o *aiEnt,
+        int32_t fromProcState,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  BaseAiActArgument_o *v8; // x22
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
 
+  v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  this->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)aiActEnt, v7, v8, v9, v10, v11, v12);
-  this->fields._AiEnt_k__BackingField = aiEnt;
-  sub_1C13CC8(
-    (PartyOrganizationUtility_o *)&this->fields._AiEnt_k__BackingField,
-    (int64_t)aiEnt,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  v8->fields._AiActEnt_k__BackingField = aiActEnt;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v8->fields, (int64_t)aiActEnt, v9, v10, v11, v12, v13, v14);
+  v8->fields._AiEnt_k__BackingField = aiEnt;
+  v8 = (BaseAiActArgument_o *)((char *)v8 + 24);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v8, (int64_t)aiEnt, v15, v16, v17, v18, v19, v20);
+  LODWORD(v8->monitor) = fromProcState;
 }
 
 
@@ -51,18 +48,18 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask(
   BaseAiActBattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4BB736D & 1) == 0 )
+  if ( (byte_4BCA74F & 1) == 0 )
   {
-    sub_1C13D24(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
-    byte_4BB736D = 1;
+    sub_1C1ABD4(&BaseAiActBattleLogicTask_TypeInfo, logicAi);
+    byte_4BCA74F = 1;
   }
-  v7 = (BaseAiActBattleLogicTask_o *)sub_1C13F70(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BaseAiActBattleLogicTask_o *)sub_1C1AE20(BaseAiActBattleLogicTask_TypeInfo);
   BaseAiActBattleLogicTask___ctor(v7, actType, 0LL);
-  return BaseAiActArgument__MakeTask_44690836(this, v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_44750336(this, v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_44690836(
+BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_44750336(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -81,10 +78,10 @@ BattleLogicTask_o *__fastcall BaseAiActArgument__MakeTask_44690836(
                                         v5->klass->vtable._5_InitCommonTask.methodPtr),
         !task) )
   {
-    sub_1C13F80(this, task);
+    sub_1C1AE30(this, task);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0LL);
-  ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._8_Init.method)(
+  ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, void *))task->klass->vtable._10_Init.method)(
     task,
     v5->fields._AiActEnt_k__BackingField,
     v5->fields._AiEnt_k__BackingField,
@@ -109,6 +106,12 @@ AiBaseEntity_o *__fastcall BaseAiActArgument__get_AiEnt(BaseAiActArgument_o *thi
 }
 
 
+int32_t __fastcall BaseAiActArgument__get_FromProcState(BaseAiActArgument_o *this, const MethodInfo *method)
+{
+  return this->fields._FromProcState_k__BackingField;
+}
+
+
 int32_t __fastcall BaseAiActArgument__get_UniqueId(BaseAiActArgument_o *this, const MethodInfo *method)
 {
   return -1;
@@ -127,7 +130,7 @@ void __fastcall BaseAiActArgument__set_AiActEnt(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AiActEnt_k__BackingField = value;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -143,7 +146,7 @@ void __fastcall BaseAiActArgument__set_AiEnt(
   PartyListViewItem_o *v7; // x7
 
   this->fields._AiEnt_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._AiEnt_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -152,4 +155,13 @@ void __fastcall BaseAiActArgument__set_AiEnt(
     v5,
     v6,
     v7);
+}
+
+
+void __fastcall BaseAiActArgument__set_FromProcState(
+        BaseAiActArgument_o *this,
+        int32_t value,
+        const MethodInfo *method)
+{
+  this->fields._FromProcState_k__BackingField = value;
 }

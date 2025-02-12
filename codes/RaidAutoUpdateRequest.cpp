@@ -2,10 +2,10 @@ int64_t __fastcall RaidAutoUpdateRequest__GetAccessCompletedTimeEventMap(const M
 {
   __int64 v1; // x1
 
-  if ( (byte_4BB6093 & 1) == 0 )
+  if ( (byte_4BC9475 & 1) == 0 )
   {
-    sub_1C13D24(&RaidAutoUpdateRequest_TypeInfo, v1);
-    byte_4BB6093 = 1;
+    sub_1C1ABD4(&RaidAutoUpdateRequest_TypeInfo, v1);
+    byte_4BC9475 = 1;
   }
   return RaidAutoUpdateRequest_TypeInfo->static_fields->accessCompletedTimeEventMap;
 }
@@ -16,11 +16,11 @@ bool __fastcall RaidAutoUpdateRequest__IsExpirationDateUpdateEventMap(const Meth
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BB6090 & 1) == 0 )
+  if ( (byte_4BC9472 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, v1);
-    sub_1C13D24(&RaidAutoUpdateRequest_TypeInfo, v2);
-    byte_4BB6090 = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v1);
+    sub_1C1ABD4(&RaidAutoUpdateRequest_TypeInfo, v2);
+    byte_4BC9472 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -37,12 +37,12 @@ void __fastcall RaidAutoUpdateRequest__UpdateAccessTime(const MethodInfo *method
   BalanceConfig_c *v5; // x8
   int64_t v6; // x19
 
-  if ( (byte_4BB6092 & 1) == 0 )
+  if ( (byte_4BC9474 & 1) == 0 )
   {
-    sub_1C13D24(&BalanceConfig_TypeInfo, v1);
-    sub_1C13D24(&NetworkManager_TypeInfo, v2);
-    sub_1C13D24(&RaidAutoUpdateRequest_TypeInfo, v3);
-    byte_4BB6092 = 1;
+    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v2);
+    sub_1C1ABD4(&RaidAutoUpdateRequest_TypeInfo, v3);
+    byte_4BC9474 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -64,16 +64,16 @@ System_String_o *__fastcall RaidAutoUpdateRequest__getURL(RaidAutoUpdateRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BB608F & 1) == 0 )
+  if ( (byte_4BC9471 & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, method);
-    sub_1C13D24(&StringLiteral_7416/*"Highlighted"*/, v2);
-    byte_4BB608F = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
+    sub_1C1ABD4(&StringLiteral_7419/*"Home/RaidAutoUpdate"*/, v2);
+    byte_4BC9471 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62967944(BaseUrl, (System_String_o *)StringLiteral_7416/*"Highlighted"*/, 0LL);
+  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_7419/*"Home/RaidAutoUpdate"*/, 0LL);
 }
 
 
@@ -100,14 +100,14 @@ void __fastcall RaidAutoUpdateRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v15; // x8
 
-  if ( (byte_4BB6091 & 1) == 0 )
+  if ( (byte_4BC9473 & 1) == 0 )
   {
-    sub_1C13D24(&JsonManager_TypeInfo, responseList);
-    sub_1C13D24(&NetworkManager_TypeInfo, v5);
-    sub_1C13D24(&RaidAutoUpdateRequest_TypeInfo, v6);
-    sub_1C13D24(&ResponseCommandKind_TypeInfo, v7);
-    sub_1C13D24(&StringLiteral_22595/*"offline"*/, v8);
-    byte_4BB6091 = 1;
+    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
+    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
+    sub_1C1ABD4(&RaidAutoUpdateRequest_TypeInfo, v6);
+    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v7);
+    sub_1C1ABD4(&StringLiteral_22613/*"ok"*/, v8);
+    byte_4BC9473 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -115,7 +115,7 @@ void __fastcall RaidAutoUpdateRequest__requestCompleted(
   if ( !v9 )
     goto LABEL_14;
   v10 = v9;
-  if ( !ResponseData__checkError_42394144(v9, 0LL) )
+  if ( !ResponseData__checkError_42452820(v9, 0LL) )
     goto LABEL_14;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -142,7 +142,7 @@ LABEL_14:
     if ( v15 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v15->fields.m_target)(
         v15->fields.original_method_info,
-        StringLiteral_22595/*"offline"*/,
+        StringLiteral_22613/*"ok"*/,
         *(_QWORD *)&v15->fields.extra_arg);
   }
 }

@@ -1,14 +1,14 @@
 void __fastcall GachaSubMaster___ctor(GachaSubMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB49A1 & 1) == 0 )
+  if ( (byte_4BC7D71 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string___ctor__, method);
-    byte_4BB49A1 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string___ctor__, method);
+    byte_4BC7D71 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     191,
-    (const MethodInfo_323ADB8 *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string___ctor__);
+    (const MethodInfo_324AE0C *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ GachaSubEntity_o *__fastcall GachaSubMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BB49A2 & 1) == 0 )
+  if ( (byte_4BC7D72 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__GetEntity__, *(_QWORD *)&gachaId);
-    byte_4BB49A2 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__GetEntity__, *(_QWORD *)&gachaId);
+    byte_4BC7D72 = 1;
   }
   PK = (Il2CppObject *)GachaSubEntity__CreatePK(gachaId, id, *(const MethodInfo **)&id);
   return (GachaSubEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_323D0DC *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__GetEntity__);
+                               (const MethodInfo_324D130 *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__GetEntity__);
 }
 
 
@@ -41,7 +41,7 @@ GachaSubEntity_o *__fastcall GachaSubMaster__GetFriendPointGachaImageInfo(
         int64_t nowTime,
         const MethodInfo *method)
 {
-  return GachaSubMaster__GetOpenEntity_40515784(this, gachaId, nowTime, method);
+  return GachaSubMaster__GetOpenEntity_40569864(this, gachaId, nowTime, method);
 }
 
 
@@ -54,20 +54,20 @@ GachaSubEntity_o *__fastcall GachaSubMaster__GetOpenEntity(
   int64_t Time; // x2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4BB499F & 1) == 0 )
+  if ( (byte_4BC7D6F & 1) == 0 )
   {
-    sub_1C13D24(&NetworkManager_TypeInfo, *(_QWORD *)&gachaId);
-    byte_4BB499F = 1;
+    sub_1C1ABD4(&NetworkManager_TypeInfo, *(_QWORD *)&gachaId);
+    byte_4BC7D6F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
-  return GachaSubMaster__GetOpenEntity_40515784(this, gachaId, Time, v6);
+  return GachaSubMaster__GetOpenEntity_40569864(this, gachaId, Time, v6);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-GachaSubEntity_o *__fastcall GachaSubMaster__GetOpenEntity_40515784(
+GachaSubEntity_o *__fastcall GachaSubMaster__GetOpenEntity_40569864(
         GachaSubMaster_o *this,
         int32_t gachaId,
         int64_t checkTime,
@@ -85,26 +85,26 @@ GachaSubEntity_o *__fastcall GachaSubMaster__GetOpenEntity_40515784(
   int32_t v16; // w25
   GachaSubEntity_o *v17; // x26
 
-  if ( (byte_4BB49A0 & 1) == 0 )
+  if ( (byte_4BC7D70 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Count__, *(_QWORD *)&gachaId);
-    sub_1C13D24(&Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Item__, v7);
-    sub_1C13D24(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4BB49A0 = 1;
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Count__, *(_QWORD *)&gachaId);
+    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Item__, v7);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v8);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4BC7D70 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !this->fields.list )
     goto LABEL_22;
   v12 = (CommonReleaseMaster_o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_31D2928 *)Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Count__);
+            (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Count__);
   if ( Count >= 1 )
   {
     v14 = Count;
@@ -118,7 +118,7 @@ GachaSubEntity_o *__fastcall GachaSubMaster__GetOpenEntity_40515784(
       Instance = (DataManager_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                     (System_Collections_ObjectModel_Collection_T__o *)Instance,
                                     v16,
-                                    (const MethodInfo_31D29B8 *)Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Item__);
+                                    (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_GachaSubEntity__get_Item__);
       if ( !Instance )
         break;
       v17 = (GachaSubEntity_o *)Instance;
@@ -140,7 +140,7 @@ LABEL_17:
         return v15;
     }
 LABEL_22:
-    sub_1C13F80(Instance, saveNameList_low);
+    sub_1C1AE30(Instance, saveNameList_low);
   }
   return 0LL;
 }
@@ -156,15 +156,15 @@ bool __fastcall GachaSubMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BB49A3 & 1) == 0 )
+  if ( (byte_4BC7D73 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__TryGetEntity__, entity);
-    byte_4BB49A3 = 1;
+    sub_1C1ABD4(&Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__TryGetEntity__, entity);
+    byte_4BC7D73 = 1;
   }
   PK = (Il2CppObject *)GachaSubEntity__CreatePK(gachaId, id, *(const MethodInfo **)&gachaId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_323D128 *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__TryGetEntity__);
+           (const MethodInfo_324D17C *)Method_DataMasterBase_GachaSubMaster__GachaSubEntity__string__TryGetEntity__);
 }

@@ -28,18 +28,18 @@ void __fastcall CancelConfirmItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_4BB0EAA & 1) == 0 )
+  if ( (byte_4BC42D6 & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
-    sub_1C13D24(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v8);
-    sub_1C13D24(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C13D24(&TutorialFlag_TypeInfo, v11);
-    sub_1C13D24(&StringLiteral_11704/*"SELECT_CANNOT"*/, v12);
-    sub_1C13D24(&StringLiteral_19859/*"forestgreen"*/, v13);
-    sub_1C13D24(&StringLiteral_1/*""*/, v14);
-    byte_4BB0EAA = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
+    sub_1C1ABD4(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v8);
+    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C1ABD4(&TutorialFlag_TypeInfo, v11);
+    sub_1C1ABD4(&StringLiteral_11715/*"SELECT_NO_SORTIE"*/, v12);
+    sub_1C1ABD4(&StringLiteral_19873/*"formation_blank_small"*/, v13);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v14);
+    byte_4BC42D6 = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
@@ -69,24 +69,24 @@ void __fastcall CancelConfirmItemDraw__SetItem(
       goto LABEL_38;
     if ( !equipIdList->max_length )
       goto LABEL_39;
-    v21 = (System_String_o *)StringLiteral_19859/*"forestgreen"*/;
+    v21 = (System_String_o *)StringLiteral_19873/*"formation_blank_small"*/;
     if ( !equipIdList->m_Items[0] )
       goto LABEL_36;
-    maskSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    maskSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !maskSprite )
       goto LABEL_38;
     maskSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)maskSprite,
-                                              (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                              (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !equipIdList->max_length )
 LABEL_39:
-      sub_1C13F88(maskSprite, userServantEntity);
+      sub_1C1AE38(maskSprite, userServantEntity);
     if ( maskSprite )
     {
       maskSprite = (UnityEngine_Component_o *)DataMasterBase_object__object__long___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)maskSprite,
                                                 equipIdList->m_Items[0],
-                                                (const MethodInfo_323AB80 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                                (const MethodInfo_324ABD4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       if ( this->fields.servantFaceIcon )
       {
         ServantFaceIconComponent__SetEquip(this->fields.servantFaceIcon, (UserServantEntity_o *)maskSprite, 0LL);
@@ -94,9 +94,9 @@ LABEL_39:
       }
     }
 LABEL_38:
-    sub_1C13F80(maskSprite, userServantEntity);
+    sub_1C1AE30(maskSprite, userServantEntity);
   }
-  ServantFaceIconComponent__Set_39365076(
+  ServantFaceIconComponent__Set_39418660(
     (ServantFaceIconComponent_o *)maskSprite,
     userServantEntity,
     equipIdList,
@@ -107,7 +107,7 @@ LABEL_38:
   {
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    if ( TutorialFlag__Get_38831432(126, 0LL) )
+    if ( TutorialFlag__Get_38884588(126, 0LL) )
     {
       maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
       if ( !maskSprite )
@@ -119,7 +119,7 @@ LABEL_38:
       warningText = this->fields.warningText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11704/*"SELECT_CANNOT"*/, 0LL);
+      maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11715/*"SELECT_NO_SORTIE"*/, 0LL);
       if ( !warningText )
         goto LABEL_38;
       UILabel__set_text(warningText, (System_String_o *)maskSprite, 0LL);
@@ -136,7 +136,7 @@ LABEL_38:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v22 = v23;
-  v20 = klass == (UnityEngine_Component_c *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47494132(
+  v20 = klass == (UnityEngine_Component_c *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47559652(
                                               &v22,
                                               0LL);
   v21 = 0LL;

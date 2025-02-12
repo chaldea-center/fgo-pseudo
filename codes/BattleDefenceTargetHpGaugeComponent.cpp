@@ -20,7 +20,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamage
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0LL),
         (damageGauge = this->fields.damageGauge) == 0LL) )
   {
-    sub_1C13F80(damageGauge, method);
+    sub_1C1AE30(damageGauge, method);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0LL);
 }
@@ -42,7 +42,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__SetHpGauge(
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0LL),
         (damageGauge = this->fields.damageGauge) == 0LL) )
   {
-    sub_1C13F80(damageGauge, v4);
+    sub_1C1AE30(damageGauge, v4);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0LL);
 }
@@ -74,7 +74,7 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGa
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0LL);
 }
 
@@ -197,36 +197,36 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   __int64 v114; // [xsp+10h] [xbp-40h] BYREF
   __int64 v115; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4BB7610 & 1) == 0 )
+  if ( (byte_4BCA9F6 & 1) == 0 )
   {
-    sub_1C13D24(&double_TypeInfo, *(_QWORD *)&nowHp);
-    sub_1C13D24(&object___TypeInfo, v5);
-    sub_1C13D24(&float_TypeInfo, v6);
-    sub_1C13D24(&StringLiteral_19961/*"friendCode"*/, v7);
-    sub_1C13D24(&StringLiteral_24320/*"textarea"*/, v8);
-    sub_1C13D24(&StringLiteral_22651/*"onProductPurchaseDeferred"*/, v9);
-    sub_1C13D24(&StringLiteral_15424/*"Update Bindings"*/, v10);
-    sub_1C13D24(&StringLiteral_18836/*"defaultPort"*/, v11);
-    sub_1C13D24(&StringLiteral_24361/*"timeoutTicks"*/, v12);
-    sub_1C13D24(&StringLiteral_4738/*"ComplateUpdateShiftHplabel"*/, v13);
-    sub_1C13D24(&StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/, v14);
-    sub_1C13D24(&iTween_TypeInfo, v15);
-    byte_4BB7610 = 1;
+    sub_1C1ABD4(&double_TypeInfo, *(_QWORD *)&nowHp);
+    sub_1C1ABD4(&object___TypeInfo, v5);
+    sub_1C1ABD4(&float_TypeInfo, v6);
+    sub_1C1ABD4(&StringLiteral_19975/*"from"*/, v7);
+    sub_1C1ABD4(&StringLiteral_24340/*"time"*/, v8);
+    sub_1C1ABD4(&StringLiteral_22669/*"onupdate"*/, v9);
+    sub_1C1ABD4(&StringLiteral_15436/*"UpdateDefenceTargetDamageGauge"*/, v10);
+    sub_1C1ABD4(&StringLiteral_18850/*"delay"*/, v11);
+    sub_1C1ABD4(&StringLiteral_24381/*"to"*/, v12);
+    sub_1C1ABD4(&StringLiteral_4741/*"CompleteDefenceTargetDamageGauge"*/, v13);
+    sub_1C1ABD4(&StringLiteral_22661/*"oncomplete"*/, v14);
+    sub_1C1ABD4(&iTween_TypeInfo, v15);
+    byte_4BCA9F6 = 1;
   }
   this->fields.nowval = nowHp;
   BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v17 = sub_1C13DCC(object___TypeInfo, 12LL);
+  v17 = sub_1C1AC7C(object___TypeInfo, 12LL);
   if ( !v17 )
-    sub_1C13F80(0LL, v18);
+    sub_1C1AE30(0LL, v18);
   v25 = (System_Object_array *)v17;
-  v26 = StringLiteral_19961/*"friendCode"*/;
-  if ( StringLiteral_19961/*"friendCode"*/ )
+  v26 = StringLiteral_19975/*"from"*/;
+  if ( StringLiteral_19975/*"from"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_19961/*"friendCode"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_19975/*"from"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_19961/*"friendCode"*/;
+    v27 = StringLiteral_19975/*"from"*/;
   }
   else
   {
@@ -235,27 +235,27 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( !v25->max_length )
     goto LABEL_59;
   v25->m_Items[0] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
   v115 = 0LL;
   v26 = j_il2cpp_value_box_0(double_TypeInfo, &v115, v28, v29, v30);
   v37 = v26;
   if ( v26 )
   {
-    v26 = sub_1C13E60(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
   }
   if ( v25->max_length <= 1 )
     goto LABEL_59;
   v25->m_Items[1] = (Il2CppObject *)v37;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[1], v37, v31, v32, v33, v34, v35, v36);
-  v26 = StringLiteral_24361/*"timeoutTicks"*/;
-  if ( StringLiteral_24361/*"timeoutTicks"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[1], v37, v31, v32, v33, v34, v35, v36);
+  v26 = StringLiteral_24381/*"to"*/;
+  if ( StringLiteral_24381/*"to"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_24361/*"timeoutTicks"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_24381/*"to"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_24361/*"timeoutTicks"*/;
+    v27 = StringLiteral_24381/*"to"*/;
   }
   else
   {
@@ -264,27 +264,27 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 2 )
     goto LABEL_59;
   v25->m_Items[2] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[2], v27, v38, v39, v40, v41, v42, v43);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[2], v27, v38, v39, v40, v41, v42, v43);
   v114 = 0x3FF0000000000000LL;
   v26 = j_il2cpp_value_box_0(double_TypeInfo, &v114, v44, v45, v46);
   v53 = v26;
   if ( v26 )
   {
-    v26 = sub_1C13E60(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
   }
   if ( v25->max_length <= 3 )
     goto LABEL_59;
   v25->m_Items[3] = (Il2CppObject *)v53;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[3], v53, v47, v48, v49, v50, v51, v52);
-  v26 = StringLiteral_22651/*"onProductPurchaseDeferred"*/;
-  if ( StringLiteral_22651/*"onProductPurchaseDeferred"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[3], v53, v47, v48, v49, v50, v51, v52);
+  v26 = StringLiteral_22669/*"onupdate"*/;
+  if ( StringLiteral_22669/*"onupdate"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_22651/*"onProductPurchaseDeferred"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_22669/*"onupdate"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_22651/*"onProductPurchaseDeferred"*/;
+    v27 = StringLiteral_22669/*"onupdate"*/;
   }
   else
   {
@@ -293,14 +293,14 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 4 )
     goto LABEL_59;
   v25->m_Items[4] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[4], v27, v54, v55, v56, v57, v58, v59);
-  v26 = StringLiteral_15424/*"Update Bindings"*/;
-  if ( StringLiteral_15424/*"Update Bindings"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[4], v27, v54, v55, v56, v57, v58, v59);
+  v26 = StringLiteral_15436/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15436/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_15424/*"Update Bindings"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_15436/*"UpdateDefenceTargetDamageGauge"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_15424/*"Update Bindings"*/;
+    v27 = StringLiteral_15436/*"UpdateDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -309,14 +309,14 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 5 )
     goto LABEL_59;
   v25->m_Items[5] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[5], v27, v60, v61, v62, v63, v64, v65);
-  v26 = StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/;
-  if ( StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[5], v27, v60, v61, v62, v63, v64, v65);
+  v26 = StringLiteral_22661/*"oncomplete"*/;
+  if ( StringLiteral_22661/*"oncomplete"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_22661/*"oncomplete"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_22643/*"onFetchStorePromotionOrderFailed"*/;
+    v27 = StringLiteral_22661/*"oncomplete"*/;
   }
   else
   {
@@ -325,14 +325,14 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 6 )
     goto LABEL_59;
   v25->m_Items[6] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[6], v27, v66, v67, v68, v69, v70, v71);
-  v26 = StringLiteral_4738/*"ComplateUpdateShiftHplabel"*/;
-  if ( StringLiteral_4738/*"ComplateUpdateShiftHplabel"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[6], v27, v66, v67, v68, v69, v70, v71);
+  v26 = StringLiteral_4741/*"CompleteDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_4741/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_4738/*"ComplateUpdateShiftHplabel"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_4741/*"CompleteDefenceTargetDamageGauge"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_4738/*"ComplateUpdateShiftHplabel"*/;
+    v27 = StringLiteral_4741/*"CompleteDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -341,14 +341,14 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 7 )
     goto LABEL_59;
   v25->m_Items[7] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[7], v27, v72, v73, v74, v75, v76, v77);
-  v26 = StringLiteral_18836/*"defaultPort"*/;
-  if ( StringLiteral_18836/*"defaultPort"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[7], v27, v72, v73, v74, v75, v76, v77);
+  v26 = StringLiteral_18850/*"delay"*/;
+  if ( StringLiteral_18850/*"delay"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_18836/*"defaultPort"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_18850/*"delay"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_18836/*"defaultPort"*/;
+    v27 = StringLiteral_18850/*"delay"*/;
   }
   else
   {
@@ -357,27 +357,27 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 8 )
     goto LABEL_59;
   v25->m_Items[8] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[8], v27, v78, v79, v80, v81, v82, v83);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[8], v27, v78, v79, v80, v81, v82, v83);
   v113 = 1056964608;
   v26 = j_il2cpp_value_box_0(float_TypeInfo, &v113, v84, v85, v86);
   v93 = v26;
   if ( v26 )
   {
-    v26 = sub_1C13E60(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
   }
   if ( v25->max_length <= 9 )
     goto LABEL_59;
   v25->m_Items[9] = (Il2CppObject *)v93;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[9], v93, v87, v88, v89, v90, v91, v92);
-  v26 = StringLiteral_24320/*"textarea"*/;
-  if ( StringLiteral_24320/*"textarea"*/ )
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[9], v93, v87, v88, v89, v90, v91, v92);
+  v26 = StringLiteral_24340/*"time"*/;
+  if ( StringLiteral_24340/*"time"*/ )
   {
-    v26 = sub_1C13E60(StringLiteral_24320/*"textarea"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(StringLiteral_24340/*"time"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_60;
-    v27 = StringLiteral_24320/*"textarea"*/;
+    v27 = StringLiteral_24340/*"time"*/;
   }
   else
   {
@@ -386,25 +386,25 @@ void __fastcall BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( v25->max_length <= 0xA )
     goto LABEL_59;
   v25->m_Items[10] = (Il2CppObject *)v27;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[10], v27, v94, v95, v96, v97, v98, v99);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[10], v27, v94, v95, v96, v97, v98, v99);
   v112 = 1065353216;
   v26 = j_il2cpp_value_box_0(float_TypeInfo, &v112, v100, v101, v102);
   v109 = v26;
   if ( v26 )
   {
-    v26 = sub_1C13E60(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C1AD10(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
     {
 LABEL_60:
-      v111 = sub_1C13FA4(v26);
-      sub_1C13E4C(v111, 0LL);
+      v111 = sub_1C1AE54(v26);
+      sub_1C1ACFC(v111, 0LL);
     }
   }
   if ( v25->max_length <= 0xB )
 LABEL_59:
-    sub_1C13F88(v26, v27);
+    sub_1C1AE38(v26, v27);
   v25->m_Items[11] = (Il2CppObject *)v109;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v25->m_Items[11], v109, v103, v104, v105, v106, v107, v108);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v25->m_Items[11], v109, v103, v104, v105, v106, v107, v108);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v110 = iTween__Hash(v25, 0LL);

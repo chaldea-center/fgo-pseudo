@@ -22,20 +22,20 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   __int64 v14; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4BB3566 & 1) == 0 )
+  if ( (byte_4BC6932 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1C13D24(&StringLiteral_16838/*"_retryNumber"*/, v3);
-    sub_1C13D24(&StringLiteral_16833/*"_out"*/, v4);
-    sub_1C13D24(&StringLiteral_16834/*"_passRuntimeValues"*/, v5);
-    byte_4BB3566 = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1C1ABD4(&StringLiteral_16852/*"_threeValue2"*/, v3);
+    sub_1C1ABD4(&StringLiteral_16847/*"_threeValue0"*/, v4);
+    sub_1C1ABD4(&StringLiteral_16848/*"_threeValue1"*/, v5);
+    byte_4BC6932 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._renderer,
     (int64_t)Component_object,
     v8,
@@ -50,45 +50,45 @@ void __fastcall FGO_param3anim__Start(FGO_param3anim_o *this, const MethodInfo *
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16833/*"_out"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16847/*"_threeValue0"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_16;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16834/*"_passRuntimeValues"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16848/*"_threeValue1"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_16;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL);
   if ( !renderer )
     goto LABEL_16;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16838/*"_retryNumber"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16852/*"_threeValue2"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16833/*"_out"*/,
+          (System_String_o *)StringLiteral_16847/*"_threeValue0"*/,
           this->fields.three_value.fields.x,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16834/*"_passRuntimeValues"*/,
+          (System_String_o *)StringLiteral_16848/*"_threeValue1"*/,
           this->fields.three_value.fields.y,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
   {
 LABEL_16:
-    sub_1C13F80(renderer, v14);
+    sub_1C1AE30(renderer, v14);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16838/*"_retryNumber"*/,
+    (System_String_o *)StringLiteral_16852/*"_threeValue2"*/,
     this->fields.three_value.fields.z,
     0LL);
 }
@@ -100,36 +100,36 @@ void __fastcall FGO_param3anim__Update(FGO_param3anim_o *this, const MethodInfo 
   __int64 v4; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4BB3567 & 1) == 0 )
+  if ( (byte_4BC6933 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_16838/*"_retryNumber"*/, method);
-    sub_1C13D24(&StringLiteral_16833/*"_out"*/, v3);
-    sub_1C13D24(&StringLiteral_16834/*"_passRuntimeValues"*/, v4);
-    byte_4BB3567 = 1;
+    sub_1C1ABD4(&StringLiteral_16852/*"_threeValue2"*/, method);
+    sub_1C1ABD4(&StringLiteral_16847/*"_threeValue0"*/, v3);
+    sub_1C1ABD4(&StringLiteral_16848/*"_threeValue1"*/, v4);
+    byte_4BC6933 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16833/*"_out"*/,
+          (System_String_o *)StringLiteral_16847/*"_threeValue0"*/,
           this->fields.three_value.fields.x,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16834/*"_passRuntimeValues"*/,
+          (System_String_o *)StringLiteral_16848/*"_threeValue1"*/,
           this->fields.three_value.fields.y,
           0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
   {
-    sub_1C13F80(renderer, method);
+    sub_1C1AE30(renderer, method);
   }
   UnityEngine_Material__SetFloat(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16838/*"_retryNumber"*/,
+    (System_String_o *)StringLiteral_16852/*"_threeValue2"*/,
     this->fields.three_value.fields.z,
     0LL);
 }

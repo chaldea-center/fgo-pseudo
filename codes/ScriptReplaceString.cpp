@@ -11,19 +11,19 @@ void __fastcall ScriptReplaceString___cctor(const MethodInfo *method)
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BB63F0 & 1) == 0 )
+  if ( (byte_4BC97D2 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string___ctor__, v1);
-    sub_1C13D24(&System_Collections_Generic_List_string__TypeInfo, v2);
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, v3);
-    byte_4BB63F0 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string___ctor__, v1);
+    sub_1C1ABD4(&System_Collections_Generic_List_string__TypeInfo, v2);
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, v3);
+    byte_4BC97D2 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_string__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_string___ctor__);
   ScriptReplaceString_TypeInfo->static_fields->replaceList = (struct System_Collections_Generic_List_string__o *)v4;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)ScriptReplaceString_TypeInfo->static_fields,
     (int64_t)v4,
     v5,
@@ -47,10 +47,10 @@ int32_t __fastcall ScriptReplaceString__GetPlayerGenderIndex(const MethodInfo *m
   __int64 v1; // x1
   ScriptReplaceString_c *v2; // x0
 
-  if ( (byte_4BB63EF & 1) == 0 )
+  if ( (byte_4BC97D1 & 1) == 0 )
   {
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, v1);
-    byte_4BB63EF = 1;
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, v1);
+    byte_4BC97D1 = 1;
   }
   v2 = ScriptReplaceString_TypeInfo;
   if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -68,11 +68,11 @@ System_String_o *__fastcall ScriptReplaceString__GetString(int32_t num, const Me
   ScriptReplaceString_c *v4; // x0
   System_Collections_Generic_List_object__o *replaceList; // x0
 
-  if ( (byte_4BB63ED & 1) == 0 )
+  if ( (byte_4BC97CF & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Item__, method);
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, v3);
-    byte_4BB63ED = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__get_Item__, method);
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, v3);
+    byte_4BC97CF = 1;
   }
   v4 = ScriptReplaceString_TypeInfo;
   if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -82,11 +82,11 @@ System_String_o *__fastcall ScriptReplaceString__GetString(int32_t num, const Me
   }
   replaceList = (System_Collections_Generic_List_object__o *)v4->static_fields->replaceList;
   if ( !replaceList )
-    sub_1C13F80(0LL, method);
+    sub_1C1AE30(0LL, method);
   return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                               replaceList,
                               num,
-                              (const MethodInfo_362CEFC *)Method_System_Collections_Generic_List_string__get_Item__);
+                              (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_string__get_Item__);
 }
 
 
@@ -102,13 +102,13 @@ void __fastcall ScriptReplaceString__Init(const MethodInfo *method)
   int v8; // w9
   const MethodInfo *v9; // x2
 
-  if ( (byte_4BB63EA & 1) == 0 )
+  if ( (byte_4BC97CC & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__Clear__, v1);
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, v2);
-    sub_1C13D24(&StringLiteral_16074/*"Zs"*/, v3);
-    sub_1C13D24(&StringLiteral_25729/*"サーヴァントスキル強化【完了】強化"*/, v4);
-    byte_4BB63EA = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__Clear__, v1);
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, v2);
+    sub_1C1ABD4(&StringLiteral_16088/*"[#[FF0000]主[-]人公:しゅじんこう]はぐだぐだな主人公"*/, v3);
+    sub_1C1ABD4(&StringLiteral_25751/*"ルビを含むテキストにも[#置換:ちかん]できますよ"*/, v4);
+    byte_4BC97CC = 1;
   }
   v5 = ScriptReplaceString_TypeInfo;
   if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -118,15 +118,15 @@ void __fastcall ScriptReplaceString__Init(const MethodInfo *method)
   }
   replaceList = v5->static_fields->replaceList;
   if ( !replaceList )
-    sub_1C13F80(v5, v1);
+    sub_1C1AE30(v5, v1);
   size = (const MethodInfo *)(unsigned int)replaceList->fields._size;
   v8 = replaceList->fields._version + 1;
   replaceList->fields._size = 0;
   replaceList->fields._version = v8;
   if ( (int)size >= 1 )
     System_Array__Clear((System_Array_o *)replaceList->fields._items, 0, (int32_t)size, 0LL);
-  ScriptReplaceString__SetString(1, (System_String_o *)StringLiteral_16074/*"Zs"*/, size);
-  ScriptReplaceString__SetString_42906072(5, (System_String_o *)StringLiteral_25729/*"サーヴァントスキル強化【完了】強化"*/, v9);
+  ScriptReplaceString__SetString(1, (System_String_o *)StringLiteral_16088/*"[#[FF0000]主[-]人公:しゅじんこう]はぐだぐだな主人公"*/, size);
+  ScriptReplaceString__SetString_42964756(5, (System_String_o *)StringLiteral_25751/*"ルビを含むテキストにも[#置換:ちかん]できますよ"*/, v9);
   ScriptReplaceString_TypeInfo->static_fields->playerGenderIndex = 1;
 }
 
@@ -135,10 +135,10 @@ void __fastcall ScriptReplaceString__SetPlayerGenderIndex(int32_t index, const M
 {
   ScriptReplaceString_c *v3; // x0
 
-  if ( (byte_4BB63EE & 1) == 0 )
+  if ( (byte_4BC97D0 & 1) == 0 )
   {
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, method);
-    byte_4BB63EE = 1;
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, method);
+    byte_4BC97D0 = 1;
   }
   v3 = ScriptReplaceString_TypeInfo;
   if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -152,18 +152,18 @@ void __fastcall ScriptReplaceString__SetPlayerGenderIndex(int32_t index, const M
 
 void __fastcall ScriptReplaceString__SetString(int32_t index, System_String_o *str, const MethodInfo *method)
 {
-  if ( (byte_4BB63EB & 1) == 0 )
+  if ( (byte_4BC97CD & 1) == 0 )
   {
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, str);
-    byte_4BB63EB = 1;
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, str);
+    byte_4BC97CD = 1;
   }
   if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
-  ScriptReplaceString__SetString_42906072(index, str, method);
+  ScriptReplaceString__SetString_42964756(index, str, method);
 }
 
 
-void __fastcall ScriptReplaceString__SetString_42906072(int32_t num, System_String_o *str, const MethodInfo *method)
+void __fastcall ScriptReplaceString__SetString_42964756(int32_t num, System_String_o *str, const MethodInfo *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -191,15 +191,15 @@ void __fastcall ScriptReplaceString__SetString_42906072(int32_t num, System_Stri
   __int64 v28; // x10
   Il2CppClass **v29; // x8
 
-  if ( (byte_4BB63EC & 1) == 0 )
+  if ( (byte_4BC97CE & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__Add__, str);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__get_Count__, v5);
-    sub_1C13D24(&Method_System_Collections_Generic_List_string__set_Item__, v6);
-    sub_1C13D24(&ScriptMessageLabel_TypeInfo, v7);
-    sub_1C13D24(&ScriptReplaceString_TypeInfo, v8);
-    sub_1C13D24(&StringLiteral_1/*""*/, v9);
-    byte_4BB63EC = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__Add__, str);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__get_Count__, v5);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_string__set_Item__, v6);
+    sub_1C1ABD4(&ScriptMessageLabel_TypeInfo, v7);
+    sub_1C1ABD4(&ScriptReplaceString_TypeInfo, v8);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v9);
+    byte_4BC97CE = 1;
   }
   if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
@@ -224,11 +224,11 @@ void __fastcall ScriptReplaceString__SetString_42906072(int32_t num, System_Stri
         replaceList,
         num,
         v19,
-        (const MethodInfo_362CF50 *)Method_System_Collections_Generic_List_string__set_Item__);
+        (const MethodInfo_363C614 *)Method_System_Collections_Generic_List_string__set_Item__);
       return;
     }
 LABEL_27:
-    sub_1C13F80(replaceList, v11);
+    sub_1C1AE30(replaceList, v11);
   }
   while ( 1 )
   {
@@ -262,14 +262,14 @@ LABEL_27:
       System_Collections_Generic_List_object___AddWithResize(
         replaceList,
         v11,
-        *(const MethodInfo_362D1CC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+        *(const MethodInfo_363C890 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
     }
     else
     {
       v25 = &items->obj.klass + v24;
       replaceList->fields._size = v24 + 1;
       v25[4] = (Il2CppClass *)v11;
-      sub_1C13CC8((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)v11, v12, v13, v14, v15, v16, v17);
+      sub_1C1AB78((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)v11, v12, v13, v14, v15, v16, v17);
     }
     v18 = ScriptReplaceString_TypeInfo;
   }
@@ -284,13 +284,13 @@ LABEL_27:
     System_Collections_Generic_List_object___AddWithResize(
       replaceList,
       v19,
-      *(const MethodInfo_362D1CC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_363C890 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
     v29 = &v26->obj.klass + v28;
     replaceList->fields._size = v28 + 1;
     v29[4] = (Il2CppClass *)v19;
-    sub_1C13CC8((PartyOrganizationUtility_o *)(v29 + 4), (int64_t)v19, v12, v13, v14, v15, v16, v17);
+    sub_1C1AB78((PartyOrganizationUtility_o *)(v29 + 4), (int64_t)v19, v12, v13, v14, v15, v16, v17);
   }
 }

@@ -302,18 +302,18 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   __int64 v300; // x10
   struct FilterKindList_StaticFields *v301; // x0
 
-  if ( (byte_4BAFDA1 & 1) == 0 )
+  if ( (byte_4BC3156 & 1) == 0 )
   {
-    sub_1C13D24(&FilterKindList_TypeInfo, v1);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__, v2);
-    sub_1C13D24(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__, v3);
-    sub_1C13D24(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo, v4);
-    byte_4BAFDA1 = 1;
+    sub_1C1ABD4(&FilterKindList_TypeInfo, v1);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__, v2);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__, v3);
+    sub_1C1ABD4(&System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo, v4);
+    byte_4BC3156 = 1;
   }
-  v5 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  v5 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v5,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v5 )
     goto LABEL_614;
   v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
@@ -329,7 +329,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       8,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -348,7 +348,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       9,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -367,7 +367,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       0,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -386,7 +386,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       1,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -405,7 +405,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       2,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -424,7 +424,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       3,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -443,7 +443,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       4,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -462,7 +462,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       5,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -481,7 +481,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       6,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -500,7 +500,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       7,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -519,7 +519,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       21,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -538,7 +538,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       22,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -557,7 +557,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       23,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -576,7 +576,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       24,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -595,7 +595,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       25,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -614,7 +614,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       26,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -633,7 +633,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       27,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -652,7 +652,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       28,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -671,7 +671,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       29,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -690,7 +690,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       30,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -709,7 +709,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       31,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -728,7 +728,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       34,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -747,7 +747,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       35,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -766,7 +766,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       36,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -785,7 +785,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       37,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -804,7 +804,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       38,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -823,7 +823,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       42,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -842,7 +842,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       43,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -861,7 +861,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       44,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -880,7 +880,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       45,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -899,7 +899,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       46,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -918,7 +918,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       47,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -937,7 +937,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       48,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -956,7 +956,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       39,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -975,7 +975,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       50,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -994,7 +994,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       51,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1013,7 +1013,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       54,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1032,7 +1032,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       55,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1051,7 +1051,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       72,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1070,7 +1070,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       73,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1089,7 +1089,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       74,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1108,7 +1108,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       75,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1127,7 +1127,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       76,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1146,7 +1146,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       56,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1165,7 +1165,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       78,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1184,7 +1184,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       79,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1203,7 +1203,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       82,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1222,7 +1222,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       77,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1241,7 +1241,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       81,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1260,7 +1260,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       80,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1279,7 +1279,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       83,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1298,7 +1298,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       84,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1317,7 +1317,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       85,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1336,7 +1336,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       86,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1355,7 +1355,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       87,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1374,7 +1374,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       57,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1393,7 +1393,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       58,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1412,7 +1412,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       59,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1431,7 +1431,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       60,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1450,7 +1450,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       61,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1469,7 +1469,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       62,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1488,7 +1488,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       63,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1507,7 +1507,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       64,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1526,7 +1526,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       10,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1545,7 +1545,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       11,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1564,7 +1564,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       12,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1583,7 +1583,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       52,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1602,7 +1602,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       53,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1621,7 +1621,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       69,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1640,7 +1640,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       70,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1659,7 +1659,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       71,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1678,7 +1678,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       65,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1697,7 +1697,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       66,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1716,7 +1716,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       67,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     items = v5->fields._items;
     v8 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v5->fields._version;
@@ -1735,7 +1735,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       68,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
@@ -1743,11 +1743,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     *((_DWORD *)items->m_Items + v86) = 68;
   }
   FilterKindList_TypeInfo->static_fields->AllFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v5;
-  sub_1C13CC8(FilterKindList_TypeInfo->static_fields);
-  v87 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(FilterKindList_TypeInfo->static_fields);
+  v87 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v87,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v87 )
     goto LABEL_614;
   v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
@@ -1763,7 +1763,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       0,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1782,7 +1782,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       1,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1801,7 +1801,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       2,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1820,7 +1820,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       3,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1839,7 +1839,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       4,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1858,7 +1858,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       5,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1877,7 +1877,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       6,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1896,7 +1896,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       57,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1915,7 +1915,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       58,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1934,7 +1934,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       59,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1953,7 +1953,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       60,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1972,7 +1972,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       61,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -1991,7 +1991,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       62,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -2010,7 +2010,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       63,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
     v90 = v87->fields._items;
     v88 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v87->fields._version;
@@ -2029,7 +2029,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v87,
       64,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v88[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2038,11 +2038,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   static_fields = FilterKindList_TypeInfo->static_fields;
   static_fields->ClassFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v87;
-  sub_1C13CC8(&static_fields->ClassFilterKindList);
-  v108 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&static_fields->ClassFilterKindList);
+  v108 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v108,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v108 )
     goto LABEL_614;
   v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
@@ -2058,7 +2058,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       0,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2077,7 +2077,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       1,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2096,7 +2096,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       2,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2115,7 +2115,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       3,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2134,7 +2134,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       4,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2153,7 +2153,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       5,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2172,7 +2172,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       6,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2191,7 +2191,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       58,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2210,7 +2210,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       59,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2229,7 +2229,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       60,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2248,7 +2248,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       61,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2267,7 +2267,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       62,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2286,7 +2286,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       63,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
     v111 = v108->fields._items;
     v109 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v108->fields._version;
@@ -2305,7 +2305,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v108,
       64,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2314,11 +2314,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v127 = FilterKindList_TypeInfo->static_fields;
   v127->ClassFilterKindListForExchangeSvtCoin = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v108;
-  sub_1C13CC8(&v127->ClassFilterKindListForExchangeSvtCoin);
-  v128 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v127->ClassFilterKindListForExchangeSvtCoin);
+  v128 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v128,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v128 )
     goto LABEL_614;
   v129 = v128->fields._items;
@@ -2332,7 +2332,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v128,
       0,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
     v129 = v128->fields._items;
     v130 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v128->fields._version;
@@ -2351,7 +2351,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v128,
       1,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
     v129 = v128->fields._items;
     v130 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v128->fields._version;
@@ -2370,7 +2370,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v128,
       2,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2379,11 +2379,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v134 = FilterKindList_TypeInfo->static_fields;
   v134->ThreeKnightsFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v128;
-  sub_1C13CC8(&v134->ThreeKnightsFilterKindList);
-  v135 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v134->ThreeKnightsFilterKindList);
+  v135 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v135,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v135 )
     goto LABEL_614;
   v136 = v135->fields._items;
@@ -2397,7 +2397,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v135,
       3,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
     v136 = v135->fields._items;
     v137 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v135->fields._version;
@@ -2416,7 +2416,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v135,
       4,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
     v136 = v135->fields._items;
     v137 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v135->fields._version;
@@ -2435,7 +2435,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v135,
       5,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
     v136 = v135->fields._items;
     v137 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v135->fields._version;
@@ -2454,7 +2454,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v135,
       6,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v137[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2463,11 +2463,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v142 = FilterKindList_TypeInfo->static_fields;
   v142->FourCavalryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v135;
-  sub_1C13CC8(&v142->FourCavalryFilterKindList);
-  v143 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v142->FourCavalryFilterKindList);
+  v143 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v143,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v143 )
     goto LABEL_614;
   v144 = v143->fields._items;
@@ -2481,7 +2481,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v143,
       58,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
     v144 = v143->fields._items;
     v145 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v143->fields._version;
@@ -2500,7 +2500,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v143,
       59,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
     v144 = v143->fields._items;
     v145 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v143->fields._version;
@@ -2519,7 +2519,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v143,
       60,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v145[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2528,11 +2528,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v149 = FilterKindList_TypeInfo->static_fields;
   v149->ClassExtra1FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v143;
-  sub_1C13CC8(&v149->ClassExtra1FilterKindList);
-  v150 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v149->ClassExtra1FilterKindList);
+  v150 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v150,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v150 )
     goto LABEL_614;
   v151 = v150->fields._items;
@@ -2546,7 +2546,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v150,
       57,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
     v151 = v150->fields._items;
     v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v150->fields._version;
@@ -2565,7 +2565,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v150,
       58,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
     v151 = v150->fields._items;
     v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v150->fields._version;
@@ -2584,7 +2584,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v150,
       59,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
     v151 = v150->fields._items;
     v152 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v150->fields._version;
@@ -2603,7 +2603,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v150,
       60,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2612,11 +2612,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v157 = FilterKindList_TypeInfo->static_fields;
   v157->ClassExtra1InShielderFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v150;
-  sub_1C13CC8(&v157->ClassExtra1InShielderFilterKindList);
-  v158 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v157->ClassExtra1InShielderFilterKindList);
+  v158 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v158,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v158 )
     goto LABEL_614;
   v159 = v158->fields._items;
@@ -2630,7 +2630,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v158,
       61,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
     v159 = v158->fields._items;
     v160 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v158->fields._version;
@@ -2649,7 +2649,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v158,
       62,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
     v159 = v158->fields._items;
     v160 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v158->fields._version;
@@ -2668,7 +2668,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v158,
       63,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
     v159 = v158->fields._items;
     v160 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v158->fields._version;
@@ -2687,7 +2687,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v158,
       64,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2696,11 +2696,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v165 = FilterKindList_TypeInfo->static_fields;
   v165->ClassExtra2FilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v158;
-  sub_1C13CC8(&v165->ClassExtra2FilterKindList);
-  v166 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v165->ClassExtra2FilterKindList);
+  v166 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v166,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v166 )
     goto LABEL_614;
   v167 = v166->fields._items;
@@ -2714,7 +2714,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v166,
       65,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
     v167 = v166->fields._items;
     v168 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v166->fields._version;
@@ -2733,7 +2733,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v166,
       66,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
     v167 = v166->fields._items;
     v168 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v166->fields._version;
@@ -2752,7 +2752,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v166,
       67,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
     v167 = v166->fields._items;
     v168 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v166->fields._version;
@@ -2771,7 +2771,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v166,
       68,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2780,11 +2780,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v173 = FilterKindList_TypeInfo->static_fields;
   v173->ClassGroupFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v166;
-  sub_1C13CC8(&v173->ClassGroupFilterKindList);
-  v174 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v173->ClassGroupFilterKindList);
+  v174 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v174,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v174 )
     goto LABEL_614;
   v175 = v174->fields._items;
@@ -2798,7 +2798,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v174,
       67,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
     v175 = v174->fields._items;
     v176 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v174->fields._version;
@@ -2817,7 +2817,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v174,
       68,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v176[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2826,11 +2826,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v179 = FilterKindList_TypeInfo->static_fields;
   v179->ClassGroupExtraFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v174;
-  sub_1C13CC8(&v179->ClassGroupExtraFilterKindList);
-  v180 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v179->ClassGroupExtraFilterKindList);
+  v180 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v180,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v180 )
     goto LABEL_614;
   v181 = v180->fields._items;
@@ -2844,7 +2844,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v180,
       44,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
     v181 = v180->fields._items;
     v182 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v180->fields._version;
@@ -2863,7 +2863,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v180,
       43,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
     v181 = v180->fields._items;
     v182 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v180->fields._version;
@@ -2882,7 +2882,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v180,
       42,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2891,11 +2891,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v186 = FilterKindList_TypeInfo->static_fields;
   v186->NpTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v180;
-  sub_1C13CC8(&v186->NpTypeFilterKindList);
-  v187 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v186->NpTypeFilterKindList);
+  v187 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v187,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v187 )
     goto LABEL_614;
   v188 = v187->fields._items;
@@ -2909,7 +2909,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v187,
       46,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
     v188 = v187->fields._items;
     v189 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v187->fields._version;
@@ -2928,7 +2928,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v187,
       45,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
     v188 = v187->fields._items;
     v189 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v187->fields._version;
@@ -2947,7 +2947,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v187,
       47,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v189[4] + 192LL) + 112LL));
   }
   else
   {
@@ -2956,11 +2956,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v193 = FilterKindList_TypeInfo->static_fields;
   v193->NpEffectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v187;
-  sub_1C13CC8(&v193->NpEffectFilterKindList);
-  v194 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v193->NpEffectFilterKindList);
+  v194 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v194,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v194 )
     goto LABEL_614;
   v195 = v194->fields._items;
@@ -2974,7 +2974,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v194,
       48,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
     v195 = v194->fields._items;
     v196 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v194->fields._version;
@@ -2993,7 +2993,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v194,
       8,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
     v195 = v194->fields._items;
     v196 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v194->fields._version;
@@ -3012,7 +3012,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v194,
       9,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v196[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3021,11 +3021,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v200 = FilterKindList_TypeInfo->static_fields;
   v200->ServantTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v194;
-  sub_1C13CC8(&v200->ServantTypeFilterKindList);
-  v201 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v200->ServantTypeFilterKindList);
+  v201 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v201,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v201 )
     goto LABEL_614;
   v202 = v201->fields._items;
@@ -3039,7 +3039,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       21,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3058,7 +3058,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       22,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3077,7 +3077,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       23,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3096,7 +3096,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       24,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3115,7 +3115,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       25,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3134,7 +3134,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       26,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
     v202 = v201->fields._items;
     v203 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v201->fields._version;
@@ -3153,7 +3153,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v201,
       27,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v203[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3162,11 +3162,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v211 = FilterKindList_TypeInfo->static_fields;
   v211->CombineBaseServantFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v201;
-  sub_1C13CC8(&v211->CombineBaseServantFilterKindList);
-  v212 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v211->CombineBaseServantFilterKindList);
+  v212 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v212,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v212 )
     goto LABEL_614;
   v213 = v212->fields._items;
@@ -3180,7 +3180,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v212,
       28,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v214[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v214[4] + 192LL) + 112LL));
     v213 = v212->fields._items;
     v214 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v212->fields._version;
@@ -3199,7 +3199,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v212,
       29,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v214[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v214[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3208,11 +3208,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v217 = FilterKindList_TypeInfo->static_fields;
   v217->CombineMaterialFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v212;
-  sub_1C13CC8(&v217->CombineMaterialFilterKindList);
-  v218 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v217->CombineMaterialFilterKindList);
+  v218 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v218,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v218 )
     goto LABEL_614;
   v219 = v218->fields._items;
@@ -3226,7 +3226,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v218,
       10,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
     v219 = v218->fields._items;
     v220 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v218->fields._version;
@@ -3245,7 +3245,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v218,
       11,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
     v219 = v218->fields._items;
     v220 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v218->fields._version;
@@ -3264,7 +3264,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v218,
       12,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v220[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3273,11 +3273,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v224 = FilterKindList_TypeInfo->static_fields;
   v224->CollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v218;
-  sub_1C13CC8(&v224->CollectionStateFilterKindList);
-  v225 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v224->CollectionStateFilterKindList);
+  v225 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v225,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v225 )
     goto LABEL_614;
   v226 = v225->fields._items;
@@ -3291,7 +3291,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v225,
       11,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v227[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v227[4] + 192LL) + 112LL));
     v226 = v225->fields._items;
     v227 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v225->fields._version;
@@ -3310,7 +3310,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v225,
       12,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v227[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v227[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3319,11 +3319,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v230 = FilterKindList_TypeInfo->static_fields;
   v230->BonusSelectCollectionStateFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v225;
-  sub_1C13CC8(&v230->BonusSelectCollectionStateFilterKindList);
-  v231 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v230->BonusSelectCollectionStateFilterKindList);
+  v231 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v231,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v231 )
     goto LABEL_614;
   v232 = v231->fields._items;
@@ -3337,7 +3337,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v231,
       52,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
     v232 = v231->fields._items;
     v233 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v231->fields._version;
@@ -3356,7 +3356,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v231,
       53,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v233[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3365,11 +3365,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v236 = FilterKindList_TypeInfo->static_fields;
   v236->ServantHaveFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v231;
-  sub_1C13CC8(&v236->ServantHaveFilterKindList);
-  v237 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v236->ServantHaveFilterKindList);
+  v237 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v237,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v237 )
     goto LABEL_614;
   v238 = v237->fields._items;
@@ -3383,7 +3383,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v237,
       50,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v239[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v239[4] + 192LL) + 112LL));
     v238 = v237->fields._items;
     v239 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v237->fields._version;
@@ -3402,7 +3402,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v237,
       51,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v239[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v239[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3411,11 +3411,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v242 = FilterKindList_TypeInfo->static_fields;
   v242->ServantEffectApplySubjectFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v237;
-  sub_1C13CC8(&v242->ServantEffectApplySubjectFilterKindList);
-  v243 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v242->ServantEffectApplySubjectFilterKindList);
+  v243 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v243,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v243 )
     goto LABEL_614;
   v244 = v243->fields._items;
@@ -3429,7 +3429,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v243,
       69,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
     v244 = v243->fields._items;
     v245 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v243->fields._version;
@@ -3448,7 +3448,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v243,
       70,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
     v244 = v243->fields._items;
     v245 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v243->fields._version;
@@ -3467,7 +3467,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v243,
       71,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v245[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3476,11 +3476,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v249 = FilterKindList_TypeInfo->static_fields;
   v249->ServantSummonCategoryFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v243;
-  sub_1C13CC8(&v249->ServantSummonCategoryFilterKindList);
-  v250 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v249->ServantSummonCategoryFilterKindList);
+  v250 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v250,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v250 )
     goto LABEL_614;
   v251 = v250->fields._items;
@@ -3494,7 +3494,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v250,
       38,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
     v251 = v250->fields._items;
     v252 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v250->fields._version;
@@ -3513,7 +3513,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v250,
       37,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
     v251 = v250->fields._items;
     v252 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v250->fields._version;
@@ -3532,7 +3532,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v250,
       36,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
     v251 = v250->fields._items;
     v252 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v250->fields._version;
@@ -3551,7 +3551,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v250,
       35,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
     v251 = v250->fields._items;
     v252 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v250->fields._version;
@@ -3570,7 +3570,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v250,
       34,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v252[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3579,11 +3579,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v258 = FilterKindList_TypeInfo->static_fields;
   v258->RarityFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v250;
-  sub_1C13CC8(&v258->RarityFilterKindList);
-  v259 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v258->RarityFilterKindList);
+  v259 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v259,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v259 )
     goto LABEL_614;
   v260 = v259->fields._items;
@@ -3597,7 +3597,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       54,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3616,7 +3616,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       55,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3635,7 +3635,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       72,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3654,7 +3654,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       73,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3673,7 +3673,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       74,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3692,7 +3692,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       75,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3711,7 +3711,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       76,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
     v260 = v259->fields._items;
     v261 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v259->fields._version;
@@ -3730,7 +3730,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v259,
       56,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v261[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3739,11 +3739,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v270 = FilterKindList_TypeInfo->static_fields;
   v270->ServantEquipTypeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v259;
-  sub_1C13CC8(&v270->ServantEquipTypeFilterKindList);
-  v271 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v270->ServantEquipTypeFilterKindList);
+  v271 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v271,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v271 )
     goto LABEL_614;
   v272 = v271->fields._items;
@@ -3757,7 +3757,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       77,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3776,7 +3776,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       78,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3795,7 +3795,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       79,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3814,7 +3814,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       80,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3833,7 +3833,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       81,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3852,7 +3852,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       82,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
     v272 = v271->fields._items;
     v273 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v271->fields._version;
@@ -3871,7 +3871,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v271,
       83,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v273[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3880,11 +3880,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v281 = FilterKindList_TypeInfo->static_fields;
   v281->ServantEquipCombineStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v271;
-  sub_1C13CC8(&v281->ServantEquipCombineStatusFilterKindList);
-  v282 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v281->ServantEquipCombineStatusFilterKindList);
+  v282 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v282,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v282 )
     goto LABEL_614;
   v283 = v282->fields._items;
@@ -3898,7 +3898,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v282,
       84,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
     v283 = v282->fields._items;
     v284 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v282->fields._version;
@@ -3917,7 +3917,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v282,
       85,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
     v283 = v282->fields._items;
     v284 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v282->fields._version;
@@ -3936,7 +3936,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v282,
       86,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
     v283 = v282->fields._items;
     v284 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v282->fields._version;
@@ -3955,7 +3955,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v282,
       87,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v284[4] + 192LL) + 112LL));
   }
   else
   {
@@ -3964,11 +3964,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v289 = FilterKindList_TypeInfo->static_fields;
   v289->ServantEquipHaveStatusFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v282;
-  sub_1C13CC8(&v289->ServantEquipHaveStatusFilterKindList);
-  v290 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v289->ServantEquipHaveStatusFilterKindList);
+  v290 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v290,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v290 )
     goto LABEL_614;
   v291 = v290->fields._items;
@@ -3982,7 +3982,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v290,
       30,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v292[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v292[4] + 192LL) + 112LL));
     v291 = v290->fields._items;
     v292 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
     ++v290->fields._version;
@@ -4001,7 +4001,7 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v290,
       31,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v292[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v292[4] + 192LL) + 112LL));
   }
   else
   {
@@ -4010,11 +4010,11 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   }
   v295 = FilterKindList_TypeInfo->static_fields;
   v295->ServantCostumeFilterKind = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v290;
-  sub_1C13CC8(&v295->ServantCostumeFilterKind);
-  v296 = (System_Collections_Generic_List_T__o *)sub_1C13F70(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
+  sub_1C1AB78(&v295->ServantCostumeFilterKind);
+  v296 = (System_Collections_Generic_List_T__o *)sub_1C1AE20(System_Collections_Generic_List_ListViewSort_FilterKind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v296,
-    (const MethodInfo_3612180 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
+    (const MethodInfo_3621844 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind___ctor__);
   if ( !v296 )
     goto LABEL_614;
   v297 = v296->fields._items;
@@ -4033,13 +4033,13 @@ void __fastcall FilterKindList___cctor(const MethodInfo *method)
   System_Collections_Generic_List_Int32Enum___AddWithResize(
     v296,
     32,
-    *(const MethodInfo_36129D4 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
+    *(const MethodInfo_3622098 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
   v297 = v296->fields._items;
   v298 = Method_System_Collections_Generic_List_ListViewSort_FilterKind__Add__;
   ++v296->fields._version;
   if ( !v297 )
 LABEL_614:
-    sub_1C13F80(v6, v7);
+    sub_1C1AE30(v6, v7);
 LABEL_610:
   v300 = v296->fields._size;
   if ( (unsigned int)v300 >= v297->max_length )
@@ -4047,7 +4047,7 @@ LABEL_610:
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v296,
       33,
-      *(const MethodInfo_36129D4 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
+      *(const MethodInfo_3622098 **)(*(_QWORD *)(v298[4] + 192LL) + 112LL));
   }
   else
   {
@@ -4056,7 +4056,7 @@ LABEL_610:
   }
   v301 = FilterKindList_TypeInfo->static_fields;
   v301->MaterialServantCostumeFilterKindList = (struct System_Collections_Generic_List_ListViewSort_FilterKind__o *)v296;
-  sub_1C13CC8(&v301->MaterialServantCostumeFilterKindList);
+  sub_1C1AB78(&v301->MaterialServantCostumeFilterKindList);
 }
 
 

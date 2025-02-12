@@ -17,16 +17,16 @@ System_Collections_IEnumerator_o *__fastcall FGOMeshExplodeFader__FadeOut(
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BB354C & 1) == 0 )
+  if ( (byte_4BC6918 & 1) == 0 )
   {
-    sub_1C13D24(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo, method);
-    byte_4BB354C = 1;
+    sub_1C1ABD4(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo, method);
+    byte_4BC6918 = 1;
   }
-  v3 = sub_1C13F70(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+  v3 = sub_1C1AE20(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C1AB78((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -36,7 +36,7 @@ void __fastcall FGOMeshExplodeFader__Start(FGOMeshExplodeFader_o *this, const Me
   System_Collections_IEnumerator_o *v3; // x1
 
   v3 = FGOMeshExplodeFader__FadeOut(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_70707260((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70779684((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
 }
 
 
@@ -71,11 +71,11 @@ bool __fastcall FGOMeshExplodeFader__FadeOut_d__2__MoveNext(
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_4BB354D & 1) == 0 )
+  if ( (byte_4BC6919 & 1) == 0 )
   {
-    sub_1C13D24(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1C13D24(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BB354D = 1;
+    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BC6919 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -88,7 +88,7 @@ bool __fastcall FGOMeshExplodeFader__FadeOut_d__2__MoveNext(
     if ( _4__this )
       goto LABEL_8;
 LABEL_14:
-    sub_1C13F80(this, method);
+    sub_1C1AE30(this, method);
   }
   if ( _1__state )
     return 0;
@@ -97,7 +97,7 @@ LABEL_14:
     goto LABEL_14;
   UnityEngine_Component__GetComponent_object_(
     (UnityEngine_Component_o *)_4__this,
-    (const MethodInfo_2F85F10 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+    (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v2->fields._t_5__2 = 0.0;
   v12 = 0.0;
 LABEL_8:
@@ -105,7 +105,7 @@ LABEL_8:
   {
     v2->fields.__2__current = 0LL;
     p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-    sub_1C13CC8(p__2__current, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1C1AB78(p__2__current, 0LL, v6, v7, v8, v9, v10, v11);
     result = 1;
     *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
     return result;
@@ -113,7 +113,7 @@ LABEL_8:
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70721988(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70794412(gameObject, 0LL);
   return 0;
 }
 
@@ -134,11 +134,11 @@ void __fastcall __noreturn FGOMeshExplodeFader__FadeOut_d__2__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C13D38(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C13F70(v2);
+  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C13D38(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C13E4C(v3, v4);
+  v4 = sub_1C1ABE8(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C1ACFC(v3, v4);
 }
 
 

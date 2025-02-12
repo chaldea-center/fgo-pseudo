@@ -27,28 +27,28 @@ void __fastcall BattleResultEventDamageItemComponent___cctor(const MethodInfo *m
   FollowerInfo_o *v25; // x6
   PartyListViewItem_o *v26; // x7
 
-  if ( (byte_4BB7A8C & 1) == 0 )
+  if ( (byte_4BCAE72 & 1) == 0 )
   {
-    sub_1C13D24(&BattleResultEventDamageItemComponent_TypeInfo, v1);
-    sub_1C13D24(&StringLiteral_20860/*"img_txt_blacklist"*/, v8);
-    sub_1C13D24(&StringLiteral_2987/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/, v9);
-    sub_1C13D24(&StringLiteral_20581/*"imageText "*/, v10);
-    byte_4BB7A8C = 1;
+    sub_1C1ABD4(&BattleResultEventDamageItemComponent_TypeInfo, v1);
+    sub_1C1ABD4(&StringLiteral_20874/*"img_txt_dpreward"*/, v8);
+    sub_1C1ABD4(&StringLiteral_2988/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/, v9);
+    sub_1C1ABD4(&StringLiteral_20595/*"img_bg_dp"*/, v10);
+    byte_4BCAE72 = 1;
   }
-  BattleResultEventDamageItemComponent_TypeInfo->static_fields->DAMAGE_POINT_REWARD_AT_LOCALE_KEY = (struct System_String_o *)StringLiteral_2987/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/;
-  sub_1C13CC8(
+  BattleResultEventDamageItemComponent_TypeInfo->static_fields->DAMAGE_POINT_REWARD_AT_LOCALE_KEY = (struct System_String_o *)StringLiteral_2988/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)BattleResultEventDamageItemComponent_TypeInfo->static_fields,
-    StringLiteral_2987/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/,
+    StringLiteral_2988/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v11 = StringLiteral_20860/*"img_txt_blacklist"*/;
+  v11 = StringLiteral_20874/*"img_txt_dpreward"*/;
   static_fields = BattleResultEventDamageItemComponent_TypeInfo->static_fields;
-  static_fields->DAMAGE_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_20860/*"img_txt_blacklist"*/;
-  sub_1C13CC8(
+  static_fields->DAMAGE_POINT_REWARD_TITLE_NAME = (struct System_String_o *)StringLiteral_20874/*"img_txt_dpreward"*/;
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&static_fields->DAMAGE_POINT_REWARD_TITLE_NAME,
     v11,
     v13,
@@ -57,10 +57,10 @@ void __fastcall BattleResultEventDamageItemComponent___cctor(const MethodInfo *m
     v16,
     v17,
     v18);
-  v19 = StringLiteral_20581/*"imageText "*/;
+  v19 = StringLiteral_20595/*"img_bg_dp"*/;
   v20 = BattleResultEventDamageItemComponent_TypeInfo->static_fields;
-  v20->DAMAGE_POINT_REWARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_20581/*"imageText "*/;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v20->DAMAGE_POINT_REWARD_SPRITE_NAME, v19, v21, v22, v23, v24, v25, v26);
+  v20->DAMAGE_POINT_REWARD_SPRITE_NAME = (struct System_String_o *)StringLiteral_20595/*"img_bg_dp"*/;
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v20->DAMAGE_POINT_REWARD_SPRITE_NAME, v19, v21, v22, v23, v24, v25, v26);
 }
 
 
@@ -68,10 +68,10 @@ void __fastcall BattleResultEventDamageItemComponent___ctor(
         BattleResultEventDamageItemComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB7A8B & 1) == 0 )
+  if ( (byte_4BCAE71 & 1) == 0 )
   {
-    sub_1C13D24(&BattleResultEventItemComponent_TypeInfo, method);
-    byte_4BB7A8B = 1;
+    sub_1C1ABD4(&BattleResultEventItemComponent_TypeInfo, method);
+    byte_4BCAE71 = 1;
   }
   if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo);
@@ -95,11 +95,11 @@ void __fastcall BattleResultEventDamageItemComponent__SetTitleSprite(
   Il2CppObject *v11; // x20
   BattleResultEventDamageItemComponent_c *v12; // x0
 
-  if ( (byte_4BB7A8A & 1) == 0 )
+  if ( (byte_4BCAE70 & 1) == 0 )
   {
-    sub_1C13D24(&BattleResultEventDamageItemComponent_TypeInfo, *(_QWORD *)&currentGroup);
-    sub_1C13D24(&Method_BetterList_string__Contains__, v4);
-    byte_4BB7A8A = 1;
+    sub_1C1ABD4(&BattleResultEventDamageItemComponent_TypeInfo, *(_QWORD *)&currentGroup);
+    sub_1C1ABD4(&Method_BetterList_string__Contains__, v4);
+    byte_4BCAE70 = 1;
   }
   v5 = BattleResultEventDamageItemComponent_TypeInfo;
   if ( !BattleResultEventDamageItemComponent_TypeInfo->_2.cctor_finished )
@@ -109,7 +109,7 @@ void __fastcall BattleResultEventDamageItemComponent__SetTitleSprite(
   }
   DAMAGE_POINT_REWARD_TITLE_NAME = v5->static_fields->DAMAGE_POINT_REWARD_TITLE_NAME;
   v7 = System_Int32__ToString((int)this + 168, 0LL);
-  mAtlas = (UIAtlas_o *)System_String__Concat_62967944(DAMAGE_POINT_REWARD_TITLE_NAME, v7, 0LL);
+  mAtlas = (UIAtlas_o *)System_String__Concat_63040368(DAMAGE_POINT_REWARD_TITLE_NAME, v7, 0LL);
   titleSp = this->fields.titleSp;
   if ( !titleSp )
     goto LABEL_15;
@@ -123,7 +123,7 @@ void __fastcall BattleResultEventDamageItemComponent__SetTitleSprite(
   if ( !BetterList_object___Contains(
           (BetterList_T__o *)mAtlas,
           v11,
-          (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
+          (const MethodInfo_31C07C8 *)Method_BetterList_string__Contains__) )
   {
     v12 = BattleResultEventDamageItemComponent_TypeInfo;
     if ( !BattleResultEventDamageItemComponent_TypeInfo->_2.cctor_finished )
@@ -139,7 +139,7 @@ void __fastcall BattleResultEventDamageItemComponent__SetTitleSprite(
         (mAtlas = (UIAtlas_o *)this->fields.titleSp) == 0LL) )
   {
 LABEL_15:
-    sub_1C13F80(mAtlas, v9);
+    sub_1C1AE30(mAtlas, v9);
   }
   ((void (__fastcall *)(UIAtlas_o *, void *))mAtlas->klass[2]._1.typeMetadataHandle)(
     mAtlas,
@@ -246,25 +246,25 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
   int32_t eventIda; // [xsp+2Ch] [xbp-44h] BYREF
 
   eventIda = eventId;
-  if ( (byte_4BB7A89 & 1) == 0 )
+  if ( (byte_4BCAE6F & 1) == 0 )
   {
-    sub_1C13D24(&AtlasManager_TypeInfo, drop);
-    sub_1C13D24(&BattleResultEventDamageItemComponent_TypeInfo, v9);
-    sub_1C13D24(&Method_BetterList_string__Contains__, v10);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventMaster___, v11);
-    sub_1C13D24(&Method_DataManager_GetMasterData_EventRewardMaster___, v12);
-    sub_1C13D24(&Method_DataManager_GetMasterData_UserEventRaidMaster___, v13);
-    sub_1C13D24(&long_TypeInfo, v14);
-    sub_1C13D24(&LocalizationManager_TypeInfo, v15);
-    sub_1C13D24(&UnityEngine_Object_TypeInfo, v16);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1C13D24(&StringLiteral_2986/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, v18);
-    sub_1C13D24(&StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v19);
-    sub_1C13D24(&StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, v20);
-    sub_1C13D24(&StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v21);
-    sub_1C13D24(&StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, v22);
-    sub_1C13D24(&StringLiteral_1/*""*/, v23);
-    byte_4BB7A89 = 1;
+    sub_1C1ABD4(&AtlasManager_TypeInfo, drop);
+    sub_1C1ABD4(&BattleResultEventDamageItemComponent_TypeInfo, v9);
+    sub_1C1ABD4(&Method_BetterList_string__Contains__, v10);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventMaster___, v11);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_EventRewardMaster___, v12);
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_UserEventRaidMaster___, v13);
+    sub_1C1ABD4(&long_TypeInfo, v14);
+    sub_1C1ABD4(&LocalizationManager_TypeInfo, v15);
+    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v16);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C1ABD4(&StringLiteral_2987/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/, v18);
+    sub_1C1ABD4(&StringLiteral_2974/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v19);
+    sub_1C1ABD4(&StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, v20);
+    sub_1C1ABD4(&StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, v21);
+    sub_1C1ABD4(&StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, v22);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v23);
+    byte_4BCAE6F = 1;
   }
   countText = 0LL;
   nameText = 0LL;
@@ -281,7 +281,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
     }
     DAMAGE_POINT_REWARD_AT_LOCALE_KEY = v24->static_fields->DAMAGE_POINT_REWARD_AT_LOCALE_KEY;
     v26 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-    v27 = System_String__Concat_62967944(DAMAGE_POINT_REWARD_AT_LOCALE_KEY, v26, 0LL);
+    v27 = System_String__Concat_63040368(DAMAGE_POINT_REWARD_AT_LOCALE_KEY, v26, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( !LocalizationManager__ContainsKey(v27, 0LL) )
@@ -302,20 +302,20 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
     {
       UILabel__set_text(titleAtLabel, Instance, 0LL);
       titleNextItemLabel = this->fields.titleNextItemLabel;
-      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2986/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, 0LL);
+      Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2987/*"BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM"*/, 0LL);
       if ( titleNextItemLabel )
       {
         UILabel__set_text(titleNextItemLabel, Instance, 0LL);
         BattleResultEventItemComponent__createDropInfo((BattleResultEventItemComponent_o *)this, drop, v33);
-        BattleResultEventItemComponent__SetItemWindow_45512248((BattleResultEventItemComponent_o *)this, drop, v34);
-        Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        BattleResultEventItemComponent__SetItemWindow_45572944((BattleResultEventItemComponent_o *)this, drop, v34);
+        Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( Instance )
         {
           MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
+                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
           this->fields.usrEvent = (struct UserEventRaidMaster_o *)MasterData_object;
-          sub_1C13CC8(
+          sub_1C1AB78(
             (PartyOrganizationUtility_o *)&this->fields.usrEvent,
             (int64_t)MasterData_object,
             v36,
@@ -328,12 +328,12 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
           if ( !usrEvent )
             return;
           TotalDamagePoint = UserEventRaidMaster__getTotalDamagePoint(usrEvent, eventIda, 0LL);
-          Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( Instance )
           {
             Instance = (System_String_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)Instance,
-                                            (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventRewardMaster___);
+                                            (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventRewardMaster___);
             if ( Instance )
             {
               NextEventRewardEntity = EventRewardMaster__GetNextEventRewardEntity(
@@ -347,12 +347,12 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( UnityEngine_Object__op_Inequality(eventIconSprite, 0LL, 0LL) )
               {
-                Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                 if ( !Instance )
                   goto LABEL_52;
                 Instance = (System_String_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)Instance,
-                                                (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_EventMaster___);
+                                                (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_EventMaster___);
                 if ( !Instance )
                   goto LABEL_52;
                 RaidEventImageId = EventMaster__GetRaidEventImageId((EventMaster_o *)Instance, eventIda, 0LL);
@@ -370,7 +370,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
               }
               DAMAGE_POINT_REWARD_SPRITE_NAME = v50->static_fields->DAMAGE_POINT_REWARD_SPRITE_NAME;
               v52 = System_Int32__ToString((int)this + 168, 0LL);
-              Instance = System_String__Concat_62967944(DAMAGE_POINT_REWARD_SPRITE_NAME, v52, 0LL);
+              Instance = System_String__Concat_63040368(DAMAGE_POINT_REWARD_SPRITE_NAME, v52, 0LL);
               eventPointAtSprite = this->fields.eventPointAtSprite;
               if ( eventPointAtSprite )
               {
@@ -384,7 +384,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                     if ( !BetterList_object___Contains(
                             (BetterList_T__o *)Instance,
                             v54,
-                            (const MethodInfo_31B0E78 *)Method_BetterList_string__Contains__) )
+                            (const MethodInfo_31C07C8 *)Method_BetterList_string__Contains__) )
                     {
                       v55 = BattleResultEventDamageItemComponent_TypeInfo;
                       if ( !BattleResultEventDamageItemComponent_TypeInfo->_2.cctor_finished )
@@ -404,7 +404,7 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                         atLabel = this->fields.atLabel;
                         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
+                        v57 = LocalizationManager__Get((System_String_o *)StringLiteral_2974/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
                         v68 = v46->fields.point - TotalDamagePoint;
                         v61 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v68, v58, v59, v60);
                         Instance = System_String__Format(v57, v61, 0LL);
@@ -416,9 +416,9 @@ void __fastcall BattleResultEventDamageItemComponent__setResultData(
                           v64 = isQp;
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
+                          v65 = LocalizationManager__Get((System_String_o *)StringLiteral_2973/*"BATTLE_RESULEVENTTITEM_NEXT_ITEM"*/, 0LL);
                           v66 = (Il2CppObject *)(v64 ? StringLiteral_1/*""*/ : nameText);
-                          Instance = System_String__Format_62982316(v65, v66, (Il2CppObject *)countText, 0LL);
+                          Instance = System_String__Format_63054740(v65, v66, (Il2CppObject *)countText, 0LL);
                           if ( nextItemLabel )
                           {
 LABEL_55:
@@ -432,12 +432,12 @@ LABEL_55:
                         v67 = this->fields.atLabel;
                         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2971/*"BATTLE_RESULEVENTTITEM_AT_POINT"*/, 0LL);
+                        Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2972/*"BATTLE_RESULEVENTTITEM_AT_POINT_NONE"*/, 0LL);
                         if ( v67 )
                         {
                           UILabel__set_text(v67, Instance, 0LL);
                           nextItemLabel = this->fields.nextItemLabel;
-                          Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2969/*"BATTLE_RESULEVENTTITEM_AT_ITEM"*/, 0LL);
+                          Instance = LocalizationManager__Get((System_String_o *)StringLiteral_2970/*"BATTLE_RESULEVENTTITEM_AT_ITEM_NONE"*/, 0LL);
                           if ( nextItemLabel )
                             goto LABEL_55;
                         }
@@ -452,6 +452,6 @@ LABEL_55:
       }
     }
 LABEL_52:
-    sub_1C13F80(Instance, v31);
+    sub_1C1AE30(Instance, v31);
   }
 }

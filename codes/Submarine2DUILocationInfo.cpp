@@ -61,18 +61,18 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   __int64 v60; // x10
   Il2CppObject *v61; // x8
 
-  if ( (byte_4BB1209 & 1) == 0 )
+  if ( (byte_4BC45C3 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_Rect__Add__, method);
-    sub_1C13D24(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
-    sub_1C13D24(&System_Collections_Generic_List_Rect__TypeInfo, v4);
-    byte_4BB1209 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Rect__Add__, method);
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
+    sub_1C1ABD4(&System_Collections_Generic_List_Rect__TypeInfo, v4);
+    byte_4BC45C3 = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0LL);
-  v5 = (System_Collections_Generic_List_Rect__o *)sub_1C13F70(System_Collections_Generic_List_Rect__TypeInfo);
+  v5 = (System_Collections_Generic_List_Rect__o *)sub_1C1AE20(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v5,
-    (const MethodInfo_363D6E0 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_364CDA4 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v6 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
          this,
          this->klass->vtable._9_GetStorageRect.methodPtr);
@@ -89,7 +89,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v8,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
@@ -114,7 +114,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v16,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
@@ -139,7 +139,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v24,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
   }
   else
   {
@@ -164,7 +164,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v32,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
   }
   else
   {
@@ -189,7 +189,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v40,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
   }
   else
   {
@@ -208,14 +208,14 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   ++v5->fields._version;
   if ( !v58 )
 LABEL_29:
-    sub_1C13F80(v6, v7);
+    sub_1C1AE30(v6, v7);
   v60 = v5->fields._size;
   if ( (unsigned int)v60 >= v58->max_length )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v54,
-      *(const MethodInfo_363DF6C **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+      *(const MethodInfo_364D630 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
   }
   else
   {
@@ -227,7 +227,7 @@ LABEL_29:
     HIDWORD(v61[2].monitor) = v57;
   }
   this->fields._rects_k__BackingField = v5;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v48, v49, v50, v51, v52, v53);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v48, v49, v50, v51, v52, v53);
 }
 
 

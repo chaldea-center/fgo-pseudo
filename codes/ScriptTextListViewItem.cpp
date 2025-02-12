@@ -19,18 +19,18 @@ void __fastcall ScriptTextListViewItem___ctor(
   PartyListViewItem_o *v18; // x7
   int v19; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BB1EA1 & 1) == 0 )
+  if ( (byte_4BC525F & 1) == 0 )
   {
-    sub_1C13D24(&int_TypeInfo, *(_QWORD *)&index);
-    sub_1C13D24(&StringLiteral_16272/*"[r]"*/, v7);
-    byte_4BB1EA1 = 1;
+    sub_1C1ABD4(&int_TypeInfo, *(_QWORD *)&index);
+    sub_1C1ABD4(&StringLiteral_16286/*"[{0:D4}] {1}"*/, v7);
+    byte_4BC525F = 1;
   }
-  ListViewItem___ctor_41884928((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
   v19 = index + 1;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v8, v9, v10);
-  v12 = System_String__Format_62982316((System_String_o *)StringLiteral_16272/*"[r]"*/, v11, (Il2CppObject *)lineText, 0LL);
+  v12 = System_String__Format_63054740((System_String_o *)StringLiteral_16286/*"[{0:D4}] {1}"*/, v11, (Il2CppObject *)lineText, 0LL);
   this->fields.lineText = v12;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.lineText, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.lineText, (int64_t)v12, v13, v14, v15, v16, v17, v18);
 }
 
 

@@ -16,19 +16,19 @@ System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetIconImageName(
   __int64 v5; // x1
   System_String_o **v6; // x8
 
-  if ( (byte_4BB314B & 1) == 0 )
+  if ( (byte_4BC6518 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_24331/*"thistle"*/, *(_QWORD *)&state);
-    sub_1C13D24(&StringLiteral_24330/*"this command is not supported for delay : "*/, v4);
-    sub_1C13D24(&StringLiteral_1/*""*/, v5);
-    byte_4BB314B = 1;
+    sub_1C1ABD4(&StringLiteral_24351/*"time_status_icon_noon"*/, *(_QWORD *)&state);
+    sub_1C1ABD4(&StringLiteral_24350/*"time_status_icon_night"*/, v4);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v5);
+    byte_4BC6518 = 1;
   }
   if ( (state & 0xFFFFFFFE) == 2 )
-    v6 = (System_String_o **)&StringLiteral_24330/*"this command is not supported for delay : "*/;
+    v6 = (System_String_o **)&StringLiteral_24350/*"time_status_icon_night"*/;
   else
     v6 = (System_String_o **)&StringLiteral_1/*""*/;
   if ( (unsigned int)state <= 1 )
-    v6 = (System_String_o **)&StringLiteral_24331/*"thistle"*/;
+    v6 = (System_String_o **)&StringLiteral_24351/*"time_status_icon_noon"*/;
   return *v6;
 }
 
@@ -43,17 +43,17 @@ System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetLabelImageName
   __int64 v5; // x1
   System_String_o **v6; // x8
 
-  if ( (byte_4BB314C & 1) == 0 )
+  if ( (byte_4BC6519 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_24332/*"threads"*/, *(_QWORD *)&state);
-    sub_1C13D24(&StringLiteral_1/*""*/, v4);
-    sub_1C13D24(&StringLiteral_24328/*"th-TH"*/, v5);
-    byte_4BB314C = 1;
+    sub_1C1ABD4(&StringLiteral_24352/*"time_status_icon_story"*/, *(_QWORD *)&state);
+    sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
+    sub_1C1ABD4(&StringLiteral_24348/*"time_status_icon_free"*/, v5);
+    byte_4BC6519 = 1;
   }
   if ( (unsigned int)state > 3 )
     v6 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v6 = (System_String_o **)*(&off_45E6098 + state);
+    v6 = (System_String_o **)*(&off_45F75B8 + state);
   return *v6;
 }
 
@@ -75,10 +75,10 @@ void __fastcall TitleInfoEventTimeImgListViewDraw__SetItem(
   System_String_o *LabelImageName; // x0
 
   v4 = this;
-  if ( (byte_4BB314A & 1) == 0 )
+  if ( (byte_4BC6517 & 1) == 0 )
   {
-    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C13D24(&AtlasManager_TypeInfo, *(_QWORD *)&state);
-    byte_4BB314A = 1;
+    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C1ABD4(&AtlasManager_TypeInfo, *(_QWORD *)&state);
+    byte_4BC6517 = 1;
   }
   timeIcon = v4->fields.timeIcon;
   IconImageName = TitleInfoEventTimeImgListViewDraw__GetIconImageName(this, state, method);
@@ -95,7 +95,7 @@ void __fastcall TitleInfoEventTimeImgListViewDraw__SetItem(
         AtlasManager__SetEventUI(stateSprite, LabelImageName, 0LL),
         (v8 = v4->fields.stateSprite) == 0LL) )
   {
-    sub_1C13F80(v8, v7);
+    sub_1C1AE30(v8, v7);
   }
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._33_MakePixelPerfect.method)(
     v8,

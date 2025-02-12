@@ -4,7 +4,7 @@ void __fastcall GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodIn
 }
 
 
-void __fastcall GachaRqParamData___ctor_33999640(
+void __fastcall GachaRqParamData___ctor_34043236(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -44,7 +44,7 @@ void __fastcall GachaRqParamData___ctor_33999640(
   v19->fields.shopIdIdx = shopIdIdx;
   v19->fields.gachaSubId = gachaSubId;
   v19->fields.storyAdjustIds = storyAdjustIds;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&v19->fields.storyAdjustIds,
     (int64_t)storyAdjustIds,
     v20,
@@ -56,5 +56,5 @@ void __fastcall GachaRqParamData___ctor_33999640(
   v19->fields.selectBonusList = selectBonusList;
   v19 = (GachaRqParamData_o *)((char *)v19 + 64);
   LOBYTE(v19[-1].fields.selectBonusList) = isAppendSummon;
-  sub_1C13CC8((PartyOrganizationUtility_o *)v19, (int64_t)selectBonusList, v26, v27, v28, v29, v30, v31);
+  sub_1C1AB78((PartyOrganizationUtility_o *)v19, (int64_t)selectBonusList, v26, v27, v28, v29, v30, v31);
 }

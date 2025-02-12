@@ -1,13 +1,13 @@
 void __fastcall GachaExtraGiftEntity___ctor(GachaExtraGiftEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BB496E & 1) == 0 )
+  if ( (byte_4BC7D3E & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BB496E = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BC7D3E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32361B8 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaExtraGiftEntity__CreatePK(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_4BB496D & 1) == 0 )
+  if ( (byte_4BC7D3D & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&idx);
-    byte_4BB496D = 1;
+    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&idx);
+    byte_4BC7D3D = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            idx,
            giftId,
-           (const MethodInfo_2F8DB20 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

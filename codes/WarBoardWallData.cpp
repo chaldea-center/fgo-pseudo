@@ -25,11 +25,11 @@ void __fastcall WarBoardWallData___ctor(
   int32_t defeatPoint; // w8
   WarBoardStageWallEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BB2461 & 1) == 0 )
+  if ( (byte_4BC581F & 1) == 0 )
   {
-    sub_1C13D24(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___, layout);
-    sub_1C13D24(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4BB2461 = 1;
+    sub_1C1ABD4(&Method_DataManager_GetMasterData_WarBoardStageWallMaster___, layout);
+    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4BC581F = 1;
   }
   entity = 0LL;
   System_Object___ctor((Il2CppObject *)this, 0LL);
@@ -39,7 +39,7 @@ void __fastcall WarBoardWallData___ctor(
   this->fields._wallId_k__BackingField = layout->fields.effectId;
   Individuality = WarBoardStageLayoutEntity__GetIndividuality(layout, 0LL);
   this->fields._individuality_k__BackingField = Individuality;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._individuality_k__BackingField,
     (int64_t)Individuality,
     v11,
@@ -51,14 +51,14 @@ void __fastcall WarBoardWallData___ctor(
   breakPoint = layout->fields.breakPoint;
   this->fields._breakPoint_k__BackingField = breakPoint;
   this->fields._breakPointMax_k__BackingField = breakPoint;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3869BD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F8F46C *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0LL )
+                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_WarBoardStageWallMaster___)) == 0LL )
   {
 LABEL_12:
-    sub_1C13F80(Instance, v9);
+    sub_1C1AE30(Instance, v9);
   }
   if ( WarBoardStageWallMaster__TryGetEntity(
          (WarBoardStageWallMaster_o *)Instance,
@@ -69,7 +69,7 @@ LABEL_12:
   {
     v24 = entity;
     this->fields.wallEntity = entity;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.wallEntity, (int64_t)v24, v18, v19, v20, v21, v22, v23);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.wallEntity, (int64_t)v24, v18, v19, v20, v21, v22, v23);
   }
   if ( wallData )
   {
@@ -98,16 +98,16 @@ System_Collections_Generic_List_WarBoardTaskBase__o *__fastcall WarBoardWallData
   WarBoardWallComponent_o *component; // x0
   int32_t breakPoint_k__BackingField; // w1
 
-  if ( (byte_4BB2465 & 1) == 0 )
+  if ( (byte_4BC5823 & 1) == 0 )
   {
-    sub_1C13D24(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, *(_QWORD *)&decPoint);
-    sub_1C13D24(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v5);
-    byte_4BB2465 = 1;
+    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__, *(_QWORD *)&decPoint);
+    sub_1C1ABD4(&System_Collections_Generic_List_WarBoardTaskBase__TypeInfo, v5);
+    byte_4BC5823 = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C13F70(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_WarBoardTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_362C998 *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
+    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_WarBoardTaskBase___ctor__);
   component = this->fields.component;
   if ( !component )
     goto LABEL_9;
@@ -128,7 +128,7 @@ System_Collections_Generic_List_WarBoardTaskBase__o *__fastcall WarBoardWallData
       return (System_Collections_Generic_List_WarBoardTaskBase__o *)v6;
     }
 LABEL_9:
-    sub_1C13F80(component, v7);
+    sub_1C1AE30(component, v7);
   }
   WarBoardWallComponent__OnBreak(
     component,
@@ -160,10 +160,10 @@ WarBoardStageWallEntity_o *__fastcall WarBoardWallData__GetWallEntity(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardWallData__SetBreakPoint(WarBoardWallData_o *this, int32_t point, const MethodInfo *method)
 {
-  if ( (byte_4BB2464 & 1) == 0 )
+  if ( (byte_4BC5822 & 1) == 0 )
   {
-    sub_1C13D24(&AStarSearch_TypeInfo, *(_QWORD *)&point);
-    byte_4BB2464 = 1;
+    sub_1C1ABD4(&AStarSearch_TypeInfo, *(_QWORD *)&point);
+    byte_4BC5822 = 1;
   }
   this->fields._breakPoint_k__BackingField = point;
   if ( point <= 0 )
@@ -188,7 +188,7 @@ void __fastcall WarBoardWallData__SetComponent(
   PartyListViewItem_o *v7; // x7
 
   this->fields.component = component;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields.component,
     (int64_t)component,
     (int64_t)method,
@@ -206,7 +206,7 @@ void __fastcall WarBoardWallData__SetTouchEnable(WarBoardWallData_o *this, bool 
 
   component = this->fields.component;
   if ( !component )
-    sub_1C13F80(0LL, enable);
+    sub_1C1AE30(0LL, enable);
   WarBoardWallComponent__SetTouchEnable(component, enable, 0LL);
 }
 
@@ -217,7 +217,7 @@ void __fastcall WarBoardWallData__SetWallEnable(WarBoardWallData_o *this, bool e
 
   component = this->fields.component;
   if ( !component )
-    sub_1C13F80(0LL, enable);
+    sub_1C1AE30(0LL, enable);
   WarBoardWallComponent__SetColliderEnable(component, enable, 0LL);
 }
 
@@ -347,10 +347,10 @@ System_String_o *__fastcall WarBoardWallData__get_wallMessage(WarBoardWallData_o
   struct WarBoardStageWallEntity_o *wallEntity; // x8
   struct System_String_StaticFields *p_message; // x8
 
-  if ( (byte_4BB2463 & 1) == 0 )
+  if ( (byte_4BC5821 & 1) == 0 )
   {
-    sub_1C13D24(&string_TypeInfo, method);
-    byte_4BB2463 = 1;
+    sub_1C1ABD4(&string_TypeInfo, method);
+    byte_4BC5821 = 1;
   }
   wallEntity = this->fields.wallEntity;
   if ( wallEntity )
@@ -366,10 +366,10 @@ System_String_o *__fastcall WarBoardWallData__get_wallName(WarBoardWallData_o *t
   struct WarBoardStageWallEntity_o *wallEntity; // x8
   struct System_String_StaticFields *p_name; // x8
 
-  if ( (byte_4BB2462 & 1) == 0 )
+  if ( (byte_4BC5820 & 1) == 0 )
   {
-    sub_1C13D24(&string_TypeInfo, method);
-    byte_4BB2462 = 1;
+    sub_1C1ABD4(&string_TypeInfo, method);
+    byte_4BC5820 = 1;
   }
   wallEntity = this->fields.wallEntity;
   if ( wallEntity )
@@ -404,7 +404,7 @@ void __fastcall WarBoardWallData__set_individuality(
   PartyListViewItem_o *v7; // x7
 
   this->fields._individuality_k__BackingField = value;
-  sub_1C13CC8(
+  sub_1C1AB78(
     (PartyOrganizationUtility_o *)&this->fields._individuality_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -449,7 +449,7 @@ void __fastcall WarBoardWallData_SaveData___ctor(WarBoardWallData_SaveData_o *th
 }
 
 
-void __fastcall WarBoardWallData_SaveData___ctor_36635276(
+void __fastcall WarBoardWallData_SaveData___ctor_36682700(
         WarBoardWallData_SaveData_o *this,
         WarBoardWallData_o *owner,
         const MethodInfo *method)
@@ -471,16 +471,16 @@ void __fastcall WarBoardWallData_SaveData___ctor_36635276(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.owner = owner;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)owner, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)owner, v5, v6, v7, v8, v9, v10);
   v18 = this->fields.owner;
   if ( !v18 )
-    sub_1C13F80(0LL, v11);
+    sub_1C1AE30(0LL, v11);
   this->fields.wallId = v18->fields._wallId_k__BackingField;
   this->fields.squareIndex = v18->fields._squareIndex_k__BackingField;
   this->fields.isDestroy = v18->fields._isDestroy_k__BackingField;
   this->fields.breakPoint = v18->fields._breakPoint_k__BackingField;
   v18->fields.localSaveData = this;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&v18->fields.localSaveData, (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&v18->fields.localSaveData, (int64_t)this, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -535,14 +535,14 @@ void __fastcall WarBoardWallData_SaveData__SetOwner(
   struct WarBoardWallData_o *owner; // x0
 
   if ( !data )
-    sub_1C13F80(this, 0LL);
+    sub_1C1AE30(this, 0LL);
   Wall = WarBoardData__GetWall(data, this->fields.squareIndex, 1, 0LL);
   this->fields.owner = Wall;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)Wall, v5, v6, v7, v8, v9, v10);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.owner, (int64_t)Wall, v5, v6, v7, v8, v9, v10);
   owner = this->fields.owner;
   if ( owner )
   {
     owner->fields.localSaveData = this;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&owner->fields.localSaveData, (int64_t)this, v11, v12, v13, v14, v15, v16);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&owner->fields.localSaveData, (int64_t)this, v11, v12, v13, v14, v15, v16);
   }
 }

@@ -18,7 +18,7 @@ void __fastcall PlayFieldMotionNpcBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
   this->fields.actiontype = 44;
   this->fields.motionName = motionName;
-  sub_1C13CC8((PartyOrganizationUtility_o *)&this->fields.motionName, (int64_t)motionName, v9, v10, v11, v12, v13, v14);
+  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.motionName, (int64_t)motionName, v9, v10, v11, v12, v13, v14);
   this->fields.isForcedSpeedOne = v8;
   this->fields.actiontype = 61;
   BattleLogicTask__setTarget((BattleLogicTask_o *)this, targetId, v15);
@@ -45,21 +45,21 @@ BattleActionData_o *__fastcall PlayFieldMotionNpcBattleLogicTask__MakeActionData
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4BB74B4 & 1) == 0 )
+  if ( (byte_4BCA896 & 1) == 0 )
   {
-    sub_1C13D24(&PlayFieldMotionNpcActionData_TypeInfo, logic);
-    byte_4BB74B4 = 1;
+    sub_1C1ABD4(&PlayFieldMotionNpcActionData_TypeInfo, logic);
+    byte_4BCA896 = 1;
   }
-  if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, void *))this->klass->vtable._8_IsMakeAble.method)(
+  if ( (((__int64 (__fastcall *)(PlayFieldMotionNpcBattleLogicTask_o *, BattleLogic_o *, void *))this->klass->vtable._10_IsMakeAble.method)(
           this,
           logic,
           this->klass[1]._1.image) & 1) == 0 )
     return 0LL;
   TargetId = PlayFieldMotionNpcBattleLogicTask__get_TargetId(this, v5);
-  v7 = (PlayFieldMotionNpcActionData_o *)sub_1C13F70(PlayFieldMotionNpcActionData_TypeInfo);
+  v7 = (PlayFieldMotionNpcActionData_o *)sub_1C1AE20(PlayFieldMotionNpcActionData_TypeInfo);
   PlayFieldMotionNpcActionData___ctor(v7, TargetId, 0LL);
   if ( !logic )
-    sub_1C13F80(v8, v9);
+    sub_1C1AE30(v8, v9);
   return BattleLogic__CreateCommonFieldPlayMotion(logic, (BattleLogicTask_o *)this, (BattleActionData_o *)v7, 0LL);
 }
 
@@ -68,14 +68,14 @@ int32_t __fastcall PlayFieldMotionNpcBattleLogicTask__get_TargetId(
         PlayFieldMotionNpcBattleLogicTask_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BB74B3 & 1) == 0 )
+  if ( (byte_4BCA895 & 1) == 0 )
   {
-    sub_1C13D24(&Method_BasicHelper_IndexValue_int____77472272, method);
-    byte_4BB74B3 = 1;
+    sub_1C1ABD4(&Method_BasicHelper_IndexValue_int____77549168, method);
+    byte_4BCA895 = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.targetIdlist,
            0,
            -1,
-           (const MethodInfo_2F7DF50 *)Method_BasicHelper_IndexValue_int____77472272);
+           (const MethodInfo_2F8DF74 *)Method_BasicHelper_IndexValue_int____77549168);
 }

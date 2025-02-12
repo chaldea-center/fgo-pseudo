@@ -28,7 +28,7 @@ void __fastcall ScriptFsmObject__SendEvent(
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C13F80(0LL, v5);
+    sub_1C1AE30(0LL, v5);
   PlayMakerFSM__SendEvent(fsm, eventName, 0LL);
 }
 
@@ -44,7 +44,7 @@ void __fastcall ScriptFsmObject__SetBool(
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0LL)) == 0LL )
-    sub_1C13F80(fsm, name);
+    sub_1C1AE30(fsm, name);
   FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0LL);
   if ( FsmBool )
     FsmBool->fields.value = value;
@@ -62,7 +62,7 @@ void __fastcall ScriptFsmObject__SetFloat(
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0LL)) == 0LL )
-    sub_1C13F80(fsm, name);
+    sub_1C1AE30(fsm, name);
   FsmFloat = HutongGames_PlayMaker_FsmVariables__GetFsmFloat((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0LL);
   if ( FsmFloat )
     FsmFloat->fields.value = value;
@@ -81,7 +81,7 @@ void __fastcall ScriptFsmObject__SetState(
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C13F80(0LL, v5);
+    sub_1C1AE30(0LL, v5);
   PlayMakerFSM__SetState(fsm, stateName, 0LL);
 }
 
@@ -103,12 +103,12 @@ void __fastcall ScriptFsmObject__SetString(
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0LL)) == 0LL )
-    sub_1C13F80(fsm, name);
+    sub_1C1AE30(fsm, name);
   FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0LL);
   if ( FsmString )
   {
     FsmString->fields.value = value;
-    sub_1C13CC8((PartyOrganizationUtility_o *)&FsmString->fields.value, (int64_t)value, v8, v9, v10, v11, v12, v13);
+    sub_1C1AB78((PartyOrganizationUtility_o *)&FsmString->fields.value, (int64_t)value, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -117,13 +117,13 @@ void __fastcall ScriptFsmObject__Skip(ScriptFsmObject_o *this, const MethodInfo 
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4BB6335 & 1) == 0 )
+  if ( (byte_4BC9717 & 1) == 0 )
   {
-    sub_1C13D24(&StringLiteral_12370/*"SKILLCHARGETURN_TXT"*/, method);
-    byte_4BB6335 = 1;
+    sub_1C1ABD4(&StringLiteral_12382/*"SKIP"*/, method);
+    byte_4BC9717 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
-    sub_1C13F80(0LL, method);
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12370/*"SKILLCHARGETURN_TXT"*/, 0LL);
+    sub_1C1AE30(0LL, method);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12382/*"SKIP"*/, 0LL);
 }
