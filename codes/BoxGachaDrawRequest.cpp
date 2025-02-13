@@ -1,41 +1,38 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BoxGachaDrawRequest__beginRequest(
         BoxGachaDrawRequest_o *this,
         int32_t gachaId,
         int32_t num,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  const MethodInfo *v7; // x3
+  const MethodInfo *v8; // x1
 
-  if ( (byte_4BC9356 & 1) == 0 )
+  if ( (byte_4BDDE00 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_22566/*"num"*/, *(_QWORD *)&gachaId);
-    sub_1C1ABD4(&StringLiteral_17671/*"boxGachaId"*/, v7);
-    byte_4BC9356 = 1;
+    sub_1C21E38(&StringLiteral_22585/*"num"*/);
+    sub_1C21E38(&StringLiteral_17684/*"boxGachaId"*/);
+    byte_4BDDE00 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17671/*"boxGachaId"*/, gachaId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22566/*"num"*/, num, v8);
-  RequestBase__beginRequest((RequestBase_o *)this, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17684/*"boxGachaId"*/, gachaId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22585/*"num"*/, num, v7);
+  RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
 
 System_String_o *__fastcall BoxGachaDrawRequest__getURL(BoxGachaDrawRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC9355 & 1) == 0 )
+  if ( (byte_4BDDDFF & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_17668/*"boxGacha/draw"*/, v2);
-    byte_4BC9355 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_17681/*"boxGacha/draw"*/);
+    byte_4BDDDFF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_17668/*"boxGacha/draw"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_17681/*"boxGacha/draw"*/, 0LL);
 }
 
 
@@ -44,46 +41,44 @@ void __fastcall BoxGachaDrawRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  ResponseData_o *v8; // x20
+  ResponseData_o *v5; // x0
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_String_o *v8; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
 
-  if ( (byte_4BC9357 & 1) == 0 )
+  if ( (byte_4BDDE01 & 1) == 0 )
   {
-    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
-    byte_4BC9357 = 1;
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDE01 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(47, responseList, 0LL);
-  if ( v7
-    && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL))
-    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
+  v5 = ResponseCommandKind__SearchData(47, responseList, 0LL);
+  if ( v5
+    && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL))
+    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v8 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v10,
+        v8,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_22437/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = this->fields.CallBack;
+    if ( v10 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
+        v10->fields.original_method_info,
+        StringLiteral_22456/*"ng"*/,
+        *(_QWORD *)&v10->fields.extra_arg);
   }
 }

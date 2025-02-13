@@ -1,13 +1,13 @@
 void __fastcall BlankEarthGimmickEntity___ctor(BlankEarthGimmickEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC775C & 1) == 0 )
+  if ( (byte_4BDC1F3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BC775C = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDC1F3 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,12 +17,12 @@ bool __fastcall BlankEarthGimmickEntity__CheckGimmickCond(BlankEarthGimmickEntit
   __int64 v4; // x1
   bool v5; // w20
 
-  if ( (byte_4BC7756 & 1) == 0 )
+  if ( (byte_4BDC1ED & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
-    byte_4BC7756 = 1;
+    sub_1C21E38(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4BDC1ED = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_388D478 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance
     || (v5 = QuestTree__CheckMapGimmickCond(
                (QuestTree_o *)Instance,
@@ -31,9 +31,9 @@ bool __fastcall BlankEarthGimmickEntity__CheckGimmickCond(BlankEarthGimmickEntit
                this->fields.dispTargetId,
                this->fields.dispTargetValue,
                0LL),
-        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_387ACC8 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL) )
+        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_388D478 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL) )
   {
-    sub_1C1AE30(Instance, v4);
+    sub_1C22094(Instance, v4);
   }
   return v5 & QuestTree__CheckMapGimmickCond(
                 (QuestTree_o *)Instance,
@@ -57,12 +57,12 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetBlankEarthOtherObjectFro
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4BC7759 & 1) == 0 )
+  if ( (byte_4BDC1F0 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_17612/*"blankEarthOtherObject"*/, method);
-    byte_4BC7759 = 1;
+    sub_1C21E38(&StringLiteral_17625/*"blankEarthOtherObject"*/);
+    byte_4BDC1F0 = 1;
   }
-  return BlankEarthGimmickEntity__GetStrFromScript(this, (System_String_o *)StringLiteral_17612/*"blankEarthOtherObject"*/, v2);
+  return BlankEarthGimmickEntity__GetStrFromScript(this, (System_String_o *)StringLiteral_17625/*"blankEarthOtherObject"*/, v2);
 }
 
 
@@ -71,16 +71,15 @@ int32_t __fastcall BlankEarthGimmickEntity__GetIntFromScript(
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
-  Il2CppObject *v7; // x19
+  Il2CppObject *v6; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC775A & 1) == 0 )
+  if ( (byte_4BDC1F1 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Convert_TypeInfo, key);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
-    byte_4BC775A = 1;
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4BDC1F1 = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -90,12 +89,12 @@ int32_t __fastcall BlankEarthGimmickEntity__GetIntFromScript(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_33044FC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3317E8C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
-      v7 = value;
+      v6 = value;
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      LODWORD(script) = System_Convert__ToInt32(v7, 0LL);
+      LODWORD(script) = System_Convert__ToInt32(v6, 0LL);
     }
     else
     {
@@ -111,16 +110,15 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetStrFromScript(
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_String_o *result; // x0
-  Il2CppObject *v7; // x19
+  Il2CppObject *v6; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC775B & 1) == 0 )
+  if ( (byte_4BDC1F2 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Convert_TypeInfo, key);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
-    byte_4BC775B = 1;
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4BDC1F2 = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -130,12 +128,12 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetStrFromScript(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_33044FC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3317E8C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
-      v7 = value;
+      v6 = value;
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-      return System_Convert__ToString(v7, 0LL);
+      return System_Convert__ToString(v6, 0LL);
     }
     else
     {
@@ -152,12 +150,12 @@ int32_t __fastcall BlankEarthGimmickEntity__GetUseAnimFromScript(
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4BC7758 & 1) == 0 )
+  if ( (byte_4BDC1EF & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_24768/*"useAnim"*/, method);
-    byte_4BC7758 = 1;
+    sub_1C21E38(&StringLiteral_24788/*"useAnim"*/);
+    byte_4BDC1EF = 1;
   }
-  return BlankEarthGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24768/*"useAnim"*/, v2);
+  return BlankEarthGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24788/*"useAnim"*/, v2);
 }
 
 
@@ -174,10 +172,10 @@ bool __fastcall BlankEarthGimmickEntity__IsOpen(BlankEarthGimmickEntity_o *this,
 {
   int64_t Time; // x0
 
-  if ( (byte_4BC7757 & 1) == 0 )
+  if ( (byte_4BDC1EE & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    byte_4BC7757 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BDC1EE = 1;
   }
   if ( !BlankEarthGimmickEntity__CheckGimmickCond(this, method) )
     return 0;

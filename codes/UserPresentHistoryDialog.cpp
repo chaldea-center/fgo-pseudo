@@ -1,12 +1,11 @@
 void __fastcall UserPresentHistoryDialog___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct UserPresentHistoryDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4BC68BA & 1) == 0 )
+  if ( (byte_4BDB350 & 1) == 0 )
   {
-    sub_1C1ABD4(&UserPresentHistoryDialog_TypeInfo, v1);
-    byte_4BC68BA = 1;
+    sub_1C21E38(&UserPresentHistoryDialog_TypeInfo);
+    byte_4BDB350 = 1;
   }
   static_fields = UserPresentHistoryDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_HISTORY_POS_Y = 5LL;
@@ -22,83 +21,75 @@ void __fastcall UserPresentHistoryDialog__Init(UserPresentHistoryDialog_o *this,
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, method);
   userPresentHistoryListViewManager = (ListViewManager_o *)this->fields.userPresentHistoryListViewManager;
   if ( !userPresentHistoryListViewManager )
-    sub_1C1AE30(0LL, v3);
+    sub_1C22094(0LL, v3);
   ListViewManager__DestroyList(userPresentHistoryListViewManager, 0LL);
 }
 
 
 void __fastcall UserPresentHistoryDialog__OnClickClose(UserPresentHistoryDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  System_Action_o *v5; // x20
 
-  if ( (byte_4BC68B9 & 1) == 0 )
+  if ( (byte_4BDB34F & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&Method_UserPresentHistoryDialog_OnClickClose__, v3);
-    sub_1C1ABD4(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, v4);
-    byte_4BC68B9 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_UserPresentHistoryDialog_OnClickClose__);
+    sub_1C21E38(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__);
+    byte_4BDB34F = 1;
   }
   if ( !this->fields.state )
   {
-    v5 = Method_UserPresentHistoryDialog_OnClickClose__;
+    v3 = Method_UserPresentHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_UserPresentHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C1ABEC(Method_UserPresentHistoryDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C21E50(Method_UserPresentHistoryDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   }
   this->fields.state = 2;
-  v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
 
 
 void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  const MethodInfo *v9; // x1
+  const MethodInfo *v3; // x1
   UserPresentHistoryListViewManager_o *userPresentHistoryListViewManager; // x0
-  UserPresentHistoryDialog_c *v11; // x0
+  UserPresentHistoryDialog_c *v5; // x0
   UnityEngine_GameObject_o *bgObject; // x20
   UILabel_o *subTitle; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   UILabel_o *titleLabel; // x20
   UILabel_o *messageLabel; // x20
-  UserPresentHistoryDialog_c *v17; // x0
+  UserPresentHistoryDialog_c *v11; // x0
   UnityEngine_GameObject_o *closeButton; // x20
   UILabel_o *closeLabel; // x20
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
   int64_t v20; // x2
   int32_t v21; // w3
   System_String_o *v22; // x4
   BattleSetupInfo_o *v23; // x5
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
 
-  if ( (byte_4BC68B8 & 1) == 0 )
+  if ( (byte_4BDB34E & 1) == 0 )
   {
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
-    sub_1C1ABD4(&UserPresentHistoryDialog_TypeInfo, v3);
-    sub_1C1ABD4(&StringLiteral_10649/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
-    sub_1C1ABD4(&StringLiteral_10647/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
-    sub_1C1ABD4(&StringLiteral_10648/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
-    sub_1C1ABD4(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v7);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
-    byte_4BC68B8 = 1;
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&UserPresentHistoryDialog_TypeInfo);
+    sub_1C21E38(&StringLiteral_10659/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/);
+    sub_1C21E38(&StringLiteral_10657/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/);
+    sub_1C21E38(&StringLiteral_10658/*"PRESENT_HISTORY_DIALOG_TITLE"*/);
+    sub_1C21E38(&StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDB34E = 1;
   }
   ((void (__fastcall *)(UserPresentHistoryDialog_o *, void *))this->klass->vtable._7_Init.method)(
     this,
@@ -107,20 +98,20 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   userPresentHistoryListViewManager = this->fields.userPresentHistoryListViewManager;
   if ( !userPresentHistoryListViewManager )
     goto LABEL_28;
-  UserPresentHistoryListViewManager__CreateList(userPresentHistoryListViewManager, v9);
-  v11 = UserPresentHistoryDialog_TypeInfo;
+  UserPresentHistoryListViewManager__CreateList(userPresentHistoryListViewManager, v3);
+  v5 = UserPresentHistoryDialog_TypeInfo;
   bgObject = this->fields.bgObject;
   if ( !UserPresentHistoryDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserPresentHistoryDialog_TypeInfo);
-    v11 = UserPresentHistoryDialog_TypeInfo;
+    v5 = UserPresentHistoryDialog_TypeInfo;
   }
-  GameObjectExtensions__SetLocalPositionY(bgObject, (float)v11->static_fields->MESSAGE_HISTORY_POS_Y, 0LL);
+  GameObjectExtensions__SetLocalPositionY(bgObject, (float)v5->static_fields->MESSAGE_HISTORY_POS_Y, 0LL);
   subTitle = this->fields.subTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_10647/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/,
+                                                                               (System_String_o *)StringLiteral_10657/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/,
                                                                                0LL);
   if ( !subTitle )
     goto LABEL_28;
@@ -139,7 +130,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   UILabel__set_text((UILabel_o *)userPresentHistoryListViewManager, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel = this->fields.titleLabel;
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_10648/*"PRESENT_HISTORY_DIALOG_TITLE"*/,
+                                                                               (System_String_o *)StringLiteral_10658/*"PRESENT_HISTORY_DIALOG_TITLE"*/,
                                                                                0LL);
   if ( !titleLabel )
     goto LABEL_28;
@@ -162,7 +153,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                                     (System_String_o *)StringLiteral_10649/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/,
+                                                                                     (System_String_o *)StringLiteral_10659/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/,
                                                                                      0LL);
         if ( messageLabel )
         {
@@ -172,7 +163,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
       }
     }
 LABEL_28:
-    sub_1C1AE30(userPresentHistoryListViewManager, v9);
+    sub_1C22094(userPresentHistoryListViewManager, v3);
   }
 LABEL_20:
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.scrollView;
@@ -181,31 +172,31 @@ LABEL_20:
   HIDWORD(userPresentHistoryListViewManager->fields.scrollView) = 1;
   UIScrollView__ResetPosition((UIScrollView_o *)userPresentHistoryListViewManager, 0LL);
   this->fields.state = 0;
-  v17 = UserPresentHistoryDialog_TypeInfo;
+  v11 = UserPresentHistoryDialog_TypeInfo;
   closeButton = this->fields.closeButton;
   if ( !UserPresentHistoryDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserPresentHistoryDialog_TypeInfo);
-    v17 = UserPresentHistoryDialog_TypeInfo;
+    v11 = UserPresentHistoryDialog_TypeInfo;
   }
-  GameObjectExtensions__SetLocalPositionX(closeButton, (float)v17->static_fields->MID_POS_X, 0LL);
+  GameObjectExtensions__SetLocalPositionX(closeButton, (float)v11->static_fields->MID_POS_X, 0LL);
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                               (System_String_o *)StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                0LL);
   if ( !closeLabel )
     goto LABEL_28;
   UILabel__set_text(closeLabel, (System_String_o *)userPresentHistoryListViewManager, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v20, v21, v22, v23, v24, v25);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.closeAction, 0LL, v14, v15, v16, v17, v18, v19);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.decideButton;
   if ( !userPresentHistoryListViewManager )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)userPresentHistoryListViewManager, 0, 0LL);
   this->fields.decideAction = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.decideAction, 0LL, v26, v27, v28, v29, v30, v31);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.decideAction, 0LL, v20, v21, v22, v23, v24, v25);
 }
 
 

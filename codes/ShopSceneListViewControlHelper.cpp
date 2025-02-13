@@ -75,9 +75,9 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.topListViewBase = topListViewBase;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)topListViewBase, v20, v21, v22, v23, v24, v25);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)topListViewBase, v20, v21, v22, v23, v24, v25);
   this->fields.eventListViewBase = eventListViewBase;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.eventListViewBase,
     (int64_t)eventListViewBase,
     v26,
@@ -87,7 +87,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v30,
     v31);
   this->fields.buyItemListViewBase = buyItemListViewBase;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.buyItemListViewBase,
     (int64_t)buyItemListViewBase,
     v32,
@@ -97,7 +97,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v36,
     v37);
   this->fields.helpListViewBase = helpListViewBase;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.helpListViewBase,
     (int64_t)helpListViewBase,
     v38,
@@ -107,7 +107,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v42,
     v43);
   this->fields.currencyInfoController = currencyInfoController;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.currencyInfoController,
     (int64_t)currencyInfoController,
     v44,
@@ -117,7 +117,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v48,
     v49);
   this->fields.topListViewManager = topListViewManager;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.topListViewManager,
     (int64_t)topListViewManager,
     v50,
@@ -127,7 +127,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v54,
     v55);
   this->fields.eventListViewManager = eventListViewManager;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.eventListViewManager,
     (int64_t)eventListViewManager,
     v56,
@@ -137,7 +137,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v60,
     v61);
   this->fields.buyItemListViewManager = buyItemListViewManager;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.buyItemListViewManager,
     (int64_t)buyItemListViewManager,
     v62,
@@ -147,7 +147,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v66,
     v67);
   this->fields.servantSellMenu = servantSellMenu;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.servantSellMenu,
     (int64_t)servantSellMenu,
     v68,
@@ -157,7 +157,7 @@ void __fastcall ShopSceneListViewControlHelper___ctor(
     v72,
     v73);
   this->fields.helpListViewManager = helpListViewManager;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.helpListViewManager,
     (int64_t)helpListViewManager,
     v74,
@@ -182,7 +182,7 @@ int32_t __fastcall ShopSceneListViewControlHelper__GetEventId(
   {
     eventListViewManager = this->fields.eventListViewManager;
     if ( !eventListViewManager )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     Item = ShopEventListViewManager__GetItem(eventListViewManager, index, 0LL);
     if ( Item )
       LODWORD(Item) = Item->fields.eventId;
@@ -203,7 +203,7 @@ int32_t __fastcall ShopSceneListViewControlHelper__GetHierarchy(
   if ( (unsigned int)(state - 1) > 0x14 )
     return 0;
   else
-    return dword_C343C8[state - 1];
+    return dword_C38300[state - 1];
 }
 
 
@@ -231,7 +231,7 @@ ShopBuyItemListViewItem_o *__fastcall ShopSceneListViewControlHelper__GetShopBuy
 
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
-    sub_1C1AE30(0LL, index);
+    sub_1C22094(0LL, index);
   return ShopBuyItemListViewManager__GetItem(buyItemListViewManager, index, 0LL);
 }
 
@@ -245,41 +245,38 @@ ShopEventListViewItem_o *__fastcall ShopSceneListViewControlHelper__GetShopEvent
 
   eventListViewManager = this->fields.eventListViewManager;
   if ( !eventListViewManager )
-    sub_1C1AE30(0LL, index);
+    sub_1C22094(0LL, index);
   return ShopEventListViewManager__GetItem(eventListViewManager, index, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ShopSceneListViewControlHelper__SetBgm(
         ShopSceneListViewControlHelper_o *this,
         int32_t state,
         bool isEnter,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  ShopRootConstants_c *v8; // x0
+  ShopRootConstants_c *v6; // x0
   System_String_o *SVT_COSTUME_BGM_NAME; // x19
 
-  if ( (byte_4BC4015 & 1) == 0 )
+  if ( (byte_4BD8AA4 & 1) == 0 )
   {
-    sub_1C1ABD4(&BgmManager_TypeInfo, *(_QWORD *)&state);
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, v6);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v7);
-    byte_4BC4015 = 1;
+    sub_1C21E38(&BgmManager_TypeInfo);
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BD8AA4 = 1;
   }
   if ( state == 15 )
   {
     if ( isEnter )
     {
-      v8 = ShopRootConstants_TypeInfo;
+      v6 = ShopRootConstants_TypeInfo;
       if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
-        v8 = ShopRootConstants_TypeInfo;
+        v6 = ShopRootConstants_TypeInfo;
       }
-      SVT_COSTUME_BGM_NAME = v8->static_fields->SVT_COSTUME_BGM_NAME;
+      SVT_COSTUME_BGM_NAME = v6->static_fields->SVT_COSTUME_BGM_NAME;
     }
     else
     {
@@ -308,10 +305,10 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListView(
   ShopCurrencyInfoController_o *currencyInfoController; // x21
 
   v6 = this;
-  if ( (byte_4BC4012 & 1) == 0 )
+  if ( (byte_4BD8AA1 & 1) == 0 )
   {
-    this = (ShopSceneListViewControlHelper_o *)sub_1C1ABD4(&ShopBuyItemListViewManager_TypeInfo, *(_QWORD *)&state);
-    byte_4BC4012 = 1;
+    this = (ShopSceneListViewControlHelper_o *)sub_1C21E38(&ShopBuyItemListViewManager_TypeInfo);
+    byte_4BD8AA1 = 1;
   }
   if ( ShopSceneListViewControlHelper__GetIsBuyItemList(this, state, *(const MethodInfo **)&eventId) )
   {
@@ -324,7 +321,7 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListView(
     {
       if ( !buyItemListViewManager )
         goto LABEL_17;
-      ShopBuyItemListViewManager__CreateList_33868252(v6->fields.buyItemListViewManager, eventId, 0LL);
+      ShopBuyItemListViewManager__CreateList_33908440(v6->fields.buyItemListViewManager, eventId, 0LL);
     }
     else
     {
@@ -347,7 +344,7 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListView(
     buyItemListViewBase = (UnityEngine_GameObject_o *)v6->fields.buyItemListViewManager;
     if ( buyItemListViewBase )
     {
-      ShopBuyItemListViewManager__SetMode_33872368(
+      ShopBuyItemListViewManager__SetMode_33912764(
         (ShopBuyItemListViewManager_o *)buyItemListViewBase,
         1,
         v6->fields.onMoveEnd,
@@ -356,7 +353,7 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListView(
       return;
     }
 LABEL_17:
-    sub_1C1AE30(buyItemListViewBase, v7);
+    sub_1C22094(buyItemListViewBase, v7);
   }
 }
 
@@ -376,7 +373,7 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListViewClear(
       || (ListViewManager__DestroyList(buyItemListViewManager, 0LL),
           (buyItemListViewManager = (ListViewManager_o *)this->fields.buyItemListViewBase) == 0LL) )
     {
-      sub_1C1AE30(buyItemListViewManager, v4);
+      sub_1C22094(buyItemListViewManager, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)buyItemListViewManager, 0, 0LL);
   }
@@ -395,8 +392,8 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListViewExit(
   {
     buyItemListViewManager = this->fields.buyItemListViewManager;
     if ( !buyItemListViewManager )
-      sub_1C1AE30(0LL, v4);
-    ShopBuyItemListViewManager__SetMode_33872368(buyItemListViewManager, 4, this->fields.onMoveEnd, 0.1, 0LL);
+      sub_1C22094(0LL, v4);
+    ShopBuyItemListViewManager__SetMode_33912764(buyItemListViewManager, 4, this->fields.onMoveEnd, 0.1, 0LL);
   }
 }
 
@@ -413,7 +410,7 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListViewInput(
   {
     buyItemListViewManager = this->fields.buyItemListViewManager;
     if ( !buyItemListViewManager )
-      sub_1C1AE30(0LL, v4);
+      sub_1C22094(0LL, v4);
     ShopBuyItemListViewManager__SetMode(buyItemListViewManager, 2, this->fields.onSelectBuyItem, 0LL);
   }
 }
@@ -437,11 +434,11 @@ void __fastcall ShopSceneListViewControlHelper__SetBuyItemListViewModify(
       buyItemListViewManager = this->fields.buyItemListViewManager;
       if ( buyItemListViewManager )
       {
-        ShopBuyItemListViewManager__SetMode_33871096(buyItemListViewManager, 5, 0LL);
+        ShopBuyItemListViewManager__SetMode_33911492(buyItemListViewManager, 5, 0LL);
         return;
       }
 LABEL_7:
-      sub_1C1AE30(buyItemListViewManager, v4);
+      sub_1C22094(buyItemListViewManager, v4);
     }
   }
 }
@@ -489,7 +486,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
   PartyListViewItem_o *v43; // x7
 
   this->fields.onMoveEnd = onMoveEnd;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.onMoveEnd,
     (int64_t)onMoveEnd,
     (int64_t)onSelectTop,
@@ -499,7 +496,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
     (FollowerInfo_o *)onOpenHelp,
     (PartyListViewItem_o *)method);
   this->fields.onSelectTop = onSelectTop;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.onSelectTop,
     (int64_t)onSelectTop,
     v14,
@@ -509,7 +506,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
     v18,
     v19);
   this->fields.onSelectEvent = onSelectEvent;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.onSelectEvent,
     (int64_t)onSelectEvent,
     v20,
@@ -519,7 +516,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
     v24,
     v25);
   this->fields.onSelectBuyItem = onSelectBuyItem;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.onSelectBuyItem,
     (int64_t)onSelectBuyItem,
     v26,
@@ -529,7 +526,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
     v30,
     v31);
   this->fields.onSelectSellServant = onSelectSellServant;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.onSelectSellServant,
     (int64_t)onSelectSellServant,
     v32,
@@ -539,7 +536,7 @@ void __fastcall ShopSceneListViewControlHelper__SetCallbackEvents(
     v36,
     v37);
   this->fields.onOpenHelp = onOpenHelp;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.onOpenHelp, (int64_t)onOpenHelp, v38, v39, v40, v41, v42, v43);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.onOpenHelp, (int64_t)onOpenHelp, v38, v39, v40, v41, v42, v43);
 }
 
 
@@ -563,7 +560,7 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListView(
       goto LABEL_9;
     }
 LABEL_11:
-    sub_1C1AE30(eventListViewManager, *(_QWORD *)&state);
+    sub_1C22094(eventListViewManager, *(_QWORD *)&state);
   }
   if ( state == 7 )
   {
@@ -581,7 +578,7 @@ LABEL_11:
           onMoveEnd = this->fields.onMoveEnd;
           v6 = 1;
 LABEL_9:
-          ShopEventListViewManager__SetMode_33900492(
+          ShopEventListViewManager__SetMode_33941780(
             (ShopEventListViewManager_o *)eventListViewManager,
             v6,
             onMoveEnd,
@@ -610,7 +607,7 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListViewClear(
       || (ShopEventListViewManager__DestroyList(eventListViewManager, 0LL),
           (eventListViewManager = (ShopEventListViewManager_o *)this->fields.eventListViewBase) == 0LL) )
     {
-      sub_1C1AE30(eventListViewManager, *(_QWORD *)&state);
+      sub_1C22094(eventListViewManager, *(_QWORD *)&state);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)eventListViewManager, 0, 0LL);
   }
@@ -628,8 +625,8 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListViewExit(
   {
     eventListViewManager = this->fields.eventListViewManager;
     if ( !eventListViewManager )
-      sub_1C1AE30(0LL, state);
-    ShopEventListViewManager__SetMode_33900492(eventListViewManager, 4, this->fields.onMoveEnd, 0LL);
+      sub_1C22094(0LL, state);
+    ShopEventListViewManager__SetMode_33941780(eventListViewManager, 4, this->fields.onMoveEnd, 0LL);
   }
 }
 
@@ -645,7 +642,7 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListViewInput(
   {
     eventListViewManager = this->fields.eventListViewManager;
     if ( !eventListViewManager )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     ShopEventListViewManager__SetMode(eventListViewManager, 2, this->fields.onSelectEvent, 0LL);
   }
 }
@@ -695,15 +692,15 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListViewOnInit(
   {
     if ( eventListViewBase )
     {
-      ShopEventListViewManager__SetMode_33900328((ShopEventListViewManager_o *)eventListViewBase, 6, 0LL);
+      ShopEventListViewManager__SetMode_33941616((ShopEventListViewManager_o *)eventListViewBase, 6, 0LL);
       return;
     }
 LABEL_16:
-    sub_1C1AE30(eventListViewBase, *(_QWORD *)&state);
+    sub_1C22094(eventListViewBase, *(_QWORD *)&state);
   }
   if ( !eventListViewBase )
     goto LABEL_16;
-  ShopEventListViewManager__SetMode_33900492(
+  ShopEventListViewManager__SetMode_33941780(
     (ShopEventListViewManager_o *)eventListViewBase,
     1,
     this->fields.onMoveEnd,
@@ -722,8 +719,8 @@ void __fastcall ShopSceneListViewControlHelper__SetEventListViewRetry(
   {
     eventListViewManager = this->fields.eventListViewManager;
     if ( !eventListViewManager )
-      sub_1C1AE30(0LL, state);
-    ShopEventListViewManager__SetMode_33900492(eventListViewManager, 5, this->fields.onMoveEnd, 0LL);
+      sub_1C22094(0LL, state);
+    ShopEventListViewManager__SetMode_33941780(eventListViewManager, 5, this->fields.onMoveEnd, 0LL);
   }
 }
 
@@ -742,7 +739,7 @@ void __fastcall ShopSceneListViewControlHelper__SetGiftButtonEnable(
     if ( !giftButtonControl
       || (giftButtonControl = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(giftButtonControl, 0LL)) == 0LL )
     {
-      sub_1C1AE30(giftButtonControl, *(_QWORD *)&state);
+      sub_1C22094(giftButtonControl, *(_QWORD *)&state);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)giftButtonControl, 1, 0LL);
   }
@@ -756,18 +753,17 @@ void __fastcall ShopSceneListViewControlHelper__SetGiftButtonPosition(
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UnityEngine_Component_o *giftButtonControl; // x0
   UnityEngine_Transform_o *transform; // x21
-  const MethodInfo *v10; // x1
+  const MethodInfo *v9; // x1
   bool IsShowEventItemWindow; // w19
-  int v12; // s0
+  int v11; // s0
 
-  if ( (byte_4BC4018 & 1) == 0 )
+  if ( (byte_4BD8AA7 & 1) == 0 )
   {
-    sub_1C1ABD4(&ShopBuyItemListViewManager_TypeInfo, *(_QWORD *)&state);
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, v7);
-    byte_4BC4018 = 1;
+    sub_1C21E38(&ShopBuyItemListViewManager_TypeInfo);
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    byte_4BD8AA7 = 1;
   }
   giftButtonControl = (UnityEngine_Component_o *)this->fields.giftButtonControl;
   if ( !giftButtonControl )
@@ -778,11 +774,11 @@ void __fastcall ShopSceneListViewControlHelper__SetGiftButtonPosition(
   IsShowEventItemWindow = ShopBuyItemListViewManager__GetIsShowEventItemWindow(state, eventId, 0LL);
   if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
-  *(UnityEngine_Vector3_o *)&v12 = ShopRootConstants__GetGiftButtonPos(IsShowEventItemWindow, v10);
+  *(UnityEngine_Vector3_o *)&v11 = ShopRootConstants__GetGiftButtonPos(IsShowEventItemWindow, v9);
   if ( !transform )
 LABEL_10:
-    sub_1C1AE30(giftButtonControl, *(_QWORD *)&state);
-  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v12, 0LL);
+    sub_1C22094(giftButtonControl, *(_QWORD *)&state);
+  UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v11, 0LL);
 }
 
 
@@ -800,14 +796,13 @@ void __fastcall ShopSceneListViewControlHelper__SetGiftButtonUnEnable(
     if ( !giftButtonControl
       || (giftButtonControl = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(giftButtonControl, 0LL)) == 0LL )
     {
-      sub_1C1AE30(giftButtonControl, *(_QWORD *)&state);
+      sub_1C22094(giftButtonControl, *(_QWORD *)&state);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)giftButtonControl, 0, 0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ShopSceneListViewControlHelper__SetGuideDetail(
         ShopSceneListViewControlHelper_o *this,
         int32_t state,
@@ -815,111 +810,107 @@ void __fastcall ShopSceneListViewControlHelper__SetGuideDetail(
         bool isEnter,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   DataManager_o *Instance; // x0
-  __int64 v14; // x1
-  int32_t v15; // w1
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
+  __int64 v10; // x1
+  int32_t v11; // w1
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
   GuideEntity_o *GuideData; // x21
-  ShopRootConstants_c *v20; // x0
+  ShopRootConstants_c *v16; // x0
   int *p_bgImageId; // x8
-  int v22; // w24
+  int v18; // w24
   System_String_o *BG_ROOT; // x22
-  Il2CppObject *v24; // x0
-  System_String_o *v25; // x22
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  ShopRootConstants_c *v29; // x0
+  Il2CppObject *v20; // x0
+  System_String_o *v21; // x22
+  __int64 v22; // x2
+  __int64 v23; // x3
+  __int64 v24; // x4
+  ShopRootConstants_c *v25; // x0
   struct ShopRootConstants_StaticFields *static_fields; // x8
-  System_String_o *v31; // x22
-  Il2CppObject *v32; // x0
+  System_String_o *v27; // x22
+  Il2CppObject *v28; // x0
   ExUITexture_o *backgroundTexture; // x23
-  ShopRootConstants_c *v34; // x0
+  ShopRootConstants_c *v30; // x0
   int32_t guideFaceId; // w4
   int32_t *p_guideImageId; // x8
   int32_t *p_guideLimitCount; // x9
-  struct ShopRootConstants_StaticFields *v38; // x9
+  struct ShopRootConstants_StaticFields *v34; // x9
   int32_t DEFAULT_BG_ID; // [xsp+8h] [xbp-38h] BYREF
-  int v40; // [xsp+Ch] [xbp-34h] BYREF
+  int v36; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BC4014 & 1) == 0 )
+  if ( (byte_4BD8AA3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMasterData_GuideMaster___, *(_QWORD *)&state);
-    sub_1C1ABD4(&FSUtility_TypeInfo, v9);
-    sub_1C1ABD4(&int_TypeInfo, v10);
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, v11);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    byte_4BC4014 = 1;
+    sub_1C21E38(&Method_DataManager_GetMasterData_GuideMaster___);
+    sub_1C21E38(&FSUtility_TypeInfo);
+    sub_1C21E38(&int_TypeInfo);
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4BD8AA3 = 1;
   }
   if ( state == 15 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_32;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_GuideMaster___);
+                                  (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_GuideMaster___);
     if ( !Instance )
       goto LABEL_32;
-    v15 = isEnter ? 3 : 2;
-    GuideData = GuideMaster__getGuideData((GuideMaster_o *)Instance, v15, 0LL);
+    v11 = isEnter ? 3 : 2;
+    GuideData = GuideMaster__getGuideData((GuideMaster_o *)Instance, v11, 0LL);
     if ( GuideData )
     {
-      v20 = ShopRootConstants_TypeInfo;
+      v16 = ShopRootConstants_TypeInfo;
       p_bgImageId = &GuideData->fields.bgImageId;
     }
     else
     {
-      v20 = ShopRootConstants_TypeInfo;
+      v16 = ShopRootConstants_TypeInfo;
       if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
-        v20 = ShopRootConstants_TypeInfo;
+        v16 = ShopRootConstants_TypeInfo;
       }
-      p_bgImageId = &v20->static_fields->DEFAULT_BG_ID;
+      p_bgImageId = &v16->static_fields->DEFAULT_BG_ID;
     }
-    v22 = *p_bgImageId;
-    if ( !v20->_2.cctor_finished )
+    v18 = *p_bgImageId;
+    if ( !v16->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v20);
-      v20 = ShopRootConstants_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v16);
+      v16 = ShopRootConstants_TypeInfo;
     }
-    BG_ROOT = v20->static_fields->BG_ROOT;
-    v40 = v22;
-    v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40, v16, v17, v18);
-    Instance = (DataManager_o *)System_String__Format(BG_ROOT, v24, 0LL);
+    BG_ROOT = v16->static_fields->BG_ROOT;
+    v36 = v18;
+    v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v36, v12, v13, v14);
+    Instance = (DataManager_o *)System_String__Format(BG_ROOT, v20, 0LL);
     if ( !this->fields.backgroundTexture )
       goto LABEL_32;
-    v25 = (System_String_o *)Instance;
+    v21 = (System_String_o *)Instance;
     if ( !ExUITexture__SetAssetImage(this->fields.backgroundTexture, (System_String_o *)Instance, 0LL, 0LL) )
     {
-      v29 = ShopRootConstants_TypeInfo;
+      v25 = ShopRootConstants_TypeInfo;
       if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
-        v29 = ShopRootConstants_TypeInfo;
+        v25 = ShopRootConstants_TypeInfo;
       }
-      static_fields = v29->static_fields;
-      v31 = static_fields->BG_ROOT;
+      static_fields = v25->static_fields;
+      v27 = static_fields->BG_ROOT;
       DEFAULT_BG_ID = static_fields->DEFAULT_BG_ID;
-      v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &DEFAULT_BG_ID, v26, v27, v28);
-      Instance = (DataManager_o *)System_String__Format(v31, v32, 0LL);
+      v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &DEFAULT_BG_ID, v22, v23, v24);
+      Instance = (DataManager_o *)System_String__Format(v27, v28, 0LL);
       if ( !this->fields.backgroundTexture )
         goto LABEL_32;
-      v25 = (System_String_o *)Instance;
+      v21 = (System_String_o *)Instance;
       ExUITexture__SetAssetImage(this->fields.backgroundTexture, (System_String_o *)Instance, 0LL, 0LL);
     }
     backgroundTexture = this->fields.backgroundTexture;
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-    FSUtility__SetUpBackTextureSize(backgroundTexture, v25, 0LL);
-    v34 = ShopRootConstants_TypeInfo;
+    FSUtility__SetUpBackTextureSize(backgroundTexture, v21, 0LL);
+    v30 = ShopRootConstants_TypeInfo;
     if ( ShopRootConstants_TypeInfo->_2.cctor_finished )
     {
       if ( GuideData )
@@ -934,14 +925,14 @@ LABEL_26:
     else
     {
       j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
-      v34 = ShopRootConstants_TypeInfo;
+      v30 = ShopRootConstants_TypeInfo;
       if ( GuideData )
         goto LABEL_26;
     }
-    v38 = v34->static_fields;
+    v34 = v30->static_fields;
     guideFaceId = 0;
-    p_guideImageId = &v38->DEFAULT_FIGURE_ID;
-    p_guideLimitCount = &v38->DEFAULT_FIGURE_LIMIT_CNT;
+    p_guideImageId = &v34->DEFAULT_FIGURE_ID;
+    p_guideLimitCount = &v34->DEFAULT_FIGURE_LIMIT_CNT;
 LABEL_29:
     Instance = (DataManager_o *)this->fields.standFigureBack;
     if ( Instance )
@@ -958,7 +949,7 @@ LABEL_29:
       return;
     }
 LABEL_32:
-    sub_1C1AE30(Instance, v14);
+    sub_1C22094(Instance, v10);
   }
 }
 
@@ -969,19 +960,17 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonEnable(
         int32_t state,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   System_String_o *HelpSaveKey; // x20
   TitleInfoControl_o *Int; // x0
-  __int64 v9; // x1
+  __int64 v7; // x1
   struct System_Action_o *onOpenHelp; // x8
 
-  if ( (byte_4BC4016 & 1) == 0 )
+  if ( (byte_4BD8AA5 & 1) == 0 )
   {
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, *(_QWORD *)&state);
-    sub_1C1ABD4(&TutorialFlag_TypeInfo, v5);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v6);
-    byte_4BC4016 = 1;
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    sub_1C21E38(&TutorialFlag_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD8AA5 = 1;
   }
   if ( (unsigned int)state <= 0x14 && ((1 << state) & 0x10006A) != 0 )
   {
@@ -998,7 +987,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonEnable(
     {
       if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-      Int = (TitleInfoControl_o *)TutorialFlag__Get_38884588(103, 0LL);
+      Int = (TitleInfoControl_o *)TutorialFlag__Get_38930984(103, 0LL);
       if ( ((unsigned __int8)Int & 1) != 0 )
       {
 LABEL_9:
@@ -1009,7 +998,7 @@ LABEL_9:
           return;
         }
 LABEL_17:
-        sub_1C1AE30(Int, v9);
+        sub_1C22094(Int, v7);
       }
     }
     onOpenHelp = this->fields.onOpenHelp;
@@ -1033,17 +1022,17 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonPosition(
   __int64 v7; // x1
   int v8; // s0
 
-  if ( (byte_4BC4017 & 1) == 0 )
+  if ( (byte_4BD8AA6 & 1) == 0 )
   {
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, *(_QWORD *)&state);
-    byte_4BC4017 = 1;
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    byte_4BD8AA6 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ShopRootConstants_TypeInfo);
   *(UnityEngine_Vector3_o *)&v8 = ShopRootConstants__GetHelpButtonPos(state, *(const MethodInfo **)&state);
   if ( !titleInfo )
-    sub_1C1AE30(v6, v7);
+    sub_1C22094(v6, v7);
   TitleInfoControl__SetHelpBtnPos(titleInfo, *(UnityEngine_Vector3_o *)&v8, 0LL);
 }
 
@@ -1059,7 +1048,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpButtonUnEnable(
   {
     titleInfo = this->fields.titleInfo;
     if ( !titleInfo )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     TitleInfoControl__SetHelpBtn(titleInfo, 0, 0LL);
   }
 }
@@ -1080,7 +1069,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpListViewClose(
       || (ShopHelpListViewManager__DestroyList(helpListViewManager, 0LL),
           (helpListViewManager = (ShopHelpListViewManager_o *)this->fields.helpListViewBase) == 0LL) )
     {
-      sub_1C1AE30(helpListViewManager, *(_QWORD *)&state);
+      sub_1C22094(helpListViewManager, *(_QWORD *)&state);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)helpListViewManager, 0, 0LL);
   }
@@ -1102,7 +1091,7 @@ void __fastcall ShopSceneListViewControlHelper__SetHelpListViewOpen(
       || (UnityEngine_GameObject__SetActive(helpListViewBase, 1, 0LL),
           (helpListViewBase = (UnityEngine_GameObject_o *)this->fields.helpListViewManager) == 0LL) )
     {
-      sub_1C1AE30(helpListViewBase, *(_QWORD *)&state);
+      sub_1C22094(helpListViewBase, *(_QWORD *)&state);
     }
     ShopHelpListViewManager__CreateList((ShopHelpListViewManager_o *)helpListViewBase, 0LL);
   }
@@ -1148,7 +1137,7 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewInvalidate(
                                                               0LL)) == 0LL )
   {
 LABEL_17:
-    sub_1C1AE30(buyItemListViewManager, method);
+    sub_1C22094(buyItemListViewManager, method);
   }
   if ( UnityEngine_GameObject__get_activeInHierarchy((UnityEngine_GameObject_o *)buyItemListViewManager, 0LL) )
   {
@@ -1207,56 +1196,53 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnCloseBuyItemConfirm
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ShopSceneListViewControlHelper__SetListViewOnCloseEventShop(
         ShopSceneListViewControlHelper_o *this,
         int32_t state,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  __int64 v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
   ShopBuyItemListViewManager_o *buyItemListViewManager; // x19
-  System_Action_o *v17; // x20
+  System_Action_o *v15; // x20
 
-  if ( (byte_4BC4011 & 1) == 0 )
+  if ( (byte_4BD8AA0 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, *(_QWORD *)&state);
-    sub_1C1ABD4(&Method_ShopSceneListViewControlHelper___c__DisplayClass31_0__SetListViewOnCloseEventShop_b__0__, v5);
-    sub_1C1ABD4(&ShopSceneListViewControlHelper___c__DisplayClass31_0_TypeInfo, v6);
-    byte_4BC4011 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_ShopSceneListViewControlHelper___c__DisplayClass31_0__SetListViewOnCloseEventShop_b__0__);
+    sub_1C21E38(&ShopSceneListViewControlHelper___c__DisplayClass31_0_TypeInfo);
+    byte_4BD8AA0 = 1;
   }
-  v7 = sub_1C1AE20(ShopSceneListViewControlHelper___c__DisplayClass31_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7 )
+  v5 = sub_1C22084(ShopSceneListViewControlHelper___c__DisplayClass31_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
     goto LABEL_8;
-  *(_QWORD *)(v7 + 16) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
-  *(_DWORD *)(v7 + 24) = state;
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 16), (int64_t)this, v8, v9, v10, v11, v12, v13);
+  *(_DWORD *)(v5 + 24) = state;
   if ( state == 8 )
   {
     buyItemListViewManager = this->fields.buyItemListViewManager;
-    v17 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
+    v15 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
     System_Action___ctor(
-      v17,
-      (Il2CppObject *)v7,
+      v15,
+      (Il2CppObject *)v5,
       Method_ShopSceneListViewControlHelper___c__DisplayClass31_0__SetListViewOnCloseEventShop_b__0__,
       0LL);
     if ( buyItemListViewManager )
     {
-      ShopBuyItemListViewManager__SetMode_33872368(buyItemListViewManager, 4, v17, 0.1, 0LL);
+      ShopBuyItemListViewManager__SetMode_33912764(buyItemListViewManager, 4, v15, 0.1, 0LL);
       return;
     }
 LABEL_8:
-    sub_1C1AE30(v8, v9);
+    sub_1C22094(v6, v7);
   }
 }
 
@@ -1303,7 +1289,7 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnOpenHelp(
   ShopSceneListViewControlHelper__SetHelpListViewOpen(this, state, method);
   topListViewBase = this->fields.topListViewBase;
   if ( !topListViewBase )
-    sub_1C1AE30(0LL, v4);
+    sub_1C22094(0LL, v4);
   UnityEngine_GameObject__SetActive(topListViewBase, 0, 0LL);
 }
 
@@ -1319,7 +1305,7 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnQuitHelp(
 
   topListViewBase = this->fields.topListViewBase;
   if ( !topListViewBase )
-    sub_1C1AE30(0LL, state);
+    sub_1C22094(0LL, state);
   UnityEngine_GameObject__SetActive(topListViewBase, 1, 0LL);
   ShopSceneListViewControlHelper__SetTopListViewRetry(this, state, v6);
   ShopSceneListViewControlHelper__SetHelpListViewClose(this, state, v7);
@@ -1358,8 +1344,8 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnSceneInit(
   ShopSceneListViewControlHelper__SetStandFigureBackFadeout(this, state, v15);
   servantSellMenu = this->fields.servantSellMenu;
   if ( !servantSellMenu )
-    sub_1C1AE30(0LL, v16);
-  ServantSellMenu__Init_33809976(servantSellMenu, jumpInfoId, 0LL);
+    sub_1C22094(0LL, v16);
+  ServantSellMenu__Init_33848508(servantSellMenu, jumpInfoId, 0LL);
   ShopSceneListViewControlHelper__SetSellServantMenuInput(this, state, v18);
 }
 
@@ -1386,10 +1372,10 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnSceneQuit(
   FollowerInfo_o *v19; // x6
   PartyListViewItem_o *v20; // x7
 
-  if ( (byte_4BC4010 & 1) == 0 )
+  if ( (byte_4BD8A9F & 1) == 0 )
   {
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, method);
-    byte_4BC4010 = 1;
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    byte_4BD8A9F = 1;
   }
   topListViewManager = (char *)this->fields.topListViewManager;
   if ( !topListViewManager )
@@ -1442,14 +1428,14 @@ void __fastcall ShopSceneListViewControlHelper__SetListViewOnSceneQuit(
   topListViewManager = (char *)this->fields.giftButtonControl;
   if ( !topListViewManager
     || (*((_QWORD *)topListViewManager + 13) = 0LL,
-        sub_1C1AB78((PartyOrganizationUtility_o *)(topListViewManager + 104), 0LL, v9, v10, v11, v12, v13, v14),
+        sub_1C21DDC((PartyOrganizationUtility_o *)(topListViewManager + 104), 0LL, v9, v10, v11, v12, v13, v14),
         (topListViewManager = (char *)this->fields.giftButtonControl) == 0LL)
     || (*((_QWORD *)topListViewManager + 12) = 0LL,
-        sub_1C1AB78((PartyOrganizationUtility_o *)(topListViewManager + 96), 0LL, v15, v16, v17, v18, v19, v20),
+        sub_1C21DDC((PartyOrganizationUtility_o *)(topListViewManager + 96), 0LL, v15, v16, v17, v18, v19, v20),
         (topListViewManager = (char *)this->fields.helpListViewManager) == 0LL) )
   {
 LABEL_21:
-    sub_1C1AE30(topListViewManager, method);
+    sub_1C22094(topListViewManager, method);
   }
   ShopHelpListViewManager__ReleaseBaseSprite((ShopHelpListViewManager_o *)topListViewManager, 0LL);
 }
@@ -1585,7 +1571,7 @@ void __fastcall ShopSceneListViewControlHelper__SetOtherObjects(
   PartyListViewItem_o *v29; // x7
 
   this->fields.titleInfo = titleInfo;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.titleInfo,
     (int64_t)titleInfo,
     (int64_t)standFigureBack,
@@ -1595,7 +1581,7 @@ void __fastcall ShopSceneListViewControlHelper__SetOtherObjects(
     v6,
     v7);
   this->fields.standFigureBack = standFigureBack;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.standFigureBack,
     (int64_t)standFigureBack,
     v12,
@@ -1605,7 +1591,7 @@ void __fastcall ShopSceneListViewControlHelper__SetOtherObjects(
     v16,
     v17);
   this->fields.giftButtonControl = giftButtonControl;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.giftButtonControl,
     (int64_t)giftButtonControl,
     v18,
@@ -1615,7 +1601,7 @@ void __fastcall ShopSceneListViewControlHelper__SetOtherObjects(
     v22,
     v23);
   this->fields.backgroundTexture = backgroundTexture;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.backgroundTexture,
     (int64_t)backgroundTexture,
     v24,
@@ -1638,7 +1624,7 @@ void __fastcall ShopSceneListViewControlHelper__SetSellServantMenuClear(
   {
     servantSellMenu = this->fields.servantSellMenu;
     if ( !servantSellMenu )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     ServantSellMenu__Init(servantSellMenu, 0LL);
   }
 }
@@ -1659,7 +1645,7 @@ void __fastcall ShopSceneListViewControlHelper__SetSellServantMenuExit(
       || (ServantSellMenu__InitBackListView(servantSellMenu, 0LL),
           (servantSellMenu = this->fields.servantSellMenu) == 0LL) )
     {
-      sub_1C1AE30(servantSellMenu, *(_QWORD *)&state);
+      sub_1C22094(servantSellMenu, *(_QWORD *)&state);
     }
     ServantSellMenu__Close(servantSellMenu, this->fields.onMoveEnd, 0LL);
   }
@@ -1675,8 +1661,8 @@ void __fastcall ShopSceneListViewControlHelper__SetSellServantMenuInit(
 
   servantSellMenu = this->fields.servantSellMenu;
   if ( !servantSellMenu )
-    sub_1C1AE30(0LL, kind);
-  ServantSellMenu__Init_33809976(servantSellMenu, kind, 0LL);
+    sub_1C22094(0LL, kind);
+  ServantSellMenu__Init_33848508(servantSellMenu, kind, 0LL);
 }
 
 
@@ -1688,7 +1674,7 @@ void __fastcall ShopSceneListViewControlHelper__SetSellServantMenuInput(
   if ( state == 9 )
   {
     if ( !this->fields.servantSellMenu )
-      sub_1C1AE30(this, state);
+      sub_1C22094(this, state);
     ServantSellMenu__Open(this->fields.servantSellMenu, this->fields.onSelectSellServant, this->fields.onMoveEnd, 0LL);
   }
 }
@@ -1707,7 +1693,7 @@ void __fastcall ShopSceneListViewControlHelper__SetSellServantMenuModify(
   {
     servantSellMenu = this->fields.servantSellMenu;
     if ( !servantSellMenu )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     ServantSellMenu__ModifyListItem(servantSellMenu, servantIds, commandCodeIds, 0LL);
   }
 }
@@ -1724,7 +1710,7 @@ void __fastcall ShopSceneListViewControlHelper__SetStandFigureBackFadein(
   {
     standFigureBack = this->fields.standFigureBack;
     if ( !standFigureBack )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     StandFigureBack__Fadein(standFigureBack, 0LL, 0LL);
   }
 }
@@ -1741,7 +1727,7 @@ void __fastcall ShopSceneListViewControlHelper__SetStandFigureBackFadeout(
   {
     standFigureBack = this->fields.standFigureBack;
     if ( !standFigureBack )
-      sub_1C1AE30(0LL, state);
+      sub_1C22094(0LL, state);
     StandFigureBack__Fadeout(standFigureBack, 0LL, 0LL);
   }
 }
@@ -1757,17 +1743,17 @@ void __fastcall ShopSceneListViewControlHelper__SetTitleInfo(
   int32_t v6; // w2
   TitleInfoControl_o *v7; // x19
 
-  if ( (byte_4BC4013 & 1) == 0 )
+  if ( (byte_4BD8AA2 & 1) == 0 )
   {
-    sub_1C1ABD4(&ShopRootConstants_TypeInfo, *(_QWORD *)&state);
-    byte_4BC4013 = 1;
+    sub_1C21E38(&ShopRootConstants_TypeInfo);
+    byte_4BD8AA2 = 1;
   }
   if ( state == 15 )
   {
     titleInfo = this->fields.titleInfo;
     if ( titleInfo )
     {
-      TitleInfoControl__changeTitleInfo_38342328(titleInfo, 1, 38, 0, 0LL);
+      TitleInfoControl__changeTitleInfo_38387828(titleInfo, 1, 38, 0, 0LL);
       v7 = this->fields.titleInfo;
       titleInfo = (TitleInfoControl_o *)ShopRootConstants_TypeInfo;
       if ( !ShopRootConstants_TypeInfo->_2.cctor_finished )
@@ -1795,14 +1781,14 @@ void __fastcall ShopSceneListViewControlHelper__SetTitleInfo(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1C1AE30(titleInfo, *(_QWORD *)&state);
+    sub_1C22094(titleInfo, *(_QWORD *)&state);
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_15;
   v6 = 39;
 LABEL_14:
-  TitleInfoControl__changeTitleInfo_38342328(titleInfo, 1, v6, 0, 0LL);
+  TitleInfoControl__changeTitleInfo_38387828(titleInfo, 1, v6, 0, 0LL);
 }
 
 
@@ -1828,10 +1814,10 @@ void __fastcall ShopSceneListViewControlHelper__SetTopListViewEnter(
   {
     topListViewManager = this->fields.topListViewManager;
     if ( !topListViewManager )
-      sub_1C1AE30(Hierarchy, v5);
+      sub_1C22094(Hierarchy, v5);
     onMoveEnd = this->fields.onMoveEnd;
     topListViewManager->fields.onMoveEnd = onMoveEnd;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&topListViewManager->fields.onMoveEnd,
       (int64_t)onMoveEnd,
       v6,
@@ -1840,7 +1826,7 @@ void __fastcall ShopSceneListViewControlHelper__SetTopListViewEnter(
       v9,
       v10,
       v11);
-    ShopTopListViewManager__SetMode_33990260(topListViewManager, 3, v14);
+    ShopTopListViewManager__SetMode_34031552(topListViewManager, 3, v14);
   }
 }
 
@@ -1863,10 +1849,10 @@ void __fastcall ShopSceneListViewControlHelper__SetTopListViewInput(
   {
     topListViewManager = this->fields.topListViewManager;
     if ( !topListViewManager )
-      sub_1C1AE30(this, state);
+      sub_1C22094(this, state);
     onSelectTop = this->fields.onSelectTop;
     topListViewManager->fields.onClickListViewItem = onSelectTop;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&topListViewManager->fields.onClickListViewItem,
       (int64_t)onSelectTop,
       (int64_t)method,
@@ -1935,7 +1921,7 @@ LABEL_12:
     {
       onMoveEnd = this->fields.onMoveEnd;
       topListViewManager->fields.onMoveEnd = onMoveEnd;
-      sub_1C1AB78(
+      sub_1C21DDC(
         (PartyOrganizationUtility_o *)&topListViewManager->fields.onMoveEnd,
         (int64_t)onMoveEnd,
         v9,
@@ -1948,14 +1934,14 @@ LABEL_12:
       goto LABEL_11;
     }
 LABEL_14:
-    sub_1C1AE30(topListViewBase, *(_QWORD *)&state);
+    sub_1C22094(topListViewBase, *(_QWORD *)&state);
   }
   topListViewManager = this->fields.topListViewManager;
   if ( !topListViewManager )
     goto LABEL_14;
   v18 = this->fields.onMoveEnd;
   topListViewManager->fields.onMoveEnd = v18;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&topListViewManager->fields.onMoveEnd,
     (int64_t)v18,
     v9,
@@ -1966,7 +1952,7 @@ LABEL_14:
     v14);
   v20 = 6;
 LABEL_11:
-  ShopTopListViewManager__SetMode_33990260(topListViewManager, v20, v19);
+  ShopTopListViewManager__SetMode_34031552(topListViewManager, v20, v19);
 }
 
 
@@ -1992,10 +1978,10 @@ void __fastcall ShopSceneListViewControlHelper__SetTopListViewRetry(
   {
     topListViewManager = this->fields.topListViewManager;
     if ( !topListViewManager )
-      sub_1C1AE30(Hierarchy, v5);
+      sub_1C22094(Hierarchy, v5);
     onMoveEnd = this->fields.onMoveEnd;
     topListViewManager->fields.onMoveEnd = onMoveEnd;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&topListViewManager->fields.onMoveEnd,
       (int64_t)onMoveEnd,
       v6,
@@ -2004,7 +1990,7 @@ void __fastcall ShopSceneListViewControlHelper__SetTopListViewRetry(
       v9,
       v10,
       v11);
-    ShopTopListViewManager__SetMode_33990260(topListViewManager, 5, v14);
+    ShopTopListViewManager__SetMode_34031552(topListViewManager, 5, v14);
   }
 }
 
@@ -2024,6 +2010,6 @@ void __fastcall ShopSceneListViewControlHelper___c__DisplayClass31_0___SetListVi
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   ShopSceneListViewControlHelper__SetBuyItemListViewClear(this->fields.__4__this, this->fields.state, v2);
 }

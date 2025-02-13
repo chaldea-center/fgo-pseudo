@@ -1,13 +1,13 @@
 void __fastcall UserInterruptionQuestEntity___ctor(UserInterruptionQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8859 & 1) == 0 )
+  if ( (byte_4BDD2FC & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC8859 = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDD2FC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,159 +15,150 @@ BattleWaveInfoData_array *__fastcall UserInterruptionQuestEntity__ConvertToBattl
         UserInterruptionQuestEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
-  const MethodInfo *v12; // x1
+  System_Collections_Generic_List_object__o *v3; // x19
+  const MethodInfo *v4; // x1
   System_Collections_Generic_List_object__o *waveInfoList; // x0
   Il2CppObject *current; // x26
-  int64_t v15; // x20
-  __int64 v16; // x0
-  __int64 v17; // x1
+  int64_t v7; // x20
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  int64_t monitor; // x1
+  int64_t klass; // x1
   int64_t v18; // x2
   int32_t v19; // w3
   System_String_o *v20; // x4
   BattleSetupInfo_o *v21; // x5
   FollowerInfo_o *v22; // x6
   PartyListViewItem_o *v23; // x7
-  int64_t monitor; // x1
-  int64_t klass; // x1
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  int64_t v32; // x1
+  int64_t v24; // x1
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  __int64 v31; // x0
+  __int64 v32; // x1
   int64_t v33; // x2
   int32_t v34; // w3
   System_String_o *v35; // x4
   BattleSetupInfo_o *v36; // x5
   FollowerInfo_o *v37; // x6
   PartyListViewItem_o *v38; // x7
-  __int64 v39; // x0
-  __int64 v40; // x1
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v48; // x9
+  _QWORD *v40; // x9
   __int64 size; // x10
-  Il2CppClass **v50; // x0
-  System_Collections_Generic_List_Enumerator_object__o v52; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v53; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v42; // x0
+  System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4BC8857 & 1) == 0 )
+  if ( (byte_4BDD2FA & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleWaveInfoData_TypeInfo, method);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__, v3);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__, v4);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__get_Current__, v5);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BattleWaveInfoData__Add__, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__, v8);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__, v9);
-    sub_1C1ABD4(&System_Collections_Generic_List_BattleWaveInfoData__TypeInfo, v10);
-    byte_4BC8857 = 1;
+    sub_1C21E38(&BattleWaveInfoData_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__get_Current__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BattleWaveInfoData__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_BattleWaveInfoData__TypeInfo);
+    byte_4BDD2FA = 1;
   }
-  memset(&v53, 0, sizeof(v53));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_BattleWaveInfoData__TypeInfo);
+  memset(&v45, 0, sizeof(v45));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_BattleWaveInfoData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__);
+    v3,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__);
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.waveInfoList, 0LL) )
-    UserInterruptionQuestEntity__SetWaveInfoScript(this, v12);
+    UserInterruptionQuestEntity__SetWaveInfoScript(this, v4);
   waveInfoList = (System_Collections_Generic_List_object__o *)this->fields.waveInfoList;
   if ( !waveInfoList )
     goto LABEL_21;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v52,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v44,
     waveInfoList,
-    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__);
-  v53 = v52;
+    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__);
+  v45 = v44;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v53,
-            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__) )
+            &v45,
+            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__) )
   {
-    current = v53.fields._current;
-    v15 = sub_1C1AE20(BattleWaveInfoData_TypeInfo);
-    BattleWaveInfoData___ctor((BattleWaveInfoData_o *)v15, 0LL);
+    current = v45.fields._current;
+    v7 = sub_1C22084(BattleWaveInfoData_TypeInfo);
+    BattleWaveInfoData___ctor((BattleWaveInfoData_o *)v7, 0LL);
     if ( !current )
-      sub_1C1AE30(v16, v17);
-    if ( !v15 )
-      sub_1C1AE30(v16, v17);
-    *(_QWORD *)(v15 + 16) = current[1].klass;
+      sub_1C22094(v8, v9);
+    if ( !v7 )
+      sub_1C22094(v8, v9);
+    *(_QWORD *)(v7 + 16) = current[1].klass;
     monitor = (int64_t)current[1].monitor;
-    *(_QWORD *)(v15 + 24) = monitor;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v15 + 24), monitor, v18, v19, v20, v21, v22, v23);
+    *(_QWORD *)(v7 + 24) = monitor;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 24), monitor, v10, v11, v12, v13, v14, v15);
     klass = (int64_t)current[2].klass;
-    *(_QWORD *)(v15 + 32) = klass;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v15 + 32), klass, v26, v27, v28, v29, v30, v31);
-    v32 = (int64_t)current[2].monitor;
-    *(_QWORD *)(v15 + 40) = v32;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v15 + 40), v32, v33, v34, v35, v36, v37, v38);
-    *(_DWORD *)(v15 + 48) = current[3].klass;
-    if ( !v11 )
-      sub_1C1AE30(v39, v40);
-    items = v11->fields._items;
-    v48 = Method_System_Collections_Generic_List_BattleWaveInfoData__Add__;
-    ++v11->fields._version;
+    *(_QWORD *)(v7 + 32) = klass;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 32), klass, v18, v19, v20, v21, v22, v23);
+    v24 = (int64_t)current[2].monitor;
+    *(_QWORD *)(v7 + 40) = v24;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 40), v24, v25, v26, v27, v28, v29, v30);
+    *(_DWORD *)(v7 + 48) = current[3].klass;
+    if ( !v3 )
+      sub_1C22094(v31, v32);
+    items = v3->fields._items;
+    v40 = Method_System_Collections_Generic_List_BattleWaveInfoData__Add__;
+    ++v3->fields._version;
     if ( !items )
-      sub_1C1AE30(v39, v40);
-    size = v11->fields._size;
+      sub_1C22094(v31, v32);
+    size = v3->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v11,
-        (Il2CppObject *)v15,
-        *(const MethodInfo_363C890 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+        v3,
+        (Il2CppObject *)v7,
+        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
     }
     else
     {
-      v50 = &items->obj.klass + size;
-      v11->fields._size = size + 1;
-      v50[4] = (Il2CppClass *)v15;
-      sub_1C1AB78((PartyOrganizationUtility_o *)(v50 + 4), v15, v41, v42, v43, v44, v45, v46);
+      v42 = &items->obj.klass + size;
+      v3->fields._size = size + 1;
+      v42[4] = (Il2CppClass *)v7;
+      sub_1C21DDC((PartyOrganizationUtility_o *)(v42 + 4), v7, v33, v34, v35, v36, v37, v38);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v53,
-    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__);
-  if ( !v11 )
+    &v45,
+    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__);
+  if ( !v3 )
 LABEL_21:
-    sub_1C1AE30(waveInfoList, v12);
+    sub_1C22094(waveInfoList, v4);
   return (BattleWaveInfoData_array *)System_Collections_Generic_List_object___ToArray(
-                                       v11,
-                                       (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__);
+                                       v3,
+                                       (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserInterruptionQuestEntity__CreatePK(
         int64_t userId,
         int32_t questId,
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4BC8858 & 1) == 0 )
+  if ( (byte_4BDD2FB & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
-    byte_4BC8858 = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4BDD2FB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            questId,
            phase,
-           (const MethodInfo_2F9DD00 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2FAE674 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -185,24 +176,21 @@ UserInterruptionQuestEntity_InterruptionInfo_o *__fastcall UserInterruptionQuest
         UserInterruptionQuestEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   PartyOrganizationUtility_o *p_optionInfo; // x19
   UserInterruptionQuestEntity_InterruptionInfo_o *optionInfo; // x21
   System_String_o *interruptionInfo; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BC8855 & 1) == 0 )
+  if ( (byte_4BDD2F8 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___,
-      method);
-    sub_1C1ABD4(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
-    byte_4BC8855 = 1;
+    sub_1C21E38(&Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___);
+    sub_1C21E38(&Newtonsoft_Json_JsonConvert_TypeInfo);
+    byte_4BDD2F8 = 1;
   }
   p_optionInfo = (PartyOrganizationUtility_o *)&this->fields.optionInfo;
   optionInfo = this->fields.optionInfo;
@@ -213,9 +201,9 @@ UserInterruptionQuestEntity_InterruptionInfo_o *__fastcall UserInterruptionQuest
       j_il2cpp_runtime_class_init_0(Newtonsoft_Json_JsonConvert_TypeInfo);
     optionInfo = (UserInterruptionQuestEntity_InterruptionInfo_o *)Newtonsoft_Json_JsonConvert__DeserializeObject_object_(
                                                                      interruptionInfo,
-                                                                     (const MethodInfo_2FF58DC *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___);
+                                                                     (const MethodInfo_3006250 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___);
     p_optionInfo->klass = (PartyOrganizationUtility_c *)optionInfo;
-    sub_1C1AB78(p_optionInfo, (int64_t)optionInfo, v7, v8, v9, v10, v11, v12);
+    sub_1C21DDC(p_optionInfo, (int64_t)optionInfo, v6, v7, v8, v9, v10, v11);
   }
   return optionInfo;
 }
@@ -230,10 +218,10 @@ int32_t __fastcall UserInterruptionQuestEntity__GetRestartWave(
   __int64 v5; // x1
   struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *v7; // x8
 
-  if ( (byte_4BC8856 & 1) == 0 )
+  if ( (byte_4BDD2F9 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__, method);
-    byte_4BC8856 = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__);
+    byte_4BDD2F9 = 1;
   }
   waveInfoList = (System_Collections_ICollection_o *)this->fields.waveInfoList;
   if ( !waveInfoList )
@@ -248,7 +236,7 @@ int32_t __fastcall UserInterruptionQuestEntity__GetRestartWave(
     return 1;
   v7 = this->fields.waveInfoList;
   if ( !v7 )
-    sub_1C1AE30(IsNullOrEmpty, v5);
+    sub_1C22094(IsNullOrEmpty, v5);
   return v7->fields._size;
 }
 
@@ -257,30 +245,29 @@ void __fastcall UserInterruptionQuestEntity__SetWaveInfoScript(
         UserInterruptionQuestEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_String_o *waveInfo; // x20
-  Il2CppObject *v5; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  Il2CppObject *v4; // x0
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BC8854 & 1) == 0 )
+  if ( (byte_4BDD2F7 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____, method);
-    sub_1C1ABD4(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
-    byte_4BC8854 = 1;
+    sub_1C21E38(&Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____);
+    sub_1C21E38(&Newtonsoft_Json_JsonConvert_TypeInfo);
+    byte_4BDD2F7 = 1;
   }
   waveInfo = this->fields.waveInfo;
   if ( !Newtonsoft_Json_JsonConvert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Newtonsoft_Json_JsonConvert_TypeInfo);
-  v5 = Newtonsoft_Json_JsonConvert__DeserializeObject_object_(
+  v4 = Newtonsoft_Json_JsonConvert__DeserializeObject_object_(
          waveInfo,
-         (const MethodInfo_2FF58DC *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____);
-  this->fields.waveInfoList = (struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *)v5;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+         (const MethodInfo_3006250 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____);
+  this->fields.waveInfoList = (struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *)v4;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -360,7 +347,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_battleItemInfos(
   PartyListViewItem_o *v7; // x7
 
   this->fields._battleItemInfos_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._battleItemInfos_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -384,7 +371,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_dropInfos(
   PartyListViewItem_o *v7; // x7
 
   this->fields._dropInfos_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._dropInfos_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -408,7 +395,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_equipSkillChargeNum(
   PartyListViewItem_o *v7; // x7
 
   this->fields._equipSkillChargeNum_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._equipSkillChargeNum_k__BackingField,
     (int64_t)value,
     (int64_t)method,

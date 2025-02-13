@@ -27,7 +27,6 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__PlayAnim(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
         EventInfoConquestItemFarmCounterComponent_o *this,
         int32_t itemNum,
@@ -35,58 +34,55 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
         int32_t addNum,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   UILabel_o *itemNumLabel; // x23
-  System_String_o *v13; // x24
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  Il2CppObject *v17; // x0
-  System_String_o *v18; // x0
-  __int64 v19; // x1
+  System_String_o *v10; // x24
+  __int64 v11; // x2
+  __int64 v12; // x3
+  __int64 v13; // x4
+  Il2CppObject *v14; // x0
+  System_String_o *v15; // x0
+  __int64 v16; // x1
   UILabel_o *productNumLabel; // x22
-  System_String_o *v21; // x23
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  Il2CppObject *v25; // x0
-  int v26; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v27; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v18; // x23
+  __int64 v19; // x2
+  __int64 v20; // x3
+  __int64 v21; // x4
+  Il2CppObject *v22; // x0
+  int v23; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v24; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BC82EB & 1) == 0 )
+  if ( (byte_4BDCD87 & 1) == 0 )
   {
-    sub_1C1ABD4(&int_TypeInfo, *(_QWORD *)&itemNum);
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, v9);
-    sub_1C1ABD4(&StringLiteral_5692/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v10);
-    sub_1C1ABD4(&StringLiteral_5693/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v11);
-    byte_4BC82EB = 1;
+    sub_1C21E38(&int_TypeInfo);
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_5702/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
+    sub_1C21E38(&StringLiteral_5703/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
+    byte_4BDCD87 = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
-  v27 = itemNum;
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v14, v15, v16);
-  v18 = System_String__Format(v13, v17, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_5702/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+  v24 = itemNum;
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, v11, v12, v13);
+  v15 = System_String__Format(v10, v14, 0LL);
   if ( !itemNumLabel )
     goto LABEL_10;
-  UILabel__set_text(itemNumLabel, v18, 0LL);
+  UILabel__set_text(itemNumLabel, v15, 0LL);
   productNumLabel = this->fields.productNumLabel;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
-  v26 = productNum - addNum;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v22, v23, v24);
-  v18 = System_String__Format(v21, v25, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5703/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+  v23 = productNum - addNum;
+  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v19, v20, v21);
+  v15 = System_String__Format(v18, v22, 0LL);
   if ( !productNumLabel
-    || (UILabel__set_text(productNumLabel, v18, 0LL), (v18 = (System_String_o *)this->fields.itemNumLabel) == 0LL)
-    || (UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0LL),
-        (v18 = (System_String_o *)this->fields.productNumLabel) == 0LL) )
+    || (UILabel__set_text(productNumLabel, v15, 0LL), (v15 = (System_String_o *)this->fields.itemNumLabel) == 0LL)
+    || (UILabel__SetCondensedScale((UILabel_o *)v15, this->fields.numLabelMaxWidth, 0, 0LL),
+        (v15 = (System_String_o *)this->fields.productNumLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1C1AE30(v18, v19);
+    sub_1C22094(v15, v16);
   }
-  UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0LL);
+  UILabel__SetCondensedScale((UILabel_o *)v15, this->fields.numLabelMaxWidth, 0, 0LL);
 }
 
 
@@ -94,62 +90,59 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
         EventInfoConquestItemFarmCounterComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   UnityEngine_Object_o *itemNumTitleLabel; // x20
-  UILabel_o *v7; // x20
-  System_String_o *v8; // x0
-  __int64 v9; // x1
+  UILabel_o *v4; // x20
+  System_String_o *v5; // x0
+  __int64 v6; // x1
   UnityEngine_Object_o *productNumTitleLabel; // x20
-  UILabel_o *v11; // x20
+  UILabel_o *v8; // x20
 
-  if ( (byte_4BC82EA & 1) == 0 )
+  if ( (byte_4BDCD86 & 1) == 0 )
   {
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C1ABD4(&StringLiteral_5692/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v4);
-    sub_1C1ABD4(&StringLiteral_5693/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v5);
-    byte_4BC82EA = 1;
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&StringLiteral_5702/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/);
+    sub_1C21E38(&StringLiteral_5703/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/);
+    byte_4BDCD86 = 1;
   }
   itemNumTitleLabel = (UnityEngine_Object_o *)this->fields.itemNumTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemNumTitleLabel, 0LL, 0LL) )
   {
-    v7 = this->fields.itemNumTitleLabel;
+    v4 = this->fields.itemNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
-    if ( !v7 )
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5702/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+    if ( !v4 )
       goto LABEL_20;
-    UILabel__set_text(v7, v8, 0LL);
-    v8 = (System_String_o *)this->fields.itemNumTitleLabel;
-    if ( !v8 )
+    UILabel__set_text(v4, v5, 0LL);
+    v5 = (System_String_o *)this->fields.itemNumTitleLabel;
+    if ( !v5 )
       goto LABEL_20;
-    UILabel__SetCondensedScale((UILabel_o *)v8, this->fields.titleLabelMaxWidth, 0, 0LL);
+    UILabel__SetCondensedScale((UILabel_o *)v5, this->fields.titleLabelMaxWidth, 0, 0LL);
   }
   productNumTitleLabel = (UnityEngine_Object_o *)this->fields.productNumTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(productNumTitleLabel, 0LL, 0LL) )
   {
-    v11 = this->fields.productNumTitleLabel;
+    v8 = this->fields.productNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5693/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
-    if ( v11 )
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5703/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+    if ( v8 )
     {
-      UILabel__set_text(v11, v8, 0LL);
-      v8 = (System_String_o *)this->fields.productNumTitleLabel;
-      if ( v8 )
+      UILabel__set_text(v8, v5, 0LL);
+      v5 = (System_String_o *)this->fields.productNumTitleLabel;
+      if ( v5 )
       {
-        UILabel__SetCondensedScale((UILabel_o *)v8, this->fields.titleLabelMaxWidth, 0, 0LL);
+        UILabel__SetCondensedScale((UILabel_o *)v5, this->fields.titleLabelMaxWidth, 0, 0LL);
         goto LABEL_19;
       }
     }
 LABEL_20:
-    sub_1C1AE30(v8, v9);
+    sub_1C22094(v5, v6);
   }
 LABEL_19:
   ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_SetLabel.method)(

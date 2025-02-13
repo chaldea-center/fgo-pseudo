@@ -23,41 +23,40 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
         const MethodInfo *method)
 {
   ServantStatusListViewItemDrawFlavorText_o *v6; // x19
-  __int64 v7; // x1
   struct ServantCommentEntity_array *svtCommentEntityList; // x22
   int max_length; // w8
   System_String_o *Comment; // x20
-  unsigned int v11; // w23
-  Il2CppClass **v12; // x8
-  ServantCommentEntity_o *v13; // x21
-  int v14; // w23
+  unsigned int v10; // w23
+  Il2CppClass **v11; // x8
+  ServantCommentEntity_o *v12; // x21
+  int v13; // w23
   UnityEngine_Vector2_o printedSize; // kr00_8
   UnityEngine_Object_o *baseButton; // x21
   int32_t y; // w20
   UnityEngine_Object_o *baseSprite; // x21
   UnityEngine_Object_o *baseCollider; // x21
-  int v20; // w23
-  int v21; // s0
-  float v22; // s1
-  float v24; // s1
-  UnityEngine_Object_o *v25; // x21
-  float v26; // s0
-  float v27; // s2
-  float v28; // s11
-  float v29; // s12
-  float v30; // s0
-  float v31; // s2
-  float v32; // s9
-  float v33; // s10
+  int v19; // w23
+  int v20; // s0
+  float v21; // s1
+  float v23; // s1
+  UnityEngine_Object_o *v24; // x21
+  float v25; // s0
+  float v26; // s2
+  float v27; // s11
+  float v28; // s12
+  float v29; // s0
+  float v30; // s2
+  float v31; // s9
+  float v32; // s10
+  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4BC4A4A & 1) == 0 )
+  if ( (byte_4BD94D9 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, item);
-    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v7);
-    byte_4BC4A4A = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD94D9 = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode && v6->fields.isFirst )
@@ -70,31 +69,31 @@ void __fastcall ServantStatusListViewItemDrawFlavorText__SetItem(
       Comment = (System_String_o *)StringLiteral_1/*""*/;
       if ( max_length >= 1 )
       {
-        v11 = 0;
+        v10 = 0;
         while ( 1 )
         {
-          if ( v11 >= max_length )
-            sub_1C1AE38(this, item);
-          v12 = &svtCommentEntityList->obj.klass + (int)v11;
-          v13 = (ServantCommentEntity_o *)v12[4];
-          if ( !v13 )
+          if ( v10 >= max_length )
+            sub_1C2209C(this, item);
+          v11 = &svtCommentEntityList->obj.klass + (int)v10;
+          v12 = (ServantCommentEntity_o *)v11[4];
+          if ( !v12 )
             goto LABEL_51;
           this = (ServantStatusListViewItemDrawFlavorText_o *)ServantCommentEntity__IsConst(
-                                                                (ServantCommentEntity_o *)v12[4],
+                                                                (ServantCommentEntity_o *)v11[4],
                                                                 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
             break;
           max_length = svtCommentEntityList->max_length;
-          if ( (int)++v11 >= max_length )
+          if ( (int)++v10 >= max_length )
             goto LABEL_16;
         }
-        Comment = ServantCommentEntity__GetComment(v13, 0LL);
+        Comment = ServantCommentEntity__GetComment(v12, 0LL);
       }
 LABEL_16:
       this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
       if ( this )
       {
-        v14 = *((_DWORD *)&this[1].fields.isFirst + 1);
+        v13 = *((_DWORD *)&this[1].fields.isFirst + 1);
         UIWidget__set_height((UIWidget_o *)this, 1000, 0LL);
         this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
         if ( this )
@@ -132,28 +131,28 @@ LABEL_16:
             baseCollider = (UnityEngine_Object_o *)v6->fields.baseCollider;
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            v20 = y - v14;
+            v19 = y - v13;
             if ( UnityEngine_Object__op_Inequality(baseCollider, 0LL, 0LL) )
             {
               this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.baseCollider;
               if ( !this )
                 goto LABEL_51;
-              *(UnityEngine_Vector3_o *)&v21 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0LL);
+              *(UnityEngine_Vector3_o *)&v20 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)this, 0LL);
               this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.baseCollider;
               if ( !this )
                 goto LABEL_51;
-              v24 = v22 + (float)v20;
-              UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, *(UnityEngine_Vector3_o *)&v21, 0LL);
+              v23 = v21 + (float)v19;
+              UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)this, *(UnityEngine_Vector3_o *)&v20, 0LL);
             }
-            v25 = (UnityEngine_Object_o *)v6->fields.baseSprite;
+            v24 = (UnityEngine_Object_o *)v6->fields.baseSprite;
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            if ( UnityEngine_Object__op_Inequality(v25, 0LL, 0LL) )
+            if ( UnityEngine_Object__op_Inequality(v24, 0LL, 0LL) )
             {
               this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.baseSprite;
               if ( !this )
                 goto LABEL_51;
-              UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)&this[1].fields.isFirst + 1) + v20, 0LL);
+              UIWidget__set_height((UIWidget_o *)this, *((_DWORD *)&this[1].fields.isFirst + 1) + v19, 0LL);
             }
             this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
             if ( this )
@@ -163,27 +162,27 @@ LABEL_16:
                                                                     0LL);
               if ( this )
               {
-                *(UnityEngine_Vector3_o *)&v26 = UnityEngine_Transform__get_localPosition(
+                *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Transform__get_localPosition(
                                                    (UnityEngine_Transform_o *)this,
                                                    0LL);
                 this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.titleBase;
                 if ( this )
                 {
+                  v27 = v25;
                   v28 = v26;
-                  v29 = v27;
                   this = (ServantStatusListViewItemDrawFlavorText_o *)UnityEngine_GameObject__get_transform(
                                                                         (UnityEngine_GameObject_o *)this,
                                                                         0LL);
                   if ( this )
                   {
-                    *(UnityEngine_Vector3_o *)&v30 = UnityEngine_Transform__get_localPosition(
+                    *(UnityEngine_Vector3_o *)&v29 = UnityEngine_Transform__get_localPosition(
                                                        (UnityEngine_Transform_o *)this,
                                                        0LL);
                     this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
                     if ( this )
                     {
+                      v31 = v29;
                       v32 = v30;
-                      v33 = v31;
                       UIWidget__set_height((UIWidget_o *)this, y, 0LL);
                       this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.messageLabel;
                       if ( this )
@@ -193,10 +192,10 @@ LABEL_16:
                                                                               0LL);
                         if ( this )
                         {
-                          v34.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
-                          v34.fields.x = v28;
-                          v34.fields.z = v29;
-                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v34, 0LL);
+                          v33.fields.y = (float)(printedSize.fields.y * 0.5) + -14.0;
+                          v33.fields.x = v27;
+                          v33.fields.z = v28;
+                          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v33, 0LL);
                           this = (ServantStatusListViewItemDrawFlavorText_o *)v6->fields.titleBase;
                           if ( this )
                           {
@@ -205,10 +204,10 @@ LABEL_16:
                                                                                   0LL);
                             if ( this )
                             {
-                              v35.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
-                              v35.fields.x = v32;
-                              v35.fields.z = v33;
-                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v35, 0LL);
+                              v34.fields.y = (float)(printedSize.fields.y * 0.5) + 20.0;
+                              v34.fields.x = v31;
+                              v34.fields.z = v32;
+                              UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v34, 0LL);
                               return;
                             }
                           }
@@ -224,6 +223,6 @@ LABEL_16:
       }
     }
 LABEL_51:
-    sub_1C1AE30(this, item);
+    sub_1C22094(this, item);
   }
 }

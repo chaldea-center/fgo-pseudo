@@ -1,9 +1,9 @@
 void __fastcall SupportDeckFixErrorDialog___ctor(SupportDeckFixErrorDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC42E3 & 1) == 0 )
+  if ( (byte_4BD8D72 & 1) == 0 )
   {
-    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
-    byte_4BC42E3 = 1;
+    sub_1C21E38(&BaseDialog_TypeInfo);
+    byte_4BD8D72 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,19 +13,18 @@ void __fastcall SupportDeckFixErrorDialog___ctor(SupportDeckFixErrorDialog_o *th
 
 void __fastcall SupportDeckFixErrorDialog__Close(SupportDeckFixErrorDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Action_o *v4; // x20
+  System_Action_o *v3; // x20
 
-  if ( (byte_4BC42E0 & 1) == 0 )
+  if ( (byte_4BD8D6F & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&Method_SupportDeckFixErrorDialog_OnFinishedClose__, v3);
-    byte_4BC42E0 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_SupportDeckFixErrorDialog_OnFinishedClose__);
+    byte_4BD8D6F = 1;
   }
   this->fields.state = 3;
-  v4 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_SupportDeckFixErrorDialog_OnFinishedClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
+  v3 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v3, (Il2CppObject *)this, Method_SupportDeckFixErrorDialog_OnFinishedClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v3, 0LL);
 }
 
 
@@ -33,10 +32,10 @@ void __fastcall SupportDeckFixErrorDialog__Init(SupportDeckFixErrorDialog_o *thi
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BC42DE & 1) == 0 )
+  if ( (byte_4BD8D6D & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
-    byte_4BC42DE = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD8D6D = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -45,7 +44,7 @@ void __fastcall SupportDeckFixErrorDialog__Init(SupportDeckFixErrorDialog_o *thi
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = this->fields.closeButtonLabel) == 0LL) )
   {
-    sub_1C1AE30(titleLabel, method);
+    sub_1C22094(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -59,17 +58,17 @@ void __fastcall SupportDeckFixErrorDialog__OnClickClose(SupportDeckFixErrorDialo
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BC42E1 & 1) == 0 )
+  if ( (byte_4BD8D70 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_SupportDeckFixErrorDialog_OnClickClose__, method);
-    byte_4BC42E1 = 1;
+    sub_1C21E38(&Method_SupportDeckFixErrorDialog_OnClickClose__);
+    byte_4BD8D70 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_SupportDeckFixErrorDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_SupportDeckFixErrorDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C1ABEC(Method_SupportDeckFixErrorDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C21E50(Method_SupportDeckFixErrorDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     SupportDeckFixErrorDialog__Close(this, v5);
   }
@@ -82,7 +81,7 @@ void __fastcall SupportDeckFixErrorDialog__OnFinishedClose(SupportDeckFixErrorDi
 
   errorListViewManager = (ListViewManager_o *)this->fields.errorListViewManager;
   if ( !errorListViewManager )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   ListViewManager__DestroyList(errorListViewManager, 0LL);
 }
 
@@ -95,7 +94,7 @@ void __fastcall SupportDeckFixErrorDialog__OnFinishedOpen(SupportDeckFixErrorDia
   errorListViewManager = this->fields.errorListViewManager;
   this->fields.state = 2;
   if ( !errorListViewManager )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   SupportDeckFixErrorListViewManager__SetMode(errorListViewManager, 2, v2);
 }
 
@@ -105,30 +104,25 @@ void __fastcall SupportDeckFixErrorDialog__Open(
         System_String_array *messageList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   int32_t state; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x2
-  const MethodInfo *v14; // x2
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
+  const MethodInfo *v9; // x2
   UILabel_o *titleLabel; // x20
   UILabel_o *messageLabel; // x20
   UILabel_o *closeButtonLabel; // x20
-  System_Action_o *v18; // x20
+  System_Action_o *v13; // x20
 
-  if ( (byte_4BC42DF & 1) == 0 )
+  if ( (byte_4BD8D6E & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, messageList);
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, v5);
-    sub_1C1ABD4(&Method_SupportDeckFixErrorDialog_OnFinishedOpen__, v6);
-    sub_1C1ABD4(&StringLiteral_12621/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/, v7);
-    sub_1C1ABD4(&StringLiteral_12624/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/, v8);
-    sub_1C1ABD4(&StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, v9);
-    byte_4BC42DF = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&Method_SupportDeckFixErrorDialog_OnFinishedOpen__);
+    sub_1C21E38(&StringLiteral_12631/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/);
+    sub_1C21E38(&StringLiteral_12634/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/);
+    sub_1C21E38(&StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4BD8D6E = 1;
   }
   state = this->fields.state;
   if ( state == 3 || !state )
@@ -140,32 +134,32 @@ void __fastcall SupportDeckFixErrorDialog__Open(
     gameObject = (UnityEngine_GameObject_o *)this->fields.errorListViewManager;
     if ( !gameObject )
       goto LABEL_15;
-    SupportDeckFixErrorListViewManager__CreateList((SupportDeckFixErrorListViewManager_o *)gameObject, messageList, v13);
+    SupportDeckFixErrorListViewManager__CreateList((SupportDeckFixErrorListViewManager_o *)gameObject, messageList, v8);
     gameObject = (UnityEngine_GameObject_o *)this->fields.errorListViewManager;
     if ( !gameObject )
       goto LABEL_15;
-    SupportDeckFixErrorListViewManager__SetMode((SupportDeckFixErrorListViewManager_o *)gameObject, 1, v14);
+    SupportDeckFixErrorListViewManager__SetMode((SupportDeckFixErrorListViewManager_o *)gameObject, 1, v9);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12624/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12634/*"SUPPORT_DECK_FIXED_ERROR_TITLE"*/, 0LL);
     if ( !titleLabel
       || (UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL),
           messageLabel = this->fields.messageLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12621/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12631/*"SUPPORT_DECK_FIXED_ERROR_MESSAGE"*/, 0LL),
           !messageLabel)
       || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL),
           closeButtonLabel = this->fields.closeButtonLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3802/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/, 0LL),
           !closeButtonLabel) )
     {
 LABEL_15:
-      sub_1C1AE30(gameObject, v12);
+      sub_1C22094(gameObject, v7);
     }
     UILabel__set_text(closeButtonLabel, (System_String_o *)gameObject, 0LL);
-    v18 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-    System_Action___ctor(v18, (Il2CppObject *)this, Method_SupportDeckFixErrorDialog_OnFinishedOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v18, 0, 0LL);
+    v13 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    System_Action___ctor(v13, (Il2CppObject *)this, Method_SupportDeckFixErrorDialog_OnFinishedOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0LL);
   }
 }
 
@@ -174,10 +168,10 @@ System_String_o *__fastcall SupportDeckFixErrorDialog__get_closeBtnPath(
         SupportDeckFixErrorDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC42E2 & 1) == 0 )
+  if ( (byte_4BD8D71 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_3236/*"BaseWindow/CloseButton"*/, method);
-    byte_4BC42E2 = 1;
+    sub_1C21E38(&StringLiteral_3245/*"BaseWindow/CloseButton"*/);
+    byte_4BD8D71 = 1;
   }
-  return (System_String_o *)StringLiteral_3236/*"BaseWindow/CloseButton"*/;
+  return (System_String_o *)StringLiteral_3245/*"BaseWindow/CloseButton"*/;
 }

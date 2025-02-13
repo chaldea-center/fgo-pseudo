@@ -20,10 +20,10 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4BCB915 & 1) == 0 )
+  if ( (byte_4BE03D7 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    byte_4BCB915 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BE03D7 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (monitor = (CommonEffectComponent_o *)v7[1].monitor) == 0LL )
 LABEL_23:
-      sub_1C1AE30(monitor, v4);
+      sub_1C22094(monitor, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)monitor, 0LL);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0LL) )
       return 1;
@@ -84,7 +84,7 @@ void __fastcall EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction;
   v9 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0LL;
-  sub_1C1AB78(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C21DDC(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v9, 0LL);
 }
@@ -96,106 +96,104 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
         System_Action_o *endAct,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
-  __int64 v10; // x1
-  Il2CppObject *ComponentInChildren_object__49897880; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  Il2CppObject *v18; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  Il2CppObject *v25; // x0
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  __int64 v8; // x1
+  Il2CppObject *ComponentInChildren_object__49965836; // x0
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  Il2CppObject *v16; // x0
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
+  Il2CppObject *v23; // x0
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  int64_t v30; // x2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  BattleSetupInfo_o *v33; // x5
+  FollowerInfo_o *v34; // x6
+  PartyListViewItem_o *v35; // x7
+  int64_t v36; // x2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  BattleSetupInfo_o *v39; // x5
+  FollowerInfo_o *v40; // x6
+  PartyListViewItem_o *v41; // x7
 
-  if ( (byte_4BCB914 & 1) == 0 )
+  if ( (byte_4BE03D6 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
-    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
-    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
-    byte_4BCB914 = 1;
+    sub_1C21E38(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_1C21E38(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+    sub_1C21E38(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    byte_4BE03D6 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__49897880 = UnityEngine_Component__GetComponentInChildren_object__49897880(
+  ComponentInChildren_object__49965836 = UnityEngine_Component__GetComponentInChildren_object__49965836(
                                            transform,
-                                           (const MethodInfo_2F96198 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__49897880;
-  sub_1C1AB78(
+                                           (const MethodInfo_2FA6B0C *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__49965836;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.commonEffectComponent,
-    (int64_t)ComponentInChildren_object__49897880,
+    (int64_t)ComponentInChildren_object__49965836,
+    v10,
+    v11,
     v12,
     v13,
     v14,
-    v15,
-    v16,
-    v17);
+    v15);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
-    || (v18 = UnityEngine_Component__GetComponentInChildren_object__49897880(
+    || (v16 = UnityEngine_Component__GetComponentInChildren_object__49965836(
                 transform,
-                (const MethodInfo_2F96198 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
-        this->fields.simpleAnimation = (struct SimpleAnimation_o *)v18,
-        sub_1C1AB78(
+                (const MethodInfo_2FA6B0C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+        this->fields.simpleAnimation = (struct SimpleAnimation_o *)v16,
+        sub_1C21DDC(
           (PartyOrganizationUtility_o *)&this->fields.simpleAnimation,
-          (int64_t)v18,
+          (int64_t)v16,
+          v17,
+          v18,
           v19,
           v20,
           v21,
-          v22,
-          v23,
-          v24),
+          v22),
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)this,
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_1C1AE30(transform, v10);
+    sub_1C22094(transform, v8);
   }
-  v25 = UnityEngine_Component__GetComponentInChildren_object__49897880(
+  v23 = UnityEngine_Component__GetComponentInChildren_object__49965836(
           transform,
-          (const MethodInfo_2F96198 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-  this->fields.animation = (struct UnityEngine_Animation_o *)v25;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)v25, v26, v27, v28, v29, v30, v31);
+          (const MethodInfo_2FA6B0C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+  this->fields.animation = (struct UnityEngine_Animation_o *)v23;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)v23, v24, v25, v26, v27, v28, v29);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction,
     (int64_t)gaugeChangeAct,
+    v30,
+    v31,
     v32,
     v33,
     v34,
-    v35,
-    v36,
-    v37);
+    v35);
   this->fields.endAction = endAct;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.endAction, (int64_t)endAct, v38, v39, v40, v41, v42, v43);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.endAction, (int64_t)endAct, v36, v37, v38, v39, v40, v41);
 }
 
 
@@ -215,7 +213,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Update(
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0LL;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
     if ( endAction )
       ActionExtensions__Call(endAction, 0LL);
   }

@@ -1,14 +1,14 @@
 void __fastcall EventRewardSetMaster___ctor(EventRewardSetMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7BCC & 1) == 0 )
+  if ( (byte_4BDC663 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__, method);
-    byte_4BC7BCC = 1;
+    sub_1C21E38(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
+    byte_4BDC663 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     144,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,16 @@ EventRewardSetEntity_o *__fastcall EventRewardSetMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BC7BCA & 1) == 0 )
+  if ( (byte_4BDC661 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__,
-      *(_QWORD *)&rewardSetType);
-    byte_4BC7BCA = 1;
+    sub_1C21E38(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
+    byte_4BDC661 = 1;
   }
   PK = (Il2CppObject *)EventRewardSetEntity__CreatePK(rewardSetType, eventId, id, *(const MethodInfo **)&id);
   return (EventRewardSetEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_324D130 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
+                                     (const MethodInfo_3260880 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
 }
 
 
@@ -48,15 +46,15 @@ bool __fastcall EventRewardSetMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC7BCB & 1) == 0 )
+  if ( (byte_4BDC662 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__, entity);
-    byte_4BC7BCB = 1;
+    sub_1C21E38(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
+    byte_4BDC662 = 1;
   }
   PK = (Il2CppObject *)EventRewardSetEntity__CreatePK(rewardSetType, eventId, id, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
 }

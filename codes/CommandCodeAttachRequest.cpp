@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CommandCodeAttachRequest__beginRequest(
         CommandCodeAttachRequest_o *this,
         int32_t servantId,
@@ -7,35 +6,32 @@ void __fastcall CommandCodeAttachRequest__beginRequest(
         int64_t attachedUserCommandCodeId,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
-  const MethodInfo *v17; // x1
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4BC9390 & 1) == 0 )
+  if ( (byte_4BDDE3A & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_24116/*"svtId"*/, *(_QWORD *)&servantId);
-    sub_1C1ABD4(&StringLiteral_24798/*"userCommandCodeId"*/, v11);
-    sub_1C1ABD4(&StringLiteral_20555/*"idx"*/, v12);
-    sub_1C1ABD4(&StringLiteral_17222/*"attachedUserCommandCodeId"*/, v13);
-    byte_4BC9390 = 1;
+    sub_1C21E38(&StringLiteral_24136/*"svtId"*/);
+    sub_1C21E38(&StringLiteral_24818/*"userCommandCodeId"*/);
+    sub_1C21E38(&StringLiteral_20570/*"idx"*/);
+    sub_1C21E38(&StringLiteral_17235/*"attachedUserCommandCodeId"*/);
+    byte_4BDDE3A = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24116/*"svtId"*/,
+    (System_String_o *)StringLiteral_24136/*"svtId"*/,
     servantId,
     (const MethodInfo *)userCommandCodeId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20555/*"idx"*/, idx, v14);
-  RequestBase__addField_42368496((RequestBase_o *)this, (System_String_o *)StringLiteral_24798/*"userCommandCodeId"*/, userCommandCodeId, v15);
-  RequestBase__addField_42368496(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20570/*"idx"*/, idx, v11);
+  RequestBase__addField_42421084((RequestBase_o *)this, (System_String_o *)StringLiteral_24818/*"userCommandCodeId"*/, userCommandCodeId, v12);
+  RequestBase__addField_42421084(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17222/*"attachedUserCommandCodeId"*/,
+    (System_String_o *)StringLiteral_17235/*"attachedUserCommandCodeId"*/,
     attachedUserCommandCodeId,
-    v16);
-  RequestBase__beginRequest((RequestBase_o *)this, v17);
+    v13);
+  RequestBase__beginRequest((RequestBase_o *)this, v14);
 }
 
 
@@ -43,19 +39,18 @@ System_String_o *__fastcall CommandCodeAttachRequest__getURL(
         CommandCodeAttachRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC938F & 1) == 0 )
+  if ( (byte_4BDDE39 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_18443/*"commandCode/attach"*/, v2);
-    byte_4BC938F = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_18457/*"commandCode/attach"*/);
+    byte_4BDDE39 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18443/*"commandCode/attach"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_18457/*"commandCode/attach"*/, 0LL);
 }
 
 
@@ -64,45 +59,43 @@ void __fastcall CommandCodeAttachRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  ResponseData_o *v8; // x20
+  ResponseData_o *v5; // x0
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_String_o *v8; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
 
-  if ( (byte_4BC9391 & 1) == 0 )
+  if ( (byte_4BDDE3B & 1) == 0 )
   {
-    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
-    byte_4BC9391 = 1;
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDE3B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(77, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL)) )
+  v5 = ResponseCommandKind__SearchData(77, responseList, 0LL);
+  if ( v5 && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL)) )
   {
-    success = (Il2CppObject *)v8->fields.success;
+    success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v8 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v10,
+        v8,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_22437/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = this->fields.CallBack;
+    if ( v10 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
+        v10->fields.original_method_info,
+        StringLiteral_22456/*"ng"*/,
+        *(_QWORD *)&v10->fields.extra_arg);
   }
 }

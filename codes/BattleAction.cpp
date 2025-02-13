@@ -13,10 +13,10 @@ void __fastcall BattleAction_BasePlayShiftGauge__End(BattleAction_BasePlayShiftG
   __int64 v5; // x1
   struct BattleActionData_BaseShiftGaugeData_o *v6; // x8
 
-  if ( (byte_4BC5AA9 & 1) == 0 )
+  if ( (byte_4BDA538 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_ActionExtensions_Call_int___, method);
-    byte_4BC5AA9 = 1;
+    sub_1C21E38(&Method_ActionExtensions_Call_int___);
+    byte_4BDA538 = 1;
   }
   shiftData = this->fields.shiftData;
   v4 = ((__int64 (__fastcall *)(BattleAction_BasePlayShiftGauge_o *, Il2CppMethodPointer))this->klass->vtable._4_unknown.method)(
@@ -25,12 +25,12 @@ void __fastcall BattleAction_BasePlayShiftGauge__End(BattleAction_BasePlayShiftG
   if ( !shiftData
     || (BattleActionData_BaseShiftGaugeData__OffState(shiftData, v4, 0LL), (v6 = this->fields.shiftData) == 0LL) )
   {
-    sub_1C1AE30(v4, v5);
+    sub_1C22094(v4, v5);
   }
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.callBack,
     v6->fields._TargetId_k__BackingField,
-    (const MethodInfo_2EF1BFC *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_2F02570 *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -46,7 +46,7 @@ BattleAction_BasePlayShiftGauge_o *__fastcall BattleAction_BasePlayShiftGauge__I
   PartyListViewItem_o *v7; // x7
 
   this->fields.shiftData = data;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
   return this;
 }
 
@@ -75,7 +75,7 @@ void __fastcall BattleAction_BasePlayShiftGauge__Start(
   __int64 v12; // x1
 
   this->fields.callBack = callBack;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.callBack,
     (int64_t)callBack,
     (int64_t)callBack,
@@ -89,7 +89,7 @@ void __fastcall BattleAction_BasePlayShiftGauge__Start(
           this,
           this->klass->vtable._5_StartPlayEffect.methodPtr);
   if ( !shiftData )
-    sub_1C1AE30(v11, v12);
+    sub_1C22094(v11, v12);
   BattleActionData_BaseShiftGaugeData__OnState(shiftData, v11, 0LL);
   ((void (__fastcall *)(BattleAction_BasePlayShiftGauge_o *, BattlePerformanceStatus_o *, Il2CppMethodPointer))this->klass->vtable._5_StartPlayEffect.method)(
     this,
@@ -126,12 +126,10 @@ void __fastcall BattleAction_BasePlayShiftGauge__set_ChangeToHp(
 
 void __fastcall BattleAction_PlayDownShiftGaugeMain___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4BC5AAF & 1) == 0 )
+  if ( (byte_4BDA53E & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleAction_PlayDownShiftGaugeMain_TypeInfo, v1);
-    byte_4BC5AAF = 1;
+    sub_1C21E38(&BattleAction_PlayDownShiftGaugeMain_TypeInfo);
+    byte_4BDA53E = 1;
   }
   LODWORD(BattleAction_PlayDownShiftGaugeMain_TypeInfo->static_fields->EffectAnmDelayTime) = (struct BattleAction_PlayDownShiftGaugeMain_StaticFields)1057518256;
 }
@@ -180,7 +178,7 @@ void __fastcall BattleAction_PlayDownShiftGaugeMain__DelayPlayDownShiftEffect(
       }
     }
 LABEL_7:
-    sub_1C1AE30(this, comp);
+    sub_1C22094(this, comp);
   }
 LABEL_6:
   TotalMovePer = BattleAction_ShiftHpData__get_TotalMovePer(hpData, (const MethodInfo *)comp);
@@ -200,86 +198,82 @@ void __fastcall BattleAction_PlayDownShiftGaugeMain__PlayEffectMain(
         BattleAction_ShiftHpData_o *hpData,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  BattleAction_PlayDownShiftGaugeMain_c *v11; // x0
+  BattleAction_PlayDownShiftGaugeMain_c *v7; // x0
   float EffectAnmDelayTime; // s9
-  float v13; // s8
+  float v9; // s8
   struct BattleActionData_BaseShiftGaugeData_o *shiftData; // x8
-  int32_t v15; // w22
-  const MethodInfo *v16; // x2
-  float v17; // s0
-  System_Action_object__object__o *v18; // x22
-  BattleCallBack_T1__T2__o *v19; // x21
+  int32_t v11; // w22
+  const MethodInfo *v12; // x2
+  float v13; // s0
+  System_Action_object__object__o *v14; // x22
+  BattleCallBack_T1__T2__o *v15; // x21
 
-  if ( (byte_4BC5AAE & 1) == 0 )
+  if ( (byte_4BDA53D & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo, comp);
-    sub_1C1ABD4(&Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__, v7);
-    sub_1C1ABD4(&BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo, v8);
-    sub_1C1ABD4(&Method_BattleAction_PlayDownShiftGaugeMain_DelayPlayDownShiftEffect__, v9);
-    sub_1C1ABD4(&BattleAction_PlayDownShiftGaugeMain_TypeInfo, v10);
-    byte_4BC5AAE = 1;
+    sub_1C21E38(&System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
+    sub_1C21E38(&Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
+    sub_1C21E38(&BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
+    sub_1C21E38(&Method_BattleAction_PlayDownShiftGaugeMain_DelayPlayDownShiftEffect__);
+    sub_1C21E38(&BattleAction_PlayDownShiftGaugeMain_TypeInfo);
+    byte_4BDA53D = 1;
   }
-  v11 = BattleAction_PlayDownShiftGaugeMain_TypeInfo;
+  v7 = BattleAction_PlayDownShiftGaugeMain_TypeInfo;
   if ( !BattleAction_PlayDownShiftGaugeMain_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleAction_PlayDownShiftGaugeMain_TypeInfo);
-    v11 = BattleAction_PlayDownShiftGaugeMain_TypeInfo;
+    v7 = BattleAction_PlayDownShiftGaugeMain_TypeInfo;
   }
   if ( !hpData )
     goto LABEL_15;
-  EffectAnmDelayTime = v11->static_fields->EffectAnmDelayTime;
-  v13 = 0.0;
+  EffectAnmDelayTime = v7->static_fields->EffectAnmDelayTime;
+  v9 = 0.0;
   if ( (((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, void *, BattleAction_ShiftHpData_o *, const MethodInfo *))hpData->klass->vtable._5_IsPlayShiftEffect.method)(
           hpData,
           hpData->klass[1]._1.image,
           hpData,
           method) & 1) == 0 )
     goto LABEL_13;
-  v11 = (BattleAction_PlayDownShiftGaugeMain_c *)((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, Il2CppMethodPointer))hpData->klass->vtable._4_unknown.method)(
-                                                   hpData,
-                                                   hpData->klass->vtable._5_IsPlayShiftEffect.methodPtr);
+  v7 = (BattleAction_PlayDownShiftGaugeMain_c *)((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, Il2CppMethodPointer))hpData->klass->vtable._4_unknown.method)(
+                                                  hpData,
+                                                  hpData->klass->vtable._5_IsPlayShiftEffect.methodPtr);
   shiftData = this->fields.shiftData;
   if ( !shiftData
-    || (v15 = (int)v11,
-        v11 = (BattleAction_PlayDownShiftGaugeMain_c *)((__int64 (__fastcall *)(struct BattleActionData_BaseShiftGaugeData_o *, Il2CppMethodPointer))shiftData->klass->vtable._6_GetBeforeEffectData.method)(
-                                                         this->fields.shiftData,
-                                                         shiftData->klass->vtable._7_unknown.methodPtr),
+    || (v11 = (int)v7,
+        v7 = (BattleAction_PlayDownShiftGaugeMain_c *)((__int64 (__fastcall *)(struct BattleActionData_BaseShiftGaugeData_o *, Il2CppMethodPointer))shiftData->klass->vtable._6_GetBeforeEffectData.method)(
+                                                        this->fields.shiftData,
+                                                        shiftData->klass->vtable._7_unknown.methodPtr),
         !comp) )
   {
 LABEL_15:
-    sub_1C1AE30(v11, comp);
+    sub_1C22094(v7, comp);
   }
-  v17 = BattleServantParamComponent__PlayShiftEffectGeneral(
+  v13 = BattleServantParamComponent__PlayShiftEffectGeneral(
           comp,
-          v15,
-          (BattleServantHpShiftComponent_EffectData_o *)v11,
+          v11,
+          (BattleServantHpShiftComponent_EffectData_o *)v7,
           0LL);
-  if ( v17 <= 0.0 )
-    v13 = EffectAnmDelayTime;
+  if ( v13 <= 0.0 )
+    v9 = EffectAnmDelayTime;
   else
-    v13 = v17;
-  BattleAction_PlayShiftGaugeMain__InitNextTdGauge((BattleAction_PlayShiftGaugeMain_o *)this, comp, v16);
+    v9 = v13;
+  BattleAction_PlayShiftGaugeMain__InitNextTdGauge((BattleAction_PlayShiftGaugeMain_o *)this, comp, v12);
 LABEL_13:
-  v18 = (System_Action_object__object__o *)sub_1C1AE20(System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
+  v14 = (System_Action_object__object__o *)sub_1C22084(System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
   System_Action_object__object____ctor(
-    v18,
+    v14,
     (Il2CppObject *)this,
     Method_BattleAction_PlayDownShiftGaugeMain_DelayPlayDownShiftEffect__,
     0LL);
-  v19 = (BattleCallBack_T1__T2__o *)sub_1C1AE20(BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
+  v15 = (BattleCallBack_T1__T2__o *)sub_1C22084(BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
   BattleCallBack_object__object____ctor(
-    v19,
+    v15,
     (Il2CppObject *)comp,
     (Il2CppObject *)hpData,
-    (System_Action_T1__T2__o *)v18,
-    (const MethodInfo_31BDE5C *)Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
+    (System_Action_T1__T2__o *)v14,
+    (const MethodInfo_31D15AC *)Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
   if ( !comp )
     goto LABEL_15;
-  BattleServantParamComponent__DelayCoroutine(comp, v13, (BattleCallBackBase_o *)v19, 0LL);
+  BattleServantParamComponent__DelayCoroutine(comp, v9, (BattleCallBackBase_o *)v15, 0LL);
 }
 
 
@@ -304,7 +298,7 @@ void __fastcall BattleAction_PlayShiftGaugeMain__InitNextTdGauge(
         BattleServantParamComponent__InitNextTdGauge(comp, 0LL),
         (this = (BattleAction_PlayShiftGaugeMain_o *)v3->fields.shiftData) == 0LL) )
   {
-    sub_1C1AE30(this, comp);
+    sub_1C22094(this, comp);
   }
   BattleActionData_BaseShiftGaugeData__OnNotUpdateState((BattleActionData_BaseShiftGaugeData_o *)this, 1, 0LL);
 }
@@ -337,7 +331,7 @@ void __fastcall BattleAction_PlayShiftGaugeMain__NextHpChangeGauge(
     if ( comp )
       goto LABEL_8;
 LABEL_9:
-    sub_1C1AE30(this, comp);
+    sub_1C22094(this, comp);
   }
   if ( !comp )
     goto LABEL_9;
@@ -373,10 +367,10 @@ void __fastcall BattleAction_PlayShiftGaugeMain__NextPlayEffect(
 
   shiftData = this->fields.shiftData;
   if ( !shiftData )
-    sub_1C1AE30(0LL, comp);
+    sub_1C22094(0LL, comp);
   HpData = BattleActionData_BaseShiftGaugeData__GetHpData(shiftData, 0LL);
   *(_QWORD *)&this->fields.hpGaugeSpeed = HpData;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.hpGaugeSpeed, (int64_t)HpData, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.hpGaugeSpeed, (int64_t)HpData, v7, v8, v9, v10, v11, v12);
   v14 = *(_QWORD *)&this->fields.hpGaugeSpeed;
   if ( v14 )
     ((void (__fastcall *)(BattleAction_PlayShiftGaugeMain_o *, BattleServantParamComponent_o *, __int64, Il2CppMethodPointer))this->klass->vtable._8_PlayEffectMain.method)(
@@ -421,15 +415,15 @@ void __fastcall BattleAction_PlayShiftGaugeMain__StartHpChangeGauge(
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4BC5AAB & 1) == 0 )
+  if ( (byte_4BDA53A & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__, comp);
-    byte_4BC5AAB = 1;
+    sub_1C21E38(&Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__);
+    byte_4BDA53A = 1;
   }
   v7 = Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__;
   if ( (*((_BYTE *)Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C1ABEC(Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C21E50(Method_BattleAction_PlayShiftGaugeMain_StartHpChangeGauge__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v7, v7[4]);
   OverwriteAssetSoundName__PlayCommonSe(v8, 16, 0, 0LL);
   ((void (__fastcall *)(BattleAction_PlayShiftGaugeMain_o *, BattleServantParamComponent_o *, BattleAction_ShiftHpData_o *, void *))this->klass->vtable._11_NextHpChangeGauge.method)(
     this,
@@ -449,10 +443,10 @@ void __fastcall BattleAction_PlayShiftGaugeMain__StartPlayEffect(
   UnityEngine_Object_o *EnemySvtParamComponent; // x20
   const MethodInfo *v8; // x1
 
-  if ( (byte_4BC5AAA & 1) == 0 )
+  if ( (byte_4BDA539 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, status);
-    byte_4BC5AAA = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDA539 = 1;
   }
   shiftData = this->fields.shiftData;
   if ( !shiftData
@@ -463,7 +457,7 @@ void __fastcall BattleAction_PlayShiftGaugeMain__StartPlayEffect(
         (v6 = this->fields.shiftData) == 0LL)
     || !status )
   {
-    sub_1C1AE30(shiftData, status);
+    sub_1C22094(shiftData, status);
   }
   EnemySvtParamComponent = (UnityEngine_Object_o *)BattlePerformanceStatus__GetEnemySvtParamComponent(
                                                      status,
@@ -508,10 +502,10 @@ void __fastcall BattleAction_PlayUpShiftGaugeUpMain__DelayStartHpChangeGauge(
   UnityEngine_Object_o *hpShift; // x22
 
   v6 = this;
-  if ( (byte_4BC5AAD & 1) == 0 )
+  if ( (byte_4BDA53C & 1) == 0 )
   {
-    this = (BattleAction_PlayUpShiftGaugeUpMain_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, comp);
-    byte_4BC5AAD = 1;
+    this = (BattleAction_PlayUpShiftGaugeUpMain_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDA53C = 1;
   }
   if ( !comp )
     goto LABEL_12;
@@ -536,7 +530,7 @@ void __fastcall BattleAction_PlayUpShiftGaugeUpMain__DelayStartHpChangeGauge(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C1AE30(this, comp);
+    sub_1C22094(this, comp);
   }
 LABEL_11:
   ((void (__fastcall *)(BattleAction_PlayUpShiftGaugeUpMain_o *, BattleServantParamComponent_o *, BattleAction_ShiftHpData_o *, Il2CppMethodPointer))v6->klass->vtable._10_StartHpChangeGauge.method)(
@@ -553,25 +547,22 @@ void __fastcall BattleAction_PlayUpShiftGaugeUpMain__PlayEffectMain(
         BattleAction_ShiftHpData_o *hpData,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   struct BattleActionData_BaseShiftGaugeData_o *shiftData; // x0
-  BattleServantHpShiftComponent_EffectData_o *v11; // x23
-  const MethodInfo *v12; // x2
-  char v13; // w22
-  const MethodInfo *v14; // x1
-  System_Action_object__object__o *v15; // x23
-  BattleCallBack_T1__T2__o *v16; // x21
-  float v17; // s0
+  BattleServantHpShiftComponent_EffectData_o *v8; // x23
+  const MethodInfo *v9; // x2
+  char v10; // w22
+  const MethodInfo *v11; // x1
+  System_Action_object__object__o *v12; // x23
+  BattleCallBack_T1__T2__o *v13; // x21
+  float v14; // s0
 
-  if ( (byte_4BC5AAC & 1) == 0 )
+  if ( (byte_4BDA53B & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo, comp);
-    sub_1C1ABD4(&Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__, v7);
-    sub_1C1ABD4(&BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo, v8);
-    sub_1C1ABD4(&Method_BattleAction_PlayUpShiftGaugeUpMain_DelayStartHpChangeGauge__, v9);
-    byte_4BC5AAC = 1;
+    sub_1C21E38(&System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
+    sub_1C21E38(&Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
+    sub_1C21E38(&BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
+    sub_1C21E38(&Method_BattleAction_PlayUpShiftGaugeUpMain_DelayStartHpChangeGauge__);
+    byte_4BDA53B = 1;
   }
   shiftData = this->fields.shiftData;
   if ( !shiftData )
@@ -583,46 +574,45 @@ void __fastcall BattleAction_PlayUpShiftGaugeUpMain__PlayEffectMain(
                                                                 method);
   if ( !hpData )
     goto LABEL_12;
-  v11 = (BattleServantHpShiftComponent_EffectData_o *)shiftData;
-  v13 = ((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, void *))hpData->klass->vtable._5_IsPlayShiftEffect.method)(
+  v8 = (BattleServantHpShiftComponent_EffectData_o *)shiftData;
+  v10 = ((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, void *))hpData->klass->vtable._5_IsPlayShiftEffect.method)(
           hpData,
           hpData->klass[1]._1.image);
-  if ( (v13 & 1) != 0 )
+  if ( (v10 & 1) != 0 )
   {
     shiftData = (struct BattleActionData_BaseShiftGaugeData_o *)((__int64 (__fastcall *)(BattleAction_ShiftHpData_o *, Il2CppMethodPointer))hpData->klass->vtable._4_unknown.method)(
                                                                   hpData,
                                                                   hpData->klass->vtable._5_IsPlayShiftEffect.methodPtr);
     if ( !comp )
       goto LABEL_12;
-    BattleServantParamComponent__PlayUpShiftEffect(comp, (int32_t)shiftData, 1.5, v11, 0LL);
+    BattleServantParamComponent__PlayUpShiftEffect(comp, (int32_t)shiftData, 1.5, v8, 0LL);
   }
-  BattleAction_PlayShiftGaugeMain__InitNextTdGauge((BattleAction_PlayShiftGaugeMain_o *)this, comp, v12);
+  BattleAction_PlayShiftGaugeMain__InitNextTdGauge((BattleAction_PlayShiftGaugeMain_o *)this, comp, v9);
   *((float *)&this->fields._ChangeToHp_k__BackingField + 1) = 1.5
-                                                            / BattleAction_ShiftHpData__get_TotalMovePer(hpData, v14);
-  v15 = (System_Action_object__object__o *)sub_1C1AE20(System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
+                                                            / BattleAction_ShiftHpData__get_TotalMovePer(hpData, v11);
+  v12 = (System_Action_object__object__o *)sub_1C22084(System_Action_BattleServantParamComponent__ShiftHpData__TypeInfo);
   System_Action_object__object____ctor(
-    v15,
+    v12,
     (Il2CppObject *)this,
     Method_BattleAction_PlayUpShiftGaugeUpMain_DelayStartHpChangeGauge__,
     0LL);
-  v16 = (BattleCallBack_T1__T2__o *)sub_1C1AE20(BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
+  v13 = (BattleCallBack_T1__T2__o *)sub_1C22084(BattleCallBack_BattleServantParamComponent__ShiftHpData__TypeInfo);
   BattleCallBack_object__object____ctor(
-    v16,
+    v13,
     (Il2CppObject *)comp,
     (Il2CppObject *)hpData,
-    (System_Action_T1__T2__o *)v15,
-    (const MethodInfo_31BDE5C *)Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
+    (System_Action_T1__T2__o *)v12,
+    (const MethodInfo_31D15AC *)Method_BattleCallBack_BattleServantParamComponent__ShiftHpData___ctor__);
   if ( !comp )
 LABEL_12:
-    sub_1C1AE30(shiftData, comp);
-  v17 = 0.0;
-  if ( (v13 & 1) != 0 )
-    v17 = 1.5;
-  BattleServantParamComponent__DelayCoroutine(comp, v17, (BattleCallBackBase_o *)v16, 0LL);
+    sub_1C22094(shiftData, comp);
+  v14 = 0.0;
+  if ( (v10 & 1) != 0 )
+    v14 = 1.5;
+  BattleServantParamComponent__DelayCoroutine(comp, v14, (BattleCallBackBase_o *)v13, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleAction_ShiftDownHpData___ctor(
         BattleAction_ShiftDownHpData_o *this,
         int32_t curGaugeIndex,
@@ -631,43 +621,42 @@ void __fastcall BattleAction_ShiftDownHpData___ctor(
         SimpleHpData_o *curHp,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x0
-  __int64 v13; // x1
+  __int64 v11; // x0
+  __int64 v12; // x1
   System_Collections_Generic_List_object__o *HpDetailList_k__BackingField; // x21
   int32_t Hp_k__BackingField; // w24
   int32_t MaxHp_k__BackingField; // w25
-  int64_t v17; // x22
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int64_t v16; // x22
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Collections_Generic_List_object__o *v28; // x20
-  int32_t v29; // w21
-  int32_t v30; // w22
-  int64_t v31; // x19
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  struct System_Object_array *v38; // x8
-  _QWORD *v39; // x9
-  __int64 v40; // x10
-  Il2CppClass **v41; // x0
+  Il2CppClass **v26; // x0
+  System_Collections_Generic_List_object__o *v27; // x20
+  int32_t v28; // w21
+  int32_t v29; // w22
+  int64_t v30; // x19
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
+  struct System_Object_array *v37; // x8
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  Il2CppClass **v40; // x0
 
-  if ( (byte_4BC5AA7 & 1) == 0 )
+  if ( (byte_4BDA536 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleAction_ShiftHpData_HpDetail_TypeInfo, *(_QWORD *)&curGaugeIndex);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__, v11);
-    byte_4BC5AA7 = 1;
+    sub_1C21E38(&BattleAction_ShiftHpData_HpDetail_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__);
+    byte_4BDA536 = 1;
   }
   BattleAction_ShiftHpData___ctor(
     (BattleAction_ShiftHpData_o *)this,
@@ -679,17 +668,17 @@ void __fastcall BattleAction_ShiftDownHpData___ctor(
   HpDetailList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
   Hp_k__BackingField = prevHp->fields._Hp_k__BackingField;
   MaxHp_k__BackingField = prevHp->fields._MaxHp_k__BackingField;
-  v17 = sub_1C1AE20(BattleAction_ShiftHpData_HpDetail_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
-  *(_DWORD *)(v17 + 16) = Hp_k__BackingField;
-  *(_DWORD *)(v17 + 20) = 0;
-  *(_DWORD *)(v17 + 24) = MaxHp_k__BackingField;
-  *(_BYTE *)(v17 + 32) = 0;
-  *(float *)(v17 + 28) = vabds_f32(0.0, (float)Hp_k__BackingField) / (float)MaxHp_k__BackingField;
+  v16 = sub_1C22084(BattleAction_ShiftHpData_HpDetail_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  *(_DWORD *)(v16 + 16) = Hp_k__BackingField;
+  *(_DWORD *)(v16 + 20) = 0;
+  *(_DWORD *)(v16 + 24) = MaxHp_k__BackingField;
+  *(_BYTE *)(v16 + 32) = 0;
+  *(float *)(v16 + 28) = vabds_f32(0.0, (float)Hp_k__BackingField) / (float)MaxHp_k__BackingField;
   if ( !HpDetailList_k__BackingField )
     goto LABEL_15;
   items = HpDetailList_k__BackingField->fields._items;
-  v25 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__;
+  v24 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__;
   ++HpDetailList_k__BackingField->fields._version;
   if ( !items )
     goto LABEL_15;
@@ -698,51 +687,51 @@ void __fastcall BattleAction_ShiftDownHpData___ctor(
   {
     System_Collections_Generic_List_object___AddWithResize(
       HpDetailList_k__BackingField,
-      (Il2CppObject *)v17,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      (Il2CppObject *)v16,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
-    v27 = &items->obj.klass + size;
+    v26 = &items->obj.klass + size;
     HpDetailList_k__BackingField->fields._size = size + 1;
-    v27[4] = (Il2CppClass *)v17;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v27 + 4), v17, v18, v19, v20, v21, v22, v23);
+    v26[4] = (Il2CppClass *)v16;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v26 + 4), v16, v17, v18, v19, v20, v21, v22);
   }
   if ( !curHp )
     goto LABEL_15;
-  v28 = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
-  v30 = curHp->fields._Hp_k__BackingField;
-  v29 = curHp->fields._MaxHp_k__BackingField;
-  v31 = sub_1C1AE20(BattleAction_ShiftHpData_HpDetail_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v31, 0LL);
-  *(_DWORD *)(v31 + 16) = v29;
-  *(_DWORD *)(v31 + 20) = v30;
-  *(_DWORD *)(v31 + 24) = v29;
-  *(_BYTE *)(v31 + 32) = 1;
-  *(float *)(v31 + 28) = vabds_f32((float)v30, (float)v29) / (float)v29;
-  if ( !v28
-    || (v38 = v28->fields._items,
-        v39 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
-        ++v28->fields._version,
-        !v38) )
+  v27 = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
+  v29 = curHp->fields._Hp_k__BackingField;
+  v28 = curHp->fields._MaxHp_k__BackingField;
+  v30 = sub_1C22084(BattleAction_ShiftHpData_HpDetail_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v30, 0LL);
+  *(_DWORD *)(v30 + 16) = v28;
+  *(_DWORD *)(v30 + 20) = v29;
+  *(_DWORD *)(v30 + 24) = v28;
+  *(_BYTE *)(v30 + 32) = 1;
+  *(float *)(v30 + 28) = vabds_f32((float)v29, (float)v28) / (float)v28;
+  if ( !v27
+    || (v37 = v27->fields._items,
+        v38 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
+        ++v27->fields._version,
+        !v37) )
   {
 LABEL_15:
-    sub_1C1AE30(v12, v13);
+    sub_1C22094(v11, v12);
   }
-  v40 = v28->fields._size;
-  if ( (unsigned int)v40 >= v38->max_length )
+  v39 = v27->fields._size;
+  if ( (unsigned int)v39 >= v37->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v28,
-      (Il2CppObject *)v31,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+      v27,
+      (Il2CppObject *)v30,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
   }
   else
   {
-    v41 = &v38->obj.klass + v40;
-    v28->fields._size = v40 + 1;
-    v41[4] = (Il2CppClass *)v31;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v41 + 4), v31, v32, v33, v34, v35, v36, v37);
+    v40 = &v37->obj.klass + v39;
+    v27->fields._size = v39 + 1;
+    v40[4] = (Il2CppClass *)v30;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v40 + 4), v30, v31, v32, v33, v34, v35, v36);
   }
 }
 
@@ -755,45 +744,43 @@ int32_t __fastcall BattleAction_ShiftDownHpData__get_PlayGaugeIndex(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleAction_ShiftHpData___ctor(
         BattleAction_ShiftHpData_o *this,
         int32_t curGaugeIndex,
         int32_t maxGaugeIconIndex,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x20
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  System_Collections_Generic_List_object__o *v7; // x20
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BC5AA3 & 1) == 0 )
+  if ( (byte_4BDA532 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail___ctor__, *(_QWORD *)&curGaugeIndex);
-    sub_1C1ABD4(&System_Collections_Generic_List_ShiftHpData_HpDetail__TypeInfo, v7);
-    byte_4BC5AA3 = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_ShiftHpData_HpDetail__TypeInfo);
+    byte_4BDA532 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._CurGaugeIndex_k__BackingField = curGaugeIndex;
   this->fields._MaxGaugeIconIndex_k__BackingField = maxGaugeIconIndex;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_ShiftHpData_HpDetail__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_ShiftHpData_HpDetail__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v8,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_ShiftHpData_HpDetail___ctor__);
-  this->fields._HpDetailList_k__BackingField = (struct System_Collections_Generic_List_ShiftHpData_HpDetail__o *)v8;
-  sub_1C1AB78(
+    v7,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_ShiftHpData_HpDetail___ctor__);
+  this->fields._HpDetailList_k__BackingField = (struct System_Collections_Generic_List_ShiftHpData_HpDetail__o *)v7;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._HpDetailList_k__BackingField,
-    (int64_t)v8,
+    (int64_t)v7,
+    v8,
     v9,
     v10,
     v11,
     v12,
-    v13,
-    v14);
+    v13);
 }
 
 
@@ -804,19 +791,19 @@ BattleAction_ShiftHpData_HpDetail_o *__fastcall BattleAction_ShiftHpData__GetHpD
   int32_t hpDetailIndex; // w1
   System_Collections_Generic_List_T__o *HpDetailList_k__BackingField; // x0
 
-  if ( (byte_4BC5AA4 & 1) == 0 )
+  if ( (byte_4BDA533 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_IndexValue_ShiftHpData_HpDetail___, method);
-    byte_4BC5AA4 = 1;
+    sub_1C21E38(&Method_BasicHelper_IndexValue_ShiftHpData_HpDetail___);
+    byte_4BDA533 = 1;
   }
   hpDetailIndex = this->fields.hpDetailIndex;
   HpDetailList_k__BackingField = (System_Collections_Generic_List_T__o *)this->fields._HpDetailList_k__BackingField;
   this->fields.hpDetailIndex = hpDetailIndex + 1;
-  return (BattleAction_ShiftHpData_HpDetail_o *)BasicHelper__IndexValue_object__49864668(
+  return (BattleAction_ShiftHpData_HpDetail_o *)BasicHelper__IndexValue_object__49932624(
                                                   HpDetailList_k__BackingField,
                                                   hpDetailIndex,
                                                   0LL,
-                                                  (const MethodInfo_2F8DFDC *)Method_BasicHelper_IndexValue_ShiftHpData_HpDetail___);
+                                                  (const MethodInfo_2F9E950 *)Method_BasicHelper_IndexValue_ShiftHpData_HpDetail___);
 }
 
 
@@ -858,69 +845,58 @@ int32_t __fastcall BattleAction_ShiftHpData__get_MaxGaugeIconIndex(
 
 float __fastcall BattleAction_ShiftHpData__get_TotalMovePer(BattleAction_ShiftHpData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  BattleAction_ShiftHpData___c_c *v6; // x0
+  BattleAction_ShiftHpData___c_c *v3; // x0
   struct System_Collections_Generic_List_ShiftHpData_HpDetail__o *HpDetailList_k__BackingField; // x19
   System_Func_T__TResult__o *_9__17_0; // x20
-  Il2CppObject *v9; // x21
+  Il2CppObject *v6; // x21
   struct BattleAction_ShiftHpData___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  System_Collections_Generic_IEnumerable_TResult__o *v17; // x0
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  System_Collections_Generic_IEnumerable_TResult__o *v14; // x0
 
-  if ( (byte_4BC5AA2 & 1) == 0 )
+  if ( (byte_4BDA531 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_ShiftHpData_HpDetail__float___, method);
-    sub_1C1ABD4(&System_Func_ShiftHpData_HpDetail__float__TypeInfo, v3);
-    sub_1C1ABD4(&Method_BattleAction_ShiftHpData___c__get_TotalMovePer_b__17_0__, v4);
-    sub_1C1ABD4(&BattleAction_ShiftHpData___c_TypeInfo, v5);
-    byte_4BC5AA2 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_ShiftHpData_HpDetail__float___);
+    sub_1C21E38(&System_Func_ShiftHpData_HpDetail__float__TypeInfo);
+    sub_1C21E38(&Method_BattleAction_ShiftHpData___c__get_TotalMovePer_b__17_0__);
+    sub_1C21E38(&BattleAction_ShiftHpData___c_TypeInfo);
+    byte_4BDA531 = 1;
   }
-  v6 = BattleAction_ShiftHpData___c_TypeInfo;
+  v3 = BattleAction_ShiftHpData___c_TypeInfo;
   HpDetailList_k__BackingField = this->fields._HpDetailList_k__BackingField;
   if ( !BattleAction_ShiftHpData___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleAction_ShiftHpData___c_TypeInfo);
-    v6 = BattleAction_ShiftHpData___c_TypeInfo;
+    v3 = BattleAction_ShiftHpData___c_TypeInfo;
   }
-  _9__17_0 = (System_Func_T__TResult__o *)v6->static_fields->__9__17_0;
+  _9__17_0 = (System_Func_T__TResult__o *)v3->static_fields->__9__17_0;
   if ( !_9__17_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = BattleAction_ShiftHpData___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = BattleAction_ShiftHpData___c_TypeInfo;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__17_0 = (System_Func_T__TResult__o *)sub_1C1AE20(System_Func_ShiftHpData_HpDetail__float__TypeInfo);
+    v6 = (Il2CppObject *)v3->static_fields->__9;
+    _9__17_0 = (System_Func_T__TResult__o *)sub_1C22084(System_Func_ShiftHpData_HpDetail__float__TypeInfo);
     System_Func_object__float____ctor(
       _9__17_0,
-      v9,
+      v6,
       Method_BattleAction_ShiftHpData___c__get_TotalMovePer_b__17_0__,
       0LL);
     static_fields = BattleAction_ShiftHpData___c_TypeInfo->static_fields;
     static_fields->__9__17_0 = (struct System_Func_ShiftHpData_HpDetail__float__o *)_9__17_0;
-    sub_1C1AB78(
-      (PartyOrganizationUtility_o *)&static_fields->__9__17_0,
-      (int64_t)_9__17_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->__9__17_0, (int64_t)_9__17_0, v8, v9, v10, v11, v12, v13);
   }
-  v17 = System_Linq_Enumerable__Select_object__float_(
+  v14 = System_Linq_Enumerable__Select_object__float_(
           (System_Collections_Generic_IEnumerable_TSource__o *)HpDetailList_k__BackingField,
           (System_Func_TSource__TResult__o *)_9__17_0,
-          (const MethodInfo_2FD0FA8 *)Method_System_Linq_Enumerable_Select_ShiftHpData_HpDetail__float___);
-  return System_Linq_Enumerable__Sum_65259964((System_Collections_Generic_IEnumerable_float__o *)v17, 0LL);
+          (const MethodInfo_2FE191C *)Method_System_Linq_Enumerable_Select_ShiftHpData_HpDetail__float___);
+  return System_Linq_Enumerable__Sum_65335164((System_Collections_Generic_IEnumerable_float__o *)v14, 0LL);
 }
 
 
@@ -945,7 +921,7 @@ void __fastcall BattleAction_ShiftHpData__set_HpDetailList(
   PartyListViewItem_o *v7; // x7
 
   this->fields._HpDetailList_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._HpDetailList_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1070,32 +1046,31 @@ void __fastcall BattleAction_ShiftHpData_HpDetail__set_StartHp(
 
 void __fastcall BattleAction_ShiftHpData___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  Il2CppObject *v1; // x19
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4BC5AA5 & 1) == 0 )
+  if ( (byte_4BDA534 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleAction_ShiftHpData___c_TypeInfo, v1);
-    byte_4BC5AA5 = 1;
+    sub_1C21E38(&BattleAction_ShiftHpData___c_TypeInfo);
+    byte_4BDA534 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C1AE20(BattleAction_ShiftHpData___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  BattleAction_ShiftHpData___c_TypeInfo->static_fields->__9 = (struct BattleAction_ShiftHpData___c_o *)v2;
-  sub_1C1AB78(
+  v1 = (Il2CppObject *)sub_1C22084(BattleAction_ShiftHpData___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  BattleAction_ShiftHpData___c_TypeInfo->static_fields->__9 = (struct BattleAction_ShiftHpData___c_o *)v1;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)BattleAction_ShiftHpData___c_TypeInfo->static_fields,
-    (int64_t)v2,
+    (int64_t)v1,
+    v2,
     v3,
     v4,
     v5,
     v6,
-    v7,
-    v8);
+    v7);
 }
 
 
@@ -1111,12 +1086,11 @@ float __fastcall BattleAction_ShiftHpData___c___get_TotalMovePer_b__17_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return x->fields._MovePer_k__BackingField;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleAction_ShiftUpHpData___ctor(
         BattleAction_ShiftUpHpData_o *this,
         int32_t curGaugeIndex,
@@ -1125,43 +1099,42 @@ void __fastcall BattleAction_ShiftUpHpData___ctor(
         SimpleHpData_o *curHp,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x0
-  __int64 v13; // x1
+  __int64 v11; // x0
+  __int64 v12; // x1
   System_Collections_Generic_List_object__o *HpDetailList_k__BackingField; // x21
   int32_t Hp_k__BackingField; // w23
   int32_t MaxHp_k__BackingField; // w25
-  int64_t v17; // x22
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int64_t v16; // x22
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Collections_Generic_List_object__o *v28; // x20
-  int32_t v29; // w21
-  int32_t v30; // w22
-  int64_t v31; // x19
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  struct System_Object_array *v38; // x8
-  _QWORD *v39; // x9
-  __int64 v40; // x10
-  Il2CppClass **v41; // x0
+  Il2CppClass **v26; // x0
+  System_Collections_Generic_List_object__o *v27; // x20
+  int32_t v28; // w21
+  int32_t v29; // w22
+  int64_t v30; // x19
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
+  struct System_Object_array *v37; // x8
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  Il2CppClass **v40; // x0
 
-  if ( (byte_4BC5AA6 & 1) == 0 )
+  if ( (byte_4BDA535 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleAction_ShiftHpData_HpDetail_TypeInfo, *(_QWORD *)&curGaugeIndex);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__, v11);
-    byte_4BC5AA6 = 1;
+    sub_1C21E38(&BattleAction_ShiftHpData_HpDetail_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__);
+    byte_4BDA535 = 1;
   }
   BattleAction_ShiftHpData___ctor(
     (BattleAction_ShiftHpData_o *)this,
@@ -1173,18 +1146,18 @@ void __fastcall BattleAction_ShiftUpHpData___ctor(
   HpDetailList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
   Hp_k__BackingField = prevHp->fields._Hp_k__BackingField;
   MaxHp_k__BackingField = prevHp->fields._MaxHp_k__BackingField;
-  v17 = sub_1C1AE20(BattleAction_ShiftHpData_HpDetail_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
-  *(_DWORD *)(v17 + 16) = Hp_k__BackingField;
-  *(_DWORD *)(v17 + 20) = MaxHp_k__BackingField;
-  *(_DWORD *)(v17 + 24) = MaxHp_k__BackingField;
-  *(_BYTE *)(v17 + 32) = 0;
-  *(float *)(v17 + 28) = vabds_f32((float)MaxHp_k__BackingField, (float)Hp_k__BackingField)
+  v16 = sub_1C22084(BattleAction_ShiftHpData_HpDetail_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  *(_DWORD *)(v16 + 16) = Hp_k__BackingField;
+  *(_DWORD *)(v16 + 20) = MaxHp_k__BackingField;
+  *(_DWORD *)(v16 + 24) = MaxHp_k__BackingField;
+  *(_BYTE *)(v16 + 32) = 0;
+  *(float *)(v16 + 28) = vabds_f32((float)MaxHp_k__BackingField, (float)Hp_k__BackingField)
                        / (float)MaxHp_k__BackingField;
   if ( !HpDetailList_k__BackingField )
     goto LABEL_15;
   items = HpDetailList_k__BackingField->fields._items;
-  v25 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__;
+  v24 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__;
   ++HpDetailList_k__BackingField->fields._version;
   if ( !items )
     goto LABEL_15;
@@ -1193,51 +1166,51 @@ void __fastcall BattleAction_ShiftUpHpData___ctor(
   {
     System_Collections_Generic_List_object___AddWithResize(
       HpDetailList_k__BackingField,
-      (Il2CppObject *)v17,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      (Il2CppObject *)v16,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
-    v27 = &items->obj.klass + size;
+    v26 = &items->obj.klass + size;
     HpDetailList_k__BackingField->fields._size = size + 1;
-    v27[4] = (Il2CppClass *)v17;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v27 + 4), v17, v18, v19, v20, v21, v22, v23);
+    v26[4] = (Il2CppClass *)v16;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v26 + 4), v16, v17, v18, v19, v20, v21, v22);
   }
   if ( !curHp )
     goto LABEL_15;
-  v28 = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
-  v29 = curHp->fields._Hp_k__BackingField;
-  v30 = curHp->fields._MaxHp_k__BackingField;
-  v31 = sub_1C1AE20(BattleAction_ShiftHpData_HpDetail_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v31, 0LL);
-  *(_DWORD *)(v31 + 16) = 0;
-  *(_DWORD *)(v31 + 20) = v29;
-  *(_DWORD *)(v31 + 24) = v30;
-  *(_BYTE *)(v31 + 32) = 1;
-  *(float *)(v31 + 28) = fabsf((float)v29) / (float)v30;
-  if ( !v28
-    || (v38 = v28->fields._items,
-        v39 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
-        ++v28->fields._version,
-        !v38) )
+  v27 = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
+  v28 = curHp->fields._Hp_k__BackingField;
+  v29 = curHp->fields._MaxHp_k__BackingField;
+  v30 = sub_1C22084(BattleAction_ShiftHpData_HpDetail_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v30, 0LL);
+  *(_DWORD *)(v30 + 16) = 0;
+  *(_DWORD *)(v30 + 20) = v28;
+  *(_DWORD *)(v30 + 24) = v29;
+  *(_BYTE *)(v30 + 32) = 1;
+  *(float *)(v30 + 28) = fabsf((float)v28) / (float)v29;
+  if ( !v27
+    || (v37 = v27->fields._items,
+        v38 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
+        ++v27->fields._version,
+        !v37) )
   {
 LABEL_15:
-    sub_1C1AE30(v12, v13);
+    sub_1C22094(v11, v12);
   }
-  v40 = v28->fields._size;
-  if ( (unsigned int)v40 >= v38->max_length )
+  v39 = v27->fields._size;
+  if ( (unsigned int)v39 >= v37->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v28,
-      (Il2CppObject *)v31,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+      v27,
+      (Il2CppObject *)v30,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
   }
   else
   {
-    v41 = &v38->obj.klass + v40;
-    v28->fields._size = v40 + 1;
-    v41[4] = (Il2CppClass *)v31;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v41 + 4), v31, v32, v33, v34, v35, v36, v37);
+    v40 = &v37->obj.klass + v39;
+    v27->fields._size = v39 + 1;
+    v40[4] = (Il2CppClass *)v30;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v40 + 4), v30, v31, v32, v33, v34, v35, v36);
   }
 }
 
@@ -1250,7 +1223,6 @@ int32_t __fastcall BattleAction_ShiftUpHpData__get_PlayGaugeIndex(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleAction_UpHpDataBeforeShift___ctor(
         BattleAction_UpHpDataBeforeShift_o *this,
         int32_t curGaugeIndex,
@@ -1258,30 +1230,29 @@ void __fastcall BattleAction_UpHpDataBeforeShift___ctor(
         SimpleHpData_o *curHp,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x0
-  __int64 v11; // x1
+  __int64 v9; // x0
+  __int64 v10; // x1
   System_Collections_Generic_List_object__o *HpDetailList_k__BackingField; // x19
   int32_t Hp_k__BackingField; // w21
-  int32_t v14; // w22
+  int32_t v13; // w22
   int32_t MaxHp_k__BackingField; // w23
-  int64_t v16; // x20
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int64_t v15; // x20
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
+  Il2CppClass **v25; // x0
 
-  if ( (byte_4BC5AA8 & 1) == 0 )
+  if ( (byte_4BDA537 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleAction_ShiftHpData_HpDetail_TypeInfo, *(_QWORD *)&curGaugeIndex);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__, v9);
-    byte_4BC5AA8 = 1;
+    sub_1C21E38(&BattleAction_ShiftHpData_HpDetail_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__);
+    byte_4BDA537 = 1;
   }
   BattleAction_ShiftHpData___ctor((BattleAction_ShiftHpData_o *)this, curGaugeIndex, -1, (const MethodInfo *)curHp);
   if ( !prevHp )
@@ -1290,38 +1261,38 @@ void __fastcall BattleAction_UpHpDataBeforeShift___ctor(
     goto LABEL_10;
   HpDetailList_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._HpDetailList_k__BackingField;
   Hp_k__BackingField = curHp->fields._Hp_k__BackingField;
-  v14 = prevHp->fields._Hp_k__BackingField;
+  v13 = prevHp->fields._Hp_k__BackingField;
   MaxHp_k__BackingField = prevHp->fields._MaxHp_k__BackingField;
-  v16 = sub_1C1AE20(BattleAction_ShiftHpData_HpDetail_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v16, 0LL);
-  *(_DWORD *)(v16 + 16) = v14;
-  *(_DWORD *)(v16 + 20) = Hp_k__BackingField;
-  *(_DWORD *)(v16 + 24) = MaxHp_k__BackingField;
-  *(_BYTE *)(v16 + 32) = 1;
-  *(float *)(v16 + 28) = vabds_f32((float)Hp_k__BackingField, (float)v14) / (float)MaxHp_k__BackingField;
+  v15 = sub_1C22084(BattleAction_ShiftHpData_HpDetail_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v15, 0LL);
+  *(_DWORD *)(v15 + 16) = v13;
+  *(_DWORD *)(v15 + 20) = Hp_k__BackingField;
+  *(_DWORD *)(v15 + 24) = MaxHp_k__BackingField;
+  *(_BYTE *)(v15 + 32) = 1;
+  *(float *)(v15 + 28) = vabds_f32((float)Hp_k__BackingField, (float)v13) / (float)MaxHp_k__BackingField;
   if ( !HpDetailList_k__BackingField
     || (items = HpDetailList_k__BackingField->fields._items,
-        v24 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
+        v23 = Method_System_Collections_Generic_List_ShiftHpData_HpDetail__Add__,
         ++HpDetailList_k__BackingField->fields._version,
         !items) )
   {
 LABEL_10:
-    sub_1C1AE30(v10, v11);
+    sub_1C22094(v9, v10);
   }
   size = HpDetailList_k__BackingField->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       HpDetailList_k__BackingField,
-      (Il2CppObject *)v16,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      (Il2CppObject *)v15,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
   }
   else
   {
-    v26 = &items->obj.klass + size;
+    v25 = &items->obj.klass + size;
     HpDetailList_k__BackingField->fields._size = size + 1;
-    v26[4] = (Il2CppClass *)v16;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v26 + 4), v16, v17, v18, v19, v20, v21, v22);
+    v25[4] = (Il2CppClass *)v15;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v25 + 4), v15, v16, v17, v18, v19, v20, v21);
   }
 }
 

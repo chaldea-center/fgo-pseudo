@@ -20,10 +20,10 @@ float __fastcall NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *t
 {
   BattleDataDefine_c *v2; // x0
 
-  if ( (byte_4BCA7E2 & 1) == 0 )
+  if ( (byte_4BDF293 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleDataDefine_TypeInfo, method);
-    byte_4BCA7E2 = 1;
+    sub_1C21E38(&BattleDataDefine_TypeInfo);
+    byte_4BDF293 = 1;
   }
   v2 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )

@@ -4,7 +4,7 @@ void __fastcall WarBoardBossBattleData___ctor(WarBoardBossBattleData_o *this, co
 }
 
 
-void __fastcall WarBoardBossBattleData___ctor_36479872(
+void __fastcall WarBoardBossBattleData___ctor_36520868(
         WarBoardBossBattleData_o *this,
         WarBoardBossBattleData_SaveData_o *bossBattleData,
         const MethodInfo *method)
@@ -21,11 +21,11 @@ void __fastcall WarBoardBossBattleData___ctor_36479872(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_1C1AE30(v5, v6);
+    sub_1C22094(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -46,11 +46,11 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor(
   v2->fields._normalFollowerInfo = 0LL;
   v2 = (PartyOrganizationUtility_o *)((char *)v2 + 24);
   *(_QWORD *)&v2[-1].fields._IsQuestStartMenuMode_k__BackingField = 0LL;
-  sub_1C1AB78(v2, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C21DDC(v2, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
-void __fastcall WarBoardBossBattleData_SaveData___ctor_36479976(
+void __fastcall WarBoardBossBattleData_SaveData___ctor_36520972(
         WarBoardBossBattleData_SaveData_o *this,
         WarBoardBossBattleData_o *bossBattleData,
         const MethodInfo *method)
@@ -67,9 +67,9 @@ void __fastcall WarBoardBossBattleData_SaveData___ctor_36479976(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !bossBattleData )
-    sub_1C1AE30(v5, v6);
+    sub_1C22094(v5, v6);
   *(_QWORD *)&this->fields.bossIdx = *(_QWORD *)&bossBattleData->fields.bossIdx;
   script = bossBattleData->fields.script;
   this->fields.script = script;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.script, (int64_t)script, v7, v8, v9, v10, v11, v12);
 }

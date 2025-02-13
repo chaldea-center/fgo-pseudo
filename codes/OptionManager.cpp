@@ -1,451 +1,400 @@
 void __fastcall OptionManager___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
+  int64_t v1; // x2
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  BattleSetupInfo_o *v4; // x5
+  FollowerInfo_o *v5; // x6
+  PartyListViewItem_o *v6; // x7
   struct OptionManager_StaticFields *static_fields; // x0
-  int64_t v35; // x1
-  int64_t v36; // x1
-  struct OptionManager_StaticFields *v37; // x0
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x1
-  struct OptionManager_StaticFields *v45; // x0
-  int64_t v46; // x2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  BattleSetupInfo_o *v49; // x5
-  FollowerInfo_o *v50; // x6
-  PartyListViewItem_o *v51; // x7
-  int64_t v52; // x1
-  struct OptionManager_StaticFields *v53; // x0
-  int64_t v54; // x2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
-  BattleSetupInfo_o *v57; // x5
-  FollowerInfo_o *v58; // x6
-  PartyListViewItem_o *v59; // x7
-  int64_t v60; // x1
-  struct OptionManager_StaticFields *v61; // x0
-  int64_t v62; // x2
-  int32_t v63; // w3
-  System_String_o *v64; // x4
-  BattleSetupInfo_o *v65; // x5
-  FollowerInfo_o *v66; // x6
-  PartyListViewItem_o *v67; // x7
-  int64_t v68; // x1
-  struct OptionManager_StaticFields *v69; // x0
-  int64_t v70; // x2
-  int32_t v71; // w3
-  System_String_o *v72; // x4
-  BattleSetupInfo_o *v73; // x5
-  FollowerInfo_o *v74; // x6
-  PartyListViewItem_o *v75; // x7
-  int64_t v76; // x1
-  struct OptionManager_StaticFields *v77; // x0
-  int64_t v78; // x2
-  int32_t v79; // w3
-  System_String_o *v80; // x4
-  BattleSetupInfo_o *v81; // x5
-  FollowerInfo_o *v82; // x6
-  PartyListViewItem_o *v83; // x7
-  int64_t v84; // x1
-  struct OptionManager_StaticFields *v85; // x0
-  int64_t v86; // x2
-  int32_t v87; // w3
-  System_String_o *v88; // x4
-  BattleSetupInfo_o *v89; // x5
-  FollowerInfo_o *v90; // x6
-  PartyListViewItem_o *v91; // x7
-  int64_t v92; // x1
-  struct OptionManager_StaticFields *v93; // x0
-  int64_t v94; // x2
-  int32_t v95; // w3
-  System_String_o *v96; // x4
-  BattleSetupInfo_o *v97; // x5
-  FollowerInfo_o *v98; // x6
-  PartyListViewItem_o *v99; // x7
-  struct OptionManager_StaticFields *v100; // x0
-  int64_t v101; // x1
-  int64_t v102; // x2
-  int32_t v103; // w3
-  System_String_o *v104; // x4
-  BattleSetupInfo_o *v105; // x5
-  FollowerInfo_o *v106; // x6
-  PartyListViewItem_o *v107; // x7
-  struct OptionManager_StaticFields *v108; // x0
-  int64_t v109; // x1
-  int64_t v110; // x2
-  int32_t v111; // w3
-  System_String_o *v112; // x4
-  BattleSetupInfo_o *v113; // x5
-  FollowerInfo_o *v114; // x6
-  PartyListViewItem_o *v115; // x7
-  struct OptionManager_StaticFields *v116; // x0
-  int64_t v117; // x1
-  int64_t v118; // x2
-  int32_t v119; // w3
-  System_String_o *v120; // x4
-  BattleSetupInfo_o *v121; // x5
-  FollowerInfo_o *v122; // x6
-  PartyListViewItem_o *v123; // x7
-  struct OptionManager_StaticFields *v124; // x0
-  int64_t v125; // x1
-  int64_t v126; // x2
-  int32_t v127; // w3
-  System_String_o *v128; // x4
-  BattleSetupInfo_o *v129; // x5
-  FollowerInfo_o *v130; // x6
-  PartyListViewItem_o *v131; // x7
-  struct OptionManager_StaticFields *v132; // x0
-  int64_t v133; // x1
-  int64_t v134; // x2
-  int32_t v135; // w3
-  System_String_o *v136; // x4
-  BattleSetupInfo_o *v137; // x5
-  FollowerInfo_o *v138; // x6
-  PartyListViewItem_o *v139; // x7
-  struct OptionManager_StaticFields *v140; // x0
-  int64_t v141; // x1
-  int64_t v142; // x2
-  int32_t v143; // w3
-  System_String_o *v144; // x4
-  BattleSetupInfo_o *v145; // x5
-  FollowerInfo_o *v146; // x6
-  PartyListViewItem_o *v147; // x7
-  struct OptionManager_StaticFields *v148; // x0
-  int64_t v149; // x1
-  int64_t v150; // x2
-  int32_t v151; // w3
-  System_String_o *v152; // x4
-  BattleSetupInfo_o *v153; // x5
-  FollowerInfo_o *v154; // x6
-  PartyListViewItem_o *v155; // x7
-  struct OptionManager_StaticFields *v156; // x0
-  int64_t v157; // x1
-  int64_t v158; // x2
-  int32_t v159; // w3
-  System_String_o *v160; // x4
-  BattleSetupInfo_o *v161; // x5
-  FollowerInfo_o *v162; // x6
-  PartyListViewItem_o *v163; // x7
-  struct OptionManager_StaticFields *v164; // x0
-  int64_t v165; // x1
-  int64_t v166; // x2
-  int32_t v167; // w3
-  System_String_o *v168; // x4
-  BattleSetupInfo_o *v169; // x5
-  FollowerInfo_o *v170; // x6
-  PartyListViewItem_o *v171; // x7
-  struct OptionManager_StaticFields *v172; // x0
-  int64_t v173; // x1
-  int64_t v174; // x2
-  int32_t v175; // w3
-  System_String_o *v176; // x4
-  BattleSetupInfo_o *v177; // x5
-  FollowerInfo_o *v178; // x6
-  PartyListViewItem_o *v179; // x7
-  PartyOrganizationUtility_o *v180; // x0
-  int64_t v181; // x1
-  int64_t v182; // x2
-  int32_t v183; // w3
-  System_String_o *v184; // x4
-  BattleSetupInfo_o *v185; // x5
-  FollowerInfo_o *v186; // x6
-  PartyListViewItem_o *v187; // x7
-  struct OptionManager_StaticFields *v188; // x0
-  int64_t v189; // x1
-  int64_t v190; // x2
-  int32_t v191; // w3
-  System_String_o *v192; // x4
-  BattleSetupInfo_o *v193; // x5
-  FollowerInfo_o *v194; // x6
-  PartyListViewItem_o *v195; // x7
-  struct OptionManager_StaticFields *v196; // x0
-  int64_t v197; // x1
-  int64_t v198; // x2
-  int32_t v199; // w3
-  System_String_o *v200; // x4
-  BattleSetupInfo_o *v201; // x5
-  FollowerInfo_o *v202; // x6
-  PartyListViewItem_o *v203; // x7
-  struct OptionManager_StaticFields *v204; // x0
-  int64_t v205; // x1
-  int64_t v206; // x2
-  int32_t v207; // w3
-  System_String_o *v208; // x4
-  BattleSetupInfo_o *v209; // x5
-  FollowerInfo_o *v210; // x6
-  PartyListViewItem_o *v211; // x7
-  struct OptionManager_StaticFields *v212; // x0
-  int64_t v213; // x1
-  int64_t v214; // x2
-  int32_t v215; // w3
-  System_String_o *v216; // x4
-  BattleSetupInfo_o *v217; // x5
-  FollowerInfo_o *v218; // x6
-  PartyListViewItem_o *v219; // x7
-  struct OptionManager_StaticFields *v220; // x0
-  int64_t v221; // x1
-  int64_t v222; // x2
-  int32_t v223; // w3
-  System_String_o *v224; // x4
-  BattleSetupInfo_o *v225; // x5
-  FollowerInfo_o *v226; // x6
-  PartyListViewItem_o *v227; // x7
-  struct OptionManager_StaticFields *v228; // x0
-  int64_t v229; // x1
-  int64_t v230; // x2
-  int32_t v231; // w3
-  System_String_o *v232; // x4
-  BattleSetupInfo_o *v233; // x5
-  FollowerInfo_o *v234; // x6
-  PartyListViewItem_o *v235; // x7
+  int64_t v8; // x1
+  int64_t v9; // x1
+  struct OptionManager_StaticFields *v10; // x0
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  int64_t v17; // x1
+  struct OptionManager_StaticFields *v18; // x0
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  int64_t v25; // x1
+  struct OptionManager_StaticFields *v26; // x0
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  int64_t v33; // x1
+  struct OptionManager_StaticFields *v34; // x0
+  int64_t v35; // x2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  BattleSetupInfo_o *v38; // x5
+  FollowerInfo_o *v39; // x6
+  PartyListViewItem_o *v40; // x7
+  int64_t v41; // x1
+  struct OptionManager_StaticFields *v42; // x0
+  int64_t v43; // x2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  BattleSetupInfo_o *v46; // x5
+  FollowerInfo_o *v47; // x6
+  PartyListViewItem_o *v48; // x7
+  int64_t v49; // x1
+  struct OptionManager_StaticFields *v50; // x0
+  int64_t v51; // x2
+  int32_t v52; // w3
+  System_String_o *v53; // x4
+  BattleSetupInfo_o *v54; // x5
+  FollowerInfo_o *v55; // x6
+  PartyListViewItem_o *v56; // x7
+  int64_t v57; // x1
+  struct OptionManager_StaticFields *v58; // x0
+  int64_t v59; // x2
+  int32_t v60; // w3
+  System_String_o *v61; // x4
+  BattleSetupInfo_o *v62; // x5
+  FollowerInfo_o *v63; // x6
+  PartyListViewItem_o *v64; // x7
+  int64_t v65; // x1
+  struct OptionManager_StaticFields *v66; // x0
+  int64_t v67; // x2
+  int32_t v68; // w3
+  System_String_o *v69; // x4
+  BattleSetupInfo_o *v70; // x5
+  FollowerInfo_o *v71; // x6
+  PartyListViewItem_o *v72; // x7
+  struct OptionManager_StaticFields *v73; // x0
+  int64_t v74; // x1
+  int64_t v75; // x2
+  int32_t v76; // w3
+  System_String_o *v77; // x4
+  BattleSetupInfo_o *v78; // x5
+  FollowerInfo_o *v79; // x6
+  PartyListViewItem_o *v80; // x7
+  struct OptionManager_StaticFields *v81; // x0
+  int64_t v82; // x1
+  int64_t v83; // x2
+  int32_t v84; // w3
+  System_String_o *v85; // x4
+  BattleSetupInfo_o *v86; // x5
+  FollowerInfo_o *v87; // x6
+  PartyListViewItem_o *v88; // x7
+  struct OptionManager_StaticFields *v89; // x0
+  int64_t v90; // x1
+  int64_t v91; // x2
+  int32_t v92; // w3
+  System_String_o *v93; // x4
+  BattleSetupInfo_o *v94; // x5
+  FollowerInfo_o *v95; // x6
+  PartyListViewItem_o *v96; // x7
+  struct OptionManager_StaticFields *v97; // x0
+  int64_t v98; // x1
+  int64_t v99; // x2
+  int32_t v100; // w3
+  System_String_o *v101; // x4
+  BattleSetupInfo_o *v102; // x5
+  FollowerInfo_o *v103; // x6
+  PartyListViewItem_o *v104; // x7
+  struct OptionManager_StaticFields *v105; // x0
+  int64_t v106; // x1
+  int64_t v107; // x2
+  int32_t v108; // w3
+  System_String_o *v109; // x4
+  BattleSetupInfo_o *v110; // x5
+  FollowerInfo_o *v111; // x6
+  PartyListViewItem_o *v112; // x7
+  struct OptionManager_StaticFields *v113; // x0
+  int64_t v114; // x1
+  int64_t v115; // x2
+  int32_t v116; // w3
+  System_String_o *v117; // x4
+  BattleSetupInfo_o *v118; // x5
+  FollowerInfo_o *v119; // x6
+  PartyListViewItem_o *v120; // x7
+  struct OptionManager_StaticFields *v121; // x0
+  int64_t v122; // x1
+  int64_t v123; // x2
+  int32_t v124; // w3
+  System_String_o *v125; // x4
+  BattleSetupInfo_o *v126; // x5
+  FollowerInfo_o *v127; // x6
+  PartyListViewItem_o *v128; // x7
+  struct OptionManager_StaticFields *v129; // x0
+  int64_t v130; // x1
+  int64_t v131; // x2
+  int32_t v132; // w3
+  System_String_o *v133; // x4
+  BattleSetupInfo_o *v134; // x5
+  FollowerInfo_o *v135; // x6
+  PartyListViewItem_o *v136; // x7
+  struct OptionManager_StaticFields *v137; // x0
+  int64_t v138; // x1
+  int64_t v139; // x2
+  int32_t v140; // w3
+  System_String_o *v141; // x4
+  BattleSetupInfo_o *v142; // x5
+  FollowerInfo_o *v143; // x6
+  PartyListViewItem_o *v144; // x7
+  struct OptionManager_StaticFields *v145; // x0
+  int64_t v146; // x1
+  int64_t v147; // x2
+  int32_t v148; // w3
+  System_String_o *v149; // x4
+  BattleSetupInfo_o *v150; // x5
+  FollowerInfo_o *v151; // x6
+  PartyListViewItem_o *v152; // x7
+  PartyOrganizationUtility_o *v153; // x0
+  int64_t v154; // x1
+  int64_t v155; // x2
+  int32_t v156; // w3
+  System_String_o *v157; // x4
+  BattleSetupInfo_o *v158; // x5
+  FollowerInfo_o *v159; // x6
+  PartyListViewItem_o *v160; // x7
+  struct OptionManager_StaticFields *v161; // x0
+  int64_t v162; // x1
+  int64_t v163; // x2
+  int32_t v164; // w3
+  System_String_o *v165; // x4
+  BattleSetupInfo_o *v166; // x5
+  FollowerInfo_o *v167; // x6
+  PartyListViewItem_o *v168; // x7
+  struct OptionManager_StaticFields *v169; // x0
+  int64_t v170; // x1
+  int64_t v171; // x2
+  int32_t v172; // w3
+  System_String_o *v173; // x4
+  BattleSetupInfo_o *v174; // x5
+  FollowerInfo_o *v175; // x6
+  PartyListViewItem_o *v176; // x7
+  struct OptionManager_StaticFields *v177; // x0
+  int64_t v178; // x1
+  int64_t v179; // x2
+  int32_t v180; // w3
+  System_String_o *v181; // x4
+  BattleSetupInfo_o *v182; // x5
+  FollowerInfo_o *v183; // x6
+  PartyListViewItem_o *v184; // x7
+  struct OptionManager_StaticFields *v185; // x0
+  int64_t v186; // x1
+  int64_t v187; // x2
+  int32_t v188; // w3
+  System_String_o *v189; // x4
+  BattleSetupInfo_o *v190; // x5
+  FollowerInfo_o *v191; // x6
+  PartyListViewItem_o *v192; // x7
+  struct OptionManager_StaticFields *v193; // x0
+  int64_t v194; // x1
+  int64_t v195; // x2
+  int32_t v196; // w3
+  System_String_o *v197; // x4
+  BattleSetupInfo_o *v198; // x5
+  FollowerInfo_o *v199; // x6
+  PartyListViewItem_o *v200; // x7
+  struct OptionManager_StaticFields *v201; // x0
+  int64_t v202; // x1
+  int64_t v203; // x2
+  int32_t v204; // w3
+  System_String_o *v205; // x4
+  BattleSetupInfo_o *v206; // x5
+  FollowerInfo_o *v207; // x6
+  PartyListViewItem_o *v208; // x7
 
-  if ( (byte_4BC73B0 & 1) == 0 )
+  if ( (byte_4BDBE46 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    sub_1C1ABD4(&StringLiteral_10220/*"OptionMessageDisp"*/, v8);
-    sub_1C1ABD4(&StringLiteral_10234/*"OptionTouchSkipOpeningMovie"*/, v9);
-    sub_1C1ABD4(&StringLiteral_10222/*"OptionNotiffication"*/, v10);
-    sub_1C1ABD4(&StringLiteral_10235/*"OptionVoiceVolume"*/, v11);
-    sub_1C1ABD4(&StringLiteral_10217/*"OptionFriendCostume"*/, v12);
-    sub_1C1ABD4(&StringLiteral_10219/*"OptionLocalNotiffication"*/, v13);
-    sub_1C1ABD4(&StringLiteral_10216/*"OptionBoostItemConfirm"*/, v14);
-    sub_1C1ABD4(&StringLiteral_10228/*"OptionScenarioSpeed"*/, v15);
-    sub_1C1ABD4(&StringLiteral_10224/*"OptionRaidNotiffication"*/, v16);
-    sub_1C1ABD4(&StringLiteral_10231/*"OptionSeVolume"*/, v17);
-    sub_1C1ABD4(&StringLiteral_10229/*"OptionScenarioText"*/, v18);
-    sub_1C1ABD4(&StringLiteral_16958/*"adjustVolume"*/, v19);
-    sub_1C1ABD4(&StringLiteral_10221/*"OptionNotPlayOpeningMovie"*/, v20);
-    sub_1C1ABD4(&StringLiteral_10215/*"OptionBgmVolume"*/, v21);
-    sub_1C1ABD4(&StringLiteral_10212/*"OptionAutoOpenAutoOrganizationDialog"*/, v22);
-    sub_1C1ABD4(&StringLiteral_10214/*"OptionBattle20220729"*/, v23);
-    sub_1C1ABD4(&StringLiteral_10218/*"OptionFriendImageLimitCount"*/, v24);
-    sub_1C1ABD4(&StringLiteral_10236/*"OptionVolumeMute"*/, v25);
-    sub_1C1ABD4(&StringLiteral_10230/*"OptionScenarioTextSpeed"*/, v26);
-    sub_1C1ABD4(&StringLiteral_10232/*"OptionSelectAdvantageClassAuto"*/, v27);
-    sub_1C1ABD4(&StringLiteral_10226/*"OptionScenarioAutoWaitTimeValue"*/, v28);
-    sub_1C1ABD4(&StringLiteral_10225/*"OptionResolutionType"*/, v29);
-    sub_1C1ABD4(&StringLiteral_10223/*"OptionPreBattleFormation"*/, v30);
-    sub_1C1ABD4(&StringLiteral_10227/*"OptionScenarioScrollSpeed"*/, v31);
-    sub_1C1ABD4(&StringLiteral_10213/*"OptionAutoSelectParty"*/, v32);
-    sub_1C1ABD4(&StringLiteral_10233/*"OptionSvtRand"*/, v33);
-    byte_4BC73B0 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_10230/*"OptionMessageDisp"*/);
+    sub_1C21E38(&StringLiteral_10244/*"OptionTouchSkipOpeningMovie"*/);
+    sub_1C21E38(&StringLiteral_10232/*"OptionNotiffication"*/);
+    sub_1C21E38(&StringLiteral_10245/*"OptionVoiceVolume"*/);
+    sub_1C21E38(&StringLiteral_10227/*"OptionFriendCostume"*/);
+    sub_1C21E38(&StringLiteral_10229/*"OptionLocalNotiffication"*/);
+    sub_1C21E38(&StringLiteral_10226/*"OptionBoostItemConfirm"*/);
+    sub_1C21E38(&StringLiteral_10238/*"OptionScenarioSpeed"*/);
+    sub_1C21E38(&StringLiteral_10234/*"OptionRaidNotiffication"*/);
+    sub_1C21E38(&StringLiteral_10241/*"OptionSeVolume"*/);
+    sub_1C21E38(&StringLiteral_10239/*"OptionScenarioText"*/);
+    sub_1C21E38(&StringLiteral_16970/*"adjustVolume"*/);
+    sub_1C21E38(&StringLiteral_10231/*"OptionNotPlayOpeningMovie"*/);
+    sub_1C21E38(&StringLiteral_10225/*"OptionBgmVolume"*/);
+    sub_1C21E38(&StringLiteral_10222/*"OptionAutoOpenAutoOrganizationDialog"*/);
+    sub_1C21E38(&StringLiteral_10224/*"OptionBattle20220729"*/);
+    sub_1C21E38(&StringLiteral_10228/*"OptionFriendImageLimitCount"*/);
+    sub_1C21E38(&StringLiteral_10246/*"OptionVolumeMute"*/);
+    sub_1C21E38(&StringLiteral_10240/*"OptionScenarioTextSpeed"*/);
+    sub_1C21E38(&StringLiteral_10242/*"OptionSelectAdvantageClassAuto"*/);
+    sub_1C21E38(&StringLiteral_10236/*"OptionScenarioAutoWaitTimeValue"*/);
+    sub_1C21E38(&StringLiteral_10235/*"OptionResolutionType"*/);
+    sub_1C21E38(&StringLiteral_10233/*"OptionPreBattleFormation"*/);
+    sub_1C21E38(&StringLiteral_10237/*"OptionScenarioScrollSpeed"*/);
+    sub_1C21E38(&StringLiteral_10223/*"OptionAutoSelectParty"*/);
+    sub_1C21E38(&StringLiteral_10243/*"OptionSvtRand"*/);
+    byte_4BDBE46 = 1;
   }
   static_fields = OptionManager_TypeInfo->static_fields;
   *(_WORD *)&static_fields->isModify = 0;
   strcpy((char *)&static_fields->DEF_VOL, "333?");
   static_fields->KIND_COUNT_SAVE_SERVER = 6;
-  v35 = StringLiteral_10215/*"OptionBgmVolume"*/;
-  static_fields->SAVE_KEY_BGM_VOLUME = (struct System_String_o *)StringLiteral_10215/*"OptionBgmVolume"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY_BGM_VOLUME, v35, v2, v3, v4, v5, v6, v7);
-  v36 = StringLiteral_10231/*"OptionSeVolume"*/;
-  v37 = OptionManager_TypeInfo->static_fields;
-  v37->SAVE_KEY_SE_VOLUME = (struct System_String_o *)StringLiteral_10231/*"OptionSeVolume"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v37->SAVE_KEY_SE_VOLUME, v36, v38, v39, v40, v41, v42, v43);
-  v44 = StringLiteral_10235/*"OptionVoiceVolume"*/;
-  v45 = OptionManager_TypeInfo->static_fields;
-  v45->SAVE_KEY_VOICE_VOLUME = (struct System_String_o *)StringLiteral_10235/*"OptionVoiceVolume"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v45->SAVE_KEY_VOICE_VOLUME, v44, v46, v47, v48, v49, v50, v51);
-  v52 = StringLiteral_16958/*"adjustVolume"*/;
-  v53 = OptionManager_TypeInfo->static_fields;
-  v53->SAVE_KEY_ADJUST_VOLUME = (struct System_String_o *)StringLiteral_16958/*"adjustVolume"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v53->SAVE_KEY_ADJUST_VOLUME, v52, v54, v55, v56, v57, v58, v59);
-  v60 = StringLiteral_10228/*"OptionScenarioSpeed"*/;
-  v61 = OptionManager_TypeInfo->static_fields;
-  v61->SAVE_KEY_SCENARIO_SPEED = (struct System_String_o *)StringLiteral_10228/*"OptionScenarioSpeed"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v61->SAVE_KEY_SCENARIO_SPEED, v60, v62, v63, v64, v65, v66, v67);
-  v68 = StringLiteral_10229/*"OptionScenarioText"*/;
-  v69 = OptionManager_TypeInfo->static_fields;
-  v69->SAVE_KEY_SCENARIO_TEXT_WAIT = (struct System_String_o *)StringLiteral_10229/*"OptionScenarioText"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v69->SAVE_KEY_SCENARIO_TEXT_WAIT, v68, v70, v71, v72, v73, v74, v75);
-  v76 = StringLiteral_10230/*"OptionScenarioTextSpeed"*/;
-  v77 = OptionManager_TypeInfo->static_fields;
-  v77->SAVE_KEY_SCENARIO_TEXT_SPEED = (struct System_String_o *)StringLiteral_10230/*"OptionScenarioTextSpeed"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v77->SAVE_KEY_SCENARIO_TEXT_SPEED, v76, v78, v79, v80, v81, v82, v83);
-  v84 = StringLiteral_10227/*"OptionScenarioScrollSpeed"*/;
-  v85 = OptionManager_TypeInfo->static_fields;
-  v85->SAVE_KEY_SCENARIO_SCROLL_SPEED = (struct System_String_o *)StringLiteral_10227/*"OptionScenarioScrollSpeed"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v85->SAVE_KEY_SCENARIO_SCROLL_SPEED, v84, v86, v87, v88, v89, v90, v91);
-  v92 = StringLiteral_10226/*"OptionScenarioAutoWaitTimeValue"*/;
-  v93 = OptionManager_TypeInfo->static_fields;
-  v93->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME = (struct System_String_o *)StringLiteral_10226/*"OptionScenarioAutoWaitTimeValue"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v93->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME, v92, v94, v95, v96, v97, v98, v99);
-  v100 = OptionManager_TypeInfo->static_fields;
-  v101 = StringLiteral_10222/*"OptionNotiffication"*/;
-  v100->SAVE_KEY_NOTIFFICATION = (struct System_String_o *)StringLiteral_10222/*"OptionNotiffication"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v100->SAVE_KEY_NOTIFFICATION, v101, v102, v103, v104, v105, v106, v107);
-  v108 = OptionManager_TypeInfo->static_fields;
-  v109 = StringLiteral_10219/*"OptionLocalNotiffication"*/;
-  v108->SAVE_KEY_LOCAL_NOTIFFICATION = (struct System_String_o *)StringLiteral_10219/*"OptionLocalNotiffication"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v108->SAVE_KEY_LOCAL_NOTIFFICATION,
+  v8 = StringLiteral_10225/*"OptionBgmVolume"*/;
+  static_fields->SAVE_KEY_BGM_VOLUME = (struct System_String_o *)StringLiteral_10225/*"OptionBgmVolume"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY_BGM_VOLUME, v8, v1, v2, v3, v4, v5, v6);
+  v9 = StringLiteral_10241/*"OptionSeVolume"*/;
+  v10 = OptionManager_TypeInfo->static_fields;
+  v10->SAVE_KEY_SE_VOLUME = (struct System_String_o *)StringLiteral_10241/*"OptionSeVolume"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v10->SAVE_KEY_SE_VOLUME, v9, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_10245/*"OptionVoiceVolume"*/;
+  v18 = OptionManager_TypeInfo->static_fields;
+  v18->SAVE_KEY_VOICE_VOLUME = (struct System_String_o *)StringLiteral_10245/*"OptionVoiceVolume"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v18->SAVE_KEY_VOICE_VOLUME, v17, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_16970/*"adjustVolume"*/;
+  v26 = OptionManager_TypeInfo->static_fields;
+  v26->SAVE_KEY_ADJUST_VOLUME = (struct System_String_o *)StringLiteral_16970/*"adjustVolume"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v26->SAVE_KEY_ADJUST_VOLUME, v25, v27, v28, v29, v30, v31, v32);
+  v33 = StringLiteral_10238/*"OptionScenarioSpeed"*/;
+  v34 = OptionManager_TypeInfo->static_fields;
+  v34->SAVE_KEY_SCENARIO_SPEED = (struct System_String_o *)StringLiteral_10238/*"OptionScenarioSpeed"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v34->SAVE_KEY_SCENARIO_SPEED, v33, v35, v36, v37, v38, v39, v40);
+  v41 = StringLiteral_10239/*"OptionScenarioText"*/;
+  v42 = OptionManager_TypeInfo->static_fields;
+  v42->SAVE_KEY_SCENARIO_TEXT_WAIT = (struct System_String_o *)StringLiteral_10239/*"OptionScenarioText"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v42->SAVE_KEY_SCENARIO_TEXT_WAIT, v41, v43, v44, v45, v46, v47, v48);
+  v49 = StringLiteral_10240/*"OptionScenarioTextSpeed"*/;
+  v50 = OptionManager_TypeInfo->static_fields;
+  v50->SAVE_KEY_SCENARIO_TEXT_SPEED = (struct System_String_o *)StringLiteral_10240/*"OptionScenarioTextSpeed"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v50->SAVE_KEY_SCENARIO_TEXT_SPEED, v49, v51, v52, v53, v54, v55, v56);
+  v57 = StringLiteral_10237/*"OptionScenarioScrollSpeed"*/;
+  v58 = OptionManager_TypeInfo->static_fields;
+  v58->SAVE_KEY_SCENARIO_SCROLL_SPEED = (struct System_String_o *)StringLiteral_10237/*"OptionScenarioScrollSpeed"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v58->SAVE_KEY_SCENARIO_SCROLL_SPEED, v57, v59, v60, v61, v62, v63, v64);
+  v65 = StringLiteral_10236/*"OptionScenarioAutoWaitTimeValue"*/;
+  v66 = OptionManager_TypeInfo->static_fields;
+  v66->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME = (struct System_String_o *)StringLiteral_10236/*"OptionScenarioAutoWaitTimeValue"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v66->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME, v65, v67, v68, v69, v70, v71, v72);
+  v73 = OptionManager_TypeInfo->static_fields;
+  v74 = StringLiteral_10232/*"OptionNotiffication"*/;
+  v73->SAVE_KEY_NOTIFFICATION = (struct System_String_o *)StringLiteral_10232/*"OptionNotiffication"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v73->SAVE_KEY_NOTIFFICATION, v74, v75, v76, v77, v78, v79, v80);
+  v81 = OptionManager_TypeInfo->static_fields;
+  v82 = StringLiteral_10229/*"OptionLocalNotiffication"*/;
+  v81->SAVE_KEY_LOCAL_NOTIFFICATION = (struct System_String_o *)StringLiteral_10229/*"OptionLocalNotiffication"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v81->SAVE_KEY_LOCAL_NOTIFFICATION, v82, v83, v84, v85, v86, v87, v88);
+  v89 = OptionManager_TypeInfo->static_fields;
+  v90 = StringLiteral_10234/*"OptionRaidNotiffication"*/;
+  v89->SAVE_KEY_RAID_NOTIFFICATION = (struct System_String_o *)StringLiteral_10234/*"OptionRaidNotiffication"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v89->SAVE_KEY_RAID_NOTIFFICATION, v90, v91, v92, v93, v94, v95, v96);
+  v97 = OptionManager_TypeInfo->static_fields;
+  v98 = StringLiteral_10226/*"OptionBoostItemConfirm"*/;
+  v97->SAVE_KEY_BOOST_ITEM_CONFIRM = (struct System_String_o *)StringLiteral_10226/*"OptionBoostItemConfirm"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v97->SAVE_KEY_BOOST_ITEM_CONFIRM, v98, v99, v100, v101, v102, v103, v104);
+  v105 = OptionManager_TypeInfo->static_fields;
+  v106 = StringLiteral_10228/*"OptionFriendImageLimitCount"*/;
+  v105->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT = (struct System_String_o *)StringLiteral_10228/*"OptionFriendImageLimitCount"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v105->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT,
+    v106,
+    v107,
+    v108,
     v109,
     v110,
     v111,
-    v112,
-    v113,
-    v114,
-    v115);
-  v116 = OptionManager_TypeInfo->static_fields;
-  v117 = StringLiteral_10224/*"OptionRaidNotiffication"*/;
-  v116->SAVE_KEY_RAID_NOTIFFICATION = (struct System_String_o *)StringLiteral_10224/*"OptionRaidNotiffication"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v116->SAVE_KEY_RAID_NOTIFFICATION,
-    v117,
-    v118,
-    v119,
-    v120,
-    v121,
-    v122,
-    v123);
-  v124 = OptionManager_TypeInfo->static_fields;
-  v125 = StringLiteral_10216/*"OptionBoostItemConfirm"*/;
-  v124->SAVE_KEY_BOOST_ITEM_CONFIRM = (struct System_String_o *)StringLiteral_10216/*"OptionBoostItemConfirm"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v124->SAVE_KEY_BOOST_ITEM_CONFIRM,
-    v125,
-    v126,
-    v127,
-    v128,
-    v129,
-    v130,
-    v131);
-  v132 = OptionManager_TypeInfo->static_fields;
-  v133 = StringLiteral_10218/*"OptionFriendImageLimitCount"*/;
-  v132->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT = (struct System_String_o *)StringLiteral_10218/*"OptionFriendImageLimitCount"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v132->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT,
-    v133,
-    v134,
-    v135,
-    v136,
-    v137,
-    v138,
-    v139);
-  v140 = OptionManager_TypeInfo->static_fields;
-  v141 = StringLiteral_10217/*"OptionFriendCostume"*/;
-  v140->SAVE_KEY_FREND_COSTUME = (struct System_String_o *)StringLiteral_10217/*"OptionFriendCostume"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v140->SAVE_KEY_FREND_COSTUME, v141, v142, v143, v144, v145, v146, v147);
-  v148 = OptionManager_TypeInfo->static_fields;
-  v149 = StringLiteral_10233/*"OptionSvtRand"*/;
-  v148->SAVE_KEY_SVT_RAND = (struct System_String_o *)StringLiteral_10233/*"OptionSvtRand"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v148->SAVE_KEY_SVT_RAND, v149, v150, v151, v152, v153, v154, v155);
-  v156 = OptionManager_TypeInfo->static_fields;
-  v157 = StringLiteral_10220/*"OptionMessageDisp"*/;
-  v156->SAVE_KEY_MESSAGE_DISP = (struct System_String_o *)StringLiteral_10220/*"OptionMessageDisp"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v156->SAVE_KEY_MESSAGE_DISP, v157, v158, v159, v160, v161, v162, v163);
-  v164 = OptionManager_TypeInfo->static_fields;
-  v165 = StringLiteral_10236/*"OptionVolumeMute"*/;
-  v164->SAVE_KEY_VOLUME_MUTE = (struct System_String_o *)StringLiteral_10236/*"OptionVolumeMute"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v164->SAVE_KEY_VOLUME_MUTE, v165, v166, v167, v168, v169, v170, v171);
-  v172 = OptionManager_TypeInfo->static_fields;
-  v173 = StringLiteral_10232/*"OptionSelectAdvantageClassAuto"*/;
-  v172->SAVE_KEY_ADVANTAGE_CLASS_AUTO = (struct System_String_o *)StringLiteral_10232/*"OptionSelectAdvantageClassAuto"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v172->SAVE_KEY_ADVANTAGE_CLASS_AUTO,
-    v173,
-    v174,
-    v175,
-    v176,
-    v177,
-    v178,
-    v179);
-  v180 = (PartyOrganizationUtility_o *)OptionManager_TypeInfo->static_fields;
-  v181 = StringLiteral_10221/*"OptionNotPlayOpeningMovie"*/;
-  v180[1].klass = (PartyOrganizationUtility_c *)StringLiteral_10221/*"OptionNotPlayOpeningMovie"*/;
-  sub_1C1AB78(v180 + 1, v181, v182, v183, v184, v185, v186, v187);
-  v188 = OptionManager_TypeInfo->static_fields;
-  v189 = StringLiteral_10234/*"OptionTouchSkipOpeningMovie"*/;
-  v188->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE = (struct System_String_o *)StringLiteral_10234/*"OptionTouchSkipOpeningMovie"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v188->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE,
+    v112);
+  v113 = OptionManager_TypeInfo->static_fields;
+  v114 = StringLiteral_10227/*"OptionFriendCostume"*/;
+  v113->SAVE_KEY_FREND_COSTUME = (struct System_String_o *)StringLiteral_10227/*"OptionFriendCostume"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v113->SAVE_KEY_FREND_COSTUME, v114, v115, v116, v117, v118, v119, v120);
+  v121 = OptionManager_TypeInfo->static_fields;
+  v122 = StringLiteral_10243/*"OptionSvtRand"*/;
+  v121->SAVE_KEY_SVT_RAND = (struct System_String_o *)StringLiteral_10243/*"OptionSvtRand"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v121->SAVE_KEY_SVT_RAND, v122, v123, v124, v125, v126, v127, v128);
+  v129 = OptionManager_TypeInfo->static_fields;
+  v130 = StringLiteral_10230/*"OptionMessageDisp"*/;
+  v129->SAVE_KEY_MESSAGE_DISP = (struct System_String_o *)StringLiteral_10230/*"OptionMessageDisp"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v129->SAVE_KEY_MESSAGE_DISP, v130, v131, v132, v133, v134, v135, v136);
+  v137 = OptionManager_TypeInfo->static_fields;
+  v138 = StringLiteral_10246/*"OptionVolumeMute"*/;
+  v137->SAVE_KEY_VOLUME_MUTE = (struct System_String_o *)StringLiteral_10246/*"OptionVolumeMute"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v137->SAVE_KEY_VOLUME_MUTE, v138, v139, v140, v141, v142, v143, v144);
+  v145 = OptionManager_TypeInfo->static_fields;
+  v146 = StringLiteral_10242/*"OptionSelectAdvantageClassAuto"*/;
+  v145->SAVE_KEY_ADVANTAGE_CLASS_AUTO = (struct System_String_o *)StringLiteral_10242/*"OptionSelectAdvantageClassAuto"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v145->SAVE_KEY_ADVANTAGE_CLASS_AUTO,
+    v146,
+    v147,
+    v148,
+    v149,
+    v150,
+    v151,
+    v152);
+  v153 = (PartyOrganizationUtility_o *)OptionManager_TypeInfo->static_fields;
+  v154 = StringLiteral_10231/*"OptionNotPlayOpeningMovie"*/;
+  v153[1].klass = (PartyOrganizationUtility_c *)StringLiteral_10231/*"OptionNotPlayOpeningMovie"*/;
+  sub_1C21DDC(v153 + 1, v154, v155, v156, v157, v158, v159, v160);
+  v161 = OptionManager_TypeInfo->static_fields;
+  v162 = StringLiteral_10244/*"OptionTouchSkipOpeningMovie"*/;
+  v161->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE = (struct System_String_o *)StringLiteral_10244/*"OptionTouchSkipOpeningMovie"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v161->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE,
+    v162,
+    v163,
+    v164,
+    v165,
+    v166,
+    v167,
+    v168);
+  v169 = OptionManager_TypeInfo->static_fields;
+  v170 = StringLiteral_10223/*"OptionAutoSelectParty"*/;
+  v169->SAVE_KEY_AUTO_SELECT_PARTY = (struct System_String_o *)StringLiteral_10223/*"OptionAutoSelectParty"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v169->SAVE_KEY_AUTO_SELECT_PARTY, v170, v171, v172, v173, v174, v175, v176);
+  v177 = OptionManager_TypeInfo->static_fields;
+  v178 = StringLiteral_10235/*"OptionResolutionType"*/;
+  v177->SAVE_KEY_RESOLUTION_TYPE = (struct System_String_o *)StringLiteral_10235/*"OptionResolutionType"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v177->SAVE_KEY_RESOLUTION_TYPE, v178, v179, v180, v181, v182, v183, v184);
+  v185 = OptionManager_TypeInfo->static_fields;
+  v186 = StringLiteral_10233/*"OptionPreBattleFormation"*/;
+  v185->SAVE_KEY_PREBATTLEFORMATION = (struct System_String_o *)StringLiteral_10233/*"OptionPreBattleFormation"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v185->SAVE_KEY_PREBATTLEFORMATION,
+    v186,
+    v187,
+    v188,
     v189,
     v190,
     v191,
-    v192,
-    v193,
+    v192);
+  v193 = OptionManager_TypeInfo->static_fields;
+  v194 = StringLiteral_10224/*"OptionBattle20220729"*/;
+  v193->SAVE_KEY_BATTLE_FPS_SETTING = (struct System_String_o *)StringLiteral_10224/*"OptionBattle20220729"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v193->SAVE_KEY_BATTLE_FPS_SETTING,
     v194,
-    v195);
-  v196 = OptionManager_TypeInfo->static_fields;
-  v197 = StringLiteral_10213/*"OptionAutoSelectParty"*/;
-  v196->SAVE_KEY_AUTO_SELECT_PARTY = (struct System_String_o *)StringLiteral_10213/*"OptionAutoSelectParty"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v196->SAVE_KEY_AUTO_SELECT_PARTY, v197, v198, v199, v200, v201, v202, v203);
-  v204 = OptionManager_TypeInfo->static_fields;
-  v205 = StringLiteral_10225/*"OptionResolutionType"*/;
-  v204->SAVE_KEY_RESOLUTION_TYPE = (struct System_String_o *)StringLiteral_10225/*"OptionResolutionType"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v204->SAVE_KEY_RESOLUTION_TYPE, v205, v206, v207, v208, v209, v210, v211);
-  v212 = OptionManager_TypeInfo->static_fields;
-  v213 = StringLiteral_10223/*"OptionPreBattleFormation"*/;
-  v212->SAVE_KEY_PREBATTLEFORMATION = (struct System_String_o *)StringLiteral_10223/*"OptionPreBattleFormation"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v212->SAVE_KEY_PREBATTLEFORMATION,
-    v213,
-    v214,
-    v215,
-    v216,
-    v217,
-    v218,
-    v219);
-  v220 = OptionManager_TypeInfo->static_fields;
-  v221 = StringLiteral_10214/*"OptionBattle20220729"*/;
-  v220->SAVE_KEY_BATTLE_FPS_SETTING = (struct System_String_o *)StringLiteral_10214/*"OptionBattle20220729"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v220->SAVE_KEY_BATTLE_FPS_SETTING,
-    v221,
-    v222,
-    v223,
-    v224,
-    v225,
-    v226,
-    v227);
-  v228 = OptionManager_TypeInfo->static_fields;
-  v229 = StringLiteral_10212/*"OptionAutoOpenAutoOrganizationDialog"*/;
-  v228->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG = (struct System_String_o *)StringLiteral_10212/*"OptionAutoOpenAutoOrganizationDialog"*/;
-  sub_1C1AB78(
-    (PartyOrganizationUtility_o *)&v228->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG,
-    v229,
-    v230,
-    v231,
-    v232,
-    v233,
-    v234,
-    v235);
+    v195,
+    v196,
+    v197,
+    v198,
+    v199,
+    v200);
+  v201 = OptionManager_TypeInfo->static_fields;
+  v202 = StringLiteral_10222/*"OptionAutoOpenAutoOrganizationDialog"*/;
+  v201->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG = (struct System_String_o *)StringLiteral_10222/*"OptionAutoOpenAutoOrganizationDialog"*/;
+  sub_1C21DDC(
+    (PartyOrganizationUtility_o *)&v201->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG,
+    v202,
+    v203,
+    v204,
+    v205,
+    v206,
+    v207,
+    v208);
 }
 
 
@@ -457,58 +406,56 @@ void __fastcall OptionManager___ctor(OptionManager_o *this, const MethodInfo *me
 
 void __fastcall OptionManager__AdjustScenarioSpeedSetting(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  OptionManager_c *v4; // x0
+  OptionManager_c *v1; // x0
+  OptionManager_c *v2; // x0
   bool HasKey; // w0
-  OptionManager_c *v6; // x8
-  bool v7; // w19
-  BalanceConfig_c *v8; // x0
+  OptionManager_c *v4; // x8
+  bool v5; // w19
+  BalanceConfig_c *v6; // x0
   System_String_o *SAVE_KEY_SCENARIO_TEXT_WAIT; // x20
   struct BalanceConfig_StaticFields *static_fields; // x8
   float *p_ScenarioTextWaitDefaultCn; // x9
   float *p_ScenarioTextWaitDefaultSt; // x8
 
-  if ( (byte_4BC736D & 1) == 0 )
+  if ( (byte_4BDBE03 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC736D = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE03 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  if ( !UnityEngine_PlayerPrefs__HasKey(v3->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT, 0LL) )
+  if ( !UnityEngine_PlayerPrefs__HasKey(v1->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT, 0LL) )
   {
+    v2 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+      v2 = OptionManager_TypeInfo;
+    }
+    HasKey = UnityEngine_PlayerPrefs__HasKey(v2->static_fields->SAVE_KEY_ADJUST_VOLUME, 0LL);
     v4 = OptionManager_TypeInfo;
+    v5 = HasKey;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
       v4 = OptionManager_TypeInfo;
     }
-    HasKey = UnityEngine_PlayerPrefs__HasKey(v4->static_fields->SAVE_KEY_ADJUST_VOLUME, 0LL);
-    v6 = OptionManager_TypeInfo;
-    v7 = HasKey;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v6 = OptionManager_TypeInfo;
-    }
-    v8 = BalanceConfig_TypeInfo;
-    SAVE_KEY_SCENARIO_TEXT_WAIT = v6->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT;
+    v6 = BalanceConfig_TypeInfo;
+    SAVE_KEY_SCENARIO_TEXT_WAIT = v4->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v8 = BalanceConfig_TypeInfo;
+      v6 = BalanceConfig_TypeInfo;
     }
-    static_fields = v8->static_fields;
+    static_fields = v6->static_fields;
     p_ScenarioTextWaitDefaultCn = &static_fields->ScenarioTextWaitDefaultCn;
     p_ScenarioTextWaitDefaultSt = &static_fields->ScenarioTextWaitDefaultSt;
-    if ( v7 )
+    if ( v5 )
       p_ScenarioTextWaitDefaultSt = p_ScenarioTextWaitDefaultCn;
     UnityEngine_PlayerPrefs__SetFloat(SAVE_KEY_SCENARIO_TEXT_WAIT, *p_ScenarioTextWaitDefaultSt, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
@@ -518,30 +465,29 @@ void __fastcall OptionManager__AdjustScenarioSpeedSetting(const MethodInfo *meth
 
 void __fastcall OptionManager__AdjustVolume(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  OptionManager_c *v1; // x0
   OptionManager_c *v2; // x0
-  OptionManager_c *v3; // x0
 
-  if ( (byte_4BC736C & 1) == 0 )
+  if ( (byte_4BDBE02 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC736C = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE02 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  if ( !UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_ADJUST_VOLUME, 0, 0LL) )
+  if ( !UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_ADJUST_VOLUME, 0, 0LL) )
   {
-    v3 = OptionManager_TypeInfo;
+    v2 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v3 = OptionManager_TypeInfo;
+      v2 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetInt(v3->static_fields->SAVE_KEY_ADJUST_VOLUME, 1, 0LL);
+    UnityEngine_PlayerPrefs__SetInt(v2->static_fields->SAVE_KEY_ADJUST_VOLUME, 1, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -549,78 +495,76 @@ void __fastcall OptionManager__AdjustVolume(const MethodInfo *method)
 
 bool __fastcall OptionManager__CheckOldLocal(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  OptionManager_c *v1; // x0
   OptionManager_c *v2; // x0
-  OptionManager_c *v3; // x0
-  const MethodInfo *v4; // x1
-  bool v5; // w19
-  OptionManager_c *v6; // x0
+  const MethodInfo *v3; // x1
+  bool v4; // w19
+  OptionManager_c *v5; // x0
   struct OptionManager_StaticFields *static_fields; // x8
   bool result; // w0
 
-  if ( (byte_4BC7366 & 1) == 0 )
+  if ( (byte_4BDBDFC & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7366 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBDFC = 1;
   }
+  v1 = OptionManager_TypeInfo;
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    v1 = OptionManager_TypeInfo;
+  }
+  if ( !UnityEngine_PlayerPrefs__HasKey(v1->static_fields->SAVE_KEY_FREND_COSTUME, 0LL) )
+    goto LABEL_12;
   v2 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     v2 = OptionManager_TypeInfo;
   }
-  if ( !UnityEngine_PlayerPrefs__HasKey(v2->static_fields->SAVE_KEY_FREND_COSTUME, 0LL) )
-    goto LABEL_12;
-  v3 = OptionManager_TypeInfo;
-  if ( !OptionManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
-  }
-  if ( UnityEngine_PlayerPrefs__GetInt(v3->static_fields->SAVE_KEY_FREND_COSTUME, 0, 0LL) )
+  if ( UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_FREND_COSTUME, 0, 0LL) )
   {
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = 1;
-    OptionManager__SetFriendCostume(1, v4);
+    v4 = 1;
+    OptionManager__SetFriendCostume(1, v3);
   }
   else
   {
 LABEL_12:
-    v5 = 0;
+    v4 = 0;
   }
-  v6 = OptionManager_TypeInfo;
+  v5 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v6 = OptionManager_TypeInfo;
+    v5 = OptionManager_TypeInfo;
   }
-  static_fields = v6->static_fields;
-  result = v5;
-  static_fields->isModify = v5;
-  static_fields->isServerModify = v5;
+  static_fields = v5->static_fields;
+  result = v4;
+  static_fields->isModify = v4;
+  static_fields->isServerModify = v4;
   return result;
 }
 
 
 void __fastcall OptionManager__DeleteContinueData(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
-  const MethodInfo *v3; // x0
+  OptionManager_c *v1; // x0
+  const MethodInfo *v2; // x0
 
-  if ( (byte_4BC7365 & 1) == 0 )
+  if ( (byte_4BDBDFB & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7365 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBDFB = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__DeleteKey(v2->static_fields->SAVE_KEY_BGM_VOLUME, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey(v1->static_fields->SAVE_KEY_BGM_VOLUME, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(OptionManager_TypeInfo->static_fields->SAVE_KEY_SE_VOLUME, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(OptionManager_TypeInfo->static_fields->SAVE_KEY_VOICE_VOLUME, 0LL);
   UnityEngine_PlayerPrefs__SetInt(OptionManager_TypeInfo->static_fields->SAVE_KEY_ADJUST_VOLUME, 1, 0LL);
@@ -643,268 +587,255 @@ void __fastcall OptionManager__DeleteContinueData(const MethodInfo *method)
   UnityEngine_PlayerPrefs__DeleteKey(OptionManager_TypeInfo->static_fields->SAVE_KEY_RESOLUTION_TYPE, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(OptionManager_TypeInfo->static_fields->SAVE_KEY_PREBATTLEFORMATION, 0LL);
   UnityEngine_PlayerPrefs__DeleteKey(OptionManager_TypeInfo->static_fields->SAVE_KEY_BATTLE_FPS_SETTING, 0LL);
-  OptionManager__Initialize(v3);
+  OptionManager__Initialize(v2);
 }
 
 
 void __fastcall OptionManager__DeleteOldLocal(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7367 & 1) == 0 )
+  if ( (byte_4BDBDFD & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7367 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBDFD = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__DeleteKey(v2->static_fields->SAVE_KEY_FREND_COSTUME, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey(v1->static_fields->SAVE_KEY_FREND_COSTUME, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
 
 bool __fastcall OptionManager__GetAdvantageClassAuto(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC739B & 1) == 0 )
+  if ( (byte_4BDBE31 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC739B = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE31 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_ADVANTAGE_CLASS_AUTO, 1, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_ADVANTAGE_CLASS_AUTO, 1, 0LL) == 1;
 }
 
 
 bool __fastcall OptionManager__GetAutoOpenAutoOrganizationDialog(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73AE & 1) == 0 )
+  if ( (byte_4BDBE44 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73AE = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE44 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG, 1, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_AUTO_OPEN_AUTO_ORGANIZATION_DIALOG, 1, 0LL) == 1;
 }
 
 
 bool __fastcall OptionManager__GetAutoSelectParty(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73A5 & 1) == 0 )
+  if ( (byte_4BDBE3B & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73A5 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE3B = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_AUTO_SELECT_PARTY, 1, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_AUTO_SELECT_PARTY, 1, 0LL) == 1;
 }
 
 
 float __fastcall OptionManager__GetBgmVolume(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7370 & 1) == 0 )
+  if ( (byte_4BDBE06 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7370 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE06 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetFloat(v2->static_fields->SAVE_KEY_BGM_VOLUME, v2->static_fields->DEF_VOL, 0LL);
+  return UnityEngine_PlayerPrefs__GetFloat(v1->static_fields->SAVE_KEY_BGM_VOLUME, v1->static_fields->DEF_VOL, 0LL);
 }
 
 
 bool __fastcall OptionManager__GetBoostItemUseConfirm(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC738C & 1) == 0 )
+  if ( (byte_4BDBE22 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC738C = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE22 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_BOOST_ITEM_CONFIRM, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_BOOST_ITEM_CONFIRM, 1, 0LL) != 0;
 }
 
 
 bool __fastcall OptionManager__GetDefaultMute(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7396 & 1) == 0 )
+  if ( (byte_4BDBE2C & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7396 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE2C = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return v2->static_fields->DEF_MUTE;
+  return v1->static_fields->DEF_MUTE;
 }
 
 
 float __fastcall OptionManager__GetDefaultScenarioAutoWaitTime(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  BalanceConfig_c *v2; // x0
+  BalanceConfig_c *v1; // x0
 
-  if ( (byte_4BC7385 & 1) == 0 )
+  if ( (byte_4BDBE1B & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    byte_4BC7385 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    byte_4BDBE1B = 1;
   }
-  v2 = BalanceConfig_TypeInfo;
+  v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v2 = BalanceConfig_TypeInfo;
+    v1 = BalanceConfig_TypeInfo;
   }
-  return v2->static_fields->ScenarioAutoWaitTimeDefault;
+  return v1->static_fields->ScenarioAutoWaitTimeDefault;
 }
 
 
 float __fastcall OptionManager__GetDefaultScenarioScrollSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  BalanceConfig_c *v2; // x0
+  BalanceConfig_c *v1; // x0
 
-  if ( (byte_4BC7399 & 1) == 0 )
+  if ( (byte_4BDBE2F & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    byte_4BC7399 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    byte_4BDBE2F = 1;
   }
-  v2 = BalanceConfig_TypeInfo;
+  v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v2 = BalanceConfig_TypeInfo;
+    v1 = BalanceConfig_TypeInfo;
   }
-  return v2->static_fields->ScenarioScrollSpeedDefault;
+  return v1->static_fields->ScenarioScrollSpeedDefault;
 }
 
 
 float __fastcall OptionManager__GetDefaultScenarioSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  BalanceConfig_c *v2; // x0
+  BalanceConfig_c *v1; // x0
 
-  if ( (byte_4BC7397 & 1) == 0 )
+  if ( (byte_4BDBE2D & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    byte_4BC7397 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    byte_4BDBE2D = 1;
   }
-  v2 = BalanceConfig_TypeInfo;
+  v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v2 = BalanceConfig_TypeInfo;
+    v1 = BalanceConfig_TypeInfo;
   }
-  return v2->static_fields->ScenarioSpeedDefault;
+  return v1->static_fields->ScenarioSpeedDefault;
 }
 
 
 float __fastcall OptionManager__GetDefaultScenarioTextSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  BalanceConfig_c *v2; // x0
+  BalanceConfig_c *v1; // x0
 
-  if ( (byte_4BC7398 & 1) == 0 )
+  if ( (byte_4BDBE2E & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    byte_4BC7398 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    byte_4BDBE2E = 1;
   }
-  v2 = BalanceConfig_TypeInfo;
+  v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v2 = BalanceConfig_TypeInfo;
+    v1 = BalanceConfig_TypeInfo;
   }
-  return v2->static_fields->ScenarioTextSpeedDefault;
+  return v1->static_fields->ScenarioTextSpeedDefault;
 }
 
 
 float __fastcall OptionManager__GetDefaultScenarioWaitTimeSecond(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  BalanceConfig_c *v2; // x0
+  BalanceConfig_c *v1; // x0
 
-  if ( (byte_4BC737C & 1) == 0 )
+  if ( (byte_4BDBE12 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    byte_4BC737C = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    byte_4BDBE12 = 1;
   }
-  v2 = BalanceConfig_TypeInfo;
+  v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v2 = BalanceConfig_TypeInfo;
+    v1 = BalanceConfig_TypeInfo;
   }
-  return v2->static_fields->ScenarioTextWaitDefaultSt;
+  return v1->static_fields->ScenarioTextWaitDefaultSt;
 }
 
 
 float __fastcall OptionManager__GetDefaultVolume(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7395 & 1) == 0 )
+  if ( (byte_4BDBE2B & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7395 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE2B = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return v2->static_fields->DEF_VOL;
+  return v1->static_fields->DEF_VOL;
 }
 
 
@@ -915,155 +846,148 @@ bool __fastcall OptionManager__GetFriendCostume(const MethodInfo *method)
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v2);
+    sub_1C22094(0LL, v2);
   return (BYTE1(SelfUserGame->fields.flag) >> 1) & 1;
 }
 
 
 bool __fastcall OptionManager__GetFriendImageLimitCount(const MethodInfo *method)
 {
-  __int64 v1; // x1
   UserGameEntity_o *SelfUserGame; // x0
-  __int64 v3; // x1
-  OptionManager_c *v4; // x0
+  __int64 v2; // x1
+  OptionManager_c *v3; // x0
 
-  if ( (byte_4BC738E & 1) == 0 )
+  if ( (byte_4BDBE24 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC738E = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE24 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v3);
+    sub_1C22094(0LL, v2);
   if ( (SelfUserGame->fields.flag & 0x100000) != 0 )
     return 1;
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  return v4->static_fields->isFriendImageLimitCount;
+  return v3->static_fields->isFriendImageLimitCount;
 }
 
 
 bool __fastcall OptionManager__GetLocalNotiffication(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7388 & 1) == 0 )
+  if ( (byte_4BDBE1E & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7388 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE1E = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_LOCAL_NOTIFFICATION, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_LOCAL_NOTIFFICATION, 1, 0LL) != 0;
 }
 
 
 bool __fastcall OptionManager__GetMessageDisp(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7393 & 1) == 0 )
+  if ( (byte_4BDBE29 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7393 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE29 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_MESSAGE_DISP, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_MESSAGE_DISP, 1, 0LL) != 0;
 }
 
 
 bool __fastcall OptionManager__GetNotPlayOpeningMovie(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73A0 & 1) == 0 )
+  if ( (byte_4BDBE36 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73A0 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE36 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_NOT_PLAY_OPENING_MOVIE, 1, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_NOT_PLAY_OPENING_MOVIE, 1, 0LL) == 1;
 }
 
 
 bool __fastcall OptionManager__GetNotiffication(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7386 & 1) == 0 )
+  if ( (byte_4BDBE1C & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7386 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE1C = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_NOTIFFICATION, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_NOTIFFICATION, 1, 0LL) != 0;
 }
 
 
 bool __fastcall OptionManager__GetPreBattleFormationSetting(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73AB & 1) == 0 )
+  if ( (byte_4BDBE41 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73AB = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE41 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_PREBATTLEFORMATION, 1, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_PREBATTLEFORMATION, 1, 0LL) == 1;
 }
 
 
 bool __fastcall OptionManager__GetRaidNotiffication(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC738A & 1) == 0 )
+  if ( (byte_4BDBE20 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC738A = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE20 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_RAID_NOTIFFICATION, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_RAID_NOTIFFICATION, 1, 0LL) != 0;
 }
 
 
@@ -1074,7 +998,7 @@ bool __fastcall OptionManager__GetRandomLimitCountFriend(const MethodInfo *metho
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v2);
+    sub_1C22094(0LL, v2);
   return (BYTE2(SelfUserGame->fields.flag) >> 2) & 1;
 }
 
@@ -1086,140 +1010,133 @@ bool __fastcall OptionManager__GetRandomLimitCountOwn(const MethodInfo *method)
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v2);
+    sub_1C22094(0LL, v2);
   return (BYTE2(SelfUserGame->fields.flag) >> 1) & 1;
 }
 
 
 int32_t __fastcall OptionManager__GetResolutionType(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73A7 & 1) == 0 )
+  if ( (byte_4BDBE3D & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73A7 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE3D = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_RESOLUTION_TYPE, 0, 0LL);
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_RESOLUTION_TYPE, 0, 0LL);
 }
 
 
 float __fastcall OptionManager__GetScenarioAutoWaitTime(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  BalanceConfig_c *v4; // x8
+  OptionManager_c *v1; // x0
+  BalanceConfig_c *v2; // x8
   System_String_o *SAVE_KEY_SCENARIO_AUTO_WAIT_TIME; // x19
 
-  if ( (byte_4BC7383 & 1) == 0 )
+  if ( (byte_4BDBE19 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7383 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE19 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  v4 = BalanceConfig_TypeInfo;
-  SAVE_KEY_SCENARIO_AUTO_WAIT_TIME = v3->static_fields->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME;
+  v2 = BalanceConfig_TypeInfo;
+  SAVE_KEY_SCENARIO_AUTO_WAIT_TIME = v1->static_fields->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v4 = BalanceConfig_TypeInfo;
+    v2 = BalanceConfig_TypeInfo;
   }
   return UnityEngine_PlayerPrefs__GetFloat(
            SAVE_KEY_SCENARIO_AUTO_WAIT_TIME,
-           v4->static_fields->ScenarioAutoWaitTimeDefault,
+           v2->static_fields->ScenarioAutoWaitTimeDefault,
            0LL);
 }
 
 
 float __fastcall OptionManager__GetScenarioScrollSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  BalanceConfig_c *v4; // x8
+  OptionManager_c *v1; // x0
+  BalanceConfig_c *v2; // x8
   System_String_o *SAVE_KEY_SCENARIO_SCROLL_SPEED; // x19
 
-  if ( (byte_4BC7381 & 1) == 0 )
+  if ( (byte_4BDBE17 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7381 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE17 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  v4 = BalanceConfig_TypeInfo;
-  SAVE_KEY_SCENARIO_SCROLL_SPEED = v3->static_fields->SAVE_KEY_SCENARIO_SCROLL_SPEED;
+  v2 = BalanceConfig_TypeInfo;
+  SAVE_KEY_SCENARIO_SCROLL_SPEED = v1->static_fields->SAVE_KEY_SCENARIO_SCROLL_SPEED;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v4 = BalanceConfig_TypeInfo;
+    v2 = BalanceConfig_TypeInfo;
   }
   return UnityEngine_PlayerPrefs__GetFloat(
            SAVE_KEY_SCENARIO_SCROLL_SPEED,
-           v4->static_fields->ScenarioScrollSpeedDefault,
+           v2->static_fields->ScenarioScrollSpeedDefault,
            0LL);
 }
 
 
 float __fastcall OptionManager__GetScenarioSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  BalanceConfig_c *v4; // x8
+  OptionManager_c *v1; // x0
+  BalanceConfig_c *v2; // x8
   System_String_o *SAVE_KEY_SCENARIO_SPEED; // x19
   float Float; // s0
-  BalanceConfig_c *v7; // x0
+  BalanceConfig_c *v5; // x0
   float ScenarioSpeedHigh; // s8
   struct BalanceConfig_StaticFields *static_fields; // x8
   float ScenarioSpeedLow; // s9
 
-  if ( (byte_4BC737A & 1) == 0 )
+  if ( (byte_4BDBE10 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC737A = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE10 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  v4 = BalanceConfig_TypeInfo;
-  SAVE_KEY_SCENARIO_SPEED = v3->static_fields->SAVE_KEY_SCENARIO_SPEED;
+  v2 = BalanceConfig_TypeInfo;
+  SAVE_KEY_SCENARIO_SPEED = v1->static_fields->SAVE_KEY_SCENARIO_SPEED;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v4 = BalanceConfig_TypeInfo;
+    v2 = BalanceConfig_TypeInfo;
   }
-  Float = UnityEngine_PlayerPrefs__GetFloat(SAVE_KEY_SCENARIO_SPEED, v4->static_fields->ScenarioSpeedDefault, 0LL);
-  v7 = BalanceConfig_TypeInfo;
+  Float = UnityEngine_PlayerPrefs__GetFloat(SAVE_KEY_SCENARIO_SPEED, v2->static_fields->ScenarioSpeedDefault, 0LL);
+  v5 = BalanceConfig_TypeInfo;
   ScenarioSpeedHigh = Float;
   static_fields = BalanceConfig_TypeInfo->static_fields;
   ScenarioSpeedLow = static_fields->ScenarioSpeedLow;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v7 = BalanceConfig_TypeInfo;
+    v5 = BalanceConfig_TypeInfo;
     static_fields = BalanceConfig_TypeInfo->static_fields;
   }
   if ( ScenarioSpeedHigh <= ScenarioSpeedLow )
@@ -1227,9 +1144,9 @@ float __fastcall OptionManager__GetScenarioSpeed(const MethodInfo *method)
   if ( ScenarioSpeedHigh >= static_fields->ScenarioSpeedHigh )
   {
     ScenarioSpeedHigh = static_fields->ScenarioSpeedHigh;
-    if ( !v7->_2.cctor_finished )
+    if ( !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
+      j_il2cpp_runtime_class_init_0(v5);
       return BalanceConfig_TypeInfo->static_fields->ScenarioSpeedHigh;
     }
   }
@@ -1239,79 +1156,75 @@ float __fastcall OptionManager__GetScenarioSpeed(const MethodInfo *method)
 
 float __fastcall OptionManager__GetScenarioTextSpeed(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  BalanceConfig_c *v4; // x8
+  OptionManager_c *v1; // x0
+  BalanceConfig_c *v2; // x8
   System_String_o *SAVE_KEY_SCENARIO_TEXT_SPEED; // x19
 
-  if ( (byte_4BC737F & 1) == 0 )
+  if ( (byte_4BDBE15 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC737F = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE15 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  v4 = BalanceConfig_TypeInfo;
-  SAVE_KEY_SCENARIO_TEXT_SPEED = v3->static_fields->SAVE_KEY_SCENARIO_TEXT_SPEED;
+  v2 = BalanceConfig_TypeInfo;
+  SAVE_KEY_SCENARIO_TEXT_SPEED = v1->static_fields->SAVE_KEY_SCENARIO_TEXT_SPEED;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v4 = BalanceConfig_TypeInfo;
+    v2 = BalanceConfig_TypeInfo;
   }
   return UnityEngine_PlayerPrefs__GetFloat(
            SAVE_KEY_SCENARIO_TEXT_SPEED,
-           v4->static_fields->ScenarioTextSpeedDefault,
+           v2->static_fields->ScenarioTextSpeedDefault,
            0LL);
 }
 
 
 float __fastcall OptionManager__GetScenarioTextWaitTimeSecond(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
-  BalanceConfig_c *v4; // x8
+  OptionManager_c *v1; // x0
+  BalanceConfig_c *v2; // x8
   System_String_o *SAVE_KEY_SCENARIO_TEXT_WAIT; // x19
   float Float; // s0
-  BalanceConfig_c *v7; // x0
+  BalanceConfig_c *v5; // x0
   float ScenarioTextWaitLow; // s8
 
-  if ( (byte_4BC737D & 1) == 0 )
+  if ( (byte_4BDBE13 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, v1);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC737D = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE13 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v3 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  v4 = BalanceConfig_TypeInfo;
-  SAVE_KEY_SCENARIO_TEXT_WAIT = v3->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT;
+  v2 = BalanceConfig_TypeInfo;
+  SAVE_KEY_SCENARIO_TEXT_WAIT = v1->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v4 = BalanceConfig_TypeInfo;
+    v2 = BalanceConfig_TypeInfo;
   }
   Float = UnityEngine_PlayerPrefs__GetFloat(
             SAVE_KEY_SCENARIO_TEXT_WAIT,
-            v4->static_fields->ScenarioTextWaitDefaultSt,
+            v2->static_fields->ScenarioTextWaitDefaultSt,
             0LL);
-  v7 = BalanceConfig_TypeInfo;
+  v5 = BalanceConfig_TypeInfo;
   if ( Float <= BalanceConfig_TypeInfo->static_fields->ScenarioTextWaitLow )
   {
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v7 = BalanceConfig_TypeInfo;
+      v5 = BalanceConfig_TypeInfo;
     }
     ScenarioTextWaitLow = BalanceConfig_TypeInfo->static_fields->ScenarioTextWaitLow;
   }
@@ -1319,17 +1232,17 @@ float __fastcall OptionManager__GetScenarioTextWaitTimeSecond(const MethodInfo *
   {
     ScenarioTextWaitLow = Float;
   }
-  if ( !v7->_2.cctor_finished )
+  if ( !v5->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v7);
-    v7 = BalanceConfig_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v5);
+    v5 = BalanceConfig_TypeInfo;
   }
-  if ( ScenarioTextWaitLow >= v7->static_fields->ScenarioTextWaitHigh )
+  if ( ScenarioTextWaitLow >= v5->static_fields->ScenarioTextWaitHigh )
   {
-    ScenarioTextWaitLow = v7->static_fields->ScenarioTextWaitHigh;
-    if ( !v7->_2.cctor_finished )
+    ScenarioTextWaitLow = v5->static_fields->ScenarioTextWaitHigh;
+    if ( !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
+      j_il2cpp_runtime_class_init_0(v5);
       return BalanceConfig_TypeInfo->static_fields->ScenarioTextWaitHigh;
     }
   }
@@ -1339,21 +1252,20 @@ float __fastcall OptionManager__GetScenarioTextWaitTimeSecond(const MethodInfo *
 
 float __fastcall OptionManager__GetSeVolume(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7373 & 1) == 0 )
+  if ( (byte_4BDBE09 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7373 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE09 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetFloat(v2->static_fields->SAVE_KEY_SE_VOLUME, v2->static_fields->DEF_VOL, 0LL);
+  return UnityEngine_PlayerPrefs__GetFloat(v1->static_fields->SAVE_KEY_SE_VOLUME, v1->static_fields->DEF_VOL, 0LL);
 }
 
 
@@ -1364,28 +1276,27 @@ bool __fastcall OptionManager__GetSpoilerSetting(const MethodInfo *method)
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v2);
+    sub_1C22094(0LL, v2);
   return (BYTE2(SelfUserGame->fields.flag) >> 3) & 1;
 }
 
 
 bool __fastcall OptionManager__GetSvtRand(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7391 & 1) == 0 )
+  if ( (byte_4BDBE27 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7391 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE27 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_SVT_RAND, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_SVT_RAND, 0, 0LL) != 0;
 }
 
 
@@ -1396,87 +1307,83 @@ bool __fastcall OptionManager__GetTDPlaySpeed(const MethodInfo *method)
 
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
-    sub_1C1AE30(0LL, v2);
+    sub_1C22094(0LL, v2);
   return (BYTE1(SelfUserGame->fields.flag) >> 2) & 1;
 }
 
 
 bool __fastcall OptionManager__GetTouchSkipOpeningMovie(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73A2 & 1) == 0 )
+  if ( (byte_4BDBE38 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73A2 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE38 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_TOUCH_SKIP_OPENING_MOVIE, 0, 0LL) != 0;
 }
 
 
 float __fastcall OptionManager__GetVoiceVolume(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7376 & 1) == 0 )
+  if ( (byte_4BDBE0C & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7376 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE0C = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetFloat(v2->static_fields->SAVE_KEY_VOICE_VOLUME, v2->static_fields->DEF_VOL, 0LL);
+  return UnityEngine_PlayerPrefs__GetFloat(v1->static_fields->SAVE_KEY_VOICE_VOLUME, v1->static_fields->DEF_VOL, 0LL);
 }
 
 
 bool __fastcall OptionManager__GetVolumeMute(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC7378 & 1) == 0 )
+  if ( (byte_4BDBE0E & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7378 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE0E = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_VOLUME_MUTE, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_VOLUME_MUTE, 0, 0LL) != 0;
 }
 
 
 void __fastcall OptionManager__Initialize(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
   int32_t Int; // w0
   struct OptionManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4BC7368 & 1) == 0 )
+  if ( (byte_4BDBDFE & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7368 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBDFE = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  OptionManager__Recover((const MethodInfo *)v2);
+  OptionManager__Recover((const MethodInfo *)v1);
   Int = UnityEngine_PlayerPrefs__GetInt(OptionManager_TypeInfo->static_fields->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT, 0, 0LL);
   static_fields = OptionManager_TypeInfo->static_fields;
   static_fields->isFriendImageLimitCount = Int != 0;
@@ -1486,60 +1393,56 @@ void __fastcall OptionManager__Initialize(const MethodInfo *method)
 
 bool __fastcall OptionManager__IsBattleFpsHigh(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
+  OptionManager_c *v1; // x0
 
-  if ( (byte_4BC73A9 & 1) == 0 )
+  if ( (byte_4BDBE3F & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC73A9 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE3F = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->SAVE_KEY_BATTLE_FPS_SETTING, 0, 0LL) > 0;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->SAVE_KEY_BATTLE_FPS_SETTING, 0, 0LL) > 0;
 }
 
 
 void __fastcall OptionManager__Recover(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x0
-  const MethodInfo *v3; // x0
+  OptionManager_c *v1; // x0
+  const MethodInfo *v2; // x0
 
-  if ( (byte_4BC7369 & 1) == 0 )
+  if ( (byte_4BDBDFF & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC7369 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBDFF = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  OptionManager__SoundRecover((const MethodInfo *)v2);
-  OptionManager__ResolutionRecover(v3);
+  OptionManager__SoundRecover((const MethodInfo *)v1);
+  OptionManager__ResolutionRecover(v2);
 }
 
 
 void __fastcall OptionManager__ResolutionRecover(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
+  OptionManager_c *v1; // x0
   int32_t ResolutionType; // w19
 
-  if ( (byte_4BC736B & 1) == 0 )
+  if ( (byte_4BDBE01 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    sub_1C1ABD4(&ResolutionManager_TypeInfo, v2);
-    byte_4BC736B = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&ResolutionManager_TypeInfo);
+    byte_4BDBE01 = 1;
   }
-  v3 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  ResolutionType = OptionManager__GetResolutionType((const MethodInfo *)v3);
+  ResolutionType = OptionManager__GetResolutionType((const MethodInfo *)v1);
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
   ResolutionManager__SetResolutionType(ResolutionType, 0LL);
@@ -1548,227 +1451,221 @@ void __fastcall OptionManager__ResolutionRecover(const MethodInfo *method)
 
 bool __fastcall OptionManager__SaveData(System_Action_o *callback, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x21
+  __int64 v3; // x21
   OptionManager_c *SpoilerSetting; // x0
-  __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  __int64 v18; // x19
-  OptionManager_c *v19; // x0
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  __int64 v12; // x19
+  OptionManager_c *v13; // x0
   struct OptionManager_StaticFields *static_fields; // x8
-  NetworkManager_ResultCallbackFunc_o *v21; // x19
-  const MethodInfo *v22; // x3
+  NetworkManager_ResultCallbackFunc_o *v15; // x19
+  const MethodInfo *v16; // x3
   Il2CppObject *Request_object; // x0
-  UserStatusFlagSetRequest_o *v24; // x19
+  UserStatusFlagSetRequest_o *v18; // x19
   _BOOL8 FriendImageLimitCount; // x0
-  int v26; // w20
+  int v20; // w20
   bool FriendCostume; // w8
-  OptionManager_c *v28; // x0
-  int v29; // w10
+  OptionManager_c *v22; // x0
+  int v23; // w10
   _BOOL8 TDPlaySpeed; // x0
-  _BOOL4 v31; // w21
-  int v32; // w20
+  _BOOL4 v25; // w21
+  int v26; // w20
   _BOOL8 RandomLimitCountOwn; // x0
-  _BOOL4 v34; // w21
-  int v35; // w20
+  _BOOL4 v28; // w21
+  int v29; // w20
   _BOOL8 RandomLimitCountFriend; // x0
-  _BOOL4 v37; // w21
-  unsigned int v38; // w21
-  const MethodInfo *v39; // x0
-  System_Int32_array *v40; // x20
-  unsigned int v41; // w24
+  _BOOL4 v31; // w21
+  unsigned int v32; // w21
+  const MethodInfo *v33; // x0
+  System_Int32_array *v34; // x20
+  unsigned int v35; // w24
+  OptionManager_c *v36; // x0
+  char *v37; // x8
+  OptionManager_c *v38; // x0
+  char *v39; // x8
+  OptionManager_c *v40; // x0
+  char *v41; // x8
   OptionManager_c *v42; // x0
   char *v43; // x8
   OptionManager_c *v44; // x0
-  char *v45; // x8
-  OptionManager_c *v46; // x0
-  char *v47; // x8
-  OptionManager_c *v48; // x0
-  char *v49; // x8
-  OptionManager_c *v50; // x0
   int32_t KIND_COUNT_SAVE_SERVER; // w8
-  __int64 v53; // x21
-  unsigned int v54; // w23
+  __int64 v47; // x21
+  unsigned int v48; // w23
+  OptionManager_c *v49; // x0
+  __int64 v50; // x8
+  OptionManager_c *v51; // x0
+  __int64 v52; // x8
+  OptionManager_c *v53; // x0
+  __int64 v54; // x8
   OptionManager_c *v55; // x0
   __int64 v56; // x8
   OptionManager_c *v57; // x0
-  __int64 v58; // x8
-  OptionManager_c *v59; // x0
-  __int64 v60; // x8
-  OptionManager_c *v61; // x0
-  __int64 v62; // x8
-  OptionManager_c *v63; // x0
 
-  if ( (byte_4BC736E & 1) == 0 )
+  if ( (byte_4BDBE04 & 1) == 0 )
   {
-    sub_1C1ABD4(&int___TypeInfo, method);
-    sub_1C1ABD4(&Method_NetworkManager_getRequest_UserStatusFlagSetRequest___, v3);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v4);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v5);
-    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_1C1ABD4(&Method_OptionManager___c__DisplayClass44_0__SaveData_b__0__, v7);
-    sub_1C1ABD4(&OptionManager___c__DisplayClass44_0_TypeInfo, v8);
-    byte_4BC736E = 1;
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C21E38(&Method_OptionManager___c__DisplayClass44_0__SaveData_b__0__);
+    sub_1C21E38(&OptionManager___c__DisplayClass44_0_TypeInfo);
+    byte_4BDBE04 = 1;
   }
-  v9 = sub_1C1AE20(OptionManager___c__DisplayClass44_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
+  v3 = sub_1C22084(OptionManager___c__DisplayClass44_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  if ( !v3 )
     goto LABEL_121;
-  *(_QWORD *)(v9 + 16) = callback;
-  v18 = v9 + 16;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)callback, v12, v13, v14, v15, v16, v17);
-  v19 = OptionManager_TypeInfo;
+  *(_QWORD *)(v3 + 16) = callback;
+  v12 = v3 + 16;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 16), (int64_t)callback, v6, v7, v8, v9, v10, v11);
+  v13 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v19 = OptionManager_TypeInfo;
+    v13 = OptionManager_TypeInfo;
   }
-  static_fields = v19->static_fields;
+  static_fields = v13->static_fields;
   if ( static_fields->isServerModify )
   {
-    v21 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v15 = (NetworkManager_ResultCallbackFunc_o *)sub_1C22084(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
-      v21,
-      (Il2CppObject *)v9,
+      v15,
+      (Il2CppObject *)v3,
       Method_OptionManager___c__DisplayClass44_0__SaveData_b__0__,
-      v22);
+      v16);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
-                       v21,
-                       (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
-    v24 = (UserStatusFlagSetRequest_o *)Request_object;
+                       v15,
+                       (const MethodInfo_30345EC *)Method_NetworkManager_getRequest_UserStatusFlagSetRequest___);
+    v18 = (UserStatusFlagSetRequest_o *)Request_object;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     FriendImageLimitCount = OptionManager__GetFriendImageLimitCount((const MethodInfo *)Request_object);
-    v26 = FriendImageLimitCount;
+    v20 = FriendImageLimitCount;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
     FriendCostume = OptionManager__GetFriendCostume((const MethodInfo *)FriendImageLimitCount);
-    v28 = OptionManager_TypeInfo;
-    if ( v26 )
-      v29 = 2;
+    v22 = OptionManager_TypeInfo;
+    if ( v20 )
+      v23 = 2;
     else
-      v29 = 1;
+      v23 = 1;
     if ( FriendCostume )
-      v26 = v29;
+      v20 = v23;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    TDPlaySpeed = OptionManager__GetTDPlaySpeed((const MethodInfo *)v28);
-    v31 = TDPlaySpeed;
+    TDPlaySpeed = OptionManager__GetTDPlaySpeed((const MethodInfo *)v22);
+    v25 = TDPlaySpeed;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v32 = v26 + v31;
+    v26 = v20 + v25;
     RandomLimitCountOwn = OptionManager__GetRandomLimitCountOwn((const MethodInfo *)TDPlaySpeed);
-    v34 = RandomLimitCountOwn;
+    v28 = RandomLimitCountOwn;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v35 = v32 + v34;
+    v29 = v26 + v28;
     RandomLimitCountFriend = OptionManager__GetRandomLimitCountFriend((const MethodInfo *)RandomLimitCountOwn);
-    v37 = RandomLimitCountFriend;
+    v31 = RandomLimitCountFriend;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v38 = v35 + v37;
+    v32 = v29 + v31;
     if ( OptionManager__GetSpoilerSetting((const MethodInfo *)RandomLimitCountFriend) )
     {
-      ++v38;
+      ++v32;
     }
-    else if ( !v38 )
+    else if ( !v32 )
     {
-      v40 = 0LL;
+      v34 = 0LL;
       goto LABEL_77;
     }
-    v39 = (const MethodInfo *)sub_1C1AC7C(int___TypeInfo, v38);
-    v40 = (System_Int32_array *)v39;
+    v33 = (const MethodInfo *)sub_1C21EE0(int___TypeInfo, v32);
+    v34 = (System_Int32_array *)v33;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendImageLimitCount(v39);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendImageLimitCount(v33);
     if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
     {
-      if ( !v40 )
+      if ( !v34 )
         goto LABEL_121;
-      if ( !v40->max_length )
+      if ( !v34->max_length )
         goto LABEL_122;
-      v41 = 1;
-      v40->m_Items[1] = 20;
+      v35 = 1;
+      v34->m_Items[1] = 20;
     }
     else
     {
-      v41 = 0;
+      v35 = 0;
+    }
+    v36 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendCostume((const MethodInfo *)v36);
+    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
+    {
+      if ( !v34 )
+        goto LABEL_121;
+      if ( v35 >= v34->max_length )
+        goto LABEL_122;
+      v37 = (char *)v34 + 4 * v35++;
+      *((_DWORD *)v37 + 8) = 9;
+    }
+    v38 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetTDPlaySpeed((const MethodInfo *)v38);
+    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
+    {
+      if ( !v34 )
+        goto LABEL_121;
+      if ( v35 >= v34->max_length )
+        goto LABEL_122;
+      v39 = (char *)v34 + 4 * v35++;
+      *((_DWORD *)v39 + 8) = 10;
+    }
+    v40 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountOwn((const MethodInfo *)v40);
+    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
+    {
+      if ( !v34 )
+        goto LABEL_121;
+      if ( v35 >= v34->max_length )
+        goto LABEL_122;
+      v41 = (char *)v34 + 4 * v35++;
+      *((_DWORD *)v41 + 8) = 17;
     }
     v42 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendCostume((const MethodInfo *)v42);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountFriend((const MethodInfo *)v42);
     if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
     {
-      if ( !v40 )
+      if ( !v34 )
         goto LABEL_121;
-      if ( v41 >= v40->max_length )
+      if ( v35 >= v34->max_length )
         goto LABEL_122;
-      v43 = (char *)v40 + 4 * v41++;
-      *((_DWORD *)v43 + 8) = 9;
+      v43 = (char *)v34 + 4 * v35++;
+      *((_DWORD *)v43 + 8) = 18;
     }
     v44 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetTDPlaySpeed((const MethodInfo *)v44);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetSpoilerSetting((const MethodInfo *)v44);
     if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
     {
-      if ( !v40 )
+      if ( !v34 )
         goto LABEL_121;
-      if ( v41 >= v40->max_length )
+      if ( v35 >= v34->max_length )
         goto LABEL_122;
-      v45 = (char *)v40 + 4 * v41++;
-      *((_DWORD *)v45 + 8) = 10;
-    }
-    v46 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountOwn((const MethodInfo *)v46);
-    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
-    {
-      if ( !v40 )
-        goto LABEL_121;
-      if ( v41 >= v40->max_length )
-        goto LABEL_122;
-      v47 = (char *)v40 + 4 * v41++;
-      *((_DWORD *)v47 + 8) = 17;
-    }
-    v48 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountFriend((const MethodInfo *)v48);
-    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
-    {
-      if ( !v40 )
-        goto LABEL_121;
-      if ( v41 >= v40->max_length )
-        goto LABEL_122;
-      v49 = (char *)v40 + 4 * v41++;
-      *((_DWORD *)v49 + 8) = 18;
-    }
-    v50 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetSpoilerSetting((const MethodInfo *)v50);
-    if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
-    {
-      if ( !v40 )
-        goto LABEL_121;
-      if ( v41 >= v40->max_length )
-        goto LABEL_122;
-      v40->m_Items[v41 + 1] = 19;
+      v34->m_Items[v35 + 1] = 19;
     }
 LABEL_77:
     SpoilerSetting = OptionManager_TypeInfo;
@@ -1778,9 +1675,9 @@ LABEL_77:
       SpoilerSetting = OptionManager_TypeInfo;
     }
     KIND_COUNT_SAVE_SERVER = SpoilerSetting->static_fields->KIND_COUNT_SAVE_SERVER;
-    if ( v38 == KIND_COUNT_SAVE_SERVER )
+    if ( v32 == KIND_COUNT_SAVE_SERVER )
     {
-      v53 = 0LL;
+      v47 = 0LL;
       goto LABEL_118;
     }
     if ( !SpoilerSetting->_2.cctor_finished )
@@ -1788,123 +1685,123 @@ LABEL_77:
       j_il2cpp_runtime_class_init_0(SpoilerSetting);
       KIND_COUNT_SAVE_SERVER = OptionManager_TypeInfo->static_fields->KIND_COUNT_SAVE_SERVER;
     }
-    v53 = sub_1C1AC7C(int___TypeInfo, KIND_COUNT_SAVE_SERVER - v38);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendImageLimitCount((const MethodInfo *)v53);
+    v47 = sub_1C21EE0(int___TypeInfo, KIND_COUNT_SAVE_SERVER - v32);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendImageLimitCount((const MethodInfo *)v47);
     if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
     {
-      v54 = 0;
+      v48 = 0;
     }
     else
     {
-      if ( !v53 )
+      if ( !v47 )
         goto LABEL_121;
-      if ( !*(_DWORD *)(v53 + 24) )
+      if ( !*(_DWORD *)(v47 + 24) )
         goto LABEL_122;
-      v54 = 1;
-      *(_DWORD *)(v53 + 32) = 20;
+      v48 = 1;
+      *(_DWORD *)(v47 + 32) = 20;
+    }
+    v49 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendCostume((const MethodInfo *)v49);
+    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
+    {
+      if ( !v47 )
+        goto LABEL_121;
+      if ( v48 >= *(_DWORD *)(v47 + 24) )
+        goto LABEL_122;
+      v50 = v47 + 4LL * v48++;
+      *(_DWORD *)(v50 + 32) = 9;
+    }
+    v51 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetTDPlaySpeed((const MethodInfo *)v51);
+    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
+    {
+      if ( !v47 )
+        goto LABEL_121;
+      if ( v48 >= *(_DWORD *)(v47 + 24) )
+        goto LABEL_122;
+      v52 = v47 + 4LL * v48++;
+      *(_DWORD *)(v52 + 32) = 10;
+    }
+    v53 = OptionManager_TypeInfo;
+    if ( !OptionManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountOwn((const MethodInfo *)v53);
+    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
+    {
+      if ( !v47 )
+        goto LABEL_121;
+      if ( v48 >= *(_DWORD *)(v47 + 24) )
+        goto LABEL_122;
+      v54 = v47 + 4LL * v48++;
+      *(_DWORD *)(v54 + 32) = 17;
     }
     v55 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetFriendCostume((const MethodInfo *)v55);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountFriend((const MethodInfo *)v55);
     if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
     {
-      if ( !v53 )
+      if ( !v47 )
         goto LABEL_121;
-      if ( v54 >= *(_DWORD *)(v53 + 24) )
+      if ( v48 >= *(_DWORD *)(v47 + 24) )
         goto LABEL_122;
-      v56 = v53 + 4LL * v54++;
-      *(_DWORD *)(v56 + 32) = 9;
+      v56 = v47 + 4LL * v48++;
+      *(_DWORD *)(v56 + 32) = 18;
     }
     v57 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetTDPlaySpeed((const MethodInfo *)v57);
-    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
-    {
-      if ( !v53 )
-        goto LABEL_121;
-      if ( v54 >= *(_DWORD *)(v53 + 24) )
-        goto LABEL_122;
-      v58 = v53 + 4LL * v54++;
-      *(_DWORD *)(v58 + 32) = 10;
-    }
-    v59 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountOwn((const MethodInfo *)v59);
-    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
-    {
-      if ( !v53 )
-        goto LABEL_121;
-      if ( v54 >= *(_DWORD *)(v53 + 24) )
-        goto LABEL_122;
-      v60 = v53 + 4LL * v54++;
-      *(_DWORD *)(v60 + 32) = 17;
-    }
-    v61 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetRandomLimitCountFriend((const MethodInfo *)v61);
-    if ( ((unsigned __int8)SpoilerSetting & 1) == 0 )
-    {
-      if ( !v53 )
-        goto LABEL_121;
-      if ( v54 >= *(_DWORD *)(v53 + 24) )
-        goto LABEL_122;
-      v62 = v53 + 4LL * v54++;
-      *(_DWORD *)(v62 + 32) = 18;
-    }
-    v63 = OptionManager_TypeInfo;
-    if ( !OptionManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    SpoilerSetting = (OptionManager_c *)OptionManager__GetSpoilerSetting((const MethodInfo *)v63);
+    SpoilerSetting = (OptionManager_c *)OptionManager__GetSpoilerSetting((const MethodInfo *)v57);
     if ( ((unsigned __int8)SpoilerSetting & 1) != 0 )
     {
 LABEL_118:
-      if ( v24 )
+      if ( v18 )
       {
-        UserStatusFlagSetRequest__beginRequest(v24, v40, (System_Int32_array *)v53, 0LL);
+        UserStatusFlagSetRequest__beginRequest(v18, v34, (System_Int32_array *)v47, 0LL);
         return 1;
       }
 LABEL_121:
-      sub_1C1AE30(SpoilerSetting, v11);
+      sub_1C22094(SpoilerSetting, v5);
     }
-    if ( !v53 )
+    if ( !v47 )
       goto LABEL_121;
-    if ( v54 < *(_DWORD *)(v53 + 24) )
+    if ( v48 < *(_DWORD *)(v47 + 24) )
     {
-      *(_DWORD *)(v53 + 4LL * v54 + 32) = 19;
+      *(_DWORD *)(v47 + 4LL * v48 + 32) = 19;
       goto LABEL_118;
     }
 LABEL_122:
-    sub_1C1AE38(SpoilerSetting, v11);
+    sub_1C2209C(SpoilerSetting, v5);
   }
-  if ( !v19->_2.cctor_finished )
+  if ( !v13->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v19);
-    v19 = OptionManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v13);
+    v13 = OptionManager_TypeInfo;
     static_fields = OptionManager_TypeInfo->static_fields;
   }
   if ( static_fields->isModify )
   {
-    if ( !v19->_2.cctor_finished )
+    if ( !v13->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v19);
+      j_il2cpp_runtime_class_init_0(v13);
       static_fields = OptionManager_TypeInfo->static_fields;
     }
     static_fields->isModify = 0;
     UnityEngine_PlayerPrefs__Save(0LL);
-    if ( *(_QWORD *)v18 )
-      (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v18 + 24LL))(
-        *(_QWORD *)(*(_QWORD *)v18 + 64LL),
-        *(_QWORD *)(*(_QWORD *)v18 + 40LL));
+    if ( *(_QWORD *)v12 )
+      (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v12 + 24LL))(
+        *(_QWORD *)(*(_QWORD *)v12 + 64LL),
+        *(_QWORD *)(*(_QWORD *)v12 + 40LL));
     return 1;
   }
-  if ( *(_QWORD *)v18 )
-    (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v18 + 24LL))(
-      *(_QWORD *)(*(_QWORD *)v18 + 64LL),
-      *(_QWORD *)(*(_QWORD *)v18 + 40LL));
+  if ( *(_QWORD *)v12 )
+    (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v12 + 24LL))(
+      *(_QWORD *)(*(_QWORD *)v12 + 64LL),
+      *(_QWORD *)(*(_QWORD *)v12 + 40LL));
   return 0;
 }
 
@@ -1914,10 +1811,10 @@ void __fastcall OptionManager__SetAdvantageClassAuto(bool flag, const MethodInfo
   OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
 
-  if ( (byte_4BC739C & 1) == 0 )
+  if ( (byte_4BDBE32 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC739C = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE32 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -1941,10 +1838,10 @@ void __fastcall OptionManager__SetAutoOpenAutoOrganizationDialog(bool flag, cons
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73AF & 1) == 0 )
+  if ( (byte_4BDBE45 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73AF = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE45 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -1975,10 +1872,10 @@ void __fastcall OptionManager__SetAutoSelectParty(bool flag, const MethodInfo *m
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73A6 & 1) == 0 )
+  if ( (byte_4BDBE3C & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73A6 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE3C = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2009,10 +1906,10 @@ void __fastcall OptionManager__SetBattleFpsHighOrNot(bool value, const MethodInf
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73AA & 1) == 0 )
+  if ( (byte_4BDBE40 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73AA = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE40 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2039,37 +1936,36 @@ void __fastcall OptionManager__SetBattleFpsHighOrNot(bool value, const MethodInf
 
 void __fastcall OptionManager__SetBgmVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
-  const MethodInfo *v6; // x0
+  const MethodInfo *v5; // x0
 
-  if ( (byte_4BC7371 & 1) == 0 )
+  if ( (byte_4BDBE07 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7371 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE07 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v4->static_fields->soundMask & 4) == 0 )
+  if ( (v3->static_fields->soundMask & 4) == 0 )
   {
-    if ( !v4->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v4);
-    if ( OptionManager__GetBgmVolume((const MethodInfo *)v4) != v )
+    if ( !v3->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v3);
+    if ( OptionManager__GetBgmVolume((const MethodInfo *)v3) != v )
     {
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
       if ( !OptionManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-        v5 = OptionManager_TypeInfo;
+        v4 = OptionManager_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_BGM_VOLUME, v, 0LL);
+      UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_BGM_VOLUME, v, 0LL);
       OptionManager_TypeInfo->static_fields->isModify = 1;
-      OptionManager__SoundRecover(v6);
+      OptionManager__SoundRecover(v5);
     }
   }
 }
@@ -2081,10 +1977,10 @@ void __fastcall OptionManager__SetBoostItemUseConfirm(bool f, const MethodInfo *
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC738D & 1) == 0 )
+  if ( (byte_4BDBE23 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC738D = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE23 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2117,10 +2013,10 @@ void __fastcall OptionManager__SetFriendCostume(bool f, const MethodInfo *method
   int v6; // w9
   OptionManager_c *v7; // x0
 
-  if ( (byte_4BC7390 & 1) == 0 )
+  if ( (byte_4BDBE26 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC7390 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE26 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2129,7 +2025,7 @@ void __fastcall OptionManager__SetFriendCostume(bool f, const MethodInfo *method
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     if ( f )
       v6 = 512;
     else
@@ -2155,10 +2051,10 @@ void __fastcall OptionManager__SetFriendImageLimitCount(bool f, const MethodInfo
   int v7; // w9
   OptionManager_c *v8; // x0
 
-  if ( (byte_4BC738F & 1) == 0 )
+  if ( (byte_4BDBE25 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC738F = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE25 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2174,7 +2070,7 @@ void __fastcall OptionManager__SetFriendImageLimitCount(bool f, const MethodInfo
     v4->static_fields->isFriendImageLimitCount = f;
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v6);
+      sub_1C22094(0LL, v6);
     if ( f )
       v7 = 0x100000;
     else
@@ -2197,10 +2093,10 @@ void __fastcall OptionManager__SetLocalNotiffication(bool f, const MethodInfo *m
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7389 & 1) == 0 )
+  if ( (byte_4BDBE1F & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC7389 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE1F = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2231,10 +2127,10 @@ void __fastcall OptionManager__SetMessageDisp(bool b, const MethodInfo *method)
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7394 & 1) == 0 )
+  if ( (byte_4BDBE2A & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC7394 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE2A = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2265,10 +2161,10 @@ void __fastcall OptionManager__SetNotPlayOpeningMovie(bool flag, const MethodInf
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73A1 & 1) == 0 )
+  if ( (byte_4BDBE37 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73A1 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE37 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2293,55 +2189,52 @@ void __fastcall OptionManager__SetNotPlayOpeningMovie(bool flag, const MethodInf
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall OptionManager__SetNotiffication(bool f, bool forceSend, const MethodInfo *method)
 {
   _BOOL4 v4; // w19
-  __int64 v5; // x1
-  __int64 v6; // x1
+  OptionManager_c *v5; // x0
+  OptionManager_c *v6; // x0
   OptionManager_c *v7; // x0
-  OptionManager_c *v8; // x0
-  OptionManager_c *v9; // x0
   Il2CppObject *Instance; // x20
-  Il2CppObject *v11; // x0
-  __int64 v12; // x1
+  Il2CppObject *v9; // x0
+  __int64 v10; // x1
 
   v4 = f;
-  if ( (byte_4BC7387 & 1) == 0 )
+  if ( (byte_4BDBE1D & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, forceSend);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v5);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__, v6);
-    byte_4BC7387 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
+    byte_4BDBE1D = 1;
   }
-  v7 = OptionManager_TypeInfo;
+  v5 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( ((OptionManager__GetNotiffication((const MethodInfo *)v7) ^ v4) & 1) != 0 || forceSend )
+  if ( ((OptionManager__GetNotiffication((const MethodInfo *)v5) ^ v4) & 1) != 0 || forceSend )
   {
-    v8 = OptionManager_TypeInfo;
+    v6 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v8 = OptionManager_TypeInfo;
+      v6 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetInt(v8->static_fields->SAVE_KEY_NOTIFFICATION, v4, 0LL);
-    v9 = OptionManager_TypeInfo;
+    UnityEngine_PlayerPrefs__SetInt(v6->static_fields->SAVE_KEY_NOTIFFICATION, v4, 0LL);
+    v7 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v9 = OptionManager_TypeInfo;
+      v7 = OptionManager_TypeInfo;
     }
-    v9->static_fields->isModify = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
+    v7->static_fields->isModify = 1;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     {
-      v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
-      if ( !v11 )
-        sub_1C1AE30(0LL, v12);
-      AvalonNotificationManager__SetRemotePushState((AvalonNotificationManager_o *)v11, v4, 0LL);
+      v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_AvalonNotificationManager__get_Instance__);
+      if ( !v9 )
+        sub_1C22094(0LL, v10);
+      AvalonNotificationManager__SetRemotePushState((AvalonNotificationManager_o *)v9, v4, 0LL);
     }
   }
 }
@@ -2353,10 +2246,10 @@ void __fastcall OptionManager__SetPreBattleFormationSetting(bool flag, const Met
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73AC & 1) == 0 )
+  if ( (byte_4BDBE42 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73AC = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE42 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2387,10 +2280,10 @@ void __fastcall OptionManager__SetRaidNotiffication(bool f, const MethodInfo *me
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC738B & 1) == 0 )
+  if ( (byte_4BDBE21 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC738B = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE21 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2423,10 +2316,10 @@ void __fastcall OptionManager__SetRandomLimitCountFriend(bool flag, const Method
   int v6; // w9
   OptionManager_c *v7; // x0
 
-  if ( (byte_4BC739E & 1) == 0 )
+  if ( (byte_4BDBE34 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC739E = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE34 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2435,7 +2328,7 @@ void __fastcall OptionManager__SetRandomLimitCountFriend(bool flag, const Method
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     if ( flag )
       v6 = 0x40000;
     else
@@ -2460,10 +2353,10 @@ void __fastcall OptionManager__SetRandomLimitCountOwn(bool flag, const MethodInf
   int v6; // w9
   OptionManager_c *v7; // x0
 
-  if ( (byte_4BC739D & 1) == 0 )
+  if ( (byte_4BDBE33 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC739D = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE33 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2472,7 +2365,7 @@ void __fastcall OptionManager__SetRandomLimitCountOwn(bool flag, const MethodInf
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     if ( flag )
       v6 = 0x20000;
     else
@@ -2491,28 +2384,27 @@ void __fastcall OptionManager__SetRandomLimitCountOwn(bool flag, const MethodInf
 
 void __fastcall OptionManager__SetResolutionType(int32_t type, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73A8 & 1) == 0 )
+  if ( (byte_4BDBE3E & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    sub_1C1ABD4(&ResolutionManager_TypeInfo, v3);
-    byte_4BC73A8 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&ResolutionManager_TypeInfo);
+    byte_4BDBE3E = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetResolutionType((const MethodInfo *)v4) != type )
+  if ( OptionManager__GetResolutionType((const MethodInfo *)v3) != type )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetInt(v5->static_fields->SAVE_KEY_RESOLUTION_TYPE, type, 0LL);
+    UnityEngine_PlayerPrefs__SetInt(v4->static_fields->SAVE_KEY_RESOLUTION_TYPE, type, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
@@ -2523,27 +2415,26 @@ void __fastcall OptionManager__SetResolutionType(int32_t type, const MethodInfo 
 
 void __fastcall OptionManager__SetScenarioAutoWaitTime(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7384 & 1) == 0 )
+  if ( (byte_4BDBE1A & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7384 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE1A = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetScenarioAutoWaitTime((const MethodInfo *)v4) != v )
+  if ( OptionManager__GetScenarioAutoWaitTime((const MethodInfo *)v3) != v )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME, v, 0LL);
+    UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SCENARIO_AUTO_WAIT_TIME, v, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
   }
 }
@@ -2551,27 +2442,26 @@ void __fastcall OptionManager__SetScenarioAutoWaitTime(float v, const MethodInfo
 
 void __fastcall OptionManager__SetScenarioScrollSpeed(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7382 & 1) == 0 )
+  if ( (byte_4BDBE18 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7382 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE18 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetScenarioScrollSpeed((const MethodInfo *)v4) != v )
+  if ( OptionManager__GetScenarioScrollSpeed((const MethodInfo *)v3) != v )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SCENARIO_SCROLL_SPEED, v, 0LL);
+    UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SCENARIO_SCROLL_SPEED, v, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
   }
 }
@@ -2579,27 +2469,26 @@ void __fastcall OptionManager__SetScenarioScrollSpeed(float v, const MethodInfo 
 
 void __fastcall OptionManager__SetScenarioSpeed(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC737B & 1) == 0 )
+  if ( (byte_4BDBE11 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC737B = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE11 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetScenarioSpeed((const MethodInfo *)v4) != v )
+  if ( OptionManager__GetScenarioSpeed((const MethodInfo *)v3) != v )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SCENARIO_SPEED, v, 0LL);
+    UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SCENARIO_SPEED, v, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
   }
 }
@@ -2607,27 +2496,26 @@ void __fastcall OptionManager__SetScenarioSpeed(float v, const MethodInfo *metho
 
 void __fastcall OptionManager__SetScenarioTextSpeed(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7380 & 1) == 0 )
+  if ( (byte_4BDBE16 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7380 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE16 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetScenarioTextSpeed((const MethodInfo *)v4) != v )
+  if ( OptionManager__GetScenarioTextSpeed((const MethodInfo *)v3) != v )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SCENARIO_TEXT_SPEED, v, 0LL);
+    UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SCENARIO_TEXT_SPEED, v, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
   }
 }
@@ -2635,27 +2523,26 @@ void __fastcall OptionManager__SetScenarioTextSpeed(float v, const MethodInfo *m
 
 void __fastcall OptionManager__SetScenarioTextWaitTimeSecond(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
 
-  if ( (byte_4BC737E & 1) == 0 )
+  if ( (byte_4BDBE14 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC737E = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE14 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  if ( OptionManager__GetScenarioTextWaitTimeSecond((const MethodInfo *)v4) != v )
+  if ( OptionManager__GetScenarioTextWaitTimeSecond((const MethodInfo *)v3) != v )
   {
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
     }
-    UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT, v, 0LL);
+    UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SCENARIO_TEXT_WAIT, v, 0LL);
     OptionManager_TypeInfo->static_fields->isModify = 1;
   }
 }
@@ -2663,37 +2550,36 @@ void __fastcall OptionManager__SetScenarioTextWaitTimeSecond(float v, const Meth
 
 void __fastcall OptionManager__SetSeVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
-  const MethodInfo *v6; // x0
+  const MethodInfo *v5; // x0
 
-  if ( (byte_4BC7374 & 1) == 0 )
+  if ( (byte_4BDBE0A & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7374 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE0A = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v4->static_fields->soundMask & 1) == 0 )
+  if ( (v3->static_fields->soundMask & 1) == 0 )
   {
-    if ( !v4->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v4);
-    if ( OptionManager__GetSeVolume((const MethodInfo *)v4) != v )
+    if ( !v3->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v3);
+    if ( OptionManager__GetSeVolume((const MethodInfo *)v3) != v )
     {
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
       if ( !OptionManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-        v5 = OptionManager_TypeInfo;
+        v4 = OptionManager_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_SE_VOLUME, v, 0LL);
+      UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_SE_VOLUME, v, 0LL);
       OptionManager_TypeInfo->static_fields->isModify = 1;
-      OptionManager__SoundRecover(v6);
+      OptionManager__SoundRecover(v5);
     }
   }
 }
@@ -2701,60 +2587,59 @@ void __fastcall OptionManager__SetSeVolume(float v, const MethodInfo *method)
 
 void __fastcall OptionManager__SetSoundMask(int32_t mask, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
   float SeVolume; // s0
-  SoundManager_c *v7; // x0
-  float v8; // s8
-  const MethodInfo *v9; // x0
-  OptionManager_c *v10; // x0
+  SoundManager_c *v6; // x0
+  float v7; // s8
+  const MethodInfo *v8; // x0
+  OptionManager_c *v9; // x0
   float VoiceVolume; // s0
-  SoundManager_c *v12; // x0
-  float v13; // s8
-  OptionManager_c *v14; // x0
+  SoundManager_c *v11; // x0
+  float v12; // s8
+  OptionManager_c *v13; // x0
   float BgmVolume; // s0
-  SoundManager_c *v16; // x0
-  float v17; // s8
-  OptionManager_c *v18; // x0
+  SoundManager_c *v15; // x0
+  float v16; // s8
+  OptionManager_c *v17; // x0
 
-  if ( (byte_4BC73AD & 1) == 0 )
+  if ( (byte_4BDBE43 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v3);
-    byte_4BC73AD = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BDBE43 = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (mask & 1) == 0 && (v4->static_fields->soundMask & 1) != 0 )
+  if ( (mask & 1) == 0 && (v3->static_fields->soundMask & 1) != 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopSe(0.0, 0LL);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( !v4->_2.cctor_finished )
+  if ( !v3->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v4);
-    v4 = OptionManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v3);
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (mask & 2) == 0 && (v4->static_fields->soundMask & 2) != 0 )
+  if ( (mask & 2) == 0 && (v3->static_fields->soundMask & 2) != 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoiceAll(0.0, 0LL);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( !v4->_2.cctor_finished )
+  if ( !v3->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v4);
-    v4 = OptionManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v3);
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (mask & 4) == 0 && (v4->static_fields->soundMask & 4) != 0 )
+  if ( (mask & 4) == 0 && (v3->static_fields->soundMask & 4) != 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -2764,100 +2649,100 @@ void __fastcall OptionManager__SetSoundMask(int32_t mask, const MethodInfo *meth
   {
     if ( (mask & 1) != 0 )
     {
-      v7 = SoundManager_TypeInfo;
-      v8 = 0.0;
+      v6 = SoundManager_TypeInfo;
+      v7 = 0.0;
     }
     else
     {
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
       if ( !OptionManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-        v5 = OptionManager_TypeInfo;
+        v4 = OptionManager_TypeInfo;
       }
-      if ( (v5->static_fields->soundMask & 1) == 0 )
+      if ( (v4->static_fields->soundMask & 1) == 0 )
       {
 LABEL_39:
         if ( (mask & 2) != 0 )
         {
-          v12 = SoundManager_TypeInfo;
-          v13 = 0.0;
+          v11 = SoundManager_TypeInfo;
+          v12 = 0.0;
         }
         else
         {
-          v10 = OptionManager_TypeInfo;
+          v9 = OptionManager_TypeInfo;
           if ( !OptionManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-            v10 = OptionManager_TypeInfo;
+            v9 = OptionManager_TypeInfo;
           }
-          if ( (v10->static_fields->soundMask & 2) == 0 )
+          if ( (v9->static_fields->soundMask & 2) == 0 )
           {
 LABEL_50:
             if ( (mask & 4) != 0 )
             {
-              v16 = SoundManager_TypeInfo;
-              v17 = 0.0;
+              v15 = SoundManager_TypeInfo;
+              v16 = 0.0;
             }
             else
             {
-              v14 = OptionManager_TypeInfo;
+              v13 = OptionManager_TypeInfo;
               if ( !OptionManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-                v14 = OptionManager_TypeInfo;
+                v13 = OptionManager_TypeInfo;
               }
-              if ( (v14->static_fields->soundMask & 4) == 0 )
+              if ( (v13->static_fields->soundMask & 4) == 0 )
                 goto LABEL_61;
-              if ( !v14->_2.cctor_finished )
-                j_il2cpp_runtime_class_init_0(v14);
-              BgmVolume = OptionManager__GetBgmVolume((const MethodInfo *)v14);
-              v16 = SoundManager_TypeInfo;
-              v17 = BgmVolume;
+              if ( !v13->_2.cctor_finished )
+                j_il2cpp_runtime_class_init_0(v13);
+              BgmVolume = OptionManager__GetBgmVolume((const MethodInfo *)v13);
+              v15 = SoundManager_TypeInfo;
+              v16 = BgmVolume;
             }
-            if ( !v16->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(v16);
-            SoundManager__SetBgmMasterVolume(v17, 0LL);
+            if ( !v15->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(v15);
+            SoundManager__SetBgmMasterVolume(v16, 0LL);
 LABEL_61:
-            v18 = OptionManager_TypeInfo;
+            v17 = OptionManager_TypeInfo;
             if ( !OptionManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-              v18 = OptionManager_TypeInfo;
+              v17 = OptionManager_TypeInfo;
             }
-            v18->static_fields->soundMask = mask;
+            v17->static_fields->soundMask = mask;
             return;
           }
-          if ( !v10->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(v10);
-          VoiceVolume = OptionManager__GetVoiceVolume((const MethodInfo *)v10);
-          v12 = SoundManager_TypeInfo;
-          v13 = VoiceVolume;
+          if ( !v9->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(v9);
+          VoiceVolume = OptionManager__GetVoiceVolume((const MethodInfo *)v9);
+          v11 = SoundManager_TypeInfo;
+          v12 = VoiceVolume;
         }
-        if ( !v12->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v12);
-        SoundManager__SetVoiceMasterVolume(v13, 0LL);
+        if ( !v11->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v11);
+        SoundManager__SetVoiceMasterVolume(v12, 0LL);
         goto LABEL_50;
       }
-      if ( !v5->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v5);
-      SeVolume = OptionManager__GetSeVolume((const MethodInfo *)v5);
-      v7 = SoundManager_TypeInfo;
-      v8 = SeVolume;
+      if ( !v4->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v4);
+      SeVolume = OptionManager__GetSeVolume((const MethodInfo *)v4);
+      v6 = SoundManager_TypeInfo;
+      v7 = SeVolume;
     }
-    if ( !v7->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v7);
-    SoundManager__SetSeMasterVolume(v8, 0LL);
+    if ( !v6->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v6);
+    SoundManager__SetSeMasterVolume(v7, 0LL);
     goto LABEL_39;
   }
-  v9 = (const MethodInfo *)OptionManager_TypeInfo;
+  v8 = (const MethodInfo *)OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v9 = (const MethodInfo *)OptionManager_TypeInfo;
+    v8 = (const MethodInfo *)OptionManager_TypeInfo;
   }
-  *((_DWORD *)v9[2].virtualMethodPointer + 58) = 0;
-  OptionManager__SoundRecover(v9);
+  *((_DWORD *)v8[2].virtualMethodPointer + 58) = 0;
+  OptionManager__SoundRecover(v8);
 }
 
 
@@ -2869,10 +2754,10 @@ void __fastcall OptionManager__SetSpoilerSetting(bool flag, const MethodInfo *me
   int v6; // w9
   OptionManager_c *v7; // x0
 
-  if ( (byte_4BC73A4 & 1) == 0 )
+  if ( (byte_4BDBE3A & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73A4 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE3A = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2881,7 +2766,7 @@ void __fastcall OptionManager__SetSpoilerSetting(bool flag, const MethodInfo *me
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     if ( flag )
       v6 = 0x80000;
     else
@@ -2904,10 +2789,10 @@ void __fastcall OptionManager__SetSvtRand(bool f, const MethodInfo *method)
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7392 & 1) == 0 )
+  if ( (byte_4BDBE28 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC7392 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE28 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2940,10 +2825,10 @@ void __fastcall OptionManager__SetTDPlaySpeed(bool flag, const MethodInfo *metho
   int v6; // w9
   OptionManager_c *v7; // x0
 
-  if ( (byte_4BC739A & 1) == 0 )
+  if ( (byte_4BDBE30 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC739A = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE30 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -2952,7 +2837,7 @@ void __fastcall OptionManager__SetTDPlaySpeed(bool flag, const MethodInfo *metho
   {
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     if ( !SelfUserGame )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     if ( flag )
       v6 = 1024;
     else
@@ -2975,10 +2860,10 @@ void __fastcall OptionManager__SetTouchSkipOpeningMovie(bool flag, const MethodI
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC73A3 & 1) == 0 )
+  if ( (byte_4BDBE39 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC73A3 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE39 = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -3005,37 +2890,36 @@ void __fastcall OptionManager__SetTouchSkipOpeningMovie(bool flag, const MethodI
 
 void __fastcall OptionManager__SetVoiceVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
+  OptionManager_c *v3; // x0
   OptionManager_c *v4; // x0
-  OptionManager_c *v5; // x0
-  const MethodInfo *v6; // x0
+  const MethodInfo *v5; // x0
 
-  if ( (byte_4BC7377 & 1) == 0 )
+  if ( (byte_4BDBE0D & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    byte_4BC7377 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE0D = 1;
   }
-  v4 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v4 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v4->static_fields->soundMask & 2) == 0 )
+  if ( (v3->static_fields->soundMask & 2) == 0 )
   {
-    if ( !v4->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v4);
-    if ( OptionManager__GetVoiceVolume((const MethodInfo *)v4) != v )
+    if ( !v3->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v3);
+    if ( OptionManager__GetVoiceVolume((const MethodInfo *)v3) != v )
     {
-      v5 = OptionManager_TypeInfo;
+      v4 = OptionManager_TypeInfo;
       if ( !OptionManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-        v5 = OptionManager_TypeInfo;
+        v4 = OptionManager_TypeInfo;
       }
-      UnityEngine_PlayerPrefs__SetFloat(v5->static_fields->SAVE_KEY_VOICE_VOLUME, v, 0LL);
+      UnityEngine_PlayerPrefs__SetFloat(v4->static_fields->SAVE_KEY_VOICE_VOLUME, v, 0LL);
       OptionManager_TypeInfo->static_fields->isModify = 1;
-      OptionManager__SoundRecover(v6);
+      OptionManager__SoundRecover(v5);
     }
   }
 }
@@ -3047,10 +2931,10 @@ void __fastcall OptionManager__SetVolumeMute(bool flag, const MethodInfo *method
   OptionManager_c *v4; // x0
   OptionManager_c *v5; // x0
 
-  if ( (byte_4BC7379 & 1) == 0 )
+  if ( (byte_4BDBE0F & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, method);
-    byte_4BC7379 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE0F = 1;
   }
   v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -3078,111 +2962,109 @@ void __fastcall OptionManager__SetVolumeMute(bool flag, const MethodInfo *method
 
 void __fastcall OptionManager__SoundRecover(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  OptionManager_c *v3; // x0
+  OptionManager_c *v1; // x0
   _BOOL8 VolumeMute; // x0
-  OptionManager_c *v5; // x8
-  bool v6; // w19
+  OptionManager_c *v3; // x8
+  bool v4; // w19
   int32_t soundMask; // w9
-  float v8; // s0
+  float v6; // s0
   float BgmVolume; // s8
   float SeVolume; // s8
   float VoiceVolume; // s8
 
-  if ( (byte_4BC736A & 1) == 0 )
+  if ( (byte_4BDBE00 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v2);
-    byte_4BC736A = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BDBE00 = 1;
   }
+  v1 = OptionManager_TypeInfo;
+  if ( !OptionManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
+  VolumeMute = OptionManager__GetVolumeMute((const MethodInfo *)v1);
   v3 = OptionManager_TypeInfo;
-  if ( !OptionManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  VolumeMute = OptionManager__GetVolumeMute((const MethodInfo *)v3);
-  v5 = OptionManager_TypeInfo;
-  v6 = VolumeMute;
+  v4 = VolumeMute;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  soundMask = v5->static_fields->soundMask;
-  if ( v6 )
+  soundMask = v3->static_fields->soundMask;
+  if ( v4 )
   {
     if ( (soundMask & 4) == 0 )
     {
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       SoundManager__SetBgmMasterVolume(0.0, 0LL);
-      v5 = OptionManager_TypeInfo;
+      v3 = OptionManager_TypeInfo;
     }
-    if ( !v5->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = OptionManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = OptionManager_TypeInfo;
     }
-    if ( (v5->static_fields->soundMask & 1) == 0 )
+    if ( (v3->static_fields->soundMask & 1) == 0 )
     {
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       SoundManager__SetSeMasterVolume(0.0, 0LL);
-      v5 = OptionManager_TypeInfo;
+      v3 = OptionManager_TypeInfo;
     }
-    if ( !v5->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = OptionManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = OptionManager_TypeInfo;
     }
-    if ( (v5->static_fields->soundMask & 2) == 0 )
+    if ( (v3->static_fields->soundMask & 2) == 0 )
     {
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v8 = 0.0;
+      v6 = 0.0;
 LABEL_46:
-      SoundManager__SetVoiceMasterVolume(v8, 0LL);
+      SoundManager__SetVoiceMasterVolume(v6, 0LL);
     }
   }
   else
   {
     if ( (soundMask & 4) == 0 )
     {
-      if ( !v5->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v5);
+      if ( !v3->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v3);
       BgmVolume = OptionManager__GetBgmVolume((const MethodInfo *)VolumeMute);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       SoundManager__SetBgmMasterVolume(BgmVolume, 0LL);
-      v5 = OptionManager_TypeInfo;
+      v3 = OptionManager_TypeInfo;
     }
-    if ( !v5->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = OptionManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = OptionManager_TypeInfo;
     }
-    if ( (v5->static_fields->soundMask & 1) == 0 )
+    if ( (v3->static_fields->soundMask & 1) == 0 )
     {
-      if ( !v5->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v5);
+      if ( !v3->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v3);
       SeVolume = OptionManager__GetSeVolume((const MethodInfo *)VolumeMute);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
       SoundManager__SetSeMasterVolume(SeVolume, 0LL);
-      v5 = OptionManager_TypeInfo;
+      v3 = OptionManager_TypeInfo;
     }
-    if ( !v5->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v5);
-      v5 = OptionManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = OptionManager_TypeInfo;
     }
-    if ( (v5->static_fields->soundMask & 2) == 0 )
+    if ( (v3->static_fields->soundMask & 2) == 0 )
     {
-      if ( !v5->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v5);
+      if ( !v3->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v3);
       VoiceVolume = OptionManager__GetVoiceVolume((const MethodInfo *)VolumeMute);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v8 = VoiceVolume;
+      v6 = VoiceVolume;
       goto LABEL_46;
     }
   }
@@ -3191,23 +3073,21 @@ LABEL_46:
 
 void __fastcall OptionManager__TestBgmVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v4; // x1
-  OptionManager_c *v5; // x0
+  OptionManager_c *v3; // x0
 
-  if ( (byte_4BC736F & 1) == 0 )
+  if ( (byte_4BDBE05 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v4);
-    byte_4BC736F = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BDBE05 = 1;
   }
-  v5 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v5->static_fields->soundMask & 4) == 0 )
+  if ( (v3->static_fields->soundMask & 4) == 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -3218,23 +3098,21 @@ void __fastcall OptionManager__TestBgmVolume(float v, const MethodInfo *method)
 
 void __fastcall OptionManager__TestSeVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v4; // x1
-  OptionManager_c *v5; // x0
+  OptionManager_c *v3; // x0
 
-  if ( (byte_4BC7372 & 1) == 0 )
+  if ( (byte_4BDBE08 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v4);
-    byte_4BC7372 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BDBE08 = 1;
   }
-  v5 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v5->static_fields->soundMask & 1) == 0 )
+  if ( (v3->static_fields->soundMask & 1) == 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -3245,23 +3123,21 @@ void __fastcall OptionManager__TestSeVolume(float v, const MethodInfo *method)
 
 void __fastcall OptionManager__TestVoiceVolume(float v, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v4; // x1
-  OptionManager_c *v5; // x0
+  OptionManager_c *v3; // x0
 
-  if ( (byte_4BC7375 & 1) == 0 )
+  if ( (byte_4BDBE0B & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v2);
-    sub_1C1ABD4(&SoundManager_TypeInfo, v4);
-    byte_4BC7375 = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    sub_1C21E38(&SoundManager_TypeInfo);
+    byte_4BDBE0B = 1;
   }
-  v5 = OptionManager_TypeInfo;
+  v3 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = OptionManager_TypeInfo;
+    v3 = OptionManager_TypeInfo;
   }
-  if ( (v5->static_fields->soundMask & 2) == 0 )
+  if ( (v3->static_fields->soundMask & 2) == 0 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -3272,45 +3148,44 @@ void __fastcall OptionManager__TestVoiceVolume(float v, const MethodInfo *method
 
 bool __fastcall OptionManager__isSavedMemoryMode(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  OptionManager_c *v2; // x8
+  OptionManager_c *v1; // x8
   int32_t systemMemorySize; // w0
-  int v4; // w19
-  int v5; // w10
+  int v3; // w19
+  int v4; // w10
 
-  if ( (byte_4BC739F & 1) == 0 )
+  if ( (byte_4BDBE35 & 1) == 0 )
   {
-    sub_1C1ABD4(&OptionManager_TypeInfo, v1);
-    byte_4BC739F = 1;
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE35 = 1;
   }
-  v2 = OptionManager_TypeInfo;
+  v1 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v2 = OptionManager_TypeInfo;
+    v1 = OptionManager_TypeInfo;
   }
-  if ( !v2->static_fields->memoryMode )
+  if ( !v1->static_fields->memoryMode )
   {
     systemMemorySize = UnityEngine_SystemInfo__get_systemMemorySize(0LL);
-    v2 = OptionManager_TypeInfo;
-    v4 = systemMemorySize;
+    v1 = OptionManager_TypeInfo;
+    v3 = systemMemorySize;
     if ( !OptionManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-      v2 = OptionManager_TypeInfo;
+      v1 = OptionManager_TypeInfo;
     }
-    if ( v4 <= 2399 )
-      v5 = 1;
+    if ( v3 <= 2399 )
+      v4 = 1;
     else
-      v5 = 2;
-    v2->static_fields->memoryMode = v5;
+      v4 = 2;
+    v1->static_fields->memoryMode = v4;
   }
-  if ( !v2->_2.cctor_finished )
+  if ( !v1->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v2);
-    v2 = OptionManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v1);
+    v1 = OptionManager_TypeInfo;
   }
-  return v2->static_fields->memoryMode == 1;
+  return v1->static_fields->memoryMode == 1;
 }
 
 
@@ -3327,25 +3202,24 @@ void __fastcall OptionManager___c__DisplayClass44_0___SaveData_b__0(
         System_String_o *result,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  OptionManager_c *v5; // x0
+  OptionManager_c *v4; // x0
   bool FriendImageLimitCount; // w0
   struct System_Action_o *callback; // x8
 
-  if ( (byte_4BC73B1 & 1) == 0 )
+  if ( (byte_4BDBE47 & 1) == 0 )
   {
-    sub_1C1ABD4(&FollowerListRequest_TypeInfo, result);
-    sub_1C1ABD4(&OptionManager_TypeInfo, v4);
-    byte_4BC73B1 = 1;
+    sub_1C21E38(&FollowerListRequest_TypeInfo);
+    sub_1C21E38(&OptionManager_TypeInfo);
+    byte_4BDBE47 = 1;
   }
-  v5 = OptionManager_TypeInfo;
+  v4 = OptionManager_TypeInfo;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-    v5 = OptionManager_TypeInfo;
+    v4 = OptionManager_TypeInfo;
   }
-  *(_WORD *)v5->static_fields = 0;
-  FriendImageLimitCount = OptionManager__GetFriendImageLimitCount((const MethodInfo *)v5);
+  *(_WORD *)v4->static_fields = 0;
+  FriendImageLimitCount = OptionManager__GetFriendImageLimitCount((const MethodInfo *)v4);
   UnityEngine_PlayerPrefs__SetInt(
     OptionManager_TypeInfo->static_fields->SAVE_KEY_FREND_IMAGE_LIMIT_COUNT,
     FriendImageLimitCount,

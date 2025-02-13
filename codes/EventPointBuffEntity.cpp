@@ -1,57 +1,55 @@
 void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  void *v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  void *v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  struct System_Int32_array *v19; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  void *v3; // x1
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
+  void *v10; // x1
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  struct System_Int32_array *v17; // x0
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4BC7B07 & 1) == 0 )
+  if ( (byte_4BDC59E & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    sub_1C1ABD4(&int___TypeInfo, v3);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
-    byte_4BC7B07 = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDC59E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.groupId = 0LL;
-  v5 = StringLiteral_1/*""*/;
+  v3 = StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)v5, v6, v7, v8, v9, v10, v11);
-  v12 = StringLiteral_1/*""*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)v10, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)&this->fields.imageId = 0LL;
   *(_QWORD *)&this->fields.skillIconId = 0LL;
   this->fields.value = 0;
-  v19 = (struct System_Int32_array *)sub_1C1AC7C(int___TypeInfo, 0LL);
-  this->fields.funcIds = v19;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  v17 = (struct System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
+  this->fields.funcIds = v17;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)v17, v18, v19, v20, v21, v22, v23);
 }
 
 
-void __fastcall EventPointBuffEntity___ctor_40407940(
+void __fastcall EventPointBuffEntity___ctor_40454924(
         EventPointBuffEntity_o *this,
         EventPointBuffEntity_o *cSrc,
         const MethodInfo *method)
@@ -80,28 +78,28 @@ void __fastcall EventPointBuffEntity___ctor_40407940(
   FollowerInfo_o *v26; // x6
   PartyListViewItem_o *v27; // x7
 
-  if ( (byte_4BC7B08 & 1) == 0 )
+  if ( (byte_4BDC59F & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_4BC7B08 = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDC59F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C1AE30(v5, v6);
+    sub_1C22094(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v7, v8, v9, v10, v11, v12);
   detail = cSrc->fields.detail;
   this->fields.detail = detail;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)detail, v15, v16, v17, v18, v19, v20);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)detail, v15, v16, v17, v18, v19, v20);
   *(_OWORD *)&this->fields.imageId = *(_OWORD *)&cSrc->fields.imageId;
   this->fields.value = cSrc->fields.value;
   funcIds = cSrc->fields.funcIds;
   this->fields.funcIds = funcIds;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)funcIds, v22, v23, v24, v25, v26, v27);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)funcIds, v22, v23, v24, v25, v26, v27);
 }
 
 

@@ -4,17 +4,16 @@ void __fastcall SwitchEnableComponent___ctor(SwitchEnableComponent_o *this, cons
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, bool value, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetComponent; // x21
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_4BC5D18 & 1) == 0 )
+  if ( (byte_4BDA7A7 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, value);
-    byte_4BC5D18 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDA7A7 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23,7 +22,7 @@ void __fastcall SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, 
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v7 )
-      sub_1C1AE30(0LL, v6);
+      sub_1C22094(0LL, v6);
     UnityEngine_Behaviour__set_enabled(v7, value, 0LL);
   }
 }
@@ -37,10 +36,10 @@ void __fastcall SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, con
   char v6; // w8
   const MethodInfo *v7; // x2
 
-  if ( (byte_4BC5D17 & 1) == 0 )
+  if ( (byte_4BDA7A6 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    byte_4BC5D17 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDA7A6 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,7 +48,7 @@ void __fastcall SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, con
   {
     v5 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v5 )
-      sub_1C1AE30(0LL, v4);
+      sub_1C22094(0LL, v4);
     v6 = ~UnityEngine_Behaviour__get_enabled(v5, 0LL);
     SwitchEnableComponent__SetEnable(this, v6 & 1, v7);
   }

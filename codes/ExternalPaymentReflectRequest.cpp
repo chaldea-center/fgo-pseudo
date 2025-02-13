@@ -2,19 +2,18 @@ System_String_o *__fastcall ExternalPaymentReflectRequest__getURL(
         ExternalPaymentReflectRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC93FD & 1) == 0 )
+  if ( (byte_4BDDEA7 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_19639/*"externalPayment/reflect"*/, v2);
-    byte_4BC93FD = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_19654/*"externalPayment/reflect"*/);
+    byte_4BDDEA7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_19639/*"externalPayment/reflect"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19654/*"externalPayment/reflect"*/, 0LL);
 }
 
 
@@ -24,46 +23,45 @@ void __fastcall ExternalPaymentReflectRequest__requestCompleted(
         const MethodInfo *method)
 {
   ExternalPaymentReflectRequest_o *v4; // x19
-  __int64 v5; // x1
-  ResponseData_o *v6; // x20
+  ResponseData_o *v5; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x0
+  System_String_o *v7; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 v10; // x1
+  __int64 v9; // x1
   Il2CppObject *m_target; // x3
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
 
   v4 = this;
-  if ( (byte_4BC93FE & 1) == 0 )
+  if ( (byte_4BDDEA8 & 1) == 0 )
   {
-    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
-    this = (ExternalPaymentReflectRequest_o *)sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v5);
-    byte_4BC93FE = 1;
+    sub_1C21E38(&JsonManager_TypeInfo);
+    this = (ExternalPaymentReflectRequest_o *)sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDEA8 = 1;
   }
   if ( !responseList )
     goto LABEL_15;
   if ( !responseList->max_length )
-    sub_1C1AE38(this, responseList);
-  v6 = responseList->m_Items[0];
-  if ( !v6 )
+    sub_1C2209C(this, responseList);
+  v5 = responseList->m_Items[0];
+  if ( !v5 )
 LABEL_15:
-    sub_1C1AE30(this, responseList);
-  if ( ResponseData__checkError_42452820(v6, 0LL) )
+    sub_1C22094(this, responseList);
+  if ( ResponseData__checkError_42505456(v5, 0LL) )
   {
-    success = (Il2CppObject *)v6->fields.success;
+    success = (Il2CppObject *)v5->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0LL);
+    v7 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = v4->fields.CallBack;
     if ( CallBack )
     {
-      v10 = (__int64)v8;
+      v9 = (__int64)v7;
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
 LABEL_13:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))m_target)(
         original_method_info,
-        v10,
+        v9,
         *(_QWORD *)&CallBack->fields.extra_arg);
     }
   }
@@ -74,7 +72,7 @@ LABEL_13:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v10 = StringLiteral_22437/*"ng"*/;
+      v9 = StringLiteral_22456/*"ng"*/;
       goto LABEL_13;
     }
   }

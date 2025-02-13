@@ -1,14 +1,14 @@
 void __fastcall ConstantStrMaster___ctor(ConstantStrMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC78F1 & 1) == 0 )
+  if ( (byte_4BDC388 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__, method);
-    byte_4BC78F1 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
+    byte_4BDC388 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     107,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string___ctor__);
 }
 
 
@@ -18,44 +18,41 @@ bool __fastcall ConstantStrMaster__ExistValueArray(
         int32_t checkVal,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x3
+  const MethodInfo *v10; // x3
   System_Int32_array *ValueArray; // x0
-  System_Int32_array *v15; // x19
-  System_Func_int__bool__o *v16; // x20
+  System_Int32_array *v12; // x19
+  System_Func_int__bool__o *v13; // x20
 
-  if ( (byte_4BC78FD & 1) == 0 )
+  if ( (byte_4BDC394 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_Any_int____77547112, name);
-    sub_1C1ABD4(&System_Func_int__bool__TypeInfo, v7);
-    sub_1C1ABD4(&Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__, v8);
-    sub_1C1ABD4(&ConstantStrMaster___c__DisplayClass14_0_TypeInfo, v9);
-    byte_4BC78FD = 1;
+    sub_1C21E38(&Method_BasicHelper_Any_int____77629760);
+    sub_1C21E38(&System_Func_int__bool__TypeInfo);
+    sub_1C21E38(&Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__);
+    sub_1C21E38(&ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
+    byte_4BDC394 = 1;
   }
-  v10 = sub_1C1AE20(ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v10, 0LL);
-  if ( !v10 )
-    sub_1C1AE30(v11, v12);
-  *(_DWORD *)(v10 + 16) = checkVal;
-  ValueArray = ConstantStrMaster__GetValueArray(this, name, 0LL, v13);
+  v7 = sub_1C22084(ConstantStrMaster___c__DisplayClass14_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
+    sub_1C22094(v8, v9);
+  *(_DWORD *)(v7 + 16) = checkVal;
+  ValueArray = ConstantStrMaster__GetValueArray(this, name, 0LL, v10);
   if ( ValueArray )
   {
-    v15 = ValueArray;
-    v16 = (System_Func_int__bool__o *)sub_1C1AE20(System_Func_int__bool__TypeInfo);
+    v12 = ValueArray;
+    v13 = (System_Func_int__bool__o *)sub_1C22084(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
-      v16,
-      (Il2CppObject *)v10,
+      v13,
+      (Il2CppObject *)v7,
       Method_ConstantStrMaster___c__DisplayClass14_0__ExistValueArray_b__0__,
       0LL);
-    LOBYTE(ValueArray) = BasicHelper__Any_int__49848700(
-                           v15,
-                           (System_Func_T__bool__o *)v16,
-                           (const MethodInfo_2F8A17C *)Method_BasicHelper_Any_int____77547112);
+    LOBYTE(ValueArray) = BasicHelper__Any_int__49916656(
+                           v12,
+                           (System_Func_T__bool__o *)v13,
+                           (const MethodInfo_2F9AAF0 *)Method_BasicHelper_Any_int____77629760);
   }
   return (char)ValueArray;
 }
@@ -65,21 +62,20 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineReturnVoiceLi
         ConstantStrMaster_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *EntityFromKey; // x0
-  const MethodInfo *v5; // x2
+  const MethodInfo *v4; // x2
 
-  if ( (byte_4BC78FB & 1) == 0 )
+  if ( (byte_4BDC392 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__, method);
-    sub_1C1ABD4(&StringLiteral_3737/*"COMBINE_SCENE_VOICE_RETURN"*/, v3);
-    byte_4BC78FB = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+    sub_1C21E38(&StringLiteral_3746/*"COMBINE_SCENE_VOICE_RETURN"*/);
+    byte_4BDC392 = 1;
   }
   EntityFromKey = DataMasterBase_object__object__object___getEntityFromKey(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                    (System_String_o *)StringLiteral_3737/*"COMBINE_SCENE_VOICE_RETURN"*/,
-                    (const MethodInfo_324C4B8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
-  return ConstantStrMaster__GetVoiceList((ConstantStrMaster_o *)EntityFromKey, (ConstantStrEntity_o *)EntityFromKey, v5);
+                    (System_String_o *)StringLiteral_3746/*"COMBINE_SCENE_VOICE_RETURN"*/,
+                    (const MethodInfo_325FC08 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+  return ConstantStrMaster__GetVoiceList((ConstantStrMaster_o *)EntityFromKey, (ConstantStrEntity_o *)EntityFromKey, v4);
 }
 
 
@@ -87,21 +83,20 @@ System_String_array_array *__fastcall ConstantStrMaster__GetCombineWelcomeVoiceL
         ConstantStrMaster_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *EntityFromKey; // x0
-  const MethodInfo *v5; // x2
+  const MethodInfo *v4; // x2
 
-  if ( (byte_4BC78FA & 1) == 0 )
+  if ( (byte_4BDC391 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__, method);
-    sub_1C1ABD4(&StringLiteral_3738/*"COMBINE_SCENE_VOICE_WELCOME"*/, v3);
-    byte_4BC78FA = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+    sub_1C21E38(&StringLiteral_3747/*"COMBINE_SCENE_VOICE_WELCOME"*/);
+    byte_4BDC391 = 1;
   }
   EntityFromKey = DataMasterBase_object__object__object___getEntityFromKey(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                    (System_String_o *)StringLiteral_3738/*"COMBINE_SCENE_VOICE_WELCOME"*/,
-                    (const MethodInfo_324C4B8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
-  return ConstantStrMaster__GetVoiceList((ConstantStrMaster_o *)EntityFromKey, (ConstantStrEntity_o *)EntityFromKey, v5);
+                    (System_String_o *)StringLiteral_3747/*"COMBINE_SCENE_VOICE_WELCOME"*/,
+                    (const MethodInfo_325FC08 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+  return ConstantStrMaster__GetVoiceList((ConstantStrMaster_o *)EntityFromKey, (ConstantStrEntity_o *)EntityFromKey, v4);
 }
 
 
@@ -127,43 +122,42 @@ System_String_o *__fastcall ConstantStrMaster__GetRandomVoice(
         System_String_o *key,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   Il2CppObject *EntityFromKey; // x0
-  const MethodInfo *v7; // x2
+  const MethodInfo *v6; // x2
   System_String_array_array *VoiceList; // x0
-  System_String_array_array *v9; // x19
-  __int64 v10; // x0
-  __int64 v11; // x1
-  System_String_array *v12; // x8
+  System_String_array_array *v8; // x19
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_String_array *v11; // x8
   System_String_o **m_Items; // x8
 
-  if ( (byte_4BC78FC & 1) == 0 )
+  if ( (byte_4BDC393 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__, key);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v5);
-    byte_4BC78FC = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDC393 = 1;
   }
   EntityFromKey = DataMasterBase_object__object__object___getEntityFromKey(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                     key,
-                    (const MethodInfo_324C4B8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+                    (const MethodInfo_325FC08 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
   VoiceList = ConstantStrMaster__GetVoiceList(
                 (ConstantStrMaster_o *)EntityFromKey,
                 (ConstantStrEntity_o *)EntityFromKey,
-                v7);
+                v6);
   if ( VoiceList )
   {
-    v9 = VoiceList;
-    v10 = UnityEngine_Random__Range_70754152(0, VoiceList->max_length, 0LL);
-    if ( (unsigned int)v10 >= v9->max_length )
+    v8 = VoiceList;
+    v9 = UnityEngine_Random__Range_70829352(0, VoiceList->max_length, 0LL);
+    if ( (unsigned int)v9 >= v8->max_length )
       goto LABEL_10;
-    v12 = v9->m_Items[(int)v10];
-    if ( !v12 )
-      sub_1C1AE30(v10, v11);
-    if ( !v12->max_length )
+    v11 = v8->m_Items[(int)v9];
+    if ( !v11 )
+      sub_1C22094(v9, v10);
+    if ( !v11->max_length )
 LABEL_10:
-      sub_1C1AE38(v10, v11);
-    m_Items = v12->m_Items;
+      sub_1C2209C(v9, v10);
+    m_Items = v11->m_Items;
   }
   else
   {
@@ -183,22 +177,22 @@ System_String_o *__fastcall ConstantStrMaster__GetValue(
   System_String_o *result; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC78F5 & 1) == 0 )
+  if ( (byte_4BDC38C & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__, name);
-    byte_4BC78F5 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    byte_4BDC38C = 1;
   }
   entity = 0LL;
   v6 = DataMasterBase_object__object__object___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          (Il2CppObject *)name,
-         (const MethodInfo_324D17C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+         (const MethodInfo_32608CC *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   result = 0LL;
   if ( v6 )
   {
     if ( !entity )
-      sub_1C1AE30(0LL, v5);
+      sub_1C22094(0LL, v5);
     return (System_String_o *)entity[1].monitor;
   }
   return result;
@@ -211,88 +205,83 @@ System_Int32_array *__fastcall ConstantStrMaster__GetValueArray(
         System_Int32_array *defVal,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  _BOOL8 v7; // x0
   __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  _BOOL8 v12; // x0
-  __int64 v13; // x1
   System_String_o *monitor; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x19
-  ConstantStrMaster___c_c *v16; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x19
+  ConstantStrMaster___c_c *v11; // x8
   System_Func_object__int__o *_9__6_0; // x20
-  Il2CppObject *v18; // x21
+  Il2CppObject *v13; // x21
   struct ConstantStrMaster___c_StaticFields *static_fields; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BC78F6 & 1) == 0 )
+  if ( (byte_4BDC38D & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__, name);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_string__int___, v7);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_int___, v8);
-    sub_1C1ABD4(&System_Func_string__int__TypeInfo, v9);
-    sub_1C1ABD4(&Method_ConstantStrMaster___c__GetValueArray_b__6_0__, v10);
-    sub_1C1ABD4(&ConstantStrMaster___c_TypeInfo, v11);
-    byte_4BC78F6 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C21E38(&System_Func_string__int__TypeInfo);
+    sub_1C21E38(&Method_ConstantStrMaster___c__GetValueArray_b__6_0__);
+    sub_1C21E38(&ConstantStrMaster___c_TypeInfo);
+    byte_4BDC38D = 1;
   }
   entity = 0LL;
-  v12 = DataMasterBase_object__object__object___TryGetEntity(
-          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-          &entity,
-          (Il2CppObject *)name,
-          (const MethodInfo_324D17C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
-  if ( v12 )
+  v7 = DataMasterBase_object__object__object___TryGetEntity(
+         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+         &entity,
+         (Il2CppObject *)name,
+         (const MethodInfo_32608CC *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+  if ( v7 )
   {
     if ( !entity )
-      sub_1C1AE30(v12, v13);
+      sub_1C22094(v7, v8);
     monitor = (System_String_o *)entity[1].monitor;
     if ( monitor )
     {
-      v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(monitor, 0x2Cu, 0, 0LL);
-      v16 = ConstantStrMaster___c_TypeInfo;
+      v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(monitor, 0x2Cu, 0, 0LL);
+      v11 = ConstantStrMaster___c_TypeInfo;
       if ( !ConstantStrMaster___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ConstantStrMaster___c_TypeInfo);
-        v16 = ConstantStrMaster___c_TypeInfo;
+        v11 = ConstantStrMaster___c_TypeInfo;
       }
-      _9__6_0 = (System_Func_object__int__o *)v16->static_fields->__9__6_0;
+      _9__6_0 = (System_Func_object__int__o *)v11->static_fields->__9__6_0;
       if ( !_9__6_0 )
       {
-        if ( !v16->_2.cctor_finished )
+        if ( !v11->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v16);
-          v16 = ConstantStrMaster___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v11);
+          v11 = ConstantStrMaster___c_TypeInfo;
         }
-        v18 = (Il2CppObject *)v16->static_fields->__9;
-        _9__6_0 = (System_Func_object__int__o *)sub_1C1AE20(System_Func_string__int__TypeInfo);
-        System_Func_object__int____ctor(_9__6_0, v18, Method_ConstantStrMaster___c__GetValueArray_b__6_0__, 0LL);
+        v13 = (Il2CppObject *)v11->static_fields->__9;
+        _9__6_0 = (System_Func_object__int__o *)sub_1C22084(System_Func_string__int__TypeInfo);
+        System_Func_object__int____ctor(_9__6_0, v13, Method_ConstantStrMaster___c__GetValueArray_b__6_0__, 0LL);
         static_fields = ConstantStrMaster___c_TypeInfo->static_fields;
         static_fields->__9__6_0 = (struct System_Func_string__int__o *)_9__6_0;
-        sub_1C1AB78(
+        sub_1C21DDC(
           (PartyOrganizationUtility_o *)&static_fields->__9__6_0,
           (int64_t)_9__6_0,
-          v20,
-          v21,
-          v22,
-          v23,
-          v24,
-          v25);
+          v15,
+          v16,
+          v17,
+          v18,
+          v19,
+          v20);
       }
-      v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                   v15,
+      v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                                   v10,
                                                                    (System_Func_TSource__TResult__o *)_9__6_0,
-                                                                   (const MethodInfo_2FD0368 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                   (const MethodInfo_2FE0CDC *)Method_System_Linq_Enumerable_Select_string__int___);
       return System_Linq_Enumerable__ToArray_int_(
-               v26,
-               (const MethodInfo_2FD8CD8 *)Method_System_Linq_Enumerable_ToArray_int___);
+               v21,
+               (const MethodInfo_2FE964C *)Method_System_Linq_Enumerable_ToArray_int___);
     }
   }
   return defVal;
@@ -301,48 +290,46 @@ System_Int32_array *__fastcall ConstantStrMaster__GetValueArray(
 
 System_Int32_array *__fastcall ConstantStrMaster__GetValueAsIntArray(System_String_o *name, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x3
+  __int64 v4; // x1
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4BC78F4 & 1) == 0 )
+  if ( (byte_4BDC38B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMaster_ConstantStrMaster___, method);
-    sub_1C1ABD4(&DataManager_TypeInfo, v3);
-    byte_4BC78F4 = 1;
+    sub_1C21E38(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    byte_4BDC38B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_object )
-    sub_1C1AE30(0LL, v5);
-  return ConstantStrMaster__GetValueArray((ConstantStrMaster_o *)Master_object, name, 0LL, v6);
+    sub_1C22094(0LL, v4);
+  return ConstantStrMaster__GetValueArray((ConstantStrMaster_o *)Master_object, name, 0LL, v5);
 }
 
 
 float __fastcall ConstantStrMaster__GetValueFloat(System_String_o *name, float defVal, const MethodInfo *method)
 {
-  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4BC78F3 & 1) == 0 )
+  if ( (byte_4BDC38A & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BC78F3 = 1;
+    sub_1C21E38(&Method_DataManager_GetMasterData_ConstantStrMaster___);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4BDC38A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                     (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
   {
-    sub_1C1AE30(Instance, v7);
+    sub_1C22094(Instance, v6);
   }
-  return ConstantStrMaster__GetFloat((ConstantStrMaster_o *)Instance, name, defVal, v8);
+  return ConstantStrMaster__GetFloat((ConstantStrMaster_o *)Instance, name, defVal, v7);
 }
 
 
@@ -352,92 +339,87 @@ System_Single_array *__fastcall ConstantStrMaster__GetValueFloatArray(
         const MethodInfo *method)
 {
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  bool v11; // w8
+  bool v6; // w8
   System_Single_array *result; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v13; // x19
-  ConstantStrMaster___c_c *v14; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x19
+  ConstantStrMaster___c_c *v9; // x8
   System_Func_T__TResult__o *_9__7_0; // x20
-  Il2CppObject *v16; // x21
+  Il2CppObject *v11; // x21
   struct ConstantStrMaster___c_StaticFields *static_fields; // x0
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC78F7 & 1) == 0 )
+  if ( (byte_4BDC38E & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__, name);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_string__float___, v5);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_float___, v6);
-    sub_1C1ABD4(&System_Func_string__float__TypeInfo, v7);
-    sub_1C1ABD4(&Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__, v8);
-    sub_1C1ABD4(&ConstantStrMaster___c_TypeInfo, v9);
-    byte_4BC78F7 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_string__float___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_float___);
+    sub_1C21E38(&System_Func_string__float__TypeInfo);
+    sub_1C21E38(&Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__);
+    sub_1C21E38(&ConstantStrMaster___c_TypeInfo);
+    byte_4BDC38E = 1;
   }
   entity = 0LL;
-  v11 = DataMasterBase_object__object__object___TryGetEntity(
-          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-          &entity,
-          (Il2CppObject *)name,
-          (const MethodInfo_324D17C *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+  v6 = DataMasterBase_object__object__object___TryGetEntity(
+         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
+         &entity,
+         (Il2CppObject *)name,
+         (const MethodInfo_32608CC *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   result = 0LL;
-  if ( v11 )
+  if ( v6 )
   {
     if ( !entity )
-      sub_1C1AE30(0LL, v10);
+      sub_1C22094(0LL, v5);
     result = (System_Single_array *)entity[1].monitor;
     if ( result )
     {
-      v13 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(
-                                                                   (System_String_o *)result,
-                                                                   0x2Cu,
-                                                                   0,
-                                                                   0LL);
-      v14 = ConstantStrMaster___c_TypeInfo;
+      v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(
+                                                                  (System_String_o *)result,
+                                                                  0x2Cu,
+                                                                  0,
+                                                                  0LL);
+      v9 = ConstantStrMaster___c_TypeInfo;
       if ( !ConstantStrMaster___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ConstantStrMaster___c_TypeInfo);
-        v14 = ConstantStrMaster___c_TypeInfo;
+        v9 = ConstantStrMaster___c_TypeInfo;
       }
-      _9__7_0 = (System_Func_T__TResult__o *)v14->static_fields->__9__7_0;
+      _9__7_0 = (System_Func_T__TResult__o *)v9->static_fields->__9__7_0;
       if ( !_9__7_0 )
       {
-        if ( !v14->_2.cctor_finished )
+        if ( !v9->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v14);
-          v14 = ConstantStrMaster___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v9);
+          v9 = ConstantStrMaster___c_TypeInfo;
         }
-        v16 = (Il2CppObject *)v14->static_fields->__9;
-        _9__7_0 = (System_Func_T__TResult__o *)sub_1C1AE20(System_Func_string__float__TypeInfo);
-        System_Func_object__float____ctor(_9__7_0, v16, Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__, 0LL);
+        v11 = (Il2CppObject *)v9->static_fields->__9;
+        _9__7_0 = (System_Func_T__TResult__o *)sub_1C22084(System_Func_string__float__TypeInfo);
+        System_Func_object__float____ctor(_9__7_0, v11, Method_ConstantStrMaster___c__GetValueFloatArray_b__7_0__, 0LL);
         static_fields = ConstantStrMaster___c_TypeInfo->static_fields;
         static_fields->__9__7_0 = (struct System_Func_string__float__o *)_9__7_0;
-        sub_1C1AB78(
+        sub_1C21DDC(
           (PartyOrganizationUtility_o *)&static_fields->__9__7_0,
           (int64_t)_9__7_0,
-          v18,
-          v19,
-          v20,
-          v21,
-          v22,
-          v23);
+          v13,
+          v14,
+          v15,
+          v16,
+          v17,
+          v18);
       }
-      v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__float_(
-                                                                   v13,
+      v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__float_(
+                                                                   v8,
                                                                    (System_Func_TSource__TResult__o *)_9__7_0,
-                                                                   (const MethodInfo_2FD0FA8 *)Method_System_Linq_Enumerable_Select_string__float___);
+                                                                   (const MethodInfo_2FE191C *)Method_System_Linq_Enumerable_Select_string__float___);
       return System_Linq_Enumerable__ToArray_float_(
-               v24,
-               (const MethodInfo_2FD8EF8 *)Method_System_Linq_Enumerable_ToArray_float___);
+               v19,
+               (const MethodInfo_2FE986C *)Method_System_Linq_Enumerable_ToArray_float___);
     }
   }
   return result;
@@ -454,22 +436,22 @@ System_String_array *__fastcall ConstantStrMaster__GetValueStringArray(
   System_String_array *monitor; // x0
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC78F8 & 1) == 0 )
+  if ( (byte_4BDC38F & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntityFromId__, name);
-    byte_4BC78F8 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntityFromId__);
+    byte_4BDC38F = 1;
   }
   result = 0LL;
   EntityFromId = DataMasterBase_object__object__object___TryGetEntityFromId(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                    &result,
                    name,
-                   (const MethodInfo_324C7E0 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntityFromId__);
+                   (const MethodInfo_325FF30 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntityFromId__);
   monitor = 0LL;
   if ( EntityFromId )
   {
     if ( !result || (monitor = (System_String_array *)result[1].monitor) == 0LL )
-      sub_1C1AE30(monitor, v5);
+      sub_1C22094(monitor, v5);
     return System_String__Split((System_String_o *)monitor, 0x2Cu, 0, 0LL);
   }
   return monitor;
@@ -496,17 +478,17 @@ UnityEngine_Vector3_o __fastcall ConstantStrMaster__GetValueVector3(
   if ( ValueFloatArray )
   {
     if ( ValueFloatArray->max_length < 3 )
-      sub_1C1AE38(ValueFloatArray, v4);
+      sub_1C2209C(ValueFloatArray, v4);
     v5 = ValueFloatArray->m_Items[1];
     p_y = &ValueFloatArray->m_Items[2];
     p_z = &ValueFloatArray->m_Items[3];
   }
   else
   {
-    if ( !byte_4BC2141 )
+    if ( !byte_4BD6BB1 )
     {
-      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4BC2141 = 1;
+      sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      byte_4BD6BB1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -528,109 +510,106 @@ System_String_array_array *__fastcall ConstantStrMaster__GetVoiceList(
         ConstantStrEntity_o *ent,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
   System_String_o *value; // x19
-  System_Char_array *v6; // x0
-  System_Char_array *v7; // x1
-  System_Char_array *v8; // x19
+  System_Char_array *v5; // x0
+  System_Char_array *v6; // x1
+  System_Char_array *v7; // x19
   int max_length; // w8
-  System_String_array_array *v10; // x20
-  __int64 v11; // x24
-  PartyOrganizationUtility_o *v12; // x21
-  System_String_o *v13; // x22
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  System_String_array_array *v9; // x20
+  __int64 v10; // x24
+  PartyOrganizationUtility_o *v11; // x21
+  System_String_o *v12; // x22
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4BC78F9 & 1) == 0 )
+  if ( (byte_4BDC390 & 1) == 0 )
   {
-    sub_1C1ABD4(&char___TypeInfo, ent);
-    sub_1C1ABD4(&string_____TypeInfo, v4);
-    byte_4BC78F9 = 1;
+    sub_1C21E38(&char___TypeInfo);
+    sub_1C21E38(&string_____TypeInfo);
+    byte_4BDC390 = 1;
   }
   if ( !ent )
     return 0LL;
   value = ent->fields.value;
-  v6 = (System_Char_array *)sub_1C1AC7C(char___TypeInfo, 1LL);
-  if ( !v6 )
+  v5 = (System_Char_array *)sub_1C21EE0(char___TypeInfo, 1LL);
+  if ( !v5 )
     goto LABEL_20;
-  v7 = v6;
-  if ( !v6->max_length )
+  v6 = v5;
+  if ( !v5->max_length )
     goto LABEL_21;
-  v6->m_Items[2] = 47;
-  if ( !value || (v6 = (System_Char_array *)System_String__Split_63062524(value, v6, 0LL)) == 0LL )
+  v5->m_Items[2] = 47;
+  if ( !value || (v5 = (System_Char_array *)System_String__Split_63137632(value, v5, 0LL)) == 0LL )
 LABEL_20:
-    sub_1C1AE30(v6, v7);
-  v8 = v6;
-  v6 = (System_Char_array *)sub_1C1AC7C(string_____TypeInfo, v6->max_length);
-  max_length = v8->max_length;
-  v10 = (System_String_array_array *)v6;
+    sub_1C22094(v5, v6);
+  v7 = v5;
+  v5 = (System_Char_array *)sub_1C21EE0(string_____TypeInfo, v5->max_length);
+  max_length = v7->max_length;
+  v9 = (System_String_array_array *)v5;
   if ( max_length >= 1 )
   {
-    v11 = 0LL;
-    v12 = (PartyOrganizationUtility_o *)&v6->m_Items[2];
-    while ( (unsigned int)v11 < max_length )
+    v10 = 0LL;
+    v11 = (PartyOrganizationUtility_o *)&v5->m_Items[2];
+    while ( (unsigned int)v10 < max_length )
     {
-      v13 = *(System_String_o **)&v8->m_Items[4 * v11 + 2];
-      v6 = (System_Char_array *)sub_1C1AC7C(char___TypeInfo, 1LL);
-      if ( !v6 )
+      v12 = *(System_String_o **)&v7->m_Items[4 * v10 + 2];
+      v5 = (System_Char_array *)sub_1C21EE0(char___TypeInfo, 1LL);
+      if ( !v5 )
         goto LABEL_20;
-      v7 = v6;
-      if ( !v6->max_length )
+      v6 = v5;
+      if ( !v5->max_length )
         break;
-      v6->m_Items[2] = 44;
-      if ( !v13 )
+      v5->m_Items[2] = 44;
+      if ( !v12 )
         goto LABEL_20;
-      v6 = (System_Char_array *)System_String__Split_63062524(v13, v6, 0LL);
-      if ( !v10 )
+      v5 = (System_Char_array *)System_String__Split_63137632(v12, v5, 0LL);
+      if ( !v9 )
         goto LABEL_20;
-      if ( (unsigned int)v11 >= v10->max_length )
+      if ( (unsigned int)v10 >= v9->max_length )
         break;
-      v12->klass = (PartyOrganizationUtility_c *)v6;
-      sub_1C1AB78(v12, (int64_t)v6, v14, v15, v16, v17, v18, v19);
-      max_length = v8->max_length;
-      ++v11;
-      v12 = (PartyOrganizationUtility_o *)((char *)v12 + 8);
-      if ( (int)v11 >= max_length )
-        return v10;
+      v11->klass = (PartyOrganizationUtility_c *)v5;
+      sub_1C21DDC(v11, (int64_t)v5, v13, v14, v15, v16, v17, v18);
+      max_length = v7->max_length;
+      ++v10;
+      v11 = (PartyOrganizationUtility_o *)((char *)v11 + 8);
+      if ( (int)v10 >= max_length )
+        return v9;
     }
 LABEL_21:
-    sub_1C1AE38(v6, v7);
+    sub_1C2209C(v5, v6);
   }
-  return v10;
+  return v9;
 }
 
 
 System_String_o *__fastcall ConstantStrMaster__getValue(System_String_o *name, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4BC78F2 & 1) == 0 )
+  if ( (byte_4BDC389 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMasterData_ConstantStrMaster___, method);
-    sub_1C1ABD4(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__, v3);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4BC78F2 = 1;
+    sub_1C21E38(&Method_DataManager_GetMasterData_ConstantStrMaster___);
+    sub_1C21E38(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4BDC389 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
+                     (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_ConstantStrMaster___)) == 0LL )
   {
-    sub_1C1AE30(Instance, v6);
+    sub_1C22094(Instance, v4);
   }
   result = (System_String_o *)DataMasterBase_object__object__object___getEntityFromKey(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 name,
-                                (const MethodInfo_324C4B8 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
+                                (const MethodInfo_325FC08 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__getEntityFromKey__);
   if ( result )
     return (System_String_o *)result[1].klass;
   return result;
@@ -639,32 +618,31 @@ System_String_o *__fastcall ConstantStrMaster__getValue(System_String_o *name, c
 
 void __fastcall ConstantStrMaster___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  Il2CppObject *v1; // x19
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4BC78FE & 1) == 0 )
+  if ( (byte_4BDC395 & 1) == 0 )
   {
-    sub_1C1ABD4(&ConstantStrMaster___c_TypeInfo, v1);
-    byte_4BC78FE = 1;
+    sub_1C21E38(&ConstantStrMaster___c_TypeInfo);
+    byte_4BDC395 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C1AE20(ConstantStrMaster___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  ConstantStrMaster___c_TypeInfo->static_fields->__9 = (struct ConstantStrMaster___c_o *)v2;
-  sub_1C1AB78(
+  v1 = (Il2CppObject *)sub_1C22084(ConstantStrMaster___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  ConstantStrMaster___c_TypeInfo->static_fields->__9 = (struct ConstantStrMaster___c_o *)v1;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)ConstantStrMaster___c_TypeInfo->static_fields,
-    (int64_t)v2,
+    (int64_t)v1,
+    v2,
     v3,
     v4,
     v5,
     v6,
-    v7,
-    v8);
+    v7);
 }
 
 

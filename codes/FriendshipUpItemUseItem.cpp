@@ -1,25 +1,26 @@
 void __fastcall FriendshipUpItemUseItem___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  struct FriendshipUpItemUseItem_StaticFields *static_fields; // x0
   __int64 v2; // x1
   __int64 v3; // x1
-  struct FriendshipUpItemUseItem_StaticFields *static_fields; // x0
-  struct FriendshipUpItemUseItem_StaticFields *v5; // x0
+  struct FriendshipUpItemUseItem_StaticFields *v4; // x0
 
-  if ( (byte_4BC35F0 & 1) == 0 )
+  if ( (byte_4BD8071 & 1) == 0 )
   {
-    sub_1C1ABD4(&FriendshipUpItemUseItem_TypeInfo, v1);
-    sub_1C1ABD4(&StringLiteral_17775/*"btn_boostitem_off"*/, v2);
-    sub_1C1ABD4(&StringLiteral_17776/*"btn_boostitem_on"*/, v3);
-    byte_4BC35F0 = 1;
+    sub_1C21E38(&FriendshipUpItemUseItem_TypeInfo);
+    sub_1C21E38(&StringLiteral_17788/*"btn_boostitem_off"*/);
+    sub_1C21E38(&StringLiteral_17789/*"btn_boostitem_on"*/);
+    byte_4BD8071 = 1;
   }
   static_fields = FriendshipUpItemUseItem_TypeInfo->static_fields;
   static_fields->FRIENDSHIP_UP_ITEM_MAX_NUM = 9999;
-  static_fields->BUTTON_ON_FILE_NAME = (struct System_String_o *)StringLiteral_17776/*"btn_boostitem_on"*/;
-  sub_1C1AB78(&static_fields->BUTTON_ON_FILE_NAME);
-  v5 = FriendshipUpItemUseItem_TypeInfo->static_fields;
-  v5->BUTTON_OFF_FILE_NAME = (struct System_String_o *)StringLiteral_17775/*"btn_boostitem_off"*/;
-  sub_1C1AB78(&v5->BUTTON_OFF_FILE_NAME);
+  v2 = StringLiteral_17789/*"btn_boostitem_on"*/;
+  static_fields->BUTTON_ON_FILE_NAME = (struct System_String_o *)StringLiteral_17789/*"btn_boostitem_on"*/;
+  sub_1C21DDC(&static_fields->BUTTON_ON_FILE_NAME, v2);
+  v3 = StringLiteral_17788/*"btn_boostitem_off"*/;
+  v4 = FriendshipUpItemUseItem_TypeInfo->static_fields;
+  v4->BUTTON_OFF_FILE_NAME = (struct System_String_o *)StringLiteral_17788/*"btn_boostitem_off"*/;
+  sub_1C21DDC(&v4->BUTTON_OFF_FILE_NAME, v3);
   FriendshipUpItemUseItem_TypeInfo->static_fields->FRIEND_SHIP_TIME_LABEL_STANDARD_POSITION_X = 29.5;
 }
 
@@ -32,33 +33,31 @@ void __fastcall FriendshipUpItemUseItem___ctor(FriendshipUpItemUseItem_o *this, 
 
 void __fastcall FriendshipUpItemUseItem__Awake(FriendshipUpItemUseItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UILabel_o *friendshipUpItemUseFixAutoUseLabel; // x20
-  System_String_o *v6; // x0
-  __int64 v7; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
   UILabel_o *friendshipUpItemUseFixHaveLabel; // x19
 
-  if ( (byte_4BC35E7 & 1) == 0 )
+  if ( (byte_4BD8068 & 1) == 0 )
   {
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_10456/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_HAVE"*/, v3);
-    sub_1C1ABD4(&StringLiteral_10454/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/, v4);
-    byte_4BC35E7 = 1;
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_10466/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_HAVE"*/);
+    sub_1C21E38(&StringLiteral_10464/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/);
+    byte_4BD8068 = 1;
   }
   friendshipUpItemUseFixAutoUseLabel = this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10454/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10464/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE"*/, 0LL);
   if ( !friendshipUpItemUseFixAutoUseLabel
-    || (UILabel__set_text(friendshipUpItemUseFixAutoUseLabel, v6, 0LL),
+    || (UILabel__set_text(friendshipUpItemUseFixAutoUseLabel, v4, 0LL),
         friendshipUpItemUseFixHaveLabel = this->fields.friendshipUpItemUseFixHaveLabel,
-        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_10456/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_HAVE"*/, 0LL),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10466/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_HAVE"*/, 0LL),
         !friendshipUpItemUseFixHaveLabel) )
   {
-    sub_1C1AE30(v6, v7);
+    sub_1C22094(v4, v5);
   }
-  UILabel__set_text(friendshipUpItemUseFixHaveLabel, v6, 0LL);
+  UILabel__set_text(friendshipUpItemUseFixHaveLabel, v4, 0LL);
 }
 
 
@@ -72,17 +71,17 @@ void __fastcall FriendshipUpItemUseItem__ChangeButtonState(
   UISprite_o *friendshipUpItemUseSprite; // x20
   __int64 v7; // x9
 
-  if ( (byte_4BC35EB & 1) == 0 )
+  if ( (byte_4BD806C & 1) == 0 )
   {
-    sub_1C1ABD4(&FriendshipUpItemUseItem_TypeInfo, isOn);
-    byte_4BC35EB = 1;
+    sub_1C21E38(&FriendshipUpItemUseItem_TypeInfo);
+    byte_4BD806C = 1;
   }
   v5 = FriendshipUpItemUseItem_TypeInfo;
   friendshipUpItemUseSprite = this->fields.friendshipUpItemUseSprite;
   if ( !FriendshipUpItemUseItem_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FriendshipUpItemUseItem_TypeInfo);
   if ( !friendshipUpItemUseSprite )
-    sub_1C1AE30(v5, isOn);
+    sub_1C22094(v5, isOn);
   v7 = 16LL;
   if ( isOn )
     v7 = 8LL;
@@ -107,25 +106,24 @@ void __fastcall FriendshipUpItemUseItem__OnClickSelectItem(FriendshipUpItemUseIt
 
 void __fastcall FriendshipUpItemUseItem__OnDestroy(FriendshipUpItemUseItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC35E9 & 1) == 0 )
+  if ( (byte_4BD806A & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_12942/*"SetLabelUpdate"*/, method);
-    byte_4BC35E9 = 1;
+    sub_1C21E38(&StringLiteral_12952/*"SetLabelUpdate"*/);
+    byte_4BD806A = 1;
   }
-  if ( UnityEngine_MonoBehaviour__IsInvoking_70779128(
+  if ( UnityEngine_MonoBehaviour__IsInvoking_70854328(
          (UnityEngine_MonoBehaviour_o *)this,
-         (System_String_o *)StringLiteral_12942/*"SetLabelUpdate"*/,
+         (System_String_o *)StringLiteral_12952/*"SetLabelUpdate"*/,
          0LL) )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_70778992(
+    UnityEngine_MonoBehaviour__CancelInvoke_70854192(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12942/*"SetLabelUpdate"*/,
+      (System_String_o *)StringLiteral_12952/*"SetLabelUpdate"*/,
       0LL);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendshipUpItemUseItem__SetButtonEnabled(
         FriendshipUpItemUseItem_o *this,
         bool isEnabled,
@@ -135,10 +133,10 @@ void __fastcall FriendshipUpItemUseItem__SetButtonEnabled(
   __int64 v6; // x1
   UICommonButton_o *v7; // x0
 
-  if ( (byte_4BC35EE & 1) == 0 )
+  if ( (byte_4BD806F & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isEnabled);
-    byte_4BC35EE = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BD806F = 1;
   }
   friendshipUpItemUserButton = (UnityEngine_Object_o *)this->fields.friendshipUpItemUserButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -147,7 +145,7 @@ void __fastcall FriendshipUpItemUseItem__SetButtonEnabled(
   {
     v7 = this->fields.friendshipUpItemUserButton;
     if ( !v7 )
-      sub_1C1AE30(0LL, v6);
+      sub_1C22094(0LL, v6);
     UICommonButton__SetColliderEnable(v7, isEnabled, 1, 0LL);
   }
 }
@@ -160,58 +158,53 @@ void __fastcall FriendshipUpItemUseItem__SetInit(
         System_Action_o *buttonCallback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   struct FriendshipUpItemInfo_o **p_friendshipUpItemInfo; // x21
-  const MethodInfo *v15; // x1
-  const MethodInfo *v16; // x1
-  const MethodInfo *v17; // x2
+  const MethodInfo *v10; // x1
+  const MethodInfo *v11; // x1
+  const MethodInfo *v12; // x2
   bool UseFlag_k__BackingField; // w1
   UILabel_o *friendshipUpStringLabel; // x22
   System_String_o *friendshipUpItemUseNumLabel; // x0
-  __int64 v21; // x1
+  __int64 v16; // x1
   UnityEngine_Object_o *explanationLabel; // x22
   struct FriendshipUpItemInfo_o *friendshipUpItemInfo; // x8
   int64_t EndedAt_k__BackingField; // x22
-  int64_t v25; // x23
+  int64_t v20; // x23
   UnityEngine_GameObject_o *gameObject; // x0
-  float v27; // s1
-  float v28; // s8
-  UnityEngine_GameObject_o *v29; // x0
-  const MethodInfo *v30; // x1
-  UnityEngine_GameObject_o *v31; // x0
-  UnityEngine_GameObject_o *v32; // x0
-  const MethodInfo *v33; // x4
+  float v22; // s1
+  float v23; // s8
+  UnityEngine_GameObject_o *v24; // x0
+  const MethodInfo *v25; // x1
+  UnityEngine_GameObject_o *v26; // x0
+  UnityEngine_GameObject_o *v27; // x0
+  const MethodInfo *v28; // x4
 
-  if ( (byte_4BC35E8 & 1) == 0 )
+  if ( (byte_4BD8069 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, itemInfo);
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, v9);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v10);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C1ABD4(&StringLiteral_13595/*"TIME_REST_USER_ITEM"*/, v12);
-    sub_1C1ABD4(&StringLiteral_12942/*"SetLabelUpdate"*/, v13);
-    byte_4BC35E8 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&StringLiteral_13606/*"TIME_REST_USER_ITEM"*/);
+    sub_1C21E38(&StringLiteral_12952/*"SetLabelUpdate"*/);
+    byte_4BD8069 = 1;
   }
   this->fields.friendshipUpItemInfo = itemInfo;
   p_friendshipUpItemInfo = &this->fields.friendshipUpItemInfo;
-  sub_1C1AB78(&this->fields.friendshipUpItemInfo);
+  sub_1C21DDC(&this->fields.friendshipUpItemInfo, itemInfo);
   this->fields.onClickButtonCallback = buttonCallback;
-  sub_1C1AB78(&this->fields.onClickButtonCallback);
-  FriendshipUpItemUseItem__SetItemIconSprite(this, v15);
-  FriendshipUpItemUseItem__SetNumLabel(this, v16);
+  sub_1C21DDC(&this->fields.onClickButtonCallback, buttonCallback);
+  FriendshipUpItemUseItem__SetItemIconSprite(this, v10);
+  FriendshipUpItemUseItem__SetNumLabel(this, v11);
   if ( this->fields.friendshipUpItemInfo )
     UseFlag_k__BackingField = this->fields.friendshipUpItemInfo->fields._UseFlag_k__BackingField;
   else
     UseFlag_k__BackingField = 0;
-  FriendshipUpItemUseItem__ChangeButtonState(this, UseFlag_k__BackingField, v17);
+  FriendshipUpItemUseItem__ChangeButtonState(this, UseFlag_k__BackingField, v12);
   friendshipUpStringLabel = this->fields.friendshipUpStringLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  friendshipUpItemUseNumLabel = LocalizationManager__Get((System_String_o *)StringLiteral_13595/*"TIME_REST_USER_ITEM"*/, 0LL);
+  friendshipUpItemUseNumLabel = LocalizationManager__Get((System_String_o *)StringLiteral_13606/*"TIME_REST_USER_ITEM"*/, 0LL);
   if ( !friendshipUpStringLabel )
     goto LABEL_37;
   UILabel__set_text(friendshipUpStringLabel, friendshipUpItemUseNumLabel, 0LL);
@@ -243,36 +236,36 @@ void __fastcall FriendshipUpItemUseItem__SetInit(
   }
   if ( !this->fields.friendshipUpItemUseFixHaveLabel )
     goto LABEL_37;
-  v25 = *(int *)(*(_QWORD *)&friendshipUpItemUseNumLabel[7].fields + 500LL);
+  v20 = *(int *)(*(_QWORD *)&friendshipUpItemUseNumLabel[7].fields + 504LL);
   gameObject = UnityEngine_Component__get_gameObject(
                  (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixHaveLabel,
                  0LL);
-  if ( EndedAt_k__BackingField >= v25 )
+  if ( EndedAt_k__BackingField >= v20 )
   {
-    v27 = -8.5;
-    v28 = -8.5;
+    v22 = -8.5;
+    v23 = -8.5;
   }
   else
   {
-    v27 = -5.5;
-    v28 = -5.5;
+    v22 = -5.5;
+    v23 = -5.5;
   }
-  GameObjectExtensions__SetLocalPosition_34756308(gameObject, -36.5, v27, 0LL);
+  GameObjectExtensions__SetLocalPosition_34797668(gameObject, -36.5, v22, 0LL);
   friendshipUpItemUseNumLabel = (System_String_o *)this->fields.friendshipUpItemUseNumLabel;
   if ( !friendshipUpItemUseNumLabel
-    || (v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL),
-        GameObjectExtensions__SetLocalPosition_34756308(v29, 11.0, v28, 0LL),
-        FriendshipUpItemUseItem__SetLabelUpdate(this, v30),
+    || (v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL),
+        GameObjectExtensions__SetLocalPosition_34797668(v24, 11.0, v23, 0LL),
+        FriendshipUpItemUseItem__SetLabelUpdate(this, v25),
         (friendshipUpItemUseNumLabel = (System_String_o *)this->fields.friendshipUpItemUseFixAutoUseLabel) == 0LL)
-    || (v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL),
-        GameObjectExtensions__SetLocalPosition_34756308(v31, -9.0, 10.5, 0LL),
+    || (v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL),
+        GameObjectExtensions__SetLocalPosition_34797668(v26, -9.0, 10.5, 0LL),
         (friendshipUpItemUseNumLabel = (System_String_o *)this->fields.friendshipUpItemUseFixHaveLabel) == 0LL) )
   {
 LABEL_37:
-    sub_1C1AE30(friendshipUpItemUseNumLabel, v21);
+    sub_1C22094(friendshipUpItemUseNumLabel, v16);
   }
-  v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL);
-  GameObjectExtensions__SetLocalScale_34758488(v32, 1.0, 1.0, 0LL);
+  v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)friendshipUpItemUseNumLabel, 0LL);
+  GameObjectExtensions__SetLocalScale_34799848(v27, 1.0, 1.0, 0LL);
   if ( isInterruption )
   {
     if ( *p_friendshipUpItemInfo )
@@ -281,8 +274,8 @@ LABEL_37:
         this,
         (*p_friendshipUpItemInfo)->fields._InterruptionUseFlag_k__BackingField,
         (*p_friendshipUpItemInfo)->fields._IsValid_k__BackingField,
-        EndedAt_k__BackingField < v25,
-        v33);
+        EndedAt_k__BackingField < v20,
+        v28);
       goto LABEL_31;
     }
     goto LABEL_37;
@@ -297,22 +290,22 @@ LABEL_37:
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)friendshipUpItemUseNumLabel,
-    EndedAt_k__BackingField < v25,
+    EndedAt_k__BackingField < v20,
     0LL);
 LABEL_31:
-  if ( EndedAt_k__BackingField < v25 )
+  if ( EndedAt_k__BackingField < v20 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     if ( EndedAt_k__BackingField - NetworkManager__getTime(0LL) >= 0 )
     {
-      UnityEngine_MonoBehaviour__CancelInvoke_70778992(
+      UnityEngine_MonoBehaviour__CancelInvoke_70854192(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_12942/*"SetLabelUpdate"*/,
+        (System_String_o *)StringLiteral_12952/*"SetLabelUpdate"*/,
         0LL);
       UnityEngine_MonoBehaviour__InvokeRepeating(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_12942/*"SetLabelUpdate"*/,
+        (System_String_o *)StringLiteral_12952/*"SetLabelUpdate"*/,
         1.0,
         1.0,
         0LL);
@@ -323,33 +316,32 @@ LABEL_31:
 
 void __fastcall FriendshipUpItemUseItem__SetItemIconSprite(FriendshipUpItemUseItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct FriendshipUpItemInfo_o *friendshipUpItemInfo; // x9
-  System_String_o *v5; // x20
-  UISprite_o *v6; // x19
+  System_String_o *v4; // x20
+  UISprite_o *v5; // x19
   UISprite_o *IsNullOrEmpty; // x0
-  __int64 v8; // x1
+  __int64 v7; // x1
   UISprite_o *friendshipUpItemIconSprite; // x21
-  System_String_o *v10; // x1
+  System_String_o *v9; // x1
 
-  if ( (byte_4BC35EC & 1) == 0 )
+  if ( (byte_4BD806D & 1) == 0 )
   {
-    sub_1C1ABD4(&AtlasManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v3);
-    byte_4BC35EC = 1;
+    sub_1C21E38(&AtlasManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD806D = 1;
   }
   friendshipUpItemInfo = this->fields.friendshipUpItemInfo;
   if ( friendshipUpItemInfo )
     friendshipUpItemInfo = (struct FriendshipUpItemInfo_o *)friendshipUpItemInfo->fields._SpriteName_k__BackingField;
   if ( friendshipUpItemInfo )
-    v5 = (System_String_o *)friendshipUpItemInfo;
+    v4 = (System_String_o *)friendshipUpItemInfo;
   else
-    v5 = (System_String_o *)StringLiteral_1/*""*/;
+    v4 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( !AtlasManager__IsExistEventAtlas(v5, 0LL) )
+  if ( !AtlasManager__IsExistEventAtlas(v4, 0LL) )
   {
-    IsNullOrEmpty = (UISprite_o *)System_String__IsNullOrEmpty(v5, 0LL);
+    IsNullOrEmpty = (UISprite_o *)System_String__IsNullOrEmpty(v4, 0LL);
     friendshipUpItemIconSprite = this->fields.friendshipUpItemIconSprite;
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
@@ -359,9 +351,9 @@ void __fastcall FriendshipUpItemUseItem__SetItemIconSprite(FriendshipUpItemUseIt
         IsNullOrEmpty = this->fields.friendshipUpItemIconSprite;
         if ( IsNullOrEmpty )
         {
-          v10 = 0LL;
+          v9 = 0LL;
 LABEL_22:
-          UISprite__set_spriteName(IsNullOrEmpty, v10, 0LL);
+          UISprite__set_spriteName(IsNullOrEmpty, v9, 0LL);
           return;
         }
       }
@@ -374,51 +366,48 @@ LABEL_22:
       IsNullOrEmpty = this->fields.friendshipUpItemIconSprite;
       if ( IsNullOrEmpty )
       {
-        v10 = v5;
+        v9 = v4;
         goto LABEL_22;
       }
     }
-    sub_1C1AE30(IsNullOrEmpty, v8);
+    sub_1C22094(IsNullOrEmpty, v7);
   }
-  v6 = this->fields.friendshipUpItemIconSprite;
+  v5 = this->fields.friendshipUpItemIconSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(v6, v5, 0LL);
+  AtlasManager__SetEventSprite(v5, v4, 0LL);
 }
 
 
 void __fastcall FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   UILabel_o *friendshipUpEndedLabel; // x0
   UnityEngine_Object_o *trueTypeFont; // x20
   struct FriendshipUpItemInfo_o *friendshipUpItemInfo; // x8
   int64_t EndedAt_k__BackingField; // x20
   System_String_o *RestTime2; // x0
-  const MethodInfo *v12; // x2
+  const MethodInfo *v8; // x2
   FriendshipUpItemUseItem_o *Time; // x0
-  const MethodInfo *v14; // x3
+  const MethodInfo *v10; // x3
   struct CondensedScaleLabel_o **p_friendshipUpEndedCondensedScaleLabel; // x20
   UnityEngine_Object_o *friendshipUpEndedCondensedScaleLabel; // x21
-  UnityEngine_Object_o *v17; // x21
+  Il2CppObject *Component_object; // x0
+  UnityEngine_Object_o *v14; // x21
   int mWidth; // w20
-  float v19; // s0
+  float v16; // s0
   struct UILabel_o *friendshipUpStringLabel; // x8
   UnityEngine_GameObject_o *friendshipUpItemEnableTimeObj; // x19
-  FriendshipUpItemUseItem_c *v22; // x0
-  float v23; // s8
+  FriendshipUpItemUseItem_c *v19; // x0
+  float v20; // s8
 
-  if ( (byte_4BC35EA & 1) == 0 )
+  if ( (byte_4BD806B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___, method);
-    sub_1C1ABD4(&FriendshipUpItemUseItem_TypeInfo, v3);
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, v4);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v5);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v6);
-    byte_4BC35EA = 1;
+    sub_1C21E38(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+    sub_1C21E38(&FriendshipUpItemUseItem_TypeInfo);
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BD806B = 1;
   }
   friendshipUpEndedLabel = this->fields.friendshipUpEndedLabel;
   if ( !friendshipUpEndedLabel )
@@ -439,7 +428,7 @@ void __fastcall FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   RestTime2 = LocalizationManager__GetRestTime2(EndedAt_k__BackingField, -1LL, 0LL);
-  FriendshipUpItemUseItem__SetParamsToBehindText(this, RestTime2, v12);
+  FriendshipUpItemUseItem__SetParamsToBehindText(this, RestTime2, v8);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = (FriendshipUpItemUseItem_o *)NetworkManager__getTime(0LL);
@@ -447,7 +436,7 @@ void __fastcall FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_
     Time,
     EndedAt_k__BackingField - (_QWORD)Time,
     this->fields.friendshipUpEndedLabel,
-    v14);
+    v10);
   p_friendshipUpEndedCondensedScaleLabel = &this->fields.friendshipUpEndedCondensedScaleLabel;
   friendshipUpEndedCondensedScaleLabel = (UnityEngine_Object_o *)this->fields.friendshipUpEndedCondensedScaleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -457,15 +446,16 @@ void __fastcall FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_
     friendshipUpEndedLabel = this->fields.friendshipUpEndedLabel;
     if ( !friendshipUpEndedLabel )
       goto LABEL_31;
-    *p_friendshipUpEndedCondensedScaleLabel = (struct CondensedScaleLabel_o *)UnityEngine_Component__GetComponent_object_(
-                                                                                (UnityEngine_Component_o *)friendshipUpEndedLabel,
-                                                                                (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
-    sub_1C1AB78(&this->fields.friendshipUpEndedCondensedScaleLabel);
+    Component_object = UnityEngine_Component__GetComponent_object_(
+                         (UnityEngine_Component_o *)friendshipUpEndedLabel,
+                         (const MethodInfo_2FA68A8 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+    *p_friendshipUpEndedCondensedScaleLabel = (struct CondensedScaleLabel_o *)Component_object;
+    sub_1C21DDC(&this->fields.friendshipUpEndedCondensedScaleLabel, Component_object);
   }
-  v17 = (UnityEngine_Object_o *)*p_friendshipUpEndedCondensedScaleLabel;
+  v14 = (UnityEngine_Object_o *)*p_friendshipUpEndedCondensedScaleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v17, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v14, 0LL, 0LL) )
   {
     friendshipUpEndedLabel = (UILabel_o *)*p_friendshipUpEndedCondensedScaleLabel;
     if ( *p_friendshipUpEndedCondensedScaleLabel )
@@ -479,7 +469,7 @@ void __fastcall FriendshipUpItemUseItem__SetLabelUpdate(FriendshipUpItemUseItem_
       }
     }
 LABEL_31:
-    sub_1C1AE30(friendshipUpEndedLabel, method);
+    sub_1C22094(friendshipUpEndedLabel, method);
   }
 LABEL_24:
   friendshipUpEndedLabel = this->fields.friendshipUpEndedLabel;
@@ -496,23 +486,23 @@ LABEL_24:
                                           0LL);
   if ( !friendshipUpEndedLabel )
     goto LABEL_31;
-  LODWORD(v19) = (unsigned int)UnityEngine_Transform__get_localScale(
+  LODWORD(v16) = (unsigned int)UnityEngine_Transform__get_localScale(
                                  (UnityEngine_Transform_o *)friendshipUpEndedLabel,
                                  0LL);
   friendshipUpStringLabel = this->fields.friendshipUpStringLabel;
   if ( !friendshipUpStringLabel )
     goto LABEL_31;
   friendshipUpItemEnableTimeObj = this->fields.friendshipUpItemEnableTimeObj;
-  v22 = FriendshipUpItemUseItem_TypeInfo;
-  v23 = (float)((float)(v19 * (float)mWidth) + (float)friendshipUpStringLabel->fields.mWidth) * 0.5;
+  v19 = FriendshipUpItemUseItem_TypeInfo;
+  v20 = (float)((float)(v16 * (float)mWidth) + (float)friendshipUpStringLabel->fields.mWidth) * 0.5;
   if ( !FriendshipUpItemUseItem_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FriendshipUpItemUseItem_TypeInfo);
-    v22 = FriendshipUpItemUseItem_TypeInfo;
+    v19 = FriendshipUpItemUseItem_TypeInfo;
   }
-  GameObjectExtensions__SetLocalPosition_34756308(
+  GameObjectExtensions__SetLocalPosition_34797668(
     friendshipUpItemEnableTimeObj,
-    v22->static_fields->FRIEND_SHIP_TIME_LABEL_STANDARD_POSITION_X - v23,
+    v19->static_fields->FRIEND_SHIP_TIME_LABEL_STANDARD_POSITION_X - v20,
     -21.5,
     0LL);
 }
@@ -520,97 +510,91 @@ LABEL_24:
 
 void __fastcall FriendshipUpItemUseItem__SetNumLabel(FriendshipUpItemUseItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   struct FriendshipUpItemInfo_o *friendshipUpItemInfo; // x8
   int32_t Num_k__BackingField; // w20
-  FriendshipUpItemUseItem_c *v11; // x0
+  FriendshipUpItemUseItem_c *v5; // x0
   int32_t FRIENDSHIP_UP_ITEM_MAX_NUM; // w21
-  int32_t v13; // w0
-  struct FriendshipUpItemInfo_o *v14; // x8
-  int v15; // w20
+  int32_t v7; // w0
+  struct FriendshipUpItemInfo_o *v8; // x8
+  int v9; // w20
   int MaxNum_k__BackingField; // w22
-  System_String_o **v17; // x8
-  System_String_o *v18; // x21
-  System_String_o *v19; // x21
+  System_String_o **v11; // x8
+  System_String_o *v12; // x21
+  System_String_o *v13; // x21
   UILabel_o *friendshipUpItemUseNumLabel; // x19
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  Il2CppObject *v24; // x20
-  __int64 v25; // x2
-  __int64 v26; // x3
-  __int64 v27; // x4
-  Il2CppObject *v28; // x0
-  System_String_o *v29; // x0
-  __int64 v30; // x1
-  int v31; // [xsp+8h] [xbp-38h] BYREF
-  int v32; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  Il2CppObject *v18; // x20
+  __int64 v19; // x2
+  __int64 v20; // x3
+  __int64 v21; // x4
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x0
+  __int64 v24; // x1
+  int v25; // [xsp+8h] [xbp-38h] BYREF
+  int v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BC35ED & 1) == 0 )
+  if ( (byte_4BD806E & 1) == 0 )
   {
-    sub_1C1ABD4(&FriendshipUpItemUseItem_TypeInfo, method);
-    sub_1C1ABD4(&int_TypeInfo, v3);
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, v4);
-    sub_1C1ABD4(&System_Math_TypeInfo, v5);
-    sub_1C1ABD4(&StringLiteral_10458/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/, v6);
-    sub_1C1ABD4(&StringLiteral_10459/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX"*/, v7);
-    sub_1C1ABD4(&StringLiteral_10460/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX_WHEN_MAX"*/, v8);
-    byte_4BC35ED = 1;
+    sub_1C21E38(&FriendshipUpItemUseItem_TypeInfo);
+    sub_1C21E38(&int_TypeInfo);
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&System_Math_TypeInfo);
+    sub_1C21E38(&StringLiteral_10468/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/);
+    sub_1C21E38(&StringLiteral_10469/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX"*/);
+    sub_1C21E38(&StringLiteral_10470/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX_WHEN_MAX"*/);
+    byte_4BD806E = 1;
   }
   friendshipUpItemInfo = this->fields.friendshipUpItemInfo;
   if ( friendshipUpItemInfo )
     Num_k__BackingField = friendshipUpItemInfo->fields._Num_k__BackingField;
   else
     Num_k__BackingField = 0;
-  v11 = FriendshipUpItemUseItem_TypeInfo;
+  v5 = FriendshipUpItemUseItem_TypeInfo;
   if ( !FriendshipUpItemUseItem_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FriendshipUpItemUseItem_TypeInfo);
-    v11 = FriendshipUpItemUseItem_TypeInfo;
+    v5 = FriendshipUpItemUseItem_TypeInfo;
   }
-  FRIENDSHIP_UP_ITEM_MAX_NUM = v11->static_fields->FRIENDSHIP_UP_ITEM_MAX_NUM;
+  FRIENDSHIP_UP_ITEM_MAX_NUM = v5->static_fields->FRIENDSHIP_UP_ITEM_MAX_NUM;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v13 = System_Math__Min_63859840(Num_k__BackingField, FRIENDSHIP_UP_ITEM_MAX_NUM, 0LL);
-  v14 = this->fields.friendshipUpItemInfo;
-  v15 = v13;
-  if ( v14 )
+  v7 = System_Math__Min_63934948(Num_k__BackingField, FRIENDSHIP_UP_ITEM_MAX_NUM, 0LL);
+  v8 = this->fields.friendshipUpItemInfo;
+  v9 = v7;
+  if ( v8 )
   {
-    MaxNum_k__BackingField = v14->fields._MaxNum_k__BackingField;
+    MaxNum_k__BackingField = v8->fields._MaxNum_k__BackingField;
     if ( MaxNum_k__BackingField < 1 )
     {
-      v18 = (System_String_o *)StringLiteral_10458/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/;
+      v12 = (System_String_o *)StringLiteral_10468/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/;
     }
     else
     {
-      v17 = (System_String_o **)&StringLiteral_10459/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX"*/;
-      if ( v13 >= MaxNum_k__BackingField )
-        v17 = (System_String_o **)&StringLiteral_10460/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX_WHEN_MAX"*/;
-      v18 = *v17;
+      v11 = (System_String_o **)&StringLiteral_10469/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX"*/;
+      if ( v7 >= MaxNum_k__BackingField )
+        v11 = (System_String_o **)&StringLiteral_10470/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM_HAS_MAX_WHEN_MAX"*/;
+      v12 = *v11;
     }
   }
   else
   {
-    v18 = (System_String_o *)StringLiteral_10458/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/;
+    v12 = (System_String_o *)StringLiteral_10468/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM"*/;
     MaxNum_k__BackingField = 0;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = LocalizationManager__Get(v18, 0LL);
+  v13 = LocalizationManager__Get(v12, 0LL);
   friendshipUpItemUseNumLabel = this->fields.friendshipUpItemUseNumLabel;
-  v32 = v15;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v21, v22, v23);
-  v31 = MaxNum_k__BackingField;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v25, v26, v27);
-  v29 = System_String__Format_63054740(v19, v24, v28, 0LL);
+  v26 = v9;
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v15, v16, v17);
+  v25 = MaxNum_k__BackingField;
+  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v19, v20, v21);
+  v23 = System_String__Format_63129848(v13, v18, v22, 0LL);
   if ( !friendshipUpItemUseNumLabel )
-    sub_1C1AE30(v29, v30);
-  UILabel__set_text(friendshipUpItemUseNumLabel, v29, 0LL);
+    sub_1C22094(v23, v24);
+  UILabel__set_text(friendshipUpItemUseNumLabel, v23, 0LL);
 }
 
 
@@ -623,7 +607,7 @@ void __fastcall FriendshipUpItemUseItem__SetParamsToBehindText(
 
   friendshipUpEndedLabel = this->fields.friendshipUpEndedLabel;
   if ( !friendshipUpEndedLabel )
-    sub_1C1AE30(0LL, time);
+    sub_1C22094(0LL, time);
   UILabel__set_text(friendshipUpEndedLabel, time, 0LL);
 }
 
@@ -645,7 +629,7 @@ void __fastcall FriendshipUpItemUseItem__SetRemainTime(
   if ( (int)remainTime / 86400 >= 1 )
     v5 = 1.0;
   if ( !label )
-    sub_1C1AE30(this, remainTime);
+    sub_1C22094(this, remainTime);
   v6 = 1.0;
   if ( (int)remainTime / 86400 < 1 )
     v4 = 0.90196;
@@ -677,30 +661,28 @@ void __fastcall FriendshipUpItemUseItem__SetWaveBattleRestart(
         bool showTimeLimit,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
   UnityEngine_Component_o *friendshipUpItemUseSprite; // x0
   UnityEngine_GameObject_o *gameObject; // x0
+  UnityEngine_GameObject_o *v11; // x0
+  UnityEngine_GameObject_o *v12; // x0
   UnityEngine_GameObject_o *v13; // x0
-  UnityEngine_GameObject_o *v14; // x0
-  UnityEngine_GameObject_o *v15; // x0
   UILabel_o *friendshipUpItemUseFixAutoUseLabel; // x20
-  UnityEngine_GameObject_o *v17; // x0
-  UnityEngine_GameObject_o *v18; // x0
-  float v19; // s0
-  UILabel_o *v20; // x21
+  UnityEngine_GameObject_o *v15; // x0
+  UnityEngine_GameObject_o *v16; // x0
+  float v17; // s0
+  UILabel_o *v18; // x21
+  UnityEngine_GameObject_o *v19; // x0
+  UnityEngine_GameObject_o *v20; // x0
   UnityEngine_GameObject_o *v21; // x0
   UnityEngine_GameObject_o *v22; // x0
   UnityEngine_GameObject_o *v23; // x0
-  UnityEngine_GameObject_o *v24; // x0
-  UnityEngine_GameObject_o *v25; // x0
 
-  if ( (byte_4BC35EF & 1) == 0 )
+  if ( (byte_4BD8070 & 1) == 0 )
   {
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, isUse);
-    sub_1C1ABD4(&StringLiteral_10464/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_UNUSED"*/, v9);
-    sub_1C1ABD4(&StringLiteral_10457/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_IN_USE"*/, v10);
-    byte_4BC35EF = 1;
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_10474/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_UNUSED"*/);
+    sub_1C21E38(&StringLiteral_10467/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_IN_USE"*/);
+    byte_4BD8070 = 1;
   }
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseSprite;
   if ( !friendshipUpItemUseSprite )
@@ -753,31 +735,31 @@ void __fastcall FriendshipUpItemUseItem__SetWaveBattleRestart(
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
   gameObject = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalPosition_34756308(gameObject, -44.5, 14.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_34797668(gameObject, -44.5, 14.0, 0LL);
   if ( isValid )
   {
     friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemIconSprite;
     if ( !friendshipUpItemUseSprite )
       goto LABEL_41;
-    v13 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-    GameObjectExtensions__SetLocalPositionY(v13, 4.0, 0LL);
+    v11 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+    GameObjectExtensions__SetLocalPositionY(v11, 4.0, 0LL);
     friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixHaveLabel;
     if ( !friendshipUpItemUseSprite )
       goto LABEL_41;
-    v14 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-    GameObjectExtensions__SetLocalPositionX(v14, -10.5, 0LL);
+    v12 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+    GameObjectExtensions__SetLocalPositionX(v12, -10.5, 0LL);
     friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseNumLabel;
     if ( !friendshipUpItemUseSprite )
       goto LABEL_41;
-    v15 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-    GameObjectExtensions__SetLocalPositionX(v15, 42.5, 0LL);
+    v13 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+    GameObjectExtensions__SetLocalPositionX(v13, 42.5, 0LL);
     if ( !isUse )
     {
       friendshipUpItemUseFixAutoUseLabel = this->fields.friendshipUpItemUseFixAutoUseLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       friendshipUpItemUseSprite = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                               (System_String_o *)StringLiteral_10464/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_UNUSED"*/,
+                                                               (System_String_o *)StringLiteral_10474/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_UNUSED"*/,
                                                                0LL);
       if ( friendshipUpItemUseFixAutoUseLabel )
       {
@@ -785,15 +767,15 @@ void __fastcall FriendshipUpItemUseItem__SetWaveBattleRestart(
         friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
         if ( friendshipUpItemUseSprite )
         {
-          v17 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-          GameObjectExtensions__SetLocalScaleX(v17, 0.85, 0LL);
+          v15 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+          GameObjectExtensions__SetLocalScaleX(v15, 0.85, 0LL);
           friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
           if ( friendshipUpItemUseSprite )
           {
-            v18 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-            v19 = 10.5;
+            v16 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+            v17 = 10.5;
 LABEL_33:
-            GameObjectExtensions__SetLocalPositionX(v18, v19, 0LL);
+            GameObjectExtensions__SetLocalPositionX(v16, v17, 0LL);
             return;
           }
         }
@@ -805,42 +787,42 @@ LABEL_33:
   {
     return;
   }
-  v20 = this->fields.friendshipUpItemUseFixAutoUseLabel;
+  v18 = this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_10457/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_IN_USE"*/,
+                                                           (System_String_o *)StringLiteral_10467/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_IN_USE"*/,
                                                            0LL);
-  if ( !v20 )
+  if ( !v18 )
     goto LABEL_41;
-  UILabel__set_text(v20, (System_String_o *)friendshipUpItemUseSprite, 0LL);
+  UILabel__set_text(v18, (System_String_o *)friendshipUpItemUseSprite, 0LL);
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
-  v21 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalScaleX(v21, 1.0, 0LL);
+  v19 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+  GameObjectExtensions__SetLocalScaleX(v19, 1.0, 0LL);
   if ( isValid )
   {
     friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
     if ( friendshipUpItemUseSprite )
     {
-      v18 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-      v19 = -4.5;
+      v16 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+      v17 = -4.5;
       goto LABEL_33;
     }
 LABEL_41:
-    sub_1C1AE30(friendshipUpItemUseSprite, isUse);
+    sub_1C22094(friendshipUpItemUseSprite, isUse);
   }
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemIconSprite;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
-  v22 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalPositionY(v22, 2.0, 0LL);
+  v20 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+  GameObjectExtensions__SetLocalPositionY(v20, 2.0, 0LL);
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemIconSprite;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
-  v23 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v23, -26.5, 0LL);
+  v21 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v21, -26.5, 0LL);
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
@@ -848,13 +830,13 @@ LABEL_41:
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
-  v24 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v24, 16.5, 0LL);
+  v22 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v22, 16.5, 0LL);
   friendshipUpItemUseSprite = (UnityEngine_Component_o *)this->fields.friendshipUpItemUseFixAutoUseLabel;
   if ( !friendshipUpItemUseSprite )
     goto LABEL_41;
-  v25 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
-  GameObjectExtensions__SetLocalPositionY(v25, -0.5, 0LL);
+  v23 = UnityEngine_Component__get_gameObject(friendshipUpItemUseSprite, 0LL);
+  GameObjectExtensions__SetLocalPositionY(v23, -0.5, 0LL);
 }
 
 
@@ -878,6 +860,6 @@ void __fastcall FriendshipUpItemUseItem__UpdateButtonAlpha(FriendshipUpItemUseIt
 
   friendshipUpItemUserButton = (UICommonButtonColor_o *)this->fields.friendshipUpItemUserButton;
   if ( !friendshipUpItemUserButton )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   UICommonButtonColor__UpdateColor(friendshipUpItemUserButton, 0, 0LL);
 }

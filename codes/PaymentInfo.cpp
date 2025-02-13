@@ -36,19 +36,19 @@ void __fastcall PaymentInfo___ctor(PaymentInfo_o *this, const MethodInfo *method
   FollowerInfo_o *v36; // x6
   PartyListViewItem_o *v37; // x7
 
-  if ( (byte_4BC73EC & 1) == 0 )
+  if ( (byte_4BDBE82 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
-    byte_4BC73EC = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDBE82 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v3 = StringLiteral_1/*""*/;
   this->fields._State_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   this->fields._Time_k__BackingField = 0LL;
   v10 = StringLiteral_1/*""*/;
   this->fields._ProductId_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ProductId_k__BackingField,
     (int64_t)v10,
     v11,
@@ -59,7 +59,7 @@ void __fastcall PaymentInfo___ctor(PaymentInfo_o *this, const MethodInfo *method
     v16);
   v17 = StringLiteral_1/*""*/;
   this->fields._BaseReceipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BaseReceipt_k__BackingField,
     (int64_t)v17,
     v18,
@@ -70,7 +70,7 @@ void __fastcall PaymentInfo___ctor(PaymentInfo_o *this, const MethodInfo *method
     v23);
   v24 = StringLiteral_1/*""*/;
   this->fields._Receipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Receipt_k__BackingField,
     (int64_t)v24,
     v25,
@@ -82,7 +82,7 @@ void __fastcall PaymentInfo___ctor(PaymentInfo_o *this, const MethodInfo *method
   *(_QWORD *)&this->fields._StoreError_k__BackingField = 0LL;
   v31 = StringLiteral_1/*""*/;
   this->fields._GoogleSignature_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._GoogleSignature_k__BackingField,
     (int64_t)v31,
     v32,
@@ -94,7 +94,6 @@ void __fastcall PaymentInfo___ctor(PaymentInfo_o *this, const MethodInfo *method
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall PaymentInfo__Clear(PaymentInfo_o *this, bool isClearErrorCode, const MethodInfo *method)
 {
   int32_t v3; // w3
@@ -133,18 +132,18 @@ void __fastcall PaymentInfo__Clear(PaymentInfo_o *this, bool isClearErrorCode, c
   int32_t StoreError_k__BackingField; // w8
   void *v39; // x1
 
-  if ( (byte_4BC73ED & 1) == 0 )
+  if ( (byte_4BDBE83 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, isClearErrorCode);
-    byte_4BC73ED = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDBE83 = 1;
   }
   v10 = StringLiteral_1/*""*/;
   this->fields._State_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v10, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v10, (int64_t)method, v3, v4, v5, v6, v7);
   this->fields._Time_k__BackingField = 0LL;
   v11 = StringLiteral_1/*""*/;
   this->fields._ProductId_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ProductId_k__BackingField,
     (int64_t)v11,
     v12,
@@ -155,7 +154,7 @@ void __fastcall PaymentInfo__Clear(PaymentInfo_o *this, bool isClearErrorCode, c
     v17);
   v18 = StringLiteral_1/*""*/;
   this->fields._BaseReceipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BaseReceipt_k__BackingField,
     (int64_t)v18,
     v19,
@@ -166,7 +165,7 @@ void __fastcall PaymentInfo__Clear(PaymentInfo_o *this, bool isClearErrorCode, c
     v24);
   v25 = StringLiteral_1/*""*/;
   this->fields._Receipt_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Receipt_k__BackingField,
     (int64_t)v25,
     v26,
@@ -183,7 +182,7 @@ void __fastcall PaymentInfo__Clear(PaymentInfo_o *this, bool isClearErrorCode, c
   this->fields._CumulativeAmount_k__BackingField = 0;
   v39 = StringLiteral_1/*""*/;
   this->fields._GoogleSignature_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._GoogleSignature_k__BackingField,
     (int64_t)v39,
     v32,
@@ -207,310 +206,296 @@ bool __fastcall PaymentInfo__ReadFile(
         bool isNewFormat,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  System_IO_Stream_o *v6; // x20
+  System_IO_BinaryReader_o *v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  System_IO_Stream_o *v20; // x20
-  System_IO_BinaryReader_o *v21; // x22
-  __int64 v22; // x0
-  __int64 v23; // x1
-  System_String_o *v24; // x20
+  System_String_o *v10; // x20
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v26; // x9
+  __int64 v12; // x9
   int32_t *p_offset; // x10
-  __int64 v28; // x0
-  System_String_o *v29; // x20
+  __int64 v14; // x0
+  System_String_o *v15; // x20
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
-  __int64 v31; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v32; // x20
+  __int64 v17; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v18; // x20
   Il2CppObject *Item; // x0
-  __int64 v34; // x1
-  struct System_String_o *v35; // x0
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
-  Il2CppObject *v42; // x0
-  __int64 v43; // x1
-  System_String_o *v44; // x0
-  Il2CppObject *v45; // x0
-  __int64 v46; // x1
-  struct System_String_o *v47; // x0
-  int64_t v48; // x2
-  int32_t v49; // w3
-  System_String_o *v50; // x4
-  BattleSetupInfo_o *v51; // x5
-  FollowerInfo_o *v52; // x6
-  PartyListViewItem_o *v53; // x7
-  Il2CppObject *v54; // x0
-  __int64 v55; // x1
-  struct System_String_o *v56; // x0
-  int64_t v57; // x2
-  int32_t v58; // w3
-  System_String_o *v59; // x4
-  BattleSetupInfo_o *v60; // x5
-  FollowerInfo_o *v61; // x6
-  PartyListViewItem_o *v62; // x7
-  Il2CppObject *v63; // x0
-  __int64 v64; // x1
-  struct System_String_o *v65; // x0
-  int64_t v66; // x2
-  int32_t v67; // w3
-  System_String_o *v68; // x4
-  BattleSetupInfo_o *v69; // x5
-  FollowerInfo_o *v70; // x6
-  PartyListViewItem_o *v71; // x7
-  Il2CppObject *v72; // x0
-  __int64 v73; // x1
-  System_String_o *v74; // x0
-  int32_t v75; // w0
-  Il2CppObject *v76; // x0
-  __int64 v77; // x1
-  System_String_o *v78; // x0
-  int64_t v79; // x2
-  int32_t v80; // w3
-  System_String_o *v81; // x4
-  BattleSetupInfo_o *v82; // x5
-  FollowerInfo_o *v83; // x6
-  PartyListViewItem_o *v84; // x7
-  int64_t v85; // x2
-  int32_t v86; // w3
-  System_String_o *v87; // x4
-  BattleSetupInfo_o *v88; // x5
-  FollowerInfo_o *v89; // x6
-  PartyListViewItem_o *v90; // x7
-  Il2CppObject *v91; // x0
-  __int64 v92; // x1
-  struct System_String_o *v93; // x1
-  void *v94; // x1
-  bool v97; // [xsp+Ch] [xbp-34h]
+  __int64 v20; // x1
+  struct System_String_o *v21; // x0
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  Il2CppObject *v28; // x0
+  __int64 v29; // x1
+  System_String_o *v30; // x0
+  Il2CppObject *v31; // x0
+  __int64 v32; // x1
+  struct System_String_o *v33; // x0
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  Il2CppObject *v40; // x0
+  __int64 v41; // x1
+  struct System_String_o *v42; // x0
+  int64_t v43; // x2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  BattleSetupInfo_o *v46; // x5
+  FollowerInfo_o *v47; // x6
+  PartyListViewItem_o *v48; // x7
+  Il2CppObject *v49; // x0
+  __int64 v50; // x1
+  struct System_String_o *v51; // x0
+  int64_t v52; // x2
+  int32_t v53; // w3
+  System_String_o *v54; // x4
+  BattleSetupInfo_o *v55; // x5
+  FollowerInfo_o *v56; // x6
+  PartyListViewItem_o *v57; // x7
+  Il2CppObject *v58; // x0
+  __int64 v59; // x1
+  System_String_o *v60; // x0
+  int32_t v61; // w0
+  Il2CppObject *v62; // x0
+  __int64 v63; // x1
+  System_String_o *v64; // x0
+  int64_t v65; // x2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  BattleSetupInfo_o *v68; // x5
+  FollowerInfo_o *v69; // x6
+  PartyListViewItem_o *v70; // x7
+  int64_t v71; // x2
+  int32_t v72; // w3
+  System_String_o *v73; // x4
+  BattleSetupInfo_o *v74; // x5
+  FollowerInfo_o *v75; // x6
+  PartyListViewItem_o *v76; // x7
+  Il2CppObject *v77; // x0
+  __int64 v78; // x1
+  struct System_String_o *v79; // x1
+  void *v80; // x1
+  bool v83; // [xsp+Ch] [xbp-34h]
 
-  v97 = isNewFormat;
-  if ( (byte_4BC73EE & 1) == 0 )
+  v83 = isNewFormat;
+  if ( (byte_4BDBE84 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_IO_BinaryReader_TypeInfo, filepath);
-    sub_1C1ABD4(&CatAndMouseGame_TypeInfo, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v9);
-    sub_1C1ABD4(&JsonManager_TypeInfo, v10);
-    sub_1C1ABD4(&StringLiteral_22886/*"paymentStoreError"*/, v11);
-    sub_1C1ABD4(&StringLiteral_22883/*"paymentReceipt"*/, v12);
-    sub_1C1ABD4(&StringLiteral_22880/*"paymentBaseReceipt"*/, v13);
-    sub_1C1ABD4(&StringLiteral_22887/*"paymentTime"*/, v14);
-    sub_1C1ABD4(&StringLiteral_22884/*"paymentSignature"*/, v15);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v16);
-    sub_1C1ABD4(&StringLiteral_22885/*"paymentState"*/, v17);
-    sub_1C1ABD4(&StringLiteral_22882/*"paymentProductId"*/, v18);
-    sub_1C1ABD4(&StringLiteral_18694/*"cumulativeAmount"*/, v19);
-    byte_4BC73EE = 1;
+    sub_1C21E38(&System_IO_BinaryReader_TypeInfo);
+    sub_1C21E38(&CatAndMouseGame_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_22905/*"paymentStoreError"*/);
+    sub_1C21E38(&StringLiteral_22902/*"paymentReceipt"*/);
+    sub_1C21E38(&StringLiteral_22899/*"paymentBaseReceipt"*/);
+    sub_1C21E38(&StringLiteral_22906/*"paymentTime"*/);
+    sub_1C21E38(&StringLiteral_22903/*"paymentSignature"*/);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    sub_1C21E38(&StringLiteral_22904/*"paymentState"*/);
+    sub_1C21E38(&StringLiteral_22901/*"paymentProductId"*/);
+    sub_1C21E38(&StringLiteral_18708/*"cumulativeAmount"*/);
+    byte_4BDBE84 = 1;
   }
   if ( !System_IO_File__Exists(filepath, 0LL) )
     return 0;
-  v20 = (System_IO_Stream_o *)System_IO_File__OpenRead(filepath, 0LL);
-  v21 = (System_IO_BinaryReader_o *)sub_1C1AE20(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v21, v20, 0LL);
-  if ( !v21 )
-    sub_1C1AE30(v22, v23);
-  v24 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v21->klass->vtable._22_ReadString.method)(
-                             v21,
-                             v21->klass->vtable._23_ReadChars.methodPtr);
-  klass = v21->klass;
-  v26 = *(unsigned __int16 *)(&v21->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v21->klass->_2.bitflags2 + 3) )
+  v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(filepath, 0LL);
+  v7 = (System_IO_BinaryReader_o *)sub_1C22084(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v7, v6, 0LL);
+  if ( !v7 )
+    sub_1C22094(v8, v9);
+  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
+                             v7,
+                             v7->klass->vtable._23_ReadChars.methodPtr);
+  klass = v7->klass;
+  v12 = *(unsigned __int16 *)(&v7->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v7->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v26;
+      --v12;
       p_offset += 4;
-      if ( !v26 )
+      if ( !v12 )
         goto LABEL_9;
     }
-    v28 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v14 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_9:
-    v28 = sub_1C6CBB4(v21, System_IDisposable_TypeInfo, 0LL);
+    v14 = sub_1C73E18(v7, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v28)(v21, *(_QWORD *)(v28 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v14)(v7, *(_QWORD *)(v14 + 8));
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v29 = CatAndMouseGame__MouseGame1(v24, 0, 0LL);
+  v15 = CatAndMouseGame__MouseGame1(v10, 0, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  Dictionary = JsonManager__getDictionary(v29, 0LL);
-  v32 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary;
+  Dictionary = JsonManager__getDictionary(v15, 0LL);
+  v18 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary;
   if ( !Dictionary )
-    sub_1C1AE30(0LL, v31);
+    sub_1C22094(0LL, v17);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-           (Il2CppObject *)StringLiteral_22885/*"paymentState"*/,
-           (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (Il2CppObject *)StringLiteral_22904/*"paymentState"*/,
+           (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
-    sub_1C1AE30(0LL, v34);
-  v35 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
+    sub_1C22094(0LL, v20);
+  v21 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
                                     Item,
                                     Item->klass->vtable[4].methodPtr);
-  this->fields._State_k__BackingField = v35;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v35, v36, v37, v38, v39, v40, v41);
-  v42 = System_Collections_Generic_Dictionary_object__object___get_Item(
-          v32,
-          (Il2CppObject *)StringLiteral_22887/*"paymentTime"*/,
-          (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v42 )
-    sub_1C1AE30(0LL, v43);
-  v44 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v42->klass->vtable[3].method)(
-                             v42,
-                             v42->klass->vtable[4].methodPtr);
-  this->fields._Time_k__BackingField = System_Int64__Parse(v44, 0LL);
-  v45 = System_Collections_Generic_Dictionary_object__object___get_Item(
-          v32,
-          (Il2CppObject *)StringLiteral_22882/*"paymentProductId"*/,
-          (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v45 )
-    sub_1C1AE30(0LL, v46);
-  v47 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v45->klass->vtable[3].method)(
-                                    v45,
-                                    v45->klass->vtable[4].methodPtr);
-  this->fields._ProductId_k__BackingField = v47;
-  sub_1C1AB78(
+  this->fields._State_k__BackingField = v21;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v21, v22, v23, v24, v25, v26, v27);
+  v28 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          v18,
+          (Il2CppObject *)StringLiteral_22906/*"paymentTime"*/,
+          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v28 )
+    sub_1C22094(0LL, v29);
+  v30 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v28->klass->vtable[3].method)(
+                             v28,
+                             v28->klass->vtable[4].methodPtr);
+  this->fields._Time_k__BackingField = System_Int64__Parse(v30, 0LL);
+  v31 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          v18,
+          (Il2CppObject *)StringLiteral_22901/*"paymentProductId"*/,
+          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v31 )
+    sub_1C22094(0LL, v32);
+  v33 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v31->klass->vtable[3].method)(
+                                    v31,
+                                    v31->klass->vtable[4].methodPtr);
+  this->fields._ProductId_k__BackingField = v33;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ProductId_k__BackingField,
-    (int64_t)v47,
-    v48,
-    v49,
-    v50,
-    v51,
-    v52,
-    v53);
-  v54 = System_Collections_Generic_Dictionary_object__object___get_Item(
-          v32,
-          (Il2CppObject *)StringLiteral_22880/*"paymentBaseReceipt"*/,
-          (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v54 )
-    sub_1C1AE30(0LL, v55);
-  v56 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v54->klass->vtable[3].method)(
-                                    v54,
-                                    v54->klass->vtable[4].methodPtr);
-  this->fields._BaseReceipt_k__BackingField = v56;
-  sub_1C1AB78(
+    (int64_t)v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
+  v40 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          v18,
+          (Il2CppObject *)StringLiteral_22899/*"paymentBaseReceipt"*/,
+          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v40 )
+    sub_1C22094(0LL, v41);
+  v42 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v40->klass->vtable[3].method)(
+                                    v40,
+                                    v40->klass->vtable[4].methodPtr);
+  this->fields._BaseReceipt_k__BackingField = v42;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BaseReceipt_k__BackingField,
-    (int64_t)v56,
-    v57,
-    v58,
-    v59,
-    v60,
-    v61,
-    v62);
-  v63 = System_Collections_Generic_Dictionary_object__object___get_Item(
-          v32,
-          (Il2CppObject *)StringLiteral_22883/*"paymentReceipt"*/,
-          (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v63 )
-    sub_1C1AE30(0LL, v64);
-  v65 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v63->klass->vtable[3].method)(
-                                    v63,
-                                    v63->klass->vtable[4].methodPtr);
-  this->fields._Receipt_k__BackingField = v65;
-  sub_1C1AB78(
+    (int64_t)v42,
+    v43,
+    v44,
+    v45,
+    v46,
+    v47,
+    v48);
+  v49 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          v18,
+          (Il2CppObject *)StringLiteral_22902/*"paymentReceipt"*/,
+          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v49 )
+    sub_1C22094(0LL, v50);
+  v51 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v49->klass->vtable[3].method)(
+                                    v49,
+                                    v49->klass->vtable[4].methodPtr);
+  this->fields._Receipt_k__BackingField = v51;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Receipt_k__BackingField,
-    (int64_t)v65,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70,
-    v71);
+    (int64_t)v51,
+    v52,
+    v53,
+    v54,
+    v55,
+    v56,
+    v57);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
-         v32,
-         (Il2CppObject *)StringLiteral_22886/*"paymentStoreError"*/,
-         (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         v18,
+         (Il2CppObject *)StringLiteral_22905/*"paymentStoreError"*/,
+         (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    v72 = System_Collections_Generic_Dictionary_object__object___get_Item(
-            v32,
-            (Il2CppObject *)StringLiteral_22886/*"paymentStoreError"*/,
-            (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    if ( !v72 )
-      sub_1C1AE30(0LL, v73);
-    v74 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v72->klass->vtable[3].method)(
-                               v72,
-                               v72->klass->vtable[4].methodPtr);
-    v75 = System_Int32__Parse(v74, 0LL);
+    v58 = System_Collections_Generic_Dictionary_object__object___get_Item(
+            v18,
+            (Il2CppObject *)StringLiteral_22905/*"paymentStoreError"*/,
+            (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    if ( !v58 )
+      sub_1C22094(0LL, v59);
+    v60 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v58->klass->vtable[3].method)(
+                               v58,
+                               v58->klass->vtable[4].methodPtr);
+    v61 = System_Int32__Parse(v60, 0LL);
   }
   else
   {
-    v75 = 0;
+    v61 = 0;
   }
-  this->fields._StoreError_k__BackingField = v75;
-  v76 = System_Collections_Generic_Dictionary_object__object___get_Item(
-          v32,
-          (Il2CppObject *)StringLiteral_18694/*"cumulativeAmount"*/,
-          (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v76 )
-    sub_1C1AE30(0LL, v77);
-  v78 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v76->klass->vtable[3].method)(
-                             v76,
-                             v76->klass->vtable[4].methodPtr);
-  this->fields._CumulativeAmount_k__BackingField = System_Int32__Parse(v78, 0LL);
-  if ( v97 )
+  this->fields._StoreError_k__BackingField = v61;
+  v62 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          v18,
+          (Il2CppObject *)StringLiteral_18708/*"cumulativeAmount"*/,
+          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v62 )
+    sub_1C22094(0LL, v63);
+  v64 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v62->klass->vtable[3].method)(
+                             v62,
+                             v62->klass->vtable[4].methodPtr);
+  this->fields._CumulativeAmount_k__BackingField = System_Int32__Parse(v64, 0LL);
+  if ( v83 )
   {
     if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
-           v32,
-           (Il2CppObject *)StringLiteral_22884/*"paymentSignature"*/,
-           (const MethodInfo_3302EE4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+           v18,
+           (Il2CppObject *)StringLiteral_22903/*"paymentSignature"*/,
+           (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     {
-      v91 = System_Collections_Generic_Dictionary_object__object___get_Item(
-              v32,
-              (Il2CppObject *)StringLiteral_22884/*"paymentSignature"*/,
-              (const MethodInfo_3302C70 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-      if ( !v91 )
-        sub_1C1AE30(0LL, v92);
-      v93 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v91->klass->vtable[3].method)(
-                                        v91,
-                                        v91->klass->vtable[4].methodPtr);
+      v77 = System_Collections_Generic_Dictionary_object__object___get_Item(
+              v18,
+              (Il2CppObject *)StringLiteral_22903/*"paymentSignature"*/,
+              (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+      if ( !v77 )
+        sub_1C22094(0LL, v78);
+      v79 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v77->klass->vtable[3].method)(
+                                        v77,
+                                        v77->klass->vtable[4].methodPtr);
     }
     else
     {
-      v93 = (struct System_String_o *)StringLiteral_1/*""*/;
+      v79 = (struct System_String_o *)StringLiteral_1/*""*/;
     }
-    this->fields._GoogleSignature_k__BackingField = v93;
-    sub_1C1AB78(
+    this->fields._GoogleSignature_k__BackingField = v79;
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&this->fields._GoogleSignature_k__BackingField,
-      (int64_t)v93,
-      v85,
-      v86,
-      v87,
-      v88,
-      v89,
-      v90);
+      (int64_t)v79,
+      v71,
+      v72,
+      v73,
+      v74,
+      v75,
+      v76);
   }
   else
   {
-    v94 = StringLiteral_1/*""*/;
+    v80 = StringLiteral_1/*""*/;
     this->fields._GoogleSignature_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&this->fields._GoogleSignature_k__BackingField,
-      (int64_t)v94,
-      v79,
-      v80,
-      v81,
-      v82,
-      v83,
-      v84);
+      (int64_t)v80,
+      v65,
+      v66,
+      v67,
+      v68,
+      v69,
+      v70);
   }
   return 1;
 }
@@ -518,159 +503,143 @@ LABEL_9:
 
 bool __fastcall PaymentInfo__WriteFile(PaymentInfo_o *this, System_String_o *filepath, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v21; // x21
-  __int64 v22; // x0
-  __int64 v23; // x1
-  __int64 v24; // x2
-  __int64 v25; // x3
-  __int64 v26; // x4
-  Il2CppObject *v27; // x0
-  __int64 v28; // x2
-  __int64 v29; // x3
-  __int64 v30; // x4
-  Il2CppObject *v31; // x0
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  Il2CppObject *v35; // x0
-  System_String_o *v36; // x20
-  System_String_o *v37; // x20
-  System_IO_Stream_o *v38; // x19
-  System_IO_BinaryWriter_o *v39; // x21
-  __int64 v40; // x0
-  __int64 v41; // x1
+  __int64 v8; // x2
+  __int64 v9; // x3
+  __int64 v10; // x4
+  Il2CppObject *v11; // x0
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  Il2CppObject *v15; // x0
+  __int64 v16; // x2
+  __int64 v17; // x3
+  __int64 v18; // x4
+  Il2CppObject *v19; // x0
+  System_String_o *v20; // x20
+  System_String_o *v21; // x20
+  System_IO_Stream_o *v22; // x19
+  System_IO_BinaryWriter_o *v23; // x21
+  __int64 v24; // x0
+  __int64 v25; // x1
   System_IO_BinaryWriter_c *klass; // x8
-  __int64 v43; // x9
+  __int64 v27; // x9
   int32_t *p_offset; // x10
-  __int64 v45; // x0
+  __int64 v29; // x0
   int32_t CumulativeAmount_k__BackingField; // [xsp+10h] [xbp-40h] BYREF
   int32_t StoreError_k__BackingField; // [xsp+14h] [xbp-3Ch] BYREF
   int64_t Time_k__BackingField; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4BC73EF & 1) == 0 )
+  if ( (byte_4BDBE85 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_IO_BinaryWriter_TypeInfo, filepath);
-    sub_1C1ABD4(&CatAndMouseGame_TypeInfo, v5);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v7);
-    sub_1C1ABD4(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v8);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v9);
-    sub_1C1ABD4(&int_TypeInfo, v10);
-    sub_1C1ABD4(&long_TypeInfo, v11);
-    sub_1C1ABD4(&JsonManager_TypeInfo, v12);
-    sub_1C1ABD4(&StringLiteral_22886/*"paymentStoreError"*/, v13);
-    sub_1C1ABD4(&StringLiteral_22883/*"paymentReceipt"*/, v14);
-    sub_1C1ABD4(&StringLiteral_22880/*"paymentBaseReceipt"*/, v15);
-    sub_1C1ABD4(&StringLiteral_22887/*"paymentTime"*/, v16);
-    sub_1C1ABD4(&StringLiteral_22884/*"paymentSignature"*/, v17);
-    sub_1C1ABD4(&StringLiteral_22885/*"paymentState"*/, v18);
-    sub_1C1ABD4(&StringLiteral_22882/*"paymentProductId"*/, v19);
-    sub_1C1ABD4(&StringLiteral_18694/*"cumulativeAmount"*/, v20);
-    byte_4BC73EF = 1;
+    sub_1C21E38(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C21E38(&CatAndMouseGame_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_1C21E38(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&int_TypeInfo);
+    sub_1C21E38(&long_TypeInfo);
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_22905/*"paymentStoreError"*/);
+    sub_1C21E38(&StringLiteral_22902/*"paymentReceipt"*/);
+    sub_1C21E38(&StringLiteral_22899/*"paymentBaseReceipt"*/);
+    sub_1C21E38(&StringLiteral_22906/*"paymentTime"*/);
+    sub_1C21E38(&StringLiteral_22903/*"paymentSignature"*/);
+    sub_1C21E38(&StringLiteral_22904/*"paymentState"*/);
+    sub_1C21E38(&StringLiteral_22901/*"paymentProductId"*/);
+    sub_1C21E38(&StringLiteral_18708/*"cumulativeAmount"*/);
+    byte_4BDBE85 = 1;
   }
-  v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C1AE20(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C22084(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v21,
-    (const MethodInfo_3302340 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-  if ( !v21 )
-    sub_1C1AE30(v22, v23);
+    v5,
+    (const MethodInfo_3315CD0 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+  if ( !v5 )
+    sub_1C22094(v6, v7);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22885/*"paymentState"*/,
+    v5,
+    (Il2CppObject *)StringLiteral_22904/*"paymentState"*/,
     (Il2CppObject *)this->fields._State_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   Time_k__BackingField = this->fields._Time_k__BackingField;
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &Time_k__BackingField, v24, v25, v26);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &Time_k__BackingField, v8, v9, v10);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22887/*"paymentTime"*/,
-    v27,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    v5,
+    (Il2CppObject *)StringLiteral_22906/*"paymentTime"*/,
+    v11,
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22882/*"paymentProductId"*/,
+    v5,
+    (Il2CppObject *)StringLiteral_22901/*"paymentProductId"*/,
     (Il2CppObject *)this->fields._ProductId_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22880/*"paymentBaseReceipt"*/,
+    v5,
+    (Il2CppObject *)StringLiteral_22899/*"paymentBaseReceipt"*/,
     (Il2CppObject *)this->fields._BaseReceipt_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22883/*"paymentReceipt"*/,
+    v5,
+    (Il2CppObject *)StringLiteral_22902/*"paymentReceipt"*/,
     (Il2CppObject *)this->fields._Receipt_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   StoreError_k__BackingField = this->fields._StoreError_k__BackingField;
-  v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &StoreError_k__BackingField, v28, v29, v30);
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &StoreError_k__BackingField, v12, v13, v14);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22886/*"paymentStoreError"*/,
-    v31,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    v5,
+    (Il2CppObject *)StringLiteral_22905/*"paymentStoreError"*/,
+    v15,
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   CumulativeAmount_k__BackingField = this->fields._CumulativeAmount_k__BackingField;
-  v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &CumulativeAmount_k__BackingField, v32, v33, v34);
+  v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &CumulativeAmount_k__BackingField, v16, v17, v18);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_18694/*"cumulativeAmount"*/,
-    v35,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    v5,
+    (Il2CppObject *)StringLiteral_18708/*"cumulativeAmount"*/,
+    v19,
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v21,
-    (Il2CppObject *)StringLiteral_22884/*"paymentSignature"*/,
+    v5,
+    (Il2CppObject *)StringLiteral_22903/*"paymentSignature"*/,
     (Il2CppObject *)this->fields._GoogleSignature_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v36 = JsonManager__toJson((Il2CppObject *)v21, 0, 0, 0LL);
+  v20 = JsonManager__toJson((Il2CppObject *)v5, 0, 0, 0LL);
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v37 = CatAndMouseGame__CatGame1(v36, 0, 0LL);
-  v38 = (System_IO_Stream_o *)System_IO_File__OpenWrite(filepath, 0LL);
-  v39 = (System_IO_BinaryWriter_o *)sub_1C1AE20(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63278860(v39, v38, 0LL);
-  if ( !v39 )
-    sub_1C1AE30(v40, v41);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v39->klass->vtable._22_Write.method)(
-    v39,
-    v37,
-    v39->klass[1]._1.image);
-  klass = v39->klass;
-  v43 = *(unsigned __int16 *)(&v39->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v39->klass->_2.bitflags2 + 3) )
+  v21 = CatAndMouseGame__CatGame1(v20, 0, 0LL);
+  v22 = (System_IO_Stream_o *)System_IO_File__OpenWrite(filepath, 0LL);
+  v23 = (System_IO_BinaryWriter_o *)sub_1C22084(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63353968(v23, v22, 0LL);
+  if ( !v23 )
+    sub_1C22094(v24, v25);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v23->klass->vtable._22_Write.method)(
+    v23,
+    v21,
+    v23->klass[1]._1.image);
+  klass = v23->klass;
+  v27 = *(unsigned __int16 *)(&v23->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v23->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v43;
+      --v27;
       p_offset += 4;
-      if ( !v43 )
+      if ( !v27 )
         goto LABEL_13;
     }
-    v45 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v29 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_13:
-    v45 = sub_1C6CBB4(v39, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1C73E18(v23, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v45)(v39, *(_QWORD *)(v45 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v29)(v23, *(_QWORD *)(v29 + 8));
   return 1;
 }
 
@@ -681,115 +650,104 @@ bool __fastcall PaymentInfo__WriteHistoryFile(
         System_String_o *state,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  System_Collections_Generic_Dictionary_object__object__o *v7; // x21
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  System_Collections_Generic_Dictionary_object__object__o *v18; // x21
-  __int64 v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  Il2CppObject *v24; // x0
-  System_String_o *v25; // x20
-  System_String_o *v26; // x20
-  System_IO_Stream_o *v27; // x21
-  System_IO_BinaryWriter_o *v28; // x19
-  __int64 v29; // x0
-  __int64 v30; // x1
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x4
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x20
+  System_String_o *v15; // x20
+  System_IO_Stream_o *v16; // x21
+  System_IO_BinaryWriter_o *v17; // x19
+  __int64 v18; // x0
+  __int64 v19; // x1
   System_IO_BinaryWriter_c *klass; // x8
-  __int64 v32; // x9
+  __int64 v21; // x9
   int32_t *p_offset; // x10
-  __int64 v34; // x0
+  __int64 v23; // x0
   int64_t Time_k__BackingField; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BC73F0 & 1) == 0 )
+  if ( (byte_4BDBE86 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_IO_BinaryWriter_TypeInfo, filepath);
-    sub_1C1ABD4(&CatAndMouseGame_TypeInfo, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v8);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v9);
-    sub_1C1ABD4(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v11);
-    sub_1C1ABD4(&long_TypeInfo, v12);
-    sub_1C1ABD4(&JsonManager_TypeInfo, v13);
-    sub_1C1ABD4(&StringLiteral_22883/*"paymentReceipt"*/, v14);
-    sub_1C1ABD4(&StringLiteral_22887/*"paymentTime"*/, v15);
-    sub_1C1ABD4(&StringLiteral_23915/*"state"*/, v16);
-    sub_1C1ABD4(&StringLiteral_22882/*"paymentProductId"*/, v17);
-    byte_4BC73F0 = 1;
+    sub_1C21E38(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C21E38(&CatAndMouseGame_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_1C21E38(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&long_TypeInfo);
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_22902/*"paymentReceipt"*/);
+    sub_1C21E38(&StringLiteral_22906/*"paymentTime"*/);
+    sub_1C21E38(&StringLiteral_23935/*"state"*/);
+    sub_1C21E38(&StringLiteral_22901/*"paymentProductId"*/);
+    byte_4BDBE86 = 1;
   }
-  v18 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C1AE20(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v7 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C22084(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v18,
-    (const MethodInfo_3302340 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
-  if ( !v18 )
-    sub_1C1AE30(v19, v20);
+    v7,
+    (const MethodInfo_3315CD0 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+  if ( !v7 )
+    sub_1C22094(v8, v9);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v18,
-    (Il2CppObject *)StringLiteral_23915/*"state"*/,
+    v7,
+    (Il2CppObject *)StringLiteral_23935/*"state"*/,
     (Il2CppObject *)state,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   Time_k__BackingField = this->fields._Time_k__BackingField;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &Time_k__BackingField, v21, v22, v23);
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &Time_k__BackingField, v10, v11, v12);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v18,
-    (Il2CppObject *)StringLiteral_22887/*"paymentTime"*/,
-    v24,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    v7,
+    (Il2CppObject *)StringLiteral_22906/*"paymentTime"*/,
+    v13,
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v18,
-    (Il2CppObject *)StringLiteral_22882/*"paymentProductId"*/,
+    v7,
+    (Il2CppObject *)StringLiteral_22901/*"paymentProductId"*/,
     (Il2CppObject *)this->fields._ProductId_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   System_Collections_Generic_Dictionary_object__object___set_Item(
-    v18,
-    (Il2CppObject *)StringLiteral_22883/*"paymentReceipt"*/,
+    v7,
+    (Il2CppObject *)StringLiteral_22902/*"paymentReceipt"*/,
     (Il2CppObject *)this->fields._Receipt_k__BackingField,
-    (const MethodInfo_3302CDC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    (const MethodInfo_331666C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v25 = JsonManager__toJson((Il2CppObject *)v18, 0, 0, 0LL);
+  v14 = JsonManager__toJson((Il2CppObject *)v7, 0, 0, 0LL);
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v26 = CatAndMouseGame__CatGame1(v25, 0, 0LL);
-  v27 = (System_IO_Stream_o *)System_IO_File__OpenWrite(filepath, 0LL);
-  v28 = (System_IO_BinaryWriter_o *)sub_1C1AE20(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63278860(v28, v27, 0LL);
-  if ( !v28 )
-    sub_1C1AE30(v29, v30);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v28->klass->vtable._22_Write.method)(
-    v28,
-    v26,
-    v28->klass[1]._1.image);
-  klass = v28->klass;
-  v32 = *(unsigned __int16 *)(&v28->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v28->klass->_2.bitflags2 + 3) )
+  v15 = CatAndMouseGame__CatGame1(v14, 0, 0LL);
+  v16 = (System_IO_Stream_o *)System_IO_File__OpenWrite(filepath, 0LL);
+  v17 = (System_IO_BinaryWriter_o *)sub_1C22084(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63353968(v17, v16, 0LL);
+  if ( !v17 )
+    sub_1C22094(v18, v19);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, System_String_o *, void *))v17->klass->vtable._22_Write.method)(
+    v17,
+    v15,
+    v17->klass[1]._1.image);
+  klass = v17->klass;
+  v21 = *(unsigned __int16 *)(&v17->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v17->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v32;
+      --v21;
       p_offset += 4;
-      if ( !v32 )
+      if ( !v21 )
         goto LABEL_13;
     }
-    v34 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_13:
-    v34 = sub_1C6CBB4(v28, System_IDisposable_TypeInfo, 0LL);
+    v23 = sub_1C73E18(v17, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v34)(v28, *(_QWORD *)(v34 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v17, *(_QWORD *)(v23 + 8));
   return 1;
 }
 
@@ -851,7 +809,7 @@ void __fastcall PaymentInfo__set_BaseReceipt(PaymentInfo_o *this, System_String_
   PartyListViewItem_o *v7; // x7
 
   this->fields._BaseReceipt_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BaseReceipt_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -878,7 +836,7 @@ void __fastcall PaymentInfo__set_GoogleSignature(PaymentInfo_o *this, System_Str
   PartyListViewItem_o *v7; // x7
 
   this->fields._GoogleSignature_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._GoogleSignature_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -899,7 +857,7 @@ void __fastcall PaymentInfo__set_ProductId(PaymentInfo_o *this, System_String_o 
   PartyListViewItem_o *v7; // x7
 
   this->fields._ProductId_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ProductId_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -920,7 +878,7 @@ void __fastcall PaymentInfo__set_Receipt(PaymentInfo_o *this, System_String_o *v
   PartyListViewItem_o *v7; // x7
 
   this->fields._Receipt_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Receipt_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -941,7 +899,7 @@ void __fastcall PaymentInfo__set_State(PaymentInfo_o *this, System_String_o *val
   PartyListViewItem_o *v7; // x7
 
   this->fields._State_k__BackingField = value;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 

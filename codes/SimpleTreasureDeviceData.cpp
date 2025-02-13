@@ -18,10 +18,10 @@ bool __fastcall SimpleTreasureDeviceData__Equals(
   _QWORD *v6; // x0
   bool result; // w0
 
-  if ( (byte_4BCA044 & 1) == 0 )
+  if ( (byte_4BDEAF2 & 1) == 0 )
   {
-    sub_1C1ABD4(&SimpleTreasureDeviceData_TypeInfo, obj);
-    byte_4BCA044 = 1;
+    sub_1C21E38(&SimpleTreasureDeviceData_TypeInfo);
+    byte_4BDEAF2 = 1;
   }
   result = obj
         && (SimpleTreasureDeviceData_c *)obj->klass == SimpleTreasureDeviceData_TypeInfo
@@ -31,7 +31,7 @@ bool __fastcall SimpleTreasureDeviceData__Equals(
 }
 
 
-bool __fastcall SimpleTreasureDeviceData__Equals_43932832(
+bool __fastcall SimpleTreasureDeviceData__Equals_43988572(
         SimpleTreasureDeviceData_o this,
         SimpleTreasureDeviceData_o toCompare,
         const MethodInfo *method)
@@ -45,17 +45,17 @@ int32_t __fastcall SimpleTreasureDeviceData__GetHashCode(SimpleTreasureDeviceDat
   System_Tuple_T1__T2__o *int__int; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BCA045 & 1) == 0 )
+  if ( (byte_4BDEAF3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Tuple_Create_int__int___, method);
-    byte_4BCA045 = 1;
+    sub_1C21E38(&Method_System_Tuple_Create_int__int___);
+    byte_4BDEAF3 = 1;
   }
   int__int = System_Tuple__Create_int__int_(
                *(_DWORD *)this.fields.id,
                *(_DWORD *)(*(_QWORD *)&this + 4LL),
-               (const MethodInfo_304FE78 *)Method_System_Tuple_Create_int__int___);
+               (const MethodInfo_30607EC *)Method_System_Tuple_Create_int__int___);
   if ( !int__int )
-    sub_1C1AE30(0LL, v4);
+    sub_1C22094(0LL, v4);
   return ((__int64 (__fastcall *)(System_Tuple_T1__T2__o *, Il2CppMethodPointer))int__int->klass->vtable._2_GetHashCode.method)(
            int__int,
            int__int->klass->vtable._3_ToString.methodPtr);

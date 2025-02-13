@@ -1,9 +1,9 @@
 void __fastcall TermsOfUseDlg___ctor(TermsOfUseDlg_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC5D2A & 1) == 0 )
+  if ( (byte_4BDA7B9 & 1) == 0 )
   {
-    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
-    byte_4BC5D2A = 1;
+    sub_1C21E38(&BaseDialog_TypeInfo);
+    byte_4BDA7B9 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,7 +28,7 @@ void __fastcall TermsOfUseDlg__Callback(TermsOfUseDlg_o *this, bool result, cons
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C1AB78(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C21DDC(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       result,
@@ -41,11 +41,11 @@ void __fastcall TermsOfUseDlg__Close(TermsOfUseDlg_o *this, const MethodInfo *me
 {
   const MethodInfo *v2; // x2
 
-  TermsOfUseDlg__Close_37346324(this, 0LL, v2);
+  TermsOfUseDlg__Close_37387372(this, 0LL, v2);
 }
 
 
-void __fastcall TermsOfUseDlg__Close_37346324(
+void __fastcall TermsOfUseDlg__Close_37387372(
         TermsOfUseDlg_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -55,17 +55,16 @@ void __fastcall TermsOfUseDlg__Close_37346324(
   BattleSetupInfo_o *v5; // x5
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  __int64 v10; // x1
-  System_Action_o *v11; // x20
+  System_Action_o *v10; // x20
 
-  if ( (byte_4BC5D26 & 1) == 0 )
+  if ( (byte_4BDA7B5 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, callback);
-    sub_1C1ABD4(&Method_TermsOfUseDlg_EndClose__, v10);
-    byte_4BC5D26 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_TermsOfUseDlg_EndClose__);
+    byte_4BDA7B5 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -75,9 +74,9 @@ void __fastcall TermsOfUseDlg__Close_37346324(
     v6,
     v7);
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(v11, (Il2CppObject *)this, Method_TermsOfUseDlg_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
+  v10 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_TermsOfUseDlg_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
 
 
@@ -100,7 +99,7 @@ void __fastcall TermsOfUseDlg__EndClose(TermsOfUseDlg_o *this, const MethodInfo 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C1AB78(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C21DDC(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -118,10 +117,10 @@ void __fastcall TermsOfUseDlg__Init(TermsOfUseDlg_o *this, const MethodInfo *met
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BC5D24 & 1) == 0 )
+  if ( (byte_4BDA7B3 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
-    byte_4BC5D24 = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDA7B3 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -132,7 +131,7 @@ void __fastcall TermsOfUseDlg__Init(TermsOfUseDlg_o *this, const MethodInfo *met
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = this->fields.cancelLabel) == 0LL) )
   {
-    sub_1C1AE30(titleLabel, method);
+    sub_1C22094(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -146,18 +145,18 @@ void __fastcall TermsOfUseDlg__OnClickCancel(TermsOfUseDlg_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BC5D29 & 1) == 0 )
+  if ( (byte_4BDA7B8 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_TermsOfUseDlg_OnClickCancel__, method);
-    byte_4BC5D29 = 1;
+    sub_1C21E38(&Method_TermsOfUseDlg_OnClickCancel__);
+    byte_4BDA7B8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TermsOfUseDlg_OnClickCancel__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C1ABEC(Method_TermsOfUseDlg_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C21E50(Method_TermsOfUseDlg_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     TermsOfUseDlg__Callback(this, 0, v5);
   }
@@ -166,72 +165,67 @@ void __fastcall TermsOfUseDlg__OnClickCancel(TermsOfUseDlg_o *this, const Method
 
 void __fastcall TermsOfUseDlg__OnClickDecide(TermsOfUseDlg_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4BC5D28 & 1) == 0 )
+  if ( (byte_4BDA7B7 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_TermsOfUseDlg_OnClickDecide__, method);
-    sub_1C1ABD4(&TermsOfUseMenu_TypeInfo, v3);
-    byte_4BC5D28 = 1;
+    sub_1C21E38(&Method_TermsOfUseDlg_OnClickDecide__);
+    sub_1C21E38(&TermsOfUseMenu_TypeInfo);
+    byte_4BDA7B7 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v4 = Method_TermsOfUseDlg_OnClickDecide__;
+    v3 = Method_TermsOfUseDlg_OnClickDecide__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C1ABEC(Method_TermsOfUseDlg_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0, 0LL);
+      v3 = (_QWORD *)sub_1C21E50(Method_TermsOfUseDlg_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     if ( !TermsOfUseMenu_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TermsOfUseMenu_TypeInfo);
     TermsOfUseMenu__Save(0LL);
-    TermsOfUseDlg__Callback(this, 1, v6);
+    TermsOfUseDlg__Callback(this, 1, v5);
   }
 }
 
 
 void __fastcall TermsOfUseDlg__OnClickShow(TermsOfUseDlg_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   System_String_o *wvTitle; // x20
   int32_t wvAddress; // w21
-  System_String_o *WebViewAddress_39773136; // x21
-  System_Action_o *v12; // x22
+  System_String_o *WebViewAddress_39819560; // x21
+  System_Action_o *v8; // x22
 
-  if ( (byte_4BC5D27 & 1) == 0 )
+  if ( (byte_4BDA7B6 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v3);
-    sub_1C1ABD4(&Method_TermsOfUseDlg_OnClickShow__, v4);
-    sub_1C1ABD4(&Method_TermsOfUseDlg_OnEndShowWebView__, v5);
-    sub_1C1ABD4(&WebViewManager_TypeInfo, v6);
-    byte_4BC5D27 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_TermsOfUseDlg_OnClickShow__);
+    sub_1C21E38(&Method_TermsOfUseDlg_OnEndShowWebView__);
+    sub_1C21E38(&WebViewManager_TypeInfo);
+    byte_4BDA7B6 = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v7 = Method_TermsOfUseDlg_OnClickShow__;
+    v3 = Method_TermsOfUseDlg_OnClickShow__;
     if ( (*((_BYTE *)Method_TermsOfUseDlg_OnClickShow__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C1ABEC(Method_TermsOfUseDlg_OnClickShow__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C21E50(Method_TermsOfUseDlg_OnClickShow__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     wvTitle = this->fields.wvTitle;
     wvAddress = this->fields.wvAddress;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    WebViewAddress_39773136 = NetworkManager__getWebViewAddress_39773136(wvAddress, 0LL);
-    v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-    System_Action___ctor(v12, (Il2CppObject *)this, Method_TermsOfUseDlg_OnEndShowWebView__, 0LL);
+    WebViewAddress_39819560 = NetworkManager__getWebViewAddress_39819560(wvAddress, 0LL);
+    v8 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    System_Action___ctor(v8, (Il2CppObject *)this, Method_TermsOfUseDlg_OnEndShowWebView__, 0LL);
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
-    WebViewManager__OpenView(wvTitle, WebViewAddress_39773136, v12, 0LL);
+    WebViewManager__OpenView(wvTitle, WebViewAddress_39819560, v8, 0LL);
   }
 }
 
@@ -256,27 +250,26 @@ void __fastcall TermsOfUseDlg__Open(
         bool canMaskTouchClose,
         const MethodInfo *method)
 {
-  __int64 v19; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  System_Action_o *v28; // x20
+  __int64 v20; // x1
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  System_Action_o *v27; // x20
 
-  if ( (byte_4BC5D25 & 1) == 0 )
+  if ( (byte_4BDA7B4 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, title);
-    sub_1C1ABD4(&Method_TermsOfUseDlg_EndOpen__, v19);
-    byte_4BC5D25 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_TermsOfUseDlg_EndOpen__);
+    byte_4BDA7B4 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       (int64_t)message,
@@ -303,25 +296,25 @@ void __fastcall TermsOfUseDlg__Open(
           (gameObject = (UnityEngine_GameObject_o *)this->fields.decideLabel) == 0LL) )
     {
 LABEL_11:
-      sub_1C1AE30(gameObject, v21);
+      sub_1C22094(gameObject, v20);
     }
     UILabel__set_text((UILabel_o *)gameObject, decideMessage, 0LL);
     this->fields.wvAddress = address;
     this->fields.wvTitle = webViewTitle;
-    sub_1C1AB78(
+    sub_1C21DDC(
       (PartyOrganizationUtility_o *)&this->fields.wvTitle,
       (int64_t)webViewTitle,
+      v21,
       v22,
       v23,
       v24,
       v25,
-      v26,
-      v27);
+      v26);
     BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, canMaskTouchClose, 0LL);
     this->fields.state = 1;
-    v28 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-    System_Action___ctor(v28, (Il2CppObject *)this, Method_TermsOfUseDlg_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v28, 0, 0LL);
+    v27 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    System_Action___ctor(v27, (Il2CppObject *)this, Method_TermsOfUseDlg_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
   }
 }
 
@@ -341,10 +334,10 @@ void __fastcall TermsOfUseDlg__add_callbackFunc(
   TermsOfUseDlg_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BC5D22 & 1) == 0 )
+  if ( (byte_4BDA7B1 & 1) == 0 )
   {
-    sub_1C1ABD4(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
-    byte_4BC5D22 = 1;
+    sub_1C21E38(&TermsOfUseDlg_CallbackFunc_TypeInfo);
+    byte_4BDA7B1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -357,13 +350,13 @@ void __fastcall TermsOfUseDlg__add_callbackFunc(
       if ( (TermsOfUseDlg_CallbackFunc_c *)v8->klass != TermsOfUseDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
+    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C1B0F0(v8);
+  sub_1C22354(v8);
   TermsOfUseDlg__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -382,10 +375,10 @@ void __fastcall TermsOfUseDlg__remove_callbackFunc(
   TermsOfUseDlg_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BC5D23 & 1) == 0 )
+  if ( (byte_4BDA7B2 & 1) == 0 )
   {
-    sub_1C1ABD4(&TermsOfUseDlg_CallbackFunc_TypeInfo, value);
-    byte_4BC5D23 = 1;
+    sub_1C21E38(&TermsOfUseDlg_CallbackFunc_TypeInfo);
+    byte_4BDA7B2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -398,13 +391,13 @@ void __fastcall TermsOfUseDlg__remove_callbackFunc(
       if ( (TermsOfUseDlg_CallbackFunc_c *)v8->klass != TermsOfUseDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
+    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C1B0F0(v8);
+  sub_1C22354(v8);
   TermsOfUseDlg__Init(v11, v12);
 }
 
@@ -431,7 +424,7 @@ void __fastcall TermsOfUseDlg_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -442,12 +435,12 @@ void __fastcall TermsOfUseDlg_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C1AC94(v10) & 1) == 0 )
+  if ( (sub_1C21EF8(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C1AE4C(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C1ACFC(v14, 0LL);
+      v14 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C21F60(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -459,13 +452,12 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A5B10C;
+  this->fields.m_target = (Il2CppObject *)sub_1A620B4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A5B0C4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6206C;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall TermsOfUseDlg_CallbackFunc__BeginInvoke(
         TermsOfUseDlg_CallbackFunc_o *this,
         bool result,
@@ -477,14 +469,14 @@ System_IAsyncResult_o *__fastcall TermsOfUseDlg_CallbackFunc__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4BC5D2B & 1) == 0 )
+  if ( (byte_4BDA7BA & 1) == 0 )
   {
-    sub_1C1ABD4(&bool_TypeInfo, result);
-    byte_4BC5D2B = 1;
+    sub_1C21E38(&bool_TypeInfo);
+    byte_4BDA7BA = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C1AB88(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
 }
 
 
@@ -493,7 +485,7 @@ void __fastcall TermsOfUseDlg_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C1AB8C(result, 0LL, method);
+  sub_1C21DF0(result, 0LL, method);
 }
 
 

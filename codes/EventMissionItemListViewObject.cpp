@@ -11,10 +11,10 @@ EventMissionItemListViewItem_o *__fastcall EventMissionItemListViewObject__GetIt
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BCBB70 & 1) == 0 )
+  if ( (byte_4BE0632 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventMissionItemListViewItem_TypeInfo, method);
-    byte_4BCBB70 = 1;
+    sub_1C21E38(&EventMissionItemListViewItem_TypeInfo);
+    byte_4BE0632 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -41,7 +41,7 @@ void __fastcall EventMissionItemListViewObject__ModifyBoardImage(
   EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
   Item = EventMissionItemListViewObject__GetItem(this, v4);
   if ( !Item || !EventMissionItemDraw )
-    sub_1C1AE30(Item, v6);
+    sub_1C22094(Item, v6);
   EventMissionItemListViewItemDraw__ModifyBoardImage(EventMissionItemDraw, Item->fields.bannerGroupId, v7);
 }
 
@@ -58,10 +58,10 @@ void __fastcall EventMissionItemListViewObject__OnChangeAlphaAnim(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4BCBB71 & 1) == 0 )
+  if ( (byte_4BE0633 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventMissionItemListViewManager_TypeInfo, method);
-    byte_4BCBB71 = 1;
+    sub_1C21E38(&EventMissionItemListViewManager_TypeInfo);
+    byte_4BE0633 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -82,7 +82,7 @@ void __fastcall EventMissionItemListViewObject__OnChangeAlphaAnim(
     }
     EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, v3);
     if ( !EventMissionItemDraw )
-      sub_1C1AE30(0LL, v8);
+      sub_1C22094(0LL, v8);
     EventMissionItemListViewItemDraw__ChangeNextRewardIcon(
       EventMissionItemDraw,
       (EventMissionItemListViewManager_o *)v6,
@@ -103,10 +103,10 @@ void __fastcall EventMissionItemListViewObject__Update(
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4BCBB6F & 1) == 0 )
+  if ( (byte_4BE0631 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventMissionItemListViewItem_TypeInfo, method);
-    byte_4BCBB6F = 1;
+    sub_1C21E38(&EventMissionItemListViewItem_TypeInfo);
+    byte_4BE0631 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -120,7 +120,7 @@ void __fastcall EventMissionItemListViewObject__Update(
       {
         EventMissionItemDraw = EventMissionItemListViewObject__get_EventMissionItemDraw(this, method);
         if ( !EventMissionItemDraw )
-          sub_1C1AE30(0LL, v8);
+          sub_1C22094(0LL, v8);
         EventMissionItemListViewItemDraw__UpdateItem(EventMissionItemDraw, v6, this->fields.dispMode, v9);
       }
     }
@@ -135,10 +135,10 @@ EventMissionItemListViewItemDraw_o *__fastcall EventMissionItemListViewObject__g
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BCBB6E & 1) == 0 )
+  if ( (byte_4BE0630 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventMissionItemListViewItemDraw_TypeInfo, method);
-    byte_4BCBB6E = 1;
+    sub_1C21E38(&EventMissionItemListViewItemDraw_TypeInfo);
+    byte_4BE0630 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

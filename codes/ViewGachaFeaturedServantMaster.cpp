@@ -1,20 +1,17 @@
 void __fastcall ViewGachaFeaturedServantMaster___ctor(ViewGachaFeaturedServantMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8A13 & 1) == 0 )
+  if ( (byte_4BDD4B6 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__,
-      method);
-    byte_4BC8A13 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
+    byte_4BDD4B6 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     505,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall ViewGachaFeaturedServantMaster__GetFeaturedServantIds(
         ViewGachaFeaturedServantMaster_o *this,
         int32_t gachaId,
@@ -31,17 +28,17 @@ System_Int32_array *__fastcall ViewGachaFeaturedServantMaster__GetFeaturedServan
   __int64 v13; // x0
   ViewGachaFeaturedServantEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BC8A15 & 1) == 0 )
+  if ( (byte_4BDD4B8 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Array_Empty_int___, *(_QWORD *)&gachaId);
-    byte_4BC8A15 = 1;
+    sub_1C21E38(&Method_System_Array_Empty_int___);
+    byte_4BDD4B8 = 1;
   }
   entity = 0LL;
   v6 = ViewGachaFeaturedServantMaster__TryGetEntity(this, &entity, gachaId, v3);
   if ( v6 )
   {
     if ( !entity )
-      sub_1C1AE30(v6, v7);
+      sub_1C22094(v6, v7);
     p_svtIds = &entity->fields.svtIds;
   }
   else
@@ -50,17 +47,17 @@ System_Int32_array *__fastcall ViewGachaFeaturedServantMaster__GetFeaturedServan
     v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v11 )
     {
-      sub_1C6CB0C(Method_System_Array_Empty_int___);
+      sub_1C73D70(Method_System_Array_Empty_int___);
       v11 = v10[7];
     }
     v12 = *(_QWORD *)(v11 + 16);
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C6CAB0(inited);
+      v12 = sub_1C73D14(inited);
     if ( !*(_DWORD *)(v12 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v12);
     v13 = *(_QWORD *)(v10[7] + 16LL);
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C6CAB0(inited);
+      v13 = sub_1C73D14(inited);
     p_svtIds = *(System_Int32_array ***)(v13 + 184);
   }
   return *p_svtIds;
@@ -75,17 +72,15 @@ bool __fastcall ViewGachaFeaturedServantMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC8A14 & 1) == 0 )
+  if ( (byte_4BDD4B7 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__,
-      entity);
-    byte_4BC8A14 = 1;
+    sub_1C21E38(&Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
+    byte_4BDD4B7 = 1;
   }
   PK = (Il2CppObject *)ViewGachaFeaturedServantEntity__CreatePK(gachaId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_ViewGachaFeaturedServantMaster__ViewGachaFeaturedServantEntity__string__TryGetEntity__);
 }

@@ -18,9 +18,9 @@ void __fastcall PaymentHistoryListViewItem___ctor(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
   this->fields._UpsideMessage_k__BackingField = upsideMessage;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._UpsideMessage_k__BackingField,
     (int64_t)upsideMessage,
     v8,
@@ -30,7 +30,7 @@ void __fastcall PaymentHistoryListViewItem___ctor(
     v12,
     v13);
   this->fields._BottomMessage_k__BackingField = bottomMessage;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BottomMessage_k__BackingField,
     (int64_t)bottomMessage,
     v14,
@@ -70,7 +70,7 @@ void __fastcall PaymentHistoryListViewItem__set_BottomMessage(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BottomMessage_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BottomMessage_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -94,7 +94,7 @@ void __fastcall PaymentHistoryListViewItem__set_UpsideMessage(
   PartyListViewItem_o *v7; // x7
 
   this->fields._UpsideMessage_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._UpsideMessage_k__BackingField,
     (int64_t)value,
     (int64_t)method,

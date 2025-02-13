@@ -1,33 +1,32 @@
 void __fastcall BattleMessageEntity___ctor(BattleMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7722 & 1) == 0 )
+  if ( (byte_4BDC1B9 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC7722 = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDC1B9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BattleMessageEntity__CreatePK(
         int32_t id,
         int32_t idx,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4BC771F & 1) == 0 )
+  if ( (byte_4BDC1B6 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&idx);
-    byte_4BC771F = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4BDC1B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            idx,
            priority,
-           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,10 +50,10 @@ float __fastcall BattleMessageEntity__GetScriptFloat(
   BattleDataDefine_c *v8; // x8
   int v9; // w19
 
-  if ( (byte_4BC7720 & 1) == 0 )
+  if ( (byte_4BDC1B7 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleDataDefine_TypeInfo, key);
-    byte_4BC7720 = 1;
+    sub_1C21E38(&BattleDataDefine_TypeInfo);
+    byte_4BDC1B7 = 1;
   }
   ScriptInt = BattleMessageEntity__GetScriptInt(this, key, def, method);
   v8 = BattleDataDefine_TypeInfo;
@@ -74,14 +73,14 @@ int32_t __fastcall BattleMessageEntity__GetScriptInt(
         int64_t def,
         const MethodInfo *method)
 {
-  if ( (byte_4BC7721 & 1) == 0 )
+  if ( (byte_4BDC1B8 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_GetValue_long___, key);
-    byte_4BC7721 = 1;
+    sub_1C21E38(&Method_BasicHelper_GetValue_long___);
+    byte_4BDC1B8 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            key,
            def,
-           (const MethodInfo_2F8D340 *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_2F9DCB4 *)Method_BasicHelper_GetValue_long___);
 }

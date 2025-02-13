@@ -1,33 +1,32 @@
 void __fastcall ItemDropEfficiencyEntity___ctor(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7DD2 & 1) == 0 )
+  if ( (byte_4BDC869 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC7DD2 = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDC869 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ItemDropEfficiencyEntity__CreatePK(
         int32_t itemId,
         int32_t targetType,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4BC7DD1 & 1) == 0 )
+  if ( (byte_4BDC868 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&targetType);
-    byte_4BC7DD1 = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4BDC868 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            itemId,
            targetType,
            priority,
-           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,19 +48,19 @@ System_String_array *__fastcall ItemDropEfficiencyEntity__GetTransitionParams(
 
   transitionParam = this->fields.transitionParam;
   if ( !transitionParam )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   return System_String__Split(transitionParam, 0x2Fu, 0, 0LL);
 }
 
 
 bool __fastcall ItemDropEfficiencyEntity__IsMainScenario(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7DCF & 1) == 0 )
+  if ( (byte_4BDC866 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_21620/*"mainScenario"*/, method);
-    byte_4BC7DCF = 1;
+    sub_1C21E38(&StringLiteral_21638/*"mainScenario"*/);
+    byte_4BDC866 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21620/*"mainScenario"*/, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21638/*"mainScenario"*/, 0, 0LL) > 0;
 }
 
 
@@ -69,10 +68,10 @@ bool __fastcall ItemDropEfficiencyEntity__IsNotDisplayQuestInfo(
         ItemDropEfficiencyEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC7DD0 & 1) == 0 )
+  if ( (byte_4BDC867 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_22528/*"notDisplayQuestInfo"*/, method);
-    byte_4BC7DD0 = 1;
+    sub_1C21E38(&StringLiteral_22547/*"notDisplayQuestInfo"*/);
+    byte_4BDC867 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22528/*"notDisplayQuestInfo"*/, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22547/*"notDisplayQuestInfo"*/, 0, 0LL) > 0;
 }

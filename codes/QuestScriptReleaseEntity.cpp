@@ -1,33 +1,32 @@
 void __fastcall QuestScriptReleaseEntity___ctor(QuestScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC80BB & 1) == 0 )
+  if ( (byte_4BDCB57 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC80BB = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDCB57 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestScriptReleaseEntity__CreatePK(
         int32_t scriptId,
         int32_t phase,
         int32_t id,
         const MethodInfo *method)
 {
-  if ( (byte_4BC80B9 & 1) == 0 )
+  if ( (byte_4BDCB55 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase);
-    byte_4BC80B9 = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4BDCB55 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            scriptId,
            phase,
            id,
-           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -56,10 +55,10 @@ bool __fastcall QuestScriptReleaseEntity__IsOpen(QuestScriptReleaseEntity_o *thi
   System_Int32_array *targetIds; // x20
   int32_t targetNum; // w19
 
-  if ( (byte_4BC80BA & 1) == 0 )
+  if ( (byte_4BDCB56 & 1) == 0 )
   {
-    sub_1C1ABD4(&CondType_TypeInfo, method);
-    byte_4BC80BA = 1;
+    sub_1C21E38(&CondType_TypeInfo);
+    byte_4BDCB56 = 1;
   }
   condType = this->fields.condType;
   targetIds = this->fields.targetIds;

@@ -13,51 +13,49 @@ void __fastcall ExchangeSvtCoinComponent__Awake(ExchangeSvtCoinComponent_o *this
 void __fastcall ExchangeSvtCoinComponent__CloseMenu(ExchangeSvtCoinComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  __int64 v4; // x1
   ExchangeSvtCoinMenu_o *exchangeSvtCoinMenu; // x0
-  BaseMenu_o *v6; // x20
-  System_Action_o *v7; // x21
+  BaseMenu_o *v5; // x20
+  System_Action_o *v6; // x21
 
-  if ( (byte_4BC2D5F & 1) == 0 )
+  if ( (byte_4BD77E0 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__, v4);
-    byte_4BC2D5F = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__);
+    byte_4BD77E0 = 1;
   }
   exchangeSvtCoinMenu = this->fields.exchangeSvtCoinMenu;
   if ( !exchangeSvtCoinMenu
     || (ExchangeSvtCoinMenu__SetDispCurrencyInfo(exchangeSvtCoinMenu, 0, v2),
-        v6 = (BaseMenu_o *)this->fields.exchangeSvtCoinMenu,
-        v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo),
-        System_Action___ctor(v7, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__, 0LL),
-        !v6) )
+        v5 = (BaseMenu_o *)this->fields.exchangeSvtCoinMenu,
+        v6 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo),
+        System_Action___ctor(v6, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__, 0LL),
+        !v5) )
   {
-    sub_1C1AE30(exchangeSvtCoinMenu, method);
+    sub_1C22094(exchangeSvtCoinMenu, method);
   }
-  BaseMenu__Close(v6, v7, 0LL);
+  BaseMenu__Close(v5, v6, 0LL);
 }
 
 
 void __fastcall ExchangeSvtCoinComponent__ExitMenu(ExchangeSvtCoinComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   BaseMenu_o *exchangeSvtCoinMenu; // x20
-  System_Action_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  System_Action_o *v4; // x21
+  __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4BC2D60 & 1) == 0 )
+  if ( (byte_4BD77E1 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__, v3);
-    byte_4BC2D60 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__);
+    byte_4BD77E1 = 1;
   }
   exchangeSvtCoinMenu = (BaseMenu_o *)this->fields.exchangeSvtCoinMenu;
-  v5 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__, 0LL);
+  v4 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__, 0LL);
   if ( !exchangeSvtCoinMenu )
-    sub_1C1AE30(v6, v7);
-  BaseMenu__Close(exchangeSvtCoinMenu, v5, 0LL);
+    sub_1C22094(v5, v6);
+  BaseMenu__Close(exchangeSvtCoinMenu, v4, 0LL);
 }
 
 
@@ -72,7 +70,7 @@ void __fastcall ExchangeSvtCoinComponent__HideMenu(ExchangeSvtCoinComponent_o *t
                                                           (UnityEngine_Component_o *)this,
                                                           0LL)) == 0LL) )
   {
-    sub_1C1AE30(exchangeSvtCoinMenu, method);
+    sub_1C22094(exchangeSvtCoinMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeSvtCoinMenu, 0, 0LL);
 }
@@ -84,7 +82,7 @@ bool __fastcall ExchangeSvtCoinComponent__IsOpenFolder(ExchangeSvtCoinComponent_
 
   exchangeSvtCoinMenu = this->fields.exchangeSvtCoinMenu;
   if ( !exchangeSvtCoinMenu )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   return ExchangeSvtCoinMenu__get_IsActiveSvtCoinList(exchangeSvtCoinMenu, method);
 }
 
@@ -105,7 +103,7 @@ void __fastcall ExchangeSvtCoinComponent__OpenMenu(ExchangeSvtCoinComponent_o *t
     || (ExchangeSvtCoinMenu__SetDispCurrencyInfo((ExchangeSvtCoinMenu_o *)gameObject, 1, v5),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.exchangeSvtCoinMenu) == 0LL) )
   {
-    sub_1C1AE30(gameObject, v4);
+    sub_1C22094(gameObject, v4);
   }
   ExchangeSvtCoinMenu__Open((ExchangeSvtCoinMenu_o *)gameObject, v4);
 }
@@ -118,7 +116,7 @@ void __fastcall ExchangeSvtCoinComponent___CloseMenu_b__4_0(ExchangeSvtCoinCompo
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C1AE30(0LL, v3);
+    sub_1C22094(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -134,7 +132,7 @@ void __fastcall ExchangeSvtCoinComponent___ExitMenu_b__5_0(ExchangeSvtCoinCompon
                                                           (UnityEngine_Component_o *)this,
                                                           0LL)) == 0LL) )
   {
-    sub_1C1AE30(exchangeSvtCoinMenu, method);
+    sub_1C22094(exchangeSvtCoinMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeSvtCoinMenu, 0, 0LL);
 }

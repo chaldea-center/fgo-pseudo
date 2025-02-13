@@ -1,9 +1,9 @@
 void __fastcall UserItemListViewObject___ctor(UserItemListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC2E9B & 1) == 0 )
+  if ( (byte_4BD791C & 1) == 0 )
   {
-    sub_1C1ABD4(&ListViewObject_TypeInfo, method);
-    byte_4BC2E9B = 1;
+    sub_1C21E38(&ListViewObject_TypeInfo);
+    byte_4BD791C = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -15,20 +15,22 @@ void __fastcall UserItemListViewObject__Awake(UserItemListViewObject_o *this, co
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
+  Il2CppObject *Component_object; // x0
 
-  if ( (byte_4BC2E95 & 1) == 0 )
+  if ( (byte_4BD7916 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UserItemListViewItemDraw___, method);
-    byte_4BC2E95 = 1;
+    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_UserItemListViewItemDraw___);
+    byte_4BD7916 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C1AE30(0LL, v3);
-  this->fields.itemDraw = (struct UserItemListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                 dispObject,
-                                                                 (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UserItemListViewItemDraw___);
-  sub_1C1AB78(&this->fields.itemDraw);
+    sub_1C22094(0LL, v3);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_UserItemListViewItemDraw___);
+  this->fields.itemDraw = (struct UserItemListViewItemDraw_o *)Component_object;
+  sub_1C21DDC(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -39,10 +41,10 @@ UserItemListViewItem_o *__fastcall UserItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BC2E96 & 1) == 0 )
+  if ( (byte_4BD7917 & 1) == 0 )
   {
-    sub_1C1ABD4(&UserItemListViewItem_TypeInfo, method);
-    byte_4BC2E96 = 1;
+    sub_1C21E38(&UserItemListViewItem_TypeInfo);
+    byte_4BD7917 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -56,7 +58,6 @@ UserItemListViewItem_o *__fastcall UserItemListViewObject__GetItem(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall UserItemListViewObject__Init(
         UserItemListViewObject_o *this,
         int32_t initMode,
@@ -77,10 +78,10 @@ void __fastcall UserItemListViewObject__Init(
   int32_t v18; // w9
   struct System_Action_o *v19; // x19
 
-  if ( (byte_4BC2E98 & 1) == 0 )
+  if ( (byte_4BD7919 & 1) == 0 )
   {
-    sub_1C1ABD4(&UserItemListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4BC2E98 = 1;
+    sub_1C21E38(&UserItemListViewItem_TypeInfo);
+    byte_4BD7919 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -108,16 +109,16 @@ void __fastcall UserItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C1AE30(transform, v15);
+    sub_1C22094(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1C1AB78(&this->fields.callbackFunc);
+  sub_1C21DDC(&this->fields.callbackFunc, callbackFunc);
   if ( (unsigned int)v11 <= 3 )
   {
-    v18 = dword_BF99A0[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BFA5A0 + v11);
+    v18 = dword_BFD900[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BFE4E0 + v11);
     this->fields.state = v18;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -126,7 +127,7 @@ void __fastcall UserItemListViewObject__Init(
   if ( *p_callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1C1AB78(p_callbackFunc);
+    sub_1C21DDC(p_callbackFunc, 0LL);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v19->fields.m_target)(
       v19->fields.original_method_info,
       *(_QWORD *)&v19->fields.extra_arg);
@@ -135,7 +136,7 @@ void __fastcall UserItemListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UserItemListViewObject__Init_32020976(
+void __fastcall UserItemListViewObject__Init_32055904(
         UserItemListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -144,17 +145,17 @@ void __fastcall UserItemListViewObject__Init_32020976(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   UserItemListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UserItemListViewObject__Init_32022312(
+void __fastcall UserItemListViewObject__Init_32057240(
         UserItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -163,17 +164,17 @@ void __fastcall UserItemListViewObject__Init_32022312(
 {
   int v5; // s1
 
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   UserItemListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UserItemListViewObject__Init_32022396(
+void __fastcall UserItemListViewObject__Init_32057324(
         UserItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -182,10 +183,10 @@ void __fastcall UserItemListViewObject__Init_32022396(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   UserItemListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -193,29 +194,28 @@ void __fastcall UserItemListViewObject__Init_32022396(
 
 void __fastcall UserItemListViewObject__OnClickSelect(UserItemListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  __int64 v6; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4BC2E9A & 1) == 0 )
+  if ( (byte_4BD791B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UserItemListViewObject_OnClickSelect__, method);
-    sub_1C1ABD4(&StringLiteral_10034/*"OnClickListView"*/, v3);
-    byte_4BC2E9A = 1;
+    sub_1C21E38(&Method_UserItemListViewObject_OnClickSelect__);
+    sub_1C21E38(&StringLiteral_10044/*"OnClickListView"*/);
+    byte_4BD791B = 1;
   }
   if ( this->fields.linkItem )
   {
-    v4 = Method_UserItemListViewObject_OnClickSelect__;
+    v3 = Method_UserItemListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_UserItemListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C1ABEC(Method_UserItemListViewObject_OnClickSelect__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C21E50(Method_UserItemListViewObject_OnClickSelect__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C1AE30(0LL, v6);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10034/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
+      sub_1C22094(0LL, v5);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10044/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -226,25 +226,23 @@ void __fastcall UserItemListViewObject__OnDestroy(UserItemListViewObject_o *this
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall UserItemListViewObject__SetInput(
         UserItemListViewObject_o *this,
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v7; // x3
+  const MethodInfo *v6; // x3
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
-  struct ListViewItem_o *v10; // x1
-  UserItemListViewItemDraw_o *v11; // x0
+  struct ListViewItem_o *v9; // x1
+  UserItemListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4BC2E97 & 1) == 0 )
+  if ( (byte_4BD7918 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isInput);
-    sub_1C1ABD4(&UserItemListViewItem_TypeInfo, v5);
-    byte_4BC2E97 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&UserItemListViewItem_TypeInfo);
+    byte_4BD7918 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -258,18 +256,18 @@ void __fastcall UserItemListViewObject__SetInput(
           LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
       if ( (UserItemListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == UserItemListViewItem_TypeInfo )
-        v10 = this->fields.linkItem;
+        v9 = this->fields.linkItem;
       else
-        v10 = 0LL;
+        v9 = 0LL;
     }
     else
     {
-      v10 = 0LL;
+      v9 = 0LL;
     }
-    v11 = this->fields.itemDraw;
-    if ( !v11 )
-      sub_1C1AE30(0LL, v10);
-    UserItemListViewItemDraw__SetInput(v11, (UserItemListViewItem_o *)v10, isInput, v7);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1C22094(0LL, v9);
+    UserItemListViewItemDraw__SetInput(v10, (UserItemListViewItem_o *)v9, isInput, v6);
   }
 }
 
@@ -281,26 +279,25 @@ void __fastcall UserItemListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_41974544((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42027352((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
 void __fastcall UserItemListViewObject__SetupDisp(UserItemListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   struct ListViewItem_o *linkItem; // x20
   __int64 methodPtr_low; // x10
-  bool v6; // w1
+  bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  UserItemListViewItemDraw_o *v10; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  UserItemListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4BC2E99 & 1) == 0 )
+  if ( (byte_4BD791A & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    sub_1C1ABD4(&UserItemListViewItem_TypeInfo, v3);
-    byte_4BC2E99 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&UserItemListViewItem_TypeInfo);
+    byte_4BD791A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -311,21 +308,21 @@ void __fastcall UserItemListViewObject__SetupDisp(UserItemListViewObject_o *this
   {
     linkItem = 0LL;
 LABEL_7:
-    v6 = 0;
+    v5 = 0;
     goto LABEL_8;
   }
-  v6 = this->fields.dispMode != 0;
+  v5 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1C1AE30(0LL, v8);
-    UserItemListViewItemDraw__SetItem(v10, (UserItemListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1C22094(0LL, v7);
+    UserItemListViewItemDraw__SetItem(v9, (UserItemListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
 
@@ -335,7 +332,7 @@ void __fastcall UserItemListViewObject__Start(UserItemListViewObject_o *this, co
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    UserItemListViewObject__Init_32020976(this, 2, v2);
+    UserItemListViewObject__Init_32055904(this, 2, v2);
 }
 
 
@@ -354,10 +351,10 @@ void __fastcall UserItemListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BC2E93 & 1) == 0 )
+  if ( (byte_4BD7914 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, value);
-    byte_4BC2E93 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    byte_4BD7914 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -370,13 +367,13 @@ void __fastcall UserItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
+    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserItemListViewObject_o *)sub_1C1B0F0(v8);
+  v11 = (UserItemListViewObject_o *)sub_1C22354(v8);
   UserItemListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -395,10 +392,10 @@ void __fastcall UserItemListViewObject__remove_callbackFunc(
   UserItemListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BC2E94 & 1) == 0 )
+  if ( (byte_4BD7915 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, value);
-    byte_4BC2E94 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    byte_4BD7915 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -411,12 +408,12 @@ void __fastcall UserItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C560C4(p_callbackFunc, v8, v6);
+    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (UserItemListViewObject_o *)sub_1C1B0F0(v8);
+  v11 = (UserItemListViewObject_o *)sub_1C22354(v8);
   UserItemListViewObject__Awake(v11, v12);
 }

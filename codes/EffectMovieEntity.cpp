@@ -1,13 +1,13 @@
 void __fastcall EffectMovieEntity___ctor(EffectMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC791B & 1) == 0 )
+  if ( (byte_4BDC3B2 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BC791B = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDC3B2 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,7 +17,6 @@ int32_t __fastcall EffectMovieEntity__CreatePrimaryKey(EffectMovieEntity_o *this
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EffectMovieEntity__GetFilePath(
         EffectMovieEntity_o *this,
         int32_t additionalId,
@@ -25,26 +24,24 @@ System_String_o *__fastcall EffectMovieEntity__GetFilePath(
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  __int64 v7; // x1
-  __int64 v8; // x1
   System_String_o *result; // x0
-  EffectMovieMaster_c *v10; // x0
-  int32_t *v11; // x1
+  EffectMovieMaster_c *v8; // x0
+  int32_t *v9; // x1
   System_String_o *NOBLE_PATH; // x21
-  System_Int32_c *v13; // x0
-  EffectMovieMaster_c *v14; // x0
-  Il2CppObject *v15; // x0
-  System_String_o *v16; // x0
-  EffectMovieMaster_c *v17; // x0
-  int32_t v18; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
+  System_Int32_c *v11; // x0
+  EffectMovieMaster_c *v12; // x0
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x0
+  EffectMovieMaster_c *v15; // x0
+  int32_t v16; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BC791A & 1) == 0 )
+  if ( (byte_4BDC3B1 & 1) == 0 )
   {
-    sub_1C1ABD4(&EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
-    sub_1C1ABD4(&int_TypeInfo, v7);
-    sub_1C1ABD4(&string_TypeInfo, v8);
-    byte_4BC791A = 1;
+    sub_1C21E38(&EffectMovieMaster_TypeInfo);
+    sub_1C21E38(&int_TypeInfo);
+    sub_1C21E38(&string_TypeInfo);
+    byte_4BDC3B1 = 1;
   }
   switch ( this->fields.folderType )
   {
@@ -52,41 +49,41 @@ System_String_o *__fastcall EffectMovieEntity__GetFilePath(
       result = this->fields.name;
       break;
     case 2:
-      v10 = EffectMovieMaster_TypeInfo;
+      v8 = EffectMovieMaster_TypeInfo;
       if ( !EffectMovieMaster_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
-        v10 = EffectMovieMaster_TypeInfo;
+        v8 = EffectMovieMaster_TypeInfo;
       }
-      v11 = &v19;
-      NOBLE_PATH = v10->static_fields->NOBLE_PATH;
-      v13 = int_TypeInfo;
-      v19 = additionalId;
+      v9 = &v17;
+      NOBLE_PATH = v8->static_fields->NOBLE_PATH;
+      v11 = int_TypeInfo;
+      v17 = additionalId;
       goto LABEL_11;
     case 3:
-      v14 = EffectMovieMaster_TypeInfo;
+      v12 = EffectMovieMaster_TypeInfo;
       if ( !EffectMovieMaster_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
-        v14 = EffectMovieMaster_TypeInfo;
+        v12 = EffectMovieMaster_TypeInfo;
       }
-      v11 = &v18;
-      NOBLE_PATH = v14->static_fields->WEAPON_PATH;
-      v13 = int_TypeInfo;
-      v18 = additionalId;
+      v9 = &v16;
+      NOBLE_PATH = v12->static_fields->WEAPON_PATH;
+      v11 = int_TypeInfo;
+      v16 = additionalId;
 LABEL_11:
-      v15 = (Il2CppObject *)j_il2cpp_value_box_0(v13, v11, method, v3, v4);
-      v16 = System_String__Format(NOBLE_PATH, v15, 0LL);
-      result = System_String__Concat_63040368(v16, this->fields.name, 0LL);
+      v13 = (Il2CppObject *)j_il2cpp_value_box_0(v11, v9, method, v3, v4);
+      v14 = System_String__Format(NOBLE_PATH, v13, 0LL);
+      result = System_String__Concat_63115476(v14, this->fields.name, 0LL);
       break;
     case 5:
-      v17 = EffectMovieMaster_TypeInfo;
+      v15 = EffectMovieMaster_TypeInfo;
       if ( !EffectMovieMaster_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
-        v17 = EffectMovieMaster_TypeInfo;
+        v15 = EffectMovieMaster_TypeInfo;
       }
-      result = System_String__Concat_63040368(v17->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
+      result = System_String__Concat_63115476(v15->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
       break;
     default:
       result = string_TypeInfo->static_fields->Empty;

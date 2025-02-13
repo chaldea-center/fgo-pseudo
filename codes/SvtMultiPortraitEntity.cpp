@@ -1,17 +1,16 @@
 void __fastcall SvtMultiPortraitEntity___ctor(SvtMultiPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC861D & 1) == 0 )
+  if ( (byte_4BDD0BB & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC861D = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDD0BB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall SvtMultiPortraitEntity__CreatePK(
         int32_t svtId,
         int32_t limitCount,
@@ -19,17 +18,17 @@ System_String_o *__fastcall SvtMultiPortraitEntity__CreatePK(
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_4BC861C & 1) == 0 )
+  if ( (byte_4BDD0BA & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&limitCount);
-    byte_4BC861C = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4BDD0BA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            limitCount,
            idx,
            type,
-           (const MethodInfo_2F9E004 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2FAE978 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

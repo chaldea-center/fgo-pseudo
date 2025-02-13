@@ -28,10 +28,10 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
   int v27; // s0
   int v30; // s0
 
-  if ( (byte_4BCACD6 & 1) == 0 )
+  if ( (byte_4BDF78A & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    byte_4BCACD6 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDF78A = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -112,7 +112,7 @@ void __fastcall BattleSyncFromTargetTransformComponent__SyncTarget(
         }
       }
 LABEL_25:
-      sub_1C1AE30(syncData, v4);
+      sub_1C22094(syncData, v4);
     }
   }
 }

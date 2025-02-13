@@ -48,7 +48,6 @@ void __fastcall BlinkingComponent__PlayExec(BlinkingComponent_o *this, const Met
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_disp, const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *p_mOrgScl; // x8
@@ -69,10 +68,10 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   }
   else
   {
-    if ( !byte_4BC2141 )
+    if ( !byte_4BD6BB1 )
     {
-      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, is_disp);
-      byte_4BC2141 = 1;
+      sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      byte_4BD6BB1 = 1;
     }
     p_mOrgScl = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = &p_mOrgScl->zeroVector.fields.y;

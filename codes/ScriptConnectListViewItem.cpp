@@ -11,9 +11,9 @@ void __fastcall ScriptConnectListViewItem___ctor(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  ListViewItem___ctor_41943804((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
   this->fields.path = path;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.path, (int64_t)path, v6, v7, v8, v9, v10, v11);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.path, (int64_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -46,7 +46,7 @@ System_String_o *__fastcall ScriptConnectListViewItem__get_TitleText(
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0LL);
 LABEL_6:
-    sub_1C1AE30(path, method);
+    sub_1C22094(path, method);
   }
   return this->fields.path;
 }

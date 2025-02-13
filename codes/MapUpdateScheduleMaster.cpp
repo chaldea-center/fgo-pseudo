@@ -1,57 +1,52 @@
 void __fastcall MapUpdateScheduleMaster___ctor(MapUpdateScheduleMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7E55 & 1) == 0 )
+  if ( (byte_4BDC8EC & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__, method);
-    byte_4BC7E55 = 1;
+    sub_1C21E38(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__);
+    byte_4BDC8EC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     493,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall MapUpdateScheduleMaster__Any(MapUpdateScheduleMaster_o *this, int32_t warId, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v12; // x20
+  System_Func_object__bool__o *v9; // x20
 
-  if ( (byte_4BC7E53 & 1) == 0 )
+  if ( (byte_4BDC8EA & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___, *(_QWORD *)&warId);
-    sub_1C1ABD4(&System_Func_MapUpdateScheduleEntity__bool__TypeInfo, v5);
-    sub_1C1ABD4(&Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__, v6);
-    sub_1C1ABD4(&MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo, v7);
-    byte_4BC7E53 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___);
+    sub_1C21E38(&System_Func_MapUpdateScheduleEntity__bool__TypeInfo);
+    sub_1C21E38(&Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__);
+    sub_1C21E38(&MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4BDC8EA = 1;
   }
-  v8 = sub_1C1AE20(MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
-    sub_1C1AE30(v9, v10);
-  *(_DWORD *)(v8 + 16) = warId;
+  v5 = sub_1C22084(MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
+    sub_1C22094(v6, v7);
+  *(_DWORD *)(v5 + 16) = warId;
   list = this->fields.list;
-  v12 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_MapUpdateScheduleEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C22084(System_Func_MapUpdateScheduleEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v12,
-    (Il2CppObject *)v8,
+    v9,
+    (Il2CppObject *)v5,
     Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__,
     0LL);
-  return System_Linq_Enumerable__Any_object__49989636(
+  return System_Linq_Enumerable__Any_object__50057592(
            (System_Collections_Generic_IEnumerable_TSource__o *)list,
-           (System_Func_TSource__bool__o *)v12,
-           (const MethodInfo_2FAC804 *)Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___);
+           (System_Func_TSource__bool__o *)v9,
+           (const MethodInfo_2FBD178 *)Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 MapUpdateScheduleEntity_o *__fastcall MapUpdateScheduleMaster__GetEntity(
         MapUpdateScheduleMaster_o *this,
         int32_t warId,
@@ -60,18 +55,16 @@ MapUpdateScheduleEntity_o *__fastcall MapUpdateScheduleMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BC7E56 & 1) == 0 )
+  if ( (byte_4BDC8ED & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__,
-      *(_QWORD *)&warId);
-    byte_4BC7E56 = 1;
+    sub_1C21E38(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__);
+    byte_4BDC8ED = 1;
   }
   PK = (Il2CppObject *)MapUpdateScheduleEntity__CreatePK(warId, mapUpdatedAt, 0LL);
   return (MapUpdateScheduleEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_324D130 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__);
+                                        (const MethodInfo_3260880 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__);
 }
 
 
@@ -80,67 +73,63 @@ bool __fastcall MapUpdateScheduleMaster__IsNeedMapUpdate(
         MapControl_WarInfo_o *warInfo,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   System_Collections_ObjectModel_Collection_T__o *Time; // x0
-  __int64 v10; // x1
-  System_Collections_ObjectModel_Collection_T__o *v11; // x20
+  __int64 v6; // x1
+  System_Collections_ObjectModel_Collection_T__o *v7; // x20
   int32_t warId; // w23
   int64_t createdDateTime; // x24
-  __int64 v14; // x1
+  __int64 v10; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v17; // x9
+  __int64 v13; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  char v20; // w21
-  System_Collections_Generic_IEnumerator_T__c *v21; // x8
-  __int64 v22; // x9
-  int32_t *v23; // x10
-  __int64 v24; // x0
-  __int64 v25; // x0
-  __int64 v26; // x1
-  int64_t v27; // x8
-  System_Collections_Generic_IEnumerator_T__c *v28; // x8
-  __int64 v29; // x9
-  int32_t *v30; // x10
-  __int64 v31; // x0
+  char v16; // w21
+  System_Collections_Generic_IEnumerator_T__c *v17; // x8
+  __int64 v18; // x9
+  int32_t *v19; // x10
+  __int64 v20; // x0
+  __int64 v21; // x0
+  __int64 v22; // x1
+  int64_t v23; // x8
+  System_Collections_Generic_IEnumerator_T__c *v24; // x8
+  __int64 v25; // x9
+  int32_t *v26; // x10
+  __int64 v27; // x0
 
-  if ( (byte_4BC7E54 & 1) == 0 )
+  if ( (byte_4BDC8EB & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__, warInfo);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v5);
-    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, v6);
-    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v8);
-    byte_4BC7E54 = 1;
+    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo);
+    sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BDC8EB = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = (System_Collections_ObjectModel_Collection_T__o *)NetworkManager__getTime(0LL);
-  if ( !warInfo || (v11 = Time, (Time = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list) == 0LL) )
-    sub_1C1AE30(Time, v10);
+  if ( !warInfo || (v7 = Time, (Time = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list) == 0LL) )
+    sub_1C22094(Time, v6);
   warId = warInfo->fields.warId;
   createdDateTime = warInfo->fields.createdDateTime;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  Time,
-                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__);
+                 (const MethodInfo_31F66A4 *)Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C1AE30(0LL, v14);
+    sub_1C22094(0LL, v10);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v17 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v13 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v17;
+        --v13;
         p_offset += 4;
-        if ( !v17 )
+        if ( !v13 )
           goto LABEL_12;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -148,67 +137,67 @@ bool __fastcall MapUpdateScheduleMaster__IsNeedMapUpdate(
     else
     {
 LABEL_12:
-      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C73E18(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
+    v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8));
-    if ( (v20 & 1) == 0 )
+    if ( (v16 & 1) == 0 )
       break;
-    v21 = Enumerator->klass;
-    v22 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v17 = Enumerator->klass;
+    v18 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v23 = &v21->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__c **)v23 - 1) != System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo )
+      v19 = &v17->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__c **)v19 - 1) != System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo )
       {
-        --v22;
-        v23 += 4;
-        if ( !v22 )
+        --v18;
+        v19 += 4;
+        if ( !v18 )
           goto LABEL_19;
       }
-      v24 = (__int64)&v21->vtable[*v23].method;
+      v20 = (__int64)&v17->vtable[*v19].method;
     }
     else
     {
 LABEL_19:
-      v24 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, 0LL);
+      v20 = sub_1C73E18(Enumerator, System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, 0LL);
     }
-    v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
+    v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             Enumerator,
-            *(_QWORD *)(v24 + 8));
-    if ( !v25 )
-      sub_1C1AE30(0LL, v26);
-    if ( *(_DWORD *)(v25 + 16) == warId )
+            *(_QWORD *)(v20 + 8));
+    if ( !v21 )
+      sub_1C22094(0LL, v22);
+    if ( *(_DWORD *)(v21 + 16) == warId )
     {
-      v27 = *(_QWORD *)(v25 + 24);
-      if ( createdDateTime <= v27 && v27 <= (__int64)v11 )
+      v23 = *(_QWORD *)(v21 + 24);
+      if ( createdDateTime <= v23 && v23 <= (__int64)v7 )
         goto LABEL_27;
     }
   }
-  v20 = 0;
+  v16 = 0;
 LABEL_27:
-  v28 = Enumerator->klass;
-  v29 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v24 = Enumerator->klass;
+  v25 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v30 = &v28->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v30 - 1) != System_IDisposable_TypeInfo )
+    v26 = &v24->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v26 - 1) != System_IDisposable_TypeInfo )
     {
-      --v29;
-      v30 += 4;
-      if ( !v29 )
+      --v25;
+      v26 += 4;
+      if ( !v25 )
         goto LABEL_31;
     }
-    v31 = (__int64)&v28->vtable[*v30].method;
+    v27 = (__int64)&v24->vtable[*v26].method;
   }
   else
   {
 LABEL_31:
-    v31 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_1C73E18(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
-  return v20 & 1;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v27)(Enumerator, *(_QWORD *)(v27 + 8));
+  return v16 & 1;
 }
 
 
@@ -221,17 +210,17 @@ bool __fastcall MapUpdateScheduleMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC7E57 & 1) == 0 )
+  if ( (byte_4BDC8EE & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__, entity);
-    byte_4BC7E57 = 1;
+    sub_1C21E38(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__);
+    byte_4BDC8EE = 1;
   }
   PK = (Il2CppObject *)MapUpdateScheduleEntity__CreatePK(warId, mapUpdatedAt, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__);
 }
 
 
@@ -249,6 +238,6 @@ bool __fastcall MapUpdateScheduleMaster___c__DisplayClass0_0___Any_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return n->fields.warId == this->fields.warId;
 }

@@ -11,38 +11,35 @@ void __fastcall ClassBoardCondData___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ClassBoardCondData___ctor_45861152(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
+void __fastcall ClassBoardCondData___ctor_45924912(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
 {
   int32_t Num; // w20
   _DWORD *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v8; // x1
+  __int64 v6; // x1
   int klass_high; // w8
   int klass; // w9
   int monitor; // w10
 
   Num = this.fields.Num;
   v4 = *(_DWORD **)&this.fields.Type;
-  if ( (byte_4BCB106 & 1) == 0 )
+  if ( (byte_4BDFBC7 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMaster_ClassBoardLockMaster___, *(_QWORD *)&this.fields.Num);
-    sub_1C1ABD4(&DataManager_TypeInfo, v5);
-    sub_1C1ABD4(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
-    byte_4BCB106 = 1;
+    sub_1C21E38(&Method_DataManager_GetMaster_ClassBoardLockMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    sub_1C21E38(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__);
+    byte_4BDFBC7 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           Num,
-                          (const MethodInfo_3248678 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
+                          (const MethodInfo_325BDC8 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1C1AE30(Master_object, v8);
+    sub_1C22094(Master_object, v6);
   }
   klass_high = HIDWORD(Master_object[3].klass);
   if ( klass_high )
@@ -61,7 +58,6 @@ void __fastcall ClassBoardCondData___ctor_45861152(ClassBoardCondData_o this, in
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const MethodInfo *method)
 {
   int32_t *v2; // x19
@@ -70,10 +66,10 @@ bool __fastcall ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const Meth
   int64_t v5; // x19
 
   v2 = *(int32_t **)&this.fields.Type;
-  if ( (byte_4BCB107 & 1) == 0 )
+  if ( (byte_4BDFBC8 & 1) == 0 )
   {
-    sub_1C1ABD4(&CondType_TypeInfo, *(_QWORD *)&this.fields.Num);
-    byte_4BCB107 = 1;
+    sub_1C21E38(&CondType_TypeInfo);
+    byte_4BDFBC8 = 1;
   }
   v4 = *v2;
   v3 = v2[1];

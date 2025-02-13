@@ -1,33 +1,32 @@
 void __fastcall GachaReleaseEntity___ctor(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7D5D & 1) == 0 )
+  if ( (byte_4BDC7F4 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC7D5D = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDC7F4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall GachaReleaseEntity__CreatePK(
         int32_t gachaId,
         int32_t type,
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4BC7D5B & 1) == 0 )
+  if ( (byte_4BDC7F2 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4BC7D5B = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4BDC7F2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            type,
            targetId,
-           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -46,10 +45,10 @@ bool __fastcall GachaReleaseEntity__IsEnable(GachaReleaseEntity_o *this, const M
   int64_t value; // x19
   int32_t v7; // w19
 
-  if ( (byte_4BC7D5C & 1) == 0 )
+  if ( (byte_4BDC7F3 & 1) == 0 )
   {
-    sub_1C1ABD4(&CondType_TypeInfo, method);
-    byte_4BC7D5C = 1;
+    sub_1C21E38(&CondType_TypeInfo);
+    byte_4BDC7F3 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )

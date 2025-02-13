@@ -14,18 +14,17 @@ BattleActionData_o *__fastcall PlayBackStepLogicTask__MakeActionData(
         const MethodInfo *method)
 {
   PlayBackStepLogicTask_o *v4; // x20
-  __int64 v5; // x1
   BattleServantData_o *ServantData; // x0
   BattleActionData_o *BackStep; // x20
-  BattleLogicTask_o *v8; // x21
-  const MethodInfo *v9; // x1
+  BattleLogicTask_o *v7; // x21
+  const MethodInfo *v8; // x1
 
   v4 = this;
-  if ( (byte_4BCA89E & 1) == 0 )
+  if ( (byte_4BDF350 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleLogicTask_TypeInfo, logic);
-    this = (PlayBackStepLogicTask_o *)sub_1C1ABD4(&BattlePerformance_TypeInfo, v5);
-    byte_4BCA89E = 1;
+    sub_1C21E38(&BattleLogicTask_TypeInfo);
+    this = (PlayBackStepLogicTask_o *)sub_1C21E38(&BattlePerformance_TypeInfo);
+    byte_4BDF350 = 1;
   }
   if ( !logic )
     goto LABEL_15;
@@ -39,15 +38,15 @@ BattleActionData_o *__fastcall PlayBackStepLogicTask__MakeActionData(
     if ( this )
     {
       BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0LL);
-      v8 = (BattleLogicTask_o *)sub_1C1AE20(BattleLogicTask_TypeInfo);
-      BattleLogicTask___ctor(v8, v9);
+      v7 = (BattleLogicTask_o *)sub_1C22084(BattleLogicTask_TypeInfo);
+      BattleLogicTask___ctor(v7, v8);
       this = (PlayBackStepLogicTask_o *)BattlePerformance_TypeInfo;
       if ( !BattlePerformance_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BattlePerformance_TypeInfo);
-      if ( v8 )
+      if ( v7 )
       {
-        v8->fields.systemTime = BattlePerformance_TypeInfo->static_fields->AFTER_BACK_STEP_INTERVAL;
-        this = (PlayBackStepLogicTask_o *)BattleLogic__createSystem(logic, v8, 0LL);
+        v7->fields.systemTime = BattlePerformance_TypeInfo->static_fields->AFTER_BACK_STEP_INTERVAL;
+        this = (PlayBackStepLogicTask_o *)BattleLogic__createSystem(logic, v7, 0LL);
         if ( BackStep )
         {
           BattleActionData__AddAfterActionData(BackStep, (BattleActionData_o *)this, 0, 0LL);
@@ -56,7 +55,7 @@ BattleActionData_o *__fastcall PlayBackStepLogicTask__MakeActionData(
       }
     }
 LABEL_15:
-    sub_1C1AE30(this, logic);
+    sub_1C22094(this, logic);
   }
   return 0LL;
 }

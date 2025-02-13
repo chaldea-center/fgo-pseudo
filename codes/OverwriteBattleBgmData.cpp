@@ -4,8 +4,7 @@ void __fastcall OverwriteBattleBgmData___ctor(OverwriteBattleBgmData_o *this, co
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall OverwriteBattleBgmData___ctor_44602436(
+void __fastcall OverwriteBattleBgmData___ctor_44659204(
         OverwriteBattleBgmData_o *this,
         int32_t waveCount,
         int32_t bgmId,
@@ -13,23 +12,21 @@ void __fastcall OverwriteBattleBgmData___ctor_44602436(
         System_String_o *bgmName,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   Il2CppObject *Master_object; // x0
-  __int64 v20; // x1
+  __int64 v18; // x1
 
-  if ( (byte_4BCA65E & 1) == 0 )
+  if ( (byte_4BDF10F & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMaster_BgmMaster___, *(_QWORD *)&waveCount);
-    sub_1C1ABD4(&DataManager_TypeInfo, v11);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v12);
-    byte_4BCA65E = 1;
+    sub_1C21E38(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDF10F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._WaveCount_k__BackingField = waveCount;
@@ -39,21 +36,21 @@ void __fastcall OverwriteBattleBgmData___ctor_44602436(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( !Master_object )
-      sub_1C1AE30(0LL, v20);
+      sub_1C22094(0LL, v18);
     bgmName = BgmMaster__GetBgmFileName((BgmMaster_o *)Master_object, bgmId, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   }
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BgmName_k__BackingField,
     (int64_t)bgmName,
+    v11,
+    v12,
     v13,
     v14,
     v15,
-    v16,
-    v17,
-    v18);
+    v16);
 }
 
 
@@ -64,15 +61,15 @@ OverwriteBattleBgmData_SaveData_o *__fastcall OverwriteBattleBgmData__ConvertToS
   OverwriteBattleBgmData_SaveData_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4BCA660 & 1) == 0 )
+  if ( (byte_4BDF111 & 1) == 0 )
   {
-    sub_1C1ABD4(&OverwriteBattleBgmData_SaveData_TypeInfo, method);
-    byte_4BCA660 = 1;
+    sub_1C21E38(&OverwriteBattleBgmData_SaveData_TypeInfo);
+    byte_4BDF111 = 1;
   }
   if ( !bgmData )
     return 0LL;
-  v3 = (OverwriteBattleBgmData_SaveData_o *)sub_1C1AE20(OverwriteBattleBgmData_SaveData_TypeInfo);
-  OverwriteBattleBgmData_SaveData___ctor_44603192(v3, bgmData, v4);
+  v3 = (OverwriteBattleBgmData_SaveData_o *)sub_1C22084(OverwriteBattleBgmData_SaveData_TypeInfo);
+  OverwriteBattleBgmData_SaveData___ctor_44659960(v3, bgmData, v4);
   return v3;
 }
 
@@ -81,88 +78,83 @@ OverwriteBattleBgmData_o *__fastcall OverwriteBattleBgmData__CreateInstanceFromS
         OverwriteBattleBgmData_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x19
+  __int64 v3; // x19
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
-  Il2CppObject *v11; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  __int64 v5; // x1
+  Il2CppObject *v6; // x0
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
   System_String_o *BgmFileName; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4BCA65F & 1) == 0 )
+  if ( (byte_4BDF110 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_IndexValue_int____77549168, method);
-    sub_1C1ABD4(&Method_BasicHelper_IndexValue_string___, v3);
-    sub_1C1ABD4(&Method_DataManager_GetMaster_BgmMaster___, v4);
-    sub_1C1ABD4(&DataManager_TypeInfo, v5);
-    sub_1C1ABD4(&OverwriteBattleBgmData_TypeInfo, v6);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v7);
-    byte_4BCA65F = 1;
+    sub_1C21E38(&Method_BasicHelper_IndexValue_int____77631832);
+    sub_1C21E38(&Method_BasicHelper_IndexValue_string___);
+    sub_1C21E38(&Method_DataManager_GetMaster_BgmMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    sub_1C21E38(&OverwriteBattleBgmData_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDF110 = 1;
   }
   if ( !sv )
     return 0LL;
-  v8 = sub_1C1AE20(OverwriteBattleBgmData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v3 = sub_1C22084(OverwriteBattleBgmData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
   Master_object = (Il2CppObject *)BasicHelper__IndexValue_int_(
                                     sv->fields.intParamArray,
                                     0,
                                     0,
-                                    (const MethodInfo_2F8DF74 *)Method_BasicHelper_IndexValue_int____77549168);
-  if ( !v8 )
+                                    (const MethodInfo_2F9E8E8 *)Method_BasicHelper_IndexValue_int____77631832);
+  if ( !v3 )
     goto LABEL_13;
-  *(_DWORD *)(v8 + 16) = (_DWORD)Master_object;
-  *(_DWORD *)(v8 + 20) = BasicHelper__IndexValue_int_(
+  *(_DWORD *)(v3 + 16) = (_DWORD)Master_object;
+  *(_DWORD *)(v3 + 20) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            1,
                            0,
-                           (const MethodInfo_2F8DF74 *)Method_BasicHelper_IndexValue_int____77549168);
-  *(_DWORD *)(v8 + 32) = BasicHelper__IndexValue_int_(
+                           (const MethodInfo_2F9E8E8 *)Method_BasicHelper_IndexValue_int____77631832);
+  *(_DWORD *)(v3 + 32) = BasicHelper__IndexValue_int_(
                            sv->fields.intParamArray,
                            2,
                            0,
-                           (const MethodInfo_2F8DF74 *)Method_BasicHelper_IndexValue_int____77549168);
-  v11 = BasicHelper__IndexValue_object_(
-          (System_Object_array *)sv->fields.strParamArray,
-          0,
-          (Il2CppObject *)StringLiteral_1/*""*/,
-          (const MethodInfo_2F8E058 *)Method_BasicHelper_IndexValue_string___);
-  *(_QWORD *)(v8 + 24) = v11;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)v11, v12, v13, v14, v15, v16, v17);
-  if ( *(int *)(v8 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v8 + 24), 0LL) )
+                           (const MethodInfo_2F9E8E8 *)Method_BasicHelper_IndexValue_int____77631832);
+  v6 = BasicHelper__IndexValue_object_(
+         (System_Object_array *)sv->fields.strParamArray,
+         0,
+         (Il2CppObject *)StringLiteral_1/*""*/,
+         (const MethodInfo_2F9E9CC *)Method_BasicHelper_IndexValue_string___);
+  *(_QWORD *)(v3 + 24) = v6;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 24), (int64_t)v6, v7, v8, v9, v10, v11, v12);
+  if ( *(int *)(v3 + 20) >= 1 && System_String__IsNullOrEmpty(*(System_String_o **)(v3 + 24), 0LL) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_BgmMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_BgmMaster___);
     if ( Master_object )
     {
       BgmFileName = BgmMaster__GetBgmFileName(
                       (BgmMaster_o *)Master_object,
-                      *(_DWORD *)(v8 + 20),
+                      *(_DWORD *)(v3 + 20),
                       (System_String_o *)StringLiteral_1/*""*/,
                       0LL);
-      *(_QWORD *)(v8 + 24) = BgmFileName;
-      sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 24), (int64_t)BgmFileName, v19, v20, v21, v22, v23, v24);
-      return (OverwriteBattleBgmData_o *)v8;
+      *(_QWORD *)(v3 + 24) = BgmFileName;
+      sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 24), (int64_t)BgmFileName, v14, v15, v16, v17, v18, v19);
+      return (OverwriteBattleBgmData_o *)v3;
     }
 LABEL_13:
-    sub_1C1AE30(Master_object, v10);
+    sub_1C22094(Master_object, v5);
   }
-  return (OverwriteBattleBgmData_o *)v8;
+  return (OverwriteBattleBgmData_o *)v3;
 }
 
 
@@ -215,7 +207,7 @@ void __fastcall OverwriteBattleBgmData__set_BgmName(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BgmName_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -244,76 +236,75 @@ void __fastcall OverwriteBattleBgmData_SaveData___ctor(
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_44603192(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_44659960(
         OverwriteBattleBgmData_SaveData_o *this,
         OverwriteBattleBgmData_o *bgmData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  int64_t v6; // x0
-  int64_t v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  unsigned int v14; // w8
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  struct System_String_array *v21; // x21
+  int64_t v5; // x0
+  int64_t v6; // x1
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  unsigned int v13; // w8
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  struct System_String_array *v20; // x21
   struct System_String_o *BgmName_k__BackingField; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
 
-  if ( (byte_4BCA661 & 1) == 0 )
+  if ( (byte_4BDF112 & 1) == 0 )
   {
-    sub_1C1ABD4(&int___TypeInfo, bgmData);
-    sub_1C1ABD4(&string___TypeInfo, v5);
-    byte_4BCA661 = 1;
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&string___TypeInfo);
+    byte_4BDF112 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v6 = sub_1C1AC7C(int___TypeInfo, 3LL);
+  v5 = sub_1C21EE0(int___TypeInfo, 3LL);
   if ( !bgmData )
     goto LABEL_12;
-  v7 = v6;
-  if ( !v6 )
+  v6 = v5;
+  if ( !v5 )
     goto LABEL_12;
-  v14 = *(_DWORD *)(v6 + 24);
-  if ( !v14
-    || (*(_DWORD *)(v6 + 32) = bgmData->fields._WaveCount_k__BackingField, v14 == 1)
-    || (*(_DWORD *)(v6 + 36) = bgmData->fields._BgmId_k__BackingField, v14 <= 2) )
+  v13 = *(_DWORD *)(v5 + 24);
+  if ( !v13
+    || (*(_DWORD *)(v5 + 32) = bgmData->fields._WaveCount_k__BackingField, v13 == 1)
+    || (*(_DWORD *)(v5 + 36) = bgmData->fields._BgmId_k__BackingField, v13 <= 2) )
   {
 LABEL_11:
-    sub_1C1AE38(v6, v7);
+    sub_1C2209C(v5, v6);
   }
-  *(_DWORD *)(v6 + 40) = bgmData->fields.allowSubBgmPlayingRawValue;
-  this->fields.intParamArray = (struct System_Int32_array *)v6;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, v6, v8, v9, v10, v11, v12, v13);
-  v6 = sub_1C1AC7C(string___TypeInfo, 1LL);
-  if ( !v6 )
+  *(_DWORD *)(v5 + 40) = bgmData->fields.allowSubBgmPlayingRawValue;
+  this->fields.intParamArray = (struct System_Int32_array *)v5;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, v5, v7, v8, v9, v10, v11, v12);
+  v5 = sub_1C21EE0(string___TypeInfo, 1LL);
+  if ( !v5 )
 LABEL_12:
-    sub_1C1AE30(v6, v7);
-  v21 = (struct System_String_array *)v6;
-  if ( !*(_DWORD *)(v6 + 24) )
+    sub_1C22094(v5, v6);
+  v20 = (struct System_String_array *)v5;
+  if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_11;
   BgmName_k__BackingField = bgmData->fields._BgmName_k__BackingField;
-  *(_QWORD *)(v6 + 32) = BgmName_k__BackingField;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)BgmName_k__BackingField, v15, v16, v17, v18, v19, v20);
-  this->fields.strParamArray = v21;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.strParamArray, (int64_t)v21, v23, v24, v25, v26, v27, v28);
+  *(_QWORD *)(v5 + 32) = BgmName_k__BackingField;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)BgmName_k__BackingField, v14, v15, v16, v17, v18, v19);
+  this->fields.strParamArray = v20;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.strParamArray, (int64_t)v20, v22, v23, v24, v25, v26, v27);
 }
 
 
-void __fastcall OverwriteBattleBgmData_SaveData___ctor_44603456(
+void __fastcall OverwriteBattleBgmData_SaveData___ctor_44660224(
         OverwriteBattleBgmData_SaveData_o *this,
         BattleData_SaveData_o *sv,
         const MethodInfo *method)
@@ -337,13 +328,13 @@ void __fastcall OverwriteBattleBgmData_SaveData___ctor_44603456(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !sv )
-    sub_1C1AE30(v5, v6);
+    sub_1C22094(v5, v6);
   overrideBgmData = sv->fields.overrideBgmData;
   this->fields.intParamArray = overrideBgmData;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)overrideBgmData, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)overrideBgmData, v7, v8, v9, v10, v11, v12);
   overrideStrBgmData = sv->fields.overrideStrBgmData;
   this->fields.strParamArray = overrideStrBgmData;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.strParamArray,
     (int64_t)overrideStrBgmData,
     v15,

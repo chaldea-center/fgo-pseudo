@@ -18,72 +18,71 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickBottom(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
-  __int64 v5; // x1
-  ListViewManager_o *v6; // x0
+  __int64 v4; // x1
+  ListViewManager_o *v5; // x0
   int32_t pageIndex; // w8
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
-  bool v10; // w3
-  int32_t v11; // w1
-  struct ListViewManager_o *v12; // x8
-  _QWORD *v13; // x0
-  System_Reflection_MethodBase_o *v14; // x0
+  _QWORD *v7; // x0
+  System_Reflection_MethodBase_o *v8; // x0
+  bool v9; // w3
+  int32_t v10; // w1
+  struct ListViewManager_o *v11; // x8
+  _QWORD *v12; // x0
+  System_Reflection_MethodBase_o *v13; // x0
 
-  if ( (byte_4BC397C & 1) == 0 )
+  if ( (byte_4BD83FD & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    sub_1C1ABD4(&Method_ServantStatusBattleListViewIndicator_OnClickBottom__, v3);
-    byte_4BC397C = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
+    byte_4BD83FD = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v6 = this->fields.manager;
-    if ( !v6 )
+    v5 = this->fields.manager;
+    if ( !v5 )
       goto LABEL_22;
-    ListViewManager__FowardLoopItem(v6, 0LL);
+    ListViewManager__FowardLoopItem(v5, 0LL);
     pageIndex = this->fields.pageIndex;
     if ( (pageIndex & 0x80000000) == 0 && pageIndex < this->fields.pageMax - 1 )
     {
-      v8 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
+      v7 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickBottom__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1C1ABEC(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v8, v8[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v9, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v7 = (_QWORD *)sub_1C21E50(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v7, v7[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0LL);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
-        v10 = 1;
-        v11 = this->fields.pageIndex + 1;
+        v9 = 1;
+        v10 = this->fields.pageIndex + 1;
 LABEL_20:
-        ListViewManager__MoveCenterItem(v6, v11, 1, v10, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v5, v10, 1, v9, 0.0, 0LL);
         return;
       }
       goto LABEL_22;
     }
-    v12 = this->fields.manager;
-    if ( !v12 )
+    v11 = this->fields.manager;
+    if ( !v11 )
       goto LABEL_22;
-    if ( v12->fields.isLoop )
+    if ( v11->fields.isLoop )
     {
-      v13 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
+      v12 = Method_ServantStatusBattleListViewIndicator_OnClickBottom__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickBottom__ + 83) & 2) != 0 )
-        v13 = (_QWORD *)sub_1C1ABEC(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
-      v14 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v13, v13[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v14, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v12 = (_QWORD *)sub_1C21E50(Method_ServantStatusBattleListViewIndicator_OnClickBottom__);
+      v13 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v12, v12[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v13, 7, 0, 0LL);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
-        v11 = 0;
         v10 = 0;
+        v9 = 0;
         goto LABEL_20;
       }
 LABEL_22:
-      sub_1C1AE30(v6, v5);
+      sub_1C22094(v5, v4);
     }
   }
 }
@@ -93,70 +92,69 @@ void __fastcall ServantStatusBattleListViewIndicator__OnClickTop(
         ServantStatusBattleListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
-  __int64 v5; // x1
-  ListViewManager_o *v6; // x0
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
+  __int64 v4; // x1
+  ListViewManager_o *v5; // x0
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
   int32_t pageIndex; // w8
-  bool v10; // w3
-  struct ListViewManager_o *v11; // x8
-  _QWORD *v12; // x0
-  System_Reflection_MethodBase_o *v13; // x0
+  bool v9; // w3
+  struct ListViewManager_o *v10; // x8
+  _QWORD *v11; // x0
+  System_Reflection_MethodBase_o *v12; // x0
 
-  if ( (byte_4BC397B & 1) == 0 )
+  if ( (byte_4BD83FC & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    sub_1C1ABD4(&Method_ServantStatusBattleListViewIndicator_OnClickTop__, v3);
-    byte_4BC397B = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&Method_ServantStatusBattleListViewIndicator_OnClickTop__);
+    byte_4BD83FC = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v6 = this->fields.manager;
-    if ( !v6 )
+    v5 = this->fields.manager;
+    if ( !v5 )
       goto LABEL_21;
-    ListViewManager__BackLoopItem(v6, 0LL);
+    ListViewManager__BackLoopItem(v5, 0LL);
     if ( this->fields.pageIndex >= 1 )
     {
-      v7 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
+      v6 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickTop__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1C1ABEC(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v7, v7[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v6 = (_QWORD *)sub_1C21E50(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v6, v6[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v7, 7, 0, 0LL);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
         pageIndex = this->fields.pageIndex;
-        v10 = 1;
+        v9 = 1;
 LABEL_19:
-        ListViewManager__MoveCenterItem(v6, pageIndex - 1, 1, v10, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v5, pageIndex - 1, 1, v9, 0.0, 0LL);
         return;
       }
       goto LABEL_21;
     }
-    v11 = this->fields.manager;
-    if ( !v11 )
+    v10 = this->fields.manager;
+    if ( !v10 )
       goto LABEL_21;
-    if ( v11->fields.isLoop )
+    if ( v10->fields.isLoop )
     {
-      v12 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
+      v11 = Method_ServantStatusBattleListViewIndicator_OnClickTop__;
       if ( (*((_BYTE *)Method_ServantStatusBattleListViewIndicator_OnClickTop__ + 83) & 2) != 0 )
-        v12 = (_QWORD *)sub_1C1ABEC(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
-      v13 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v12, v12[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v13, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v11 = (_QWORD *)sub_1C21E50(Method_ServantStatusBattleListViewIndicator_OnClickTop__);
+      v12 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v11, v11[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v12, 7, 0, 0LL);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
         pageIndex = this->fields.pageMax;
-        v10 = 0;
+        v9 = 0;
         goto LABEL_19;
       }
 LABEL_21:
-      sub_1C1AE30(v6, v5);
+      sub_1C22094(v5, v4);
     }
   }
 }
@@ -180,7 +178,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.manager,
     (int64_t)manager,
     (int64_t)item,
@@ -193,7 +191,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyCenterItem(
   if ( !bottomObject
     || (UnityEngine_GameObject__SetActive(bottomObject, isTop, 0LL), (bottomObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_1C1AE30(bottomObject, v13);
+    sub_1C22094(bottomObject, v13);
   }
   UnityEngine_GameObject__SetActive(bottomObject, isBottom, 0LL);
   if ( item )
@@ -227,7 +225,7 @@ void __fastcall ServantStatusBattleListViewIndicator__OnModifyPosition(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isTop, 0LL),
         (this = (ServantStatusBattleListViewIndicator_o *)v4->fields.bottomObject) == 0LL) )
   {
-    sub_1C1AE30(this, manager);
+    sub_1C22094(this, manager);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, isBottom, 0LL);
 }
@@ -247,7 +245,7 @@ void __fastcall ServantStatusBattleListViewIndicator__SetIndexMax(
   if ( !topObject
     || (UnityEngine_GameObject__SetActive(topObject, 0, 0LL), (topObject = this->fields.bottomObject) == 0LL) )
   {
-    sub_1C1AE30(topObject, *(_QWORD *)&max);
+    sub_1C22094(topObject, *(_QWORD *)&max);
   }
   UnityEngine_GameObject__SetActive(topObject, 0, 0LL);
 }

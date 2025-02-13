@@ -4,7 +4,7 @@ void __fastcall UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo
 }
 
 
-void __fastcall UserOwnItemInfo___ctor_41789024(
+void __fastcall UserOwnItemInfo___ctor_41840308(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
@@ -20,7 +20,7 @@ void __fastcall UserOwnItemInfo___ctor_41789024(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
     (int64_t)itemEntity,
     v7,
@@ -44,18 +44,16 @@ bool __fastcall UserOwnItemInfo__IsExpired(
 {
   int64_t value; // x20
   bool hasValue; // w21
-  __int64 v6; // x1
-  __int64 v7; // x1
   ItemEntity_o *ItemEntity_k__BackingField; // x0
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_4BC8DC0 & 1) == 0 )
+  if ( (byte_4BDD862 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
-    sub_1C1ABD4(&Method_System_Nullable_long__GetValueOrDefault__, v6);
-    sub_1C1ABD4(&Method_System_Nullable_long__get_HasValue__, v7);
-    byte_4BC8DC0 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_1C21E38(&Method_System_Nullable_long__get_HasValue__);
+    byte_4BDD862 = 1;
   }
   if ( !hasValue )
   {
@@ -65,8 +63,8 @@ bool __fastcall UserOwnItemInfo__IsExpired(
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C1AE30(0LL, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_40599160(ItemEntity_k__BackingField, value, 0LL);
+    sub_1C22094(0LL, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_40646144(ItemEntity_k__BackingField, value, 0LL);
 }
 
 
@@ -76,7 +74,7 @@ int32_t __fastcall UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const M
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -93,7 +91,7 @@ int32_t __fastcall UserOwnItemInfo__get_ItemId(UserOwnItemInfo_o *this, const Me
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   return ItemEntity_k__BackingField->fields.id;
 }
 
@@ -110,7 +108,7 @@ int32_t __fastcall UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const Meth
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   return ItemEntity_k__BackingField->fields.type;
 }
 
@@ -124,7 +122,7 @@ void __fastcall UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEnt
   PartyListViewItem_o *v7; // x7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
     (int64_t)value,
     (int64_t)method,

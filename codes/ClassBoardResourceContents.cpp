@@ -16,7 +16,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int64_t)boardUiAtlasManagerUnit,
     (int64_t)method,
@@ -58,7 +58,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
   PartyListViewItem_o *v29; // x7
 
   this->fields._Square_k__BackingField = square;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields,
     (int64_t)square,
     (int64_t)line,
@@ -68,7 +68,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v6,
     v7);
   this->fields._Line_k__BackingField = line;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Line_k__BackingField,
     (int64_t)line,
     v12,
@@ -78,7 +78,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v16,
     v17);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Lock_k__BackingField,
     (int64_t)lockAsset,
     v18,
@@ -88,7 +88,7 @@ void __fastcall ClassBoardResourceContents__SetContents(
     v22,
     v23);
   this->fields._Blank_k__BackingField = blank;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Blank_k__BackingField,
     (int64_t)blank,
     v24,
@@ -112,7 +112,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BgModel_k__BackingField,
     (int64_t)bgModel,
     (int64_t)method,
@@ -136,7 +136,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int64_t)boardSelectViewPrefab,
     (int64_t)method,
@@ -184,7 +184,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
   PartyListViewItem_o *v36; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int64_t)classBoardDisableOpenDialog,
     (int64_t)classBoardSquareOpenConfirmDialog,
@@ -194,7 +194,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     (FollowerInfo_o *)method,
     v7);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int64_t)classBoardSquareOpenConfirmDialog,
     v13,
@@ -204,7 +204,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v17,
     v18);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int64_t)classBoardLockOpenConfirmDialog,
     v19,
@@ -214,7 +214,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v23,
     v24);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int64_t)classBoardLockReleaseConditionDialog,
     v25,
@@ -224,7 +224,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
     v29,
     v30);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int64_t)classBoardSquareDetailDialog,
     v31,
@@ -248,7 +248,7 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int64_t)prefab,
     (int64_t)method,
@@ -290,7 +290,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
   PartyListViewItem_o *v29; // x7
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardUiController_k__BackingField,
     (int64_t)uiController,
     (int64_t)boardUiAtlasManagerUnit,
@@ -300,7 +300,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v6,
     v7);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int64_t)boardUiAtlasManagerUnit,
     v12,
@@ -310,7 +310,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v16,
     v17);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int64_t)iconAtlasManagerUnit,
     v18,
@@ -320,7 +320,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
     v22,
     v23);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int64_t)classUiAtlasManagerUnit,
     v24,
@@ -472,7 +472,7 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BgModel_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -496,7 +496,7 @@ void __fastcall ClassBoardResourceContents__set_Blank(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Blank_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Blank_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -520,7 +520,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -544,7 +544,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -568,7 +568,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._BoardUiController_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -592,7 +592,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -616,7 +616,7 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -640,7 +640,7 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -664,7 +664,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
   PartyListViewItem_o *v7; // x7
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -688,7 +688,7 @@ void __fastcall ClassBoardResourceContents__set_Line(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Line_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Line_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -712,7 +712,7 @@ void __fastcall ClassBoardResourceContents__set_Lock(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Lock_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Lock_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -736,7 +736,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -760,7 +760,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -784,7 +784,7 @@ void __fastcall ClassBoardResourceContents__set_Square(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Square_k__BackingField = value;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -800,7 +800,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -824,7 +824,7 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,

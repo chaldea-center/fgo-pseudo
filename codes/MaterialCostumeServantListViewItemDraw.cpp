@@ -6,7 +6,6 @@ void __fastcall MaterialCostumeServantListViewItemDraw___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
         MaterialCostumeServantListViewItemDraw_o *this,
         bool isEnable,
@@ -17,10 +16,10 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
   struct UICommonButton_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BC2F98 & 1) == 0 )
+  if ( (byte_4BD7A19 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4BC2F98 = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BD7A19 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +34,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetButtonState(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1C1AE30(v7, v6);
+      sub_1C22094(v7, v6);
     }
     if ( isEnable )
       v8 = 0LL;
@@ -67,31 +66,28 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   ServantFaceIconComponent_o *servantFaceIcon; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v8; // x2
   struct UserServantCollectionEntity_o *userSvtCollectionEntity_k__BackingField; // x8
   int32_t status; // w8
   int32_t costumeOpenStatus_k__BackingField; // w8
   UILabel_o *maskLabel; // x20
-  __int64 *v16; // x8
+  __int64 *v13; // x8
 
-  if ( (byte_4BC2F97 & 1) == 0 )
+  if ( (byte_4BD7A18 & 1) == 0 )
   {
-    sub_1C1ABD4(&LocalizationManager_TypeInfo, item);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v7);
-    sub_1C1ABD4(&StringLiteral_8725/*"MATERIAL_FIND_SERVANT"*/, v8);
-    sub_1C1ABD4(&StringLiteral_8724/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/, v9);
-    byte_4BC2F97 = 1;
+    sub_1C21E38(&LocalizationManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    sub_1C21E38(&StringLiteral_8735/*"MATERIAL_FIND_SERVANT"*/);
+    sub_1C21E38(&StringLiteral_8734/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/);
+    byte_4BD7A18 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( !servantFaceIcon )
       goto LABEL_33;
-    ServantFaceIconComponent__Set_39421780(
+    ServantFaceIconComponent__Set_39468224(
       servantFaceIcon,
       item->fields._userSvtCollectionEntity_k__BackingField,
       item->fields._svtCostumeEntity_k__BackingField,
@@ -121,7 +117,7 @@ void __fastcall MaterialCostumeServantListViewItemDraw__SetItem(
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8725/*"MATERIAL_FIND_SERVANT"*/;
+      v13 = &StringLiteral_8735/*"MATERIAL_FIND_SERVANT"*/;
     }
     else
     {
@@ -147,7 +143,7 @@ LABEL_9:
             {
               UILabel__set_text((UILabel_o *)servantFaceIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 LABEL_13:
-              MaterialCostumeServantListViewItemDraw__SetButtonState(this, 1, v11);
+              MaterialCostumeServantListViewItemDraw__SetButtonState(this, 1, v8);
               return;
             }
           }
@@ -166,9 +162,9 @@ LABEL_13:
       maskLabel = this->fields.maskLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = &StringLiteral_8724/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
+      v13 = &StringLiteral_8734/*"MATERIAL_FIND_NOT_SELECT_COSTUME"*/;
     }
-    servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v16, 0LL);
+    servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v13, 0LL);
     if ( maskLabel )
     {
       UILabel__set_text(maskLabel, (System_String_o *)servantFaceIcon, 0LL);
@@ -180,6 +176,6 @@ LABEL_13:
       }
     }
 LABEL_33:
-    sub_1C1AE30(servantFaceIcon, item);
+    sub_1C22094(servantFaceIcon, item);
   }
 }

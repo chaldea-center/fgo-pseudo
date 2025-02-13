@@ -1,107 +1,103 @@
 void __fastcall DeckServantData___ctor(DeckServantData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  BalanceConfig_c *v5; // x0
-  struct System_Int64_array *v6; // x0
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  struct System_Int32_array *v13; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  BalanceConfig_c *v3; // x0
+  struct System_Int64_array *v4; // x0
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
+  struct System_Int32_array *v11; // x0
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BC7622 & 1) == 0 )
+  if ( (byte_4BDC0B9 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, method);
-    sub_1C1ABD4(&int___TypeInfo, v3);
-    sub_1C1ABD4(&long___TypeInfo, v4);
-    byte_4BC7622 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&long___TypeInfo);
+    byte_4BDC0B9 = 1;
   }
   this->fields.followerType = -1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = BalanceConfig_TypeInfo;
+  v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v5 = BalanceConfig_TypeInfo;
+    v3 = BalanceConfig_TypeInfo;
   }
-  v6 = (struct System_Int64_array *)sub_1C1AC7C(long___TypeInfo, (unsigned int)v5->static_fields->SvtEquipMax);
-  this->fields.userSvtEquipIds = v6;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.userSvtEquipIds, (int64_t)v6, v7, v8, v9, v10, v11, v12);
-  v13 = (struct System_Int32_array *)sub_1C1AC7C(
+  v4 = (struct System_Int64_array *)sub_1C21EE0(long___TypeInfo, (unsigned int)v3->static_fields->SvtEquipMax);
+  this->fields.userSvtEquipIds = v4;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.userSvtEquipIds, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (struct System_Int32_array *)sub_1C21EE0(
                                        int___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipMax);
-  this->fields.svtEquipIds = v13;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.svtEquipIds, (int64_t)v13, v14, v15, v16, v17, v18, v19);
+  this->fields.svtEquipIds = v11;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.svtEquipIds, (int64_t)v11, v12, v13, v14, v15, v16, v17);
 }
 
 
 DeckServantData_o *__fastcall DeckServantData__Clone(DeckServantData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x20
-  const MethodInfo *v6; // x1
+  __int64 v3; // x20
+  const MethodInfo *v4; // x1
   System_Array_o *userSvtEquipIds; // x0
-  __int64 v8; // x1
-  Il2CppObject *v9; // x21
-  int64_t v10; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  Il2CppObject *v17; // x21
-  int64_t v18; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
+  __int64 v6; // x1
+  Il2CppObject *v7; // x21
+  int64_t v8; // x0
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  Il2CppObject *v15; // x21
+  int64_t v16; // x0
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   DeckServantData_o *result; // x0
 
-  if ( (byte_4BC7623 & 1) == 0 )
+  if ( (byte_4BDC0BA & 1) == 0 )
   {
-    sub_1C1ABD4(&DeckServantData_TypeInfo, method);
-    sub_1C1ABD4(&int___TypeInfo, v3);
-    sub_1C1ABD4(&long___TypeInfo, v4);
-    byte_4BC7623 = 1;
+    sub_1C21E38(&DeckServantData_TypeInfo);
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&long___TypeInfo);
+    byte_4BDC0BA = 1;
   }
-  v5 = sub_1C1AE20(DeckServantData_TypeInfo);
-  DeckServantData___ctor((DeckServantData_o *)v5, v6);
-  if ( !v5 )
+  v3 = sub_1C22084(DeckServantData_TypeInfo);
+  DeckServantData___ctor((DeckServantData_o *)v3, v4);
+  if ( !v3 )
     goto LABEL_7;
-  *(_DWORD *)(v5 + 16) = this->fields.id;
-  *(_QWORD *)(v5 + 24) = this->fields.userSvtId;
-  *(_DWORD *)(v5 + 32) = this->fields.svtId;
+  *(_DWORD *)(v3 + 16) = this->fields.id;
+  *(_QWORD *)(v3 + 24) = this->fields.userSvtId;
+  *(_DWORD *)(v3 + 32) = this->fields.svtId;
   userSvtEquipIds = (System_Array_o *)this->fields.userSvtEquipIds;
   if ( !userSvtEquipIds
-    || (v9 = System_Array__Clone(userSvtEquipIds, 0LL),
-        *(_QWORD *)(v5 + 40) = sub_1C1AD10(v9, long___TypeInfo),
-        v10 = sub_1C1AD10(v9, long___TypeInfo),
-        sub_1C1AB78((PartyOrganizationUtility_o *)(v5 + 40), v10, v11, v12, v13, v14, v15, v16),
+    || (v7 = System_Array__Clone(userSvtEquipIds, 0LL),
+        *(_QWORD *)(v3 + 40) = sub_1C21F74(v7, long___TypeInfo),
+        v8 = sub_1C21F74(v7, long___TypeInfo),
+        sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 40), v8, v9, v10, v11, v12, v13, v14),
         (userSvtEquipIds = (System_Array_o *)this->fields.svtEquipIds) == 0LL) )
   {
 LABEL_7:
-    sub_1C1AE30(userSvtEquipIds, v8);
+    sub_1C22094(userSvtEquipIds, v6);
   }
-  v17 = System_Array__Clone(userSvtEquipIds, 0LL);
-  *(_QWORD *)(v5 + 48) = sub_1C1AD10(v17, int___TypeInfo);
-  v18 = sub_1C1AD10(v17, int___TypeInfo);
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v5 + 48), v18, v19, v20, v21, v22, v23, v24);
-  result = (DeckServantData_o *)v5;
-  *(_BYTE *)(v5 + 56) = this->fields.isFollowerSvt;
-  *(_QWORD *)(v5 + 64) = this->fields.npcFollowerSvtId;
-  *(_QWORD *)(v5 + 72) = *(_QWORD *)&this->fields.followerType;
+  v15 = System_Array__Clone(userSvtEquipIds, 0LL);
+  *(_QWORD *)(v3 + 48) = sub_1C21F74(v15, int___TypeInfo);
+  v16 = sub_1C21F74(v15, int___TypeInfo);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 48), v16, v17, v18, v19, v20, v21, v22);
+  result = (DeckServantData_o *)v3;
+  *(_BYTE *)(v3 + 56) = this->fields.isFollowerSvt;
+  *(_QWORD *)(v3 + 64) = this->fields.npcFollowerSvtId;
+  *(_QWORD *)(v3 + 72) = *(_QWORD *)&this->fields.followerType;
   return result;
 }

@@ -1,345 +1,329 @@
 void __fastcall Grade___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  __int64 v1; // x0
   __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x0
-  __int64 v18; // x1
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  struct System_String_array *v25; // x19
-  int64_t v26; // x1
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
+  struct System_String_array *v9; // x19
+  int64_t v10; // x1
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
+  int64_t v23; // x19
+  int64_t v24; // x1
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  int64_t v31; // x1
+  struct Grade_StaticFields *static_fields; // x0
   int64_t v33; // x2
   int32_t v34; // w3
   System_String_o *v35; // x4
   BattleSetupInfo_o *v36; // x5
   FollowerInfo_o *v37; // x6
   PartyListViewItem_o *v38; // x7
-  int64_t v39; // x19
-  int64_t v40; // x1
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
-  int64_t v47; // x1
-  struct Grade_StaticFields *static_fields; // x0
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
+  int64_t v39; // x2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  BattleSetupInfo_o *v42; // x5
+  FollowerInfo_o *v43; // x6
+  PartyListViewItem_o *v44; // x7
+  int64_t v45; // x19
+  int64_t v46; // x1
+  int64_t v47; // x2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  BattleSetupInfo_o *v50; // x5
+  FollowerInfo_o *v51; // x6
+  PartyListViewItem_o *v52; // x7
+  int64_t v53; // x1
+  struct Grade_StaticFields *v54; // x0
   int64_t v55; // x2
   int32_t v56; // w3
   System_String_o *v57; // x4
   BattleSetupInfo_o *v58; // x5
   FollowerInfo_o *v59; // x6
   PartyListViewItem_o *v60; // x7
-  int64_t v61; // x19
-  int64_t v62; // x1
-  int64_t v63; // x2
-  int32_t v64; // w3
-  System_String_o *v65; // x4
-  BattleSetupInfo_o *v66; // x5
-  FollowerInfo_o *v67; // x6
-  PartyListViewItem_o *v68; // x7
-  int64_t v69; // x1
-  struct Grade_StaticFields *v70; // x0
-  int64_t v71; // x2
-  int32_t v72; // w3
-  System_String_o *v73; // x4
-  BattleSetupInfo_o *v74; // x5
-  FollowerInfo_o *v75; // x6
-  PartyListViewItem_o *v76; // x7
+  int64_t v61; // x2
+  int32_t v62; // w3
+  System_String_o *v63; // x4
+  BattleSetupInfo_o *v64; // x5
+  FollowerInfo_o *v65; // x6
+  PartyListViewItem_o *v66; // x7
+  int64_t v67; // x19
+  int64_t v68; // x1
+  int64_t v69; // x2
+  int32_t v70; // w3
+  System_String_o *v71; // x4
+  BattleSetupInfo_o *v72; // x5
+  FollowerInfo_o *v73; // x6
+  PartyListViewItem_o *v74; // x7
+  int64_t v75; // x1
+  struct Grade_StaticFields *v76; // x0
   int64_t v77; // x2
   int32_t v78; // w3
   System_String_o *v79; // x4
   BattleSetupInfo_o *v80; // x5
   FollowerInfo_o *v81; // x6
   PartyListViewItem_o *v82; // x7
-  int64_t v83; // x19
-  int64_t v84; // x1
-  int64_t v85; // x2
-  int32_t v86; // w3
-  System_String_o *v87; // x4
-  BattleSetupInfo_o *v88; // x5
-  FollowerInfo_o *v89; // x6
-  PartyListViewItem_o *v90; // x7
-  int64_t v91; // x1
-  struct Grade_StaticFields *v92; // x0
-  int64_t v93; // x2
-  int32_t v94; // w3
-  System_String_o *v95; // x4
-  BattleSetupInfo_o *v96; // x5
-  FollowerInfo_o *v97; // x6
-  PartyListViewItem_o *v98; // x7
+  int64_t v83; // x2
+  int32_t v84; // w3
+  System_String_o *v85; // x4
+  BattleSetupInfo_o *v86; // x5
+  FollowerInfo_o *v87; // x6
+  PartyListViewItem_o *v88; // x7
+  int64_t v89; // x19
+  int64_t v90; // x1
+  int64_t v91; // x2
+  int32_t v92; // w3
+  System_String_o *v93; // x4
+  BattleSetupInfo_o *v94; // x5
+  FollowerInfo_o *v95; // x6
+  PartyListViewItem_o *v96; // x7
+  int64_t v97; // x1
+  struct Grade_StaticFields *v98; // x0
   int64_t v99; // x2
   int32_t v100; // w3
   System_String_o *v101; // x4
   BattleSetupInfo_o *v102; // x5
   FollowerInfo_o *v103; // x6
   PartyListViewItem_o *v104; // x7
-  int64_t v105; // x19
-  int64_t v106; // x1
-  int64_t v107; // x2
-  int32_t v108; // w3
-  System_String_o *v109; // x4
-  BattleSetupInfo_o *v110; // x5
-  FollowerInfo_o *v111; // x6
-  PartyListViewItem_o *v112; // x7
-  int64_t v113; // x1
-  struct Grade_StaticFields *v114; // x0
-  int64_t v115; // x2
-  int32_t v116; // w3
-  System_String_o *v117; // x4
-  BattleSetupInfo_o *v118; // x5
-  FollowerInfo_o *v119; // x6
-  PartyListViewItem_o *v120; // x7
+  int64_t v105; // x2
+  int32_t v106; // w3
+  System_String_o *v107; // x4
+  BattleSetupInfo_o *v108; // x5
+  FollowerInfo_o *v109; // x6
+  PartyListViewItem_o *v110; // x7
+  int64_t v111; // x19
+  int64_t v112; // x1
+  int64_t v113; // x2
+  int32_t v114; // w3
+  System_String_o *v115; // x4
+  BattleSetupInfo_o *v116; // x5
+  FollowerInfo_o *v117; // x6
+  PartyListViewItem_o *v118; // x7
+  int64_t v119; // x1
+  struct Grade_StaticFields *v120; // x0
   int64_t v121; // x2
   int32_t v122; // w3
   System_String_o *v123; // x4
   BattleSetupInfo_o *v124; // x5
   FollowerInfo_o *v125; // x6
   PartyListViewItem_o *v126; // x7
-  int64_t v127; // x19
-  int64_t v128; // x1
-  int64_t v129; // x2
-  int32_t v130; // w3
-  System_String_o *v131; // x4
-  BattleSetupInfo_o *v132; // x5
-  FollowerInfo_o *v133; // x6
-  PartyListViewItem_o *v134; // x7
-  int64_t v135; // x1
-  struct Grade_StaticFields *v136; // x0
-  int64_t v137; // x2
-  int32_t v138; // w3
-  System_String_o *v139; // x4
-  BattleSetupInfo_o *v140; // x5
-  FollowerInfo_o *v141; // x6
-  PartyListViewItem_o *v142; // x7
+  int64_t v127; // x2
+  int32_t v128; // w3
+  System_String_o *v129; // x4
+  BattleSetupInfo_o *v130; // x5
+  FollowerInfo_o *v131; // x6
+  PartyListViewItem_o *v132; // x7
+  int64_t v133; // x19
+  int64_t v134; // x1
+  int64_t v135; // x2
+  int32_t v136; // w3
+  System_String_o *v137; // x4
+  BattleSetupInfo_o *v138; // x5
+  FollowerInfo_o *v139; // x6
+  PartyListViewItem_o *v140; // x7
+  int64_t v141; // x1
+  struct Grade_StaticFields *v142; // x0
   int64_t v143; // x2
   int32_t v144; // w3
   System_String_o *v145; // x4
   BattleSetupInfo_o *v146; // x5
   FollowerInfo_o *v147; // x6
   PartyListViewItem_o *v148; // x7
-  int64_t v149; // x19
-  int64_t v150; // x1
-  int64_t v151; // x2
-  int32_t v152; // w3
-  System_String_o *v153; // x4
-  BattleSetupInfo_o *v154; // x5
-  FollowerInfo_o *v155; // x6
-  PartyListViewItem_o *v156; // x7
-  int64_t v157; // x1
-  struct Grade_StaticFields *v158; // x0
-  int64_t v159; // x2
-  int32_t v160; // w3
-  System_String_o *v161; // x4
-  BattleSetupInfo_o *v162; // x5
-  FollowerInfo_o *v163; // x6
-  PartyListViewItem_o *v164; // x7
+  int64_t v149; // x2
+  int32_t v150; // w3
+  System_String_o *v151; // x4
+  BattleSetupInfo_o *v152; // x5
+  FollowerInfo_o *v153; // x6
+  PartyListViewItem_o *v154; // x7
+  int64_t v155; // x19
+  int64_t v156; // x1
+  int64_t v157; // x2
+  int32_t v158; // w3
+  System_String_o *v159; // x4
+  BattleSetupInfo_o *v160; // x5
+  FollowerInfo_o *v161; // x6
+  PartyListViewItem_o *v162; // x7
+  int64_t v163; // x1
+  struct Grade_StaticFields *v164; // x0
   int64_t v165; // x2
   int32_t v166; // w3
   System_String_o *v167; // x4
   BattleSetupInfo_o *v168; // x5
   FollowerInfo_o *v169; // x6
   PartyListViewItem_o *v170; // x7
-  int64_t v171; // x19
-  int64_t v172; // x1
-  int64_t v173; // x2
-  int32_t v174; // w3
-  System_String_o *v175; // x4
-  BattleSetupInfo_o *v176; // x5
-  FollowerInfo_o *v177; // x6
-  PartyListViewItem_o *v178; // x7
-  int64_t v179; // x1
-  struct Grade_StaticFields *v180; // x0
-  int64_t v181; // x2
-  int32_t v182; // w3
-  System_String_o *v183; // x4
-  BattleSetupInfo_o *v184; // x5
-  FollowerInfo_o *v185; // x6
-  PartyListViewItem_o *v186; // x7
 
-  if ( (byte_4BC6A5E & 1) == 0 )
+  if ( (byte_4BDB4F4 & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, v1);
-    sub_1C1ABD4(&string___TypeInfo, v2);
-    sub_1C1ABD4(&StringLiteral_20699/*"img_listbg_04"*/, v3);
-    sub_1C1ABD4(&StringLiteral_20696/*"img_listbg_01"*/, v4);
-    sub_1C1ABD4(&StringLiteral_20704/*"img_mastername_line1"*/, v5);
-    sub_1C1ABD4(&StringLiteral_20640/*"img_commonbg_04"*/, v6);
-    sub_1C1ABD4(&StringLiteral_20493/*"icon_grade_1"*/, v7);
-    sub_1C1ABD4(&StringLiteral_20707/*"img_masterprofile_bg2"*/, v8);
-    sub_1C1ABD4(&StringLiteral_19940/*"frame_master_bg1"*/, v9);
-    sub_1C1ABD4(&StringLiteral_20706/*"img_masterprofile_bg1"*/, v10);
-    sub_1C1ABD4(&StringLiteral_23936/*"status_master_frame"*/, v11);
-    sub_1C1ABD4(&StringLiteral_20698/*"img_listbg_03"*/, v12);
-    sub_1C1ABD4(&StringLiteral_20703/*"img_masterform_bg"*/, v13);
-    sub_1C1ABD4(&StringLiteral_20705/*"img_mastername_line2"*/, v14);
-    sub_1C1ABD4(&StringLiteral_19939/*"frame_master_bg"*/, v15);
-    sub_1C1ABD4(&StringLiteral_23937/*"status_master_frame1"*/, v16);
-    byte_4BC6A5E = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    sub_1C21E38(&string___TypeInfo);
+    sub_1C21E38(&StringLiteral_20715/*"img_listbg_04"*/);
+    sub_1C21E38(&StringLiteral_20712/*"img_listbg_01"*/);
+    sub_1C21E38(&StringLiteral_20720/*"img_mastername_line1"*/);
+    sub_1C21E38(&StringLiteral_20655/*"img_commonbg_04"*/);
+    sub_1C21E38(&StringLiteral_20508/*"icon_grade_1"*/);
+    sub_1C21E38(&StringLiteral_20723/*"img_masterprofile_bg2"*/);
+    sub_1C21E38(&StringLiteral_19955/*"frame_master_bg1"*/);
+    sub_1C21E38(&StringLiteral_20722/*"img_masterprofile_bg1"*/);
+    sub_1C21E38(&StringLiteral_23956/*"status_master_frame"*/);
+    sub_1C21E38(&StringLiteral_20714/*"img_listbg_03"*/);
+    sub_1C21E38(&StringLiteral_20719/*"img_masterform_bg"*/);
+    sub_1C21E38(&StringLiteral_20721/*"img_mastername_line2"*/);
+    sub_1C21E38(&StringLiteral_19954/*"frame_master_bg"*/);
+    sub_1C21E38(&StringLiteral_23957/*"status_master_frame1"*/);
+    byte_4BDB4F4 = 1;
   }
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v25 = (struct System_String_array *)v17;
-  if ( *(_DWORD *)(v17 + 24) <= 1u )
+  v9 = (struct System_String_array *)v1;
+  if ( *(_DWORD *)(v1 + 24) <= 1u )
     goto LABEL_27;
-  v26 = StringLiteral_20493/*"icon_grade_1"*/;
-  *(_QWORD *)(v17 + 40) = StringLiteral_20493/*"icon_grade_1"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 40), v26, v19, v20, v21, v22, v23, v24);
-  Grade_TypeInfo->static_fields->gradeIconFileList = v25;
-  sub_1C1AB78((PartyOrganizationUtility_o *)Grade_TypeInfo->static_fields, (int64_t)v25, v27, v28, v29, v30, v31, v32);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v10 = StringLiteral_20508/*"icon_grade_1"*/;
+  *(_QWORD *)(v1 + 40) = StringLiteral_20508/*"icon_grade_1"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 40), v10, v3, v4, v5, v6, v7, v8);
+  Grade_TypeInfo->static_fields->gradeIconFileList = v9;
+  sub_1C21DDC((PartyOrganizationUtility_o *)Grade_TypeInfo->static_fields, (int64_t)v9, v11, v12, v13, v14, v15, v16);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v39 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+  v23 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v40 = StringLiteral_20706/*"img_masterprofile_bg1"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_20706/*"img_masterprofile_bg1"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v40, v33, v34, v35, v36, v37, v38);
-  if ( *(_DWORD *)(v39 + 24) <= 1u )
+  v24 = StringLiteral_20722/*"img_masterprofile_bg1"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_20722/*"img_masterprofile_bg1"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v24, v17, v18, v19, v20, v21, v22);
+  if ( *(_DWORD *)(v23 + 24) <= 1u )
     goto LABEL_27;
-  v47 = StringLiteral_20707/*"img_masterprofile_bg2"*/;
-  *(_QWORD *)(v39 + 40) = StringLiteral_20707/*"img_masterprofile_bg2"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v39 + 40), v47, v41, v42, v43, v44, v45, v46);
+  v31 = StringLiteral_20723/*"img_masterprofile_bg2"*/;
+  *(_QWORD *)(v23 + 40) = StringLiteral_20723/*"img_masterprofile_bg2"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v23 + 40), v31, v25, v26, v27, v28, v29, v30);
   static_fields = Grade_TypeInfo->static_fields;
-  static_fields->masterProfileBgFileList = (struct System_String_array *)v39;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->masterProfileBgFileList, v39, v49, v50, v51, v52, v53, v54);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  static_fields->masterProfileBgFileList = (struct System_String_array *)v23;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->masterProfileBgFileList, v23, v33, v34, v35, v36, v37, v38);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v61 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+  v45 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v62 = StringLiteral_20704/*"img_mastername_line1"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_20704/*"img_mastername_line1"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v62, v55, v56, v57, v58, v59, v60);
-  if ( *(_DWORD *)(v61 + 24) <= 1u )
+  v46 = StringLiteral_20720/*"img_mastername_line1"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_20720/*"img_mastername_line1"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v46, v39, v40, v41, v42, v43, v44);
+  if ( *(_DWORD *)(v45 + 24) <= 1u )
     goto LABEL_27;
-  v69 = StringLiteral_20705/*"img_mastername_line2"*/;
-  *(_QWORD *)(v61 + 40) = StringLiteral_20705/*"img_mastername_line2"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v61 + 40), v69, v63, v64, v65, v66, v67, v68);
-  v70 = Grade_TypeInfo->static_fields;
-  v70->masterProfileBgLineFileList = (struct System_String_array *)v61;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v70->masterProfileBgLineFileList, v61, v71, v72, v73, v74, v75, v76);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v53 = StringLiteral_20721/*"img_mastername_line2"*/;
+  *(_QWORD *)(v45 + 40) = StringLiteral_20721/*"img_mastername_line2"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v45 + 40), v53, v47, v48, v49, v50, v51, v52);
+  v54 = Grade_TypeInfo->static_fields;
+  v54->masterProfileBgLineFileList = (struct System_String_array *)v45;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v54->masterProfileBgLineFileList, v45, v55, v56, v57, v58, v59, v60);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v83 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+  v67 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v84 = StringLiteral_20640/*"img_commonbg_04"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_20640/*"img_commonbg_04"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v84, v77, v78, v79, v80, v81, v82);
-  if ( *(_DWORD *)(v83 + 24) <= 1u )
+  v68 = StringLiteral_20655/*"img_commonbg_04"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_20655/*"img_commonbg_04"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v68, v61, v62, v63, v64, v65, v66);
+  if ( *(_DWORD *)(v67 + 24) <= 1u )
     goto LABEL_27;
-  v91 = StringLiteral_20703/*"img_masterform_bg"*/;
-  *(_QWORD *)(v83 + 40) = StringLiteral_20703/*"img_masterform_bg"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v83 + 40), v91, v85, v86, v87, v88, v89, v90);
-  v92 = Grade_TypeInfo->static_fields;
-  v92->masterEquipBgFileList = (struct System_String_array *)v83;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v92->masterEquipBgFileList, v83, v93, v94, v95, v96, v97, v98);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v75 = StringLiteral_20719/*"img_masterform_bg"*/;
+  *(_QWORD *)(v67 + 40) = StringLiteral_20719/*"img_masterform_bg"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v67 + 40), v75, v69, v70, v71, v72, v73, v74);
+  v76 = Grade_TypeInfo->static_fields;
+  v76->masterEquipBgFileList = (struct System_String_array *)v67;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v76->masterEquipBgFileList, v67, v77, v78, v79, v80, v81, v82);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v105 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+  v89 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v106 = StringLiteral_19939/*"frame_master_bg"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_19939/*"frame_master_bg"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v106, v99, v100, v101, v102, v103, v104);
-  if ( *(_DWORD *)(v105 + 24) <= 1u )
+  v90 = StringLiteral_19954/*"frame_master_bg"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_19954/*"frame_master_bg"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v90, v83, v84, v85, v86, v87, v88);
+  if ( *(_DWORD *)(v89 + 24) <= 1u )
     goto LABEL_27;
-  v113 = StringLiteral_19940/*"frame_master_bg1"*/;
-  *(_QWORD *)(v105 + 40) = StringLiteral_19940/*"frame_master_bg1"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v105 + 40), v113, v107, v108, v109, v110, v111, v112);
-  v114 = Grade_TypeInfo->static_fields;
-  v114->battleIconBgFileList = (struct System_String_array *)v105;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v114->battleIconBgFileList, v105, v115, v116, v117, v118, v119, v120);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v97 = StringLiteral_19955/*"frame_master_bg1"*/;
+  *(_QWORD *)(v89 + 40) = StringLiteral_19955/*"frame_master_bg1"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v89 + 40), v97, v91, v92, v93, v94, v95, v96);
+  v98 = Grade_TypeInfo->static_fields;
+  v98->battleIconBgFileList = (struct System_String_array *)v89;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v98->battleIconBgFileList, v89, v99, v100, v101, v102, v103, v104);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v127 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+  v111 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v128 = StringLiteral_23936/*"status_master_frame"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_23936/*"status_master_frame"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v128, v121, v122, v123, v124, v125, v126);
-  if ( *(_DWORD *)(v127 + 24) <= 1u )
+  v112 = StringLiteral_23956/*"status_master_frame"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_23956/*"status_master_frame"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v112, v105, v106, v107, v108, v109, v110);
+  if ( *(_DWORD *)(v111 + 24) <= 1u )
     goto LABEL_27;
-  v135 = StringLiteral_23937/*"status_master_frame1"*/;
-  *(_QWORD *)(v127 + 40) = StringLiteral_23937/*"status_master_frame1"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v127 + 40), v135, v129, v130, v131, v132, v133, v134);
-  v136 = Grade_TypeInfo->static_fields;
-  v136->mainMstIconBgFileList = (struct System_String_array *)v127;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v136->mainMstIconBgFileList, v127, v137, v138, v139, v140, v141, v142);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v119 = StringLiteral_23957/*"status_master_frame1"*/;
+  *(_QWORD *)(v111 + 40) = StringLiteral_23957/*"status_master_frame1"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v111 + 40), v119, v113, v114, v115, v116, v117, v118);
+  v120 = Grade_TypeInfo->static_fields;
+  v120->mainMstIconBgFileList = (struct System_String_array *)v111;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v120->mainMstIconBgFileList, v111, v121, v122, v123, v124, v125, v126);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
     goto LABEL_28;
-  v149 = v17;
-  if ( !*(_DWORD *)(v17 + 24)
-    || (v150 = StringLiteral_20696/*"img_listbg_01"*/,
-        *(_QWORD *)(v17 + 32) = StringLiteral_20696/*"img_listbg_01"*/,
-        sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v150, v143, v144, v145, v146, v147, v148),
-        *(_DWORD *)(v149 + 24) <= 1u) )
+  v133 = v1;
+  if ( !*(_DWORD *)(v1 + 24)
+    || (v134 = StringLiteral_20712/*"img_listbg_01"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_20712/*"img_listbg_01"*/,
+        sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v134, v127, v128, v129, v130, v131, v132),
+        *(_DWORD *)(v133 + 24) <= 1u) )
   {
 LABEL_27:
-    sub_1C1AE38(v17, v18);
+    sub_1C2209C(v1, v2);
   }
-  v157 = StringLiteral_20698/*"img_listbg_03"*/;
-  *(_QWORD *)(v149 + 40) = StringLiteral_20698/*"img_listbg_03"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v149 + 40), v157, v151, v152, v153, v154, v155, v156);
-  v158 = Grade_TypeInfo->static_fields;
-  v158->supportBgFileList = (struct System_String_array *)v149;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v158->supportBgFileList, v149, v159, v160, v161, v162, v163, v164);
-  v17 = sub_1C1AC7C(string___TypeInfo, 2LL);
-  if ( !v17 )
+  v141 = StringLiteral_20714/*"img_listbg_03"*/;
+  *(_QWORD *)(v133 + 40) = StringLiteral_20714/*"img_listbg_03"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v133 + 40), v141, v135, v136, v137, v138, v139, v140);
+  v142 = Grade_TypeInfo->static_fields;
+  v142->supportBgFileList = (struct System_String_array *)v133;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v142->supportBgFileList, v133, v143, v144, v145, v146, v147, v148);
+  v1 = sub_1C21EE0(string___TypeInfo, 2LL);
+  if ( !v1 )
 LABEL_28:
-    sub_1C1AE30(v17, v18);
-  v171 = v17;
-  if ( !*(_DWORD *)(v17 + 24) )
+    sub_1C22094(v1, v2);
+  v155 = v1;
+  if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_27;
-  v172 = StringLiteral_20696/*"img_listbg_01"*/;
-  *(_QWORD *)(v17 + 32) = StringLiteral_20696/*"img_listbg_01"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v17 + 32), v172, v165, v166, v167, v168, v169, v170);
-  if ( *(_DWORD *)(v171 + 24) <= 1u )
+  v156 = StringLiteral_20712/*"img_listbg_01"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_20712/*"img_listbg_01"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v1 + 32), v156, v149, v150, v151, v152, v153, v154);
+  if ( *(_DWORD *)(v155 + 24) <= 1u )
     goto LABEL_27;
-  v179 = StringLiteral_20699/*"img_listbg_04"*/;
-  *(_QWORD *)(v171 + 40) = StringLiteral_20699/*"img_listbg_04"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v171 + 40), v179, v173, v174, v175, v176, v177, v178);
-  v180 = Grade_TypeInfo->static_fields;
-  v180->followerBgFileList = (struct System_String_array *)v171;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v180->followerBgFileList, v171, v181, v182, v183, v184, v185, v186);
+  v163 = StringLiteral_20715/*"img_listbg_04"*/;
+  *(_QWORD *)(v155 + 40) = StringLiteral_20715/*"img_listbg_04"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v155 + 40), v163, v157, v158, v159, v160, v161, v162);
+  v164 = Grade_TypeInfo->static_fields;
+  v164->followerBgFileList = (struct System_String_array *)v155;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v164->followerBgFileList, v155, v165, v166, v167, v168, v169, v170);
 }
 
 
@@ -354,10 +338,10 @@ System_String_o *__fastcall Grade__GetBattleIconBgImage(int32_t gradeKind, const
   Grade_c *v3; // x0
   struct System_String_array *battleIconBgFileList; // x8
 
-  if ( (byte_4BC6A5A & 1) == 0 )
+  if ( (byte_4BDB4F0 & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A5A = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4F0 = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -367,9 +351,9 @@ System_String_o *__fastcall Grade__GetBattleIconBgImage(int32_t gradeKind, const
   }
   battleIconBgFileList = v3->static_fields->battleIconBgFileList;
   if ( !battleIconBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( battleIconBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return battleIconBgFileList->m_Items[gradeKind];
 }
 
@@ -379,10 +363,10 @@ System_String_o *__fastcall Grade__GetFollowerBgImage(int32_t gradeKind, const M
   Grade_c *v3; // x0
   struct System_String_array *followerBgFileList; // x8
 
-  if ( (byte_4BC6A5D & 1) == 0 )
+  if ( (byte_4BDB4F3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A5D = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4F3 = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -392,9 +376,9 @@ System_String_o *__fastcall Grade__GetFollowerBgImage(int32_t gradeKind, const M
   }
   followerBgFileList = v3->static_fields->followerBgFileList;
   if ( !followerBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( followerBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return followerBgFileList->m_Items[gradeKind];
 }
 
@@ -404,10 +388,10 @@ System_String_o *__fastcall Grade__GetIconImage(int32_t gradeKind, const MethodI
   Grade_c *v3; // x0
   struct System_String_array *gradeIconFileList; // x8
 
-  if ( (byte_4BC6A56 & 1) == 0 )
+  if ( (byte_4BDB4EC & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A56 = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4EC = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -417,9 +401,9 @@ System_String_o *__fastcall Grade__GetIconImage(int32_t gradeKind, const MethodI
   }
   gradeIconFileList = v3->static_fields->gradeIconFileList;
   if ( !gradeIconFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( gradeIconFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return gradeIconFileList->m_Items[gradeKind];
 }
 
@@ -428,67 +412,67 @@ int32_t __fastcall Grade__GetKind(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_4BC6A52 & 1) == 0 )
+  if ( (byte_4BDB4E8 & 1) == 0 )
   {
-    sub_1C1ABD4(&TutorialFlag_TypeInfo, v1);
-    byte_4BC6A52 = 1;
+    sub_1C21E38(&TutorialFlag_TypeInfo);
+    byte_4BDB4E8 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_38884588(127, v1);
+  return TutorialFlag__Get_38930984(127, v1);
 }
 
 
-int32_t __fastcall Grade__GetKind_38884672(UserGameEntity_o *userGameEntity, const MethodInfo *method)
+int32_t __fastcall Grade__GetKind_38931068(UserGameEntity_o *userGameEntity, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4BC6A53 & 1) == 0 )
+  if ( (byte_4BDB4E9 & 1) == 0 )
   {
-    sub_1C1ABD4(&TutorialFlag_TypeInfo, method);
-    byte_4BC6A53 = 1;
+    sub_1C21E38(&TutorialFlag_TypeInfo);
+    byte_4BDB4E9 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   if ( !userGameEntity )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   return (LODWORD(userGameEntity->fields.tutorial1) >> 27) & 1;
 }
 
 
-int32_t __fastcall Grade__GetKind_38884892(OtherUserGameEntity_o *otherUserGameEntity, const MethodInfo *method)
+int32_t __fastcall Grade__GetKind_38931288(OtherUserGameEntity_o *otherUserGameEntity, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4BC6A54 & 1) == 0 )
+  if ( (byte_4BDB4EA & 1) == 0 )
   {
-    sub_1C1ABD4(&TutorialFlag_TypeInfo, method);
-    byte_4BC6A54 = 1;
+    sub_1C21E38(&TutorialFlag_TypeInfo);
+    byte_4BDB4EA = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   if ( !otherUserGameEntity )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   return (LODWORD(otherUserGameEntity->fields.tutorial1) >> 27) & 1;
 }
 
 
-int32_t __fastcall Grade__GetKind_38885084(FollowerInfo_o *followerInfo, const MethodInfo *method)
+int32_t __fastcall Grade__GetKind_38931480(FollowerInfo_o *followerInfo, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4BC6A55 & 1) == 0 )
+  if ( (byte_4BDB4EB & 1) == 0 )
   {
-    sub_1C1ABD4(&TutorialFlag_TypeInfo, method);
-    byte_4BC6A55 = 1;
+    sub_1C21E38(&TutorialFlag_TypeInfo);
+    byte_4BDB4EB = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   if ( !followerInfo )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   return (LODWORD(followerInfo->fields.tutorial1) >> 27) & 1;
 }
 
@@ -498,10 +482,10 @@ System_String_o *__fastcall Grade__GetMainMstIconBgImage(int32_t gradeKind, cons
   Grade_c *v3; // x0
   struct System_String_array *mainMstIconBgFileList; // x8
 
-  if ( (byte_4BC6A5B & 1) == 0 )
+  if ( (byte_4BDB4F1 & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A5B = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4F1 = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -511,9 +495,9 @@ System_String_o *__fastcall Grade__GetMainMstIconBgImage(int32_t gradeKind, cons
   }
   mainMstIconBgFileList = v3->static_fields->mainMstIconBgFileList;
   if ( !mainMstIconBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( mainMstIconBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return mainMstIconBgFileList->m_Items[gradeKind];
 }
 
@@ -523,10 +507,10 @@ System_String_o *__fastcall Grade__GetMasterEquipBgImage(int32_t gradeKind, cons
   Grade_c *v3; // x0
   struct System_String_array *masterEquipBgFileList; // x8
 
-  if ( (byte_4BC6A59 & 1) == 0 )
+  if ( (byte_4BDB4EF & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A59 = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4EF = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -536,9 +520,9 @@ System_String_o *__fastcall Grade__GetMasterEquipBgImage(int32_t gradeKind, cons
   }
   masterEquipBgFileList = v3->static_fields->masterEquipBgFileList;
   if ( !masterEquipBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( masterEquipBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return masterEquipBgFileList->m_Items[gradeKind];
 }
 
@@ -548,10 +532,10 @@ System_String_o *__fastcall Grade__GetMasterProfileBgImage(int32_t gradeKind, co
   Grade_c *v3; // x0
   struct System_String_array *masterProfileBgFileList; // x8
 
-  if ( (byte_4BC6A57 & 1) == 0 )
+  if ( (byte_4BDB4ED & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A57 = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4ED = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -561,9 +545,9 @@ System_String_o *__fastcall Grade__GetMasterProfileBgImage(int32_t gradeKind, co
   }
   masterProfileBgFileList = v3->static_fields->masterProfileBgFileList;
   if ( !masterProfileBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( masterProfileBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return masterProfileBgFileList->m_Items[gradeKind];
 }
 
@@ -573,10 +557,10 @@ System_String_o *__fastcall Grade__GetMasterProfileBgLineImage(int32_t gradeKind
   Grade_c *v3; // x0
   struct System_String_array *masterProfileBgLineFileList; // x8
 
-  if ( (byte_4BC6A58 & 1) == 0 )
+  if ( (byte_4BDB4EE & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A58 = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4EE = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -586,9 +570,9 @@ System_String_o *__fastcall Grade__GetMasterProfileBgLineImage(int32_t gradeKind
   }
   masterProfileBgLineFileList = v3->static_fields->masterProfileBgLineFileList;
   if ( !masterProfileBgLineFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( masterProfileBgLineFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return masterProfileBgLineFileList->m_Items[gradeKind];
 }
 
@@ -598,10 +582,10 @@ System_String_o *__fastcall Grade__GetSupportBgImage(int32_t gradeKind, const Me
   Grade_c *v3; // x0
   struct System_String_array *supportBgFileList; // x8
 
-  if ( (byte_4BC6A5C & 1) == 0 )
+  if ( (byte_4BDB4F2 & 1) == 0 )
   {
-    sub_1C1ABD4(&Grade_TypeInfo, method);
-    byte_4BC6A5C = 1;
+    sub_1C21E38(&Grade_TypeInfo);
+    byte_4BDB4F2 = 1;
   }
   v3 = Grade_TypeInfo;
   if ( !Grade_TypeInfo->_2.cctor_finished )
@@ -611,8 +595,8 @@ System_String_o *__fastcall Grade__GetSupportBgImage(int32_t gradeKind, const Me
   }
   supportBgFileList = v3->static_fields->supportBgFileList;
   if ( !supportBgFileList )
-    sub_1C1AE30(v3, method);
+    sub_1C22094(v3, method);
   if ( supportBgFileList->max_length <= gradeKind )
-    sub_1C1AE38(v3, method);
+    sub_1C2209C(v3, method);
   return supportBgFileList->m_Items[gradeKind];
 }

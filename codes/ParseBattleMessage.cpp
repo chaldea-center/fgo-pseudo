@@ -1,76 +1,73 @@
 void __fastcall ParseBattleMessage___ctor(ParseBattleMessage_o *this, BattleLogic_o *logic, const MethodInfo *method)
 {
-  __int64 v5; // x1
+  __int64 v5; // x0
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  struct System_String_array *v16; // x21
-  int64_t v17; // x1
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  System_Collections_Generic_Dictionary_object__object__o *v24; // x21
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
-  const MethodInfo *v37; // x1
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
+  struct System_String_array *v13; // x21
+  int64_t v14; // x1
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  System_Collections_Generic_Dictionary_object__object__o *v21; // x21
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
+  const MethodInfo *v34; // x1
 
-  if ( (byte_4BCA8ED & 1) == 0 )
+  if ( (byte_4BDF39F & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase___ctor__, logic);
-    sub_1C1ABD4(&System_Collections_Generic_Dictionary_string__ReplaceTagBase__TypeInfo, v5);
-    sub_1C1ABD4(&string___TypeInfo, v6);
-    sub_1C1ABD4(&StringLiteral_16248/*"[div]"*/, v7);
-    byte_4BCA8ED = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase___ctor__);
+    sub_1C21E38(&System_Collections_Generic_Dictionary_string__ReplaceTagBase__TypeInfo);
+    sub_1C21E38(&string___TypeInfo);
+    sub_1C21E38(&StringLiteral_16259/*"[div]"*/);
+    byte_4BDF39F = 1;
   }
-  v8 = sub_1C1AC7C(string___TypeInfo, 1LL);
-  if ( !v8 )
-    sub_1C1AE30(0LL, v9);
-  v16 = (struct System_String_array *)v8;
-  if ( !*(_DWORD *)(v8 + 24) )
-    sub_1C1AE38(v8, v9);
-  v17 = StringLiteral_16248/*"[div]"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_16248/*"[div]"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v8 + 32), v17, v10, v11, v12, v13, v14, v15);
-  this->fields.TAG_DIVIDE = v16;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v16, v18, v19, v20, v21, v22, v23);
-  v24 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C1AE20(System_Collections_Generic_Dictionary_string__ReplaceTagBase__TypeInfo);
+  v5 = sub_1C21EE0(string___TypeInfo, 1LL);
+  if ( !v5 )
+    sub_1C22094(0LL, v6);
+  v13 = (struct System_String_array *)v5;
+  if ( !*(_DWORD *)(v5 + 24) )
+    sub_1C2209C(v5, v6);
+  v14 = StringLiteral_16259/*"[div]"*/;
+  *(_QWORD *)(v5 + 32) = StringLiteral_16259/*"[div]"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 32), v14, v7, v8, v9, v10, v11, v12);
+  this->fields.TAG_DIVIDE = v13;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v13, v15, v16, v17, v18, v19, v20);
+  v21 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C22084(System_Collections_Generic_Dictionary_string__ReplaceTagBase__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v24,
-    (const MethodInfo_3302340 *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase___ctor__);
-  this->fields.dicReplaceTag = (struct System_Collections_Generic_Dictionary_string__ReplaceTagBase__o *)v24;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.dicReplaceTag, (int64_t)v24, v25, v26, v27, v28, v29, v30);
+    v21,
+    (const MethodInfo_3315CD0 *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase___ctor__);
+  this->fields.dicReplaceTag = (struct System_Collections_Generic_Dictionary_string__ReplaceTagBase__o *)v21;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.dicReplaceTag, (int64_t)v21, v22, v23, v24, v25, v26, v27);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Logic_k__BackingField = logic;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Logic_k__BackingField,
     (int64_t)logic,
+    v28,
+    v29,
+    v30,
     v31,
     v32,
-    v33,
-    v34,
-    v35,
-    v36);
-  ParseBattleMessage__Init(this, v37);
+    v33);
+  ParseBattleMessage__Init(this, v34);
 }
 
 
@@ -83,12 +80,10 @@ void __fastcall ParseBattleMessage__AddReplaceTag(
   System_Collections_Generic_Dictionary_object__object__o *dicReplaceTag; // x20
 
   v4 = this;
-  if ( (byte_4BCA8EF & 1) == 0 )
+  if ( (byte_4BDF3A1 & 1) == 0 )
   {
-    this = (ParseBattleMessage_o *)sub_1C1ABD4(
-                                     &Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__Add__,
-                                     replaceTag);
-    byte_4BCA8EF = 1;
+    this = (ParseBattleMessage_o *)sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__Add__);
+    byte_4BDF3A1 = 1;
   }
   if ( !replaceTag
     || (dicReplaceTag = (System_Collections_Generic_Dictionary_object__object__o *)v4->fields.dicReplaceTag,
@@ -98,13 +93,13 @@ void __fastcall ParseBattleMessage__AddReplaceTag(
                                          method),
         !dicReplaceTag) )
   {
-    sub_1C1AE30(this, replaceTag);
+    sub_1C22094(this, replaceTag);
   }
   System_Collections_Generic_Dictionary_object__object___Add(
     dicReplaceTag,
     (Il2CppObject *)this,
     (Il2CppObject *)replaceTag,
-    (const MethodInfo_3302CF0 *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__Add__);
+    (const MethodInfo_3316680 *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__Add__);
 }
 
 
@@ -115,36 +110,34 @@ bool __fastcall ParseBattleMessage__ExistReplaceTag(
         const MethodInfo *method)
 {
   ParseBattleMessage_o *v6; // x21
-  __int64 v7; // x1
-  __int64 v8; // x1
   System_Collections_Generic_Dictionary_object__object__o *dicReplaceTag; // x21
-  System_String_array *v10; // x0
+  System_String_array *v8; // x0
 
   v6 = this;
-  if ( (byte_4BCA8F3 & 1) == 0 )
+  if ( (byte_4BDF3A5 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_IndexValue_string___, tag);
-    sub_1C1ABD4(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__TryGetValue__, v7);
-    this = (ParseBattleMessage_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
-    byte_4BCA8F3 = 1;
+    sub_1C21E38(&Method_BasicHelper_IndexValue_string___);
+    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__TryGetValue__);
+    this = (ParseBattleMessage_o *)sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDF3A5 = 1;
   }
   if ( !tag
     || (dicReplaceTag = (System_Collections_Generic_Dictionary_object__object__o *)v6->fields.dicReplaceTag,
-        v10 = System_String__Split(tag, 0x20u, 0, 0LL),
+        v8 = System_String__Split(tag, 0x20u, 0, 0LL),
         this = (ParseBattleMessage_o *)BasicHelper__IndexValue_object_(
-                                         (System_Object_array *)v10,
+                                         (System_Object_array *)v8,
                                          0,
                                          (Il2CppObject *)StringLiteral_1/*""*/,
-                                         (const MethodInfo_2F8E058 *)Method_BasicHelper_IndexValue_string___),
+                                         (const MethodInfo_2F9E9CC *)Method_BasicHelper_IndexValue_string___),
         !dicReplaceTag) )
   {
-    sub_1C1AE30(this, tag);
+    sub_1C22094(this, tag);
   }
   return System_Collections_Generic_Dictionary_object__object___TryGetValue(
            dicReplaceTag,
            (Il2CppObject *)this,
            (Il2CppObject **)replaceTag,
-           (const MethodInfo_33044FC *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__TryGetValue__);
+           (const MethodInfo_3317E8C *)Method_System_Collections_Generic_Dictionary_string__ReplaceTagBase__TryGetValue__);
 }
 
 
@@ -153,12 +146,12 @@ void __fastcall ParseBattleMessage__Init(ParseBattleMessage_o *this, const Metho
   Il2CppObject *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4BCA8EE & 1) == 0 )
+  if ( (byte_4BDF3A0 & 1) == 0 )
   {
-    sub_1C1ABD4(&ReplaceMasterName_TypeInfo, method);
-    byte_4BCA8EE = 1;
+    sub_1C21E38(&ReplaceMasterName_TypeInfo);
+    byte_4BDF3A0 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C1AE20(ReplaceMasterName_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C22084(ReplaceMasterName_TypeInfo);
   System_Object___ctor(v3, 0LL);
   ParseBattleMessage__AddReplaceTag(this, (ReplaceTagBase_o *)v3, v4);
 }
@@ -172,26 +165,25 @@ bool __fastcall ParseBattleMessage__NextTagSearch(
         int32_t *endIndex,
         const MethodInfo *method)
 {
-  __int64 v10; // x1
+  int32_t v10; // w0
   int32_t v11; // w0
-  int32_t v12; // w0
 
-  if ( (byte_4BCA8F0 & 1) == 0 )
+  if ( (byte_4BDF3A2 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_16075/*"["*/, text);
-    this = (ParseBattleMessage_o *)sub_1C1ABD4(&StringLiteral_16334/*"]"*/, v10);
-    byte_4BCA8F0 = 1;
+    sub_1C21E38(&StringLiteral_16086/*"["*/);
+    this = (ParseBattleMessage_o *)sub_1C21E38(&StringLiteral_16345/*"]"*/);
+    byte_4BDF3A2 = 1;
   }
   *endIndex = 0;
   if ( !text )
-    sub_1C1AE30(this, text);
-  v11 = System_String__IndexOf_63071976(text, (System_String_o *)StringLiteral_16075/*"["*/, analyzeIdx, 4, 0LL);
-  *startIndex = v11;
-  if ( (v11 & 0x80000000) != 0 )
+    sub_1C22094(this, text);
+  v10 = System_String__IndexOf_63147084(text, (System_String_o *)StringLiteral_16086/*"["*/, analyzeIdx, 4, 0LL);
+  *startIndex = v10;
+  if ( (v10 & 0x80000000) != 0 )
     return 0;
-  v12 = System_String__IndexOf_63071976(text, (System_String_o *)StringLiteral_16334/*"]"*/, v11, 4, 0LL);
-  *endIndex = v12;
-  return v12 > 0;
+  v11 = System_String__IndexOf_63147084(text, (System_String_o *)StringLiteral_16345/*"]"*/, v10, 4, 0LL);
+  *endIndex = v11;
+  return v11 > 0;
 }
 
 
@@ -201,38 +193,35 @@ System_String_array *__fastcall ParseBattleMessage__Replace(
         const MethodInfo *method)
 {
   ParseBattleMessage_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_IEnumerable_TSource__o *v8; // x20
-  System_Func_object__object__o *v9; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v5; // x20
+  System_Func_object__object__o *v6; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
 
   v4 = this;
-  if ( (byte_4BCA8F1 & 1) == 0 )
+  if ( (byte_4BDF3A3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_string__string___, texts);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_string___, v5);
-    sub_1C1ABD4(&System_Func_string__string__TypeInfo, v6);
-    this = (ParseBattleMessage_o *)sub_1C1ABD4(&Method_ParseBattleMessage_ReplaceText__, v7);
-    byte_4BCA8F1 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_string__string___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_1C21E38(&System_Func_string__string__TypeInfo);
+    this = (ParseBattleMessage_o *)sub_1C21E38(&Method_ParseBattleMessage_ReplaceText__);
+    byte_4BDF3A3 = 1;
   }
   if ( !texts )
-    sub_1C1AE30(this, texts);
-  v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split_63066600(
+    sub_1C22094(this, texts);
+  v5 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split_63141708(
                                                               texts,
                                                               v4->fields.TAG_DIVIDE,
                                                               0,
                                                               0LL);
-  v9 = (System_Func_object__object__o *)sub_1C1AE20(System_Func_string__string__TypeInfo);
-  System_Func_object__object____ctor(v9, (Il2CppObject *)v4, Method_ParseBattleMessage_ReplaceText__, 0LL);
-  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                               v8,
-                                                               (System_Func_TSource__TResult__o *)v9,
-                                                               (const MethodInfo_2FD0C44 *)Method_System_Linq_Enumerable_Select_string__string___);
+  v6 = (System_Func_object__object__o *)sub_1C22084(System_Func_string__string__TypeInfo);
+  System_Func_object__object____ctor(v6, (Il2CppObject *)v4, Method_ParseBattleMessage_ReplaceText__, 0LL);
+  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                              v5,
+                                                              (System_Func_TSource__TResult__o *)v6,
+                                                              (const MethodInfo_2FE15B8 *)Method_System_Linq_Enumerable_Select_string__string___);
   return (System_String_array *)System_Linq_Enumerable__ToArray_object_(
-                                  v10,
-                                  (const MethodInfo_2FD8E70 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                  v7,
+                                  (const MethodInfo_2FE97E4 *)Method_System_Linq_Enumerable_ToArray_string___);
 }
 
 
@@ -241,7 +230,6 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
         System_String_o *text,
         const MethodInfo *method)
 {
-  System_String_o *v3; // x19
   System_String_o *IsNullOrEmpty; // x0
   __int64 v6; // x1
   int32_t stringLength; // w22
@@ -259,25 +247,24 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
   System_String_o *v20; // [xsp+0h] [xbp-50h] BYREF
   __int64 endIndex; // [xsp+8h] [xbp-48h] BYREF
 
-  v3 = text;
-  if ( (byte_4BCA8F2 & 1) == 0 )
+  if ( (byte_4BDF3A4 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Text_StringBuilder_TypeInfo, text);
-    byte_4BCA8F2 = 1;
+    sub_1C21E38(&System_Text_StringBuilder_TypeInfo);
+    byte_4BDF3A4 = 1;
   }
   v20 = 0LL;
   endIndex = 0LL;
-  IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(v3, 0LL);
+  IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(text, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
-    if ( v3 )
+    if ( text )
     {
-      stringLength = v3->fields._stringLength;
-      v8 = (System_Text_StringBuilder_o *)sub_1C1AE20(System_Text_StringBuilder_TypeInfo);
-      System_Text_StringBuilder___ctor_62194872(v8, stringLength + 32, 0LL);
+      stringLength = text->fields._stringLength;
+      v8 = (System_Text_StringBuilder_o *)sub_1C22084(System_Text_StringBuilder_TypeInfo);
+      System_Text_StringBuilder___ctor_62269980(v8, stringLength + 32, 0LL);
       IsNullOrEmpty = (System_String_o *)ParseBattleMessage__NextTagSearch(
                                            v9,
-                                           v3,
+                                           text,
                                            0,
                                            (int32_t *)&endIndex + 1,
                                            (int32_t *)&endIndex,
@@ -290,7 +277,7 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
         {
           v12 = endIndex;
           v13 = HIDWORD(endIndex);
-          v14 = System_String__Substring_63059372(v3, HIDWORD(endIndex) + 1, (int)endIndex + ~HIDWORD(endIndex), 0LL);
+          v14 = System_String__Substring_63134480(text, HIDWORD(endIndex) + 1, (int)endIndex + ~HIDWORD(endIndex), 0LL);
           IsNullOrEmpty = (System_String_o *)ParseBattleMessage__ExistReplaceTag(
                                                this,
                                                v14,
@@ -302,7 +289,7 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
             {
               if ( !v8 )
                 goto LABEL_23;
-              System_Text_StringBuilder__Append_62201836(v8, v3, v11, v13 - v11, 0LL);
+              System_Text_StringBuilder__Append_62276944(v8, text, v11, v13 - v11, 0LL);
             }
             IsNullOrEmpty = v20;
             if ( !v20 )
@@ -314,15 +301,15 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
                                                  v20->klass->vtable._6_System_Collections_Generic_IEnumerable_System_Char__GetEnumerator.methodPtr);
             if ( !v8 )
               goto LABEL_23;
-            appended = (ParseBattleMessage_o *)System_Text_StringBuilder__Append_62201520(v8, IsNullOrEmpty, 0LL);
+            appended = (ParseBattleMessage_o *)System_Text_StringBuilder__Append_62276628(v8, IsNullOrEmpty, 0LL);
           }
           else
           {
             if ( !v8 )
               goto LABEL_23;
-            appended = (ParseBattleMessage_o *)System_Text_StringBuilder__Append_62201836(
+            appended = (ParseBattleMessage_o *)System_Text_StringBuilder__Append_62276944(
                                                  v8,
-                                                 v3,
+                                                 text,
                                                  v11,
                                                  v12 - v11 + 1,
                                                  0LL);
@@ -330,7 +317,7 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
           v11 = v12 + 1;
           IsNullOrEmpty = (System_String_o *)ParseBattleMessage__NextTagSearch(
                                                appended,
-                                               v3,
+                                               text,
                                                v12 + 1,
                                                (int32_t *)&endIndex + 1,
                                                (int32_t *)&endIndex,
@@ -338,7 +325,7 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
         }
         while ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 );
       }
-      v18 = v3->fields._stringLength;
+      v18 = text->fields._stringLength;
       if ( v18 <= v11 )
       {
         if ( v8 )
@@ -348,16 +335,16 @@ System_String_o *__fastcall ParseBattleMessage__ReplaceText(
       }
       else if ( v8 )
       {
-        System_Text_StringBuilder__Append_62201836(v8, v3, v11, v18 - v11, 0LL);
+        System_Text_StringBuilder__Append_62276944(v8, text, v11, v18 - v11, 0LL);
         return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v8->klass->vtable._3_ToString.method)(
                                     v8,
                                     v8->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       }
     }
 LABEL_23:
-    sub_1C1AE30(IsNullOrEmpty, v6);
+    sub_1C22094(IsNullOrEmpty, v6);
   }
-  return v3;
+  return text;
 }
 
 
@@ -367,7 +354,7 @@ BattleData_o *__fastcall ParseBattleMessage__get_Data(ParseBattleMessage_o *this
 
   Logic_k__BackingField = this->fields._Logic_k__BackingField;
   if ( !Logic_k__BackingField )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   return Logic_k__BackingField->fields.data;
 }
 
@@ -390,7 +377,7 @@ void __fastcall ParseBattleMessage__set_Logic(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Logic_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Logic_k__BackingField,
     (int64_t)value,
     (int64_t)method,

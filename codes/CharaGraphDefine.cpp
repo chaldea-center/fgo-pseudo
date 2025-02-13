@@ -38,7 +38,7 @@ UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0LL);
     p_userGameEntity->klass = (PartyOrganizationUtility_c *)userGameEntity;
-    sub_1C1AB78(p_userGameEntity, (int64_t)userGameEntity, v4, v5, v6, v7, v8, v9);
+    sub_1C21DDC(p_userGameEntity, (int64_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

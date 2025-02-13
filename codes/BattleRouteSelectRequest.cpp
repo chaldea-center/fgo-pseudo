@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall BattleRouteSelectRequest__beginRequest(
         BattleRouteSelectRequest_o *this,
         int32_t questId,
@@ -7,32 +6,29 @@ void __fastcall BattleRouteSelectRequest__beginRequest(
         const MethodInfo *method)
 {
   System_Int32_array *v5; // x21
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
+  const MethodInfo *v9; // x3
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x1
 
   v5 = routeSelect;
-  if ( (byte_4BC932C & 1) == 0 )
+  if ( (byte_4BDDDD6 & 1) == 0 )
   {
-    sub_1C1ABD4(&int___TypeInfo, *(_QWORD *)&questId);
-    sub_1C1ABD4(&StringLiteral_23373/*"routeSelect"*/, v9);
-    sub_1C1ABD4(&StringLiteral_23083/*"questPhase"*/, v10);
-    sub_1C1ABD4(&StringLiteral_23081/*"questId"*/, v11);
-    byte_4BC932C = 1;
+    sub_1C21E38(&int___TypeInfo);
+    sub_1C21E38(&StringLiteral_23393/*"routeSelect"*/);
+    sub_1C21E38(&StringLiteral_23103/*"questPhase"*/);
+    sub_1C21E38(&StringLiteral_23101/*"questId"*/);
+    byte_4BDDDD6 = 1;
   }
   if ( !v5 )
-    v5 = (System_Int32_array *)sub_1C1AC7C(int___TypeInfo, 0LL);
+    v5 = (System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23081/*"questId"*/,
+    (System_String_o *)StringLiteral_23101/*"questId"*/,
     questId,
     (const MethodInfo *)routeSelect);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23083/*"questPhase"*/, questPhase, v12);
-  RequestBase__addField_42370648((RequestBase_o *)this, (System_String_o *)StringLiteral_23373/*"routeSelect"*/, &v5->obj, v13);
-  RequestBase__beginRequest((RequestBase_o *)this, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23103/*"questPhase"*/, questPhase, v9);
+  RequestBase__addField_42423236((RequestBase_o *)this, (System_String_o *)StringLiteral_23393/*"routeSelect"*/, &v5->obj, v10);
+  RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
 
@@ -40,19 +36,18 @@ System_String_o *__fastcall BattleRouteSelectRequest__getURL(
         BattleRouteSelectRequest_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC932B & 1) == 0 )
+  if ( (byte_4BDDDD5 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_17370/*"battle/routeSelect"*/, v2);
-    byte_4BC932B = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_17383/*"battle/routeSelect"*/);
+    byte_4BDDDD5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_17370/*"battle/routeSelect"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_17383/*"battle/routeSelect"*/, 0LL);
 }
 
 
@@ -61,37 +56,35 @@ void __fastcall BattleRouteSelectRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  ResponseData_o *v5; // x0
   __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 v8; // x1
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_String_o *v8; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_4BC932D & 1) == 0 )
+  if ( (byte_4BDDDD7 & 1) == 0 )
   {
-    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C1ABD4(&ServantCommentManager_TypeInfo, v6);
-    byte_4BC932D = 1;
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&ServantCommentManager_TypeInfo);
+    byte_4BDDDD7 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(86, responseList, 0LL);
-  if ( !v7 )
-    sub_1C1AE30(0LL, v8);
-  success = (Il2CppObject *)v7->fields.success;
+  v5 = ResponseCommandKind__SearchData(86, responseList, 0LL);
+  if ( !v5 )
+    sub_1C22094(0LL, v6);
+  success = (Il2CppObject *)v5->fields.success;
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
   ServantCommentManager__UpdateChapter(0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v10 = JsonManager__toJson(success, 0, 0, 0LL);
+  v8 = JsonManager__toJson(success, 0, 0, 0LL);
   CallBack = this->fields.CallBack;
   if ( CallBack )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
       CallBack->fields.original_method_info,
-      v10,
+      v8,
       *(_QWORD *)&CallBack->fields.extra_arg);
 }

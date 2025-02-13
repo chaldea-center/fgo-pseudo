@@ -35,10 +35,10 @@ void __fastcall EventSaveData__SetValueByArray(
   uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
   v14 = separator;
-  if ( (byte_4BC4ED8 & 1) == 0 )
+  if ( (byte_4BD9967 & 1) == 0 )
   {
-    sub_1C1ABD4(&char_TypeInfo, valueArray);
-    byte_4BC4ED8 = 1;
+    sub_1C21E38(&char_TypeInfo);
+    byte_4BD9967 = 1;
   }
   if ( valueArray )
   {
@@ -47,6 +47,6 @@ void __fastcall EventSaveData__SetValueByArray(
     v6 = System_Char__ToString((uint16_t)&v14, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

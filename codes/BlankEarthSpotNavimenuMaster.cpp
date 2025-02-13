@@ -1,14 +1,14 @@
 void __fastcall BlankEarthSpotNavimenuMaster___ctor(BlankEarthSpotNavimenuMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC777B & 1) == 0 )
+  if ( (byte_4BDC212 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_BlankEarthSpotNavimenuMaster__BlankEarthSpotNavimenuEntity__int___ctor__, method);
-    byte_4BC777B = 1;
+    sub_1C21E38(&Method_DataMasterBase_BlankEarthSpotNavimenuMaster__BlankEarthSpotNavimenuEntity__int___ctor__);
+    byte_4BDC212 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     465,
-    (const MethodInfo_3246354 *)Method_DataMasterBase_BlankEarthSpotNavimenuMaster__BlankEarthSpotNavimenuEntity__int___ctor__);
+    (const MethodInfo_3259AA4 *)Method_DataMasterBase_BlankEarthSpotNavimenuMaster__BlankEarthSpotNavimenuEntity__int___ctor__);
 }
 
 
@@ -16,100 +16,89 @@ BlankEarthSpotNavimenuEntity_array *__fastcall BlankEarthSpotNavimenuMaster__Get
         BlankEarthSpotNavimenuMaster_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  System_Collections_Generic_List_object__o *v14; // x19
-  __int64 v15; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v17; // x1
+  __int64 v6; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x20
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v20; // x9
+  __int64 v9; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v23; // x8
-  __int64 v24; // x9
-  int32_t *v25; // x10
-  __int64 v26; // x0
-  BlankEarthSpotNavimenuEntity_o *v27; // x0
-  const MethodInfo *v28; // x1
-  Il2CppObject *v29; // x21
+  System_Collections_Generic_IEnumerator_T__c *v12; // x8
+  __int64 v13; // x9
+  int32_t *v14; // x10
+  __int64 v15; // x0
+  BlankEarthSpotNavimenuEntity_o *v16; // x0
+  const MethodInfo *v17; // x1
+  Il2CppObject *v18; // x21
   _BOOL8 IsEnable; // x0
-  __int64 v31; // x1
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
+  __int64 v20; // x1
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v39; // x9
+  _QWORD *v28; // x9
   __int64 size; // x10
-  Il2CppClass **v41; // x0
-  System_Collections_Generic_IEnumerator_T__c *v42; // x8
-  __int64 v43; // x9
-  int32_t *v44; // x10
-  __int64 v45; // x0
-  BlankEarthSpotNavimenuMaster___c_c *v46; // x8
+  Il2CppClass **v30; // x0
+  System_Collections_Generic_IEnumerator_T__c *v31; // x8
+  __int64 v32; // x9
+  int32_t *v33; // x10
+  __int64 v34; // x0
+  BlankEarthSpotNavimenuMaster___c_c *v35; // x8
   System_Comparison_T__o *_9__0_0; // x20
-  Il2CppObject *v48; // x21
+  Il2CppObject *v37; // x21
   struct BlankEarthSpotNavimenuMaster___c_StaticFields *static_fields; // x0
-  int64_t v50; // x2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
-  BattleSetupInfo_o *v53; // x5
-  FollowerInfo_o *v54; // x6
-  PartyListViewItem_o *v55; // x7
+  int64_t v39; // x2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  BattleSetupInfo_o *v42; // x5
+  FollowerInfo_o *v43; // x6
+  PartyListViewItem_o *v44; // x7
 
-  if ( (byte_4BC777A & 1) == 0 )
+  if ( (byte_4BDC211 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_BlankEarthSpotNavimenuEntity__GetEnumerator__, method);
-    sub_1C1ABD4(&System_Comparison_BlankEarthSpotNavimenuEntity__TypeInfo, v3);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v4);
-    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo, v5);
-    sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Add__, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Sort__, v8);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__ToArray__, v9);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity___ctor__, v10);
-    sub_1C1ABD4(&System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__TypeInfo, v11);
-    sub_1C1ABD4(&Method_BlankEarthSpotNavimenuMaster___c__GetEnableShortcutButtons_b__0_0__, v12);
-    sub_1C1ABD4(&BlankEarthSpotNavimenuMaster___c_TypeInfo, v13);
-    byte_4BC777A = 1;
+    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_BlankEarthSpotNavimenuEntity__GetEnumerator__);
+    sub_1C21E38(&System_Comparison_BlankEarthSpotNavimenuEntity__TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo);
+    sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Sort__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__ToArray__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__TypeInfo);
+    sub_1C21E38(&Method_BlankEarthSpotNavimenuMaster___c__GetEnableShortcutButtons_b__0_0__);
+    sub_1C21E38(&BlankEarthSpotNavimenuMaster___c_TypeInfo);
+    byte_4BDC211 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v14,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity___ctor__);
+    v3,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_41;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31E2F54 *)Method_System_Collections_ObjectModel_Collection_BlankEarthSpotNavimenuEntity__GetEnumerator__);
+                 (const MethodInfo_31F66A4 *)Method_System_Collections_ObjectModel_Collection_BlankEarthSpotNavimenuEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C1AE30(0LL, v17);
+    sub_1C22094(0LL, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v9 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v20;
+        --v9;
         p_offset += 4;
-        if ( !v20 )
+        if ( !v9 )
           goto LABEL_9;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -117,153 +106,152 @@ BlankEarthSpotNavimenuEntity_array *__fastcall BlankEarthSpotNavimenuMaster__Get
     else
     {
 LABEL_9:
-      p_method = sub_1C6CBB4(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C73E18(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v23 = Enumerator->klass;
-    v24 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v12 = Enumerator->klass;
+    v13 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v25 = &v23->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__c **)v25 - 1) != System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo )
+      v14 = &v12->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__c **)v14 - 1) != System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo )
       {
-        --v24;
-        v25 += 4;
-        if ( !v24 )
+        --v13;
+        v14 += 4;
+        if ( !v13 )
           goto LABEL_16;
       }
-      v26 = (__int64)&v23->vtable[*v25].method;
+      v15 = (__int64)&v12->vtable[*v14].method;
     }
     else
     {
 LABEL_16:
-      v26 = sub_1C6CBB4(Enumerator, System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo, 0LL);
+      v15 = sub_1C73E18(Enumerator, System_Collections_Generic_IEnumerator_BlankEarthSpotNavimenuEntity__TypeInfo, 0LL);
     }
-    v27 = (BlankEarthSpotNavimenuEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(
+    v16 = (BlankEarthSpotNavimenuEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
                                               Enumerator,
-                                              *(_QWORD *)(v26 + 8));
-    v29 = (Il2CppObject *)v27;
-    if ( v27 )
+                                              *(_QWORD *)(v15 + 8));
+    v18 = (Il2CppObject *)v16;
+    if ( v16 )
     {
-      IsEnable = BlankEarthSpotNavimenuEntity__IsEnable(v27, v28);
+      IsEnable = BlankEarthSpotNavimenuEntity__IsEnable(v16, v17);
       if ( IsEnable )
       {
-        if ( !v14 )
-          sub_1C1AE30(IsEnable, v31);
-        items = v14->fields._items;
-        v39 = Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Add__;
-        ++v14->fields._version;
+        if ( !v3 )
+          sub_1C22094(IsEnable, v20);
+        items = v3->fields._items;
+        v28 = Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Add__;
+        ++v3->fields._version;
         if ( !items )
-          sub_1C1AE30(IsEnable, v31);
-        size = v14->fields._size;
+          sub_1C22094(IsEnable, v20);
+        size = v3->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v14,
-            v29,
-            *(const MethodInfo_363C890 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+            v3,
+            v18,
+            *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
         }
         else
         {
-          v41 = &items->obj.klass + size;
-          v14->fields._size = size + 1;
-          v41[4] = (Il2CppClass *)v29;
-          sub_1C1AB78((PartyOrganizationUtility_o *)(v41 + 4), (int64_t)v29, v32, v33, v34, v35, v36, v37);
+          v30 = &items->obj.klass + size;
+          v3->fields._size = size + 1;
+          v30[4] = (Il2CppClass *)v18;
+          sub_1C21DDC((PartyOrganizationUtility_o *)(v30 + 4), (int64_t)v18, v21, v22, v23, v24, v25, v26);
         }
       }
     }
   }
-  v42 = Enumerator->klass;
-  v43 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v31 = Enumerator->klass;
+  v32 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v44 = &v42->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v44 - 1) != System_IDisposable_TypeInfo )
+    v33 = &v31->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
     {
-      --v43;
-      v44 += 4;
-      if ( !v43 )
+      --v32;
+      v33 += 4;
+      if ( !v32 )
         goto LABEL_29;
     }
-    v45 = (__int64)&v42->vtable[*v44].method;
+    v34 = (__int64)&v31->vtable[*v33].method;
   }
   else
   {
 LABEL_29:
-    v45 = sub_1C6CBB4(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v34 = sub_1C73E18(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v45)(
+  list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(
                                                              Enumerator,
-                                                             *(_QWORD *)(v45 + 8));
-  v46 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
+                                                             *(_QWORD *)(v34 + 8));
+  v35 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
   if ( !BlankEarthSpotNavimenuMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BlankEarthSpotNavimenuMaster___c_TypeInfo);
-    v46 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
+    v35 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
   }
-  _9__0_0 = (System_Comparison_T__o *)v46->static_fields->__9__0_0;
+  _9__0_0 = (System_Comparison_T__o *)v35->static_fields->__9__0_0;
   if ( !_9__0_0 )
   {
-    if ( !v46->_2.cctor_finished )
+    if ( !v35->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v46);
-      v46 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v35);
+      v35 = BlankEarthSpotNavimenuMaster___c_TypeInfo;
     }
-    v48 = (Il2CppObject *)v46->static_fields->__9;
-    _9__0_0 = (System_Comparison_T__o *)sub_1C1AE20(System_Comparison_BlankEarthSpotNavimenuEntity__TypeInfo);
+    v37 = (Il2CppObject *)v35->static_fields->__9;
+    _9__0_0 = (System_Comparison_T__o *)sub_1C22084(System_Comparison_BlankEarthSpotNavimenuEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__0_0,
-      v48,
+      v37,
       Method_BlankEarthSpotNavimenuMaster___c__GetEnableShortcutButtons_b__0_0__,
       0LL);
     static_fields = BlankEarthSpotNavimenuMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Comparison_BlankEarthSpotNavimenuEntity__o *)_9__0_0;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v50, v51, v52, v53, v54, v55);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v39, v40, v41, v42, v43, v44);
   }
-  if ( !v14 )
+  if ( !v3 )
 LABEL_41:
-    sub_1C1AE30(list, v15);
-  System_Collections_Generic_List_object___Sort_56877908(
-    v14,
+    sub_1C22094(list, v4);
+  System_Collections_Generic_List_object___Sort_56953720(
+    v3,
     _9__0_0,
-    (const MethodInfo_363E354 *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Sort__);
+    (const MethodInfo_3650B78 *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__Sort__);
   return (BlankEarthSpotNavimenuEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                                 v14,
-                                                 (const MethodInfo_363E3E8 *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__ToArray__);
+                                                 v3,
+                                                 (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_BlankEarthSpotNavimenuEntity__ToArray__);
 }
 
 
 void __fastcall BlankEarthSpotNavimenuMaster___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  Il2CppObject *v1; // x19
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4BC777C & 1) == 0 )
+  if ( (byte_4BDC213 & 1) == 0 )
   {
-    sub_1C1ABD4(&BlankEarthSpotNavimenuMaster___c_TypeInfo, v1);
-    byte_4BC777C = 1;
+    sub_1C21E38(&BlankEarthSpotNavimenuMaster___c_TypeInfo);
+    byte_4BDC213 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C1AE20(BlankEarthSpotNavimenuMaster___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  BlankEarthSpotNavimenuMaster___c_TypeInfo->static_fields->__9 = (struct BlankEarthSpotNavimenuMaster___c_o *)v2;
-  sub_1C1AB78(
+  v1 = (Il2CppObject *)sub_1C22084(BlankEarthSpotNavimenuMaster___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  BlankEarthSpotNavimenuMaster___c_TypeInfo->static_fields->__9 = (struct BlankEarthSpotNavimenuMaster___c_o *)v1;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)BlankEarthSpotNavimenuMaster___c_TypeInfo->static_fields,
-    (int64_t)v2,
+    (int64_t)v1,
+    v2,
     v3,
     v4,
     v5,
     v6,
-    v7,
-    v8);
+    v7);
 }
 
 
@@ -282,6 +270,6 @@ int32_t __fastcall BlankEarthSpotNavimenuMaster___c___GetEnableShortcutButtons_b
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C1AE30(this, a);
+    sub_1C22094(this, a);
   return b->fields.priority - a->fields.priority;
 }

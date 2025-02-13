@@ -1,151 +1,142 @@
 void __fastcall DrawLotsDisplayMessage___ctor(DrawLotsDisplayMessage_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  System_Collections_Generic_List_object__o *v3; // x20
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BCA058 & 1) == 0 )
+  if ( (byte_4BDEB06 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup___ctor__, method);
-    sub_1C1ABD4(&System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo, v3);
-    byte_4BCA058 = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
+    byte_4BDEB06 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup___ctor__);
-  this->fields.displayedList = (struct System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__o *)v4;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+    v3,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup___ctor__);
+  this->fields.displayedList = (struct System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__o *)v3;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall DrawLotsDisplayMessage__DrawLots(
         DrawLotsDisplayMessage_o *this,
         int32_t groupId,
         int32_t defMessageId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x22
+  __int64 v7; // x22
   BattleMessageGroupMaster_o *Master_object; // x0
-  __int64 v16; // x1
+  __int64 v9; // x1
   System_Collections_ICollection_o *Entities; // x20
   System_Collections_Generic_List_object__o *displayedList; // x21
-  System_Predicate_object__o *v20; // x23
-  Il2CppObject *v21; // x0
-  const MethodInfo *v22; // x2
-  DrawLotsDisplayMessage_DisplayedInGroup_o *v23; // x21
-  const MethodInfo *v24; // x1
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  __int64 v31; // x8
-  _QWORD *v32; // x9
+  System_Predicate_object__o *v13; // x23
+  Il2CppObject *v14; // x0
+  const MethodInfo *v15; // x2
+  DrawLotsDisplayMessage_DisplayedInGroup_o *v16; // x21
+  const MethodInfo *v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  __int64 v24; // x8
+  _QWORD *v25; // x9
   __int64 MasterName_k__BackingField_low; // x10
-  __int64 v34; // x8
+  __int64 v27; // x8
 
-  if ( (byte_4BCA055 & 1) == 0 )
+  if ( (byte_4BDEB03 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMaster_BattleMessageGroupMaster___, *(_QWORD *)&groupId);
-    sub_1C1ABD4(&DataManager_TypeInfo, v7);
-    sub_1C1ABD4(&DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo, v8);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__, v9);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Find__, v10);
-    sub_1C1ABD4(&System_Predicate_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo, v11);
-    sub_1C1ABD4(&Method_DrawLotsDisplayMessage___c__DisplayClass3_0__DrawLots_b__0__, v12);
-    sub_1C1ABD4(&DrawLotsDisplayMessage___c__DisplayClass3_0_TypeInfo, v13);
-    byte_4BCA055 = 1;
+    sub_1C21E38(&Method_DataManager_GetMaster_BattleMessageGroupMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    sub_1C21E38(&DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Find__);
+    sub_1C21E38(&System_Predicate_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
+    sub_1C21E38(&Method_DrawLotsDisplayMessage___c__DisplayClass3_0__DrawLots_b__0__);
+    sub_1C21E38(&DrawLotsDisplayMessage___c__DisplayClass3_0_TypeInfo);
+    byte_4BDEB03 = 1;
   }
-  v14 = sub_1C1AE20(DrawLotsDisplayMessage___c__DisplayClass3_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v14, 0LL);
-  if ( !v14 )
+  v7 = sub_1C22084(DrawLotsDisplayMessage___c__DisplayClass3_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_19;
-  *(_DWORD *)(v14 + 16) = groupId;
+  *(_DWORD *)(v7 + 16) = groupId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (BattleMessageGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_BattleMessageGroupMaster___);
+  Master_object = (BattleMessageGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_BattleMessageGroupMaster___);
   if ( !Master_object )
     goto LABEL_19;
   Entities = (System_Collections_ICollection_o *)BattleMessageGroupMaster__GetEntities(
                                                    Master_object,
-                                                   *(_DWORD *)(v14 + 16),
+                                                   *(_DWORD *)(v7 + 16),
                                                    0LL);
   if ( BasicHelper__IsNullOrEmpty(Entities, 0LL) )
     return defMessageId;
   displayedList = (System_Collections_Generic_List_object__o *)this->fields.displayedList;
-  v20 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
+  v13 = (System_Predicate_object__o *)sub_1C22084(System_Predicate_DrawLotsDisplayMessage_DisplayedInGroup__TypeInfo);
   System_Predicate_object____ctor(
-    v20,
-    (Il2CppObject *)v14,
+    v13,
+    (Il2CppObject *)v7,
     Method_DrawLotsDisplayMessage___c__DisplayClass3_0__DrawLots_b__0__,
     0LL);
   if ( !displayedList )
     goto LABEL_19;
-  v21 = System_Collections_Generic_List_object___Find(
+  v14 = System_Collections_Generic_List_object___Find(
           displayedList,
-          (System_Predicate_T__o *)v20,
-          (const MethodInfo_363CEF8 *)Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Find__);
-  if ( !v21 )
+          (System_Predicate_T__o *)v13,
+          (const MethodInfo_364F71C *)Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Find__);
+  if ( !v14 )
   {
-    v23 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C1AE20(DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
-    DrawLotsDisplayMessage_DisplayedInGroup___ctor(v23, v24);
-    if ( v23 )
+    v16 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C22084(DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
+    DrawLotsDisplayMessage_DisplayedInGroup___ctor(v16, v17);
+    if ( v16 )
     {
-      v23->fields.groupId = *(_DWORD *)(v14 + 16);
+      v16->fields.groupId = *(_DWORD *)(v7 + 16);
       Master_object = (BattleMessageGroupMaster_o *)this->fields.displayedList;
       if ( Master_object )
       {
-        v31 = *(_QWORD *)&Master_object->fields._MasterKind_k__BackingField;
-        v32 = Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__;
+        v24 = *(_QWORD *)&Master_object->fields._MasterKind_k__BackingField;
+        v25 = Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__;
         ++HIDWORD(Master_object->fields._MasterName_k__BackingField);
-        if ( v31 )
+        if ( v24 )
         {
           MasterName_k__BackingField_low = SLODWORD(Master_object->fields._MasterName_k__BackingField);
-          if ( (unsigned int)MasterName_k__BackingField_low >= *(_DWORD *)(v31 + 24) )
+          if ( (unsigned int)MasterName_k__BackingField_low >= *(_DWORD *)(v24 + 24) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)Master_object,
-              (Il2CppObject *)v23,
-              *(const MethodInfo_363C890 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+              (Il2CppObject *)v16,
+              *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
           }
           else
           {
-            v34 = v31 + 8 * MasterName_k__BackingField_low;
+            v27 = v24 + 8 * MasterName_k__BackingField_low;
             LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
-            *(_QWORD *)(v34 + 32) = v23;
-            sub_1C1AB78((PartyOrganizationUtility_o *)(v34 + 32), (int64_t)v23, v25, v26, v27, v28, v29, v30);
+            *(_QWORD *)(v27 + 32) = v16;
+            sub_1C21DDC((PartyOrganizationUtility_o *)(v27 + 32), (int64_t)v16, v18, v19, v20, v21, v22, v23);
           }
           return DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId(
-                   v23,
+                   v16,
                    (BattleMessageGroupEntity_array *)Entities,
-                   v22);
+                   v15);
         }
       }
     }
 LABEL_19:
-    sub_1C1AE30(Master_object, v16);
+    sub_1C22094(Master_object, v9);
   }
-  v23 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)v21;
+  v16 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)v14;
   return DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId(
-           v23,
+           v16,
            (BattleMessageGroupEntity_array *)Entities,
-           v22);
+           v15);
 }
 
 
@@ -153,65 +144,57 @@ DrawLotsDisplayMessage_DisplayedInGroup_SaveData_array *__fastcall DrawLotsDispl
         DrawLotsDisplayMessage_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  DrawLotsDisplayMessage___c_c *v7; // x0
+  DrawLotsDisplayMessage___c_c *v3; // x0
   struct System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__o *displayedList; // x19
   System_Func_object__object__o *_9__4_0; // x20
-  Il2CppObject *v10; // x21
+  Il2CppObject *v6; // x21
   struct DrawLotsDisplayMessage___c_StaticFields *static_fields; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
-  if ( (byte_4BCA056 & 1) == 0 )
+  if ( (byte_4BDEB04 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_System_Linq_Enumerable_Select_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData___,
-      method);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___, v3);
-    sub_1C1ABD4(
-      &System_Func_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo,
-      v4);
-    sub_1C1ABD4(&Method_DrawLotsDisplayMessage___c__GetSaveData_b__4_0__, v5);
-    sub_1C1ABD4(&DrawLotsDisplayMessage___c_TypeInfo, v6);
-    byte_4BCA056 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+    sub_1C21E38(&System_Func_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
+    sub_1C21E38(&Method_DrawLotsDisplayMessage___c__GetSaveData_b__4_0__);
+    sub_1C21E38(&DrawLotsDisplayMessage___c_TypeInfo);
+    byte_4BDEB04 = 1;
   }
-  v7 = DrawLotsDisplayMessage___c_TypeInfo;
+  v3 = DrawLotsDisplayMessage___c_TypeInfo;
   displayedList = this->fields.displayedList;
   if ( !DrawLotsDisplayMessage___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DrawLotsDisplayMessage___c_TypeInfo);
-    v7 = DrawLotsDisplayMessage___c_TypeInfo;
+    v3 = DrawLotsDisplayMessage___c_TypeInfo;
   }
-  _9__4_0 = (System_Func_object__object__o *)v7->static_fields->__9__4_0;
+  _9__4_0 = (System_Func_object__object__o *)v3->static_fields->__9__4_0;
   if ( !_9__4_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = DrawLotsDisplayMessage___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = DrawLotsDisplayMessage___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__4_0 = (System_Func_object__object__o *)sub_1C1AE20(System_Func_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
-    System_Func_object__object____ctor(_9__4_0, v10, Method_DrawLotsDisplayMessage___c__GetSaveData_b__4_0__, 0LL);
+    v6 = (Il2CppObject *)v3->static_fields->__9;
+    _9__4_0 = (System_Func_object__object__o *)sub_1C22084(System_Func_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
+    System_Func_object__object____ctor(_9__4_0, v6, Method_DrawLotsDisplayMessage___c__GetSaveData_b__4_0__, 0LL);
     static_fields = DrawLotsDisplayMessage___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData__o *)_9__4_0;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)_9__4_0, v12, v13, v14, v15, v16, v17);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->__9__4_0, (int64_t)_9__4_0, v8, v9, v10, v11, v12, v13);
   }
-  v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)displayedList,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_2FD0C44 *)Method_System_Linq_Enumerable_Select_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+                                                               (const MethodInfo_2FE15B8 *)Method_System_Linq_Enumerable_Select_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
   return (DrawLotsDisplayMessage_DisplayedInGroup_SaveData_array *)System_Linq_Enumerable__ToArray_object_(
-                                                                     v18,
-                                                                     (const MethodInfo_2FD8E70 *)Method_System_Linq_Enumerable_ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+                                                                     v14,
+                                                                     (const MethodInfo_2FE97E4 *)Method_System_Linq_Enumerable_ToArray_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
 }
 
 
@@ -223,16 +206,14 @@ void __fastcall DrawLotsDisplayMessage__Init(DrawLotsDisplayMessage_o *this, con
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4BCA054 & 1) == 0 )
+  if ( (byte_4BDEB02 & 1) == 0 )
   {
-    this = (DrawLotsDisplayMessage_o *)sub_1C1ABD4(
-                                         &Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Clear__,
-                                         method);
-    byte_4BCA054 = 1;
+    this = (DrawLotsDisplayMessage_o *)sub_1C21E38(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Clear__);
+    byte_4BDEB02 = 1;
   }
   displayedList = v2->fields.displayedList;
   if ( !displayedList )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   size = displayedList->fields._size;
   v5 = displayedList->fields._version + 1;
   displayedList->fields._size = 0;
@@ -247,23 +228,21 @@ void __fastcall DrawLotsDisplayMessage__SetSaveData(
         DrawLotsDisplayMessage_DisplayedInGroup_SaveData_array *saves,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  System_Action_object__o *v7; // x21
+  System_Action_object__o *v5; // x21
 
-  if ( (byte_4BCA057 & 1) == 0 )
+  if ( (byte_4BDEB05 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo, saves);
-    sub_1C1ABD4(&Method_BasicHelper_ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___, v5);
-    sub_1C1ABD4(&Method_DrawLotsDisplayMessage__SetSaveData_b__5_0__, v6);
-    byte_4BCA057 = 1;
+    sub_1C21E38(&System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
+    sub_1C21E38(&Method_BasicHelper_ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+    sub_1C21E38(&Method_DrawLotsDisplayMessage__SetSaveData_b__5_0__);
+    byte_4BDEB05 = 1;
   }
-  v7 = (System_Action_object__o *)sub_1C1AE20(System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
-  System_Action_object____ctor(v7, (Il2CppObject *)this, Method_DrawLotsDisplayMessage__SetSaveData_b__5_0__, 0LL);
+  v5 = (System_Action_object__o *)sub_1C22084(System_Action_DrawLotsDisplayMessage_DisplayedInGroup_SaveData__TypeInfo);
+  System_Action_object____ctor(v5, (Il2CppObject *)this, Method_DrawLotsDisplayMessage__SetSaveData_b__5_0__, 0LL);
   BasicHelper__ForEach_object_(
     (System_Collections_Generic_IEnumerable_T__o *)saves,
-    (System_Action_T__o *)v7,
-    (const MethodInfo_2F8C3EC *)Method_BasicHelper_ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
+    (System_Action_T__o *)v5,
+    (const MethodInfo_2F9CD60 *)Method_BasicHelper_ForEach_DrawLotsDisplayMessage_DisplayedInGroup_SaveData___);
 }
 
 
@@ -272,56 +251,55 @@ void __fastcall DrawLotsDisplayMessage___SetSaveData_b__5_0(
         DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *displayedList; // x19
-  DrawLotsDisplayMessage_DisplayedInGroup_o *v7; // x20
-  const MethodInfo *v8; // x1
-  DrawLotsDisplayMessage_DisplayedInGroup_o *v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  DrawLotsDisplayMessage_DisplayedInGroup_o *v6; // x20
+  const MethodInfo *v7; // x1
+  DrawLotsDisplayMessage_DisplayedInGroup_o *v8; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x2
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v21; // x0
+  Il2CppClass **v20; // x0
 
-  if ( (byte_4BCA059 & 1) == 0 )
+  if ( (byte_4BDEB07 & 1) == 0 )
   {
-    sub_1C1ABD4(&DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo, sv);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__, v5);
-    byte_4BCA059 = 1;
+    sub_1C21E38(&DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__);
+    byte_4BDEB07 = 1;
   }
   displayedList = (System_Collections_Generic_List_object__o *)this->fields.displayedList;
-  v7 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C1AE20(DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
-  DrawLotsDisplayMessage_DisplayedInGroup___ctor(v7, v8);
-  if ( !v7
-    || (v9 = DrawLotsDisplayMessage_DisplayedInGroup__SetSaveData(v7, sv, v11), !displayedList)
+  v6 = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C22084(DrawLotsDisplayMessage_DisplayedInGroup_TypeInfo);
+  DrawLotsDisplayMessage_DisplayedInGroup___ctor(v6, v7);
+  if ( !v6
+    || (v8 = DrawLotsDisplayMessage_DisplayedInGroup__SetSaveData(v6, sv, v10), !displayedList)
     || (items = displayedList->fields._items,
-        v19 = Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__,
+        v18 = Method_System_Collections_Generic_List_DrawLotsDisplayMessage_DisplayedInGroup__Add__,
         ++displayedList->fields._version,
         !items) )
   {
-    sub_1C1AE30(v9, v10);
+    sub_1C22094(v8, v9);
   }
   size = displayedList->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       displayedList,
-      (Il2CppObject *)v7,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      (Il2CppObject *)v6,
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v21 = &items->obj.klass + size;
+    v20 = &items->obj.klass + size;
     displayedList->fields._size = size + 1;
-    v21[4] = (Il2CppClass *)v7;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v21 + 4), (int64_t)v7, v12, v13, v14, v15, v16, v17);
+    v20[4] = (Il2CppClass *)v6;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)v6, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -330,27 +308,26 @@ void __fastcall DrawLotsDisplayMessage_DisplayedInGroup___ctor(
         DrawLotsDisplayMessage_DisplayedInGroup_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_HashSet_int__o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  System_Collections_Generic_HashSet_int__o *v3; // x20
+  int64_t v4; // x2
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  BattleSetupInfo_o *v7; // x5
+  FollowerInfo_o *v8; // x6
+  PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BCA05D & 1) == 0 )
+  if ( (byte_4BDEB0B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int___ctor__, method);
-    sub_1C1ABD4(&System_Collections_Generic_HashSet_int__TypeInfo, v3);
-    byte_4BCA05D = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1C21E38(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4BDEB0B = 1;
   }
-  v4 = (System_Collections_Generic_HashSet_int__o *)sub_1C1AE20(System_Collections_Generic_HashSet_int__TypeInfo);
+  v3 = (System_Collections_Generic_HashSet_int__o *)sub_1C22084(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
-    v4,
-    (const MethodInfo_34EFAF4 *)Method_System_Collections_Generic_HashSet_int___ctor__);
-  this->fields.hashMsgId = v4;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.hashMsgId, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+    v3,
+    (const MethodInfo_3502780 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+  this->fields.hashMsgId = v3;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.hashMsgId, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -360,121 +337,111 @@ int32_t __fastcall DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId(
         BattleMessageGroupEntity_array *entities,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
+  System_Func_object__bool__o *v5; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
+  System_Collections_ICollection_o *v7; // x21
   __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  System_Func_object__bool__o *v15; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
-  System_Collections_ICollection_o *v17; // x21
-  __int64 v18; // x1
   System_Collections_Generic_HashSet_int__o *hashMsgId; // x0
-  DrawLotsDisplayMessage_DisplayedInGroup___c_c *v20; // x0
+  DrawLotsDisplayMessage_DisplayedInGroup___c_c *v10; // x0
   System_Func_object__int__o *_9__2_1; // x20
-  Il2CppObject *v22; // x22
+  Il2CppObject *v12; // x22
   struct DrawLotsDisplayMessage_DisplayedInGroup___c_StaticFields *static_fields; // x0
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
-  System_Int32_array *v31; // x0
-  __int64 v32; // x8
-  int32_t v33; // w19
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
+  System_Int32_array *v21; // x0
+  __int64 v22; // x8
+  int32_t v23; // w19
 
-  if ( (byte_4BCA05A & 1) == 0 )
+  if ( (byte_4BDEB08 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId_b__2_0__, entities);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__int___, v5);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___, v6);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_int___, v7);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___, v8);
-    sub_1C1ABD4(&System_Func_BattleMessageGroupEntity__bool__TypeInfo, v9);
-    sub_1C1ABD4(&System_Func_BattleMessageGroupEntity__int__TypeInfo, v10);
-    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__Add__, v11);
-    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int__Clear__, v12);
-    sub_1C1ABD4(&Method_DrawLotsDisplayMessage_DisplayedInGroup___c__DrawLotsMessageId_b__2_1__, v13);
-    sub_1C1ABD4(&DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo, v14);
-    byte_4BCA05A = 1;
+    sub_1C21E38(&Method_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId_b__2_0__);
+    sub_1C21E38(&Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__int___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C21E38(&Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
+    sub_1C21E38(&System_Func_BattleMessageGroupEntity__bool__TypeInfo);
+    sub_1C21E38(&System_Func_BattleMessageGroupEntity__int__TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_HashSet_int__Clear__);
+    sub_1C21E38(&Method_DrawLotsDisplayMessage_DisplayedInGroup___c__DrawLotsMessageId_b__2_1__);
+    sub_1C21E38(&DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo);
+    byte_4BDEB08 = 1;
   }
-  v15 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_BattleMessageGroupEntity__bool__TypeInfo);
+  v5 = (System_Func_object__bool__o *)sub_1C22084(System_Func_BattleMessageGroupEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v15,
+    v5,
     (Il2CppObject *)this,
     Method_DrawLotsDisplayMessage_DisplayedInGroup__DrawLotsMessageId_b__2_0__,
     0LL);
-  v16 = System_Linq_Enumerable__Where_object_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)entities,
-          (System_Func_TSource__bool__o *)v15,
-          (const MethodInfo_2FDED84 *)Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
-  v17 = (System_Collections_ICollection_o *)System_Linq_Enumerable__ToArray_object_(
-                                              v16,
-                                              (const MethodInfo_2FD8E70 *)Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
-  if ( BasicHelper__IsNullOrEmpty(v17, 0LL) )
+  v6 = System_Linq_Enumerable__Where_object_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)entities,
+         (System_Func_TSource__bool__o *)v5,
+         (const MethodInfo_2FEF6F8 *)Method_System_Linq_Enumerable_Where_BattleMessageGroupEntity___);
+  v7 = (System_Collections_ICollection_o *)System_Linq_Enumerable__ToArray_object_(
+                                             v6,
+                                             (const MethodInfo_2FE97E4 *)Method_System_Linq_Enumerable_ToArray_BattleMessageGroupEntity___);
+  if ( BasicHelper__IsNullOrEmpty(v7, 0LL) )
   {
     hashMsgId = this->fields.hashMsgId;
     if ( !hashMsgId )
       goto LABEL_17;
     System_Collections_Generic_HashSet_int___Clear(
       hashMsgId,
-      (const MethodInfo_34F0188 *)Method_System_Collections_Generic_HashSet_int__Clear__);
-    v17 = (System_Collections_ICollection_o *)entities;
+      (const MethodInfo_3502E14 *)Method_System_Collections_Generic_HashSet_int__Clear__);
+    v7 = (System_Collections_ICollection_o *)entities;
   }
-  v20 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
+  v10 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
   if ( !DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo);
-    v20 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
+    v10 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
   }
-  _9__2_1 = (System_Func_object__int__o *)v20->static_fields->__9__2_1;
+  _9__2_1 = (System_Func_object__int__o *)v10->static_fields->__9__2_1;
   if ( !_9__2_1 )
   {
-    if ( !v20->_2.cctor_finished )
+    if ( !v10->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v20);
-      v20 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v10);
+      v10 = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo;
     }
-    v22 = (Il2CppObject *)v20->static_fields->__9;
-    _9__2_1 = (System_Func_object__int__o *)sub_1C1AE20(System_Func_BattleMessageGroupEntity__int__TypeInfo);
+    v12 = (Il2CppObject *)v10->static_fields->__9;
+    _9__2_1 = (System_Func_object__int__o *)sub_1C22084(System_Func_BattleMessageGroupEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__2_1,
-      v22,
+      v12,
       Method_DrawLotsDisplayMessage_DisplayedInGroup___c__DrawLotsMessageId_b__2_1__,
       0LL);
     static_fields = DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo->static_fields;
     static_fields->__9__2_1 = (struct System_Func_BattleMessageGroupEntity__int__o *)_9__2_1;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->__9__2_1, (int64_t)_9__2_1, v24, v25, v26, v27, v28, v29);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->__9__2_1, (int64_t)_9__2_1, v14, v15, v16, v17, v18, v19);
   }
-  v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v17,
+  v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                               (System_Collections_Generic_IEnumerable_TSource__o *)v7,
                                                                (System_Func_TSource__TResult__o *)_9__2_1,
-                                                               (const MethodInfo_2FD0368 *)Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__int___);
-  v31 = System_Linq_Enumerable__ToArray_int_(
-          v30,
-          (const MethodInfo_2FD8CD8 *)Method_System_Linq_Enumerable_ToArray_int___);
-  hashMsgId = (System_Collections_Generic_HashSet_int__o *)RandomUtility__GetRandomRangeIndex(v31, 0, 0LL);
-  if ( !v17 )
+                                                               (const MethodInfo_2FE0CDC *)Method_System_Linq_Enumerable_Select_BattleMessageGroupEntity__int___);
+  v21 = System_Linq_Enumerable__ToArray_int_(
+          v20,
+          (const MethodInfo_2FE964C *)Method_System_Linq_Enumerable_ToArray_int___);
+  hashMsgId = (System_Collections_Generic_HashSet_int__o *)RandomUtility__GetRandomRangeIndex(v21, 0, 0LL);
+  if ( !v7 )
     goto LABEL_17;
-  if ( (unsigned int)hashMsgId >= LODWORD(v17[1].monitor) )
-    sub_1C1AE38(hashMsgId, v18);
-  v32 = *((_QWORD *)&v17[2].klass + (int)hashMsgId);
-  if ( !v32 || (hashMsgId = this->fields.hashMsgId) == 0LL )
+  if ( (unsigned int)hashMsgId >= LODWORD(v7[1].monitor) )
+    sub_1C2209C(hashMsgId, v8);
+  v22 = *((_QWORD *)&v7[2].klass + (int)hashMsgId);
+  if ( !v22 || (hashMsgId = this->fields.hashMsgId) == 0LL )
 LABEL_17:
-    sub_1C1AE30(hashMsgId, v18);
-  v33 = *(_DWORD *)(v32 + 20);
+    sub_1C22094(hashMsgId, v8);
+  v23 = *(_DWORD *)(v22 + 20);
   System_Collections_Generic_HashSet_int___Add(
     hashMsgId,
-    v33,
-    (const MethodInfo_34F0CF8 *)Method_System_Collections_Generic_HashSet_int__Add__);
-  return v33;
+    v23,
+    (const MethodInfo_3503984 *)Method_System_Collections_Generic_HashSet_int__Add__);
+  return v23;
 }
 
 
@@ -482,35 +449,34 @@ DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *__fastcall DrawLotsDisplayMe
         DrawLotsDisplayMessage_DisplayedInGroup_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x20
-  __int64 v5; // x0
-  __int64 v6; // x1
-  System_Int32_array *v7; // x0
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  __int64 v3; // x20
+  __int64 v4; // x0
+  __int64 v5; // x1
+  System_Int32_array *v6; // x0
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4BCA05B & 1) == 0 )
+  if ( (byte_4BDEB09 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_ToArray_int___, method);
-    sub_1C1ABD4(&DrawLotsDisplayMessage_DisplayedInGroup_SaveData_TypeInfo, v3);
-    byte_4BCA05B = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C21E38(&DrawLotsDisplayMessage_DisplayedInGroup_SaveData_TypeInfo);
+    byte_4BDEB09 = 1;
   }
-  v4 = sub_1C1AE20(DrawLotsDisplayMessage_DisplayedInGroup_SaveData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v4, 0LL);
-  if ( !v4 )
-    sub_1C1AE30(v5, v6);
-  *(_DWORD *)(v4 + 16) = this->fields.groupId;
-  v7 = System_Linq_Enumerable__ToArray_int_(
+  v3 = sub_1C22084(DrawLotsDisplayMessage_DisplayedInGroup_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  if ( !v3 )
+    sub_1C22094(v4, v5);
+  *(_DWORD *)(v3 + 16) = this->fields.groupId;
+  v6 = System_Linq_Enumerable__ToArray_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.hashMsgId,
-         (const MethodInfo_2FD8CD8 *)Method_System_Linq_Enumerable_ToArray_int___);
-  *(_QWORD *)(v4 + 24) = v7;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v4 + 24), (int64_t)v7, v8, v9, v10, v11, v12, v13);
-  return (DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *)v4;
+         (const MethodInfo_2FE964C *)Method_System_Linq_Enumerable_ToArray_int___);
+  *(_QWORD *)(v3 + 24) = v6;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 24), (int64_t)v6, v7, v8, v9, v10, v11, v12);
+  return (DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *)v3;
 }
 
 
@@ -519,33 +485,32 @@ DrawLotsDisplayMessage_DisplayedInGroup_o *__fastcall DrawLotsDisplayMessage_Dis
         DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *sv,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_IEnumerable_T__o *msgIds; // x20
-  System_Collections_Generic_HashSet_int__o *v7; // x21
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  System_Collections_Generic_HashSet_int__o *v6; // x21
+  int64_t v7; // x2
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  BattleSetupInfo_o *v10; // x5
+  FollowerInfo_o *v11; // x6
+  PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4BCA05C & 1) == 0 )
+  if ( (byte_4BDEB0A & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_HashSet_int___ctor___77473576, sv);
-    sub_1C1ABD4(&System_Collections_Generic_HashSet_int__TypeInfo, v5);
-    byte_4BCA05C = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_HashSet_int___ctor___77556136);
+    sub_1C21E38(&System_Collections_Generic_HashSet_int__TypeInfo);
+    byte_4BDEB0A = 1;
   }
   if ( sv )
   {
     this->fields.groupId = sv->fields.groupId;
     msgIds = (System_Collections_Generic_IEnumerable_T__o *)sv->fields.msgIds;
-    v7 = (System_Collections_Generic_HashSet_int__o *)sub_1C1AE20(System_Collections_Generic_HashSet_int__TypeInfo);
-    System_Collections_Generic_HashSet_int____ctor_55507940(
-      v7,
+    v6 = (System_Collections_Generic_HashSet_int__o *)sub_1C22084(System_Collections_Generic_HashSet_int__TypeInfo);
+    System_Collections_Generic_HashSet_int____ctor_55584880(
+      v6,
       msgIds,
-      (const MethodInfo_34EFBE4 *)Method_System_Collections_Generic_HashSet_int___ctor___77473576);
-    this->fields.hashMsgId = v7;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.hashMsgId, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+      (const MethodInfo_3502870 *)Method_System_Collections_Generic_HashSet_int___ctor___77556136);
+    this->fields.hashMsgId = v6;
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.hashMsgId, (int64_t)v6, v7, v8, v9, v10, v11, v12);
   }
   return this;
 }
@@ -559,19 +524,17 @@ bool __fastcall DrawLotsDisplayMessage_DisplayedInGroup___DrawLotsMessageId_b__2
   DrawLotsDisplayMessage_DisplayedInGroup_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4BCA05E & 1) == 0 )
+  if ( (byte_4BDEB0C & 1) == 0 )
   {
-    this = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C1ABD4(
-                                                          &Method_System_Collections_Generic_HashSet_int__Contains__,
-                                                          ent);
-    byte_4BCA05E = 1;
+    this = (DrawLotsDisplayMessage_DisplayedInGroup_o *)sub_1C21E38(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    byte_4BDEB0C = 1;
   }
   if ( !ent || (this = (DrawLotsDisplayMessage_DisplayedInGroup_o *)v4->fields.hashMsgId) == 0LL )
-    sub_1C1AE30(this, ent);
+    sub_1C22094(this, ent);
   return !System_Collections_Generic_HashSet_int___Contains(
             (System_Collections_Generic_HashSet_int__o *)this,
             ent->fields.messageId,
-            (const MethodInfo_34F01E8 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+            (const MethodInfo_3502E74 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }
 
 
@@ -585,32 +548,31 @@ void __fastcall DrawLotsDisplayMessage_DisplayedInGroup_SaveData___ctor(
 
 void __fastcall DrawLotsDisplayMessage_DisplayedInGroup___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  Il2CppObject *v1; // x19
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4BCA05F & 1) == 0 )
+  if ( (byte_4BDEB0D & 1) == 0 )
   {
-    sub_1C1ABD4(&DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo, v1);
-    byte_4BCA05F = 1;
+    sub_1C21E38(&DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo);
+    byte_4BDEB0D = 1;
   }
-  v2 = (Il2CppObject *)sub_1C1AE20(DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo->static_fields->__9 = (struct DrawLotsDisplayMessage_DisplayedInGroup___c_o *)v2;
-  sub_1C1AB78(
+  v1 = (Il2CppObject *)sub_1C22084(DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo->static_fields->__9 = (struct DrawLotsDisplayMessage_DisplayedInGroup___c_o *)v1;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)DrawLotsDisplayMessage_DisplayedInGroup___c_TypeInfo->static_fields,
-    (int64_t)v2,
+    (int64_t)v1,
+    v2,
     v3,
     v4,
     v5,
     v6,
-    v7,
-    v8);
+    v7);
 }
 
 
@@ -628,39 +590,38 @@ int32_t __fastcall DrawLotsDisplayMessage_DisplayedInGroup___c___DrawLotsMessage
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return ent->fields.probability;
 }
 
 
 void __fastcall DrawLotsDisplayMessage___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  Il2CppObject *v1; // x19
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4BCA060 & 1) == 0 )
+  if ( (byte_4BDEB0E & 1) == 0 )
   {
-    sub_1C1ABD4(&DrawLotsDisplayMessage___c_TypeInfo, v1);
-    byte_4BCA060 = 1;
+    sub_1C21E38(&DrawLotsDisplayMessage___c_TypeInfo);
+    byte_4BDEB0E = 1;
   }
-  v2 = (Il2CppObject *)sub_1C1AE20(DrawLotsDisplayMessage___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  DrawLotsDisplayMessage___c_TypeInfo->static_fields->__9 = (struct DrawLotsDisplayMessage___c_o *)v2;
-  sub_1C1AB78(
+  v1 = (Il2CppObject *)sub_1C22084(DrawLotsDisplayMessage___c_TypeInfo);
+  System_Object___ctor(v1, 0LL);
+  DrawLotsDisplayMessage___c_TypeInfo->static_fields->__9 = (struct DrawLotsDisplayMessage___c_o *)v1;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)DrawLotsDisplayMessage___c_TypeInfo->static_fields,
-    (int64_t)v2,
+    (int64_t)v1,
+    v2,
     v3,
     v4,
     v5,
     v6,
-    v7,
-    v8);
+    v7);
 }
 
 
@@ -676,7 +637,7 @@ DrawLotsDisplayMessage_DisplayedInGroup_SaveData_o *__fastcall DrawLotsDisplayMe
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return DrawLotsDisplayMessage_DisplayedInGroup__GetSaveData(data, (const MethodInfo *)data);
 }
 
@@ -695,6 +656,6 @@ bool __fastcall DrawLotsDisplayMessage___c__DisplayClass3_0___DrawLots_b__0(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return data->fields.groupId == this->fields.groupId;
 }

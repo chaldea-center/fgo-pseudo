@@ -79,7 +79,7 @@ UnityEngine_Color_o __fastcall ColorChange__PingPong(
     to.fields.b = b;
     to.fields.a = a;
   }
-  *(UnityEngine_Color_o *)&v10 = Easing__Func_47674908(from, to, v14, easingType, 0LL);
+  *(UnityEngine_Color_o *)&v10 = Easing__Func_47742864(from, to, v14, easingType, 0LL);
   result.fields.a = v13;
   result.fields.b = v12;
   result.fields.g = v11;
@@ -135,14 +135,14 @@ void __fastcall ColorChange__Play(
   v11->fields.mCount = count;
   v11->fields.mNowCount = 0;
   v11->fields.mEndAct = endAct;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v11->fields.mEndAct, (int64_t)endAct, v21, v22, v23, v24, v25, v26);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v11->fields.mEndAct, (int64_t)endAct, v21, v22, v23, v24, v25, v26);
   v11->fields.mProcessAct = procAct;
   v11 = (ColorChange_o *)((char *)v11 + 112);
   *(float *)&v11[-1].fields.mNowCount = r;
   v11[-1].fields.mDelay = g;
   *(&v11[-1].fields.mDelay + 1) = b;
   *(float *)&v11[-1].fields.mProcessAct = a;
-  sub_1C1AB78((PartyOrganizationUtility_o *)v11, (int64_t)procAct, v27, v28, v29, v30, v31, v32);
+  sub_1C21DDC((PartyOrganizationUtility_o *)v11, (int64_t)procAct, v27, v28, v29, v30, v31, v32);
   klass = (System_Action_o *)v11->klass;
   LODWORD(v11->fields.m_CancellationTokenSource) = easingType;
   *(float *)&v11[-1].fields.mEasingType = delay;
@@ -262,7 +262,7 @@ void __fastcall ColorChange__Update(ColorChange_o *this, const MethodInfo *metho
                                        time,
                                        mEasingType,
                                        v5)
-                                   : Easing__Func_47674908(
+                                   : Easing__Func_47742864(
                                        *(UnityEngine_Color_o *)&r,
                                        *(UnityEngine_Color_o *)&v13,
                                        time,

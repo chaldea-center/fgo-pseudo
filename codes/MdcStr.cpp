@@ -4,7 +4,6 @@ void __fastcall MdcStr___ctor(MdcStr_o *this, const MethodInfo *method)
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall MdcStr__Dc(
         System_String_o *str,
         uint32_t eorData,
@@ -12,367 +11,357 @@ System_String_o *__fastcall MdcStr__Dc(
         const MethodInfo *method)
 {
   bool hasValue; // w20
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  System_Byte_array *v17; // x0
-  bool v18; // zf
-  System_Byte_array *v19; // x20
-  uint32_t v20; // w21
+  System_Byte_array *v7; // x0
+  bool v8; // zf
+  System_Byte_array *v9; // x20
+  uint32_t v10; // w21
   _DWORD *Mk; // x0
-  __int64 v22; // x1
-  unsigned int v23; // w8
-  unsigned __int64 v24; // x8
-  unsigned __int64 v25; // x9
+  __int64 v12; // x1
+  unsigned int v13; // w8
+  unsigned __int64 v14; // x8
+  unsigned __int64 v15; // x9
   System_Text_Encoding_o *UTF8; // x0
-  System_Text_Encoding_o *v27; // x19
-  __int64 v28; // x21
-  System_Text_Encoding_o *v29; // x19
-  __int64 v30; // x22
-  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v31; // x23
-  System_IO_MemoryStream_o *v32; // x19
+  System_Text_Encoding_o *v17; // x19
+  __int64 v18; // x21
+  System_Text_Encoding_o *v19; // x19
+  __int64 v20; // x22
+  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v21; // x23
+  System_IO_MemoryStream_o *v22; // x19
+  __int64 v23; // x0
+  __int64 v24; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v25; // x22
+  System_Security_Cryptography_CryptoStream_o *v26; // x21
+  __int64 v27; // x0
+  __int64 v28; // x1
+  System_Security_Cryptography_CryptoStream_c *klass; // x8
+  __int64 v30; // x9
+  int32_t *p_offset; // x10
+  __int64 v32; // x0
   __int64 v33; // x0
   __int64 v34; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v35; // x22
-  System_Security_Cryptography_CryptoStream_o *v36; // x21
-  __int64 v37; // x0
-  __int64 v38; // x1
-  System_Security_Cryptography_CryptoStream_c *klass; // x8
-  __int64 v40; // x9
-  int32_t *p_offset; // x10
-  __int64 v42; // x0
+  System_Byte_array *v35; // x20
+  System_IO_MemoryStream_c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
+  System_IO_MemoryStream_o *v40; // x19
+  System_IO_MemoryStream_o *v41; // x22
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v42; // x23
   __int64 v43; // x0
   __int64 v44; // x1
-  System_Byte_array *v45; // x20
-  System_IO_MemoryStream_c *v46; // x8
-  __int64 v47; // x9
-  int32_t *v48; // x10
-  __int64 v49; // x0
-  System_IO_MemoryStream_o *v50; // x19
-  System_IO_MemoryStream_o *v51; // x22
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *v52; // x23
-  __int64 v53; // x0
-  __int64 v54; // x1
-  __int64 v55; // x21
-  __int64 v56; // x0
-  __int64 v57; // x1
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_c *v58; // x8
-  __int64 v59; // x9
-  int32_t *v60; // x10
-  __int64 v61; // x0
-  __int64 v62; // x0
-  __int64 v63; // x1
-  System_IO_MemoryStream_c *v64; // x8
-  __int64 v65; // x9
-  int32_t *v66; // x10
-  __int64 v67; // x0
-  __int64 v68; // x0
-  __int64 v69; // x1
-  __int64 v70; // x22
-  System_IO_MemoryStream_c *v71; // x8
-  __int64 v72; // x9
-  int32_t *v73; // x10
-  __int64 v74; // x0
-  __int64 v76; // x0
-  System_IO_IOException_o *v77; // x19
-  System_String_o *v78; // x0
-  __int64 v79; // x0
-  System_Nullable_uint__o v80; // [xsp+8h] [xbp-58h] BYREF
-  System_Nullable_uint__o v81; // 0:x0.8
+  __int64 v45; // x21
+  __int64 v46; // x0
+  __int64 v47; // x1
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_c *v48; // x8
+  __int64 v49; // x9
+  int32_t *v50; // x10
+  __int64 v51; // x0
+  __int64 v52; // x0
+  __int64 v53; // x1
+  System_IO_MemoryStream_c *v54; // x8
+  __int64 v55; // x9
+  int32_t *v56; // x10
+  __int64 v57; // x0
+  __int64 v58; // x0
+  __int64 v59; // x1
+  __int64 v60; // x22
+  System_IO_MemoryStream_c *v61; // x8
+  __int64 v62; // x9
+  int32_t *v63; // x10
+  __int64 v64; // x0
+  __int64 v66; // x0
+  System_IO_IOException_o *v67; // x19
+  System_String_o *v68; // x0
+  __int64 v69; // x0
+  System_Nullable_uint__o v70; // [xsp+8h] [xbp-58h] BYREF
+  System_Nullable_uint__o v71; // 0:x0.8
 
-  v80 = crc;
+  v70 = crc;
   hasValue = crc.fields.hasValue;
-  if ( (byte_4BC72D1 & 1) == 0 )
+  if ( (byte_4BDBD67 & 1) == 0 )
   {
-    sub_1C1ABD4(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo, *(_QWORD *)&eorData);
-    sub_1C1ABD4(&byte___TypeInfo, v7);
-    sub_1C1ABD4(&System_Convert_TypeInfo, v8);
-    sub_1C1ABD4(&Crc32_TypeInfo, v9);
-    sub_1C1ABD4(&System_Security_Cryptography_CryptoStream_TypeInfo, v10);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v11);
-    sub_1C1ABD4(&System_IO_MemoryStream_TypeInfo, v12);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v13);
-    sub_1C1ABD4(&Method_System_Nullable_uint__get_HasValue__, v14);
-    sub_1C1ABD4(&Method_System_Nullable_uint__get_Value__, v15);
-    sub_1C1ABD4(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo, v16);
-    byte_4BC72D1 = 1;
+    sub_1C21E38(&ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+    sub_1C21E38(&byte___TypeInfo);
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&Crc32_TypeInfo);
+    sub_1C21E38(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&System_IO_MemoryStream_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_System_Nullable_uint__get_HasValue__);
+    sub_1C21E38(&Method_System_Nullable_uint__get_Value__);
+    sub_1C21E38(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    byte_4BDBD67 = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v17 = System_Convert__FromBase64String(str, 0LL);
-  v18 = !hasValue;
-  v19 = v17;
-  if ( !v18 )
+  v7 = System_Convert__FromBase64String(str, 0LL);
+  v8 = !hasValue;
+  v9 = v7;
+  if ( !v8 )
   {
     if ( !Crc32_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-    v20 = Crc32__Compute(v19, 0LL);
-    v81 = (System_Nullable_uint__o)&v80;
-    if ( v20 != System_Nullable_uint___get_Value(
-                  v81,
-                  (const MethodInfo_375C41C *)Method_System_Nullable_uint__get_Value__) )
+    v10 = Crc32__Compute(v9, 0LL);
+    v71 = (System_Nullable_uint__o)&v70;
+    if ( v10 != System_Nullable_uint___get_Value(
+                  v71,
+                  (const MethodInfo_376EEB8 *)Method_System_Nullable_uint__get_Value__) )
     {
-      v76 = sub_1C1ABE8(&System_IO_IOException_TypeInfo);
-      v77 = (System_IO_IOException_o *)sub_1C1AE20(v76);
-      v78 = (System_String_o *)sub_1C1ABE8(&StringLiteral_9124/*"MdcStr:Dc Crc Error"*/);
-      System_IO_IOException___ctor_63180612(v77, v78, 0LL);
-      v79 = sub_1C1ABE8(&Method_MdcStr_Dc__);
-      sub_1C1ACFC(v77, v79);
+      v66 = sub_1C21E4C(&System_IO_IOException_TypeInfo);
+      v67 = (System_IO_IOException_o *)sub_1C22084(v66);
+      v68 = (System_String_o *)sub_1C21E4C(&StringLiteral_9134/*"MdcStr:Dc Crc Error"*/);
+      System_IO_IOException___ctor_63255720(v67, v68, 0LL);
+      v69 = sub_1C21E4C(&Method_MdcStr_Dc__);
+      sub_1C21F60(v67, v69);
     }
   }
   if ( eorData )
   {
-    Mk = (_DWORD *)sub_1C1AC7C(byte___TypeInfo, 4LL);
+    Mk = (_DWORD *)sub_1C21EE0(byte___TypeInfo, 4LL);
     if ( !Mk )
       goto LABEL_70;
-    v23 = Mk[6];
-    if ( !v23 )
+    v13 = Mk[6];
+    if ( !v13 )
       goto LABEL_68;
     *((_BYTE *)Mk + 32) = eorData;
-    if ( v23 == 1 )
+    if ( v13 == 1 )
       goto LABEL_68;
     *((_BYTE *)Mk + 33) = BYTE1(eorData);
-    if ( v23 <= 2 )
+    if ( v13 <= 2 )
       goto LABEL_68;
     *((_BYTE *)Mk + 34) = BYTE2(eorData);
-    if ( v23 == 3 )
+    if ( v13 == 3 )
       goto LABEL_68;
     *((_BYTE *)Mk + 35) = HIBYTE(eorData);
-    if ( !v19 )
+    if ( !v9 )
 LABEL_70:
-      sub_1C1AE30(Mk, v22);
-    if ( (int)*(_QWORD *)&v19->max_length >= 1 )
+      sub_1C22094(Mk, v12);
+    if ( (int)*(_QWORD *)&v9->max_length >= 1 )
     {
-      v24 = 0LL;
-      v25 = (unsigned int)*(_QWORD *)&v19->max_length;
-      while ( v24 < v25 && (v24 & 3) < Mk[6] )
+      v14 = 0LL;
+      v15 = (unsigned int)*(_QWORD *)&v9->max_length;
+      while ( v14 < v15 && (v14 & 3) < Mk[6] )
       {
-        v19->m_Items[v24 + 4] ^= *((_BYTE *)Mk + (v24 & 3) + 32);
-        if ( v25 == ++v24 )
+        v9->m_Items[v14 + 4] ^= *((_BYTE *)Mk + (v14 & 3) + 32);
+        if ( v15 == ++v14 )
           goto LABEL_21;
       }
 LABEL_68:
-      sub_1C1AE38(Mk, v22);
+      sub_1C2209C(Mk, v12);
     }
   }
 LABEL_21:
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
-  v27 = UTF8;
+  v17 = UTF8;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Mk = NetworkManager__GetMk((const MethodInfo *)UTF8);
-  if ( !v27 )
+  if ( !v17 )
     goto LABEL_70;
-  v28 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, _DWORD *, Il2CppMethodPointer))v27->klass->vtable._19_GetBytes.method)(
-          v27,
+  v18 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, _DWORD *, Il2CppMethodPointer))v17->klass->vtable._19_GetBytes.method)(
+          v17,
           Mk,
-          v27->klass->vtable._20_GetBytes.methodPtr);
-  v29 = System_Text_Encoding__get_UTF8(0LL);
-  Mk = NetworkManager__GetCv((const MethodInfo *)v29);
-  if ( !v29 )
-    goto LABEL_70;
-  v30 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, _DWORD *, Il2CppMethodPointer))v29->klass->vtable._19_GetBytes.method)(
-          v29,
-          Mk,
-          v29->klass->vtable._20_GetBytes.methodPtr);
-  v31 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_1C1AE20(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v31, 0LL);
-  v32 = (System_IO_MemoryStream_o *)sub_1C1AE20(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v32, 0LL);
-  if ( !v31 )
-    sub_1C1AE30(v33, v34);
-  v35 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v31->klass->vtable._25_CreateDecryptor.method)(
-                                                             v31,
-                                                             v28,
-                                                             v30,
-                                                             v31->klass->vtable._26_GenerateKey.methodPtr);
-  v36 = (System_Security_Cryptography_CryptoStream_o *)sub_1C1AE20(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v36, (System_IO_Stream_o *)v32, v35, 1, 0LL);
+          v17->klass->vtable._20_GetBytes.methodPtr);
+  v19 = System_Text_Encoding__get_UTF8(0LL);
+  Mk = NetworkManager__GetCv((const MethodInfo *)v19);
   if ( !v19 )
-    sub_1C1AE30(v37, v38);
-  if ( !v36 )
-    sub_1C1AE30(v37, v38);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v36->klass->vtable._36_Write.method)(
-    v36,
-    v19,
+    goto LABEL_70;
+  v20 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, _DWORD *, Il2CppMethodPointer))v19->klass->vtable._19_GetBytes.method)(
+          v19,
+          Mk,
+          v19->klass->vtable._20_GetBytes.methodPtr);
+  v21 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_1C22084(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v21, 0LL);
+  v22 = (System_IO_MemoryStream_o *)sub_1C22084(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v22, 0LL);
+  if ( !v21 )
+    sub_1C22094(v23, v24);
+  v25 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v21->klass->vtable._25_CreateDecryptor.method)(
+                                                             v21,
+                                                             v18,
+                                                             v20,
+                                                             v21->klass->vtable._26_GenerateKey.methodPtr);
+  v26 = (System_Security_Cryptography_CryptoStream_o *)sub_1C22084(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v26, (System_IO_Stream_o *)v22, v25, 1, 0LL);
+  if ( !v9 )
+    sub_1C22094(v27, v28);
+  if ( !v26 )
+    sub_1C22094(v27, v28);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, System_Byte_array *, _QWORD, _QWORD, Il2CppMethodPointer))v26->klass->vtable._36_Write.method)(
+    v26,
+    v9,
     0LL,
-    v19->max_length,
-    v36->klass->vtable._37_Write.methodPtr);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v36->klass->vtable._19_Close.method)(
-    v36,
-    v36->klass->vtable._20_Dispose.methodPtr);
-  klass = v36->klass;
-  v40 = *(unsigned __int16 *)(&v36->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v36->klass->_2.bitflags2 + 3) )
+    v9->max_length,
+    v26->klass->vtable._37_Write.methodPtr);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v26->klass->vtable._19_Close.method)(
+    v26,
+    v26->klass->vtable._20_Dispose.methodPtr);
+  klass = v26->klass;
+  v30 = *(unsigned __int16 *)(&v26->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v26->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v40;
+      --v30;
       p_offset += 4;
-      if ( !v40 )
+      if ( !v30 )
         goto LABEL_32;
     }
-    v42 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v32 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_32:
-    v42 = sub_1C6CBB4(v36, System_IDisposable_TypeInfo, 0LL);
+    v32 = sub_1C73E18(v26, System_IDisposable_TypeInfo, 0LL);
   }
-  v43 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v42)(
-          v36,
-          *(_QWORD *)(v42 + 8));
-  if ( !v32 )
-    sub_1C1AE30(v43, v44);
-  v45 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v32->klass->vtable._42_ToArray.method)(
-                               v32,
-                               v32->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v32->klass->vtable._19_Close.method)(
-    v32,
-    v32->klass->vtable._20_Dispose.methodPtr);
-  v46 = v32->klass;
-  v47 = *(unsigned __int16 *)(&v32->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v32->klass->_2.bitflags2 + 3) )
+  v33 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v32)(
+          v26,
+          *(_QWORD *)(v32 + 8));
+  if ( !v22 )
+    sub_1C22094(v33, v34);
+  v35 = (System_Byte_array *)((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v22->klass->vtable._42_ToArray.method)(
+                               v22,
+                               v22->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v22->klass->vtable._19_Close.method)(
+    v22,
+    v22->klass->vtable._20_Dispose.methodPtr);
+  v36 = v22->klass;
+  v37 = *(unsigned __int16 *)(&v22->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v22->klass->_2.bitflags2 + 3) )
   {
-    v48 = &v46->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      --v47;
-      v48 += 4;
-      if ( !v47 )
+      --v37;
+      v38 += 4;
+      if ( !v37 )
         goto LABEL_39;
     }
-    v49 = (__int64)(&v46->vtable._0_Equals.method + 2 * *v48);
+    v39 = (__int64)(&v36->vtable._0_Equals.method + 2 * *v38);
   }
   else
   {
 LABEL_39:
-    v49 = sub_1C6CBB4(v32, System_IDisposable_TypeInfo, 0LL);
+    v39 = sub_1C73E18(v22, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v49)(v32, *(_QWORD *)(v49 + 8));
-  v50 = (System_IO_MemoryStream_o *)sub_1C1AE20(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v50, 0LL);
-  v51 = (System_IO_MemoryStream_o *)sub_1C1AE20(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor_63184380(v51, v45, 0LL);
-  v52 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_1C1AE20(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
-  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v52, (System_IO_Stream_o *)v51, 0LL);
-  v53 = sub_1C1AC7C(byte___TypeInfo, 0x4000LL);
-  v55 = v53;
-  if ( !v53 )
-    sub_1C1AE30(0LL, v54);
-  if ( !v52 )
-    sub_1C1AE30(v53, v54);
+  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v39)(v22, *(_QWORD *)(v39 + 8));
+  v40 = (System_IO_MemoryStream_o *)sub_1C22084(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v40, 0LL);
+  v41 = (System_IO_MemoryStream_o *)sub_1C22084(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor_63259488(v41, v35, 0LL);
+  v42 = (ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *)sub_1C22084(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_TypeInfo);
+  ICSharpCode_SharpZipLib_BZip2_BZip2InputStream___ctor(v42, (System_IO_Stream_o *)v41, 0LL);
+  v43 = sub_1C21EE0(byte___TypeInfo, 0x4000LL);
+  v45 = v43;
+  if ( !v43 )
+    sub_1C22094(0LL, v44);
+  if ( !v42 )
+    sub_1C22094(v43, v44);
   while ( 1 )
   {
-    v56 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v52->klass->vtable._33_Read.method)(
-            v52,
-            v55,
+    v46 = ((__int64 (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v42->klass->vtable._33_Read.method)(
+            v42,
+            v45,
             0LL,
-            *(unsigned int *)(v55 + 24),
-            v52->klass->vtable._34_Read.methodPtr);
-    if ( (int)v56 <= 0 )
+            *(unsigned int *)(v45 + 24),
+            v42->klass->vtable._34_Read.methodPtr);
+    if ( (int)v46 <= 0 )
       break;
-    if ( !v50 )
-      sub_1C1AE30(v56, v57);
-    ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v50->klass->vtable._36_Write.method)(
-      v50,
-      v55,
+    if ( !v40 )
+      sub_1C22094(v46, v47);
+    ((void (__fastcall *)(System_IO_MemoryStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v40->klass->vtable._36_Write.method)(
+      v40,
+      v45,
       0LL,
-      (unsigned int)v56,
-      v50->klass->vtable._37_Write.methodPtr);
+      (unsigned int)v46,
+      v40->klass->vtable._37_Write.methodPtr);
   }
-  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, Il2CppMethodPointer))v52->klass->vtable._19_Close.method)(
-    v52,
-    v52->klass->vtable._20_Dispose.methodPtr);
-  v58 = v52->klass;
-  v59 = *(unsigned __int16 *)(&v52->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v52->klass->_2.bitflags2 + 3) )
+  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, Il2CppMethodPointer))v42->klass->vtable._19_Close.method)(
+    v42,
+    v42->klass->vtable._20_Dispose.methodPtr);
+  v48 = v42->klass;
+  v49 = *(unsigned __int16 *)(&v42->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v42->klass->_2.bitflags2 + 3) )
   {
-    v60 = &v58->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v60 - 1) != System_IDisposable_TypeInfo )
+    v50 = &v48->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v50 - 1) != System_IDisposable_TypeInfo )
     {
-      --v59;
-      v60 += 4;
-      if ( !v59 )
+      --v49;
+      v50 += 4;
+      if ( !v49 )
         goto LABEL_50;
     }
-    v61 = (__int64)(&v58->vtable._0_Equals.method + 2 * *v60);
+    v51 = (__int64)(&v48->vtable._0_Equals.method + 2 * *v50);
   }
   else
   {
 LABEL_50:
-    v61 = sub_1C6CBB4(v52, System_IDisposable_TypeInfo, 0LL);
+    v51 = sub_1C73E18(v42, System_IDisposable_TypeInfo, 0LL);
   }
-  v62 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, _QWORD))v61)(
-          v52,
-          *(_QWORD *)(v61 + 8));
-  if ( !v51 )
-    sub_1C1AE30(v62, v63);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v51->klass->vtable._19_Close.method)(
-    v51,
-    v51->klass->vtable._20_Dispose.methodPtr);
-  v64 = v51->klass;
-  v65 = *(unsigned __int16 *)(&v51->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v51->klass->_2.bitflags2 + 3) )
+  v52 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2InputStream_o *, _QWORD))v51)(
+          v42,
+          *(_QWORD *)(v51 + 8));
+  if ( !v41 )
+    sub_1C22094(v52, v53);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v41->klass->vtable._19_Close.method)(
+    v41,
+    v41->klass->vtable._20_Dispose.methodPtr);
+  v54 = v41->klass;
+  v55 = *(unsigned __int16 *)(&v41->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v41->klass->_2.bitflags2 + 3) )
   {
-    v66 = &v64->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v66 - 1) != System_IDisposable_TypeInfo )
+    v56 = &v54->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v56 - 1) != System_IDisposable_TypeInfo )
     {
-      --v65;
-      v66 += 4;
-      if ( !v65 )
+      --v55;
+      v56 += 4;
+      if ( !v55 )
         goto LABEL_57;
     }
-    v67 = (__int64)(&v64->vtable._0_Equals.method + 2 * *v66);
+    v57 = (__int64)(&v54->vtable._0_Equals.method + 2 * *v56);
   }
   else
   {
 LABEL_57:
-    v67 = sub_1C6CBB4(v51, System_IDisposable_TypeInfo, 0LL);
+    v57 = sub_1C73E18(v41, System_IDisposable_TypeInfo, 0LL);
   }
-  v68 = (*(__int64 (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v67)(v51, *(_QWORD *)(v67 + 8));
-  if ( !v50 )
-    sub_1C1AE30(v68, v69);
-  v70 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v50->klass->vtable._42_ToArray.method)(
-          v50,
-          v50->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v50->klass->vtable._19_Close.method)(
-    v50,
-    v50->klass->vtable._20_Dispose.methodPtr);
-  v71 = v50->klass;
-  v72 = *(unsigned __int16 *)(&v50->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v50->klass->_2.bitflags2 + 3) )
+  v58 = (*(__int64 (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v57)(v41, *(_QWORD *)(v57 + 8));
+  if ( !v40 )
+    sub_1C22094(v58, v59);
+  v60 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v40->klass->vtable._42_ToArray.method)(
+          v40,
+          v40->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v40->klass->vtable._19_Close.method)(
+    v40,
+    v40->klass->vtable._20_Dispose.methodPtr);
+  v61 = v40->klass;
+  v62 = *(unsigned __int16 *)(&v40->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v40->klass->_2.bitflags2 + 3) )
   {
-    v73 = &v71->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v73 - 1) != System_IDisposable_TypeInfo )
+    v63 = &v61->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v63 - 1) != System_IDisposable_TypeInfo )
     {
-      --v72;
-      v73 += 4;
-      if ( !v72 )
+      --v62;
+      v63 += 4;
+      if ( !v62 )
         goto LABEL_64;
     }
-    v74 = (__int64)(&v71->vtable._0_Equals.method + 2 * *v73);
+    v64 = (__int64)(&v61->vtable._0_Equals.method + 2 * *v63);
   }
   else
   {
 LABEL_64:
-    v74 = sub_1C6CBB4(v50, System_IDisposable_TypeInfo, 0LL);
+    v64 = sub_1C73E18(v40, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v74)(v50, *(_QWORD *)(v74 + 8));
+  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v64)(v40, *(_QWORD *)(v64 + 8));
   Mk = System_Text_Encoding__get_UTF8(0LL);
   if ( !Mk )
     goto LABEL_70;
   return (System_String_o *)(*(__int64 (__fastcall **)(_DWORD *, __int64, _QWORD))(*(_QWORD *)Mk + 888LL))(
                               Mk,
-                              v70,
+                              v60,
                               *(_QWORD *)(*(_QWORD *)Mk + 896LL));
 }
 
@@ -383,249 +372,239 @@ System_String_o *__fastcall MdcStr__Ec(
         uint32_t eorData,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
   unsigned int *UTF8; // x0
+  __int64 v8; // x1
+  __int64 v9; // x23
+  System_Text_Encoding_o *v10; // x0
+  System_Text_Encoding_o *v11; // x21
+  __int64 v12; // x22
+  System_Text_Encoding_o *v13; // x21
+  __int64 v14; // x24
+  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v15; // x25
+  System_IO_MemoryStream_o *v16; // x21
+  __int64 v17; // x0
   __int64 v18; // x1
-  __int64 v19; // x23
-  System_Text_Encoding_o *v20; // x0
-  System_Text_Encoding_o *v21; // x21
-  __int64 v22; // x22
-  System_Text_Encoding_o *v23; // x21
-  __int64 v24; // x24
-  System_Security_Cryptography_TripleDESCryptoServiceProvider_o *v25; // x25
-  System_IO_MemoryStream_o *v26; // x21
-  __int64 v27; // x0
-  __int64 v28; // x1
-  System_Security_Cryptography_ICryptoTransform_o *v29; // x24
-  System_Security_Cryptography_CryptoStream_o *v30; // x22
-  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v31; // x25
-  __int64 v32; // x0
-  __int64 v33; // x1
+  System_Security_Cryptography_ICryptoTransform_o *v19; // x24
+  System_Security_Cryptography_CryptoStream_o *v20; // x22
+  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *v21; // x25
+  __int64 v22; // x0
+  __int64 v23; // x1
   ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_c *klass; // x8
-  __int64 v35; // x9
+  __int64 v25; // x9
   int32_t *p_offset; // x10
-  __int64 v37; // x0
-  __int64 v38; // x0
-  __int64 v39; // x1
-  System_Security_Cryptography_CryptoStream_c *v40; // x8
-  __int64 v41; // x9
-  int32_t *v42; // x10
-  __int64 v43; // x0
-  __int64 v44; // x0
-  __int64 v45; // x1
-  __int64 v46; // x22
-  System_IO_MemoryStream_c *v47; // x8
-  __int64 v48; // x9
-  int32_t *v49; // x10
-  __int64 v50; // x0
-  unsigned int v51; // w8
-  unsigned __int64 v52; // x8
-  unsigned __int64 v53; // x9
-  uint32_t v54; // w1
-  System_Nullable_uint__o v56; // [xsp+8h] [xbp-58h] BYREF
-  System_Nullable_uint__o v57; // 0:x0.8
+  __int64 v27; // x0
+  __int64 v28; // x0
+  __int64 v29; // x1
+  System_Security_Cryptography_CryptoStream_c *v30; // x8
+  __int64 v31; // x9
+  int32_t *v32; // x10
+  __int64 v33; // x0
+  __int64 v34; // x0
+  __int64 v35; // x1
+  __int64 v36; // x22
+  System_IO_MemoryStream_c *v37; // x8
+  __int64 v38; // x9
+  int32_t *v39; // x10
+  __int64 v40; // x0
+  unsigned int v41; // w8
+  unsigned __int64 v42; // x8
+  unsigned __int64 v43; // x9
+  uint32_t v44; // w1
+  System_Nullable_uint__o v46; // [xsp+8h] [xbp-58h] BYREF
+  System_Nullable_uint__o v47; // 0:x0.8
 
-  if ( (byte_4BC72D0 & 1) == 0 )
+  if ( (byte_4BDBD66 & 1) == 0 )
   {
-    sub_1C1ABD4(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo, str);
-    sub_1C1ABD4(&byte___TypeInfo, v7);
-    sub_1C1ABD4(&System_Convert_TypeInfo, v8);
-    sub_1C1ABD4(&Crc32_TypeInfo, v9);
-    sub_1C1ABD4(&System_Security_Cryptography_CryptoStream_TypeInfo, v10);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v11);
-    sub_1C1ABD4(&System_IO_MemoryStream_TypeInfo, v12);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v13);
-    sub_1C1ABD4(&Method_System_Nullable_uint___ctor__, v14);
-    sub_1C1ABD4(&Method_System_Nullable_uint__get_HasValue__, v15);
-    sub_1C1ABD4(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo, v16);
-    byte_4BC72D0 = 1;
+    sub_1C21E38(&ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+    sub_1C21E38(&byte___TypeInfo);
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&Crc32_TypeInfo);
+    sub_1C21E38(&System_Security_Cryptography_CryptoStream_TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&System_IO_MemoryStream_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_System_Nullable_uint___ctor__);
+    sub_1C21E38(&Method_System_Nullable_uint__get_HasValue__);
+    sub_1C21E38(&System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+    byte_4BDBD66 = 1;
   }
   UTF8 = (unsigned int *)System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
     goto LABEL_51;
-  v19 = (*(__int64 (__fastcall **)(unsigned int *, System_String_o *, _QWORD))(*(_QWORD *)UTF8 + 616LL))(
-          UTF8,
-          str,
-          *(_QWORD *)(*(_QWORD *)UTF8 + 624LL));
-  v20 = System_Text_Encoding__get_UTF8(0LL);
-  v21 = v20;
+  v9 = (*(__int64 (__fastcall **)(unsigned int *, System_String_o *, _QWORD))(*(_QWORD *)UTF8 + 616LL))(
+         UTF8,
+         str,
+         *(_QWORD *)(*(_QWORD *)UTF8 + 624LL));
+  v10 = System_Text_Encoding__get_UTF8(0LL);
+  v11 = v10;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  UTF8 = (unsigned int *)NetworkManager__GetMk((const MethodInfo *)v20);
+  UTF8 = (unsigned int *)NetworkManager__GetMk((const MethodInfo *)v10);
+  if ( !v11 )
+    goto LABEL_51;
+  v12 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, unsigned int *, Il2CppMethodPointer))v11->klass->vtable._19_GetBytes.method)(
+          v11,
+          UTF8,
+          v11->klass->vtable._20_GetBytes.methodPtr);
+  v13 = System_Text_Encoding__get_UTF8(0LL);
+  UTF8 = (unsigned int *)NetworkManager__GetCv((const MethodInfo *)v13);
+  if ( !v13 )
+    goto LABEL_51;
+  v14 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, unsigned int *, Il2CppMethodPointer))v13->klass->vtable._19_GetBytes.method)(
+          v13,
+          UTF8,
+          v13->klass->vtable._20_GetBytes.methodPtr);
+  v15 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_1C22084(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
+  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v15, 0LL);
+  v16 = (System_IO_MemoryStream_o *)sub_1C22084(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v16, 0LL);
+  if ( !v15 )
+    sub_1C22094(v17, v18);
+  v19 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v15->klass->vtable._23_CreateEncryptor.method)(
+                                                             v15,
+                                                             v12,
+                                                             v14,
+                                                             v15->klass->vtable._24_CreateDecryptor.methodPtr);
+  v20 = (System_Security_Cryptography_CryptoStream_o *)sub_1C22084(System_Security_Cryptography_CryptoStream_TypeInfo);
+  System_Security_Cryptography_CryptoStream___ctor(v20, (System_IO_Stream_o *)v16, v19, 1, 0LL);
+  v21 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_1C22084(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
+  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor(v21, (System_IO_Stream_o *)v20, 0LL);
+  if ( !v9 )
+    sub_1C22094(v22, v23);
   if ( !v21 )
-    goto LABEL_51;
-  v22 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, unsigned int *, Il2CppMethodPointer))v21->klass->vtable._19_GetBytes.method)(
-          v21,
-          UTF8,
-          v21->klass->vtable._20_GetBytes.methodPtr);
-  v23 = System_Text_Encoding__get_UTF8(0LL);
-  UTF8 = (unsigned int *)NetworkManager__GetCv((const MethodInfo *)v23);
-  if ( !v23 )
-    goto LABEL_51;
-  v24 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, unsigned int *, Il2CppMethodPointer))v23->klass->vtable._19_GetBytes.method)(
-          v23,
-          UTF8,
-          v23->klass->vtable._20_GetBytes.methodPtr);
-  v25 = (System_Security_Cryptography_TripleDESCryptoServiceProvider_o *)sub_1C1AE20(System_Security_Cryptography_TripleDESCryptoServiceProvider_TypeInfo);
-  System_Security_Cryptography_TripleDESCryptoServiceProvider___ctor(v25, 0LL);
-  v26 = (System_IO_MemoryStream_o *)sub_1C1AE20(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v26, 0LL);
-  if ( !v25 )
-    sub_1C1AE30(v27, v28);
-  v29 = (System_Security_Cryptography_ICryptoTransform_o *)((__int64 (__fastcall *)(System_Security_Cryptography_TripleDESCryptoServiceProvider_o *, __int64, __int64, Il2CppMethodPointer))v25->klass->vtable._23_CreateEncryptor.method)(
-                                                             v25,
-                                                             v22,
-                                                             v24,
-                                                             v25->klass->vtable._24_CreateDecryptor.methodPtr);
-  v30 = (System_Security_Cryptography_CryptoStream_o *)sub_1C1AE20(System_Security_Cryptography_CryptoStream_TypeInfo);
-  System_Security_Cryptography_CryptoStream___ctor(v30, (System_IO_Stream_o *)v26, v29, 1, 0LL);
-  v31 = (ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *)sub_1C1AE20(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_TypeInfo);
-  ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream___ctor(v31, (System_IO_Stream_o *)v30, 0LL);
-  if ( !v19 )
-    sub_1C1AE30(v32, v33);
-  if ( !v31 )
-    sub_1C1AE30(v32, v33);
-  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v31->klass->vtable._36_Write.method)(
-    v31,
-    v19,
+    sub_1C22094(v22, v23);
+  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))v21->klass->vtable._36_Write.method)(
+    v21,
+    v9,
     0LL,
-    *(unsigned int *)(v19 + 24),
-    v31->klass->vtable._37_Write.methodPtr);
-  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v31->klass->vtable._19_Close.method)(
-    v31,
-    v31->klass->vtable._20_Dispose.methodPtr);
-  klass = v31->klass;
-  v35 = *(unsigned __int16 *)(&v31->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v31->klass->_2.bitflags2 + 3) )
+    *(unsigned int *)(v9 + 24),
+    v21->klass->vtable._37_Write.methodPtr);
+  ((void (__fastcall *)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, Il2CppMethodPointer))v21->klass->vtable._19_Close.method)(
+    v21,
+    v21->klass->vtable._20_Dispose.methodPtr);
+  klass = v21->klass;
+  v25 = *(unsigned __int16 *)(&v21->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v21->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v35;
+      --v25;
       p_offset += 4;
-      if ( !v35 )
+      if ( !v25 )
         goto LABEL_15;
     }
-    v37 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v27 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_15:
-    v37 = sub_1C6CBB4(v31, System_IDisposable_TypeInfo, 0LL);
+    v27 = sub_1C73E18(v21, System_IDisposable_TypeInfo, 0LL);
   }
-  v38 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, _QWORD))v37)(
-          v31,
-          *(_QWORD *)(v37 + 8));
-  if ( !v30 )
-    sub_1C1AE30(v38, v39);
-  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v30->klass->vtable._19_Close.method)(
-    v30,
-    v30->klass->vtable._20_Dispose.methodPtr);
-  v40 = v30->klass;
-  v41 = *(unsigned __int16 *)(&v30->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v30->klass->_2.bitflags2 + 3) )
+  v28 = (*(__int64 (__fastcall **)(ICSharpCode_SharpZipLib_BZip2_BZip2OutputStream_o *, _QWORD))v27)(
+          v21,
+          *(_QWORD *)(v27 + 8));
+  if ( !v20 )
+    sub_1C22094(v28, v29);
+  ((void (__fastcall *)(System_Security_Cryptography_CryptoStream_o *, Il2CppMethodPointer))v20->klass->vtable._19_Close.method)(
+    v20,
+    v20->klass->vtable._20_Dispose.methodPtr);
+  v30 = v20->klass;
+  v31 = *(unsigned __int16 *)(&v20->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v20->klass->_2.bitflags2 + 3) )
   {
-    v42 = &v40->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v42 - 1) != System_IDisposable_TypeInfo )
+    v32 = &v30->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
     {
-      --v41;
-      v42 += 4;
-      if ( !v41 )
+      --v31;
+      v32 += 4;
+      if ( !v31 )
         goto LABEL_22;
     }
-    v43 = (__int64)(&v40->vtable._0_Equals.method + 2 * *v42);
+    v33 = (__int64)(&v30->vtable._0_Equals.method + 2 * *v32);
   }
   else
   {
 LABEL_22:
-    v43 = sub_1C6CBB4(v30, System_IDisposable_TypeInfo, 0LL);
+    v33 = sub_1C73E18(v20, System_IDisposable_TypeInfo, 0LL);
   }
-  v44 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v43)(
-          v30,
-          *(_QWORD *)(v43 + 8));
-  if ( !v26 )
-    sub_1C1AE30(v44, v45);
-  v46 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v26->klass->vtable._42_ToArray.method)(
-          v26,
-          v26->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v26->klass->vtable._19_Close.method)(
-    v26,
-    v26->klass->vtable._20_Dispose.methodPtr);
-  v47 = v26->klass;
-  v48 = *(unsigned __int16 *)(&v26->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v26->klass->_2.bitflags2 + 3) )
+  v34 = (*(__int64 (__fastcall **)(System_Security_Cryptography_CryptoStream_o *, _QWORD))v33)(
+          v20,
+          *(_QWORD *)(v33 + 8));
+  if ( !v16 )
+    sub_1C22094(v34, v35);
+  v36 = ((__int64 (__fastcall *)(System_IO_MemoryStream_o *, void *))v16->klass->vtable._42_ToArray.method)(
+          v16,
+          v16->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_MemoryStream_o *, Il2CppMethodPointer))v16->klass->vtable._19_Close.method)(
+    v16,
+    v16->klass->vtable._20_Dispose.methodPtr);
+  v37 = v16->klass;
+  v38 = *(unsigned __int16 *)(&v16->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v16->klass->_2.bitflags2 + 3) )
   {
-    v49 = &v47->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v49 - 1) != System_IDisposable_TypeInfo )
+    v39 = &v37->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
     {
-      --v48;
-      v49 += 4;
-      if ( !v48 )
+      --v38;
+      v39 += 4;
+      if ( !v38 )
         goto LABEL_29;
     }
-    v50 = (__int64)(&v47->vtable._0_Equals.method + 2 * *v49);
+    v40 = (__int64)(&v37->vtable._0_Equals.method + 2 * *v39);
   }
   else
   {
 LABEL_29:
-    v50 = sub_1C6CBB4(v26, System_IDisposable_TypeInfo, 0LL);
+    v40 = sub_1C73E18(v16, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v50)(v26, *(_QWORD *)(v50 + 8));
+  (*(void (__fastcall **)(System_IO_MemoryStream_o *, _QWORD))v40)(v16, *(_QWORD *)(v40 + 8));
   if ( !eorData )
     goto LABEL_43;
-  UTF8 = (unsigned int *)sub_1C1AC7C(byte___TypeInfo, 4LL);
+  UTF8 = (unsigned int *)sub_1C21EE0(byte___TypeInfo, 4LL);
   if ( !UTF8 )
     goto LABEL_51;
-  v51 = UTF8[6];
-  if ( !v51 )
+  v41 = UTF8[6];
+  if ( !v41 )
     goto LABEL_50;
   *((_BYTE *)UTF8 + 32) = eorData;
-  if ( v51 == 1 )
+  if ( v41 == 1 )
     goto LABEL_50;
   *((_BYTE *)UTF8 + 33) = BYTE1(eorData);
-  if ( v51 <= 2 )
+  if ( v41 <= 2 )
     goto LABEL_50;
   *((_BYTE *)UTF8 + 34) = BYTE2(eorData);
-  if ( v51 == 3 )
+  if ( v41 == 3 )
     goto LABEL_50;
   *((_BYTE *)UTF8 + 35) = HIBYTE(eorData);
-  if ( !v46 )
+  if ( !v36 )
 LABEL_51:
-    sub_1C1AE30(UTF8, v18);
-  if ( (int)*(_QWORD *)(v46 + 24) >= 1 )
+    sub_1C22094(UTF8, v8);
+  if ( (int)*(_QWORD *)(v36 + 24) >= 1 )
   {
-    v52 = 0LL;
-    v53 = (unsigned int)*(_QWORD *)(v46 + 24);
-    while ( v52 < v53 && (v52 & 3) < UTF8[6] )
+    v42 = 0LL;
+    v43 = (unsigned int)*(_QWORD *)(v36 + 24);
+    while ( v42 < v43 && (v42 & 3) < UTF8[6] )
     {
-      *(_BYTE *)(v46 + 32 + v52) ^= *((_BYTE *)UTF8 + (v52 & 3) + 32);
-      if ( v53 == ++v52 )
+      *(_BYTE *)(v36 + 32 + v42) ^= *((_BYTE *)UTF8 + (v42 & 3) + 32);
+      if ( v43 == ++v42 )
         goto LABEL_43;
     }
 LABEL_50:
-    sub_1C1AE38(UTF8, v18);
+    sub_1C2209C(UTF8, v8);
   }
 LABEL_43:
   if ( crc->fields.hasValue )
   {
     if ( !Crc32_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-    v54 = Crc32__Compute((System_Byte_array *)v46, 0LL);
-    v57 = (System_Nullable_uint__o)&v56;
-    v56 = 0LL;
-    System_Nullable_uint____ctor(v57, v54, (const MethodInfo_375C404 *)Method_System_Nullable_uint___ctor__);
-    *crc = v56;
+    v44 = Crc32__Compute((System_Byte_array *)v36, 0LL);
+    v47 = (System_Nullable_uint__o)&v46;
+    v46 = 0LL;
+    System_Nullable_uint____ctor(v47, v44, (const MethodInfo_376EEA0 *)Method_System_Nullable_uint___ctor__);
+    *crc = v46;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  return System_Convert__ToBase64String((System_Byte_array *)v46, 0LL);
+  return System_Convert__ToBase64String((System_Byte_array *)v36, 0LL);
 }

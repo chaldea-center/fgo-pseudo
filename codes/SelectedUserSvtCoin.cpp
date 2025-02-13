@@ -18,32 +18,32 @@ void __fastcall SelectedUserSvtCoin___ctor(
   __int64 v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4BCB18A & 1) == 0 )
+  if ( (byte_4BDFC4B & 1) == 0 )
   {
-    sub_1C1ABD4(&CoinRoomCoinIconItem_TypeInfo, iconObject);
-    byte_4BCB18A = 1;
+    sub_1C21E38(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4BDFC4B = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !iconObject )
 LABEL_9:
-    sub_1C1AE30(v7, v8);
+    sub_1C22094(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
-    sub_1C1AE30(v18, v19);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
+    sub_1C22094(v18, v19);
   }
   methodPtr_low = LOBYTE(CoinRoomCoinIconItem_TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1C1B0F0(iconObject->fields.linkItem);
+    sub_1C22354(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1C1AB78((PartyOrganizationUtility_o *)p_fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
+  sub_1C21DDC((PartyOrganizationUtility_o *)p_fields, (int64_t)iconObject, v9, v10, v11, v12, v13, v14);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

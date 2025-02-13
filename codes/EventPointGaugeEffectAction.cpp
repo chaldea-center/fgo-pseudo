@@ -22,7 +22,7 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
   p_gaugeStartAction = (PartyOrganizationUtility_o *)&this->fields.gaugeStartAction;
   v9 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_1C1AB78(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C21DDC(p_gaugeStartAction, 0LL, v2, v3, v4, v5, v6, v7);
   if ( gaugeStartAction )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
@@ -42,7 +42,7 @@ void __fastcall EventPointGaugeEffectAction__Setup(
   PartyListViewItem_o *v7; // x7
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.gaugeStartAction,
     (int64_t)gaugeStartAct,
     (int64_t)method,

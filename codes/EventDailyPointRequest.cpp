@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventDailyPointRequest__beginRequest(
         EventDailyPointRequest_o *this,
         int32_t eventId,
@@ -7,31 +6,30 @@ void __fastcall EventDailyPointRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BC93CE & 1) == 0 )
+  if ( (byte_4BDDE78 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_19445/*"eventId"*/, *(_QWORD *)&eventId);
-    byte_4BC93CE = 1;
+    sub_1C21E38(&StringLiteral_19460/*"eventId"*/);
+    byte_4BDDE78 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19445/*"eventId"*/, eventId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19460/*"eventId"*/, eventId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
 System_String_o *__fastcall EventDailyPointRequest__getURL(EventDailyPointRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC93CD & 1) == 0 )
+  if ( (byte_4BDDE77 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_19426/*"event/dailyPoint"*/, v2);
-    byte_4BC93CD = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_19441/*"event/dailyPoint"*/);
+    byte_4BDDE77 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_19426/*"event/dailyPoint"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19441/*"event/dailyPoint"*/, 0LL);
 }
 
 
@@ -40,46 +38,44 @@ void __fastcall EventDailyPointRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  ResponseData_o *v8; // x20
+  ResponseData_o *v5; // x0
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_String_o *v8; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
 
-  if ( (byte_4BC93CF & 1) == 0 )
+  if ( (byte_4BDDE79 & 1) == 0 )
   {
-    sub_1C1ABD4(&JsonManager_TypeInfo, responseList);
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
-    byte_4BC93CF = 1;
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDE79 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(83, responseList, 0LL);
-  if ( v7
-    && (v8 = v7, ResponseData__checkError_42452820(v7, 0LL))
-    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
+  v5 = ResponseCommandKind__SearchData(83, responseList, 0LL);
+  if ( v5
+    && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL))
+    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v10 = JsonManager__toJson(success, 0, 0, 0LL);
+    v8 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v10,
+        v8,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_22437/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = this->fields.CallBack;
+    if ( v10 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
+        v10->fields.original_method_info,
+        StringLiteral_22456/*"ng"*/,
+        *(_QWORD *)&v10->fields.extra_arg);
   }
 }

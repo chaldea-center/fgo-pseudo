@@ -1,11 +1,11 @@
 void __fastcall ServantSellMaxAlertDialog___ctor(ServantSellMaxAlertDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC3E88 & 1) == 0 )
+  if ( (byte_4BD890C & 1) == 0 )
   {
-    sub_1C1ABD4(&BaseDialog_TypeInfo, method);
-    byte_4BC3E88 = 1;
+    sub_1C21E38(&BaseDialog_TypeInfo);
+    byte_4BD890C = 1;
   }
-  *(_OWORD *)&this->fields.BIG_FONT_SIZE = xmmword_BFAFF0;
+  *(_OWORD *)&this->fields.BIG_FONT_SIZE = xmmword_BFEF20;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -17,48 +17,46 @@ void __fastcall ServantSellMaxAlertDialog__Close(
         System_Action_o *onCloseEnd,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Action_o *v22; // x20
+  __int64 v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  System_Action_o *v20; // x20
 
-  if ( (byte_4BC3E85 & 1) == 0 )
+  if ( (byte_4BD8909 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, onCloseEnd);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog___c__DisplayClass22_0__Close_b__0__, v5);
-    sub_1C1ABD4(&ServantSellMaxAlertDialog___c__DisplayClass22_0_TypeInfo, v6);
-    byte_4BC3E85 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog___c__DisplayClass22_0__Close_b__0__);
+    sub_1C21E38(&ServantSellMaxAlertDialog___c__DisplayClass22_0_TypeInfo);
+    byte_4BD8909 = 1;
   }
-  v7 = sub_1C1AE20(ServantSellMaxAlertDialog___c__DisplayClass22_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7 )
-    sub_1C1AE30(v8, v9);
-  *(_QWORD *)(v7 + 16) = onCloseEnd;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)onCloseEnd, v10, v11, v12, v13, v14, v15);
-  *(_QWORD *)(v7 + 24) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)this, v16, v17, v18, v19, v20, v21);
+  v5 = sub_1C22084(ServantSellMaxAlertDialog___c__DisplayClass22_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  if ( !v5 )
+    sub_1C22094(v6, v7);
+  *(_QWORD *)(v5 + 16) = onCloseEnd;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 16), (int64_t)onCloseEnd, v8, v9, v10, v11, v12, v13);
+  *(_QWORD *)(v5 + 24) = this;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
   this->fields.state = 5;
-  v22 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
-    (Il2CppObject *)v7,
+    v20,
+    (Il2CppObject *)v5,
     Method_ServantSellMaxAlertDialog___c__DisplayClass22_0__Close_b__0__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v22, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v20, 0LL);
 }
 
 
@@ -70,23 +68,23 @@ void __fastcall ServantSellMaxAlertDialog__EndOpen(ServantSellMaxAlertDialog_o *
 
 void __fastcall ServantSellMaxAlertDialog__Init(ServantSellMaxAlertDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   UILabel_o *titleLabel; // x0
   UnityEngine_Object_o *eventMissionMessageLabel; // x20
   struct UICommonButton_o *decideButton; // x8
   System_Collections_Generic_List_EventDelegate__o *onClick; // x20
-  EventDelegate_Callback_o *v13; // x21
+  EventDelegate_Callback_o *v7; // x21
   struct UICommonButton_o *transitionButton; // x8
-  System_Collections_Generic_List_EventDelegate__o *v15; // x20
-  EventDelegate_Callback_o *v16; // x21
+  System_Collections_Generic_List_EventDelegate__o *v9; // x20
+  EventDelegate_Callback_o *v10; // x21
   struct UICommonButton_o *closeButton; // x8
-  System_Collections_Generic_List_EventDelegate__o *v18; // x20
-  EventDelegate_Callback_o *v19; // x21
+  System_Collections_Generic_List_EventDelegate__o *v12; // x20
+  EventDelegate_Callback_o *v13; // x21
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
   int64_t v20; // x2
   int32_t v21; // w3
   System_String_o *v22; // x4
@@ -99,23 +97,17 @@ void __fastcall ServantSellMaxAlertDialog__Init(ServantSellMaxAlertDialog_o *thi
   BattleSetupInfo_o *v29; // x5
   FollowerInfo_o *v30; // x6
   PartyListViewItem_o *v31; // x7
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
 
-  if ( (byte_4BC3E83 & 1) == 0 )
+  if ( (byte_4BD8907 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C1ABD4(&EventDelegate_TypeInfo, v3);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_OnClickClose__, v5);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_OnClickDecide__, v6);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_OnClickTransition__, v7);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
-    byte_4BC3E83 = 1;
+    sub_1C21E38(&EventDelegate_Callback_TypeInfo);
+    sub_1C21E38(&EventDelegate_TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_OnClickClose__);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_OnClickDecide__);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_OnClickTransition__);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD8907 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -156,40 +148,40 @@ void __fastcall ServantSellMaxAlertDialog__Init(ServantSellMaxAlertDialog_o *thi
   if ( !decideButton )
     goto LABEL_20;
   onClick = decideButton->fields.onClick;
-  v13 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v13, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog_OnClickDecide__, 0LL);
+  v7 = (EventDelegate_Callback_o *)sub_1C22084(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v7, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog_OnClickDecide__, 0LL);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  titleLabel = (UILabel_o *)EventDelegate__Set_47878096(onClick, v13, 0LL);
+  titleLabel = (UILabel_o *)EventDelegate__Set_47946052(onClick, v7, 0LL);
   transitionButton = this->fields.transitionButton;
   if ( !transitionButton
-    || (v15 = transitionButton->fields.onClick,
-        v16 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo),
+    || (v9 = transitionButton->fields.onClick,
+        v10 = (EventDelegate_Callback_o *)sub_1C22084(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
-          v16,
+          v10,
           (Il2CppObject *)this,
           (intptr_t)Method_ServantSellMaxAlertDialog_OnClickTransition__,
           0LL),
-        titleLabel = (UILabel_o *)EventDelegate__Set_47878096(v15, v16, 0LL),
+        titleLabel = (UILabel_o *)EventDelegate__Set_47946052(v9, v10, 0LL),
         (closeButton = this->fields.closeButton) == 0LL) )
   {
 LABEL_20:
-    sub_1C1AE30(titleLabel, method);
+    sub_1C22094(titleLabel, method);
   }
-  v18 = closeButton->fields.onClick;
-  v19 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
+  v12 = closeButton->fields.onClick;
+  v13 = (EventDelegate_Callback_o *)sub_1C22084(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v19,
+    v13,
     (Il2CppObject *)this,
     (intptr_t)Method_ServantSellMaxAlertDialog_OnClickClose__,
     0LL);
-  EventDelegate__Set_47878096(v18, v19, 0LL);
+  EventDelegate__Set_47946052(v12, v13, 0LL);
   this->fields.onDecide = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.onDecide, 0LL, v20, v21, v22, v23, v24, v25);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.onDecide, 0LL, v14, v15, v16, v17, v18, v19);
   this->fields.onTransition = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.onTransition, 0LL, v26, v27, v28, v29, v30, v31);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.onTransition, 0LL, v20, v21, v22, v23, v24, v25);
   this->fields.onClose = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.onClose, 0LL, v32, v33, v34, v35, v36, v37);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.onClose, 0LL, v26, v27, v28, v29, v30, v31);
   this->fields.state = 1;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -197,31 +189,29 @@ LABEL_20:
 
 void __fastcall ServantSellMaxAlertDialog__OnClickClose(ServantSellMaxAlertDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
-  const MethodInfo *v8; // x2
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  System_Action_o *v5; // x20
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4BC3E87 & 1) == 0 )
+  if ( (byte_4BD890B & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_OnClickClose__, v3);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog__OnClickClose_b__26_0__, v4);
-    byte_4BC3E87 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_OnClickClose__);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog__OnClickClose_b__26_0__);
+    byte_4BD890B = 1;
   }
   if ( this->fields.state == 3 )
   {
     this->fields.state = 4;
-    v5 = Method_ServantSellMaxAlertDialog_OnClickClose__;
+    v3 = Method_ServantSellMaxAlertDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ServantSellMaxAlertDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C1ABEC(Method_ServantSellMaxAlertDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
-    v7 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-    System_Action___ctor(v7, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog__OnClickClose_b__26_0__, 0LL);
-    ServantSellMaxAlertDialog__Close(this, v7, v8);
+      v3 = (_QWORD *)sub_1C21E50(Method_ServantSellMaxAlertDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
+    v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    System_Action___ctor(v5, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog__OnClickClose_b__26_0__, 0LL);
+    ServantSellMaxAlertDialog__Close(this, v5, v6);
   }
 }
 
@@ -248,49 +238,45 @@ void __fastcall ServantSellMaxAlertDialog__OnClickTransition(
         ServantSellMaxAlertDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   Il2CppObject *Instance; // x20
-  AvalonSceneManager_c *v10; // x8
+  AvalonSceneManager_c *v6; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v12; // x21
-  __int64 v13; // x0
-  __int64 v14; // x1
+  System_Action_o *v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
 
-  if ( (byte_4BC3E86 & 1) == 0 )
+  if ( (byte_4BD890A & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, method);
-    sub_1C1ABD4(&AvalonSceneManager_TypeInfo, v3);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_OnClickTransition__, v4);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog__OnClickTransition_b__25_0__, v5);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4BC3E86 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&AvalonSceneManager_TypeInfo);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_OnClickTransition__);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog__OnClickTransition_b__25_0__);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4BD890A = 1;
   }
   if ( this->fields.state == 3 )
   {
     this->fields.state = 4;
-    v7 = Method_ServantSellMaxAlertDialog_OnClickTransition__;
+    v3 = Method_ServantSellMaxAlertDialog_OnClickTransition__;
     if ( (*((_BYTE *)Method_ServantSellMaxAlertDialog_OnClickTransition__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C1ABEC(Method_ServantSellMaxAlertDialog_OnClickTransition__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C1ABB8(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v10 = AvalonSceneManager_TypeInfo;
+      v3 = (_QWORD *)sub_1C21E50(Method_ServantSellMaxAlertDialog_OnClickTransition__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v6 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      v10 = AvalonSceneManager_TypeInfo;
+      v6 = AvalonSceneManager_TypeInfo;
     }
-    DEFAULT_FADE_TIME = v10->static_fields->DEFAULT_FADE_TIME;
-    v12 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-    System_Action___ctor(v12, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog__OnClickTransition_b__25_0__, 0LL);
+    DEFAULT_FADE_TIME = v6->static_fields->DEFAULT_FADE_TIME;
+    v8 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    System_Action___ctor(v8, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog__OnClickTransition_b__25_0__, 0LL);
     if ( !Instance )
-      sub_1C1AE30(v13, v14);
-    CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v12, 0LL);
+      sub_1C22094(v9, v10);
+    CommonUI__maskFadeout((CommonUI_o *)Instance, 1, DEFAULT_FADE_TIME, v8, 0LL);
   }
 }
 
@@ -309,43 +295,41 @@ void __fastcall ServantSellMaxAlertDialog__Open(
         bool isEventMission,
         const MethodInfo *method)
 {
-  __int64 v19; // x1
-  __int64 v20; // x1
   int32_t state; // w8
   UILabel_o *titleLabel; // x0
   UnityEngine_Object_o *eventMissionMessageLabel; // x28
-  int32_t v24; // w28
-  int v25; // w29
+  int32_t v22; // w28
+  int v23; // w29
   uint16_t Chars; // w0
-  bool v27; // w8
+  bool v25; // w8
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t WORD_DEFAULT_POSITION_Y; // s0
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  int64_t v36; // x2
-  int32_t v37; // w3
-  System_String_o *v38; // x4
-  BattleSetupInfo_o *v39; // x5
-  FollowerInfo_o *v40; // x6
-  PartyListViewItem_o *v41; // x7
-  int64_t v42; // x2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  BattleSetupInfo_o *v45; // x5
-  FollowerInfo_o *v46; // x6
-  PartyListViewItem_o *v47; // x7
-  System_Action_o *v48; // x20
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
+  System_Action_o *v46; // x20
 
-  if ( (byte_4BC3E84 & 1) == 0 )
+  if ( (byte_4BD8908 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, title);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v19);
-    sub_1C1ABD4(&Method_ServantSellMaxAlertDialog_EndOpen__, v20);
-    byte_4BC3E84 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&Method_ServantSellMaxAlertDialog_EndOpen__);
+    byte_4BD8908 = 1;
   }
   state = this->fields.state;
   if ( !state )
@@ -374,23 +358,23 @@ void __fastcall ServantSellMaxAlertDialog__Open(
         goto LABEL_36;
       if ( message->fields._stringLength < 1 )
       {
-        v27 = 0;
+        v25 = 0;
       }
       else
       {
-        v24 = 0;
-        v25 = 0;
+        v22 = 0;
+        v23 = 0;
         do
         {
-          Chars = System_String__get_Chars(message, v24++, 0LL);
+          Chars = System_String__get_Chars(message, v22++, 0LL);
           if ( Chars == 10 )
-            ++v25;
+            ++v23;
         }
-        while ( v24 < message->fields._stringLength );
-        v27 = v25 > 6;
+        while ( v22 < message->fields._stringLength );
+        v25 = v23 > 6;
       }
       titleLabel = this->fields.eventMissionMessageLabel;
-      if ( v27 )
+      if ( v25 )
       {
         if ( !titleLabel )
           goto LABEL_36;
@@ -439,46 +423,46 @@ LABEL_20:
           {
             UILabel__set_text(titleLabel, close, 0LL);
             this->fields.onDecide = onDecide;
-            sub_1C1AB78(
+            sub_1C21DDC(
               (PartyOrganizationUtility_o *)&this->fields.onDecide,
               (int64_t)onDecide,
+              v28,
+              v29,
               v30,
               v31,
               v32,
-              v33,
-              v34,
-              v35);
+              v33);
             this->fields.onTransition = onTransition;
-            sub_1C1AB78(
+            sub_1C21DDC(
               (PartyOrganizationUtility_o *)&this->fields.onTransition,
               (int64_t)onTransition,
+              v34,
+              v35,
               v36,
               v37,
               v38,
-              v39,
-              v40,
-              v41);
+              v39);
             this->fields.onClose = onClose;
-            sub_1C1AB78(
+            sub_1C21DDC(
               (PartyOrganizationUtility_o *)&this->fields.onClose,
               (int64_t)onClose,
+              v40,
+              v41,
               v42,
               v43,
               v44,
-              v45,
-              v46,
-              v47);
+              v45);
             this->fields.state = 2;
-            v48 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-            System_Action___ctor(v48, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog_EndOpen__, 0LL);
-            BaseDialog__Open((BaseDialog_o *)this, v48, 0, 0LL);
+            v46 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+            System_Action___ctor(v46, (Il2CppObject *)this, Method_ServantSellMaxAlertDialog_EndOpen__, 0LL);
+            BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0LL);
             return;
           }
         }
       }
     }
 LABEL_36:
-    sub_1C1AE30(titleLabel, title);
+    sub_1C22094(titleLabel, title);
   }
 }
 
@@ -535,6 +519,6 @@ void __fastcall ServantSellMaxAlertDialog___c__DisplayClass22_0___Close_b__0(
       *(_QWORD *)&onCloseEnd->fields.extra_arg);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   ServantSellMaxAlertDialog__Init(_4__this, method);
 }

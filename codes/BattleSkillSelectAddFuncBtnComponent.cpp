@@ -1,17 +1,16 @@
 void __fastcall BattleSkillSelectAddFuncBtnComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct BattleSkillSelectAddFuncBtnComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4BCACC2 & 1) == 0 )
+  if ( (byte_4BDF776 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleSkillSelectAddFuncBtnComponent_TypeInfo, v1);
-    byte_4BCACC2 = 1;
+    sub_1C21E38(&BattleSkillSelectAddFuncBtnComponent_TypeInfo);
+    byte_4BDF776 = 1;
   }
   static_fields = BattleSkillSelectAddFuncBtnComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->TWO_ALTERNATIVES_GRID_WIDTH = 0x8000000100LL;
   *(_QWORD *)&static_fields->TWO_ALTERNATIVES_BTN_WIDTH = 0xC3900000000000F4LL;
-  *(_OWORD *)&static_fields->THREE_ALTERNATIVES_GRID_WIDTH = xmmword_BF9C80;
+  *(_OWORD *)&static_fields->THREE_ALTERNATIVES_GRID_WIDTH = xmmword_BFDBE0;
   static_fields->TWO_ALTERNATIVES_CONDENSED_SCALE = 190;
 }
 
@@ -39,94 +38,81 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetBtnLayout(
         int32_t btnNum,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
   int *btnTop; // x0
   Il2CppObject *btnPrefab; // x21
-  Il2CppObject *v20; // x21
+  Il2CppObject *v7; // x21
   Il2CppObject *Component_object; // x21
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  __int64 v28; // x8
-  _QWORD *v29; // x9
-  __int64 v30; // x10
-  __int64 v31; // x8
-  UnityEngine_GameObject_o *v32; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  __int64 v15; // x8
+  _QWORD *v16; // x9
+  __int64 v17; // x10
+  __int64 v18; // x8
+  UnityEngine_GameObject_o *v19; // x0
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
   struct UnityEngine_GameObject_o *btnTarget; // x1
-  const MethodInfo *v40; // x5
-  BattleSkillSelectAddFuncBtnComponent_c *v41; // x0
-  __int64 v42; // x1
-  UnityEngine_GameObject_o *v43; // x0
-  __int64 v44; // x1
-  CondensedScaleLabel_o *v45; // x21
-  __int64 v46; // x1
-  BattleSkillSelectAddFuncBtnComponent_c *v47; // x0
-  int32_t v48; // w8
+  const MethodInfo *v27; // x5
+  BattleSkillSelectAddFuncBtnComponent_c *v28; // x0
+  __int64 v29; // x1
+  UnityEngine_GameObject_o *v30; // x0
+  __int64 v31; // x1
+  CondensedScaleLabel_o *v32; // x21
+  __int64 v33; // x1
+  BattleSkillSelectAddFuncBtnComponent_c *v34; // x0
+  int32_t v35; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Object_o *v50; // x20
-  const MethodInfo *v51; // x5
-  BattleSkillSelectAddFuncBtnComponent_c *v52; // x0
-  __int64 v53; // x1
-  UnityEngine_GameObject_o *v54; // x0
-  __int64 v55; // x1
+  UnityEngine_Object_o *v37; // x20
+  const MethodInfo *v38; // x5
+  BattleSkillSelectAddFuncBtnComponent_c *v39; // x0
+  __int64 v40; // x1
+  UnityEngine_GameObject_o *v41; // x0
+  __int64 v42; // x1
   CondensedScaleLabel_o *ComponentInChildren_object; // x20
-  __int64 v57; // x1
-  BattleSkillSelectAddFuncBtnComponent_c *v58; // x0
-  System_Collections_Generic_List_Enumerator_object__o v59; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v60; // [xsp+20h] [xbp-60h] BYREF
+  __int64 v44; // x1
+  BattleSkillSelectAddFuncBtnComponent_c *v45; // x0
+  System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BCACC0 & 1) == 0 )
+  if ( (byte_4BDF774 & 1) == 0 )
   {
-    sub_1C1ABD4(&BattleSkillSelectAddFuncBtnComponent_TypeInfo, *(_QWORD *)&btnNum);
-    sub_1C1ABD4(&Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___, v5);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__, v8);
-    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___, v9);
-    sub_1C1ABD4(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v10);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__Add__, v11);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__, v12);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__RemoveAt__, v13);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__get_Count__, v14);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__get_Item__, v15);
-    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_GameObject___, v16);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v17);
-    byte_4BCACC0 = 1;
+    sub_1C21E38(&BattleSkillSelectAddFuncBtnComponent_TypeInfo);
+    sub_1C21E38(&Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__);
+    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___);
+    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__RemoveAt__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__get_Count__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__get_Item__);
+    sub_1C21E38(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDF774 = 1;
   }
-  memset(&v60, 0, sizeof(v60));
+  memset(&v47, 0, sizeof(v47));
   btnTop = (int *)this->fields.btnTop;
   if ( !btnTop )
     goto LABEL_65;
   if ( btnTop[6] >= btnNum )
   {
-    v48 = btnTop[6];
-    if ( v48 <= btnNum )
+    v35 = btnTop[6];
+    if ( v35 <= btnNum )
       goto LABEL_60;
     btnTop = (int *)System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)btnTop,
-                      v48 - 1,
-                      (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                      v35 - 1,
+                      (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
     if ( btnTop )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)btnTop, 0LL);
@@ -137,20 +123,20 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetBtnLayout(
         btnTop = (int *)System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)btnTop,
                           btnTop[6] - 1,
-                          (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
+                          (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_UISprite__get_Item__);
         if ( btnTop )
         {
-          v50 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)btnTop, 0LL);
+          v37 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)btnTop, 0LL);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_70794412(v50, 0LL);
+          UnityEngine_Object__Destroy_70869612(v37, 0LL);
           btnTop = (int *)this->fields.btnTop;
           if ( btnTop )
           {
             System_Collections_Generic_List_object___RemoveAt(
               (System_Collections_Generic_List_object__o *)btnTop,
               btnTop[6] - 1,
-              (const MethodInfo_363E064 *)Method_System_Collections_Generic_List_UISprite__RemoveAt__);
+              (const MethodInfo_3650888 *)Method_System_Collections_Generic_List_UISprite__RemoveAt__);
             btnTop = (int *)this->fields.cancelBtnLabel;
             if ( btnTop )
             {
@@ -159,49 +145,49 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetBtnLayout(
               if ( btnTop )
               {
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)btnTop, 0, 0LL);
-                v52 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+                v39 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
                 if ( !BattleSkillSelectAddFuncBtnComponent_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(BattleSkillSelectAddFuncBtnComponent_TypeInfo);
-                  v52 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+                  v39 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
                 }
                 BattleSkillSelectAddFuncBtnComponent__SetCommonPart(
                   this,
-                  v52->static_fields->TWO_ALTERNATIVES_ROOT_POS,
-                  v52->static_fields->TWO_ALTERNATIVES_GRID_WIDTH,
-                  v52->static_fields->TWO_ALTERNATIVES_BTN_WIDTH,
-                  (float)(-2 * v52->static_fields->TWO_ALTERNATIVES_ROOT_POS),
+                  v39->static_fields->TWO_ALTERNATIVES_ROOT_POS,
+                  v39->static_fields->TWO_ALTERNATIVES_GRID_WIDTH,
+                  v39->static_fields->TWO_ALTERNATIVES_BTN_WIDTH,
+                  (float)(-2 * v39->static_fields->TWO_ALTERNATIVES_ROOT_POS),
                   0,
-                  v51);
+                  v38);
                 btnTop = (int *)this->fields.btnTop;
                 if ( btnTop )
                 {
                   System_Collections_Generic_List_object___GetEnumerator(
-                    (System_Collections_Generic_List_Enumerator_T__o *)&v59,
+                    (System_Collections_Generic_List_Enumerator_T__o *)&v46,
                     (System_Collections_Generic_List_object__o *)btnTop,
-                    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
-                  v60 = v59;
+                    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+                  v47 = v46;
                   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                            &v60,
-                            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
+                            &v47,
+                            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
                   {
-                    if ( !v60.fields._current )
-                      sub_1C1AE30(0LL, v53);
-                    v54 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v60.fields._current, 0LL);
-                    if ( !v54 )
-                      sub_1C1AE30(0LL, v55);
+                    if ( !v47.fields._current )
+                      sub_1C22094(0LL, v40);
+                    v41 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v47.fields._current, 0LL);
+                    if ( !v41 )
+                      sub_1C22094(0LL, v42);
                     ComponentInChildren_object = (CondensedScaleLabel_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
-                                                                            v54,
-                                                                            (const MethodInfo_2FEFE24 *)Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___);
+                                                                            v41,
+                                                                            (const MethodInfo_3000798 *)Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___);
                     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInChildren_object, 0LL, 0LL) )
                     {
-                      v58 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+                      v45 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
                       if ( !BattleSkillSelectAddFuncBtnComponent_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(BattleSkillSelectAddFuncBtnComponent_TypeInfo);
                       if ( !ComponentInChildren_object )
-                        sub_1C1AE30(v58, v57);
+                        sub_1C22094(v45, v44);
                       ComponentInChildren_object->fields.maxWidth = BattleSkillSelectAddFuncBtnComponent_TypeInfo->static_fields->TWO_ALTERNATIVES_CONDENSED_SCALE;
                       CondensedScaleLabel__SetCondensedScale(ComponentInChildren_object, 0LL);
                     }
@@ -215,66 +201,66 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetBtnLayout(
       }
     }
 LABEL_65:
-    sub_1C1AE30(btnTop, *(_QWORD *)&btnNum);
+    sub_1C22094(btnTop, *(_QWORD *)&btnNum);
   }
   btnPrefab = (Il2CppObject *)this->fields.btnPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v20 = UnityEngine_Object__Instantiate_object_(
-          btnPrefab,
-          (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  v7 = UnityEngine_Object__Instantiate_object_(
+         btnPrefab,
+         (const MethodInfo_30358BC *)Method_UnityEngine_Object_Instantiate_GameObject___);
   GameObjectExtensions__SafeSetParent(
-    (UnityEngine_GameObject_o *)v20,
+    (UnityEngine_GameObject_o *)v7,
     (UnityEngine_Component_o *)this->fields.btnRoot,
     0LL);
-  if ( !v20 )
+  if ( !v7 )
     goto LABEL_65;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)v20,
-                       (const MethodInfo_2FEFBC0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (UnityEngine_GameObject_o *)v7,
+                       (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
     return;
   btnTop = (int *)this->fields.btnTop;
   if ( !btnTop )
     goto LABEL_65;
-  v28 = *((_QWORD *)btnTop + 2);
-  v29 = Method_System_Collections_Generic_List_UISprite__Add__;
+  v15 = *((_QWORD *)btnTop + 2);
+  v16 = Method_System_Collections_Generic_List_UISprite__Add__;
   ++btnTop[7];
-  if ( !v28 )
+  if ( !v15 )
     goto LABEL_65;
-  v30 = btnTop[6];
-  if ( (unsigned int)v30 >= *(_DWORD *)(v28 + 24) )
+  v17 = btnTop[6];
+  if ( (unsigned int)v17 >= *(_DWORD *)(v15 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)btnTop,
       Component_object,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
   }
   else
   {
-    v31 = v28 + 8 * v30;
-    btnTop[6] = v30 + 1;
-    *(_QWORD *)(v31 + 32) = Component_object;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v31 + 32), (int64_t)Component_object, v22, v23, v24, v25, v26, v27);
+    v18 = v15 + 8 * v17;
+    btnTop[6] = v17 + 1;
+    *(_QWORD *)(v18 + 32) = Component_object;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v18 + 32), (int64_t)Component_object, v9, v10, v11, v12, v13, v14);
   }
   if ( !Component_object )
     goto LABEL_65;
-  v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0LL);
-  GameObjectExtensions__SetParent(v32, (UnityEngine_Component_o *)this->fields.btnRoot, 0LL);
+  v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0LL);
+  GameObjectExtensions__SetParent(v19, (UnityEngine_Component_o *)this->fields.btnRoot, 0LL);
   btnTop = (int *)UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)Component_object,
-                    (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___);
+                    (const MethodInfo_2FA68A8 *)Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___);
   if ( !btnTop )
     goto LABEL_65;
   btnTop[12] = 2;
   btnTop = (int *)UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)Component_object,
-                    (const MethodInfo_2F95F34 *)Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___);
+                    (const MethodInfo_2FA68A8 *)Method_UnityEngine_Component_GetComponent_BattleValueButtonComponent___);
   if ( !btnTop )
     goto LABEL_65;
   btnTarget = this->fields.btnTarget;
   *((_QWORD *)btnTop + 4) = btnTarget;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(btnTop + 8), (int64_t)btnTarget, v33, v34, v35, v36, v37, v38);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(btnTop + 8), (int64_t)btnTarget, v20, v21, v22, v23, v24, v25);
   UISprite__set_atlas((UISprite_o *)Component_object, this->fields.btnAtlas, 0LL);
   btnTop = (int *)this->fields.cancelBtnLabel;
   if ( !btnTop )
@@ -284,57 +270,57 @@ LABEL_65:
   if ( !btnTop )
     goto LABEL_65;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)btnTop, 1, 0LL);
-  v41 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+  v28 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
   if ( !BattleSkillSelectAddFuncBtnComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleSkillSelectAddFuncBtnComponent_TypeInfo);
-    v41 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+    v28 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
   }
   BattleSkillSelectAddFuncBtnComponent__SetCommonPart(
     this,
-    v41->static_fields->THREE_ALTERNATIVES_ROOT_POS,
-    v41->static_fields->THREE_ALTERNATIVES_GRID_WIDTH,
-    v41->static_fields->THREE_ALTERNATIVES_BTN_WIDTH,
-    v41->static_fields->THREE_ALTERNATIVES_CANCEL_POS,
+    v28->static_fields->THREE_ALTERNATIVES_ROOT_POS,
+    v28->static_fields->THREE_ALTERNATIVES_GRID_WIDTH,
+    v28->static_fields->THREE_ALTERNATIVES_BTN_WIDTH,
+    v28->static_fields->THREE_ALTERNATIVES_CANCEL_POS,
     1,
-    v40);
+    v27);
   btnTop = (int *)this->fields.btnTop;
   if ( !btnTop )
     goto LABEL_65;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v59,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v46,
     (System_Collections_Generic_List_object__o *)btnTop,
-    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
-  v60 = v59;
+    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+  v47 = v46;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v60,
-            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
+            &v47,
+            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__) )
   {
-    if ( !v60.fields._current )
-      sub_1C1AE30(0LL, v42);
-    v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v60.fields._current, 0LL);
-    if ( !v43 )
-      sub_1C1AE30(0LL, v44);
-    v45 = (CondensedScaleLabel_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
-                                     v43,
-                                     (const MethodInfo_2FEFE24 *)Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___);
+    if ( !v47.fields._current )
+      sub_1C22094(0LL, v29);
+    v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v47.fields._current, 0LL);
+    if ( !v30 )
+      sub_1C22094(0LL, v31);
+    v32 = (CondensedScaleLabel_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
+                                     v30,
+                                     (const MethodInfo_3000798 *)Method_UnityEngine_GameObject_GetComponentInChildren_CondensedScaleLabel___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v45, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v32, 0LL, 0LL) )
     {
-      v47 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
+      v34 = BattleSkillSelectAddFuncBtnComponent_TypeInfo;
       if ( !BattleSkillSelectAddFuncBtnComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BattleSkillSelectAddFuncBtnComponent_TypeInfo);
-      if ( !v45 )
-        sub_1C1AE30(v47, v46);
-      v45->fields.maxWidth = BattleSkillSelectAddFuncBtnComponent_TypeInfo->static_fields->THREE_ALTERNATIVES_CONDENSED_SCALE;
-      CondensedScaleLabel__SetCondensedScale(v45, 0LL);
+      if ( !v32 )
+        sub_1C22094(v34, v33);
+      v32->fields.maxWidth = BattleSkillSelectAddFuncBtnComponent_TypeInfo->static_fields->THREE_ALTERNATIVES_CONDENSED_SCALE;
+      CondensedScaleLabel__SetCondensedScale(v32, 0LL);
     }
   }
 LABEL_59:
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v60,
-    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+    &v47,
+    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
 LABEL_60:
   btnTop = (int *)this->fields.btnRoot;
   if ( !btnTop )
@@ -353,80 +339,76 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetCommonPart(
         bool isThreeAlternatives,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
   UnityEngine_Component_o *btnRoot; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  struct UIGrid_o *v19; // x8
-  UnityEngine_GameObject_o *v20; // x0
+  struct UIGrid_o *v15; // x8
+  UnityEngine_GameObject_o *v16; // x0
   struct System_String_o **p_addBtnSpriteName; // x8
-  System_String_o *v22; // x21
-  _BOOL8 v23; // x0
-  __int64 v24; // x1
+  System_String_o *v18; // x21
+  _BOOL8 v19; // x0
+  __int64 v20; // x1
   Il2CppObject *current; // x22
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BCACC1 & 1) == 0 )
+  if ( (byte_4BDF775 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__, *(_QWORD *)&rootPosX);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__, v13);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__, v14);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__, v15);
-    sub_1C1ABD4(&StringLiteral_17743/*"btn_bg_01"*/, v16);
-    byte_4BCACC1 = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_UISprite__get_Current__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+    sub_1C21E38(&StringLiteral_17756/*"btn_bg_01"*/);
+    byte_4BDF775 = 1;
   }
-  memset(&v27, 0, sizeof(v27));
+  memset(&v23, 0, sizeof(v23));
   btnRoot = (UnityEngine_Component_o *)this->fields.btnRoot;
   if ( !btnRoot )
     goto LABEL_18;
   gameObject = UnityEngine_Component__get_gameObject(btnRoot, 0LL);
   GameObjectExtensions__SetLocalPositionX(gameObject, (float)rootPosX, 0LL);
-  v19 = this->fields.btnRoot;
-  if ( !v19 )
+  v15 = this->fields.btnRoot;
+  if ( !v15 )
     goto LABEL_18;
-  v19->fields.cellWidth = (float)cellWidth;
+  v15->fields.cellWidth = (float)cellWidth;
   btnRoot = (UnityEngine_Component_o *)this->fields.btnCancel;
   if ( !btnRoot )
     goto LABEL_18;
-  v20 = UnityEngine_Component__get_gameObject(btnRoot, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v20, cancelBtnPosX, 0LL);
+  v16 = UnityEngine_Component__get_gameObject(btnRoot, 0LL);
+  GameObjectExtensions__SetLocalPositionX(v16, cancelBtnPosX, 0LL);
   btnRoot = (UnityEngine_Component_o *)this->fields.btnTop;
   p_addBtnSpriteName = &this->fields.addBtnSpriteName;
   if ( !isThreeAlternatives )
-    p_addBtnSpriteName = (struct System_String_o **)&StringLiteral_17743/*"btn_bg_01"*/;
+    p_addBtnSpriteName = (struct System_String_o **)&StringLiteral_17756/*"btn_bg_01"*/;
   if ( !btnRoot )
     goto LABEL_18;
-  v22 = *p_addBtnSpriteName;
+  v18 = *p_addBtnSpriteName;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)btnRoot,
-    (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
-  v27 = v26;
+    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_UISprite__GetEnumerator__);
+  v23 = v22;
   while ( 1 )
   {
-    v23 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v27,
-            (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
-    if ( !v23 )
+    v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v23,
+            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_UISprite__MoveNext__);
+    if ( !v19 )
       break;
-    current = v27.fields._current;
-    if ( !v27.fields._current )
-      sub_1C1AE30(v23, v24);
-    UISprite__set_spriteName((UISprite_o *)v27.fields._current, v22, 0LL);
+    current = v23.fields._current;
+    if ( !v23.fields._current )
+      sub_1C22094(v19, v20);
+    UISprite__set_spriteName((UISprite_o *)v23.fields._current, v18, 0LL);
     ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))current->klass->vtable[33].method)(
       current,
       current->klass->vtable[34].methodPtr);
     UIWidget__set_width((UIWidget_o *)current, btnWidth, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v27,
-    (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
+    &v23,
+    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_UISprite__Dispose__);
   btnRoot = (UnityEngine_Component_o *)this->fields.btnCancel;
   if ( !btnRoot
-    || (UISprite__set_spriteName((UISprite_o *)btnRoot, v22, 0LL),
+    || (UISprite__set_spriteName((UISprite_o *)btnRoot, v18, 0LL),
         (btnRoot = (UnityEngine_Component_o *)this->fields.btnCancel) == 0LL)
     || (((void (__fastcall *)(UnityEngine_Component_o *, void *))btnRoot->klass[2]._1.typeMetadataHandle)(
           btnRoot,
@@ -434,7 +416,7 @@ void __fastcall BattleSkillSelectAddFuncBtnComponent__SetCommonPart(
         (btnRoot = (UnityEngine_Component_o *)this->fields.btnCancel) == 0LL) )
   {
 LABEL_18:
-    sub_1C1AE30(btnRoot, *(_QWORD *)&rootPosX);
+    sub_1C22094(btnRoot, *(_QWORD *)&rootPosX);
   }
   UIWidget__set_width((UIWidget_o *)btnRoot, btnWidth, 0LL);
 }

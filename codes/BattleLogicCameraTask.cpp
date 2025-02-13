@@ -16,5 +16,5 @@ void __fastcall BattleLogicCameraTask___ctor(
   v4->fields.temporaryPartyInfo = (struct PartyOrganizationUtility_TemporaryPartyInfo_o *)cameraName;
   v4 = (PartyOrganizationUtility_o *)((char *)v4 + 144);
   LODWORD(v4[-1].fields._PartyItem_k__BackingField) = 27;
-  sub_1C1AB78(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
+  sub_1C21DDC(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
 }

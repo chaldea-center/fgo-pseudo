@@ -1,11 +1,9 @@
 void __fastcall EventCraftTimeCalculation___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4BCB9A9 & 1) == 0 )
+  if ( (byte_4BE046B & 1) == 0 )
   {
-    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, v1);
-    byte_4BCB9A9 = 1;
+    sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    byte_4BE046B = 1;
   }
   EventCraftTimeCalculation_TypeInfo->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE = 1000;
 }
@@ -27,13 +25,13 @@ int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum(
   System_Collections_Generic_List_EventCraftPickupInfo__o *PickupInfoList_k__BackingField; // x21
 
   v7 = item;
-  if ( (byte_4BCB9A3 & 1) == 0 )
+  if ( (byte_4BE0465 & 1) == 0 )
   {
-    item = (EventCraftListViewItem_o *)sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, supportTool);
-    byte_4BCB9A3 = 1;
+    item = (EventCraftListViewItem_o *)sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    byte_4BE0465 = 1;
   }
   if ( !v7 || (TradeInfo_k__BackingField = v7->fields._TradeInfo_k__BackingField) == 0LL )
-    sub_1C1AE30(item, supportTool);
+    sub_1C22094(item, supportTool);
   TradeGoodsEntity_k__BackingField = v7->fields._TradeGoodsEntity_k__BackingField;
   startedAt = TradeInfo_k__BackingField->fields.startedAt;
   tradeNum = TradeInfo_k__BackingField->fields.tradeNum;
@@ -41,7 +39,7 @@ int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum(
   PickupInfoList_k__BackingField = v7->fields._PickupInfoList_k__BackingField;
   if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-  return EventCraftTimeCalculation__GetCompleteNum_46907524(
+  return EventCraftTimeCalculation__GetCompleteNum_46972716(
            TradeGoodsEntity_k__BackingField,
            startedAt,
            endedAt,
@@ -53,7 +51,7 @@ int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum(
 }
 
 
-int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum_46907524(
+int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum_46972716(
         EventTradeGoodsEntity_o *goodsEntity,
         int64_t startedAt,
         int64_t endedAt,
@@ -63,16 +61,14 @@ int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum_46907524(
         ItemEntity_o *supportTool,
         const MethodInfo *method)
 {
-  int64_t v13; // x24
   int32_t v15; // w27
   int64_t v16; // x26
   int64_t CraftTime; // x0
 
-  v13 = startedAt;
-  if ( (byte_4BCB9A4 & 1) == 0 )
+  if ( (byte_4BE0466 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, startedAt);
-    byte_4BCB9A4 = 1;
+    sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    byte_4BE0466 = 1;
   }
   if ( tradeNum < 1 )
   {
@@ -90,11 +86,11 @@ int32_t __fastcall EventCraftTimeCalculation__GetCompleteNum_46907524(
                     pickupInfoList,
                     supportTool,
                     goodsEntity,
-                    v13,
+                    startedAt,
                     v16,
                     (const MethodInfo *)pickupInfoList);
-      v13 += CraftTime;
-      if ( v13 >= endedAt )
+      startedAt += CraftTime;
+      if ( startedAt >= endedAt )
         break;
       ++v15;
       v16 = CraftTime;
@@ -117,14 +113,13 @@ int64_t __fastcall EventCraftTimeCalculation__GetCraftFinishTime(
         int64_t startedAt,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  int64_t v12; // x24
+  int64_t v11; // x24
 
-  if ( (byte_4BCB9A5 & 1) == 0 )
+  if ( (byte_4BE0467 & 1) == 0 )
   {
-    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, pickupInfoList);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v11);
-    byte_4BCB9A5 = 1;
+    sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BE0467 = 1;
   }
   if ( startedAt <= 0 )
   {
@@ -134,16 +129,16 @@ int64_t __fastcall EventCraftTimeCalculation__GetCraftFinishTime(
   }
   if ( tradeNum < 1 )
     return 0LL;
-  v12 = 0LL;
+  v11 = 0LL;
   do
   {
     if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
     --tradeNum;
-    v12 += EventCraftTimeCalculation__GetCraftTime(pickupInfoList, supportTool, goodsEntity, startedAt, v12, method);
+    v11 += EventCraftTimeCalculation__GetCraftTime(pickupInfoList, supportTool, goodsEntity, startedAt, v11, method);
   }
   while ( tradeNum );
-  return v12;
+  return v11;
 }
 
 
@@ -154,58 +149,54 @@ int32_t __fastcall EventCraftTimeCalculation__GetCraftMaxNum(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_EventCraftPickupInfo__o *v6; // x21
-  __int64 v7; // x1
-  __int64 v8; // x1
   int maxNum; // w22
   int64_t Time; // x0
-  const MethodInfo *v11; // x5
-  int64_t v12; // x23
-  int64_t v13; // x24
-  int v14; // w26
+  const MethodInfo *v9; // x5
+  int64_t v10; // x23
+  int64_t v11; // x24
+  int v12; // w26
   int64_t CraftTime; // x0
-  BalanceConfig_c *v16; // x8
-  int64_t v17; // x25
+  BalanceConfig_c *v14; // x8
+  int64_t v15; // x25
 
   v6 = pickupInfoList;
-  if ( (byte_4BCB9A6 & 1) == 0 )
+  if ( (byte_4BE0468 & 1) == 0 )
   {
-    sub_1C1ABD4(&BalanceConfig_TypeInfo, supportTool);
-    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, v7);
-    pickupInfoList = (System_Collections_Generic_List_EventCraftPickupInfo__o *)sub_1C1ABD4(
-                                                                                  &NetworkManager_TypeInfo,
-                                                                                  v8);
-    byte_4BCB9A6 = 1;
+    sub_1C21E38(&BalanceConfig_TypeInfo);
+    sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    pickupInfoList = (System_Collections_Generic_List_EventCraftPickupInfo__o *)sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BE0468 = 1;
   }
   if ( !goodsEntity )
-    sub_1C1AE30(pickupInfoList, supportTool);
+    sub_1C22094(pickupInfoList, supportTool);
   maxNum = goodsEntity->fields.maxNum;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   if ( maxNum >= 2 )
   {
-    v12 = Time;
-    v13 = 0LL;
-    v14 = 1;
+    v10 = Time;
+    v11 = 0LL;
+    v12 = 1;
     while ( 1 )
     {
       if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-      CraftTime = EventCraftTimeCalculation__GetCraftTime(v6, supportTool, goodsEntity, v12, v13, v11);
-      v16 = BalanceConfig_TypeInfo;
-      v17 = CraftTime;
+      CraftTime = EventCraftTimeCalculation__GetCraftTime(v6, supportTool, goodsEntity, v10, v11, v9);
+      v14 = BalanceConfig_TypeInfo;
+      v15 = CraftTime;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        v16 = BalanceConfig_TypeInfo;
+        v14 = BalanceConfig_TypeInfo;
       }
-      v13 += v17;
-      if ( v13 > v16->static_fields->SECONDS_PER_DAY )
+      v11 += v15;
+      if ( v11 > v14->static_fields->SECONDS_PER_DAY )
         break;
-      if ( maxNum == ++v14 )
+      if ( maxNum == ++v12 )
         return maxNum;
     }
-    return v14 - 1;
+    return v12 - 1;
   }
   return maxNum;
 }
@@ -219,129 +210,117 @@ int64_t __fastcall EventCraftTimeCalculation__GetCraftTime(
         int64_t endTradeTime,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x19
+  __int64 v11; // x19
   int64_t Time; // x0
-  __int64 v25; // x1
-  const MethodInfo *v26; // x4
-  int64_t v27; // x23
-  int64_t v28; // x25
+  __int64 v13; // x1
+  const MethodInfo *v14; // x4
+  int64_t v15; // x23
+  int64_t v16; // x25
   System_Collections_ICollection_o *PickupInfo; // x21
   int64_t result; // x0
-  System_Func_object__bool__o *v31; // x22
-  EventCraftTimeCalculation_c *v32; // x8
-  int64_t v33; // x22
+  System_Func_object__bool__o *v19; // x22
+  EventCraftTimeCalculation_c *v20; // x8
+  int64_t v21; // x22
   int DEFAULT_EVENT_CRAFT_TIME_RATE; // w28
-  EventCraftTimeCalculation_c *v35; // x0
+  EventCraftTimeCalculation_c *v23; // x0
   int32_t tradeTime; // w20
-  int v37; // w29
-  double v38; // d8
-  __int64 v39; // x8
-  __int64 v40; // x20
-  EventTradePickupMaster_c *v41; // x0
-  System_Func_object__bool__o *v42; // x20
-  Il2CppObject *v43; // x0
-  EventCraftTimeCalculation_c *v44; // x8
-  Il2CppObject *v45; // x20
+  int v25; // w29
+  double v26; // d8
+  __int64 v27; // x8
+  __int64 v28; // x20
+  EventTradePickupMaster_c *v29; // x0
+  System_Func_object__bool__o *v30; // x20
+  Il2CppObject *v31; // x0
+  EventCraftTimeCalculation_c *v32; // x8
+  Il2CppObject *v33; // x20
   int klass; // w21
-  __int64 v47; // x22
-  EventCraftTimeCalculation_c *v48; // x0
-  double v49; // d8
-  double v50; // d9
-  double v51; // d8
-  System_Convert_c *v52; // x0
-  double v53; // d0
-  __int64 v54; // x20
-  double v55; // d8
-  Il2CppObject *v56; // [xsp+0h] [xbp-80h] BYREF
+  __int64 v35; // x22
+  EventCraftTimeCalculation_c *v36; // x0
+  double v37; // d8
+  double v38; // d9
+  double v39; // d8
+  System_Convert_c *v40; // x0
+  double v41; // d0
+  __int64 v42; // x20
+  double v43; // d8
+  Il2CppObject *v44; // [xsp+0h] [xbp-80h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4BCB9A7 & 1) == 0 )
+  if ( (byte_4BE0469 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Convert_TypeInfo, supportTool);
-    sub_1C1ABD4(&Method_DataManager_GetMaster_ItemMaster___, v11);
-    sub_1C1ABD4(&DataManager_TypeInfo, v12);
-    sub_1C1ABD4(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v13);
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___, v14);
-    sub_1C1ABD4(&EventCraftTimeCalculation_TypeInfo, v15);
-    sub_1C1ABD4(&EventTradePickupMaster_TypeInfo, v16);
-    sub_1C1ABD4(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v17);
-    sub_1C1ABD4(&System_Math_TypeInfo, v18);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v19);
-    sub_1C1ABD4(&Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__0__, v20);
-    sub_1C1ABD4(&Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__1__, v21);
-    sub_1C1ABD4(&EventCraftTimeCalculation___c__DisplayClass5_0_TypeInfo, v22);
-    byte_4BCB9A7 = 1;
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C21E38(&DataManager_TypeInfo);
+    sub_1C21E38(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1C21E38(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
+    sub_1C21E38(&EventCraftTimeCalculation_TypeInfo);
+    sub_1C21E38(&EventTradePickupMaster_TypeInfo);
+    sub_1C21E38(&System_Func_EventCraftPickupInfo__bool__TypeInfo);
+    sub_1C21E38(&System_Math_TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__0__);
+    sub_1C21E38(&Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__1__);
+    sub_1C21E38(&EventCraftTimeCalculation___c__DisplayClass5_0_TypeInfo);
+    byte_4BE0469 = 1;
   }
-  v56 = 0LL;
+  v44 = 0LL;
   entity = 0LL;
-  v23 = sub_1C1AE20(EventCraftTimeCalculation___c__DisplayClass5_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v23, 0LL);
+  v11 = sub_1C22084(EventCraftTimeCalculation___c__DisplayClass5_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
-  if ( !v23 )
+  if ( !v11 )
     goto LABEL_54;
-  v27 = endTradeTime + tradeStartedAt;
-  *(_QWORD *)(v23 + 16) = v27;
-  v28 = Time;
+  v15 = endTradeTime + tradeStartedAt;
+  *(_QWORD *)(v11 + 16) = v15;
+  v16 = Time;
   if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
   PickupInfo = (System_Collections_ICollection_o *)EventCraftTimeCalculation__ReCreatePickupInfo(
                                                      pickupInfoList,
                                                      supportTool,
-                                                     v28,
-                                                     v27,
-                                                     v26);
+                                                     v16,
+                                                     v15,
+                                                     v14);
   Time = BasicHelper__IsNullOrEmpty(PickupInfo, 0LL);
   if ( (Time & 1) != 0 )
   {
     if ( goodsEntity )
       return goodsEntity->fields.tradeTime;
 LABEL_54:
-    sub_1C1AE30(Time, v25);
+    sub_1C22094(Time, v13);
   }
-  v31 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__bool__TypeInfo);
+  v19 = (System_Func_object__bool__o *)sub_1C22084(System_Func_EventCraftPickupInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v31,
-    (Il2CppObject *)v23,
+    v19,
+    (Il2CppObject *)v11,
     Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__0__,
     0LL);
-  Time = (int64_t)System_Linq_Enumerable__FirstOrDefault_object__50081164(
+  Time = (int64_t)System_Linq_Enumerable__FirstOrDefault_object__50149120(
                     (System_Collections_Generic_IEnumerable_TSource__o *)PickupInfo,
-                    (System_Func_TSource__bool__o *)v31,
-                    (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
-  v32 = EventCraftTimeCalculation_TypeInfo;
-  v33 = Time;
+                    (System_Func_TSource__bool__o *)v19,
+                    (const MethodInfo_2FD3700 *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
+  v20 = EventCraftTimeCalculation_TypeInfo;
+  v21 = Time;
   if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-    v32 = EventCraftTimeCalculation_TypeInfo;
+    v20 = EventCraftTimeCalculation_TypeInfo;
   }
-  DEFAULT_EVENT_CRAFT_TIME_RATE = v32->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
-  if ( v33 )
+  DEFAULT_EVENT_CRAFT_TIME_RATE = v20->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
+  if ( v21 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ItemMaster___);
+    Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_ItemMaster___);
     if ( !Time )
       goto LABEL_54;
     Time = DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Time,
              &entity,
-             *(_DWORD *)(v33 + 20),
-             (const MethodInfo_32486C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+             *(_DWORD *)(v21 + 20),
+             (const MethodInfo_325BE14 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
     if ( (Time & 1) != 0 )
     {
       if ( !entity )
@@ -351,107 +330,107 @@ LABEL_54:
   }
   if ( !goodsEntity )
     goto LABEL_54;
-  v35 = EventCraftTimeCalculation_TypeInfo;
+  v23 = EventCraftTimeCalculation_TypeInfo;
   tradeTime = goodsEntity->fields.tradeTime;
   if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-    v35 = EventCraftTimeCalculation_TypeInfo;
+    v23 = EventCraftTimeCalculation_TypeInfo;
   }
-  v37 = v35->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
+  v25 = v23->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v38 = ceil((double)(tradeTime * DEFAULT_EVENT_CRAFT_TIME_RATE) / (double)v37);
+  v26 = ceil((double)(tradeTime * DEFAULT_EVENT_CRAFT_TIME_RATE) / (double)v25);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  result = System_Convert__ToInt64_63699268(v38, 0LL);
-  if ( v33 )
-    v39 = *(_QWORD *)(v33 + 32) - *(_QWORD *)(v23 + 16);
+  result = System_Convert__ToInt64_63774376(v26, 0LL);
+  if ( v21 )
+    v27 = *(_QWORD *)(v21 + 32) - *(_QWORD *)(v11 + 16);
   else
-    v39 = 0LL;
-  v40 = result - v39;
-  *(_QWORD *)(v23 + 24) = v39;
-  if ( result >= v39 )
+    v27 = 0LL;
+  v28 = result - v27;
+  *(_QWORD *)(v11 + 24) = v27;
+  if ( result >= v27 )
   {
-    v41 = EventTradePickupMaster_TypeInfo;
+    v29 = EventTradePickupMaster_TypeInfo;
     if ( !EventTradePickupMaster_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventTradePickupMaster_TypeInfo);
-      v41 = EventTradePickupMaster_TypeInfo;
+      v29 = EventTradePickupMaster_TypeInfo;
     }
-    *(double *)(v23 + 32) = (double)v40
-                          * (double)v41->static_fields->DEFAULT_EVENT_TRADE_TIME_RATE
+    *(double *)(v11 + 32) = (double)v28
+                          * (double)v29->static_fields->DEFAULT_EVENT_TRADE_TIME_RATE
                           / (double)DEFAULT_EVENT_CRAFT_TIME_RATE;
-    v42 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__bool__TypeInfo);
+    v30 = (System_Func_object__bool__o *)sub_1C22084(System_Func_EventCraftPickupInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
-      v42,
-      (Il2CppObject *)v23,
+      v30,
+      (Il2CppObject *)v11,
       Method_EventCraftTimeCalculation___c__DisplayClass5_0__GetCraftTime_b__1__,
       0LL);
-    v43 = System_Linq_Enumerable__FirstOrDefault_object__50081164(
+    v31 = System_Linq_Enumerable__FirstOrDefault_object__50149120(
             (System_Collections_Generic_IEnumerable_TSource__o *)PickupInfo,
-            (System_Func_TSource__bool__o *)v42,
-            (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
-    v44 = EventCraftTimeCalculation_TypeInfo;
-    v45 = v43;
+            (System_Func_TSource__bool__o *)v30,
+            (const MethodInfo_2FD3700 *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
+    v32 = EventCraftTimeCalculation_TypeInfo;
+    v33 = v31;
     if ( EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
     {
-      if ( v43 )
+      if ( v31 )
       {
 LABEL_35:
-        klass = v44->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
+        klass = v32->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F9F43C *)Method_DataManager_GetMaster_ItemMaster___);
+        Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_ItemMaster___);
         if ( !Time )
           goto LABEL_54;
         Time = DataMasterBase_object__object__int___TryGetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Time,
-                 &v56,
-                 HIDWORD(v45[1].klass),
-                 (const MethodInfo_32486C4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                 &v44,
+                 HIDWORD(v33[1].klass),
+                 (const MethodInfo_325BE14 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
         if ( (Time & 1) != 0 )
         {
-          if ( !v56 )
+          if ( !v44 )
             goto LABEL_54;
-          klass = (int)v56[4].klass;
+          klass = (int)v44[4].klass;
         }
-        v47 = *(_QWORD *)(v23 + 24);
-        v48 = EventCraftTimeCalculation_TypeInfo;
-        v49 = *(double *)(v23 + 32);
-        v50 = v49 + (double)(v47 + *(_QWORD *)(v23 + 16)) - (double)(__int64)v45[1].monitor;
+        v35 = *(_QWORD *)(v11 + 24);
+        v36 = EventCraftTimeCalculation_TypeInfo;
+        v37 = *(double *)(v11 + 32);
+        v38 = v37 + (double)(v35 + *(_QWORD *)(v11 + 16)) - (double)(__int64)v33[1].monitor;
         if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-          v48 = EventCraftTimeCalculation_TypeInfo;
-          v47 = *(_QWORD *)(v23 + 24);
+          v36 = EventCraftTimeCalculation_TypeInfo;
+          v35 = *(_QWORD *)(v11 + 24);
         }
-        v51 = v49 - v50 + v50 * (double)klass / (double)v48->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
+        v39 = v37 - v38 + v38 * (double)klass / (double)v36->static_fields->DEFAULT_EVENT_CRAFT_TIME_RATE;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v52 = System_Convert_TypeInfo;
-        v53 = (double)v47;
+        v40 = System_Convert_TypeInfo;
+        v41 = (double)v35;
         goto LABEL_50;
       }
     }
     else
     {
       j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-      v44 = EventCraftTimeCalculation_TypeInfo;
-      if ( v45 )
+      v32 = EventCraftTimeCalculation_TypeInfo;
+      if ( v33 )
         goto LABEL_35;
     }
-    v54 = *(_QWORD *)(v23 + 24);
-    v51 = *(double *)(v23 + 32);
+    v42 = *(_QWORD *)(v11 + 24);
+    v39 = *(double *)(v11 + 32);
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v52 = System_Convert_TypeInfo;
-    v53 = (double)v54;
+    v40 = System_Convert_TypeInfo;
+    v41 = (double)v42;
 LABEL_50:
-    v55 = ceil(v51 + v53);
-    if ( !v52->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v52);
-    return System_Convert__ToInt64_63699268(v55, 0LL);
+    v43 = ceil(v39 + v41);
+    if ( !v40->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v40);
+    return System_Convert__ToInt64_63774376(v43, 0LL);
   }
   return result;
 }
@@ -464,189 +443,178 @@ System_Collections_Generic_List_EventCraftPickupInfo__o *__fastcall EventCraftTi
         int64_t tradeThisTimeStartedAt,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
+  Il2CppObject *v9; // x21
+  Il2CppObject *v10; // x0
   __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  Il2CppObject *v20; // x21
-  Il2CppObject *v21; // x0
-  __int64 v22; // x1
-  System_Collections_Generic_List_object__o *v23; // x19
+  System_Collections_Generic_List_object__o *v12; // x19
   Il2CppObject *current; // x29
-  int64_t v25; // x22
-  __int64 v26; // x0
-  __int64 v27; // x1
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
+  int64_t v14; // x22
+  __int64 v15; // x0
+  __int64 v16; // x1
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v35; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v37; // x0
-  int64_t v38; // x22
+  Il2CppClass **v26; // x0
+  int64_t v27; // x22
   char *monitor; // x23
-  int64_t v40; // x2
-  int32_t v41; // w3
-  System_String_o *v42; // x4
-  BattleSetupInfo_o *v43; // x5
-  FollowerInfo_o *v44; // x6
-  PartyListViewItem_o *v45; // x7
-  System_Func_object__bool__o *v46; // x23
+  int64_t v29; // x2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  BattleSetupInfo_o *v32; // x5
+  FollowerInfo_o *v33; // x6
+  PartyListViewItem_o *v34; // x7
+  System_Func_object__bool__o *v35; // x23
   Il2CppClass *klass; // x22
-  struct System_Object_array *v48; // x8
-  _QWORD *v49; // x9
-  __int64 v50; // x10
-  Il2CppClass **v51; // x0
-  System_Collections_Generic_List_Enumerator_object__o v53; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v54; // [xsp+20h] [xbp-80h] BYREF
+  struct System_Object_array *v37; // x8
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  Il2CppClass **v40; // x0
+  System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4BCB9A8 & 1) == 0 )
+  if ( (byte_4BE046A & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___, supportTool);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__Dispose__, v9);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__MoveNext__, v10);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__get_Current__, v11);
-    sub_1C1ABD4(&EventCraftPickupInfo_TypeInfo, v12);
-    sub_1C1ABD4(&System_Func_EventCraftPickupInfo__bool__TypeInfo, v13);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__, v14);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventCraftPickupInfo__GetEnumerator__, v15);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__, v16);
-    sub_1C1ABD4(&System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo, v17);
-    sub_1C1ABD4(&Method_EventCraftTimeCalculation___c__DisplayClass6_0__ReCreatePickupInfo_b__0__, v18);
-    sub_1C1ABD4(&EventCraftTimeCalculation___c__DisplayClass6_0_TypeInfo, v19);
-    byte_4BCB9A8 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__Dispose__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__MoveNext__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__get_Current__);
+    sub_1C21E38(&EventCraftPickupInfo_TypeInfo);
+    sub_1C21E38(&System_Func_EventCraftPickupInfo__bool__TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_EventCraftPickupInfo__GetEnumerator__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo);
+    sub_1C21E38(&Method_EventCraftTimeCalculation___c__DisplayClass6_0__ReCreatePickupInfo_b__0__);
+    sub_1C21E38(&EventCraftTimeCalculation___c__DisplayClass6_0_TypeInfo);
+    byte_4BE046A = 1;
   }
-  memset(&v54, 0, sizeof(v54));
-  v20 = (Il2CppObject *)sub_1C1AE20(EventCraftTimeCalculation___c__DisplayClass6_0_TypeInfo);
-  System_Object___ctor(v20, 0LL);
-  if ( !v20 )
+  memset(&v43, 0, sizeof(v43));
+  v9 = (Il2CppObject *)sub_1C22084(EventCraftTimeCalculation___c__DisplayClass6_0_TypeInfo);
+  System_Object___ctor(v9, 0LL);
+  if ( !v9 )
 LABEL_32:
-    sub_1C1AE30(v21, v22);
-  v20[1].klass = (Il2CppClass *)tradeThisTimeStartedAt;
-  v20[1].monitor = (void *)currentTime;
-  v23 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo);
+    sub_1C22094(v10, v11);
+  v9[1].klass = (Il2CppClass *)tradeThisTimeStartedAt;
+  v9[1].monitor = (void *)currentTime;
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v23,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__);
+    v12,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__);
   if ( pickupInfoList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v53,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v42,
       (System_Collections_Generic_List_object__o *)pickupInfoList,
-      (const MethodInfo_363D388 *)Method_System_Collections_Generic_List_EventCraftPickupInfo__GetEnumerator__);
-    v54 = v53;
+      (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_EventCraftPickupInfo__GetEnumerator__);
+    v43 = v42;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v54,
-              (const MethodInfo_33CE4F8 *)Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__MoveNext__) )
+              &v43,
+              (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__MoveNext__) )
     {
-      current = v54.fields._current;
-      v25 = sub_1C1AE20(EventCraftPickupInfo_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v25, 0LL);
+      current = v43.fields._current;
+      v14 = sub_1C22084(EventCraftPickupInfo_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v14, 0LL);
       if ( !current )
-        sub_1C1AE30(v26, v27);
-      if ( !v25 )
-        sub_1C1AE30(v26, v27);
-      *(Il2CppObject *)(v25 + 24) = *(Il2CppObject *)((char *)current + 24);
-      *(_DWORD *)(v25 + 20) = HIDWORD(current[1].klass);
-      if ( !v23 )
-        sub_1C1AE30(v26, v27);
-      items = v23->fields._items;
-      v35 = Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__;
-      ++v23->fields._version;
+        sub_1C22094(v15, v16);
+      if ( !v14 )
+        sub_1C22094(v15, v16);
+      *(Il2CppObject *)(v14 + 24) = *(Il2CppObject *)((char *)current + 24);
+      *(_DWORD *)(v14 + 20) = HIDWORD(current[1].klass);
+      if ( !v12 )
+        sub_1C22094(v15, v16);
+      items = v12->fields._items;
+      v24 = Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__;
+      ++v12->fields._version;
       if ( !items )
-        sub_1C1AE30(v26, v27);
-      size = v23->fields._size;
+        sub_1C22094(v15, v16);
+      size = v12->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v23,
-          (Il2CppObject *)v25,
-          *(const MethodInfo_363C890 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+          v12,
+          (Il2CppObject *)v14,
+          *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
-        v37 = &items->obj.klass + size;
-        v23->fields._size = size + 1;
-        v37[4] = (Il2CppClass *)v25;
-        sub_1C1AB78((PartyOrganizationUtility_o *)(v37 + 4), v25, v28, v29, v30, v31, v32, v33);
+        v26 = &items->obj.klass + size;
+        v12->fields._size = size + 1;
+        v26[4] = (Il2CppClass *)v14;
+        sub_1C21DDC((PartyOrganizationUtility_o *)(v26 + 4), v14, v17, v18, v19, v20, v21, v22);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v54,
-      (const MethodInfo_33CE4F4 *)Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__Dispose__);
+      &v43,
+      (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_EventCraftPickupInfo__Dispose__);
   }
   if ( supportTool )
   {
-    v38 = sub_1C1AE20(EventCraftPickupInfo_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v38, 0LL);
-    if ( !v38 )
+    v27 = sub_1C22084(EventCraftPickupInfo_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v27, 0LL);
+    if ( !v27 )
       goto LABEL_32;
-    monitor = (char *)v20[1].monitor;
-    *(_QWORD *)(v38 + 24) = monitor;
-    *(_QWORD *)(v38 + 32) = &monitor[ItemEntity__GetTradePickupTime(supportTool, 0LL)];
-    *(_DWORD *)(v38 + 20) = supportTool->fields.id;
-    if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v23, 0LL) )
+    monitor = (char *)v9[1].monitor;
+    *(_QWORD *)(v27 + 24) = monitor;
+    *(_QWORD *)(v27 + 32) = &monitor[ItemEntity__GetTradePickupTime(supportTool, 0LL)];
+    *(_DWORD *)(v27 + 20) = supportTool->fields.id;
+    if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v12, 0LL) )
     {
-      v23 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo);
+      v12 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_EventCraftPickupInfo__TypeInfo);
       System_Collections_Generic_List_object____ctor(
-        v23,
-        (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__);
-      if ( !v23 )
+        v12,
+        (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_EventCraftPickupInfo___ctor__);
+      if ( !v12 )
         goto LABEL_32;
     }
     else
     {
-      v46 = (System_Func_object__bool__o *)sub_1C1AE20(System_Func_EventCraftPickupInfo__bool__TypeInfo);
+      v35 = (System_Func_object__bool__o *)sub_1C22084(System_Func_EventCraftPickupInfo__bool__TypeInfo);
       System_Func_object__bool____ctor(
-        v46,
-        v20,
+        v35,
+        v9,
         Method_EventCraftTimeCalculation___c__DisplayClass6_0__ReCreatePickupInfo_b__0__,
         0LL);
-      v21 = System_Linq_Enumerable__FirstOrDefault_object__50081164(
-              (System_Collections_Generic_IEnumerable_TSource__o *)v23,
-              (System_Func_TSource__bool__o *)v46,
-              (const MethodInfo_2FC2D8C *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
-      if ( v21 )
+      v10 = System_Linq_Enumerable__FirstOrDefault_object__50149120(
+              (System_Collections_Generic_IEnumerable_TSource__o *)v12,
+              (System_Func_TSource__bool__o *)v35,
+              (const MethodInfo_2FD3700 *)Method_System_Linq_Enumerable_FirstOrDefault_EventCraftPickupInfo___);
+      if ( v10 )
       {
-        klass = v21[2].klass;
-        v21[2].klass = (Il2CppClass *)((char *)klass + ItemEntity__GetTradePickupTime(supportTool, 0LL));
-        return (System_Collections_Generic_List_EventCraftPickupInfo__o *)v23;
+        klass = v10[2].klass;
+        v10[2].klass = (Il2CppClass *)((char *)klass + ItemEntity__GetTradePickupTime(supportTool, 0LL));
+        return (System_Collections_Generic_List_EventCraftPickupInfo__o *)v12;
       }
-      if ( !v23 )
+      if ( !v12 )
         goto LABEL_32;
     }
-    v48 = v23->fields._items;
-    v49 = Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__;
-    ++v23->fields._version;
-    if ( !v48 )
+    v37 = v12->fields._items;
+    v38 = Method_System_Collections_Generic_List_EventCraftPickupInfo__Add__;
+    ++v12->fields._version;
+    if ( !v37 )
       goto LABEL_32;
-    v50 = v23->fields._size;
-    if ( (unsigned int)v50 >= v48->max_length )
+    v39 = v12->fields._size;
+    if ( (unsigned int)v39 >= v37->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v23,
-        (Il2CppObject *)v38,
-        *(const MethodInfo_363C890 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+        v12,
+        (Il2CppObject *)v27,
+        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
     }
     else
     {
-      v51 = &v48->obj.klass + v50;
-      v23->fields._size = v50 + 1;
-      v51[4] = (Il2CppClass *)v38;
-      sub_1C1AB78((PartyOrganizationUtility_o *)(v51 + 4), v38, v40, v41, v42, v43, v44, v45);
+      v40 = &v37->obj.klass + v39;
+      v12->fields._size = v39 + 1;
+      v40[4] = (Il2CppClass *)v27;
+      sub_1C21DDC((PartyOrganizationUtility_o *)(v40 + 4), v27, v29, v30, v31, v32, v33, v34);
     }
   }
-  return (System_Collections_Generic_List_EventCraftPickupInfo__o *)v23;
+  return (System_Collections_Generic_List_EventCraftPickupInfo__o *)v12;
 }
 
 
@@ -666,7 +634,7 @@ bool __fastcall EventCraftTimeCalculation___c__DisplayClass5_0___GetCraftTime_b_
   int64_t tradeThisTimeStartedAt; // x8
 
   if ( !x )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   tradeThisTimeStartedAt = this->fields.tradeThisTimeStartedAt;
   return x->fields.startedAt <= tradeThisTimeStartedAt && tradeThisTimeStartedAt <= x->fields.endedAt;
 }
@@ -681,7 +649,7 @@ bool __fastcall EventCraftTimeCalculation___c__DisplayClass5_0___GetCraftTime_b_
   int64_t startedAt; // x9
 
   if ( !x )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   tradeThisTimeStartedAt = this->fields.tradeThisTimeStartedAt;
   startedAt = x->fields.startedAt;
   return tradeThisTimeStartedAt < startedAt
@@ -707,7 +675,7 @@ bool __fastcall EventCraftTimeCalculation___c__DisplayClass6_0___ReCreatePickupI
   bool result; // w0
 
   if ( !x )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   tradeThisTimeStartedAt = this->fields.tradeThisTimeStartedAt;
   result = x->fields.startedAt <= tradeThisTimeStartedAt
         && (endedAt = x->fields.endedAt, tradeThisTimeStartedAt <= endedAt)

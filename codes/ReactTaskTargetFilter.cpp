@@ -23,19 +23,19 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *__fastcall ReactTas
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BCA843 & 1) == 0 )
+  if ( (byte_4BDF2F4 & 1) == 0 )
   {
-    sub_1C1ABD4(&ReactTaskTargetFilter__Apply_d__4_TypeInfo, targets);
-    byte_4BCA843 = 1;
+    sub_1C21E38(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    byte_4BDF2F4 = 1;
   }
-  v5 = sub_1C1AE20(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+  v5 = sub_1C22084(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0LL);
   *(_QWORD *)(v5 + 56) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v5 + 56), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 56), (int64_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 48) = targets;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v5 + 48), (int64_t)targets, v12, v13, v14, v15, v16, v17);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 48), (int64_t)targets, v12, v13, v14, v15, v16, v17);
   return (System_Collections_Generic_IEnumerable_BattleServantData__o *)v5;
 }
 
@@ -78,7 +78,7 @@ void __fastcall ReactTaskTargetFilter__set_FilterFunc(
   PartyListViewItem_o *v7; // x7
 
   this->fields._FilterFunc_k__BackingField = value;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -98,64 +98,61 @@ bool __fastcall ReactTaskTargetFilter__Apply_d__4__MoveNext(
         const MethodInfo *method)
 {
   ReactTaskTargetFilter__Apply_d__4_o *v2; // x20
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   int32_t _1__state; // w8
   struct ReactTaskTargetFilter_o *_4__this; // x21
-  System_Collections_Generic_IEnumerable_T__o *v8; // x0
-  __int64 v9; // x1
-  System_Collections_Generic_IEnumerable_T__o *v10; // x19
+  System_Collections_Generic_IEnumerable_T__o *v5; // x0
+  __int64 v6; // x1
+  System_Collections_Generic_IEnumerable_T__o *v7; // x19
   System_Collections_Generic_IEnumerable_T__c *klass; // x8
-  __int64 v12; // x9
+  __int64 v9; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  int64_t v15; // x1
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
+  int64_t v12; // x1
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
   struct System_Collections_Generic_IEnumerator_BattleServantData__o *_7__wrap1; // x19
-  System_Collections_Generic_IEnumerator_BattleServantData__c *v23; // x8
-  __int64 v24; // x9
-  int *v25; // x10
-  __int64 v26; // x0
-  const MethodInfo *v27; // x1
-  struct System_Collections_Generic_IEnumerator_BattleServantData__o *v28; // x19
-  System_Collections_Generic_IEnumerator_BattleServantData__c *v29; // x8
-  __int64 v30; // x9
-  int *v31; // x10
-  __int64 v32; // x0
-  __int64 v33; // x0
-  __int64 v34; // x1
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
+  System_Collections_Generic_IEnumerator_BattleServantData__c *v20; // x8
+  __int64 v21; // x9
+  int *v22; // x10
+  __int64 v23; // x0
+  const MethodInfo *v24; // x1
+  struct System_Collections_Generic_IEnumerator_BattleServantData__o *v25; // x19
+  System_Collections_Generic_IEnumerator_BattleServantData__c *v26; // x8
+  __int64 v27; // x9
+  int *v28; // x10
+  __int64 v29; // x0
+  __int64 v30; // x0
+  __int64 v31; // x1
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
   struct System_Func_BattleServantData__bool__o *FilterFunc_k__BackingField; // x8
-  int64_t v42; // x19
+  int64_t v39; // x19
   bool result; // w0
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
-  ReactTaskTargetFilter__Apply_d__4_o *v50; // [xsp+18h] [xbp-28h]
+  int64_t v41; // x2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  BattleSetupInfo_o *v44; // x5
+  FollowerInfo_o *v45; // x6
+  PartyListViewItem_o *v46; // x7
+  ReactTaskTargetFilter__Apply_d__4_o *v47; // [xsp+18h] [xbp-28h]
 
-  v50 = this;
+  v47 = this;
   v2 = this;
-  if ( (byte_4BCA844 & 1) == 0 )
+  if ( (byte_4BDF2F5 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_ExcludeNull_BattleServantData___, method);
-    sub_1C1ABD4(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, v3);
-    sub_1C1ABD4(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, v4);
-    this = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C1ABD4(&System_Collections_IEnumerator_TypeInfo, v5);
-    byte_4BCA844 = 1;
+    sub_1C21E38(&Method_BasicHelper_ExcludeNull_BattleServantData___);
+    sub_1C21E38(&System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo);
+    sub_1C21E38(&System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo);
+    this = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
+    byte_4BDF2F5 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -164,22 +161,22 @@ bool __fastcall ReactTaskTargetFilter__Apply_d__4__MoveNext(
     if ( _1__state )
       return 0;
     v2->fields.__1__state = -1;
-    v8 = BasicHelper__ExcludeNull_object_(
+    v5 = BasicHelper__ExcludeNull_object_(
            (System_Collections_Generic_IEnumerable_T__o *)v2->fields.targets,
-           (const MethodInfo_2F8AD50 *)Method_BasicHelper_ExcludeNull_BattleServantData___);
-    v10 = v8;
-    if ( !v8 )
-      sub_1C1AE30(0LL, v9);
-    klass = v8->klass;
-    v12 = *(unsigned __int16 *)(&v8->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&v8->klass->_2.bitflags2 + 3) )
+           (const MethodInfo_2F9B6C4 *)Method_BasicHelper_ExcludeNull_BattleServantData___);
+    v7 = v5;
+    if ( !v5 )
+      sub_1C22094(0LL, v6);
+    klass = v5->klass;
+    v9 = *(unsigned __int16 *)(&v5->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v5->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_Generic_IEnumerable_BattleServantData__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo )
       {
-        --v12;
+        --v9;
         p_offset += 4;
-        if ( !v12 )
+        if ( !v9 )
           goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -187,94 +184,94 @@ bool __fastcall ReactTaskTargetFilter__Apply_d__4__MoveNext(
     else
     {
 LABEL_10:
-      p_method = sub_1C6CBB4(v8, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0LL);
+      p_method = sub_1C73E18(v5, System_Collections_Generic_IEnumerable_BattleServantData__TypeInfo, 0LL);
     }
-    v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
-            v10,
+    v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_T__o *, _QWORD))p_method)(
+            v7,
             *(_QWORD *)(p_method + 8));
-    v50->fields.__7__wrap1 = (struct System_Collections_Generic_IEnumerator_BattleServantData__o *)v15;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&v50->fields.__7__wrap1, v15, v16, v17, v18, v19, v20, v21);
-    v2 = v50;
+    v47->fields.__7__wrap1 = (struct System_Collections_Generic_IEnumerator_BattleServantData__o *)v12;
+    sub_1C21DDC((PartyOrganizationUtility_o *)&v47->fields.__7__wrap1, v12, v13, v14, v15, v16, v17, v18);
+    v2 = v47;
   }
   _7__wrap1 = v2->fields.__7__wrap1;
   v2->fields.__1__state = -3;
   if ( !_7__wrap1 )
 LABEL_32:
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   while ( 1 )
   {
-    v23 = _7__wrap1->klass;
-    v24 = *(unsigned __int16 *)(&_7__wrap1->klass->_2.bitflags2 + 3);
+    v20 = _7__wrap1->klass;
+    v21 = *(unsigned __int16 *)(&_7__wrap1->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&_7__wrap1->klass->_2.bitflags2 + 3) )
     {
-      v25 = &v23->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_IEnumerator_c **)v25 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v22 = &v20->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_IEnumerator_c **)v22 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v24;
-        v25 += 4;
-        if ( !v24 )
+        --v21;
+        v22 += 4;
+        if ( !v21 )
           goto LABEL_18;
       }
-      v26 = (__int64)&v23->vtable[*v25].method;
+      v23 = (__int64)&v20->vtable[*v22].method;
     }
     else
     {
 LABEL_18:
-      v26 = sub_1C6CBB4(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v23 = sub_1C73E18(_7__wrap1, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v26)(
+    if ( ((*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v23)(
             _7__wrap1,
-            *(_QWORD *)(v26 + 8)) & 1) == 0 )
+            *(_QWORD *)(v23 + 8)) & 1) == 0 )
       break;
-    v28 = v50->fields.__7__wrap1;
-    if ( !v28 )
-      sub_1C1AE30(v50, v27);
-    v29 = v28->klass;
-    v30 = *(unsigned __int16 *)(&v28->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&v28->klass->_2.bitflags2 + 3) )
+    v25 = v47->fields.__7__wrap1;
+    if ( !v25 )
+      sub_1C22094(v47, v24);
+    v26 = v25->klass;
+    v27 = *(unsigned __int16 *)(&v25->klass->_2.bitflags2 + 3);
+    if ( *(_WORD *)(&v25->klass->_2.bitflags2 + 3) )
     {
-      v31 = &v29->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_BattleServantData__c **)v31 - 1) != System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo )
+      v28 = &v26->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_BattleServantData__c **)v28 - 1) != System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo )
       {
-        --v30;
-        v31 += 4;
-        if ( !v30 )
+        --v27;
+        v28 += 4;
+        if ( !v27 )
           goto LABEL_26;
       }
-      v32 = (__int64)&v29->vtable[*v31].method;
+      v29 = (__int64)&v26->vtable[*v28].method;
     }
     else
     {
 LABEL_26:
-      v32 = sub_1C6CBB4(v50->fields.__7__wrap1, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0LL);
+      v29 = sub_1C73E18(v47->fields.__7__wrap1, System_Collections_Generic_IEnumerator_BattleServantData__TypeInfo, 0LL);
     }
-    v33 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v32)(
-            v28,
-            *(_QWORD *)(v32 + 8));
+    v30 = (*(__int64 (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))v29)(
+            v25,
+            *(_QWORD *)(v29 + 8));
     if ( !_4__this )
-      sub_1C1AE30(v33, v34);
+      sub_1C22094(v30, v31);
     FilterFunc_k__BackingField = _4__this->fields._FilterFunc_k__BackingField;
-    v42 = v33;
+    v39 = v30;
     if ( !FilterFunc_k__BackingField
       || (this = (ReactTaskTargetFilter__Apply_d__4_o *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))FilterFunc_k__BackingField->fields.m_target)(
                                                           FilterFunc_k__BackingField->fields.original_method_info,
-                                                          v33,
+                                                          v30,
                                                           *(_QWORD *)&FilterFunc_k__BackingField->fields.extra_arg),
           ((unsigned __int8)this & 1) != 0) )
     {
-      v50->fields.__2__current = (struct BattleServantData_o *)v42;
-      sub_1C1AB78((PartyOrganizationUtility_o *)&v50->fields.__2__current, v42, v35, v36, v37, v38, v39, v40);
+      v47->fields.__2__current = (struct BattleServantData_o *)v39;
+      sub_1C21DDC((PartyOrganizationUtility_o *)&v47->fields.__2__current, v39, v32, v33, v34, v35, v36, v37);
       result = 1;
-      v50->fields.__1__state = 1;
+      v47->fields.__1__state = 1;
       return result;
     }
-    _7__wrap1 = v50->fields.__7__wrap1;
+    _7__wrap1 = v47->fields.__7__wrap1;
     if ( !_7__wrap1 )
       goto LABEL_32;
   }
-  ReactTaskTargetFilter__Apply_d__4____m__Finally1(v50, v27);
-  v50->fields.__7__wrap1 = 0LL;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v50->fields.__7__wrap1, 0LL, v44, v45, v46, v47, v48, v49);
+  ReactTaskTargetFilter__Apply_d__4____m__Finally1(v47, v24);
+  v47->fields.__7__wrap1 = 0LL;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v47->fields.__7__wrap1, 0LL, v41, v42, v43, v44, v45, v46);
   return 0;
 }
 
@@ -300,10 +297,10 @@ System_Collections_Generic_IEnumerator_BattleServantData__o *__fastcall ReactTas
   PartyListViewItem_o *v17; // x7
   struct System_Collections_Generic_IEnumerable_BattleServantData__o *_3__targets; // x1
 
-  if ( (byte_4BCA846 & 1) == 0 )
+  if ( (byte_4BDF2F7 & 1) == 0 )
   {
-    sub_1C1ABD4(&ReactTaskTargetFilter__Apply_d__4_TypeInfo, method);
-    byte_4BCA846 = 1;
+    sub_1C21E38(&ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    byte_4BDF2F7 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -314,17 +311,17 @@ System_Collections_Generic_IEnumerator_BattleServantData__o *__fastcall ReactTas
   }
   else
   {
-    v10 = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C1AE20(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
+    v10 = (ReactTaskTargetFilter__Apply_d__4_o *)sub_1C22084(ReactTaskTargetFilter__Apply_d__4_TypeInfo);
     System_Object___ctor((Il2CppObject *)v10, 0LL);
     v10->fields.__1__state = 0;
     v10->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
     _4__this = this->fields.__4__this;
     v10->fields.__4__this = _4__this;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&v10->fields.__4__this, (int64_t)_4__this, v12, v13, v14, v15, v16, v17);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&v10->fields.__4__this, (int64_t)_4__this, v12, v13, v14, v15, v16, v17);
   }
   _3__targets = this->fields.__3__targets;
   v10->fields.targets = _3__targets;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v10->fields.targets, (int64_t)_3__targets, v4, v5, v6, v7, v8, v9);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v10->fields.targets, (int64_t)_3__targets, v4, v5, v6, v7, v8, v9);
   return (System_Collections_Generic_IEnumerator_BattleServantData__o *)v10;
 }
 
@@ -345,11 +342,11 @@ void __fastcall __noreturn ReactTaskTargetFilter__Apply_d__4__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
+  v2 = sub_1C21E4C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C22084(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C1ABE8(&Method_ReactTaskTargetFilter__Apply_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1C1ACFC(v3, v4);
+  v4 = sub_1C21E4C(&Method_ReactTaskTargetFilter__Apply_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1C21F60(v3, v4);
 }
 
 
@@ -383,10 +380,10 @@ void __fastcall ReactTaskTargetFilter__Apply_d__4____m__Finally1(
   int32_t *p_offset; // x10
   __int64 p_method; // x0
 
-  if ( (byte_4BCA845 & 1) == 0 )
+  if ( (byte_4BDF2F6 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, method);
-    byte_4BCA845 = 1;
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    byte_4BDF2F6 = 1;
   }
   _7__wrap1 = this->fields.__7__wrap1;
   this->fields.__1__state = -1;
@@ -409,7 +406,7 @@ void __fastcall ReactTaskTargetFilter__Apply_d__4____m__Finally1(
     else
     {
 LABEL_8:
-      p_method = sub_1C6CBB4(_7__wrap1, System_IDisposable_TypeInfo, 0LL);
+      p_method = sub_1C73E18(_7__wrap1, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(struct System_Collections_Generic_IEnumerator_BattleServantData__o *, _QWORD))p_method)(
       _7__wrap1,

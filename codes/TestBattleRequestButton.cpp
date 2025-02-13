@@ -4,7 +4,6 @@ void __fastcall TestBattleRequestButton___ctor(TestBattleRequestButton_o *this, 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Collections_IEnumerator_o *__fastcall TestBattleRequestButton__battleRequest(
         TestBattleRequestButton_o *this,
         int32_t questNo,
@@ -19,16 +18,16 @@ System_Collections_IEnumerator_o *__fastcall TestBattleRequestButton__battleRequ
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BC530D & 1) == 0 )
+  if ( (byte_4BD9D9C & 1) == 0 )
   {
-    sub_1C1ABD4(&TestBattleRequestButton__battleRequest_d__4_TypeInfo, *(_QWORD *)&questNo);
-    byte_4BC530D = 1;
+    sub_1C21E38(&TestBattleRequestButton__battleRequest_d__4_TypeInfo);
+    byte_4BD9D9C = 1;
   }
-  v7 = sub_1C1AE20(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
+  v7 = sub_1C22084(TestBattleRequestButton__battleRequest_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v7 + 40) = questNo;
   *(_DWORD *)(v7 + 44) = questPhase;
   return (System_Collections_IEnumerator_o *)v7;
@@ -40,22 +39,22 @@ void __fastcall TestBattleRequestButton__beginInitialize(TestBattleRequestButton
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BC530C & 1) == 0 )
+  if ( (byte_4BD9D9B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4BC530C = 1;
+    sub_1C21E38(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4BD9D9B = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C1AE30(0LL, v4);
+    sub_1C22094(0LL, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0LL);
 }
 
 
 void __fastcall TestBattleRequestButton__beginStartUp(TestBattleRequestButton_o *this, const MethodInfo *method)
 {
-  SceneRootComponent__beginStartUp_39873964((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent__beginStartUp_39920388((SceneRootComponent_o *)this, 0LL);
 }
 
 
@@ -74,7 +73,7 @@ void __fastcall TestBattleRequestButton__startRequestA(TestBattleRequestButton_o
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = TestBattleRequestButton__battleRequest(this, 1010, 1, v2);
-  UnityEngine_MonoBehaviour__StartCoroutine_70779684((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70854884((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -93,38 +92,32 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
         const MethodInfo *method)
 {
   TestBattleRequestButton__battleRequest_d__4_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   int32_t _1__state; // w8
   struct TestBattleRequestButton_o *_4__this; // x20
   UserGameEntity_o *SelfUserGame; // x21
-  NetworkManager_ResultCallbackFunc_o *v12; // x22
+  NetworkManager_ResultCallbackFunc_o *v6; // x22
   int64_t activeDeckId; // x3
   bool result; // w0
-  UnityEngine_WaitForEndOfFrame_o *v15; // x20
+  UnityEngine_WaitForEndOfFrame_o *v9; // x20
   PartyOrganizationUtility_o *p__2__current; // x19
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
 
   v2 = this;
-  if ( (byte_4BC530E & 1) == 0 )
+  if ( (byte_4BD9D9D & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_NetworkManager_getRequest_BattleSetupRequest___, method);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v3);
-    sub_1C1ABD4(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    sub_1C1ABD4(&Method_TestBattleRequestButton_callbackRequest__, v6);
-    sub_1C1ABD4(&UnityEngine_WaitForEndOfFrame_TypeInfo, v7);
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1C1ABD4(&StringLiteral_1/*""*/, v8);
-    byte_4BC530E = 1;
+    sub_1C21E38(&Method_NetworkManager_getRequest_BattleSetupRequest___);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C21E38(&Method_TestBattleRequestButton_callbackRequest__);
+    sub_1C21E38(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD9D9D = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -137,23 +130,23 @@ bool __fastcall TestBattleRequestButton__battleRequest_d__4__MoveNext(
         goto LABEL_19;
       _4__this->fields.isRequest = 0;
       SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-      v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1C1AE20(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C22084(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v12,
+        v6,
         (Il2CppObject *)_4__this,
         Method_TestBattleRequestButton_callbackRequest__,
         0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (TestBattleRequestButton__battleRequest_d__4_o *)NetworkManager__getRequest_object_(
-                                                                v12,
-                                                                (const MethodInfo_3023C78 *)Method_NetworkManager_getRequest_BattleSetupRequest___);
+                                                                v6,
+                                                                (const MethodInfo_30345EC *)Method_NetworkManager_getRequest_BattleSetupRequest___);
       if ( SelfUserGame )
       {
         activeDeckId = SelfUserGame->fields.activeDeckId;
         if ( !this )
 LABEL_19:
-          sub_1C1AE30(this, method);
+          sub_1C22094(this, method);
       }
       else
       {
@@ -193,18 +186,18 @@ LABEL_19:
     goto LABEL_19;
   if ( _4__this->fields.isRequest )
   {
-    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (TestBattleRequestButton__battleRequest_d__4_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !this )
       goto LABEL_19;
     AvalonSceneManager__changeScene((AvalonSceneManager_o *)this, 10, 1, 0LL, 0LL);
     return 0;
   }
 LABEL_18:
-  v15 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C1AE20(UnityEngine_WaitForEndOfFrame_TypeInfo);
-  UnityEngine_WaitForEndOfFrame___ctor(v15, 0LL);
-  v2->fields.__2__current = (Il2CppObject *)v15;
+  v9 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C22084(UnityEngine_WaitForEndOfFrame_TypeInfo);
+  UnityEngine_WaitForEndOfFrame___ctor(v9, 0LL);
+  v2->fields.__2__current = (Il2CppObject *)v9;
   p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-  sub_1C1AB78(p__2__current, (int64_t)v15, v17, v18, v19, v20, v21, v22);
+  sub_1C21DDC(p__2__current, (int64_t)v9, v11, v12, v13, v14, v15, v16);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
   return result;
@@ -227,11 +220,11 @@ void __fastcall __noreturn TestBattleRequestButton__battleRequest_d__4__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C1ABE8(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C1AE20(v2);
+  v2 = sub_1C21E4C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C22084(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C1ABE8(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1C1ACFC(v3, v4);
+  v4 = sub_1C21E4C(&Method_TestBattleRequestButton__battleRequest_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1C21F60(v3, v4);
 }
 
 

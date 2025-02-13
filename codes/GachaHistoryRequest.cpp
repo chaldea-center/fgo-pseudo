@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall GachaHistoryRequest__beginRequest(
         GachaHistoryRequest_o *this,
         int32_t gachaId,
@@ -7,25 +6,23 @@ void __fastcall GachaHistoryRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BC9446 & 1) == 0 )
+  if ( (byte_4BDDEF0 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_20022/*"gachaId"*/, *(_QWORD *)&gachaId);
-    byte_4BC9446 = 1;
+    sub_1C21E38(&StringLiteral_20037/*"gachaId"*/);
+    byte_4BDDEF0 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20022/*"gachaId"*/, gachaId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20037/*"gachaId"*/, gachaId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
 System_String_o *__fastcall GachaHistoryRequest__getMockData(GachaHistoryRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
-
-  if ( (byte_4BC9445 & 1) == 0 )
+  if ( (byte_4BDDEEF & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v2);
-    byte_4BC9445 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDDEEF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -35,19 +32,18 @@ System_String_o *__fastcall GachaHistoryRequest__getMockData(GachaHistoryRequest
 
 System_String_o *__fastcall GachaHistoryRequest__getURL(GachaHistoryRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC9444 & 1) == 0 )
+  if ( (byte_4BDDEEE & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_20021/*"gacha/drawHistory"*/, v2);
-    byte_4BC9444 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_20036/*"gacha/drawHistory"*/);
+    byte_4BDDEEE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_20021/*"gacha/drawHistory"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_20036/*"gacha/drawHistory"*/, 0LL);
 }
 
 
@@ -56,38 +52,36 @@ void __fastcall GachaHistoryRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
+  ResponseData_o *v5; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v9; // x9
+  __int64 *v7; // x9
 
-  if ( (byte_4BC9447 & 1) == 0 )
+  if ( (byte_4BDDEF1 & 1) == 0 )
   {
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C1ABD4(&StringLiteral_22613/*"ok"*/, v5);
-    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
-    byte_4BC9447 = 1;
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&StringLiteral_22632/*"ok"*/);
+    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDEF1 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42452820(v7, 0LL) )
+  v5 = ResponseCommandKind__SearchData(70, responseList, 0LL);
+  if ( v5 && ResponseData__checkError_42505456(v5, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22613/*"ok"*/;
+    v7 = &StringLiteral_22632/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22437/*"ng"*/;
+    v7 = &StringLiteral_22456/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v9,
+    *v7,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

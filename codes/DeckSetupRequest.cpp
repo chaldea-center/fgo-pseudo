@@ -4,95 +4,88 @@ void __fastcall DeckSetupRequest__beginRequest(
         UserDeckEntity_o *userDeck,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
+  const MethodInfo *v7; // x3
+  System_Collections_Generic_List_object__o *v8; // x21
+  __int64 v9; // x0
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  const MethodInfo *v14; // x3
-  System_Collections_Generic_List_object__o *v15; // x21
-  __int64 v16; // x0
-  __int64 v17; // x1
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  MiniMessagePack_MiniMessagePacker_o *v28; // x20
-  System_Byte_array *v29; // x20
-  System_String_o *v30; // x0
-  const MethodInfo *v31; // x3
-  const MethodInfo *v32; // x1
+  Il2CppClass **v20; // x0
+  MiniMessagePack_MiniMessagePacker_o *v21; // x20
+  System_Byte_array *v22; // x20
+  System_String_o *v23; // x0
+  const MethodInfo *v24; // x3
+  const MethodInfo *v25; // x1
 
-  if ( (byte_4BC93CB & 1) == 0 )
+  if ( (byte_4BDDE75 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Convert_TypeInfo, activeDeckId);
-    sub_1C1ABD4(&JsonManager_TypeInfo, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UserDeckEntity__Add__, v8);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__, v9);
-    sub_1C1ABD4(&System_Collections_Generic_List_UserDeckEntity__TypeInfo, v10);
-    sub_1C1ABD4(&MiniMessagePack_MiniMessagePacker_TypeInfo, v11);
-    sub_1C1ABD4(&StringLiteral_16922/*"activeDeckId"*/, v12);
-    sub_1C1ABD4(&StringLiteral_24801/*"userDeck"*/, v13);
-    byte_4BC93CB = 1;
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&JsonManager_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UserDeckEntity__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+    sub_1C21E38(&MiniMessagePack_MiniMessagePacker_TypeInfo);
+    sub_1C21E38(&StringLiteral_16934/*"activeDeckId"*/);
+    sub_1C21E38(&StringLiteral_24821/*"userDeck"*/);
+    byte_4BDDE75 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson((Il2CppObject *)userDeck, 0, 0, 0LL);
-  RequestBase__addField_42368496((RequestBase_o *)this, (System_String_o *)StringLiteral_16922/*"activeDeckId"*/, activeDeckId, v14);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+  RequestBase__addField_42421084((RequestBase_o *)this, (System_String_o *)StringLiteral_16934/*"activeDeckId"*/, activeDeckId, v7);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v15,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
-  if ( !v15 )
+    v8,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+  if ( !v8 )
     goto LABEL_14;
-  items = v15->fields._items;
-  v25 = Method_System_Collections_Generic_List_UserDeckEntity__Add__;
-  ++v15->fields._version;
+  items = v8->fields._items;
+  v18 = Method_System_Collections_Generic_List_UserDeckEntity__Add__;
+  ++v8->fields._version;
   if ( !items )
     goto LABEL_14;
-  size = v15->fields._size;
+  size = v8->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v15,
+      v8,
       (Il2CppObject *)userDeck,
-      *(const MethodInfo_363C890 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v27 = &items->obj.klass + size;
-    v15->fields._size = size + 1;
-    v27[4] = (Il2CppClass *)userDeck;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v27 + 4), (int64_t)userDeck, v18, v19, v20, v21, v22, v23);
+    v20 = &items->obj.klass + size;
+    v8->fields._size = size + 1;
+    v20[4] = (Il2CppClass *)userDeck;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v20 + 4), (int64_t)userDeck, v11, v12, v13, v14, v15, v16);
   }
-  v28 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C1AE20(MiniMessagePack_MiniMessagePacker_TypeInfo);
-  MiniMessagePack_MiniMessagePacker___ctor(v28, 0LL);
-  if ( !v28 )
+  v21 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C22084(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v21, 0LL);
+  if ( !v21 )
 LABEL_14:
-    sub_1C1AE30(v16, v17);
-  v29 = MiniMessagePack_MiniMessagePacker__PackClass(v28, (Il2CppObject *)v15, 0LL);
+    sub_1C22094(v9, v10);
+  v22 = MiniMessagePack_MiniMessagePacker__PackClass(v21, (Il2CppObject *)v8, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v30 = System_Convert__ToBase64String(v29, 0LL);
-  RequestBase__addField_42362156((RequestBase_o *)this, (System_String_o *)StringLiteral_24801/*"userDeck"*/, v30, v31);
-  RequestBase__beginRequest((RequestBase_o *)this, v32);
+  v23 = System_Convert__ToBase64String(v22, 0LL);
+  RequestBase__addField_42414744((RequestBase_o *)this, (System_String_o *)StringLiteral_24821/*"userDeck"*/, v23, v24);
+  RequestBase__beginRequest((RequestBase_o *)this, v25);
 }
 
 
 System_String_o *__fastcall DeckSetupRequest__getMockData(DeckSetupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC93CA & 1) == 0 )
+  if ( (byte_4BDDE74 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
-    byte_4BC93CA = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDDE74 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -100,19 +93,18 @@ System_String_o *__fastcall DeckSetupRequest__getMockData(DeckSetupRequest_o *th
 
 System_String_o *__fastcall DeckSetupRequest__getURL(DeckSetupRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BC93C9 & 1) == 0 )
+  if ( (byte_4BDDE73 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_18819/*"deck/setup"*/, v2);
-    byte_4BC93C9 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_18834/*"deck/setup"*/);
+    byte_4BDDE73 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63040368(BaseUrl, (System_String_o *)StringLiteral_18819/*"deck/setup"*/, 0LL);
+  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_18834/*"deck/setup"*/, 0LL);
 }
 
 
@@ -121,38 +113,36 @@ void __fastcall DeckSetupRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
+  ResponseData_o *v5; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v9; // x9
+  __int64 *v7; // x9
 
-  if ( (byte_4BC93CC & 1) == 0 )
+  if ( (byte_4BDDE76 & 1) == 0 )
   {
-    sub_1C1ABD4(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C1ABD4(&StringLiteral_22613/*"ok"*/, v5);
-    sub_1C1ABD4(&StringLiteral_22437/*"ng"*/, v6);
-    byte_4BC93CC = 1;
+    sub_1C21E38(&ResponseCommandKind_TypeInfo);
+    sub_1C21E38(&StringLiteral_22632/*"ok"*/);
+    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
+    byte_4BDDE76 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(7, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42452820(v7, 0LL) )
+  v5 = ResponseCommandKind__SearchData(7, responseList, 0LL);
+  if ( v5 && ResponseData__checkError_42505456(v5, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22613/*"ok"*/;
+    v7 = &StringLiteral_22632/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22437/*"ng"*/;
+    v7 = &StringLiteral_22456/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v9,
+    *v7,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

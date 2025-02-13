@@ -1,13 +1,13 @@
 void __fastcall RestrictionMessageEntity___ctor(RestrictionMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8C14 & 1) == 0 )
+  if ( (byte_4BDD6B6 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BC8C14 = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDD6B6 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
 }
 
 

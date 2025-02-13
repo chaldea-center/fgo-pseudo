@@ -1,31 +1,30 @@
 void __fastcall UserEventMissionEntity___ctor(UserEventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8785 & 1) == 0 )
+  if ( (byte_4BDD228 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC8785 = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDD228 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventMissionEntity__CreatePK(
         int64_t userId,
         int32_t missionId,
         const MethodInfo *method)
 {
-  if ( (byte_4BC8783 & 1) == 0 )
+  if ( (byte_4BDD226 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&missionId);
-    byte_4BC8783 = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4BDD226 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_2F9D7BC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2FAE130 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -44,10 +43,10 @@ bool __fastcall UserEventMissionEntity__IsTodayMissionData(UserEventMissionEntit
   int64_t TodayStartTime; // x0
   int64_t updatedAt; // x19
 
-  if ( (byte_4BC8784 & 1) == 0 )
+  if ( (byte_4BDD227 & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, method);
-    byte_4BC8784 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BDD227 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

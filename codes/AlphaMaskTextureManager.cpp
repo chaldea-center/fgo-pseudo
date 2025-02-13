@@ -11,59 +11,58 @@ UIAlphaMaskTexture_o *__fastcall AlphaMaskTextureManager__Create(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
   Il2CppObject *prefab; // x21
   UnityEngine_Component_o *transform; // x0
-  __int64 v12; // x1
-  UnityEngine_Component_o *v13; // x21
-  UnityEngine_Transform_o *v14; // x23
+  __int64 v11; // x1
+  UnityEngine_Component_o *v12; // x21
+  UnityEngine_Transform_o *v13; // x23
+  UnityEngine_Transform_o *v14; // x22
   UnityEngine_Transform_o *v15; // x22
-  UnityEngine_Transform_o *v16; // x22
 
-  if ( (byte_4BCA912 & 1) == 0 )
+  if ( (byte_4BDF3C4 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___, root);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BCA912 = 1;
+    sub_1C21E38(&Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDF3C4 = 1;
   }
   prefab = (Il2CppObject *)this->fields.prefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   transform = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object_(
                                            prefab,
-                                           (const MethodInfo_3024F48 *)Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
+                                           (const MethodInfo_30358BC *)Method_UnityEngine_Object_Instantiate_UIAlphaMaskTexture___);
   if ( !transform )
     goto LABEL_15;
-  v13 = transform;
+  v12 = transform;
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0LL);
   if ( !root )
     goto LABEL_15;
-  v14 = (UnityEngine_Transform_o *)transform;
+  v13 = (UnityEngine_Transform_o *)transform;
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(root, 0LL);
+  if ( !v13 )
+    goto LABEL_15;
+  UnityEngine_Transform__SetParent(v13, (UnityEngine_Transform_o *)transform, 0LL);
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v12, 0LL);
+  v14 = (UnityEngine_Transform_o *)transform;
+  if ( !byte_4BD6BB1 )
+  {
+    transform = (UnityEngine_Component_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
+  }
   if ( !v14 )
     goto LABEL_15;
-  UnityEngine_Transform__SetParent(v14, (UnityEngine_Transform_o *)transform, 0LL);
-  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v13, 0LL);
+  UnityEngine_Transform__set_localPosition(v14, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v12, 0LL);
   v15 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB6 )
   {
-    transform = (UnityEngine_Component_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v12);
-    byte_4BC2141 = 1;
+    transform = (UnityEngine_Component_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB6 = 1;
   }
   if ( !v15 )
-    goto LABEL_15;
-  UnityEngine_Transform__set_localPosition(v15, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(v13, 0LL);
-  v16 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2146 )
-  {
-    transform = (UnityEngine_Component_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v12);
-    byte_4BC2146 = 1;
-  }
-  if ( !v16 )
 LABEL_15:
-    sub_1C1AE30(transform, v12);
-  UnityEngine_Transform__set_localScale(v16, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-  UIAlphaMaskTexture__SetAlphaMaskTexture((UIAlphaMaskTexture_o *)v13, loadName, callback, 0LL);
-  return (UIAlphaMaskTexture_o *)v13;
+    sub_1C22094(transform, v11);
+  UnityEngine_Transform__set_localScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+  UIAlphaMaskTexture__SetAlphaMaskTexture((UIAlphaMaskTexture_o *)v12, loadName, callback, 0LL);
+  return (UIAlphaMaskTexture_o *)v12;
 }

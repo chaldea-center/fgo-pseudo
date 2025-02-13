@@ -1,13 +1,13 @@
 void __fastcall WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8AA3 & 1) == 0 )
+  if ( (byte_4BDD546 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BC8AA3 = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDD546 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_Int32_array *__fastcall WarBoardEventEntity__GetSquareIndicesToAdd(
         WarBoardEventEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC8AA0 & 1) == 0 )
+  if ( (byte_4BDD543 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_16945/*"addSquareIndex"*/, method);
-    byte_4BC8AA0 = 1;
+    sub_1C21E38(&StringLiteral_16957/*"addSquareIndex"*/);
+    byte_4BDD543 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16945/*"addSquareIndex"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16957/*"addSquareIndex"*/, 0LL, 0LL);
 }
 
 
@@ -46,7 +46,7 @@ bool __fastcall WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -56,23 +56,23 @@ LABEL_7:
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8AA1 & 1) == 0 )
+  if ( (byte_4BDD544 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_20968/*"includeInvolvedAttacker"*/, method);
-    byte_4BC8AA1 = 1;
+    sub_1C21E38(&StringLiteral_20986/*"includeInvolvedAttacker"*/);
+    byte_4BDD544 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20968/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20986/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
 }
 
 
 bool __fastcall WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8AA2 & 1) == 0 )
+  if ( (byte_4BDD545 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_20969/*"includeInvolvedDefender"*/, method);
-    byte_4BC8AA2 = 1;
+    sub_1C21E38(&StringLiteral_20987/*"includeInvolvedDefender"*/);
+    byte_4BDD545 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20969/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20987/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
 }
 
 
@@ -94,14 +94,14 @@ bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_4BC8A9F & 1) == 0 )
+  if ( (byte_4BDD542 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4BC8A9F = 1;
+    sub_1C21E38(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4BDD542 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0LL )
-    sub_1C1AE30(Instance, v4);
+    sub_1C22094(Instance, v4);
   PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0LL);
   if ( !PlayedEventData )
     return 1;

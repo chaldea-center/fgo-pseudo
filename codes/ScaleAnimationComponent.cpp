@@ -6,21 +6,21 @@ void __fastcall ScaleAnimationComponent___ctor(ScaleAnimationComponent_o *this, 
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.minScale.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.minScale.fields.z = z;
-  if ( !byte_4BC2146 )
+  if ( !byte_4BD6BB6 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, method);
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
     v3 = UnityEngine_Vector3_TypeInfo;
-    byte_4BC2146 = 1;
+    byte_4BD6BB6 = 1;
   }
   v6 = v3->static_fields;
   v7 = v6->oneVector.fields.z;
@@ -71,12 +71,12 @@ void __fastcall ScaleAnimationComponent__PlayAnimation(
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
   v10.fields.x = p_maxScale->fields.x;
-  ScaleAnimationComponent__PlayAnimation_31276868(this, animationType, v10, v11, onFinish, method);
+  ScaleAnimationComponent__PlayAnimation_31306160(this, animationType, v10, v11, onFinish, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScaleAnimationComponent__PlayAnimation_31276868(
+void __fastcall ScaleAnimationComponent__PlayAnimation_31306160(
         ScaleAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromScale,
@@ -105,10 +105,10 @@ void __fastcall ScaleAnimationComponent__PlayAnimation_31276868(
   v10 = fromScale.fields.z;
   v11 = fromScale.fields.y;
   v12 = fromScale.fields.x;
-  if ( (byte_4BC27AE & 1) == 0 )
+  if ( (byte_4BD721E & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-    byte_4BC27AE = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BD721E = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -120,7 +120,7 @@ void __fastcall ScaleAnimationComponent__PlayAnimation_31276868(
     || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL )
   {
 LABEL_16:
-    sub_1C1AE30(transform, v17);
+    sub_1C22094(transform, v17);
   }
   v20.fields.x = v12;
   v20.fields.y = v11;

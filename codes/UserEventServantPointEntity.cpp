@@ -1,11 +1,9 @@
 void __fastcall UserEventServantPointEntity___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4BC87CC & 1) == 0 )
+  if ( (byte_4BDD26F & 1) == 0 )
   {
-    sub_1C1ABD4(&UserEventServantPointEntity_TypeInfo, v1);
-    byte_4BC87CC = 1;
+    sub_1C21E38(&UserEventServantPointEntity_TypeInfo);
+    byte_4BDD26F = 1;
   }
   UserEventServantPointEntity_TypeInfo->static_fields->MAX_BUDDY_POINT = 9999999LL;
 }
@@ -13,34 +11,33 @@ void __fastcall UserEventServantPointEntity___cctor(const MethodInfo *method)
 
 void __fastcall UserEventServantPointEntity___ctor(UserEventServantPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC87CB & 1) == 0 )
+  if ( (byte_4BDD26E & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC87CB = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDD26E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventServantPointEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
         int32_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_4BC87C8 & 1) == 0 )
+  if ( (byte_4BDD26B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&eventId);
-    byte_4BC87C8 = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4BDD26B = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            svtId,
-           (const MethodInfo_2F9DD00 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_2FAE674 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -48,35 +45,34 @@ System_String_o *__fastcall UserEventServantPointEntity__CreatePrimaryKey(
         UserEventServantPointEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int128 v4; // q0
-  int64_t v5; // x0
-  const MethodInfo *v6; // x3
+  __int128 v3; // q0
+  int64_t v4; // x0
+  const MethodInfo *v5; // x3
   int32_t svtId; // w19
   int32_t eventId; // w20
-  int64_t v9; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-40h]
+  int64_t v8; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v10; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v11; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4BC87C7 & 1) == 0 )
+  if ( (byte_4BDD26A & 1) == 0 )
   {
-    sub_1C1ABD4(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    sub_1C1ABD4(&UserEventServantPointEntity_TypeInfo, v3);
-    byte_4BC87C7 = 1;
+    sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C21E38(&UserEventServantPointEntity_TypeInfo);
+    byte_4BDD26A = 1;
   }
-  v4 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v12.fields.fakeValue = v4;
+  v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
+  *(_OWORD *)&v11.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v11.fields.fakeValue = v3;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v11 = v12;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47559652(&v11, 0LL);
+  v10 = v11;
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v10, 0LL);
   eventId = this->fields.eventId;
   svtId = this->fields.svtId;
-  v9 = v5;
+  v8 = v4;
   if ( !UserEventServantPointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserEventServantPointEntity_TypeInfo);
-  return UserEventServantPointEntity__CreatePK(v9, eventId, svtId, v6);
+  return UserEventServantPointEntity__CreatePK(v8, eventId, svtId, v5);
 }
 
 
@@ -87,10 +83,10 @@ int32_t __fastcall UserEventServantPointEntity__GetBuddyPoint(
   const MethodInfo *v2; // x2
   UserEventServantPointEntity_c *v4; // x0
 
-  if ( (byte_4BC87CA & 1) == 0 )
+  if ( (byte_4BDD26D & 1) == 0 )
   {
-    sub_1C1ABD4(&UserEventServantPointEntity_TypeInfo, method);
-    byte_4BC87CA = 1;
+    sub_1C21E38(&UserEventServantPointEntity_TypeInfo);
+    byte_4BDD26D = 1;
   }
   v4 = UserEventServantPointEntity_TypeInfo;
   if ( !UserEventServantPointEntity_TypeInfo->_2.cctor_finished )
@@ -107,25 +103,22 @@ int32_t __fastcall UserEventServantPointEntity__GetIntValue(
         int64_t maxValue,
         const MethodInfo *method)
 {
-  int64_t v3; // x19
-  __int64 v5; // x1
   int64_t value; // x20
-  int64_t v7; // x19
+  int64_t v6; // x19
 
-  v3 = maxValue;
-  if ( (byte_4BC87C9 & 1) == 0 )
+  if ( (byte_4BDD26C & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Convert_TypeInfo, maxValue);
-    sub_1C1ABD4(&System_Math_TypeInfo, v5);
-    byte_4BC87C9 = 1;
+    sub_1C21E38(&System_Convert_TypeInfo);
+    sub_1C21E38(&System_Math_TypeInfo);
+    byte_4BDD26C = 1;
   }
   value = this->fields.value;
-  if ( !v3 )
-    v3 = 0x7FFFFFFFLL;
+  if ( !maxValue )
+    maxValue = 0x7FFFFFFFLL;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v7 = System_Math__Min_63859852(v3, value, 0LL);
+  v6 = System_Math__Min_63934960(maxValue, value, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  return System_Convert__ToInt32_63696680(v7, 0LL);
+  return System_Convert__ToInt32_63771788(v6, 0LL);
 }

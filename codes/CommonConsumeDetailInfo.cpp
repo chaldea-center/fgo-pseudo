@@ -37,9 +37,9 @@ void __fastcall CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
   this->fields.targetEntity = targetEntity;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.targetEntity,
     (int64_t)targetEntity,
     v15,
@@ -49,7 +49,7 @@ void __fastcall CommonConsumeDetailInfo___ctor(
     v19,
     v20);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.userOwnStatusEntity,
     (int64_t)userOwnStatusEntity,
     v21,
@@ -60,11 +60,11 @@ void __fastcall CommonConsumeDetailInfo___ctor(
     v26);
   v29 = this->fields.CommonConsumeEntity;
   if ( !v29 )
-    sub_1C1AE30(v27, v28);
+    sub_1C22094(v27, v28);
   this->fields._Num_k__BackingField = v29->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)TargetName,
     v31,
@@ -81,18 +81,17 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
         CommonConsumeDetailInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *targetEntity; // x8
   __int64 methodPtr_low; // x10
   bool result; // w0
   Il2CppObject *userOwnStatusEntity; // x8
-  __int64 v8; // x11
+  __int64 v7; // x11
 
-  if ( (byte_4BC75AB & 1) == 0 )
+  if ( (byte_4BDC041 & 1) == 0 )
   {
-    sub_1C1ABD4(&ItemEntity_TypeInfo, method);
-    sub_1C1ABD4(&UserItemEntity_TypeInfo, v3);
-    byte_4BC75AB = 1;
+    sub_1C21E38(&ItemEntity_TypeInfo);
+    sub_1C21E38(&UserItemEntity_TypeInfo);
+    byte_4BDC041 = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -100,9 +99,9 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
             LOBYTE(targetEntity->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low)
         && (ItemEntity_c *)targetEntity->klass->_2.typeHierarchy[methodPtr_low - 1] == ItemEntity_TypeInfo
         && (userOwnStatusEntity = this->fields.userOwnStatusEntity) != 0LL
-        && (v8 = LOBYTE(UserItemEntity_TypeInfo->vtable._0_Equals.methodPtr),
-            LOBYTE(userOwnStatusEntity->klass->vtable[0].methodPtr) >= (unsigned int)v8)
-        && (UserItemEntity_c *)userOwnStatusEntity->klass->_2.typeHierarchy[v8 - 1] == UserItemEntity_TypeInfo
+        && (v7 = LOBYTE(UserItemEntity_TypeInfo->vtable._0_Equals.methodPtr),
+            LOBYTE(userOwnStatusEntity->klass->vtable[0].methodPtr) >= (unsigned int)v7)
+        && (UserItemEntity_c *)userOwnStatusEntity->klass->_2.typeHierarchy[v7 - 1] == UserItemEntity_TypeInfo
         && HIDWORD(userOwnStatusEntity[1].monitor) - this->fields._Num_k__BackingField >= 0;
   return result;
 }
@@ -112,16 +111,15 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
         CommonConsumeDetailInfo_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *targetEntity; // x8
   __int64 methodPtr_low; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4BC75AA & 1) == 0 )
+  if ( (byte_4BDC040 & 1) == 0 )
   {
-    sub_1C1ABD4(&ItemEntity_TypeInfo, method);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v3);
-    byte_4BC75AA = 1;
+    sub_1C21E38(&ItemEntity_TypeInfo);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDC040 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -180,7 +178,7 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)value,
     (int64_t)method,

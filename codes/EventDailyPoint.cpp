@@ -13,5 +13,5 @@ void __fastcall EventDailyPoint___ctor(EventDailyPoint_o *this, const MethodInfo
   v2->fields._normalFollowerInfo = 0LL;
   v2 = (PartyOrganizationUtility_o *)((char *)v2 + 24);
   *(_DWORD *)&v2[-1].fields._IsQuestStartMenuMode_k__BackingField = 0;
-  sub_1C1AB78(v2, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C21DDC(v2, 0LL, v3, v4, v5, v6, v7, v8);
 }

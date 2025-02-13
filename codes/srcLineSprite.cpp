@@ -8,67 +8,59 @@ void __fastcall srcLineSprite___ctor(srcLineSprite_o *this, const MethodInfo *me
   PartyListViewItem_o *v7; // x7
   void *v9; // x1
 
-  if ( (byte_4BC4EAA & 1) == 0 )
+  if ( (byte_4BD9939 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_1/*""*/, method);
-    byte_4BC4EAA = 1;
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BD9939 = 1;
   }
   this->fields.mfWidth = 20.0;
   v9 = StringLiteral_1/*""*/;
   this->fields.msSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.msSpriteName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.msSpriteName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall srcLineSprite__Awake(srcLineSprite_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   UnityEngine_Object_o *mcMyTrans; // x20
   UnityEngine_Object_o *mcLineSprite; // x20
   UnityEngine_Object_o *mcTweenAlphaP; // x20
   UnityEngine_Object_o *mcTweenScaleP; // x20
   struct CStateManager_srcLineSprite__o **p_mFSM; // x20
-  CStateManager_T__o *v16; // x21
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  CStateManager_T__o *v8; // x21
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
   CStateManager_T__o *mFSM; // x21
+  Il2CppObject *v16; // x22
+  __int64 v17; // x0
+  __int64 v18; // x1
+  CStateManager_T__o *v19; // x21
+  Il2CppObject *v20; // x22
+  CStateManager_T__o *v21; // x21
+  Il2CppObject *v22; // x22
+  CStateManager_T__o *v23; // x21
   Il2CppObject *v24; // x22
-  __int64 v25; // x0
-  __int64 v26; // x1
-  CStateManager_T__o *v27; // x21
-  Il2CppObject *v28; // x22
-  CStateManager_T__o *v29; // x21
-  Il2CppObject *v30; // x22
-  CStateManager_T__o *v31; // x21
-  Il2CppObject *v32; // x22
-  CStateManager_T__o *v33; // x20
-  Il2CppObject *v34; // x21
-  const MethodInfo *v35; // x3
+  CStateManager_T__o *v25; // x20
+  Il2CppObject *v26; // x21
+  const MethodInfo *v27; // x3
 
-  if ( (byte_4BC4EA4 & 1) == 0 )
+  if ( (byte_4BD9933 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_CStateManager_srcLineSprite___ctor__, method);
-    sub_1C1ABD4(&Method_CStateManager_srcLineSprite__add__, v3);
-    sub_1C1ABD4(&CStateManager_srcLineSprite__TypeInfo, v4);
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C1ABD4(&srcLineSprite_StateMapMain_TypeInfo, v6);
-    sub_1C1ABD4(&srcLineSprite_StateNone_TypeInfo, v7);
-    sub_1C1ABD4(&srcLineSprite_StateQaaDisp_TypeInfo, v8);
-    sub_1C1ABD4(&srcLineSprite_StateQaaGray_TypeInfo, v9);
-    sub_1C1ABD4(&srcLineSprite_StateQaaHide_TypeInfo, v10);
-    byte_4BC4EA4 = 1;
+    sub_1C21E38(&Method_CStateManager_srcLineSprite___ctor__);
+    sub_1C21E38(&Method_CStateManager_srcLineSprite__add__);
+    sub_1C21E38(&CStateManager_srcLineSprite__TypeInfo);
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    sub_1C21E38(&srcLineSprite_StateMapMain_TypeInfo);
+    sub_1C21E38(&srcLineSprite_StateNone_TypeInfo);
+    sub_1C21E38(&srcLineSprite_StateQaaDisp_TypeInfo);
+    sub_1C21E38(&srcLineSprite_StateQaaGray_TypeInfo);
+    sub_1C21E38(&srcLineSprite_StateQaaHide_TypeInfo);
+    byte_4BD9933 = 1;
   }
   mcMyTrans = (UnityEngine_Object_o *)this->fields.mcMyTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,67 +87,67 @@ void __fastcall srcLineSprite__Awake(srcLineSprite_o *this, const MethodInfo *me
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v16 = (CStateManager_T__o *)sub_1C1AE20(CStateManager_srcLineSprite__TypeInfo);
+    v8 = (CStateManager_T__o *)sub_1C22084(CStateManager_srcLineSprite__TypeInfo);
     CStateManager_object____ctor(
-      v16,
+      v8,
       (Il2CppObject *)this,
       5,
-      (const MethodInfo_31D32D0 *)Method_CStateManager_srcLineSprite___ctor__);
-    this->fields.mFSM = (struct CStateManager_srcLineSprite__o *)v16;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+      (const MethodInfo_31E6A20 *)Method_CStateManager_srcLineSprite___ctor__);
+    this->fields.mFSM = (struct CStateManager_srcLineSprite__o *)v8;
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v8, v9, v10, v11, v12, v13, v14);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v24 = (Il2CppObject *)sub_1C1AE20(srcLineSprite_StateNone_TypeInfo);
-    System_Object___ctor(v24, 0LL);
+    v16 = (Il2CppObject *)sub_1C22084(srcLineSprite_StateNone_TypeInfo);
+    System_Object___ctor(v16, 0LL);
     if ( !mFSM )
       goto LABEL_22;
     CStateManager_object___add(
       mFSM,
       0,
-      (IState_T__o *)v24,
-      (const MethodInfo_31D3378 *)Method_CStateManager_srcLineSprite__add__);
-    v27 = (CStateManager_T__o *)*p_mFSM;
-    v28 = (Il2CppObject *)sub_1C1AE20(srcLineSprite_StateMapMain_TypeInfo);
-    System_Object___ctor(v28, 0LL);
-    if ( !v27 )
+      (IState_T__o *)v16,
+      (const MethodInfo_31E6AC8 *)Method_CStateManager_srcLineSprite__add__);
+    v19 = (CStateManager_T__o *)*p_mFSM;
+    v20 = (Il2CppObject *)sub_1C22084(srcLineSprite_StateMapMain_TypeInfo);
+    System_Object___ctor(v20, 0LL);
+    if ( !v19 )
       goto LABEL_22;
     CStateManager_object___add(
-      v27,
+      v19,
       1,
-      (IState_T__o *)v28,
-      (const MethodInfo_31D3378 *)Method_CStateManager_srcLineSprite__add__);
-    v29 = (CStateManager_T__o *)*p_mFSM;
-    v30 = (Il2CppObject *)sub_1C1AE20(srcLineSprite_StateQaaHide_TypeInfo);
-    System_Object___ctor(v30, 0LL);
-    if ( !v29 )
+      (IState_T__o *)v20,
+      (const MethodInfo_31E6AC8 *)Method_CStateManager_srcLineSprite__add__);
+    v21 = (CStateManager_T__o *)*p_mFSM;
+    v22 = (Il2CppObject *)sub_1C22084(srcLineSprite_StateQaaHide_TypeInfo);
+    System_Object___ctor(v22, 0LL);
+    if ( !v21 )
       goto LABEL_22;
     CStateManager_object___add(
-      v29,
+      v21,
       2,
-      (IState_T__o *)v30,
-      (const MethodInfo_31D3378 *)Method_CStateManager_srcLineSprite__add__);
-    v31 = (CStateManager_T__o *)*p_mFSM;
-    v32 = (Il2CppObject *)sub_1C1AE20(srcLineSprite_StateQaaGray_TypeInfo);
-    System_Object___ctor(v32, 0LL);
-    if ( !v31
+      (IState_T__o *)v22,
+      (const MethodInfo_31E6AC8 *)Method_CStateManager_srcLineSprite__add__);
+    v23 = (CStateManager_T__o *)*p_mFSM;
+    v24 = (Il2CppObject *)sub_1C22084(srcLineSprite_StateQaaGray_TypeInfo);
+    System_Object___ctor(v24, 0LL);
+    if ( !v23
       || (CStateManager_object___add(
-            v31,
+            v23,
             3,
-            (IState_T__o *)v32,
-            (const MethodInfo_31D3378 *)Method_CStateManager_srcLineSprite__add__),
-          v33 = (CStateManager_T__o *)*p_mFSM,
-          v34 = (Il2CppObject *)sub_1C1AE20(srcLineSprite_StateQaaDisp_TypeInfo),
-          System_Object___ctor(v34, 0LL),
-          !v33) )
+            (IState_T__o *)v24,
+            (const MethodInfo_31E6AC8 *)Method_CStateManager_srcLineSprite__add__),
+          v25 = (CStateManager_T__o *)*p_mFSM,
+          v26 = (Il2CppObject *)sub_1C22084(srcLineSprite_StateQaaDisp_TypeInfo),
+          System_Object___ctor(v26, 0LL),
+          !v25) )
     {
 LABEL_22:
-      sub_1C1AE30(v25, v26);
+      sub_1C22094(v17, v18);
     }
     CStateManager_object___add(
-      v33,
+      v25,
       4,
-      (IState_T__o *)v34,
-      (const MethodInfo_31D3378 *)Method_CStateManager_srcLineSprite__add__);
-    srcLineSprite__SetState(this, 1, 0LL, v35);
+      (IState_T__o *)v26,
+      (const MethodInfo_31E6AC8 *)Method_CStateManager_srcLineSprite__add__);
+    srcLineSprite__SetState(this, 1, 0LL, v27);
   }
 }
 
@@ -173,19 +165,18 @@ float __fastcall srcLineSprite__GetAim(
 
 System_String_o *__fastcall srcLineSprite__GetGobjName(int32_t id, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  System_String_o *v3; // x0
-  int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
+  System_String_o *v2; // x0
+  int32_t v4; // [xsp+Ch] [xbp-24h] BYREF
 
-  v5 = id;
-  if ( (byte_4BC4EA3 & 1) == 0 )
+  v4 = id;
+  if ( (byte_4BD9932 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_13148/*"Spot_Line_"*/, method);
-    sub_1C1ABD4(&StringLiteral_1220/*"00"*/, v2);
-    byte_4BC4EA3 = 1;
+    sub_1C21E38(&StringLiteral_13158/*"Spot_Line_"*/);
+    sub_1C21E38(&StringLiteral_1220/*"00"*/);
+    byte_4BD9932 = 1;
   }
-  v3 = System_Int32__ToString_63845976((int32_t)&v5, (System_String_o *)StringLiteral_1220/*"00"*/, 0LL);
-  return System_String__Concat_63040368((System_String_o *)StringLiteral_13148/*"Spot_Line_"*/, v3, 0LL);
+  v2 = System_Int32__ToString_63921084((int32_t)&v4, (System_String_o *)StringLiteral_1220/*"00"*/, 0LL);
+  return System_String__Concat_63115476((System_String_o *)StringLiteral_13158/*"Spot_Line_"*/, v2, 0LL);
 }
 
 
@@ -203,14 +194,14 @@ int32_t __fastcall srcLineSprite__GetState(srcLineSprite_o *this, const MethodIn
   struct CStateManager_srcLineSprite__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4BC4EA6 & 1) == 0 )
+  if ( (byte_4BD9935 & 1) == 0 )
   {
-    this = (srcLineSprite_o *)sub_1C1ABD4(&Method_CStateManager_srcLineSprite__getState__, method);
-    byte_4BC4EA6 = 1;
+    this = (srcLineSprite_o *)sub_1C21E38(&Method_CStateManager_srcLineSprite__getState__);
+    byte_4BD9935 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -223,7 +214,7 @@ void __fastcall srcLineSprite__SetContrast(srcLineSprite_o *this, float val, con
 
   mcLineSprite = (UIWidget_o *)this->fields.mcLineSprite;
   if ( !mcLineSprite )
-    sub_1C1AE30(0LL, method);
+    sub_1C22094(0LL, method);
   v4 = 1.0;
   UIWidget__set_color(mcLineSprite, *(UnityEngine_Color_o *)&val, 0LL);
 }
@@ -241,7 +232,7 @@ void __fastcall srcLineSprite__SetMapCtrl_SpotRoadInfo(
   PartyListViewItem_o *v7; // x7
 
   this->fields.mMapCtrl_SpotRoadInfo = MapCtrl_SpotRoadInfo;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.mMapCtrl_SpotRoadInfo,
     (int64_t)MapCtrl_SpotRoadInfo,
     (int64_t)method,
@@ -255,276 +246,261 @@ void __fastcall srcLineSprite__SetMapCtrl_SpotRoadInfo(
 
 void __fastcall srcLineSprite__SetQaaColorAnim(srcLineSprite_o *this, bool isActive, const MethodInfo *method)
 {
-  srcLineSprite__SetQaaColorAnim_35763388(this, isActive, 0.5, method);
+  srcLineSprite__SetQaaColorAnim_35804384(this, isActive, 0.5, method);
 }
 
 
 void __fastcall srcLineSprite__SetQaaColorAnimQuick(srcLineSprite_o *this, bool isActive, const MethodInfo *method)
 {
-  srcLineSprite__SetQaaColorAnim_35763388(this, isActive, 0.0, method);
+  srcLineSprite__SetQaaColorAnim_35804384(this, isActive, 0.0, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall srcLineSprite__SetQaaColorAnim_35763388(
+void __fastcall srcLineSprite__SetQaaColorAnim_35804384(
         srcLineSprite_o *this,
         bool is_disp,
         float time,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x20
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x20
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  float v28; // s9
-  EasingObject_o *v29; // x21
-  System_Action_o *v30; // x22
-  System_Action_o *v31; // x23
-  float v32; // s0
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  float v24; // s9
+  EasingObject_o *v25; // x21
+  System_Action_o *v26; // x22
+  System_Action_o *v27; // x23
+  float v28; // s0
 
-  if ( (byte_4BC4EA9 & 1) == 0 )
+  if ( (byte_4BD9938 & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, is_disp);
-    sub_1C1ABD4(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v7);
-    sub_1C1ABD4(&Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__0__, v8);
-    sub_1C1ABD4(&Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__1__, v9);
-    sub_1C1ABD4(&srcLineSprite___c__DisplayClass39_0_TypeInfo, v10);
-    byte_4BC4EA9 = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    sub_1C21E38(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C21E38(&Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__0__);
+    sub_1C21E38(&Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__1__);
+    sub_1C21E38(&srcLineSprite___c__DisplayClass39_0_TypeInfo);
+    byte_4BD9938 = 1;
   }
-  v11 = sub_1C1AE20(srcLineSprite___c__DisplayClass39_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
+  v7 = sub_1C22084(srcLineSprite___c__DisplayClass39_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
     goto LABEL_12;
-  *(_QWORD *)(v11 + 16) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  *(_QWORD *)(v7 + 16) = this;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_2FF16A8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-  *(_QWORD *)(v11 + 24) = Component_object;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)Component_object, v22, v23, v24, v25, v26, v27);
-  v28 = is_disp ? 1.0 : 0.5;
-  *(float *)(v11 + 32) = v28;
-  v29 = *(EasingObject_o **)(v11 + 24);
-  v30 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(
-    v30,
-    (Il2CppObject *)v11,
-    Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__0__,
-    0LL);
-  v31 = (System_Action_o *)sub_1C1AE20(System_Action_TypeInfo);
-  System_Action___ctor(
-    v31,
-    (Il2CppObject *)v11,
-    Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__1__,
-    0LL);
-  if ( !v29 )
+                       (const MethodInfo_300201C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+  *(_QWORD *)(v7 + 24) = Component_object;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)Component_object, v18, v19, v20, v21, v22, v23);
+  v24 = is_disp ? 1.0 : 0.5;
+  *(float *)(v7 + 32) = v24;
+  v25 = *(EasingObject_o **)(v7 + 24);
+  v26 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v26, (Il2CppObject *)v7, Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__0__, 0LL);
+  v27 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  System_Action___ctor(v27, (Il2CppObject *)v7, Method_srcLineSprite___c__DisplayClass39_0__SetQaaColorAnim_b__1__, 0LL);
+  if ( !v25 )
 LABEL_12:
-    sub_1C1AE30(v12, v13);
+    sub_1C22094(v8, v9);
   if ( is_disp )
-    v32 = 0.5;
+    v28 = 0.5;
   else
-    v32 = 1.0;
-  EasingObject__Play_47677196(v29, v32, v28, time, v30, v31, 0.0, 17, 0LL);
+    v28 = 1.0;
+  EasingObject__Play_47745152(v25, v28, v24, time, v26, v27, 0.0, 17, 0LL);
 }
 
 
 void __fastcall srcLineSprite__SetQaaScaleAnim(srcLineSprite_o *this, bool isDisp, const MethodInfo *method)
 {
-  srcLineSprite__SetQaaScaleAnim_35762696(this, isDisp, 0.5, method);
+  srcLineSprite__SetQaaScaleAnim_35803692(this, isDisp, 0.5, method);
 }
 
 
 void __fastcall srcLineSprite__SetQaaScaleAnimQuick(srcLineSprite_o *this, bool isDisp, const MethodInfo *method)
 {
-  srcLineSprite__SetQaaScaleAnim_35762696(this, isDisp, 0.0, method);
+  srcLineSprite__SetQaaScaleAnim_35803692(this, isDisp, 0.0, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall srcLineSprite__SetQaaScaleAnim_35762696(
+void __fastcall srcLineSprite__SetQaaScaleAnim_35803692(
         srcLineSprite_o *this,
         bool is_disp,
         float time,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Transform_o *mcMyTrans; // x0
-  __int64 v11; // x1
-  UnityEngine_Transform_o *v12; // x21
-  UnityEngine_Vector3_c *v13; // x8
+  __int64 v9; // x1
+  UnityEngine_Transform_o *v10; // x21
+  UnityEngine_Vector3_c *v11; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   int *p_y; // x10
   intptr_t *p_z; // x11
-  struct UnityEngine_Vector3_StaticFields *v17; // x11
-  int v18; // s1
-  intptr_t v19; // s2
-  struct UnityEngine_Vector3_StaticFields *v20; // x10
+  struct UnityEngine_Vector3_StaticFields *v15; // x11
+  int v16; // s1
+  intptr_t v17; // s2
+  struct UnityEngine_Vector3_StaticFields *v18; // x10
   _DWORD *p_x; // x8
-  int *v22; // x9
-  int *v23; // x10
-  int v24; // s1
-  int v25; // s2
-  UnityEngine_GameObject_o *v26; // x0
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  int64_t v33; // x1
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
-  UnityEngine_GameObject_o *v40; // x0
+  int *v20; // x9
+  int *v21; // x10
+  int v22; // s1
+  int v23; // s2
+  UnityEngine_GameObject_o *v24; // x0
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  int64_t v31; // x1
+  int64_t v32; // x2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  BattleSetupInfo_o *v35; // x5
+  FollowerInfo_o *v36; // x6
+  PartyListViewItem_o *v37; // x7
+  UnityEngine_GameObject_o *v38; // x0
   float x; // s8
   float y; // s9
-  float *v43; // x21
-  float v44; // s2
+  float *v41; // x21
+  float v42; // s2
   float z; // s10
-  float v46; // s1
-  float v47; // s0
+  float v44; // s1
+  float v45; // s0
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BC4EA8 & 1) == 0 )
+  if ( (byte_4BD9937 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_UITweener_Begin_TweenPosition___, is_disp);
-    sub_1C1ABD4(&Method_UITweener_Begin_TweenScale___, v7);
-    sub_1C1ABD4(&StringLiteral_13222/*"StateQaaEnd"*/, v8);
-    byte_4BC4EA8 = 1;
+    sub_1C21E38(&Method_UITweener_Begin_TweenPosition___);
+    sub_1C21E38(&Method_UITweener_Begin_TweenScale___);
+    sub_1C21E38(&StringLiteral_13232/*"StateQaaEnd"*/);
+    byte_4BD9937 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   mcMyTrans = (UnityEngine_Transform_o *)UITweener__Begin_object_(
                                            gameObject,
                                            time,
-                                           (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenScale___);
-  v12 = mcMyTrans;
+                                           (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenScale___);
+  v10 = mcMyTrans;
   if ( is_disp )
   {
-    if ( !byte_4BC2141 )
+    if ( !byte_4BD6BB1 )
     {
-      mcMyTrans = (UnityEngine_Transform_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v11);
-      byte_4BC2141 = 1;
+      mcMyTrans = (UnityEngine_Transform_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      byte_4BD6BB1 = 1;
     }
-    v13 = UnityEngine_Vector3_TypeInfo;
+    v11 = UnityEngine_Vector3_TypeInfo;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = (int *)&static_fields->zeroVector.fields.y;
     p_z = (intptr_t *)&static_fields->zeroVector.fields.z;
   }
   else
   {
-    if ( !byte_4BC2146 )
+    if ( !byte_4BD6BB6 )
     {
-      mcMyTrans = (UnityEngine_Transform_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v11);
-      byte_4BC2146 = 1;
+      mcMyTrans = (UnityEngine_Transform_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      byte_4BD6BB6 = 1;
     }
-    v13 = UnityEngine_Vector3_TypeInfo;
-    v17 = UnityEngine_Vector3_TypeInfo->static_fields;
-    static_fields = (struct UnityEngine_Vector3_StaticFields *)&v17->oneVector;
-    p_y = (int *)&v17->oneVector.fields.y;
-    p_z = (intptr_t *)&v17->oneVector.fields.z;
+    v11 = UnityEngine_Vector3_TypeInfo;
+    v15 = UnityEngine_Vector3_TypeInfo->static_fields;
+    static_fields = (struct UnityEngine_Vector3_StaticFields *)&v15->oneVector;
+    p_y = (int *)&v15->oneVector.fields.y;
+    p_z = (intptr_t *)&v15->oneVector.fields.z;
   }
-  if ( !v12 )
+  if ( !v10 )
     goto LABEL_30;
-  v18 = *p_y;
-  v19 = *p_z;
-  *(float *)&v12[5].monitor = static_fields->zeroVector.fields.x;
-  HIDWORD(v12[5].monitor) = v18;
-  v12[5].fields.m_CachedPtr = v19;
+  v16 = *p_y;
+  v17 = *p_z;
+  *(float *)&v10[5].monitor = static_fields->zeroVector.fields.x;
+  HIDWORD(v10[5].monitor) = v16;
+  v10[5].fields.m_CachedPtr = v17;
   if ( is_disp )
   {
-    if ( !byte_4BC2146 )
+    if ( !byte_4BD6BB6 )
     {
-      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v11);
-      v13 = UnityEngine_Vector3_TypeInfo;
-      byte_4BC2146 = 1;
+      sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      v11 = UnityEngine_Vector3_TypeInfo;
+      byte_4BD6BB6 = 1;
     }
-    v20 = v13->static_fields;
-    p_x = (_DWORD *)&v20->oneVector.fields.x;
-    v22 = (int *)&v20->oneVector.fields.y;
-    v23 = (int *)&v20->oneVector.fields.z;
+    v18 = v11->static_fields;
+    p_x = (_DWORD *)&v18->oneVector.fields.x;
+    v20 = (int *)&v18->oneVector.fields.y;
+    v21 = (int *)&v18->oneVector.fields.z;
   }
   else
   {
-    if ( !byte_4BC2141 )
+    if ( !byte_4BD6BB1 )
     {
-      sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v11);
-      v13 = UnityEngine_Vector3_TypeInfo;
-      byte_4BC2141 = 1;
+      sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+      v11 = UnityEngine_Vector3_TypeInfo;
+      byte_4BD6BB1 = 1;
     }
-    p_x = (_DWORD *)&v13->static_fields->zeroVector.fields.x;
-    v22 = p_x + 1;
-    v23 = p_x + 2;
+    p_x = (_DWORD *)&v11->static_fields->zeroVector.fields.x;
+    v20 = p_x + 1;
+    v21 = p_x + 2;
   }
-  v24 = *v22;
-  v25 = *v23;
-  *((_DWORD *)&v12[5].fields + 1) = *p_x;
-  LODWORD(v12[6].klass) = v24;
-  HIDWORD(v12[6].klass) = v25;
-  LODWORD(v12[1].monitor) = 2;
-  v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v12[3].monitor = v26;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v12[3].monitor, (int64_t)v26, v27, v28, v29, v30, v31, v32);
-  v33 = StringLiteral_13222/*"StateQaaEnd"*/;
-  *(_QWORD *)&v12[3].fields.m_CachedPtr = StringLiteral_13222/*"StateQaaEnd"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v12[3].fields, v33, v34, v35, v36, v37, v38, v39);
+  v22 = *v20;
+  v23 = *v21;
+  *((_DWORD *)&v10[5].fields + 1) = *p_x;
+  LODWORD(v10[6].klass) = v22;
+  HIDWORD(v10[6].klass) = v23;
+  LODWORD(v10[1].monitor) = 2;
+  v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v10[3].monitor = v24;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v10[3].monitor, (int64_t)v24, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_13232/*"StateQaaEnd"*/;
+  *(_QWORD *)&v10[3].fields.m_CachedPtr = StringLiteral_13232/*"StateQaaEnd"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v10[3].fields, v31, v32, v33, v34, v35, v36, v37);
   if ( time != 0.0 || is_disp )
   {
-    v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     mcMyTrans = (UnityEngine_Transform_o *)UITweener__Begin_object_(
-                                             v40,
+                                             v38,
                                              time,
-                                             (const MethodInfo_3053E84 *)Method_UITweener_Begin_TweenPosition___);
+                                             (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenPosition___);
     if ( !this->fields.mcMyTrans )
       goto LABEL_30;
     x = this->fields.mcFrom.fields.x;
     y = this->fields.mcFrom.fields.y;
-    v43 = (float *)mcMyTrans;
-    *(UnityEngine_Vector3_o *)(&v44 - 2) = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0LL);
-    z = v44;
-    v46 = y;
-    v47 = x;
+    v41 = (float *)mcMyTrans;
+    *(UnityEngine_Vector3_o *)(&v42 - 2) = UnityEngine_Transform__get_localPosition(this->fields.mcMyTrans, 0LL);
+    z = v42;
+    v44 = y;
+    v45 = x;
     if ( !is_disp )
     {
       mcMyTrans = this->fields.mcMyTrans;
       if ( !mcMyTrans )
         goto LABEL_30;
-      *(UnityEngine_Vector3_o *)&v47 = UnityEngine_Transform__get_localPosition(mcMyTrans, 0LL);
+      *(UnityEngine_Vector3_o *)&v45 = UnityEngine_Transform__get_localPosition(mcMyTrans, 0LL);
     }
-    if ( v43 )
+    if ( v41 )
     {
-      v43[32] = v47;
-      v43[33] = v46;
-      v43[34] = v44;
+      v41[32] = v45;
+      v41[33] = v44;
+      v41[34] = v42;
       if ( !is_disp )
       {
 LABEL_28:
-        v43[35] = x;
-        v43[36] = y;
-        v43[37] = z;
-        *((_DWORD *)v43 + 8) = 2;
+        v41[35] = x;
+        v41[36] = y;
+        v41[37] = z;
+        *((_DWORD *)v41 + 8) = 2;
         return;
       }
       mcMyTrans = this->fields.mcMyTrans;
@@ -538,12 +514,11 @@ LABEL_28:
       }
     }
 LABEL_30:
-    sub_1C1AE30(mcMyTrans, v11);
+    sub_1C22094(mcMyTrans, v9);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall srcLineSprite__SetState(
         srcLineSprite_o *this,
         int32_t state,
@@ -558,14 +533,14 @@ void __fastcall srcLineSprite__SetState(
   __int64 v12; // x1
   CStateManager_T__o *v13; // x0
 
-  if ( (byte_4BC4EA7 & 1) == 0 )
+  if ( (byte_4BD9936 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_CStateManager_srcLineSprite__setState__, *(_QWORD *)&state);
-    byte_4BC4EA7 = 1;
+    sub_1C21E38(&Method_CStateManager_srcLineSprite__setState__);
+    byte_4BD9936 = 1;
   }
   this->fields.mStateEndAct = end_act;
   p_mStateEndAct = &this->fields.mStateEndAct;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)p_mStateEndAct,
     (int64_t)end_act,
     (int64_t)end_act,
@@ -576,11 +551,11 @@ void __fastcall srcLineSprite__SetState(
     v7);
   v13 = (CStateManager_T__o *)*(p_mStateEndAct - 13);
   if ( !v13 )
-    sub_1C1AE30(0LL, v12);
+    sub_1C22094(0LL, v12);
   CStateManager_object___setState(
     v13,
     state,
-    (const MethodInfo_31D3404 *)Method_CStateManager_srcLineSprite__setState__);
+    (const MethodInfo_31E6B54 *)Method_CStateManager_srcLineSprite__setState__);
 }
 
 
@@ -603,14 +578,14 @@ void __fastcall srcLineSprite__Update(srcLineSprite_o *this, const MethodInfo *m
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4BC4EA5 & 1) == 0 )
+  if ( (byte_4BD9934 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_CStateManager_srcLineSprite__update__, method);
-    byte_4BC4EA5 = 1;
+    sub_1C21E38(&Method_CStateManager_srcLineSprite__update__);
+    byte_4BD9934 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
-    CStateManager_object___update(mFSM, (const MethodInfo_31D33E0 *)Method_CStateManager_srcLineSprite__update__);
+    CStateManager_object___update(mFSM, (const MethodInfo_31E6B30 *)Method_CStateManager_srcLineSprite__update__);
 }
 
 
@@ -634,7 +609,7 @@ void __fastcall srcLineSprite__mfSetAtlas(
 
   v8 = this;
   this->fields.mcAtlasP = cAtlasP;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.mcAtlasP,
     (int64_t)cAtlasP,
     (int64_t)sSpriteName,
@@ -645,7 +620,7 @@ void __fastcall srcLineSprite__mfSetAtlas(
     v7);
   v8->fields.msSpriteName = sSpriteName;
   v8 = (srcLineSprite_o *)((char *)v8 + 120);
-  sub_1C1AB78((PartyOrganizationUtility_o *)v8, (int64_t)sSpriteName, v10, v11, v12, v13, v14, v15);
+  sub_1C21DDC((PartyOrganizationUtility_o *)v8, (int64_t)sSpriteName, v10, v11, v12, v13, v14, v15);
   LOBYTE(v8[-1].fields.mcTweenAlphaP) = 1;
 }
 
@@ -677,7 +652,7 @@ void __fastcall srcLineSprite__mfSetITweenSize(
     || (v7->fields.duration = fTime, (mcTweenAlphaP = this->fields.mcTweenAlphaP) == 0LL) )
   {
 LABEL_6:
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   }
   mcTweenAlphaP->fields.duration = fTime;
   *(_QWORD *)&mcTweenAlphaP->fields.from = 0x3F80000000000000LL;
@@ -711,14 +686,13 @@ void __fastcall srcLineSprite__mfSetPos2(
   float v22; // s10
   UnityEngine_Transform_o *v23; // x20
   int v24; // s0
-  __int64 v28; // x1
   float mfWidth; // s0
-  int32_t v30; // w8
-  float v31; // s0
-  unsigned int v32; // w11
-  int32_t v33; // w8
+  int32_t v29; // w8
+  float v30; // s0
+  unsigned int v31; // w11
+  int32_t v32; // w8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v35; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v34; // 0:s1.4,4:s2.4,8:s3.4
 
   this->fields.mcFrom = cFrom;
   this->fields.mcTo = cTo;
@@ -726,20 +700,20 @@ void __fastcall srcLineSprite__mfSetPos2(
   x = cTo.fields.x;
   v6 = cFrom.fields.y;
   v7 = cFrom.fields.x;
-  if ( !byte_4BC203A )
+  if ( !byte_4BD6AAA )
   {
-    sub_1C1ABD4(&UnityEngine_Vector2_TypeInfo, method);
-    byte_4BC203A = 1;
+    sub_1C21E38(&UnityEngine_Vector2_TypeInfo);
+    byte_4BD6AAA = 1;
   }
   v9 = x - v7;
   v10 = y - v6;
   static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
   v12 = static_fields->zeroVector.fields.x;
   v13 = static_fields->zeroVector.fields.y;
-  if ( !byte_4BC27F2 )
+  if ( !byte_4BD7262 )
   {
-    sub_1C1ABD4(&System_Math_TypeInfo, method);
-    byte_4BC27F2 = 1;
+    sub_1C21E38(&System_Math_TypeInfo);
+    byte_4BD7262 = 1;
   }
   v14 = System_Math_TypeInfo;
   v15 = (float)(v9 * v9) + (float)(v10 * v10);
@@ -765,33 +739,33 @@ void __fastcall srcLineSprite__mfSetPos2(
   localPosition.fields.y = (float)(v10 * 0.5) + v18;
   UnityEngine_Transform__set_localPosition(mcMyTrans, localPosition, 0LL);
   v23 = this->fields.mcMyTrans;
-  v35.fields.x = 0.0;
-  v35.fields.y = 0.0;
-  v35.fields.z = 1.0;
-  *(UnityEngine_Quaternion_o *)&v24 = UnityEngine_Quaternion__AngleAxis(v21, v35, 0LL);
+  v34.fields.x = 0.0;
+  v34.fields.y = 0.0;
+  v34.fields.z = 1.0;
+  *(UnityEngine_Quaternion_o *)&v24 = UnityEngine_Quaternion__AngleAxis(v21, v34, 0LL);
   if ( !v23 )
 LABEL_22:
-    sub_1C1AE30(v14, method);
+    sub_1C22094(v14, method);
   UnityEngine_Transform__set_localRotation(v23, *(UnityEngine_Quaternion_o *)&v24, 0LL);
   mfWidth = this->fields.mfWidth;
-  v30 = (int)mfWidth;
+  v29 = (int)mfWidth;
   if ( mfWidth == INFINITY )
-    v30 = 0x80000000;
-  this->fields.miLineH = v30;
-  if ( !byte_4BC2142 )
+    v29 = 0x80000000;
+  this->fields.miLineH = v29;
+  if ( !byte_4BD6BB2 )
   {
-    sub_1C1ABD4(&System_Math_TypeInfo, v28);
-    byte_4BC2142 = 1;
+    sub_1C21E38(&System_Math_TypeInfo);
+    byte_4BD6BB2 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v31 = sqrtf(v15);
-  v32 = vcvtps_s32_f32(v31);
-  if ( ceilf(v31) == INFINITY )
-    v33 = 0x80000000;
+  v30 = sqrtf(v15);
+  v31 = vcvtps_s32_f32(v30);
+  if ( ceilf(v30) == INFINITY )
+    v32 = 0x80000000;
   else
-    v33 = v32;
-  this->fields.miLineW = v33;
+    v32 = v31;
+  this->fields.miLineW = v32;
   this->fields.mtIsUpdate = 1;
 }
 
@@ -830,10 +804,10 @@ void __fastcall srcLineSprite_StateMapMain__update(
   UnityEngine_Object_o *mAtlas; // x20
   UnityEngine_Object_o *mcAtlasP; // x21
 
-  if ( (byte_4BC4EAB & 1) == 0 )
+  if ( (byte_4BD993A & 1) == 0 )
   {
-    this = (srcLineSprite_StateMapMain_o *)sub_1C1ABD4(&UnityEngine_Object_TypeInfo, that);
-    byte_4BC4EAB = 1;
+    this = (srcLineSprite_StateMapMain_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BD993A = 1;
   }
   if ( !that )
     goto LABEL_18;
@@ -872,7 +846,7 @@ void __fastcall srcLineSprite_StateMapMain__update(
       }
     }
 LABEL_18:
-    sub_1C1AE30(this, that);
+    sub_1C22094(this, that);
   }
 LABEL_16:
   that->fields.mtIsUpdate = 0;
@@ -938,7 +912,7 @@ void __fastcall srcLineSprite_StateQaaDisp__begin(
   switch ( dispType )
   {
     case 2:
-      srcLineSprite__SetQaaColorAnim_35763388(that, 1, 0.5, method);
+      srcLineSprite__SetQaaColorAnim_35804384(that, 1, 0.5, method);
       break;
     case 1:
       ActionExtensions__Call(that->fields.mStateEndAct, 0LL);
@@ -953,11 +927,11 @@ void __fastcall srcLineSprite_StateQaaDisp__begin(
         v8.fields.b = 1.0;
         v8.fields.a = 1.0;
         UIWidget__set_color((UIWidget_o *)this, v8, 0LL);
-        srcLineSprite__SetQaaScaleAnim_35762696(that, 1, 0.5, v6);
+        srcLineSprite__SetQaaScaleAnim_35803692(that, 1, 0.5, v6);
         return;
       }
 LABEL_11:
-      sub_1C1AE30(this, that);
+      sub_1C22094(this, that);
   }
 }
 
@@ -1010,7 +984,7 @@ void __fastcall srcLineSprite_StateQaaGray__begin(
       srcLineSprite__SetState(that, 1, 0LL, v7);
       break;
     case 1:
-      srcLineSprite__SetQaaColorAnim_35763388(that, 0, 0.5, method);
+      srcLineSprite__SetQaaColorAnim_35804384(that, 0, 0.5, method);
       break;
     case 0:
       this = (srcLineSprite_StateQaaGray_o *)that->fields.mcLineSprite;
@@ -1021,11 +995,11 @@ void __fastcall srcLineSprite_StateQaaGray__begin(
         v8.fields.b = 0.5;
         v8.fields.a = 1.0;
         UIWidget__set_color((UIWidget_o *)this, v8, 0LL);
-        srcLineSprite__SetQaaScaleAnim_35762696(that, 1, 0.5, v6);
+        srcLineSprite__SetQaaScaleAnim_35803692(that, 1, 0.5, v6);
         return;
       }
 LABEL_11:
-      sub_1C1AE30(this, that);
+      sub_1C22094(this, that);
   }
 }
 
@@ -1064,12 +1038,12 @@ void __fastcall srcLineSprite_StateQaaHide__begin(
   const MethodInfo *v6; // x3
 
   if ( !that || (mMapCtrl_SpotRoadInfo = that->fields.mMapCtrl_SpotRoadInfo) == 0LL )
-    sub_1C1AE30(this, that);
+    sub_1C22094(this, that);
   dispType = mMapCtrl_SpotRoadInfo->fields.dispType;
   if ( dispType )
   {
     if ( (unsigned int)(dispType - 1) < 2 )
-      srcLineSprite__SetQaaScaleAnim_35762696(that, 0, 0.5, method);
+      srcLineSprite__SetQaaScaleAnim_35803692(that, 0, 0.5, method);
   }
   else
   {
@@ -1113,7 +1087,7 @@ void __fastcall srcLineSprite___c__DisplayClass39_0___SetQaaColorAnim_b__0(
 
   eo = this->fields.eo;
   if ( !eo || (this = (srcLineSprite___c__DisplayClass39_0_o *)this->fields.__4__this) == 0LL )
-    sub_1C1AE30(this, method);
+    sub_1C22094(this, method);
   srcLineSprite__SetContrast((srcLineSprite_o *)this, eo->fields.mNow, method);
 }
 
@@ -1130,7 +1104,7 @@ void __fastcall srcLineSprite___c__DisplayClass39_0___SetQaaColorAnim_b__1(
   if ( !_4__this
     || (srcLineSprite__SetContrast(_4__this, this->fields.to, method), (v4 = this->fields.__4__this) == 0LL) )
   {
-    sub_1C1AE30(_4__this, method);
+    sub_1C22094(_4__this, method);
   }
   ActionExtensions__Call(v4->fields.mStateEndAct, 0LL);
   srcLineSprite__SetState(v4, 1, 0LL, v5);

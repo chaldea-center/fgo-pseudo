@@ -18,16 +18,16 @@ void __fastcall AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *cli
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !clip )
-    sub_1C1AE30(v5, v6);
+    sub_1C22094(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0LL);
   this->fields.name = name;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v8, v9, v10, v11, v12, v13);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v8, v9, v10, v11, v12, v13);
   this->fields.data = clip;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v14, v15, v16, v17, v18, v19);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v14, v15, v16, v17, v18, v19);
 }
 
 
-void __fastcall AudioData___ctor_39103160(
+void __fastcall AudioData___ctor_39149556(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -48,13 +48,13 @@ void __fastcall AudioData___ctor_39103160(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
   this->fields.data = clip;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v13, v14, v15, v16, v17, v18);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v13, v14, v15, v16, v17, v18);
 }
 
 
-void __fastcall AudioData___ctor_39103228(
+void __fastcall AudioData___ctor_39149624(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -79,17 +79,17 @@ void __fastcall AudioData___ctor_39103228(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
   if ( !buf
     || (v15 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0LL),
         this->fields.data = v15,
         p_data = &this->fields.data,
-        sub_1C1AB78((PartyOrganizationUtility_o *)p_data, (int64_t)v15, v17, v18, v19, v20, v21, v22),
+        sub_1C21DDC((PartyOrganizationUtility_o *)p_data, (int64_t)v15, v17, v18, v19, v20, v21, v22),
         (v13 = *p_data) == 0LL) )
   {
-    sub_1C1AE30(v13, v14);
+    sub_1C22094(v13, v14);
   }
-  UnityEngine_AudioClip__SetData_70568780(v13, buf, 0, 0LL);
+  UnityEngine_AudioClip__SetData_70643980(v13, buf, 0, 0LL);
 }
 
 
@@ -99,8 +99,8 @@ bool __fastcall AudioData__IsSame(AudioData_o *this, System_String_o *name, cons
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_1C1AE30(0LL, name);
-  return System_String__Equals_63048684(v3, name, 0LL);
+    sub_1C22094(0LL, name);
+  return System_String__Equals_63123792(v3, name, 0LL);
 }
 
 

@@ -23,6 +23,6 @@ void __fastcall CharaGraphListViewItemDrawPatternServantMission__SetupAccessorie
     item,
     0LL);
   if ( !itemDraw || (servantFaceIcon = itemDraw->fields.servantFaceIcon) == 0LL )
-    sub_1C1AE30(servantFaceIcon, v6);
+    sub_1C22094(servantFaceIcon, v6);
   ServantFaceIconComponent__ClearShiningIcon(servantFaceIcon, 0LL);
 }

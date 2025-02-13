@@ -10,64 +10,58 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *__fastcall
         CharaGraphListViewPatternCommandCode_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x19
+  __int64 v3; // x19
   UserCommandCodeMaster_o *Master_object; // x0
-  __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
   UserCommandCodeEntity_array *List; // x0
-  __int64 *v19; // x20
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  Il2CppObject *v26; // x21
-  __int64 v27; // x21
-  System_Func_T__TResult__o *v28; // x20
+  __int64 *v13; // x20
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  Il2CppObject *v20; // x21
+  __int64 v21; // x21
+  System_Func_T__TResult__o *v22; // x20
 
-  if ( (byte_4BC6E5D & 1) == 0 )
+  if ( (byte_4BDB8F3 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_BasicHelper_ToIterator_CharaGraphCommandCodeListViewItem___, method);
-    sub_1C1ABD4(&Method_CharaGraphListViewPatternBase_GetMaster_UserCommandCodeMaster___, v3);
-    sub_1C1ABD4(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantCommandCodeMaster___, v4);
-    sub_1C1ABD4(&System_Func_int__CharaGraphCommandCodeListViewItem__TypeInfo, v5);
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v6);
-    sub_1C1ABD4(&Method_CharaGraphListViewPatternCommandCode___c__DisplayClass2_0__GenerateListViewItem_b__0__, v7);
-    sub_1C1ABD4(&CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_TypeInfo, v8);
-    byte_4BC6E5D = 1;
+    sub_1C21E38(&Method_BasicHelper_ToIterator_CharaGraphCommandCodeListViewItem___);
+    sub_1C21E38(&Method_CharaGraphListViewPatternBase_GetMaster_UserCommandCodeMaster___);
+    sub_1C21E38(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantCommandCodeMaster___);
+    sub_1C21E38(&System_Func_int__CharaGraphCommandCodeListViewItem__TypeInfo);
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    sub_1C21E38(&Method_CharaGraphListViewPatternCommandCode___c__DisplayClass2_0__GenerateListViewItem_b__0__);
+    sub_1C21E38(&CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_TypeInfo);
+    byte_4BDB8F3 = 1;
   }
-  v9 = sub_1C1AE20(CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
+  v3 = sub_1C22084(CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  if ( !v3 )
     goto LABEL_14;
-  *(_QWORD *)(v9 + 16) = this;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
-  Master_object = (UserCommandCodeMaster_o *)CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_2F92F0C *)Method_CharaGraphListViewPatternBase_GetMaster_UserCommandCodeMaster___);
+  *(_QWORD *)(v3 + 16) = this;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 16), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  Master_object = (UserCommandCodeMaster_o *)CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_2FA3880 *)Method_CharaGraphListViewPatternBase_GetMaster_UserCommandCodeMaster___);
   if ( !Master_object )
     goto LABEL_14;
   List = UserCommandCodeMaster__getList(Master_object, 0LL);
-  *(_QWORD *)(v9 + 24) = List;
-  v19 = (__int64 *)(v9 + 24);
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)List, v20, v21, v22, v23, v24, v25);
-  v26 = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_2F92F0C *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantCommandCodeMaster___);
+  *(_QWORD *)(v3 + 24) = List;
+  v13 = (__int64 *)(v3 + 24);
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 24), (int64_t)List, v14, v15, v16, v17, v18, v19);
+  v20 = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_2FA3880 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantCommandCodeMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BC2585 )
+  if ( !byte_4BD6FF5 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, v11);
-    byte_4BC2585 = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BD6FF5 = 1;
   }
   Master_object = (UserCommandCodeMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -75,27 +69,27 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *__fastcall
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Master_object = (UserCommandCodeMaster_o *)NetworkManager_TypeInfo;
   }
-  if ( !v26
+  if ( !v20
     || (UserServantCommandCodeMaster__getAttachList(
-          (UserServantCommandCodeMaster_o *)v26,
-          (System_Int64_array **)(v9 + 32),
+          (UserServantCommandCodeMaster_o *)v20,
+          (System_Int64_array **)(v3 + 32),
           (int64_t)Master_object[2].fields.list[1].monitor,
           0LL),
-        (v27 = *v19) == 0) )
+        (v21 = *v13) == 0) )
   {
 LABEL_14:
-    sub_1C1AE30(Master_object, v11);
+    sub_1C22094(Master_object, v5);
   }
-  v28 = (System_Func_T__TResult__o *)sub_1C1AE20(System_Func_int__CharaGraphCommandCodeListViewItem__TypeInfo);
+  v22 = (System_Func_T__TResult__o *)sub_1C22084(System_Func_int__CharaGraphCommandCodeListViewItem__TypeInfo);
   System_Func_int__object____ctor(
-    v28,
-    (Il2CppObject *)v9,
+    v22,
+    (Il2CppObject *)v3,
     Method_CharaGraphListViewPatternCommandCode___c__DisplayClass2_0__GenerateListViewItem_b__0__,
     0LL);
   return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)BasicHelper__ToIterator_object_(
-                                                                                   *(_DWORD *)(v27 + 24),
-                                                                                   (System_Func_int__T__o *)v28,
-                                                                                   (const MethodInfo_2F8F630 *)Method_BasicHelper_ToIterator_CharaGraphCommandCodeListViewItem___);
+                                                                                   *(_DWORD *)(v21 + 24),
+                                                                                   (System_Func_int__T__o *)v22,
+                                                                                   (const MethodInfo_2F9FFA4 *)Method_BasicHelper_ToIterator_CharaGraphCommandCodeListViewItem___);
 }
 
 
@@ -103,12 +97,12 @@ System_String_o *__fastcall CharaGraphListViewPatternCommandCode__get_EmptyMessa
         CharaGraphListViewPatternCommandCode_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC6E5C & 1) == 0 )
+  if ( (byte_4BDB8F2 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_3766/*"COMMAND_CODE_EMPTY"*/, method);
-    byte_4BC6E5C = 1;
+    sub_1C21E38(&StringLiteral_3775/*"COMMAND_CODE_EMPTY"*/);
+    byte_4BDB8F2 = 1;
   }
-  return (System_String_o *)StringLiteral_3766/*"COMMAND_CODE_EMPTY"*/;
+  return (System_String_o *)StringLiteral_3775/*"COMMAND_CODE_EMPTY"*/;
 }
 
 
@@ -135,22 +129,20 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CharaGraphListViewPatternCommand
   const MethodInfo *v10; // x5
 
   v4 = this;
-  if ( (byte_4BC6E5E & 1) == 0 )
+  if ( (byte_4BDB8F4 & 1) == 0 )
   {
-    this = (CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_o *)sub_1C1ABD4(
-                                                                            &CharaGraphCommandCodeListViewItem_TypeInfo,
-                                                                            *(_QWORD *)&i);
-    byte_4BC6E5E = 1;
+    this = (CharaGraphListViewPatternCommandCode___c__DisplayClass2_0_o *)sub_1C21E38(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    byte_4BDB8F4 = 1;
   }
   commandCodeArray = v4->fields.commandCodeArray;
   if ( !commandCodeArray )
-    sub_1C1AE30(this, *(_QWORD *)&i);
+    sub_1C22094(this, *(_QWORD *)&i);
   if ( commandCodeArray->max_length <= i )
-    sub_1C1AE38(this, *(_QWORD *)&i);
+    sub_1C2209C(this, *(_QWORD *)&i);
   _4__this = (CharaGraphListViewPatternBase_o *)v4->fields.__4__this;
   attachUserCommandCodeList = v4->fields.attachUserCommandCodeList;
   v8 = commandCodeArray->m_Items[i];
-  v9 = (CharaGraphCommandCodeListViewItem_o *)sub_1C1AE20(CharaGraphCommandCodeListViewItem_TypeInfo);
+  v9 = (CharaGraphCommandCodeListViewItem_o *)sub_1C22084(CharaGraphCommandCodeListViewItem_TypeInfo);
   CharaGraphCommandCodeListViewItem___ctor(v9, i, _4__this, v8, attachUserCommandCodeList, v10);
   return v9;
 }

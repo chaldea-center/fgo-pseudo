@@ -1,13 +1,13 @@
 void __fastcall PartialMaintenanceEntity___ctor(PartialMaintenanceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7EF0 & 1) == 0 )
+  if ( (byte_4BDC98C & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BC7EF0 = 1;
+    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
+    byte_4BDC98C = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3246194 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,7 +19,6 @@ int32_t __fastcall PartialMaintenanceEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall PartialMaintenanceEntity__isMaintenanceNow(
         PartialMaintenanceEntity_o *this,
         int32_t mainteType,
@@ -27,10 +26,10 @@ bool __fastcall PartialMaintenanceEntity__isMaintenanceNow(
 {
   int64_t Time; // x0
 
-  if ( (byte_4BC7EEF & 1) == 0 )
+  if ( (byte_4BDC98B & 1) == 0 )
   {
-    sub_1C1ABD4(&NetworkManager_TypeInfo, *(_QWORD *)&mainteType);
-    byte_4BC7EEF = 1;
+    sub_1C21E38(&NetworkManager_TypeInfo);
+    byte_4BDC98B = 1;
   }
   if ( this->fields.type != mainteType )
     return 0;

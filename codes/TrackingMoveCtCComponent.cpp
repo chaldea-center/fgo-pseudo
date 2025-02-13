@@ -3,10 +3,10 @@ void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -51,17 +51,16 @@ void __fastcall TrackingMoveCtCComponent__Set(
   BattleSetupInfo_o *v25; // x5
   FollowerInfo_o *v26; // x6
   PartyListViewItem_o *v27; // x7
-  __int64 v28; // x1
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  __int64 v30; // d0
-  float v31; // s1
+  __int64 v29; // d0
+  float v30; // s1
 
   this->fields.before = a;
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
   v15 = isLate;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.before,
     (int64_t)a,
     (int64_t)b,
@@ -71,24 +70,24 @@ void __fastcall TrackingMoveCtCComponent__Set(
     v7,
     v8);
   this->fields.after = b;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.after, (int64_t)b, v16, v17, v18, v19, v20, v21);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.after, (int64_t)b, v16, v17, v18, v19, v20, v21);
   this->fields.targetObject = c;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.targetObject, (int64_t)c, v22, v23, v24, v25, v26, v27);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.targetObject, (int64_t)c, v22, v23, v24, v25, v26, v27);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
   this->fields.isLateUpdate = v15;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v28);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v30 = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  v31 = static_fields->zeroVector.fields.z;
+  v29 = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  v30 = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.offset2D.fields.condition = 0LL;
-  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v30;
-  this->fields.offset2D.fields.offset.fields.z = v31;
+  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v29;
+  this->fields.offset2D.fields.offset.fields.z = v30;
 }
 
 
@@ -149,10 +148,10 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BCADEE & 1) == 0 )
+  if ( (byte_4BDF8AF & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, method);
-    byte_4BCADEE = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDF8AF = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -172,7 +171,7 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     v31.fields.z = v9 + this->fields.addpos.fields.z;
     v31.fields.y = v8 + this->fields.addpos.fields.y;
     v31.fields.x = v7 + this->fields.addpos.fields.x;
-    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_70600392(before, v31, 0LL);
+    *(UnityEngine_Vector3_o *)&v10 = UnityEngine_Camera__WorldToViewportPoint_70675592(before, v31, 0LL);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_24;
@@ -226,7 +225,7 @@ LABEL_14:
         v32.fields.x = v13;
         v32.fields.y = v20;
         v32.fields.z = v15;
-        v33 = UnityEngine_Camera__ViewportToWorldPoint_70600400((UnityEngine_Camera_o *)transform, v32, 0LL);
+        v33 = UnityEngine_Camera__ViewportToWorldPoint_70675600((UnityEngine_Camera_o *)transform, v32, 0LL);
         x = v33.fields.x;
         y = v33.fields.y;
         z = v33.fields.z;
@@ -243,7 +242,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1C1AE30(transform, v4);
+      sub_1C22094(transform, v4);
     }
     v13 = v13 + this->fields.offset2D.fields.offset.fields.x;
     v20 = v20 + this->fields.offset2D.fields.offset.fields.y;

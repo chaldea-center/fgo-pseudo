@@ -1,28 +1,27 @@
 void __fastcall EventFilterEntity___ctor(EventFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7A40 & 1) == 0 )
+  if ( (byte_4BDC4D7 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC7A40 = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDC4D7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventFilterEntity__CreatePK(int32_t id, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4BC7A3E & 1) == 0 )
+  if ( (byte_4BDC4D5 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&type);
-    byte_4BC7A3E = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4BDC4D5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            type,
-           (const MethodInfo_2F9D6B4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FAE028 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -51,10 +50,10 @@ bool __fastcall EventFilterEntity__IsOpen(EventFilterEntity_o *this, const Metho
   int32_t closeQuestId; // w19
   int32_t openQuestId; // w20
 
-  if ( (byte_4BC7A3F & 1) == 0 )
+  if ( (byte_4BDC4D6 & 1) == 0 )
   {
-    sub_1C1ABD4(&CondType_TypeInfo, method);
-    byte_4BC7A3F = 1;
+    sub_1C21E38(&CondType_TypeInfo);
+    byte_4BDC4D6 = 1;
   }
   openQuestId = this->fields.openQuestId;
   closeQuestId = this->fields.closeQuestId;

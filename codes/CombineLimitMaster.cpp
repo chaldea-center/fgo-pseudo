@@ -1,14 +1,14 @@
 void __fastcall CombineLimitMaster___ctor(CombineLimitMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC7860 & 1) == 0 )
+  if ( (byte_4BDC2F7 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string___ctor__, method);
-    byte_4BC7860 = 1;
+    sub_1C21E38(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string___ctor__);
+    byte_4BDC2F7 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     116,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ CombineLimitEntity_o *__fastcall CombineLimitMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BC785E & 1) == 0 )
+  if ( (byte_4BDC2F5 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4BC785E = 1;
+    sub_1C21E38(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__GetEntity__);
+    byte_4BDC2F5 = 1;
   }
   PK = (Il2CppObject *)CombineLimitEntity__CreatePK(id, svtLimit, *(const MethodInfo **)&svtLimit);
   return (CombineLimitEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_324D130 *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__GetEntity__);
+                                   (const MethodInfo_3260880 *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool __fastcall CombineLimitMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC785F & 1) == 0 )
+  if ( (byte_4BDC2F6 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__TryGetEntity__, entity);
-    byte_4BC785F = 1;
+    sub_1C21E38(&Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__TryGetEntity__);
+    byte_4BDC2F6 = 1;
   }
   PK = (Il2CppObject *)CombineLimitEntity__CreatePK(id, svtLimit, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_CombineLimitMaster__CombineLimitEntity__string__TryGetEntity__);
 }

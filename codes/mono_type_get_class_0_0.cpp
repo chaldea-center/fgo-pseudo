@@ -1,6 +1,6 @@
 __int64 __fastcall mono_type_get_class_0_0(__int64 result)
 {
   if ( result )
-    return sub_1C35A7C();
+    return sub_1C3CCE0();
   return result;
 }

@@ -1,64 +1,59 @@
 void __fastcall WarBoardMovieHistoryManager___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  int64_t v12; // x1
+  int64_t v1; // x2
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  BattleSetupInfo_o *v4; // x5
+  FollowerInfo_o *v5; // x6
+  PartyListViewItem_o *v6; // x7
+  int64_t v7; // x1
   struct WarBoardMovieHistoryManager_StaticFields *static_fields; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  System_Collections_Generic_List_object__o *v20; // x19
-  struct WarBoardMovieHistoryManager_StaticFields *v21; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  System_Collections_Generic_List_object__o *v15; // x19
+  struct WarBoardMovieHistoryManager_StaticFields *v16; // x0
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
 
-  if ( (byte_4BC8DF5 & 1) == 0 )
+  if ( (byte_4BDD897 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo___ctor__, v1);
-    sub_1C1ABD4(&System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo, v8);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v9);
-    sub_1C1ABD4(&StringLiteral_6810/*"Fgo_20220601"*/, v10);
-    sub_1C1ABD4(&StringLiteral_15849/*"WarBoardStartMovie"*/, v11);
-    byte_4BC8DF5 = 1;
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_6820/*"Fgo_20220601"*/);
+    sub_1C21E38(&StringLiteral_15860/*"WarBoardStartMovie"*/);
+    byte_4BDD897 = 1;
   }
-  WarBoardMovieHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6810/*"Fgo_20220601"*/;
-  sub_1C1AB78(
+  WarBoardMovieHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6820/*"Fgo_20220601"*/;
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)WarBoardMovieHistoryManager_TypeInfo->static_fields,
-    StringLiteral_6810/*"Fgo_20220601"*/,
+    StringLiteral_6820/*"Fgo_20220601"*/,
+    v1,
     v2,
     v3,
     v4,
     v5,
-    v6,
-    v7);
-  v12 = StringLiteral_15849/*"WarBoardStartMovie"*/;
+    v6);
+  v7 = StringLiteral_15860/*"WarBoardStartMovie"*/;
   static_fields = WarBoardMovieHistoryManager_TypeInfo->static_fields;
-  static_fields->SAVE_KEY_START_MOVIE = (struct System_String_o *)StringLiteral_15849/*"WarBoardStartMovie"*/;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY_START_MOVIE, v12, v14, v15, v16, v17, v18, v19);
+  static_fields->SAVE_KEY_START_MOVIE = (struct System_String_o *)StringLiteral_15860/*"WarBoardStartMovie"*/;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY_START_MOVIE, v7, v9, v10, v11, v12, v13, v14);
   WarBoardMovieHistoryManager_TypeInfo->static_fields->isModfiy = 0;
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C1AE20(System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v20,
-    (const MethodInfo_363C05C *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo___ctor__);
-  v21 = WarBoardMovieHistoryManager_TypeInfo->static_fields;
-  v21->infoList = (struct System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__o *)v20;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&v21->infoList, (int64_t)v20, v22, v23, v24, v25, v26, v27);
+    v15,
+    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo___ctor__);
+  v16 = WarBoardMovieHistoryManager_TypeInfo->static_fields;
+  v16->infoList = (struct System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__o *)v15;
+  sub_1C21DDC((PartyOrganizationUtility_o *)&v16->infoList, (int64_t)v15, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -68,85 +63,82 @@ void __fastcall WarBoardMovieHistoryManager___ctor(WarBoardMovieHistoryManager_o
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall WarBoardMovieHistoryManager__AddHistory(
         int32_t questId,
         int32_t phase,
         System_String_o *saveKey,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  int64_t v9; // x19
+  int64_t v7; // x19
   System_Collections_Generic_List_object__o *infoList; // x0
-  __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  WarBoardMovieHistoryManager_c *v24; // x0
+  __int64 v9; // x1
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  WarBoardMovieHistoryManager_c *v22; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x8
+  Il2CppClass **v26; // x8
 
-  if ( (byte_4BC8DF2 & 1) == 0 )
+  if ( (byte_4BDD894 & 1) == 0 )
   {
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_HistoryInfo_TypeInfo, *(_QWORD *)&phase);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__, v7);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v8);
-    byte_4BC8DF2 = 1;
+    sub_1C21E38(&WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD894 = 1;
   }
   if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
   if ( !WarBoardMovieHistoryManager__ExistsHistory(questId, phase, saveKey, method) )
   {
-    v9 = sub_1C1AE20(WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v9, 0LL);
-    if ( !v9 )
+    v7 = sub_1C22084(WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v7, 0LL);
+    if ( !v7 )
       goto LABEL_16;
-    *(_QWORD *)(v9 + 24) = saveKey;
-    *(_DWORD *)(v9 + 16) = questId;
-    *(_DWORD *)(v9 + 20) = phase;
-    sub_1C1AB78((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)saveKey, v12, v13, v14, v15, v16, v17);
-    v24 = WarBoardMovieHistoryManager_TypeInfo;
+    *(_QWORD *)(v7 + 24) = saveKey;
+    *(_DWORD *)(v7 + 16) = questId;
+    *(_DWORD *)(v7 + 20) = phase;
+    sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)saveKey, v10, v11, v12, v13, v14, v15);
+    v22 = WarBoardMovieHistoryManager_TypeInfo;
     if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-      v24 = WarBoardMovieHistoryManager_TypeInfo;
+      v22 = WarBoardMovieHistoryManager_TypeInfo;
     }
-    infoList = (System_Collections_Generic_List_object__o *)v24->static_fields->infoList;
+    infoList = (System_Collections_Generic_List_object__o *)v22->static_fields->infoList;
     if ( !infoList
       || (items = infoList->fields._items,
-          v26 = Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__,
+          v24 = Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__,
           ++infoList->fields._version,
           !items) )
     {
 LABEL_16:
-      sub_1C1AE30(infoList, v11);
+      sub_1C22094(infoList, v9);
     }
     size = infoList->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         infoList,
-        (Il2CppObject *)v9,
-        *(const MethodInfo_363C890 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+        (Il2CppObject *)v7,
+        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
     }
     else
     {
-      v28 = &items->obj.klass + size;
+      v26 = &items->obj.klass + size;
       infoList->fields._size = size + 1;
-      v28[4] = (Il2CppClass *)v9;
-      sub_1C1AB78((PartyOrganizationUtility_o *)(v28 + 4), v9, v18, v19, v20, v21, v22, v23);
+      v26[4] = (Il2CppClass *)v7;
+      sub_1C21DDC((PartyOrganizationUtility_o *)(v26 + 4), v7, v16, v17, v18, v19, v20, v21);
     }
     WarBoardMovieHistoryManager_TypeInfo->static_fields->isModfiy = 1;
   }
@@ -155,410 +147,46 @@ LABEL_16:
 
 void __fastcall WarBoardMovieHistoryManager__ClearSaveData(const MethodInfo *method)
 {
-  __int64 v1; // x1
+  WarBoardMovieHistoryManager_c *v1; // x0
   __int64 v2; // x1
-  __int64 v3; // x1
-  WarBoardMovieHistoryManager_c *v4; // x0
-  __int64 v5; // x1
-  WarBoardMovieHistoryManager_c *v6; // x0
+  WarBoardMovieHistoryManager_c *v3; // x0
   struct System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__o *infoList; // x8
   int32_t size; // w2
-  int v9; // w9
-  WarBoardMovieHistoryManager_c *v10; // x0
+  int v6; // w9
+  WarBoardMovieHistoryManager_c *v7; // x0
 
-  if ( (byte_4BC8DF0 & 1) == 0 )
+  if ( (byte_4BDD892 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Linq_Enumerable_Any_WarBoardMovieHistoryManager_HistoryInfo___, v1);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Clear__, v2);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v3);
-    byte_4BC8DF0 = 1;
+    sub_1C21E38(&Method_System_Linq_Enumerable_Any_WarBoardMovieHistoryManager_HistoryInfo___);
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Clear__);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD892 = 1;
   }
-  v4 = WarBoardMovieHistoryManager_TypeInfo;
+  v1 = WarBoardMovieHistoryManager_TypeInfo;
   if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v4 = WarBoardMovieHistoryManager_TypeInfo;
+    v1 = WarBoardMovieHistoryManager_TypeInfo;
   }
   if ( System_Linq_Enumerable__Any_object_(
-         (System_Collections_Generic_IEnumerable_TSource__o *)v4->static_fields->infoList,
-         (const MethodInfo_2FAA930 *)Method_System_Linq_Enumerable_Any_WarBoardMovieHistoryManager_HistoryInfo___) )
+         (System_Collections_Generic_IEnumerable_TSource__o *)v1->static_fields->infoList,
+         (const MethodInfo_2FBB2A4 *)Method_System_Linq_Enumerable_Any_WarBoardMovieHistoryManager_HistoryInfo___) )
   {
-    v6 = WarBoardMovieHistoryManager_TypeInfo;
+    v3 = WarBoardMovieHistoryManager_TypeInfo;
     if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-      v6 = WarBoardMovieHistoryManager_TypeInfo;
+      v3 = WarBoardMovieHistoryManager_TypeInfo;
     }
-    infoList = v6->static_fields->infoList;
+    infoList = v3->static_fields->infoList;
     if ( !infoList )
-      sub_1C1AE30(v6, v5);
+      sub_1C22094(v3, v2);
     size = infoList->fields._size;
-    v9 = infoList->fields._version + 1;
+    v6 = infoList->fields._version + 1;
     infoList->fields._size = 0;
-    infoList->fields._version = v9;
+    infoList->fields._version = v6;
     if ( size >= 1 )
       System_Array__Clear((System_Array_o *)infoList->fields._items, 0, size, 0LL);
-  }
-  v10 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v10 = WarBoardMovieHistoryManager_TypeInfo;
-  }
-  v10->static_fields->isModfiy = 1;
-}
-
-
-void __fastcall WarBoardMovieHistoryManager__DeleteSaveData(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  WarBoardMovieHistoryManager_c *v2; // x0
-  System_String_o *FilePath; // x19
-
-  if ( (byte_4BC8DEE & 1) == 0 )
-  {
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v1);
-    byte_4BC8DEE = 1;
-  }
-  v2 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-  FilePath = WarBoardMovieHistoryManager__GetFilePath((const MethodInfo *)v2);
-  if ( System_IO_File__Exists(FilePath, 0LL) )
-    System_IO_File__Delete(FilePath, 0LL);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall WarBoardMovieHistoryManager__ExistsHistory(
-        int32_t questId,
-        int32_t phase,
-        System_String_o *saveKey,
-        const MethodInfo *method)
-{
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  WarBoardMovieHistoryManager_c *v20; // x0
-  System_Collections_Generic_List_object__o *infoList; // x19
-  System_Predicate_object__o *v22; // x20
-
-  if ( (byte_4BC8DF1 & 1) == 0 )
-  {
-    sub_1C1ABD4(
-      &Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Find__,
-      *(_QWORD *)&phase);
-    sub_1C1ABD4(&System_Predicate_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo, v7);
-    sub_1C1ABD4(&Method_WarBoardMovieHistoryManager___c__DisplayClass9_0__ExistsHistory_b__0__, v8);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager___c__DisplayClass9_0_TypeInfo, v9);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v10);
-    byte_4BC8DF1 = 1;
-  }
-  v11 = sub_1C1AE20(WarBoardMovieHistoryManager___c__DisplayClass9_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
-    goto LABEL_8;
-  *(_QWORD *)(v11 + 24) = saveKey;
-  *(_DWORD *)(v11 + 16) = questId;
-  *(_DWORD *)(v11 + 20) = phase;
-  sub_1C1AB78((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)saveKey, v14, v15, v16, v17, v18, v19);
-  v20 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v20 = WarBoardMovieHistoryManager_TypeInfo;
-  }
-  infoList = (System_Collections_Generic_List_object__o *)v20->static_fields->infoList;
-  v22 = (System_Predicate_object__o *)sub_1C1AE20(System_Predicate_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
-  System_Predicate_object____ctor(
-    v22,
-    (Il2CppObject *)v11,
-    Method_WarBoardMovieHistoryManager___c__DisplayClass9_0__ExistsHistory_b__0__,
-    0LL);
-  if ( !infoList )
-LABEL_8:
-    sub_1C1AE30(v12, v13);
-  return System_Collections_Generic_List_object___Find(
-           infoList,
-           (System_Predicate_T__o *)v22,
-           (const MethodInfo_363CEF8 *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Find__) != 0LL;
-}
-
-
-System_String_o *__fastcall WarBoardMovieHistoryManager__GetFilePath(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  System_String_o *DatFileSavePath; // x19
-  System_String_o *FileName; // x2
-
-  if ( (byte_4BC8DED & 1) == 0 )
-  {
-    sub_1C1ABD4(&AndroidUtil_TypeInfo, v1);
-    sub_1C1ABD4(&DatFileName_TypeInfo, v2);
-    sub_1C1ABD4(&StringLiteral_1123/*"/"*/, v3);
-    byte_4BC8DED = 1;
-  }
-  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
-  DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
-  if ( !DatFileName_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName = DatFileName__getFileName(39, 0LL);
-  return System_String__Concat_63051628(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
-}
-
-
-void __fastcall WarBoardMovieHistoryManager__Initialize(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  WarBoardMovieHistoryManager_c *v2; // x0
-
-  if ( (byte_4BC8DEF & 1) == 0 )
-  {
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v1);
-    byte_4BC8DEF = 1;
-  }
-  v2 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-  WarBoardMovieHistoryManager__ReadData((const MethodInfo *)v2);
-}
-
-
-bool __fastcall WarBoardMovieHistoryManager__ReadData(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ManagerConfig_c *v7; // x0
-  WarBoardMovieHistoryManager_c *v9; // x0
-  System_String_o *FilePath; // x19
-  WarBoardMovieHistoryManager_c *v11; // x0
-  System_IO_Stream_o *v12; // x20
-  System_IO_BinaryReader_o *v13; // x19
-  __int64 v14; // x0
-  __int64 v15; // x1
-  System_String_o *v16; // x20
-  WarBoardMovieHistoryManager_c *v17; // x0
-  int v18; // w21
-  int v19; // w20
-  int v20; // w22
-  int v21; // w23
-  int64_t v22; // x24
-  int64_t v23; // x21
-  __int64 v24; // x0
-  __int64 v25; // x1
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  __int64 v32; // x1
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
-  WarBoardMovieHistoryManager_c *v39; // x0
-  System_Collections_Generic_List_object__o *infoList; // x0
-  struct System_Object_array *items; // x8
-  _QWORD *v42; // x9
-  __int64 size; // x10
-  Il2CppClass **v44; // x8
-  System_IO_BinaryReader_c *klass; // x8
-  __int64 v46; // x9
-  int32_t *p_offset; // x10
-  __int64 v48; // x0
-
-  if ( (byte_4BC8DF3 & 1) == 0 )
-  {
-    sub_1C1ABD4(&System_IO_BinaryReader_TypeInfo, v1);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_HistoryInfo_TypeInfo, v2);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v3);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__, v4);
-    sub_1C1ABD4(&ManagerConfig_TypeInfo, v5);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v6);
-    byte_4BC8DF3 = 1;
-  }
-  v7 = ManagerConfig_TypeInfo;
-  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v7 = ManagerConfig_TypeInfo;
-  }
-  if ( v7->static_fields->UseMock )
-    return 1;
-  v9 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-  FilePath = WarBoardMovieHistoryManager__GetFilePath((const MethodInfo *)v9);
-  if ( !System_IO_File__Exists(FilePath, 0LL) )
-    return 0;
-  v11 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-  WarBoardMovieHistoryManager__ClearSaveData((const MethodInfo *)v11);
-  WarBoardMovieHistoryManager_TypeInfo->static_fields->isModfiy = 0;
-  v12 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0LL);
-  v13 = (System_IO_BinaryReader_o *)sub_1C1AE20(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v13, v12, 0LL);
-  if ( !v13 )
-    sub_1C1AE30(v14, v15);
-  v16 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._22_ReadString.method)(
-                             v13,
-                             v13->klass->vtable._23_ReadChars.methodPtr);
-  v17 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v17 = WarBoardMovieHistoryManager_TypeInfo;
-  }
-  if ( System_String__op_Inequality(v17->static_fields->SAVE_DATA_VERSION, v16, 0LL) )
-  {
-    v18 = 5;
-  }
-  else
-  {
-    v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
-            v13,
-            v13->klass->vtable._16_ReadUInt32.methodPtr);
-    if ( v19 >= 1 )
-    {
-      do
-      {
-        v20 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
-                v13,
-                v13->klass->vtable._16_ReadUInt32.methodPtr);
-        v21 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
-                v13,
-                v13->klass->vtable._16_ReadUInt32.methodPtr);
-        v22 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._22_ReadString.method)(
-                v13,
-                v13->klass->vtable._23_ReadChars.methodPtr);
-        v23 = sub_1C1AE20(WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v23, 0LL);
-        if ( !v23 )
-          sub_1C1AE30(v24, v25);
-        *(_QWORD *)(v23 + 24) = v22;
-        *(_DWORD *)(v23 + 16) = v20;
-        *(_DWORD *)(v23 + 20) = v21;
-        sub_1C1AB78((PartyOrganizationUtility_o *)(v23 + 24), v22, v26, v27, v28, v29, v30, v31);
-        v39 = WarBoardMovieHistoryManager_TypeInfo;
-        if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
-        {
-          j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-          v39 = WarBoardMovieHistoryManager_TypeInfo;
-        }
-        infoList = (System_Collections_Generic_List_object__o *)v39->static_fields->infoList;
-        if ( !infoList )
-          sub_1C1AE30(0LL, v32);
-        items = infoList->fields._items;
-        v42 = Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__;
-        ++infoList->fields._version;
-        if ( !items )
-          sub_1C1AE30(infoList, v32);
-        size = infoList->fields._size;
-        if ( (unsigned int)size >= items->max_length )
-        {
-          System_Collections_Generic_List_object___AddWithResize(
-            infoList,
-            (Il2CppObject *)v23,
-            *(const MethodInfo_363C890 **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
-        }
-        else
-        {
-          v44 = &items->obj.klass + size;
-          infoList->fields._size = size + 1;
-          v44[4] = (Il2CppClass *)v23;
-          sub_1C1AB78((PartyOrganizationUtility_o *)(v44 + 4), v23, v33, v34, v35, v36, v37, v38);
-        }
-        --v19;
-      }
-      while ( v19 );
-    }
-    v18 = 8;
-  }
-  klass = v13->klass;
-  v46 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
-  {
-    p_offset = &klass->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
-    {
-      --v46;
-      p_offset += 4;
-      if ( !v46 )
-        goto LABEL_32;
-    }
-    v48 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
-  }
-  else
-  {
-LABEL_32:
-    v48 = sub_1C6CBB4(v13, System_IDisposable_TypeInfo, 0LL);
-  }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v48)(v13, *(_QWORD *)(v48 + 8));
-  return (v18 | 8) == 8;
-}
-
-
-bool __fastcall WarBoardMovieHistoryManager__WriteData(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  WarBoardMovieHistoryManager_c *v7; // x0
-  ManagerConfig_c *v8; // x0
-  const MethodInfo *v10; // x0
-  System_String_o *FilePath; // x0
-  System_IO_Stream_o *v12; // x20
-  System_IO_BinaryWriter_o *v13; // x19
-  __int64 v14; // x1
-  WarBoardMovieHistoryManager_c *v15; // x0
-  struct WarBoardMovieHistoryManager_StaticFields *static_fields; // x8
-  struct System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__o *infoList; // x9
-  int size; // w20
-  __int64 v19; // x1
-  int32_t i; // w21
-  WarBoardMovieHistoryManager_c *v21; // x0
-  System_Collections_Generic_List_object__o *v22; // x0
-  Il2CppObject *Item; // x0
-  __int64 v24; // x1
-  Il2CppObject *v25; // x22
-  System_IO_BinaryWriter_c *klass; // x8
-  __int64 v27; // x9
-  int32_t *p_offset; // x10
-  __int64 v29; // x0
-
-  if ( (byte_4BC8DF4 & 1) == 0 )
-  {
-    sub_1C1ABD4(&System_IO_BinaryWriter_TypeInfo, v1);
-    sub_1C1ABD4(&System_IDisposable_TypeInfo, v2);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Count__, v3);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Item__, v4);
-    sub_1C1ABD4(&ManagerConfig_TypeInfo, v5);
-    sub_1C1ABD4(&WarBoardMovieHistoryManager_TypeInfo, v6);
-    byte_4BC8DF4 = 1;
   }
   v7 = WarBoardMovieHistoryManager_TypeInfo;
   if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
@@ -566,102 +194,439 @@ bool __fastcall WarBoardMovieHistoryManager__WriteData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
     v7 = WarBoardMovieHistoryManager_TypeInfo;
   }
-  if ( !v7->static_fields->isModfiy )
-    return 0;
-  v8 = ManagerConfig_TypeInfo;
+  v7->static_fields->isModfiy = 1;
+}
+
+
+void __fastcall WarBoardMovieHistoryManager__DeleteSaveData(const MethodInfo *method)
+{
+  WarBoardMovieHistoryManager_c *v1; // x0
+  System_String_o *FilePath; // x19
+
+  if ( (byte_4BDD890 & 1) == 0 )
+  {
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD890 = 1;
+  }
+  v1 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+  FilePath = WarBoardMovieHistoryManager__GetFilePath((const MethodInfo *)v1);
+  if ( System_IO_File__Exists(FilePath, 0LL) )
+    System_IO_File__Delete(FilePath, 0LL);
+}
+
+
+bool __fastcall WarBoardMovieHistoryManager__ExistsHistory(
+        int32_t questId,
+        int32_t phase,
+        System_String_o *saveKey,
+        const MethodInfo *method)
+{
+  __int64 v7; // x22
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  WarBoardMovieHistoryManager_c *v16; // x0
+  System_Collections_Generic_List_object__o *infoList; // x19
+  System_Predicate_object__o *v18; // x20
+
+  if ( (byte_4BDD893 & 1) == 0 )
+  {
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Find__);
+    sub_1C21E38(&System_Predicate_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
+    sub_1C21E38(&Method_WarBoardMovieHistoryManager___c__DisplayClass9_0__ExistsHistory_b__0__);
+    sub_1C21E38(&WarBoardMovieHistoryManager___c__DisplayClass9_0_TypeInfo);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD893 = 1;
+  }
+  v7 = sub_1C22084(WarBoardMovieHistoryManager___c__DisplayClass9_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
+    goto LABEL_8;
+  *(_QWORD *)(v7 + 24) = saveKey;
+  *(_DWORD *)(v7 + 16) = questId;
+  *(_DWORD *)(v7 + 20) = phase;
+  sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)saveKey, v10, v11, v12, v13, v14, v15);
+  v16 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+    v16 = WarBoardMovieHistoryManager_TypeInfo;
+  }
+  infoList = (System_Collections_Generic_List_object__o *)v16->static_fields->infoList;
+  v18 = (System_Predicate_object__o *)sub_1C22084(System_Predicate_WarBoardMovieHistoryManager_HistoryInfo__TypeInfo);
+  System_Predicate_object____ctor(
+    v18,
+    (Il2CppObject *)v7,
+    Method_WarBoardMovieHistoryManager___c__DisplayClass9_0__ExistsHistory_b__0__,
+    0LL);
+  if ( !infoList )
+LABEL_8:
+    sub_1C22094(v8, v9);
+  return System_Collections_Generic_List_object___Find(
+           infoList,
+           (System_Predicate_T__o *)v18,
+           (const MethodInfo_364F71C *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Find__) != 0LL;
+}
+
+
+System_String_o *__fastcall WarBoardMovieHistoryManager__GetFilePath(const MethodInfo *method)
+{
+  System_String_o *DatFileSavePath; // x19
+  System_String_o *FileName; // x2
+
+  if ( (byte_4BDD88F & 1) == 0 )
+  {
+    sub_1C21E38(&AndroidUtil_TypeInfo);
+    sub_1C21E38(&DatFileName_TypeInfo);
+    sub_1C21E38(&StringLiteral_1123/*"/"*/);
+    byte_4BDD88F = 1;
+  }
+  if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
+  DatFileSavePath = AndroidUtil__GetDatFileSavePath(0LL);
+  if ( !DatFileName_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
+  FileName = DatFileName__getFileName(39, 0LL);
+  return System_String__Concat_63126736(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+}
+
+
+void __fastcall WarBoardMovieHistoryManager__Initialize(const MethodInfo *method)
+{
+  WarBoardMovieHistoryManager_c *v1; // x0
+
+  if ( (byte_4BDD891 & 1) == 0 )
+  {
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD891 = 1;
+  }
+  v1 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+  WarBoardMovieHistoryManager__ReadData((const MethodInfo *)v1);
+}
+
+
+bool __fastcall WarBoardMovieHistoryManager__ReadData(const MethodInfo *method)
+{
+  ManagerConfig_c *v1; // x0
+  WarBoardMovieHistoryManager_c *v3; // x0
+  System_String_o *FilePath; // x19
+  WarBoardMovieHistoryManager_c *v5; // x0
+  System_IO_Stream_o *v6; // x20
+  System_IO_BinaryReader_o *v7; // x19
+  __int64 v8; // x0
+  __int64 v9; // x1
+  System_String_o *v10; // x20
+  WarBoardMovieHistoryManager_c *v11; // x0
+  int v12; // w21
+  int v13; // w20
+  int v14; // w22
+  int v15; // w23
+  int64_t v16; // x24
+  int64_t v17; // x21
+  __int64 v18; // x0
+  __int64 v19; // x1
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
+  __int64 v26; // x1
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  WarBoardMovieHistoryManager_c *v33; // x0
+  System_Collections_Generic_List_object__o *infoList; // x0
+  struct System_Object_array *items; // x8
+  _QWORD *v36; // x9
+  __int64 size; // x10
+  Il2CppClass **v38; // x8
+  System_IO_BinaryReader_c *klass; // x8
+  __int64 v40; // x9
+  int32_t *p_offset; // x10
+  __int64 v42; // x0
+
+  if ( (byte_4BDD895 & 1) == 0 )
+  {
+    sub_1C21E38(&System_IO_BinaryReader_TypeInfo);
+    sub_1C21E38(&WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__);
+    sub_1C21E38(&ManagerConfig_TypeInfo);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD895 = 1;
+  }
+  v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v8 = ManagerConfig_TypeInfo;
+    v1 = ManagerConfig_TypeInfo;
   }
-  if ( v8->static_fields->UseMock )
+  if ( v1->static_fields->UseMock )
+    return 1;
+  v3 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+  FilePath = WarBoardMovieHistoryManager__GetFilePath((const MethodInfo *)v3);
+  if ( !System_IO_File__Exists(FilePath, 0LL) )
     return 0;
-  v10 = (const MethodInfo *)WarBoardMovieHistoryManager_TypeInfo;
+  v5 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+  WarBoardMovieHistoryManager__ClearSaveData((const MethodInfo *)v5);
+  WarBoardMovieHistoryManager_TypeInfo->static_fields->isModfiy = 0;
+  v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0LL);
+  v7 = (System_IO_BinaryReader_o *)sub_1C22084(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v7, v6, 0LL);
+  if ( !v7 )
+    sub_1C22094(v8, v9);
+  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
+                             v7,
+                             v7->klass->vtable._23_ReadChars.methodPtr);
+  v11 = WarBoardMovieHistoryManager_TypeInfo;
   if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v10 = (const MethodInfo *)WarBoardMovieHistoryManager_TypeInfo;
+    v11 = WarBoardMovieHistoryManager_TypeInfo;
   }
-  *((_BYTE *)v10[2].virtualMethodPointer + 16) = 0;
-  FilePath = WarBoardMovieHistoryManager__GetFilePath(v10);
-  v12 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0LL);
-  v13 = (System_IO_BinaryWriter_o *)sub_1C1AE20(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63278860(v13, v12, 0LL);
-  v15 = WarBoardMovieHistoryManager_TypeInfo;
-  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+  if ( System_String__op_Inequality(v11->static_fields->SAVE_DATA_VERSION, v10, 0LL) )
   {
-    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-    v15 = WarBoardMovieHistoryManager_TypeInfo;
+    v12 = 5;
   }
-  static_fields = v15->static_fields;
-  infoList = static_fields->infoList;
-  if ( !infoList )
-    sub_1C1AE30(v15, v14);
-  if ( !v13 )
-    sub_1C1AE30(v15, v14);
-  size = infoList->fields._size;
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v13->klass->vtable._22_Write.method)(
-    v13,
-    static_fields->SAVE_DATA_VERSION,
-    v13->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v13->klass->vtable._17_Write.method)(
-    v13,
-    (unsigned int)size,
-    v13->klass->vtable._18_Write.methodPtr);
-  if ( size >= 1 )
+  else
   {
-    for ( i = 0; i != size; ++i )
+    v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
+            v7,
+            v7->klass->vtable._16_ReadUInt32.methodPtr);
+    if ( v13 >= 1 )
     {
-      v21 = WarBoardMovieHistoryManager_TypeInfo;
-      if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+      do
       {
-        j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
-        v21 = WarBoardMovieHistoryManager_TypeInfo;
+        v14 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
+                v7,
+                v7->klass->vtable._16_ReadUInt32.methodPtr);
+        v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
+                v7,
+                v7->klass->vtable._16_ReadUInt32.methodPtr);
+        v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
+                v7,
+                v7->klass->vtable._23_ReadChars.methodPtr);
+        v17 = sub_1C22084(WarBoardMovieHistoryManager_HistoryInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v17, 0LL);
+        if ( !v17 )
+          sub_1C22094(v18, v19);
+        *(_QWORD *)(v17 + 24) = v16;
+        *(_DWORD *)(v17 + 16) = v14;
+        *(_DWORD *)(v17 + 20) = v15;
+        sub_1C21DDC((PartyOrganizationUtility_o *)(v17 + 24), v16, v20, v21, v22, v23, v24, v25);
+        v33 = WarBoardMovieHistoryManager_TypeInfo;
+        if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+          v33 = WarBoardMovieHistoryManager_TypeInfo;
+        }
+        infoList = (System_Collections_Generic_List_object__o *)v33->static_fields->infoList;
+        if ( !infoList )
+          sub_1C22094(0LL, v26);
+        items = infoList->fields._items;
+        v36 = Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__Add__;
+        ++infoList->fields._version;
+        if ( !items )
+          sub_1C22094(infoList, v26);
+        size = infoList->fields._size;
+        if ( (unsigned int)size >= items->max_length )
+        {
+          System_Collections_Generic_List_object___AddWithResize(
+            infoList,
+            (Il2CppObject *)v17,
+            *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v38 = &items->obj.klass + size;
+          infoList->fields._size = size + 1;
+          v38[4] = (Il2CppClass *)v17;
+          sub_1C21DDC((PartyOrganizationUtility_o *)(v38 + 4), v17, v27, v28, v29, v30, v31, v32);
+        }
+        --v13;
       }
-      v22 = (System_Collections_Generic_List_object__o *)v21->static_fields->infoList;
-      if ( !v22 )
-        sub_1C1AE30(0LL, v19);
-      Item = System_Collections_Generic_List_object___get_Item(
-               v22,
-               i,
-               (const MethodInfo_363C5C0 *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Item__);
-      v25 = Item;
-      if ( !Item )
-        sub_1C1AE30(0LL, v24);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v13->klass->vtable._17_Write.method)(
-        v13,
-        LODWORD(Item[1].klass),
-        v13->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v13->klass->vtable._17_Write.method)(
-        v13,
-        HIDWORD(v25[1].klass),
-        v13->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, void *, void *))v13->klass->vtable._22_Write.method)(
-        v13,
-        v25[1].monitor,
-        v13->klass[1]._1.image);
+      while ( v13 );
     }
+    v12 = 8;
   }
-  klass = v13->klass;
-  v27 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
+  klass = v7->klass;
+  v40 = *(unsigned __int16 *)(&v7->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v7->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v27;
+      --v40;
       p_offset += 4;
-      if ( !v27 )
+      if ( !v40 )
+        goto LABEL_32;
+    }
+    v42 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+  }
+  else
+  {
+LABEL_32:
+    v42 = sub_1C73E18(v7, System_IDisposable_TypeInfo, 0LL);
+  }
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v42)(v7, *(_QWORD *)(v42 + 8));
+  return (v12 | 8) == 8;
+}
+
+
+bool __fastcall WarBoardMovieHistoryManager__WriteData(const MethodInfo *method)
+{
+  WarBoardMovieHistoryManager_c *v1; // x0
+  ManagerConfig_c *v2; // x0
+  const MethodInfo *v4; // x0
+  System_String_o *FilePath; // x0
+  System_IO_Stream_o *v6; // x20
+  System_IO_BinaryWriter_o *v7; // x19
+  __int64 v8; // x1
+  WarBoardMovieHistoryManager_c *v9; // x0
+  struct WarBoardMovieHistoryManager_StaticFields *static_fields; // x8
+  struct System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__o *infoList; // x9
+  int size; // w20
+  __int64 v13; // x1
+  int32_t i; // w21
+  WarBoardMovieHistoryManager_c *v15; // x0
+  System_Collections_Generic_List_object__o *v16; // x0
+  Il2CppObject *Item; // x0
+  __int64 v18; // x1
+  Il2CppObject *v19; // x22
+  System_IO_BinaryWriter_c *klass; // x8
+  __int64 v21; // x9
+  int32_t *p_offset; // x10
+  __int64 v23; // x0
+
+  if ( (byte_4BDD896 & 1) == 0 )
+  {
+    sub_1C21E38(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C21E38(&System_IDisposable_TypeInfo);
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Count__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Item__);
+    sub_1C21E38(&ManagerConfig_TypeInfo);
+    sub_1C21E38(&WarBoardMovieHistoryManager_TypeInfo);
+    byte_4BDD896 = 1;
+  }
+  v1 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+    v1 = WarBoardMovieHistoryManager_TypeInfo;
+  }
+  if ( !v1->static_fields->isModfiy )
+    return 0;
+  v2 = ManagerConfig_TypeInfo;
+  if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
+    v2 = ManagerConfig_TypeInfo;
+  }
+  if ( v2->static_fields->UseMock )
+    return 0;
+  v4 = (const MethodInfo *)WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+    v4 = (const MethodInfo *)WarBoardMovieHistoryManager_TypeInfo;
+  }
+  *((_BYTE *)v4[2].virtualMethodPointer + 16) = 0;
+  FilePath = WarBoardMovieHistoryManager__GetFilePath(v4);
+  v6 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0LL);
+  v7 = (System_IO_BinaryWriter_o *)sub_1C22084(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63353968(v7, v6, 0LL);
+  v9 = WarBoardMovieHistoryManager_TypeInfo;
+  if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+    v9 = WarBoardMovieHistoryManager_TypeInfo;
+  }
+  static_fields = v9->static_fields;
+  infoList = static_fields->infoList;
+  if ( !infoList )
+    sub_1C22094(v9, v8);
+  if ( !v7 )
+    sub_1C22094(v9, v8);
+  size = infoList->fields._size;
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v7->klass->vtable._22_Write.method)(
+    v7,
+    static_fields->SAVE_DATA_VERSION,
+    v7->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._17_Write.method)(
+    v7,
+    (unsigned int)size,
+    v7->klass->vtable._18_Write.methodPtr);
+  if ( size >= 1 )
+  {
+    for ( i = 0; i != size; ++i )
+    {
+      v15 = WarBoardMovieHistoryManager_TypeInfo;
+      if ( !WarBoardMovieHistoryManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(WarBoardMovieHistoryManager_TypeInfo);
+        v15 = WarBoardMovieHistoryManager_TypeInfo;
+      }
+      v16 = (System_Collections_Generic_List_object__o *)v15->static_fields->infoList;
+      if ( !v16 )
+        sub_1C22094(0LL, v13);
+      Item = System_Collections_Generic_List_object___get_Item(
+               v16,
+               i,
+               (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_WarBoardMovieHistoryManager_HistoryInfo__get_Item__);
+      v19 = Item;
+      if ( !Item )
+        sub_1C22094(0LL, v18);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._17_Write.method)(
+        v7,
+        LODWORD(Item[1].klass),
+        v7->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v7->klass->vtable._17_Write.method)(
+        v7,
+        HIDWORD(v19[1].klass),
+        v7->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, void *, void *))v7->klass->vtable._22_Write.method)(
+        v7,
+        v19[1].monitor,
+        v7->klass[1]._1.image);
+    }
+  }
+  klass = v7->klass;
+  v21 = *(unsigned __int16 *)(&v7->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v7->klass->_2.bitflags2 + 3) )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
+    {
+      --v21;
+      p_offset += 4;
+      if ( !v21 )
         goto LABEL_27;
     }
-    v29 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v23 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_27:
-    v29 = sub_1C6CBB4(v13, System_IDisposable_TypeInfo, 0LL);
+    v23 = sub_1C73E18(v7, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v29)(v13, *(_QWORD *)(v29 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v7, *(_QWORD *)(v23 + 8));
   return 1;
 }
 
@@ -688,7 +653,7 @@ bool __fastcall WarBoardMovieHistoryManager___c__DisplayClass9_0___ExistsHistory
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C1AE30(this, 0LL);
+    sub_1C22094(this, 0LL);
   return x->fields.questId == this->fields.questId
       && x->fields.phase == this->fields.phase
       && System_String__op_Equality(x->fields.saveKey, this->fields.saveKey, 0LL);

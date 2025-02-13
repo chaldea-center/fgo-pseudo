@@ -1,33 +1,32 @@
 void __fastcall ServantTreasureDeviceAddEntity___ctor(ServantTreasureDeviceAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC841C & 1) == 0 )
+  if ( (byte_4BDCEBA & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BC841C = 1;
+    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
+    byte_4BDCEBA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_324620C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantTreasureDeviceAddEntity__CreatePK(
         int32_t svtId,
         int32_t num,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4BC841B & 1) == 0 )
+  if ( (byte_4BDCEB9 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4BC841B = 1;
+    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4BDCEB9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_2F9DB44 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -45,12 +44,12 @@ int32_t __fastcall ServantTreasureDeviceAddEntity__GetCondIgnoreSealedLimitCount
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC841A & 1) == 0 )
+  if ( (byte_4BDCEB8 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_18494/*"condIgnoreSealedLimitCount"*/, method);
-    byte_4BC841A = 1;
+    sub_1C21E38(&StringLiteral_18508/*"condIgnoreSealedLimitCount"*/);
+    byte_4BDCEB8 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18494/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18508/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
 }
 
 
@@ -58,12 +57,12 @@ System_Int32_array *__fastcall ServantTreasureDeviceAddEntity__GetDispMaskTreasu
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC8418 & 1) == 0 )
+  if ( (byte_4BDCEB6 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_18948/*"dispMaskTreasureDevices"*/, method);
-    byte_4BC8418 = 1;
+    sub_1C21E38(&StringLiteral_18963/*"dispMaskTreasureDevices"*/);
+    byte_4BDCEB6 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18948/*"dispMaskTreasureDevices"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18963/*"dispMaskTreasureDevices"*/, 0LL, 0LL);
 }
 
 
@@ -71,12 +70,12 @@ System_Int32_array *__fastcall ServantTreasureDeviceAddEntity__GetFixedCardLimit
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BC8419 & 1) == 0 )
+  if ( (byte_4BDCEB7 & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_19771/*"fixedCardLimitCounts"*/, method);
-    byte_4BC8419 = 1;
+    sub_1C21E38(&StringLiteral_19786/*"fixedCardLimitCounts"*/);
+    byte_4BDCEB7 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19771/*"fixedCardLimitCounts"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19786/*"fixedCardLimitCounts"*/, 0LL, 0LL);
 }
 
 
@@ -84,25 +83,24 @@ bool __fastcall ServantTreasureDeviceAddEntity__IsEnable(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4BC8417 & 1) == 0 )
+  if ( (byte_4BDCEB5 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1C1ABD4(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BC8417 = 1;
+    sub_1C21E38(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4BDCEB5 = 1;
   }
   if ( !this->fields.commonReleaseId )
     return 1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_387A8A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F9F490 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1C1AE30(Instance, v5);
+    sub_1C22094(Instance, v4);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }

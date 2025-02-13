@@ -1,11 +1,9 @@
 void __fastcall WarBoardInfoPopupBase___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4BC5931 & 1) == 0 )
+  if ( (byte_4BDA3C0 & 1) == 0 )
   {
-    sub_1C1ABD4(&WarBoardInfoPopupBase_TypeInfo, v1);
-    byte_4BC5931 = 1;
+    sub_1C21E38(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4BDA3C0 = 1;
   }
   *WarBoardInfoPopupBase_TypeInfo->static_fields = (struct WarBoardInfoPopupBase_StaticFields)vdup_n_s32(0x3E088889u).n64_u64[0];
 }
@@ -34,10 +32,10 @@ void __fastcall WarBoardInfoPopupBase__AddHideCompleteCallback(
   int64_t v14; // x8
   System_Action_c *v15; // x1
 
-  if ( (byte_4BC592E & 1) == 0 )
+  if ( (byte_4BDA3BD & 1) == 0 )
   {
-    sub_1C1ABD4(&System_Action_TypeInfo, completeCallback);
-    byte_4BC592E = 1;
+    sub_1C21E38(&System_Action_TypeInfo);
+    byte_4BDA3BD = 1;
   }
   hideCompleteCallback = (System_Delegate_o *)this->fields.hideCompleteCallback;
   p_hideCompleteCallback = (PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback;
@@ -49,11 +47,11 @@ void __fastcall WarBoardInfoPopupBase__AddHideCompleteCallback(
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (p_hideCompleteCallback->klass = (PartyOrganizationUtility_c *)v7, (System_Action_c *)v7->klass != v15) )
   {
-    sub_1C1B0F0(v7);
+    sub_1C22354(v7);
 LABEL_7:
     p_hideCompleteCallback->klass = (PartyOrganizationUtility_c *)v14;
   }
-  sub_1C1AB78(p_hideCompleteCallback, v14, v8, v9, v10, v11, v12, v13);
+  sub_1C21DDC(p_hideCompleteCallback, v14, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -65,21 +63,20 @@ void __fastcall WarBoardInfoPopupBase__CleanPopup(WarBoardInfoPopupBase_o *this,
 
 void __fastcall WarBoardInfoPopupBase__Hide(WarBoardInfoPopupBase_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  EventDelegate_Callback_o *v4; // x20
+  EventDelegate_Callback_o *v3; // x20
 
-  if ( (byte_4BC592D & 1) == 0 )
+  if ( (byte_4BDA3BC & 1) == 0 )
   {
-    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C1ABD4(&Method_WarBoardInfoPopupBase__Hide_b__18_0__, v3);
-    byte_4BC592D = 1;
+    sub_1C21E38(&EventDelegate_Callback_TypeInfo);
+    sub_1C21E38(&Method_WarBoardInfoPopupBase__Hide_b__18_0__);
+    byte_4BDA3BC = 1;
   }
   this->fields._isHideAnimating_k__BackingField = 1;
-  v4 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v4, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Hide_b__18_0__, 0LL);
+  v3 = (EventDelegate_Callback_o *)sub_1C22084(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v3, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Hide_b__18_0__, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, EventDelegate_Callback_o *, Il2CppMethodPointer))this->klass->vtable._6_HideAnimation.method)(
     this,
-    v4,
+    v3,
     this->klass->vtable._7_OnBeforeShow.methodPtr);
 }
 
@@ -89,45 +86,44 @@ void __fastcall WarBoardInfoPopupBase__HideAnimation(
         EventDelegate_Callback_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  WarBoardInfoPopupBase_c *v6; // x0
+  WarBoardInfoPopupBase_c *v5; // x0
   UnityEngine_GameObject_o *mainView; // x20
   float POPUP_HIDE_ANIM_DURATION; // s8
-  TweenScale_o *v9; // x0
-  __int64 v10; // x1
+  TweenScale_o *v8; // x0
+  __int64 v9; // x1
   System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
 
-  if ( (byte_4BC5930 & 1) == 0 )
+  if ( (byte_4BDA3BF & 1) == 0 )
   {
-    sub_1C1ABD4(&EventDelegate_TypeInfo, finishCallback);
-    sub_1C1ABD4(&WarBoardInfoPopupBase_TypeInfo, v5);
-    byte_4BC5930 = 1;
+    sub_1C21E38(&EventDelegate_TypeInfo);
+    sub_1C21E38(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4BDA3BF = 1;
   }
-  v6 = WarBoardInfoPopupBase_TypeInfo;
+  v5 = WarBoardInfoPopupBase_TypeInfo;
   mainView = this->fields.mainView;
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
-    v6 = WarBoardInfoPopupBase_TypeInfo;
+    v5 = WarBoardInfoPopupBase_TypeInfo;
   }
-  POPUP_HIDE_ANIM_DURATION = v6->static_fields->POPUP_HIDE_ANIM_DURATION;
-  if ( !byte_4BC2141 )
+  POPUP_HIDE_ANIM_DURATION = v5->static_fields->POPUP_HIDE_ANIM_DURATION;
+  if ( !byte_4BD6BB1 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, finishCallback);
-    byte_4BC2141 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
-  v9 = TweenScale__Begin(
+  v8 = TweenScale__Begin(
          mainView,
          POPUP_HIDE_ANIM_DURATION,
          UnityEngine_Vector3_TypeInfo->static_fields->zeroVector,
          0LL);
-  if ( !v9 )
-    sub_1C1AE30(0LL, v10);
-  v9->fields.method = 6;
-  onFinished = v9->fields.onFinished;
+  if ( !v8 )
+    sub_1C22094(0LL, v9);
+  v8->fields.method = 6;
+  onFinished = v8->fields.onFinished;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_47878096(onFinished, finishCallback, 0LL);
+  EventDelegate__Set_47946052(onFinished, finishCallback, 0LL);
 }
 
 
@@ -153,18 +149,18 @@ void __fastcall WarBoardInfoPopupBase__Initialize(WarBoardInfoPopupBase_o *this,
     goto LABEL_7;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
   v5 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v4);
-    byte_4BC2141 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   if ( !v5 )
 LABEL_7:
-    sub_1C1AE30(gameObject, v4);
+    sub_1C22094(gameObject, v4);
   UnityEngine_Transform__set_localScale(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   this->fields.hideCompleteCallback = 0LL;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1C1AB78((PartyOrganizationUtility_o *)p_hideCompleteCallback, 0LL, v7, v8, v9, v10, v11, v12);
+  sub_1C21DDC((PartyOrganizationUtility_o *)p_hideCompleteCallback, 0LL, v7, v8, v9, v10, v11, v12);
   *((_WORD *)p_hideCompleteCallback + 4) = 0;
 }
 
@@ -185,7 +181,7 @@ void __fastcall WarBoardInfoPopupBase__OnAfterHide(WarBoardInfoPopupBase_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C1AE30(0LL, v4);
+    sub_1C22094(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, void *))this->klass->vtable._9_CleanPopup.method)(
     this,
@@ -199,7 +195,7 @@ void __fastcall WarBoardInfoPopupBase__OnAfterHide(WarBoardInfoPopupBase_o *this
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
     p_hideCompleteCallback->klass = 0LL;
-    sub_1C1AB78(p_hideCompleteCallback, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1C21DDC(p_hideCompleteCallback, 0LL, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -211,31 +207,30 @@ void __fastcall WarBoardInfoPopupBase__OnBeforeShow(WarBoardInfoPopupBase_o *thi
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C1AE30(0LL, v3);
+    sub_1C22094(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
 
 void __fastcall WarBoardInfoPopupBase__Show(WarBoardInfoPopupBase_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  EventDelegate_Callback_o *v4; // x20
+  EventDelegate_Callback_o *v3; // x20
 
-  if ( (byte_4BC592C & 1) == 0 )
+  if ( (byte_4BDA3BB & 1) == 0 )
   {
-    sub_1C1ABD4(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C1ABD4(&Method_WarBoardInfoPopupBase__Show_b__17_0__, v3);
-    byte_4BC592C = 1;
+    sub_1C21E38(&EventDelegate_Callback_TypeInfo);
+    sub_1C21E38(&Method_WarBoardInfoPopupBase__Show_b__17_0__);
+    byte_4BDA3BB = 1;
   }
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, Il2CppMethodPointer))this->klass->vtable._7_OnBeforeShow.method)(
     this,
     this->klass->vtable._8_OnAfterHide.methodPtr);
   this->fields._isShowAnimating_k__BackingField = 1;
-  v4 = (EventDelegate_Callback_o *)sub_1C1AE20(EventDelegate_Callback_TypeInfo);
-  EventDelegate_Callback___ctor(v4, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Show_b__17_0__, 0LL);
+  v3 = (EventDelegate_Callback_o *)sub_1C22084(EventDelegate_Callback_TypeInfo);
+  EventDelegate_Callback___ctor(v3, (Il2CppObject *)this, Method_WarBoardInfoPopupBase__Show_b__17_0__, 0LL);
   ((void (__fastcall *)(WarBoardInfoPopupBase_o *, EventDelegate_Callback_o *, Il2CppMethodPointer))this->klass->vtable._5_ShowAnimation.method)(
     this,
-    v4,
+    v3,
     this->klass->vtable._6_HideAnimation.methodPtr);
 }
 
@@ -245,45 +240,44 @@ void __fastcall WarBoardInfoPopupBase__ShowAnimation(
         EventDelegate_Callback_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  WarBoardInfoPopupBase_c *v6; // x0
+  WarBoardInfoPopupBase_c *v5; // x0
   UnityEngine_GameObject_o *mainView; // x20
   float POPUP_SHOW_ANIM_DURATION; // s8
-  TweenScale_o *v9; // x0
-  __int64 v10; // x1
+  TweenScale_o *v8; // x0
+  __int64 v9; // x1
   System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
 
-  if ( (byte_4BC592F & 1) == 0 )
+  if ( (byte_4BDA3BE & 1) == 0 )
   {
-    sub_1C1ABD4(&EventDelegate_TypeInfo, finishCallback);
-    sub_1C1ABD4(&WarBoardInfoPopupBase_TypeInfo, v5);
-    byte_4BC592F = 1;
+    sub_1C21E38(&EventDelegate_TypeInfo);
+    sub_1C21E38(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4BDA3BE = 1;
   }
-  v6 = WarBoardInfoPopupBase_TypeInfo;
+  v5 = WarBoardInfoPopupBase_TypeInfo;
   mainView = this->fields.mainView;
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
-    v6 = WarBoardInfoPopupBase_TypeInfo;
+    v5 = WarBoardInfoPopupBase_TypeInfo;
   }
-  POPUP_SHOW_ANIM_DURATION = v6->static_fields->POPUP_SHOW_ANIM_DURATION;
-  if ( !byte_4BC2146 )
+  POPUP_SHOW_ANIM_DURATION = v5->static_fields->POPUP_SHOW_ANIM_DURATION;
+  if ( !byte_4BD6BB6 )
   {
-    sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, finishCallback);
-    byte_4BC2146 = 1;
+    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB6 = 1;
   }
-  v9 = TweenScale__Begin(
+  v8 = TweenScale__Begin(
          mainView,
          POPUP_SHOW_ANIM_DURATION,
          UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
          0LL);
-  if ( !v9 )
-    sub_1C1AE30(0LL, v10);
-  v9->fields.method = 6;
-  onFinished = v9->fields.onFinished;
+  if ( !v8 )
+    sub_1C22094(0LL, v9);
+  v8->fields.method = 6;
+  onFinished = v8->fields.onFinished;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_47878096(onFinished, finishCallback, 0LL);
+  EventDelegate__Set_47946052(onFinished, finishCallback, 0LL);
 }
 
 
@@ -330,7 +324,7 @@ bool __fastcall WarBoardInfoPopupBase__get_isShown(WarBoardInfoPopupBase_o *this
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C1AE30(0LL, v3);
+    sub_1C22094(0LL, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
 }
 

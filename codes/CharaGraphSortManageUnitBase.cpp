@@ -16,7 +16,7 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields,
     (int64_t)sortSaveKeyPrefix,
     (int64_t)method,
@@ -46,10 +46,10 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
   FollowerInfo_o *v14; // x6
   PartyListViewItem_o *v15; // x7
 
-  if ( (byte_4BC6E63 & 1) == 0 )
+  if ( (byte_4BDB8F9 & 1) == 0 )
   {
-    sub_1C1ABD4(&ListViewSort_TypeInfo, method);
-    byte_4BC6E63 = 1;
+    sub_1C21E38(&ListViewSort_TypeInfo);
+    byte_4BDB8F9 = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -58,20 +58,20 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
                               this,
                               this->klass[1]._1.name);
-    v6 = System_String__Concat_63040368(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
+    v6 = System_String__Concat_63115476(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
            this,
            this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_1C1AE20(ListViewSort_TypeInfo);
-    ListViewSort___ctor_41977068(sortInfo, v6, v7, 0, 0LL);
+    sortInfo = (struct ListViewSort_o *)sub_1C22084(ListViewSort_TypeInfo);
+    ListViewSort___ctor_42029876(sortInfo, v6, v7, 0, 0LL);
     v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
            this,
            this->klass[1]._1.this_arg.data);
     if ( !sortInfo )
-      sub_1C1AE30(v8, v9);
+      sub_1C22094(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields.sortInfo, (int64_t)sortInfo, v10, v11, v12, v13, v14, v15);
+    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.sortInfo, (int64_t)sortInfo, v10, v11, v12, v13, v14, v15);
   }
   return sortInfo;
 }
@@ -97,5 +97,5 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   PartyListViewItem_o *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_1C1AB78((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

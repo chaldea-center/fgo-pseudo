@@ -1,14 +1,14 @@
 void __fastcall UserQuestRouteMaster___ctor(UserQuestRouteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC88B9 & 1) == 0 )
+  if ( (byte_4BDD35C & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__, method);
-    byte_4BC88B9 = 1;
+    sub_1C21E38(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__);
+    byte_4BDD35C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     291,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ UserQuestRouteEntity_o *__fastcall UserQuestRouteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BC88B7 & 1) == 0 )
+  if ( (byte_4BDD35A & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__, userId);
-    byte_4BC88B7 = 1;
+    sub_1C21E38(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__);
+    byte_4BDD35A = 1;
   }
   PK = (Il2CppObject *)UserQuestRouteEntity__CreatePK(userId, questId, routeId, *(const MethodInfo **)&routeId);
   return (UserQuestRouteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_324D130 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__);
+                                     (const MethodInfo_3260880 *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall UserQuestRouteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC88B8 & 1) == 0 )
+  if ( (byte_4BDD35B & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__, entity);
-    byte_4BC88B8 = 1;
+    sub_1C21E38(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__);
+    byte_4BDD35B = 1;
   }
   PK = (Il2CppObject *)UserQuestRouteEntity__CreatePK(userId, questId, routeId, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__TryGetEntity__);
 }
 
 

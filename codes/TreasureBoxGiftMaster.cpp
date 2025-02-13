@@ -1,61 +1,55 @@
 void __fastcall TreasureBoxGiftMaster___ctor(TreasureBoxGiftMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8667 & 1) == 0 )
+  if ( (byte_4BDD105 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string___ctor__, method);
-    byte_4BC8667 = 1;
+    sub_1C21E38(&Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string___ctor__);
+    byte_4BDD105 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     381,
-    (const MethodInfo_324AE0C *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string___ctor__);
+    (const MethodInfo_325E55C *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall TreasureBoxGiftMaster__GetEmissionItemList(
         TreasureBoxGiftMaster_o *this,
         int32_t id,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_int__o *v10; // x21
+  System_Collections_Generic_List_int__o *v5; // x21
   __int64 klass_low; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v13; // w22
-  int32_t v14; // w23
+  int v8; // w22
+  int32_t v9; // w23
   struct System_Int32_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v11; // x9
   __int64 size; // x10
 
-  if ( (byte_4BC8668 & 1) == 0 )
+  if ( (byte_4BDD106 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Count__, *(_QWORD *)&id);
-    sub_1C1ABD4(&Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Item__, v5);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__Add__, v6);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_int__ToArray__, v7);
-    sub_1C1ABD4(&Method_System_Collections_Generic_List_int___ctor__, v8);
-    sub_1C1ABD4(&System_Collections_Generic_List_int__TypeInfo, v9);
-    byte_4BC8668 = 1;
+    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Count__);
+    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Item__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C21E38(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C21E38(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4BDD106 = 1;
   }
-  v10 = (System_Collections_Generic_List_int__o *)sub_1C1AE20(System_Collections_Generic_List_int__TypeInfo);
+  v5 = (System_Collections_Generic_List_int__o *)sub_1C22084(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v10,
-    (const MethodInfo_361F018 *)Method_System_Collections_Generic_List_int___ctor__);
+    v5,
+    (const MethodInfo_363183C *)Method_System_Collections_Generic_List_int___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_31E297C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Count__);
+                                                             (const MethodInfo_31F60CC *)Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v13 = (int)list;
-    v14 = 0;
+    v8 = (int)list;
+    v9 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -63,44 +57,44 @@ System_Int32_array *__fastcall TreasureBoxGiftMaster__GetEmissionItemList(
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v14,
-                                                                 (const MethodInfo_31E2A0C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Item__);
+                                                                 v9,
+                                                                 (const MethodInfo_31F615C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxGiftEntity__get_Item__);
       if ( list && LODWORD(list->fields.items) == id )
       {
-        if ( !v10 )
+        if ( !v5 )
           break;
         klass_low = LODWORD(list[1].klass);
-        items = v10->fields._items;
-        v16 = Method_System_Collections_Generic_List_int__Add__;
-        ++v10->fields._version;
+        items = v5->fields._items;
+        v11 = Method_System_Collections_Generic_List_int__Add__;
+        ++v5->fields._version;
         if ( !items )
           break;
-        size = v10->fields._size;
+        size = v5->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_int___AddWithResize(
-            v10,
+            v5,
             klass_low,
-            *(const MethodInfo_361F86C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_3632090 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
         }
         else
         {
-          v10->fields._size = size + 1;
+          v5->fields._size = size + 1;
           items->m_Items[size + 1] = klass_low;
         }
       }
-      if ( v13 == ++v14 )
+      if ( v8 == ++v9 )
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1C1AE30(list, klass_low);
+    sub_1C22094(list, klass_low);
   }
 LABEL_15:
-  if ( !v10 )
+  if ( !v5 )
     goto LABEL_17;
   return System_Collections_Generic_List_int___ToArray(
-           v10,
-           (const MethodInfo_3621324 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v5,
+           (const MethodInfo_3633B48 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -113,18 +107,16 @@ TreasureBoxGiftEntity_o *__fastcall TreasureBoxGiftMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BC8665 & 1) == 0 )
+  if ( (byte_4BDD103 & 1) == 0 )
   {
-    sub_1C1ABD4(
-      &Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__GetEntity__,
-      *(_QWORD *)&id);
-    byte_4BC8665 = 1;
+    sub_1C21E38(&Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__GetEntity__);
+    byte_4BDD103 = 1;
   }
   PK = (Il2CppObject *)TreasureBoxGiftEntity__CreatePK(id, idx, *(const MethodInfo **)&idx);
   return (TreasureBoxGiftEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_324D130 *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__GetEntity__);
+                                      (const MethodInfo_3260880 *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__GetEntity__);
 }
 
 
@@ -138,15 +130,15 @@ bool __fastcall TreasureBoxGiftMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BC8666 & 1) == 0 )
+  if ( (byte_4BDD104 & 1) == 0 )
   {
-    sub_1C1ABD4(&Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__TryGetEntity__, entity);
-    byte_4BC8666 = 1;
+    sub_1C21E38(&Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__TryGetEntity__);
+    byte_4BDD104 = 1;
   }
   PK = (Il2CppObject *)TreasureBoxGiftEntity__CreatePK(id, idx, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_324D17C *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__TryGetEntity__);
+           (const MethodInfo_32608CC *)Method_DataMasterBase_TreasureBoxGiftMaster__TreasureBoxGiftEntity__string__TryGetEntity__);
 }

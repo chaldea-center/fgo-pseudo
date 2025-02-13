@@ -14,7 +14,7 @@ void __fastcall BattleSpeedButtonComponent__OnPress(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1C1AE30(0LL, isPressed);
+    sub_1C22094(0LL, isPressed);
   v4 = 1.0;
   if ( isPressed )
     v4 = 2.0;

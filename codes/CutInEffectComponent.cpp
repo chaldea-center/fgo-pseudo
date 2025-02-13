@@ -1,9 +1,9 @@
 void __fastcall CutInEffectComponent___ctor(CutInEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BC8EF0 & 1) == 0 )
+  if ( (byte_4BDD996 & 1) == 0 )
   {
-    sub_1C1ABD4(&CommonEffectComponent_TypeInfo, method);
-    byte_4BC8EF0 = 1;
+    sub_1C21E38(&CommonEffectComponent_TypeInfo);
+    byte_4BDD996 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -11,7 +11,6 @@ void __fastcall CutInEffectComponent___ctor(CutInEffectComponent_o *this, const 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *__fastcall CutInEffectComponent__GetPrefabRoot(
         CutInEffectComponent_o *this,
         int32_t idx,
@@ -22,17 +21,16 @@ UnityEngine_GameObject_o *__fastcall CutInEffectComponent__GetPrefabRoot(
 
   prefabRoots = this->fields.prefabRoots;
   if ( !prefabRoots )
-    sub_1C1AE30(this, idx);
+    sub_1C22094(this, idx);
   max_length = prefabRoots->max_length;
   if ( max_length <= idx )
     return 0LL;
   if ( max_length <= (unsigned int)idx )
-    sub_1C1AE38(this, *(_QWORD *)&idx);
+    sub_1C2209C(this, idx);
   return prefabRoots->m_Items[idx];
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall CutInEffectComponent__PlayBuffEffect(
         CutInEffectComponent_o *this,
         int32_t functionIndex,
@@ -42,10 +40,10 @@ void __fastcall CutInEffectComponent__PlayBuffEffect(
   __int64 v6; // x1
   BattlePerformance_o *v7; // x0
 
-  if ( (byte_4BC8EEF & 1) == 0 )
+  if ( (byte_4BDD995 & 1) == 0 )
   {
-    sub_1C1ABD4(&UnityEngine_Object_TypeInfo, *(_QWORD *)&functionIndex);
-    byte_4BC8EEF = 1;
+    sub_1C21E38(&UnityEngine_Object_TypeInfo);
+    byte_4BDD995 = 1;
   }
   battlePerformance = (UnityEngine_Object_o *)this->fields.battlePerformance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -54,7 +52,7 @@ void __fastcall CutInEffectComponent__PlayBuffEffect(
   {
     v7 = this->fields.battlePerformance;
     if ( !v7 )
-      sub_1C1AE30(0LL, v6);
+      sub_1C22094(0LL, v6);
     BattlePerformance__PlayBuffInSkillCutInEffect(v7, functionIndex, 0LL);
   }
 }
@@ -85,14 +83,14 @@ void __fastcall CutInEffectComponent__PlayVoiceFromIdx(
           return;
         monitor = (System_String_o **)v6[1].monitor;
         if ( !monitor )
-          sub_1C1AE30(this, *(_QWORD *)&idx);
+          sub_1C22094(this, *(_QWORD *)&idx);
         if ( *((_DWORD *)monitor + 6) > (unsigned int)idx )
         {
           CommonEffectComponent__PlayVoice(v6, monitor[idx + 4], 0LL);
           return;
         }
       }
-      sub_1C1AE38(this, *(_QWORD *)&idx);
+      sub_1C2209C(this, *(_QWORD *)&idx);
     }
   }
 }
@@ -110,7 +108,7 @@ void __fastcall CutInEffectComponent__SetBattlePerformance(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battlePerformance = performance;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.battlePerformance,
     (int64_t)performance,
     (int64_t)method,
@@ -134,7 +132,7 @@ void __fastcall CutInEffectComponent__SetVoiceStrs(
   PartyListViewItem_o *v7; // x7
 
   this->fields.voiceStrs = voiceStrs;
-  sub_1C1AB78(
+  sub_1C21DDC(
     (PartyOrganizationUtility_o *)&this->fields.voiceStrs,
     (int64_t)voiceStrs,
     (int64_t)method,

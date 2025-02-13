@@ -6,59 +6,52 @@ void __fastcall TitleInfoEventTimeImgListViewDraw___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetIconImageName(
         TitleInfoEventTimeImgListViewDraw_o *this,
         int32_t state,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_String_o **v6; // x8
+  System_String_o **v4; // x8
 
-  if ( (byte_4BC6518 & 1) == 0 )
+  if ( (byte_4BDAFAD & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_24351/*"time_status_icon_noon"*/, *(_QWORD *)&state);
-    sub_1C1ABD4(&StringLiteral_24350/*"time_status_icon_night"*/, v4);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v5);
-    byte_4BC6518 = 1;
+    sub_1C21E38(&StringLiteral_24371/*"time_status_icon_noon"*/);
+    sub_1C21E38(&StringLiteral_24370/*"time_status_icon_night"*/);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    byte_4BDAFAD = 1;
   }
   if ( (state & 0xFFFFFFFE) == 2 )
-    v6 = (System_String_o **)&StringLiteral_24350/*"time_status_icon_night"*/;
+    v4 = (System_String_o **)&StringLiteral_24370/*"time_status_icon_night"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_1/*""*/;
+    v4 = (System_String_o **)&StringLiteral_1/*""*/;
   if ( (unsigned int)state <= 1 )
-    v6 = (System_String_o **)&StringLiteral_24351/*"time_status_icon_noon"*/;
-  return *v6;
+    v4 = (System_String_o **)&StringLiteral_24371/*"time_status_icon_noon"*/;
+  return *v4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall TitleInfoEventTimeImgListViewDraw__GetLabelImageName(
         TitleInfoEventTimeImgListViewDraw_o *this,
         int32_t state,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_String_o **v6; // x8
+  System_String_o **v4; // x8
 
-  if ( (byte_4BC6519 & 1) == 0 )
+  if ( (byte_4BDAFAE & 1) == 0 )
   {
-    sub_1C1ABD4(&StringLiteral_24352/*"time_status_icon_story"*/, *(_QWORD *)&state);
-    sub_1C1ABD4(&StringLiteral_1/*""*/, v4);
-    sub_1C1ABD4(&StringLiteral_24348/*"time_status_icon_free"*/, v5);
-    byte_4BC6519 = 1;
+    sub_1C21E38(&StringLiteral_24372/*"time_status_icon_story"*/);
+    sub_1C21E38(&StringLiteral_1/*""*/);
+    sub_1C21E38(&StringLiteral_24368/*"time_status_icon_free"*/);
+    byte_4BDAFAE = 1;
   }
   if ( (unsigned int)state > 3 )
-    v6 = (System_String_o **)&StringLiteral_1/*""*/;
+    v4 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v6 = (System_String_o **)*(&off_45F75B8 + state);
-  return *v6;
+    v4 = (System_String_o **)*(&off_4609FE8 + state);
+  return *v4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventTimeImgListViewDraw__SetItem(
         TitleInfoEventTimeImgListViewDraw_o *this,
         int32_t state,
@@ -75,10 +68,10 @@ void __fastcall TitleInfoEventTimeImgListViewDraw__SetItem(
   System_String_o *LabelImageName; // x0
 
   v4 = this;
-  if ( (byte_4BC6517 & 1) == 0 )
+  if ( (byte_4BDAFAC & 1) == 0 )
   {
-    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C1ABD4(&AtlasManager_TypeInfo, *(_QWORD *)&state);
-    byte_4BC6517 = 1;
+    this = (TitleInfoEventTimeImgListViewDraw_o *)sub_1C21E38(&AtlasManager_TypeInfo);
+    byte_4BDAFAC = 1;
   }
   timeIcon = v4->fields.timeIcon;
   IconImageName = TitleInfoEventTimeImgListViewDraw__GetIconImageName(this, state, method);
@@ -95,7 +88,7 @@ void __fastcall TitleInfoEventTimeImgListViewDraw__SetItem(
         AtlasManager__SetEventUI(stateSprite, LabelImageName, 0LL),
         (v8 = v4->fields.stateSprite) == 0LL) )
   {
-    sub_1C1AE30(v8, v7);
+    sub_1C22094(v8, v7);
   }
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v8->klass->vtable._33_MakePixelPerfect.method)(
     v8,

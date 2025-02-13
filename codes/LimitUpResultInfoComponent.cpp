@@ -27,47 +27,47 @@ void __fastcall LimitUpResultInfoComponent__Open(
   GameObjectExtensions__SetParent(gameObject, (UnityEngine_Component_o *)parent, 0LL);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v8 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BC2141 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   if ( !v8 )
     goto LABEL_15;
   UnityEngine_Transform__set_position(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v9 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BC2141 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   if ( !v9 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v9, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v10 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2141 )
+  if ( !byte_4BD6BB1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BC2141 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB1 = 1;
   }
   if ( !v10 )
     goto LABEL_15;
   UnityEngine_Transform__set_eulerAngles(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v11 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4BC2146 )
+  if ( !byte_4BD6BB6 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1C1ABD4(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BC2146 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
+    byte_4BD6BB6 = 1;
   }
   if ( !v11
     || (UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
         (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_15:
-    sub_1C1AE30(transform, v7);
+    sub_1C22094(transform, v7);
   }
   UnityEngine_GameObject__SetActive(transform, 1, 0LL);
 }
@@ -79,15 +79,14 @@ void __fastcall LimitUpResultInfoComponent__Setup(
         System_String_o *detail,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UILabel_o *titleLabel; // x0
   UISprite_o *lineSprite; // x19
 
-  if ( (byte_4BCB568 & 1) == 0 )
+  if ( (byte_4BE002A & 1) == 0 )
   {
-    sub_1C1ABD4(&AtlasManager_TypeInfo, title);
-    sub_1C1ABD4(&StringLiteral_21477/*"line_whiteAlpha"*/, v7);
-    byte_4BCB568 = 1;
+    sub_1C21E38(&AtlasManager_TypeInfo);
+    sub_1C21E38(&StringLiteral_21495/*"line_whiteAlpha"*/);
+    byte_4BE002A = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -95,11 +94,11 @@ void __fastcall LimitUpResultInfoComponent__Setup(
     || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C1AE30(titleLabel, title);
+    sub_1C22094(titleLabel, title);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   lineSprite = this->fields.lineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_21477/*"line_whiteAlpha"*/, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_21495/*"line_whiteAlpha"*/, 0LL);
 }
