@@ -1,32 +1,33 @@
 void __fastcall BlankEarthGimmickAddEntity___ctor(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC1E6 & 1) == 0 )
+  if ( (byte_4BFD3EE & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDC1E6 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFD3EE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall BlankEarthGimmickAddEntity__CreatePK(
         int32_t blankEarthSpotId,
         int32_t priority,
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4BDC1E4 & 1) == 0 )
+  if ( (byte_4BFD3EC & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4BDC1E4 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_4BFD3EC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            blankEarthSpotId,
            priority,
            overwriteType,
-           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -52,6 +53,7 @@ int32_t __fastcall BlankEarthGimmickAddEntity__GetCondType(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
         BlankEarthGimmickAddEntity_o *this,
         int32_t beforeClearQuestId,
@@ -62,10 +64,10 @@ bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
   int32_t condTargetType; // w23
   int64_t condNum; // x21
 
-  if ( (byte_4BDC1E5 & 1) == 0 )
+  if ( (byte_4BFD3ED & 1) == 0 )
   {
-    sub_1C21E38(&CondType_TypeInfo);
-    byte_4BDC1E5 = 1;
+    sub_1C2E12C(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4BFD3ED = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

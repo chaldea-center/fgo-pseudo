@@ -1,30 +1,31 @@
 void __fastcall WarBoardMessageScriptEntity___ctor(WarBoardMessageScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD590 & 1) == 0 )
+  if ( (byte_4BFE7CB & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDD590 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFE7CB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarBoardMessageScriptEntity__CreatePK(
         System_String_o *imageId,
         int32_t form,
         const MethodInfo *method)
 {
-  if ( (byte_4BDD58F & 1) == 0 )
+  if ( (byte_4BFE7CA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_string__int___);
-    byte_4BDD58F = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_string__int___, *(_QWORD *)&form);
+    byte_4BFE7CA = 1;
   }
   return DataEntityBase__CreateMultiplePK_object__int_(
            (Il2CppObject *)imageId,
            form,
-           (const MethodInfo_2FAE238 *)Method_DataEntityBase_CreateMultiplePK_string__int___);
+           (const MethodInfo_2FCFC64 *)Method_DataEntityBase_CreateMultiplePK_string__int___);
 }
 
 

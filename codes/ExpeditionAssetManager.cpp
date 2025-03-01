@@ -1,100 +1,105 @@
 void __fastcall ExpeditionAssetManager___ctor(ExpeditionAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
-  __int64 v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  struct System_String_array *v11; // x20
-  int64_t v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  struct System_String_array *v12; // x20
+  int64_t v13; // x1
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4BE04CD & 1) == 0 )
+  if ( (byte_4C0176C & 1) == 0 )
   {
-    sub_1C21E38(&string___TypeInfo);
-    sub_1C21E38(&StringLiteral_6399/*"EventUI/Prefabs/80381"*/);
-    byte_4BE04CD = 1;
+    sub_1C2E12C(&string___TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_6390/*"EventUI/Prefabs/80381"*/, v3);
+    byte_4C0176C = 1;
   }
-  v3 = sub_1C21EE0(string___TypeInfo, 1LL);
-  if ( !v3 )
-    sub_1C22094(0LL, v4);
-  v11 = (struct System_String_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-    sub_1C2209C(v3, v4);
-  v12 = StringLiteral_6399/*"EventUI/Prefabs/80381"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_6399/*"EventUI/Prefabs/80381"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
-  this->fields.loadAssetNames = v11;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.loadAssetNames, (int64_t)v11, v13, v14, v15, v16, v17, v18);
+  v4 = sub_1C2E1D4(string___TypeInfo, 1LL);
+  if ( !v4 )
+    sub_1C2E388(0LL, v5);
+  v12 = (struct System_String_array *)v4;
+  if ( !*(_DWORD *)(v4 + 24) )
+    sub_1C2E390(v4, v5);
+  v13 = StringLiteral_6390/*"EventUI/Prefabs/80381"*/;
+  *(_QWORD *)(v4 + 32) = StringLiteral_6390/*"EventUI/Prefabs/80381"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11);
+  this->fields.loadAssetNames = v12;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.loadAssetNames, (int64_t)v12, v14, v15, v16, v17, v18, v19);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ExpeditionAssetManager__GetAssets(
         ExpeditionAssetManager_o *this,
         int32_t eventId,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x22
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
+  __int64 v10; // x22
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v23; // x19
-  AssetLoader_LoadEndDataHandler_o *v24; // x20
+  System_String_o *v26; // x19
+  AssetLoader_LoadEndDataHandler_o *v27; // x20
 
-  if ( (byte_4BE04CB & 1) == 0 )
+  if ( (byte_4C0176A & 1) == 0 )
   {
-    sub_1C21E38(&AssetManager_TypeInfo);
-    sub_1C21E38(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C21E38(&Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__0__);
-    sub_1C21E38(&ExpeditionAssetManager___c__DisplayClass85_0_TypeInfo);
-    byte_4BE04CB = 1;
+    sub_1C2E12C(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1C2E12C(&Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__0__, v8);
+    sub_1C2E12C(&ExpeditionAssetManager___c__DisplayClass85_0_TypeInfo, v9);
+    byte_4C0176A = 1;
   }
-  v7 = sub_1C22084(ExpeditionAssetManager___c__DisplayClass85_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7
-    || (*(_QWORD *)(v7 + 16) = this,
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15),
-        *(_QWORD *)(v7 + 32) = finishCallback,
-        *(_DWORD *)(v7 + 24) = eventId,
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)finishCallback, v16, v17, v18, v19, v20, v21),
+  v10 = sub_1C2E378(ExpeditionAssetManager___c__DisplayClass85_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10
+    || (*(_QWORD *)(v10 + 16) = this,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18),
+        *(_QWORD *)(v10 + 32) = finishCallback,
+        *(_DWORD *)(v10 + 24) = eventId,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 32), (int64_t)finishCallback, v19, v20, v21, v22, v23, v24),
         (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
   {
-    sub_1C22094(v8, v9);
+    sub_1C2E388(v11, v12);
   }
   if ( !loadAssetNames->max_length )
-    sub_1C2209C(v8, v9);
-  v23 = loadAssetNames->m_Items[0];
-  v24 = (AssetLoader_LoadEndDataHandler_o *)sub_1C22084(AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2E390(v11, v12);
+  v26 = loadAssetNames->m_Items[0];
+  v27 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v24,
-    (Il2CppObject *)v7,
+    v27,
+    (Il2CppObject *)v10,
     Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v23, v24, 1, 0LL);
+  AssetManager__loadAssetStorage(v26, v27, 1, 0LL);
 }
 
 
@@ -218,6 +223,7 @@ LABEL_15:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall ExpeditionAssetManager__Release(
         ExpeditionAssetManager_o *this,
         int32_t eventId,
@@ -350,18 +356,18 @@ void __fastcall ExpeditionAssetManager__Release(
   FollowerInfo_o *v129; // x6
   PartyListViewItem_o *v130; // x7
 
-  if ( (byte_4BE04CC & 1) == 0 )
+  if ( (byte_4C0176B & 1) == 0 )
   {
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    byte_4BE04CC = 1;
+    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4C0176B = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_39104280(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_39173524(eventId, 0LL);
   this->fields._efStayHakkenshi10_k__BackingField = 0LL;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields._efStayHakkenshi20_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi20_k__BackingField,
     0LL,
     v11,
@@ -371,7 +377,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v15,
     v16);
   this->fields._efStayHakkenshi30_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi30_k__BackingField,
     0LL,
     v17,
@@ -381,7 +387,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v21,
     v22);
   this->fields._efStayHakkenshi40_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi40_k__BackingField,
     0LL,
     v23,
@@ -391,7 +397,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v27,
     v28);
   this->fields._efStayHakkenshi50_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi50_k__BackingField,
     0LL,
     v29,
@@ -401,7 +407,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v33,
     v34);
   this->fields._efStayHakkenshi60_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi60_k__BackingField,
     0LL,
     v35,
@@ -411,7 +417,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v39,
     v40);
   this->fields._efStayHakkenshi70_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi70_k__BackingField,
     0LL,
     v41,
@@ -421,7 +427,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v45,
     v46);
   this->fields._efStayHakkenshi80_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi80_k__BackingField,
     0LL,
     v47,
@@ -431,7 +437,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v51,
     v52);
   this->fields._efRunHakkenshi10_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi10_k__BackingField,
     0LL,
     v53,
@@ -441,7 +447,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v57,
     v58);
   this->fields._efRunHakkenshi20_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi20_k__BackingField,
     0LL,
     v59,
@@ -451,7 +457,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v63,
     v64);
   this->fields._efRunHakkenshi30_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi30_k__BackingField,
     0LL,
     v65,
@@ -461,7 +467,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v69,
     v70);
   this->fields._efRunHakkenshi40_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi40_k__BackingField,
     0LL,
     v71,
@@ -471,7 +477,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v75,
     v76);
   this->fields._efRunHakkenshi50_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi50_k__BackingField,
     0LL,
     v77,
@@ -481,7 +487,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v81,
     v82);
   this->fields._efRunHakkenshi60_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi60_k__BackingField,
     0LL,
     v83,
@@ -491,7 +497,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v87,
     v88);
   this->fields._efRunHakkenshi70_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi70_k__BackingField,
     0LL,
     v89,
@@ -501,7 +507,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v93,
     v94);
   this->fields._efRunHakkenshi80_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi80_k__BackingField,
     0LL,
     v95,
@@ -511,7 +517,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v99,
     v100);
   this->fields._expeditionConfirmDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionConfirmDialog_k__BackingField,
     0LL,
     v101,
@@ -521,7 +527,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v105,
     v106);
   this->fields._expeditionRewardDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionRewardDialog_k__BackingField,
     0LL,
     v107,
@@ -531,7 +537,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v111,
     v112);
   this->fields._expeditionPointRewardDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionPointRewardDialog_k__BackingField,
     0LL,
     v113,
@@ -541,7 +547,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v117,
     v118);
   this->fields._bitExpeditionStart_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._bitExpeditionStart_k__BackingField,
     0LL,
     v119,
@@ -551,7 +557,7 @@ void __fastcall ExpeditionAssetManager__Release(
     v123,
     v124);
   this->fields._bitExpeditionFinish_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._bitExpeditionFinish_k__BackingField,
     0LL,
     v125,
@@ -743,7 +749,7 @@ void __fastcall ExpeditionAssetManager__set_bitExpeditionFinish(
   PartyListViewItem_o *v7; // x7
 
   this->fields._bitExpeditionFinish_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._bitExpeditionFinish_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -767,7 +773,7 @@ void __fastcall ExpeditionAssetManager__set_bitExpeditionStart(
   PartyListViewItem_o *v7; // x7
 
   this->fields._bitExpeditionStart_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._bitExpeditionStart_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -791,7 +797,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi10(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi10_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi10_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -815,7 +821,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi20(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi20_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi20_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -839,7 +845,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi30(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi30_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi30_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -863,7 +869,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi40(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi40_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi40_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -887,7 +893,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi50(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi50_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi50_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -911,7 +917,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi60(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi60_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi60_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -935,7 +941,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi70(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi70_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi70_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -959,7 +965,7 @@ void __fastcall ExpeditionAssetManager__set_efRunHakkenshi80(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efRunHakkenshi80_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efRunHakkenshi80_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -983,7 +989,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi10(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi10_k__BackingField = value;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -999,7 +1005,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi20(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi20_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi20_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1023,7 +1029,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi30(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi30_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi30_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1047,7 +1053,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi40(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi40_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi40_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1071,7 +1077,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi50(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi50_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi50_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1095,7 +1101,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi60(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi60_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi60_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1119,7 +1125,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi70(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi70_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi70_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1143,7 +1149,7 @@ void __fastcall ExpeditionAssetManager__set_efStayHakkenshi80(
   PartyListViewItem_o *v7; // x7
 
   this->fields._efStayHakkenshi80_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._efStayHakkenshi80_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1167,7 +1173,7 @@ void __fastcall ExpeditionAssetManager__set_expeditionConfirmDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._expeditionConfirmDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionConfirmDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1191,7 +1197,7 @@ void __fastcall ExpeditionAssetManager__set_expeditionPointRewardDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._expeditionPointRewardDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionPointRewardDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1215,7 +1221,7 @@ void __fastcall ExpeditionAssetManager__set_expeditionRewardDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._expeditionRewardDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._expeditionRewardDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -1241,547 +1247,571 @@ void __fastcall ExpeditionAssetManager___c__DisplayClass85_0___GetAssets_b__0(
         const MethodInfo *method)
 {
   ExpeditionAssetManager___c__DisplayClass85_0_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
   struct ExpeditionAssetManager_o *_4__this; // x21
   ExpeditionAssetManager___c__DisplayClass85_0_Fields *p_fields; // x22
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  PartyOrganizationUtility_o *v13; // x21
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  struct ExpeditionAssetManager_o *v20; // x21
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
-  struct ExpeditionAssetManager_o *v27; // x21
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  struct ExpeditionAssetManager_o *v34; // x21
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  struct ExpeditionAssetManager_o *v41; // x21
-  int64_t v42; // x2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  BattleSetupInfo_o *v45; // x5
-  FollowerInfo_o *v46; // x6
-  PartyListViewItem_o *v47; // x7
-  struct ExpeditionAssetManager_o *v48; // x21
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
-  struct ExpeditionAssetManager_o *v55; // x21
-  int64_t v56; // x2
-  int32_t v57; // w3
-  System_String_o *v58; // x4
-  BattleSetupInfo_o *v59; // x5
-  FollowerInfo_o *v60; // x6
-  PartyListViewItem_o *v61; // x7
-  struct ExpeditionAssetManager_o *v62; // x21
-  int64_t v63; // x2
-  int32_t v64; // w3
-  System_String_o *v65; // x4
-  BattleSetupInfo_o *v66; // x5
-  FollowerInfo_o *v67; // x6
-  PartyListViewItem_o *v68; // x7
-  struct ExpeditionAssetManager_o *v69; // x21
-  int64_t v70; // x2
-  int32_t v71; // w3
-  System_String_o *v72; // x4
-  BattleSetupInfo_o *v73; // x5
-  FollowerInfo_o *v74; // x6
-  PartyListViewItem_o *v75; // x7
-  struct ExpeditionAssetManager_o *v76; // x21
-  int64_t v77; // x2
-  int32_t v78; // w3
-  System_String_o *v79; // x4
-  BattleSetupInfo_o *v80; // x5
-  FollowerInfo_o *v81; // x6
-  PartyListViewItem_o *v82; // x7
-  PartyOrganizationUtility_o *v83; // x21
-  int64_t v84; // x2
-  int32_t v85; // w3
-  System_String_o *v86; // x4
-  BattleSetupInfo_o *v87; // x5
-  FollowerInfo_o *v88; // x6
-  PartyListViewItem_o *v89; // x7
-  PartyOrganizationUtility_o *v90; // x21
-  int64_t v91; // x2
-  int32_t v92; // w3
-  System_String_o *v93; // x4
-  BattleSetupInfo_o *v94; // x5
-  FollowerInfo_o *v95; // x6
-  PartyListViewItem_o *v96; // x7
-  PartyOrganizationUtility_o *v97; // x21
-  int64_t v98; // x2
-  int32_t v99; // w3
-  System_String_o *v100; // x4
-  BattleSetupInfo_o *v101; // x5
-  FollowerInfo_o *v102; // x6
-  PartyListViewItem_o *v103; // x7
-  PartyOrganizationUtility_o *v104; // x21
-  int64_t v105; // x2
-  int32_t v106; // w3
-  System_String_o *v107; // x4
-  BattleSetupInfo_o *v108; // x5
-  FollowerInfo_o *v109; // x6
-  PartyListViewItem_o *v110; // x7
-  PartyOrganizationUtility_o *v111; // x21
-  int64_t v112; // x2
-  int32_t v113; // w3
-  System_String_o *v114; // x4
-  BattleSetupInfo_o *v115; // x5
-  FollowerInfo_o *v116; // x6
-  PartyListViewItem_o *v117; // x7
-  PartyOrganizationUtility_o *v118; // x21
-  int64_t v119; // x2
-  int32_t v120; // w3
-  System_String_o *v121; // x4
-  BattleSetupInfo_o *v122; // x5
-  FollowerInfo_o *v123; // x6
-  PartyListViewItem_o *v124; // x7
-  PartyOrganizationUtility_o *v125; // x21
-  int64_t v126; // x2
-  int32_t v127; // w3
-  System_String_o *v128; // x4
-  BattleSetupInfo_o *v129; // x5
-  FollowerInfo_o *v130; // x6
-  PartyListViewItem_o *v131; // x7
-  PartyOrganizationUtility_o *v132; // x21
-  int64_t v133; // x2
-  int32_t v134; // w3
-  System_String_o *v135; // x4
-  BattleSetupInfo_o *v136; // x5
-  FollowerInfo_o *v137; // x6
-  PartyListViewItem_o *v138; // x7
-  PartyOrganizationUtility_o *v139; // x21
-  int64_t v140; // x2
-  int32_t v141; // w3
-  System_String_o *v142; // x4
-  BattleSetupInfo_o *v143; // x5
-  FollowerInfo_o *v144; // x6
-  PartyListViewItem_o *v145; // x7
-  PartyOrganizationUtility_o *v146; // x21
-  int64_t v147; // x2
-  int32_t v148; // w3
-  System_String_o *v149; // x4
-  BattleSetupInfo_o *v150; // x5
-  FollowerInfo_o *v151; // x6
-  PartyListViewItem_o *v152; // x7
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
+  PartyOrganizationUtility_o *v37; // x21
+  int64_t v38; // x2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  BattleSetupInfo_o *v41; // x5
+  FollowerInfo_o *v42; // x6
+  PartyListViewItem_o *v43; // x7
+  struct ExpeditionAssetManager_o *v44; // x21
+  int64_t v45; // x2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  BattleSetupInfo_o *v48; // x5
+  FollowerInfo_o *v49; // x6
+  PartyListViewItem_o *v50; // x7
+  struct ExpeditionAssetManager_o *v51; // x21
+  int64_t v52; // x2
+  int32_t v53; // w3
+  System_String_o *v54; // x4
+  BattleSetupInfo_o *v55; // x5
+  FollowerInfo_o *v56; // x6
+  PartyListViewItem_o *v57; // x7
+  struct ExpeditionAssetManager_o *v58; // x21
+  int64_t v59; // x2
+  int32_t v60; // w3
+  System_String_o *v61; // x4
+  BattleSetupInfo_o *v62; // x5
+  FollowerInfo_o *v63; // x6
+  PartyListViewItem_o *v64; // x7
+  struct ExpeditionAssetManager_o *v65; // x21
+  int64_t v66; // x2
+  int32_t v67; // w3
+  System_String_o *v68; // x4
+  BattleSetupInfo_o *v69; // x5
+  FollowerInfo_o *v70; // x6
+  PartyListViewItem_o *v71; // x7
+  struct ExpeditionAssetManager_o *v72; // x21
+  int64_t v73; // x2
+  int32_t v74; // w3
+  System_String_o *v75; // x4
+  BattleSetupInfo_o *v76; // x5
+  FollowerInfo_o *v77; // x6
+  PartyListViewItem_o *v78; // x7
+  struct ExpeditionAssetManager_o *v79; // x21
+  int64_t v80; // x2
+  int32_t v81; // w3
+  System_String_o *v82; // x4
+  BattleSetupInfo_o *v83; // x5
+  FollowerInfo_o *v84; // x6
+  PartyListViewItem_o *v85; // x7
+  struct ExpeditionAssetManager_o *v86; // x21
+  int64_t v87; // x2
+  int32_t v88; // w3
+  System_String_o *v89; // x4
+  BattleSetupInfo_o *v90; // x5
+  FollowerInfo_o *v91; // x6
+  PartyListViewItem_o *v92; // x7
+  struct ExpeditionAssetManager_o *v93; // x21
+  int64_t v94; // x2
+  int32_t v95; // w3
+  System_String_o *v96; // x4
+  BattleSetupInfo_o *v97; // x5
+  FollowerInfo_o *v98; // x6
+  PartyListViewItem_o *v99; // x7
+  struct ExpeditionAssetManager_o *v100; // x21
+  int64_t v101; // x2
+  int32_t v102; // w3
+  System_String_o *v103; // x4
+  BattleSetupInfo_o *v104; // x5
+  FollowerInfo_o *v105; // x6
+  PartyListViewItem_o *v106; // x7
+  PartyOrganizationUtility_o *v107; // x21
+  int64_t v108; // x2
+  int32_t v109; // w3
+  System_String_o *v110; // x4
+  BattleSetupInfo_o *v111; // x5
+  FollowerInfo_o *v112; // x6
+  PartyListViewItem_o *v113; // x7
+  PartyOrganizationUtility_o *v114; // x21
+  int64_t v115; // x2
+  int32_t v116; // w3
+  System_String_o *v117; // x4
+  BattleSetupInfo_o *v118; // x5
+  FollowerInfo_o *v119; // x6
+  PartyListViewItem_o *v120; // x7
+  PartyOrganizationUtility_o *v121; // x21
+  int64_t v122; // x2
+  int32_t v123; // w3
+  System_String_o *v124; // x4
+  BattleSetupInfo_o *v125; // x5
+  FollowerInfo_o *v126; // x6
+  PartyListViewItem_o *v127; // x7
+  PartyOrganizationUtility_o *v128; // x21
+  int64_t v129; // x2
+  int32_t v130; // w3
+  System_String_o *v131; // x4
+  BattleSetupInfo_o *v132; // x5
+  FollowerInfo_o *v133; // x6
+  PartyListViewItem_o *v134; // x7
+  PartyOrganizationUtility_o *v135; // x21
+  int64_t v136; // x2
+  int32_t v137; // w3
+  System_String_o *v138; // x4
+  BattleSetupInfo_o *v139; // x5
+  FollowerInfo_o *v140; // x6
+  PartyListViewItem_o *v141; // x7
+  PartyOrganizationUtility_o *v142; // x21
+  int64_t v143; // x2
+  int32_t v144; // w3
+  System_String_o *v145; // x4
+  BattleSetupInfo_o *v146; // x5
+  FollowerInfo_o *v147; // x6
+  PartyListViewItem_o *v148; // x7
+  PartyOrganizationUtility_o *v149; // x21
+  int64_t v150; // x2
+  int32_t v151; // w3
+  System_String_o *v152; // x4
+  BattleSetupInfo_o *v153; // x5
+  FollowerInfo_o *v154; // x6
+  PartyListViewItem_o *v155; // x7
+  PartyOrganizationUtility_o *v156; // x21
+  int64_t v157; // x2
+  int32_t v158; // w3
+  System_String_o *v159; // x4
+  BattleSetupInfo_o *v160; // x5
+  FollowerInfo_o *v161; // x6
+  PartyListViewItem_o *v162; // x7
+  PartyOrganizationUtility_o *v163; // x21
+  int64_t v164; // x2
+  int32_t v165; // w3
+  System_String_o *v166; // x4
+  BattleSetupInfo_o *v167; // x5
+  FollowerInfo_o *v168; // x6
+  PartyListViewItem_o *v169; // x7
+  PartyOrganizationUtility_o *v170; // x21
+  int64_t v171; // x2
+  int32_t v172; // w3
+  System_String_o *v173; // x4
+  BattleSetupInfo_o *v174; // x5
+  FollowerInfo_o *v175; // x6
+  PartyListViewItem_o *v176; // x7
   System_Action_o *_9__1; // x21
   int32_t eventId; // w20
-  int64_t v155; // x2
-  int32_t v156; // w3
-  System_String_o *v157; // x4
-  BattleSetupInfo_o *v158; // x5
-  FollowerInfo_o *v159; // x6
-  PartyListViewItem_o *v160; // x7
+  int64_t v179; // x2
+  int32_t v180; // w3
+  System_String_o *v181; // x4
+  BattleSetupInfo_o *v182; // x5
+  FollowerInfo_o *v183; // x6
+  PartyListViewItem_o *v184; // x7
 
   v4 = this;
-  if ( (byte_4BE04CE & 1) == 0 )
+  if ( (byte_4C0176D & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_AssetData_GetObject_GameObject____77626288);
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    sub_1C21E38(&Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__1__);
-    sub_1C21E38(&StringLiteral_6482/*"ExpeditionConfirmDialog"*/);
-    sub_1C21E38(&StringLiteral_23964/*"stay_dog_10"*/);
-    sub_1C21E38(&StringLiteral_17586/*"bit_runningdog_10"*/);
-    sub_1C21E38(&StringLiteral_6485/*"ExpeditionRewardDialog"*/);
-    sub_1C21E38(&StringLiteral_6484/*"ExpeditionPointRewardDialog"*/);
-    sub_1C21E38(&StringLiteral_17517/*"bit_expedition_finish"*/);
-    sub_1C21E38(&StringLiteral_23968/*"stay_dog_50"*/);
-    sub_1C21E38(&StringLiteral_17591/*"bit_runningdog_60"*/);
-    sub_1C21E38(&StringLiteral_17589/*"bit_runningdog_40"*/);
-    sub_1C21E38(&StringLiteral_17588/*"bit_runningdog_30"*/);
-    sub_1C21E38(&StringLiteral_23971/*"stay_dog_80"*/);
-    sub_1C21E38(&StringLiteral_17521/*"bit_expedition_start"*/);
-    sub_1C21E38(&StringLiteral_23965/*"stay_dog_20"*/);
-    sub_1C21E38(&StringLiteral_23966/*"stay_dog_30"*/);
-    sub_1C21E38(&StringLiteral_23970/*"stay_dog_70"*/);
-    sub_1C21E38(&StringLiteral_17587/*"bit_runningdog_20"*/);
-    sub_1C21E38(&StringLiteral_23967/*"stay_dog_40"*/);
-    sub_1C21E38(&StringLiteral_23969/*"stay_dog_60"*/);
-    sub_1C21E38(&StringLiteral_17593/*"bit_runningdog_80"*/);
-    sub_1C21E38(&StringLiteral_17590/*"bit_runningdog_50"*/);
-    this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)sub_1C21E38(&StringLiteral_17592/*"bit_runningdog_70"*/);
-    byte_4BE04CE = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, assetData);
+    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, v5);
+    sub_1C2E12C(&AtlasManager_TypeInfo, v6);
+    sub_1C2E12C(&Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__1__, v7);
+    sub_1C2E12C(&StringLiteral_6473/*"ExpeditionConfirmDialog"*/, v8);
+    sub_1C2E12C(&StringLiteral_23986/*"stay_dog_10"*/, v9);
+    sub_1C2E12C(&StringLiteral_17601/*"bit_runningdog_10"*/, v10);
+    sub_1C2E12C(&StringLiteral_6476/*"ExpeditionRewardDialog"*/, v11);
+    sub_1C2E12C(&StringLiteral_6475/*"ExpeditionPointRewardDialog"*/, v12);
+    sub_1C2E12C(&StringLiteral_17532/*"bit_expedition_finish"*/, v13);
+    sub_1C2E12C(&StringLiteral_23990/*"stay_dog_50"*/, v14);
+    sub_1C2E12C(&StringLiteral_17606/*"bit_runningdog_60"*/, v15);
+    sub_1C2E12C(&StringLiteral_17604/*"bit_runningdog_40"*/, v16);
+    sub_1C2E12C(&StringLiteral_17603/*"bit_runningdog_30"*/, v17);
+    sub_1C2E12C(&StringLiteral_23993/*"stay_dog_80"*/, v18);
+    sub_1C2E12C(&StringLiteral_17536/*"bit_expedition_start"*/, v19);
+    sub_1C2E12C(&StringLiteral_23987/*"stay_dog_20"*/, v20);
+    sub_1C2E12C(&StringLiteral_23988/*"stay_dog_30"*/, v21);
+    sub_1C2E12C(&StringLiteral_23992/*"stay_dog_70"*/, v22);
+    sub_1C2E12C(&StringLiteral_17602/*"bit_runningdog_20"*/, v23);
+    sub_1C2E12C(&StringLiteral_23989/*"stay_dog_40"*/, v24);
+    sub_1C2E12C(&StringLiteral_23991/*"stay_dog_60"*/, v25);
+    sub_1C2E12C(&StringLiteral_17608/*"bit_runningdog_80"*/, v26);
+    sub_1C2E12C(&StringLiteral_17605/*"bit_runningdog_50"*/, v27);
+    this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)sub_1C2E12C(&StringLiteral_17607/*"bit_runningdog_70"*/, v28);
+    byte_4C0176D = 1;
   }
   p_fields = &v4->fields;
   _4__this = v4->fields.__4__this;
   if ( !assetData )
     goto LABEL_30;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_23964/*"stay_dog_10"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
+                                                             (System_String_o *)StringLiteral_23986/*"stay_dog_10"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
   if ( !_4__this )
     goto LABEL_30;
   _4__this->fields._efStayHakkenshi10_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&_4__this->fields, (int64_t)this, v7, v8, v9, v10, v11, v12);
-  v13 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields, (int64_t)this, v31, v32, v33, v34, v35, v36);
+  v37 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_23965/*"stay_dog_20"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v13 )
+                                                             (System_String_o *)StringLiteral_23987/*"stay_dog_20"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v37 )
     goto LABEL_30;
-  v13->fields._normalFollowerInfo = (struct FollowerInfo_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v13->fields._normalFollowerInfo,
+  v37->fields._normalFollowerInfo = (struct FollowerInfo_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v37->fields._normalFollowerInfo,
     (int64_t)this,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
-  v20 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23966/*"stay_dog_30"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v20 )
-    goto LABEL_30;
-  v20->fields._efStayHakkenshi30_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v20->fields._efStayHakkenshi30_k__BackingField,
-    (int64_t)this,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  v27 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23967/*"stay_dog_40"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v27 )
-    goto LABEL_30;
-  v27->fields._efStayHakkenshi40_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v27->fields._efStayHakkenshi40_k__BackingField,
-    (int64_t)this,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32,
-    v33);
-  v34 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23968/*"stay_dog_50"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v34 )
-    goto LABEL_30;
-  v34->fields._efStayHakkenshi50_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v34->fields._efStayHakkenshi50_k__BackingField,
-    (int64_t)this,
-    v35,
-    v36,
-    v37,
     v38,
     v39,
-    v40);
-  v41 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23969/*"stay_dog_60"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v41 )
-    goto LABEL_30;
-  v41->fields._efStayHakkenshi60_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v41->fields._efStayHakkenshi60_k__BackingField,
-    (int64_t)this,
+    v40,
+    v41,
     v42,
-    v43,
-    v44,
+    v43);
+  v44 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23988/*"stay_dog_30"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v44 )
+    goto LABEL_30;
+  v44->fields._efStayHakkenshi30_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v44->fields._efStayHakkenshi30_k__BackingField,
+    (int64_t)this,
     v45,
     v46,
-    v47);
-  v48 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23970/*"stay_dog_70"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v48 )
-    goto LABEL_30;
-  v48->fields._efStayHakkenshi70_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v48->fields._efStayHakkenshi70_k__BackingField,
-    (int64_t)this,
+    v47,
+    v48,
     v49,
-    v50,
-    v51,
+    v50);
+  v51 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23989/*"stay_dog_40"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v51 )
+    goto LABEL_30;
+  v51->fields._efStayHakkenshi40_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v51->fields._efStayHakkenshi40_k__BackingField,
+    (int64_t)this,
     v52,
     v53,
-    v54);
-  v55 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_23971/*"stay_dog_80"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v55 )
-    goto LABEL_30;
-  v55->fields._efStayHakkenshi80_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v55->fields._efStayHakkenshi80_k__BackingField,
-    (int64_t)this,
+    v54,
+    v55,
     v56,
-    v57,
-    v58,
+    v57);
+  v58 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23990/*"stay_dog_50"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v58 )
+    goto LABEL_30;
+  v58->fields._efStayHakkenshi50_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v58->fields._efStayHakkenshi50_k__BackingField,
+    (int64_t)this,
     v59,
     v60,
-    v61);
-  v62 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_6482/*"ExpeditionConfirmDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v62 )
-    goto LABEL_30;
-  v62->fields._expeditionConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v62->fields._expeditionConfirmDialog_k__BackingField,
-    (int64_t)this,
+    v61,
+    v62,
     v63,
-    v64,
-    v65,
+    v64);
+  v65 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23991/*"stay_dog_60"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v65 )
+    goto LABEL_30;
+  v65->fields._efStayHakkenshi60_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v65->fields._efStayHakkenshi60_k__BackingField,
+    (int64_t)this,
     v66,
     v67,
-    v68);
-  v69 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_6485/*"ExpeditionRewardDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v69 )
-    goto LABEL_30;
-  v69->fields._expeditionRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v69->fields._expeditionRewardDialog_k__BackingField,
-    (int64_t)this,
+    v68,
+    v69,
     v70,
-    v71,
-    v72,
+    v71);
+  v72 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23992/*"stay_dog_70"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v72 )
+    goto LABEL_30;
+  v72->fields._efStayHakkenshi70_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v72->fields._efStayHakkenshi70_k__BackingField,
+    (int64_t)this,
     v73,
     v74,
-    v75);
-  v76 = p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_6484/*"ExpeditionPointRewardDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v76 )
-    goto LABEL_30;
-  v76->fields._expeditionPointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v76->fields._expeditionPointRewardDialog_k__BackingField,
-    (int64_t)this,
+    v75,
+    v76,
     v77,
-    v78,
-    v79,
+    v78);
+  v79 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_23993/*"stay_dog_80"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v79 )
+    goto LABEL_30;
+  v79->fields._efStayHakkenshi80_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v79->fields._efStayHakkenshi80_k__BackingField,
+    (int64_t)this,
     v80,
     v81,
-    v82);
-  v83 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+    v82,
+    v83,
+    v84,
+    v85);
+  v86 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_17521/*"bit_expedition_start"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v83 )
+                                                             (System_String_o *)StringLiteral_6473/*"ExpeditionConfirmDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v86 )
     goto LABEL_30;
-  v83[1].klass = (PartyOrganizationUtility_c *)this;
-  sub_1C21DDC(v83 + 1, (int64_t)this, v84, v85, v86, v87, v88, v89);
-  v90 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_17517/*"bit_expedition_finish"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v90 )
-    goto LABEL_30;
-  v90[1].monitor = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)((char *)v90 + 176), (int64_t)this, v91, v92, v93, v94, v95, v96);
-  v97 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_17586/*"bit_runningdog_10"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v97 )
-    goto LABEL_30;
-  v97->fields._PartyItemSmc_k__BackingField = (struct PartyListViewItem_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v97->fields._PartyItemSmc_k__BackingField,
+  v86->fields._expeditionConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v86->fields._expeditionConfirmDialog_k__BackingField,
     (int64_t)this,
+    v87,
+    v88,
+    v89,
+    v90,
+    v91,
+    v92);
+  v93 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_6476/*"ExpeditionRewardDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v93 )
+    goto LABEL_30;
+  v93->fields._expeditionRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v93->fields._expeditionRewardDialog_k__BackingField,
+    (int64_t)this,
+    v94,
+    v95,
+    v96,
+    v97,
     v98,
-    v99,
-    v100,
+    v99);
+  v100 = p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_6475/*"ExpeditionPointRewardDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v100 )
+    goto LABEL_30;
+  v100->fields._expeditionPointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v100->fields._expeditionPointRewardDialog_k__BackingField,
+    (int64_t)this,
     v101,
     v102,
-    v103);
-  v104 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_17587/*"bit_runningdog_20"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v104 )
-    goto LABEL_30;
-  *(_QWORD *)&v104->fields._IsWaveBattleRestart_k__BackingField = this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v104->fields._IsWaveBattleRestart_k__BackingField,
-    (int64_t)this,
+    v103,
+    v104,
     v105,
-    v106,
-    v107,
-    v108,
-    v109,
-    v110);
-  v111 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+    v106);
+  v107 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_17588/*"bit_runningdog_30"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v111 )
+                                                             (System_String_o *)StringLiteral_17536/*"bit_expedition_start"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v107 )
     goto LABEL_30;
-  v111->fields._WaveBattleStartTime_k__BackingField = (int64_t)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v111->fields._WaveBattleStartTime_k__BackingField,
-    (int64_t)this,
-    v112,
-    v113,
-    v114,
-    v115,
-    v116,
-    v117);
-  v118 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+  v107[1].klass = (PartyOrganizationUtility_c *)this;
+  sub_1C2E0D0(v107 + 1, (int64_t)this, v108, v109, v110, v111, v112, v113);
+  v114 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_17589/*"bit_runningdog_40"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v118 )
+                                                             (System_String_o *)StringLiteral_17532/*"bit_expedition_finish"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v114 )
     goto LABEL_30;
-  *(_QWORD *)&v118->fields._WaveBattleRestartWave_k__BackingField = this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v118->fields._WaveBattleRestartWave_k__BackingField,
+  v114[1].monitor = this;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)((char *)v114 + 176), (int64_t)this, v115, v116, v117, v118, v119, v120);
+  v121 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17601/*"bit_runningdog_10"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v121 )
+    goto LABEL_30;
+  v121->fields._PartyItemSmc_k__BackingField = (struct PartyListViewItem_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v121->fields._PartyItemSmc_k__BackingField,
     (int64_t)this,
-    v119,
-    v120,
-    v121,
     v122,
     v123,
-    v124);
-  v125 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_17590/*"bit_runningdog_50"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v125 )
-    goto LABEL_30;
-  *(_QWORD *)&v125->fields._CachedQuestPhase_k__BackingField = this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v125->fields._CachedQuestPhase_k__BackingField,
-    (int64_t)this,
+    v124,
+    v125,
     v126,
-    v127,
-    v128,
+    v127);
+  v128 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17602/*"bit_runningdog_20"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v128 )
+    goto LABEL_30;
+  *(_QWORD *)&v128->fields._IsWaveBattleRestart_k__BackingField = this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v128->fields._IsWaveBattleRestart_k__BackingField,
+    (int64_t)this,
     v129,
     v130,
-    v131);
-  v132 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_17591/*"bit_runningdog_60"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v132 )
-    goto LABEL_30;
-  v132->fields.CachedFriendshipUpItemInfo = (struct FriendshipUpItemInfo_array *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v132->fields.CachedFriendshipUpItemInfo,
-    (int64_t)this,
+    v131,
+    v132,
     v133,
-    v134,
-    v135,
+    v134);
+  v135 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17603/*"bit_runningdog_30"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v135 )
+    goto LABEL_30;
+  v135->fields._WaveBattleStartTime_k__BackingField = (int64_t)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v135->fields._WaveBattleStartTime_k__BackingField,
+    (int64_t)this,
     v136,
     v137,
-    v138);
-  v139 = (PartyOrganizationUtility_o *)p_fields->__4__this;
-  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
+    v138,
+    v139,
+    v140,
+    v141);
+  v142 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_17592/*"bit_runningdog_70"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v139
-    || (v139->fields.questUseItemStateList = (struct System_Collections_Generic_List_int____o *)this,
-        sub_1C21DDC(
-          (PartyOrganizationUtility_o *)&v139->fields.questUseItemStateList,
-          (int64_t)this,
-          v140,
-          v141,
-          v142,
-          v143,
-          v144,
-          v145),
-        v146 = (PartyOrganizationUtility_o *)p_fields->__4__this,
-        this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__49880776(
-                                                                   assetData,
-                                                                   (System_String_o *)StringLiteral_17593/*"bit_runningdog_80"*/,
-                                                                   (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288),
-        !v146) )
-  {
-LABEL_30:
-    sub_1C22094(this, assetData);
-  }
-  v146->fields.temporaryPartyInfo = (struct PartyOrganizationUtility_TemporaryPartyInfo_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v146->fields.temporaryPartyInfo,
+                                                             (System_String_o *)StringLiteral_17604/*"bit_runningdog_40"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v142 )
+    goto LABEL_30;
+  *(_QWORD *)&v142->fields._WaveBattleRestartWave_k__BackingField = this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v142->fields._WaveBattleRestartWave_k__BackingField,
     (int64_t)this,
+    v143,
+    v144,
+    v145,
+    v146,
     v147,
-    v148,
-    v149,
+    v148);
+  v149 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17605/*"bit_runningdog_50"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v149 )
+    goto LABEL_30;
+  *(_QWORD *)&v149->fields._CachedQuestPhase_k__BackingField = this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v149->fields._CachedQuestPhase_k__BackingField,
+    (int64_t)this,
     v150,
     v151,
-    v152);
+    v152,
+    v153,
+    v154,
+    v155);
+  v156 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17606/*"bit_runningdog_60"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v156 )
+    goto LABEL_30;
+  v156->fields.CachedFriendshipUpItemInfo = (struct FriendshipUpItemInfo_array *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v156->fields.CachedFriendshipUpItemInfo,
+    (int64_t)this,
+    v157,
+    v158,
+    v159,
+    v160,
+    v161,
+    v162);
+  v163 = (PartyOrganizationUtility_o *)p_fields->__4__this;
+  this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_17607/*"bit_runningdog_70"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v163
+    || (v163->fields.questUseItemStateList = (struct System_Collections_Generic_List_int____o *)this,
+        sub_1C2E0D0(
+          (PartyOrganizationUtility_o *)&v163->fields.questUseItemStateList,
+          (int64_t)this,
+          v164,
+          v165,
+          v166,
+          v167,
+          v168,
+          v169),
+        v170 = (PartyOrganizationUtility_o *)p_fields->__4__this,
+        this = (ExpeditionAssetManager___c__DisplayClass85_0_o *)AssetData__GetObject_object__50017172(
+                                                                   assetData,
+                                                                   (System_String_o *)StringLiteral_17608/*"bit_runningdog_80"*/,
+                                                                   (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312),
+        !v170) )
+  {
+LABEL_30:
+    sub_1C2E388(this, assetData);
+  }
+  v170->fields.temporaryPartyInfo = (struct PartyOrganizationUtility_TemporaryPartyInfo_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v170->fields.temporaryPartyInfo,
+    (int64_t)this,
+    v171,
+    v172,
+    v173,
+    v174,
+    v175,
+    v176);
   _9__1 = v4->fields.__9__1;
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_ExpeditionAssetManager___c__DisplayClass85_0__GetAssets_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&v4->fields.__9__1, (int64_t)_9__1, v155, v156, v157, v158, v159, v160);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->fields.__9__1, (int64_t)_9__1, v179, v180, v181, v182, v183, v184);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_39104116(eventId, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_39173360(eventId, _9__1, 1, 0LL);
 }
 
 

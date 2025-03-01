@@ -6,28 +6,31 @@ void __fastcall BattleUseItemRequest__beginRequest(
         int32_t eventId,
         const MethodInfo *method)
 {
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x1
-  const MethodInfo *v12; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4BDDDF2 & 1) == 0 )
+  if ( (byte_4BFF036 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_22585/*"num"*/);
-    sub_1C21E38(&StringLiteral_19460/*"eventId"*/);
-    sub_1C21E38(&StringLiteral_24793/*"useItemId"*/);
-    byte_4BDDDF2 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+    sub_1C2E12C(&StringLiteral_22597/*"num"*/, v9);
+    sub_1C2E12C(&StringLiteral_19472/*"eventId"*/, v10);
+    sub_1C2E12C(&StringLiteral_24817/*"useItemId"*/, v11);
+    byte_4BFF036 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19460/*"eventId"*/,
+    (System_String_o *)StringLiteral_19472/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24793/*"useItemId"*/, itemId, v9);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22585/*"num"*/, num, v10);
-  RequestBase__addBaseField((RequestBase_o *)this, v11);
-  RequestBase__WriteParameter((RequestBase_o *)this, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24817/*"useItemId"*/, itemId, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22597/*"num"*/, num, v13);
+  RequestBase__addBaseField((RequestBase_o *)this, v14);
+  RequestBase__WriteParameter((RequestBase_o *)this, v15);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__RequestStart((RequestBase_o *)this, 0LL);
@@ -38,15 +41,17 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
         BattleUseItemRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4BDDDF1 & 1) == 0 )
+  if ( (byte_4BFF035 & 1) == 0 )
   {
-    sub_1C21E38(&AndroidUtil_TypeInfo);
-    sub_1C21E38(&DatFileName_TypeInfo);
-    sub_1C21E38(&StringLiteral_1123/*"/"*/);
-    byte_4BDDDF1 = 1;
+    sub_1C2E12C(&AndroidUtil_TypeInfo, method);
+    sub_1C2E12C(&DatFileName_TypeInfo, v2);
+    sub_1C2E12C(&StringLiteral_1102/*"/"*/, v3);
+    byte_4BFF035 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -54,24 +59,25 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(30, 0LL);
-  return System_String__Concat_63126736(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+  return System_String__Concat_63246844(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/"*/, FileName, 0LL);
 }
 
 
 System_String_o *__fastcall BattleUseItemRequest__getURL(BattleUseItemRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDDF0 & 1) == 0 )
+  if ( (byte_4BFF034 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_17390/*"battle/useItem"*/);
-    byte_4BDDDF0 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_17403/*"battle/useItem"*/, v2);
+    byte_4BFF034 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_17390/*"battle/useItem"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_17403/*"battle/useItem"*/, 0LL);
 }
 
 
@@ -80,46 +86,48 @@ void __fastcall BattleUseItemRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x0
+  System_String_o *v10; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BDDDF3 & 1) == 0 )
+  if ( (byte_4BFF037 & 1) == 0 )
   {
-    sub_1C21E38(&JsonManager_TypeInfo);
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDDF3 = 1;
+    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF037 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(107, responseList, 0LL);
-  if ( v5 && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL)) )
+  v7 = ResponseCommandKind__SearchData(107, responseList, 0LL);
+  if ( v7 && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL)) )
   {
-    success = (Il2CppObject *)v6->fields.success;
+    success = (Il2CppObject *)v8->fields.success;
     if ( success )
     {
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-      v8 = JsonManager__toJson(success, 0, 0, 0LL);
+      v10 = JsonManager__toJson(success, 0, 0, 0LL);
       CallBack = this->fields.CallBack;
       if ( CallBack )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
           CallBack->fields.original_method_info,
-          v8,
+          v10,
           *(_QWORD *)&CallBack->fields.extra_arg);
     }
   }
   else
   {
-    v10 = this->fields.CallBack;
-    if ( v10 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
-        v10->fields.original_method_info,
-        StringLiteral_22456/*"ng"*/,
-        *(_QWORD *)&v10->fields.extra_arg);
+    v12 = this->fields.CallBack;
+    if ( v12 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
+        v12->fields.original_method_info,
+        StringLiteral_22468/*"ng"*/,
+        *(_QWORD *)&v12->fields.extra_arg);
   }
 }

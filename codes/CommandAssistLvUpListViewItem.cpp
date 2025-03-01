@@ -38,12 +38,12 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
   PartyListViewItem_o *v41; // x7
 
   v17 = this;
-  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42081352((ListViewItem_o *)this, index, 0LL);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&v17->fields._Name_k__BackingField,
     (int64_t)name,
     v18,
@@ -53,7 +53,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v22,
     v23);
   v17->fields._Detail_k__BackingField = detail;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&v17->fields._Detail_k__BackingField,
     (int64_t)detail,
     v24,
@@ -63,7 +63,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v28,
     v29);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&v17->fields._BeforeName_k__BackingField,
     (int64_t)beforeName,
     v30,
@@ -74,7 +74,7 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
     v35);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_1C21DDC((PartyOrganizationUtility_o *)v17, (int64_t)beforeDetail, v36, v37, v38, v39, v40, v41);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)v17, (int64_t)beforeDetail, v36, v37, v38, v39, v40, v41);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -164,7 +164,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._BeforeDetail_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -188,7 +188,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
   PartyListViewItem_o *v7; // x7
 
   this->fields._BeforeName_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._BeforeName_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -212,7 +212,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Detail(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Detail_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._Detail_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -263,7 +263,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Name(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)value,
     (int64_t)method,

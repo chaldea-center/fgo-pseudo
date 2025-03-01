@@ -4,37 +4,38 @@ void __fastcall UserOwnSvtCoin___ctor(
         UserGameEntity_o *userGameEntity,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  __int64 v7; // x1
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
   Il2CppObject *Master_object; // x0
-  __int64 v14; // x1
+  __int64 v15; // x1
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BDD861 & 1) == 0 )
+  if ( (byte_4BFEA9E & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    byte_4BDD861 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserSvtCoinMaster___, itemEntity);
+    sub_1C2E12C(&DataManager_TypeInfo, v7);
+    byte_4BFEA9E = 1;
   }
   entity = 0LL;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ItemEntity_k__BackingField,
     (int64_t)itemEntity,
-    v7,
     v8,
     v9,
     v10,
     v11,
-    v12);
+    v12,
+    v13);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !userGameEntity || !itemEntity || !Master_object )
     goto LABEL_12;
   Master_object = (Il2CppObject *)UserSvtCoinMaster__TryGetEntity(
@@ -47,6 +48,6 @@ void __fastcall UserOwnSvtCoin___ctor(
     return;
   if ( !entity )
 LABEL_12:
-    sub_1C22094(Master_object, v14);
+    sub_1C2E388(Master_object, v15);
   this->fields._Num_k__BackingField = entity->fields.num;
 }

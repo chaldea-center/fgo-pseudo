@@ -1,13 +1,16 @@
 void __fastcall AccountLinkageOverrideTakeOverDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_4BD6F07 & 1) == 0 )
+  __int64 v1; // x1
+  __int64 v2; // x1
+
+  if ( (byte_4BF80E7 & 1) == 0 )
   {
-    sub_1C21E38(&AccountLinkageOverrideTakeOverDialog_TypeInfo);
-    sub_1C21E38(&StringLiteral_441/*"#787878"*/);
-    byte_4BD6F07 = 1;
+    sub_1C2E12C(&AccountLinkageOverrideTakeOverDialog_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_420/*"#787878"*/, v2);
+    byte_4BF80E7 = 1;
   }
-  AccountLinkageOverrideTakeOverDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_441/*"#787878"*/;
-  sub_1C21DDC(AccountLinkageOverrideTakeOverDialog_TypeInfo->static_fields, StringLiteral_441/*"#787878"*/);
+  AccountLinkageOverrideTakeOverDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_420/*"#787878"*/;
+  sub_1C2E0D0(AccountLinkageOverrideTakeOverDialog_TypeInfo->static_fields);
 }
 
 
@@ -15,10 +18,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog___ctor(
         AccountLinkageOverrideTakeOverDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BD6F06 & 1) == 0 )
+  if ( (byte_4BF80E6 & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BD6F06 = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BF80E6 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -32,29 +35,30 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  AccountLinkageOverrideTakeOverDialog__Close_31031736(this, 0LL, v2);
+  AccountLinkageOverrideTakeOverDialog__Close_31081636(this, 0LL, v2);
 }
 
 
-void __fastcall AccountLinkageOverrideTakeOverDialog__Close_31031736(
+void __fastcall AccountLinkageOverrideTakeOverDialog__Close_31081636(
         AccountLinkageOverrideTakeOverDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  __int64 v5; // x1
+  System_Action_o *v6; // x20
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4BD6F02 & 1) == 0 )
+  if ( (byte_4BF80E2 & 1) == 0 )
   {
-    sub_1C21E38(&Method_AccountLinkageOverrideTakeOverDialog_EndClose__);
-    sub_1C21E38(&System_Action_TypeInfo);
-    byte_4BD6F02 = 1;
+    sub_1C2E12C(&Method_AccountLinkageOverrideTakeOverDialog_EndClose__, callback);
+    sub_1C2E12C(&System_Action_TypeInfo, v5);
+    byte_4BF80E2 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C21DDC(&this->fields.closeEndFunc, callback);
-  v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_AccountLinkageOverrideTakeOverDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, v6);
+  sub_1C2E0D0(&this->fields.closeEndFunc);
+  v6 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_AccountLinkageOverrideTakeOverDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
 }
 
 
@@ -73,7 +77,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__EndClose(
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0LL;
-    sub_1C21DDC(p_closeEndFunc, 0LL);
+    sub_1C2E0D0(p_closeEndFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -85,8 +89,9 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__Init(
         AccountLinkageOverrideTakeOverDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Object_o *titleLabel; // x20
-  __int64 v4; // x1
+  __int64 v5; // x1
   UILabel_o *gameObject; // x0
   UnityEngine_Object_o *messageLabel; // x20
   UnityEngine_Object_o *currentAccountTitleLabel; // x20
@@ -97,13 +102,13 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__Init(
   UnityEngine_Object_o *warningLabel2; // x20
   UnityEngine_Object_o *buttonDecideLabel; // x20
   UnityEngine_Object_o *buttonCancelLabel; // x20
-  const MethodInfo *v15; // x1
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4BD6EF7 & 1) == 0 )
+  if ( (byte_4BF80D7 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BD6EF7 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_1/*""*/, v3);
+    byte_4BF80D7 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -208,9 +213,9 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__Init(
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_55:
-    sub_1C22094(gameObject, v4);
+    sub_1C2E388(gameObject, v5);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
-  BaseDialog__Init((BaseDialog_o *)this, v15);
+  BaseDialog__Init((BaseDialog_o *)this, v16);
 }
 
 
@@ -225,28 +230,28 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnClickCancel(
   __int64 v7; // x1
   struct AccountLinkageOverrideTakeOverDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4BD6F04 & 1) == 0 )
+  if ( (byte_4BF80E4 & 1) == 0 )
   {
-    sub_1C21E38(&Method_AccountLinkageOverrideTakeOverDialog_OnClickCancel__);
-    byte_4BD6F04 = 1;
+    sub_1C2E12C(&Method_AccountLinkageOverrideTakeOverDialog_OnClickCancel__, method);
+    byte_4BF80E4 = 1;
   }
   v3 = Method_AccountLinkageOverrideTakeOverDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_AccountLinkageOverrideTakeOverDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C21E50();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C2E144();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
   if ( this->fields.clickFunc )
   {
-    AccountLinkageOverrideTakeOverDialog__Close_31031736(this, 0LL, v5);
+    AccountLinkageOverrideTakeOverDialog__Close_31081636(this, 0LL, v5);
     clickFunc = this->fields.clickFunc;
     if ( !clickFunc )
-      sub_1C22094(v6, v7);
+      sub_1C2E388(v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickFunc->fields.m_target)(
       clickFunc->fields.original_method_info,
       0LL,
       *(_QWORD *)&clickFunc->fields.extra_arg);
     this->fields.clickFunc = 0LL;
-    sub_1C21DDC(&this->fields.clickFunc, 0LL);
+    sub_1C2E0D0(&this->fields.clickFunc);
   }
 }
 
@@ -263,10 +268,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnClickDecide(
   const MethodInfo *v8; // x2
   struct AccountLinkageOverrideTakeOverDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4BD6F03 & 1) == 0 )
+  if ( (byte_4BF80E3 & 1) == 0 )
   {
-    sub_1C21E38(&Method_AccountLinkageOverrideTakeOverDialog_OnClickDecide__);
-    byte_4BD6F03 = 1;
+    sub_1C2E12C(&Method_AccountLinkageOverrideTakeOverDialog_OnClickDecide__, method);
+    byte_4BF80E3 = 1;
   }
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
@@ -275,8 +280,8 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnClickDecide(
   v5 = Method_AccountLinkageOverrideTakeOverDialog_OnClickDecide__;
   v6 = value;
   if ( (*((_BYTE *)Method_AccountLinkageOverrideTakeOverDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C21E50();
-  v7 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C2E144();
+  v7 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
   if ( v6 < 1.0 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0LL);
@@ -285,7 +290,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnClickDecide(
   OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0LL);
   if ( this->fields.clickFunc )
   {
-    AccountLinkageOverrideTakeOverDialog__Close_31031736(this, 0LL, v8);
+    AccountLinkageOverrideTakeOverDialog__Close_31081636(this, 0LL, v8);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
     {
@@ -294,11 +299,11 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnClickDecide(
         1LL,
         *(_QWORD *)&clickFunc->fields.extra_arg);
       this->fields.clickFunc = 0LL;
-      sub_1C21DDC(&this->fields.clickFunc, 0LL);
+      sub_1C2E0D0(&this->fields.clickFunc);
       return;
     }
 LABEL_12:
-    sub_1C22094(checkSlider, method);
+    sub_1C2E388(checkSlider, method);
   }
 }
 
@@ -309,13 +314,13 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4BD6F05 & 1) == 0 )
+  if ( (byte_4BF80E5 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_15917/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4BD6F05 = 1;
+    sub_1C2E12C(&StringLiteral_15930/*"Window/Objects/Buttons/CancelButton"*/, method);
+    byte_4BF80E5 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_43098604(transform, (System_String_o *)StringLiteral_15917/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_43187880(transform, (System_String_o *)StringLiteral_15930/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -335,7 +340,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__OnSliderDragFinished(
     || (value = UIProgressBar__get_value(checkSlider, 0LL),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0LL) )
   {
-    sub_1C22094(checkSlider, method);
+    sub_1C2E388(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -354,38 +359,39 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__Open(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  __int64 v6; // x1
   UIProgressBar_o *checkSlider; // x0
-  struct UISlider_o *v7; // x20
-  UIProgressBar_OnDragFinished_o *v8; // x21
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x3
+  struct UISlider_o *v8; // x20
+  UIProgressBar_OnDragFinished_o *v9; // x21
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4BD6F00 & 1) == 0 )
+  if ( (byte_4BF80E0 & 1) == 0 )
   {
-    sub_1C21E38(&Method_AccountLinkageOverrideTakeOverDialog_OnSliderDragFinished__);
-    sub_1C21E38(&UIProgressBar_OnDragFinished_TypeInfo);
-    byte_4BD6F00 = 1;
+    sub_1C2E12C(&Method_AccountLinkageOverrideTakeOverDialog_OnSliderDragFinished__, func);
+    sub_1C2E12C(&UIProgressBar_OnDragFinished_TypeInfo, v5);
+    byte_4BF80E0 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1C21DDC(&this->fields.clickFunc, func);
+  sub_1C2E0D0(&this->fields.clickFunc);
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider
     || (UIProgressBar__set_value(checkSlider, 0.0, 0LL),
-        v7 = this->fields.checkSlider,
-        v8 = (UIProgressBar_OnDragFinished_o *)sub_1C22084(UIProgressBar_OnDragFinished_TypeInfo),
+        v8 = this->fields.checkSlider,
+        v9 = (UIProgressBar_OnDragFinished_o *)sub_1C2E378(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(
-          v8,
+          v9,
           (Il2CppObject *)this,
           Method_AccountLinkageOverrideTakeOverDialog_OnSliderDragFinished__,
           0LL),
-        !v7) )
+        !v8) )
   {
-    sub_1C22094(checkSlider, v5);
+    sub_1C2E388(checkSlider, v6);
   }
-  v7->fields.onDragFinished = v8;
-  sub_1C21DDC(&v7->fields.onDragFinished, v8);
-  AccountLinkageOverrideTakeOverDialog__SetSlider(this, 0, v9);
-  BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, v10);
+  v8->fields.onDragFinished = v9;
+  sub_1C2E0D0(&v8->fields.onDragFinished);
+  AccountLinkageOverrideTakeOverDialog__SetSlider(this, 0, v10);
+  BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, v11);
 }
 
 
@@ -393,50 +399,53 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetAccountTitleLabel(
         AccountLinkageOverrideTakeOverDialog_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   UnityEngine_Object_o *currentAccountTitleLabel; // x20
-  UILabel_o *v4; // x20
-  System_String_o *v5; // x0
-  __int64 v6; // x1
+  UILabel_o *v7; // x20
+  System_String_o *v8; // x0
+  __int64 v9; // x1
   UnityEngine_Object_o *overrideAccountTitleLabel; // x20
-  UILabel_o *v8; // x19
+  UILabel_o *v11; // x19
 
-  if ( (byte_4BD6EFA & 1) == 0 )
+  if ( (byte_4BF80DA & 1) == 0 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&StringLiteral_2039/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/);
-    sub_1C21E38(&StringLiteral_2036/*"ACCOUNT_LINKAGE_TAKEOVER_CURRENT_TITLE"*/);
-    byte_4BD6EFA = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C2E12C(&StringLiteral_2014/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, v4);
+    sub_1C2E12C(&StringLiteral_2011/*"ACCOUNT_LINKAGE_TAKEOVER_CURRENT_TITLE"*/, v5);
+    byte_4BF80DA = 1;
   }
   currentAccountTitleLabel = (UnityEngine_Object_o *)this->fields.currentAccountTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(currentAccountTitleLabel, 0LL, 0LL) )
   {
-    v4 = this->fields.currentAccountTitleLabel;
+    v7 = this->fields.currentAccountTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2036/*"ACCOUNT_LINKAGE_TAKEOVER_CURRENT_TITLE"*/, 0LL);
-    if ( !v4 )
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2011/*"ACCOUNT_LINKAGE_TAKEOVER_CURRENT_TITLE"*/, 0LL);
+    if ( !v7 )
       goto LABEL_18;
-    UILabel__set_text(v4, v5, 0LL);
+    UILabel__set_text(v7, v8, 0LL);
   }
   overrideAccountTitleLabel = (UnityEngine_Object_o *)this->fields.overrideAccountTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(overrideAccountTitleLabel, 0LL, 0LL) )
   {
-    v8 = this->fields.overrideAccountTitleLabel;
+    v11 = this->fields.overrideAccountTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2039/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, 0LL);
-    if ( v8 )
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_2014/*"ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE"*/, 0LL);
+    if ( v11 )
     {
-      UILabel__set_text(v8, v5, 0LL);
+      UILabel__set_text(v11, v8, 0LL);
       return;
     }
 LABEL_18:
-    sub_1C22094(v5, v6);
+    sub_1C2E388(v8, v9);
   }
 }
 
@@ -450,10 +459,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetButtonCancelLabel(
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EFE & 1) == 0 )
+  if ( (byte_4BF80DE & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EFE = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, buttonCancel);
+    byte_4BF80DE = 1;
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -462,7 +471,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetButtonCancelLabel(
   {
     v7 = this->fields.buttonCancelLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, buttonCancel, 0LL);
   }
 }
@@ -477,10 +486,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetButtonDecideLabel(
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EFF & 1) == 0 )
+  if ( (byte_4BF80DF & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EFF = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, buttonDecide);
+    byte_4BF80DF = 1;
   }
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -489,7 +498,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetButtonDecideLabel(
   {
     v7 = this->fields.buttonDecideLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, buttonDecide, 0LL);
   }
 }
@@ -504,10 +513,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetCurrentAccountDataLabel
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EFB & 1) == 0 )
+  if ( (byte_4BF80DB & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EFB = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, currentAccountData);
+    byte_4BF80DB = 1;
   }
   currentAccountDataLabel = (UnityEngine_Object_o *)this->fields.currentAccountDataLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -516,7 +525,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetCurrentAccountDataLabel
   {
     v7 = this->fields.currentAccountDataLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, currentAccountData, 0LL);
   }
 }
@@ -531,10 +540,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetMessageLabel(
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EF9 & 1) == 0 )
+  if ( (byte_4BF80D9 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EF9 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, message);
+    byte_4BF80D9 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -543,7 +552,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetMessageLabel(
   {
     v7 = this->fields.messageLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, message, 0LL);
   }
 }
@@ -555,46 +564,48 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetSlider(
         bool sliderOn,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UISprite_o *sliderSprite; // x0
-  System_String_o **v6; // x8
-  AccountLinkageOverrideTakeOverDialog_c *v7; // x0
-  __int64 v8; // x1
+  System_String_o **v8; // x8
+  AccountLinkageOverrideTakeOverDialog_c *v9; // x0
+  __int64 v10; // x1
   float a; // s3
   float b; // s2
   float g; // s1
   float r; // s0
-  UnityEngine_Color_o v13; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Color_o v15; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4BD6F01 & 1) == 0 )
+  if ( (byte_4BF80E1 & 1) == 0 )
   {
-    sub_1C21E38(&AccountLinkageOverrideTakeOverDialog_TypeInfo);
-    sub_1C21E38(&StringLiteral_20838/*"img_slider_thumb_locked"*/);
-    sub_1C21E38(&StringLiteral_20837/*"img_slider_thumb"*/);
-    byte_4BD6F01 = 1;
+    sub_1C2E12C(&AccountLinkageOverrideTakeOverDialog_TypeInfo, sliderOn);
+    sub_1C2E12C(&StringLiteral_20849/*"img_slider_thumb_locked"*/, v5);
+    sub_1C2E12C(&StringLiteral_20848/*"img_slider_thumb"*/, v6);
+    byte_4BF80E1 = 1;
   }
-  *(_QWORD *)&v13.fields.r = 0LL;
-  *(_QWORD *)&v13.fields.b = 0LL;
+  *(_QWORD *)&v15.fields.r = 0LL;
+  *(_QWORD *)&v15.fields.b = 0LL;
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_17;
-  v6 = (System_String_o **)&StringLiteral_20837/*"img_slider_thumb"*/;
+  v8 = (System_String_o **)&StringLiteral_20848/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = (System_String_o **)&StringLiteral_20838/*"img_slider_thumb_locked"*/;
-  UISprite__set_spriteName(sliderSprite, *v6, 0LL);
-  v7 = AccountLinkageOverrideTakeOverDialog_TypeInfo;
+    v8 = (System_String_o **)&StringLiteral_20849/*"img_slider_thumb_locked"*/;
+  UISprite__set_spriteName(sliderSprite, *v8, 0LL);
+  v9 = AccountLinkageOverrideTakeOverDialog_TypeInfo;
   if ( !AccountLinkageOverrideTakeOverDialog_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AccountLinkageOverrideTakeOverDialog_TypeInfo);
-    v7 = AccountLinkageOverrideTakeOverDialog_TypeInfo;
+    v9 = AccountLinkageOverrideTakeOverDialog_TypeInfo;
   }
-  UnityEngine_ColorUtility__TryParseHtmlString(v7->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v13, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString(v9->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE, &v15, 0LL);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   if ( !sliderSprite )
     goto LABEL_17;
-  v8 = sliderOn ? 0LL : 3LL;
+  v10 = sliderOn ? 0LL : 3LL;
   ((void (__fastcall *)(UISprite_o *, __int64, __int64, Il2CppMethodPointer))sliderSprite->klass->vtable._14_OnEnable.method)(
     sliderSprite,
-    v8,
+    v10,
     1LL,
     sliderSprite->klass->vtable._15_OnInit.methodPtr);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
@@ -604,17 +615,17 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetSlider(
   r = 1.0;
   if ( !sliderOn )
   {
-    g = v13.fields.g;
-    r = v13.fields.r;
-    b = v13.fields.b;
-    a = v13.fields.a;
+    g = v15.fields.g;
+    r = v15.fields.r;
+    b = v15.fields.b;
+    a = v15.fields.a;
   }
   if ( !sliderSprite
     || (UIButtonColor__set_defaultColor((UIButtonColor_o *)sliderSprite, *(UnityEngine_Color_o *)&r, 0LL),
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0LL) )
   {
 LABEL_17:
-    sub_1C22094(sliderSprite, sliderOn);
+    sub_1C2E388(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, Il2CppMethodPointer))sliderSprite->klass->vtable._5_get_isAnchoredVertically.method)(
     sliderSprite,
@@ -632,10 +643,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetTakeOverAccountDataLabe
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EFC & 1) == 0 )
+  if ( (byte_4BF80DC & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EFC = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, takeOverAccountData);
+    byte_4BF80DC = 1;
   }
   takeOverAccountDataLabel = (UnityEngine_Object_o *)this->fields.takeOverAccountDataLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -644,7 +655,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetTakeOverAccountDataLabe
   {
     v7 = this->fields.takeOverAccountDataLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, takeOverAccountData, 0LL);
   }
 }
@@ -659,10 +670,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetTitleLabel(
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_4BD6EF8 & 1) == 0 )
+  if ( (byte_4BF80D8 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EF8 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, title);
+    byte_4BF80D8 = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -671,7 +682,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetTitleLabel(
   {
     v7 = this->fields.titleLabel;
     if ( !v7 )
-      sub_1C22094(0LL, v6);
+      sub_1C2E388(0LL, v6);
     UILabel__set_text(v7, title, 0LL);
   }
 }
@@ -688,10 +699,10 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetWarningLabel(
   UILabel_o *v9; // x0
   UnityEngine_Object_o *warningLabel2; // x21
 
-  if ( (byte_4BD6EFD & 1) == 0 )
+  if ( (byte_4BF80DD & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD6EFD = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, warning1);
+    byte_4BF80DD = 1;
   }
   warningLabel1 = (UnityEngine_Object_o *)this->fields.warningLabel1;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -715,7 +726,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog__SetWarningLabel(
       return;
     }
 LABEL_14:
-    sub_1C22094(v9, v8);
+    sub_1C2E388(v9, v8);
   }
 }
 
@@ -738,15 +749,15 @@ void __fastcall AccountLinkageOverrideTakeOverDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(&this->fields.method, object);
+  sub_1C2E0D0(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v6) & 1) == 0 )
+  if ( (sub_1C2E1EC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v10, 0LL);
+      v10 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -758,12 +769,13 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A5AEA8;
+  this->fields.m_target = (Il2CppObject *)sub_1A67348;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A5AE60;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A67300;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall AccountLinkageOverrideTakeOverDialog_ClickDelegate__BeginInvoke(
         AccountLinkageOverrideTakeOverDialog_ClickDelegate_o *this,
         bool isDecide,
@@ -775,14 +787,14 @@ System_IAsyncResult_o *__fastcall AccountLinkageOverrideTakeOverDialog_ClickDele
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4BD6F08 & 1) == 0 )
+  if ( (byte_4BF80E8 & 1) == 0 )
   {
-    sub_1C21E38(&bool_TypeInfo);
-    byte_4BD6F08 = 1;
+    sub_1C2E12C(&bool_TypeInfo, isDecide);
+    byte_4BF80E8 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -791,7 +803,7 @@ void __fastcall AccountLinkageOverrideTakeOverDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 

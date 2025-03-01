@@ -1,30 +1,31 @@
 void __fastcall ClassBoardClassEntity___ctor(ClassBoardClassEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC2B0 & 1) == 0 )
+  if ( (byte_4BFD4BA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDC2B0 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFD4BA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ClassBoardClassEntity__CreatePK(
         int32_t classBoardBaseId,
         int32_t classId,
         const MethodInfo *method)
 {
-  if ( (byte_4BDC2AF & 1) == 0 )
+  if ( (byte_4BFD4B9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4BDC2AF = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&classId);
+    byte_4BFD4B9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            classId,
-           (const MethodInfo_2FAE028 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,10 +45,10 @@ bool __fastcall ClassBoardClassEntity__IsOpen(ClassBoardClassEntity_o *this, con
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4BDC2AE & 1) == 0 )
+  if ( (byte_4BFD4B8 & 1) == 0 )
   {
-    sub_1C21E38(&CondType_TypeInfo);
-    byte_4BDC2AE = 1;
+    sub_1C2E12C(&CondType_TypeInfo, method);
+    byte_4BFD4B8 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

@@ -1,14 +1,14 @@
 void __fastcall UserCombineExpMaster___ctor(UserCombineExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD176 & 1) == 0 )
+  if ( (byte_4BFE3AC & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
-    byte_4BDD176 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__, method);
+    byte_4BFE3AC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     309,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_UserCombineExpMaster__UserCombineExpEntity__string___ctor__);
 }
 
 
@@ -17,41 +17,43 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *__fastcall UserCombineExpMaste
         UserCombineExpMaster_o *this,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *result; // x0
   int32_t Count; // w21
-  int32_t v7; // w22
-  __int64 v8; // x25
-  __int64 v9; // x8
-  unsigned __int64 v10; // x26
-  _OWORD *v11; // x27
-  __int128 v12; // q0
-  __int128 v13; // q0
+  int32_t v9; // w22
+  __int64 v10; // x25
+  __int64 v11; // x8
+  unsigned __int64 v12; // x26
+  _OWORD *v13; // x27
   __int128 v14; // q0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+0h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+20h] [xbp-B0h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+40h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+60h] [xbp-70h]
+  __int128 v15; // q0
+  __int128 v16; // q0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+0h] [xbp-D0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+20h] [xbp-B0h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+40h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+60h] [xbp-70h]
 
-  if ( (byte_4BDD177 & 1) == 0 )
+  if ( (byte_4BFE3AD & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
-    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
-    sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4BDD177 = 1;
+    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__, method);
+    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__, v5);
+    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
+    byte_4BFE3AD = 1;
   }
   result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)this->fields.list;
   if ( !result )
     goto LABEL_22;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_31F60CC *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
+            (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Count__);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  result = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v17, 0LL, 0LL);
-  v18 = v17;
+  result = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit(&v19, 0LL, 0LL);
+  v20 = v19;
   if ( Count >= 1 )
   {
-    v7 = 0;
+    v9 = 0;
     while ( 1 )
     {
       result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)this->fields.list;
@@ -59,52 +61,52 @@ CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *__fastcall UserCombineExpMaste
         break;
       result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                      (System_Collections_ObjectModel_Collection_T__o *)result,
-                                                                     v7,
-                                                                     (const MethodInfo_31F615C *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
+                                                                     v9,
+                                                                     (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_UserCombineExpEntity__get_Item__);
       if ( result )
       {
-        v8 = *(_QWORD *)&result->fields.inited;
-        if ( !v8 )
+        v10 = *(_QWORD *)&result->fields.inited;
+        if ( !v10 )
           break;
-        v9 = *(_QWORD *)(v8 + 24);
-        if ( (int)v9 >= 1 )
+        v11 = *(_QWORD *)(v10 + 24);
+        if ( (int)v11 >= 1 )
         {
-          v10 = 0LL;
-          v11 = (_OWORD *)(v8 + 32);
+          v12 = 0LL;
+          v13 = (_OWORD *)(v10 + 32);
           do
           {
-            if ( v10 >= (unsigned int)v9 )
-              sub_1C2209C(result, method);
-            v12 = v11[1];
-            *(_OWORD *)&v17.fields.currentCryptoKey = *v11;
-            *(_OWORD *)&v17.fields.fakeValue = v12;
-            v13 = v11[1];
-            *(_OWORD *)&v16.fields.currentCryptoKey = *v11;
-            *(_OWORD *)&v16.fields.fakeValue = v13;
+            if ( v12 >= (unsigned int)v11 )
+              sub_1C2E390(result, method);
+            v14 = v13[1];
+            *(_OWORD *)&v19.fields.currentCryptoKey = *v13;
+            *(_OWORD *)&v19.fields.fakeValue = v14;
+            v15 = v13[1];
+            *(_OWORD *)&v18.fields.currentCryptoKey = *v13;
+            *(_OWORD *)&v18.fields.fakeValue = v15;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-            v15 = v16;
-            result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(
-                                                                           &v15,
+            v17 = v18;
+            result = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(
+                                                                           &v17,
                                                                            0LL);
             if ( ((unsigned __int64)result & 0x8000000000000000LL) == 0 )
-              v18 = v17;
-            LODWORD(v9) = *(_DWORD *)(v8 + 24);
-            ++v10;
-            v11 += 2;
+              v20 = v19;
+            LODWORD(v11) = *(_DWORD *)(v10 + 24);
+            ++v12;
+            v13 += 2;
           }
-          while ( (__int64)v10 < (int)v9 );
+          while ( (__int64)v12 < (int)v11 );
         }
       }
-      if ( ++v7 == Count )
+      if ( ++v9 == Count )
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1C22094(result, method);
+    sub_1C2E388(result, method);
   }
 LABEL_20:
-  v14 = *(_OWORD *)&v18.fields.fakeValue;
-  *(_OWORD *)&retstr->fields.currentCryptoKey = *(_OWORD *)&v18.fields.currentCryptoKey;
-  *(_OWORD *)&retstr->fields.fakeValue = v14;
+  v16 = *(_OWORD *)&v20.fields.fakeValue;
+  *(_OWORD *)&retstr->fields.currentCryptoKey = *(_OWORD *)&v20.fields.currentCryptoKey;
+  *(_OWORD *)&retstr->fields.fakeValue = v16;
   return result;
 }

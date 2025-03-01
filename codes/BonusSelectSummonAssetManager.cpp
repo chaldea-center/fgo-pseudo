@@ -9,49 +9,53 @@ void __fastcall BonusSelectSummonAssetManager__GetAssets(
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  AssetLoader_LoadEndDataHandler_o *v20; // x19
+  __int64 v8; // x1
+  __int64 v9; // x21
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  AssetLoader_LoadEndDataHandler_o *v24; // x19
 
-  if ( (byte_4BD8AF1 & 1) == 0 )
+  if ( (byte_4BF9CD7 & 1) == 0 )
   {
-    sub_1C21E38(&AssetManager_TypeInfo);
-    sub_1C21E38(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C21E38(&Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__);
-    sub_1C21E38(&BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
-    sub_1C21E38(&StringLiteral_13337/*"SummonScene/BonusSelectSummon"*/);
-    byte_4BD8AF1 = 1;
+    sub_1C2E12C(&AssetManager_TypeInfo, finishCallback);
+    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
+    sub_1C2E12C(&Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__, v6);
+    sub_1C2E12C(&BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo, v7);
+    sub_1C2E12C(&StringLiteral_13347/*"SummonScene/BonusSelectSummon"*/, v8);
+    byte_4BF9CD7 = 1;
   }
-  v5 = sub_1C22084(BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_QWORD *)(v5 + 16) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 16), (int64_t)this, v8, v9, v10, v11, v12, v13);
-  *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 24), (int64_t)finishCallback, v14, v15, v16, v17, v18, v19);
-  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C22084(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v9 = sub_1C2E378(BonusSelectSummonAssetManager___c__DisplayClass21_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v9, 0LL);
+  if ( !v9 )
+    sub_1C2E388(v10, v11);
+  *(_QWORD *)(v9 + 16) = this;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  *(_QWORD *)(v9 + 24) = finishCallback;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)finishCallback, v18, v19, v20, v21, v22, v23);
+  v24 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v20,
-    (Il2CppObject *)v5,
+    v24,
+    (Il2CppObject *)v9,
     Method_BonusSelectSummonAssetManager___c__DisplayClass21_0__GetAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13337/*"SummonScene/BonusSelectSummon"*/, v20, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13347/*"SummonScene/BonusSelectSummon"*/, v24, 1, 0LL);
 }
 
 
@@ -89,9 +93,9 @@ void __fastcall BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetMan
   PartyListViewItem_o *v32; // x7
 
   this->fields._ConfirmDialogPrefab_k__BackingField = 0LL;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields._OrganizationListViewItemPrefab_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._OrganizationListViewItemPrefab_k__BackingField,
     0LL,
     v9,
@@ -101,7 +105,7 @@ void __fastcall BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetMan
     v13,
     v14);
   this->fields._ServantSelectMenuPrefab_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ServantSelectMenuPrefab_k__BackingField,
     0LL,
     v15,
@@ -111,7 +115,7 @@ void __fastcall BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetMan
     v19,
     v20);
   this->fields._MsgInfoPrefab_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._MsgInfoPrefab_k__BackingField,
     0LL,
     v21,
@@ -121,7 +125,7 @@ void __fastcall BonusSelectSummonAssetManager__Release(BonusSelectSummonAssetMan
     v25,
     v26);
   this->fields._MsgInfoMenberPrefab_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._MsgInfoMenberPrefab_k__BackingField,
     0LL,
     v27,
@@ -140,7 +144,7 @@ void __fastcall BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  Il2CppObject *Object_object__49880776; // x1
+  Il2CppObject *Object_object__50017172; // x1
   int64_t v9; // x2
   int32_t v10; // w3
   System_String_o *v11; // x4
@@ -148,19 +152,19 @@ void __fastcall BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4BD8AF2 & 1) == 0 )
+  if ( (byte_4BF9CD8 & 1) == 0 )
   {
-    this = (BonusSelectSummonAssetManager_o *)sub_1C21E38(&Method_AssetData_GetObject_GameObject____77626288);
-    byte_4BD8AF2 = 1;
+    this = (BonusSelectSummonAssetManager_o *)sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, prefab);
+    byte_4BF9CD8 = 1;
   }
   if ( !assetData )
-    sub_1C22094(this, prefab);
-  Object_object__49880776 = AssetData__GetObject_object__49880776(
+    sub_1C2E388(this, prefab);
+  Object_object__50017172 = AssetData__GetObject_object__50017172(
                               assetData,
                               prefabName,
-                              (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  *prefab = (UnityEngine_GameObject_o *)Object_object__49880776;
-  sub_1C21DDC((PartyOrganizationUtility_o *)prefab, (int64_t)Object_object__49880776, v9, v10, v11, v12, v13, v14);
+                              (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  *prefab = (UnityEngine_GameObject_o *)Object_object__50017172;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)prefab, (int64_t)Object_object__50017172, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -216,7 +220,7 @@ void __fastcall BonusSelectSummonAssetManager__set_ConfirmDialogPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ConfirmDialogPrefab_k__BackingField = value;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -232,7 +236,7 @@ void __fastcall BonusSelectSummonAssetManager__set_MsgInfoMenberPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._MsgInfoMenberPrefab_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._MsgInfoMenberPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -256,7 +260,7 @@ void __fastcall BonusSelectSummonAssetManager__set_MsgInfoPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._MsgInfoPrefab_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._MsgInfoPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -280,7 +284,7 @@ void __fastcall BonusSelectSummonAssetManager__set_OrganizationListViewItemPrefa
   PartyListViewItem_o *v7; // x7
 
   this->fields._OrganizationListViewItemPrefab_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._OrganizationListViewItemPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -304,7 +308,7 @@ void __fastcall BonusSelectSummonAssetManager__set_ServantSelectMenuPrefab(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ServantSelectMenuPrefab_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ServantSelectMenuPrefab_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -331,133 +335,137 @@ void __fastcall BonusSelectSummonAssetManager___c__DisplayClass21_0___GetAssets_
 {
   const MethodInfo *v3; // x4
   BonusSelectSummonAssetManager___c__DisplayClass21_0_o *v5; // x19
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  UnityEngine_GameObject_o *v12; // x1
-  const MethodInfo *v13; // x4
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  UnityEngine_GameObject_o *v20; // x1
-  const MethodInfo *v21; // x4
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  UnityEngine_GameObject_o *v28; // x1
-  const MethodInfo *v29; // x4
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  UnityEngine_GameObject_o *v36; // x1
-  const MethodInfo *v37; // x4
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  UnityEngine_GameObject_o *v44; // x1
-  UnityEngine_GameObject_o *v45; // [xsp+8h] [xbp-48h] BYREF
-  UnityEngine_GameObject_o *v46; // [xsp+10h] [xbp-40h] BYREF
-  UnityEngine_GameObject_o *v47; // [xsp+18h] [xbp-38h] BYREF
-  UnityEngine_GameObject_o *v48; // [xsp+20h] [xbp-30h] BYREF
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  UnityEngine_GameObject_o *v16; // x1
+  const MethodInfo *v17; // x4
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  UnityEngine_GameObject_o *v24; // x1
+  const MethodInfo *v25; // x4
+  int64_t v26; // x2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  BattleSetupInfo_o *v29; // x5
+  FollowerInfo_o *v30; // x6
+  PartyListViewItem_o *v31; // x7
+  UnityEngine_GameObject_o *v32; // x1
+  const MethodInfo *v33; // x4
+  int64_t v34; // x2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  BattleSetupInfo_o *v37; // x5
+  FollowerInfo_o *v38; // x6
+  PartyListViewItem_o *v39; // x7
+  UnityEngine_GameObject_o *v40; // x1
+  const MethodInfo *v41; // x4
+  int64_t v42; // x2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  BattleSetupInfo_o *v45; // x5
+  FollowerInfo_o *v46; // x6
+  PartyListViewItem_o *v47; // x7
+  UnityEngine_GameObject_o *v48; // x1
+  UnityEngine_GameObject_o *v49; // [xsp+8h] [xbp-48h] BYREF
+  UnityEngine_GameObject_o *v50; // [xsp+10h] [xbp-40h] BYREF
+  UnityEngine_GameObject_o *v51; // [xsp+18h] [xbp-38h] BYREF
+  UnityEngine_GameObject_o *v52; // [xsp+20h] [xbp-30h] BYREF
   UnityEngine_GameObject_o *prefab; // [xsp+28h] [xbp-28h] BYREF
 
   v5 = this;
-  if ( (byte_4BD8AF3 & 1) == 0 )
+  if ( (byte_4BF9CD9 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_3364/*"BonusSelectSummonConfirmDialog"*/);
-    sub_1C21E38(&StringLiteral_3365/*"BonusSelectSummonMsgInfo"*/);
-    sub_1C21E38(&StringLiteral_3366/*"BonusSelectSummonMsgInfoMenber"*/);
-    sub_1C21E38(&StringLiteral_3367/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/);
-    this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)sub_1C21E38(&StringLiteral_3369/*"BonusSelectSummonPartyServantSelectMenu"*/);
-    byte_4BD8AF3 = 1;
+    sub_1C2E12C(&StringLiteral_3352/*"BonusSelectSummonConfirmDialog"*/, assetData);
+    sub_1C2E12C(&StringLiteral_3353/*"BonusSelectSummonMsgInfo"*/, v6);
+    sub_1C2E12C(&StringLiteral_3354/*"BonusSelectSummonMsgInfoMenber"*/, v7);
+    sub_1C2E12C(&StringLiteral_3355/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/, v8);
+    this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)sub_1C2E12C(&StringLiteral_3357/*"BonusSelectSummonPartyServantSelectMenu"*/, v9);
+    byte_4BF9CD9 = 1;
   }
-  v48 = 0LL;
+  v52 = 0LL;
   prefab = 0LL;
-  v46 = 0LL;
-  v47 = 0LL;
-  v45 = 0LL;
+  v50 = 0LL;
+  v51 = 0LL;
+  v49 = 0LL;
   if ( !v5->fields.__4__this )
     goto LABEL_14;
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
     &prefab,
-    (System_String_o *)StringLiteral_3364/*"BonusSelectSummonConfirmDialog"*/,
+    (System_String_o *)StringLiteral_3352/*"BonusSelectSummonConfirmDialog"*/,
     assetData,
     v3);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
   if ( !this )
     goto LABEL_14;
-  v12 = prefab;
+  v16 = prefab;
   this->fields.__4__this = (struct BonusSelectSummonAssetManager_o *)prefab;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v12, v6, v7, v8, v9, v10, v11);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)v16, v10, v11, v12, v13, v14, v15);
   if ( !v5->fields.__4__this )
     goto LABEL_14;
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
-    &v48,
-    (System_String_o *)StringLiteral_3367/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/,
+    &v52,
+    (System_String_o *)StringLiteral_3355/*"BonusSelectSummonPartyListViewItemMemberPrefab"*/,
     assetData,
-    v13);
+    v17);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
   if ( !this )
     goto LABEL_14;
-  v20 = v48;
-  this->fields.finishCallback = (struct System_Action_o *)v48;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.finishCallback, (int64_t)v20, v14, v15, v16, v17, v18, v19);
+  v24 = v52;
+  this->fields.finishCallback = (struct System_Action_o *)v52;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.finishCallback, (int64_t)v24, v18, v19, v20, v21, v22, v23);
   if ( !v5->fields.__4__this )
     goto LABEL_14;
   BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
     (BonusSelectSummonAssetManager_o *)this,
-    &v47,
-    (System_String_o *)StringLiteral_3369/*"BonusSelectSummonPartyServantSelectMenu"*/,
+    &v51,
+    (System_String_o *)StringLiteral_3357/*"BonusSelectSummonPartyServantSelectMenu"*/,
     assetData,
-    v21);
+    v25);
   this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this;
   if ( !this )
     goto LABEL_14;
-  v28 = v47;
-  this[1].klass = (BonusSelectSummonAssetManager___c__DisplayClass21_0_c *)v47;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this[1], (int64_t)v28, v22, v23, v24, v25, v26, v27);
+  v32 = v51;
+  this[1].klass = (BonusSelectSummonAssetManager___c__DisplayClass21_0_c *)v51;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this[1], (int64_t)v32, v26, v27, v28, v29, v30, v31);
   if ( !v5->fields.__4__this
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
-          &v46,
-          (System_String_o *)StringLiteral_3365/*"BonusSelectSummonMsgInfo"*/,
+          &v50,
+          (System_String_o *)StringLiteral_3353/*"BonusSelectSummonMsgInfo"*/,
           assetData,
-          v29),
+          v33),
         (this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this) == 0LL)
-    || (v36 = v46,
-        this[1].monitor = v46,
-        sub_1C21DDC((PartyOrganizationUtility_o *)&this[1].monitor, (int64_t)v36, v30, v31, v32, v33, v34, v35),
+    || (v40 = v50,
+        this[1].monitor = v50,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)&this[1].monitor, (int64_t)v40, v34, v35, v36, v37, v38, v39),
         !v5->fields.__4__this)
     || (BonusSelectSummonAssetManager__SetPrefabAndNullCheck(
           (BonusSelectSummonAssetManager_o *)this,
-          &v45,
-          (System_String_o *)StringLiteral_3366/*"BonusSelectSummonMsgInfoMenber"*/,
+          &v49,
+          (System_String_o *)StringLiteral_3354/*"BonusSelectSummonMsgInfoMenber"*/,
           assetData,
-          v37),
+          v41),
         (this = (BonusSelectSummonAssetManager___c__DisplayClass21_0_o *)v5->fields.__4__this) == 0LL) )
   {
 LABEL_14:
-    sub_1C22094(this, assetData);
+    sub_1C2E388(this, assetData);
   }
-  v44 = v45;
-  this[1].fields.__4__this = (struct BonusSelectSummonAssetManager_o *)v45;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this[1].fields, (int64_t)v44, v38, v39, v40, v41, v42, v43);
+  v48 = v49;
+  this[1].fields.__4__this = (struct BonusSelectSummonAssetManager_o *)v49;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this[1].fields, (int64_t)v48, v42, v43, v44, v45, v46, v47);
   ActionExtensions__Call(v5->fields.finishCallback, 0LL);
 }

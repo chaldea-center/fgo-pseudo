@@ -1,25 +1,27 @@
 void __fastcall TitleInfoEventRaidDayComponent___cctor(const MethodInfo *method)
 {
-  int64_t v1; // x2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
-  BattleSetupInfo_o *v4; // x5
-  FollowerInfo_o *v5; // x6
-  PartyListViewItem_o *v6; // x7
+  __int64 v1; // x1
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
   struct TitleInfoEventRaidDayComponent_StaticFields *static_fields; // x0
-  int64_t v8; // x1
+  int64_t v10; // x1
 
-  if ( (byte_4BDAF69 & 1) == 0 )
+  if ( (byte_4BFC166 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoEventRaidDayComponent_TypeInfo);
-    sub_1C21E38(&StringLiteral_19555/*"event_raid_num_"*/);
-    byte_4BDAF69 = 1;
+    sub_1C2E12C(&TitleInfoEventRaidDayComponent_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_19567/*"event_raid_num_"*/, v8);
+    byte_4BFC166 = 1;
   }
   static_fields = TitleInfoEventRaidDayComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEPTH_FRONT = 0x100000003LL;
-  v8 = StringLiteral_19555/*"event_raid_num_"*/;
-  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_19555/*"event_raid_num_"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->NUM_SPNAME_PREFIX, v8, v1, v2, v3, v4, v5, v6);
+  v10 = StringLiteral_19567/*"event_raid_num_"*/;
+  static_fields->NUM_SPNAME_PREFIX = (struct System_String_o *)StringLiteral_19567/*"event_raid_num_"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->NUM_SPNAME_PREFIX, v10, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -42,12 +44,13 @@ void __fastcall TitleInfoEventRaidDayComponent__SetDepth(
     || (UIWidget__set_depth(dayStrSp, depth, 0LL), (dayStrSp = (UIWidget_o *)this->fields.dayNumSp) == 0LL)
     || (UIWidget__set_depth(dayStrSp, depth, 0LL), (dayStrSp = (UIWidget_o *)this->fields.dayLastSp) == 0LL) )
   {
-    sub_1C22094(dayStrSp, *(_QWORD *)&depth);
+    sub_1C2E388(dayStrSp, *(_QWORD *)&depth);
   }
   UIWidget__set_depth(dayStrSp, depth, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TitleInfoEventRaidDayComponent__Setup(
         TitleInfoEventRaidDayComponent_o *this,
         int32_t eventId,
@@ -55,42 +58,45 @@ void __fastcall TitleInfoEventRaidDayComponent__Setup(
         int32_t dispDayType,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v8; // x1
   __int64 v9; // x1
-  EventRaidMaster_c *v10; // x0
+  __int64 v10; // x1
+  DataManager_o *Instance; // x0
+  __int64 v12; // x1
+  EventRaidMaster_c *v13; // x0
   int32_t OLD_RAID_DAY_COUNT; // w8
-  const MethodInfo *v12; // x2
+  const MethodInfo *v15; // x2
   UISprite_o *dayNumSp; // x21
-  TitleInfoEventRaidDayComponent_c *v14; // x0
-  System_String_o *NUM_SPNAME_PREFIX; // x22
-  System_String_o *v16; // x0
   TitleInfoEventRaidDayComponent_c *v17; // x0
+  System_String_o *NUM_SPNAME_PREFIX; // x22
+  System_String_o *v19; // x0
+  TitleInfoEventRaidDayComponent_c *v20; // x0
   int32_t DEPTH_BACK; // w1
-  TitleInfoEventRaidDayComponent_c *v19; // x0
-  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
+  TitleInfoEventRaidDayComponent_c *v22; // x0
+  int32_t v23; // [xsp+Ch] [xbp-34h] BYREF
 
-  v20 = dispDayNum;
-  if ( (byte_4BDAF68 & 1) == 0 )
+  v23 = dispDayNum;
+  if ( (byte_4BFC165 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1C21E38(&EventRaidMaster_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&TitleInfoEventRaidDayComponent_TypeInfo);
-    byte_4BDAF68 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventRaidMaster___, *(_QWORD *)&eventId);
+    sub_1C2E12C(&EventRaidMaster_TypeInfo, v8);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1C2E12C(&TitleInfoEventRaidDayComponent_TypeInfo, v10);
+    byte_4BFC165 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   DataManager__GetMasterData_object_(
     Instance,
-    (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventRaidMaster___);
-  v10 = EventRaidMaster_TypeInfo;
+    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventRaidMaster___);
+  v13 = EventRaidMaster_TypeInfo;
   if ( !EventRaidMaster_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventRaidMaster_TypeInfo);
-    v10 = EventRaidMaster_TypeInfo;
+    v13 = EventRaidMaster_TypeInfo;
   }
-  if ( dispDayNum < 1 || (OLD_RAID_DAY_COUNT = v10->static_fields->OLD_RAID_DAY_COUNT, OLD_RAID_DAY_COUNT < dispDayNum) )
+  if ( dispDayNum < 1 || (OLD_RAID_DAY_COUNT = v13->static_fields->OLD_RAID_DAY_COUNT, OLD_RAID_DAY_COUNT < dispDayNum) )
   {
     Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( Instance )
@@ -135,7 +141,7 @@ void __fastcall TitleInfoEventRaidDayComponent__Setup(
       }
     }
 LABEL_40:
-    sub_1C22094(Instance, v9);
+    sub_1C2E388(Instance, v12);
   }
   Instance = (DataManager_o *)this->fields.dayLastSp;
   if ( !Instance )
@@ -159,15 +165,15 @@ LABEL_40:
     goto LABEL_40;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   dayNumSp = this->fields.dayNumSp;
-  v14 = TitleInfoEventRaidDayComponent_TypeInfo;
+  v17 = TitleInfoEventRaidDayComponent_TypeInfo;
   if ( !TitleInfoEventRaidDayComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidDayComponent_TypeInfo);
-    v14 = TitleInfoEventRaidDayComponent_TypeInfo;
+    v17 = TitleInfoEventRaidDayComponent_TypeInfo;
   }
-  NUM_SPNAME_PREFIX = v14->static_fields->NUM_SPNAME_PREFIX;
-  v16 = System_Int32__ToString((int32_t)&v20, 0LL);
-  Instance = (DataManager_o *)System_String__Concat_63115476(NUM_SPNAME_PREFIX, v16, 0LL);
+  NUM_SPNAME_PREFIX = v17->static_fields->NUM_SPNAME_PREFIX;
+  v19 = System_Int32__ToString((int32_t)&v23, 0LL);
+  Instance = (DataManager_o *)System_String__Concat_63235584(NUM_SPNAME_PREFIX, v19, 0LL);
   if ( !dayNumSp )
     goto LABEL_40;
   UISprite__set_spriteName(dayNumSp, (System_String_o *)Instance, 0LL);
@@ -180,13 +186,13 @@ LABEL_40:
   if ( !dispDayType )
   {
 LABEL_35:
-    v19 = TitleInfoEventRaidDayComponent_TypeInfo;
+    v22 = TitleInfoEventRaidDayComponent_TypeInfo;
     if ( !TitleInfoEventRaidDayComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TitleInfoEventRaidDayComponent_TypeInfo);
-      v19 = TitleInfoEventRaidDayComponent_TypeInfo;
+      v22 = TitleInfoEventRaidDayComponent_TypeInfo;
     }
-    DEPTH_BACK = v19->static_fields->DEPTH_BACK;
+    DEPTH_BACK = v22->static_fields->DEPTH_BACK;
     goto LABEL_38;
   }
 LABEL_30:
@@ -194,13 +200,13 @@ LABEL_30:
     goto LABEL_35;
   if ( dispDayType != 1 )
     return;
-  v17 = TitleInfoEventRaidDayComponent_TypeInfo;
+  v20 = TitleInfoEventRaidDayComponent_TypeInfo;
   if ( !TitleInfoEventRaidDayComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventRaidDayComponent_TypeInfo);
-    v17 = TitleInfoEventRaidDayComponent_TypeInfo;
+    v20 = TitleInfoEventRaidDayComponent_TypeInfo;
   }
-  DEPTH_BACK = v17->static_fields->DEPTH_FRONT;
+  DEPTH_BACK = v20->static_fields->DEPTH_FRONT;
 LABEL_38:
-  TitleInfoEventRaidDayComponent__SetDepth(this, DEPTH_BACK, v12);
+  TitleInfoEventRaidDayComponent__SetDepth(this, DEPTH_BACK, v15);
 }

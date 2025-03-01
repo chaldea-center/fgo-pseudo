@@ -6,30 +6,31 @@ void __fastcall FriendRemoveRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BDDEE4 & 1) == 0 )
+  if ( (byte_4BFF128 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_24288/*"targetUserId"*/);
-    byte_4BDDEE4 = 1;
+    sub_1C2E12C(&StringLiteral_24311/*"targetUserId"*/, targetUserId);
+    byte_4BFF128 = 1;
   }
-  RequestBase__addField_42421084((RequestBase_o *)this, (System_String_o *)StringLiteral_24288/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_42510212((RequestBase_o *)this, (System_String_o *)StringLiteral_24311/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
 System_String_o *__fastcall FriendRemoveRequest__getURL(FriendRemoveRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDEE3 & 1) == 0 )
+  if ( (byte_4BFF127 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_19974/*"friend/remove"*/);
-    byte_4BDDEE3 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_19989/*"friend/remove"*/, v2);
+    byte_4BFF127 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19974/*"friend/remove"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19989/*"friend/remove"*/, 0LL);
 }
 
 
@@ -38,43 +39,45 @@ void __fastcall FriendRemoveRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x0
+  System_String_o *v10; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BDDEE5 & 1) == 0 )
+  if ( (byte_4BFF129 & 1) == 0 )
   {
-    sub_1C21E38(&JsonManager_TypeInfo);
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDEE5 = 1;
+    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF129 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(17, responseList, 0LL);
-  if ( v5 && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL)) )
+  v7 = ResponseCommandKind__SearchData(17, responseList, 0LL);
+  if ( v7 && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL)) )
   {
-    success = (Il2CppObject *)v6->fields.success;
+    success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0LL);
+    v10 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v8,
+        v10,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v10 = this->fields.CallBack;
-    if ( v10 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
-        v10->fields.original_method_info,
-        StringLiteral_22456/*"ng"*/,
-        *(_QWORD *)&v10->fields.extra_arg);
+    v12 = this->fields.CallBack;
+    if ( v12 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
+        v12->fields.original_method_info,
+        StringLiteral_22468/*"ng"*/,
+        *(_QWORD *)&v12->fields.extra_arg);
   }
 }

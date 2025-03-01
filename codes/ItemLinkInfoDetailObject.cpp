@@ -12,7 +12,7 @@ void __fastcall ItemLinkInfoDetailObject__Awake(ItemLinkInfoDetailObject_o *this
 
   widget = this->fields.widget;
   if ( !widget || (itemDetailLabel = this->fields.itemDetailLabel) == 0LL )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   this->fields.itemDetailLabelMargin = (float)widget->fields.mHeight - (float)itemDetailLabel->fields.mHeight;
   this->fields.itemDetailLabelFontSize = itemDetailLabel->fields.mFontSize;
 }
@@ -41,7 +41,7 @@ void __fastcall ItemLinkInfoDetailObject__Setup(
     itemIcon = this->fields.itemIcon;
     ImageId = ItemEntity__GetImageId(itemEnt, 0LL);
     if ( !itemIcon )
-      sub_1C22094(ImageId, v10);
+      sub_1C2E388(ImageId, v10);
     ItemIconComponent__SetCombineItemImage(itemIcon, ImageId, itemEnt->fields.bgImageId, -1, type == 29, 0LL);
   }
   if ( isDispStoneDetail )
@@ -52,42 +52,46 @@ void __fastcall ItemLinkInfoDetailObject__Setup(
 void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObject_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   Il2CppObject *Master_object; // x20
   System_String_o *UnitInfo; // x0
   UnityEngine_Object_o *payStoneNumLabel; // x20
-  UILabel_o *v7; // x20
-  int32_t v8; // w21
+  UILabel_o *v11; // x20
+  int32_t v12; // w21
   UnityEngine_Object_o *freeStoneNumLabel; // x20
-  UILabel_o *v10; // x20
+  UILabel_o *v14; // x20
   int32_t freeStone; // w21
   UnityEngine_Object_o *externalPayStoneNumLabel; // x20
-  UILabel_o *v13; // x19
+  UILabel_o *v17; // x19
   int32_t stone; // w20
-  UserExternalPaymentStoneEntity_o *v15; // [xsp+8h] [xbp-38h] BYREF
+  UserExternalPaymentStoneEntity_o *v19; // [xsp+8h] [xbp-38h] BYREF
   UserGameEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4BDE5F5 & 1) == 0 )
+  if ( (byte_4BFF840 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDE5F5 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___, method);
+    sub_1C2E12C(&DataManager_TypeInfo, v3);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v4);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v5);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
+    byte_4BFF840 = 1;
   }
   entity = 0LL;
-  v15 = 0LL;
+  v19 = 0LL;
   if ( UserGameMaster__TryGetSelfUserGame(&entity, 0LL) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserExternalPaymentStoneMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BD6FF5 )
+    if ( !byte_4BF81D5 )
     {
-      sub_1C21E38(&NetworkManager_TypeInfo);
-      byte_4BD6FF5 = 1;
+      sub_1C2E12C(&NetworkManager_TypeInfo, v7);
+      byte_4BF81D5 = 1;
     }
     UnitInfo = (System_String_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -99,7 +103,7 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
       goto LABEL_40;
     if ( !UserExternalPaymentStoneMaster__TryGetEntity(
             (UserExternalPaymentStoneMaster_o *)Master_object,
-            &v15,
+            &v19,
             *(_QWORD *)(*(_QWORD *)&UnitInfo[7].fields + 64LL),
             4,
             0LL) )
@@ -110,16 +114,16 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
     UnitInfo = (System_String_o *)UnityEngine_Object__op_Inequality(payStoneNumLabel, 0LL, 0LL);
     if ( ((unsigned __int8)UnitInfo & 1) != 0 )
     {
-      if ( !entity || !v15 )
+      if ( !entity || !v19 )
         goto LABEL_40;
-      v7 = this->fields.payStoneNumLabel;
-      v8 = entity->fields.chargeStone - v15->fields.stone;
+      v11 = this->fields.payStoneNumLabel;
+      v12 = entity->fields.chargeStone - v19->fields.stone;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      UnitInfo = LocalizationManager__GetUnitInfo(v8, 0LL);
-      if ( !v7 )
+      UnitInfo = LocalizationManager__GetUnitInfo(v12, 0LL);
+      if ( !v11 )
         goto LABEL_40;
-      UILabel__set_text(v7, UnitInfo, 0LL);
+      UILabel__set_text(v11, UnitInfo, 0LL);
     }
     freeStoneNumLabel = (UnityEngine_Object_o *)this->fields.freeStoneNumLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -129,14 +133,14 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
     {
       if ( !entity )
         goto LABEL_40;
-      v10 = this->fields.freeStoneNumLabel;
+      v14 = this->fields.freeStoneNumLabel;
       freeStone = entity->fields.freeStone;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       UnitInfo = LocalizationManager__GetUnitInfo(freeStone, 0LL);
-      if ( !v10 )
+      if ( !v14 )
         goto LABEL_40;
-      UILabel__set_text(v10, UnitInfo, 0LL);
+      UILabel__set_text(v14, UnitInfo, 0LL);
     }
     externalPayStoneNumLabel = (UnityEngine_Object_o *)this->fields.externalPayStoneNumLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -144,21 +148,21 @@ void __fastcall ItemLinkInfoDetailObject__SetupStoneDetail(ItemLinkInfoDetailObj
     UnitInfo = (System_String_o *)UnityEngine_Object__op_Inequality(externalPayStoneNumLabel, 0LL, 0LL);
     if ( ((unsigned __int8)UnitInfo & 1) != 0 )
     {
-      if ( v15 )
+      if ( v19 )
       {
-        v13 = this->fields.externalPayStoneNumLabel;
-        stone = v15->fields.stone;
+        v17 = this->fields.externalPayStoneNumLabel;
+        stone = v19->fields.stone;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         UnitInfo = LocalizationManager__GetUnitInfo(stone, 0LL);
-        if ( v13 )
+        if ( v17 )
         {
-          UILabel__set_text(v13, UnitInfo, 0LL);
+          UILabel__set_text(v17, UnitInfo, 0LL);
           return;
         }
       }
 LABEL_40:
-      sub_1C22094(UnitInfo, v3);
+      sub_1C2E388(UnitInfo, v7);
     }
   }
 }
@@ -170,7 +174,7 @@ float __fastcall ItemLinkInfoDetailObject__get_AreaHeight(ItemLinkInfoDetailObje
 
   itemDetailLabel = this->fields.itemDetailLabel;
   if ( !itemDetailLabel )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   return this->fields.itemDetailLabelMargin + (float)itemDetailLabel->fields.mHeight;
 }
 
@@ -181,6 +185,6 @@ float __fastcall ItemLinkInfoDetailObject__get_Height(ItemLinkInfoDetailObject_o
 
   widget = this->fields.widget;
   if ( !widget )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   return (float)widget->fields.mHeight;
 }

@@ -1,46 +1,52 @@
 void __fastcall MaterialGroupClearHistoryManager___cctor(const MethodInfo *method)
 {
-  int64_t v1; // x2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
-  BattleSetupInfo_o *v4; // x5
-  FollowerInfo_o *v5; // x6
-  PartyListViewItem_o *v6; // x7
-  System_Collections_Generic_List_object__o *v7; // x19
+  __int64 v1; // x1
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x19
   struct MaterialGroupClearHistoryManager_StaticFields *static_fields; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
 
-  if ( (byte_4BDD6F7 & 1) == 0 )
+  if ( (byte_4BFE934 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_6818/*"Fgo_20220404"*/);
-    byte_4BDD6F7 = 1;
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo___ctor__,
+      v1);
+    sub_1C2E12C(&System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo, v8);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v9);
+    sub_1C2E12C(&StringLiteral_6809/*"Fgo_20220404"*/, v10);
+    byte_4BFE934 = 1;
   }
-  MaterialGroupClearHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6818/*"Fgo_20220404"*/;
-  sub_1C21DDC(
+  MaterialGroupClearHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6809/*"Fgo_20220404"*/;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)MaterialGroupClearHistoryManager_TypeInfo->static_fields,
-    StringLiteral_6818/*"Fgo_20220404"*/,
-    v1,
+    StringLiteral_6809/*"Fgo_20220404"*/,
     v2,
     v3,
     v4,
     v5,
-    v6);
+    v6,
+    v7);
   *(_WORD *)&MaterialGroupClearHistoryManager_TypeInfo->static_fields->isModfiy = 0;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v7,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo___ctor__);
+    v11,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo___ctor__);
   static_fields = MaterialGroupClearHistoryManager_TypeInfo->static_fields;
-  static_fields->infoList = (struct System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__o *)v7;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->infoList, (int64_t)v7, v9, v10, v11, v12, v13, v14);
+  static_fields->infoList = (struct System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__o *)v11;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->infoList, (int64_t)v11, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -54,71 +60,77 @@ void __fastcall MaterialGroupClearHistoryManager___ctor(
 
 void __fastcall MaterialGroupClearHistoryManager__ClearSaveData(const MethodInfo *method)
 {
-  MaterialGroupClearHistoryManager_c *v1; // x0
+  __int64 v1; // x1
   __int64 v2; // x1
-  MaterialGroupClearHistoryManager_c *v3; // x0
+  __int64 v3; // x1
+  MaterialGroupClearHistoryManager_c *v4; // x0
+  __int64 v5; // x1
+  MaterialGroupClearHistoryManager_c *v6; // x0
   struct System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__o *infoList; // x8
   int32_t size; // w2
-  int v6; // w9
-  MaterialGroupClearHistoryManager_c *v7; // x0
+  int v9; // w9
+  MaterialGroupClearHistoryManager_c *v10; // x0
 
-  if ( (byte_4BDD6F1 & 1) == 0 )
+  if ( (byte_4BFE92E & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_Any_MaterialGroupClearHistoryManager_MaterialHistoryInfo___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Clear__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    byte_4BDD6F1 = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Any_MaterialGroupClearHistoryManager_MaterialHistoryInfo___, v1);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Clear__,
+      v2);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v3);
+    byte_4BFE92E = 1;
   }
-  v1 = MaterialGroupClearHistoryManager_TypeInfo;
+  v4 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v1 = MaterialGroupClearHistoryManager_TypeInfo;
+    v4 = MaterialGroupClearHistoryManager_TypeInfo;
   }
   if ( System_Linq_Enumerable__Any_object_(
-         (System_Collections_Generic_IEnumerable_TSource__o *)v1->static_fields->infoList,
-         (const MethodInfo_2FBB2A4 *)Method_System_Linq_Enumerable_Any_MaterialGroupClearHistoryManager_MaterialHistoryInfo___) )
+         (System_Collections_Generic_IEnumerable_TSource__o *)v4->static_fields->infoList,
+         (const MethodInfo_2FDD22C *)Method_System_Linq_Enumerable_Any_MaterialGroupClearHistoryManager_MaterialHistoryInfo___) )
   {
-    v3 = MaterialGroupClearHistoryManager_TypeInfo;
+    v6 = MaterialGroupClearHistoryManager_TypeInfo;
     if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-      v3 = MaterialGroupClearHistoryManager_TypeInfo;
+      v6 = MaterialGroupClearHistoryManager_TypeInfo;
     }
-    infoList = v3->static_fields->infoList;
+    infoList = v6->static_fields->infoList;
     if ( !infoList )
-      sub_1C22094(v3, v2);
+      sub_1C2E388(v6, v5);
     size = infoList->fields._size;
-    v6 = infoList->fields._version + 1;
+    v9 = infoList->fields._version + 1;
     infoList->fields._size = 0;
-    infoList->fields._version = v6;
+    infoList->fields._version = v9;
     if ( size >= 1 )
       System_Array__Clear((System_Array_o *)infoList->fields._items, 0, size, 0LL);
   }
-  v7 = MaterialGroupClearHistoryManager_TypeInfo;
+  v10 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v7 = MaterialGroupClearHistoryManager_TypeInfo;
+    v10 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  *(_WORD *)&v7->static_fields->isModfiy = 1;
+  *(_WORD *)&v10->static_fields->isModfiy = 1;
 }
 
 
 void __fastcall MaterialGroupClearHistoryManager__DeleteSaveData(const MethodInfo *method)
 {
-  MaterialGroupClearHistoryManager_c *v1; // x0
+  __int64 v1; // x1
+  MaterialGroupClearHistoryManager_c *v2; // x0
   System_String_o *FilePath; // x19
 
-  if ( (byte_4BDD6EF & 1) == 0 )
+  if ( (byte_4BFE92C & 1) == 0 )
   {
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    byte_4BDD6EF = 1;
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v1);
+    byte_4BFE92C = 1;
   }
-  v1 = MaterialGroupClearHistoryManager_TypeInfo;
+  v2 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-  FilePath = MaterialGroupClearHistoryManager__GetFilePath((const MethodInfo *)v1);
+  FilePath = MaterialGroupClearHistoryManager__GetFilePath((const MethodInfo *)v2);
   if ( System_IO_File__Exists(FilePath, 0LL) )
     System_IO_File__Delete(FilePath, 0LL);
 }
@@ -126,15 +138,18 @@ void __fastcall MaterialGroupClearHistoryManager__DeleteSaveData(const MethodInf
 
 System_String_o *__fastcall MaterialGroupClearHistoryManager__GetFilePath(const MethodInfo *method)
 {
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4BDD6EE & 1) == 0 )
+  if ( (byte_4BFE92B & 1) == 0 )
   {
-    sub_1C21E38(&AndroidUtil_TypeInfo);
-    sub_1C21E38(&DatFileName_TypeInfo);
-    sub_1C21E38(&StringLiteral_1123/*"/"*/);
-    byte_4BDD6EE = 1;
+    sub_1C2E12C(&AndroidUtil_TypeInfo, v1);
+    sub_1C2E12C(&DatFileName_TypeInfo, v2);
+    sub_1C2E12C(&StringLiteral_1102/*"/"*/, v3);
+    byte_4BFE92B = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -142,7 +157,7 @@ System_String_o *__fastcall MaterialGroupClearHistoryManager__GetFilePath(const 
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(37, 0LL);
-  return System_String__Concat_63126736(DatFileSavePath, (System_String_o *)StringLiteral_1123/*"/"*/, FileName, 0LL);
+  return System_String__Concat_63246844(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/"*/, FileName, 0LL);
 }
 
 
@@ -150,434 +165,490 @@ UserQuestEntity_o *__fastcall MaterialGroupClearHistoryManager__GetMaterialFinis
         System_Collections_Generic_List_QuestScriptMaterialNextEntity__o *groupEntities,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
-  __int64 v4; // x0
+  __int64 v3; // x1
+  __int64 v4; // x1
   __int64 v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  MaterialGroupClearHistoryManager_c *v12; // x0
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x20
+  __int64 v9; // x0
+  __int64 v10; // x1
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
+  MaterialGroupClearHistoryManager_c *v17; // x0
   System_Collections_Generic_List_UserQuestEntity__o *Quests; // x0
-  System_Collections_Generic_List_object__o *v14; // x19
-  System_Predicate_object__o *v15; // x21
+  System_Collections_Generic_List_object__o *v19; // x19
+  System_Predicate_object__o *v20; // x21
 
-  if ( (byte_4BDD6F3 & 1) == 0 )
+  if ( (byte_4BFE930 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_Any_UserQuestEntity___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_UserQuestEntity__Find__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    sub_1C21E38(&System_Predicate_UserQuestEntity__TypeInfo);
-    sub_1C21E38(&Method_MaterialGroupClearHistoryManager___c__DisplayClass10_0__GetMaterialFinishReadIncludedGroupQuest_b__0__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager___c__DisplayClass10_0_TypeInfo);
-    byte_4BDD6F3 = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Any_UserQuestEntity___, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_UserQuestEntity__Find__, v3);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v4);
+    sub_1C2E12C(&System_Predicate_UserQuestEntity__TypeInfo, v5);
+    sub_1C2E12C(
+      &Method_MaterialGroupClearHistoryManager___c__DisplayClass10_0__GetMaterialFinishReadIncludedGroupQuest_b__0__,
+      v6);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager___c__DisplayClass10_0_TypeInfo, v7);
+    byte_4BFE930 = 1;
   }
-  v3 = sub_1C22084(MaterialGroupClearHistoryManager___c__DisplayClass10_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  if ( !v3 )
-    sub_1C22094(v4, v5);
-  *(_QWORD *)(v3 + 16) = groupEntities;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 16), (int64_t)groupEntities, v6, v7, v8, v9, v10, v11);
-  v12 = MaterialGroupClearHistoryManager_TypeInfo;
+  v8 = sub_1C2E378(MaterialGroupClearHistoryManager___c__DisplayClass10_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  if ( !v8 )
+    sub_1C2E388(v9, v10);
+  *(_QWORD *)(v8 + 16) = groupEntities;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)groupEntities, v11, v12, v13, v14, v15, v16);
+  v17 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-  Quests = MaterialGroupClearHistoryManager__GetMaterialFinishReadQuests((const MethodInfo *)v12);
+  Quests = MaterialGroupClearHistoryManager__GetMaterialFinishReadQuests((const MethodInfo *)v17);
   if ( !Quests )
     return 0LL;
-  v14 = (System_Collections_Generic_List_object__o *)Quests;
+  v19 = (System_Collections_Generic_List_object__o *)Quests;
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)Quests,
-          (const MethodInfo_2FBB2A4 *)Method_System_Linq_Enumerable_Any_UserQuestEntity___) )
+          (const MethodInfo_2FDD22C *)Method_System_Linq_Enumerable_Any_UserQuestEntity___) )
     return 0LL;
-  v15 = (System_Predicate_object__o *)sub_1C22084(System_Predicate_UserQuestEntity__TypeInfo);
+  v20 = (System_Predicate_object__o *)sub_1C2E378(System_Predicate_UserQuestEntity__TypeInfo);
   System_Predicate_object____ctor(
-    v15,
-    (Il2CppObject *)v3,
+    v20,
+    (Il2CppObject *)v8,
     Method_MaterialGroupClearHistoryManager___c__DisplayClass10_0__GetMaterialFinishReadIncludedGroupQuest_b__0__,
     0LL);
   return (UserQuestEntity_o *)System_Collections_Generic_List_object___Find(
-                                v14,
-                                (System_Predicate_T__o *)v15,
-                                (const MethodInfo_364F71C *)Method_System_Collections_Generic_List_UserQuestEntity__Find__);
+                                v19,
+                                (System_Predicate_T__o *)v20,
+                                (const MethodInfo_366BF14 *)Method_System_Collections_Generic_List_UserQuestEntity__Find__);
 }
 
 
 System_Collections_Generic_List_UserQuestEntity__o *__fastcall MaterialGroupClearHistoryManager__GetMaterialFinishReadQuests(
         const MethodInfo *method)
 {
-  Il2CppObject *Master_object; // x20
-  System_Collections_Generic_List_object__o *v2; // x19
+  __int64 v1; // x1
+  __int64 v2; // x1
   __int64 v3; // x1
-  MaterialGroupClearHistoryManager_c *v4; // x0
-  System_Collections_Generic_List_object__o *infoList; // x0
-  _BOOL8 v6; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  Il2CppObject *Master_object; // x20
+  System_Collections_Generic_List_object__o *v12; // x19
+  __int64 v13; // x1
+  MaterialGroupClearHistoryManager_c *v14; // x0
+  System_Collections_Generic_List_object__o *infoList; // x0
+  _BOOL8 v16; // x0
+  __int64 v17; // x1
   Il2CppObject *QuestClearDummyData; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x1
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  int64_t v25; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v19; // x0
-  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-68h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-50h] BYREF
+  Il2CppClass **v29; // x0
+  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4BDD6F2 & 1) == 0 )
+  if ( (byte_4BFE92F & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserQuestMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Current__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_UserQuestEntity__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_UserQuestEntity___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_UserQuestEntity__TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    byte_4BDD6F2 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserQuestMaster___, v1);
+    sub_1C2E12C(&DataManager_TypeInfo, v2);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Dispose__,
+      v3);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__MoveNext__,
+      v4);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Current__,
+      v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_UserQuestEntity__Add__, v6);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__GetEnumerator__,
+      v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_UserQuestEntity___ctor__, v8);
+    sub_1C2E12C(&System_Collections_Generic_List_UserQuestEntity__TypeInfo, v9);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v10);
+    byte_4BFE92F = 1;
   }
-  memset(&v22, 0, sizeof(v22));
+  memset(&v32, 0, sizeof(v32));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserQuestMaster___);
-  v2 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_UserQuestEntity__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserQuestMaster___);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_UserQuestEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v2,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_UserQuestEntity___ctor__);
-  v4 = MaterialGroupClearHistoryManager_TypeInfo;
+    v12,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_UserQuestEntity___ctor__);
+  v14 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v4 = MaterialGroupClearHistoryManager_TypeInfo;
+    v14 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  infoList = (System_Collections_Generic_List_object__o *)v4->static_fields->infoList;
+  infoList = (System_Collections_Generic_List_object__o *)v14->static_fields->infoList;
   if ( !infoList )
-    sub_1C22094(0LL, v3);
+    sub_1C2E388(0LL, v13);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v21,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v31,
     infoList,
-    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__GetEnumerator__);
-  v22 = v21;
+    (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__GetEnumerator__);
+  v32 = v31;
   while ( 1 )
   {
-    v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v22,
-           (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__MoveNext__);
-    if ( !v6 )
+    v16 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v32,
+            (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__MoveNext__);
+    if ( !v16 )
       break;
-    if ( !v22.fields._current )
-      sub_1C22094(v6, v7);
+    if ( !v32.fields._current )
+      sub_1C2E388(v16, v17);
     if ( !Master_object )
-      sub_1C22094(v6, v7);
+      sub_1C2E388(v16, v17);
     QuestClearDummyData = (Il2CppObject *)UserQuestMaster__CreateQuestClearDummyData(
                                             (UserQuestMaster_o *)Master_object,
-                                            (int32_t)v22.fields._current[1].klass,
-                                            HIDWORD(v22.fields._current[1].klass),
-                                            (int64_t)v22.fields._current[1].monitor,
+                                            (int32_t)v32.fields._current[1].klass,
+                                            HIDWORD(v32.fields._current[1].klass),
+                                            (int64_t)v32.fields._current[1].monitor,
                                             0LL);
-    v15 = (int64_t)QuestClearDummyData;
-    if ( !v2 )
-      sub_1C22094(QuestClearDummyData, QuestClearDummyData);
-    items = v2->fields._items;
-    v17 = Method_System_Collections_Generic_List_UserQuestEntity__Add__;
-    ++v2->fields._version;
+    v25 = (int64_t)QuestClearDummyData;
+    if ( !v12 )
+      sub_1C2E388(QuestClearDummyData, QuestClearDummyData);
+    items = v12->fields._items;
+    v27 = Method_System_Collections_Generic_List_UserQuestEntity__Add__;
+    ++v12->fields._version;
     if ( !items )
-      sub_1C22094(QuestClearDummyData, QuestClearDummyData);
-    size = v2->fields._size;
+      sub_1C2E388(QuestClearDummyData, QuestClearDummyData);
+    size = v12->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v2,
+        v12,
         QuestClearDummyData,
-        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_366B8AC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     }
     else
     {
-      v19 = &items->obj.klass + size;
-      v2->fields._size = size + 1;
-      v19[4] = (Il2CppClass *)v15;
-      sub_1C21DDC((PartyOrganizationUtility_o *)(v19 + 4), v15, v9, v10, v11, v12, v13, v14);
+      v29 = &items->obj.klass + size;
+      v12->fields._size = size + 1;
+      v29[4] = (Il2CppClass *)v25;
+      sub_1C2E0D0((PartyOrganizationUtility_o *)(v29 + 4), v25, v19, v20, v21, v22, v23, v24);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v22,
-    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Dispose__);
-  return (System_Collections_Generic_List_UserQuestEntity__o *)v2;
+    &v32,
+    (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Dispose__);
+  return (System_Collections_Generic_List_UserQuestEntity__o *)v12;
 }
 
 
 void __fastcall MaterialGroupClearHistoryManager__Initialize(const MethodInfo *method)
 {
-  MaterialGroupClearHistoryManager_c *v1; // x0
+  __int64 v1; // x1
+  MaterialGroupClearHistoryManager_c *v2; // x0
 
-  if ( (byte_4BDD6F0 & 1) == 0 )
+  if ( (byte_4BFE92D & 1) == 0 )
   {
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    byte_4BDD6F0 = 1;
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v1);
+    byte_4BFE92D = 1;
   }
-  v1 = MaterialGroupClearHistoryManager_TypeInfo;
+  v2 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-  MaterialGroupClearHistoryManager__ReadData((const MethodInfo *)v1);
+  MaterialGroupClearHistoryManager__ReadData((const MethodInfo *)v2);
 }
 
 
 bool __fastcall MaterialGroupClearHistoryManager__ReadData(const MethodInfo *method)
 {
-  ManagerConfig_c *v1; // x0
-  MaterialGroupClearHistoryManager_c *v3; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ManagerConfig_c *v7; // x0
+  MaterialGroupClearHistoryManager_c *v9; // x0
   System_String_o *FilePath; // x19
-  MaterialGroupClearHistoryManager_c *v5; // x0
-  System_IO_Stream_o *v6; // x20
-  System_IO_BinaryReader_o *v7; // x19
-  __int64 v8; // x0
-  __int64 v9; // x1
-  System_String_o *v10; // x20
   MaterialGroupClearHistoryManager_c *v11; // x0
-  int v12; // w21
-  char v13; // w20
-  MaterialGroupClearHistoryManager_c *v14; // x0
-  int v15; // w20
-  int v16; // w22
-  int v17; // w23
-  __int64 v18; // x24
-  int64_t v19; // x21
-  __int64 v20; // x0
-  __int64 v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  MaterialGroupClearHistoryManager_c *v28; // x0
+  System_IO_Stream_o *v12; // x20
+  System_IO_BinaryReader_o *v13; // x19
+  __int64 v14; // x0
+  __int64 v15; // x1
+  System_String_o *v16; // x20
+  MaterialGroupClearHistoryManager_c *v17; // x0
+  int v18; // w21
+  char v19; // w20
+  MaterialGroupClearHistoryManager_c *v20; // x0
+  int v21; // w20
+  int v22; // w22
+  int v23; // w23
+  __int64 v24; // x24
+  int64_t v25; // x21
+  __int64 v26; // x0
+  __int64 v27; // x1
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
+  MaterialGroupClearHistoryManager_c *v34; // x0
   System_Collections_Generic_List_object__o *infoList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v31; // x9
+  _QWORD *v37; // x9
   __int64 size; // x10
-  Il2CppClass **v33; // x8
+  Il2CppClass **v39; // x8
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v35; // x9
+  __int64 v41; // x9
   int32_t *p_offset; // x10
-  __int64 v37; // x0
+  __int64 v43; // x0
 
-  if ( (byte_4BDD6F5 & 1) == 0 )
+  if ( (byte_4BFE932 & 1) == 0 )
   {
-    sub_1C21E38(&System_IO_BinaryReader_TypeInfo);
-    sub_1C21E38(&System_IDisposable_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__);
-    sub_1C21E38(&ManagerConfig_TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
-    byte_4BDD6F5 = 1;
+    sub_1C2E12C(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1C2E12C(&System_IDisposable_TypeInfo, v2);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__, v3);
+    sub_1C2E12C(&ManagerConfig_TypeInfo, v4);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v5);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo, v6);
+    byte_4BFE932 = 1;
   }
-  v1 = ManagerConfig_TypeInfo;
+  v7 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v1 = ManagerConfig_TypeInfo;
+    v7 = ManagerConfig_TypeInfo;
   }
-  if ( v1->static_fields->UseMock )
+  if ( v7->static_fields->UseMock )
     return 1;
-  v3 = MaterialGroupClearHistoryManager_TypeInfo;
+  v9 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-  FilePath = MaterialGroupClearHistoryManager__GetFilePath((const MethodInfo *)v3);
+  FilePath = MaterialGroupClearHistoryManager__GetFilePath((const MethodInfo *)v9);
   if ( !System_IO_File__Exists(FilePath, 0LL) )
     return 0;
-  v5 = MaterialGroupClearHistoryManager_TypeInfo;
-  if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-  MaterialGroupClearHistoryManager__ClearSaveData((const MethodInfo *)v5);
-  MaterialGroupClearHistoryManager_TypeInfo->static_fields->isModfiy = 0;
-  v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0LL);
-  v7 = (System_IO_BinaryReader_o *)sub_1C22084(System_IO_BinaryReader_TypeInfo);
-  System_IO_BinaryReader___ctor(v7, v6, 0LL);
-  if ( !v7 )
-    sub_1C22094(v8, v9);
-  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._22_ReadString.method)(
-                             v7,
-                             v7->klass->vtable._23_ReadChars.methodPtr);
   v11 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
+  MaterialGroupClearHistoryManager__ClearSaveData((const MethodInfo *)v11);
+  MaterialGroupClearHistoryManager_TypeInfo->static_fields->isModfiy = 0;
+  v12 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0LL);
+  v13 = (System_IO_BinaryReader_o *)sub_1C2E378(System_IO_BinaryReader_TypeInfo);
+  System_IO_BinaryReader___ctor(v13, v12, 0LL);
+  if ( !v13 )
+    sub_1C2E388(v14, v15);
+  v16 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._22_ReadString.method)(
+                             v13,
+                             v13->klass->vtable._23_ReadChars.methodPtr);
+  v17 = MaterialGroupClearHistoryManager_TypeInfo;
+  if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v11 = MaterialGroupClearHistoryManager_TypeInfo;
+    v17 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  if ( System_String__op_Inequality(v11->static_fields->SAVE_DATA_VERSION, v10, 0LL) )
+  if ( System_String__op_Inequality(v17->static_fields->SAVE_DATA_VERSION, v16, 0LL) )
   {
-    v12 = 5;
+    v18 = 5;
   }
   else
   {
-    v13 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._9_ReadBoolean.method)(
-            v7,
-            v7->klass->vtable._10_ReadByte.methodPtr);
-    v14 = MaterialGroupClearHistoryManager_TypeInfo;
+    v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._9_ReadBoolean.method)(
+            v13,
+            v13->klass->vtable._10_ReadByte.methodPtr);
+    v20 = MaterialGroupClearHistoryManager_TypeInfo;
     if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-      v14 = MaterialGroupClearHistoryManager_TypeInfo;
+      v20 = MaterialGroupClearHistoryManager_TypeInfo;
     }
-    v14->static_fields->isContinueDevice = v13 & 1;
-    v15 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-            v7,
-            v7->klass->vtable._16_ReadUInt32.methodPtr);
-    if ( v15 >= 1 )
+    v20->static_fields->isContinueDevice = v19 & 1;
+    v21 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
+            v13,
+            v13->klass->vtable._16_ReadUInt32.methodPtr);
+    if ( v21 >= 1 )
     {
       do
       {
-        v16 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-                v7,
-                v7->klass->vtable._16_ReadUInt32.methodPtr);
-        v17 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._15_ReadInt32.method)(
-                v7,
-                v7->klass->vtable._16_ReadUInt32.methodPtr);
-        v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v7->klass->vtable._17_ReadInt64.method)(
-                v7,
-                v7->klass->vtable._18_ReadUInt64.methodPtr);
-        v19 = sub_1C22084(MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v19, 0LL);
-        if ( !v19 )
-          sub_1C22094(v20, v21);
-        *(_DWORD *)(v19 + 16) = v16;
-        *(_DWORD *)(v19 + 20) = v17;
-        *(_QWORD *)(v19 + 24) = v18;
-        v28 = MaterialGroupClearHistoryManager_TypeInfo;
+        v22 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
+                v13,
+                v13->klass->vtable._16_ReadUInt32.methodPtr);
+        v23 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._15_ReadInt32.method)(
+                v13,
+                v13->klass->vtable._16_ReadUInt32.methodPtr);
+        v24 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v13->klass->vtable._17_ReadInt64.method)(
+                v13,
+                v13->klass->vtable._18_ReadUInt64.methodPtr);
+        v25 = sub_1C2E378(MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v25, 0LL);
+        if ( !v25 )
+          sub_1C2E388(v26, v27);
+        *(_DWORD *)(v25 + 16) = v22;
+        *(_DWORD *)(v25 + 20) = v23;
+        *(_QWORD *)(v25 + 24) = v24;
+        v34 = MaterialGroupClearHistoryManager_TypeInfo;
         if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-          v28 = MaterialGroupClearHistoryManager_TypeInfo;
+          v34 = MaterialGroupClearHistoryManager_TypeInfo;
         }
-        infoList = (System_Collections_Generic_List_object__o *)v28->static_fields->infoList;
+        infoList = (System_Collections_Generic_List_object__o *)v34->static_fields->infoList;
         if ( !infoList )
-          sub_1C22094(0LL, v21);
+          sub_1C2E388(0LL, v27);
         items = infoList->fields._items;
-        v31 = Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__;
+        v37 = Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__;
         ++infoList->fields._version;
         if ( !items )
-          sub_1C22094(infoList, v21);
+          sub_1C2E388(infoList, v27);
         size = infoList->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             infoList,
-            (Il2CppObject *)v19,
-            *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            (Il2CppObject *)v25,
+            *(const MethodInfo_366B8AC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
         }
         else
         {
-          v33 = &items->obj.klass + size;
+          v39 = &items->obj.klass + size;
           infoList->fields._size = size + 1;
-          v33[4] = (Il2CppClass *)v19;
-          sub_1C21DDC((PartyOrganizationUtility_o *)(v33 + 4), v19, v22, v23, v24, v25, v26, v27);
+          v39[4] = (Il2CppClass *)v25;
+          sub_1C2E0D0((PartyOrganizationUtility_o *)(v39 + 4), v25, v28, v29, v30, v31, v32, v33);
         }
-        --v15;
+        --v21;
       }
-      while ( v15 );
+      while ( v21 );
     }
-    v12 = 8;
+    v18 = 8;
   }
-  klass = v7->klass;
-  v35 = *(unsigned __int16 *)(&v7->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v7->klass->_2.bitflags2 + 3) )
+  klass = v13->klass;
+  v41 = *(unsigned __int16 *)(&v13->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v13->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v35;
+      --v41;
       p_offset += 4;
-      if ( !v35 )
+      if ( !v41 )
         goto LABEL_34;
     }
-    v37 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v43 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_34:
-    v37 = sub_1C73E18(v7, System_IDisposable_TypeInfo, 0LL);
+    v43 = sub_1C8010C(v13, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v37)(v7, *(_QWORD *)(v37 + 8));
-  return (v12 | 8) == 8;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v43)(v13, *(_QWORD *)(v43 + 8));
+  return (v18 | 8) == 8;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall MaterialGroupClearHistoryManager__SetMaterialFinishReadQuest(
         int32_t questId,
         int32_t phase,
         int64_t updatedAt,
         const MethodInfo *method)
 {
-  Il2CppObject *Master_object; // x0
+  int32_t v4; // w23
+  __int64 v6; // x1
   __int64 v7; // x1
-  System_Collections_Generic_List_QuestScriptMaterialNextEntity__o *IncludedGroups; // x0
-  System_Collections_Generic_List_object__o *v9; // x21
-  __int64 v10; // x21
-  __int64 v11; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
   __int64 v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v22; // x1
+  System_Collections_Generic_List_QuestScriptMaterialNextEntity__o *IncludedGroups; // x0
+  System_Collections_Generic_List_object__o *v24; // x21
+  __int64 v25; // x21
+  __int64 v26; // x0
+  __int64 v27; // x1
+  int64_t v28; // x2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  BattleSetupInfo_o *v31; // x5
+  FollowerInfo_o *v32; // x6
+  PartyListViewItem_o *v33; // x7
   Il2CppObject *current; // x1
-  MaterialGroupClearHistoryManager_c *v20; // x0
+  MaterialGroupClearHistoryManager_c *v35; // x0
   System_Collections_Generic_List_object__o *infoList; // x22
-  System_Predicate_object__o *v22; // x23
-  __int64 v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x1
-  Il2CppObject *v26; // x21
-  MaterialGroupClearHistoryManager_c *v27; // x0
-  System_Collections_Generic_List_object__o *v28; // x0
-  int64_t v29; // x21
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  MaterialGroupClearHistoryManager_c *v36; // x0
+  System_Predicate_object__o *v37; // x23
+  __int64 v38; // x0
+  __int64 v39; // x1
+  __int64 v40; // x1
+  Il2CppObject *v41; // x21
+  MaterialGroupClearHistoryManager_c *v42; // x0
+  System_Collections_Generic_List_object__o *v43; // x0
+  int64_t v44; // x21
+  int64_t v45; // x2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  BattleSetupInfo_o *v48; // x5
+  FollowerInfo_o *v49; // x6
+  PartyListViewItem_o *v50; // x7
+  MaterialGroupClearHistoryManager_c *v51; // x0
   Il2CppClass *klass; // x8
-  _QWORD *v38; // x9
+  _QWORD *v53; // x9
   __int64 monitor_low; // x10
-  void **v40; // x8
-  int32_t v41; // [xsp+4h] [xbp-9Ch]
-  System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+20h] [xbp-80h] BYREF
+  void **v55; // x8
+  int32_t v56; // [xsp+4h] [xbp-9Ch]
+  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4BDD6F4 & 1) == 0 )
+  v4 = phase;
+  if ( (byte_4BFE931 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_QuestScriptMaterialNextMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Any_QuestScriptMaterialNextEntity___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__get_Current__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Find__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Remove__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&System_Predicate_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
-    sub_1C21E38(&Method_MaterialGroupClearHistoryManager___c__DisplayClass11_0__SetMaterialFinishReadQuest_b__0__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager___c__DisplayClass11_0_TypeInfo);
-    byte_4BDD6F4 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_QuestScriptMaterialNextMaster___, *(_QWORD *)&phase);
+    sub_1C2E12C(&DataManager_TypeInfo, v6);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Any_QuestScriptMaterialNextEntity___, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__Dispose__, v8);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__MoveNext__, v9);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__get_Current__, v10);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__,
+      v11);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Find__,
+      v12);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__GetEnumerator__, v13);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Remove__,
+      v14);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v15);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo, v16);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v17);
+    sub_1C2E12C(&System_Predicate_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo, v18);
+    sub_1C2E12C(&Method_MaterialGroupClearHistoryManager___c__DisplayClass11_0__SetMaterialFinishReadQuest_b__0__, v19);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager___c__DisplayClass11_0_TypeInfo, v20);
+    byte_4BFE931 = 1;
   }
-  memset(&v43, 0, sizeof(v43));
+  memset(&v58, 0, sizeof(v58));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_QuestScriptMaterialNextMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_QuestScriptMaterialNextMaster___);
   if ( !Master_object )
     goto LABEL_34;
   IncludedGroups = QuestScriptMaterialNextMaster__GetIncludedGroups(
@@ -586,109 +657,109 @@ void __fastcall MaterialGroupClearHistoryManager__SetMaterialFinishReadQuest(
                      0LL);
   if ( IncludedGroups )
   {
-    v9 = (System_Collections_Generic_List_object__o *)IncludedGroups;
+    v24 = (System_Collections_Generic_List_object__o *)IncludedGroups;
     if ( System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)IncludedGroups,
-           (const MethodInfo_2FBB2A4 *)Method_System_Linq_Enumerable_Any_QuestScriptMaterialNextEntity___) )
+           (const MethodInfo_2FDD22C *)Method_System_Linq_Enumerable_Any_QuestScriptMaterialNextEntity___) )
     {
-      v41 = phase;
+      v56 = v4;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v42,
-        v9,
-        (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__GetEnumerator__);
-      v43 = v42;
+        (System_Collections_Generic_List_Enumerator_T__o *)&v57,
+        v24,
+        (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__GetEnumerator__);
+      v58 = v57;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v43,
-                (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__MoveNext__) )
+                &v58,
+                (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__MoveNext__) )
       {
-        v10 = sub_1C22084(MaterialGroupClearHistoryManager___c__DisplayClass11_0_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v10, 0LL);
-        if ( !v10 )
-          sub_1C22094(v11, v12);
-        current = v43.fields._current;
-        *(_QWORD *)(v10 + 16) = v43.fields._current;
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)current, v13, v14, v15, v16, v17, v18);
-        v20 = MaterialGroupClearHistoryManager_TypeInfo;
+        v25 = sub_1C2E378(MaterialGroupClearHistoryManager___c__DisplayClass11_0_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v25, 0LL);
+        if ( !v25 )
+          sub_1C2E388(v26, v27);
+        current = v58.fields._current;
+        *(_QWORD *)(v25 + 16) = v58.fields._current;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v25 + 16), (int64_t)current, v28, v29, v30, v31, v32, v33);
+        v35 = MaterialGroupClearHistoryManager_TypeInfo;
         if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-          v20 = MaterialGroupClearHistoryManager_TypeInfo;
+          v35 = MaterialGroupClearHistoryManager_TypeInfo;
         }
-        infoList = (System_Collections_Generic_List_object__o *)v20->static_fields->infoList;
-        v22 = (System_Predicate_object__o *)sub_1C22084(System_Predicate_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
+        infoList = (System_Collections_Generic_List_object__o *)v35->static_fields->infoList;
+        v37 = (System_Predicate_object__o *)sub_1C2E378(System_Predicate_MaterialGroupClearHistoryManager_MaterialHistoryInfo__TypeInfo);
         System_Predicate_object____ctor(
-          v22,
-          (Il2CppObject *)v10,
+          v37,
+          (Il2CppObject *)v25,
           Method_MaterialGroupClearHistoryManager___c__DisplayClass11_0__SetMaterialFinishReadQuest_b__0__,
           0LL);
         if ( !infoList )
-          sub_1C22094(v23, v24);
-        v26 = System_Collections_Generic_List_object___Find(
+          sub_1C2E388(v38, v39);
+        v41 = System_Collections_Generic_List_object___Find(
                 infoList,
-                (System_Predicate_T__o *)v22,
-                (const MethodInfo_364F71C *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Find__);
-        if ( v26 )
+                (System_Predicate_T__o *)v37,
+                (const MethodInfo_366BF14 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Find__);
+        if ( v41 )
         {
-          v27 = MaterialGroupClearHistoryManager_TypeInfo;
+          v42 = MaterialGroupClearHistoryManager_TypeInfo;
           if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-            v27 = MaterialGroupClearHistoryManager_TypeInfo;
+            v42 = MaterialGroupClearHistoryManager_TypeInfo;
           }
-          v28 = (System_Collections_Generic_List_object__o *)v27->static_fields->infoList;
-          if ( !v28 )
-            sub_1C22094(0LL, v25);
+          v43 = (System_Collections_Generic_List_object__o *)v42->static_fields->infoList;
+          if ( !v43 )
+            sub_1C2E388(0LL, v40);
           System_Collections_Generic_List_object___Remove(
-            v28,
-            v26,
-            (const MethodInfo_36505DC *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Remove__);
+            v43,
+            v41,
+            (const MethodInfo_366CDD4 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Remove__);
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v43,
-        (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__Dispose__);
-      phase = v41;
+        &v58,
+        (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptMaterialNextEntity__Dispose__);
+      v4 = v56;
     }
   }
-  v29 = sub_1C22084(MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v29, 0LL);
-  if ( !v29 )
+  v44 = sub_1C2E378(MaterialGroupClearHistoryManager_MaterialHistoryInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v44, 0LL);
+  if ( !v44 )
     goto LABEL_34;
-  *(_DWORD *)(v29 + 16) = questId;
-  *(_DWORD *)(v29 + 20) = phase;
+  *(_DWORD *)(v44 + 16) = questId;
+  *(_DWORD *)(v44 + 20) = v4;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  *(_QWORD *)(v29 + 24) = NetworkManager__getTime(0LL);
-  v36 = MaterialGroupClearHistoryManager_TypeInfo;
+  *(_QWORD *)(v44 + 24) = NetworkManager__getTime(0LL);
+  v51 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v36 = MaterialGroupClearHistoryManager_TypeInfo;
+    v51 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  Master_object = (Il2CppObject *)v36->static_fields->infoList;
+  Master_object = (Il2CppObject *)v51->static_fields->infoList;
   if ( !Master_object
     || (klass = Master_object[1].klass,
-        v38 = Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__,
+        v53 = Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__Add__,
         ++HIDWORD(Master_object[1].monitor),
         !klass) )
   {
 LABEL_34:
-    sub_1C22094(Master_object, v7);
+    sub_1C2E388(Master_object, v22);
   }
   monitor_low = SLODWORD(Master_object[1].monitor);
   if ( (unsigned int)monitor_low >= LODWORD(klass->_1.namespaze) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Master_object,
-      (Il2CppObject *)v29,
-      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+      (Il2CppObject *)v44,
+      *(const MethodInfo_366B8AC **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
   }
   else
   {
-    v40 = &klass->_1.image + monitor_low;
+    v55 = &klass->_1.image + monitor_low;
     LODWORD(Master_object[1].monitor) = monitor_low + 1;
-    v40[4] = (void *)v29;
-    sub_1C21DDC((PartyOrganizationUtility_o *)(v40 + 4), v29, v30, v31, v32, v33, v34, v35);
+    v55[4] = (void *)v44;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 4), v44, v45, v46, v47, v48, v49, v50);
   }
   MaterialGroupClearHistoryManager_TypeInfo->static_fields->isModfiy = 1;
 }
@@ -696,161 +767,172 @@ LABEL_34:
 
 bool __fastcall MaterialGroupClearHistoryManager__WriteData(const MethodInfo *method)
 {
-  MaterialGroupClearHistoryManager_c *v1; // x0
-  ManagerConfig_c *v2; // x0
-  MyRoomStateMaterial_c *v4; // x0
+  __int64 v1; // x1
+  __int64 v2; // x1
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  MaterialGroupClearHistoryManager_c *v8; // x0
+  ManagerConfig_c *v9; // x0
+  MyRoomStateMaterial_c *v11; // x0
   System_String_o *String; // x0
-  const MethodInfo *v6; // x0
+  const MethodInfo *v13; // x0
   System_String_o *FilePath; // x0
-  System_IO_Stream_o *v8; // x20
-  System_IO_BinaryWriter_o *v9; // x19
-  __int64 v10; // x1
-  MaterialGroupClearHistoryManager_c *v11; // x0
+  System_IO_Stream_o *v15; // x20
+  System_IO_BinaryWriter_o *v16; // x19
+  __int64 v17; // x1
+  MaterialGroupClearHistoryManager_c *v18; // x0
   struct MaterialGroupClearHistoryManager_StaticFields *static_fields; // x8
   struct System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__o *infoList; // x9
   int size; // w20
-  __int64 v15; // x1
+  __int64 v22; // x1
   int32_t i; // w21
-  MaterialGroupClearHistoryManager_c *v17; // x0
-  System_Collections_Generic_List_object__o *v18; // x0
+  MaterialGroupClearHistoryManager_c *v24; // x0
+  System_Collections_Generic_List_object__o *v25; // x0
   Il2CppObject *Item; // x0
-  __int64 v20; // x1
-  Il2CppObject *v21; // x22
+  __int64 v27; // x1
+  Il2CppObject *v28; // x22
   System_IO_BinaryWriter_c *klass; // x8
-  __int64 v23; // x9
+  __int64 v30; // x9
   int32_t *p_offset; // x10
-  __int64 v25; // x0
+  __int64 v32; // x0
 
-  if ( (byte_4BDD6F6 & 1) == 0 )
+  if ( (byte_4BFE933 & 1) == 0 )
   {
-    sub_1C21E38(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C21E38(&System_IDisposable_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Item__);
-    sub_1C21E38(&ManagerConfig_TypeInfo);
-    sub_1C21E38(&MaterialGroupClearHistoryManager_TypeInfo);
-    sub_1C21E38(&MyRoomStateMaterial_TypeInfo);
-    byte_4BDD6F6 = 1;
+    sub_1C2E12C(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1C2E12C(&System_IDisposable_TypeInfo, v2);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Count__,
+      v3);
+    sub_1C2E12C(
+      &Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Item__,
+      v4);
+    sub_1C2E12C(&ManagerConfig_TypeInfo, v5);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager_TypeInfo, v6);
+    sub_1C2E12C(&MyRoomStateMaterial_TypeInfo, v7);
+    byte_4BFE933 = 1;
   }
-  v1 = MaterialGroupClearHistoryManager_TypeInfo;
+  v8 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v1 = MaterialGroupClearHistoryManager_TypeInfo;
+    v8 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  if ( !v1->static_fields->isModfiy )
+  if ( !v8->static_fields->isModfiy )
     return 0;
-  v2 = ManagerConfig_TypeInfo;
+  v9 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-    v2 = ManagerConfig_TypeInfo;
+    v9 = ManagerConfig_TypeInfo;
   }
-  if ( v2->static_fields->UseMock )
+  if ( v9->static_fields->UseMock )
     return 0;
-  v4 = MyRoomStateMaterial_TypeInfo;
+  v11 = MyRoomStateMaterial_TypeInfo;
   if ( !MyRoomStateMaterial_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MyRoomStateMaterial_TypeInfo);
-    v4 = MyRoomStateMaterial_TypeInfo;
+    v11 = MyRoomStateMaterial_TypeInfo;
   }
-  String = UnityEngine_PlayerPrefs__GetString(v4->static_fields->SAVE_MARETIAL_FINISH_READ_QUEST_LIST, 0LL, 0LL);
+  String = UnityEngine_PlayerPrefs__GetString(v11->static_fields->SAVE_MARETIAL_FINISH_READ_QUEST_LIST, 0LL, 0LL);
   if ( !System_String__IsNullOrEmpty(String, 0LL) )
   {
     if ( !MyRoomStateMaterial_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomStateMaterial_TypeInfo);
     MyRoomStateMaterial__ClearMaterialFinishReadQuest(0LL);
   }
-  v6 = (const MethodInfo *)MaterialGroupClearHistoryManager_TypeInfo;
+  v13 = (const MethodInfo *)MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v6 = (const MethodInfo *)MaterialGroupClearHistoryManager_TypeInfo;
+    v13 = (const MethodInfo *)MaterialGroupClearHistoryManager_TypeInfo;
   }
-  *((_BYTE *)v6[2].virtualMethodPointer + 8) = 0;
-  FilePath = MaterialGroupClearHistoryManager__GetFilePath(v6);
-  v8 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0LL);
-  v9 = (System_IO_BinaryWriter_o *)sub_1C22084(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63353968(v9, v8, 0LL);
-  v11 = MaterialGroupClearHistoryManager_TypeInfo;
+  *((_BYTE *)v13[2].virtualMethodPointer + 8) = 0;
+  FilePath = MaterialGroupClearHistoryManager__GetFilePath(v13);
+  v15 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0LL);
+  v16 = (System_IO_BinaryWriter_o *)sub_1C2E378(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63474076(v16, v15, 0LL);
+  v18 = MaterialGroupClearHistoryManager_TypeInfo;
   if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-    v11 = MaterialGroupClearHistoryManager_TypeInfo;
+    v18 = MaterialGroupClearHistoryManager_TypeInfo;
   }
-  static_fields = v11->static_fields;
+  static_fields = v18->static_fields;
   infoList = static_fields->infoList;
   if ( !infoList )
-    sub_1C22094(v11, v10);
-  if ( !v9 )
-    sub_1C22094(v11, v10);
+    sub_1C2E388(v18, v17);
+  if ( !v16 )
+    sub_1C2E388(v18, v17);
   size = infoList->fields._size;
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v9->klass->vtable._22_Write.method)(
-    v9,
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v16->klass->vtable._22_Write.method)(
+    v16,
     static_fields->SAVE_DATA_VERSION,
-    v9->klass[1]._1.image);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v9->klass->vtable._8_Write.method)(
-    v9,
+    v16->klass[1]._1.image);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, bool, Il2CppMethodPointer))v16->klass->vtable._8_Write.method)(
+    v16,
     MaterialGroupClearHistoryManager_TypeInfo->static_fields->isContinueDevice,
-    v9->klass->vtable._9_Write.methodPtr);
-  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
-    v9,
+    v16->klass->vtable._9_Write.methodPtr);
+  ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v16->klass->vtable._17_Write.method)(
+    v16,
     (unsigned int)size,
-    v9->klass->vtable._18_Write.methodPtr);
+    v16->klass->vtable._18_Write.methodPtr);
   if ( size >= 1 )
   {
     for ( i = 0; i != size; ++i )
     {
-      v17 = MaterialGroupClearHistoryManager_TypeInfo;
+      v24 = MaterialGroupClearHistoryManager_TypeInfo;
       if ( !MaterialGroupClearHistoryManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MaterialGroupClearHistoryManager_TypeInfo);
-        v17 = MaterialGroupClearHistoryManager_TypeInfo;
+        v24 = MaterialGroupClearHistoryManager_TypeInfo;
       }
-      v18 = (System_Collections_Generic_List_object__o *)v17->static_fields->infoList;
-      if ( !v18 )
-        sub_1C22094(0LL, v15);
+      v25 = (System_Collections_Generic_List_object__o *)v24->static_fields->infoList;
+      if ( !v25 )
+        sub_1C2E388(0LL, v22);
       Item = System_Collections_Generic_List_object___get_Item(
-               v18,
+               v25,
                i,
-               (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Item__);
-      v21 = Item;
+               (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_MaterialGroupClearHistoryManager_MaterialHistoryInfo__get_Item__);
+      v28 = Item;
       if ( !Item )
-        sub_1C22094(0LL, v20);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
-        v9,
+        sub_1C2E388(0LL, v27);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v16->klass->vtable._17_Write.method)(
+        v16,
         LODWORD(Item[1].klass),
-        v9->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v9->klass->vtable._17_Write.method)(
-        v9,
-        HIDWORD(v21[1].klass),
-        v9->klass->vtable._18_Write.methodPtr);
-      ((void (__fastcall *)(System_IO_BinaryWriter_o *, void *, Il2CppMethodPointer))v9->klass->vtable._19_Write.method)(
-        v9,
-        v21[1].monitor,
-        v9->klass->vtable._20_Write.methodPtr);
+        v16->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v16->klass->vtable._17_Write.method)(
+        v16,
+        HIDWORD(v28[1].klass),
+        v16->klass->vtable._18_Write.methodPtr);
+      ((void (__fastcall *)(System_IO_BinaryWriter_o *, void *, Il2CppMethodPointer))v16->klass->vtable._19_Write.method)(
+        v16,
+        v28[1].monitor,
+        v16->klass->vtable._20_Write.methodPtr);
     }
   }
-  klass = v9->klass;
-  v23 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
+  klass = v16->klass;
+  v30 = *(unsigned __int16 *)(&v16->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v16->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v23;
+      --v30;
       p_offset += 4;
-      if ( !v23 )
+      if ( !v30 )
         goto LABEL_33;
     }
-    v25 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+    v32 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
   }
   else
   {
 LABEL_33:
-    v25 = sub_1C73E18(v9, System_IDisposable_TypeInfo, 0LL);
+    v32 = sub_1C8010C(v16, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v25)(v9, *(_QWORD *)(v25 + 8));
+  (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v32)(v16, *(_QWORD *)(v32 + 8));
   return 1;
 }
 
@@ -876,46 +958,51 @@ bool __fastcall MaterialGroupClearHistoryManager___c__DisplayClass10_0___GetMate
         UserQuestEntity_o *x,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  __int64 v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   System_Collections_Generic_List_object__o *groupEntities; // x19
-  System_Predicate_object__o *v15; // x20
+  System_Predicate_object__o *v18; // x20
 
-  if ( (byte_4BDD6F8 & 1) == 0 )
+  if ( (byte_4BFE935 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__Exists__);
-    sub_1C21E38(&System_Predicate_QuestScriptMaterialNextEntity__TypeInfo);
-    sub_1C21E38(&Method_MaterialGroupClearHistoryManager___c__DisplayClass10_1__GetMaterialFinishReadIncludedGroupQuest_b__1__);
-    sub_1C21E38(&MaterialGroupClearHistoryManager___c__DisplayClass10_1_TypeInfo);
-    byte_4BDD6F8 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__Exists__, x);
+    sub_1C2E12C(&System_Predicate_QuestScriptMaterialNextEntity__TypeInfo, v5);
+    sub_1C2E12C(
+      &Method_MaterialGroupClearHistoryManager___c__DisplayClass10_1__GetMaterialFinishReadIncludedGroupQuest_b__1__,
+      v6);
+    sub_1C2E12C(&MaterialGroupClearHistoryManager___c__DisplayClass10_1_TypeInfo, v7);
+    byte_4BFE935 = 1;
   }
-  v5 = sub_1C22084(MaterialGroupClearHistoryManager___c__DisplayClass10_1_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5
-    || (*(_QWORD *)(v5 + 16) = x,
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 16), (int64_t)x, v8, v9, v10, v11, v12, v13),
+  v8 = sub_1C2E378(MaterialGroupClearHistoryManager___c__DisplayClass10_1_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  if ( !v8
+    || (*(_QWORD *)(v8 + 16) = x,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)x, v11, v12, v13, v14, v15, v16),
         groupEntities = (System_Collections_Generic_List_object__o *)this->fields.groupEntities,
-        v15 = (System_Predicate_object__o *)sub_1C22084(System_Predicate_QuestScriptMaterialNextEntity__TypeInfo),
+        v18 = (System_Predicate_object__o *)sub_1C2E378(System_Predicate_QuestScriptMaterialNextEntity__TypeInfo),
         System_Predicate_object____ctor(
-          v15,
-          (Il2CppObject *)v5,
+          v18,
+          (Il2CppObject *)v8,
           Method_MaterialGroupClearHistoryManager___c__DisplayClass10_1__GetMaterialFinishReadIncludedGroupQuest_b__1__,
           0LL),
         !groupEntities) )
   {
-    sub_1C22094(v6, v7);
+    sub_1C2E388(v9, v10);
   }
   return System_Collections_Generic_List_object___Exists(
            groupEntities,
-           (System_Predicate_T__o *)v15,
-           (const MethodInfo_364F6E0 *)Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__Exists__);
+           (System_Predicate_T__o *)v18,
+           (const MethodInfo_366BED8 *)Method_System_Collections_Generic_List_QuestScriptMaterialNextEntity__Exists__);
 }
 
 
@@ -936,7 +1023,7 @@ bool __fastcall MaterialGroupClearHistoryManager___c__DisplayClass10_1___GetMate
 
   x = this->fields.x;
   if ( !x || !y )
-    sub_1C22094(this, y);
+    sub_1C2E388(this, y);
   return x->fields.questId == y->fields.questId;
 }
 
@@ -957,6 +1044,6 @@ bool __fastcall MaterialGroupClearHistoryManager___c__DisplayClass11_0___SetMate
   struct QuestScriptMaterialNextEntity_o *groupEntity; // x8
 
   if ( !x || (groupEntity = this->fields.groupEntity) == 0LL )
-    sub_1C22094(this, x);
+    sub_1C2E388(this, x);
   return x->fields.questId == groupEntity->fields.questId;
 }

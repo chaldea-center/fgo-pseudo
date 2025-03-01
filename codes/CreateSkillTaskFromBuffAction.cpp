@@ -21,10 +21,10 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
   __int64 v16; // x0
   __int64 v17; // x0
 
-  if ( (byte_4BDF176 & 1) == 0 )
+  if ( (byte_4C003F9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Array_Empty_BattleLogicTask___);
-    byte_4BDF176 = 1;
+    sub_1C2E12C(&Method_System_Array_Empty_BattleLogicTask___, logic);
+    byte_4C003F9 = 1;
   }
   v7 = ((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, BattleLogic_o *, BattleAddSkillTaskAroundTargetTask_Argument_o *, void *))this->klass->vtable._5_IsCreatable.method)(
          this,
@@ -42,7 +42,7 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
                  this->klass->vtable._5_IsCreatable.methodPtr),
           !logic) )
     {
-      sub_1C22094(v7, v8);
+      sub_1C2E388(v7, v8);
     }
     return BattleLogic__GetTargetBuffFunctionTaskArray(
              logic,
@@ -58,17 +58,17 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
     v15 = *((_QWORD *)Method_System_Array_Empty_BattleLogicTask___ + 7);
     if ( !v15 )
     {
-      sub_1C73D70(Method_System_Array_Empty_BattleLogicTask___);
+      sub_1C80064(Method_System_Array_Empty_BattleLogicTask___);
       v15 = v14[7];
     }
     v16 = *(_QWORD *)(v15 + 16);
     if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-      v16 = sub_1C73D14(inited);
+      v16 = sub_1C80008(inited);
     if ( !*(_DWORD *)(v16 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v16);
     v17 = *(_QWORD *)(v14[7] + 16LL);
     if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-      v17 = sub_1C73D14(inited);
+      v17 = sub_1C80008(inited);
     return **(BattleLogicTask_array ***)(v17 + 184);
   }
 }
@@ -101,25 +101,25 @@ BuffList_ACTION_array *__fastcall CreateSkillTaskFromBuffAction__get_TargetActs(
   __int64 v5; // x0
   __int64 v6; // x0
 
-  if ( (byte_4BDF175 & 1) == 0 )
+  if ( (byte_4C003F8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Array_Empty_BuffList_ACTION___);
-    byte_4BDF175 = 1;
+    sub_1C2E12C(&Method_System_Array_Empty_BuffList_ACTION___, method);
+    byte_4C003F8 = 1;
   }
   v3 = Method_System_Array_Empty_BuffList_ACTION___;
   v4 = *((_QWORD *)Method_System_Array_Empty_BuffList_ACTION___ + 7);
   if ( !v4 )
   {
-    sub_1C73D70(Method_System_Array_Empty_BuffList_ACTION___);
+    sub_1C80064(Method_System_Array_Empty_BuffList_ACTION___);
     v4 = v3[7];
   }
   v5 = *(_QWORD *)(v4 + 16);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C73D14(inited);
+    v5 = sub_1C80008(inited);
   if ( !*(_DWORD *)(v5 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v5);
   v6 = *(_QWORD *)(v3[7] + 16LL);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C73D14(inited);
+    v6 = sub_1C80008(inited);
   return **(BuffList_ACTION_array ***)(v6 + 184);
 }

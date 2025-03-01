@@ -6,89 +6,94 @@ void __fastcall QuestIncomingAction___ctor(QuestIncomingAction_o *this, const Me
   BattleSetupInfo_o *v5; // x5
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  int64_t v9; // x1
+  __int64 v9; // x1
   int64_t v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int64_t v11; // x1
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BD93E7 & 1) == 0 )
+  if ( (byte_4BFA5D1 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_17534/*"bit_incoming_end"*/);
-    sub_1C21E38(&StringLiteral_17535/*"bit_incoming_start"*/);
-    byte_4BD93E7 = 1;
+    sub_1C2E12C(&StringLiteral_17549/*"bit_incoming_end"*/, method);
+    sub_1C2E12C(&StringLiteral_17550/*"bit_incoming_start"*/, v9);
+    byte_4BFA5D1 = 1;
   }
-  v9 = StringLiteral_17535/*"bit_incoming_start"*/;
-  this->fields.startAnimName = (struct System_String_o *)StringLiteral_17535/*"bit_incoming_start"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.startAnimName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_17534/*"bit_incoming_end"*/;
-  this->fields.endAnimName = (struct System_String_o *)StringLiteral_17534/*"bit_incoming_end"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.endAnimName, v10, v11, v12, v13, v14, v15, v16);
+  v10 = StringLiteral_17550/*"bit_incoming_start"*/;
+  this->fields.startAnimName = (struct System_String_o *)StringLiteral_17550/*"bit_incoming_start"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.startAnimName, v10, v2, v3, v4, v5, v6, v7);
+  v11 = StringLiteral_17549/*"bit_incoming_end"*/;
+  this->fields.endAnimName = (struct System_String_o *)StringLiteral_17549/*"bit_incoming_end"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.endAnimName, v11, v12, v13, v14, v15, v16, v17);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
 void __fastcall QuestIncomingAction__Awake(QuestIncomingAction_o *this, const MethodInfo *method)
 {
-  CStateManager_T__o *v3; // x21
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  CStateManager_T__o *v7; // x21
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
   CStateManager_T__o *mFSM; // x21
-  Il2CppObject *v11; // x22
-  __int64 v12; // x0
-  __int64 v13; // x1
-  CStateManager_T__o *v14; // x20
-  Il2CppObject *v15; // x21
-  const MethodInfo *v16; // x2
+  Il2CppObject *v15; // x22
+  __int64 v16; // x0
+  __int64 v17; // x1
+  CStateManager_T__o *v18; // x20
+  Il2CppObject *v19; // x21
+  const MethodInfo *v20; // x2
 
-  if ( (byte_4BD93E0 & 1) == 0 )
+  if ( (byte_4BFA5CA & 1) == 0 )
   {
-    sub_1C21E38(&Method_CStateManager_QuestIncomingAction___ctor__);
-    sub_1C21E38(&Method_CStateManager_QuestIncomingAction__add__);
-    sub_1C21E38(&CStateManager_QuestIncomingAction__TypeInfo);
-    sub_1C21E38(&QuestIncomingAction_StateNone_TypeInfo);
-    sub_1C21E38(&QuestIncomingAction_StatePlay_TypeInfo);
-    byte_4BD93E0 = 1;
+    sub_1C2E12C(&Method_CStateManager_QuestIncomingAction___ctor__, method);
+    sub_1C2E12C(&Method_CStateManager_QuestIncomingAction__add__, v3);
+    sub_1C2E12C(&CStateManager_QuestIncomingAction__TypeInfo, v4);
+    sub_1C2E12C(&QuestIncomingAction_StateNone_TypeInfo, v5);
+    sub_1C2E12C(&QuestIncomingAction_StatePlay_TypeInfo, v6);
+    byte_4BFA5CA = 1;
   }
   if ( !this->fields.mFSM )
   {
-    v3 = (CStateManager_T__o *)sub_1C22084(CStateManager_QuestIncomingAction__TypeInfo);
+    v7 = (CStateManager_T__o *)sub_1C2E378(CStateManager_QuestIncomingAction__TypeInfo);
     CStateManager_object____ctor(
-      v3,
+      v7,
       (Il2CppObject *)this,
       2,
-      (const MethodInfo_31E6A20 *)Method_CStateManager_QuestIncomingAction___ctor__);
-    this->fields.mFSM = (struct CStateManager_QuestIncomingAction__o *)v3;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+      (const MethodInfo_32064C0 *)Method_CStateManager_QuestIncomingAction___ctor__);
+    this->fields.mFSM = (struct CStateManager_QuestIncomingAction__o *)v7;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mFSM, (int64_t)v7, v8, v9, v10, v11, v12, v13);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v11 = (Il2CppObject *)sub_1C22084(QuestIncomingAction_StateNone_TypeInfo);
-    System_Object___ctor(v11, 0LL);
+    v15 = (Il2CppObject *)sub_1C2E378(QuestIncomingAction_StateNone_TypeInfo);
+    System_Object___ctor(v15, 0LL);
     if ( !mFSM
       || (CStateManager_object___add(
             mFSM,
             0,
-            (IState_T__o *)v11,
-            (const MethodInfo_31E6AC8 *)Method_CStateManager_QuestIncomingAction__add__),
-          v14 = (CStateManager_T__o *)this->fields.mFSM,
-          v15 = (Il2CppObject *)sub_1C22084(QuestIncomingAction_StatePlay_TypeInfo),
-          System_Object___ctor(v15, 0LL),
-          !v14) )
+            (IState_T__o *)v15,
+            (const MethodInfo_3206568 *)Method_CStateManager_QuestIncomingAction__add__),
+          v18 = (CStateManager_T__o *)this->fields.mFSM,
+          v19 = (Il2CppObject *)sub_1C2E378(QuestIncomingAction_StatePlay_TypeInfo),
+          System_Object___ctor(v19, 0LL),
+          !v18) )
     {
-      sub_1C22094(v12, v13);
+      sub_1C2E388(v16, v17);
     }
     CStateManager_object___add(
-      v14,
+      v18,
       1,
-      (IState_T__o *)v15,
-      (const MethodInfo_31E6AC8 *)Method_CStateManager_QuestIncomingAction__add__);
-    QuestIncomingAction__SetState(this, 0, v16);
+      (IState_T__o *)v19,
+      (const MethodInfo_3206568 *)Method_CStateManager_QuestIncomingAction__add__);
+    QuestIncomingAction__SetState(this, 0, v20);
   }
 }
 
@@ -127,11 +132,11 @@ void __fastcall QuestIncomingAction__Close(
         (mAnimation = (UnityEngine_Animation_o *)UnityEngine_Animation__get_Item(v8, v9, 0LL)) == 0LL) )
   {
 LABEL_10:
-    sub_1C22094(mAnimation, callback);
+    sub_1C2E388(mAnimation, callback);
   }
   UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)mAnimation, 0.0, 0LL);
   v11 = QuestIncomingAction__Play(this, callback, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_70854884((UnityEngine_MonoBehaviour_o *)this, v11, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)this, v11, 0LL);
 }
 
 
@@ -141,77 +146,78 @@ int32_t __fastcall QuestIncomingAction__GetState(QuestIncomingAction_o *this, co
   struct CStateManager_QuestIncomingAction__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4BD93E5 & 1) == 0 )
+  if ( (byte_4BFA5CF & 1) == 0 )
   {
-    this = (QuestIncomingAction_o *)sub_1C21E38(&Method_CStateManager_QuestIncomingAction__getState__);
-    byte_4BD93E5 = 1;
+    this = (QuestIncomingAction_o *)sub_1C2E12C(&Method_CStateManager_QuestIncomingAction__getState__, method);
+    byte_4BFA5CF = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   return mFSM->fields.m_state;
 }
 
 
 void __fastcall QuestIncomingAction__Init(QuestIncomingAction_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   Il2CppObject *Component_object; // x0
   UnityEngine_Animation_o **p_mAnimation; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
   UnityEngine_Object_o *mAnimation; // x21
   UnityEngine_Object_o *clip; // x0
-  __int64 v13; // x1
-  UnityEngine_Animation_o *v14; // x21
+  __int64 v14; // x1
+  UnityEngine_Animation_o *v15; // x21
   System_String_o *name; // x0
-  UnityEngine_Animation_o *v16; // x20
-  System_String_o *v17; // x0
+  UnityEngine_Animation_o *v17; // x20
+  System_String_o *v18; // x0
 
-  if ( (byte_4BD93E2 & 1) == 0 )
+  if ( (byte_4BFA5CC & 1) == 0 )
   {
-    sub_1C21E38(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD93E2 = 1;
+    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
+    byte_4BFA5CC = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FA68A8 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.mAnimation = (struct UnityEngine_Animation_o *)Component_object;
   p_mAnimation = &this->fields.mAnimation;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.mAnimation,
     (int64_t)Component_object,
-    v5,
     v6,
     v7,
     v8,
     v9,
-    v10);
+    v10,
+    v11);
   mAnimation = (UnityEngine_Object_o *)this->fields.mAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   clip = (UnityEngine_Object_o *)UnityEngine_Object__op_Inequality(mAnimation, 0LL, 0LL);
   if ( ((unsigned __int8)clip & 1) != 0 )
   {
-    v14 = *p_mAnimation;
+    v15 = *p_mAnimation;
     if ( !*p_mAnimation )
       goto LABEL_15;
     clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_clip(*p_mAnimation, 0LL);
     if ( !clip
       || (name = UnityEngine_Object__get_name(clip, 0LL),
-          (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(v14, name, 0LL)) == 0LL)
+          (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(v15, name, 0LL)) == 0LL)
       || (UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)clip, 0.0, 0LL),
-          (v16 = *p_mAnimation) == 0LL)
-      || (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_clip(v16, 0LL)) == 0LL
-      || (v17 = UnityEngine_Object__get_name(clip, 0LL),
-          (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(v16, v17, 0LL)) == 0LL) )
+          (v17 = *p_mAnimation) == 0LL)
+      || (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_clip(v17, 0LL)) == 0LL
+      || (v18 = UnityEngine_Object__get_name(clip, 0LL),
+          (clip = (UnityEngine_Object_o *)UnityEngine_Animation__get_Item(v17, v18, 0LL)) == 0LL) )
     {
 LABEL_15:
-      sub_1C22094(clip, v13);
+      sub_1C2E388(clip, v14);
     }
     UnityEngine_AnimationState__set_normalizedTime((UnityEngine_AnimationState_o *)clip, 0.0, 0LL);
   }
@@ -238,10 +244,10 @@ void __fastcall QuestIncomingAction__Open(
   const MethodInfo *v15; // x2
   System_Collections_IEnumerator_o *v16; // x1
 
-  if ( (byte_4BD93E3 & 1) == 0 )
+  if ( (byte_4BFA5CD & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD93E3 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, title);
+    byte_4BFA5CD = 1;
   }
   mAnimation = this->fields.mAnimation;
   if ( !mAnimation )
@@ -290,11 +296,11 @@ void __fastcall QuestIncomingAction__Open(
                                                    0LL)) == 0LL) )
   {
 LABEL_19:
-    sub_1C22094(mAnimation, title);
+    sub_1C2E388(mAnimation, title);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mAnimation, 1, 0LL);
   v16 = QuestIncomingAction__Play(this, callback, v15);
-  UnityEngine_MonoBehaviour__StartCoroutine_70854884((UnityEngine_MonoBehaviour_o *)this, v16, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)this, v16, 0LL);
 }
 
 
@@ -317,18 +323,18 @@ System_Collections_IEnumerator_o *__fastcall QuestIncomingAction__Play(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BD93E4 & 1) == 0 )
+  if ( (byte_4BFA5CE & 1) == 0 )
   {
-    sub_1C21E38(&QuestIncomingAction__Play_d__14_TypeInfo);
-    byte_4BD93E4 = 1;
+    sub_1C2E12C(&QuestIncomingAction__Play_d__14_TypeInfo, end_act);
+    byte_4BFA5CE = 1;
   }
-  v5 = sub_1C22084(QuestIncomingAction__Play_d__14_TypeInfo);
+  v5 = sub_1C2E378(QuestIncomingAction__Play_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = end_act;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)end_act, v12, v13, v14, v15, v16, v17);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)end_act, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -338,18 +344,18 @@ void __fastcall QuestIncomingAction__SetState(QuestIncomingAction_o *this, int32
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4BD93E6 & 1) == 0 )
+  if ( (byte_4BFA5D0 & 1) == 0 )
   {
-    sub_1C21E38(&Method_CStateManager_QuestIncomingAction__setState__);
-    byte_4BD93E6 = 1;
+    sub_1C2E12C(&Method_CStateManager_QuestIncomingAction__setState__, *(_QWORD *)&state);
+    byte_4BFA5D0 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1C22094(0LL, *(_QWORD *)&state);
+    sub_1C2E388(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_31E6B54 *)Method_CStateManager_QuestIncomingAction__setState__);
+    (const MethodInfo_32065F4 *)Method_CStateManager_QuestIncomingAction__setState__);
 }
 
 
@@ -357,14 +363,14 @@ void __fastcall QuestIncomingAction__Update(QuestIncomingAction_o *this, const M
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4BD93E1 & 1) == 0 )
+  if ( (byte_4BFA5CB & 1) == 0 )
   {
-    sub_1C21E38(&Method_CStateManager_QuestIncomingAction__update__);
-    byte_4BD93E1 = 1;
+    sub_1C2E12C(&Method_CStateManager_QuestIncomingAction__update__, method);
+    byte_4BFA5CB = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
-    CStateManager_object___update(mFSM, (const MethodInfo_31E6B30 *)Method_CStateManager_QuestIncomingAction__update__);
+    CStateManager_object___update(mFSM, (const MethodInfo_32065D0 *)Method_CStateManager_QuestIncomingAction__update__);
 }
 
 
@@ -422,10 +428,10 @@ void __fastcall QuestIncomingAction_StatePlay__begin(
   UnityEngine_Animation_o *v11; // x19
   System_String_o *v12; // x0
 
-  if ( (byte_4BD93E8 & 1) == 0 )
+  if ( (byte_4BFA5D2 & 1) == 0 )
   {
-    this = (QuestIncomingAction_StatePlay_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD93E8 = 1;
+    this = (QuestIncomingAction_StatePlay_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, that);
+    byte_4BFA5D2 = 1;
   }
   if ( !that )
     goto LABEL_21;
@@ -452,7 +458,7 @@ void __fastcall QuestIncomingAction_StatePlay__begin(
           if ( !this )
             goto LABEL_21;
           v8 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-          this = (QuestIncomingAction_StatePlay_o *)UnityEngine_Animation__Play_70614020(v7, v8, 0LL);
+          this = (QuestIncomingAction_StatePlay_o *)UnityEngine_Animation__Play_70734128(v7, v8, 0LL);
         }
         v9 = that->fields.mAnimation;
         if ( v9 )
@@ -486,7 +492,7 @@ void __fastcall QuestIncomingAction_StatePlay__begin(
       }
     }
 LABEL_21:
-    sub_1C22094(this, that);
+    sub_1C2E388(this, that);
   }
 }
 
@@ -510,10 +516,10 @@ void __fastcall QuestIncomingAction_StatePlay__update(
   System_String_o *name; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4BD93E9 & 1) == 0 )
+  if ( (byte_4BFA5D3 & 1) == 0 )
   {
-    this = (QuestIncomingAction_StatePlay_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD93E9 = 1;
+    this = (QuestIncomingAction_StatePlay_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, that);
+    byte_4BFA5D3 = 1;
   }
   if ( !that )
     goto LABEL_12;
@@ -539,7 +545,7 @@ void __fastcall QuestIncomingAction_StatePlay__update(
       }
     }
 LABEL_12:
-    sub_1C22094(this, that);
+    sub_1C2E388(this, that);
   }
 }
 
@@ -577,10 +583,10 @@ bool __fastcall QuestIncomingAction__Play_d__14__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C22094(this, method);
+      sub_1C2E388(this, method);
     end_act = this->fields.end_act;
     _4__this->fields.mEndAct = end_act;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&_4__this->fields.mEndAct, (int64_t)end_act, v2, v3, v4, v5, v6, v7);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.mEndAct, (int64_t)end_act, v2, v3, v4, v5, v6, v7);
     QuestIncomingAction__SetState(_4__this, 1, v13);
   }
   else if ( !_1__state )
@@ -588,7 +594,7 @@ bool __fastcall QuestIncomingAction__Play_d__14__MoveNext(
     this->fields.__2__current = 0LL;
     p__2__current = &this->fields.__2__current;
     this->fields.__1__state = -1;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.__2__current, 0LL, v2, v3, v4, v5, v6, v7);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -613,11 +619,11 @@ void __fastcall __noreturn QuestIncomingAction__Play_d__14__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C21E4C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C22084(v2);
+  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C21E4C(&Method_QuestIncomingAction__Play_d__14_System_Collections_IEnumerator_Reset__);
-  sub_1C21F60(v3, v4);
+  v4 = sub_1C2E140(&Method_QuestIncomingAction__Play_d__14_System_Collections_IEnumerator_Reset__);
+  sub_1C2E254(v3, v4);
 }
 
 

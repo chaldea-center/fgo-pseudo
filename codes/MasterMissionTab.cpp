@@ -4,36 +4,40 @@ void __fastcall MasterMissionTab___ctor(MasterMissionTab_o *this, const MethodIn
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall MasterMissionTab__GetButtonSpriteName(
         MasterMissionTab_o *this,
         bool isOn,
         const MethodInfo *method)
 {
-  System_String_o **v5; // x9
-  __int64 *v6; // x10
-  System_String_o **v7; // x8
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  System_String_o **v8; // x9
+  __int64 *v9; // x10
+  System_String_o **v10; // x8
 
-  if ( (byte_4BDF7CE & 1) == 0 )
+  if ( (byte_4C00A16 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_17786/*"btn_bg_on_4"*/);
-    sub_1C21E38(&StringLiteral_17781/*"btn_bg_off_4"*/);
-    sub_1C21E38(&StringLiteral_17782/*"btn_bg_off_5"*/);
-    sub_1C21E38(&StringLiteral_17787/*"btn_bg_on_5"*/);
-    byte_4BDF7CE = 1;
+    sub_1C2E12C(&StringLiteral_17801/*"btn_bg_on_4"*/, isOn);
+    sub_1C2E12C(&StringLiteral_17796/*"btn_bg_off_4"*/, v5);
+    sub_1C2E12C(&StringLiteral_17797/*"btn_bg_off_5"*/, v6);
+    sub_1C2E12C(&StringLiteral_17802/*"btn_bg_on_5"*/, v7);
+    byte_4C00A16 = 1;
   }
   if ( isOn )
-    v5 = (System_String_o **)&StringLiteral_17787/*"btn_bg_on_5"*/;
+    v8 = (System_String_o **)&StringLiteral_17802/*"btn_bg_on_5"*/;
   else
-    v5 = (System_String_o **)&StringLiteral_17782/*"btn_bg_off_5"*/;
+    v8 = (System_String_o **)&StringLiteral_17797/*"btn_bg_off_5"*/;
   if ( isOn )
-    v6 = &StringLiteral_17786/*"btn_bg_on_4"*/;
+    v9 = &StringLiteral_17801/*"btn_bg_on_4"*/;
   else
-    v6 = &StringLiteral_17781/*"btn_bg_off_4"*/;
+    v9 = &StringLiteral_17796/*"btn_bg_off_4"*/;
   if ( this->fields.isSmall )
-    v7 = v5;
+    v10 = v8;
   else
-    v7 = (System_String_o **)v6;
-  return *v7;
+    v10 = (System_String_o **)v9;
+  return *v10;
 }
 
 
@@ -223,7 +227,7 @@ void __fastcall MasterMissionTab__SetLargeTab(MasterMissionTab_o *this, const Me
       }
     }
 LABEL_53:
-    sub_1C22094(transform, v5);
+    sub_1C2E388(transform, v5);
   }
   transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -387,7 +391,7 @@ void __fastcall MasterMissionTab__SetSmallTab(MasterMissionTab_o *this, const Me
                                                     0LL)) == 0LL) )
   {
 LABEL_53:
-    sub_1C22094(gameObject, v5);
+    sub_1C2E388(gameObject, v5);
   }
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)gameObject,

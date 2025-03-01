@@ -6,25 +6,27 @@ void __fastcall BattleInterruptionRequest__beginRequest(
         int32_t restartWave,
         const MethodInfo *method)
 {
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4BDDDC4 & 1) == 0 )
+  if ( (byte_4BFF008 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_22925/*"phase"*/);
-    sub_1C21E38(&StringLiteral_23101/*"questId"*/);
-    sub_1C21E38(&StringLiteral_23318/*"restartWave"*/);
-    byte_4BDDDC4 = 1;
+    sub_1C2E12C(&StringLiteral_22939/*"phase"*/, *(_QWORD *)&questId);
+    sub_1C2E12C(&StringLiteral_23118/*"questId"*/, v9);
+    sub_1C2E12C(&StringLiteral_23336/*"restartWave"*/, v10);
+    byte_4BFF008 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23101/*"questId"*/,
+    (System_String_o *)StringLiteral_23118/*"questId"*/,
     questId,
     *(const MethodInfo **)&restartWave);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22925/*"phase"*/, phase, v9);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23318/*"restartWave"*/, restartWave, v10);
-  RequestBase__beginRequest((RequestBase_o *)this, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22939/*"phase"*/, phase, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23336/*"restartWave"*/, restartWave, v12);
+  RequestBase__beginRequest((RequestBase_o *)this, v13);
 }
 
 
@@ -32,18 +34,19 @@ System_String_o *__fastcall BattleInterruptionRequest__getURL(
         BattleInterruptionRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDDC3 & 1) == 0 )
+  if ( (byte_4BFF007 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_17379/*"battle/interruption"*/);
-    byte_4BDDDC3 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_17392/*"battle/interruption"*/, v2);
+    byte_4BFF007 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_17379/*"battle/interruption"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_17392/*"battle/interruption"*/, 0LL);
 }
 
 
@@ -52,36 +55,38 @@ void __fastcall BattleInterruptionRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v7; // x9
+  __int64 *v9; // x9
 
-  if ( (byte_4BDDDC5 & 1) == 0 )
+  if ( (byte_4BFF009 & 1) == 0 )
   {
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22632/*"ok"*/);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDDC5 = 1;
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1C2E12C(&StringLiteral_22644/*"ok"*/, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF009 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(128, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_42505456(v5, 0LL) )
+  v7 = ResponseCommandKind__SearchData(128, responseList, 0LL);
+  if ( v7 && ResponseData__checkError_42594652(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22632/*"ok"*/;
+    v9 = &StringLiteral_22644/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22456/*"ng"*/;
+    v9 = &StringLiteral_22468/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v7,
+    *v9,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

@@ -11,31 +11,33 @@ void __fastcall FieldChangeBuffDeleteProcess__Exec(
         bool isAddAfterTask,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
   BattleFieldEnvironmentData_o *FieldEnvData_k__BackingField; // x0
-  BattleFieldEnvironmentData_o *v8; // x21
-  UpdateAllViewBattleLogicTask_o *v9; // x22
-  const MethodInfo *v10; // x4
-  BattleFieldEnvironmentData_o *v11; // x19
-  PlayFieldMotionBattleLogicTask_o *v12; // x20
-  const MethodInfo *v13; // x4
+  BattleFieldEnvironmentData_o *v10; // x21
+  UpdateAllViewBattleLogicTask_o *v11; // x22
+  const MethodInfo *v12; // x4
+  BattleFieldEnvironmentData_o *v13; // x19
+  PlayFieldMotionBattleLogicTask_o *v14; // x20
+  const MethodInfo *v15; // x4
 
-  if ( (byte_4BDEC65 & 1) == 0 )
+  if ( (byte_4BFFEDC & 1) == 0 )
   {
-    sub_1C21E38(&PlayFieldMotionBattleLogicTask_TypeInfo);
-    sub_1C21E38(&UpdateAllViewBattleLogicTask_TypeInfo);
-    sub_1C21E38(&StringLiteral_8923/*"MOTION_UPDATE_FIELD"*/);
-    byte_4BDEC65 = 1;
+    sub_1C2E12C(&PlayFieldMotionBattleLogicTask_TypeInfo, buff);
+    sub_1C2E12C(&UpdateAllViewBattleLogicTask_TypeInfo, v7);
+    sub_1C2E12C(&StringLiteral_8917/*"MOTION_UPDATE_FIELD"*/, v8);
+    byte_4BFFEDC = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
   if ( !FieldEnvData_k__BackingField )
     goto LABEL_11;
   BattleFieldEnvironmentData__RemoveRelateBuff(FieldEnvData_k__BackingField, buff, (const MethodInfo *)isAddAfterTask);
-  v8 = this->fields._FieldEnvData_k__BackingField;
-  v9 = (UpdateAllViewBattleLogicTask_o *)sub_1C22084(UpdateAllViewBattleLogicTask_TypeInfo);
-  UpdateAllViewBattleLogicTask___ctor(v9, 0LL);
-  if ( !v8 )
+  v10 = this->fields._FieldEnvData_k__BackingField;
+  v11 = (UpdateAllViewBattleLogicTask_o *)sub_1C2E378(UpdateAllViewBattleLogicTask_TypeInfo);
+  UpdateAllViewBattleLogicTask___ctor(v11, 0LL);
+  if ( !v10 )
     goto LABEL_11;
-  BattleFieldEnvironmentData__AddRemoveProcTask(v8, (BattleLogicTask_o *)v9, 2, 1, v10);
+  BattleFieldEnvironmentData__AddRemoveProcTask(v10, (BattleLogicTask_o *)v11, 2, 1, v12);
   if ( isAddAfterTask )
   {
     FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
@@ -43,16 +45,16 @@ void __fastcall FieldChangeBuffDeleteProcess__Exec(
       goto LABEL_11;
     if ( BattleFieldEnvironmentData__IsNeedChangeField(FieldEnvData_k__BackingField, (const MethodInfo *)buff) )
     {
-      v11 = this->fields._FieldEnvData_k__BackingField;
-      v12 = (PlayFieldMotionBattleLogicTask_o *)sub_1C22084(PlayFieldMotionBattleLogicTask_TypeInfo);
-      PlayFieldMotionBattleLogicTask___ctor(v12, (System_String_o *)StringLiteral_8923/*"MOTION_UPDATE_FIELD"*/, 0, 0LL);
-      if ( v11 )
+      v13 = this->fields._FieldEnvData_k__BackingField;
+      v14 = (PlayFieldMotionBattleLogicTask_o *)sub_1C2E378(PlayFieldMotionBattleLogicTask_TypeInfo);
+      PlayFieldMotionBattleLogicTask___ctor(v14, (System_String_o *)StringLiteral_8917/*"MOTION_UPDATE_FIELD"*/, 0, 0LL);
+      if ( v13 )
       {
-        BattleFieldEnvironmentData__AddRemoveProcTask(v11, (BattleLogicTask_o *)v12, 1, 1, v13);
+        BattleFieldEnvironmentData__AddRemoveProcTask(v13, (BattleLogicTask_o *)v14, 1, 1, v15);
         return;
       }
 LABEL_11:
-      sub_1C22094(FieldEnvData_k__BackingField, buff);
+      sub_1C2E388(FieldEnvData_k__BackingField, buff);
     }
   }
 }

@@ -1,13 +1,13 @@
 void __fastcall QuestMessageEntity___ctor(QuestMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDCA0F & 1) == 0 )
+  if ( (byte_4BFDC24 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDCA0F = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFDC24 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ bool __fastcall QuestMessageEntity__CheckValid(QuestMessageEntity_o *this, const
   int32_t condType; // w21
   int64_t targetNum; // x19
 
-  if ( (byte_4BDCA0E & 1) == 0 )
+  if ( (byte_4BFDC23 & 1) == 0 )
   {
-    sub_1C21E38(&CondType_TypeInfo);
-    byte_4BDCA0E = 1;
+    sub_1C2E12C(&CondType_TypeInfo, method);
+    byte_4BFDC23 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
@@ -31,22 +31,23 @@ bool __fastcall QuestMessageEntity__CheckValid(QuestMessageEntity_o *this, const
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestMessageEntity__CreatePK(
         int32_t questId,
         int32_t phase,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4BDCA0D & 1) == 0 )
+  if ( (byte_4BFDC22 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4BDCA0D = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&phase);
+    byte_4BFDC22 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            phase,
            idx,
-           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

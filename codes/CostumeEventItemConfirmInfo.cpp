@@ -9,104 +9,117 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
         EventCombineCostumeEntity_o *ent,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v5; // x1
   __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  DataManager_o *Instance; // x0
+  __int64 v19; // x1
   UILabel_o *title; // x21
   UILabel_o *subTitle; // x21
-  System_String_o *v9; // x22
-  Il2CppObject *v10; // x0
+  System_String_o *v22; // x22
+  Il2CppObject *v23; // x0
   UILabel_o *reqItemLabel; // x21
-  System_String_o *v12; // x22
-  Il2CppObject *v13; // x0
+  System_String_o *v25; // x22
+  Il2CppObject *v26; // x0
   UILabel_o *haveItemLabel; // x21
-  System_String_o *v15; // x22
-  Il2CppObject *v16; // x0
+  System_String_o *v28; // x22
+  Il2CppObject *v29; // x0
   UILabel_o *msg; // x21
-  System_String_o *v18; // x22
-  Il2CppObject *v19; // x0
-  __int64 v20; // x2
-  __int64 v21; // x3
-  __int64 v22; // x4
+  System_String_o *v31; // x22
+  Il2CppObject *v32; // x0
+  __int64 v33; // x2
+  __int64 v34; // x3
+  __int64 v35; // x4
   struct System_Int32_array *itemNums; // x8
   UILabel_o *reqItemCountLabel; // x21
-  Il2CppObject *v25; // x0
+  Il2CppObject *v38; // x0
   UILabel_o *haveItemCountLabel; // x21
   Il2CppObject *MasterData_object; // x21
   struct System_Int32_array *itemIds; // x8
-  __int64 v29; // x2
-  __int64 v30; // x3
-  __int64 v31; // x4
-  UILabel_o *v32; // x21
-  Il2CppObject *v33; // x0
-  struct System_Int32_array *v34; // x8
+  __int64 v42; // x2
+  __int64 v43; // x3
+  __int64 v44; // x4
+  UILabel_o *v45; // x21
+  Il2CppObject *v46; // x0
+  struct System_Int32_array *v47; // x8
   int32_t num; // [xsp+0h] [xbp-50h] BYREF
-  int v36; // [xsp+4h] [xbp-4Ch] BYREF
+  int v49; // [xsp+4h] [xbp-4Ch] BYREF
   UserItemEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BE019A & 1) == 0 )
+  if ( (byte_4C01439 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C21E38(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C21E38(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&StringLiteral_5684/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/);
-    sub_1C21E38(&StringLiteral_5687/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/);
-    sub_1C21E38(&StringLiteral_3885/*"CONFIRM_TITLE_COSTUME_COMBINE"*/);
-    sub_1C21E38(&StringLiteral_25376/*"{0:#,0}"*/);
-    sub_1C21E38(&StringLiteral_5685/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/);
-    sub_1C21E38(&StringLiteral_5686/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/);
-    sub_1C21E38(&StringLiteral_5683/*"EVENT_COMBINE_COSTUME_ITEM"*/);
-    byte_4BE019A = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventMaster___, ent);
+    sub_1C2E12C(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
+    sub_1C2E12C(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v6);
+    sub_1C2E12C(&int_TypeInfo, v7);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v9);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C2E12C(&StringLiteral_5675/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/, v11);
+    sub_1C2E12C(&StringLiteral_5678/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/, v12);
+    sub_1C2E12C(&StringLiteral_3873/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, v13);
+    sub_1C2E12C(&StringLiteral_25402/*"{0:#,0}"*/, v14);
+    sub_1C2E12C(&StringLiteral_5676/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/, v15);
+    sub_1C2E12C(&StringLiteral_5677/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/, v16);
+    sub_1C2E12C(&StringLiteral_5674/*"EVENT_COMBINE_COSTUME_ITEM"*/, v17);
+    byte_4C01439 = 1;
   }
   entity = 0LL;
-  v36 = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v49 = 0;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !ent || !Instance )
     goto LABEL_35;
   DataMasterBase_object__object__int___GetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
     ent->fields.eventId,
-    (const MethodInfo_325BDC8 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    (const MethodInfo_327B180 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   title = this->fields.title;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3873/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
   if ( !title )
     goto LABEL_35;
   UILabel__set_text(title, (System_String_o *)Instance, 0LL);
   subTitle = this->fields.subTitle;
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5687/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/, 0LL);
-  v10 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
-  Instance = (DataManager_o *)System_String__Format(v9, v10, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5678/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  v23 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5674/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  Instance = (DataManager_o *)System_String__Format(v22, v23, 0LL);
   if ( !subTitle )
     goto LABEL_35;
   UILabel__set_text(subTitle, (System_String_o *)Instance, 0LL);
   reqItemLabel = this->fields.reqItemLabel;
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5686/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/, 0LL);
-  v13 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
-  Instance = (DataManager_o *)System_String__Format(v12, v13, 0LL);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5677/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_REQ"*/, 0LL);
+  v26 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5674/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  Instance = (DataManager_o *)System_String__Format(v25, v26, 0LL);
   if ( !reqItemLabel )
     goto LABEL_35;
   UILabel__set_text(reqItemLabel, (System_String_o *)Instance, 0LL);
   haveItemLabel = this->fields.haveItemLabel;
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_5685/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/, 0LL);
-  v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
-  Instance = (DataManager_o *)System_String__Format(v15, v16, 0LL);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_5676/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG_HAVE"*/, 0LL);
+  v29 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5674/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  Instance = (DataManager_o *)System_String__Format(v28, v29, 0LL);
   if ( !haveItemLabel )
     goto LABEL_35;
   UILabel__set_text(haveItemLabel, (System_String_o *)Instance, 0LL);
   msg = this->fields.msg;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_5684/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/, 0LL);
-  v19 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
-  Instance = (DataManager_o *)System_String__Format(v18, v19, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5675/*"EVENT_COMBINE_COSTUME_ITEM_CONFIRM_DIALOG"*/, 0LL);
+  v32 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5674/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  Instance = (DataManager_o *)System_String__Format(v31, v32, 0LL);
   if ( !msg )
     goto LABEL_35;
   UILabel__set_text(msg, (System_String_o *)Instance, 0LL);
@@ -117,29 +130,29 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
     goto LABEL_36;
   reqItemCountLabel = this->fields.reqItemCountLabel;
   num = itemNums->m_Items[1];
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v20, v21, v22);
-  Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25376/*"{0:#,0}"*/, v25, 0LL);
+  v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v33, v34, v35);
+  Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25402/*"{0:#,0}"*/, v38, 0LL);
   if ( !reqItemCountLabel )
     goto LABEL_35;
   UILabel__set_text(reqItemCountLabel, (System_String_o *)Instance, 0LL);
   haveItemCountLabel = this->fields.haveItemCountLabel;
-  v36 = 0;
-  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v36, 0LL);
+  v49 = 0;
+  Instance = (DataManager_o *)System_Int32__ToString((int32_t)&v49, 0LL);
   if ( !haveItemCountLabel )
     goto LABEL_35;
   UILabel__set_text(haveItemCountLabel, (System_String_o *)Instance, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_35;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v19);
+    byte_4BF81D5 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -163,25 +176,25 @@ void __fastcall CostumeEventItemConfirmInfo__Set(
   if ( ((unsigned __int8)Instance & 1) == 0 )
     goto LABEL_31;
   if ( !entity
-    || (v32 = this->fields.haveItemCountLabel,
+    || (v45 = this->fields.haveItemCountLabel,
         num = entity->fields.num,
-        v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v29, v30, v31),
-        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25376/*"{0:#,0}"*/, v33, 0LL),
-        !v32) )
+        v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v42, v43, v44),
+        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25402/*"{0:#,0}"*/, v46, 0LL),
+        !v45) )
   {
 LABEL_35:
-    sub_1C22094(Instance, v6);
+    sub_1C2E388(Instance, v19);
   }
-  UILabel__set_text(v32, (System_String_o *)Instance, 0LL);
+  UILabel__set_text(v45, (System_String_o *)Instance, 0LL);
 LABEL_31:
-  v34 = ent->fields.itemIds;
-  if ( !v34 )
+  v47 = ent->fields.itemIds;
+  if ( !v47 )
     goto LABEL_35;
-  if ( !v34->max_length )
+  if ( !v47->max_length )
 LABEL_36:
-    sub_1C2209C(Instance, v6);
+    sub_1C2E390(Instance, v19);
   Instance = (DataManager_o *)this->fields.itemIcon;
   if ( !Instance )
     goto LABEL_35;
-  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)Instance, v34->m_Items[1], 0LL);
+  LimitCntUpItemComponent__SetItemIcon((LimitCntUpItemComponent_o *)Instance, v47->m_Items[1], 0LL);
 }

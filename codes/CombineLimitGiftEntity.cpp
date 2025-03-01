@@ -1,32 +1,33 @@
 void __fastcall CombineLimitGiftEntity___ctor(CombineLimitGiftEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC2F0 & 1) == 0 )
+  if ( (byte_4BFD4FA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDC2F0 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFD4FA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CombineLimitGiftEntity__CreatePK(
         int32_t svtId,
         int32_t rarity,
         int32_t limitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4BDC2EF & 1) == 0 )
+  if ( (byte_4BFD4F9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4BDC2EF = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&rarity);
+    byte_4BFD4F9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            rarity,
            limitCount,
-           (const MethodInfo_2FAE4B8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

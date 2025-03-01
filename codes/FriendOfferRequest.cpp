@@ -6,30 +6,31 @@ void __fastcall FriendOfferRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BDDEDD & 1) == 0 )
+  if ( (byte_4BFF121 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_24288/*"targetUserId"*/);
-    byte_4BDDEDD = 1;
+    sub_1C2E12C(&StringLiteral_24311/*"targetUserId"*/, targetUserId);
+    byte_4BFF121 = 1;
   }
-  RequestBase__addField_42421084((RequestBase_o *)this, (System_String_o *)StringLiteral_24288/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__addField_42510212((RequestBase_o *)this, (System_String_o *)StringLiteral_24311/*"targetUserId"*/, targetUserId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
 System_String_o *__fastcall FriendOfferRequest__getURL(FriendOfferRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDEDC & 1) == 0 )
+  if ( (byte_4BFF120 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_19972/*"friend/offer"*/);
-    byte_4BDDEDC = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_19987/*"friend/offer"*/, v2);
+    byte_4BFF120 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19972/*"friend/offer"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19987/*"friend/offer"*/, 0LL);
 }
 
 
@@ -38,48 +39,62 @@ void __fastcall FriendOfferRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  long double v6; // q0
-  ResponseData_o *v7; // x20
-  Il2CppObject *v8; // x0
-  System_String_c *v9; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  ResponseData_o *v18; // x0
+  long double v19; // q0
+  ResponseData_o *v20; // x20
+  Il2CppObject *v21; // x0
+  System_String_c *v22; // x1
   System_Collections_Generic_Dictionary_object__object__o *success; // x23
   Il2CppObject *Item; // x0
-  System_String_o *v12; // x22
+  System_String_o *v25; // x22
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   Il2CppObject *m_target; // x3
   struct System_Reflection_MethodInfo_o *original_method_info; // x0
-  __int64 v16; // x1
-  Il2CppObject *v17; // x0
-  System_String_o *v18; // x21
-  System_String_o *v19; // x23
-  Il2CppObject *v20; // x20
-  System_String_o *v21; // x0
+  __int64 v29; // x1
+  Il2CppObject *v30; // x0
+  System_String_o *v31; // x21
+  System_String_o *v32; // x23
+  Il2CppObject *v33; // x20
+  System_String_o *v34; // x0
   Il2CppObject *Instance; // x20
-  NotificationDialog_ClickDelegate_o *v23; // x22
+  NotificationDialog_ClickDelegate_o *v36; // x22
 
-  if ( (byte_4BDDEDE & 1) == 0 )
+  if ( (byte_4BFF122 & 1) == 0 )
   {
-    sub_1C21E38(&NotificationDialog_ClickDelegate_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C21E38(&Method_FriendOfferRequest_requestErrorDialog__);
-    sub_1C21E38(&JsonManager_TypeInfo);
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C21E38(&string_TypeInfo);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    sub_1C21E38(&StringLiteral_24389/*"title"*/);
-    sub_1C21E38(&StringLiteral_21780/*"message"*/);
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    sub_1C21E38(&StringLiteral_1212/*"0"*/);
-    sub_1C21E38(&StringLiteral_23950/*"status"*/);
-    byte_4BDDEDE = 1;
+    sub_1C2E12C(&NotificationDialog_ClickDelegate_TypeInfo, responseList);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v6);
+    sub_1C2E12C(&Method_FriendOfferRequest_requestErrorDialog__, v7);
+    sub_1C2E12C(&JsonManager_TypeInfo, v8);
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v9);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1C2E12C(&string_TypeInfo, v11);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v12);
+    sub_1C2E12C(&StringLiteral_24413/*"title"*/, v13);
+    sub_1C2E12C(&StringLiteral_21791/*"message"*/, v14);
+    sub_1C2E12C(&StringLiteral_1/*""*/, v15);
+    sub_1C2E12C(&StringLiteral_1191/*"0"*/, v16);
+    sub_1C2E12C(&StringLiteral_23972/*"status"*/, v17);
+    byte_4BFF122 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(13, responseList, 0LL);
-  if ( !v5 || (v7 = v5, v8 = (Il2CppObject *)ResponseData__checkError_42505456(v5, 0LL), ((unsigned __int8)v8 & 1) == 0) )
+  v18 = ResponseCommandKind__SearchData(13, responseList, 0LL);
+  if ( !v18
+    || (v20 = v18, v21 = (Il2CppObject *)ResponseData__checkError_42594652(v18, 0LL), ((unsigned __int8)v21 & 1) == 0) )
   {
 LABEL_12:
     CallBack = this->fields.CallBack;
@@ -87,100 +102,100 @@ LABEL_12:
     {
       m_target = CallBack->fields.m_target;
       original_method_info = CallBack->fields.original_method_info;
-      v16 = StringLiteral_22456/*"ng"*/;
+      v29 = StringLiteral_22468/*"ng"*/;
 LABEL_14:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, long double))m_target)(
         original_method_info,
-        v16,
+        v29,
         *(_QWORD *)&CallBack->fields.extra_arg,
-        v6);
+        v19);
       return;
     }
     return;
   }
-  success = (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success;
+  success = (System_Collections_Generic_Dictionary_object__object__o *)v20->fields.success;
   if ( !success )
 LABEL_35:
-    sub_1C22094(v8, v9);
+    sub_1C2E388(v21, v22);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
-         (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success,
-         (Il2CppObject *)StringLiteral_23950/*"status"*/,
-         (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (System_Collections_Generic_Dictionary_object__object__o *)v20->fields.success,
+         (Il2CppObject *)StringLiteral_23972/*"status"*/,
+         (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_23950/*"status"*/,
-             (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v12 = (System_String_o *)Item;
+             (Il2CppObject *)StringLiteral_23972/*"status"*/,
+             (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v25 = (System_String_o *)Item;
     if ( Item && (System_String_c *)Item->klass != string_TypeInfo )
     {
-      v6 = sub_1C22354(Item);
+      v19 = sub_1C2E648(Item);
       goto LABEL_12;
     }
   }
   else
   {
-    v12 = (System_String_o *)StringLiteral_1212/*"0"*/;
+    v25 = (System_String_o *)StringLiteral_1191/*"0"*/;
   }
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           success,
-          (Il2CppObject *)StringLiteral_24389/*"title"*/,
-          (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_24413/*"title"*/,
+          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_20;
-  v17 = System_Collections_Generic_Dictionary_object__object___get_Item(
+  v30 = System_Collections_Generic_Dictionary_object__object___get_Item(
           success,
-          (Il2CppObject *)StringLiteral_24389/*"title"*/,
-          (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v18 = (System_String_o *)v17;
-  if ( v17 && (System_String_c *)v17->klass != string_TypeInfo )
+          (Il2CppObject *)StringLiteral_24413/*"title"*/,
+          (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v31 = (System_String_o *)v30;
+  if ( v30 && (System_String_c *)v30->klass != string_TypeInfo )
   {
-    sub_1C22354(v17);
+    sub_1C2E648(v30);
 LABEL_20:
-    v18 = (System_String_o *)StringLiteral_1/*""*/;
+    v31 = (System_String_o *)StringLiteral_1/*""*/;
   }
-  v8 = (Il2CppObject *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
-                         success,
-                         (Il2CppObject *)StringLiteral_21780/*"message"*/,
-                         (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-  if ( ((unsigned __int8)v8 & 1) == 0 )
+  v21 = (Il2CppObject *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
+                          success,
+                          (Il2CppObject *)StringLiteral_21791/*"message"*/,
+                          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+  if ( ((unsigned __int8)v21 & 1) == 0 )
   {
 LABEL_25:
-    v19 = (System_String_o *)StringLiteral_1/*""*/;
+    v32 = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_26;
   }
-  v8 = System_Collections_Generic_Dictionary_object__object___get_Item(
-         success,
-         (Il2CppObject *)StringLiteral_21780/*"message"*/,
-         (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  v19 = (System_String_o *)v8;
-  if ( v8 )
+  v21 = System_Collections_Generic_Dictionary_object__object___get_Item(
+          success,
+          (Il2CppObject *)StringLiteral_21791/*"message"*/,
+          (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  v32 = (System_String_o *)v21;
+  if ( v21 )
   {
-    v9 = string_TypeInfo;
-    if ( (System_String_c *)v8->klass != string_TypeInfo )
+    v22 = string_TypeInfo;
+    if ( (System_String_c *)v21->klass != string_TypeInfo )
     {
-      sub_1C22354(v8);
+      sub_1C2E648(v21);
       goto LABEL_25;
     }
   }
 LABEL_26:
-  if ( !v12 )
+  if ( !v25 )
     goto LABEL_35;
-  if ( !System_String__Equals_63123792(v12, (System_String_o *)StringLiteral_1212/*"0"*/, 0LL) )
+  if ( !System_String__Equals_63243900(v25, (System_String_o *)StringLiteral_1191/*"0"*/, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v23 = (NotificationDialog_ClickDelegate_o *)sub_1C22084(NotificationDialog_ClickDelegate_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v36 = (NotificationDialog_ClickDelegate_o *)sub_1C2E378(NotificationDialog_ClickDelegate_TypeInfo);
     NotificationDialog_ClickDelegate___ctor(
-      v23,
+      v36,
       (Il2CppObject *)this,
       Method_FriendOfferRequest_requestErrorDialog__,
       0LL);
     if ( Instance )
     {
-      CommonUI__OpenNotificationDialog_31130684(
+      CommonUI__OpenNotificationDialog_31179448(
         (CommonUI_o *)Instance,
-        v18,
-        v19,
-        v23,
+        v31,
+        v32,
+        v36,
         -1,
         0,
         0,
@@ -201,14 +216,14 @@ LABEL_26:
     }
     goto LABEL_35;
   }
-  v20 = (Il2CppObject *)v7->fields.success;
+  v33 = (Il2CppObject *)v20->fields.success;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v21 = JsonManager__toJson(v20, 0, 0, 0LL);
+  v34 = JsonManager__toJson(v33, 0, 0, 0LL);
   CallBack = this->fields.CallBack;
   if ( CallBack )
   {
-    v16 = (__int64)v21;
+    v29 = (__int64)v34;
     m_target = CallBack->fields.m_target;
     original_method_info = CallBack->fields.original_method_info;
     goto LABEL_14;
@@ -216,26 +231,28 @@ LABEL_26:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendOfferRequest__requestErrorDialog(FriendOfferRequest_o *this, bool flg, const MethodInfo *method)
 {
+  __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
+  __int64 v6; // x1
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_4BDDEDF & 1) == 0 )
+  if ( (byte_4BFF123 & 1) == 0 )
   {
-    sub_1C21E38(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDEDF = 1;
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, flg);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v4);
+    byte_4BFF123 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C22094(0LL, v5);
+    sub_1C2E388(0LL, v6);
   CommonUI__CloseNotificationDialog((CommonUI_o *)Instance, 0LL);
   CallBack = this->fields.CallBack;
   if ( CallBack )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
       CallBack->fields.original_method_info,
-      StringLiteral_22456/*"ng"*/,
+      StringLiteral_22468/*"ng"*/,
       *(_QWORD *)&CallBack->fields.extra_arg);
 }

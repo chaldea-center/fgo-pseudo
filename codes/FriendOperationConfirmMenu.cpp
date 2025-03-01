@@ -1,9 +1,9 @@
 void __fastcall FriendOperationConfirmMenu___ctor(FriendOperationConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BD7634 & 1) == 0 )
+  if ( (byte_4BF8814 & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BD7634 = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BF8814 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -26,7 +26,7 @@ void __fastcall FriendOperationConfirmMenu__Callback(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1C21DDC(p_callbackFunc, 0LL);
+    sub_1C2E0D0(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       result,
@@ -39,29 +39,30 @@ void __fastcall FriendOperationConfirmMenu__Close(FriendOperationConfirmMenu_o *
 {
   const MethodInfo *v2; // x2
 
-  FriendOperationConfirmMenu__Close_31807220(this, 0LL, v2);
+  FriendOperationConfirmMenu__Close_31856444(this, 0LL, v2);
 }
 
 
-void __fastcall FriendOperationConfirmMenu__Close_31807220(
+void __fastcall FriendOperationConfirmMenu__Close_31856444(
         FriendOperationConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_Action_o *v5; // x20
+  __int64 v5; // x1
+  System_Action_o *v6; // x20
 
-  if ( (byte_4BD7630 & 1) == 0 )
+  if ( (byte_4BF8810 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_FriendOperationConfirmMenu_EndClose__);
-    byte_4BD7630 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, callback);
+    sub_1C2E12C(&Method_FriendOperationConfirmMenu_EndClose__, v5);
+    byte_4BF8810 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C21DDC(&this->fields.closeCallbackFunc, callback);
+  sub_1C2E0D0(&this->fields.closeCallbackFunc);
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_FriendOperationConfirmMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
+  v6 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_FriendOperationConfirmMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
 
 
@@ -78,7 +79,7 @@ void __fastcall FriendOperationConfirmMenu__EndClose(FriendOperationConfirmMenu_
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0LL;
-    sub_1C21DDC(p_closeCallbackFunc, 0LL);
+    sub_1C2E0D0(p_closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -96,10 +97,10 @@ void __fastcall FriendOperationConfirmMenu__Init(FriendOperationConfirmMenu_o *t
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_4BD762E & 1) == 0 )
+  if ( (byte_4BF880E & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BD762E = 1;
+    sub_1C2E12C(&StringLiteral_1/*""*/, method);
+    byte_4BF880E = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel
@@ -108,7 +109,7 @@ void __fastcall FriendOperationConfirmMenu__Init(FriendOperationConfirmMenu_o *t
     || (UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (messageLabel = this->fields.cancelLabel) == 0LL) )
   {
-    sub_1C22094(messageLabel, method);
+    sub_1C2E388(messageLabel, method);
   }
   UILabel__set_text(messageLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -122,18 +123,18 @@ void __fastcall FriendOperationConfirmMenu__OnClickCancel(FriendOperationConfirm
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BD7632 & 1) == 0 )
+  if ( (byte_4BF8812 & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendOperationConfirmMenu_OnClickCancel__);
-    byte_4BD7632 = 1;
+    sub_1C2E12C(&Method_FriendOperationConfirmMenu_OnClickCancel__, method);
+    byte_4BF8812 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FriendOperationConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_FriendOperationConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_FriendOperationConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C2E144(Method_FriendOperationConfirmMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     FriendOperationConfirmMenu__Callback(this, 0, v5);
   }
@@ -146,24 +147,25 @@ void __fastcall FriendOperationConfirmMenu__OnClickDecide(FriendOperationConfirm
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BD7631 & 1) == 0 )
+  if ( (byte_4BF8811 & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendOperationConfirmMenu_OnClickDecide__);
-    byte_4BD7631 = 1;
+    sub_1C2E12C(&Method_FriendOperationConfirmMenu_OnClickDecide__, method);
+    byte_4BF8811 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FriendOperationConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_FriendOperationConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_FriendOperationConfirmMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C2E144(Method_FriendOperationConfirmMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     FriendOperationConfirmMenu__Callback(this, 1, v5);
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendOperationConfirmMenu__Open(
         FriendOperationConfirmMenu_o *this,
         int32_t kind,
@@ -171,58 +173,81 @@ void __fastcall FriendOperationConfirmMenu__Open(
         FriendOperationConfirmMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v9; // x1
   __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v33; // x1
   UILabel_o *messageLabel; // x21
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  __int64 *v14; // x8
-  UILabel_o *v15; // x21
-  UILabel_o *v16; // x20
-  UILabel_o *v17; // x21
-  UILabel_o *v18; // x20
-  UILabel_o *v19; // x21
-  UILabel_o *v20; // x20
-  UILabel_o *v21; // x21
-  UILabel_o *v22; // x20
-  UILabel_o *v23; // x21
-  UILabel_o *v24; // x20
-  UILabel_o *v25; // x21
-  UILabel_o *v26; // x20
-  System_Action_o *v27; // x20
+  __int64 *v37; // x8
+  UILabel_o *v38; // x21
+  UILabel_o *v39; // x20
+  UILabel_o *v40; // x21
+  UILabel_o *v41; // x20
+  UILabel_o *v42; // x21
+  UILabel_o *v43; // x20
+  UILabel_o *v44; // x21
+  UILabel_o *v45; // x20
+  UILabel_o *v46; // x21
+  UILabel_o *v47; // x20
+  UILabel_o *v48; // x21
+  UILabel_o *v49; // x20
+  System_Action_o *v50; // x20
 
-  if ( (byte_4BD762F & 1) == 0 )
+  if ( (byte_4BF880F & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_FriendOperationConfirmMenu_EndOpen__);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_6696/*"FRIEND_REMOVE_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6658/*"FRIEND_ACCEPT_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6698/*"FRIEND_REMOVE_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6695/*"FRIEND_REJECT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6610/*"FOLLOW_REMOVE_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6660/*"FRIEND_ACCEPT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6694/*"FRIEND_REJECT_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6659/*"FRIEND_ACCEPT_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6664/*"FRIEND_CANCEL_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6683/*"FRIEND_OFFER_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6611/*"FOLLOW_REMOVE_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6662/*"FRIEND_CANCEL_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6697/*"FRIEND_REMOVE_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6606/*"FOLLOW_OFFER_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6609/*"FOLLOW_REMOVE_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_6684/*"FRIEND_OFFER_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6607/*"FOLLOW_OFFER_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6608/*"FOLLOW_OFFER_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6685/*"FRIEND_OFFER_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_6663/*"FRIEND_CANCEL_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_6693/*"FRIEND_REJECT_CANCEL"*/);
-    byte_4BD762F = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1C2E12C(&Method_FriendOperationConfirmMenu_EndOpen__, v9);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v10);
+    sub_1C2E12C(&StringLiteral_6687/*"FRIEND_REMOVE_CANCEL"*/, v11);
+    sub_1C2E12C(&StringLiteral_6649/*"FRIEND_ACCEPT_CANCEL"*/, v12);
+    sub_1C2E12C(&StringLiteral_6689/*"FRIEND_REMOVE_MESSAGE"*/, v13);
+    sub_1C2E12C(&StringLiteral_6686/*"FRIEND_REJECT_MESSAGE"*/, v14);
+    sub_1C2E12C(&StringLiteral_6601/*"FOLLOW_REMOVE_DECIDE"*/, v15);
+    sub_1C2E12C(&StringLiteral_6651/*"FRIEND_ACCEPT_MESSAGE"*/, v16);
+    sub_1C2E12C(&StringLiteral_6685/*"FRIEND_REJECT_DECIDE"*/, v17);
+    sub_1C2E12C(&StringLiteral_6650/*"FRIEND_ACCEPT_DECIDE"*/, v18);
+    sub_1C2E12C(&StringLiteral_6655/*"FRIEND_CANCEL_MESSAGE"*/, v19);
+    sub_1C2E12C(&StringLiteral_6674/*"FRIEND_OFFER_CANCEL"*/, v20);
+    sub_1C2E12C(&StringLiteral_6602/*"FOLLOW_REMOVE_MESSAGE"*/, v21);
+    sub_1C2E12C(&StringLiteral_6653/*"FRIEND_CANCEL_CANCEL"*/, v22);
+    sub_1C2E12C(&StringLiteral_6688/*"FRIEND_REMOVE_DECIDE"*/, v23);
+    sub_1C2E12C(&StringLiteral_6597/*"FOLLOW_OFFER_CANCEL"*/, v24);
+    sub_1C2E12C(&StringLiteral_6600/*"FOLLOW_REMOVE_CANCEL"*/, v25);
+    sub_1C2E12C(&StringLiteral_6675/*"FRIEND_OFFER_DECIDE"*/, v26);
+    sub_1C2E12C(&StringLiteral_6598/*"FOLLOW_OFFER_DECIDE"*/, v27);
+    sub_1C2E12C(&StringLiteral_6599/*"FOLLOW_OFFER_MESSAGE"*/, v28);
+    sub_1C2E12C(&StringLiteral_6676/*"FRIEND_OFFER_MESSAGE"*/, v29);
+    sub_1C2E12C(&StringLiteral_6654/*"FRIEND_CANCEL_DECIDE"*/, v30);
+    sub_1C2E12C(&StringLiteral_6684/*"FRIEND_REJECT_CANCEL"*/, v31);
+    byte_4BF880F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C21DDC(&this->fields.callbackFunc, callback);
+    sub_1C2E0D0(&this->fields.callbackFunc);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_51;
@@ -233,7 +258,7 @@ void __fastcall FriendOperationConfirmMenu__Open(
         messageLabel = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6685/*"FRIEND_OFFER_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6676/*"FRIEND_OFFER_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
@@ -244,158 +269,158 @@ void __fastcall FriendOperationConfirmMenu__Open(
           goto LABEL_51;
         UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
         decideLabel = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6684/*"FRIEND_OFFER_DECIDE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6675/*"FRIEND_OFFER_DECIDE"*/, 0LL);
         if ( !decideLabel )
           goto LABEL_51;
         UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6683/*"FRIEND_OFFER_CANCEL"*/;
+        v37 = &StringLiteral_6674/*"FRIEND_OFFER_CANCEL"*/;
         break;
       case 2:
-        v15 = this->fields.messageLabel;
+        v38 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6660/*"FRIEND_ACCEPT_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6651/*"FRIEND_ACCEPT_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v15 )
+        if ( !v38 )
           goto LABEL_51;
-        UILabel__set_text(v15, (System_String_o *)gameObject, 0LL);
-        v16 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6659/*"FRIEND_ACCEPT_DECIDE"*/, 0LL);
-        if ( !v16 )
+        UILabel__set_text(v38, (System_String_o *)gameObject, 0LL);
+        v39 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6650/*"FRIEND_ACCEPT_DECIDE"*/, 0LL);
+        if ( !v39 )
           goto LABEL_51;
-        UILabel__set_text(v16, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v39, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6658/*"FRIEND_ACCEPT_CANCEL"*/;
+        v37 = &StringLiteral_6649/*"FRIEND_ACCEPT_CANCEL"*/;
         break;
       case 3:
-        v17 = this->fields.messageLabel;
+        v40 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6695/*"FRIEND_REJECT_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6686/*"FRIEND_REJECT_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v17 )
+        if ( !v40 )
           goto LABEL_51;
-        UILabel__set_text(v17, (System_String_o *)gameObject, 0LL);
-        v18 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6694/*"FRIEND_REJECT_DECIDE"*/, 0LL);
-        if ( !v18 )
+        UILabel__set_text(v40, (System_String_o *)gameObject, 0LL);
+        v41 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6685/*"FRIEND_REJECT_DECIDE"*/, 0LL);
+        if ( !v41 )
           goto LABEL_51;
-        UILabel__set_text(v18, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v41, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6693/*"FRIEND_REJECT_CANCEL"*/;
+        v37 = &StringLiteral_6684/*"FRIEND_REJECT_CANCEL"*/;
         break;
       case 4:
-        v19 = this->fields.messageLabel;
+        v42 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6664/*"FRIEND_CANCEL_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6655/*"FRIEND_CANCEL_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v19 )
+        if ( !v42 )
           goto LABEL_51;
-        UILabel__set_text(v19, (System_String_o *)gameObject, 0LL);
-        v20 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6663/*"FRIEND_CANCEL_DECIDE"*/, 0LL);
-        if ( !v20 )
+        UILabel__set_text(v42, (System_String_o *)gameObject, 0LL);
+        v43 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6654/*"FRIEND_CANCEL_DECIDE"*/, 0LL);
+        if ( !v43 )
           goto LABEL_51;
-        UILabel__set_text(v20, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v43, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6662/*"FRIEND_CANCEL_CANCEL"*/;
+        v37 = &StringLiteral_6653/*"FRIEND_CANCEL_CANCEL"*/;
         break;
       case 5:
-        v21 = this->fields.messageLabel;
+        v44 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6698/*"FRIEND_REMOVE_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6689/*"FRIEND_REMOVE_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v21 )
+        if ( !v44 )
           goto LABEL_51;
-        UILabel__set_text(v21, (System_String_o *)gameObject, 0LL);
-        v22 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6697/*"FRIEND_REMOVE_DECIDE"*/, 0LL);
-        if ( !v22 )
+        UILabel__set_text(v44, (System_String_o *)gameObject, 0LL);
+        v45 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6688/*"FRIEND_REMOVE_DECIDE"*/, 0LL);
+        if ( !v45 )
           goto LABEL_51;
-        UILabel__set_text(v22, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v45, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6696/*"FRIEND_REMOVE_CANCEL"*/;
+        v37 = &StringLiteral_6687/*"FRIEND_REMOVE_CANCEL"*/;
         break;
       case 6:
-        v23 = this->fields.messageLabel;
+        v46 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6608/*"FOLLOW_OFFER_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6599/*"FOLLOW_OFFER_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v23 )
+        if ( !v46 )
           goto LABEL_51;
-        UILabel__set_text(v23, (System_String_o *)gameObject, 0LL);
-        v24 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6607/*"FOLLOW_OFFER_DECIDE"*/, 0LL);
-        if ( !v24 )
+        UILabel__set_text(v46, (System_String_o *)gameObject, 0LL);
+        v47 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6598/*"FOLLOW_OFFER_DECIDE"*/, 0LL);
+        if ( !v47 )
           goto LABEL_51;
-        UILabel__set_text(v24, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v47, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6606/*"FOLLOW_OFFER_CANCEL"*/;
+        v37 = &StringLiteral_6597/*"FOLLOW_OFFER_CANCEL"*/;
         break;
       case 7:
-        v25 = this->fields.messageLabel;
+        v48 = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6611/*"FOLLOW_REMOVE_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6602/*"FOLLOW_REMOVE_MESSAGE"*/, 0LL);
         if ( !entity )
           goto LABEL_51;
         gameObject = (UnityEngine_GameObject_o *)System_String__Format(
                                                    (System_String_o *)gameObject,
                                                    (Il2CppObject *)entity->fields.userName,
                                                    0LL);
-        if ( !v25 )
+        if ( !v48 )
           goto LABEL_51;
-        UILabel__set_text(v25, (System_String_o *)gameObject, 0LL);
-        v26 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6610/*"FOLLOW_REMOVE_DECIDE"*/, 0LL);
-        if ( !v26 )
+        UILabel__set_text(v48, (System_String_o *)gameObject, 0LL);
+        v49 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6601/*"FOLLOW_REMOVE_DECIDE"*/, 0LL);
+        if ( !v49 )
           goto LABEL_51;
-        UILabel__set_text(v26, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v49, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v14 = &StringLiteral_6609/*"FOLLOW_REMOVE_CANCEL"*/;
+        v37 = &StringLiteral_6600/*"FOLLOW_REMOVE_CANCEL"*/;
         break;
       default:
         goto LABEL_50;
     }
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v14, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v37, 0LL);
     if ( !cancelLabel )
 LABEL_51:
-      sub_1C22094(gameObject, v10);
+      sub_1C2E388(gameObject, v33);
     UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
 LABEL_50:
     this->fields.state = 1;
-    v27 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-    System_Action___ctor(v27, (Il2CppObject *)this, Method_FriendOperationConfirmMenu_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
+    v50 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    System_Action___ctor(v50, (Il2CppObject *)this, Method_FriendOperationConfirmMenu_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v50, 0, 0LL);
   }
 }
 
@@ -415,10 +440,10 @@ void __fastcall FriendOperationConfirmMenu__add_callbackFunc(
   FriendOperationConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BD762C & 1) == 0 )
+  if ( (byte_4BF880C & 1) == 0 )
   {
-    sub_1C21E38(&FriendOperationConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4BD762C = 1;
+    sub_1C2E12C(&FriendOperationConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4BF880C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -431,13 +456,13 @@ void __fastcall FriendOperationConfirmMenu__add_callbackFunc(
       if ( (FriendOperationConfirmMenu_CallbackFunc_c *)v8->klass != FriendOperationConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FriendOperationConfirmMenu_o *)sub_1C22354(v8);
+  v11 = (FriendOperationConfirmMenu_o *)sub_1C2E648(v8);
   FriendOperationConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -446,12 +471,12 @@ System_String_o *__fastcall FriendOperationConfirmMenu__get_closeBtnPath(
         FriendOperationConfirmMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BD7633 & 1) == 0 )
+  if ( (byte_4BF8813 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_4772/*"ConfirmWindow/CancelButton"*/);
-    byte_4BD7633 = 1;
+    sub_1C2E12C(&StringLiteral_4760/*"ConfirmWindow/CancelButton"*/, method);
+    byte_4BF8813 = 1;
   }
-  return (System_String_o *)StringLiteral_4772/*"ConfirmWindow/CancelButton"*/;
+  return (System_String_o *)StringLiteral_4760/*"ConfirmWindow/CancelButton"*/;
 }
 
 
@@ -469,10 +494,10 @@ void __fastcall FriendOperationConfirmMenu__remove_callbackFunc(
   FriendOperationConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BD762D & 1) == 0 )
+  if ( (byte_4BF880D & 1) == 0 )
   {
-    sub_1C21E38(&FriendOperationConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4BD762D = 1;
+    sub_1C2E12C(&FriendOperationConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4BF880D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -485,13 +510,13 @@ void __fastcall FriendOperationConfirmMenu__remove_callbackFunc(
       if ( (FriendOperationConfirmMenu_CallbackFunc_c *)v8->klass != FriendOperationConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FriendOperationConfirmMenu_o *)sub_1C22354(v8);
+  v11 = (FriendOperationConfirmMenu_o *)sub_1C2E648(v8);
   FriendOperationConfirmMenu__Init(v11, v12);
 }
 
@@ -514,15 +539,15 @@ void __fastcall FriendOperationConfirmMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(&this->fields.method, object);
+  sub_1C2E0D0(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v6) & 1) == 0 )
+  if ( (sub_1C2E1EC(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v10, 0LL);
+      v10 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -534,12 +559,13 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A5B8A4;
+  this->fields.m_target = (Il2CppObject *)sub_1A67D44;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A5B85C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A67CFC;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall FriendOperationConfirmMenu_CallbackFunc__BeginInvoke(
         FriendOperationConfirmMenu_CallbackFunc_o *this,
         bool result,
@@ -551,14 +577,14 @@ System_IAsyncResult_o *__fastcall FriendOperationConfirmMenu_CallbackFunc__Begin
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4BD7635 & 1) == 0 )
+  if ( (byte_4BF8815 & 1) == 0 )
   {
-    sub_1C21E38(&bool_TypeInfo);
-    byte_4BD7635 = 1;
+    sub_1C2E12C(&bool_TypeInfo, result);
+    byte_4BF8815 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -567,7 +593,7 @@ void __fastcall FriendOperationConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 

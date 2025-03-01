@@ -22,10 +22,10 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   il2cpp_array_size_t v12; // w21
 
   v4 = this;
-  if ( (byte_4BDD9D0 & 1) == 0 )
+  if ( (byte_4BFEC0D & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_1C21E38(&RaceResultEffectParam_TypeInfo);
-    byte_4BDD9D0 = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_1C2E12C(&RaceResultEffectParam_TypeInfo, param);
+    byte_4BFEC0D = 1;
   }
   if ( param
     && (methodPtr_low = LOBYTE(RaceResultEffectParam_TypeInfo->vtable._0_Equals.methodPtr),
@@ -43,7 +43,7 @@ void __fastcall RankObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_27:
-    sub_1C22094(this, param);
+    sub_1C2E388(this, param);
   max_length = switchObjectList->max_length;
   if ( v6
     && (monitor = v6[1].monitor) != 0LL
@@ -85,6 +85,6 @@ LABEL_27:
         goto LABEL_27;
     }
 LABEL_29:
-    sub_1C2209C(this, param);
+    sub_1C2E390(this, param);
   }
 }

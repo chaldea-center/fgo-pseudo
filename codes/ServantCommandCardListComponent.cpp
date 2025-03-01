@@ -24,20 +24,20 @@ void __fastcall ServantCommandCardListComponent___ctor(
   FollowerInfo_o *v22; // x6
   PartyListViewItem_o *v23; // x7
 
-  if ( (byte_4BDBA5C & 1) == 0 )
+  if ( (byte_4BFCC61 & 1) == 0 )
   {
-    sub_1C21E38(&UISprite___TypeInfo);
-    byte_4BDBA5C = 1;
+    sub_1C2E12C(&UISprite___TypeInfo, method);
+    byte_4BFCC61 = 1;
   }
-  v3 = (struct UISprite_array *)sub_1C21EE0(UISprite___TypeInfo, 5LL);
+  v3 = (struct UISprite_array *)sub_1C2E1D4(UISprite___TypeInfo, 5LL);
   this->fields.cardSpriteList = v3;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.cardSpriteList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (struct UISprite_array *)sub_1C21EE0(UISprite___TypeInfo, 5LL);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.cardSpriteList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (struct UISprite_array *)sub_1C2E1D4(UISprite___TypeInfo, 5LL);
   this->fields.grantSpriteList = v10;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.grantSpriteList, (int64_t)v10, v11, v12, v13, v14, v15, v16);
-  v17 = (struct UISprite_array *)sub_1C21EE0(UISprite___TypeInfo, 5LL);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.grantSpriteList, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+  v17 = (struct UISprite_array *)sub_1C2E1D4(UISprite___TypeInfo, 5LL);
   this->fields.cardRankSpriteList = v17;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.cardRankSpriteList,
     (int64_t)v17,
     v18,
@@ -48,7 +48,7 @@ void __fastcall ServantCommandCardListComponent___ctor(
     v23);
   __asm { FMOV            V1.4S, #1.0 }
   this->fields.COMMAND_CARD_NORMAL = _Q1;
-  this->fields.COMMAND_CARD_GRAY_OUT = (struct UnityEngine_Color_o)xmmword_BFDCD0;
+  this->fields.COMMAND_CARD_GRAY_OUT = (struct UnityEngine_Color_o)xmmword_C05D40;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -68,7 +68,7 @@ void __fastcall ServantCommandCardListComponent__AdjustCardSpriteListPosX(
   cardSpriteList = this->fields.cardSpriteList;
   if ( !cardSpriteList )
 LABEL_7:
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   v6 = this;
   v8 = 0LL;
   while ( 1 )
@@ -77,7 +77,7 @@ LABEL_7:
     if ( (int)v8 >= max_length )
       break;
     if ( (unsigned int)v8 >= max_length )
-      sub_1C2209C(this, method);
+      sub_1C2E390(this, method);
     this = (ServantCommandCardListComponent_o *)cardSpriteList->m_Items[v8];
     if ( this )
     {
@@ -110,10 +110,10 @@ void __fastcall ServantCommandCardListComponent__Clear(
   struct UISprite_array *v11; // x8
 
   v2 = this;
-  if ( (byte_4BDBA56 & 1) == 0 )
+  if ( (byte_4BFCC5B & 1) == 0 )
   {
-    this = (ServantCommandCardListComponent_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDBA56 = 1;
+    this = (ServantCommandCardListComponent_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4BFCC5B = 1;
   }
   cardSpriteList = v2->fields.cardSpriteList;
   if ( !cardSpriteList )
@@ -127,7 +127,7 @@ void __fastcall ServantCommandCardListComponent__Clear(
     {
       if ( v6 >= cardSpriteList->max_length )
 LABEL_24:
-        sub_1C2209C(this, method);
+        sub_1C2E390(this, method);
       v7 = (int)v6;
       this = (ServantCommandCardListComponent_o *)cardSpriteList->m_Items[v6];
       if ( !this )
@@ -170,7 +170,7 @@ LABEL_24:
     }
     while ( cardSpriteList );
 LABEL_22:
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   }
 }
 
@@ -183,18 +183,20 @@ void __fastcall ServantCommandCardListComponent__Set(
         const MethodInfo *method)
 {
   bool v8; // w22
-  Il2CppObject *Instance; // x0
+  __int64 v9; // x1
   __int64 v10; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v12; // x1
   Il2CppObject *Entity; // x1
-  const MethodInfo *v12; // x3
+  const MethodInfo *v14; // x3
 
   v8 = isChkLock;
-  if ( (byte_4BDBA57 & 1) == 0 )
+  if ( (byte_4BFCC5C & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C21E38(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDBA57 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_UserServantMaster___, userSvtId);
+    sub_1C2E12C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v9);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    byte_4BFCC5C = 1;
   }
   this->fields.isChkLock = v8;
   if ( userSvtId <= 0 )
@@ -203,19 +205,19 @@ void __fastcall ServantCommandCardListComponent__Set(
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
+                       (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0LL )
     {
-      sub_1C22094(Instance, v10);
+      sub_1C2E388(Instance, v12);
     }
     Entity = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                userSvtId,
-               (const MethodInfo_325E324 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    ServantCommandCardListComponent__Set_39457240(this, (UserServantEntity_o *)Entity, cardIconType, v12);
+               (const MethodInfo_327D6DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    ServantCommandCardListComponent__Set_39527832(this, (UserServantEntity_o *)Entity, cardIconType, v14);
   }
 }
 
@@ -226,11 +228,11 @@ void __fastcall ServantCommandCardListComponent__SetHide(
 {
   const MethodInfo *v2; // x7
 
-  ServantCommandCardListComponent__Set_39455936(this, 0LL, 0LL, 0LL, 4, 1, 0, v2);
+  ServantCommandCardListComponent__Set_39526528(this, 0LL, 0LL, 0LL, 4, 1, 0, v2);
 }
 
 
-void __fastcall ServantCommandCardListComponent__Set_39455936(
+void __fastcall ServantCommandCardListComponent__Set_39526528(
         ServantCommandCardListComponent_o *this,
         System_Int32_array *cardIds,
         System_Int32_array *cardParams,
@@ -240,63 +242,68 @@ void __fastcall ServantCommandCardListComponent__Set_39455936(
         int32_t svtId,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v12; // x1
   __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  DataManager_o *Instance; // x0
+  __int64 v18; // x1
   Il2CppObject *MasterData_object; // x19
   struct UISprite_array *cardSpriteList; // x8
   int max_length; // w9
-  int v17; // w21
-  il2cpp_array_size_t v18; // w9
+  int v22; // w21
+  il2cpp_array_size_t v23; // w9
   struct UISprite_array *grantSpriteList; // x10
-  __int64 v20; // x22
+  __int64 v25; // x22
   struct UISprite_array *cardRankSpriteList; // x9
-  UISprite_o *v22; // x28
-  UnityEngine_Behaviour_o *v23; // x26
-  UnityEngine_Object_o *v24; // x25
-  int32_t v25; // w29
-  int32_t v26; // w19
-  int32_t v27; // w27
-  il2cpp_array_size_t v28; // w8
-  il2cpp_array_size_t v29; // w8
-  UserServantCommandCodeEntity_o *v30; // x8
+  UISprite_o *v27; // x28
+  UnityEngine_Behaviour_o *v28; // x26
+  UnityEngine_Object_o *v29; // x25
+  int32_t v30; // w29
+  int32_t v31; // w19
+  int32_t v32; // w27
+  il2cpp_array_size_t v33; // w8
+  il2cpp_array_size_t v34; // w8
+  UserServantCommandCodeEntity_o *v35; // x8
   struct System_Int64_array *userCommandCodeIds; // x8
-  int v32; // w9
+  int v37; // w9
   float *p_a; // x8
   struct UnityEngine_Color_o *p_COMMAND_CARD_NORMAL; // x11
   float *p_b; // x9
   float *p_g; // x10
-  bool v37; // w1
-  UnityEngine_Behaviour_o *v38; // x0
-  unsigned __int8 v42; // [xsp+60h] [xbp-70h]
-  signed int v43; // [xsp+64h] [xbp-6Ch]
+  bool v42; // w1
+  UnityEngine_Behaviour_o *v43; // x0
+  unsigned __int8 v47; // [xsp+60h] [xbp-70h]
+  signed int v48; // [xsp+64h] [xbp-6Ch]
   UserServantCommandCodeEntity_o *entity; // [xsp+68h] [xbp-68h] BYREF
-  UnityEngine_Color_o v45; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v50; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BDBA5B & 1) == 0 )
+  if ( (byte_4BFCC60 & 1) == 0 )
   {
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    sub_1C21E38(&BattleCommand_TypeInfo);
-    sub_1C21E38(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDBA5B = 1;
+    sub_1C2E12C(&AtlasManager_TypeInfo, cardIds);
+    sub_1C2E12C(&BattleCommand_TypeInfo, v12);
+    sub_1C2E12C(&Method_DataManager_GetMasterData_UserServantCommandCodeMaster___, v13);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v14);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v15);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_4BFCC60 = 1;
   }
   entity = 0LL;
   if ( cardIds )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_68;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
+                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserServantCommandCodeMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BD6FF5 )
+    if ( !byte_4BF81D5 )
     {
-      sub_1C21E38(&NetworkManager_TypeInfo);
-      byte_4BD6FF5 = 1;
+      sub_1C2E12C(&NetworkManager_TypeInfo, v18);
+      byte_4BF81D5 = 1;
     }
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -314,101 +321,101 @@ void __fastcall ServantCommandCardListComponent__Set_39455936(
           (cardSpriteList = this->fields.cardSpriteList) == 0LL) )
     {
 LABEL_68:
-      sub_1C22094(Instance, v13);
+      sub_1C2E388(Instance, v18);
     }
     max_length = cardSpriteList->max_length;
-    v17 = max_length - 1;
+    v22 = max_length - 1;
     if ( max_length >= 1 )
     {
-      v18 = 0;
-      v42 = (unsigned __int8)Instance;
-      v43 = cardIds->max_length;
+      v23 = 0;
+      v47 = (unsigned __int8)Instance;
+      v48 = cardIds->max_length;
       while ( 1 )
       {
-        if ( v18 >= cardSpriteList->max_length )
+        if ( v23 >= cardSpriteList->max_length )
           goto LABEL_71;
         grantSpriteList = this->fields.grantSpriteList;
         if ( !grantSpriteList )
           goto LABEL_68;
-        v20 = (int)v18;
-        if ( v18 >= grantSpriteList->max_length )
+        v25 = (int)v23;
+        if ( v23 >= grantSpriteList->max_length )
           goto LABEL_71;
         cardRankSpriteList = this->fields.cardRankSpriteList;
         if ( !cardRankSpriteList )
           goto LABEL_68;
-        if ( (unsigned int)v20 >= cardRankSpriteList->max_length )
+        if ( (unsigned int)v25 >= cardRankSpriteList->max_length )
 LABEL_71:
-          sub_1C2209C(Instance, v13);
-        v22 = cardSpriteList->m_Items[v20];
-        v23 = (UnityEngine_Behaviour_o *)grantSpriteList->m_Items[v20];
-        v24 = (UnityEngine_Object_o *)cardRankSpriteList->m_Items[v20];
-        v25 = 0;
+          sub_1C2E390(Instance, v18);
+        v27 = cardSpriteList->m_Items[v25];
+        v28 = (UnityEngine_Behaviour_o *)grantSpriteList->m_Items[v25];
+        v29 = (UnityEngine_Object_o *)cardRankSpriteList->m_Items[v25];
+        v30 = 0;
         if ( collectionStatus == 4 )
         {
-          v26 = 0;
-          v27 = 0;
+          v31 = 0;
+          v32 = 0;
         }
         else
         {
-          v26 = 0;
-          v27 = 0;
-          if ( (int)v20 < v43 )
+          v31 = 0;
+          v32 = 0;
+          if ( (int)v25 < v48 )
           {
-            if ( (unsigned int)v20 >= cardIds->max_length )
+            if ( (unsigned int)v25 >= cardIds->max_length )
               goto LABEL_71;
-            v27 = cardIds->m_Items[v20 + 1];
-            if ( codeIds && (v28 = codeIds->max_length, (int)v20 < (int)v28) )
+            v32 = cardIds->m_Items[v25 + 1];
+            if ( codeIds && (v33 = codeIds->max_length, (int)v25 < (int)v33) )
             {
-              if ( (unsigned int)v20 >= v28 )
+              if ( (unsigned int)v25 >= v33 )
                 goto LABEL_71;
-              v26 = codeIds->m_Items[v20 + 1];
+              v31 = codeIds->m_Items[v25 + 1];
             }
             else
             {
-              v26 = 0;
+              v31 = 0;
             }
-            if ( cardParams && (v29 = cardParams->max_length, (int)v20 < (int)v29) )
+            if ( cardParams && (v34 = cardParams->max_length, (int)v25 < (int)v34) )
             {
-              if ( (unsigned int)v20 >= v29 )
+              if ( (unsigned int)v25 >= v34 )
                 goto LABEL_71;
-              v25 = cardParams->m_Items[v20 + 1];
+              v30 = cardParams->m_Items[v25 + 1];
             }
             else
             {
-              v25 = 0;
+              v30 = 0;
             }
           }
         }
         if ( !BattleCommand_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-        BattleCommand__setSprite(v22, v27, 0LL);
+        BattleCommand__setSprite(v27, v32, 0LL);
         if ( this->fields.isChkLock )
         {
-          v30 = entity;
+          v35 = entity;
           if ( entity )
           {
             userCommandCodeIds = entity->fields.userCommandCodeIds;
             if ( !userCommandCodeIds )
               goto LABEL_68;
-            v32 = userCommandCodeIds->max_length;
-            if ( (int)v20 >= v32 )
+            v37 = userCommandCodeIds->max_length;
+            if ( (int)v25 >= v37 )
             {
-              v30 = 0LL;
+              v35 = 0LL;
             }
             else
             {
-              if ( (unsigned int)v20 >= v32 )
+              if ( (unsigned int)v25 >= v37 )
                 goto LABEL_71;
-              v30 = (UserServantCommandCodeEntity_o *)userCommandCodeIds->m_Items[v20];
+              v35 = (UserServantCommandCodeEntity_o *)userCommandCodeIds->m_Items[v25];
             }
           }
-          if ( ((v30 != (UserServantCommandCodeEntity_o *)-1LL) & v42) != 0 )
+          if ( ((v35 != (UserServantCommandCodeEntity_o *)-1LL) & v47) != 0 )
           {
             p_COMMAND_CARD_NORMAL = &this->fields.COMMAND_CARD_NORMAL;
             p_a = &this->fields.COMMAND_CARD_NORMAL.fields.a;
             p_g = &this->fields.COMMAND_CARD_NORMAL.fields.g;
             p_b = &this->fields.COMMAND_CARD_NORMAL.fields.b;
-            if ( !v22 )
+            if ( !v27 )
               goto LABEL_68;
           }
           else
@@ -417,41 +424,41 @@ LABEL_71:
             p_a = &this->fields.COMMAND_CARD_GRAY_OUT.fields.a;
             p_g = &this->fields.COMMAND_CARD_GRAY_OUT.fields.g;
             p_b = &this->fields.COMMAND_CARD_GRAY_OUT.fields.b;
-            if ( !v22 )
+            if ( !v27 )
               goto LABEL_68;
           }
-          v45.fields.a = *p_a;
-          v45.fields.b = *p_b;
-          v45.fields.g = *p_g;
-          v45.fields.r = p_COMMAND_CARD_NORMAL->fields.r;
-          UIWidget__set_color((UIWidget_o *)v22, v45, 0LL);
+          v50.fields.a = *p_a;
+          v50.fields.b = *p_b;
+          v50.fields.g = *p_g;
+          v50.fields.r = p_COMMAND_CARD_NORMAL->fields.r;
+          UIWidget__set_color((UIWidget_o *)v27, v50, 0LL);
         }
-        if ( !v23 )
+        if ( !v28 )
           goto LABEL_68;
-        if ( v26 < 1 )
+        if ( v31 < 1 )
         {
-          UnityEngine_Behaviour__set_enabled(v23, 0, 0LL);
+          UnityEngine_Behaviour__set_enabled(v28, 0, 0LL);
         }
         else
         {
-          UnityEngine_Behaviour__set_enabled(v23, 1, 0LL);
+          UnityEngine_Behaviour__set_enabled(v28, 1, 0LL);
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          AtlasManager__SetCommandCodeMiniImage((UISprite_o *)v23, v26, 0LL);
+          AtlasManager__SetCommandCodeMiniImage((UISprite_o *)v28, v31, 0LL);
         }
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        Instance = (DataManager_o *)UnityEngine_Object__op_Inequality(v24, 0LL, 0LL);
-        if ( v25 < 1 )
+        Instance = (DataManager_o *)UnityEngine_Object__op_Inequality(v29, 0LL, 0LL);
+        if ( v30 < 1 )
         {
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
-            if ( !v24 )
+            if ( !v29 )
               goto LABEL_68;
-            v38 = (UnityEngine_Behaviour_o *)v24;
-            v37 = 0;
+            v43 = (UnityEngine_Behaviour_o *)v29;
+            v42 = 0;
 LABEL_65:
-            UnityEngine_Behaviour__set_enabled(v38, v37, 0LL);
+            UnityEngine_Behaviour__set_enabled(v43, v42, 0LL);
           }
         }
         else if ( ((unsigned __int8)Instance & 1) != 0 )
@@ -459,21 +466,21 @@ LABEL_65:
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
           Instance = (DataManager_o *)AtlasManager__SetCommandCardIconImage(
-                                        (UISprite_o *)v24,
-                                        v25,
+                                        (UISprite_o *)v29,
+                                        v30,
                                         cardIconType,
                                         0,
                                         0LL);
-          if ( !v24 )
+          if ( !v29 )
             goto LABEL_68;
-          v37 = (unsigned __int8)Instance & 1;
-          v38 = (UnityEngine_Behaviour_o *)v24;
+          v42 = (unsigned __int8)Instance & 1;
+          v43 = (UnityEngine_Behaviour_o *)v29;
           goto LABEL_65;
         }
-        if ( v17 == (_DWORD)v20 )
+        if ( v22 == (_DWORD)v25 )
           return;
         cardSpriteList = this->fields.cardSpriteList;
-        v18 = v20 + 1;
+        v23 = v25 + 1;
         if ( !cardSpriteList )
           goto LABEL_68;
       }
@@ -486,7 +493,7 @@ LABEL_65:
 }
 
 
-void __fastcall ServantCommandCardListComponent__Set_39457240(
+void __fastcall ServantCommandCardListComponent__Set_39527832(
         ServantCommandCardListComponent_o *this,
         UserServantEntity_o *userSvtEntity,
         int32_t cardIconType,
@@ -500,10 +507,10 @@ void __fastcall ServantCommandCardListComponent__Set_39457240(
   const MethodInfo *v12; // x6
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4BDBA58 & 1) == 0 )
+  if ( (byte_4BFCC5D & 1) == 0 )
   {
-    sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4BDBA58 = 1;
+    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, userSvtEntity);
+    byte_4BFCC5D = 1;
   }
   if ( userSvtEntity )
   {
@@ -513,10 +520,10 @@ void __fastcall ServantCommandCardListComponent__Set_39457240(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v13.fields.currentCryptoKey = v8;
     *(_QWORD *)&v13.fields.fakeValue = v7;
-    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v13, 0LL);
+    v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v13, 0LL);
     CommandCardParam = UserServantEntity__GetCommandCardParam(userSvtEntity, 0LL);
     CommandCodeIdList = UserServantEntity__getCommandCodeIdList(userSvtEntity, 0LL);
-    ServantCommandCardListComponent__Set_39457436(this, v9, CommandCardParam, CommandCodeIdList, 2, cardIconType, v12);
+    ServantCommandCardListComponent__Set_39528028(this, v9, CommandCardParam, CommandCodeIdList, 2, cardIconType, v12);
   }
   else
   {
@@ -526,7 +533,7 @@ void __fastcall ServantCommandCardListComponent__Set_39457240(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantCommandCardListComponent__Set_39457436(
+void __fastcall ServantCommandCardListComponent__Set_39528028(
         ServantCommandCardListComponent_o *this,
         int32_t svtId,
         System_Int32_array *cardParams,
@@ -535,16 +542,18 @@ void __fastcall ServantCommandCardListComponent__Set_39457436(
         int32_t cardIconType,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v13; // x1
   __int64 v14; // x1
-  const MethodInfo *v15; // x7
+  Il2CppObject *Instance; // x0
+  __int64 v16; // x1
+  const MethodInfo *v17; // x7
 
-  if ( (byte_4BDBA5A & 1) == 0 )
+  if ( (byte_4BFCC5F & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C21E38(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDBA5A = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4BFCC5F = 1;
   }
   if ( svtId <= 0 )
   {
@@ -552,19 +561,19 @@ void __fastcall ServantCommandCardListComponent__Set_39457436(
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL
+                       (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___)) == 0LL
       || (Instance = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                        svtId,
-                       (const MethodInfo_325BDC8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
+                       (const MethodInfo_327B180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
     {
-      sub_1C22094(Instance, v14);
+      sub_1C2E388(Instance, v16);
     }
-    ServantCommandCardListComponent__Set_39455936(
+    ServantCommandCardListComponent__Set_39526528(
       this,
       (System_Int32_array *)Instance[9].klass,
       cardParams,
@@ -572,13 +581,13 @@ void __fastcall ServantCommandCardListComponent__Set_39457436(
       collectionStatus,
       cardIconType,
       svtId,
-      v15);
+      v17);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantCommandCardListComponent__Set_39457680(
+void __fastcall ServantCommandCardListComponent__Set_39528272(
         ServantCommandCardListComponent_o *this,
         int32_t svtId,
         System_Int32_array *codeIds,
@@ -586,60 +595,65 @@ void __fastcall ServantCommandCardListComponent__Set_39457680(
         int32_t cardIconType,
         const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v11; // x1
   __int64 v12; // x1
-  Il2CppObject *v13; // x24
-  long double v14; // q0
-  __int64 v15; // x8
-  __int64 v16; // x0
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  DataManager_o *Instance; // x0
+  __int64 v17; // x1
+  Il2CppObject *v18; // x24
+  long double v19; // q0
+  __int64 v20; // x8
+  __int64 v21; // x0
   Il2CppObject *MasterData_object; // x25
-  const MethodInfo *v18; // x7
+  const MethodInfo *v23; // x7
   System_Int32_array *commandCardParam; // x2
   UserServantCommandCardEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4BDBA59 & 1) == 0 )
+  if ( (byte_4BFCC5E & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C21E38(&Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
-    sub_1C21E38(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDBA59 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C2E12C(&Method_DataManager_GetMasterData_UserServantCommandCardMaster___, v11);
+    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v13);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v14);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4BFCC5E = 1;
   }
   entity = 0LL;
   if ( svtId > 0 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
-        v13 = DataMasterBase_object__object__int___GetEntity(
+        v18 = DataMasterBase_object__object__int___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                 svtId,
-                (const MethodInfo_325BDC8 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-        v15 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-        if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-          v15 = sub_1C73D14(v14);
-        v16 = *(_QWORD *)(*(_QWORD *)(v15 + 192) + 16LL);
-        if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-          v16 = sub_1C73D14(v14);
-        Instance = **(DataManager_o ***)(v16 + 184);
+                (const MethodInfo_327B180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+        v20 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+        if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
+          v20 = sub_1C80008(v19);
+        v21 = *(_QWORD *)(*(_QWORD *)(v20 + 192) + 16LL);
+        if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
+          v21 = sub_1C80008(v19);
+        Instance = **(DataManager_o ***)(v21 + 184);
         if ( Instance )
         {
           MasterData_object = DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
+                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserServantCommandCardMaster___);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BD6FF5 )
+          if ( !byte_4BF81D5 )
           {
-            sub_1C21E38(&NetworkManager_TypeInfo);
-            byte_4BD6FF5 = 1;
+            sub_1C2E12C(&NetworkManager_TypeInfo, v17);
+            byte_4BF81D5 = 1;
           }
           Instance = (DataManager_o *)NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -662,17 +676,17 @@ void __fastcall ServantCommandCardListComponent__Set_39457680(
                 goto LABEL_25;
               commandCardParam = entity->fields.commandCardParam;
             }
-            if ( v13 )
+            if ( v18 )
             {
-              ServantCommandCardListComponent__Set_39455936(
+              ServantCommandCardListComponent__Set_39526528(
                 this,
-                (System_Int32_array *)v13[9].klass,
+                (System_Int32_array *)v18[9].klass,
                 commandCardParam,
                 codeIds,
                 collectionStatus,
                 cardIconType,
                 svtId,
-                v18);
+                v23);
               return;
             }
           }
@@ -680,7 +694,7 @@ void __fastcall ServantCommandCardListComponent__Set_39457680(
       }
     }
 LABEL_25:
-    sub_1C22094(Instance, v12);
+    sub_1C2E388(Instance, v17);
   }
   ServantCommandCardListComponent__Clear(this, *(const MethodInfo **)&svtId);
 }

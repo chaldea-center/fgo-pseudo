@@ -14,69 +14,72 @@ int32_t __fastcall GainNpIndividualSum__GetIndividualityIncludeTargetSum(
         const MethodInfo *method)
 {
   BattleData_o *v10; // x20
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
   System_Int32_array *vals; // x21
   int32_t Param; // w0
-  const MethodInfo *v13; // x4
+  const MethodInfo *v16; // x4
   System_Collections_Generic_List_int__o *TargetUniqueIdList; // x23
-  int v15; // w22
-  int32_t v16; // w19
-  _BOOL8 v17; // x0
-  __int64 v18; // x1
+  int v18; // w22
+  int32_t v19; // w19
+  _BOOL8 v20; // x0
+  __int64 v21; // x1
   BattleServantData_o *ServantData; // x0
-  BattleServantData_o *v20; // x23
-  System_Collections_Generic_List_Enumerator_int__o v22; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v23; // [xsp+20h] [xbp-60h] BYREF
+  BattleServantData_o *v23; // x23
+  System_Collections_Generic_List_Enumerator_int__o v25; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v26; // [xsp+20h] [xbp-60h] BYREF
 
   v10 = battleData;
-  if ( (byte_4BDF292 & 1) == 0 )
+  if ( (byte_4C00520 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    battleData = (BattleData_o *)sub_1C21E38(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    byte_4BDF292 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, *(_QWORD *)&actorId);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v11);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v12);
+    battleData = (BattleData_o *)sub_1C2E12C(&Method_System_Collections_Generic_List_int__GetEnumerator__, v13);
+    byte_4C00520 = 1;
   }
-  memset(&v23, 0, sizeof(v23));
+  memset(&v26, 0, sizeof(v26));
   if ( !functionEntity
     || !baseVals
     || (vals = functionEntity->fields.vals,
         Param = DataVals__GetParam(baseVals, 4, 0, 0LL),
-        TargetUniqueIdList = GainNpIndividualSum__GetTargetUniqueIdList(Param, v10, actorId, targetId, v13),
+        TargetUniqueIdList = GainNpIndividualSum__GetTargetUniqueIdList(Param, v10, actorId, targetId, v16),
         battleData = (BattleData_o *)DataVals__GetParam(baseVals, 114, 0, 0LL),
         !TargetUniqueIdList) )
   {
-    sub_1C22094(battleData, *(_QWORD *)&actorId);
+    sub_1C2E388(battleData, *(_QWORD *)&actorId);
   }
-  v15 = (int)battleData;
+  v18 = (int)battleData;
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v25,
     TargetUniqueIdList,
-    (const MethodInfo_3632B64 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v16 = 0;
-  v23 = v22;
+    (const MethodInfo_364F35C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v19 = 0;
+  v26 = v25;
   while ( 1 )
   {
-    v17 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v23,
-            (const MethodInfo_33DD1D0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    if ( !v17 )
+    v20 = System_Collections_Generic_List_Enumerator_int___MoveNext(
+            &v26,
+            (const MethodInfo_33FC0F8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    if ( !v20 )
       break;
     if ( !v10 )
-      sub_1C22094(v17, v18);
-    ServantData = BattleData__getServantData(v10, v23.fields._current, 0LL);
-    v20 = ServantData;
+      sub_1C2E388(v20, v21);
+    ServantData = BattleData__getServantData(v10, v26.fields._current, 0LL);
+    v23 = ServantData;
     if ( ServantData
       && !BattleServantData__isLogicDeadAndNoRevive(ServantData, 0LL)
-      && (BattleServantData__checkIndividualities(v20, vals, 0LL)
-       || BattleServantData__checkBuffIndividualities(v20, vals, v15 < 1, 0, 0, 0LL)) )
+      && (BattleServantData__checkIndividualities(v23, vals, 0LL)
+       || BattleServantData__checkBuffIndividualities(v23, vals, v18 < 1, 0, 0, 0LL)) )
     {
-      ++v16;
+      ++v19;
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v23,
-    (const MethodInfo_33DD1CC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  return v16;
+    &v26,
+    (const MethodInfo_33FC0F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  return v19;
 }
 
 
@@ -90,140 +93,147 @@ int32_t __fastcall GainNpIndividualSum__GetSameIndiualitySum(
         const MethodInfo *method)
 {
   BattleData_o *v10; // x19
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
   System_Int32_array *vals; // x20
-  System_Collections_Generic_List_int__o *v12; // x22
+  System_Collections_Generic_List_int__o *v19; // x22
   struct System_Int32_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v21; // x9
   __int64 size; // x10
-  int32_t v16; // w4
+  int32_t v23; // w4
   System_Int32_array *TargetIds; // x0
-  const MethodInfo_363229C *v18; // x2
-  BattleData_o *v19; // x1
-  int v20; // w23
-  int v21; // w21
-  _BOOL8 v22; // x0
-  __int64 v23; // x1
+  const MethodInfo_364EA94 *v25; // x2
+  BattleData_o *v26; // x1
+  int v27; // w23
+  int v28; // w21
+  _BOOL8 v29; // x0
+  __int64 v30; // x1
   BattleServantData_o *ServantData; // x0
-  __int64 v25; // x1
-  BattleServantData_o *v26; // x22
-  int v27; // w21
-  System_Collections_Generic_List_Enumerator_int__o v29; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v30; // [xsp+20h] [xbp-60h] BYREF
+  __int64 v32; // x1
+  BattleServantData_o *v33; // x22
+  int v34; // w21
+  System_Collections_Generic_List_Enumerator_int__o v36; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v37; // [xsp+20h] [xbp-60h] BYREF
 
   v10 = data;
-  if ( (byte_4BDF290 & 1) == 0 )
+  if ( (byte_4C0051E & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int___ctor__);
-    data = (BattleData_o *)sub_1C21E38(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4BDF290 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, *(_QWORD *)&actorId);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v11);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v12);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__AddRange__, v13);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Add__, v14);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__GetEnumerator__, v15);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int___ctor__, v16);
+    data = (BattleData_o *)sub_1C2E12C(&System_Collections_Generic_List_int__TypeInfo, v17);
+    byte_4C0051E = 1;
   }
-  memset(&v30, 0, sizeof(v30));
+  memset(&v37, 0, sizeof(v37));
   if ( !funcEnt
     || (vals = funcEnt->fields.vals,
-        v12 = (System_Collections_Generic_List_int__o *)sub_1C22084(System_Collections_Generic_List_int__TypeInfo),
+        v19 = (System_Collections_Generic_List_int__o *)sub_1C2E378(System_Collections_Generic_List_int__TypeInfo),
         System_Collections_Generic_List_int____ctor(
-          v12,
-          (const MethodInfo_363183C *)Method_System_Collections_Generic_List_int___ctor__),
+          v19,
+          (const MethodInfo_364E034 *)Method_System_Collections_Generic_List_int___ctor__),
         !baseVals) )
   {
 LABEL_27:
-    sub_1C22094(data, *(_QWORD *)&actorId);
+    sub_1C2E388(data, *(_QWORD *)&actorId);
   }
   data = (BattleData_o *)DataVals__GetParam(baseVals, 4, 0, 0LL);
   switch ( (int)data )
   {
     case 0:
-      if ( !v12 )
+      if ( !v19 )
         goto LABEL_27;
-      items = v12->fields._items;
-      v14 = Method_System_Collections_Generic_List_int__Add__;
-      ++v12->fields._version;
+      items = v19->fields._items;
+      v21 = Method_System_Collections_Generic_List_int__Add__;
+      ++v19->fields._version;
       if ( !items )
         goto LABEL_27;
-      size = v12->fields._size;
+      size = v19->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v12,
+          v19,
           targetId,
-          *(const MethodInfo_3632090 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+          *(const MethodInfo_364E888 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
-        v12->fields._size = size + 1;
+        v19->fields._size = size + 1;
         items->m_Items[size + 1] = targetId;
       }
       goto LABEL_18;
     case 1:
-      v16 = 3;
+      v23 = 3;
       goto LABEL_15;
     case 2:
-      v16 = 6;
+      v23 = 6;
       goto LABEL_15;
     case 3:
       data = (BattleData_o *)Target__getTargetIds(v10, actorId, -1, -1, 3, 0LL, 0LL);
-      if ( !v12 )
+      if ( !v19 )
         goto LABEL_27;
       System_Collections_Generic_List_int___AddRange(
-        v12,
+        v19,
         (System_Collections_Generic_IEnumerable_T__o *)data,
-        (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__);
+        (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__);
       TargetIds = Target__getTargetIds(v10, actorId, -1, -1, 6, 0LL, 0LL);
-      v18 = (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__;
-      v19 = (BattleData_o *)TargetIds;
+      v25 = (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__;
+      v26 = (BattleData_o *)TargetIds;
       goto LABEL_17;
     case 4:
-      v16 = 26;
+      v23 = 26;
 LABEL_15:
-      data = (BattleData_o *)Target__getTargetIds(v10, actorId, -1, -1, v16, 0LL, 0LL);
-      if ( !v12 )
+      data = (BattleData_o *)Target__getTargetIds(v10, actorId, -1, -1, v23, 0LL, 0LL);
+      if ( !v19 )
         goto LABEL_27;
-      v19 = data;
-      v18 = (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__;
+      v26 = data;
+      v25 = (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__;
 LABEL_17:
-      System_Collections_Generic_List_int___AddRange(v12, (System_Collections_Generic_IEnumerable_T__o *)v19, v18);
+      System_Collections_Generic_List_int___AddRange(v19, (System_Collections_Generic_IEnumerable_T__o *)v26, v25);
 LABEL_18:
       LODWORD(data) = DataVals__GetParam(baseVals, 114, 0, 0LL);
 LABEL_19:
-      v20 = (int)data;
+      v27 = (int)data;
       System_Collections_Generic_List_int___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v29,
-        v12,
-        (const MethodInfo_3632B64 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-      v21 = 0;
-      v30 = v29;
+        (System_Collections_Generic_List_Enumerator_T__o *)&v36,
+        v19,
+        (const MethodInfo_364F35C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+      v28 = 0;
+      v37 = v36;
       while ( 1 )
       {
-        v22 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-                &v30,
-                (const MethodInfo_33DD1D0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-        if ( !v22 )
+        v29 = System_Collections_Generic_List_Enumerator_int___MoveNext(
+                &v37,
+                (const MethodInfo_33FC0F8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+        if ( !v29 )
           break;
         if ( !v10 )
-          sub_1C22094(v22, v23);
-        ServantData = BattleData__getServantData(v10, v30.fields._current, 0LL);
-        v26 = ServantData;
+          sub_1C2E388(v29, v30);
+        ServantData = BattleData__getServantData(v10, v37.fields._current, 0LL);
+        v33 = ServantData;
         if ( !ServantData )
-          sub_1C22094(0LL, v25);
+          sub_1C2E388(0LL, v32);
         if ( !BattleServantData__isLogicDeadAndNoRevive(ServantData, 0LL) )
         {
-          v27 = BattleServantData__getSameIndiualityServantSum(v26, vals, 0LL) + v21;
-          v21 = BattleServantData__getSameIndiualityBuffSum(v26, vals, v20 < 1, 0, 0, 0LL) + v27;
+          v34 = BattleServantData__getSameIndiualityServantSum(v33, vals, 0LL) + v28;
+          v28 = BattleServantData__getSameIndiualityBuffSum(v33, vals, v27 < 1, 0, 0, 0LL) + v34;
         }
       }
       System_Collections_Generic_List_Enumerator_int___Dispose(
-        &v30,
-        (const MethodInfo_33DD1CC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-      return v21;
+        &v37,
+        (const MethodInfo_33FC0F4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+      return v28;
     default:
       data = (BattleData_o *)DataVals__GetParam(baseVals, 114, 0, 0LL);
-      if ( !v12 )
+      if ( !v19 )
         goto LABEL_27;
       goto LABEL_19;
   }
@@ -237,58 +247,61 @@ System_Collections_Generic_List_int__o *__fastcall GainNpIndividualSum__GetTarge
         int32_t targetId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_int__o *v9; // x19
-  System_Collections_Generic_IEnumerable_T__o *TargetIds; // x0
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
+  System_Collections_Generic_List_int__o *v12; // x19
+  System_Collections_Generic_IEnumerable_T__o *TargetIds; // x0
+  __int64 v14; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  int32_t v15; // w4
-  System_Int32_array *v16; // x0
-  const MethodInfo_363229C *v17; // x2
-  System_Collections_Generic_IEnumerable_T__o *v18; // x1
+  int32_t v18; // w4
+  System_Int32_array *v19; // x0
+  const MethodInfo_364EA94 *v20; // x2
+  System_Collections_Generic_IEnumerable_T__o *v21; // x1
 
-  if ( (byte_4BDF291 & 1) == 0 )
+  if ( (byte_4C0051F & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__AddRange__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4BDF291 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__AddRange__, battleData);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Add__, v9);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int___ctor__, v10);
+    sub_1C2E12C(&System_Collections_Generic_List_int__TypeInfo, v11);
+    byte_4C0051F = 1;
   }
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C22084(System_Collections_Generic_List_int__TypeInfo);
+  v12 = (System_Collections_Generic_List_int__o *)sub_1C2E378(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v9,
-    (const MethodInfo_363183C *)Method_System_Collections_Generic_List_int___ctor__);
+    v12,
+    (const MethodInfo_364E034 *)Method_System_Collections_Generic_List_int___ctor__);
   switch ( individualityTargetType )
   {
     case 0:
-      if ( !v9 )
+      if ( !v12 )
         goto LABEL_18;
-      items = v9->fields._items;
-      v13 = Method_System_Collections_Generic_List_int__Add__;
-      ++v9->fields._version;
+      items = v12->fields._items;
+      v16 = Method_System_Collections_Generic_List_int__Add__;
+      ++v12->fields._version;
       if ( !items )
         goto LABEL_18;
-      size = v9->fields._size;
+      size = v12->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_int___AddWithResize(
-          v9,
+          v12,
           targetId,
-          *(const MethodInfo_3632090 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_364E888 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       }
       else
       {
-        v9->fields._size = size + 1;
+        v12->fields._size = size + 1;
         items->m_Items[size + 1] = targetId;
       }
-      return v9;
+      return v12;
     case 1:
-      v15 = 3;
+      v18 = 3;
       goto LABEL_13;
     case 2:
-      v15 = 6;
+      v18 = 6;
       goto LABEL_13;
     case 3:
       TargetIds = (System_Collections_Generic_IEnumerable_T__o *)Target__getTargetIds(
@@ -299,37 +312,37 @@ System_Collections_Generic_List_int__o *__fastcall GainNpIndividualSum__GetTarge
                                                                    3,
                                                                    0LL,
                                                                    0LL);
-      if ( !v9 )
+      if ( !v12 )
         goto LABEL_18;
       System_Collections_Generic_List_int___AddRange(
-        v9,
+        v12,
         TargetIds,
-        (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__);
-      v16 = Target__getTargetIds(battleData, actorId, -1, -1, 6, 0LL, 0LL);
-      v17 = (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__;
-      v18 = (System_Collections_Generic_IEnumerable_T__o *)v16;
+        (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__);
+      v19 = Target__getTargetIds(battleData, actorId, -1, -1, 6, 0LL, 0LL);
+      v20 = (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__;
+      v21 = (System_Collections_Generic_IEnumerable_T__o *)v19;
       goto LABEL_15;
     case 4:
-      v15 = 26;
+      v18 = 26;
 LABEL_13:
       TargetIds = (System_Collections_Generic_IEnumerable_T__o *)Target__getTargetIds(
                                                                    battleData,
                                                                    actorId,
                                                                    -1,
                                                                    -1,
-                                                                   v15,
+                                                                   v18,
                                                                    0LL,
                                                                    0LL);
-      if ( !v9 )
+      if ( !v12 )
 LABEL_18:
-        sub_1C22094(TargetIds, v11);
-      v18 = TargetIds;
-      v17 = (const MethodInfo_363229C *)Method_System_Collections_Generic_List_int__AddRange__;
+        sub_1C2E388(TargetIds, v14);
+      v21 = TargetIds;
+      v20 = (const MethodInfo_364EA94 *)Method_System_Collections_Generic_List_int__AddRange__;
 LABEL_15:
-      System_Collections_Generic_List_int___AddRange(v9, v18, v17);
+      System_Collections_Generic_List_int___AddRange(v12, v21, v20);
       break;
     default:
-      return v9;
+      return v12;
   }
-  return v9;
+  return v12;
 }

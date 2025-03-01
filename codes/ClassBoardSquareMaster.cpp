@@ -1,65 +1,73 @@
 void __fastcall ClassBoardSquareMaster___ctor(ClassBoardSquareMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC2CF & 1) == 0 )
+  if ( (byte_4BFD4D9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
-    byte_4BDC2CF = 1;
+    sub_1C2E12C(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__, method);
+    byte_4BFD4D9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     433,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetAllEntity(
         ClassBoardSquareMaster_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v9; // x19
-  System_Func_object__bool__o *v10; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x19
+  System_Func_object__bool__o *v15; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4BDC2CD & 1) == 0 )
+  if ( (byte_4BFD4D7 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-    sub_1C21E38(&System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-    sub_1C21E38(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__);
-    sub_1C21E38(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4BDC2CD = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___,
+      *(_QWORD *)&baseId);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1C2E12C(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1C2E12C(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__, v8);
+    sub_1C2E12C(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo, v9);
+    byte_4BFD4D7 = 1;
   }
-  v5 = sub_1C22084(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_DWORD *)(v5 + 16) = baseId;
-  v8 = sub_1C21F6C(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
-                   + 2
-                   * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
-                     + 40)));
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v8 + 8))(
-                                                              this,
-                                                              v8);
-  v10 = (System_Func_object__bool__o *)sub_1C22084(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  v10 = sub_1C2E378(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    sub_1C2E388(v11, v12);
+  *(_DWORD *)(v10 + 16) = baseId;
+  v13 = sub_1C2E260(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
+                    + 2
+                    * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
+                      + 40)));
+  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v13 + 8))(
+                                                               this,
+                                                               v13);
+  v15 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v10,
-    (Il2CppObject *)v5,
+    v15,
+    (Il2CppObject *)v10,
     Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__,
     0LL);
-  v11 = System_Linq_Enumerable__Where_object_(
-          v9,
-          (System_Func_TSource__bool__o *)v10,
-          (const MethodInfo_2FEF6F8 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+  v16 = System_Linq_Enumerable__Where_object_(
+          v14,
+          (System_Func_TSource__bool__o *)v15,
+          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
   return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                           v11,
-                                           (const MethodInfo_2FE97E4 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+                                           v16,
+                                           (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -72,67 +80,77 @@ ClassBoardSquareEntity_o *__fastcall ClassBoardSquareMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BDC2D0 & 1) == 0 )
+  if ( (byte_4BFD4DA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
-    byte_4BDC2D0 = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__,
+      *(_QWORD *)&classBoardBaseId);
+    byte_4BFD4DA = 1;
   }
   PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&id);
   return (ClassBoardSquareEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3260880 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
+                                       (const MethodInfo_327FC38 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetOtherThanNoneEntity(
         ClassBoardSquareMaster_o *this,
         int32_t baseId,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v9; // x19
-  System_Func_object__bool__o *v10; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x21
+  __int64 v11; // x0
+  __int64 v12; // x1
+  __int64 v13; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x19
+  System_Func_object__bool__o *v15; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4BDC2CE & 1) == 0 )
+  if ( (byte_4BFD4D8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
-    sub_1C21E38(&System_Func_ClassBoardSquareEntity__bool__TypeInfo);
-    sub_1C21E38(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__);
-    sub_1C21E38(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
-    byte_4BDC2CE = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___,
+      *(_QWORD *)&baseId);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1C2E12C(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1C2E12C(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__, v8);
+    sub_1C2E12C(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo, v9);
+    byte_4BFD4D8 = 1;
   }
-  v5 = sub_1C22084(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_DWORD *)(v5 + 16) = baseId;
-  v8 = sub_1C21F6C(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
-                   + 2
-                   * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
-                     + 40)));
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v8 + 8))(
-                                                              this,
-                                                              v8);
-  v10 = (System_Func_object__bool__o *)sub_1C22084(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  v10 = sub_1C2E378(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    sub_1C2E388(v11, v12);
+  *(_DWORD *)(v10 + 16) = baseId;
+  v13 = sub_1C2E260(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
+                    + 2
+                    * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
+                      + 40)));
+  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v13 + 8))(
+                                                               this,
+                                                               v13);
+  v15 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v10,
-    (Il2CppObject *)v5,
+    v15,
+    (Il2CppObject *)v10,
     Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__,
     0LL);
-  v11 = System_Linq_Enumerable__Where_object_(
-          v9,
-          (System_Func_TSource__bool__o *)v10,
-          (const MethodInfo_2FEF6F8 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+  v16 = System_Linq_Enumerable__Where_object_(
+          v14,
+          (System_Func_TSource__bool__o *)v15,
+          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
   return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                           v11,
-                                           (const MethodInfo_2FE97E4 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+                                           v16,
+                                           (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -146,17 +164,17 @@ bool __fastcall ClassBoardSquareMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BDC2D1 & 1) == 0 )
+  if ( (byte_4BFD4DB & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
-    byte_4BDC2D1 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__, entity);
+    byte_4BFD4DB = 1;
   }
   PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&classBoardBaseId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32608CC *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
+           (const MethodInfo_327FC84 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
 }
 
 
@@ -174,7 +192,7 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass0_0___GetAllEntity_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId;
 }
 
@@ -193,6 +211,6 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass1_0___GetOtherThanNoneEn
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId && x->fields.skillType != 0;
 }

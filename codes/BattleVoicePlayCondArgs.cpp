@@ -26,9 +26,9 @@ void __fastcall BattleVoicePlayCondArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BattleData_k__BackingField = btlData;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)btlData, v9, v10, v11, v12, v13, v14);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)btlData, v9, v10, v11, v12, v13, v14);
   this->fields._ServantData_k__BackingField = svtData;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ServantData_k__BackingField,
     (int64_t)svtData,
     v15,
@@ -38,7 +38,7 @@ void __fastcall BattleVoicePlayCondArgs___ctor(
     v19,
     v20);
   this->fields._ActionData_k__BackingField = actData;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ActionData_k__BackingField,
     (int64_t)actData,
     v21,
@@ -50,52 +50,54 @@ void __fastcall BattleVoicePlayCondArgs___ctor(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleVoicePlayCondArgs__CheckMainTargetIndividuality(
         BattleVoicePlayCondArgs_o *this,
         int32_t targetIndividuality,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   struct BattleActionData_o *ActionData_k__BackingField; // x8
   int32_t targetId; // w21
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
-  System_Int32_array *v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
+  System_Int32_array *v9; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x3
   int max_length; // w8
-  int v12; // w9
+  int v13; // w9
 
-  if ( (byte_4BDEEB0 & 1) == 0 )
+  if ( (byte_4C0012A & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4BDEEB0 = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Distinct_int___, *(_QWORD *)&targetIndividuality);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    byte_4C0012A = 1;
   }
   ActionData_k__BackingField = this->fields._ActionData_k__BackingField;
   if ( !ActionData_k__BackingField )
     return 0;
   targetId = ActionData_k__BackingField->fields.targetId;
-  v7 = System_Linq_Enumerable__Distinct_int_(
+  v8 = System_Linq_Enumerable__Distinct_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)ActionData_k__BackingField->fields.funcTargetList,
-         (const MethodInfo_2FCD204 *)Method_System_Linq_Enumerable_Distinct_int___);
-  v8 = System_Linq_Enumerable__ToArray_int_(
-         v7,
-         (const MethodInfo_2FE964C *)Method_System_Linq_Enumerable_ToArray_int___);
-  if ( !v8 )
-    sub_1C22094(0LL, v9);
-  max_length = v8->max_length;
+         (const MethodInfo_2FEF18C *)Method_System_Linq_Enumerable_Distinct_int___);
+  v9 = System_Linq_Enumerable__ToArray_int_(
+         v8,
+         (const MethodInfo_300BC24 *)Method_System_Linq_Enumerable_ToArray_int___);
+  if ( !v9 )
+    sub_1C2E388(0LL, v10);
+  max_length = v9->max_length;
   if ( max_length < 1 )
     return 0;
-  v12 = 0;
+  v13 = 0;
   while ( 1 )
   {
-    if ( max_length == v12 )
-      sub_1C2209C(v8, v9);
-    if ( targetId == v8->m_Items[v12 + 1] )
+    if ( max_length == v13 )
+      sub_1C2E390(v9, v10);
+    if ( targetId == v9->m_Items[v13 + 1] )
       break;
-    if ( max_length == ++v12 )
+    if ( max_length == ++v13 )
       return 0;
   }
-  return BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(this, targetId, targetIndividuality, v10);
+  return BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(this, targetId, targetIndividuality, v11);
 }
 
 
@@ -106,58 +108,60 @@ bool __fastcall BattleVoicePlayCondArgs__CheckTargetIndividualityInFuncTargetLis
         const MethodInfo *method)
 {
   BattleVoicePlayCondArgs_o *v4; // x20
+  __int64 v5; // x1
   struct BattleActionData_o *ActionData_k__BackingField; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v6; // x0
-  const MethodInfo *v7; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
+  const MethodInfo *v8; // x3
   struct BattleServantData_o *ServantData_k__BackingField; // x8
-  BattleVoicePlayCondArgs_o *v9; // x21
-  bool v10; // w22
-  unsigned __int64 v11; // x23
+  BattleVoicePlayCondArgs_o *v10; // x21
+  bool v11; // w22
+  unsigned __int64 v12; // x23
 
   v4 = this;
-  if ( (byte_4BDEEAF & 1) == 0 )
+  if ( (byte_4C00129 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_Distinct_int___);
-    this = (BattleVoicePlayCondArgs_o *)sub_1C21E38(&Method_System_Linq_Enumerable_ToArray_int___);
-    byte_4BDEEAF = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Distinct_int___, *(_QWORD *)&targetIndividuality);
+    this = (BattleVoicePlayCondArgs_o *)sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    byte_4C00129 = 1;
   }
   ActionData_k__BackingField = v4->fields._ActionData_k__BackingField;
   if ( !ActionData_k__BackingField
-    || (v6 = System_Linq_Enumerable__Distinct_int_(
+    || (v7 = System_Linq_Enumerable__Distinct_int_(
                (System_Collections_Generic_IEnumerable_TSource__o *)ActionData_k__BackingField->fields.funcTargetList,
-               (const MethodInfo_2FCD204 *)Method_System_Linq_Enumerable_Distinct_int___),
+               (const MethodInfo_2FEF18C *)Method_System_Linq_Enumerable_Distinct_int___),
         (this = (BattleVoicePlayCondArgs_o *)System_Linq_Enumerable__ToArray_int_(
-                                               v6,
-                                               (const MethodInfo_2FE964C *)Method_System_Linq_Enumerable_ToArray_int___)) == 0LL) )
+                                               v7,
+                                               (const MethodInfo_300BC24 *)Method_System_Linq_Enumerable_ToArray_int___)) == 0LL) )
   {
-    sub_1C22094(this, *(_QWORD *)&targetIndividuality);
+    sub_1C2E388(this, *(_QWORD *)&targetIndividuality);
   }
   ServantData_k__BackingField = this->fields._ServantData_k__BackingField;
-  v9 = this;
-  v10 = (int)ServantData_k__BackingField > 0;
+  v10 = this;
+  v11 = (int)ServantData_k__BackingField > 0;
   if ( (int)ServantData_k__BackingField >= 1 )
   {
-    v11 = 0LL;
+    v12 = 0LL;
     do
     {
-      if ( v11 >= (unsigned int)ServantData_k__BackingField )
-        sub_1C2209C(this, *(_QWORD *)&targetIndividuality);
+      if ( v12 >= (unsigned int)ServantData_k__BackingField )
+        sub_1C2E390(this, *(_QWORD *)&targetIndividuality);
       this = (BattleVoicePlayCondArgs_o *)BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
                                             v4,
-                                            *((_DWORD *)&v9->fields._ActionData_k__BackingField + v11),
+                                            *((_DWORD *)&v10->fields._ActionData_k__BackingField + v12),
                                             targetIndividuality,
-                                            v7);
+                                            v8);
       if ( ((unsigned __int8)this & 1) != 0 )
         break;
-      LODWORD(ServantData_k__BackingField) = v9->fields._ServantData_k__BackingField;
-      v10 = (__int64)++v11 < (int)ServantData_k__BackingField;
+      LODWORD(ServantData_k__BackingField) = v10->fields._ServantData_k__BackingField;
+      v11 = (__int64)++v12 < (int)ServantData_k__BackingField;
     }
-    while ( (__int64)v11 < (int)ServantData_k__BackingField );
+    while ( (__int64)v12 < (int)ServantData_k__BackingField );
   }
-  return v10;
+  return v11;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleVoicePlayCondArgs__IsPlayQuestPhase(
         BattleVoicePlayCondArgs_o *this,
         int32_t targetQuestId,
@@ -171,10 +175,10 @@ bool __fastcall BattleVoicePlayCondArgs__IsPlayQuestPhase(
   BattleData_o *v13; // x8
   bool v14; // w8
 
-  if ( (byte_4BDEEAE & 1) == 0 )
+  if ( (byte_4C00128 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDEEAE = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&targetQuestId);
+    byte_4C00128 = 1;
   }
   BattleData_k__BackingField = (UnityEngine_Object_o *)this->fields._BattleData_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -186,7 +190,7 @@ bool __fastcall BattleVoicePlayCondArgs__IsPlayQuestPhase(
     || (QuestId = (BattleData_o *)BattleData__getQuestId(QuestId, 0LL),
         (v13 = this->fields._BattleData_k__BackingField) == 0LL) )
   {
-    sub_1C22094(QuestId, v10);
+    sub_1C2E388(QuestId, v10);
   }
   v14 = ((_DWORD)QuestId == targetQuestId) & (BattleData__getPhase(v13, 0LL) == targetQuestPhase);
   if ( isNot )
@@ -196,39 +200,42 @@ bool __fastcall BattleVoicePlayCondArgs__IsPlayQuestPhase(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
         BattleVoicePlayCondArgs_o *this,
         int32_t targetUniqueId,
         int32_t targetIndividuality,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *BattleData_k__BackingField; // x22
+  __int64 v7; // x1
   __int64 v8; // x1
-  struct BattleData_o *v9; // x0
+  UnityEngine_Object_o *BattleData_k__BackingField; // x22
+  __int64 v10; // x1
+  struct BattleData_o *v11; // x0
   BattleServantData_o *ServantData; // x0
-  BattleServantData_o *v11; // x21
+  BattleServantData_o *v13; // x21
   System_Int32_array *ConcatServantAndBuffIndividualityies; // x20
-  System_Int32_array *v13; // x21
+  System_Int32_array *v15; // x21
 
-  if ( (byte_4BDEEB1 & 1) == 0 )
+  if ( (byte_4C0012B & 1) == 0 )
   {
-    sub_1C21E38(&Individuality_TypeInfo);
-    sub_1C21E38(&int___TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDEEB1 = 1;
+    sub_1C2E12C(&Individuality_TypeInfo, *(_QWORD *)&targetUniqueId);
+    sub_1C2E12C(&int___TypeInfo, v7);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v8);
+    byte_4C0012B = 1;
   }
   BattleData_k__BackingField = (UnityEngine_Object_o *)this->fields._BattleData_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(BattleData_k__BackingField, 0LL, 0LL) )
     return 0;
-  v9 = this->fields._BattleData_k__BackingField;
-  if ( !v9 )
+  v11 = this->fields._BattleData_k__BackingField;
+  if ( !v11 )
     goto LABEL_15;
-  ServantData = BattleData__getServantData(v9, targetUniqueId, 0LL);
+  ServantData = BattleData__getServantData(v11, targetUniqueId, 0LL);
   if ( !ServantData )
     return 0;
-  v11 = ServantData;
+  v13 = ServantData;
   ConcatServantAndBuffIndividualityies = BattleServantData__getConcatServantAndBuffIndividualityies(
                                            ServantData,
                                            0LL,
@@ -236,19 +243,19 @@ bool __fastcall BattleVoicePlayCondArgs__IsServantHaveTargetIndividuality(
                                            0,
                                            0,
                                            0LL);
-  if ( !BattleServantData__isAlive(v11, 0, 0LL) )
+  if ( !BattleServantData__isAlive(v13, 0, 0LL) )
     return 0;
-  v9 = (struct BattleData_o *)sub_1C21EE0(int___TypeInfo, 1LL);
-  if ( !v9 )
+  v11 = (struct BattleData_o *)sub_1C2E1D4(int___TypeInfo, 1LL);
+  if ( !v11 )
 LABEL_15:
-    sub_1C22094(v9, v8);
-  v13 = (System_Int32_array *)v9;
-  if ( !LODWORD(v9->fields.m_CancellationTokenSource) )
-    sub_1C2209C(v9, v8);
-  LODWORD(v9->fields.rootfsm) = targetIndividuality;
+    sub_1C2E388(v11, v10);
+  v15 = (System_Int32_array *)v11;
+  if ( !LODWORD(v11->fields.m_CancellationTokenSource) )
+    sub_1C2E390(v11, v10);
+  LODWORD(v11->fields.rootfsm) = targetIndividuality;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Individuality_TypeInfo);
-  return Individuality__CheckIndividualities(ConcatServantAndBuffIndividualityies, v13, 0LL);
+  return Individuality__CheckIndividualities(ConcatServantAndBuffIndividualityies, v15, 0LL);
 }
 
 

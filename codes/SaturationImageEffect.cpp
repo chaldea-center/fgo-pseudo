@@ -10,27 +10,29 @@ void __fastcall SaturationImageEffect__OnRenderImage(
         UnityEngine_RenderTexture_o *destination,
         const MethodInfo *method)
 {
-  UnityEngine_Material_o *material; // x0
+  __int64 v7; // x1
   __int64 v8; // x1
-  UnityEngine_Material_o *v9; // x21
+  UnityEngine_Material_o *material; // x0
+  __int64 v10; // x1
+  UnityEngine_Material_o *v11; // x21
 
-  if ( (byte_4BDFA05 & 1) == 0 )
+  if ( (byte_4C00CA4 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Graphics_TypeInfo);
-    sub_1C21E38(&StringLiteral_16540/*"_MainTex"*/);
-    sub_1C21E38(&StringLiteral_16601/*"_Saturation"*/);
-    byte_4BDFA05 = 1;
+    sub_1C2E12C(&UnityEngine_Graphics_TypeInfo, source);
+    sub_1C2E12C(&StringLiteral_16551/*"_MainTex"*/, v7);
+    sub_1C2E12C(&StringLiteral_16612/*"_Saturation"*/, v8);
+    byte_4C00CA4 = 1;
   }
   material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !material
-    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16601/*"_Saturation"*/, this->fields.saturation, 0LL),
+    || (UnityEngine_Material__SetFloat(material, (System_String_o *)StringLiteral_16612/*"_Saturation"*/, this->fields.saturation, 0LL),
         (material = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C22094(material, v8);
+    sub_1C2E388(material, v10);
   }
-  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16540/*"_MainTex"*/, this->fields.texture, 0LL);
-  v9 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
+  UnityEngine_Material__SetTexture(material, (System_String_o *)StringLiteral_16551/*"_MainTex"*/, this->fields.texture, 0LL);
+  v11 = ImageEffectBase__get_material((ImageEffectBase_o *)this, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_70715340((UnityEngine_Texture_o *)source, destination, v9, 0LL);
+  UnityEngine_Graphics__Blit_70835448((UnityEngine_Texture_o *)source, destination, v11, 0LL);
 }

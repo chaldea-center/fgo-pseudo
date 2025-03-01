@@ -16,10 +16,10 @@ void __fastcall EnableComponentBase__Awake(EnableComponentBase_o *this, const Me
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BDBCC8 & 1) == 0 )
+  if ( (byte_4BFCECD & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDBCC8 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4BFCECD = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -28,7 +28,7 @@ void __fastcall EnableComponentBase__Awake(EnableComponentBase_o *this, const Me
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     this->fields.target = gameObject;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)gameObject, v5, v6, v7, v8, v9, v10);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)gameObject, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -51,7 +51,7 @@ void __fastcall EnableComponentBase__Refresh(EnableComponentBase_o *this, const 
          this,
          this->klass[1]._1.name);
   if ( !target )
-    sub_1C22094(v4, v5);
+    sub_1C2E388(v4, v5);
   UnityEngine_GameObject__SetActive(target, this->fields.visibleIsOpen == (v4 & 1), 0LL);
 }
 

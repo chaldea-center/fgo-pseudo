@@ -1,30 +1,31 @@
 void __fastcall QuestRestrictionInfoEntity___ctor(QuestRestrictionInfoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDCB18 & 1) == 0 )
+  if ( (byte_4BFDD3E & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDCB18 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFDD3E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestRestrictionInfoEntity__CreatePK(
         int32_t questId,
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4BDCB10 & 1) == 0 )
+  if ( (byte_4BFDD36 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4BDCB10 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&phase);
+    byte_4BFDD36 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            phase,
-           (const MethodInfo_2FAE028 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -45,79 +46,81 @@ bool __fastcall QuestRestrictionInfoEntity__GetOverwriteLimitCountSvtIds(
         System_Int32_array **overwriteLimitCountIconIds,
         const MethodInfo *method)
 {
+  __int64 v9; // x1
+  __int64 v10; // x1
   System_Int32_array *ScriptIntArrayParam; // x0
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  const MethodInfo *v17; // x3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Int32_array *v22; // x0
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  const MethodInfo *v29; // x3
-  System_Int32_array *v30; // x0
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
+  int64_t v18; // x2
+  const MethodInfo *v19; // x3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  System_Int32_array *v24; // x0
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
+  const MethodInfo *v31; // x3
+  System_Int32_array *v32; // x0
+  int64_t v33; // x2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  BattleSetupInfo_o *v36; // x5
+  FollowerInfo_o *v37; // x6
+  PartyListViewItem_o *v38; // x7
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
 
-  if ( (byte_4BDCB17 & 1) == 0 )
+  if ( (byte_4BFDD3D & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_22801/*"overwriteLimitCountSvtIds"*/);
-    sub_1C21E38(&StringLiteral_22802/*"overwriteLimitCounts"*/);
-    sub_1C21E38(&StringLiteral_22800/*"overwriteLimitCountIconIds"*/);
-    byte_4BDCB17 = 1;
+    sub_1C2E12C(&StringLiteral_22815/*"overwriteLimitCountSvtIds"*/, overwriteLimitCountSvtIds);
+    sub_1C2E12C(&StringLiteral_22816/*"overwriteLimitCounts"*/, v9);
+    sub_1C2E12C(&StringLiteral_22814/*"overwriteLimitCountIconIds"*/, v10);
+    byte_4BFDD3D = 1;
   }
   ScriptIntArrayParam = QuestRestrictionInfoEntity__GetScriptIntArrayParam(
                           this,
-                          (System_String_o *)StringLiteral_22801/*"overwriteLimitCountSvtIds"*/,
+                          (System_String_o *)StringLiteral_22815/*"overwriteLimitCountSvtIds"*/,
                           0LL,
                           (const MethodInfo *)overwriteLimitCountIconIds);
   *overwriteLimitCountSvtIds = ScriptIntArrayParam;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)overwriteLimitCountSvtIds,
     (int64_t)ScriptIntArrayParam,
-    v10,
-    v11,
     v12,
     v13,
     v14,
-    v15);
+    v15,
+    v16,
+    v17);
   if ( *overwriteLimitCountSvtIds )
   {
-    v22 = QuestRestrictionInfoEntity__GetScriptIntArrayParam(this, (System_String_o *)StringLiteral_22802/*"overwriteLimitCounts"*/, 0LL, v17);
-    *overwriteLimitCounts = v22;
-    sub_1C21DDC((PartyOrganizationUtility_o *)overwriteLimitCounts, (int64_t)v22, v23, v24, v25, v26, v27, v28);
-    v30 = QuestRestrictionInfoEntity__GetScriptIntArrayParam(this, (System_String_o *)StringLiteral_22800/*"overwriteLimitCountIconIds"*/, 0LL, v29);
-    *overwriteLimitCountIconIds = v30;
-    sub_1C21DDC((PartyOrganizationUtility_o *)overwriteLimitCountIconIds, (int64_t)v30, v31, v32, v33, v34, v35, v36);
+    v24 = QuestRestrictionInfoEntity__GetScriptIntArrayParam(this, (System_String_o *)StringLiteral_22816/*"overwriteLimitCounts"*/, 0LL, v19);
+    *overwriteLimitCounts = v24;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)overwriteLimitCounts, (int64_t)v24, v25, v26, v27, v28, v29, v30);
+    v32 = QuestRestrictionInfoEntity__GetScriptIntArrayParam(this, (System_String_o *)StringLiteral_22814/*"overwriteLimitCountIconIds"*/, 0LL, v31);
+    *overwriteLimitCountIconIds = v32;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)overwriteLimitCountIconIds, (int64_t)v32, v33, v34, v35, v36, v37, v38);
     return *overwriteLimitCounts != 0LL;
   }
   else
   {
     *overwriteLimitCounts = 0LL;
-    sub_1C21DDC((PartyOrganizationUtility_o *)overwriteLimitCounts, 0LL, v16, (int32_t)v17, v18, v19, v20, v21);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)overwriteLimitCounts, 0LL, v18, (int32_t)v19, v20, v21, v22, v23);
     *overwriteLimitCountIconIds = 0LL;
-    sub_1C21DDC((PartyOrganizationUtility_o *)overwriteLimitCountIconIds, 0LL, v38, v39, v40, v41, v42, v43);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)overwriteLimitCountIconIds, 0LL, v40, v41, v42, v43, v44, v45);
     return 0;
   }
 }
@@ -129,76 +132,80 @@ System_Int32_array *__fastcall QuestRestrictionInfoEntity__GetScriptIntArrayPara
         System_Int32_array *defVal,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   System_Collections_Generic_List_object__o *ScriptObjListParam; // x0
-  System_Collections_Generic_List_object__o *v8; // x19
-  QuestRestrictionInfoEntity___c_c *v9; // x0
+  System_Collections_Generic_List_object__o *v12; // x19
+  QuestRestrictionInfoEntity___c_c *v13; // x0
   System_Converter_object__int__o *_9__10_0; // x20
-  Il2CppObject *v11; // x21
+  Il2CppObject *v15; // x21
   struct QuestRestrictionInfoEntity___c_StaticFields *static_fields; // x0
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  System_Collections_Generic_List_int__o *v19; // x0
-  __int64 v20; // x1
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
+  System_Collections_Generic_List_int__o *v23; // x0
+  __int64 v24; // x1
 
-  if ( (byte_4BDCB14 & 1) == 0 )
+  if ( (byte_4BFDD3A & 1) == 0 )
   {
-    sub_1C21E38(&System_Converter_object__int__TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C21E38(&Method_QuestRestrictionInfoEntity___c__GetScriptIntArrayParam_b__10_0__);
-    sub_1C21E38(&QuestRestrictionInfoEntity___c_TypeInfo);
-    byte_4BDCB14 = 1;
+    sub_1C2E12C(&System_Converter_object__int__TypeInfo, key);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1C2E12C(&Method_QuestRestrictionInfoEntity___c__GetScriptIntArrayParam_b__10_0__, v9);
+    sub_1C2E12C(&QuestRestrictionInfoEntity___c_TypeInfo, v10);
+    byte_4BFDD3A = 1;
   }
   ScriptObjListParam = QuestRestrictionInfoEntity__GetScriptObjListParam(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObjListParam )
     return defVal;
-  v8 = ScriptObjListParam;
-  v9 = QuestRestrictionInfoEntity___c_TypeInfo;
+  v12 = ScriptObjListParam;
+  v13 = QuestRestrictionInfoEntity___c_TypeInfo;
   if ( !QuestRestrictionInfoEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestRestrictionInfoEntity___c_TypeInfo);
-    v9 = QuestRestrictionInfoEntity___c_TypeInfo;
+    v13 = QuestRestrictionInfoEntity___c_TypeInfo;
   }
-  _9__10_0 = v9->static_fields->__9__10_0;
+  _9__10_0 = v13->static_fields->__9__10_0;
   if ( !_9__10_0 )
   {
-    if ( !v9->_2.cctor_finished )
+    if ( !v13->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v9);
-      v9 = QuestRestrictionInfoEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v13);
+      v13 = QuestRestrictionInfoEntity___c_TypeInfo;
     }
-    v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__10_0 = (System_Converter_object__int__o *)sub_1C22084(System_Converter_object__int__TypeInfo);
+    v15 = (Il2CppObject *)v13->static_fields->__9;
+    _9__10_0 = (System_Converter_object__int__o *)sub_1C2E378(System_Converter_object__int__TypeInfo);
     System_Converter_object__int____ctor(
       _9__10_0,
-      v11,
+      v15,
       Method_QuestRestrictionInfoEntity___c__GetScriptIntArrayParam_b__10_0__,
       0LL);
     static_fields = QuestRestrictionInfoEntity___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = _9__10_0;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&static_fields->__9__10_0,
       (int64_t)_9__10_0,
-      v13,
-      v14,
-      v15,
-      v16,
       v17,
-      v18);
+      v18,
+      v19,
+      v20,
+      v21,
+      v22);
   }
-  v19 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
-                                                    v8,
+  v23 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
+                                                    v12,
                                                     (System_Converter_T__TOutput__o *)_9__10_0,
-                                                    (const MethodInfo_2EDFBE4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
-  if ( !v19 )
-    sub_1C22094(0LL, v20);
+                                                    (const MethodInfo_2F01574 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+  if ( !v23 )
+    sub_1C2E388(0LL, v24);
   return System_Collections_Generic_List_int___ToArray(
-           v19,
-           (const MethodInfo_3633B48 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v23,
+           (const MethodInfo_3650340 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -218,17 +225,17 @@ int32_t __fastcall QuestRestrictionInfoEntity__GetScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4BDCB12 & 1) == 0 )
+  if ( (byte_4BFDD38 & 1) == 0 )
   {
-    sub_1C21E38(&long_TypeInfo);
-    byte_4BDCB12 = 1;
+    sub_1C2E12C(&long_TypeInfo, key);
+    byte_4BFDD38 = 1;
   }
   ScriptObj = QuestRestrictionInfoEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C22354(ScriptObj);
+  sub_1C2E648(ScriptObj);
   return (unsigned int)QuestRestrictionInfoEntity__GetScriptObjListParam(v11, v12, v13);
 }
 
@@ -241,10 +248,10 @@ Il2CppObject *__fastcall QuestRestrictionInfoEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BDCB11 & 1) == 0 )
+  if ( (byte_4BFDD37 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4BDCB11 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4BFDD37 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -254,7 +261,7 @@ Il2CppObject *__fastcall QuestRestrictionInfoEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3317E8C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3337380 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -279,10 +286,10 @@ System_Collections_Generic_List_object__o *__fastcall QuestRestrictionInfoEntity
   System_Int32_array *v9; // x2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4BDCB13 & 1) == 0 )
+  if ( (byte_4BFDD39 & 1) == 0 )
   {
-    sub_1C21E38(&System_Collections_Generic_List_object__TypeInfo);
-    byte_4BDCB13 = 1;
+    sub_1C2E12C(&System_Collections_Generic_List_object__TypeInfo, key);
+    byte_4BFDD39 = 1;
   }
   result = (System_Collections_Generic_List_object__o *)QuestRestrictionInfoEntity__GetScriptObj(this, key, method);
   if ( result )
@@ -291,7 +298,7 @@ System_Collections_Generic_List_object__o *__fastcall QuestRestrictionInfoEntity
     if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1C22354(result);
+      sub_1C2E648(result);
       return (System_Collections_Generic_List_object__o *)QuestRestrictionInfoEntity__GetScriptIntArrayParam(
                                                             v7,
                                                             v8,
@@ -309,12 +316,12 @@ int32_t __fastcall QuestRestrictionInfoEntity__GetSingleForceSvtId(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BDCB15 & 1) == 0 )
+  if ( (byte_4BFDD3B & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_23761/*"singleForceSvtId"*/);
-    byte_4BDCB15 = 1;
+    sub_1C2E12C(&StringLiteral_23782/*"singleForceSvtId"*/, method);
+    byte_4BFDD3B = 1;
   }
-  return QuestRestrictionInfoEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23761/*"singleForceSvtId"*/, 0, v2);
+  return QuestRestrictionInfoEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23782/*"singleForceSvtId"*/, 0, v2);
 }
 
 
@@ -324,12 +331,12 @@ int32_t __fastcall QuestRestrictionInfoEntity__GetUserEventDeckNo(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BDCB16 & 1) == 0 )
+  if ( (byte_4BFDD3C & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_24791/*"useEventDeckNo"*/);
-    byte_4BDCB16 = 1;
+    sub_1C2E12C(&StringLiteral_24815/*"useEventDeckNo"*/, method);
+    byte_4BFDD3C = 1;
   }
-  return QuestRestrictionInfoEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_24791/*"useEventDeckNo"*/, 1, v2);
+  return QuestRestrictionInfoEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_24815/*"useEventDeckNo"*/, 1, v2);
 }
 
 
@@ -344,31 +351,32 @@ bool __fastcall QuestRestrictionInfoEntity__HasFlag(
 
 void __fastcall QuestRestrictionInfoEntity___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BDCB19 & 1) == 0 )
+  if ( (byte_4BFDD3F & 1) == 0 )
   {
-    sub_1C21E38(&QuestRestrictionInfoEntity___c_TypeInfo);
-    byte_4BDCB19 = 1;
+    sub_1C2E12C(&QuestRestrictionInfoEntity___c_TypeInfo, v1);
+    byte_4BFDD3F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C22084(QuestRestrictionInfoEntity___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  QuestRestrictionInfoEntity___c_TypeInfo->static_fields->__9 = (struct QuestRestrictionInfoEntity___c_o *)v1;
-  sub_1C21DDC(
+  v2 = (Il2CppObject *)sub_1C2E378(QuestRestrictionInfoEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  QuestRestrictionInfoEntity___c_TypeInfo->static_fields->__9 = (struct QuestRestrictionInfoEntity___c_o *)v2;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)QuestRestrictionInfoEntity___c_TypeInfo->static_fields,
-    (int64_t)v1,
-    v2,
+    (int64_t)v2,
     v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8);
 }
 
 
@@ -385,10 +393,10 @@ int32_t __fastcall QuestRestrictionInfoEntity___c___GetScriptIntArrayParam_b__10
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4BDCB1A & 1) == 0 )
+  if ( (byte_4BFDD40 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDCB1A = 1;
+    sub_1C2E12C(&StringLiteral_1/*""*/, x);
+    byte_4BFDD40 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

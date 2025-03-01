@@ -6,63 +6,69 @@ void __fastcall StrengthStatus___ctor(StrengthStatus_o *this, const MethodInfo *
 
 System_String_o *__fastcall StrengthStatus__GetIconName(int32_t strengthStatus, const MethodInfo *method)
 {
-  if ( (byte_4BDB52B & 1) == 0 )
+  __int64 v3; // x1
+
+  if ( (byte_4BFC72A & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_20542/*"icon_stateup_on"*/);
-    sub_1C21E38(&StringLiteral_20541/*"icon_stateup_off"*/);
-    byte_4BDB52B = 1;
+    sub_1C2E12C(&StringLiteral_20553/*"icon_stateup_on"*/, method);
+    sub_1C2E12C(&StringLiteral_20552/*"icon_stateup_off"*/, v3);
+    byte_4BFC72A = 1;
   }
   if ( !strengthStatus )
     return 0LL;
   if ( (unsigned int)(strengthStatus - 1) <= 0x61 )
-    return (System_String_o *)StringLiteral_20541/*"icon_stateup_off"*/;
+    return (System_String_o *)StringLiteral_20552/*"icon_stateup_off"*/;
   if ( strengthStatus == 99 )
-    return (System_String_o *)StringLiteral_20542/*"icon_stateup_on"*/;
+    return (System_String_o *)StringLiteral_20553/*"icon_stateup_on"*/;
   return 0LL;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall StrengthStatus__GetTreasureDeviceIconName(
         int32_t strengthStatus,
         int32_t treasureDeviceNum,
         const MethodInfo *method)
 {
-  __int64 *v5; // x8
-  unsigned int v6; // w8
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 *v7; // x8
+  unsigned int v8; // w8
 
-  if ( (byte_4BDB52C & 1) == 0 )
+  if ( (byte_4BFC72B & 1) == 0 )
   {
-    sub_1C21E38(&System_Math_TypeInfo);
-    sub_1C21E38(&StringLiteral_20514/*"icon_np_off"*/);
-    sub_1C21E38(&StringLiteral_20515/*"icon_np_on"*/);
-    byte_4BDB52C = 1;
+    sub_1C2E12C(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    sub_1C2E12C(&StringLiteral_20525/*"icon_np_off"*/, v5);
+    sub_1C2E12C(&StringLiteral_20526/*"icon_np_on"*/, v6);
+    byte_4BFC72B = 1;
   }
   if ( !strengthStatus )
     return 0LL;
   if ( strengthStatus == 99 )
   {
-    v5 = &StringLiteral_20515/*"icon_np_on"*/;
-    return (System_String_o *)*v5;
+    v7 = &StringLiteral_20526/*"icon_np_on"*/;
+    return (System_String_o *)*v7;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( strengthStatus - treasureDeviceNum >= 0 )
-    v6 = strengthStatus - treasureDeviceNum;
+    v8 = strengthStatus - treasureDeviceNum;
   else
-    v6 = treasureDeviceNum - strengthStatus;
-  if ( v6 == 1 )
+    v8 = treasureDeviceNum - strengthStatus;
+  if ( v8 == 1 )
   {
-    v5 = &StringLiteral_20514/*"icon_np_off"*/;
-    return (System_String_o *)*v5;
+    v7 = &StringLiteral_20525/*"icon_np_off"*/;
+    return (System_String_o *)*v7;
   }
   if ( strengthStatus == treasureDeviceNum )
     return 0LL;
-  if ( v6 >= 0x63 )
+  if ( v8 >= 0x63 )
     return 0LL;
-  return (System_String_o *)StringLiteral_20515/*"icon_np_on"*/;
+  return (System_String_o *)StringLiteral_20526/*"icon_np_on"*/;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall StrengthStatus__GetTreasureDeviceStrengthAdjustData(
         int32_t strengthStatus,
         int32_t treasureDeviceNum,
@@ -71,10 +77,10 @@ int32_t __fastcall StrengthStatus__GetTreasureDeviceStrengthAdjustData(
   int32_t result; // w0
   int32_t v6; // w8
 
-  if ( (byte_4BDB52A & 1) == 0 )
+  if ( (byte_4BFC729 & 1) == 0 )
   {
-    sub_1C21E38(&System_Math_TypeInfo);
-    byte_4BDB52A = 1;
+    sub_1C2E12C(&System_Math_TypeInfo, *(_QWORD *)&treasureDeviceNum);
+    byte_4BFC729 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);

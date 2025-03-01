@@ -16,18 +16,18 @@ bool __fastcall MapGimmickRandomEffectElementComponent__get_IsValid(
   SpotEntity_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BD9262 & 1) == 0 )
+  if ( (byte_4BFA44A & 1) == 0 )
   {
-    sub_1C21E38(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4BD9262 = 1;
+    sub_1C2E12C(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
+    byte_4BFA44A = 1;
   }
   SpotEntity = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, method);
   if ( SpotEntity )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_388D478 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38A83B0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     v6 = MapGimmickRandomEffectElementComponent__get_SpotEntity(this, v5);
     if ( !Instance )
-      sub_1C22094(v6, v7);
+      sub_1C2E388(v6, v7);
     LOBYTE(SpotEntity) = QuestTree__IsSpotSatisfyingDisplayCond((QuestTree_o *)Instance, v6, 1, 0LL);
   }
   return (char)SpotEntity;
@@ -38,28 +38,30 @@ SpotEntity_o *__fastcall MapGimmickRandomEffectElementComponent__get_SpotEntity(
         MapGimmickRandomEffectElementComponent_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *Master_object; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Master_object; // x0
+  __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BD9263 & 1) == 0 )
+  if ( (byte_4BFA44B & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__);
-    byte_4BD9263 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_SpotMaster___, method);
+    sub_1C2E12C(&DataManager_TypeInfo, v3);
+    sub_1C2E12C(&Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__, v4);
+    byte_4BFA44B = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_SpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_SpotMaster___);
   if ( !Master_object )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v6);
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          this->fields.spotId,
-         (const MethodInfo_325BE14 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
+         (const MethodInfo_327B1CC *)Method_DataMasterBase_SpotMaster__SpotEntity__int__TryGetEntity__) )
   {
     return (SpotEntity_o *)entity;
   }

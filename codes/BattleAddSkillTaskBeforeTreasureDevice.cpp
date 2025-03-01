@@ -10,65 +10,67 @@ CreateSkillTaskFromBuffAction_array *__fastcall BattleAddSkillTaskBeforeTreasure
         BattleAddSkillTaskBeforeTreasureDevice_o *this,
         const MethodInfo *method)
 {
-  CreateSkillTaskFromBuffAction_array *v2; // x19
-  Il2CppObject *v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  Il2CppObject *v12; // x20
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  __int64 v20; // x0
+  __int64 v2; // x1
+  __int64 v3; // x1
+  CreateSkillTaskFromBuffAction_array *v4; // x19
+  Il2CppObject *v5; // x20
+  __int64 v6; // x0
+  __int64 v7; // x1
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
+  Il2CppObject *v14; // x20
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  __int64 v22; // x0
 
-  if ( (byte_4BDF16E & 1) == 0 )
+  if ( (byte_4C003F1 & 1) == 0 )
   {
-    sub_1C21E38(&CreateComboStartSkillTask_TypeInfo);
-    sub_1C21E38(&CreateSkillTaskFromBuffAction___TypeInfo);
-    sub_1C21E38(&CreateTreasureDeviceBeforeSkillTask_TypeInfo);
-    byte_4BDF16E = 1;
+    sub_1C2E12C(&CreateComboStartSkillTask_TypeInfo, method);
+    sub_1C2E12C(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
+    sub_1C2E12C(&CreateTreasureDeviceBeforeSkillTask_TypeInfo, v3);
+    byte_4C003F1 = 1;
   }
-  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C21EE0(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
-  v3 = (Il2CppObject *)sub_1C22084(CreateComboStartSkillTask_TypeInfo);
-  System_Object___ctor(v3, 0LL);
-  if ( !v2 )
-    sub_1C22094(v4, v5);
-  if ( v3 )
+  v4 = (CreateSkillTaskFromBuffAction_array *)sub_1C2E1D4(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
+  v5 = (Il2CppObject *)sub_1C2E378(CreateComboStartSkillTask_TypeInfo);
+  System_Object___ctor(v5, 0LL);
+  if ( !v4 )
+    sub_1C2E388(v6, v7);
+  if ( v5 )
   {
-    v4 = sub_1C21F74(v3, v2->obj.klass->_1.element_class);
-    if ( !v4 )
+    v6 = sub_1C2E268(v5, v4->obj.klass->_1.element_class);
+    if ( !v6 )
       goto LABEL_12;
   }
-  if ( !v2->max_length )
+  if ( !v4->max_length )
     goto LABEL_11;
-  v2->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v3;
-  sub_1C21DDC((PartyOrganizationUtility_o *)v2->m_Items, (int64_t)v3, v6, v7, v8, v9, v10, v11);
-  v12 = (Il2CppObject *)sub_1C22084(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
-  System_Object___ctor(v12, 0LL);
-  if ( v12 )
+  v4->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v5;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)v4->m_Items, (int64_t)v5, v8, v9, v10, v11, v12, v13);
+  v14 = (Il2CppObject *)sub_1C2E378(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
+  System_Object___ctor(v14, 0LL);
+  if ( v14 )
   {
-    v4 = sub_1C21F74(v12, v2->obj.klass->_1.element_class);
-    if ( !v4 )
+    v6 = sub_1C2E268(v14, v4->obj.klass->_1.element_class);
+    if ( !v6 )
     {
 LABEL_12:
-      v20 = sub_1C220B8(v4);
-      sub_1C21F60(v20, 0LL);
+      v22 = sub_1C2E3AC(v6);
+      sub_1C2E254(v22, 0LL);
     }
   }
-  if ( v2->max_length <= 1 )
+  if ( v4->max_length <= 1 )
 LABEL_11:
-    sub_1C2209C(v4, v5);
-  v2->m_Items[1] = (CreateSkillTaskFromBuffAction_o *)v12;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&v2->m_Items[1], (int64_t)v12, v13, v14, v15, v16, v17, v18);
-  return v2;
+    sub_1C2E390(v6, v7);
+  v4->m_Items[1] = (CreateSkillTaskFromBuffAction_o *)v14;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->m_Items[1], (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  return v4;
 }
 
 

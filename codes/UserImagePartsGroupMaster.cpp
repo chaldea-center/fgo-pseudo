@@ -1,17 +1,18 @@
 void __fastcall UserImagePartsGroupMaster___ctor(UserImagePartsGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD2F5 & 1) == 0 )
+  if ( (byte_4BFE52B & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int___ctor__);
-    byte_4BDD2F5 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int___ctor__, method);
+    byte_4BFE52B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     532,
-    (const MethodInfo_3259AA4 *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int___ctor__);
+    (const MethodInfo_3278E5C *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall UserImagePartsGroupMaster__ContainsImagePartsGroupIdx(
         UserImagePartsGroupMaster_o *this,
         int32_t id,
@@ -22,17 +23,19 @@ bool __fastcall UserImagePartsGroupMaster__ContainsImagePartsGroupIdx(
   char v8; // w0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BDD2F6 & 1) == 0 )
+  if ( (byte_4BFE52C & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__);
-    byte_4BDD2F6 = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__,
+      *(_QWORD *)&id);
+    byte_4BFE52C = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_325BE14 *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
+         (const MethodInfo_327B1CC *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
   {
     v8 = (char)entity;
     if ( entity )

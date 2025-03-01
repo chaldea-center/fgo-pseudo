@@ -10,10 +10,10 @@ void __fastcall ReleaseAssetStorageWhenDestroy__OnDestroy(
 {
   System_String_o *assetName; // x19
 
-  if ( (byte_4BD71ED & 1) == 0 )
+  if ( (byte_4BF83CD & 1) == 0 )
   {
-    sub_1C21E38(&AssetManager_TypeInfo);
-    byte_4BD71ED = 1;
+    sub_1C2E12C(&AssetManager_TypeInfo, method);
+    byte_4BF83CD = 1;
   }
   assetName = this->fields.assetName;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -28,5 +28,5 @@ void __fastcall ReleaseAssetStorageWhenDestroy__Setup(
         const MethodInfo *method)
 {
   this->fields.assetName = assetName;
-  sub_1C21DDC(&this->fields.assetName, assetName);
+  sub_1C2E0D0(&this->fields.assetName);
 }

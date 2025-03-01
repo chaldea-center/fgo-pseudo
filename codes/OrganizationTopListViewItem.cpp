@@ -4,9 +4,9 @@ void __fastcall OrganizationTopListViewItem___ctor(
         OrganizationTopItemInfo_o *info,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42081352((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_1C21DDC(&this->fields.info, info);
+  sub_1C2E0D0(&this->fields.info);
 }
 
 
@@ -24,15 +24,15 @@ System_String_o *__fastcall OrganizationTopListViewItem__ToString(
   struct OrganizationTopItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_4BD7F6B & 1) == 0 )
+  if ( (byte_4BF9117 & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1C21E38(&StringLiteral_10256/*"OrganizationTopItem "*/);
-    byte_4BD7F6B = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1C2E12C(&StringLiteral_10250/*"OrganizationTopItem "*/, method);
+    byte_4BF9117 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C22094(this, method);
-  return System_String__Concat_63115476((System_String_o *)StringLiteral_10256/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
+    sub_1C2E388(this, method);
+  return System_String__Concat_63235584((System_String_o *)StringLiteral_10250/*"OrganizationTopItem "*/, info->fields.textCode, 0LL);
 }
 
 
@@ -44,7 +44,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_EventData(
 
   info = this->fields.info;
   if ( !info )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   return info->fields.eventData;
 }
 
@@ -57,7 +57,7 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   return info->fields.imageName;
 }
 
@@ -79,14 +79,14 @@ System_String_o *__fastcall OrganizationTopListViewItem__get_InfoText(
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4BD7F6A & 1) == 0 )
+  if ( (byte_4BF9116 & 1) == 0 )
   {
-    this = (OrganizationTopListViewItem_o *)sub_1C21E38(&LocalizationManager_TypeInfo);
-    byte_4BD7F6A = 1;
+    this = (OrganizationTopListViewItem_o *)sub_1C2E12C(&LocalizationManager_TypeInfo, method);
+    byte_4BF9116 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);

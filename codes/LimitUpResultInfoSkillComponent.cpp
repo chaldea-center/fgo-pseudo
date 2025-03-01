@@ -23,7 +23,7 @@ void __fastcall LimitUpResultInfoSkillComponent__SetBattleName(
 
   battleNameLabel = this->fields.battleNameLabel;
   if ( !battleNameLabel )
-    sub_1C22094(0LL, battleName);
+    sub_1C2E388(0LL, battleName);
   UILabel__set_text(battleNameLabel, battleName, 0LL);
 }
 
@@ -43,7 +43,7 @@ void __fastcall LimitUpResultInfoSkillComponent__SetTitleDisp(
         (titleLabel = (UnityEngine_Component_o *)this->fields.lineSprite) == 0LL)
     || (titleLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(titleLabel, 0LL)) == 0LL )
   {
-    sub_1C22094(titleLabel, isDisp);
+    sub_1C2E388(titleLabel, isDisp);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, isDisp, 0LL);
 }
@@ -59,78 +59,76 @@ void __fastcall LimitUpResultInfoSkillComponent__Setup(
         System_String_o *detail,
         const MethodInfo *method)
 {
+  __int64 v13; // x1
   SkillIconComponent_o *iconLimitUp; // x0
-  const MethodInfo *v14; // x3
   System_String_o *PATH; // x23
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *Component_object; // x0
   UILabel_o *nameLimitUpLabel; // x23
   ServantSkillStrengthStatus_o *v19; // x24
-  UnityEngine_Vector2Int_o v20; // 0:x6.8
+  const MethodInfo *v20; // x3
+  UnityEngine_Vector2Int_o v21; // 0:x6.8
 
-  if ( (byte_4BE002D & 1) == 0 )
+  if ( (byte_4C012CC & 1) == 0 )
   {
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-    sub_1C21E38(&ServantSkillStrengthStatus_TypeInfo);
-    byte_4BE002D = 1;
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___, *(_QWORD *)&skillId);
+    sub_1C2E12C(&ServantSkillStrengthStatus_TypeInfo, v13);
+    byte_4C012CC = 1;
   }
   iconLimitUp = this->fields.iconLimitUp;
   if ( !iconLimitUp )
-    goto LABEL_14;
+    goto LABEL_15;
   SkillIconComponent__Set(iconLimitUp, skillId, 0LL);
   iconLimitUp = (SkillIconComponent_o *)this->fields.nameLimitUpLabel;
   if ( !iconLimitUp )
-    goto LABEL_14;
+    goto LABEL_15;
   UILabel__set_text((UILabel_o *)iconLimitUp, name, 0LL);
-  iconLimitUp = (SkillIconComponent_o *)this->fields.nameLimitUpLabel;
-  if ( !iconLimitUp )
-    goto LABEL_14;
-  UILabel__SetCondensedScale((UILabel_o *)iconLimitUp, 340, 0, 0LL);
-  if ( svtSkillEntity )
+  if ( !svtSkillEntity )
   {
-    if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
     iconLimitUp = (SkillIconComponent_o *)this->fields.nameLimitUpLabel;
     if ( iconLimitUp )
     {
-      PATH = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
-      transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLimitUp, 0LL);
-      iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_39485728(
-                                              (BaseMonoBehaviour_o *)this,
-                                              PATH,
-                                              transform,
-                                              0LL,
-                                              0LL);
-      if ( iconLimitUp )
-      {
-        Component_object = UnityEngine_GameObject__GetComponent_object_(
-                             (UnityEngine_GameObject_o *)iconLimitUp,
-                             (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
-        nameLimitUpLabel = this->fields.nameLimitUpLabel;
-        v19 = (ServantSkillStrengthStatus_o *)Component_object;
-        iconLimitUp = (SkillIconComponent_o *)ServantSkillEntity__GetStrengthStatus(svtSkillEntity, 0LL);
-        if ( v19 )
-        {
-          v20 = (UnityEngine_Vector2Int_o)0x1200000014LL;
-          ServantSkillStrengthStatus__Set(
-            v19,
-            nameLimitUpLabel,
-            (int32_t)iconLimitUp,
-            svtSkillEntity->fields.skillNum,
-            20,
-            -9,
-            v20,
-            0,
-            0LL,
-            0,
-            0LL);
-          goto LABEL_13;
-        }
-      }
+      UILabel__SetCondensedScale((UILabel_o *)iconLimitUp, 340, 0, 0LL);
+      goto LABEL_14;
     }
-LABEL_14:
-    sub_1C22094(iconLimitUp, *(_QWORD *)&skillId);
+LABEL_15:
+    sub_1C2E388(iconLimitUp, *(_QWORD *)&skillId);
   }
-LABEL_13:
-  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v14);
+  if ( !ServantSkillStrengthStatus_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ServantSkillStrengthStatus_TypeInfo);
+  iconLimitUp = (SkillIconComponent_o *)this->fields.nameLimitUpLabel;
+  if ( !iconLimitUp )
+    goto LABEL_15;
+  PATH = ServantSkillStrengthStatus_TypeInfo->static_fields->PATH;
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)iconLimitUp, 0LL);
+  iconLimitUp = (SkillIconComponent_o *)BaseMonoBehaviour__createObject_39556320(
+                                          (BaseMonoBehaviour_o *)this,
+                                          PATH,
+                                          transform,
+                                          0LL,
+                                          0LL);
+  if ( !iconLimitUp )
+    goto LABEL_15;
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       (UnityEngine_GameObject_o *)iconLimitUp,
+                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_ServantSkillStrengthStatus___);
+  nameLimitUpLabel = this->fields.nameLimitUpLabel;
+  v19 = (ServantSkillStrengthStatus_o *)Component_object;
+  iconLimitUp = (SkillIconComponent_o *)ServantSkillEntity__GetStrengthStatus(svtSkillEntity, 0LL);
+  if ( !v19 )
+    goto LABEL_15;
+  v21 = (UnityEngine_Vector2Int_o)0x1200000014LL;
+  ServantSkillStrengthStatus__Set(
+    v19,
+    nameLimitUpLabel,
+    (int32_t)iconLimitUp,
+    svtSkillEntity->fields.skillNum,
+    20,
+    -9,
+    v21,
+    340,
+    0LL,
+    0LL);
+LABEL_14:
+  LimitUpResultInfoComponent__Setup((LimitUpResultInfoComponent_o *)this, title, detail, v20);
 }

@@ -1,9 +1,9 @@
 void __fastcall CancelConfirmDeckIdDialog___ctor(CancelConfirmDeckIdDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BD8D62 & 1) == 0 )
+  if ( (byte_4BF9F47 & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BD8D62 = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BF9F47 = 1;
   }
   this->fields.MESSAGE_FONT_SIZE = 27;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -32,7 +32,7 @@ void __fastcall CancelConfirmDeckIdDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C21DDC(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C2E0D0(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       result,
@@ -45,11 +45,11 @@ void __fastcall CancelConfirmDeckIdDialog__Close(CancelConfirmDeckIdDialog_o *th
 {
   const MethodInfo *v2; // x2
 
-  CancelConfirmDeckIdDialog__Close_34348588(this, 0LL, v2);
+  CancelConfirmDeckIdDialog__Close_34408004(this, 0LL, v2);
 }
 
 
-void __fastcall CancelConfirmDeckIdDialog__Close_34348588(
+void __fastcall CancelConfirmDeckIdDialog__Close_34408004(
         CancelConfirmDeckIdDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -59,16 +59,17 @@ void __fastcall CancelConfirmDeckIdDialog__Close_34348588(
   BattleSetupInfo_o *v5; // x5
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  System_Action_o *v10; // x20
+  __int64 v10; // x1
+  System_Action_o *v11; // x20
 
-  if ( (byte_4BD8D5F & 1) == 0 )
+  if ( (byte_4BF9F44 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_CancelConfirmDeckIdDialog_EndClose__);
-    byte_4BD8D5F = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, callback);
+    sub_1C2E12C(&Method_CancelConfirmDeckIdDialog_EndClose__, v10);
+    byte_4BF9F44 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -78,12 +79,13 @@ void __fastcall CancelConfirmDeckIdDialog__Close_34348588(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CancelConfirmDeckIdDialog__CreateDeckIDString(
         CancelConfirmDeckIdDialog_o *this,
         int32_t deckNo,
@@ -92,49 +94,55 @@ System_String_o *__fastcall CancelConfirmDeckIdDialog__CreateDeckIDString(
         bool isMainQuestSupportDeck,
         const MethodInfo *method)
 {
-  System_String_o **v10; // x8
-  __int64 v11; // x24
-  __int64 v12; // x25
-  System_String_o *v13; // x22
-  System_String_o *v14; // x22
-  Il2CppObject *v15; // x0
-  System_String_o *v16; // x0
-  System_String_o *v17; // x21
-  System_String_o *v18; // x0
-  System_String_o *v19; // x20
-  __int64 v20; // x2
-  __int64 v21; // x3
-  __int64 v22; // x4
-  Il2CppObject *v23; // x0
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  System_String_o **v16; // x8
+  __int64 v17; // x24
+  __int64 v18; // x25
+  System_String_o *v19; // x22
+  System_String_o *v20; // x22
+  Il2CppObject *v21; // x0
+  System_String_o *v22; // x0
+  System_String_o *v23; // x21
   System_String_o *v24; // x0
-  int32_t v26; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v25; // x20
+  __int64 v26; // x2
+  __int64 v27; // x3
+  __int64 v28; // x4
+  Il2CppObject *v29; // x0
+  System_String_o *v30; // x0
+  int32_t v32; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4BD8D5E & 1) == 0 )
+  if ( (byte_4BF9F43 & 1) == 0 )
   {
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_12639/*"SUPPORT_EVENTQUEST"*/);
-    sub_1C21E38(&StringLiteral_12637/*"SUPPORT_DECK_NOT_FIXED"*/);
-    sub_1C21E38(&StringLiteral_12629/*"SUPPORT_DECKID_FREE"*/);
-    sub_1C21E38(&StringLiteral_12652/*"SUPPORT_MAINQUEST"*/);
-    sub_1C21E38(&StringLiteral_12635/*"SUPPORT_DECK_ID_FIXED"*/);
-    byte_4BD8D5E = 1;
+    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&deckNo);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v10);
+    sub_1C2E12C(&StringLiteral_12648/*"SUPPORT_EVENTQUEST"*/, v11);
+    sub_1C2E12C(&StringLiteral_12646/*"SUPPORT_DECK_NOT_FIXED"*/, v12);
+    sub_1C2E12C(&StringLiteral_12638/*"SUPPORT_DECKID_FREE"*/, v13);
+    sub_1C2E12C(&StringLiteral_12661/*"SUPPORT_MAINQUEST"*/, v14);
+    sub_1C2E12C(&StringLiteral_12644/*"SUPPORT_DECK_ID_FIXED"*/, v15);
+    byte_4BF9F43 = 1;
   }
   if ( isFixed )
-    v10 = (System_String_o **)&StringLiteral_12635/*"SUPPORT_DECK_ID_FIXED"*/;
+    v16 = (System_String_o **)&StringLiteral_12644/*"SUPPORT_DECK_ID_FIXED"*/;
   else
-    v10 = (System_String_o **)&StringLiteral_12629/*"SUPPORT_DECKID_FREE"*/;
-  v11 = StringLiteral_12652/*"SUPPORT_MAINQUEST"*/;
-  v12 = StringLiteral_12639/*"SUPPORT_EVENTQUEST"*/;
-  v13 = *v10;
+    v16 = (System_String_o **)&StringLiteral_12638/*"SUPPORT_DECKID_FREE"*/;
+  v17 = StringLiteral_12661/*"SUPPORT_MAINQUEST"*/;
+  v18 = StringLiteral_12648/*"SUPPORT_EVENTQUEST"*/;
+  v19 = *v16;
   if ( LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     if ( deckID )
     {
 LABEL_8:
-      v14 = LocalizationManager__Get(v13, 0LL);
-      v15 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(deckID, 0LL);
-      v16 = System_String__Format(v14, v15, 0LL);
+      v20 = LocalizationManager__Get(v19, 0LL);
+      v21 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(deckID, 0LL);
+      v22 = System_String__Format(v20, v21, 0LL);
       goto LABEL_11;
     }
   }
@@ -144,20 +152,20 @@ LABEL_8:
     if ( deckID )
       goto LABEL_8;
   }
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_12637/*"SUPPORT_DECK_NOT_FIXED"*/, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_12646/*"SUPPORT_DECK_NOT_FIXED"*/, 0LL);
 LABEL_11:
-  v17 = v16;
+  v23 = v22;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( isMainQuestSupportDeck )
-    v18 = (System_String_o *)v11;
+    v24 = (System_String_o *)v17;
   else
-    v18 = (System_String_o *)v12;
-  v19 = LocalizationManager__Get(v18, 0LL);
-  v26 = deckNo;
-  v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v20, v21, v22);
-  v24 = System_String__Format(v19, v23, 0LL);
-  return System_String__Concat_63115476(v24, v17, 0LL);
+    v24 = (System_String_o *)v18;
+  v25 = LocalizationManager__Get(v24, 0LL);
+  v32 = deckNo;
+  v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v26, v27, v28);
+  v30 = System_String__Format(v25, v29, 0LL);
+  return System_String__Concat_63235584(v30, v23, 0LL);
 }
 
 
@@ -180,7 +188,7 @@ void __fastcall CancelConfirmDeckIdDialog__EndClose(CancelConfirmDeckIdDialog_o 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C21DDC(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -198,10 +206,10 @@ void __fastcall CancelConfirmDeckIdDialog__Init(CancelConfirmDeckIdDialog_o *thi
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BD8D5B & 1) == 0 )
+  if ( (byte_4BF9F40 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BD8D5B = 1;
+    sub_1C2E12C(&StringLiteral_1/*""*/, method);
+    byte_4BF9F40 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -217,7 +225,7 @@ void __fastcall CancelConfirmDeckIdDialog__Init(CancelConfirmDeckIdDialog_o *thi
         (titleLabel = this->fields.cancelLabel) == 0LL) )
   {
 LABEL_9:
-    sub_1C22094(titleLabel, method);
+    sub_1C2E388(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -231,17 +239,17 @@ void __fastcall CancelConfirmDeckIdDialog__OnClickCancel(CancelConfirmDeckIdDial
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BD8D60 & 1) == 0 )
+  if ( (byte_4BF9F45 & 1) == 0 )
   {
-    sub_1C21E38(&Method_CancelConfirmDeckIdDialog_OnClickCancel__);
-    byte_4BD8D60 = 1;
+    sub_1C2E12C(&Method_CancelConfirmDeckIdDialog_OnClickCancel__, method);
+    byte_4BF9F45 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_CancelConfirmDeckIdDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CancelConfirmDeckIdDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_CancelConfirmDeckIdDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C2E144(Method_CancelConfirmDeckIdDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     this->fields.state = 3;
     CancelConfirmDeckIdDialog__Callback(this, 0, v5);
@@ -273,50 +281,60 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
         CancelConfirmDeckIdDialog_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v17; // x1
   __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v28; // x1
   UILabel_o *titleLabel; // x26
   UILabel_o *fixMessageLabel; // x26
-  System_Text_StringBuilder_o *v21; // x26
-  const MethodInfo *v22; // x5
-  const MethodInfo *v23; // x5
-  System_String_o *v24; // x0
-  const MethodInfo *v25; // x5
-  const MethodInfo *v26; // x5
+  System_Text_StringBuilder_o *v31; // x26
+  const MethodInfo *v32; // x5
+  const MethodInfo *v33; // x5
+  System_String_o *v34; // x0
+  const MethodInfo *v35; // x5
+  const MethodInfo *v36; // x5
   UILabel_o *messageLabel; // x20
-  System_String_o *v28; // x0
+  System_String_o *v38; // x0
   UnityEngine_BoxCollider_o *messageCollider; // x20
-  float v30; // s1
-  UnityEngine_BoxCollider_o *v31; // x20
-  int v32; // s0
-  int v33; // s8
-  int v34; // s1
-  float v35; // s2
-  int v36; // s0
+  float v40; // s1
+  UnityEngine_BoxCollider_o *v41; // x20
+  int v42; // s0
+  int v43; // s8
+  int v44; // s1
+  float v45; // s2
+  int v46; // s0
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  System_Action_o *v39; // x20
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v49; // x20
+  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BD8D5C & 1) == 0 )
+  if ( (byte_4BF9F41 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_CancelConfirmDeckIdDialog_EndOpen__);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&System_Text_StringBuilder_TypeInfo);
-    sub_1C21E38(&StringLiteral_12651/*"SUPPORT_LAST_DECKID"*/);
-    sub_1C21E38(&StringLiteral_12630/*"SUPPORT_DECKID_QUESTION"*/);
-    sub_1C21E38(&StringLiteral_3812/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_12628/*"SUPPORT_CURRENT_DECKID"*/);
-    sub_1C21E38(&StringLiteral_3810/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_44/*"\n\n"*/);
-    sub_1C21E38(&StringLiteral_12657/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/);
-    byte_4BD8D5C = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, *(_QWORD *)&nowSupportDeckId);
+    sub_1C2E12C(&Method_CancelConfirmDeckIdDialog_EndOpen__, v17);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v18);
+    sub_1C2E12C(&System_Text_StringBuilder_TypeInfo, v19);
+    sub_1C2E12C(&StringLiteral_12660/*"SUPPORT_LAST_DECKID"*/, v20);
+    sub_1C2E12C(&StringLiteral_12639/*"SUPPORT_DECKID_QUESTION"*/, v21);
+    sub_1C2E12C(&StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, v22);
+    sub_1C2E12C(&StringLiteral_12637/*"SUPPORT_CURRENT_DECKID"*/, v23);
+    sub_1C2E12C(&StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, v24);
+    sub_1C2E12C(&StringLiteral_44/*"\n\n"*/, v25);
+    sub_1C2E12C(&StringLiteral_12666/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, v26);
+    byte_4BF9F41 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       *(int64_t *)&orgSupportDeckId,
@@ -336,12 +354,12 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12657/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12666/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_28;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
     fixMessageLabel = this->fields.fixMessageLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12630/*"SUPPORT_DECKID_QUESTION"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12639/*"SUPPORT_DECKID_QUESTION"*/, 0LL);
     if ( !fixMessageLabel )
       goto LABEL_28;
     UILabel__set_text(fixMessageLabel, (System_String_o *)gameObject, 0LL);
@@ -352,26 +370,26 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
     if ( !gameObject )
       goto LABEL_28;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-    v21 = (System_Text_StringBuilder_o *)sub_1C22084(System_Text_StringBuilder_TypeInfo);
-    System_Text_StringBuilder___ctor(v21, 0LL);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12628/*"SUPPORT_CURRENT_DECKID"*/, 0LL);
-    if ( !v21 )
+    v31 = (System_Text_StringBuilder_o *)sub_1C2E378(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v31, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12637/*"SUPPORT_CURRENT_DECKID"*/, 0LL);
+    if ( !v31 )
       goto LABEL_28;
-    System_Text_StringBuilder__Append_62276628(v21, (System_String_o *)gameObject, 0LL);
-    CancelConfirmDeckIdDialog__SetDeckInfo(this, v21, nowSupportDeckId, nowFixMainSupportDeckIds, 1, v22);
-    CancelConfirmDeckIdDialog__SetDeckInfo(this, v21, nowSupportDeckId, nowFixEventSupportDeckIds, 0, v23);
-    System_Text_StringBuilder__Append_62276628(v21, (System_String_o *)StringLiteral_44/*"\n\n"*/, 0LL);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_12651/*"SUPPORT_LAST_DECKID"*/, 0LL);
-    System_Text_StringBuilder__Append_62276628(v21, v24, 0LL);
-    CancelConfirmDeckIdDialog__SetDeckInfo(this, v21, orgSupportDeckId, orgFixMainSupportDeckIds, 1, v25);
-    CancelConfirmDeckIdDialog__SetDeckInfo(this, v21, orgSupportDeckId, orgFixEventSupportDeckIds, 0, v26);
+    System_Text_StringBuilder__Append_62396736(v31, (System_String_o *)gameObject, 0LL);
+    CancelConfirmDeckIdDialog__SetDeckInfo(this, v31, nowSupportDeckId, nowFixMainSupportDeckIds, 1, v32);
+    CancelConfirmDeckIdDialog__SetDeckInfo(this, v31, nowSupportDeckId, nowFixEventSupportDeckIds, 0, v33);
+    System_Text_StringBuilder__Append_62396736(v31, (System_String_o *)StringLiteral_44/*"\n\n"*/, 0LL);
+    v34 = LocalizationManager__Get((System_String_o *)StringLiteral_12660/*"SUPPORT_LAST_DECKID"*/, 0LL);
+    System_Text_StringBuilder__Append_62396736(v31, v34, 0LL);
+    CancelConfirmDeckIdDialog__SetDeckInfo(this, v31, orgSupportDeckId, orgFixMainSupportDeckIds, 1, v35);
+    CancelConfirmDeckIdDialog__SetDeckInfo(this, v31, orgSupportDeckId, orgFixEventSupportDeckIds, 0, v36);
     messageLabel = this->fields.messageLabel;
-    v28 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v21->klass->vtable._3_ToString.method)(
-                               v21,
-                               v21->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+    v38 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v31->klass->vtable._3_ToString.method)(
+                               v31,
+                               v31->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
     WrapControlText__textBBCodeAdjust(
       messageLabel,
-      v28,
+      v38,
       this->fields.MESSAGE_FONT_SIZE,
       this->fields.MESSAGE_FONT_SIZE,
       0LL);
@@ -384,29 +402,29 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
                                                gameObject->klass[1].vtable._0_Equals.methodPtr);
     if ( !messageCollider )
       goto LABEL_28;
-    v40.fields.y = v30 * -0.5;
-    v40.fields.x = 0.0;
-    v40.fields.z = 0.0;
-    UnityEngine_BoxCollider__set_center(messageCollider, v40, 0LL);
+    v50.fields.y = v40 * -0.5;
+    v50.fields.x = 0.0;
+    v50.fields.z = 0.0;
+    UnityEngine_BoxCollider__set_center(messageCollider, v50, 0LL);
     gameObject = (UnityEngine_GameObject_o *)this->fields.messageLabel;
     if ( !gameObject )
       goto LABEL_28;
-    v31 = this->fields.messageCollider;
+    v41 = this->fields.messageCollider;
     (*(void (__fastcall **)(UnityEngine_GameObject_o *, Il2CppMethodPointer))&gameObject->klass[1]._2.naturalAligment)(
       gameObject,
       gameObject->klass[1].vtable._0_Equals.methodPtr);
     gameObject = (UnityEngine_GameObject_o *)this->fields.messageLabel;
     if ( !gameObject )
       goto LABEL_28;
-    v33 = v32;
+    v43 = v42;
     gameObject = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, Il2CppMethodPointer))&gameObject->klass[1]._2.naturalAligment)(
                                                gameObject,
                                                gameObject->klass[1].vtable._0_Equals.methodPtr);
-    if ( !v31 )
+    if ( !v41 )
       goto LABEL_28;
-    v35 = 1.0;
-    v36 = v33;
-    UnityEngine_BoxCollider__set_size(v31, *(UnityEngine_Vector3_o *)(&v34 - 1), 0LL);
+    v45 = 1.0;
+    v46 = v43;
+    UnityEngine_BoxCollider__set_size(v41, *(UnityEngine_Vector3_o *)(&v44 - 1), 0LL);
     gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton;
     if ( !gameObject )
       goto LABEL_28;
@@ -437,21 +455,21 @@ void __fastcall CancelConfirmDeckIdDialog__Open(
             1LL,
             gameObject->klass[1]._1.interfaceOffsets),
           decideLabel = this->fields.decideLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, 0LL),
           !decideLabel)
       || (UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL),
           cancelLabel = this->fields.cancelLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3810/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, 0LL),
           !cancelLabel) )
     {
 LABEL_28:
-      sub_1C22094(gameObject, v18);
+      sub_1C2E388(gameObject, v28);
     }
     UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
     this->fields.state = 1;
-    v39 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-    System_Action___ctor(v39, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v39, 0, 0LL);
+    v49 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    System_Action___ctor(v49, (Il2CppObject *)this, Method_CancelConfirmDeckIdDialog_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v49, 0, 0LL);
   }
 }
 
@@ -464,126 +482,132 @@ void __fastcall CancelConfirmDeckIdDialog__SetDeckInfo(
         bool isMain,
         const MethodInfo *method)
 {
-  CancelConfirmDeckIdDialog___c_c *v10; // x0
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  CancelConfirmDeckIdDialog___c_c *v16; // x0
   System_Func_int__bool__o *_9__19_0; // x23
-  Il2CppObject *v12; // x24
+  Il2CppObject *v18; // x24
   struct CancelConfirmDeckIdDialog___c_StaticFields *static_fields; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
+  int64_t v20; // x2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  BattleSetupInfo_o *v23; // x5
+  FollowerInfo_o *v24; // x6
+  PartyListViewItem_o *v25; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
   System_Text_StringBuilder_o *appended; // x0
-  __int64 v22; // x1
-  BalanceConfig_c *v23; // x8
-  int v24; // w23
-  struct BalanceConfig_StaticFields *v25; // x8
-  __int64 v26; // x9
-  __int64 v27; // x25
-  unsigned __int64 v28; // x24
-  const MethodInfo *v29; // x5
+  __int64 v28; // x1
+  BalanceConfig_c *v29; // x8
+  int v30; // w23
+  struct BalanceConfig_StaticFields *v31; // x8
+  __int64 v32; // x9
+  __int64 v33; // x25
+  unsigned __int64 v34; // x24
+  const MethodInfo *v35; // x5
   System_String_o *DeckIDString; // x1
-  int32_t v31; // w2
+  int32_t v37; // w2
 
-  if ( (byte_4BD8D5D & 1) == 0 )
+  if ( (byte_4BF9F42 & 1) == 0 )
   {
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Count_int___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C21E38(&System_Func_int__bool__TypeInfo);
-    sub_1C21E38(&Method_CancelConfirmDeckIdDialog___c__SetDeckInfo_b__19_0__);
-    sub_1C21E38(&CancelConfirmDeckIdDialog___c_TypeInfo);
-    sub_1C21E38(&StringLiteral_43/*"\n"*/);
-    byte_4BD8D5D = 1;
+    sub_1C2E12C(&BalanceConfig_TypeInfo, sb);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Count_int___, v10);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_int___, v11);
+    sub_1C2E12C(&System_Func_int__bool__TypeInfo, v12);
+    sub_1C2E12C(&Method_CancelConfirmDeckIdDialog___c__SetDeckInfo_b__19_0__, v13);
+    sub_1C2E12C(&CancelConfirmDeckIdDialog___c_TypeInfo, v14);
+    sub_1C2E12C(&StringLiteral_43/*"\n"*/, v15);
+    byte_4BF9F42 = 1;
   }
-  v10 = CancelConfirmDeckIdDialog___c_TypeInfo;
+  v16 = CancelConfirmDeckIdDialog___c_TypeInfo;
   if ( !CancelConfirmDeckIdDialog___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CancelConfirmDeckIdDialog___c_TypeInfo);
-    v10 = CancelConfirmDeckIdDialog___c_TypeInfo;
+    v16 = CancelConfirmDeckIdDialog___c_TypeInfo;
   }
-  _9__19_0 = v10->static_fields->__9__19_0;
+  _9__19_0 = v16->static_fields->__9__19_0;
   if ( !_9__19_0 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v16->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = CancelConfirmDeckIdDialog___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v16);
+      v16 = CancelConfirmDeckIdDialog___c_TypeInfo;
     }
-    v12 = (Il2CppObject *)v10->static_fields->__9;
-    _9__19_0 = (System_Func_int__bool__o *)sub_1C22084(System_Func_int__bool__TypeInfo);
-    System_Func_int__bool____ctor(_9__19_0, v12, Method_CancelConfirmDeckIdDialog___c__SetDeckInfo_b__19_0__, 0LL);
+    v18 = (Il2CppObject *)v16->static_fields->__9;
+    _9__19_0 = (System_Func_int__bool__o *)sub_1C2E378(System_Func_int__bool__TypeInfo);
+    System_Func_int__bool____ctor(_9__19_0, v18, Method_CancelConfirmDeckIdDialog___c__SetDeckInfo_b__19_0__, 0LL);
     static_fields = CancelConfirmDeckIdDialog___c_TypeInfo->static_fields;
     static_fields->__9__19_0 = _9__19_0;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&static_fields->__9__19_0,
       (int64_t)_9__19_0,
-      v14,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19);
+      v20,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25);
   }
-  v20 = System_Linq_Enumerable__Where_int_(
+  v26 = System_Linq_Enumerable__Where_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)fixDeckIds,
           (System_Func_TSource__bool__o *)_9__19_0,
-          (const MethodInfo_2FEF424 *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_30119FC *)Method_System_Linq_Enumerable_Where_int___);
   appended = (System_Text_StringBuilder_o *)System_Linq_Enumerable__Count_int_(
-                                              v20,
-                                              (const MethodInfo_2FCAA40 *)Method_System_Linq_Enumerable_Count_int___);
-  v23 = BalanceConfig_TypeInfo;
-  v24 = (int)appended;
+                                              v26,
+                                              (const MethodInfo_2FEC9C8 *)Method_System_Linq_Enumerable_Count_int___);
+  v29 = BalanceConfig_TypeInfo;
+  v30 = (int)appended;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v23 = BalanceConfig_TypeInfo;
+    v29 = BalanceConfig_TypeInfo;
   }
-  v25 = v23->static_fields;
-  v26 = 184LL;
+  v31 = v29->static_fields;
+  v32 = 184LL;
   if ( isMain )
-    v26 = 180LL;
-  v27 = *(unsigned int *)((char *)&v25->CriticalRateToAddByQuickFirstBonus + v26);
-  if ( (int)v27 >= 1 )
+    v32 = 180LL;
+  v33 = *(unsigned int *)((char *)&v31->CriticalRateToAddByQuickFirstBonus + v32);
+  if ( (int)v33 >= 1 )
   {
     if ( !sb )
 LABEL_23:
-      sub_1C22094(appended, v22);
-    v28 = 0LL;
+      sub_1C2E388(appended, v28);
+    v34 = 0LL;
     do
     {
-      appended = System_Text_StringBuilder__Append_62276628(sb, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
-      if ( v28 == 0 && v24 < 1 )
+      appended = System_Text_StringBuilder__Append_62396736(sb, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
+      if ( v34 == 0 && v30 < 1 )
       {
         DeckIDString = CancelConfirmDeckIdDialog__CreateDeckIDString(
                          (CancelConfirmDeckIdDialog_o *)appended,
                          1,
                          currentDeckId,
-                         v24 > 0,
+                         v30 > 0,
                          isMain,
-                         v29);
-        v28 = 1LL;
+                         v35);
+        v34 = 1LL;
       }
       else
       {
         if ( !fixDeckIds )
           goto LABEL_23;
-        if ( v28 >= fixDeckIds->max_length )
-          sub_1C2209C(appended, v22);
-        v31 = fixDeckIds->m_Items[++v28];
+        if ( v34 >= fixDeckIds->max_length )
+          sub_1C2E390(appended, v28);
+        v37 = fixDeckIds->m_Items[++v34];
         DeckIDString = CancelConfirmDeckIdDialog__CreateDeckIDString(
                          (CancelConfirmDeckIdDialog_o *)appended,
-                         v28,
-                         v31,
-                         v31 != 0,
+                         v34,
+                         v37,
+                         v37 != 0,
                          isMain,
-                         v29);
+                         v35);
       }
-      System_Text_StringBuilder__Append_62276628(sb, DeckIDString, 0LL);
+      System_Text_StringBuilder__Append_62396736(sb, DeckIDString, 0LL);
     }
-    while ( v28 != v27 );
+    while ( v34 != v33 );
   }
 }
 
@@ -603,10 +627,10 @@ void __fastcall CancelConfirmDeckIdDialog__add_callbackFunc(
   CancelConfirmDeckIdDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BD8D59 & 1) == 0 )
+  if ( (byte_4BF9F3E & 1) == 0 )
   {
-    sub_1C21E38(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo);
-    byte_4BD8D59 = 1;
+    sub_1C2E12C(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo, value);
+    byte_4BF9F3E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -619,13 +643,13 @@ void __fastcall CancelConfirmDeckIdDialog__add_callbackFunc(
       if ( (CancelConfirmDeckIdDialog_CallbackFunc_c *)v8->klass != CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   CancelConfirmDeckIdDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -634,12 +658,12 @@ System_String_o *__fastcall CancelConfirmDeckIdDialog__get_closeBtnPath(
         CancelConfirmDeckIdDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BD8D61 & 1) == 0 )
+  if ( (byte_4BF9F46 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_4772/*"ConfirmWindow/CancelButton"*/);
-    byte_4BD8D61 = 1;
+    sub_1C2E12C(&StringLiteral_4760/*"ConfirmWindow/CancelButton"*/, method);
+    byte_4BF9F46 = 1;
   }
-  return (System_String_o *)StringLiteral_4772/*"ConfirmWindow/CancelButton"*/;
+  return (System_String_o *)StringLiteral_4760/*"ConfirmWindow/CancelButton"*/;
 }
 
 
@@ -657,10 +681,10 @@ void __fastcall CancelConfirmDeckIdDialog__remove_callbackFunc(
   CancelConfirmDeckIdDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BD8D5A & 1) == 0 )
+  if ( (byte_4BF9F3F & 1) == 0 )
   {
-    sub_1C21E38(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo);
-    byte_4BD8D5A = 1;
+    sub_1C2E12C(&CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo, value);
+    byte_4BF9F3F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -673,13 +697,13 @@ void __fastcall CancelConfirmDeckIdDialog__remove_callbackFunc(
       if ( (CancelConfirmDeckIdDialog_CallbackFunc_c *)v8->klass != CancelConfirmDeckIdDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   CancelConfirmDeckIdDialog__Init(v11, v12);
 }
 
@@ -706,7 +730,7 @@ void __fastcall CancelConfirmDeckIdDialog_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -717,12 +741,12 @@ void __fastcall CancelConfirmDeckIdDialog_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v10) & 1) == 0 )
+  if ( (sub_1C2E1EC(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v14, 0LL);
+      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -734,12 +758,13 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A5F7DC;
+  this->fields.m_target = (Il2CppObject *)sub_1A6BC7C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A5F794;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6BC34;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall CancelConfirmDeckIdDialog_CallbackFunc__BeginInvoke(
         CancelConfirmDeckIdDialog_CallbackFunc_o *this,
         bool result,
@@ -751,14 +776,14 @@ System_IAsyncResult_o *__fastcall CancelConfirmDeckIdDialog_CallbackFunc__BeginI
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4BD8D63 & 1) == 0 )
+  if ( (byte_4BF9F48 & 1) == 0 )
   {
-    sub_1C21E38(&bool_TypeInfo);
-    byte_4BD8D63 = 1;
+    sub_1C2E12C(&bool_TypeInfo, result);
+    byte_4BF9F48 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -767,7 +792,7 @@ void __fastcall CancelConfirmDeckIdDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 
@@ -785,31 +810,32 @@ void __fastcall CancelConfirmDeckIdDialog_CallbackFunc__Invoke(
 
 void __fastcall CancelConfirmDeckIdDialog___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BD8D64 & 1) == 0 )
+  if ( (byte_4BF9F49 & 1) == 0 )
   {
-    sub_1C21E38(&CancelConfirmDeckIdDialog___c_TypeInfo);
-    byte_4BD8D64 = 1;
+    sub_1C2E12C(&CancelConfirmDeckIdDialog___c_TypeInfo, v1);
+    byte_4BF9F49 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C22084(CancelConfirmDeckIdDialog___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  CancelConfirmDeckIdDialog___c_TypeInfo->static_fields->__9 = (struct CancelConfirmDeckIdDialog___c_o *)v1;
-  sub_1C21DDC(
+  v2 = (Il2CppObject *)sub_1C2E378(CancelConfirmDeckIdDialog___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  CancelConfirmDeckIdDialog___c_TypeInfo->static_fields->__9 = (struct CancelConfirmDeckIdDialog___c_o *)v2;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)CancelConfirmDeckIdDialog___c_TypeInfo->static_fields,
-    (int64_t)v1,
-    v2,
+    (int64_t)v2,
     v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8);
 }
 
 

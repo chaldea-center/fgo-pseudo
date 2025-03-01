@@ -1,13 +1,13 @@
 void __fastcall ServantFilterEntity___ctor(ServantFilterEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDCCB9 & 1) == 0 )
+  if ( (byte_4BFDFCB & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
-    byte_4BDCCB9 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BFDFCB = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,18 +19,21 @@ int32_t __fastcall ServantFilterEntity__CreatePrimaryKey(ServantFilterEntity_o *
 
 bool __fastcall ServantFilterEntity__IsEnable(ServantFilterEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4BDCCB7 & 1) == 0 )
+  int64_t Time; // x20
+
+  Time = nowTime;
+  if ( (byte_4BFDFC9 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BDCCB7 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, nowTime);
+    byte_4BFDFC9 = 1;
   }
-  if ( !nowTime )
+  if ( !Time )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    nowTime = NetworkManager__getTime(0LL);
+    Time = NetworkManager__getTime(0LL);
   }
-  return nowTime >= this->fields.startedAt && (this->fields.endedAt == 0 || nowTime <= this->fields.endedAt);
+  return Time >= this->fields.startedAt && (this->fields.endedAt == 0 || Time <= this->fields.endedAt);
 }
 
 
@@ -57,10 +60,12 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
   v3 = *(_QWORD *)&svtId.fields.fakeValue;
   v4 = *(_QWORD *)&svtId.fields.currentCryptoKey;
   v5 = this;
-  if ( (byte_4BDCCB8 & 1) == 0 )
+  if ( (byte_4BFDFCA & 1) == 0 )
   {
-    this = (ServantFilterEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4BDCCB8 = 1;
+    this = (ServantFilterEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                      *(_QWORD *)&svtId.fields.currentCryptoKey);
+    byte_4BFDFCA = 1;
   }
   svtIds = v5->fields.svtIds;
   if ( svtIds && (int)*(_QWORD *)&svtIds->max_length >= 1 )
@@ -71,7 +76,7 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
     while ( 1 )
     {
       if ( v8 >= svtIds->max_length )
-        sub_1C2209C(this, *(_QWORD *)&svtId.fields.currentCryptoKey);
+        sub_1C2E390(this, *(_QWORD *)&svtId.fields.currentCryptoKey);
       v10 = (char *)svtIds + v7;
       v12 = *((_QWORD *)v10 + 4);
       v11 = *((_QWORD *)v10 + 5);
@@ -79,10 +84,10 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v16.fields.currentCryptoKey = v12;
       *(_QWORD *)&v16.fields.fakeValue = v11;
-      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v16, 0LL);
+      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v16, 0LL);
       *(_QWORD *)&v17.fields.currentCryptoKey = v4;
       *(_QWORD *)&v17.fields.fakeValue = v3;
-      v14 = v13 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v17, 0LL);
+      v14 = v13 == CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v17, 0LL);
       this = (ServantFilterEntity_o *)v14;
       if ( v14 || v9 == v8 )
         break;
@@ -90,7 +95,7 @@ bool __fastcall ServantFilterEntity__IsEnableServant(
       ++v8;
       v7 += 16LL;
       if ( !svtIds )
-        sub_1C22094(v14, *(_QWORD *)&svtId.fields.currentCryptoKey);
+        sub_1C2E388(v14, *(_QWORD *)&svtId.fields.currentCryptoKey);
     }
   }
   else

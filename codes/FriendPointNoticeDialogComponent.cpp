@@ -1,9 +1,11 @@
 void __fastcall FriendPointNoticeDialogComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4BDE5E2 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4BFF82D & 1) == 0 )
   {
-    sub_1C21E38(&FriendPointNoticeDialogComponent_TypeInfo);
-    byte_4BDE5E2 = 1;
+    sub_1C2E12C(&FriendPointNoticeDialogComponent_TypeInfo, v1);
+    byte_4BFF82D = 1;
   }
   *FriendPointNoticeDialogComponent_TypeInfo->static_fields = (struct FriendPointNoticeDialogComponent_StaticFields)vdup_n_s32(0x442F0000u).n64_u64[0];
 }
@@ -13,10 +15,10 @@ void __fastcall FriendPointNoticeDialogComponent___ctor(
         FriendPointNoticeDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BDE5E1 & 1) == 0 )
+  if ( (byte_4BFF82C & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BDE5E1 = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BFF82C = 1;
   }
   this->fields.addedPointLabelCenterPosY = 165.0;
   *(_QWORD *)&this->fields.servantNameLabelMaxWidth = 0x25843900000LL;
@@ -50,67 +52,69 @@ void __fastcall FriendPointNoticeDialogComponent__Close(
 {
   const MethodInfo *v2; // x2
 
-  FriendPointNoticeDialogComponent__Close_43393116(this, 0LL, v2);
+  FriendPointNoticeDialogComponent__Close_43490180(this, 0LL, v2);
 }
 
 
-void __fastcall FriendPointNoticeDialogComponent__Close_43393116(
+void __fastcall FriendPointNoticeDialogComponent__Close_43490180(
         FriendPointNoticeDialogComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x20
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  FriendPointNoticeDialogComponent_o *v20; // x0
-  const MethodInfo *v21; // x3
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x20
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int64_t v10; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  BattleSetupInfo_o *v13; // x5
+  FollowerInfo_o *v14; // x6
+  PartyListViewItem_o *v15; // x7
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
   FriendPointNoticeDialogComponent_o *v22; // x0
   const MethodInfo *v23; // x3
   FriendPointNoticeDialogComponent_o *v24; // x0
   const MethodInfo *v25; // x3
   FriendPointNoticeDialogComponent_o *v26; // x0
   const MethodInfo *v27; // x3
-  System_Action_o *v28; // x21
+  FriendPointNoticeDialogComponent_o *v28; // x0
+  const MethodInfo *v29; // x3
+  System_Action_o *v30; // x21
 
-  if ( (byte_4BDE5D9 & 1) == 0 )
+  if ( (byte_4BFF824 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent___c__DisplayClass51_0__Close_b__0__);
-    sub_1C21E38(&FriendPointNoticeDialogComponent___c__DisplayClass51_0_TypeInfo);
-    byte_4BDE5D9 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, callback);
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent___c__DisplayClass51_0__Close_b__0__, v5);
+    sub_1C2E12C(&FriendPointNoticeDialogComponent___c__DisplayClass51_0_TypeInfo, v6);
+    byte_4BFF824 = 1;
   }
-  v5 = sub_1C22084(FriendPointNoticeDialogComponent___c__DisplayClass51_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_QWORD *)(v5 + 16) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 16), (int64_t)this, v8, v9, v10, v11, v12, v13);
-  *(_QWORD *)(v5 + 24) = callback;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v5 + 24), (int64_t)callback, v14, v15, v16, v17, v18, v19);
-  FriendPointNoticeDialogComponent__SetEnableButton(v20, this->fields.decideButtonObject, 0, v21);
-  FriendPointNoticeDialogComponent__SetEnableButton(v22, this->fields.friendSupportButtonObject, 0, v23);
-  FriendPointNoticeDialogComponent__SetEnableButton(v24, this->fields.recommendedSupportButtonObject, 0, v25);
-  FriendPointNoticeDialogComponent__SetEnableButton(v26, this->fields.closeButtonObject, 0, v27);
+  v7 = sub_1C2E378(FriendPointNoticeDialogComponent___c__DisplayClass51_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  if ( !v7 )
+    sub_1C2E388(v8, v9);
+  *(_QWORD *)(v7 + 16) = this;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  *(_QWORD *)(v7 + 24) = callback;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)callback, v16, v17, v18, v19, v20, v21);
+  FriendPointNoticeDialogComponent__SetEnableButton(v22, this->fields.decideButtonObject, 0, v23);
+  FriendPointNoticeDialogComponent__SetEnableButton(v24, this->fields.friendSupportButtonObject, 0, v25);
+  FriendPointNoticeDialogComponent__SetEnableButton(v26, this->fields.recommendedSupportButtonObject, 0, v27);
+  FriendPointNoticeDialogComponent__SetEnableButton(v28, this->fields.closeButtonObject, 0, v29);
   AndroidBackKeyManager__RemoveBackBtn(this->fields.closeButtonObject, 0LL);
-  v28 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
   System_Action___ctor(
-    v28,
-    (Il2CppObject *)v5,
+    v30,
+    (Il2CppObject *)v7,
     Method_FriendPointNoticeDialogComponent___c__DisplayClass51_0__Close_b__0__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v28, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v30, 0LL);
 }
 
 
@@ -135,7 +139,7 @@ void __fastcall FriendPointNoticeDialogComponent__ExecClickedFunc(
       result,
       *(_QWORD *)&clickedFunc->fields.extra_arg);
   p_clickedFunc->klass = 0LL;
-  sub_1C21DDC(p_clickedFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C2E0D0(p_clickedFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -145,17 +149,17 @@ void __fastcall FriendPointNoticeDialogComponent__Init(
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BDE5D7 & 1) == 0 )
+  if ( (byte_4BFF822 & 1) == 0 )
   {
-    sub_1C21E38(&string_TypeInfo);
-    byte_4BDE5D7 = 1;
+    sub_1C2E12C(&string_TypeInfo, method);
+    byte_4BFF822 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C22094(titleLabel, method);
+    sub_1C2E388(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
@@ -171,15 +175,15 @@ void __fastcall FriendPointNoticeDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDE5E0 & 1) == 0 )
+  if ( (byte_4BFF82B & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent_OnClickCancel__);
-    byte_4BDE5E0 = 1;
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent_OnClickCancel__, method);
+    byte_4BFF82B = 1;
   }
   v3 = Method_FriendPointNoticeDialogComponent_OnClickCancel__;
   if ( (*((_BYTE *)Method_FriendPointNoticeDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C21E50(Method_FriendPointNoticeDialogComponent_OnClickCancel__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C2E144(Method_FriendPointNoticeDialogComponent_OnClickCancel__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
   FriendPointNoticeDialogComponent__ExecClickedFunc(this, 3, v5);
 }
@@ -192,15 +196,15 @@ void __fastcall FriendPointNoticeDialogComponent__OnClickRecommendedSupportDisab
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_4BDE5DC & 1) == 0 )
+  if ( (byte_4BFF827 & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__);
-    byte_4BDE5DC = 1;
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__, method);
+    byte_4BFF827 = 1;
   }
   v2 = Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__;
   if ( (*((_BYTE *)Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1C21E50(Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v2, v2[4]);
+    v2 = (_QWORD *)sub_1C2E144(Method_FriendPointNoticeDialogComponent_OnClickRecommendedSupportDisableMask__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1C2E110(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 1, 0, 0LL);
 }
 
@@ -213,15 +217,15 @@ void __fastcall FriendPointNoticeDialogComponent__OnClickToFriedPointSummon(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDE5DD & 1) == 0 )
+  if ( (byte_4BFF828 & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__);
-    byte_4BDE5DD = 1;
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__, method);
+    byte_4BFF828 = 1;
   }
   v3 = Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__;
   if ( (*((_BYTE *)Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C21E50(Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C2E144(Method_FriendPointNoticeDialogComponent_OnClickToFriedPointSummon__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
   FriendPointNoticeDialogComponent__ExecClickedFunc(this, 0, v5);
 }
@@ -235,15 +239,15 @@ void __fastcall FriendPointNoticeDialogComponent__OnClickToRecommendedSupport(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDE5DF & 1) == 0 )
+  if ( (byte_4BFF82A & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__);
-    byte_4BDE5DF = 1;
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__, method);
+    byte_4BFF82A = 1;
   }
   v3 = Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__;
   if ( (*((_BYTE *)Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C21E50(Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C2E144(Method_FriendPointNoticeDialogComponent_OnClickToRecommendedSupport__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
   FriendPointNoticeDialogComponent__ExecClickedFunc(this, 2, v5);
 }
@@ -257,15 +261,15 @@ void __fastcall FriendPointNoticeDialogComponent__OnClickToSupport(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDE5DE & 1) == 0 )
+  if ( (byte_4BFF829 & 1) == 0 )
   {
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent_OnClickToSupport__);
-    byte_4BDE5DE = 1;
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent_OnClickToSupport__, method);
+    byte_4BFF829 = 1;
   }
   v3 = Method_FriendPointNoticeDialogComponent_OnClickToSupport__;
   if ( (*((_BYTE *)Method_FriendPointNoticeDialogComponent_OnClickToSupport__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C21E50(Method_FriendPointNoticeDialogComponent_OnClickToSupport__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C2E144(Method_FriendPointNoticeDialogComponent_OnClickToSupport__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
   FriendPointNoticeDialogComponent__ExecClickedFunc(this, 1, v5);
 }
@@ -278,231 +282,266 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
         FriendPointNoticeDialogComponent_CallbackFunc_o *clickedAction,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x1
+  __int64 v36; // x1
+  __int64 v37; // x1
+  __int64 v38; // x1
+  __int64 v39; // x1
+  __int64 v40; // x1
+  __int64 v41; // x1
   FriendPointNoticeDialogSvtInfo_o *gameObject; // x0
-  Il2CppObject *v8; // x1
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  Il2CppObject *v43; // x1
+  int64_t v44; // x2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  BattleSetupInfo_o *v47; // x5
+  FollowerInfo_o *v48; // x6
+  PartyListViewItem_o *v49; // x7
   UILabel_o *titleLabel; // x21
   int32_t addFriendPoint; // w8
-  _BOOL4 v17; // w20
+  _BOOL4 v52; // w20
   struct UILabel_o *addedPointLabel; // x21
   System_String_o *mText; // x22
-  System_String_o *v20; // x23
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  Il2CppObject *v24; // x0
-  System_String_o *v25; // x0
-  System_String_o *v26; // x0
-  struct UILabel_o *v27; // x21
-  System_String_o *v28; // x0
-  struct UILabel_o *v29; // x21
-  System_String_o *v30; // x22
-  System_String_o *v31; // x23
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  Il2CppObject *v35; // x0
-  System_String_o *v36; // x0
-  System_String_o *v37; // x0
-  UILabel_o *v38; // x21
+  System_String_o *v55; // x23
+  __int64 v56; // x2
+  __int64 v57; // x3
+  __int64 v58; // x4
+  Il2CppObject *v59; // x0
+  System_String_o *v60; // x0
+  System_String_o *v61; // x0
+  struct UILabel_o *v62; // x21
+  System_String_o *v63; // x0
+  struct UILabel_o *v64; // x21
+  System_String_o *v65; // x22
+  System_String_o *v66; // x23
+  __int64 v67; // x2
+  __int64 v68; // x3
+  __int64 v69; // x4
+  Il2CppObject *v70; // x0
+  System_String_o *v71; // x0
+  System_String_o *v72; // x0
+  UILabel_o *v73; // x21
   UILabel_o *addedRecommendedPointLabel; // x21
-  System_String_o *v40; // x22
-  __int64 v41; // x2
-  __int64 v42; // x3
-  __int64 v43; // x4
-  Il2CppObject *v44; // x0
-  UILabel_o *v45; // x21
-  UnityEngine_GameObject_o *v46; // x0
-  System_Collections_Generic_List_object__o *v47; // x21
+  System_String_o *v75; // x22
+  __int64 v76; // x2
+  __int64 v77; // x3
+  __int64 v78; // x4
+  Il2CppObject *v79; // x0
+  UILabel_o *v80; // x21
+  UnityEngine_GameObject_o *v81; // x0
+  System_Collections_Generic_List_object__o *v82; // x21
   UILabel_o *usedRecommendedServantTitleLabel; // x23
   struct CommonUI_LoginResultRecommendSupportFriendPointSvtData_array *addRecommendSupportFriendPointSvtList; // x29
   struct FriendPointNoticeDialogSvtInfo_array *recommendedSupportServantInfoList; // x28
-  __int64 v51; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v52; // x23
-  il2cpp_array_size_t v53; // w26
-  unsigned __int64 v54; // x27
+  __int64 v86; // x8
+  DataMasterBase_TMaster__TEntity__PKType__o *v87; // x23
+  il2cpp_array_size_t v88; // w26
+  unsigned __int64 v89; // x27
   il2cpp_array_size_t max_length; // w8
-  CommonUI_LoginResultRecommendSupportFriendPointSvtData_o *v56; // x24
+  CommonUI_LoginResultRecommendSupportFriendPointSvtData_o *v91; // x24
   System_String_o *monitor; // x25
-  const MethodInfo *v58; // x5
-  struct FriendPointNoticeDialogSvtInfo_array *v59; // x8
-  struct FriendPointNoticeDialogSvtInfo_array *v60; // x8
-  int64_t v61; // x2
-  int32_t v62; // w3
-  System_String_o *v63; // x4
-  BattleSetupInfo_o *v64; // x5
-  FollowerInfo_o *v65; // x6
-  PartyListViewItem_o *v66; // x7
-  struct FriendPointNoticeDialogSvtInfo_array *v67; // x8
+  const MethodInfo *v93; // x5
+  struct FriendPointNoticeDialogSvtInfo_array *v94; // x8
+  struct FriendPointNoticeDialogSvtInfo_array *v95; // x8
+  int64_t v96; // x2
+  int32_t v97; // w3
+  System_String_o *v98; // x4
+  BattleSetupInfo_o *v99; // x5
+  FollowerInfo_o *v100; // x6
+  PartyListViewItem_o *v101; // x7
+  struct FriendPointNoticeDialogSvtInfo_array *v102; // x8
   struct System_Object_array *items; // x8
-  _QWORD *v69; // x9
+  _QWORD *v104; // x9
   __int64 size; // x10
-  Il2CppClass **v71; // x0
-  System_Collections_Generic_IEnumerable_T__o *v72; // x23
-  FriendPointNoticeDialogComponent___c_c *v73; // x0
+  Il2CppClass **v106; // x0
+  System_Collections_Generic_IEnumerable_T__o *v107; // x23
+  FriendPointNoticeDialogComponent___c_c *v108; // x0
   System_Action_object__o *_9__46_1; // x24
-  Il2CppObject *v75; // x25
+  Il2CppObject *v110; // x25
   struct FriendPointNoticeDialogComponent___c_StaticFields *static_fields; // x0
-  int64_t v77; // x2
-  int32_t v78; // w3
-  System_String_o *v79; // x4
-  BattleSetupInfo_o *v80; // x5
-  FollowerInfo_o *v81; // x6
-  PartyListViewItem_o *v82; // x7
+  int64_t v112; // x2
+  int32_t v113; // w3
+  System_String_o *v114; // x4
+  BattleSetupInfo_o *v115; // x5
+  FollowerInfo_o *v116; // x6
+  PartyListViewItem_o *v117; // x7
   UILabel_o *mostUsedServantTitleLabel; // x23
   CommonUI_LoginResultFriendPointSvtData_o *topAddFriendPointSvt; // x24
   FriendPointNoticeDialogSvtInfo_o *normalSupportServantInfo; // x23
-  const MethodInfo *v86; // x5
-  struct CommonUI_LoginResultFriendPointSvtData_o *v87; // x8
+  const MethodInfo *v121; // x5
+  struct CommonUI_LoginResultFriendPointSvtData_o *v122; // x8
   CommonUI_LoginResultFriendPointSvtData_o *topAddFriendPointSvtEQ; // x24
   FriendPointNoticeDialogSvtInfo_o *eventSupportServantInfo; // x23
-  const MethodInfo *v90; // x5
-  struct CommonUI_LoginResultFriendPointSvtData_o *v91; // x8
-  int64_t v92; // x2
-  int32_t v93; // w3
-  System_String_o *v94; // x4
-  BattleSetupInfo_o *v95; // x5
-  FollowerInfo_o *v96; // x6
-  PartyListViewItem_o *v97; // x7
-  struct System_Object_array *v98; // x8
-  _QWORD *v99; // x9
-  __int64 v100; // x10
-  Il2CppClass **v101; // x0
-  int64_t v102; // x2
-  int32_t v103; // w3
-  System_String_o *v104; // x4
-  BattleSetupInfo_o *v105; // x5
-  FollowerInfo_o *v106; // x6
-  PartyListViewItem_o *v107; // x7
-  struct System_Object_array *v108; // x8
-  _QWORD *v109; // x9
-  __int64 v110; // x10
-  Il2CppClass **v111; // x0
+  const MethodInfo *v125; // x5
+  struct CommonUI_LoginResultFriendPointSvtData_o *v126; // x8
+  int64_t v127; // x2
+  int32_t v128; // w3
+  System_String_o *v129; // x4
+  BattleSetupInfo_o *v130; // x5
+  FollowerInfo_o *v131; // x6
+  PartyListViewItem_o *v132; // x7
+  struct System_Object_array *v133; // x8
+  _QWORD *v134; // x9
+  __int64 v135; // x10
+  Il2CppClass **v136; // x0
+  int64_t v137; // x2
+  int32_t v138; // w3
+  System_String_o *v139; // x4
+  BattleSetupInfo_o *v140; // x5
+  FollowerInfo_o *v141; // x6
+  PartyListViewItem_o *v142; // x7
+  struct System_Object_array *v143; // x8
+  _QWORD *v144; // x9
+  __int64 v145; // x10
+  Il2CppClass **v146; // x0
   unsigned int localPosition; // s0
-  int v113; // w8
-  float v114; // s8
-  int v115; // w9
-  struct FriendPointNoticeDialogComponent_PositionYData_array *v116; // x8
-  FriendPointNoticeDialogComponent_PositionYData_o *v117; // x20
-  UnityEngine_GameObject_o *v118; // x0
-  const MethodInfo *v119; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v120; // x8
-  const MethodInfo *v121; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v122; // x8
-  const MethodInfo *v123; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v124; // x8
+  int v148; // w8
+  float v149; // s8
+  int v150; // w9
+  struct FriendPointNoticeDialogComponent_PositionYData_array *v151; // x8
+  FriendPointNoticeDialogComponent_PositionYData_o *v152; // x20
+  UnityEngine_GameObject_o *v153; // x0
+  const MethodInfo *v154; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v155; // x8
+  const MethodInfo *v156; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v157; // x8
+  const MethodInfo *v158; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v159; // x8
   float left; // s0
   float lowerRow1; // s1
-  int v127; // w9
+  int v162; // w9
   struct FriendPointNoticeDialogComponent_PositionYData_array *layoutYPositionList; // x8
-  const MethodInfo *v129; // x2
+  const MethodInfo *v164; // x2
   struct FriendPointNoticeDialogComponent_PositionXData_o *layoutXPositionList; // x8
-  const MethodInfo_364EDE4 *v131; // x2
-  System_Collections_Generic_List_object__o *v132; // x0
-  struct FriendPointNoticeDialogComponent_PositionYData_array *v133; // x8
-  const MethodInfo *v134; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v135; // x8
+  const MethodInfo_366B5DC *v166; // x2
+  System_Collections_Generic_List_object__o *v167; // x0
+  struct FriendPointNoticeDialogComponent_PositionYData_array *v168; // x8
+  const MethodInfo *v169; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v170; // x8
   UILabel_o *noDataLabel; // x20
-  struct FriendPointNoticeDialogComponent_PositionYData_array *v137; // x8
-  FriendPointNoticeDialogComponent_PositionYData_o *v138; // x20
-  const MethodInfo *v139; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v140; // x8
-  const MethodInfo *v141; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v142; // x8
-  const MethodInfo *v143; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v144; // x8
+  struct FriendPointNoticeDialogComponent_PositionYData_array *v172; // x8
+  FriendPointNoticeDialogComponent_PositionYData_o *v173; // x20
+  const MethodInfo *v174; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v175; // x8
+  const MethodInfo *v176; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v177; // x8
+  const MethodInfo *v178; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v179; // x8
   float right; // s0
   float upperRow1; // s1
-  struct FriendPointNoticeDialogComponent_PositionYData_array *v147; // x8
-  UnityEngine_GameObject_o *v148; // x0
-  const MethodInfo *v149; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v150; // x8
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v151; // x8
-  const MethodInfo *v152; // x2
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v153; // x8
-  struct FriendPointNoticeDialogComponent_PositionXData_o *v154; // x8
+  struct FriendPointNoticeDialogComponent_PositionYData_array *v182; // x8
+  UnityEngine_GameObject_o *v183; // x0
+  const MethodInfo *v184; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v185; // x8
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v186; // x8
+  const MethodInfo *v187; // x2
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v188; // x8
+  struct FriendPointNoticeDialogComponent_PositionXData_o *v189; // x8
   Il2CppObject *Master_object; // x20
-  FriendPointNoticeDialogSvtInfo_o *v156; // x20
+  FriendPointNoticeDialogSvtInfo_o *v191; // x20
   int32_t m_CancellationTokenSource; // w21
-  BalanceConfig_c *v158; // x0
+  BalanceConfig_c *v193; // x0
   UILabel_o *friendPointMaxLabel; // x21
-  UnityEngine_GameObject_o *v160; // x0
+  UnityEngine_GameObject_o *v195; // x0
   UILabel_o *currentFriendPointLabel; // x21
-  System_String_o *v162; // x22
-  __int64 v163; // x2
-  __int64 v164; // x3
-  __int64 v165; // x4
-  Il2CppObject *v166; // x0
-  UILabel_o *v167; // x20
+  System_String_o *v197; // x22
+  __int64 v198; // x2
+  __int64 v199; // x3
+  __int64 v200; // x4
+  Il2CppObject *v201; // x0
+  UILabel_o *v202; // x20
   UILabel_o *closeButtonLabel; // x20
   UILabel_o *friendSupportButtonLabel; // x20
-  const MethodInfo *v170; // x1
+  const MethodInfo *v205; // x1
   UILabel_o *decideButtonLabel; // x20
-  System_Action_o *v172; // x20
-  System_Collections_Generic_List_object__o *v173; // [xsp+8h] [xbp-88h]
-  CommonUI_LoginResultData_o *v174; // [xsp+10h] [xbp-80h]
+  System_Action_o *v207; // x20
+  System_Collections_Generic_List_object__o *v208; // [xsp+8h] [xbp-88h]
+  CommonUI_LoginResultData_o *v209; // [xsp+10h] [xbp-80h]
   int32_t addFollowFriendPoint; // [xsp+1Ch] [xbp-74h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
-  UnityEngine_Vector2_o v177; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v178; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v179; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v180; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v181; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v182; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v183; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v184; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v185; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v186; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v187; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v188; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v189; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v190; // 0:s0.4,4:s1.4
-  UnityEngine_Vector2_o v191; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v212; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v213; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v214; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v215; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v216; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v217; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v218; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v219; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v220; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v221; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v222; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v223; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v224; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v225; // 0:s0.4,4:s1.4
+  UnityEngine_Vector2_o v226; // 0:s0.4,4:s1.4
 
-  if ( (byte_4BDE5D8 & 1) == 0 )
+  if ( (byte_4BFF823 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_FriendPointNoticeDialogSvtInfo__TypeInfo);
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    sub_1C21E38(&Method_BasicHelper_ForEach_FriendPointNoticeDialogSvtInfo___);
-    sub_1C21E38(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C21E38(&Method_DataManager_GetMaster_TblUserMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent__Open_b__46_0__);
-    sub_1C21E38(&FriendPointNoticeDialogComponent_TypeInfo);
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-    sub_1C21E38(&System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent___c__Open_b__46_1__);
-    sub_1C21E38(&FriendPointNoticeDialogComponent___c_TypeInfo);
-    sub_1C21E38(&StringLiteral_7083/*"GET_FRIEND_POINT_FP_RECOMMENDED"*/);
-    sub_1C21E38(&StringLiteral_7090/*"GET_FRIEND_POINT_SERVANT_TITLE"*/);
-    sub_1C21E38(&StringLiteral_7086/*"GET_FRIEND_POINT_NO_DATA"*/);
-    sub_1C21E38(&StringLiteral_7085/*"GET_FRIEND_POINT_NOW_POINT"*/);
-    sub_1C21E38(&StringLiteral_7092/*"GET_FRIEND_POINT_SUPPORT_BTN"*/);
-    sub_1C21E38(&StringLiteral_118/*"  "*/);
-    sub_1C21E38(&StringLiteral_7082/*"GET_FRIEND_POINT_FP_NORMAL"*/);
-    sub_1C21E38(&StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C21E38(&StringLiteral_7081/*"GET_FRIEND_POINT_FP_FOLLOW"*/);
-    sub_1C21E38(&StringLiteral_7091/*"GET_FRIEND_POINT_SERVANT_USED_RECOMMENDED_TITLE"*/);
-    sub_1C21E38(&StringLiteral_7078/*"GET_FRIEND_POINT_CAPTION_EVENT"*/);
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    sub_1C21E38(&StringLiteral_7084/*"GET_FRIEND_POINT_GACHA_BTN"*/);
-    sub_1C21E38(&StringLiteral_7093/*"GET_FRIEND_POINT_TITLE"*/);
-    sub_1C21E38(&StringLiteral_7077/*"GET_FRIEND_POINT_AT_LIMIT"*/);
-    sub_1C21E38(&StringLiteral_7079/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/);
-    byte_4BDE5D8 = 1;
+    sub_1C2E12C(&System_Action_FriendPointNoticeDialogSvtInfo__TypeInfo, loginResultData);
+    sub_1C2E12C(&System_Action_TypeInfo, v7);
+    sub_1C2E12C(&BalanceConfig_TypeInfo, v8);
+    sub_1C2E12C(&Method_BasicHelper_ForEach_FriendPointNoticeDialogSvtInfo___, v9);
+    sub_1C2E12C(&Method_DataManager_GetMaster_QuestMaster___, v10);
+    sub_1C2E12C(&Method_DataManager_GetMaster_TblUserMaster___, v11);
+    sub_1C2E12C(&DataManager_TypeInfo, v12);
+    sub_1C2E12C(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v13);
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent__Open_b__46_0__, v14);
+    sub_1C2E12C(&FriendPointNoticeDialogComponent_TypeInfo, v15);
+    sub_1C2E12C(&int_TypeInfo, v16);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__, v17);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__, v18);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Count__, v19);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__, v20);
+    sub_1C2E12C(&System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo, v21);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v22);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v23);
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent___c__Open_b__46_1__, v24);
+    sub_1C2E12C(&FriendPointNoticeDialogComponent___c_TypeInfo, v25);
+    sub_1C2E12C(&StringLiteral_7074/*"GET_FRIEND_POINT_FP_RECOMMENDED"*/, v26);
+    sub_1C2E12C(&StringLiteral_7081/*"GET_FRIEND_POINT_SERVANT_TITLE"*/, v27);
+    sub_1C2E12C(&StringLiteral_7077/*"GET_FRIEND_POINT_NO_DATA"*/, v28);
+    sub_1C2E12C(&StringLiteral_7076/*"GET_FRIEND_POINT_NOW_POINT"*/, v29);
+    sub_1C2E12C(&StringLiteral_7083/*"GET_FRIEND_POINT_SUPPORT_BTN"*/, v30);
+    sub_1C2E12C(&StringLiteral_118/*"  "*/, v31);
+    sub_1C2E12C(&StringLiteral_7073/*"GET_FRIEND_POINT_FP_NORMAL"*/, v32);
+    sub_1C2E12C(&StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, v33);
+    sub_1C2E12C(&StringLiteral_7072/*"GET_FRIEND_POINT_FP_FOLLOW"*/, v34);
+    sub_1C2E12C(&StringLiteral_7082/*"GET_FRIEND_POINT_SERVANT_USED_RECOMMENDED_TITLE"*/, v35);
+    sub_1C2E12C(&StringLiteral_7069/*"GET_FRIEND_POINT_CAPTION_EVENT"*/, v36);
+    sub_1C2E12C(&StringLiteral_1/*""*/, v37);
+    sub_1C2E12C(&StringLiteral_7075/*"GET_FRIEND_POINT_GACHA_BTN"*/, v38);
+    sub_1C2E12C(&StringLiteral_7084/*"GET_FRIEND_POINT_TITLE"*/, v39);
+    sub_1C2E12C(&StringLiteral_7068/*"GET_FRIEND_POINT_AT_LIMIT"*/, v40);
+    sub_1C2E12C(&StringLiteral_7070/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/, v41);
+    byte_4BFF823 = 1;
   }
   entity = 0LL;
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
@@ -512,15 +551,15 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
     goto LABEL_231;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   this->fields.clickedFunc = clickedAction;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.clickedFunc,
     (int64_t)clickedAction,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
+    v44,
+    v45,
+    v46,
+    v47,
+    v48,
+    v49);
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.noDataLabel;
   this->fields.state = 1;
   if ( !gameObject )
@@ -534,7 +573,7 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7093/*"GET_FRIEND_POINT_TITLE"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7084/*"GET_FRIEND_POINT_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_231;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
@@ -545,7 +584,7 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
   if ( !loginResultData )
     goto LABEL_231;
   addFriendPoint = loginResultData->fields.addFriendPoint;
-  v17 = addFriendPoint < 1;
+  v52 = addFriendPoint < 1;
   if ( addFriendPoint >= 1 )
   {
     addedPointLabel = this->fields.addedPointLabel;
@@ -554,45 +593,45 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
     mText = addedPointLabel->fields.mText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v20 = LocalizationManager__Get((System_String_o *)StringLiteral_7082/*"GET_FRIEND_POINT_FP_NORMAL"*/, 0LL);
+    v55 = LocalizationManager__Get((System_String_o *)StringLiteral_7073/*"GET_FRIEND_POINT_FP_NORMAL"*/, 0LL);
     addFollowFriendPoint = loginResultData->fields.addFriendPoint;
-    v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v21, v22, v23);
-    v25 = System_String__Format(v20, v24, 0LL);
-    v26 = System_String__Concat_63115476(mText, v25, 0LL);
-    UILabel__set_text(addedPointLabel, v26, 0LL);
+    v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v56, v57, v58);
+    v60 = System_String__Format(v55, v59, 0LL);
+    v61 = System_String__Concat_63235584(mText, v60, 0LL);
+    UILabel__set_text(addedPointLabel, v61, 0LL);
   }
   if ( loginResultData->fields.addFollowFriendPoint >= 1 )
   {
     if ( loginResultData->fields.addFriendPoint >= 1 )
     {
-      v27 = this->fields.addedPointLabel;
-      if ( !v27 )
+      v62 = this->fields.addedPointLabel;
+      if ( !v62 )
         goto LABEL_231;
-      v28 = System_String__Concat_63115476(v27->fields.mText, (System_String_o *)StringLiteral_118/*"  "*/, 0LL);
-      UILabel__set_text(v27, v28, 0LL);
+      v63 = System_String__Concat_63235584(v62->fields.mText, (System_String_o *)StringLiteral_118/*"  "*/, 0LL);
+      UILabel__set_text(v62, v63, 0LL);
     }
-    v29 = this->fields.addedPointLabel;
-    if ( !v29 )
+    v64 = this->fields.addedPointLabel;
+    if ( !v64 )
       goto LABEL_231;
-    v30 = v29->fields.mText;
+    v65 = v64->fields.mText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_7081/*"GET_FRIEND_POINT_FP_FOLLOW"*/, 0LL);
+    v66 = LocalizationManager__Get((System_String_o *)StringLiteral_7072/*"GET_FRIEND_POINT_FP_FOLLOW"*/, 0LL);
     addFollowFriendPoint = loginResultData->fields.addFollowFriendPoint;
-    v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v32, v33, v34);
-    v36 = System_String__Format(v31, v35, 0LL);
-    v37 = System_String__Concat_63115476(v30, v36, 0LL);
-    UILabel__set_text(v29, v37, 0LL);
-    v17 = 0;
+    v70 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v67, v68, v69);
+    v71 = System_String__Format(v66, v70, 0LL);
+    v72 = System_String__Concat_63235584(v65, v71, 0LL);
+    UILabel__set_text(v64, v72, 0LL);
+    v52 = 0;
   }
-  v38 = this->fields.addedPointLabel;
+  v73 = this->fields.addedPointLabel;
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)FriendPointNoticeDialogComponent_TypeInfo;
   if ( !FriendPointNoticeDialogComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDialogComponent_TypeInfo);
-  if ( !v38 )
+  if ( !v73 )
     goto LABEL_231;
-  UILabel__SetCondensedScale_48213524(
-    v38,
+  UILabel__SetCondensedScale_48350976(
+    v73,
     FriendPointNoticeDialogComponent_TypeInfo->static_fields->ADD_POINT_LABEL_MAX_WIDTH,
     0.0,
     0LL);
@@ -602,32 +641,32 @@ void __fastcall FriendPointNoticeDialogComponent__Open(
     if ( !gameObject )
       goto LABEL_231;
 LABEL_38:
-    v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-    GameObjectExtensions__SetLocalPositionY(v46, this->fields.addedPointLabelCenterPosY, 0LL);
+    v81 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+    GameObjectExtensions__SetLocalPositionY(v81, this->fields.addedPointLabelCenterPosY, 0LL);
     goto LABEL_39;
   }
   addedRecommendedPointLabel = this->fields.addedRecommendedPointLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_7083/*"GET_FRIEND_POINT_FP_RECOMMENDED"*/, 0LL);
+  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_7074/*"GET_FRIEND_POINT_FP_RECOMMENDED"*/, 0LL);
   addFollowFriendPoint = loginResultData->fields.addRecommendSupportFriendPoint;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v41, v42, v43);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_String__Format(v40, v44, 0LL);
+  v79 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v76, v77, v78);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_String__Format(v75, v79, 0LL);
   if ( !addedRecommendedPointLabel )
     goto LABEL_231;
   UILabel__set_text(addedRecommendedPointLabel, (System_String_o *)gameObject, 0LL);
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)FriendPointNoticeDialogComponent_TypeInfo;
-  v45 = this->fields.addedRecommendedPointLabel;
+  v80 = this->fields.addedRecommendedPointLabel;
   if ( !FriendPointNoticeDialogComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDialogComponent_TypeInfo);
-  if ( !v45 )
+  if ( !v80 )
     goto LABEL_231;
-  UILabel__SetCondensedScale_48213524(
-    v45,
+  UILabel__SetCondensedScale_48350976(
+    v80,
     FriendPointNoticeDialogComponent_TypeInfo->static_fields->ADD_POINT_LABEL_MAX_WIDTH,
     0.0,
     0LL);
-  if ( v17 )
+  if ( v52 )
   {
     gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.addedRecommendedPointLabel;
     if ( !gameObject )
@@ -635,43 +674,43 @@ LABEL_38:
     goto LABEL_38;
   }
 LABEL_39:
-  v47 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo);
+  v82 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v47,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__);
-  v173 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo);
+    v82,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__);
+  v208 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v173,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__);
+    v208,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo___ctor__);
   usedRecommendedServantTitleLabel = this->fields.usedRecommendedServantTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7091/*"GET_FRIEND_POINT_SERVANT_USED_RECOMMENDED_TITLE"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7082/*"GET_FRIEND_POINT_SERVANT_USED_RECOMMENDED_TITLE"*/, 0LL);
   if ( !usedRecommendedServantTitleLabel )
     goto LABEL_231;
   UILabel__set_text(usedRecommendedServantTitleLabel, (System_String_o *)gameObject, 0LL);
   addRecommendSupportFriendPointSvtList = loginResultData->fields.addRecommendSupportFriendPointSvtList;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_QuestMaster___);
-  v174 = loginResultData;
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_QuestMaster___);
+  v209 = loginResultData;
   if ( addRecommendSupportFriendPointSvtList && *(_QWORD *)&addRecommendSupportFriendPointSvtList->max_length )
   {
     recommendedSupportServantInfoList = this->fields.recommendedSupportServantInfoList;
     if ( !recommendedSupportServantInfoList )
       goto LABEL_231;
-    v51 = *(_QWORD *)&recommendedSupportServantInfoList->max_length;
-    if ( (int)v51 >= 1 )
+    v86 = *(_QWORD *)&recommendedSupportServantInfoList->max_length;
+    if ( (int)v86 >= 1 )
     {
-      v52 = (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject;
-      v53 = 0;
-      v54 = 0LL;
-      while ( v54 < (unsigned int)v51 )
+      v87 = (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject;
+      v88 = 0;
+      v89 = 0LL;
+      while ( v89 < (unsigned int)v86 )
       {
         max_length = addRecommendSupportFriendPointSvtList->max_length;
-        if ( (int)v53 >= (int)max_length )
+        if ( (int)v88 >= (int)max_length )
         {
-          gameObject = recommendedSupportServantInfoList->m_Items[v54];
+          gameObject = recommendedSupportServantInfoList->m_Items[v89];
           if ( !gameObject )
             goto LABEL_231;
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
@@ -683,41 +722,41 @@ LABEL_39:
         }
         else
         {
-          if ( v53 >= max_length )
+          if ( v88 >= max_length )
             goto LABEL_232;
-          v56 = addRecommendSupportFriendPointSvtList->m_Items[v53];
-          if ( !v56 || !v52 )
+          v91 = addRecommendSupportFriendPointSvtList->m_Items[v88];
+          if ( !v91 || !v87 )
             goto LABEL_231;
           monitor = (System_String_o *)StringLiteral_1/*""*/;
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
-                                                             v52,
+                                                             v87,
                                                              &entity,
-                                                             v56->fields.questId,
-                                                             (const MethodInfo_325BE14 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+                                                             v91->fields.questId,
+                                                             (const MethodInfo_327B1CC *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)gameObject & 1) != 0 )
           {
             if ( !entity )
               goto LABEL_231;
             monitor = (System_String_o *)entity[1].monitor;
           }
-          v59 = this->fields.recommendedSupportServantInfoList;
-          if ( !v59 )
+          v94 = this->fields.recommendedSupportServantInfoList;
+          if ( !v94 )
             goto LABEL_231;
-          if ( v53 >= v59->max_length )
+          if ( v88 >= v94->max_length )
             goto LABEL_232;
-          FriendPointNoticeDialogComponent__SetupServantInfo_43390300(
+          FriendPointNoticeDialogComponent__SetupServantInfo_43487364(
             (FriendPointNoticeDialogComponent_o *)gameObject,
-            v59->m_Items[v53],
-            v56,
+            v94->m_Items[v88],
+            v91,
             monitor,
-            v56->fields.friendPoint,
-            v58);
-          v60 = this->fields.recommendedSupportServantInfoList;
-          if ( !v60 )
+            v91->fields.friendPoint,
+            v93);
+          v95 = this->fields.recommendedSupportServantInfoList;
+          if ( !v95 )
             goto LABEL_231;
-          if ( v53 >= v60->max_length )
+          if ( v88 >= v95->max_length )
             goto LABEL_232;
-          gameObject = v60->m_Items[v53];
+          gameObject = v95->m_Items[v88];
           if ( !gameObject )
             goto LABEL_231;
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
@@ -730,39 +769,39 @@ LABEL_39:
                                                              0LL);
           if ( ((unsigned __int8)gameObject & 1) != 0 )
           {
-            v67 = this->fields.recommendedSupportServantInfoList;
-            if ( !v67 )
+            v102 = this->fields.recommendedSupportServantInfoList;
+            if ( !v102 )
               goto LABEL_231;
-            if ( v53 >= v67->max_length )
+            if ( v88 >= v102->max_length )
               goto LABEL_232;
-            if ( !v47 )
+            if ( !v82 )
               goto LABEL_231;
-            v8 = (Il2CppObject *)v67->m_Items[v53];
-            items = v47->fields._items;
-            v69 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
-            ++v47->fields._version;
+            v43 = (Il2CppObject *)v102->m_Items[v88];
+            items = v82->fields._items;
+            v104 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
+            ++v82->fields._version;
             if ( !items )
               goto LABEL_231;
-            size = v47->fields._size;
+            size = v82->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                v47,
-                v8,
-                *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
+                v82,
+                v43,
+                *(const MethodInfo_366B8AC **)(*(_QWORD *)(v104[4] + 192LL) + 112LL));
             }
             else
             {
-              v71 = &items->obj.klass + size;
-              v47->fields._size = size + 1;
-              v71[4] = (Il2CppClass *)v8;
-              sub_1C21DDC((PartyOrganizationUtility_o *)(v71 + 4), (int64_t)v8, v61, v62, v63, v64, v65, v66);
+              v106 = &items->obj.klass + size;
+              v82->fields._size = size + 1;
+              v106[4] = (Il2CppClass *)v43;
+              sub_1C2E0D0((PartyOrganizationUtility_o *)(v106 + 4), (int64_t)v43, v96, v97, v98, v99, v100, v101);
             }
           }
-          ++v53;
+          ++v88;
         }
-        LODWORD(v51) = recommendedSupportServantInfoList->max_length;
-        if ( (__int64)++v54 >= (int)v51 )
+        LODWORD(v86) = recommendedSupportServantInfoList->max_length;
+        if ( (__int64)++v89 >= (int)v86 )
           goto LABEL_84;
       }
       goto LABEL_232;
@@ -770,68 +809,68 @@ LABEL_39:
   }
   else
   {
-    v72 = (System_Collections_Generic_IEnumerable_T__o *)this->fields.recommendedSupportServantInfoList;
-    v73 = FriendPointNoticeDialogComponent___c_TypeInfo;
+    v107 = (System_Collections_Generic_IEnumerable_T__o *)this->fields.recommendedSupportServantInfoList;
+    v108 = FriendPointNoticeDialogComponent___c_TypeInfo;
     if ( !FriendPointNoticeDialogComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(FriendPointNoticeDialogComponent___c_TypeInfo);
-      v73 = FriendPointNoticeDialogComponent___c_TypeInfo;
+      v108 = FriendPointNoticeDialogComponent___c_TypeInfo;
     }
-    _9__46_1 = (System_Action_object__o *)v73->static_fields->__9__46_1;
+    _9__46_1 = (System_Action_object__o *)v108->static_fields->__9__46_1;
     if ( !_9__46_1 )
     {
-      if ( !v73->_2.cctor_finished )
+      if ( !v108->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v73);
-        v73 = FriendPointNoticeDialogComponent___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v108);
+        v108 = FriendPointNoticeDialogComponent___c_TypeInfo;
       }
-      v75 = (Il2CppObject *)v73->static_fields->__9;
-      _9__46_1 = (System_Action_object__o *)sub_1C22084(System_Action_FriendPointNoticeDialogSvtInfo__TypeInfo);
-      System_Action_object____ctor(_9__46_1, v75, Method_FriendPointNoticeDialogComponent___c__Open_b__46_1__, 0LL);
+      v110 = (Il2CppObject *)v108->static_fields->__9;
+      _9__46_1 = (System_Action_object__o *)sub_1C2E378(System_Action_FriendPointNoticeDialogSvtInfo__TypeInfo);
+      System_Action_object____ctor(_9__46_1, v110, Method_FriendPointNoticeDialogComponent___c__Open_b__46_1__, 0LL);
       static_fields = FriendPointNoticeDialogComponent___c_TypeInfo->static_fields;
       static_fields->__9__46_1 = (struct System_Action_FriendPointNoticeDialogSvtInfo__o *)_9__46_1;
-      sub_1C21DDC(
+      sub_1C2E0D0(
         (PartyOrganizationUtility_o *)&static_fields->__9__46_1,
         (int64_t)_9__46_1,
-        v77,
-        v78,
-        v79,
-        v80,
-        v81,
-        v82);
+        v112,
+        v113,
+        v114,
+        v115,
+        v116,
+        v117);
     }
     BasicHelper__ForEach_object_(
-      v72,
+      v107,
       (System_Action_T__o *)_9__46_1,
-      (const MethodInfo_2F9CD60 *)Method_BasicHelper_ForEach_FriendPointNoticeDialogSvtInfo___);
+      (const MethodInfo_2FBE538 *)Method_BasicHelper_ForEach_FriendPointNoticeDialogSvtInfo___);
   }
 LABEL_84:
   mostUsedServantTitleLabel = this->fields.mostUsedServantTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7090/*"GET_FRIEND_POINT_SERVANT_TITLE"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7081/*"GET_FRIEND_POINT_SERVANT_TITLE"*/, 0LL);
   if ( !mostUsedServantTitleLabel )
     goto LABEL_231;
   UILabel__set_text(mostUsedServantTitleLabel, (System_String_o *)gameObject, 0LL);
-  topAddFriendPointSvt = v174->fields.topAddFriendPointSvt;
+  topAddFriendPointSvt = v209->fields.topAddFriendPointSvt;
   normalSupportServantInfo = this->fields.normalSupportServantInfo;
   if ( topAddFriendPointSvt )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_7079/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/,
+                                                       (System_String_o *)StringLiteral_7070/*"GET_FRIEND_POINT_CAPTION_NORMAL"*/,
                                                        0LL);
-    v87 = v174->fields.topAddFriendPointSvt;
-    if ( !v87 )
+    v122 = v209->fields.topAddFriendPointSvt;
+    if ( !v122 )
       goto LABEL_231;
     FriendPointNoticeDialogComponent__SetupServantInfo(
       (FriendPointNoticeDialogComponent_o *)gameObject,
       normalSupportServantInfo,
       topAddFriendPointSvt,
       (System_String_o *)gameObject,
-      v87->fields.friendPoint,
-      v86);
+      v122->fields.friendPoint,
+      v121);
   }
   else
   {
@@ -844,25 +883,25 @@ LABEL_84:
       goto LABEL_231;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
-  topAddFriendPointSvtEQ = v174->fields.topAddFriendPointSvtEQ;
+  topAddFriendPointSvtEQ = v209->fields.topAddFriendPointSvtEQ;
   eventSupportServantInfo = this->fields.eventSupportServantInfo;
   if ( topAddFriendPointSvtEQ )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_7078/*"GET_FRIEND_POINT_CAPTION_EVENT"*/,
+                                                       (System_String_o *)StringLiteral_7069/*"GET_FRIEND_POINT_CAPTION_EVENT"*/,
                                                        0LL);
-    v91 = v174->fields.topAddFriendPointSvtEQ;
-    if ( !v91 )
+    v126 = v209->fields.topAddFriendPointSvtEQ;
+    if ( !v126 )
       goto LABEL_231;
     FriendPointNoticeDialogComponent__SetupServantInfo(
       (FriendPointNoticeDialogComponent_o *)gameObject,
       eventSupportServantInfo,
       topAddFriendPointSvtEQ,
       (System_String_o *)gameObject,
-      v91->fields.friendPoint,
-      v90);
+      v126->fields.friendPoint,
+      v125);
   }
   else
   {
@@ -888,28 +927,28 @@ LABEL_84:
                                                      0LL);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    if ( !v173 )
+    if ( !v208 )
       goto LABEL_231;
-    v8 = (Il2CppObject *)this->fields.normalSupportServantInfo;
-    v98 = v173->fields._items;
-    v99 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
-    ++v173->fields._version;
-    if ( !v98 )
+    v43 = (Il2CppObject *)this->fields.normalSupportServantInfo;
+    v133 = v208->fields._items;
+    v134 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
+    ++v208->fields._version;
+    if ( !v133 )
       goto LABEL_231;
-    v100 = v173->fields._size;
-    if ( (unsigned int)v100 >= v98->max_length )
+    v135 = v208->fields._size;
+    if ( (unsigned int)v135 >= v133->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v173,
-        v8,
-        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
+        v208,
+        v43,
+        *(const MethodInfo_366B8AC **)(*(_QWORD *)(v134[4] + 192LL) + 112LL));
     }
     else
     {
-      v101 = &v98->obj.klass + v100;
-      v173->fields._size = v100 + 1;
-      v101[4] = (Il2CppClass *)v8;
-      sub_1C21DDC((PartyOrganizationUtility_o *)(v101 + 4), (int64_t)v8, v92, v93, v94, v95, v96, v97);
+      v136 = &v133->obj.klass + v135;
+      v208->fields._size = v135 + 1;
+      v136[4] = (Il2CppClass *)v43;
+      sub_1C2E0D0((PartyOrganizationUtility_o *)(v136 + 4), (int64_t)v43, v127, v128, v129, v130, v131, v132);
     }
   }
   gameObject = this->fields.eventSupportServantInfo;
@@ -925,28 +964,28 @@ LABEL_84:
                                                      0LL);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    if ( !v173 )
+    if ( !v208 )
       goto LABEL_231;
-    v8 = (Il2CppObject *)this->fields.eventSupportServantInfo;
-    v108 = v173->fields._items;
-    v109 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
-    ++v173->fields._version;
-    if ( !v108 )
+    v43 = (Il2CppObject *)this->fields.eventSupportServantInfo;
+    v143 = v208->fields._items;
+    v144 = Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__Add__;
+    ++v208->fields._version;
+    if ( !v143 )
       goto LABEL_231;
-    v110 = v173->fields._size;
-    if ( (unsigned int)v110 >= v108->max_length )
+    v145 = v208->fields._size;
+    if ( (unsigned int)v145 >= v143->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v173,
-        v8,
-        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+        v208,
+        v43,
+        *(const MethodInfo_366B8AC **)(*(_QWORD *)(v144[4] + 192LL) + 112LL));
     }
     else
     {
-      v111 = &v108->obj.klass + v110;
-      v173->fields._size = v110 + 1;
-      v111[4] = (Il2CppClass *)v8;
-      sub_1C21DDC((PartyOrganizationUtility_o *)(v111 + 4), (int64_t)v8, v102, v103, v104, v105, v106, v107);
+      v146 = &v143->obj.klass + v145;
+      v208->fields._size = v145 + 1;
+      v146[4] = (Il2CppClass *)v43;
+      sub_1C2E0D0((PartyOrganizationUtility_o *)(v146 + 4), (int64_t)v43, v137, v138, v139, v140, v141, v142);
     }
   }
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.usedRecommendedServantTitleLabel;
@@ -958,21 +997,21 @@ LABEL_84:
   if ( !gameObject )
     goto LABEL_231;
   localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)gameObject, 0LL);
-  if ( !v173 )
+  if ( !v208 )
     goto LABEL_231;
-  v113 = v173->fields._size;
-  v114 = *(float *)&localPosition;
-  if ( v113 )
+  v148 = v208->fields._size;
+  v149 = *(float *)&localPosition;
+  if ( v148 )
   {
-    if ( !v47 )
+    if ( !v82 )
       goto LABEL_231;
   }
   else
   {
-    if ( !v47 )
+    if ( !v82 )
       goto LABEL_231;
-    v127 = v47->fields._size;
-    if ( (unsigned int)(v127 - 1) <= 1 )
+    v162 = v82->fields._size;
+    if ( (unsigned int)(v162 - 1) <= 1 )
     {
       layoutYPositionList = this->fields.layoutYPositionList;
       if ( !layoutYPositionList )
@@ -982,7 +1021,7 @@ LABEL_84:
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.mostUsedServantTitleLabel;
         if ( !gameObject )
           goto LABEL_231;
-        v117 = layoutYPositionList->m_Items[0];
+        v152 = layoutYPositionList->m_Items[0];
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                            (UnityEngine_Component_o *)gameObject,
                                                            0LL);
@@ -995,58 +1034,58 @@ LABEL_84:
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                            (UnityEngine_Component_o *)gameObject,
                                                            0LL);
-        if ( !v117 )
+        if ( !v152 )
           goto LABEL_231;
-        v181.fields.y = v117->fields.upperLabel;
-        v181.fields.x = v114;
-        GameObjectExtensions__SetLocalPosition_34797564((UnityEngine_GameObject_o *)gameObject, v181, 0LL);
+        v216.fields.y = v152->fields.upperLabel;
+        v216.fields.x = v149;
+        GameObjectExtensions__SetLocalPosition_34857684((UnityEngine_GameObject_o *)gameObject, v216, 0LL);
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                           v47,
+                                                           v82,
                                                            0,
-                                                           (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+                                                           (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
         layoutXPositionList = this->fields.layoutXPositionList;
         if ( !layoutXPositionList )
           goto LABEL_231;
-        v182.fields.x = layoutXPositionList->fields.left;
-        v182.fields.y = v117->fields.upperRow1;
-        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v182, v129);
-        if ( v47->fields._size >= 2 )
+        v217.fields.x = layoutXPositionList->fields.left;
+        v217.fields.y = v152->fields.upperRow1;
+        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v217, v164);
+        if ( v82->fields._size >= 2 )
         {
-          v131 = (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
-          v132 = v47;
+          v166 = (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
+          v167 = v82;
 LABEL_197:
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v132,
+                                                             v167,
                                                              1,
-                                                             v131);
-          v154 = this->fields.layoutXPositionList;
-          if ( !v154 )
+                                                             v166);
+          v189 = this->fields.layoutXPositionList;
+          if ( !v189 )
             goto LABEL_231;
-          right = v154->fields.right;
-          upperRow1 = v117->fields.upperRow1;
+          right = v189->fields.right;
+          upperRow1 = v152->fields.upperRow1;
 LABEL_199:
           FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(
             this,
             gameObject,
             *(UnityEngine_Vector2_o *)&right,
-            v143);
+            v178);
           goto LABEL_200;
         }
         goto LABEL_200;
       }
       goto LABEL_232;
     }
-    if ( v127 >= 3 )
+    if ( v162 >= 3 )
     {
-      v137 = this->fields.layoutYPositionList;
-      if ( !v137 )
+      v172 = this->fields.layoutYPositionList;
+      if ( !v172 )
         goto LABEL_231;
-      if ( v137->max_length > 1 )
+      if ( v172->max_length > 1 )
       {
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.mostUsedServantTitleLabel;
         if ( !gameObject )
           goto LABEL_231;
-        v138 = v137->m_Items[1];
+        v173 = v172->m_Items[1];
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                            (UnityEngine_Component_o *)gameObject,
                                                            0LL);
@@ -1059,190 +1098,190 @@ LABEL_199:
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                            (UnityEngine_Component_o *)gameObject,
                                                            0LL);
-        if ( !v138 )
+        if ( !v173 )
           goto LABEL_231;
-        v185.fields.y = v138->fields.upperLabel;
-        v185.fields.x = v114;
-        GameObjectExtensions__SetLocalPosition_34797564((UnityEngine_GameObject_o *)gameObject, v185, 0LL);
+        v220.fields.y = v173->fields.upperLabel;
+        v220.fields.x = v149;
+        GameObjectExtensions__SetLocalPosition_34857684((UnityEngine_GameObject_o *)gameObject, v220, 0LL);
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                           v47,
+                                                           v82,
                                                            0,
-                                                           (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-        v140 = this->fields.layoutXPositionList;
-        if ( !v140 )
+                                                           (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+        v175 = this->fields.layoutXPositionList;
+        if ( !v175 )
           goto LABEL_231;
-        v186.fields.x = v140->fields.left;
-        v186.fields.y = v138->fields.upperRow1;
-        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v186, v139);
+        v221.fields.x = v175->fields.left;
+        v221.fields.y = v173->fields.upperRow1;
+        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v221, v174);
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                           v47,
+                                                           v82,
                                                            1,
-                                                           (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-        v142 = this->fields.layoutXPositionList;
-        if ( !v142 )
+                                                           (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+        v177 = this->fields.layoutXPositionList;
+        if ( !v177 )
           goto LABEL_231;
-        v187.fields.x = v142->fields.right;
-        v187.fields.y = v138->fields.upperRow1;
-        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v187, v141);
+        v222.fields.x = v177->fields.right;
+        v222.fields.y = v173->fields.upperRow1;
+        FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v222, v176);
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                           v47,
+                                                           v82,
                                                            2,
-                                                           (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-        v144 = this->fields.layoutXPositionList;
-        if ( !v144 )
+                                                           (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+        v179 = this->fields.layoutXPositionList;
+        if ( !v179 )
           goto LABEL_231;
-        right = v144->fields.left;
-        upperRow1 = v138->fields.upperRow2;
+        right = v179->fields.left;
+        upperRow1 = v173->fields.upperRow2;
         goto LABEL_199;
       }
       goto LABEL_232;
     }
   }
-  v115 = v47->fields._size;
-  if ( v115 )
+  v150 = v82->fields._size;
+  if ( v150 )
   {
-    if ( v113 >= 1 )
+    if ( v148 >= 1 )
     {
-      if ( v115 <= 2 )
+      if ( v150 <= 2 )
       {
-        v147 = this->fields.layoutYPositionList;
-        if ( !v147 )
+        v182 = this->fields.layoutYPositionList;
+        if ( !v182 )
           goto LABEL_231;
-        if ( v147->max_length > 2 )
+        if ( v182->max_length > 2 )
         {
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.usedRecommendedServantTitleLabel;
           if ( !gameObject )
             goto LABEL_231;
-          v117 = v147->m_Items[2];
+          v152 = v182->m_Items[2];
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                              (UnityEngine_Component_o *)gameObject,
                                                              0LL);
-          if ( !v117 )
+          if ( !v152 )
             goto LABEL_231;
-          v188.fields.y = v117->fields.lowerLabel;
-          v188.fields.x = v114;
-          GameObjectExtensions__SetLocalPosition_34797564((UnityEngine_GameObject_o *)gameObject, v188, 0LL);
+          v223.fields.y = v152->fields.lowerLabel;
+          v223.fields.x = v149;
+          GameObjectExtensions__SetLocalPosition_34857684((UnityEngine_GameObject_o *)gameObject, v223, 0LL);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.mostUsedServantTitleLabel;
           if ( !gameObject )
             goto LABEL_231;
-          v148 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-          v189.fields.y = v117->fields.upperLabel;
-          v189.fields.x = v114;
-          GameObjectExtensions__SetLocalPosition_34797564(v148, v189, 0LL);
+          v183 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          v224.fields.y = v152->fields.upperLabel;
+          v224.fields.x = v149;
+          GameObjectExtensions__SetLocalPosition_34857684(v183, v224, 0LL);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v47,
+                                                             v82,
                                                              0,
-                                                             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-          v150 = this->fields.layoutXPositionList;
-          if ( !v150 )
+                                                             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+          v185 = this->fields.layoutXPositionList;
+          if ( !v185 )
             goto LABEL_231;
-          v190.fields.x = v150->fields.left;
-          v190.fields.y = v117->fields.lowerRow1;
-          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v190, v149);
-          if ( v47->fields._size < 2 )
+          v225.fields.x = v185->fields.left;
+          v225.fields.y = v152->fields.lowerRow1;
+          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v225, v184);
+          if ( v82->fields._size < 2 )
           {
 LABEL_193:
             gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                               v173,
+                                                               v208,
                                                                0,
-                                                               (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-            v153 = this->fields.layoutXPositionList;
-            if ( !v153 )
+                                                               (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+            v188 = this->fields.layoutXPositionList;
+            if ( !v188 )
               goto LABEL_231;
-            v191.fields.x = v153->fields.left;
-            v191.fields.y = v117->fields.upperRow1;
-            FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v191, v152);
-            if ( v173->fields._size >= 2 )
+            v226.fields.x = v188->fields.left;
+            v226.fields.y = v152->fields.upperRow1;
+            FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v226, v187);
+            if ( v208->fields._size >= 2 )
             {
-              v131 = (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
+              v166 = (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
               goto LABEL_196;
             }
             goto LABEL_200;
           }
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v47,
+                                                             v82,
                                                              1,
-                                                             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-          v151 = this->fields.layoutXPositionList;
-          if ( !v151 )
+                                                             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+          v186 = this->fields.layoutXPositionList;
+          if ( !v186 )
             goto LABEL_231;
-          left = v151->fields.right;
-          lowerRow1 = v117->fields.lowerRow1;
+          left = v186->fields.right;
+          lowerRow1 = v152->fields.lowerRow1;
 LABEL_192:
           FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(
             this,
             gameObject,
             *(UnityEngine_Vector2_o *)&left,
-            v123);
+            v158);
           goto LABEL_193;
         }
 LABEL_232:
-        sub_1C2209C(gameObject, v8);
+        sub_1C2E390(gameObject, v43);
       }
-      if ( v115 == 3 )
+      if ( v150 == 3 )
       {
-        v116 = this->fields.layoutYPositionList;
-        if ( !v116 )
+        v151 = this->fields.layoutYPositionList;
+        if ( !v151 )
           goto LABEL_231;
-        if ( v116->max_length > 3 )
+        if ( v151->max_length > 3 )
         {
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.usedRecommendedServantTitleLabel;
           if ( !gameObject )
             goto LABEL_231;
-          v117 = v116->m_Items[3];
+          v152 = v151->m_Items[3];
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                              (UnityEngine_Component_o *)gameObject,
                                                              0LL);
-          if ( !v117 )
+          if ( !v152 )
             goto LABEL_231;
-          v177.fields.y = v117->fields.lowerLabel;
-          v177.fields.x = v114;
-          GameObjectExtensions__SetLocalPosition_34797564((UnityEngine_GameObject_o *)gameObject, v177, 0LL);
+          v212.fields.y = v152->fields.lowerLabel;
+          v212.fields.x = v149;
+          GameObjectExtensions__SetLocalPosition_34857684((UnityEngine_GameObject_o *)gameObject, v212, 0LL);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.mostUsedServantTitleLabel;
           if ( !gameObject )
             goto LABEL_231;
-          v118 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-          v178.fields.y = v117->fields.upperLabel;
-          v178.fields.x = v114;
-          GameObjectExtensions__SetLocalPosition_34797564(v118, v178, 0LL);
+          v153 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          v213.fields.y = v152->fields.upperLabel;
+          v213.fields.x = v149;
+          GameObjectExtensions__SetLocalPosition_34857684(v153, v213, 0LL);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v47,
+                                                             v82,
                                                              0,
-                                                             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-          v120 = this->fields.layoutXPositionList;
-          if ( !v120 )
+                                                             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+          v155 = this->fields.layoutXPositionList;
+          if ( !v155 )
             goto LABEL_231;
-          v179.fields.x = v120->fields.left;
-          v179.fields.y = v117->fields.lowerRow1;
-          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v179, v119);
+          v214.fields.x = v155->fields.left;
+          v214.fields.y = v152->fields.lowerRow1;
+          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v214, v154);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v47,
+                                                             v82,
                                                              1,
-                                                             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-          v122 = this->fields.layoutXPositionList;
-          if ( !v122 )
+                                                             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+          v157 = this->fields.layoutXPositionList;
+          if ( !v157 )
             goto LABEL_231;
-          v180.fields.x = v122->fields.right;
-          v180.fields.y = v117->fields.lowerRow1;
-          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v180, v121);
+          v215.fields.x = v157->fields.right;
+          v215.fields.y = v152->fields.lowerRow1;
+          FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v215, v156);
           gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                             v47,
+                                                             v82,
                                                              2,
-                                                             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-          v124 = this->fields.layoutXPositionList;
-          if ( !v124 )
+                                                             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+          v159 = this->fields.layoutXPositionList;
+          if ( !v159 )
             goto LABEL_231;
-          left = v124->fields.left;
-          lowerRow1 = v117->fields.lowerRow2;
+          left = v159->fields.left;
+          lowerRow1 = v152->fields.lowerRow2;
           goto LABEL_192;
         }
         goto LABEL_232;
       }
     }
 LABEL_158:
-    if ( v174->fields.addFriendPoint > 0
-      || v174->fields.addFollowFriendPoint > 0
-      || v174->fields.addRecommendSupportFriendPoint >= 1 )
+    if ( v209->fields.addFriendPoint > 0
+      || v209->fields.addFollowFriendPoint > 0
+      || v209->fields.addRecommendSupportFriendPoint >= 1 )
     {
       gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.noDataLabel;
       if ( !gameObject )
@@ -1257,7 +1296,7 @@ LABEL_158:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_7086/*"GET_FRIEND_POINT_NO_DATA"*/,
+                                                         (System_String_o *)StringLiteral_7077/*"GET_FRIEND_POINT_NO_DATA"*/,
                                                          0LL);
       if ( !noDataLabel )
         goto LABEL_231;
@@ -1288,25 +1327,25 @@ LABEL_158:
     }
     goto LABEL_200;
   }
-  if ( v113 < 1 )
+  if ( v148 < 1 )
     goto LABEL_158;
-  v133 = this->fields.layoutYPositionList;
-  if ( !v133 )
+  v168 = this->fields.layoutYPositionList;
+  if ( !v168 )
     goto LABEL_231;
-  if ( !v133->max_length )
+  if ( !v168->max_length )
     goto LABEL_232;
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.mostUsedServantTitleLabel;
   if ( !gameObject )
     goto LABEL_231;
-  v117 = v133->m_Items[0];
+  v152 = v168->m_Items[0];
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)gameObject,
                                                      0LL);
-  if ( !v117 )
+  if ( !v152 )
     goto LABEL_231;
-  v183.fields.y = v117->fields.upperLabel;
-  v183.fields.x = v114;
-  GameObjectExtensions__SetLocalPosition_34797564((UnityEngine_GameObject_o *)gameObject, v183, 0LL);
+  v218.fields.y = v152->fields.upperLabel;
+  v218.fields.x = v149;
+  GameObjectExtensions__SetLocalPosition_34857684((UnityEngine_GameObject_o *)gameObject, v218, 0LL);
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.usedRecommendedServantTitleLabel;
   if ( !gameObject )
     goto LABEL_231;
@@ -1317,32 +1356,32 @@ LABEL_158:
     goto LABEL_231;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_Collections_Generic_List_object___get_Item(
-                                                     v173,
+                                                     v208,
                                                      0,
-                                                     (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
-  v135 = this->fields.layoutXPositionList;
-  if ( !v135 )
+                                                     (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__);
+  v170 = this->fields.layoutXPositionList;
+  if ( !v170 )
     goto LABEL_231;
-  v184.fields.x = v135->fields.left;
-  v184.fields.y = v117->fields.upperRow1;
-  FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v184, v134);
-  if ( v173->fields._size >= 2 )
+  v219.fields.x = v170->fields.left;
+  v219.fields.y = v152->fields.upperRow1;
+  FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(this, gameObject, v219, v169);
+  if ( v208->fields._size >= 2 )
   {
-    v131 = (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
+    v166 = (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_FriendPointNoticeDialogSvtInfo__get_Item__;
 LABEL_196:
-    v132 = v173;
+    v167 = v208;
     goto LABEL_197;
   }
 LABEL_200:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_TblUserMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_TblUserMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v43);
+    byte_4BF81D5 = 1;
   }
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1358,15 +1397,15 @@ LABEL_200:
                                                      0LL);
   if ( !gameObject )
     goto LABEL_231;
-  v156 = gameObject;
+  v191 = gameObject;
   m_CancellationTokenSource = (int32_t)gameObject->fields.m_CancellationTokenSource;
-  v158 = BalanceConfig_TypeInfo;
+  v193 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v158 = BalanceConfig_TypeInfo;
+    v193 = BalanceConfig_TypeInfo;
   }
-  if ( m_CancellationTokenSource >= v158->static_fields->FriendPointMax )
+  if ( m_CancellationTokenSource >= v193->static_fields->FriendPointMax )
   {
     gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.friendPointMaxLabel;
     if ( gameObject )
@@ -1381,7 +1420,7 @@ LABEL_200:
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_7077/*"GET_FRIEND_POINT_AT_LIMIT"*/,
+                                                           (System_String_o *)StringLiteral_7068/*"GET_FRIEND_POINT_AT_LIMIT"*/,
                                                            0LL);
         if ( friendPointMaxLabel )
         {
@@ -1394,8 +1433,8 @@ LABEL_200:
             gameObject = (FriendPointNoticeDialogSvtInfo_o *)this->fields.currentFriendPointLabel;
             if ( gameObject )
             {
-              v160 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-              GameObjectExtensions__SetLocalPositionY(v160, this->fields.currentFpLabelYMaxFp, 0LL);
+              v195 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+              GameObjectExtensions__SetLocalPositionY(v195, this->fields.currentFpLabelYMaxFp, 0LL);
               GameObjectExtensions__SetLocalPositionY(
                 this->fields.buttonParentObject,
                 this->fields.buttonPosYMaxFp,
@@ -1407,51 +1446,51 @@ LABEL_200:
       }
     }
 LABEL_231:
-    sub_1C22094(gameObject, v8);
+    sub_1C2E388(gameObject, v43);
   }
 LABEL_221:
   currentFriendPointLabel = this->fields.currentFriendPointLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v162 = LocalizationManager__Get((System_String_o *)StringLiteral_7085/*"GET_FRIEND_POINT_NOW_POINT"*/, 0LL);
-  addFollowFriendPoint = (int32_t)v156->fields.m_CancellationTokenSource;
-  v166 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v163, v164, v165);
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_String__Format(v162, v166, 0LL);
+  v197 = LocalizationManager__Get((System_String_o *)StringLiteral_7076/*"GET_FRIEND_POINT_NOW_POINT"*/, 0LL);
+  addFollowFriendPoint = (int32_t)v191->fields.m_CancellationTokenSource;
+  v201 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &addFollowFriendPoint, v198, v199, v200);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)System_String__Format(v197, v201, 0LL);
   if ( !currentFriendPointLabel )
     goto LABEL_231;
   UILabel__set_text(currentFriendPointLabel, (System_String_o *)gameObject, 0LL);
-  v167 = this->fields.currentFriendPointLabel;
+  v202 = this->fields.currentFriendPointLabel;
   gameObject = (FriendPointNoticeDialogSvtInfo_o *)FriendPointNoticeDialogComponent_TypeInfo;
   if ( !FriendPointNoticeDialogComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDialogComponent_TypeInfo);
-  if ( !v167 )
+  if ( !v202 )
     goto LABEL_231;
-  UILabel__SetCondensedScale_48213524(
-    v167,
+  UILabel__SetCondensedScale_48350976(
+    v202,
     FriendPointNoticeDialogComponent_TypeInfo->static_fields->CURRENT_FRIEND_POINT_LABEL_MAX_WIDTH,
     0.0,
     0LL);
   closeButtonLabel = this->fields.closeButtonLabel;
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3811/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeButtonLabel )
     goto LABEL_231;
   UILabel__set_text(closeButtonLabel, (System_String_o *)gameObject, 0LL);
   friendSupportButtonLabel = this->fields.friendSupportButtonLabel;
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7092/*"GET_FRIEND_POINT_SUPPORT_BTN"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7083/*"GET_FRIEND_POINT_SUPPORT_BTN"*/, 0LL);
   if ( !friendSupportButtonLabel )
     goto LABEL_231;
   UILabel__set_text(friendSupportButtonLabel, (System_String_o *)gameObject, 0LL);
-  FriendPointNoticeDialogComponent__SetRecommendedSupportButton(this, v170);
+  FriendPointNoticeDialogComponent__SetRecommendedSupportButton(this, v205);
   decideButtonLabel = this->fields.decideButtonLabel;
-  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7084/*"GET_FRIEND_POINT_GACHA_BTN"*/, 0LL);
+  gameObject = (FriendPointNoticeDialogSvtInfo_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7075/*"GET_FRIEND_POINT_GACHA_BTN"*/, 0LL);
   if ( !decideButtonLabel )
     goto LABEL_231;
   UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0LL);
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0LL);
   AndroidBackKeyManager__AddBackBtn(this->fields.closeButtonObject, 0LL);
-  v172 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v172, (Il2CppObject *)this, Method_FriendPointNoticeDialogComponent__Open_b__46_0__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v172, 0, 0LL);
+  v207 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v207, (Il2CppObject *)this, Method_FriendPointNoticeDialogComponent__Open_b__46_0__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v207, 0, 0LL);
 }
 
 
@@ -1469,19 +1508,20 @@ void __fastcall FriendPointNoticeDialogComponent__SetEnableButton(
         bool isEnable,
         const MethodInfo *method)
 {
+  __int64 v6; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4BDE5DA & 1) == 0 )
+  if ( (byte_4BFF825 & 1) == 0 )
   {
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    this = (FriendPointNoticeDialogComponent_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDE5DA = 1;
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___, buttonObj);
+    this = (FriendPointNoticeDialogComponent_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
+    byte_4BFF825 = 1;
   }
   if ( !buttonObj )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        buttonObj,
-                       (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (FriendPointNoticeDialogComponent_o *)UnityEngine_Object__op_Inequality(
@@ -1496,7 +1536,7 @@ void __fastcall FriendPointNoticeDialogComponent__SetEnableButton(
       return;
     }
 LABEL_10:
-    sub_1C22094(this, buttonObj);
+    sub_1C2E388(this, buttonObj);
   }
 }
 
@@ -1505,104 +1545,111 @@ void __fastcall FriendPointNoticeDialogComponent__SetRecommendedSupportButton(
         FriendPointNoticeDialogComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   UILabel_o *recommendedSupportButtonLabel; // x20
   System_String_o *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v12; // x1
   RecommendSupportQuestEntity_array *List; // x0
-  FriendPointNoticeDialogComponent___c_c *v7; // x8
-  System_Object_array *v8; // x20
+  FriendPointNoticeDialogComponent___c_c *v14; // x8
+  System_Object_array *v15; // x20
   System_Func_object__bool__o *_9__53_0; // x21
-  Il2CppObject *v10; // x22
+  Il2CppObject *v17; // x22
   struct FriendPointNoticeDialogComponent___c_StaticFields *static_fields; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  bool v18; // w0
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  bool v25; // w0
   UILabel_o *recommendedSupportButtonLabelForMask; // x21
-  bool v20; // w20
-  FriendPointNoticeDialogComponent_o *v21; // x0
-  const MethodInfo *v22; // x3
+  bool v27; // w20
+  FriendPointNoticeDialogComponent_o *v28; // x0
+  const MethodInfo *v29; // x3
 
-  if ( (byte_4BDE5DB & 1) == 0 )
+  if ( (byte_4BFF826 & 1) == 0 )
   {
-    sub_1C21E38(&Method_BasicHelper_Any_RecommendSupportQuestEntity___);
-    sub_1C21E38(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&System_Func_RecommendSupportQuestEntity__bool__TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&Method_FriendPointNoticeDialogComponent___c__SetRecommendedSupportButton_b__53_0__);
-    sub_1C21E38(&FriendPointNoticeDialogComponent___c_TypeInfo);
-    sub_1C21E38(&StringLiteral_7087/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/);
-    byte_4BDE5DB = 1;
+    sub_1C2E12C(&Method_BasicHelper_Any_RecommendSupportQuestEntity___, method);
+    sub_1C2E12C(&Method_DataManager_GetMaster_RecommendSupportQuestMaster___, v3);
+    sub_1C2E12C(&DataManager_TypeInfo, v4);
+    sub_1C2E12C(&System_Func_RecommendSupportQuestEntity__bool__TypeInfo, v5);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v6);
+    sub_1C2E12C(&Method_FriendPointNoticeDialogComponent___c__SetRecommendedSupportButton_b__53_0__, v7);
+    sub_1C2E12C(&FriendPointNoticeDialogComponent___c_TypeInfo, v8);
+    sub_1C2E12C(&StringLiteral_7078/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/, v9);
+    byte_4BFF826 = 1;
   }
   recommendedSupportButtonLabel = this->fields.recommendedSupportButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_7087/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_7078/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/, 0LL);
   if ( !recommendedSupportButtonLabel )
     goto LABEL_20;
   UILabel__set_text(recommendedSupportButtonLabel, Master_object, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
+  Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_RecommendSupportQuestMaster___);
   if ( !Master_object )
     goto LABEL_20;
   List = RecommendSupportQuestMaster__GetList((RecommendSupportQuestMaster_o *)Master_object, 0LL);
-  v7 = FriendPointNoticeDialogComponent___c_TypeInfo;
-  v8 = (System_Object_array *)List;
+  v14 = FriendPointNoticeDialogComponent___c_TypeInfo;
+  v15 = (System_Object_array *)List;
   if ( !FriendPointNoticeDialogComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDialogComponent___c_TypeInfo);
-    v7 = FriendPointNoticeDialogComponent___c_TypeInfo;
+    v14 = FriendPointNoticeDialogComponent___c_TypeInfo;
   }
-  _9__53_0 = (System_Func_object__bool__o *)v7->static_fields->__9__53_0;
+  _9__53_0 = (System_Func_object__bool__o *)v14->static_fields->__9__53_0;
   if ( !_9__53_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v14->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = FriendPointNoticeDialogComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v14);
+      v14 = FriendPointNoticeDialogComponent___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__53_0 = (System_Func_object__bool__o *)sub_1C22084(System_Func_RecommendSupportQuestEntity__bool__TypeInfo);
+    v17 = (Il2CppObject *)v14->static_fields->__9;
+    _9__53_0 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_RecommendSupportQuestEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__53_0,
-      v10,
+      v17,
       Method_FriendPointNoticeDialogComponent___c__SetRecommendedSupportButton_b__53_0__,
       0LL);
     static_fields = FriendPointNoticeDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__53_0 = (struct System_Func_RecommendSupportQuestEntity__bool__o *)_9__53_0;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&static_fields->__9__53_0,
       (int64_t)_9__53_0,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16,
-      v17);
+      v19,
+      v20,
+      v21,
+      v22,
+      v23,
+      v24);
   }
-  v18 = BasicHelper__Any_object__49917468(
-          v8,
+  v25 = BasicHelper__Any_object__50053864(
+          v15,
           (System_Func_T__bool__o *)_9__53_0,
-          (const MethodInfo_2F9AE1C *)Method_BasicHelper_Any_RecommendSupportQuestEntity___);
+          (const MethodInfo_2FBC2E8 *)Method_BasicHelper_Any_RecommendSupportQuestEntity___);
   recommendedSupportButtonLabelForMask = this->fields.recommendedSupportButtonLabelForMask;
-  v20 = v18;
+  v27 = v25;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_7087/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_7078/*"GET_FRIEND_POINT_RECOMMENDED_BTN"*/, 0LL);
   if ( !recommendedSupportButtonLabelForMask
     || (UILabel__set_text(recommendedSupportButtonLabelForMask, Master_object, 0LL),
-        FriendPointNoticeDialogComponent__SetEnableButton(v21, this->fields.recommendedSupportButtonObject, v20, v22),
+        FriendPointNoticeDialogComponent__SetEnableButton(v28, this->fields.recommendedSupportButtonObject, v27, v29),
         (Master_object = (System_String_o *)this->fields.recommendedSupportButtonMaskTextObject) == 0LL) )
   {
 LABEL_20:
-    sub_1C22094(Master_object, v5);
+    sub_1C2E388(Master_object, v12);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, !v20, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, !v27, 0LL);
 }
 
 
@@ -1623,7 +1670,7 @@ void __fastcall FriendPointNoticeDialogComponent__SetupServantInfo(
                                                        (UnityEngine_Component_o *)servantInfo,
                                                        0LL)) == 0LL )
   {
-    sub_1C22094(this, servantInfo);
+    sub_1C2E388(this, servantInfo);
   }
   v10 = this;
   if ( pointData )
@@ -1660,20 +1707,20 @@ void __fastcall FriendPointNoticeDialogComponent__SetupServantInfoLocalPosition(
   UnityEngine_Vector2_o v11; // 0:s0.4,4:s1.4
 
   if ( !servantInfo )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   y = position.fields.y;
   x = position.fields.x;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantInfo, 0LL);
   v11.fields.x = x;
   v11.fields.y = y;
-  GameObjectExtensions__SetLocalPosition_34797564(gameObject, v11, 0LL);
+  GameObjectExtensions__SetLocalPosition_34857684(gameObject, v11, 0LL);
   FriendPointNoticeDialogSvtInfo__SetLabelsCondensedScale(servantInfo, this->fields.servantNameLabelMaxWidth, v9);
   v10 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantInfo, 0LL);
   GameObjectExtensions__ResetLocalScale(v10, 0LL);
 }
 
 
-void __fastcall FriendPointNoticeDialogComponent__SetupServantInfo_43390300(
+void __fastcall FriendPointNoticeDialogComponent__SetupServantInfo_43487364(
         FriendPointNoticeDialogComponent_o *this,
         FriendPointNoticeDialogSvtInfo_o *servantInfo,
         CommonUI_LoginResultRecommendSupportFriendPointSvtData_o *pointData,
@@ -1690,7 +1737,7 @@ void __fastcall FriendPointNoticeDialogComponent__SetupServantInfo_43390300(
                                                        (UnityEngine_Component_o *)servantInfo,
                                                        0LL)) == 0LL )
   {
-    sub_1C22094(this, servantInfo);
+    sub_1C2E388(this, servantInfo);
   }
   v10 = this;
   if ( pointData )
@@ -1735,10 +1782,10 @@ void __fastcall FriendPointNoticeDialogComponent__add_clickedFunc(
   FriendPointNoticeDialogComponent_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4BDE5D5 & 1) == 0 )
+  if ( (byte_4BFF820 & 1) == 0 )
   {
-    sub_1C21E38(&FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo);
-    byte_4BDE5D5 = 1;
+    sub_1C2E12C(&FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo, value);
+    byte_4BFF820 = 1;
   }
   clickedFunc = (System_Delegate_o *)this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -1750,13 +1797,13 @@ void __fastcall FriendPointNoticeDialogComponent__add_clickedFunc(
       if ( (FriendPointNoticeDialogComponent_CallbackFunc_c *)v7->klass != FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_clickedFunc, v7, clickedFunc);
+    v8 = sub_1C6961C(p_clickedFunc, v7, clickedFunc);
     v9 = clickedFunc == (System_Delegate_o *)v8;
     clickedFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   FriendPointNoticeDialogComponent__remove_clickedFunc(v10, v11, v12);
 }
 
@@ -1774,10 +1821,10 @@ void __fastcall FriendPointNoticeDialogComponent__remove_clickedFunc(
   FriendPointNoticeDialogComponent_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4BDE5D6 & 1) == 0 )
+  if ( (byte_4BFF821 & 1) == 0 )
   {
-    sub_1C21E38(&FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo);
-    byte_4BDE5D6 = 1;
+    sub_1C2E12C(&FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo, value);
+    byte_4BFF821 = 1;
   }
   clickedFunc = (System_Delegate_o *)this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -1789,13 +1836,13 @@ void __fastcall FriendPointNoticeDialogComponent__remove_clickedFunc(
       if ( (FriendPointNoticeDialogComponent_CallbackFunc_c *)v7->klass != FriendPointNoticeDialogComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_clickedFunc, v7, clickedFunc);
+    v8 = sub_1C6961C(p_clickedFunc, v7, clickedFunc);
     v9 = clickedFunc == (System_Delegate_o *)v8;
     clickedFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   FriendPointNoticeDialogComponent__CheckSerializeFieldAssertion(v10, v11);
 }
 
@@ -1822,7 +1869,7 @@ void __fastcall FriendPointNoticeDialogComponent_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1833,12 +1880,12 @@ void __fastcall FriendPointNoticeDialogComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v10) & 1) == 0 )
+  if ( (sub_1C2E1EC(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v14, 0LL);
+      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1850,12 +1897,13 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A65178;
+  this->fields.m_target = (Il2CppObject *)sub_1A7164C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A65130;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A71604;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall FriendPointNoticeDialogComponent_CallbackFunc__BeginInvoke(
         FriendPointNoticeDialogComponent_CallbackFunc_o *this,
         int32_t result,
@@ -1867,14 +1915,14 @@ System_IAsyncResult_o *__fastcall FriendPointNoticeDialogComponent_CallbackFunc_
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4BDE5E3 & 1) == 0 )
+  if ( (byte_4BFF82E & 1) == 0 )
   {
-    sub_1C21E38(&FriendPointNoticeDialogComponent_ResultClicked_TypeInfo);
-    byte_4BDE5E3 = 1;
+    sub_1C2E12C(&FriendPointNoticeDialogComponent_ResultClicked_TypeInfo, *(_QWORD *)&result);
+    byte_4BFF82E = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(FriendPointNoticeDialogComponent_ResultClicked_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -1883,7 +1931,7 @@ void __fastcall FriendPointNoticeDialogComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 
@@ -1917,31 +1965,32 @@ void __fastcall FriendPointNoticeDialogComponent_PositionYData___ctor(
 
 void __fastcall FriendPointNoticeDialogComponent___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BDE5E4 & 1) == 0 )
+  if ( (byte_4BFF82F & 1) == 0 )
   {
-    sub_1C21E38(&FriendPointNoticeDialogComponent___c_TypeInfo);
-    byte_4BDE5E4 = 1;
+    sub_1C2E12C(&FriendPointNoticeDialogComponent___c_TypeInfo, v1);
+    byte_4BFF82F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C22084(FriendPointNoticeDialogComponent___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  FriendPointNoticeDialogComponent___c_TypeInfo->static_fields->__9 = (struct FriendPointNoticeDialogComponent___c_o *)v1;
-  sub_1C21DDC(
+  v2 = (Il2CppObject *)sub_1C2E378(FriendPointNoticeDialogComponent___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  FriendPointNoticeDialogComponent___c_TypeInfo->static_fields->__9 = (struct FriendPointNoticeDialogComponent___c_o *)v2;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)FriendPointNoticeDialogComponent___c_TypeInfo->static_fields,
-    (int64_t)v1,
-    v2,
+    (int64_t)v2,
     v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8);
 }
 
 
@@ -1963,7 +2012,7 @@ void __fastcall FriendPointNoticeDialogComponent___c___Open_b__46_1(
                                                            (UnityEngine_Component_o *)x,
                                                            0LL)) == 0LL )
   {
-    sub_1C22094(this, x);
+    sub_1C2E388(this, x);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -1976,17 +2025,17 @@ bool __fastcall FriendPointNoticeDialogComponent___c___SetRecommendedSupportButt
 {
   int32_t questId; // w19
 
-  if ( (byte_4BDE5E5 & 1) == 0 )
+  if ( (byte_4BFF830 & 1) == 0 )
   {
-    this = (FriendPointNoticeDialogComponent___c_o *)sub_1C21E38(&CondType_TypeInfo);
-    byte_4BDE5E5 = 1;
+    this = (FriendPointNoticeDialogComponent___c_o *)sub_1C2E12C(&CondType_TypeInfo, entity);
+    byte_4BFF830 = 1;
   }
   if ( !entity )
-    sub_1C22094(this, entity);
+    sub_1C2E388(this, entity);
   questId = entity->fields.questId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_38834244(questId, -1, 0, 0LL);
+  return CondType__IsQuestClear_38902436(questId, -1, 0, 0LL);
 }
 
 
@@ -2011,7 +2060,7 @@ void __fastcall FriendPointNoticeDialogComponent___c__DisplayClass51_0___Close_b
                                                            (UnityEngine_Component_o *)_4__this,
                                                            0LL)) == 0LL )
   {
-    sub_1C22094(_4__this, method);
+    sub_1C2E388(_4__this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)_4__this, 0, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);

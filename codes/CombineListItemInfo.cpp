@@ -23,7 +23,7 @@ void __fastcall CombineListItemInfo___ctor(
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.spriteName, (int64_t)spriteName, v11, v12, v13, v14, v15, v16);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.spriteName, (int64_t)spriteName, v11, v12, v13, v14, v15, v16);
   this->fields.eventData = eventData;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.eventData, (int64_t)eventData, v17, v18, v19, v20, v21, v22);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.eventData, (int64_t)eventData, v17, v18, v19, v20, v21, v22);
 }

@@ -1,14 +1,16 @@
 void __fastcall RecommendSupportQuestMaster___ctor(RecommendSupportQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDCB79 & 1) == 0 )
+  if ( (byte_4BFDDA5 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string___ctor__);
-    byte_4BDCB79 = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string___ctor__,
+      method);
+    byte_4BFDDA5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     516,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string___ctor__);
 }
 
 
@@ -21,16 +23,18 @@ RecommendSupportQuestEntity_o *__fastcall RecommendSupportQuestMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BDCB7A & 1) == 0 )
+  if ( (byte_4BFDDA6 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__GetEntity__);
-    byte_4BDCB7A = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__GetEntity__,
+      *(_QWORD *)&questId);
+    byte_4BFDDA6 = 1;
   }
   PK = (Il2CppObject *)RecommendSupportQuestEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questPhase);
   return (RecommendSupportQuestEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_3260880 *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__GetEntity__);
+                                            (const MethodInfo_327FC38 *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__GetEntity__);
 }
 
 
@@ -40,12 +44,14 @@ RecommendSupportQuestEntity_array *__fastcall RecommendSupportQuestMaster__GetLi
 {
   __int64 v3; // x1
 
-  if ( (byte_4BDCB78 & 1) == 0 )
+  if ( (byte_4BFDDA4 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__getEntitys_RecommendSupportQuestEntity___);
-    byte_4BDCB78 = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__getEntitys_RecommendSupportQuestEntity___,
+      method);
+    byte_4BFDDA4 = 1;
   }
-  v3 = sub_1C21F6C(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
+  v3 = sub_1C2E260(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
                    + 2
                    * *((unsigned __int16 *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__getEntitys_RecommendSupportQuestEntity___
                      + 40)));
@@ -65,15 +71,17 @@ bool __fastcall RecommendSupportQuestMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BDCB7B & 1) == 0 )
+  if ( (byte_4BFDDA7 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__TryGetEntity__);
-    byte_4BDCB7B = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__TryGetEntity__,
+      entity);
+    byte_4BFDDA7 = 1;
   }
   PK = (Il2CppObject *)RecommendSupportQuestEntity__CreatePK(questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32608CC *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__TryGetEntity__);
+           (const MethodInfo_327FC84 *)Method_DataMasterBase_RecommendSupportQuestMaster__RecommendSupportQuestEntity__string__TryGetEntity__);
 }

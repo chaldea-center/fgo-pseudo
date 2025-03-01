@@ -1,9 +1,11 @@
 void __fastcall FBXAnimclips___cctor(const MethodInfo *method)
 {
-  if ( (byte_4BDB9C4 & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4BFCBC9 & 1) == 0 )
   {
-    sub_1C21E38(&FBXAnimclips_TypeInfo);
-    byte_4BDB9C4 = 1;
+    sub_1C2E12C(&FBXAnimclips_TypeInfo, v1);
+    byte_4BFCBC9 = 1;
   }
   LODWORD(FBXAnimclips_TypeInfo->static_fields->animFps) = (struct FBXAnimclips_StaticFields)1106247680;
 }
@@ -26,62 +28,71 @@ void __fastcall FBXAnimclips__inAttachAnimationEvents(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FBXAnimclips__loadAnimationEvents(
         FBXAnimclips_o *this,
         int32_t svtId,
         int32_t level,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v4; // x1
   __int64 v5; // x1
-  System_String_o *v6; // x0
-  System_String_o *v7; // x0
-  System_String_o *v8; // x0
-  System_String_o *v9; // x0
-  intptr_t v10; // w20
-  System_String_o *v11; // x19
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v13; // x1
+  System_String_o *v14; // x0
+  System_String_o *v15; // x0
+  System_String_o *v16; // x0
+  System_String_o *v17; // x0
+  intptr_t v18; // w20
+  System_String_o *v19; // x19
   System_Type_o *TypeFromHandle; // x0
-  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
-  System_RuntimeTypeHandle_o v14; // 0:w0.4
+  int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
+  System_RuntimeTypeHandle_o v22; // 0:w0.4
 
-  v13 = svtId;
-  if ( (byte_4BDB9C3 & 1) == 0 )
+  v21 = svtId;
+  if ( (byte_4BFCBC8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C21E38(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&UnityEngine_TextAsset_var);
-    sub_1C21E38(&UnityEngine_TextAsset_TypeInfo);
-    sub_1C21E38(&System_Type_TypeInfo);
-    sub_1C21E38(&StringLiteral_1179/*"/fbxevent"*/);
-    sub_1C21E38(&StringLiteral_12900/*"Servants/"*/);
-    sub_1C21E38(&StringLiteral_1172/*"/chr"*/);
-    byte_4BDB9C3 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C2E12C(&Method_UnityEngine_Resources_Load_GameObject___, v4);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C2E12C(&UnityEngine_TextAsset_var, v6);
+    sub_1C2E12C(&UnityEngine_TextAsset_TypeInfo, v7);
+    sub_1C2E12C(&System_Type_TypeInfo, v8);
+    sub_1C2E12C(&StringLiteral_1158/*"/fbxevent"*/, v9);
+    sub_1C2E12C(&StringLiteral_12909/*"Servants/"*/, v10);
+    sub_1C2E12C(&StringLiteral_1151/*"/chr"*/, v11);
+    byte_4BFCBC8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C22094(0LL, v5);
+    sub_1C2E388(0LL, v13);
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_ServantMaster___);
-  v6 = System_Int32__ToString((int32_t)&v13, 0LL);
-  v7 = System_String__Concat_63126736(
-         (System_String_o *)StringLiteral_12900/*"Servants/"*/,
-         v6,
-         (System_String_o *)StringLiteral_1172/*"/chr"*/,
-         0LL);
-  UnityEngine_Resources__Load_object_(v7, (const MethodInfo_3045110 *)Method_UnityEngine_Resources_Load_GameObject___);
-  v8 = System_Int32__ToString((int32_t)&v13, 0LL);
-  v9 = System_String__Concat_63126736(
-         (System_String_o *)StringLiteral_12900/*"Servants/"*/,
-         v8,
-         (System_String_o *)StringLiteral_1179/*"/fbxevent"*/,
-         0LL);
-  v10 = (int)UnityEngine_TextAsset_var;
-  v11 = v9;
+    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+  v14 = System_Int32__ToString((int32_t)&v21, 0LL);
+  v15 = System_String__Concat_63246844(
+          (System_String_o *)StringLiteral_12909/*"Servants/"*/,
+          v14,
+          (System_String_o *)StringLiteral_1151/*"/chr"*/,
+          0LL);
+  UnityEngine_Resources__Load_object_(v15, (const MethodInfo_30676E8 *)Method_UnityEngine_Resources_Load_GameObject___);
+  v16 = System_Int32__ToString((int32_t)&v21, 0LL);
+  v17 = System_String__Concat_63246844(
+          (System_String_o *)StringLiteral_12909/*"Servants/"*/,
+          v16,
+          (System_String_o *)StringLiteral_1158/*"/fbxevent"*/,
+          0LL);
+  v18 = (int)UnityEngine_TextAsset_var;
+  v19 = v17;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v14.fields.value = v10;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v14, 0LL);
-  UnityEngine_Resources__Load_70829540(v11, TypeFromHandle, 0LL);
+  v22.fields.value = v18;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v22, 0LL);
+  UnityEngine_Resources__Load_70949648(v19, TypeFromHandle, 0LL);
 }

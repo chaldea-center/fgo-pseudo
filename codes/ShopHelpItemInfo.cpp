@@ -24,7 +24,7 @@ void __fastcall ShopHelpItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v10->fields._Kind_k__BackingField = kind;
   v10->fields._TextCode_k__BackingField = textCode;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&v10->fields._TextCode_k__BackingField,
     (int64_t)textCode,
     v11,
@@ -35,7 +35,7 @@ void __fastcall ShopHelpItemInfo___ctor(
     v16);
   v10->fields._ImageName_k__BackingField = imageName;
   v10 = (ShopHelpItemInfo_o *)((char *)v10 + 32);
-  sub_1C21DDC((PartyOrganizationUtility_o *)v10, (int64_t)imageName, v17, v18, v19, v20, v21, v22);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)v10, (int64_t)imageName, v17, v18, v19, v20, v21, v22);
   LODWORD(v10->monitor) = line;
 }
 
@@ -82,7 +82,7 @@ void __fastcall ShopHelpItemInfo__set_ImageName(
   PartyListViewItem_o *v7; // x7
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._ImageName_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -118,7 +118,7 @@ void __fastcall ShopHelpItemInfo__set_TextCode(
   PartyListViewItem_o *v7; // x7
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._TextCode_k__BackingField,
     (int64_t)value,
     (int64_t)method,

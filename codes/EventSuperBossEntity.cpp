@@ -1,107 +1,114 @@
 void __fastcall EventSuperBossEntity___cctor(const MethodInfo *method)
 {
-  int64_t v1; // x2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
-  BattleSetupInfo_o *v4; // x5
-  FollowerInfo_o *v5; // x6
-  PartyListViewItem_o *v6; // x7
-  int64_t v7; // x1
+  __int64 v1; // x1
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  int64_t v13; // x1
   struct EventSuperBossEntity_StaticFields *static_fields; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x1
-  struct EventSuperBossEntity_StaticFields *v16; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  int64_t v23; // x1
-  struct EventSuperBossEntity_StaticFields *v24; // x0
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  int64_t v31; // x1
-  struct EventSuperBossEntity_StaticFields *v32; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  int64_t v21; // x1
+  struct EventSuperBossEntity_StaticFields *v22; // x0
+  int64_t v23; // x2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  BattleSetupInfo_o *v26; // x5
+  FollowerInfo_o *v27; // x6
+  PartyListViewItem_o *v28; // x7
+  int64_t v29; // x1
+  struct EventSuperBossEntity_StaticFields *v30; // x0
+  int64_t v31; // x2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  BattleSetupInfo_o *v34; // x5
+  FollowerInfo_o *v35; // x6
+  PartyListViewItem_o *v36; // x7
+  int64_t v37; // x1
+  struct EventSuperBossEntity_StaticFields *v38; // x0
+  int64_t v39; // x2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  BattleSetupInfo_o *v42; // x5
+  FollowerInfo_o *v43; // x6
+  PartyListViewItem_o *v44; // x7
 
-  if ( (byte_4BDC6B7 & 1) == 0 )
+  if ( (byte_4BFD8C1 & 1) == 0 )
   {
-    sub_1C21E38(&EventSuperBossEntity_TypeInfo);
-    sub_1C21E38(&StringLiteral_24581/*"ui_start_quest_phase"*/);
-    sub_1C21E38(&StringLiteral_24578/*"ui_end_quest_phase"*/);
-    sub_1C21E38(&StringLiteral_24577/*"ui_end_quest_id"*/);
-    sub_1C21E38(&StringLiteral_24579/*"ui_hidden"*/);
-    sub_1C21E38(&StringLiteral_24580/*"ui_start_quest_id"*/);
-    byte_4BDC6B7 = 1;
+    sub_1C2E12C(&EventSuperBossEntity_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_24605/*"ui_start_quest_phase"*/, v8);
+    sub_1C2E12C(&StringLiteral_24602/*"ui_end_quest_phase"*/, v9);
+    sub_1C2E12C(&StringLiteral_24601/*"ui_end_quest_id"*/, v10);
+    sub_1C2E12C(&StringLiteral_24603/*"ui_hidden"*/, v11);
+    sub_1C2E12C(&StringLiteral_24604/*"ui_start_quest_id"*/, v12);
+    byte_4BFD8C1 = 1;
   }
-  EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24580/*"ui_start_quest_id"*/;
-  sub_1C21DDC(
+  EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24604/*"ui_start_quest_id"*/;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)EventSuperBossEntity_TypeInfo->static_fields,
-    StringLiteral_24580/*"ui_start_quest_id"*/,
-    v1,
+    StringLiteral_24604/*"ui_start_quest_id"*/,
     v2,
     v3,
     v4,
     v5,
-    v6);
-  v7 = StringLiteral_24581/*"ui_start_quest_phase"*/;
+    v6,
+    v7);
+  v13 = StringLiteral_24605/*"ui_start_quest_phase"*/;
   static_fields = EventSuperBossEntity_TypeInfo->static_fields;
-  static_fields->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24581/*"ui_start_quest_phase"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&static_fields->UI_START_QUEST_PHASE_KEY, v7, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_24577/*"ui_end_quest_id"*/;
-  v16 = EventSuperBossEntity_TypeInfo->static_fields;
-  v16->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24577/*"ui_end_quest_id"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&v16->UI_END_QUEST_ID_KEY, v15, v17, v18, v19, v20, v21, v22);
-  v23 = StringLiteral_24578/*"ui_end_quest_phase"*/;
-  v24 = EventSuperBossEntity_TypeInfo->static_fields;
-  v24->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24578/*"ui_end_quest_phase"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&v24->UI_END_QUEST_PHASE_KEY, v23, v25, v26, v27, v28, v29, v30);
-  v31 = StringLiteral_24579/*"ui_hidden"*/;
-  v32 = EventSuperBossEntity_TypeInfo->static_fields;
-  v32->UI_HIDDEN = (struct System_String_o *)StringLiteral_24579/*"ui_hidden"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&v32->UI_HIDDEN, v31, v33, v34, v35, v36, v37, v38);
+  static_fields->UI_START_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24605/*"ui_start_quest_phase"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->UI_START_QUEST_PHASE_KEY, v13, v15, v16, v17, v18, v19, v20);
+  v21 = StringLiteral_24601/*"ui_end_quest_id"*/;
+  v22 = EventSuperBossEntity_TypeInfo->static_fields;
+  v22->UI_END_QUEST_ID_KEY = (struct System_String_o *)StringLiteral_24601/*"ui_end_quest_id"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&v22->UI_END_QUEST_ID_KEY, v21, v23, v24, v25, v26, v27, v28);
+  v29 = StringLiteral_24602/*"ui_end_quest_phase"*/;
+  v30 = EventSuperBossEntity_TypeInfo->static_fields;
+  v30->UI_END_QUEST_PHASE_KEY = (struct System_String_o *)StringLiteral_24602/*"ui_end_quest_phase"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&v30->UI_END_QUEST_PHASE_KEY, v29, v31, v32, v33, v34, v35, v36);
+  v37 = StringLiteral_24603/*"ui_hidden"*/;
+  v38 = EventSuperBossEntity_TypeInfo->static_fields;
+  v38->UI_HIDDEN = (struct System_String_o *)StringLiteral_24603/*"ui_hidden"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&v38->UI_HIDDEN, v37, v39, v40, v41, v42, v43, v44);
 }
 
 
 void __fastcall EventSuperBossEntity___ctor(EventSuperBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC6B6 & 1) == 0 )
+  if ( (byte_4BFD8C0 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDC6B6 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFD8C0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventSuperBossEntity__CreatePK(int32_t eventId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4BDC6B0 & 1) == 0 )
+  if ( (byte_4BFD8BA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4BDC6B0 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
+    byte_4BFD8BA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            id,
-           (const MethodInfo_2FAE028 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -113,10 +120,10 @@ System_String_o *__fastcall EventSuperBossEntity__CreatePrimaryKey(
   int32_t id; // w19
   int32_t eventId; // w20
 
-  if ( (byte_4BDC6AF & 1) == 0 )
+  if ( (byte_4BFD8B9 & 1) == 0 )
   {
-    sub_1C21E38(&EventSuperBossEntity_TypeInfo);
-    byte_4BDC6AF = 1;
+    sub_1C2E12C(&EventSuperBossEntity_TypeInfo, method);
+    byte_4BFD8B9 = 1;
   }
   eventId = this->fields.eventId;
   id = this->fields.id;
@@ -139,7 +146,7 @@ int32_t __fastcall EventSuperBossEntity__DamageProgressNum(EventSuperBossEntity_
   {
     splitHp = this->fields.splitHp;
     if ( !splitHp )
-      sub_1C22094(UserSuperBossEntity, v4);
+      sub_1C2E388(UserSuperBossEntity, v4);
     max_length = splitHp->max_length;
     if ( max_length < 1 )
     {
@@ -152,7 +159,7 @@ int32_t __fastcall EventSuperBossEntity__DamageProgressNum(EventSuperBossEntity_
       do
       {
         if ( (unsigned int)UserSuperBossEntity >= max_length )
-          sub_1C2209C(UserSuperBossEntity, v4);
+          sub_1C2E390(UserSuperBossEntity, v4);
         if ( damage < splitHp->m_Items[(int)UserSuperBossEntity] )
           break;
         UserSuperBossEntity = (UserSuperBossEntity_o *)(unsigned int)((_DWORD)UserSuperBossEntity + 1);
@@ -192,90 +199,97 @@ System_Int64_array *__fastcall EventSuperBossEntity__GetBreakGaugeHpList(
         EventSuperBossEntity_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   __int64 script; // x0
-  System_Collections_Generic_List_object__o *v4; // x20
+  System_Collections_Generic_List_object__o *v11; // x20
   __int64 methodPtr_low; // x9
-  __int64 v6; // x22
-  System_Int64_array *v7; // x21
-  unsigned __int64 v8; // x19
+  __int64 v13; // x22
+  System_Int64_array *v14; // x21
+  unsigned __int64 v15; // x19
   Il2CppObject *Item; // x23
   System_Int64_array *result; // x0
-  EventSuperBossEntity_o *v11; // x0
-  const MethodInfo *v12; // x1
+  EventSuperBossEntity_o *v18; // x0
+  const MethodInfo *v19; // x1
 
-  if ( (byte_4BDC6B5 & 1) == 0 )
+  if ( (byte_4BFD8BF & 1) == 0 )
   {
-    sub_1C21E38(&System_Convert_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C21E38(&long___TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C21E38(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C21E38(&StringLiteral_17731/*"breakGaugeHp"*/);
-    byte_4BDC6B5 = 1;
+    sub_1C2E12C(&System_Convert_TypeInfo, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1C2E12C(&long___TypeInfo, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_object__get_Count__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_object__get_Item__, v7);
+    sub_1C2E12C(&System_Collections_Generic_List_object__TypeInfo, v8);
+    sub_1C2E12C(&StringLiteral_17746/*"breakGaugeHp"*/, v9);
+    byte_4BFD8BF = 1;
   }
   script = (__int64)this->fields.script;
   if ( !script )
     goto LABEL_21;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)script,
-         (Il2CppObject *)StringLiteral_17731/*"breakGaugeHp"*/,
-         (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_17746/*"breakGaugeHp"*/,
+         (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     script = (__int64)this->fields.script;
     if ( !script )
       goto LABEL_21;
     script = (__int64)System_Collections_Generic_Dictionary_object__object___get_Item(
                         (System_Collections_Generic_Dictionary_object__object__o *)script,
-                        (Il2CppObject *)StringLiteral_17731/*"breakGaugeHp"*/,
-                        (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                        (Il2CppObject *)StringLiteral_17746/*"breakGaugeHp"*/,
+                        (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !script )
       goto LABEL_21;
-    v4 = (System_Collections_Generic_List_object__o *)script;
+    v11 = (System_Collections_Generic_List_object__o *)script;
     methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
     if ( *(unsigned __int8 *)(*(_QWORD *)script + 304LL) < (unsigned int)methodPtr_low
       || *(System_Collections_Generic_List_object__c **)(*(_QWORD *)(*(_QWORD *)script + 200LL) + 8 * methodPtr_low - 8) != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1C22354(script);
-      EventSuperBossEntity___ctor(v11, v12);
+      sub_1C2E648(script);
+      EventSuperBossEntity___ctor(v18, v19);
       return result;
     }
-    v6 = *(unsigned int *)(script + 24);
-    if ( (int)v6 >= 1 )
+    v13 = *(unsigned int *)(script + 24);
+    if ( (int)v13 >= 1 )
     {
-      v7 = (System_Int64_array *)sub_1C21EE0(long___TypeInfo, (unsigned int)v6);
-      v8 = 0LL;
+      v14 = (System_Int64_array *)sub_1C2E1D4(long___TypeInfo, (unsigned int)v13);
+      v15 = 0LL;
       while ( 1 )
       {
         Item = System_Collections_Generic_List_object___get_Item(
-                 v4,
-                 v8,
-                 (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_object__get_Item__);
+                 v11,
+                 v15,
+                 (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_object__get_Item__);
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
         script = System_Convert__ToInt64(Item, 0LL);
-        if ( !v7 )
+        if ( !v14 )
           break;
-        if ( v8 >= v7->max_length )
+        if ( v15 >= v14->max_length )
           goto LABEL_22;
-        v7->m_Items[v8++] = script;
-        if ( v6 == v8 )
-          return v7;
+        v14->m_Items[v15++] = script;
+        if ( v13 == v15 )
+          return v14;
       }
 LABEL_21:
-      sub_1C22094(script, method);
+      sub_1C2E388(script, method);
     }
   }
-  script = sub_1C21EE0(long___TypeInfo, 1LL);
+  script = sub_1C2E1D4(long___TypeInfo, 1LL);
   if ( !script )
     goto LABEL_21;
-  v7 = (System_Int64_array *)script;
+  v14 = (System_Int64_array *)script;
   if ( !*(_DWORD *)(script + 24) )
 LABEL_22:
-    sub_1C2209C(script, method);
+    sub_1C2E390(script, method);
   *(_QWORD *)(script + 32) = this->fields.maxHp;
-  return v7;
+  return v14;
 }
 
 
@@ -284,30 +298,33 @@ UserSuperBossEntity_o *__fastcall EventSuperBossEntity__GetUserSuperBossEntity(
         const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   Il2CppObject *Master_object; // x20
   UserSuperBossEntity_o *result; // x0
-  UserSuperBossEntity_o *v6; // x20
-  __int64 v7; // d0
+  UserSuperBossEntity_o *v9; // x20
+  __int64 v10; // d0
   UserSuperBossEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BDC6B1 & 1) == 0 )
+  if ( (byte_4BFD8BB & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserSuperBossMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&UserSuperBossEntity_TypeInfo);
-    byte_4BDC6B1 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserSuperBossMaster___, method);
+    sub_1C2E12C(&DataManager_TypeInfo, v3);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v4);
+    sub_1C2E12C(&UserSuperBossEntity_TypeInfo, v5);
+    byte_4BFD8BB = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserSuperBossMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserSuperBossMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v6);
+    byte_4BF81D5 = 1;
   }
   result = (UserSuperBossEntity_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -327,15 +344,15 @@ UserSuperBossEntity_o *__fastcall EventSuperBossEntity__GetUserSuperBossEntity(
   {
     return entity;
   }
-  v6 = (UserSuperBossEntity_o *)sub_1C22084(UserSuperBossEntity_TypeInfo);
-  UserSuperBossEntity___ctor(v6, 0LL);
-  entity = v6;
+  v9 = (UserSuperBossEntity_o *)sub_1C2E378(UserSuperBossEntity_TypeInfo);
+  UserSuperBossEntity___ctor(v9, 0LL);
+  entity = v9;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v6);
+    byte_4BF81D5 = 1;
   }
   result = (UserSuperBossEntity_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -343,75 +360,81 @@ UserSuperBossEntity_o *__fastcall EventSuperBossEntity__GetUserSuperBossEntity(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     result = (UserSuperBossEntity_o *)NetworkManager_TypeInfo;
   }
-  if ( !v6 || (v6->fields.userId = *(_QWORD *)(result[3].fields.userId + 64), (result = entity) == 0LL) )
+  if ( !v9 || (v9->fields.userId = *(_QWORD *)(result[3].fields.userId + 64), (result = entity) == 0LL) )
 LABEL_23:
-    sub_1C22094(result, v3);
-  v7 = *(_QWORD *)&this->fields.eventId;
+    sub_1C2E388(result, v6);
+  v10 = *(_QWORD *)&this->fields.eventId;
   entity->fields.damage = 0LL;
-  *(_QWORD *)&result->fields.eventId = v7;
+  *(_QWORD *)&result->fields.eventId = v10;
   return result;
 }
 
 
 bool __fastcall EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *this, const MethodInfo *method)
 {
-  DataManager_o *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  DataManager_o *Instance; // x0
+  __int64 v10; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x21
-  UserQuestMaster_o *v6; // x20
-  NetworkManager_c *v7; // x0
+  UserQuestMaster_o *v12; // x20
+  NetworkManager_c *v13; // x0
   struct NetworkManager_StaticFields *static_fields; // x8
-  struct System_Collections_Generic_Dictionary_string__object__o *v9; // x22
+  struct System_Collections_Generic_Dictionary_string__object__o *v15; // x22
   int64_t userIdNumber; // x21
-  __int64 v11; // x2
-  __int64 v12; // x3
-  int32_t *v13; // x0
+  __int64 v17; // x2
+  __int64 v18; // x3
+  int32_t *v19; // x0
   UserQuestEntity_o *EntityFromId; // x0
-  UserQuestEntity_o *v15; // x21
-  struct System_Collections_Generic_Dictionary_string__object__o *v16; // x22
+  UserQuestEntity_o *v21; // x21
+  struct System_Collections_Generic_Dictionary_string__object__o *v22; // x22
   int32_t questPhase; // w22
-  struct System_Collections_Generic_Dictionary_string__object__o *v18; // x21
-  __int64 v19; // x2
-  __int64 v20; // x3
-  struct System_Collections_Generic_Dictionary_string__object__o *v21; // x21
-  NetworkManager_c *v22; // x0
-  struct NetworkManager_StaticFields *v23; // x8
-  struct System_Collections_Generic_Dictionary_string__object__o *v24; // x22
-  int64_t v25; // x21
-  __int64 v26; // x2
-  __int64 v27; // x3
-  int32_t *v28; // x0
-  UserQuestEntity_o *v29; // x0
-  UserQuestEntity_o *v30; // x20
-  struct System_Collections_Generic_Dictionary_string__object__o *v31; // x21
-  int32_t v32; // w20
-  struct System_Collections_Generic_Dictionary_string__object__o *v33; // x19
-  __int64 v34; // x2
-  __int64 v35; // x3
-  EventSuperBossEntity_o *v36; // x0
-  const MethodInfo *v37; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *v24; // x21
+  __int64 v25; // x2
+  __int64 v26; // x3
+  struct System_Collections_Generic_Dictionary_string__object__o *v27; // x21
+  NetworkManager_c *v28; // x0
+  struct NetworkManager_StaticFields *v29; // x8
+  struct System_Collections_Generic_Dictionary_string__object__o *v30; // x22
+  int64_t v31; // x21
+  __int64 v32; // x2
+  __int64 v33; // x3
+  int32_t *v34; // x0
+  UserQuestEntity_o *v35; // x0
+  UserQuestEntity_o *v36; // x20
+  struct System_Collections_Generic_Dictionary_string__object__o *v37; // x21
+  int32_t v38; // w20
+  struct System_Collections_Generic_Dictionary_string__object__o *v39; // x19
+  __int64 v40; // x2
+  __int64 v41; // x3
+  EventSuperBossEntity_o *v42; // x0
+  const MethodInfo *v43; // x1
 
-  if ( (byte_4BDC6B3 & 1) == 0 )
+  if ( (byte_4BFD8BD & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C21E38(&EventSuperBossEntity_TypeInfo);
-    sub_1C21E38(&long_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDC6B3 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_UserQuestMaster___, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1C2E12C(&EventSuperBossEntity_TypeInfo, v5);
+    sub_1C2E12C(&long_TypeInfo, v6);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v7);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4BFD8BD = 1;
   }
   if ( !this->fields.script )
     goto LABEL_63;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_65;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   script = this->fields.script;
-  v6 = (UserQuestMaster_o *)Instance;
+  v12 = (UserQuestMaster_o *)Instance;
   if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
   if ( !script )
@@ -419,162 +442,162 @@ bool __fastcall EventSuperBossEntity__InUIDisplayPeriod(EventSuperBossEntity_o *
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_ID_KEY,
-          (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     goto LABEL_34;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v10);
+    byte_4BF81D5 = 1;
   }
-  v7 = NetworkManager_TypeInfo;
+  v13 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v7 = NetworkManager_TypeInfo;
+    v13 = NetworkManager_TypeInfo;
   }
-  static_fields = v7->static_fields;
+  static_fields = v13->static_fields;
   Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-  v9 = this->fields.script;
+  v15 = this->fields.script;
   userIdNumber = static_fields->userIdNumber;
   if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-  if ( !v9 )
+  if ( !v15 )
     goto LABEL_65;
   Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                (System_Collections_Generic_Dictionary_object__object__o *)v9,
+                                (System_Collections_Generic_Dictionary_object__object__o *)v15,
                                 (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_ID_KEY,
-                                (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v6 || !Instance )
+                                (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v12 || !Instance )
     goto LABEL_65;
   if ( Instance->klass->_1.element_class != long_TypeInfo->_1.element_class )
     goto LABEL_66;
-  v13 = (int32_t *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v11, v12);
-  EntityFromId = UserQuestMaster__getEntityFromId(v6, userIdNumber, *v13, 0LL);
+  v19 = (int32_t *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v17, v18);
+  EntityFromId = UserQuestMaster__getEntityFromId(v12, userIdNumber, *v19, 0LL);
   if ( !EntityFromId )
     goto LABEL_34;
-  v15 = EntityFromId;
+  v21 = EntityFromId;
   Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-  v16 = this->fields.script;
+  v22 = this->fields.script;
   if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-  if ( !v16 )
+  if ( !v22 )
     goto LABEL_65;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
-         (System_Collections_Generic_Dictionary_object__object__o *)v16,
+         (System_Collections_Generic_Dictionary_object__object__o *)v22,
          (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_PHASE_KEY,
-         (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-    questPhase = v15->fields.questPhase;
-    v18 = this->fields.script;
+    questPhase = v21->fields.questPhase;
+    v24 = this->fields.script;
     if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-    if ( !v18 )
+    if ( !v24 )
       goto LABEL_65;
     Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                  (System_Collections_Generic_Dictionary_object__object__o *)v18,
+                                  (System_Collections_Generic_Dictionary_object__object__o *)v24,
                                   (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_END_QUEST_PHASE_KEY,
-                                  (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                  (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Instance )
       goto LABEL_65;
     if ( Instance->klass->_1.element_class != long_TypeInfo->_1.element_class )
       goto LABEL_66;
-    if ( questPhase >= *(_DWORD *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v19, v20) )
+    if ( questPhase >= *(_DWORD *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v25, v26) )
       goto LABEL_61;
     goto LABEL_34;
   }
-  if ( v15->fields.clearNum <= 0 )
+  if ( v21->fields.clearNum <= 0 )
   {
 LABEL_34:
     Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-    v21 = this->fields.script;
+    v27 = this->fields.script;
     if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-    if ( v21 )
+    if ( v27 )
     {
       if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
-              (System_Collections_Generic_Dictionary_object__object__o *)v21,
+              (System_Collections_Generic_Dictionary_object__object__o *)v27,
               (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY,
-              (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+              (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
         goto LABEL_63;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BD6FF5 )
+      if ( !byte_4BF81D5 )
       {
-        sub_1C21E38(&NetworkManager_TypeInfo);
-        byte_4BD6FF5 = 1;
+        sub_1C2E12C(&NetworkManager_TypeInfo, v10);
+        byte_4BF81D5 = 1;
       }
-      v22 = NetworkManager_TypeInfo;
+      v28 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v22 = NetworkManager_TypeInfo;
+        v28 = NetworkManager_TypeInfo;
       }
-      v23 = v22->static_fields;
+      v29 = v28->static_fields;
       Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-      v24 = this->fields.script;
-      v25 = v23->userIdNumber;
+      v30 = this->fields.script;
+      v31 = v29->userIdNumber;
       if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-      if ( v24 )
+      if ( v30 )
       {
         Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                      (System_Collections_Generic_Dictionary_object__object__o *)v24,
+                                      (System_Collections_Generic_Dictionary_object__object__o *)v30,
                                       (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_ID_KEY,
-                                      (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-        if ( v6 )
+                                      (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+        if ( v12 )
         {
           if ( Instance )
           {
             if ( Instance->klass->_1.element_class != long_TypeInfo->_1.element_class )
               goto LABEL_66;
-            v28 = (int32_t *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v26, v27);
-            v29 = UserQuestMaster__getEntityFromId(v6, v25, *v28, 0LL);
-            if ( !v29 )
-              return (char)v29;
-            v30 = v29;
+            v34 = (int32_t *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v32, v33);
+            v35 = UserQuestMaster__getEntityFromId(v12, v31, *v34, 0LL);
+            if ( !v35 )
+              return (char)v35;
+            v36 = v35;
             Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-            v31 = this->fields.script;
+            v37 = this->fields.script;
             if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-            if ( v31 )
+            if ( v37 )
             {
               if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
-                      (System_Collections_Generic_Dictionary_object__object__o *)v31,
+                      (System_Collections_Generic_Dictionary_object__object__o *)v37,
                       (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_PHASE_KEY,
-                      (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                      (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
               {
-                if ( !v30->fields.clearNum )
+                if ( !v36->fields.clearNum )
                   goto LABEL_61;
                 goto LABEL_63;
               }
               Instance = (DataManager_o *)EventSuperBossEntity_TypeInfo;
-              v32 = v30->fields.questPhase;
-              v33 = this->fields.script;
+              v38 = v36->fields.questPhase;
+              v39 = this->fields.script;
               if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-              if ( v33 )
+              if ( v39 )
               {
                 Instance = (DataManager_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
-                                              (System_Collections_Generic_Dictionary_object__object__o *)v33,
+                                              (System_Collections_Generic_Dictionary_object__object__o *)v39,
                                               (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_START_QUEST_PHASE_KEY,
-                                              (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                              (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
                 if ( Instance )
                 {
                   if ( Instance->klass->_1.element_class == long_TypeInfo->_1.element_class )
                   {
-                    if ( v32 < *(_DWORD *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v34, v35) )
+                    if ( v38 < *(_DWORD *)j_il2cpp_object_unbox_0(Instance, long_TypeInfo, v40, v41) )
                       goto LABEL_61;
 LABEL_63:
-                    LOBYTE(v29) = 1;
-                    return (char)v29;
+                    LOBYTE(v35) = 1;
+                    return (char)v35;
                   }
 LABEL_66:
-                  sub_1C22354(Instance);
-                  LOBYTE(v29) = EventSuperBossEntity__IsCleard(v36, v37);
-                  return (char)v29;
+                  sub_1C2E648(Instance);
+                  LOBYTE(v35) = EventSuperBossEntity__IsCleard(v42, v43);
+                  return (char)v35;
                 }
               }
             }
@@ -583,11 +606,11 @@ LABEL_66:
       }
     }
 LABEL_65:
-    sub_1C22094(Instance, v4);
+    sub_1C2E388(Instance, v10);
   }
 LABEL_61:
-  LOBYTE(v29) = 0;
-  return (char)v29;
+  LOBYTE(v35) = 0;
+  return (char)v35;
 }
 
 
@@ -604,54 +627,59 @@ bool __fastcall EventSuperBossEntity__IsCleard(EventSuperBossEntity_o *this, con
 
 bool __fastcall EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x2
-  __int64 v4; // x3
-  __int64 v5; // x4
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x2
+  __int64 v9; // x3
+  __int64 v10; // x4
   int i; // w22
-  EventSuperBossMaster_c *v7; // x0
+  EventSuperBossMaster_c *v12; // x0
   System_String_o *SAVE_KEY; // x20
-  Il2CppObject *v9; // x21
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  Il2CppObject *v13; // x0
-  System_String_o *v14; // x0
+  Il2CppObject *v14; // x21
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x0
   clsQuestCheck_o *Int; // x0
-  __int64 v16; // x1
+  __int64 v21; // x1
   struct System_Int32_array *splitQuestIds; // x8
   Il2CppObject *Master_object; // x20
-  struct System_Int32_array *v20; // x8
-  struct System_Int32_array *v22; // x8
-  int v23; // [xsp+8h] [xbp-38h] BYREF
+  struct System_Int32_array *v25; // x8
+  struct System_Int32_array *v27; // x8
+  int v28; // [xsp+8h] [xbp-38h] BYREF
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BDC6B2 & 1) == 0 )
+  if ( (byte_4BFD8BC & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserQuestMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&EventSuperBossMaster_TypeInfo);
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    byte_4BDC6B2 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserQuestMaster___, method);
+    sub_1C2E12C(&DataManager_TypeInfo, v3);
+    sub_1C2E12C(&EventSuperBossMaster_TypeInfo, v4);
+    sub_1C2E12C(&int_TypeInfo, v5);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v6);
+    sub_1C2E12C(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v7);
+    byte_4BFD8BC = 1;
   }
   if ( EventSuperBossEntity__InUIDisplayPeriod(this, method) )
   {
     for ( i = 0; ; ++i )
     {
-      v7 = EventSuperBossMaster_TypeInfo;
+      v12 = EventSuperBossMaster_TypeInfo;
       if ( !EventSuperBossMaster_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventSuperBossMaster_TypeInfo);
-        v7 = EventSuperBossMaster_TypeInfo;
+        v12 = EventSuperBossMaster_TypeInfo;
       }
-      SAVE_KEY = v7->static_fields->SAVE_KEY;
+      SAVE_KEY = v12->static_fields->SAVE_KEY;
       eventId = this->fields.eventId;
-      v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v3, v4, v5);
-      v23 = i;
-      v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v10, v11, v12);
-      v14 = System_String__Format_63129848(SAVE_KEY, v9, v13, 0LL);
-      Int = (clsQuestCheck_o *)UnityEngine_PlayerPrefs__GetInt(v14, 0, 0LL);
+      v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &eventId, v8, v9, v10);
+      v28 = i;
+      v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v15, v16, v17);
+      v19 = System_String__Format_63249956(SAVE_KEY, v14, v18, 0LL);
+      Int = (clsQuestCheck_o *)UnityEngine_PlayerPrefs__GetInt(v19, 0, 0LL);
       if ( !(_DWORD)Int )
         break;
       if ( (_DWORD)Int == this->fields.id )
@@ -664,13 +692,13 @@ bool __fastcall EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, 
         return 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserQuestMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserQuestMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BD6FF5 )
+      if ( !byte_4BF81D5 )
       {
-        sub_1C21E38(&NetworkManager_TypeInfo);
-        byte_4BD6FF5 = 1;
+        sub_1C2E12C(&NetworkManager_TypeInfo, v21);
+        byte_4BF81D5 = 1;
       }
       Int = (clsQuestCheck_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -678,37 +706,37 @@ bool __fastcall EventSuperBossEntity__IsEncounted(EventSuperBossEntity_o *this, 
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Int = (clsQuestCheck_o *)NetworkManager_TypeInfo;
       }
-      v20 = this->fields.splitQuestIds;
-      if ( v20 )
+      v25 = this->fields.splitQuestIds;
+      if ( v25 )
       {
-        if ( !v20->max_length )
+        if ( !v25->max_length )
           goto LABEL_32;
         if ( Master_object )
         {
           if ( UserQuestMaster__getChallengeCountsFromId(
                  (UserQuestMaster_o *)Master_object,
                  *(_QWORD *)&Int[5].fields.cQuestReleaseListP[1].fields._size,
-                 v20->m_Items[1],
+                 v25->m_Items[1],
                  0LL) > 0 )
             return 1;
-          Int = (clsQuestCheck_o *)SingletonTemplate_object___get_Instance((const MethodInfo_388D478 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-          v22 = this->fields.splitQuestIds;
-          if ( v22 )
+          Int = (clsQuestCheck_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38A83B0 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+          v27 = this->fields.splitQuestIds;
+          if ( v27 )
           {
-            if ( v22->max_length )
+            if ( v27->max_length )
             {
               if ( Int )
-                return clsQuestCheck__IsQuestRelease(Int, v22->m_Items[1], -1, 0, 0LL);
+                return clsQuestCheck__IsQuestRelease(Int, v27->m_Items[1], -1, 0, 0LL);
               goto LABEL_31;
             }
 LABEL_32:
-            sub_1C2209C(Int, v16);
+            sub_1C2E390(Int, v21);
           }
         }
       }
     }
 LABEL_31:
-    sub_1C22094(Int, v16);
+    sub_1C2E388(Int, v21);
   }
   return 0;
 }
@@ -716,21 +744,24 @@ LABEL_31:
 
 bool __fastcall EventSuperBossEntity__IsHidden(EventSuperBossEntity_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   void *Item; // x0
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x20
-  struct System_Collections_Generic_Dictionary_string__object__o *v5; // x19
-  __int64 v6; // x2
-  __int64 v7; // x3
-  EventSuperBossEntity_o *v9; // x0
-  const MethodInfo *v10; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *v8; // x19
+  __int64 v9; // x2
+  __int64 v10; // x3
+  EventSuperBossEntity_o *v12; // x0
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4BDC6B4 & 1) == 0 )
+  if ( (byte_4BFD8BE & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C21E38(&EventSuperBossEntity_TypeInfo);
-    sub_1C21E38(&long_TypeInfo);
-    byte_4BDC6B4 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v3);
+    sub_1C2E12C(&EventSuperBossEntity_TypeInfo, v4);
+    sub_1C2E12C(&long_TypeInfo, v5);
+    byte_4BFD8BE = 1;
   }
   Item = EventSuperBossEntity_TypeInfo;
   script = this->fields.script;
@@ -741,23 +772,23 @@ bool __fastcall EventSuperBossEntity__IsHidden(EventSuperBossEntity_o *this, con
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_HIDDEN,
-          (const MethodInfo_3316874 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
   Item = EventSuperBossEntity_TypeInfo;
-  v5 = this->fields.script;
+  v8 = this->fields.script;
   if ( !EventSuperBossEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventSuperBossEntity_TypeInfo);
-  if ( !v5
+  if ( !v8
     || (Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-                 (System_Collections_Generic_Dictionary_object__object__o *)v5,
+                 (System_Collections_Generic_Dictionary_object__object__o *)v8,
                  (Il2CppObject *)EventSuperBossEntity_TypeInfo->static_fields->UI_HIDDEN,
-                 (const MethodInfo_3316600 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                 (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
 LABEL_14:
-    sub_1C22094(Item, method);
+    sub_1C2E388(Item, method);
   }
   if ( *(Il2CppClass **)(*(_QWORD *)Item + 64LL) == long_TypeInfo->_1.element_class )
-    return *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v6, v7) == 1LL;
-  sub_1C22354(Item);
-  return (unsigned __int8)EventSuperBossEntity__GetBreakGaugeHpList(v9, v10);
+    return *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v9, v10) == 1LL;
+  sub_1C2E648(Item);
+  return (unsigned __int8)EventSuperBossEntity__GetBreakGaugeHpList(v12, v13);
 }

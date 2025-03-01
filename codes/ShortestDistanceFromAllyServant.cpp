@@ -17,42 +17,45 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
         const MethodInfo *method)
 {
   ShortestDistanceFromAllyServant_o *v11; // x19
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
   uint32_t Item; // w23
   WarBoardPieceData_o *PieceUnique; // x0
-  WarBoardPieceData_o *v14; // x23
+  WarBoardPieceData_o *v17; // x23
   int32_t squareIndex_k__BackingField; // w21
-  int32_t v16; // w20
-  System_Int32_array *v17; // x0
-  __int64 v18; // x20
+  int32_t v19; // w20
+  System_Int32_array *v20; // x0
+  __int64 v21; // x20
   float BreakPoint; // s0
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = this;
-  if ( (byte_4BD9F79 & 1) == 0 )
+  if ( (byte_4BFB168 & 1) == 0 )
   {
-    sub_1C21E38(&AStarSearch_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
-    this = (ShortestDistanceFromAllyServant_o *)sub_1C21E38(&WarBoardAIManager_TypeInfo);
-    byte_4BD9F79 = 1;
+    sub_1C2E12C(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
+    this = (ShortestDistanceFromAllyServant_o *)sub_1C2E12C(&WarBoardAIManager_TypeInfo, v14);
+    byte_4BFB168 = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_20;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_32D799C *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_32F6E90 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_32D7714 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_32F6C08 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
     PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0LL);
     if ( PieceUnique )
     {
-      v14 = PieceUnique;
+      v17 = PieceUnique;
       if ( PieceUnique->fields._forceId_k__BackingField == forceId )
       {
         this = (ShortestDistanceFromAllyServant_o *)WarBoardPieceData__get_isMaster(PieceUnique, 0LL);
@@ -61,24 +64,24 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
           if ( !calcSquare )
             goto LABEL_20;
           squareIndex_k__BackingField = calcSquare->fields._squareIndex_k__BackingField;
-          v16 = targetSquare->fields._squareIndex_k__BackingField;
+          v19 = targetSquare->fields._squareIndex_k__BackingField;
           if ( !AStarSearch_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-          v17 = AStarSearch__RouteSearch(v14, squareIndex_k__BackingField, v16, 0, 0LL, 0LL);
-          if ( v17 )
+          v20 = AStarSearch__RouteSearch(v17, squareIndex_k__BackingField, v19, 0, 0LL, 0LL);
+          if ( v20 )
           {
-            v18 = *(_QWORD *)&v17->max_length;
+            v21 = *(_QWORD *)&v20->max_length;
             if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-            BreakPoint = WarBoardAIManager__GetBreakPoint(v14, 0LL);
+            BreakPoint = WarBoardAIManager__GetBreakPoint(v17, 0LL);
             ratingBase = v11->fields.ratingBase;
             if ( ratingBase )
               return fmaxf(
                        (float)(BreakPoint * (float)ratingBase->fields.adjustmentValueB)
-                     + (float)(ratingBase->fields.adjustmentValueA1 - ratingBase->fields.adjustmentValueA2 * (v18 - 1)),
+                     + (float)(ratingBase->fields.adjustmentValueA1 - ratingBase->fields.adjustmentValueA2 * (v21 - 1)),
                        0.0);
 LABEL_20:
-            sub_1C22094(this, *(_QWORD *)&forceId);
+            sub_1C2E388(this, *(_QWORD *)&forceId);
           }
         }
       }

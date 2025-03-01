@@ -7,7 +7,7 @@ void __fastcall BattleActorShakeComponent___ctor(BattleActorShakeComponent_o *th
 
 void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_Transform_o *transform; // x0
+  __int64 transform; // x0
   __int64 v4; // x1
   float z; // s8
   float y; // s9
@@ -20,12 +20,12 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
 
   if ( !this->fields.IsAnimation )
   {
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    v11 = transform;
-    if ( !byte_4BD6BB1 )
+    transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    v11 = (UnityEngine_Transform_o *)transform;
+    if ( !byte_4BF7D91 )
     {
-      transform = (UnityEngine_Transform_o *)sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
-      byte_4BD6BB1 = 1;
+      transform = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_4BF7D91 = 1;
     }
     if ( v11 )
     {
@@ -36,12 +36,12 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
   }
   if ( !this->fields.animationCurvel )
     return;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !this->fields.animationCurvel
     || (y = this->fields.vector.fields.y,
         z = this->fields.vector.fields.z,
         x = this->fields.vector.fields.x,
-        v8 = transform,
+        v8 = (UnityEngine_Transform_o *)transform,
         v9 = UnityEngine_AnimationCurve__Evaluate(
                this->fields.animationCurvel,
                this->fields.animationSpeed * this->fields.elapsedTime,
@@ -49,7 +49,7 @@ void __fastcall BattleActorShakeComponent__Update(BattleActorShakeComponent_o *t
         !v8) )
   {
 LABEL_11:
-    sub_1C22094(transform, v4);
+    sub_1C2E388(transform, v4);
   }
   v12.fields.z = z * v9;
   v12.fields.y = y * v9;

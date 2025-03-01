@@ -1,9 +1,9 @@
 void __fastcall WarehouseConfirmMenu___ctor(WarehouseConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDA467 & 1) == 0 )
+  if ( (byte_4BFB656 & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BDA467 = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BFB656 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,7 +28,7 @@ void __fastcall WarehouseConfirmMenu__Callback(WarehouseConfirmMenu_o *this, boo
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C21DDC(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C2E0D0(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       result,
@@ -41,11 +41,11 @@ void __fastcall WarehouseConfirmMenu__Close(WarehouseConfirmMenu_o *this, const 
 {
   const MethodInfo *v2; // x2
 
-  WarehouseConfirmMenu__Close_36958860(this, 0LL, v2);
+  WarehouseConfirmMenu__Close_37020836(this, 0LL, v2);
 }
 
 
-void __fastcall WarehouseConfirmMenu__Close_36958860(
+void __fastcall WarehouseConfirmMenu__Close_37020836(
         WarehouseConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -55,16 +55,17 @@ void __fastcall WarehouseConfirmMenu__Close_36958860(
   BattleSetupInfo_o *v5; // x5
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  System_Action_o *v10; // x20
+  __int64 v10; // x1
+  System_Action_o *v11; // x20
 
-  if ( (byte_4BDA463 & 1) == 0 )
+  if ( (byte_4BFB652 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_WarehouseConfirmMenu_EndClose__);
-    byte_4BDA463 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, callback);
+    sub_1C2E12C(&Method_WarehouseConfirmMenu_EndClose__, v10);
+    byte_4BFB652 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -74,9 +75,9 @@ void __fastcall WarehouseConfirmMenu__Close_36958860(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_WarehouseConfirmMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_WarehouseConfirmMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -99,7 +100,7 @@ void __fastcall WarehouseConfirmMenu__EndClose(WarehouseConfirmMenu_o *this, con
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C21DDC(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -117,10 +118,10 @@ void __fastcall WarehouseConfirmMenu__Init(WarehouseConfirmMenu_o *this, const M
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4BDA461 & 1) == 0 )
+  if ( (byte_4BFB650 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDA461 = 1;
+    sub_1C2E12C(&StringLiteral_1/*""*/, method);
+    byte_4BFB650 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -136,7 +137,7 @@ void __fastcall WarehouseConfirmMenu__Init(WarehouseConfirmMenu_o *this, const M
         (titleLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_9:
-    sub_1C22094(titleLabel, method);
+    sub_1C2E388(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -150,18 +151,18 @@ void __fastcall WarehouseConfirmMenu__OnClickCancel(WarehouseConfirmMenu_o *this
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDA465 & 1) == 0 )
+  if ( (byte_4BFB654 & 1) == 0 )
   {
-    sub_1C21E38(&Method_WarehouseConfirmMenu_OnClickCancel__);
-    byte_4BDA465 = 1;
+    sub_1C2E12C(&Method_WarehouseConfirmMenu_OnClickCancel__, method);
+    byte_4BFB654 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_WarehouseConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_WarehouseConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_WarehouseConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C2E144(Method_WarehouseConfirmMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     WarehouseConfirmMenu__Callback(this, 0, v5);
   }
@@ -174,18 +175,18 @@ void __fastcall WarehouseConfirmMenu__OnClickClose(WarehouseConfirmMenu_o *this,
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BDA466 & 1) == 0 )
+  if ( (byte_4BFB655 & 1) == 0 )
   {
-    sub_1C21E38(&Method_WarehouseConfirmMenu_OnClickClose__);
-    byte_4BDA466 = 1;
+    sub_1C2E12C(&Method_WarehouseConfirmMenu_OnClickClose__, method);
+    byte_4BFB655 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_WarehouseConfirmMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_WarehouseConfirmMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_WarehouseConfirmMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C2E144(Method_WarehouseConfirmMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     WarehouseConfirmMenu__Callback(this, 0, v5);
   }
@@ -199,10 +200,10 @@ void __fastcall WarehouseConfirmMenu__OnClickDecide(WarehouseConfirmMenu_o *this
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4BDA464 & 1) == 0 )
+  if ( (byte_4BFB653 & 1) == 0 )
   {
-    sub_1C21E38(&Method_WarehouseConfirmMenu_OnClickDecide__);
-    byte_4BDA464 = 1;
+    sub_1C2E12C(&Method_WarehouseConfirmMenu_OnClickDecide__, method);
+    byte_4BFB653 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -210,8 +211,8 @@ void __fastcall WarehouseConfirmMenu__OnClickDecide(WarehouseConfirmMenu_o *this
     kind = this->fields.kind;
     v4 = Method_WarehouseConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_WarehouseConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C21E50(Method_WarehouseConfirmMenu_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C2E144(Method_WarehouseConfirmMenu_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 8 * (kind < 4), 0, 0LL);
     WarehouseConfirmMenu__Callback(this, 1, v6);
   }
@@ -229,86 +230,111 @@ void __fastcall WarehouseConfirmMenu__Open(
 {
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v13; // x1
   __int64 v14; // x1
-  UnityEngine_GameObject_o *v15; // x0
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  __int64 v22; // x1
+  __int64 v23; // x1
+  __int64 v24; // x1
+  __int64 v25; // x1
+  __int64 v26; // x1
+  __int64 v27; // x1
+  __int64 v28; // x1
+  __int64 v29; // x1
+  __int64 v30; // x1
+  __int64 v31; // x1
+  __int64 v32; // x1
+  __int64 v33; // x1
+  __int64 v34; // x1
+  __int64 v35; // x1
+  __int64 v36; // x1
+  __int64 v37; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v39; // x1
+  UnityEngine_GameObject_o *v40; // x0
   UILabel_o *titleLabel; // x20
   UILabel_o *messageLabel; // x20
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  __int64 *v20; // x8
-  UILabel_o *v21; // x20
-  UILabel_o *v22; // x20
-  UILabel_o *v23; // x20
-  UILabel_o *v24; // x20
-  UILabel_o *v25; // x20
-  UILabel_o *v26; // x20
-  UILabel_o *v27; // x20
-  UILabel_o *v28; // x22
-  UILabel_o *v29; // x22
-  __int64 *v30; // x8
-  UILabel_o *v31; // x22
-  System_String_o *v32; // x23
-  __int64 v33; // x2
-  __int64 v34; // x3
-  __int64 v35; // x4
-  Il2CppObject *v36; // x21
-  __int64 v37; // x2
-  __int64 v38; // x3
-  __int64 v39; // x4
-  Il2CppObject *v40; // x0
-  UILabel_o *v41; // x22
-  UILabel_o *v42; // x22
-  __int64 *v43; // x8
-  UILabel_o *v44; // x22
-  System_String_o *v45; // x23
-  __int64 v46; // x2
-  __int64 v47; // x3
-  __int64 v48; // x4
-  Il2CppObject *v49; // x21
-  __int64 v50; // x2
-  __int64 v51; // x3
-  __int64 v52; // x4
-  Il2CppObject *v53; // x0
-  System_Action_o *v54; // x20
-  int32_t v55; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v56; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 *v45; // x8
+  UILabel_o *v46; // x20
+  UILabel_o *v47; // x20
+  UILabel_o *v48; // x20
+  UILabel_o *v49; // x20
+  UILabel_o *v50; // x20
+  UILabel_o *v51; // x20
+  UILabel_o *v52; // x20
+  UILabel_o *v53; // x22
+  UILabel_o *v54; // x22
+  __int64 *v55; // x8
+  UILabel_o *v56; // x22
+  System_String_o *v57; // x23
+  __int64 v58; // x2
+  __int64 v59; // x3
+  __int64 v60; // x4
+  Il2CppObject *v61; // x21
+  __int64 v62; // x2
+  __int64 v63; // x3
+  __int64 v64; // x4
+  Il2CppObject *v65; // x0
+  UILabel_o *v66; // x22
+  UILabel_o *v67; // x22
+  __int64 *v68; // x8
+  UILabel_o *v69; // x22
+  System_String_o *v70; // x23
+  __int64 v71; // x2
+  __int64 v72; // x3
+  __int64 v73; // x4
+  Il2CppObject *v74; // x21
+  __int64 v75; // x2
+  __int64 v76; // x3
+  __int64 v77; // x4
+  Il2CppObject *v78; // x0
+  System_Action_o *v79; // x20
+  int32_t v80; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v81; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BDA462 & 1) == 0 )
+  if ( (byte_4BFB651 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&Method_WarehouseConfirmMenu_EndOpen__);
-    sub_1C21E38(&StringLiteral_15721/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_15740/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/);
-    sub_1C21E38(&StringLiteral_15737/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15739/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/);
-    sub_1C21E38(&StringLiteral_15723/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15735/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/);
-    sub_1C21E38(&StringLiteral_15732/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/);
-    sub_1C21E38(&StringLiteral_15741/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15742/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15734/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15718/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_15736/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/);
-    sub_1C21E38(&StringLiteral_15719/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15730/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/);
-    sub_1C21E38(&StringLiteral_15743/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/);
-    sub_1C21E38(&StringLiteral_15731/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15733/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/);
-    sub_1C21E38(&StringLiteral_15738/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/);
-    sub_1C21E38(&StringLiteral_15717/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/);
-    sub_1C21E38(&StringLiteral_15724/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/);
-    sub_1C21E38(&StringLiteral_15722/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/);
-    sub_1C21E38(&StringLiteral_15720/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/);
-    byte_4BDA462 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1C2E12C(&int_TypeInfo, v13);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v14);
+    sub_1C2E12C(&Method_WarehouseConfirmMenu_EndOpen__, v15);
+    sub_1C2E12C(&StringLiteral_15733/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/, v16);
+    sub_1C2E12C(&StringLiteral_15752/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/, v17);
+    sub_1C2E12C(&StringLiteral_15749/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/, v18);
+    sub_1C2E12C(&StringLiteral_15751/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, v19);
+    sub_1C2E12C(&StringLiteral_15735/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/, v20);
+    sub_1C2E12C(&StringLiteral_15747/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/, v21);
+    sub_1C2E12C(&StringLiteral_15744/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/, v22);
+    sub_1C2E12C(&StringLiteral_15753/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/, v23);
+    sub_1C2E12C(&StringLiteral_15754/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/, v24);
+    sub_1C2E12C(&StringLiteral_15746/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/, v25);
+    sub_1C2E12C(&StringLiteral_15730/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/, v26);
+    sub_1C2E12C(&StringLiteral_15748/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/, v27);
+    sub_1C2E12C(&StringLiteral_15731/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/, v28);
+    sub_1C2E12C(&StringLiteral_15742/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/, v29);
+    sub_1C2E12C(&StringLiteral_15755/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, v30);
+    sub_1C2E12C(&StringLiteral_15743/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/, v31);
+    sub_1C2E12C(&StringLiteral_15745/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/, v32);
+    sub_1C2E12C(&StringLiteral_15750/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/, v33);
+    sub_1C2E12C(&StringLiteral_15729/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/, v34);
+    sub_1C2E12C(&StringLiteral_15736/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/, v35);
+    sub_1C2E12C(&StringLiteral_15734/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/, v36);
+    sub_1C2E12C(&StringLiteral_15732/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/, v37);
+    byte_4BFB651 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.kind = kind;
     this->fields.callbackFunc = callback;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       (int64_t)callback,
@@ -356,7 +382,7 @@ void __fastcall WarehouseConfirmMenu__Open(
             (gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton) == 0LL) )
       {
 LABEL_73:
-        sub_1C22094(gameObject, v14);
+        sub_1C2E388(gameObject, v39);
       }
     }
     else
@@ -396,8 +422,8 @@ LABEL_73:
       if ( !gameObject )
         goto LABEL_73;
     }
-    v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-    AndroidBackKeyManager__AddBackBtn(v15, 0LL);
+    v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+    AndroidBackKeyManager__AddBackBtn(v40, 0LL);
 LABEL_26:
     switch ( kind )
     {
@@ -406,156 +432,156 @@ LABEL_26:
         titleLabel = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15720/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15732/*"WAREHOUSE_CONFIRM_PUT_IN_TITLE"*/, 0LL);
         if ( !titleLabel )
           goto LABEL_73;
         UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
         messageLabel = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15719/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15731/*"WAREHOUSE_CONFIRM_PUT_IN_MESSAGE"*/, 0LL);
         if ( !messageLabel )
           goto LABEL_73;
         UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
         decideLabel = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15718/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15730/*"WAREHOUSE_CONFIRM_PUT_IN_DECIDE"*/, 0LL);
         if ( !decideLabel )
           goto LABEL_73;
         UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v20 = &StringLiteral_15717/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/;
+        v45 = &StringLiteral_15729/*"WAREHOUSE_CONFIRM_PUT_IN_CANCEL"*/;
         goto LABEL_69;
       case 2:
       case 3:
-        v21 = this->fields.titleLabel;
+        v46 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15724/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/, 0LL);
-        if ( !v21 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15736/*"WAREHOUSE_CONFIRM_PUT_OUT_TITLE"*/, 0LL);
+        if ( !v46 )
           goto LABEL_73;
-        UILabel__set_text(v21, (System_String_o *)gameObject, 0LL);
-        v22 = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15723/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/, 0LL);
-        if ( !v22 )
+        UILabel__set_text(v46, (System_String_o *)gameObject, 0LL);
+        v47 = this->fields.messageLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15735/*"WAREHOUSE_CONFIRM_PUT_OUT_MESSAGE"*/, 0LL);
+        if ( !v47 )
           goto LABEL_73;
-        UILabel__set_text(v22, (System_String_o *)gameObject, 0LL);
-        v23 = this->fields.decideLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15722/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/, 0LL);
-        if ( !v23 )
+        UILabel__set_text(v47, (System_String_o *)gameObject, 0LL);
+        v48 = this->fields.decideLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15734/*"WAREHOUSE_CONFIRM_PUT_OUT_DECIDE"*/, 0LL);
+        if ( !v48 )
           goto LABEL_73;
-        UILabel__set_text(v23, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v48, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.cancelLabel;
-        v20 = &StringLiteral_15721/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/;
+        v45 = &StringLiteral_15733/*"WAREHOUSE_CONFIRM_PUT_OUT_CANCEL"*/;
         goto LABEL_69;
       case 4:
       case 5:
-        v24 = this->fields.titleLabel;
+        v49 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15732/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/, 0LL);
-        if ( !v24 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15744/*"WAREHOUSE_NOTIFICATION_PUT_IN_TITLE"*/, 0LL);
+        if ( !v49 )
           goto LABEL_73;
-        UILabel__set_text(v24, (System_String_o *)gameObject, 0LL);
-        v25 = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15731/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/, 0LL);
-        if ( !v25 )
+        UILabel__set_text(v49, (System_String_o *)gameObject, 0LL);
+        v50 = this->fields.messageLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15743/*"WAREHOUSE_NOTIFICATION_PUT_IN_MESSAGE"*/, 0LL);
+        if ( !v50 )
           goto LABEL_73;
-        UILabel__set_text(v25, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v50, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.closeLabel;
-        v20 = &StringLiteral_15730/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/;
+        v45 = &StringLiteral_15742/*"WAREHOUSE_NOTIFICATION_PUT_IN_CLOSE"*/;
         goto LABEL_69;
       case 6:
       case 7:
-        v26 = this->fields.titleLabel;
+        v51 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15735/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/, 0LL);
-        if ( !v26 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15747/*"WAREHOUSE_NOTIFICATION_PUT_OUT_TITLE"*/, 0LL);
+        if ( !v51 )
           goto LABEL_73;
-        UILabel__set_text(v26, (System_String_o *)gameObject, 0LL);
-        v27 = this->fields.messageLabel;
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15734/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/, 0LL);
-        if ( !v27 )
+        UILabel__set_text(v51, (System_String_o *)gameObject, 0LL);
+        v52 = this->fields.messageLabel;
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15746/*"WAREHOUSE_NOTIFICATION_PUT_OUT_MESSAGE"*/, 0LL);
+        if ( !v52 )
           goto LABEL_73;
-        UILabel__set_text(v27, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v52, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.closeLabel;
-        v20 = &StringLiteral_15733/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/;
+        v45 = &StringLiteral_15745/*"WAREHOUSE_NOTIFICATION_PUT_OUT_CLOSE"*/;
         goto LABEL_69;
       case 8:
-        v28 = this->fields.titleLabel;
+        v53 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15739/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
-        if ( !v28 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15751/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
+        if ( !v53 )
           goto LABEL_73;
-        UILabel__set_text(v28, (System_String_o *)gameObject, 0LL);
-        v29 = this->fields.messageLabel;
-        v30 = &StringLiteral_15738/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/;
+        UILabel__set_text(v53, (System_String_o *)gameObject, 0LL);
+        v54 = this->fields.messageLabel;
+        v55 = &StringLiteral_15750/*"WAREHOUSE_OVER_PUT_IN_SERVANT_MESSAGE"*/;
         goto LABEL_57;
       case 9:
-        v31 = this->fields.titleLabel;
+        v56 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15739/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
-        if ( !v31 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15751/*"WAREHOUSE_OVER_PUT_IN_TITLE"*/, 0LL);
+        if ( !v56 )
           goto LABEL_73;
-        UILabel__set_text(v31, (System_String_o *)gameObject, 0LL);
-        v29 = this->fields.messageLabel;
-        v30 = &StringLiteral_15737/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/;
+        UILabel__set_text(v56, (System_String_o *)gameObject, 0LL);
+        v54 = this->fields.messageLabel;
+        v55 = &StringLiteral_15749/*"WAREHOUSE_OVER_PUT_IN_SERVANT_EQUIP_MESSAGE"*/;
 LABEL_57:
-        v32 = LocalizationManager__Get((System_String_o *)*v30, 0LL);
-        v56 = param1;
-        v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v56, v33, v34, v35);
-        v55 = param2;
-        v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v55, v37, v38, v39);
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format_63129848(v32, v36, v40, 0LL);
-        if ( !v29 )
+        v57 = LocalizationManager__Get((System_String_o *)*v55, 0LL);
+        v81 = param1;
+        v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v58, v59, v60);
+        v80 = param2;
+        v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80, v62, v63, v64);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format_63249956(v57, v61, v65, 0LL);
+        if ( !v54 )
           goto LABEL_73;
-        UILabel__set_text(v29, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v54, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.closeLabel;
-        v20 = &StringLiteral_15736/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/;
+        v45 = &StringLiteral_15748/*"WAREHOUSE_OVER_PUT_IN_CLOSE"*/;
         goto LABEL_69;
       case 10:
-        v41 = this->fields.titleLabel;
+        v66 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15743/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
-        if ( !v41 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15755/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
+        if ( !v66 )
           goto LABEL_73;
-        UILabel__set_text(v41, (System_String_o *)gameObject, 0LL);
-        v42 = this->fields.messageLabel;
-        v43 = &StringLiteral_15742/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/;
+        UILabel__set_text(v66, (System_String_o *)gameObject, 0LL);
+        v67 = this->fields.messageLabel;
+        v68 = &StringLiteral_15754/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE"*/;
         goto LABEL_67;
       case 11:
-        v44 = this->fields.titleLabel;
+        v69 = this->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15743/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
-        if ( !v44 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15755/*"WAREHOUSE_OVER_PUT_OUT_TITLE"*/, 0LL);
+        if ( !v69 )
           goto LABEL_73;
-        UILabel__set_text(v44, (System_String_o *)gameObject, 0LL);
-        v42 = this->fields.messageLabel;
-        v43 = &StringLiteral_15741/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/;
+        UILabel__set_text(v69, (System_String_o *)gameObject, 0LL);
+        v67 = this->fields.messageLabel;
+        v68 = &StringLiteral_15753/*"WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE"*/;
 LABEL_67:
-        v45 = LocalizationManager__Get((System_String_o *)*v43, 0LL);
-        v56 = param1;
-        v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v56, v46, v47, v48);
-        v55 = param2;
-        v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v55, v50, v51, v52);
-        gameObject = (UnityEngine_GameObject_o *)System_String__Format_63129848(v45, v49, v53, 0LL);
-        if ( !v42 )
+        v70 = LocalizationManager__Get((System_String_o *)*v68, 0LL);
+        v81 = param1;
+        v74 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v81, v71, v72, v73);
+        v80 = param2;
+        v78 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80, v75, v76, v77);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Format_63249956(v70, v74, v78, 0LL);
+        if ( !v67 )
           goto LABEL_73;
-        UILabel__set_text(v42, (System_String_o *)gameObject, 0LL);
+        UILabel__set_text(v67, (System_String_o *)gameObject, 0LL);
         cancelLabel = this->fields.closeLabel;
-        v20 = &StringLiteral_15740/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/;
+        v45 = &StringLiteral_15752/*"WAREHOUSE_OVER_PUT_OUT_CLOSE"*/;
 LABEL_69:
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v20, 0LL);
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v45, 0LL);
         if ( !cancelLabel )
           goto LABEL_73;
         UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
 LABEL_71:
         this->fields.state = 1;
-        v54 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-        System_Action___ctor(v54, (Il2CppObject *)this, Method_WarehouseConfirmMenu_EndOpen__, 0LL);
-        BaseDialog__Open((BaseDialog_o *)this, v54, 0, 0LL);
+        v79 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+        System_Action___ctor(v79, (Il2CppObject *)this, Method_WarehouseConfirmMenu_EndOpen__, 0LL);
+        BaseDialog__Open((BaseDialog_o *)this, v79, 0, 0LL);
         break;
       default:
         goto LABEL_71;
@@ -579,10 +605,10 @@ void __fastcall WarehouseConfirmMenu__add_callbackFunc(
   WarehouseConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BDA45F & 1) == 0 )
+  if ( (byte_4BFB64E & 1) == 0 )
   {
-    sub_1C21E38(&WarehouseConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4BDA45F = 1;
+    sub_1C2E12C(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4BFB64E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -595,13 +621,13 @@ void __fastcall WarehouseConfirmMenu__add_callbackFunc(
       if ( (WarehouseConfirmMenu_CallbackFunc_c *)v8->klass != WarehouseConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   WarehouseConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -620,10 +646,10 @@ void __fastcall WarehouseConfirmMenu__remove_callbackFunc(
   WarehouseConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BDA460 & 1) == 0 )
+  if ( (byte_4BFB64F & 1) == 0 )
   {
-    sub_1C21E38(&WarehouseConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4BDA460 = 1;
+    sub_1C2E12C(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4BFB64F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -636,13 +662,13 @@ void __fastcall WarehouseConfirmMenu__remove_callbackFunc(
       if ( (WarehouseConfirmMenu_CallbackFunc_c *)v8->klass != WarehouseConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   WarehouseConfirmMenu__Init(v11, v12);
 }
 
@@ -669,7 +695,7 @@ void __fastcall WarehouseConfirmMenu_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -680,12 +706,12 @@ void __fastcall WarehouseConfirmMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v10) & 1) == 0 )
+  if ( (sub_1C2E1EC(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v14, 0LL);
+      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -697,12 +723,13 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A61770;
+  this->fields.m_target = (Il2CppObject *)sub_1A6DC10;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A61728;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6DBC8;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall WarehouseConfirmMenu_CallbackFunc__BeginInvoke(
         WarehouseConfirmMenu_CallbackFunc_o *this,
         bool result,
@@ -714,14 +741,14 @@ System_IAsyncResult_o *__fastcall WarehouseConfirmMenu_CallbackFunc__BeginInvoke
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4BDA468 & 1) == 0 )
+  if ( (byte_4BFB657 & 1) == 0 )
   {
-    sub_1C21E38(&bool_TypeInfo);
-    byte_4BDA468 = 1;
+    sub_1C2E12C(&bool_TypeInfo, result);
+    byte_4BFB657 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -730,7 +757,7 @@ void __fastcall WarehouseConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 

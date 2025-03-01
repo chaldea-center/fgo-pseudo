@@ -1,38 +1,41 @@
+// local variable allocation has failed, the output may be wrong!
 void __fastcall RecoverUseItemRequest__beginRequest(
         RecoverUseItemRequest_o *this,
         int32_t recoverId,
         int32_t num,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4BDDF24 & 1) == 0 )
+  if ( (byte_4BFF168 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_22585/*"num"*/);
-    sub_1C21E38(&StringLiteral_23228/*"recoverId"*/);
-    byte_4BDDF24 = 1;
+    sub_1C2E12C(&StringLiteral_22597/*"num"*/, *(_QWORD *)&recoverId);
+    sub_1C2E12C(&StringLiteral_23246/*"recoverId"*/, v7);
+    byte_4BFF168 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23228/*"recoverId"*/, recoverId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22585/*"num"*/, num, v7);
-  RequestBase__beginRequest((RequestBase_o *)this, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23246/*"recoverId"*/, recoverId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22597/*"num"*/, num, v8);
+  RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
 
 System_String_o *__fastcall RecoverUseItemRequest__getURL(RecoverUseItemRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDF23 & 1) == 0 )
+  if ( (byte_4BFF167 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_21257/*"item/recover"*/);
-    byte_4BDDF23 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_21267/*"item/recover"*/, v2);
+    byte_4BFF167 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_21257/*"item/recover"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_21267/*"item/recover"*/, 0LL);
 }
 
 
@@ -41,36 +44,38 @@ void __fastcall RecoverUseItemRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v7; // x9
+  __int64 *v9; // x9
 
-  if ( (byte_4BDDF25 & 1) == 0 )
+  if ( (byte_4BFF169 & 1) == 0 )
   {
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22632/*"ok"*/);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDF25 = 1;
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1C2E12C(&StringLiteral_22644/*"ok"*/, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF169 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(45, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_42505456(v5, 0LL) )
+  v7 = ResponseCommandKind__SearchData(45, responseList, 0LL);
+  if ( v7 && ResponseData__checkError_42594652(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22632/*"ok"*/;
+    v9 = &StringLiteral_22644/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22456/*"ng"*/;
+    v9 = &StringLiteral_22468/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v7,
+    *v9,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

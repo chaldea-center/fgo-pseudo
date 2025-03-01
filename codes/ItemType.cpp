@@ -4,25 +4,31 @@ void __fastcall ItemType___ctor(ItemType_o *this, const MethodInfo *method)
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, const MethodInfo *method)
 {
-  __int64 *v5; // x8
-  System_String_o *v6; // x20
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x4
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 *v10; // x8
+  System_String_o *v11; // x20
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  Il2CppObject *v15; // x0
+  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BDB51A & 1) == 0 )
+  if ( (byte_4BFC719 & 1) == 0 )
   {
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_11029/*"QP_UNIT"*/);
-    sub_1C21E38(&StringLiteral_8692/*"MANA_UNIT"*/);
-    sub_1C21E38(&StringLiteral_12543/*"STONE_UNIT"*/);
-    sub_1C21E38(&StringLiteral_6692/*"FRIEND_POINT_UNIT"*/);
-    byte_4BDB51A = 1;
+    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&num);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v5);
+    sub_1C2E12C(&StringLiteral_11023/*"QP_UNIT"*/, v6);
+    sub_1C2E12C(&StringLiteral_8683/*"MANA_UNIT"*/, v7);
+    sub_1C2E12C(&StringLiteral_12552/*"STONE_UNIT"*/, v8);
+    sub_1C2E12C(&StringLiteral_6683/*"FRIEND_POINT_UNIT"*/, v9);
+    byte_4BFC719 = 1;
   }
   if ( type <= 13 )
   {
@@ -32,7 +38,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_8692/*"MANA_UNIT"*/;
+        v10 = &StringLiteral_8683/*"MANA_UNIT"*/;
       }
       else
       {
@@ -40,19 +46,19 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
           goto LABEL_19;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v5 = &StringLiteral_6692/*"FRIEND_POINT_UNIT"*/;
+        v10 = &StringLiteral_6683/*"FRIEND_POINT_UNIT"*/;
       }
 LABEL_13:
-      v6 = LocalizationManager__Get((System_String_o *)*v5, 0LL);
-      v12 = num;
-      v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v7, v8, v9);
-      return System_String__Format(v6, v10, 0LL);
+      v11 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
+      v17 = num;
+      v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v12, v13, v14);
+      return System_String__Format(v11, v15, 0LL);
     }
     if ( type == 1 )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v5 = &StringLiteral_11029/*"QP_UNIT"*/;
+      v10 = &StringLiteral_11023/*"QP_UNIT"*/;
       goto LABEL_13;
     }
     if ( type != 2 )
@@ -60,7 +66,7 @@ LABEL_13:
 LABEL_10:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = &StringLiteral_12543/*"STONE_UNIT"*/;
+    v10 = &StringLiteral_12552/*"STONE_UNIT"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
@@ -90,27 +96,33 @@ bool __fastcall ItemType__IsCountableWithPlus(int32_t type, const MethodInfo *me
 
 System_String_o *__fastcall ItemType__get_CrossOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4BDB518 & 1) == 0 )
+  __int64 v1; // x1
+  __int64 v2; // x1
+
+  if ( (byte_4BFC717 & 1) == 0 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_3824/*"COMMON_COUNT_OPERATOR_CROSS"*/);
-    byte_4BDB518 = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, v2);
+    byte_4BFC717 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3824/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
 }
 
 
 System_String_o *__fastcall ItemType__get_PlusOperatorString(const MethodInfo *method)
 {
-  if ( (byte_4BDB519 & 1) == 0 )
+  __int64 v1; // x1
+  __int64 v2; // x1
+
+  if ( (byte_4BFC718 & 1) == 0 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_3825/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_4BDB519 = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/, v2);
+    byte_4BFC718 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3825/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
 }

@@ -1,14 +1,14 @@
 void __fastcall UserSvtCoinMaster___ctor(UserSvtCoinMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD4A3 & 1) == 0 )
+  if ( (byte_4BFE6DA & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
-    byte_4BDD4A3 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__, method);
+    byte_4BFE6DA = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     378,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserSvtCoinEntity_o *__fastcall UserSvtCoinMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BDD4A1 & 1) == 0 )
+  if ( (byte_4BFE6D8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
-    byte_4BDD4A1 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__, userId);
+    byte_4BFE6D8 = 1;
   }
   PK = (Il2CppObject *)UserSvtCoinEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserSvtCoinEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_3260880 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
+                                  (const MethodInfo_327FC38 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__GetEntity__);
 }
 
 
@@ -43,15 +43,15 @@ bool __fastcall UserSvtCoinMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BDD4A2 & 1) == 0 )
+  if ( (byte_4BFE6D9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
-    byte_4BDD4A2 = 1;
+    sub_1C2E12C(&Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__, entity);
+    byte_4BFE6D9 = 1;
   }
   PK = (Il2CppObject *)UserSvtCoinEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32608CC *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
+           (const MethodInfo_327FC84 *)Method_DataMasterBase_UserSvtCoinMaster__UserSvtCoinEntity__string__TryGetEntity__);
 }

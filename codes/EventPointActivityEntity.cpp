@@ -1,13 +1,13 @@
 void __fastcall EventPointActivityEntity___ctor(EventPointActivityEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC599 & 1) == 0 )
+  if ( (byte_4BFD7A3 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDC599 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFD7A3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.eventId = 0LL;
   *(_QWORD *)&this->fields.objectType = 0LL;
   this->fields.point = 0;
@@ -15,6 +15,7 @@ void __fastcall EventPointActivityEntity___ctor(EventPointActivityEntity_o *this
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventPointActivityEntity__CreatePK(
         int32_t eventId,
         int32_t groupId,
@@ -23,10 +24,10 @@ System_String_o *__fastcall EventPointActivityEntity__CreatePK(
         int64_t objectValue,
         const MethodInfo *method)
 {
-  if ( (byte_4BDC598 & 1) == 0 )
+  if ( (byte_4BFD7A2 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___);
-    byte_4BDC598 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___, *(_QWORD *)&groupId);
+    byte_4BFD7A2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__long_(
            eventId,
@@ -34,7 +35,7 @@ System_String_o *__fastcall EventPointActivityEntity__CreatePK(
            objectType,
            objectId,
            objectValue,
-           (const MethodInfo_2FAEECC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___);
+           (const MethodInfo_2FD08F8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__long___);
 }
 
 

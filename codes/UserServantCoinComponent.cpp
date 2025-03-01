@@ -8,17 +8,17 @@ void __fastcall UserServantCoinComponent___openMenu_b__5_0(UserServantCoinCompon
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4BD7E9D & 1) == 0 )
+  if ( (byte_4BF9049 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_7114/*"GO_NEXT"*/);
-    byte_4BD7E9D = 1;
+    sub_1C2E12C(&StringLiteral_7105/*"GO_NEXT"*/, method);
+    byte_4BF9049 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7114/*"GO_NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7105/*"GO_NEXT"*/, 0LL),
         (myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomCtrl) == 0LL) )
   {
-    sub_1C22094(myRoomFsm, method);
+    sub_1C2E388(myRoomFsm, method);
   }
   MyRoomControl__SetBackButtonIgnore((MyRoomControl_o *)myRoomFsm, 0, 0LL);
 }
@@ -26,24 +26,25 @@ void __fastcall UserServantCoinComponent___openMenu_b__5_0(UserServantCoinCompon
 
 bool __fastcall UserServantCoinComponent__closeMenu(UserServantCoinComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   UserServantCoinMenu_o *userServantCoinListMenu; // x20
-  System_Action_o *v4; // x21
-  __int64 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4BD7E9A & 1) == 0 )
+  if ( (byte_4BF9046 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_UserServantCoinComponent_onClose__);
-    byte_4BD7E9A = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&Method_UserServantCoinComponent_onClose__, v3);
+    byte_4BF9046 = 1;
   }
   userServantCoinListMenu = this->fields.userServantCoinListMenu;
-  v4 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_UserServantCoinComponent_onClose__, 0LL);
+  v5 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_UserServantCoinComponent_onClose__, 0LL);
   if ( !userServantCoinListMenu )
-    sub_1C22094(v5, v6);
-  UserServantCoinMenu__Close_32668736(userServantCoinListMenu, v4, v7);
+    sub_1C2E388(v6, v7);
+  UserServantCoinMenu__Close_32701440(userServantCoinListMenu, v5, v8);
   return 1;
 }
 
@@ -59,7 +60,7 @@ void __fastcall UserServantCoinComponent__hideMenu(UserServantCoinComponent_o *t
                                                               (UnityEngine_Component_o *)this,
                                                               0LL)) == 0LL) )
   {
-    sub_1C22094(userServantCoinListMenu, method);
+    sub_1C2E388(userServantCoinListMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)userServantCoinListMenu, 0, 0LL);
 }
@@ -69,15 +70,15 @@ void __fastcall UserServantCoinComponent__onClose(UserServantCoinComponent_o *th
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4BD7E9B & 1) == 0 )
+  if ( (byte_4BF9047 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_3649/*"CLOSE_MENU"*/);
-    byte_4BD7E9B = 1;
+    sub_1C2E12C(&StringLiteral_3637/*"CLOSE_MENU"*/, method);
+    byte_4BF9047 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C22094(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3649/*"CLOSE_MENU"*/, 0LL);
+    sub_1C2E388(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3637/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -85,53 +86,56 @@ void __fastcall UserServantCoinComponent__onEndMenu(UserServantCoinComponent_o *
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4BD7E9C & 1) == 0 )
+  if ( (byte_4BF9048 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_3658/*"CLOSE_USER_SERVANT_COIN"*/);
-    byte_4BD7E9C = 1;
+    sub_1C2E12C(&StringLiteral_3646/*"CLOSE_USER_SERVANT_COIN"*/, method);
+    byte_4BF9048 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C22094(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3658/*"CLOSE_USER_SERVANT_COIN"*/, 0LL);
+    sub_1C2E388(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3646/*"CLOSE_USER_SERVANT_COIN"*/, 0LL);
 }
 
 
 bool __fastcall UserServantCoinComponent__openMenu(UserServantCoinComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v7; // x1
   UserServantCoinMenu_o *userServantCoinListMenu; // x20
-  System_Action_o *v6; // x21
-  UserServantCoinMenu_CallbackFunc_o *v7; // x22
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x3
+  System_Action_o *v9; // x21
+  UserServantCoinMenu_CallbackFunc_o *v10; // x22
+  const MethodInfo *v11; // x3
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4BD7E99 & 1) == 0 )
+  if ( (byte_4BF9045 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&UserServantCoinMenu_CallbackFunc_TypeInfo);
-    sub_1C21E38(&Method_UserServantCoinComponent__openMenu_b__5_0__);
-    sub_1C21E38(&Method_UserServantCoinComponent_onEndMenu__);
-    byte_4BD7E99 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&UserServantCoinMenu_CallbackFunc_TypeInfo, v3);
+    sub_1C2E12C(&Method_UserServantCoinComponent__openMenu_b__5_0__, v4);
+    sub_1C2E12C(&Method_UserServantCoinComponent_onEndMenu__, v5);
+    byte_4BF9045 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         userServantCoinListMenu = this->fields.userServantCoinListMenu,
-        v6 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo),
-        System_Action___ctor(v6, (Il2CppObject *)this, Method_UserServantCoinComponent__openMenu_b__5_0__, 0LL),
-        v7 = (UserServantCoinMenu_CallbackFunc_o *)sub_1C22084(UserServantCoinMenu_CallbackFunc_TypeInfo),
+        v9 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo),
+        System_Action___ctor(v9, (Il2CppObject *)this, Method_UserServantCoinComponent__openMenu_b__5_0__, 0LL),
+        v10 = (UserServantCoinMenu_CallbackFunc_o *)sub_1C2E378(UserServantCoinMenu_CallbackFunc_TypeInfo),
         UserServantCoinMenu_CallbackFunc___ctor(
-          v7,
+          v10,
           (Il2CppObject *)this,
           Method_UserServantCoinComponent_onEndMenu__,
-          v8),
+          v11),
         !userServantCoinListMenu) )
   {
-    sub_1C22094(gameObject, v4);
+    sub_1C2E388(gameObject, v7);
   }
-  UserServantCoinMenu__Open(userServantCoinListMenu, v6, v7, v9);
+  UserServantCoinMenu__Open(userServantCoinListMenu, v9, v10, v12);
   return 1;
 }
 
@@ -146,7 +150,7 @@ void __fastcall UserServantCoinComponent__showMenu(UserServantCoinComponent_o *t
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.userServantCoinListMenu) == 0LL) )
   {
-    sub_1C22094(gameObject, v4);
+    sub_1C2E388(gameObject, v4);
   }
   UserServantCoinMenu__Init((UserServantCoinMenu_o *)gameObject, v4);
 }

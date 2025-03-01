@@ -49,10 +49,10 @@ bool __fastcall CharaGraphKindTabButtonGroup__IsActive(UnityEngine_Component_o *
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BDB882 & 1) == 0 )
+  if ( (byte_4BFCA87 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDB882 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4BFCA87 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -60,7 +60,7 @@ bool __fastcall CharaGraphKindTabButtonGroup__IsActive(UnityEngine_Component_o *
   if ( ((unsigned __int8)gameObject & 1) == 0 )
     return 0;
   if ( !c || (gameObject = UnityEngine_Component__get_gameObject(c, 0LL)) == 0LL )
-    sub_1C22094(gameObject, v4);
+    sub_1C2E388(gameObject, v4);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
 }
 
@@ -75,19 +75,21 @@ void __fastcall CharaGraphKindTabButtonGroup__SetupTabButton(
         bool isInit,
         const MethodInfo *method)
 {
-  _BOOL8 v15; // x0
+  __int64 v15; // x1
   __int64 v16; // x1
-  _BOOL4 v17; // w25
+  _BOOL8 v17; // x0
+  __int64 v18; // x1
+  _BOOL4 v19; // w25
   bool enabled; // w0
-  System_String_o *v19; // x1
-  __int64 *v20; // x8
+  System_String_o *v21; // x1
+  __int64 *v22; // x8
 
-  if ( (byte_4BDB881 & 1) == 0 )
+  if ( (byte_4BFCA86 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&StringLiteral_17765/*"btn_bg_12"*/);
-    sub_1C21E38(&StringLiteral_17767/*"btn_bg_19"*/);
-    byte_4BDB881 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, titleSprite);
+    sub_1C2E12C(&StringLiteral_17780/*"btn_bg_12"*/, v15);
+    sub_1C2E12C(&StringLiteral_17782/*"btn_bg_19"*/, v16);
+    byte_4BFCA86 = 1;
   }
   if ( CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)button, (const MethodInfo *)titleSprite) )
   {
@@ -97,8 +99,8 @@ void __fastcall CharaGraphKindTabButtonGroup__SetupTabButton(
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v15 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tabSprite, 0LL, 0LL);
-      if ( !v15 )
+      v17 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)tabSprite, 0LL, 0LL);
+      if ( !v17 )
       {
         if ( !button )
           goto LABEL_20;
@@ -107,31 +109,32 @@ void __fastcall CharaGraphKindTabButtonGroup__SetupTabButton(
           1LL,
           button->klass->vtable._6_OnInit.methodPtr);
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)button, !isSelectedTab, 0LL);
-        v17 = !isInit;
+        v19 = !isInit;
         ((void (__fastcall *)(UICommonButton_o *, _QWORD, _BOOL4, Il2CppMethodPointer))button->klass->vtable._14_SetState.method)(
           button,
           0LL,
-          v17,
+          v19,
           button->klass->vtable._15_OnPress.methodPtr);
         enabled = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)button, 0LL);
-        UICommonButton__SetColliderEnable(button, enabled, v17, 0LL);
+        UICommonButton__SetColliderEnable(button, enabled, v19, 0LL);
         if ( !titleSprite )
           goto LABEL_20;
-        v19 = isSelectedTab ? onName : offName;
-        UISprite__set_spriteName(titleSprite, v19, 0LL);
+        v21 = isSelectedTab ? onName : offName;
+        UISprite__set_spriteName(titleSprite, v21, 0LL);
         if ( !tabSprite )
 LABEL_20:
-          sub_1C22094(v15, v16);
-        v20 = &StringLiteral_17767/*"btn_bg_19"*/;
+          sub_1C2E388(v17, v18);
+        v22 = &StringLiteral_17782/*"btn_bg_19"*/;
         if ( !isSelectedTab )
-          v20 = &StringLiteral_17765/*"btn_bg_12"*/;
-        UISprite__set_spriteName(tabSprite, (System_String_o *)*v20, 0LL);
+          v22 = &StringLiteral_17780/*"btn_bg_12"*/;
+        UISprite__set_spriteName(tabSprite, (System_String_o *)*v22, 0LL);
       }
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall CharaGraphKindTabButtonGroup__SetupTabButtons(
         CharaGraphKindTabButtonGroup_o *this,
         int32_t iTabKind,
@@ -139,48 +142,53 @@ void __fastcall CharaGraphKindTabButtonGroup__SetupTabButtons(
         const MethodInfo *method)
 {
   const MethodInfo *v4; // x7
-  bool v8; // w21
-  const MethodInfo *v9; // x7
-  const MethodInfo *v10; // x7
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  bool v13; // w21
+  const MethodInfo *v14; // x7
+  const MethodInfo *v15; // x7
 
-  if ( (byte_4BDB880 & 1) == 0 )
+  if ( (byte_4BFCA85 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_17864/*"btn_txt_craftessence_off"*/);
-    sub_1C21E38(&StringLiteral_17904/*"btn_txt_servant_off"*/);
-    sub_1C21E38(&StringLiteral_17860/*"btn_txt_cc_off"*/);
-    sub_1C21E38(&StringLiteral_17861/*"btn_txt_cc_on"*/);
-    sub_1C21E38(&StringLiteral_17905/*"btn_txt_servant_on"*/);
-    sub_1C21E38(&StringLiteral_17865/*"btn_txt_craftessence_on"*/);
-    byte_4BDB880 = 1;
+    sub_1C2E12C(&StringLiteral_17879/*"btn_txt_craftessence_off"*/, *(_QWORD *)&iTabKind);
+    sub_1C2E12C(&StringLiteral_17919/*"btn_txt_servant_off"*/, v8);
+    sub_1C2E12C(&StringLiteral_17875/*"btn_txt_cc_off"*/, v9);
+    sub_1C2E12C(&StringLiteral_17876/*"btn_txt_cc_on"*/, v10);
+    sub_1C2E12C(&StringLiteral_17920/*"btn_txt_servant_on"*/, v11);
+    sub_1C2E12C(&StringLiteral_17880/*"btn_txt_craftessence_on"*/, v12);
+    byte_4BFCA85 = 1;
   }
-  v8 = isInit;
+  v13 = isInit;
   CharaGraphKindTabButtonGroup__SetupTabButton(
     this->fields.servantTabButton,
     this->fields.servantTabTitleSprite,
     this->fields.servantTabSprite,
     iTabKind == 0,
-    (System_String_o *)StringLiteral_17905/*"btn_txt_servant_on"*/,
-    (System_String_o *)StringLiteral_17904/*"btn_txt_servant_off"*/,
-    v8,
+    (System_String_o *)StringLiteral_17920/*"btn_txt_servant_on"*/,
+    (System_String_o *)StringLiteral_17919/*"btn_txt_servant_off"*/,
+    v13,
     v4);
   CharaGraphKindTabButtonGroup__SetupTabButton(
     this->fields.servantEquipTabButton,
     this->fields.servantEquipTabTitleSprite,
     this->fields.servantEquipTabSprite,
     iTabKind == 1,
-    (System_String_o *)StringLiteral_17865/*"btn_txt_craftessence_on"*/,
-    (System_String_o *)StringLiteral_17864/*"btn_txt_craftessence_off"*/,
-    v8,
-    v9);
+    (System_String_o *)StringLiteral_17880/*"btn_txt_craftessence_on"*/,
+    (System_String_o *)StringLiteral_17879/*"btn_txt_craftessence_off"*/,
+    v13,
+    v14);
   CharaGraphKindTabButtonGroup__SetupTabButton(
     this->fields.commandCodeTabButton,
     this->fields.commandCodeTabTitleSprite,
     this->fields.commandCodeTabSprite,
     iTabKind == 2,
-    (System_String_o *)StringLiteral_17861/*"btn_txt_cc_on"*/,
-    (System_String_o *)StringLiteral_17860/*"btn_txt_cc_off"*/,
-    v8,
-    v10);
+    (System_String_o *)StringLiteral_17876/*"btn_txt_cc_on"*/,
+    (System_String_o *)StringLiteral_17875/*"btn_txt_cc_off"*/,
+    v13,
+    v15);
 }
 
 
@@ -190,240 +198,247 @@ void __fastcall CharaGraphKindTabButtonGroup__SetupTabLabel(
         int32_t iTabKind,
         const MethodInfo *method)
 {
-  LocalizationManager_c *v5; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  LocalizationManager_c *v12; // x0
   float *static_fields; // x8
-  float v7; // s10
-  float v8; // s11
-  float v9; // s8
-  float v10; // s9
-  struct LocalizationManager_StaticFields *v11; // x8
+  float v14; // s10
+  float v15; // s11
+  float v16; // s8
+  float v17; // s9
+  struct LocalizationManager_StaticFields *v18; // x8
   float r; // s12
   float g; // s13
   float b; // s14
   float a; // s15
   UserGameEntity_o *SelfUserGame; // x22
   UserServantMaster_o *Master_object; // x0
-  __int64 v18; // x1
-  const MethodInfo *v19; // x1
-  const MethodInfo *v20; // x1
+  __int64 v25; // x1
+  const MethodInfo *v26; // x1
+  const MethodInfo *v27; // x1
   UILabel_o *servantTabLabel; // x23
-  System_String_o *v22; // x24
-  __int64 v23; // x2
-  __int64 v24; // x3
-  __int64 v25; // x4
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  Il2CppObject *v29; // x25
-  Il2CppObject *v30; // x0
-  float v31; // s3
-  float v32; // s2
-  float v33; // s1
-  float v34; // s0
-  const MethodInfo *v35; // x1
+  System_String_o *v29; // x24
+  __int64 v30; // x2
+  __int64 v31; // x3
+  __int64 v32; // x4
+  __int64 v33; // x2
+  __int64 v34; // x3
+  __int64 v35; // x4
+  Il2CppObject *v36; // x25
+  Il2CppObject *v37; // x0
+  float v38; // s3
+  float v39; // s2
+  float v40; // s1
+  float v41; // s0
+  const MethodInfo *v42; // x1
   UILabel_o *servantEquipTabLabel; // x23
-  System_String_o *v37; // x24
-  __int64 v38; // x2
-  __int64 v39; // x3
-  __int64 v40; // x4
-  __int64 v41; // x2
-  __int64 v42; // x3
-  __int64 v43; // x4
-  Il2CppObject *v44; // x25
-  Il2CppObject *v45; // x0
-  float v46; // s3
-  float v47; // s2
-  float v48; // s1
-  float v49; // s0
+  System_String_o *v44; // x24
+  __int64 v45; // x2
+  __int64 v46; // x3
+  __int64 v47; // x4
+  __int64 v48; // x2
+  __int64 v49; // x3
+  __int64 v50; // x4
+  Il2CppObject *v51; // x25
+  Il2CppObject *v52; // x0
+  float v53; // s3
+  float v54; // s2
+  float v55; // s1
+  float v56; // s0
   int32_t Count; // w0
   UILabel_o *commandCodeTabLabel; // x21
-  int32_t v52; // w24
-  System_String_o *v53; // x23
-  __int64 v54; // x2
-  __int64 v55; // x3
-  __int64 v56; // x4
-  __int64 v57; // x2
-  __int64 v58; // x3
-  __int64 v59; // x4
-  Il2CppObject *v60; // x24
-  BalanceConfig_c *v61; // x0
-  Il2CppObject *v62; // x0
+  int32_t v59; // w24
+  System_String_o *v60; // x23
+  __int64 v61; // x2
+  __int64 v62; // x3
+  __int64 v63; // x4
+  __int64 v64; // x2
+  __int64 v65; // x3
+  __int64 v66; // x4
+  Il2CppObject *v67; // x24
+  BalanceConfig_c *v68; // x0
+  Il2CppObject *v69; // x0
   int32_t svtKeep; // [xsp+0h] [xbp-A0h] BYREF
-  int32_t v64; // [xsp+4h] [xbp-9Ch] BYREF
+  int32_t v71; // [xsp+4h] [xbp-9Ch] BYREF
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-98h] BYREF
-  UnityEngine_Color_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BDB87F & 1) == 0 )
+  if ( (byte_4BFCA84 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserCommandCodeMaster___);
-    sub_1C21E38(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&int_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_3501/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/);
-    sub_1C21E38(&StringLiteral_3502/*"CHARA_GRAPH_TAB_SERVANT"*/);
-    sub_1C21E38(&StringLiteral_3503/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/);
-    byte_4BDB87F = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserCommandCodeMaster___, *(_QWORD *)&iTabKind);
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserServantMaster___, v5);
+    sub_1C2E12C(&DataManager_TypeInfo, v6);
+    sub_1C2E12C(&int_TypeInfo, v7);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
+    sub_1C2E12C(&StringLiteral_3489/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, v9);
+    sub_1C2E12C(&StringLiteral_3490/*"CHARA_GRAPH_TAB_SERVANT"*/, v10);
+    sub_1C2E12C(&StringLiteral_3491/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, v11);
+    byte_4BFCA84 = 1;
   }
   *(_QWORD *)servantEquipSum = 0LL;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4BD7362 )
+  if ( !byte_4BF8542 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    byte_4BD7362 = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, *(_QWORD *)&iTabKind);
+    byte_4BF8542 = 1;
   }
-  v5 = LocalizationManager_TypeInfo;
+  v12 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = LocalizationManager_TypeInfo;
+    v12 = LocalizationManager_TypeInfo;
   }
-  static_fields = (float *)v5->static_fields;
-  v8 = static_fields[20];
-  v7 = static_fields[21];
-  v10 = static_fields[22];
-  v9 = static_fields[23];
-  if ( !byte_4BD7363 )
+  static_fields = (float *)v12->static_fields;
+  v15 = static_fields[20];
+  v14 = static_fields[21];
+  v17 = static_fields[22];
+  v16 = static_fields[23];
+  if ( !byte_4BF8543 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    v5 = LocalizationManager_TypeInfo;
-    byte_4BD7363 = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, *(_QWORD *)&iTabKind);
+    v12 = LocalizationManager_TypeInfo;
+    byte_4BF8543 = 1;
   }
-  if ( !v5->_2.cctor_finished )
+  if ( !v12->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v5);
-    v5 = LocalizationManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v12);
+    v12 = LocalizationManager_TypeInfo;
   }
-  v11 = v5->static_fields;
-  r = v11->selectEffectColor.fields.r;
-  g = v11->selectEffectColor.fields.g;
-  b = v11->selectEffectColor.fields.b;
-  a = v11->selectEffectColor.fields.a;
+  v18 = v12->static_fields;
+  r = v18->selectEffectColor.fields.r;
+  g = v18->selectEffectColor.fields.g;
+  b = v18->selectEffectColor.fields.b;
+  a = v18->selectEffectColor.fields.a;
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_51;
   UserServantMaster__getCount(Master_object, &servantEquipSum[1], servantEquipSum, 1, 0LL);
-  if ( CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.servantTabButton, v19) )
+  if ( CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.servantTabButton, v26) )
   {
     servantTabLabel = this->fields.servantTabLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_3502/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
-    v64 = servantEquipSum[1];
-    Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v23, v24, v25);
+    v29 = LocalizationManager__Get((System_String_o *)StringLiteral_3490/*"CHARA_GRAPH_TAB_SERVANT"*/, 0LL);
+    v71 = servantEquipSum[1];
+    Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v71, v30, v31, v32);
     if ( !SelfUserGame )
       goto LABEL_51;
-    v29 = (Il2CppObject *)Master_object;
+    v36 = (Il2CppObject *)Master_object;
     svtKeep = SelfUserGame->fields.svtKeep;
-    v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v26, v27, v28);
-    Master_object = (UserServantMaster_o *)System_String__Format_63129848(v22, v29, v30, 0LL);
+    v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v33, v34, v35);
+    Master_object = (UserServantMaster_o *)System_String__Format_63249956(v29, v36, v37, 0LL);
     if ( !servantTabLabel )
       goto LABEL_51;
     UILabel__set_text(servantTabLabel, (System_String_o *)Master_object, 0LL);
     Master_object = (UserServantMaster_o *)this->fields.servantTabLabel;
-    v31 = v9;
-    v32 = v10;
-    v33 = v7;
-    v34 = v8;
+    v38 = v16;
+    v39 = v17;
+    v40 = v14;
+    v41 = v15;
     if ( !iTabKind )
     {
-      v31 = a;
-      v32 = b;
-      v33 = g;
-      v34 = r;
+      v38 = a;
+      v39 = b;
+      v40 = g;
+      v41 = r;
     }
     if ( !Master_object )
       goto LABEL_51;
-    UILabel__set_effectColor((UILabel_o *)Master_object, *(UnityEngine_Color_o *)&v34, 0LL);
+    UILabel__set_effectColor((UILabel_o *)Master_object, *(UnityEngine_Color_o *)&v41, 0LL);
   }
-  if ( CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.servantEquipTabButton, v20) )
+  if ( CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.servantEquipTabButton, v27) )
   {
     servantEquipTabLabel = this->fields.servantEquipTabLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3503/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
-    v64 = servantEquipSum[0];
-    Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v38, v39, v40);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_3491/*"CHARA_GRAPH_TAB_SERVANT_EQUIP"*/, 0LL);
+    v71 = servantEquipSum[0];
+    Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v71, v45, v46, v47);
     if ( !SelfUserGame )
       goto LABEL_51;
-    v44 = (Il2CppObject *)Master_object;
+    v51 = (Il2CppObject *)Master_object;
     svtKeep = SelfUserGame->fields.svtEquipKeep;
-    v45 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v41, v42, v43);
-    Master_object = (UserServantMaster_o *)System_String__Format_63129848(v37, v44, v45, 0LL);
+    v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v48, v49, v50);
+    Master_object = (UserServantMaster_o *)System_String__Format_63249956(v44, v51, v52, 0LL);
     if ( !servantEquipTabLabel )
       goto LABEL_51;
     UILabel__set_text(servantEquipTabLabel, (System_String_o *)Master_object, 0LL);
     Master_object = (UserServantMaster_o *)this->fields.servantEquipTabLabel;
-    v46 = v9;
-    v47 = v10;
-    v48 = v7;
-    v49 = v8;
+    v53 = v16;
+    v54 = v17;
+    v55 = v14;
+    v56 = v15;
     if ( iTabKind == 1 )
     {
-      v46 = a;
-      v47 = b;
-      v48 = g;
-      v49 = r;
+      v53 = a;
+      v54 = b;
+      v55 = g;
+      v56 = r;
     }
     if ( !Master_object )
       goto LABEL_51;
-    UILabel__set_effectColor((UILabel_o *)Master_object, *(UnityEngine_Color_o *)&v49, 0LL);
+    UILabel__set_effectColor((UILabel_o *)Master_object, *(UnityEngine_Color_o *)&v56, 0LL);
   }
-  if ( !CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.commandCodeTabButton, v35) )
+  if ( !CharaGraphKindTabButtonGroup__IsActive((UnityEngine_Component_o *)this->fields.commandCodeTabButton, v42) )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
+  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
   if ( !Master_object )
     goto LABEL_51;
   Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)Master_object, 0LL);
   commandCodeTabLabel = this->fields.commandCodeTabLabel;
-  v52 = Count;
+  v59 = Count;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v53 = LocalizationManager__Get((System_String_o *)StringLiteral_3501/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
-  v64 = v52;
-  Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v54, v55, v56);
+  v60 = LocalizationManager__Get((System_String_o *)StringLiteral_3489/*"CHARA_GRAPH_TAB_COMMAND_CODE"*/, 0LL);
+  v71 = v59;
+  Master_object = (UserServantMaster_o *)j_il2cpp_value_box_0(int_TypeInfo, &v71, v61, v62, v63);
   if ( !SelfUserGame )
     goto LABEL_51;
-  v60 = (Il2CppObject *)Master_object;
-  if ( !byte_4BD7514 )
+  v67 = (Il2CppObject *)Master_object;
+  if ( !byte_4BF86F4 )
   {
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    byte_4BD7514 = 1;
+    sub_1C2E12C(&BalanceConfig_TypeInfo, v25);
+    byte_4BF86F4 = 1;
   }
-  v61 = BalanceConfig_TypeInfo;
+  v68 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v61 = BalanceConfig_TypeInfo;
+    v68 = BalanceConfig_TypeInfo;
   }
-  svtKeep = v61->static_fields->CommandCodeFrameMax;
-  v62 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v57, v58, v59);
-  Master_object = (UserServantMaster_o *)System_String__Format_63129848(v53, v60, v62, 0LL);
+  svtKeep = v68->static_fields->CommandCodeFrameMax;
+  v69 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtKeep, v64, v65, v66);
+  Master_object = (UserServantMaster_o *)System_String__Format_63249956(v60, v67, v69, 0LL);
   if ( !commandCodeTabLabel )
     goto LABEL_51;
   UILabel__set_text(commandCodeTabLabel, (System_String_o *)Master_object, 0LL);
   Master_object = (UserServantMaster_o *)this->fields.commandCodeTabLabel;
   if ( iTabKind == 2 )
   {
-    v9 = a;
-    v10 = b;
-    v7 = g;
-    v8 = r;
+    v16 = a;
+    v17 = b;
+    v14 = g;
+    v15 = r;
   }
   if ( !Master_object )
 LABEL_51:
-    sub_1C22094(Master_object, v18);
-  v66.fields.r = v8;
-  v66.fields.g = v7;
-  v66.fields.b = v10;
-  v66.fields.a = v9;
-  UILabel__set_effectColor((UILabel_o *)Master_object, v66, 0LL);
+    sub_1C2E388(Master_object, v25);
+  v73.fields.r = v15;
+  v73.fields.g = v14;
+  v73.fields.b = v17;
+  v73.fields.a = v16;
+  UILabel__set_effectColor((UILabel_o *)Master_object, v73, 0LL);
 }
 
 
@@ -463,7 +478,7 @@ void __fastcall CharaGraphKindTabButtonGroup__set_OnClickTabCommandCode(
   PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickTabCommandCode_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._OnClickTabCommandCode_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -487,7 +502,7 @@ void __fastcall CharaGraphKindTabButtonGroup__set_OnClickTabServant(
   PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickTabServant_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._OnClickTabServant_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -511,7 +526,7 @@ void __fastcall CharaGraphKindTabButtonGroup__set_OnClickTabServantEquip(
   PartyListViewItem_o *v7; // x7
 
   this->fields._OnClickTabServantEquip_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._OnClickTabServantEquip_k__BackingField,
     (int64_t)value,
     (int64_t)method,

@@ -42,7 +42,7 @@ int32_t __fastcall FuncList__getRate(int32_t intype, System_Int32_array *vals, c
 }
 
 
-int32_t __fastcall FuncList__getRate_38928376(int32_t type, System_Int32_array *vals, const MethodInfo *method)
+int32_t __fastcall FuncList__getRate_38997516(int32_t type, System_Int32_array *vals, const MethodInfo *method)
 {
   if ( vals && (int)vals->max_length >= 1 )
     return vals->m_Items[1];
@@ -112,6 +112,7 @@ LABEL_8:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, const MethodInfo *method)
 {
   il2cpp_array_size_t max_length; // w8
@@ -122,7 +123,7 @@ int32_t __fastcall FuncList__getValueFronIndex(System_Int32_array *vals, int32_t
     if ( (int)max_length >= index )
     {
       if ( max_length <= index )
-        sub_1C2209C(vals, index);
+        sub_1C2E390(vals, *(_QWORD *)&index);
       LODWORD(vals) = vals->m_Items[index + 1];
     }
     else
@@ -144,24 +145,25 @@ bool __fastcall FuncList__isAddState(int32_t func, const MethodInfo *method)
 
 bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
 {
-  System_String_o *v3; // x0
-  __int64 v4; // x1
-  System_Enum_o v6; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v7; // [xsp+18h] [xbp-28h]
+  __int64 v3; // x1
+  System_String_o *v4; // x0
+  __int64 v5; // x1
+  System_Enum_o v7; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v8; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4BDB4DF & 1) == 0 )
+  if ( (byte_4BFC6DE & 1) == 0 )
   {
-    sub_1C21E38(&FuncList_TYPE_TypeInfo);
-    sub_1C21E38(&StringLiteral_5100/*"DAMAGE"*/);
-    byte_4BDB4DF = 1;
+    sub_1C2E12C(&FuncList_TYPE_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_5088/*"DAMAGE"*/, v3);
+    byte_4BFC6DE = 1;
   }
-  v6.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
-  v6.monitor = (void *)-1LL;
-  v7 = funcType;
-  v3 = System_Enum__ToString(&v6, 0LL);
-  if ( !v3 )
-    sub_1C22094(0LL, v4);
-  return System_String__Contains(v3, (System_String_o *)StringLiteral_5100/*"DAMAGE"*/, 0LL);
+  v7.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
+  v7.monitor = (void *)-1LL;
+  v8 = funcType;
+  v4 = System_Enum__ToString(&v7, 0LL);
+  if ( !v4 )
+    sub_1C2E388(0LL, v5);
+  return System_String__Contains(v4, (System_String_o *)StringLiteral_5088/*"DAMAGE"*/, 0LL);
 }
 
 

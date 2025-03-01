@@ -1,9 +1,11 @@
 void __fastcall SetNoticeInfo___cctor(const MethodInfo *method)
 {
-  if ( (byte_4BDD7FA & 1) == 0 )
+  __int64 v1; // x1
+
+  if ( (byte_4BFEA37 & 1) == 0 )
   {
-    sub_1C21E38(&SetNoticeInfo_TypeInfo);
-    byte_4BDD7FA = 1;
+    sub_1C2E12C(&SetNoticeInfo_TypeInfo, v1);
+    byte_4BFEA37 = 1;
   }
   *SetNoticeInfo_TypeInfo->static_fields = (struct SetNoticeInfo_StaticFields)257;
 }
@@ -17,39 +19,41 @@ void __fastcall SetNoticeInfo___ctor(SetNoticeInfo_o *this, const MethodInfo *me
 
 bool __fastcall SetNoticeInfo__GetisApRecover(const MethodInfo *method)
 {
-  SetNoticeInfo_c *v1; // x0
+  __int64 v1; // x1
+  SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_4BDD7F7 & 1) == 0 )
+  if ( (byte_4BFEA34 & 1) == 0 )
   {
-    sub_1C21E38(&SetNoticeInfo_TypeInfo);
-    byte_4BDD7F7 = 1;
+    sub_1C2E12C(&SetNoticeInfo_TypeInfo, v1);
+    byte_4BFEA34 = 1;
   }
-  v1 = SetNoticeInfo_TypeInfo;
+  v2 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SetNoticeInfo_TypeInfo);
-    v1 = SetNoticeInfo_TypeInfo;
+    v2 = SetNoticeInfo_TypeInfo;
   }
-  return v1->static_fields->isApRecover;
+  return v2->static_fields->isApRecover;
 }
 
 
 bool __fastcall SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
 {
-  SetNoticeInfo_c *v1; // x0
+  __int64 v1; // x1
+  SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_4BDD7F9 & 1) == 0 )
+  if ( (byte_4BFEA36 & 1) == 0 )
   {
-    sub_1C21E38(&SetNoticeInfo_TypeInfo);
-    byte_4BDD7F9 = 1;
+    sub_1C2E12C(&SetNoticeInfo_TypeInfo, v1);
+    byte_4BFEA36 = 1;
   }
-  v1 = SetNoticeInfo_TypeInfo;
+  v2 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SetNoticeInfo_TypeInfo);
-    v1 = SetNoticeInfo_TypeInfo;
+    v2 = SetNoticeInfo_TypeInfo;
   }
-  return v1->static_fields->isGameNotice;
+  return v2->static_fields->isGameNotice;
 }
 
 
@@ -57,10 +61,10 @@ void __fastcall SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *m
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4BDD7F6 & 1) == 0 )
+  if ( (byte_4BFEA33 & 1) == 0 )
   {
-    sub_1C21E38(&SetNoticeInfo_TypeInfo);
-    byte_4BDD7F6 = 1;
+    sub_1C2E12C(&SetNoticeInfo_TypeInfo, method);
+    byte_4BFEA33 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -76,10 +80,10 @@ void __fastcall SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4BDD7F8 & 1) == 0 )
+  if ( (byte_4BFEA35 & 1) == 0 )
   {
-    sub_1C21E38(&SetNoticeInfo_TypeInfo);
-    byte_4BDD7F8 = 1;
+    sub_1C2E12C(&SetNoticeInfo_TypeInfo, method);
+    byte_4BFEA35 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )

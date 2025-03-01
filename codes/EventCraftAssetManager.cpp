@@ -1,107 +1,113 @@
 void __fastcall EventCraftAssetManager___ctor(EventCraftAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x0
-  __int64 v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  struct System_String_array *v11; // x20
-  int64_t v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  __int64 v3; // x1
+  __int64 v4; // x0
+  __int64 v5; // x1
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
+  struct System_String_array *v12; // x20
+  int64_t v13; // x1
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4BE03FB & 1) == 0 )
+  if ( (byte_4C0169A & 1) == 0 )
   {
-    sub_1C21E38(&string___TypeInfo);
-    sub_1C21E38(&StringLiteral_6396/*"EventUI/Prefabs/"*/);
-    byte_4BE03FB = 1;
+    sub_1C2E12C(&string___TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_6387/*"EventUI/Prefabs/"*/, v3);
+    byte_4C0169A = 1;
   }
-  v3 = sub_1C21EE0(string___TypeInfo, 1LL);
-  if ( !v3 )
-    sub_1C22094(0LL, v4);
-  v11 = (struct System_String_array *)v3;
-  if ( !*(_DWORD *)(v3 + 24) )
-    sub_1C2209C(v3, v4);
-  v12 = StringLiteral_6396/*"EventUI/Prefabs/"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_6396/*"EventUI/Prefabs/"*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
-  this->fields.loadAssetNames = v11;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.loadAssetNames, (int64_t)v11, v13, v14, v15, v16, v17, v18);
+  v4 = sub_1C2E1D4(string___TypeInfo, 1LL);
+  if ( !v4 )
+    sub_1C2E388(0LL, v5);
+  v12 = (struct System_String_array *)v4;
+  if ( !*(_DWORD *)(v4 + 24) )
+    sub_1C2E390(v4, v5);
+  v13 = StringLiteral_6387/*"EventUI/Prefabs/"*/;
+  *(_QWORD *)(v4 + 32) = StringLiteral_6387/*"EventUI/Prefabs/"*/;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v4 + 32), v13, v6, v7, v8, v9, v10, v11);
+  this->fields.loadAssetNames = v12;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.loadAssetNames, (int64_t)v12, v14, v15, v16, v17, v18, v19);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventCraftAssetManager__LoadAssets(
         EventCraftAssetManager_o *this,
         int32_t eventId,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x19
-  __int64 v8; // x0
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
+  __int64 v10; // x19
+  __int64 v11; // x0
+  __int64 v12; // x1
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v23; // x20
-  System_String_o *v24; // x0
-  System_String_o *v25; // x20
-  AssetLoader_LoadEndDataHandler_o *v26; // x21
+  System_String_o *v26; // x20
+  System_String_o *v27; // x0
+  System_String_o *v28; // x20
+  AssetLoader_LoadEndDataHandler_o *v29; // x21
 
-  if ( (byte_4BE03F9 & 1) == 0 )
+  if ( (byte_4C01698 & 1) == 0 )
   {
-    sub_1C21E38(&AssetManager_TypeInfo);
-    sub_1C21E38(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C21E38(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__0__);
-    sub_1C21E38(&EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
-    byte_4BE03F9 = 1;
+    sub_1C2E12C(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1C2E12C(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__0__, v8);
+    sub_1C2E12C(&EventCraftAssetManager___c__DisplayClass25_0_TypeInfo, v9);
+    byte_4C01698 = 1;
   }
-  v7 = sub_1C22084(EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7
-    || (*(_QWORD *)(v7 + 16) = this,
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15),
-        *(_DWORD *)(v7 + 24) = eventId,
-        *(_QWORD *)(v7 + 32) = finishCallback,
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v7 + 32), (int64_t)finishCallback, v16, v17, v18, v19, v20, v21),
+  v10 = sub_1C2E378(EventCraftAssetManager___c__DisplayClass25_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10
+    || (*(_QWORD *)(v10 + 16) = this,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18),
+        *(_DWORD *)(v10 + 24) = eventId,
+        *(_QWORD *)(v10 + 32) = finishCallback,
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 32), (int64_t)finishCallback, v19, v20, v21, v22, v23, v24),
         (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
   {
-    sub_1C22094(v8, v9);
+    sub_1C2E388(v11, v12);
   }
   if ( !loadAssetNames->max_length )
-    sub_1C2209C(v8, v9);
-  v23 = loadAssetNames->m_Items[0];
-  v24 = System_Int32__ToString((int)v7 + 24, 0LL);
-  v25 = System_String__Concat_63115476(v23, v24, 0LL);
-  v26 = (AssetLoader_LoadEndDataHandler_o *)sub_1C22084(AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2E390(v11, v12);
+  v26 = loadAssetNames->m_Items[0];
+  v27 = System_Int32__ToString((int)v10 + 24, 0LL);
+  v28 = System_String__Concat_63235584(v26, v27, 0LL);
+  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v26,
-    (Il2CppObject *)v7,
+    v29,
+    (Il2CppObject *)v10,
     Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__0__,
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v25, v26, 1, 0LL);
+  AssetManager__loadAssetStorage(v28, v29, 1, 0LL);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventCraftAssetManager__Release(
         EventCraftAssetManager_o *this,
         int32_t eventId,
@@ -144,18 +150,18 @@ void __fastcall EventCraftAssetManager__Release(
   FollowerInfo_o *v39; // x6
   PartyListViewItem_o *v40; // x7
 
-  if ( (byte_4BE03FA & 1) == 0 )
+  if ( (byte_4C01699 & 1) == 0 )
   {
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    byte_4BE03FA = 1;
+    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4C01699 = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_39104280(eventId, 0LL);
+  AtlasManager__ReleaseEventUI_39173524(eventId, 0LL);
   this->fields._CraftItemNumConfirmDialog_k__BackingField = 0LL;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, 0LL, v5, v6, v7, v8, v9, v10);
   this->fields._CraftItemWithdrawConfirmDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     0LL,
     v11,
@@ -165,7 +171,7 @@ void __fastcall EventCraftAssetManager__Release(
     v15,
     v16);
   this->fields._CraftRewardDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftRewardDialog_k__BackingField,
     0LL,
     v17,
@@ -175,7 +181,7 @@ void __fastcall EventCraftAssetManager__Release(
     v21,
     v22);
   this->fields._CraftButtonBlinkEffect_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftButtonBlinkEffect_k__BackingField,
     0LL,
     v23,
@@ -185,7 +191,7 @@ void __fastcall EventCraftAssetManager__Release(
     v27,
     v28);
   this->fields._CraftUseSupportToolDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftUseSupportToolDialog_k__BackingField,
     0LL,
     v29,
@@ -195,7 +201,7 @@ void __fastcall EventCraftAssetManager__Release(
     v33,
     v34);
   this->fields._CraftFirstTimeSupportToolDialog_k__BackingField = 0LL;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
     0LL,
     v35,
@@ -267,7 +273,7 @@ void __fastcall EventCraftAssetManager__set_CraftButtonBlinkEffect(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftButtonBlinkEffect_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftButtonBlinkEffect_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -291,7 +297,7 @@ void __fastcall EventCraftAssetManager__set_CraftFirstTimeSupportToolDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftFirstTimeSupportToolDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -315,7 +321,7 @@ void __fastcall EventCraftAssetManager__set_CraftItemNumConfirmDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftItemNumConfirmDialog_k__BackingField = value;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -331,7 +337,7 @@ void __fastcall EventCraftAssetManager__set_CraftItemWithdrawConfirmDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftItemWithdrawConfirmDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -355,7 +361,7 @@ void __fastcall EventCraftAssetManager__set_CraftRewardDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftRewardDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftRewardDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -379,7 +385,7 @@ void __fastcall EventCraftAssetManager__set_CraftUseSupportToolDialog(
   PartyListViewItem_o *v7; // x7
 
   this->fields._CraftUseSupportToolDialog_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._CraftUseSupportToolDialog_k__BackingField,
     (int64_t)value,
     (int64_t)method,
@@ -405,186 +411,195 @@ void __fastcall EventCraftAssetManager___c__DisplayClass25_0___LoadAssets_b__0(
         const MethodInfo *method)
 {
   EventCraftAssetManager___c__DisplayClass25_0_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
   struct EventCraftAssetManager_o *_4__this; // x21
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  struct EventCraftAssetManager_o *v12; // x21
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  struct EventCraftAssetManager_o *v19; // x21
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  struct EventCraftAssetManager_o *v26; // x21
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  struct EventCraftAssetManager_o *v33; // x21
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
-  struct EventCraftAssetManager_o *v40; // x21
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
+  struct EventCraftAssetManager_o *v21; // x21
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  struct EventCraftAssetManager_o *v28; // x21
+  int64_t v29; // x2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  BattleSetupInfo_o *v32; // x5
+  FollowerInfo_o *v33; // x6
+  PartyListViewItem_o *v34; // x7
+  struct EventCraftAssetManager_o *v35; // x21
+  int64_t v36; // x2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  BattleSetupInfo_o *v39; // x5
+  FollowerInfo_o *v40; // x6
+  PartyListViewItem_o *v41; // x7
+  struct EventCraftAssetManager_o *v42; // x21
+  int64_t v43; // x2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  BattleSetupInfo_o *v46; // x5
+  FollowerInfo_o *v47; // x6
+  PartyListViewItem_o *v48; // x7
+  struct EventCraftAssetManager_o *v49; // x21
+  int64_t v50; // x2
+  int32_t v51; // w3
+  System_String_o *v52; // x4
+  BattleSetupInfo_o *v53; // x5
+  FollowerInfo_o *v54; // x6
+  PartyListViewItem_o *v55; // x7
   System_Action_o *_9__1; // x21
   int32_t eventId; // w20
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
+  int64_t v58; // x2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  BattleSetupInfo_o *v61; // x5
+  FollowerInfo_o *v62; // x6
+  PartyListViewItem_o *v63; // x7
 
   v4 = this;
-  if ( (byte_4BE03FC & 1) == 0 )
+  if ( (byte_4C0169B & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_AssetData_GetObject_GameObject____77626288);
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    sub_1C21E38(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__);
-    sub_1C21E38(&StringLiteral_17508/*"bit_craft_blink"*/);
-    sub_1C21E38(&StringLiteral_6335/*"EventCraftItemNumConfirmDialog"*/);
-    sub_1C21E38(&StringLiteral_6338/*"EventCraftUseSupportToolDialog"*/);
-    sub_1C21E38(&StringLiteral_6337/*"EventCraftRewardDialog"*/);
-    sub_1C21E38(&StringLiteral_6334/*"EventCraftFirstTimeSupportToolDialog"*/);
-    this = (EventCraftAssetManager___c__DisplayClass25_0_o *)sub_1C21E38(&StringLiteral_6336/*"EventCraftItemWithdrawConfirmDialog"*/);
-    byte_4BE03FC = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, assetData);
+    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, v5);
+    sub_1C2E12C(&AtlasManager_TypeInfo, v6);
+    sub_1C2E12C(&Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__, v7);
+    sub_1C2E12C(&StringLiteral_17523/*"bit_craft_blink"*/, v8);
+    sub_1C2E12C(&StringLiteral_6326/*"EventCraftItemNumConfirmDialog"*/, v9);
+    sub_1C2E12C(&StringLiteral_6329/*"EventCraftUseSupportToolDialog"*/, v10);
+    sub_1C2E12C(&StringLiteral_6328/*"EventCraftRewardDialog"*/, v11);
+    sub_1C2E12C(&StringLiteral_6325/*"EventCraftFirstTimeSupportToolDialog"*/, v12);
+    this = (EventCraftAssetManager___c__DisplayClass25_0_o *)sub_1C2E12C(&StringLiteral_6327/*"EventCraftItemWithdrawConfirmDialog"*/, v13);
+    byte_4C0169B = 1;
   }
   if ( !assetData )
     goto LABEL_15;
   _4__this = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6335/*"EventCraftItemNumConfirmDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
+                                                             (System_String_o *)StringLiteral_6326/*"EventCraftItemNumConfirmDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
   if ( !_4__this )
     goto LABEL_15;
   _4__this->fields._CraftItemNumConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&_4__this->fields, (int64_t)this, v6, v7, v8, v9, v10, v11);
-  v12 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields, (int64_t)this, v15, v16, v17, v18, v19, v20);
+  v21 = v4->fields.__4__this;
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6336/*"EventCraftItemWithdrawConfirmDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v12 )
+                                                             (System_String_o *)StringLiteral_6327/*"EventCraftItemWithdrawConfirmDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v21 )
     goto LABEL_15;
-  v12->fields._CraftItemWithdrawConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v12->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
+  v21->fields._CraftItemWithdrawConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v21->fields._CraftItemWithdrawConfirmDialog_k__BackingField,
     (int64_t)this,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
-  v19 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
-                                                             assetData,
-                                                             (System_String_o *)StringLiteral_6337/*"EventCraftRewardDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v19 )
-    goto LABEL_15;
-  v19->fields._CraftRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v19->fields._CraftRewardDialog_k__BackingField,
-    (int64_t)this,
-    v20,
-    v21,
     v22,
     v23,
     v24,
-    v25);
-  v26 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
+    v25,
+    v26,
+    v27);
+  v28 = v4->fields.__4__this;
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6338/*"EventCraftUseSupportToolDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v26 )
+                                                             (System_String_o *)StringLiteral_6328/*"EventCraftRewardDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v28 )
     goto LABEL_15;
-  v26->fields._CraftUseSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v26->fields._CraftUseSupportToolDialog_k__BackingField,
+  v28->fields._CraftRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v28->fields._CraftRewardDialog_k__BackingField,
     (int64_t)this,
-    v27,
-    v28,
     v29,
     v30,
     v31,
-    v32);
-  v33 = v4->fields.__4__this;
-  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
+    v32,
+    v33,
+    v34);
+  v35 = v4->fields.__4__this;
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
                                                              assetData,
-                                                             (System_String_o *)StringLiteral_6334/*"EventCraftFirstTimeSupportToolDialog"*/,
-                                                             (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288);
-  if ( !v33
-    || (v33->fields._CraftFirstTimeSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_1C21DDC(
-          (PartyOrganizationUtility_o *)&v33->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
+                                                             (System_String_o *)StringLiteral_6329/*"EventCraftUseSupportToolDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v35 )
+    goto LABEL_15;
+  v35->fields._CraftUseSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v35->fields._CraftUseSupportToolDialog_k__BackingField,
+    (int64_t)this,
+    v36,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41);
+  v42 = v4->fields.__4__this;
+  this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
+                                                             assetData,
+                                                             (System_String_o *)StringLiteral_6325/*"EventCraftFirstTimeSupportToolDialog"*/,
+                                                             (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+  if ( !v42
+    || (v42->fields._CraftFirstTimeSupportToolDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
+        sub_1C2E0D0(
+          (PartyOrganizationUtility_o *)&v42->fields._CraftFirstTimeSupportToolDialog_k__BackingField,
           (int64_t)this,
-          v34,
-          v35,
-          v36,
-          v37,
-          v38,
-          v39),
-        v40 = v4->fields.__4__this,
-        this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__49880776(
+          v43,
+          v44,
+          v45,
+          v46,
+          v47,
+          v48),
+        v49 = v4->fields.__4__this,
+        this = (EventCraftAssetManager___c__DisplayClass25_0_o *)AssetData__GetObject_object__50017172(
                                                                    assetData,
-                                                                   (System_String_o *)StringLiteral_17508/*"bit_craft_blink"*/,
-                                                                   (const MethodInfo_2F91EC8 *)Method_AssetData_GetObject_GameObject____77626288),
-        !v40) )
+                                                                   (System_String_o *)StringLiteral_17523/*"bit_craft_blink"*/,
+                                                                   (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312),
+        !v49) )
   {
 LABEL_15:
-    sub_1C22094(this, assetData);
+    sub_1C2E388(this, assetData);
   }
-  v40->fields._CraftButtonBlinkEffect_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&v40->fields._CraftButtonBlinkEffect_k__BackingField,
+  v49->fields._CraftButtonBlinkEffect_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&v49->fields._CraftButtonBlinkEffect_k__BackingField,
     (int64_t)this,
-    v41,
-    v42,
-    v43,
-    v44,
-    v45,
-    v46);
+    v50,
+    v51,
+    v52,
+    v53,
+    v54,
+    v55);
   _9__1 = v4->fields.__9__1;
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_EventCraftAssetManager___c__DisplayClass25_0__LoadAssets_b__1__,
       0LL);
     v4->fields.__9__1 = _9__1;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&v4->fields.__9__1, (int64_t)_9__1, v49, v50, v51, v52, v53, v54);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->fields.__9__1, (int64_t)_9__1, v58, v59, v60, v61, v62, v63);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_39104116(eventId, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_39173360(eventId, _9__1, 1, 0LL);
 }
 
 

@@ -10,36 +10,41 @@ BattleLogicTask_array *__fastcall CheckUpdateShiftTask__MakeActionTask(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v4; // x19
-  BattleLogicNomal_o *logicnomal; // x0
+  __int64 v4; // x1
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  BattleLogicTask_o *v8; // x20
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  __int64 v7; // x1
+  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *v9; // x19
+  BattleLogicNomal_o *logicnomal; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x2
+  BattleLogicTask_o *v13; // x20
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v21; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v23; // x0
 
-  if ( (byte_4BDF305 & 1) == 0 )
+  if ( (byte_4C00593 & 1) == 0 )
   {
-    sub_1C21E38(&CheckEnemyShiftAfterTask_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleLogicTask__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
-    byte_4BDF305 = 1;
+    sub_1C2E12C(&CheckEnemyShiftAfterTask_TypeInfo, logic);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__, v4);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v7);
+    sub_1C2E12C(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v8);
+    byte_4C00593 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    v9,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( !logic )
     goto LABEL_11;
   logicnomal = logic->fields.logicnomal;
@@ -48,39 +53,39 @@ BattleLogicTask_array *__fastcall CheckUpdateShiftTask__MakeActionTask(
   logicnomal = (BattleLogicNomal_o *)BattleLogicNomal__shiftServantTaskReaction(
                                        logicnomal,
                                        logicnomal->fields.tmpShiftTask,
-                                       v7);
-  if ( !v4
+                                       v12);
+  if ( !v9
     || (System_Collections_Generic_List_object___AddRange(
-          v4,
+          v9,
           (System_Collections_Generic_IEnumerable_T__o *)logicnomal,
-          (const MethodInfo_364F2C0 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__),
-        v8 = (BattleLogicTask_o *)sub_1C22084(CheckEnemyShiftAfterTask_TypeInfo),
-        BattleLogicTask___ctor(v8, 0LL),
-        v8->fields.actiontype = 68,
-        items = v4->fields._items,
-        v16 = Method_System_Collections_Generic_List_BattleLogicTask__Add__,
-        ++v4->fields._version,
+          (const MethodInfo_366BAB8 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__),
+        v13 = (BattleLogicTask_o *)sub_1C2E378(CheckEnemyShiftAfterTask_TypeInfo),
+        BattleLogicTask___ctor(v13, 0LL),
+        v13->fields.actiontype = 68,
+        items = v9->fields._items,
+        v21 = Method_System_Collections_Generic_List_BattleLogicTask__Add__,
+        ++v9->fields._version,
         !items) )
   {
 LABEL_11:
-    sub_1C22094(logicnomal, v6);
+    sub_1C2E388(logicnomal, v11);
   }
-  size = v4->fields._size;
+  size = v9->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v4,
-      (Il2CppObject *)v8,
-      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      v9,
+      (Il2CppObject *)v13,
+      *(const MethodInfo_366B8AC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
-    v18 = &items->obj.klass + size;
-    v4->fields._size = size + 1;
-    v18[4] = (Il2CppClass *)v8;
-    sub_1C21DDC((PartyOrganizationUtility_o *)(v18 + 4), (int64_t)v8, v9, v10, v11, v12, v13, v14);
+    v23 = &items->obj.klass + size;
+    v9->fields._size = size + 1;
+    v23[4] = (Il2CppClass *)v13;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)(v23 + 4), (int64_t)v13, v14, v15, v16, v17, v18, v19);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
-                                    v4,
-                                    (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    v9,
+                                    (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }

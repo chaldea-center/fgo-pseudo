@@ -1,56 +1,59 @@
 void __fastcall TitleInfoSuperBossStatusComponent___cctor(const MethodInfo *method)
 {
-  int64_t v1; // x2
-  int32_t v2; // w3
-  System_String_o *v3; // x4
-  BattleSetupInfo_o *v4; // x5
-  FollowerInfo_o *v5; // x6
-  PartyListViewItem_o *v6; // x7
-  int64_t v7; // x1
+  __int64 v1; // x1
+  int64_t v2; // x2
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+  __int64 v8; // x1
+  __int64 v9; // x1
+  int64_t v10; // x1
   struct TitleInfoSuperBossStatusComponent_StaticFields *static_fields; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  TitleInfoSuperBossStatusComponent_c *v15; // x8
-  struct TitleInfoSuperBossStatusComponent_StaticFields *v16; // x9
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
+  TitleInfoSuperBossStatusComponent_c *v18; // x8
+  struct TitleInfoSuperBossStatusComponent_StaticFields *v19; // x9
 
-  if ( (byte_4BDB10C & 1) == 0 )
+  if ( (byte_4BFC309 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    sub_1C21E38(&StringLiteral_19600/*"event_superboss_status_win_"*/);
-    sub_1C21E38(&StringLiteral_19599/*"event_superboss_status_battle_"*/);
-    byte_4BDB10C = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, v1);
+    sub_1C2E12C(&StringLiteral_19612/*"event_superboss_status_win_"*/, v8);
+    sub_1C2E12C(&StringLiteral_19611/*"event_superboss_status_battle_"*/, v9);
+    byte_4BFC309 = 1;
   }
-  TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE = (struct System_String_o *)StringLiteral_19599/*"event_superboss_status_battle_"*/;
-  sub_1C21DDC(
+  TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE = (struct System_String_o *)StringLiteral_19611/*"event_superboss_status_battle_"*/;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)TitleInfoSuperBossStatusComponent_TypeInfo->static_fields,
-    StringLiteral_19599/*"event_superboss_status_battle_"*/,
-    v1,
+    StringLiteral_19611/*"event_superboss_status_battle_"*/,
     v2,
     v3,
     v4,
     v5,
-    v6);
-  v7 = StringLiteral_19600/*"event_superboss_status_win_"*/;
+    v6,
+    v7);
+  v10 = StringLiteral_19612/*"event_superboss_status_win_"*/;
   static_fields = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
-  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_WIN = (struct System_String_o *)StringLiteral_19600/*"event_superboss_status_win_"*/;
-  sub_1C21DDC(
+  static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_WIN = (struct System_String_o *)StringLiteral_19612/*"event_superboss_status_win_"*/;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_WIN,
-    v7,
-    v9,
     v10,
-    v11,
     v12,
     v13,
-    v14);
-  v15 = TitleInfoSuperBossStatusComponent_TypeInfo;
-  v16 = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
-  *(_QWORD *)&v16->FRAME_ANIM_OUT_POS_DELTA.fields.x = 3263954944LL;
-  v16->FRAME_ANIM_OUT_POS_DELTA.fields.z = 0.0;
-  *(_QWORD *)&v15->static_fields->FRAME_ANIM_DURATION = 0x3F0000003E99999ALL;
+    v14,
+    v15,
+    v16,
+    v17);
+  v18 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  v19 = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields;
+  *(_QWORD *)&v19->FRAME_ANIM_OUT_POS_DELTA.fields.x = 3263954944LL;
+  v19->FRAME_ANIM_OUT_POS_DELTA.fields.z = 0.0;
+  *(_QWORD *)&v18->static_fields->FRAME_ANIM_DURATION = 0x3F0000003E99999ALL;
 }
 
 
@@ -74,20 +77,20 @@ void __fastcall TitleInfoSuperBossStatusComponent__AnimFrameOutEnd(
   const MethodInfo *v8; // x2
   const MethodInfo *v9; // x2
 
-  if ( (byte_4BDB109 & 1) == 0 )
+  if ( (byte_4BFC306 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    byte_4BDB109 = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
+    byte_4BFC306 = 1;
   }
   v3 = TitleInfoSuperBossStatusComponent_TypeInfo;
   if ( !TitleInfoSuperBossStatusComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TitleInfoSuperBossStatusComponent_TypeInfo);
   superBossEntity = this->fields.superBossEntity;
   if ( !superBossEntity )
-    sub_1C22094(v3, method);
+    sub_1C2E388(v3, method);
   SUPERBOSS_ICON_SPNAME_PREFIX_WIN = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_WIN;
   v6 = System_Int32__ToString((int)superBossEntity + 56, 0LL);
-  v7 = System_String__Concat_63115476(SUPERBOSS_ICON_SPNAME_PREFIX_WIN, v6, 0LL);
+  v7 = System_String__Concat_63235584(SUPERBOSS_ICON_SPNAME_PREFIX_WIN, v6, 0LL);
   TitleInfoSuperBossStatusComponent__SetBossIcon(this, v7, v8);
   TitleInfoSuperBossStatusComponent__FrameIn(this, 0LL, v9);
 }
@@ -116,75 +119,77 @@ void __fastcall TitleInfoSuperBossStatusComponent__FrameIn(
         System_String_o *callFinished,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  TitleInfoSuperBossStatusComponent_c *v6; // x8
-  UnityEngine_GameObject_o *v7; // x21
+  TitleInfoSuperBossStatusComponent_c *v8; // x8
+  UnityEngine_GameObject_o *v9; // x21
   char *superBossIconSp; // x0
-  __int64 v9; // x1
-  char *v10; // x21
+  __int64 v11; // x1
+  char *v12; // x21
   float z; // w8
-  __int64 v12; // x9
-  UnityEngine_GameObject_o *v13; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  UnityEngine_GameObject_o *v26; // x0
-  __int64 v27; // [xsp+0h] [xbp-40h]
+  __int64 v14; // x9
+  UnityEngine_GameObject_o *v15; // x0
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  UnityEngine_GameObject_o *v28; // x0
+  __int64 v29; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4BDB10A & 1) == 0 )
+  if ( (byte_4BFC307 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    sub_1C21E38(&Method_UITweener_Begin_TweenAlpha___);
-    sub_1C21E38(&Method_UITweener_Begin_TweenPosition___);
-    byte_4BDB10A = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, callFinished);
+    sub_1C2E12C(&Method_UITweener_Begin_TweenAlpha___, v5);
+    sub_1C2E12C(&Method_UITweener_Begin_TweenPosition___, v6);
+    byte_4BFC307 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
-  v7 = gameObject;
+  v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  v9 = gameObject;
   if ( !TitleInfoSuperBossStatusComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoSuperBossStatusComponent_TypeInfo);
-    v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
   superBossIconSp = (char *)UITweener__Begin_object_(
-                              v7,
-                              v6->static_fields->FRAME_ANIM_DURATION,
-                              (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenPosition___);
-  v27 = *(_QWORD *)&this->fields.outPos.fields.x;
+                              v9,
+                              v8->static_fields->FRAME_ANIM_DURATION,
+                              (const MethodInfo_3086DBC *)Method_UITweener_Begin_TweenPosition___);
+  v29 = *(_QWORD *)&this->fields.outPos.fields.x;
   if ( !superBossIconSp )
     goto LABEL_9;
-  v10 = superBossIconSp;
+  v12 = superBossIconSp;
   *((_DWORD *)superBossIconSp + 34) = LODWORD(this->fields.outPos.fields.z);
-  *((_QWORD *)superBossIconSp + 16) = v27;
+  *((_QWORD *)superBossIconSp + 16) = v29;
   z = this->fields.inPos.fields.z;
-  v12 = *(_QWORD *)&this->fields.inPos.fields.x;
+  v14 = *(_QWORD *)&this->fields.inPos.fields.x;
   *((_DWORD *)superBossIconSp + 8) = 6;
   *((float *)superBossIconSp + 37) = z;
-  *(_QWORD *)(superBossIconSp + 140) = v12;
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  *((_QWORD *)v10 + 10) = v13;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v10 + 80), (int64_t)v13, v14, v15, v16, v17, v18, v19);
-  *((_QWORD *)v10 + 11) = callFinished;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v10 + 88), (int64_t)callFinished, v20, v21, v22, v23, v24, v25);
+  *(_QWORD *)(superBossIconSp + 140) = v14;
+  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  *((_QWORD *)v12 + 10) = v15;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  *((_QWORD *)v12 + 11) = callFinished;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
   superBossIconSp = (char *)this->fields.superBossIconSp;
   if ( !superBossIconSp
-    || (v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)superBossIconSp, 0LL),
+    || (v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)superBossIconSp, 0LL),
         (superBossIconSp = (char *)UITweener__Begin_object_(
-                                     v26,
+                                     v28,
                                      TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->FRAME_ANIM_DURATION,
-                                     (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
+                                     (const MethodInfo_3086DBC *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
   {
 LABEL_9:
-    sub_1C22094(superBossIconSp, v9);
+    sub_1C2E388(superBossIconSp, v11);
   }
   *((_QWORD *)superBossIconSp + 16) = 0x3F80000000000000LL;
   *((_DWORD *)superBossIconSp + 8) = 6;
@@ -196,75 +201,77 @@ void __fastcall TitleInfoSuperBossStatusComponent__FrameOut(
         System_String_o *callFinished,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  TitleInfoSuperBossStatusComponent_c *v6; // x8
-  UnityEngine_GameObject_o *v7; // x21
+  TitleInfoSuperBossStatusComponent_c *v8; // x8
+  UnityEngine_GameObject_o *v9; // x21
   char *superBossIconSp; // x0
-  __int64 v9; // x1
-  char *v10; // x21
+  __int64 v11; // x1
+  char *v12; // x21
   float z; // w8
-  __int64 v12; // x9
-  UnityEngine_GameObject_o *v13; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  UnityEngine_GameObject_o *v26; // x0
-  __int64 v27; // [xsp+0h] [xbp-40h]
+  __int64 v14; // x9
+  UnityEngine_GameObject_o *v15; // x0
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  UnityEngine_GameObject_o *v28; // x0
+  __int64 v29; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4BDB10B & 1) == 0 )
+  if ( (byte_4BFC308 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    sub_1C21E38(&Method_UITweener_Begin_TweenAlpha___);
-    sub_1C21E38(&Method_UITweener_Begin_TweenPosition___);
-    byte_4BDB10B = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, callFinished);
+    sub_1C2E12C(&Method_UITweener_Begin_TweenAlpha___, v5);
+    sub_1C2E12C(&Method_UITweener_Begin_TweenPosition___, v6);
+    byte_4BFC308 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
-  v7 = gameObject;
+  v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  v9 = gameObject;
   if ( !TitleInfoSuperBossStatusComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoSuperBossStatusComponent_TypeInfo);
-    v6 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
   superBossIconSp = (char *)UITweener__Begin_object_(
-                              v7,
-                              v6->static_fields->FRAME_ANIM_DURATION,
-                              (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenPosition___);
-  v27 = *(_QWORD *)&this->fields.inPos.fields.x;
+                              v9,
+                              v8->static_fields->FRAME_ANIM_DURATION,
+                              (const MethodInfo_3086DBC *)Method_UITweener_Begin_TweenPosition___);
+  v29 = *(_QWORD *)&this->fields.inPos.fields.x;
   if ( !superBossIconSp )
     goto LABEL_9;
-  v10 = superBossIconSp;
+  v12 = superBossIconSp;
   *((_DWORD *)superBossIconSp + 34) = LODWORD(this->fields.inPos.fields.z);
-  *((_QWORD *)superBossIconSp + 16) = v27;
+  *((_QWORD *)superBossIconSp + 16) = v29;
   z = this->fields.outPos.fields.z;
-  v12 = *(_QWORD *)&this->fields.outPos.fields.x;
+  v14 = *(_QWORD *)&this->fields.outPos.fields.x;
   *((_DWORD *)superBossIconSp + 8) = 2;
   *((float *)superBossIconSp + 37) = z;
-  *(_QWORD *)(superBossIconSp + 140) = v12;
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  *((_QWORD *)v10 + 10) = v13;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v10 + 80), (int64_t)v13, v14, v15, v16, v17, v18, v19);
-  *((_QWORD *)v10 + 11) = callFinished;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v10 + 88), (int64_t)callFinished, v20, v21, v22, v23, v24, v25);
+  *(_QWORD *)(superBossIconSp + 140) = v14;
+  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  *((_QWORD *)v12 + 10) = v15;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v12 + 80), (int64_t)v15, v16, v17, v18, v19, v20, v21);
+  *((_QWORD *)v12 + 11) = callFinished;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v12 + 88), (int64_t)callFinished, v22, v23, v24, v25, v26, v27);
   superBossIconSp = (char *)this->fields.superBossIconSp;
   if ( !superBossIconSp
-    || (v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)superBossIconSp, 0LL),
+    || (v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)superBossIconSp, 0LL),
         (superBossIconSp = (char *)UITweener__Begin_object_(
-                                     v26,
+                                     v28,
                                      TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->FRAME_ANIM_DURATION,
-                                     (const MethodInfo_30647F8 *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
+                                     (const MethodInfo_3086DBC *)Method_UITweener_Begin_TweenAlpha___)) == 0LL) )
   {
 LABEL_9:
-    sub_1C22094(superBossIconSp, v9);
+    sub_1C2E388(superBossIconSp, v11);
   }
   *((_QWORD *)superBossIconSp + 16) = 1065353216LL;
   *((_DWORD *)superBossIconSp + 8) = 2;
@@ -339,10 +346,10 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetBossIcon(
   struct UISprite_o *v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BDB103 & 1) == 0 )
+  if ( (byte_4BFC300 & 1) == 0 )
   {
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    byte_4BDB103 = 1;
+    sub_1C2E12C(&AtlasManager_TypeInfo, spName);
+    byte_4BFC300 = 1;
   }
   superBossIconSp = this->fields.superBossIconSp;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -365,7 +372,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetBossIcon(
       return;
     }
 LABEL_11:
-    sub_1C22094(v6, v7);
+    sub_1C2E388(v6, v7);
   }
 }
 
@@ -382,10 +389,10 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetClearAnim(
   System_String_o *v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4BDB107 & 1) == 0 )
+  if ( (byte_4BFC304 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    byte_4BDB107 = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
+    byte_4BFC304 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -397,10 +404,10 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetClearAnim(
   superBossEntity = this->fields.superBossEntity;
   if ( !superBossEntity )
 LABEL_8:
-    sub_1C22094(gameObject, v4);
+    sub_1C2E388(gameObject, v4);
   SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE = TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE;
   v7 = System_Int32__ToString((int)superBossEntity + 56, 0LL);
-  v8 = System_String__Concat_63115476(SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE, v7, 0LL);
+  v8 = System_String__Concat_63235584(SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE, v7, 0LL);
   TitleInfoSuperBossStatusComponent__SetBossIcon(this, v8, v9);
 }
 
@@ -417,7 +424,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetClickCallBack(
   PartyListViewItem_o *v7; // x7
 
   this->fields.clickCallBack = callback;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.clickCallBack,
     (int64_t)callback,
     (int64_t)method,
@@ -434,53 +441,54 @@ void __fastcall TitleInfoSuperBossStatusComponent__SetEntryAnim(
         TitleInfoSuperBossStatusComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
-  float v5; // s1
+  __int64 v5; // x1
+  float v6; // s1
   float offsetY; // s0
-  float v7; // s4
-  TitleInfoSuperBossStatusComponent_c *v8; // x0
+  float v8; // s4
+  TitleInfoSuperBossStatusComponent_c *v9; // x0
   float32x2_t *static_fields; // x8
-  float32x2_t v10; // d0
-  float v11; // s2
-  float v12; // [xsp+0h] [xbp-30h]
+  float32x2_t v11; // d0
+  float v12; // s2
+  float v13; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4BDB106 & 1) == 0 )
+  if ( (byte_4BFC303 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    sub_1C21E38(&StringLiteral_6207/*"EntryAnim"*/);
-    byte_4BDB106 = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_6198/*"EntryAnim"*/, v3);
+    byte_4BFC303 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_9;
-  *(UnityEngine_Vector3_o *)(&v5 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+  *(UnityEngine_Vector3_o *)(&v6 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
   offsetY = this->fields.offsetY;
   this->fields.inPos.fields.x = 0.0;
   this->fields.inPos.fields.z = 0.0;
-  v7 = v5 + offsetY;
-  this->fields.inPos.fields.y = v5 + offsetY;
-  v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  v8 = v6 + offsetY;
+  this->fields.inPos.fields.y = v6 + offsetY;
+  v9 = TitleInfoSuperBossStatusComponent_TypeInfo;
   if ( !TitleInfoSuperBossStatusComponent_TypeInfo->_2.cctor_finished )
   {
-    v12 = v5 + offsetY;
+    v13 = v6 + offsetY;
     j_il2cpp_runtime_class_init_0(TitleInfoSuperBossStatusComponent_TypeInfo);
-    v7 = v12;
-    v8 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v8 = v13;
+    v9 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
-  static_fields = (float32x2_t *)v8->static_fields;
-  v10.n64_u32[0] = 0;
-  v10.n64_f32[1] = v7;
-  v11 = static_fields[3].n64_f32[0];
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(static_fields[2], v10);
-  this->fields.outPos.fields.z = v11 + 0.0;
+  static_fields = (float32x2_t *)v9->static_fields;
+  v11.n64_u32[0] = 0;
+  v11.n64_f32[1] = v8;
+  v12 = static_fields[3].n64_f32[0];
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(static_fields[2], v11);
+  this->fields.outPos.fields.z = v12 + 0.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0LL),
         (transform = (UnityEngine_Transform_o *)this->fields.superBossIconSp) == 0LL) )
   {
 LABEL_9:
-    sub_1C22094(transform, v4);
+    sub_1C2E388(transform, v5);
   }
   (*(void (__fastcall **)(UnityEngine_Transform_o *, Il2CppClass *, float))&transform->klass[1]._1.this_arg.bits)(
     transform,
@@ -488,7 +496,7 @@ LABEL_9:
     0.0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6207/*"EntryAnim"*/,
+    (System_String_o *)StringLiteral_6198/*"EntryAnim"*/,
     TitleInfoSuperBossStatusComponent_TypeInfo->static_fields->ENTRY_ANIM_DELAY
   + (float)(this->fields.inPos.fields.y / -500.0),
     0LL);
@@ -517,7 +525,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__Setup(
 
   this->fields.superBossEntity = eventSuperBossEntity;
   p_superBossEntity = &this->fields.superBossEntity;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.superBossEntity,
     (int64_t)eventSuperBossEntity,
     (int64_t)method,
@@ -533,11 +541,11 @@ void __fastcall TitleInfoSuperBossStatusComponent__Setup(
         gameObject = (UnityEngine_Object_o *)UnityEngine_Object__get_name(gameObject, 0LL),
         (v15 = *p_superBossEntity) == 0LL) )
   {
-    sub_1C22094(gameObject, v13);
+    sub_1C2E388(gameObject, v13);
   }
   v16 = (System_String_o *)gameObject;
   v17 = System_Int32__ToString((int)v15 + 20, 0LL);
-  v18 = System_String__Concat_63115476(v16, v17, 0LL);
+  v18 = System_String__Concat_63235584(v16, v17, 0LL);
   UnityEngine_Object__set_name(v14, v18, 0LL);
   ((void (__fastcall *)(TitleInfoSuperBossStatusComponent_o *, Il2CppMethodPointer))this->klass->vtable._5_UpdateDisp.method)(
     this,
@@ -550,48 +558,49 @@ void __fastcall TitleInfoSuperBossStatusComponent__StartClearAnim(
         TitleInfoSuperBossStatusComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
-  float v6; // s1
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  float v7; // s1
   float offsetY; // s0
-  float v8; // s4
-  TitleInfoSuperBossStatusComponent_c *v9; // x0
+  float v9; // s4
+  TitleInfoSuperBossStatusComponent_c *v10; // x0
   float32x2_t *static_fields; // x8
-  float32x2_t v11; // d0
-  float v12; // s2
-  float v13; // [xsp+0h] [xbp-30h]
+  float32x2_t v12; // d0
+  float v13; // s2
+  float v14; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4BDB108 & 1) == 0 )
+  if ( (byte_4BFC305 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    sub_1C21E38(&StringLiteral_2411/*"AnimFrameOutEnd"*/);
-    byte_4BDB108 = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_2397/*"AnimFrameOutEnd"*/, v3);
+    byte_4BFC305 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1C22094(0LL, v4);
-  *(UnityEngine_Vector3_o *)(&v6 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+    sub_1C2E388(0LL, v5);
+  *(UnityEngine_Vector3_o *)(&v7 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
   offsetY = this->fields.offsetY;
   this->fields.inPos.fields.x = 0.0;
   this->fields.inPos.fields.z = 0.0;
-  v8 = v6 + offsetY;
-  this->fields.inPos.fields.y = v6 + offsetY;
-  v9 = TitleInfoSuperBossStatusComponent_TypeInfo;
+  v9 = v7 + offsetY;
+  this->fields.inPos.fields.y = v7 + offsetY;
+  v10 = TitleInfoSuperBossStatusComponent_TypeInfo;
   if ( !TitleInfoSuperBossStatusComponent_TypeInfo->_2.cctor_finished )
   {
-    v13 = v6 + offsetY;
+    v14 = v7 + offsetY;
     j_il2cpp_runtime_class_init_0(TitleInfoSuperBossStatusComponent_TypeInfo);
-    v8 = v13;
-    v9 = TitleInfoSuperBossStatusComponent_TypeInfo;
+    v9 = v14;
+    v10 = TitleInfoSuperBossStatusComponent_TypeInfo;
   }
-  static_fields = (float32x2_t *)v9->static_fields;
-  v11.n64_u32[0] = 0;
-  v11.n64_f32[1] = v8;
-  v12 = static_fields[3].n64_f32[0];
-  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(static_fields[2], v11);
-  this->fields.outPos.fields.z = v12 + 0.0;
-  TitleInfoSuperBossStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_2411/*"AnimFrameOutEnd"*/, v5);
+  static_fields = (float32x2_t *)v10->static_fields;
+  v12.n64_u32[0] = 0;
+  v12.n64_f32[1] = v9;
+  v13 = static_fields[3].n64_f32[0];
+  *(float32x2_t *)&this->fields.outPos.fields.x = vadd_f32(static_fields[2], v12);
+  this->fields.outPos.fields.z = v13 + 0.0;
+  TitleInfoSuperBossStatusComponent__FrameOut(this, (System_String_o *)StringLiteral_2397/*"AnimFrameOutEnd"*/, v6);
 }
 
 
@@ -617,10 +626,10 @@ void __fastcall TitleInfoSuperBossStatusComponent__UpdateDisp(
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BDB104 & 1) == 0 )
+  if ( (byte_4BFC301 & 1) == 0 )
   {
-    sub_1C21E38(&TitleInfoSuperBossStatusComponent_TypeInfo);
-    byte_4BDB104 = 1;
+    sub_1C2E12C(&TitleInfoSuperBossStatusComponent_TypeInfo, method);
+    byte_4BFC301 = 1;
   }
   superBossEntity = this->fields.superBossEntity;
   if ( superBossEntity )
@@ -653,7 +662,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__UpdateDisp(
             ++p_SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE;
           v11 = *p_SUPERBOSS_ICON_SPNAME_PREFIX_BATTLE;
           v12 = System_Int32__ToString((int)v9 + 56, 0LL);
-          v13 = System_String__Concat_63115476(v11, v12, 0LL);
+          v13 = System_String__Concat_63235584(v11, v12, 0LL);
           TitleInfoSuperBossStatusComponent__SetBossIcon(this, v13, v14);
           gameObject = (UnityEngine_GameObject_o *)this->fields.superBossIconSp;
           if ( gameObject )
@@ -695,7 +704,7 @@ void __fastcall TitleInfoSuperBossStatusComponent__UpdateDisp(
         }
       }
 LABEL_21:
-      sub_1C22094(gameObject, v6);
+      sub_1C2E388(gameObject, v6);
     }
     UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   }
@@ -710,16 +719,16 @@ void __fastcall TitleInfoSuperBossStatusComponent__onClick(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4BDB105 & 1) == 0 )
+  if ( (byte_4BFC302 & 1) == 0 )
   {
-    sub_1C21E38(&Method_TitleInfoSuperBossStatusComponent_onClick__);
-    byte_4BDB105 = 1;
+    sub_1C2E12C(&Method_TitleInfoSuperBossStatusComponent_onClick__, method);
+    byte_4BFC302 = 1;
   }
   if ( !this->fields.clickCallBack )
     goto LABEL_6;
   superBossEntity = this->fields.superBossEntity;
   if ( !superBossEntity )
-    sub_1C22094(0LL, method);
+    sub_1C2E388(0LL, method);
   if ( !EventSuperBossEntity__IsCleard(superBossEntity, 0LL) )
   {
     ActionExtensions__Call(this->fields.clickCallBack, 0LL);
@@ -729,8 +738,8 @@ void __fastcall TitleInfoSuperBossStatusComponent__onClick(
 LABEL_6:
     v4 = Method_TitleInfoSuperBossStatusComponent_onClick__;
     if ( (*((_BYTE *)Method_TitleInfoSuperBossStatusComponent_onClick__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C21E50(Method_TitleInfoSuperBossStatusComponent_onClick__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C2E144(Method_TitleInfoSuperBossStatusComponent_onClick__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 2, 0, 0LL);
   }
 }

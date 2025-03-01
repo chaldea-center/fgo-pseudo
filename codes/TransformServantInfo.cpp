@@ -8,20 +8,20 @@ void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const 
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BDD817 & 1) == 0 )
+  if ( (byte_4BFEA54 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDD817 = 1;
+    sub_1C2E12C(&StringLiteral_1/*""*/, method);
+    byte_4BFEA54 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
   v3 = StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
-void __fastcall TransformServantInfo___ctor_41815448(
+void __fastcall TransformServantInfo___ctor_41900188(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -42,10 +42,11 @@ void __fastcall TransformServantInfo___ctor_41815448(
   v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
   *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = svtId;
   *(_DWORD *)(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = dispLimitCount;
-  sub_1C21DDC(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
+  sub_1C2E0D0(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall TransformServantInfo__GetDispLimitCount(
         TransformServantInfo_o *this,
         int32_t limitCount,
@@ -55,10 +56,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4BDD818 & 1) == 0 )
+  if ( (byte_4BFEA55 & 1) == 0 )
   {
-    sub_1C21E38(&ImageLimitCount_TypeInfo);
-    byte_4BDD818 = 1;
+    sub_1C2E12C(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    byte_4BFEA55 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

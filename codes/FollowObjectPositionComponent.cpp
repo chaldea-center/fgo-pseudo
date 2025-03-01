@@ -21,7 +21,7 @@ void __fastcall FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v9 = IsInversion;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.TargetObj,
     (int64_t)obj,
     IsInversion,
@@ -49,10 +49,10 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
   float v12; // s1
   float v13; // s0
 
-  if ( (byte_4BDB9CB & 1) == 0 )
+  if ( (byte_4BFCBD0 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDB9CB = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4BFCBD0 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -97,6 +97,6 @@ LABEL_14:
         }
       }
     }
-    sub_1C22094(transform, v6);
+    sub_1C2E388(transform, v6);
   }
 }

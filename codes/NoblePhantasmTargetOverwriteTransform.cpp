@@ -17,29 +17,28 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
   UnityEngine_Transform_o *transform; // x0
   System_String_o *targetNodeName; // x22
   UnityEngine_Transform_o *v10; // x23
-  const MethodInfo *v11; // x1
   int32_t LimitCount; // w0
   struct UnityEngine_Transform_o *NodeFromLvName; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  UnityEngine_Object_o *v20; // x22
-  UnityEngine_Object_o *v21; // x21
-  struct UnityEngine_Transform_o *v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  UnityEngine_Object_o *v19; // x22
+  UnityEngine_Object_o *v20; // x21
+  struct UnityEngine_Transform_o *v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
 
-  if ( (byte_4BDF38C & 1) == 0 )
+  if ( (byte_4C006D1 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDF38C = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, targetActor);
+    byte_4C006D1 = 1;
   }
   targetNode = (UnityEngine_Object_o *)this->fields.targetNode;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -57,74 +56,124 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
     transform = UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0LL);
     targetNodeName = this->fields.targetNodeName;
     v10 = transform;
-    LimitCount = BattleActorControl__getLimitCount(targetActor, v11);
+    LimitCount = BattleActorControl__getLimitCount(targetActor, 0LL);
     NodeFromLvName = TransformHelper__getNodeFromLvName(v10, targetNodeName, LimitCount, 1, 0LL);
     this->fields.targetNode = NodeFromLvName;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.targetNode,
       (int64_t)NodeFromLvName,
+      v13,
       v14,
       v15,
       v16,
       v17,
-      v18,
-      v19);
-    v20 = (UnityEngine_Object_o *)this->fields.targetNode;
+      v18);
+    v19 = (UnityEngine_Object_o *)this->fields.targetNode;
     IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetActor, 0LL);
     if ( !IsNullOrEmpty )
 LABEL_15:
-      sub_1C22094(IsNullOrEmpty, v7);
-    v21 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0LL);
+      sub_1C2E388(IsNullOrEmpty, v7);
+    v20 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v20, v21, 0LL) )
+    if ( UnityEngine_Object__op_Equality(v19, v20, 0LL) )
     {
 LABEL_14:
-      v22 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      this->fields.targetNode = v22;
-      sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.targetNode, (int64_t)v22, v23, v24, v25, v26, v27, v28);
+      v21 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+      this->fields.targetNode = v21;
+      sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetNode, (int64_t)v21, v22, v23, v24, v25, v26, v27);
     }
   }
 }
 
 
-void __fastcall NoblePhantasmTargetOverwriteTransform__OverwriteTarget(
+bool __fastcall NoblePhantasmTargetOverwriteTransform__IsSettingCheck(
         NoblePhantasmTargetOverwriteTransform_o *this,
-        BattleActorControl_o *targetActor,
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *overwriteTransformInfo,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  UnityEngine_Transform_o *targetNode; // x0
+  int32_t treasureDeviceRangeSet; // w8
+  int32_t functionTargetTypeSet; // w8
 
-  NoblePhantasmTargetOverwriteTransform__SaveOriginal(this, targetActor, method);
-  targetNode = this->fields.targetNode;
-  if ( !targetNode
-    || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.overwritePosition, 0LL),
-        (targetNode = this->fields.targetNode) == 0LL) )
+  treasureDeviceRangeSet = this->fields.treasureDeviceRangeSet;
+  if ( !treasureDeviceRangeSet )
+    goto LABEL_4;
+  if ( !overwriteTransformInfo )
+    goto LABEL_9;
+  if ( treasureDeviceRangeSet != overwriteTransformInfo->fields._FunctionMaxTargetType_k__BackingField )
+    return 0;
+LABEL_4:
+  functionTargetTypeSet = this->fields.functionTargetTypeSet;
+  if ( functionTargetTypeSet )
   {
-    sub_1C22094(targetNode, v4);
+    if ( overwriteTransformInfo )
+      return functionTargetTypeSet == overwriteTransformInfo->fields._FunctionTargetType_k__BackingField;
+LABEL_9:
+    sub_1C2E388(this, overwriteTransformInfo);
   }
-  UnityEngine_Transform__set_localRotation(targetNode, this->fields.overwriteRotation, 0LL);
+  return 1;
+}
+
+
+void __fastcall NoblePhantasmTargetOverwriteTransform__OverwriteTarget(
+        NoblePhantasmTargetOverwriteTransform_o *this,
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *overwriteTransformInfo,
+        const MethodInfo *method)
+{
+  UnityEngine_Transform_o *targetNode; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+
+  targetNode = (UnityEngine_Transform_o *)NoblePhantasmTargetOverwriteTransform__IsSettingCheck(
+                                            this,
+                                            overwriteTransformInfo,
+                                            method);
+  if ( ((unsigned __int8)targetNode & 1) != 0 )
+  {
+    if ( !overwriteTransformInfo
+      || (NoblePhantasmTargetOverwriteTransform__SaveOriginal(
+            this,
+            overwriteTransformInfo->fields._TargetActor_k__BackingField,
+            v7),
+          (targetNode = this->fields.targetNode) == 0LL)
+      || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.overwritePosition, 0LL),
+          (targetNode = this->fields.targetNode) == 0LL) )
+    {
+      sub_1C2E388(targetNode, v6);
+    }
+    UnityEngine_Transform__set_localRotation(targetNode, this->fields.overwriteRotation, 0LL);
+  }
 }
 
 
 void __fastcall NoblePhantasmTargetOverwriteTransform__ResetTarget(
         NoblePhantasmTargetOverwriteTransform_o *this,
-        BattleActorControl_o *targetActor,
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *overwriteTransformInfo,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
   UnityEngine_Transform_o *targetNode; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
 
-  NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(this, targetActor, method);
-  targetNode = this->fields.targetNode;
-  if ( !targetNode
-    || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.originalPosition, 0LL),
-        (targetNode = this->fields.targetNode) == 0LL) )
+  targetNode = (UnityEngine_Transform_o *)NoblePhantasmTargetOverwriteTransform__IsSettingCheck(
+                                            this,
+                                            overwriteTransformInfo,
+                                            method);
+  if ( ((unsigned __int8)targetNode & 1) != 0 )
   {
-    sub_1C22094(targetNode, v4);
+    if ( !overwriteTransformInfo
+      || (NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
+            this,
+            overwriteTransformInfo->fields._TargetActor_k__BackingField,
+            v7),
+          (targetNode = this->fields.targetNode) == 0LL)
+      || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.originalPosition, 0LL),
+          (targetNode = this->fields.targetNode) == 0LL) )
+    {
+      sub_1C2E388(targetNode, v6);
+    }
+    UnityEngine_Transform__set_localRotation(targetNode, this->fields.originalRotation, 0LL);
   }
-  UnityEngine_Transform__set_localRotation(targetNode, this->fields.originalRotation, 0LL);
 }
 
 
@@ -145,7 +194,73 @@ void __fastcall NoblePhantasmTargetOverwriteTransform__SaveOriginal(
         this->fields.originalPosition = localPosition,
         !targetNode) )
   {
-    sub_1C22094(targetNode, v4);
+    sub_1C2E388(targetNode, v4);
   }
   this->fields.originalRotation = UnityEngine_Transform__get_localRotation(targetNode, 0LL);
+}
+
+
+void __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo___ctor(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+int32_t __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__get_FunctionMaxTargetType(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._FunctionMaxTargetType_k__BackingField;
+}
+
+
+int32_t __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__get_FunctionTargetType(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._FunctionTargetType_k__BackingField;
+}
+
+
+BattleActorControl_o *__fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__get_TargetActor(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._TargetActor_k__BackingField;
+}
+
+
+void __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__set_FunctionMaxTargetType(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        int32_t value,
+        const MethodInfo *method)
+{
+  this->fields._FunctionMaxTargetType_k__BackingField = value;
+}
+
+
+void __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__set_FunctionTargetType(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        int32_t value,
+        const MethodInfo *method)
+{
+  this->fields._FunctionTargetType_k__BackingField = value;
+}
+
+
+void __fastcall NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__set_TargetActor(
+        NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo_o *this,
+        BattleActorControl_o *value,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  BattleSetupInfo_o *v5; // x5
+  FollowerInfo_o *v6; // x6
+  PartyListViewItem_o *v7; // x7
+
+  this->fields._TargetActor_k__BackingField = value;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

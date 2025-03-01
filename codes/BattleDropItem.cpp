@@ -12,15 +12,15 @@ DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const
   __int64 v5; // x1
   DropInfo_o *result; // x0
 
-  if ( (byte_4BDEB84 & 1) == 0 )
+  if ( (byte_4BFFDF1 & 1) == 0 )
   {
-    sub_1C21E38(&DropInfo_TypeInfo);
-    byte_4BDEB84 = 1;
+    sub_1C2E12C(&DropInfo_TypeInfo, method);
+    byte_4BFFDF1 = 1;
   }
-  v3 = sub_1C22084(DropInfo_TypeInfo);
+  v3 = sub_1C2E378(DropInfo_TypeInfo);
   DropInfo___ctor((DropInfo_o *)v3, 0LL);
   if ( !v3 )
-    sub_1C22094(v4, v5);
+    sub_1C2E388(v4, v5);
   result = (DropInfo_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
   *(int32x2_t *)(v3 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
@@ -124,7 +124,7 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
   int32_t num; // w8
 
   if ( !info )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&info->fields.type;
   this->fields.limitCount = info->fields.limitCount;
   num = info->fields.num;

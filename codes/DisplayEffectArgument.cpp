@@ -10,86 +10,88 @@ void __fastcall DisplayEffectArgument___ctor(
         bool ispopAdjustment,
         const MethodInfo *method)
 {
-  void *v17; // x1
+  __int64 v17; // x1
+  void *v18; // x1
   struct System_String_o **p_attachNodeName; // x24
-  UnityEngine_Vector3_c *v19; // x8
+  __int64 v20; // x1
+  UnityEngine_Vector3_c *v21; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
   float z; // s1
-  struct UnityEngine_Vector3_StaticFields *v22; // x8
-  float v23; // s1
-  struct System_Int32_array *v24; // x0
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
+  struct UnityEngine_Vector3_StaticFields *v24; // x8
+  float v25; // s1
+  struct System_Int32_array *v26; // x0
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  int64_t v33; // x2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  BattleSetupInfo_o *v36; // x5
+  FollowerInfo_o *v37; // x6
+  PartyListViewItem_o *v38; // x7
   struct BattleActionData_o **p_actData; // x20
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
+  int64_t v40; // x2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  BattleSetupInfo_o *v43; // x5
+  FollowerInfo_o *v44; // x6
+  PartyListViewItem_o *v45; // x7
+  int64_t v46; // x2
+  int32_t v47; // w3
+  System_String_o *v48; // x4
+  BattleSetupInfo_o *v49; // x5
+  FollowerInfo_o *v50; // x6
+  PartyListViewItem_o *v51; // x7
 
-  if ( (byte_4BDEAF8 & 1) == 0 )
+  if ( (byte_4BFFD5D & 1) == 0 )
   {
-    sub_1C21E38(&int___TypeInfo);
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDEAF8 = 1;
+    sub_1C2E12C(&int___TypeInfo, actObj);
+    sub_1C2E12C(&StringLiteral_1/*""*/, v17);
+    byte_4BFFD5D = 1;
   }
-  v17 = StringLiteral_1/*""*/;
+  v18 = StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.attachNodeName,
-    (int64_t)v17,
+    (int64_t)v18,
     *(int64_t *)&funcIndex,
     (int32_t)actData,
     (System_String_o *)isCommandAfter,
     (BattleSetupInfo_o *)isTreasureDevice,
     (FollowerInfo_o *)attachNodeName,
     (PartyListViewItem_o *)ispopAdjustment);
-  if ( !byte_4BD6BB1 )
+  if ( !byte_4BF7D91 )
   {
-    sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
-    byte_4BD6BB1 = 1;
+    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v20);
+    byte_4BF7D91 = 1;
   }
-  v19 = UnityEngine_Vector3_TypeInfo;
+  v21 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.buffOffset.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.buffOffset.fields.z = z;
-  v22 = v19->static_fields;
-  v23 = v22->zeroVector.fields.z;
-  *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v22->zeroVector.fields.x;
-  this->fields.popupOffset.fields.z = v23;
-  v24 = (struct System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
-  this->fields.fieldIndiv = v24;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.fieldIndiv, (int64_t)v24, v25, v26, v27, v28, v29, v30);
+  v24 = v21->static_fields;
+  v25 = v24->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v24->zeroVector.fields.x;
+  this->fields.popupOffset.fields.z = v25;
+  v26 = (struct System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
+  this->fields.fieldIndiv = v26;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.fieldIndiv, (int64_t)v26, v27, v28, v29, v30, v31, v32);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.actObj = actObj;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)actObj, v31, v32, v33, v34, v35, v36);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)actObj, v33, v34, v35, v36, v37, v38);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_1C21DDC((PartyOrganizationUtility_o *)p_actData, (int64_t)actData, v38, v39, v40, v41, v42, v43);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)p_actData, (int64_t)actData, v40, v41, v42, v43, v44, v45);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_1C21DDC((PartyOrganizationUtility_o *)p_attachNodeName, (int64_t)attachNodeName, v44, v45, v46, v47, v48, v49);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)p_attachNodeName, (int64_t)attachNodeName, v46, v47, v48, v49, v50, v51);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -103,10 +105,10 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
   __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_4BDEAFA & 1) == 0 )
+  if ( (byte_4BFFD5F & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDEAFA = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, targetObj);
+    byte_4BFFD5F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -121,7 +123,7 @@ bool __fastcall DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0LL);
 LABEL_13:
-    sub_1C22094(v5, v6);
+    sub_1C2E388(v5, v6);
   }
   return 1;
 }
@@ -161,10 +163,10 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   v15 = buffOffset.fields.z;
   v16 = buffOffset.fields.y;
   v17 = buffOffset.fields.x;
-  if ( (byte_4BDEAF9 & 1) == 0 )
+  if ( (byte_4BFFD5E & 1) == 0 )
   {
-    sub_1C21E38(&int___TypeInfo);
-    byte_4BDEAF9 = 1;
+    sub_1C2E12C(&int___TypeInfo, overwriteEffectIds);
+    byte_4BFFD5E = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v17;
@@ -173,7 +175,7 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.overwriteEffectIds,
     (int64_t)overwriteEffectIds,
     (int64_t)fieldIndiv,
@@ -183,8 +185,8 @@ DisplayEffectArgument_o *__fastcall DisplayEffectArgument__SetBuffParam(
     v8,
     v9);
   if ( !v10 )
-    v10 = (struct System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
+    v10 = (struct System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
   this->fields.fieldIndiv = v10;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.fieldIndiv, (int64_t)v10, v19, v20, v21, v22, v23, v24);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.fieldIndiv, (int64_t)v10, v19, v20, v21, v22, v23, v24);
   return this;
 }

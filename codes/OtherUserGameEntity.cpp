@@ -1,13 +1,13 @@
 void __fastcall OtherUserGameEntity___ctor(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDC986 & 1) == 0 )
+  if ( (byte_4BFDB95 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_long___ctor__);
-    byte_4BDC986 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_long___ctor__, method);
+    byte_4BFDB95 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_325992C *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3278CE4 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -26,40 +26,41 @@ void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
         const MethodInfo *method)
 {
   OtherUserGameEntity_o *v10; // x22
-  __int64 v11; // x8
-  __int64 v12; // x9
-  __int64 v13; // x8
-  OtherUserGameEntity_o **v14; // x9
-  BalanceConfig_c *v15; // x0
-  SkillInfo_array *v16; // x1
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  __int64 v11; // x1
+  __int64 v12; // x8
+  __int64 v13; // x9
+  __int64 v14; // x8
+  OtherUserGameEntity_o **v15; // x9
+  BalanceConfig_c *v16; // x0
+  SkillInfo_array *v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
 
   v10 = this;
-  if ( (byte_4BDC985 & 1) == 0 )
+  if ( (byte_4BFDB94 & 1) == 0 )
   {
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&SkillInfo___TypeInfo);
-    byte_4BDC985 = 1;
+    sub_1C2E12C(&BalanceConfig_TypeInfo, skillInfoList);
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(&SkillInfo___TypeInfo, v11);
+    byte_4BFDB94 = 1;
   }
-  v11 = 80LL;
+  v12 = 80LL;
   if ( !returnSupportServantType )
-    v11 = 72LL;
-  v12 = *(__int64 *)((char *)&v10->klass + v11);
-  if ( !v12 )
+    v12 = 72LL;
+  v13 = *(__int64 *)((char *)&v10->klass + v12);
+  if ( !v13 )
 LABEL_19:
-    sub_1C22094(this, skillInfoList);
-  if ( (int)*(_QWORD *)(v12 + 24) >= 1 )
+    sub_1C2E388(this, skillInfoList);
+  if ( (int)*(_QWORD *)(v13 + 24) >= 1 )
   {
-    v13 = (unsigned int)*(_QWORD *)(v12 + 24);
-    v14 = (OtherUserGameEntity_o **)(v12 + 32);
+    v14 = (unsigned int)*(_QWORD *)(v13 + 24);
+    v15 = (OtherUserGameEntity_o **)(v13 + 32);
     do
     {
-      this = *v14;
+      this = *v15;
       if ( supportDeckId < 1 )
       {
         if ( !this )
@@ -74,119 +75,128 @@ LABEL_19:
       }
       if ( this->fields.userLv == classPos )
       {
-        ServantLeaderInfo__GetAppendPassiveSkillInfo_41790300((ServantLeaderInfo_o *)this, skillInfoList, 0, 0LL);
+        ServantLeaderInfo__GetAppendPassiveSkillInfo_41875040((ServantLeaderInfo_o *)this, skillInfoList, 0, 0LL);
         return;
       }
 LABEL_14:
-      --v13;
-      ++v14;
+      --v14;
+      ++v15;
     }
-    while ( v13 );
+    while ( v14 );
   }
-  v15 = BalanceConfig_TypeInfo;
+  v16 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v15 = BalanceConfig_TypeInfo;
+    v16 = BalanceConfig_TypeInfo;
   }
-  v16 = (SkillInfo_array *)sub_1C21EE0(
+  v17 = (SkillInfo_array *)sub_1C2E1D4(
                              SkillInfo___TypeInfo,
-                             (unsigned int)v15->static_fields->SvtAppendPassiveSkillListMax);
-  *skillInfoList = v16;
-  sub_1C21DDC((PartyOrganizationUtility_o *)skillInfoList, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+                             (unsigned int)v16->static_fields->SvtAppendPassiveSkillListMax);
+  *skillInfoList = v17;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)skillInfoList, (int64_t)v17, v18, v19, v20, v21, v22, v23);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 EquipTargetInfo_o *__fastcall OtherUserGameEntity__GetEquipInfo(
         OtherUserGameEntity_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x21
+  __int64 v14; // x0
+  __int64 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *userRecommendSupportHash; // x19
-  System_Func_object__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
-  OtherUserGameEntity___c_c *v11; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
+  System_Func_object__bool__o *v17; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  OtherUserGameEntity___c_c *v19; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x19
   System_Func_object__object__o *_9__45_1; // x20
-  Il2CppObject *v14; // x21
+  Il2CppObject *v22; // x21
   struct OtherUserGameEntity___c_StaticFields *static_fields; // x0
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
 
-  if ( (byte_4BDC984 & 1) == 0 )
+  if ( (byte_4BFDB93 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-    sub_1C21E38(&System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
-    sub_1C21E38(&System_Func_UserRecommendSupportInfo__bool__TypeInfo);
-    sub_1C21E38(&Method_OtherUserGameEntity___c__GetEquipInfo_b__45_1__);
-    sub_1C21E38(&Method_OtherUserGameEntity___c__DisplayClass45_0__GetEquipInfo_b__0__);
-    sub_1C21E38(&OtherUserGameEntity___c__DisplayClass45_0_TypeInfo);
-    sub_1C21E38(&OtherUserGameEntity___c_TypeInfo);
-    byte_4BDC984 = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___, *(_QWORD *)&index);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___, v5);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___, v6);
+    sub_1C2E12C(&System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo, v7);
+    sub_1C2E12C(&System_Func_UserRecommendSupportInfo__bool__TypeInfo, v8);
+    sub_1C2E12C(&Method_OtherUserGameEntity___c__GetEquipInfo_b__45_1__, v9);
+    sub_1C2E12C(&Method_OtherUserGameEntity___c__DisplayClass45_0__GetEquipInfo_b__0__, v10);
+    sub_1C2E12C(&OtherUserGameEntity___c__DisplayClass45_0_TypeInfo, v11);
+    sub_1C2E12C(&OtherUserGameEntity___c_TypeInfo, v12);
+    byte_4BFDB93 = 1;
   }
-  v5 = sub_1C22084(OtherUserGameEntity___c__DisplayClass45_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_DWORD *)(v5 + 16) = index;
+  v13 = sub_1C2E378(OtherUserGameEntity___c__DisplayClass45_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v13, 0LL);
+  if ( !v13 )
+    sub_1C2E388(v14, v15);
+  *(_DWORD *)(v13 + 16) = index;
   userRecommendSupportHash = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.userRecommendSupportHash;
-  v9 = (System_Func_object__bool__o *)sub_1C22084(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+  v17 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
-    (Il2CppObject *)v5,
+    v17,
+    (Il2CppObject *)v13,
     Method_OtherUserGameEntity___c__DisplayClass45_0__GetEquipInfo_b__0__,
     0LL);
-  v10 = System_Linq_Enumerable__Where_object_(
+  v18 = System_Linq_Enumerable__Where_object_(
           userRecommendSupportHash,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_2FEF6F8 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-  v11 = OtherUserGameEntity___c_TypeInfo;
-  v12 = v10;
+          (System_Func_TSource__bool__o *)v17,
+          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+  v19 = OtherUserGameEntity___c_TypeInfo;
+  v20 = v18;
   if ( !OtherUserGameEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OtherUserGameEntity___c_TypeInfo);
-    v11 = OtherUserGameEntity___c_TypeInfo;
+    v19 = OtherUserGameEntity___c_TypeInfo;
   }
-  _9__45_1 = (System_Func_object__object__o *)v11->static_fields->__9__45_1;
+  _9__45_1 = (System_Func_object__object__o *)v19->static_fields->__9__45_1;
   if ( !_9__45_1 )
   {
-    if ( !v11->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = OtherUserGameEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = OtherUserGameEntity___c_TypeInfo;
     }
-    v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__45_1 = (System_Func_object__object__o *)sub_1C22084(System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
-    System_Func_object__object____ctor(_9__45_1, v14, Method_OtherUserGameEntity___c__GetEquipInfo_b__45_1__, 0LL);
+    v22 = (Il2CppObject *)v19->static_fields->__9;
+    _9__45_1 = (System_Func_object__object__o *)sub_1C2E378(System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
+    System_Func_object__object____ctor(_9__45_1, v22, Method_OtherUserGameEntity___c__GetEquipInfo_b__45_1__, 0LL);
     static_fields = OtherUserGameEntity___c_TypeInfo->static_fields;
     static_fields->__9__45_1 = (struct System_Func_UserRecommendSupportInfo__EquipTargetInfo__o *)_9__45_1;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&static_fields->__9__45_1,
       (int64_t)_9__45_1,
-      v16,
-      v17,
-      v18,
-      v19,
-      v20,
-      v21);
+      v24,
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
   }
-  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                               v12,
+  v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                               v20,
                                                                (System_Func_TSource__TResult__o *)_9__45_1,
-                                                               (const MethodInfo_2FE15B8 *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
+                                                               (const MethodInfo_3003B90 *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
   return (EquipTargetInfo_o *)System_Linq_Enumerable__FirstOrDefault_object_(
-                                v22,
-                                (const MethodInfo_2FD26B0 *)Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
+                                v30,
+                                (const MethodInfo_2FF4638 *)Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
 }
 
 
@@ -206,10 +216,12 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4BDC980 & 1) == 0 )
+  if ( (byte_4BFDB8F & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4BDC980 = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                      *(_QWORD *)&index);
+    byte_4BFDB8F = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
@@ -221,7 +233,7 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
   while ( 1 )
   {
     if ( v7 >= max_length )
-      sub_1C2209C(this, *(_QWORD *)&index);
+      sub_1C2E390(this, *(_QWORD *)&index);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_17;
@@ -238,14 +250,14 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
   this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
   if ( !this )
 LABEL_17:
-    sub_1C22094(this, *(_QWORD *)&index);
+    sub_1C2E388(this, *(_QWORD *)&index);
   message = this->fields.message;
   pushUserSvtId = this->fields.pushUserSvtId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v12.fields.currentCryptoKey = message;
   *(_QWORD *)&v12.fields.fakeValue = pushUserSvtId;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v12, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v12, 0LL);
 }
 
 
@@ -265,10 +277,12 @@ int64_t __fastcall OtherUserGameEntity__GetEquipUserSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-50h]
 
   v4 = this;
-  if ( (byte_4BDC97E & 1) == 0 )
+  if ( (byte_4BFDB8D & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4BDC97E = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
+                                      *(_QWORD *)&index);
+    byte_4BFDB8D = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
@@ -280,7 +294,7 @@ int64_t __fastcall OtherUserGameEntity__GetEquipUserSvtId(
   while ( 1 )
   {
     if ( v7 >= max_length )
-      sub_1C2209C(this, *(_QWORD *)&index);
+      sub_1C2E390(this, *(_QWORD *)&index);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_18;
@@ -297,14 +311,14 @@ int64_t __fastcall OtherUserGameEntity__GetEquipUserSvtId(
   this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
   if ( !this )
 LABEL_18:
-    sub_1C22094(this, *(_QWORD *)&index);
+    sub_1C2E388(this, *(_QWORD *)&index);
   v10 = *(_OWORD *)&this->fields.friendCode;
   *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&this->fields.userName;
   *(_OWORD *)&v12.fields.fakeValue = v10;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v11 = v12;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v11, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v11, 0LL);
 }
 
 
@@ -321,61 +335,63 @@ System_Int32_array *__fastcall OtherUserGameEntity__GetRecommendSupportMessageId
   UserRecommendSupportInfo_o *v8; // x11
 
   v4 = this;
-  if ( (byte_4BDC981 & 1) == 0 )
+  if ( (byte_4BFDB90 & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&int___TypeInfo);
-    byte_4BDC981 = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(&int___TypeInfo, *(_QWORD *)&index);
+    byte_4BFDB90 = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
 LABEL_13:
-    sub_1C22094(this, *(_QWORD *)&index);
+    sub_1C2E388(this, *(_QWORD *)&index);
   max_length = userRecommendSupportHash->max_length;
   if ( max_length < 1 )
-    return (System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
   v7 = 0;
   while ( 1 )
   {
     if ( max_length == v7 )
-      sub_1C2209C(this, *(_QWORD *)&index);
+      sub_1C2E390(this, *(_QWORD *)&index);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_13;
     if ( v8->fields.idx == index )
       return v8->fields.adviceMessageIds;
     if ( max_length == ++v7 )
-      return (System_Int32_array *)sub_1C21EE0(int___TypeInfo, 0LL);
+      return (System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
   }
 }
 
 
 int32_t __fastcall OtherUserGameEntity__GetReturnTypeByQuestId(int32_t questId, const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   Il2CppObject *Entity; // x0
-  const MethodInfo *v6; // x1
+  const MethodInfo *v8; // x1
 
-  if ( (byte_4BDC979 & 1) == 0 )
+  if ( (byte_4BFDB88 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C21E38(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDC979 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_QuestMaster___, method);
+    sub_1C2E12C(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BFDB88 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
+                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
   {
-    sub_1C22094(Instance, v4);
+    sub_1C2E388(Instance, v6);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              questId,
-             (const MethodInfo_325BDC8 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-  return Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, v6);
+             (const MethodInfo_327B180 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+  return Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, v8);
 }
 
 
@@ -401,96 +417,105 @@ UserRecommendSupportInfo_array *__fastcall OtherUserGameEntity__GetUserRecommend
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall OtherUserGameEntity__GetUserSvtId(
         OtherUserGameEntity_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x21
+  __int64 v14; // x0
+  __int64 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *userRecommendSupportHash; // x19
-  System_Func_object__bool__o *v9; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
-  OtherUserGameEntity___c_c *v11; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
+  System_Func_object__bool__o *v17; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  OtherUserGameEntity___c_c *v19; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x19
   System_Func_T__TResult__o *_9__20_1; // x20
-  Il2CppObject *v14; // x21
+  Il2CppObject *v22; // x21
   struct OtherUserGameEntity___c_StaticFields *static_fields; // x0
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
+  int64_t v24; // x2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  BattleSetupInfo_o *v27; // x5
+  FollowerInfo_o *v28; // x6
+  PartyListViewItem_o *v29; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v30; // x0
 
-  if ( (byte_4BDC97B & 1) == 0 )
+  if ( (byte_4BFDB8A & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Linq_Enumerable_FirstOrDefault_long___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
-    sub_1C21E38(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-    sub_1C21E38(&System_Func_UserRecommendSupportInfo__bool__TypeInfo);
-    sub_1C21E38(&System_Func_UserRecommendSupportInfo__long__TypeInfo);
-    sub_1C21E38(&Method_OtherUserGameEntity___c__GetUserSvtId_b__20_1__);
-    sub_1C21E38(&Method_OtherUserGameEntity___c__DisplayClass20_0__GetUserSvtId_b__0__);
-    sub_1C21E38(&OtherUserGameEntity___c__DisplayClass20_0_TypeInfo);
-    sub_1C21E38(&OtherUserGameEntity___c_TypeInfo);
-    byte_4BDC97B = 1;
+    sub_1C2E12C(&Method_System_Linq_Enumerable_FirstOrDefault_long___, *(_QWORD *)&index);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___, v5);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___, v6);
+    sub_1C2E12C(&System_Func_UserRecommendSupportInfo__bool__TypeInfo, v7);
+    sub_1C2E12C(&System_Func_UserRecommendSupportInfo__long__TypeInfo, v8);
+    sub_1C2E12C(&Method_OtherUserGameEntity___c__GetUserSvtId_b__20_1__, v9);
+    sub_1C2E12C(&Method_OtherUserGameEntity___c__DisplayClass20_0__GetUserSvtId_b__0__, v10);
+    sub_1C2E12C(&OtherUserGameEntity___c__DisplayClass20_0_TypeInfo, v11);
+    sub_1C2E12C(&OtherUserGameEntity___c_TypeInfo, v12);
+    byte_4BFDB8A = 1;
   }
-  v5 = sub_1C22084(OtherUserGameEntity___c__DisplayClass20_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
-  if ( !v5 )
-    sub_1C22094(v6, v7);
-  *(_DWORD *)(v5 + 16) = index;
+  v13 = sub_1C2E378(OtherUserGameEntity___c__DisplayClass20_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v13, 0LL);
+  if ( !v13 )
+    sub_1C2E388(v14, v15);
+  *(_DWORD *)(v13 + 16) = index;
   userRecommendSupportHash = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.userRecommendSupportHash;
-  v9 = (System_Func_object__bool__o *)sub_1C22084(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+  v17 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
-    (Il2CppObject *)v5,
+    v17,
+    (Il2CppObject *)v13,
     Method_OtherUserGameEntity___c__DisplayClass20_0__GetUserSvtId_b__0__,
     0LL);
-  v10 = System_Linq_Enumerable__Where_object_(
+  v18 = System_Linq_Enumerable__Where_object_(
           userRecommendSupportHash,
-          (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_2FEF6F8 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-  v11 = OtherUserGameEntity___c_TypeInfo;
-  v12 = v10;
+          (System_Func_TSource__bool__o *)v17,
+          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+  v19 = OtherUserGameEntity___c_TypeInfo;
+  v20 = v18;
   if ( !OtherUserGameEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OtherUserGameEntity___c_TypeInfo);
-    v11 = OtherUserGameEntity___c_TypeInfo;
+    v19 = OtherUserGameEntity___c_TypeInfo;
   }
-  _9__20_1 = (System_Func_T__TResult__o *)v11->static_fields->__9__20_1;
+  _9__20_1 = (System_Func_T__TResult__o *)v19->static_fields->__9__20_1;
   if ( !_9__20_1 )
   {
-    if ( !v11->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = OtherUserGameEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = OtherUserGameEntity___c_TypeInfo;
     }
-    v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__20_1 = (System_Func_T__TResult__o *)sub_1C22084(System_Func_UserRecommendSupportInfo__long__TypeInfo);
-    System_Func_object__long____ctor(_9__20_1, v14, Method_OtherUserGameEntity___c__GetUserSvtId_b__20_1__, 0LL);
+    v22 = (Il2CppObject *)v19->static_fields->__9;
+    _9__20_1 = (System_Func_T__TResult__o *)sub_1C2E378(System_Func_UserRecommendSupportInfo__long__TypeInfo);
+    System_Func_object__long____ctor(_9__20_1, v22, Method_OtherUserGameEntity___c__GetUserSvtId_b__20_1__, 0LL);
     static_fields = OtherUserGameEntity___c_TypeInfo->static_fields;
     static_fields->__9__20_1 = (struct System_Func_UserRecommendSupportInfo__long__o *)_9__20_1;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&static_fields->__9__20_1,
       (int64_t)_9__20_1,
-      v16,
-      v17,
-      v18,
-      v19,
-      v20,
-      v21);
+      v24,
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
   }
-  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
-                                                               v12,
+  v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
+                                                               v20,
                                                                (System_Func_TSource__TResult__o *)_9__20_1,
-                                                               (const MethodInfo_2FE12C4 *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
+                                                               (const MethodInfo_300389C *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
   return System_Linq_Enumerable__FirstOrDefault_long_(
-           v22,
-           (const MethodInfo_2FD2268 *)Method_System_Linq_Enumerable_FirstOrDefault_long___);
+           v30,
+           (const MethodInfo_2FF41F0 *)Method_System_Linq_Enumerable_FirstOrDefault_long___);
 }
 
 
@@ -521,10 +546,10 @@ bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+60h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v27; // [xsp+80h] [xbp-60h]
 
-  if ( (byte_4BDC97A & 1) == 0 )
+  if ( (byte_4BFDB89 & 1) == 0 )
   {
-    sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4BDC97A = 1;
+    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_4BFDB89 = 1;
   }
   v4 = 0;
   while ( 1 )
@@ -570,7 +595,7 @@ LABEL_17:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v26 = v27;
-    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v26, 0LL);
+    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v26, 0LL);
     v14 = v8 == 0;
     if ( v10 )
       goto LABEL_23;
@@ -598,7 +623,7 @@ LABEL_23:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v25 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v25, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v25, 0LL);
   v17 = v8 == 0;
   if ( v14 )
     goto LABEL_29;
@@ -616,14 +641,14 @@ LABEL_30:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v24 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v24, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v24, 0LL);
   if ( !v10 || (v20 = *(_QWORD *)(v10 + 144)) == 0 )
 LABEL_41:
-    sub_1C22094(v8, v9);
+    sub_1C2E388(v8, v9);
   v21 = *(_OWORD *)(v20 + 40);
   *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)(v20 + 24);
   *(_OWORD *)&v23.fields.fakeValue = v21;
-  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v23, 0LL) )
+  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v23, 0LL) )
     goto LABEL_38;
   return 0;
 }
@@ -648,7 +673,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -704,7 +729,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -760,7 +785,7 @@ int32_t __fastcall OtherUserGameEntity__getAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -817,7 +842,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipAtk(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_18:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -861,6 +886,7 @@ LABEL_14:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall OtherUserGameEntity__getEquipExp(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -880,7 +906,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipExp(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_15:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0;
@@ -888,7 +914,7 @@ LABEL_15:
   while ( 1 )
   {
     if ( v6 == v7 )
-      sub_1C2209C(this, classPos);
+      sub_1C2E390(this, *(_QWORD *)&classPos);
     v8 = *(_QWORD *)(v5 + 8LL * v7 + 32);
     if ( !v8 )
       goto LABEL_15;
@@ -927,7 +953,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_18:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -990,7 +1016,7 @@ EquipTargetInfo_o *__fastcall OtherUserGameEntity__getEquipInfo(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_16:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -1044,10 +1070,12 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
   v8 = this;
-  if ( (byte_4BDC97F & 1) == 0 )
+  if ( (byte_4BFDB8E & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4BDC97F = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                      *(_QWORD *)&classPos);
+    byte_4BFDB8E = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -1055,7 +1083,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_20:
-    sub_1C22094(this, *(_QWORD *)&classPos);
+    sub_1C2E388(this, *(_QWORD *)&classPos);
   if ( (int)*(_QWORD *)(v10 + 24) < 1 )
     return 0;
   v11 = (unsigned int)*(_QWORD *)(v10 + 24);
@@ -1090,7 +1118,7 @@ LABEL_15:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v18.fields.currentCryptoKey = v17;
   *(_QWORD *)&v18.fields.fakeValue = v16;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v18, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v18, 0LL);
 }
 
 
@@ -1114,10 +1142,12 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-50h]
 
   v8 = this;
-  if ( (byte_4BDC97D & 1) == 0 )
+  if ( (byte_4BFDB8C & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4BDC97D = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
+                                      *(_QWORD *)&classPos);
+    byte_4BFDB8C = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -1125,7 +1155,7 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_21:
-    sub_1C22094(this, *(_QWORD *)&classPos);
+    sub_1C2E388(this, *(_QWORD *)&classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v10 + 24) >= 1 )
   {
@@ -1156,7 +1186,7 @@ LABEL_21:
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v16 = v17;
-          return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47624888(&v16, 0LL);
+          return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v16, 0LL);
         }
       }
 LABEL_15:
@@ -1187,7 +1217,7 @@ int32_t __fastcall OtherUserGameEntity__getHp(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -1224,6 +1254,7 @@ LABEL_13:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall OtherUserGameEntity__getLimitCount(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1242,7 +1273,7 @@ int32_t __fastcall OtherUserGameEntity__getLimitCount(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_13:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0;
@@ -1250,7 +1281,7 @@ LABEL_13:
   while ( 1 )
   {
     if ( v6 == v7 )
-      sub_1C2209C(this, classPos);
+      sub_1C2E390(this, *(_QWORD *)&classPos);
     v8 = *(_QWORD *)(v5 + 8LL * v7 + 32);
     if ( !v8 )
       goto LABEL_13;
@@ -1281,7 +1312,7 @@ int32_t __fastcall OtherUserGameEntity__getLv(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_17:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   this = 0LL;
   if ( (int)*(_QWORD *)(v6 + 24) >= 1 )
   {
@@ -1336,7 +1367,7 @@ int32_t __fastcall OtherUserGameEntity__getMaxLv(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_16:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   if ( (int)*(_QWORD *)(v6 + 24) < 1 )
     return 0;
   v7 = (unsigned int)*(_QWORD *)(v6 + 24);
@@ -1365,6 +1396,7 @@ LABEL_13:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1391,7 +1423,7 @@ ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
     while ( 1 )
     {
       if ( v8 == v9 )
-        sub_1C2209C(this, classPos);
+        sub_1C2E390(this, *(_QWORD *)&classPos);
       this = *(OtherUserGameEntity_o **)(v7 + 8LL * v9 + 32);
       if ( !this )
         break;
@@ -1405,12 +1437,13 @@ ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
         return 0LL;
     }
 LABEL_16:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   }
   return 0LL;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall OtherUserGameEntity__getSkillIdList(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1428,7 +1461,7 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillIdList(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_13:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1436,7 +1469,7 @@ LABEL_13:
   while ( 1 )
   {
     if ( v6 == v7 )
-      sub_1C2209C(this, classPos);
+      sub_1C2E390(this, *(_QWORD *)&classPos);
     this = *(OtherUserGameEntity_o **)(v5 + 8LL * v7 + 32);
     if ( !this )
       goto LABEL_13;
@@ -1457,40 +1490,41 @@ void __fastcall OtherUserGameEntity__getSkillInfo(
         const MethodInfo *method)
 {
   OtherUserGameEntity_o *v10; // x22
-  __int64 v11; // x8
-  __int64 v12; // x9
-  __int64 v13; // x8
-  OtherUserGameEntity_o **v14; // x9
-  BalanceConfig_c *v15; // x0
-  SkillInfo_array *v16; // x1
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  __int64 v11; // x1
+  __int64 v12; // x8
+  __int64 v13; // x9
+  __int64 v14; // x8
+  OtherUserGameEntity_o **v15; // x9
+  BalanceConfig_c *v16; // x0
+  SkillInfo_array *v17; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
 
   v10 = this;
-  if ( (byte_4BDC982 & 1) == 0 )
+  if ( (byte_4BFDB91 & 1) == 0 )
   {
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&SkillInfo___TypeInfo);
-    byte_4BDC982 = 1;
+    sub_1C2E12C(&BalanceConfig_TypeInfo, skillInfoList);
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(&SkillInfo___TypeInfo, v11);
+    byte_4BFDB91 = 1;
   }
-  v11 = 80LL;
+  v12 = 80LL;
   if ( !returnSupportServantType )
-    v11 = 72LL;
-  v12 = *(__int64 *)((char *)&v10->klass + v11);
-  if ( !v12 )
+    v12 = 72LL;
+  v13 = *(__int64 *)((char *)&v10->klass + v12);
+  if ( !v13 )
 LABEL_20:
-    sub_1C22094(this, skillInfoList);
-  if ( (int)*(_QWORD *)(v12 + 24) >= 1 )
+    sub_1C2E388(this, skillInfoList);
+  if ( (int)*(_QWORD *)(v13 + 24) >= 1 )
   {
-    v13 = (unsigned int)*(_QWORD *)(v12 + 24);
-    v14 = (OtherUserGameEntity_o **)(v12 + 32);
+    v14 = (unsigned int)*(_QWORD *)(v13 + 24);
+    v15 = (OtherUserGameEntity_o **)(v13 + 32);
     do
     {
-      this = *v14;
+      this = *v15;
       if ( supportDeckId < 1 )
       {
         if ( !this )
@@ -1509,23 +1543,24 @@ LABEL_20:
         return;
       }
 LABEL_15:
-      --v13;
-      ++v14;
+      --v14;
+      ++v15;
     }
-    while ( v13 );
+    while ( v14 );
   }
-  v15 = BalanceConfig_TypeInfo;
+  v16 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v15 = BalanceConfig_TypeInfo;
+    v16 = BalanceConfig_TypeInfo;
   }
-  v16 = (SkillInfo_array *)sub_1C21EE0(SkillInfo___TypeInfo, (unsigned int)v15->static_fields->SvtSkillListMax);
-  *skillInfoList = v16;
-  sub_1C21DDC((PartyOrganizationUtility_o *)skillInfoList, (int64_t)v16, v17, v18, v19, v20, v21, v22);
+  v17 = (SkillInfo_array *)sub_1C2E1D4(SkillInfo___TypeInfo, (unsigned int)v16->static_fields->SvtSkillListMax);
+  *skillInfoList = v17;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)skillInfoList, (int64_t)v17, v18, v19, v20, v21, v22, v23);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Int32_array *__fastcall OtherUserGameEntity__getSkillLevelList(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1543,7 +1578,7 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillLevelList(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_13:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1551,7 +1586,7 @@ LABEL_13:
   while ( 1 )
   {
     if ( v6 == v7 )
-      sub_1C2209C(this, classPos);
+      sub_1C2E390(this, *(_QWORD *)&classPos);
     this = *(OtherUserGameEntity_o **)(v5 + 8LL * v7 + 32);
     if ( !this )
       goto LABEL_13;
@@ -1582,10 +1617,12 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
   v8 = this;
-  if ( (byte_4BDC97C & 1) == 0 )
+  if ( (byte_4BFDB8B & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4BDC97C = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(
+                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                      *(_QWORD *)&classPos);
+    byte_4BFDB8B = 1;
   }
   v9 = 80LL;
   if ( !returnSupportServantType )
@@ -1593,7 +1630,7 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
   v10 = *(__int64 *)((char *)&v8->klass + v9);
   if ( !v10 )
 LABEL_20:
-    sub_1C22094(this, *(_QWORD *)&classPos);
+    sub_1C2E388(this, *(_QWORD *)&classPos);
   if ( (int)*(_QWORD *)(v10 + 24) < 1 )
     return 0;
   v11 = (unsigned int)*(_QWORD *)(v10 + 24);
@@ -1624,7 +1661,7 @@ LABEL_15:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v17.fields.currentCryptoKey = v16;
   *(_QWORD *)&v17.fields.fakeValue = v15;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47621364(v17, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v17, 0LL);
 }
 
 
@@ -1650,10 +1687,10 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
   PartyListViewItem_o *v21; // x7
 
   v10 = this;
-  if ( (byte_4BDC983 & 1) == 0 )
+  if ( (byte_4BFDB92 & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1C21E38(&TreasureDvcInfo_TypeInfo);
-    byte_4BDC983 = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2E12C(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_4BFDB92 = 1;
   }
   v11 = 80LL;
   if ( !returnSupportServantType )
@@ -1661,14 +1698,14 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
   v12 = *(__int64 *)((char *)&v10->klass + v11);
   if ( !v12 )
 LABEL_18:
-    sub_1C22094(this, tdInfo);
+    sub_1C2E388(this, tdInfo);
   if ( (int)*(_QWORD *)(v12 + 24) < 1 )
   {
 LABEL_16:
-    v15 = (TreasureDvcInfo_o *)sub_1C22084(TreasureDvcInfo_TypeInfo);
+    v15 = (TreasureDvcInfo_o *)sub_1C2E378(TreasureDvcInfo_TypeInfo);
     TreasureDvcInfo___ctor(v15, 0LL);
     *tdInfo = v15;
-    sub_1C21DDC((PartyOrganizationUtility_o *)tdInfo, (int64_t)v15, v16, v17, v18, v19, v20, v21);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)tdInfo, (int64_t)v15, v16, v17, v18, v19, v20, v21);
     return 0;
   }
   v13 = (unsigned int)*(_QWORD *)(v12 + 24);
@@ -1699,7 +1736,7 @@ LABEL_15:
 }
 
 
-bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_40714956(
+bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_40789476(
         OtherUserGameEntity_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -1718,7 +1755,7 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_40714956(
   v7 = *(__int64 *)((char *)&this->klass + v6);
   if ( !v7 )
 LABEL_13:
-    sub_1C22094(this, tdLv);
+    sub_1C2E388(this, tdLv);
   v8 = *(_DWORD *)(v7 + 24);
   if ( v8 < 1 )
   {
@@ -1733,12 +1770,12 @@ LABEL_11:
     while ( 1 )
     {
       if ( v8 == v9 )
-        sub_1C2209C(this, tdLv);
+        sub_1C2E390(this, tdLv);
       this = *(OtherUserGameEntity_o **)(v7 + 8LL * v9 + 32);
       if ( !this )
         goto LABEL_13;
       if ( this->fields.userLv == classPos && this->fields.friendCode )
-        return ServantLeaderInfo__getTreasureDeviceInfo_41780952((ServantLeaderInfo_o *)this, tdLv, tdMaxLv, 0LL);
+        return ServantLeaderInfo__getTreasureDeviceInfo_41865692((ServantLeaderInfo_o *)this, tdLv, tdMaxLv, 0LL);
       if ( v8 == ++v9 )
         goto LABEL_11;
     }
@@ -1764,7 +1801,7 @@ int32_t __fastcall OtherUserGameEntity__getTreasureDeviceLevelIcon(
   v6 = *(__int64 *)((char *)&this->klass + v5);
   if ( !v6 )
 LABEL_16:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   if ( (int)*(_QWORD *)(v6 + 24) < 1 )
     return 0;
   v7 = (unsigned int)*(_QWORD *)(v6 + 24);
@@ -1793,6 +1830,7 @@ LABEL_13:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall OtherUserGameEntity__getUpdatedAt(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1805,15 +1843,16 @@ int64_t __fastcall OtherUserGameEntity__getUpdatedAt(
   if ( !userSvtLeaderHash )
     goto LABEL_5;
   if ( !userSvtLeaderHash->max_length )
-    sub_1C2209C(this, classPos);
+    sub_1C2E390(this, *(_QWORD *)&classPos);
   v4 = userSvtLeaderHash->m_Items[0];
   if ( !v4 )
 LABEL_5:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   return v4->fields.updatedAt;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int64_t __fastcall OtherUserGameEntity__getUserSvtId(
         OtherUserGameEntity_o *this,
         int32_t classPos,
@@ -1832,7 +1871,7 @@ int64_t __fastcall OtherUserGameEntity__getUserSvtId(
   v5 = *(__int64 *)((char *)&this->klass + v4);
   if ( !v5 )
 LABEL_13:
-    sub_1C22094(this, classPos);
+    sub_1C2E388(this, classPos);
   v6 = *(_DWORD *)(v5 + 24);
   if ( v6 < 1 )
     return 0LL;
@@ -1840,7 +1879,7 @@ LABEL_13:
   while ( 1 )
   {
     if ( v6 == v7 )
-      sub_1C2209C(this, classPos);
+      sub_1C2E390(this, *(_QWORD *)&classPos);
     v8 = *(_QWORD *)(v5 + 8LL * v7 + 32);
     if ( !v8 )
       goto LABEL_13;
@@ -1854,31 +1893,32 @@ LABEL_13:
 
 void __fastcall OtherUserGameEntity___c___cctor(const MethodInfo *method)
 {
-  Il2CppObject *v1; // x19
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v1; // x1
+  Il2CppObject *v2; // x19
+  int64_t v3; // x2
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  BattleSetupInfo_o *v6; // x5
+  FollowerInfo_o *v7; // x6
+  PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BDC987 & 1) == 0 )
+  if ( (byte_4BFDB96 & 1) == 0 )
   {
-    sub_1C21E38(&OtherUserGameEntity___c_TypeInfo);
-    byte_4BDC987 = 1;
+    sub_1C2E12C(&OtherUserGameEntity___c_TypeInfo, v1);
+    byte_4BFDB96 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C22084(OtherUserGameEntity___c_TypeInfo);
-  System_Object___ctor(v1, 0LL);
-  OtherUserGameEntity___c_TypeInfo->static_fields->__9 = (struct OtherUserGameEntity___c_o *)v1;
-  sub_1C21DDC(
+  v2 = (Il2CppObject *)sub_1C2E378(OtherUserGameEntity___c_TypeInfo);
+  System_Object___ctor(v2, 0LL);
+  OtherUserGameEntity___c_TypeInfo->static_fields->__9 = (struct OtherUserGameEntity___c_o *)v2;
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)OtherUserGameEntity___c_TypeInfo->static_fields,
-    (int64_t)v1,
-    v2,
+    (int64_t)v2,
     v3,
     v4,
     v5,
     v6,
-    v7);
+    v7,
+    v8);
 }
 
 
@@ -1894,7 +1934,7 @@ EquipTargetInfo_o *__fastcall OtherUserGameEntity___c___GetEquipInfo_b__45_1(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return UserRecommendSupportInfo__GetEquipTarget(info, 0LL);
 }
 
@@ -1905,7 +1945,7 @@ int64_t __fastcall OtherUserGameEntity___c___GetUserSvtId_b__20_1(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return UserRecommendSupportInfo__GetUserServantId(info, 0LL);
 }
 
@@ -1924,7 +1964,7 @@ bool __fastcall OtherUserGameEntity___c__DisplayClass20_0___GetUserSvtId_b__0(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return info->fields.idx == this->fields.index;
 }
 
@@ -1943,6 +1983,6 @@ bool __fastcall OtherUserGameEntity___c__DisplayClass45_0___GetEquipInfo_b__0(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   return info->fields.idx == this->fields.index;
 }

@@ -20,37 +20,39 @@ void __fastcall EventInfoChronologyComponent__Initialize(
 
 void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   UnityEngine_GameObject_o *objHistory; // x0
-  Il2CppObject *v4; // x20
-  int32_t v5; // w21
-  UnityEngine_Component_o *v6; // x22
+  Il2CppObject *v6; // x20
+  int32_t v7; // w21
+  UnityEngine_Component_o *v8; // x22
   Il2CppObject *Component_object; // x23
   UnityEngine_Object_o *widget; // x21
   UnityEngine_BoxCollider_o *collider; // x21
   unsigned int size; // s0
   int monitor_high; // w22
-  float v12; // s8
+  float v14; // s8
   UnityEngine_Object_o *spriteLineH; // x21
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BDCD27 & 1) == 0 )
+  if ( (byte_4BFDF32 & 1) == 0 )
   {
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDCD27 = 1;
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___, method);
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, v3);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
+    byte_4BFDF32 = 1;
   }
   objHistory = this->fields.objHistory;
   if ( !objHistory )
     goto LABEL_40;
-  v4 = 0LL;
-  v5 = 0;
+  v6 = 0LL;
+  v7 = 0;
   while ( 1 )
   {
     objHistory = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(objHistory, 0LL);
     if ( !objHistory )
       goto LABEL_40;
-    if ( v5 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)objHistory, 0LL) )
+    if ( v7 >= UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)objHistory, 0LL) )
       break;
     objHistory = this->fields.objHistory;
     if ( objHistory )
@@ -60,17 +62,17 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
       {
         objHistory = (UnityEngine_GameObject_o *)UnityEngine_Transform__GetChild(
                                                    (UnityEngine_Transform_o *)objHistory,
-                                                   v5,
+                                                   v7,
                                                    0LL);
         if ( objHistory )
         {
-          v6 = (UnityEngine_Component_o *)objHistory;
+          v8 = (UnityEngine_Component_o *)objHistory;
           objHistory = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)objHistory, 0LL);
           if ( objHistory )
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  objHistory,
-                                 (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
+                                 (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_EnableCommonReleaseComponent___);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             objHistory = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -83,20 +85,20 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
                 goto LABEL_40;
               EnableCommonReleaseComponent__Refresh((EnableCommonReleaseComponent_o *)Component_object, 0LL);
             }
-            objHistory = UnityEngine_Component__get_gameObject(v6, 0LL);
+            objHistory = UnityEngine_Component__get_gameObject(v8, 0LL);
             if ( objHistory )
             {
               if ( UnityEngine_GameObject__get_activeSelf(objHistory, 0LL) )
               {
-                objHistory = UnityEngine_Component__get_gameObject(v6, 0LL);
+                objHistory = UnityEngine_Component__get_gameObject(v8, 0LL);
                 if ( !objHistory )
                   goto LABEL_40;
-                v4 = UnityEngine_GameObject__GetComponent_object_(
+                v6 = UnityEngine_GameObject__GetComponent_object_(
                        objHistory,
-                       (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
               }
               objHistory = this->fields.objHistory;
-              ++v5;
+              ++v7;
               if ( objHistory )
                 continue;
             }
@@ -108,7 +110,7 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v6, 0LL, 0LL) )
   {
     widget = (UnityEngine_Object_o *)this->fields.widget;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -116,12 +118,12 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
     objHistory = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(widget, 0LL, 0LL);
     if ( ((unsigned __int8)objHistory & 1) != 0 )
     {
-      if ( !v4 )
+      if ( !v6 )
         goto LABEL_40;
       objHistory = (UnityEngine_GameObject_o *)this->fields.widget;
       if ( !objHistory )
         goto LABEL_40;
-      UIWidget__set_height((UIWidget_o *)objHistory, HIDWORD(v4[10].monitor) + 7, 0LL);
+      UIWidget__set_height((UIWidget_o *)objHistory, HIDWORD(v6[10].monitor) + 7, 0LL);
       collider = this->fields.collider;
       if ( !collider )
         goto LABEL_40;
@@ -129,12 +131,12 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
       objHistory = (UnityEngine_GameObject_o *)this->fields.collider;
       if ( !objHistory )
         goto LABEL_40;
-      monitor_high = HIDWORD(v4[10].monitor);
-      v12 = *(float *)&size;
-      v14 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0LL);
-      v14.fields.y = (float)(monitor_high + 7);
-      v14.fields.x = v12;
-      UnityEngine_BoxCollider__set_size(collider, v14, 0LL);
+      monitor_high = HIDWORD(v6[10].monitor);
+      v14 = *(float *)&size;
+      v16 = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)objHistory, 0LL);
+      v16.fields.y = (float)(monitor_high + 7);
+      v16.fields.x = v14;
+      UnityEngine_BoxCollider__set_size(collider, v16, 0LL);
     }
     spriteLineH = (UnityEngine_Object_o *)this->fields.spriteLineH;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -142,17 +144,17 @@ void __fastcall EventInfoChronologyComponent__Refresh(EventInfoChronologyCompone
     objHistory = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(spriteLineH, 0LL, 0LL);
     if ( ((unsigned __int8)objHistory & 1) != 0 )
     {
-      if ( v4 )
+      if ( v6 )
       {
         objHistory = (UnityEngine_GameObject_o *)this->fields.spriteLineH;
         if ( objHistory )
         {
-          UIWidget__set_width((UIWidget_o *)objHistory, HIDWORD(v4[10].monitor) + 10, 0LL);
+          UIWidget__set_width((UIWidget_o *)objHistory, HIDWORD(v6[10].monitor) + 10, 0LL);
           return;
         }
       }
 LABEL_40:
-      sub_1C22094(objHistory, method);
+      sub_1C2E388(objHistory, method);
     }
   }
 }
@@ -165,7 +167,7 @@ void __fastcall EventInfoChronologyComponent__SetSprite(
         const MethodInfo *method)
 {
   if ( !src || !dest )
-    sub_1C22094(this, src);
+    sub_1C2E388(this, src);
   UISprite__set_atlas(dest, src->fields.mAtlas, 0LL);
   UISprite__set_spriteName(dest, src->fields.mSpriteName, 0LL);
 }

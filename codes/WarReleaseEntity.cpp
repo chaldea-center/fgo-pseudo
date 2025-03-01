@@ -1,16 +1,17 @@
 void __fastcall WarReleaseEntity___ctor(WarReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD665 & 1) == 0 )
+  if ( (byte_4BFE8A0 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDD665 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFE8A0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall WarReleaseEntity__CreatePK(
         int32_t warId,
         int32_t condType,
@@ -18,17 +19,17 @@ System_String_o *__fastcall WarReleaseEntity__CreatePK(
         int64_t condNum,
         const MethodInfo *method)
 {
-  if ( (byte_4BDD664 & 1) == 0 )
+  if ( (byte_4BFE89F & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
-    byte_4BDD664 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&condType);
+    byte_4BFE89F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            warId,
            condType,
            condId,
            condNum,
-           (const MethodInfo_2FAEA14 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_2FD0440 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
@@ -81,10 +82,10 @@ bool __fastcall WarReleaseEntity__IsRelease(WarReleaseEntity_o *this, const Meth
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4BDD663 & 1) == 0 )
+  if ( (byte_4BFE89E & 1) == 0 )
   {
-    sub_1C21E38(&CondType_TypeInfo);
-    byte_4BDD663 = 1;
+    sub_1C2E12C(&CondType_TypeInfo, method);
+    byte_4BFE89E = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;

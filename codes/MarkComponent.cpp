@@ -1,25 +1,26 @@
 void __fastcall MarkComponent___ctor(MarkComponent_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_HashSet_T__o *v3; // x20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_HashSet_T__o *v4; // x20
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BDD9B2 & 1) == 0 )
+  if ( (byte_4BFEBEF & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_HashSet_string___ctor__);
-    sub_1C21E38(&System_Collections_Generic_HashSet_string__TypeInfo);
-    byte_4BDD9B2 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_HashSet_string___ctor__, method);
+    sub_1C2E12C(&System_Collections_Generic_HashSet_string__TypeInfo, v3);
+    byte_4BFEBEF = 1;
   }
-  v3 = (System_Collections_Generic_HashSet_T__o *)sub_1C22084(System_Collections_Generic_HashSet_string__TypeInfo);
+  v4 = (System_Collections_Generic_HashSet_T__o *)sub_1C2E378(System_Collections_Generic_HashSet_string__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
-    v3,
-    (const MethodInfo_3508BA4 *)Method_System_Collections_Generic_HashSet_string___ctor__);
-  this->fields.hash = (struct System_Collections_Generic_HashSet_string__o *)v3;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.hash, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+    v4,
+    (const MethodInfo_3527820 *)Method_System_Collections_Generic_HashSet_string___ctor__);
+  this->fields.hash = (struct System_Collections_Generic_HashSet_string__o *)v4;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.hash, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -28,18 +29,18 @@ void __fastcall MarkComponent__Add(MarkComponent_o *this, System_String_o *key, 
 {
   System_Collections_Generic_HashSet_T__o *hash; // x0
 
-  if ( (byte_4BDD9AF & 1) == 0 )
+  if ( (byte_4BFEBEC & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_HashSet_string__Add__);
-    byte_4BDD9AF = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_HashSet_string__Add__, key);
+    byte_4BFEBEC = 1;
   }
   hash = (System_Collections_Generic_HashSet_T__o *)this->fields.hash;
   if ( !hash )
-    sub_1C22094(0LL, key);
+    sub_1C2E388(0LL, key);
   System_Collections_Generic_HashSet_object___Add(
     hash,
     (Il2CppObject *)key,
-    (const MethodInfo_3509D88 *)Method_System_Collections_Generic_HashSet_string__Add__);
+    (const MethodInfo_3528A04 *)Method_System_Collections_Generic_HashSet_string__Add__);
 }
 
 
@@ -47,18 +48,18 @@ bool __fastcall MarkComponent__Contains(MarkComponent_o *this, System_String_o *
 {
   System_Collections_Generic_HashSet_T__o *hash; // x0
 
-  if ( (byte_4BDD9B1 & 1) == 0 )
+  if ( (byte_4BFEBEE & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_HashSet_string__Contains__);
-    byte_4BDD9B1 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_HashSet_string__Contains__, key);
+    byte_4BFEBEE = 1;
   }
   hash = (System_Collections_Generic_HashSet_T__o *)this->fields.hash;
   if ( !hash )
-    sub_1C22094(0LL, key);
+    sub_1C2E388(0LL, key);
   return System_Collections_Generic_HashSet_object___Contains(
            hash,
            (Il2CppObject *)key,
-           (const MethodInfo_3509298 *)Method_System_Collections_Generic_HashSet_string__Contains__);
+           (const MethodInfo_3527F14 *)Method_System_Collections_Generic_HashSet_string__Contains__);
 }
 
 
@@ -66,16 +67,16 @@ void __fastcall MarkComponent__Remove(MarkComponent_o *this, System_String_o *ke
 {
   System_Collections_Generic_HashSet_T__o *hash; // x0
 
-  if ( (byte_4BDD9B0 & 1) == 0 )
+  if ( (byte_4BFEBED & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_HashSet_string__Remove__);
-    byte_4BDD9B0 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_HashSet_string__Remove__, key);
+    byte_4BFEBED = 1;
   }
   hash = (System_Collections_Generic_HashSet_T__o *)this->fields.hash;
   if ( !hash )
-    sub_1C22094(0LL, key);
+    sub_1C2E388(0LL, key);
   System_Collections_Generic_HashSet_object___Remove(
     hash,
     (Il2CppObject *)key,
-    (const MethodInfo_3509464 *)Method_System_Collections_Generic_HashSet_string__Remove__);
+    (const MethodInfo_35280E0 *)Method_System_Collections_Generic_HashSet_string__Remove__);
 }

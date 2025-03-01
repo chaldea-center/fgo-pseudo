@@ -4,18 +4,19 @@ void __fastcall ClassBoardReleaseLockRequest__beginRequest(
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x1
+  __int64 v6; // x1
+  const MethodInfo *v7; // x3
+  const MethodInfo *v8; // x1
 
-  if ( (byte_4BDDE22 & 1) == 0 )
+  if ( (byte_4BFF066 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_18294/*"classBoardBaseId"*/);
-    sub_1C21E38(&StringLiteral_23878/*"squareId"*/);
-    byte_4BDDE22 = 1;
+    sub_1C2E12C(&StringLiteral_18304/*"classBoardBaseId"*/, data);
+    sub_1C2E12C(&StringLiteral_23900/*"squareId"*/, v6);
+    byte_4BFF066 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18294/*"classBoardBaseId"*/, data.fields.ClassBoardId, v3);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23878/*"squareId"*/, data.fields.SquareId, v6);
-  RequestBase__beginRequest((RequestBase_o *)this, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18304/*"classBoardBaseId"*/, data.fields.ClassBoardId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23900/*"squareId"*/, data.fields.SquareId, v7);
+  RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
 
@@ -23,18 +24,19 @@ System_String_o *__fastcall ClassBoardReleaseLockRequest__getURL(
         ClassBoardReleaseLockRequest_o *this,
         const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDE21 & 1) == 0 )
+  if ( (byte_4BFF065 & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_18292/*"classBoard/releaseLock"*/);
-    byte_4BDDE21 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_18302/*"classBoard/releaseLock"*/, v2);
+    byte_4BFF065 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_18292/*"classBoard/releaseLock"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_18302/*"classBoard/releaseLock"*/, 0LL);
 }
 
 
@@ -43,44 +45,46 @@ void __fastcall ClassBoardReleaseLockRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x0
+  System_String_o *v10; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v10; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BDDE23 & 1) == 0 )
+  if ( (byte_4BFF067 & 1) == 0 )
   {
-    sub_1C21E38(&JsonManager_TypeInfo);
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDE23 = 1;
+    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF067 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(123, responseList, 0LL);
-  if ( v5
-    && (v6 = v5, ResponseData__checkError_42505456(v5, 0LL))
-    && (success = (Il2CppObject *)v6->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(123, responseList, 0LL);
+  if ( v7
+    && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL))
+    && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0LL);
+    v10 = JsonManager__toJson(success, 0, 0, 0LL);
     CallBack = this->fields.CallBack;
     if ( CallBack )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
-        v8,
+        v10,
         *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v10 = this->fields.CallBack;
-    if ( v10 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v10->fields.m_target)(
-        v10->fields.original_method_info,
-        StringLiteral_22456/*"ng"*/,
-        *(_QWORD *)&v10->fields.extra_arg);
+    v12 = this->fields.CallBack;
+    if ( v12 )
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
+        v12->fields.original_method_info,
+        StringLiteral_22468/*"ng"*/,
+        *(_QWORD *)&v12->fields.extra_arg);
   }
 }

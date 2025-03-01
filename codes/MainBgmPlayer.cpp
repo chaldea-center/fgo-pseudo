@@ -7,22 +7,23 @@ void __fastcall MainBgmPlayer___ctor(MainBgmPlayer_o *this, const MethodInfo *me
 
 BgmPlayArgs_o *__fastcall MainBgmPlayer__ExportPlayArgs(MainBgmPlayer_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   System_String_o *bgmName; // x19
   float bgmVolume; // s0
-  const MethodInfo *v5; // x1
+  const MethodInfo *v6; // x1
   int32_t PlayTime; // w21
-  BgmPlayArgs_o *v7; // x0
-  BgmPlayArgs_o *v8; // x20
-  const MethodInfo *v9; // x4
+  BgmPlayArgs_o *v8; // x0
+  BgmPlayArgs_o *v9; // x20
+  const MethodInfo *v10; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-28h] BYREF
   System_Nullable_float__o p_volume; // 0:x0.8
-  System_Nullable_float__o v13; // 0:x2.8
+  System_Nullable_float__o v14; // 0:x2.8
 
-  if ( (byte_4BDBB65 & 1) == 0 )
+  if ( (byte_4BFCD6A & 1) == 0 )
   {
-    sub_1C21E38(&MainBgmPlayArgs_TypeInfo);
-    sub_1C21E38(&Method_System_Nullable_float___ctor__);
-    byte_4BDBB65 = 1;
+    sub_1C2E12C(&MainBgmPlayArgs_TypeInfo, method);
+    sub_1C2E12C(&Method_System_Nullable_float___ctor__, v3);
+    byte_4BFCD6A = 1;
   }
   bgmName = this->fields.bgmName;
   if ( !bgmName )
@@ -30,11 +31,11 @@ BgmPlayArgs_o *__fastcall MainBgmPlayer__ExportPlayArgs(MainBgmPlayer_o *this, c
   bgmVolume = this->fields.bgmVolume;
   p_volume = (System_Nullable_float__o)&volume;
   volume = 0LL;
-  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_376D9C4 *)Method_System_Nullable_float___ctor__);
-  PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v5);
-  v7 = (BgmPlayArgs_o *)sub_1C22084(MainBgmPlayArgs_TypeInfo);
-  v13 = volume;
-  v8 = v7;
-  BgmPlayArgs___ctor(v7, bgmName, v13, 0.0, PlayTime, v9);
-  return v8;
+  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_378A18C *)Method_System_Nullable_float___ctor__);
+  PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v6);
+  v8 = (BgmPlayArgs_o *)sub_1C2E378(MainBgmPlayArgs_TypeInfo);
+  v14 = volume;
+  v9 = v8;
+  BgmPlayArgs___ctor(v8, bgmName, v14, 0.0, PlayTime, v10);
+  return v9;
 }

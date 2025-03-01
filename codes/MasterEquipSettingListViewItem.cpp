@@ -10,13 +10,13 @@ void __fastcall MasterEquipSettingListViewItem___ctor(
   MasterEquipSettingListViewItem_o *v11; // x23
 
   v11 = this;
-  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42081352((ListViewItem_o *)this, index, 0LL);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1C21DDC(&v11->fields._EquipTexture_k__BackingField, equipTexture);
+  sub_1C2E0D0(&v11->fields._EquipTexture_k__BackingField);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 128);
-  sub_1C21DDC(v11, shortName);
+  sub_1C2E0D0(v11);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -36,7 +36,7 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
         const MethodInfo *method)
 {
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1C21DDC(&this->fields._EquipTexture_k__BackingField, texture);
+  sub_1C2E0D0(&this->fields._EquipTexture_k__BackingField);
 }
 
 
@@ -93,7 +93,7 @@ void __fastcall MasterEquipSettingListViewItem__set_EquipTexture(
         const MethodInfo *method)
 {
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1C21DDC(&this->fields._EquipTexture_k__BackingField, value);
+  sub_1C2E0D0(&this->fields._EquipTexture_k__BackingField);
 }
 
 

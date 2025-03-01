@@ -11,9 +11,9 @@ void __fastcall MasterMissionReceiveConfirmListViewItem___ctor(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  ListViewItem___ctor_41996612((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42081352((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._Message_k__BackingField,
     (int64_t)message,
     v6,
@@ -45,7 +45,7 @@ void __fastcall MasterMissionReceiveConfirmListViewItem__set_Message(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Message_k__BackingField = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields._Message_k__BackingField,
     (int64_t)value,
     (int64_t)method,

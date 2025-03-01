@@ -23,29 +23,29 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
   const MethodInfo *v16; // x2
   __int64 v17; // x0
 
-  if ( (byte_4BDEC66 & 1) == 0 )
+  if ( (byte_4BFFEDD & 1) == 0 )
   {
-    sub_1C21E38(&BattleBuffData_BuffData___TypeInfo);
-    byte_4BDEC66 = 1;
+    sub_1C2E12C(&BattleBuffData_BuffData___TypeInfo, buff);
+    byte_4BFFEDD = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1C21EE0(BattleBuffData_BuffData___TypeInfo, 1LL);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1C2E1D4(BattleBuffData_BuffData___TypeInfo, 1LL);
   if ( !v7 )
     goto LABEL_10;
   v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1C21F74(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1C2E268(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v17 = sub_1C220B8(0LL);
-      sub_1C21F60(v17, 0LL);
+      v17 = sub_1C2E3AC(0LL);
+      sub_1C2E254(v17, 0LL);
     }
   }
   if ( !LODWORD(v15->fields._Data_k__BackingField) )
-    sub_1C2209C(v7, v8);
+    sub_1C2E390(v7, v8);
   v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&v15->fields._Perf_k__BackingField,
     (int64_t)buff,
     v9,
@@ -62,7 +62,7 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0LL) )
   {
 LABEL_10:
-    sub_1C22094(v7, v8);
+    sub_1C2E388(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

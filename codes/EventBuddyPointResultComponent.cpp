@@ -18,10 +18,10 @@ void __fastcall EventBuddyPointResultComponent__FadeInFigure(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Color_o v10; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4BE07E8 & 1) == 0 )
+  if ( (byte_4C01A87 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BE07E8 = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4C01A87 = 1;
   }
   figureR = (UnityEngine_Object_o *)this->fields.figureR;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -54,12 +54,13 @@ void __fastcall EventBuddyPointResultComponent__FadeInFigure(
         }
       }
 LABEL_14:
-      sub_1C22094(v4, v5);
+      sub_1C2E388(v4, v5);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventBuddyPointResultComponent__GetFileNameFromRank(
         EventBuddyPointResultComponent_o *this,
         int32_t rank,
@@ -69,13 +70,13 @@ System_String_o *__fastcall EventBuddyPointResultComponent__GetFileNameFromRank(
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = rank;
-  if ( (byte_4BE07EA & 1) == 0 )
+  if ( (byte_4C01A89 & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_23198/*"rank_"*/);
-    byte_4BE07EA = 1;
+    sub_1C2E12C(&StringLiteral_23214/*"rank_"*/, *(_QWORD *)&rank);
+    byte_4C01A89 = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
-  return System_String__Concat_63115476((System_String_o *)StringLiteral_23198/*"rank_"*/, v3, 0LL);
+  return System_String__Concat_63235584((System_String_o *)StringLiteral_23214/*"rank_"*/, v3, 0LL);
 }
 
 
@@ -88,20 +89,20 @@ void __fastcall EventBuddyPointResultComponent__OnClickScreen(
   System_Reflection_MethodBase_o *v5; // x0
   struct System_Action_o *closeCallback; // x8
 
-  if ( (byte_4BE07E9 & 1) == 0 )
+  if ( (byte_4C01A88 & 1) == 0 )
   {
-    sub_1C21E38(&Method_EventBuddyPointResultComponent_OnClickScreen__);
-    byte_4BE07E9 = 1;
+    sub_1C2E12C(&Method_EventBuddyPointResultComponent_OnClickScreen__, method);
+    byte_4C01A88 = 1;
   }
   touchHintObj = this->fields.touchHintObj;
   if ( !touchHintObj )
-    sub_1C22094(0LL, method);
+    sub_1C2E388(0LL, method);
   if ( UnityEngine_GameObject__get_activeInHierarchy(touchHintObj, 0LL) )
   {
     v4 = Method_EventBuddyPointResultComponent_OnClickScreen__;
     if ( (*((_BYTE *)Method_EventBuddyPointResultComponent_OnClickScreen__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C21E50(Method_EventBuddyPointResultComponent_OnClickScreen__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C2E144(Method_EventBuddyPointResultComponent_OnClickScreen__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
     closeCallback = this->fields.closeCallback;
     if ( closeCallback )
@@ -120,7 +121,7 @@ void __fastcall EventBuddyPointResultComponent__OnPlayEnd(
 
   touchHintObj = this->fields.touchHintObj;
   if ( !touchHintObj )
-    sub_1C22094(0LL, method);
+    sub_1C2E388(0LL, method);
   UnityEngine_GameObject__SetActive(touchHintObj, 1, 0LL);
 }
 
@@ -129,43 +130,46 @@ void __fastcall EventBuddyPointResultComponent__SetAnimationEvent(
         EventBuddyPointResultComponent_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   CommonEffectActionComponent_o *effectActionComponent; // x20
-  System_Action_o *v4; // x21
-  __int64 v5; // x0
-  __int64 v6; // x1
-  struct CommonEffectActionComponent_o *v7; // x20
-  System_Action_o *v8; // x21
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
+  __int64 v8; // x1
+  struct CommonEffectActionComponent_o *v9; // x20
+  System_Action_o *v10; // x21
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4BE07E7 & 1) == 0 )
+  if ( (byte_4C01A86 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_EventBuddyPointResultComponent_FadeInFigure__);
-    sub_1C21E38(&Method_EventBuddyPointResultComponent_OnPlayEnd__);
-    byte_4BE07E7 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&Method_EventBuddyPointResultComponent_FadeInFigure__, v3);
+    sub_1C2E12C(&Method_EventBuddyPointResultComponent_OnPlayEnd__, v4);
+    byte_4C01A86 = 1;
   }
   effectActionComponent = this->fields.effectActionComponent;
-  v4 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v4, (Il2CppObject *)this, Method_EventBuddyPointResultComponent_FadeInFigure__, 0LL);
+  v6 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_EventBuddyPointResultComponent_FadeInFigure__, 0LL);
   if ( !effectActionComponent
-    || (CommonEffectActionComponent__SetEventAction(effectActionComponent, 1, v4, 0LL),
-        v7 = this->fields.effectActionComponent,
-        v8 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo),
-        System_Action___ctor(v8, (Il2CppObject *)this, Method_EventBuddyPointResultComponent_OnPlayEnd__, 0LL),
-        !v7) )
+    || (CommonEffectActionComponent__SetEventAction(effectActionComponent, 1, v6, 0LL),
+        v9 = this->fields.effectActionComponent,
+        v10 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo),
+        System_Action___ctor(v10, (Il2CppObject *)this, Method_EventBuddyPointResultComponent_OnPlayEnd__, 0LL),
+        !v9) )
   {
-    sub_1C22094(v5, v6);
+    sub_1C2E388(v7, v8);
   }
-  v7->fields.endAction = v8;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&v7->fields.endAction, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+  v9->fields.endAction = v10;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&v9->fields.endAction, (int64_t)v10, v11, v12, v13, v14, v15, v16);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventBuddyPointResultComponent__SetPointInfo(
         EventBuddyPointResultComponent_o *this,
         int32_t eventId,
@@ -173,33 +177,36 @@ void __fastcall EventBuddyPointResultComponent__SetPointInfo(
         int32_t svtId,
         const MethodInfo *method)
 {
-  EventServantPointRankMaster_o *Master_object; // x0
+  __int64 v9; // x1
   __int64 v10; // x1
+  __int64 v11; // x1
+  EventServantPointRankMaster_o *Master_object; // x0
+  __int64 v13; // x1
   EventServantPointRankEntity_o *EnableEntity; // x0
-  EventServantPointRankEntity_o *v12; // x21
+  EventServantPointRankEntity_o *v15; // x21
   UILabel_o *pointLabel; // x22
   UnityEngine_Object_o *buddyUiAtlas; // x20
   UISprite_o *rankSprite; // x20
-  EventBuddyPointResultComponent_o *v16; // x0
-  const MethodInfo *v17; // x2
+  EventBuddyPointResultComponent_o *v19; // x0
+  const MethodInfo *v20; // x2
 
-  if ( (byte_4BE07E5 & 1) == 0 )
+  if ( (byte_4C01A84 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_EventServantPointRankMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BE07E5 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_EventServantPointRankMaster___, *(_QWORD *)&eventId);
+    sub_1C2E12C(&DataManager_TypeInfo, v9);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v10);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v11);
+    byte_4C01A84 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
   if ( !Master_object )
     goto LABEL_18;
   EnableEntity = EventServantPointRankMaster__GetEnableEntity(Master_object, eventId, point, svtId, 0LL);
   if ( EnableEntity )
   {
-    v12 = EnableEntity;
+    v15 = EnableEntity;
     pointLabel = this->fields.pointLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -218,9 +225,9 @@ void __fastcall EventBuddyPointResultComponent__SetPointInfo(
         UISprite__set_atlas((UISprite_o *)Master_object, this->fields.buddyUiAtlas, 0LL);
         rankSprite = this->fields.rankSprite;
         Master_object = (EventServantPointRankMaster_o *)EventBuddyPointResultComponent__GetFileNameFromRank(
-                                                           v16,
-                                                           v12->fields.svtPointRank,
-                                                           v17);
+                                                           v19,
+                                                           v15->fields.svtPointRank,
+                                                           v20);
         if ( rankSprite )
         {
           UISprite__set_spriteName(rankSprite, (System_String_o *)Master_object, 0LL);
@@ -235,12 +242,13 @@ void __fastcall EventBuddyPointResultComponent__SetPointInfo(
         }
       }
 LABEL_18:
-      sub_1C22094(Master_object, v10);
+      sub_1C2E388(Master_object, v13);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall EventBuddyPointResultComponent__SetSvtFigure(
         EventBuddyPointResultComponent_o *this,
         int32_t svtId,
@@ -248,48 +256,55 @@ void __fastcall EventBuddyPointResultComponent__SetSvtFigure(
         System_Action_o *setupEndCallBack,
         const MethodInfo *method)
 {
-  __int64 v9; // x21
-  ServantLimitImageMaster_o *svtStandFig; // x0
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x21
+  ServantLimitImageMaster_o *svtStandFig; // x0
+  __int64 v18; // x1
+  int64_t v19; // x2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  BattleSetupInfo_o *v22; // x5
+  FollowerInfo_o *v23; // x6
+  PartyListViewItem_o *v24; // x7
+  int64_t v25; // x2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  BattleSetupInfo_o *v28; // x5
+  FollowerInfo_o *v29; // x6
+  PartyListViewItem_o *v30; // x7
   int LimitCountByImageLimitCostumeIn; // w23
   Il2CppObject *Master_object; // x22
   UserServantCollectionEntity_o *EntityDefinitely; // x0
   int32_t ServantLimitCountSealAfter; // w22
-  StandFigureBack_o *v28; // x20
-  System_Action_o *v29; // x23
+  StandFigureBack_o *v35; // x20
+  System_Action_o *v36; // x23
 
-  if ( (byte_4BE07E6 & 1) == 0 )
+  if ( (byte_4C01A85 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C21E38(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&ImageLimitCount_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&Method_EventBuddyPointResultComponent___c__DisplayClass11_0__SetSvtFigure_b__0__);
-    sub_1C21E38(&EventBuddyPointResultComponent___c__DisplayClass11_0_TypeInfo);
-    byte_4BE07E6 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, *(_QWORD *)&svtId);
+    sub_1C2E12C(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v9);
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v10);
+    sub_1C2E12C(&DataManager_TypeInfo, v11);
+    sub_1C2E12C(&ImageLimitCount_TypeInfo, v12);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v13);
+    sub_1C2E12C(&Method_EventBuddyPointResultComponent___c__DisplayClass11_0__SetSvtFigure_b__0__, v14);
+    sub_1C2E12C(&EventBuddyPointResultComponent___c__DisplayClass11_0_TypeInfo, v15);
+    byte_4C01A85 = 1;
   }
-  v9 = sub_1C22084(EventBuddyPointResultComponent___c__DisplayClass11_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
+  v16 = sub_1C2E378(EventBuddyPointResultComponent___c__DisplayClass11_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  if ( !v16 )
     goto LABEL_31;
-  *(_QWORD *)(v9 + 16) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
-  *(_QWORD *)(v9 + 24) = setupEndCallBack;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)setupEndCallBack, v18, v19, v20, v21, v22, v23);
+  *(_QWORD *)(v16 + 16) = this;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)this, v19, v20, v21, v22, v23, v24);
+  *(_QWORD *)(v16 + 24) = setupEndCallBack;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 24), (int64_t)setupEndCallBack, v25, v26, v27, v28, v29, v30);
   if ( (overwriteImgLimitCount & 0x80000000) == 0 )
   {
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -299,13 +314,13 @@ void __fastcall EventBuddyPointResultComponent__SetSvtFigure(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v18);
+    byte_4BF81D5 = 1;
   }
   svtStandFig = (ServantLimitImageMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -315,7 +330,7 @@ void __fastcall EventBuddyPointResultComponent__SetSvtFigure(
   }
   if ( !Master_object )
 LABEL_31:
-    sub_1C22094(svtStandFig, v11);
+    sub_1C2E388(svtStandFig, v18);
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(
                        (UserServantCollectionMaster_o *)Master_object,
                        (int64_t)svtStandFig[2].fields.list[1].monitor,
@@ -334,7 +349,7 @@ LABEL_19:
 LABEL_22:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  svtStandFig = (ServantLimitImageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  svtStandFig = (ServantLimitImageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !svtStandFig )
     goto LABEL_31;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -350,16 +365,16 @@ LABEL_28:
   if ( !svtStandFig )
     goto LABEL_31;
   StandFigureBack__Init((StandFigureBack_o *)svtStandFig, 0LL);
-  v28 = this->fields.svtStandFig;
-  v29 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+  v35 = this->fields.svtStandFig;
+  v36 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
   System_Action___ctor(
-    v29,
-    (Il2CppObject *)v9,
+    v36,
+    (Il2CppObject *)v16,
     Method_EventBuddyPointResultComponent___c__DisplayClass11_0__SetSvtFigure_b__0__,
     0LL);
-  if ( !v28 )
+  if ( !v35 )
     goto LABEL_31;
-  StandFigureBack__CreatedStandFigure(v28, svtId, overwriteImgLimitCount, 0, 0, v29, 0, 0LL);
+  StandFigureBack__CreatedStandFigure(v35, svtId, overwriteImgLimitCount, 0, 0, v36, 0, 0LL);
 }
 
 
@@ -372,7 +387,7 @@ void __fastcall EventBuddyPointResultComponent__SetTouchEnable(
 
   touchHintObj = this->fields.touchHintObj;
   if ( !touchHintObj )
-    sub_1C22094(0LL, isEnable);
+    sub_1C2E388(0LL, isEnable);
   UnityEngine_GameObject__SetActive(touchHintObj, isEnable, 0LL);
 }
 
@@ -388,31 +403,33 @@ void __fastcall EventBuddyPointResultComponent__Setup(
         const MethodInfo *method)
 {
   PartyListViewItem_o *v7; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  __int64 v20; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  int64_t v16; // x2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  BattleSetupInfo_o *v19; // x5
+  FollowerInfo_o *v20; // x6
+  PartyListViewItem_o *v21; // x7
+  __int64 v22; // x1
   Il2CppObject *Master_object; // x23
   UnityEngine_GameObject_o *touchHintObj; // x0
   UserEventServantPointEntity_o *BestServantPointEntity; // x0
   int32_t svtId; // w23
   int32_t BuddyPoint; // w0
-  const MethodInfo *v26; // x4
-  const MethodInfo *v27; // x4
-  const MethodInfo *v28; // x1
+  const MethodInfo *v28; // x4
+  const MethodInfo *v29; // x4
+  const MethodInfo *v30; // x1
 
-  if ( (byte_4BE07E4 & 1) == 0 )
+  if ( (byte_4C01A83 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_UserEventServantPointMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BE07E4 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_UserEventServantPointMaster___, *(_QWORD *)&eventId);
+    sub_1C2E12C(&DataManager_TypeInfo, v14);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v15);
+    byte_4C01A83 = 1;
   }
   this->fields.closeCallback = closeCallback;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.closeCallback,
     (int64_t)closeCallback,
     (int64_t)buddyUiAtlas,
@@ -422,24 +439,24 @@ void __fastcall EventBuddyPointResultComponent__Setup(
     (FollowerInfo_o *)method,
     v7);
   this->fields.buddyUiAtlas = buddyUiAtlas;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.buddyUiAtlas,
     (int64_t)buddyUiAtlas,
-    v14,
-    v15,
     v16,
     v17,
     v18,
-    v19);
+    v19,
+    v20,
+    v21);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BD6FF5 )
+  if ( !byte_4BF81D5 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    byte_4BD6FF5 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, v22);
+    byte_4BF81D5 = 1;
   }
   touchHintObj = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -458,9 +475,9 @@ void __fastcall EventBuddyPointResultComponent__Setup(
   {
     svtId = BestServantPointEntity->fields.svtId;
     BuddyPoint = UserEventServantPointEntity__GetBuddyPoint(BestServantPointEntity, 0LL);
-    EventBuddyPointResultComponent__SetPointInfo(this, eventId, BuddyPoint, svtId, v26);
-    EventBuddyPointResultComponent__SetSvtFigure(this, svtId, overwriteLimitCount, setupEndCallback, v27);
-    EventBuddyPointResultComponent__SetAnimationEvent(this, v28);
+    EventBuddyPointResultComponent__SetPointInfo(this, eventId, BuddyPoint, svtId, v28);
+    EventBuddyPointResultComponent__SetSvtFigure(this, svtId, overwriteLimitCount, setupEndCallback, v29);
+    EventBuddyPointResultComponent__SetAnimationEvent(this, v30);
     touchHintObj = this->fields.touchHintObj;
     if ( touchHintObj )
     {
@@ -468,7 +485,7 @@ void __fastcall EventBuddyPointResultComponent__Setup(
       return;
     }
 LABEL_16:
-    sub_1C22094(touchHintObj, v20);
+    sub_1C2E388(touchHintObj, v22);
   }
 }
 
@@ -502,10 +519,10 @@ void __fastcall EventBuddyPointResultComponent___c__DisplayClass11_0___SetSvtFig
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4BE07EB & 1) == 0 )
+  if ( (byte_4C01A8A & 1) == 0 )
   {
-    this = (EventBuddyPointResultComponent___c__DisplayClass11_0_o *)sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BE07EB = 1;
+    this = (EventBuddyPointResultComponent___c__DisplayClass11_0_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4C01A8A = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -515,7 +532,7 @@ void __fastcall EventBuddyPointResultComponent___c__DisplayClass11_0___SetSvtFig
     goto LABEL_16;
   SvtStandFigure = StandFigureBack__GetSvtStandFigure((StandFigureBack_o *)this, 0, 0LL);
   _4__this->fields.figureR = SvtStandFigure;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&_4__this->fields.figureR, (int64_t)SvtStandFigure, v5, v6, v7, v8, v9, v10);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.figureR, (int64_t)SvtStandFigure, v5, v6, v7, v8, v9, v10);
   v11 = v2->fields.__4__this;
   if ( !v11 )
     goto LABEL_16;
@@ -544,7 +561,7 @@ void __fastcall EventBuddyPointResultComponent___c__DisplayClass11_0___SetSvtFig
       }
     }
 LABEL_16:
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   }
 LABEL_13:
   setupEndCallBack = v2->fields.setupEndCallBack;

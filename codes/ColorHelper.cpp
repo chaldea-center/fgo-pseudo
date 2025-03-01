@@ -38,20 +38,22 @@ UnityEngine_Color_o __fastcall ColorHelper__GetClamped(UnityEngine_Color_o color
 
 float __fastcall ColorHelper___GetClamped_g__Clamp_0_0(float value, const MethodInfo *method)
 {
+  __int64 v2; // x1
+  __int64 v4; // x1
   float result; // s0
 
-  if ( (byte_4BDDD80 & 1) == 0 )
+  if ( (byte_4BFEFC2 & 1) == 0 )
   {
-    sub_1C21E38(&System_Math_TypeInfo);
-    byte_4BDDD80 = 1;
+    sub_1C2E12C(&System_Math_TypeInfo, v2);
+    byte_4BFEFC2 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4BDDF41 )
+  if ( !byte_4BFF185 )
   {
-    sub_1C21E38(&Method_System_Math_ThrowMinMaxException_float___);
-    sub_1C21E38(&System_Math_TypeInfo);
-    byte_4BDDF41 = 1;
+    sub_1C2E12C(&Method_System_Math_ThrowMinMaxException_float___, v2);
+    sub_1C2E12C(&System_Math_TypeInfo, v4);
+    byte_4BFF185 = 1;
   }
   result = 0.0;
   if ( value >= 0.0 )

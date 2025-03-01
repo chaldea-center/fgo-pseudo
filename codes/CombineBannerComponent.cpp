@@ -7,21 +7,23 @@ void __fastcall CombineBannerComponent___ctor(CombineBannerComponent_o *this, co
 void __fastcall CombineBannerComponent__onOpenWebView(CombineBannerComponent_o *this, const MethodInfo *method)
 {
   CombineBannerComponent_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
   struct EventEntity_o *eventEntity; // x8
   System_String_o *linkBody; // x19
   System_String_o *WebViewAddress; // x19
 
   v2 = this;
-  if ( (byte_4BDFDCD & 1) == 0 )
+  if ( (byte_4C0106C & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&WebViewManager_TypeInfo);
-    this = (CombineBannerComponent_o *)sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDFDCD = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&WebViewManager_TypeInfo, v3);
+    this = (CombineBannerComponent_o *)sub_1C2E12C(&StringLiteral_1/*""*/, v4);
+    byte_4C0106C = 1;
   }
   eventEntity = v2->fields.eventEntity;
   if ( !eventEntity )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   linkBody = eventEntity->fields.linkBody;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -45,15 +47,15 @@ void __fastcall CombineBannerComponent__setBannerInfo(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BDFDCC & 1) == 0 )
+  if ( (byte_4C0106B & 1) == 0 )
   {
-    sub_1C21E38(&AtlasManager_TypeInfo);
-    byte_4BDFDCC = 1;
+    sub_1C2E12C(&AtlasManager_TypeInfo, eventData);
+    byte_4C0106B = 1;
   }
   bannerSprite = this->fields.bannerSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner_39102168(bannerSprite, eventData, 0LL);
+  AtlasManager__SetBanner_39171412(bannerSprite, eventData, 0LL);
   this->fields.eventEntity = eventData;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)eventData, v6, v7, v8, v9, v10, v11);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.eventEntity, (int64_t)eventData, v6, v7, v8, v9, v10, v11);
 }

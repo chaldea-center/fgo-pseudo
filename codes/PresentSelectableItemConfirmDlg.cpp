@@ -2,10 +2,10 @@ void __fastcall PresentSelectableItemConfirmDlg___ctor(
         PresentSelectableItemConfirmDlg_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BDB2ED & 1) == 0 )
+  if ( (byte_4BFC4EA & 1) == 0 )
   {
-    sub_1C21E38(&BaseDialog_TypeInfo);
-    byte_4BDB2ED = 1;
+    sub_1C2E12C(&BaseDialog_TypeInfo, method);
+    byte_4BFC4EA = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,11 +19,11 @@ void __fastcall PresentSelectableItemConfirmDlg__Close(
 {
   const MethodInfo *v2; // x2
 
-  PresentSelectableItemConfirmDlg__Close_38697040(this, 0LL, v2);
+  PresentSelectableItemConfirmDlg__Close_38764928(this, 0LL, v2);
 }
 
 
-void __fastcall PresentSelectableItemConfirmDlg__Close_38697040(
+void __fastcall PresentSelectableItemConfirmDlg__Close_38764928(
         PresentSelectableItemConfirmDlg_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -33,16 +33,17 @@ void __fastcall PresentSelectableItemConfirmDlg__Close_38697040(
   BattleSetupInfo_o *v5; // x5
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
-  System_Action_o *v10; // x20
+  __int64 v10; // x1
+  System_Action_o *v11; // x20
 
-  if ( (byte_4BDB2E9 & 1) == 0 )
+  if ( (byte_4BFC4E6 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg_EndClose__);
-    byte_4BDB2E9 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, callback);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg_EndClose__, v10);
+    byte_4BFC4E6 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -52,9 +53,9 @@ void __fastcall PresentSelectableItemConfirmDlg__Close_38697040(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  System_Action___ctor(v11, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
 
 
@@ -77,7 +78,7 @@ void __fastcall PresentSelectableItemConfirmDlg__EndClose(
   PresentSelectableItemConfirmDlg__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
@@ -85,7 +86,7 @@ void __fastcall PresentSelectableItemConfirmDlg__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C21DDC(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v12->fields.m_target)(
       v12->fields.original_method_info,
       *(_QWORD *)&v12->fields.extra_arg);
@@ -116,11 +117,11 @@ void __fastcall PresentSelectableItemConfirmDlg__Init(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   this->fields.itemSelectEntity = 0LL;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.itemSelectEntity, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.itemSelectEntity, 0LL, v5, v6, v7, v8, v9, v10);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -129,29 +130,31 @@ void __fastcall PresentSelectableItemConfirmDlg__OnClickCancel(
         PresentSelectableItemConfirmDlg_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  System_Action_o *v7; // x20
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4BDB2EB & 1) == 0 )
+  if ( (byte_4BFC4E8 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg_OnClickCancel__);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg__OnClickCancel_b__26_0__);
-    byte_4BDB2EB = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg_OnClickCancel__, v3);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg__OnClickCancel_b__26_0__, v4);
+    byte_4BFC4E8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v3 = Method_PresentSelectableItemConfirmDlg_OnClickCancel__;
+    v5 = Method_PresentSelectableItemConfirmDlg_OnClickCancel__;
     if ( (*((_BYTE *)Method_PresentSelectableItemConfirmDlg_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_PresentSelectableItemConfirmDlg_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
-    v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-    System_Action___ctor(v5, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg__OnClickCancel_b__26_0__, 0LL);
-    PresentSelectableItemConfirmDlg__Close_38697040(this, v5, v6);
+      v5 = (_QWORD *)sub_1C2E144(Method_PresentSelectableItemConfirmDlg_OnClickCancel__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
+    v7 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    System_Action___ctor(v7, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg__OnClickCancel_b__26_0__, 0LL);
+    PresentSelectableItemConfirmDlg__Close_38764928(this, v7, v8);
   }
 }
 
@@ -160,29 +163,31 @@ void __fastcall PresentSelectableItemConfirmDlg__OnClickDecide(
         PresentSelectableItemConfirmDlg_o *this,
         const MethodInfo *method)
 {
-  _QWORD *v3; // x0
-  System_Reflection_MethodBase_o *v4; // x0
-  System_Action_o *v5; // x20
-  const MethodInfo *v6; // x2
+  __int64 v3; // x1
+  __int64 v4; // x1
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  System_Action_o *v7; // x20
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4BDB2EA & 1) == 0 )
+  if ( (byte_4BFC4E7 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg_OnClickDecide__);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg__OnClickDecide_b__25_0__);
-    byte_4BDB2EA = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg_OnClickDecide__, v3);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg__OnClickDecide_b__25_0__, v4);
+    byte_4BFC4E7 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
-    v3 = Method_PresentSelectableItemConfirmDlg_OnClickDecide__;
+    v5 = Method_PresentSelectableItemConfirmDlg_OnClickDecide__;
     if ( (*((_BYTE *)Method_PresentSelectableItemConfirmDlg_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C21E50(Method_PresentSelectableItemConfirmDlg_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
-    v5 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-    System_Action___ctor(v5, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg__OnClickDecide_b__25_0__, 0LL);
-    PresentSelectableItemConfirmDlg__Close_38697040(this, v5, v6);
+      v5 = (_QWORD *)sub_1C2E144(Method_PresentSelectableItemConfirmDlg_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
+    v7 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    System_Action___ctor(v7, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg__OnClickDecide_b__25_0__, 0LL);
+    PresentSelectableItemConfirmDlg__Close_38764928(this, v7, v8);
   }
 }
 
@@ -199,40 +204,47 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
         int32_t btnSpriteId,
         const MethodInfo *method)
 {
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  __int64 v18; // x1
+  __int64 v19; // x1
+  __int64 v20; // x1
+  __int64 v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v22; // x1
+  __int64 v29; // x1
   UILabel_o *TitleLabel; // x24
   UILabel_o *DetailLabel; // x24
   UILabel_o *priceNumLabel; // x24
-  BalanceConfig_c *v26; // x0
+  BalanceConfig_c *v33; // x0
   int32_t UserItemMax; // w8
-  UILabel_o *v28; // x21
-  __int64 *v29; // x8
-  const MethodInfo *v30; // x5
-  System_Action_o *v31; // x20
+  UILabel_o *v35; // x21
+  __int64 *v36; // x8
+  const MethodInfo *v37; // x5
+  System_Action_o *v38; // x20
 
-  if ( (byte_4BDB2E8 & 1) == 0 )
+  if ( (byte_4BFC4E5 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&BalanceConfig_TypeInfo);
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&Method_PresentSelectableItemConfirmDlg_EndOpen__);
-    sub_1C21E38(&StringLiteral_10650/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/);
-    sub_1C21E38(&StringLiteral_10670/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/);
-    sub_1C21E38(&StringLiteral_10649/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/);
-    sub_1C21E38(&StringLiteral_10669/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/);
-    byte_4BDB2E8 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, entity);
+    sub_1C2E12C(&BalanceConfig_TypeInfo, v15);
+    sub_1C2E12C(&LocalizationManager_TypeInfo, v16);
+    sub_1C2E12C(&Method_PresentSelectableItemConfirmDlg_EndOpen__, v17);
+    sub_1C2E12C(&StringLiteral_10644/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/, v18);
+    sub_1C2E12C(&StringLiteral_10664/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/, v19);
+    sub_1C2E12C(&StringLiteral_10643/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/, v20);
+    sub_1C2E12C(&StringLiteral_10663/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/, v21);
+    byte_4BFC4E5 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
       (int64_t)callback,
       (int64_t)itemEnt,
@@ -242,15 +254,15 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
       (FollowerInfo_o *)callback,
       *(PartyListViewItem_o **)&btnSpriteId);
     this->fields.itemSelectEntity = entity;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.itemSelectEntity,
       (int64_t)entity,
-      v15,
-      v16,
-      v17,
-      v18,
-      v19,
-      v20);
+      v22,
+      v23,
+      v24,
+      v25,
+      v26,
+      v27);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_32;
@@ -258,12 +270,12 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
     TitleLabel = this->fields.TitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10650/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10644/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_TITLE"*/, 0LL);
     if ( !TitleLabel )
       goto LABEL_32;
     UILabel__set_text(TitleLabel, (System_String_o *)gameObject, 0LL);
     DetailLabel = this->fields.DetailLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10649/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10643/*"PRESENT_BOX_SELECTABLE_CONFIRM_DLG_DETAIL"*/, 0LL);
     if ( !DetailLabel )
       goto LABEL_32;
     UILabel__set_text(DetailLabel, (System_String_o *)gameObject, 0LL);
@@ -284,37 +296,37 @@ void __fastcall PresentSelectableItemConfirmDlg__Open(
     if ( !gameObject )
       goto LABEL_32;
     ItemIconComponent__SetItemImage((ItemIconComponent_o *)gameObject, ticketEnt->fields.imageId, 0LL);
-    v26 = BalanceConfig_TypeInfo;
+    v33 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v26 = BalanceConfig_TypeInfo;
+      v33 = BalanceConfig_TypeInfo;
     }
-    UserItemMax = v26->static_fields->UserItemMax;
+    UserItemMax = v33->static_fields->UserItemMax;
     if ( UserItemMax <= itemHold )
     {
-      v28 = this->fields.DetailLabel;
+      v35 = this->fields.DetailLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v29 = &StringLiteral_10669/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/;
+      v36 = &StringLiteral_10663/*"PRESENT_SELECT_ITEM_FULL_WARNING"*/;
     }
     else
     {
-      if ( !v26->_2.cctor_finished )
+      if ( !v33->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v26);
+        j_il2cpp_runtime_class_init_0(v33);
         UserItemMax = BalanceConfig_TypeInfo->static_fields->UserItemMax;
       }
       if ( UserItemMax > itemHold )
       {
-        v22 = 0LL;
+        v29 = 0LL;
 LABEL_29:
         gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton;
         if ( gameObject )
         {
           ((void (__fastcall *)(UnityEngine_GameObject_o *, __int64, __int64, Il2CppRuntimeInterfaceOffsetPair *))gameObject->klass[1]._1.implementedInterfaces)(
             gameObject,
-            v22,
+            v29,
             1LL,
             gameObject->klass[1]._1.interfaceOffsets);
           gameObject = (UnityEngine_GameObject_o *)this->fields.itemInfo;
@@ -326,27 +338,27 @@ LABEL_29:
               ticketsHave,
               0,
               0LL,
-              v30);
+              v37);
             this->fields.state = 1;
-            v31 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-            System_Action___ctor(v31, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg_EndOpen__, 0LL);
-            BaseDialog__Open((BaseDialog_o *)this, v31, 0, 0LL);
+            v38 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+            System_Action___ctor(v38, (Il2CppObject *)this, Method_PresentSelectableItemConfirmDlg_EndOpen__, 0LL);
+            BaseDialog__Open((BaseDialog_o *)this, v38, 0, 0LL);
             return;
           }
         }
 LABEL_32:
-        sub_1C22094(gameObject, v22);
+        sub_1C2E388(gameObject, v29);
       }
-      v28 = this->fields.DetailLabel;
+      v35 = this->fields.DetailLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v29 = &StringLiteral_10670/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/;
+      v36 = &StringLiteral_10664/*"PRESENT_SELECT_ITEM_OVER_WARNING"*/;
     }
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v29, 0LL);
-    if ( !v28 )
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v36, 0LL);
+    if ( !v35 )
       goto LABEL_32;
-    UILabel__set_text(v28, (System_String_o *)gameObject, 0LL);
-    v22 = 3LL;
+    UILabel__set_text(v35, (System_String_o *)gameObject, 0LL);
+    v29 = 3LL;
     goto LABEL_29;
   }
 }
@@ -360,7 +372,7 @@ void __fastcall PresentSelectableItemConfirmDlg___OnClickCancel_b__26_0(
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackFunc->fields.m_target)(
     callbackFunc->fields.original_method_info,
     0LL,
@@ -376,7 +388,7 @@ void __fastcall PresentSelectableItemConfirmDlg___OnClickDecide_b__25_0(
 
   callbackFunc = this->fields.callbackFunc;
   if ( !callbackFunc )
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))callbackFunc->fields.m_target)(
     callbackFunc->fields.original_method_info,
     1LL,
@@ -399,10 +411,10 @@ void __fastcall PresentSelectableItemConfirmDlg__add_callbackFunc(
   PresentSelectableItemConfirmDlg_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BDB2E6 & 1) == 0 )
+  if ( (byte_4BFC4E3 & 1) == 0 )
   {
-    sub_1C21E38(&PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo);
-    byte_4BDB2E6 = 1;
+    sub_1C2E12C(&PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo, value);
+    byte_4BFC4E3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -415,13 +427,13 @@ void __fastcall PresentSelectableItemConfirmDlg__add_callbackFunc(
       if ( (PresentSelectableItemConfirmDlg_CallbackFunc_c *)v8->klass != PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   PresentSelectableItemConfirmDlg__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -434,10 +446,10 @@ UnityEngine_GameObject_o *__fastcall PresentSelectableItemConfirmDlg__get_closeB
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4BDB2EC & 1) == 0 )
+  if ( (byte_4BFC4E9 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDB2EC = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
+    byte_4BFC4E9 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -446,7 +458,7 @@ UnityEngine_GameObject_o *__fastcall PresentSelectableItemConfirmDlg__get_closeB
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -465,10 +477,10 @@ void __fastcall PresentSelectableItemConfirmDlg__remove_callbackFunc(
   PresentSelectableItemConfirmDlg_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BDB2E7 & 1) == 0 )
+  if ( (byte_4BFC4E4 & 1) == 0 )
   {
-    sub_1C21E38(&PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo);
-    byte_4BDB2E7 = 1;
+    sub_1C2E12C(&PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo, value);
+    byte_4BFC4E4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -481,13 +493,13 @@ void __fastcall PresentSelectableItemConfirmDlg__remove_callbackFunc(
       if ( (PresentSelectableItemConfirmDlg_CallbackFunc_c *)v8->klass != PresentSelectableItemConfirmDlg_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C5D328(p_callbackFunc, v8, v6);
+    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C22354(v8);
+  sub_1C2E648(v8);
   PresentSelectableItemConfirmDlg__Init(v11, v12);
 }
 
@@ -514,7 +526,7 @@ void __fastcall PresentSelectableItemConfirmDlg_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -525,12 +537,12 @@ void __fastcall PresentSelectableItemConfirmDlg_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C21EF8(v10) & 1) == 0 )
+  if ( (sub_1C2E1EC(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C220B0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C21F60(v14, 0LL);
+      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2E254(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -542,12 +554,13 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A625EC;
+  this->fields.m_target = (Il2CppObject *)sub_1A6EA8C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A625A4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6EA44;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *__fastcall PresentSelectableItemConfirmDlg_CallbackFunc__BeginInvoke(
         PresentSelectableItemConfirmDlg_CallbackFunc_o *this,
         int32_t result,
@@ -559,14 +572,14 @@ System_IAsyncResult_o *__fastcall PresentSelectableItemConfirmDlg_CallbackFunc__
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4BDB2EE & 1) == 0 )
+  if ( (byte_4BFC4EB & 1) == 0 )
   {
-    sub_1C21E38(&int_TypeInfo);
-    byte_4BDB2EE = 1;
+    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&result);
+    byte_4BFC4EB = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C21DEC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
 }
 
 
@@ -575,7 +588,7 @@ void __fastcall PresentSelectableItemConfirmDlg_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C21DF0(result, 0LL, method);
+  sub_1C2E0E4(result, 0LL, method);
 }
 
 

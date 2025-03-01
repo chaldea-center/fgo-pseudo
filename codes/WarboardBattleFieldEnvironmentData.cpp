@@ -31,9 +31,10 @@ BattleFieldEnvironmentData_BackgroundData_o *__fastcall WarboardBattleFieldEnvir
 System_Int32_array *__fastcall WarboardBattleFieldEnvironmentData__GetFieldIndividuality(
         WarboardBattleFieldEnvironmentData_o *this,
         System_Int32_array *addIndiv,
+        bool exceptDelTarget,
         const MethodInfo *method)
 {
-  System_Int32_array *QuestPhaseIndividuality; // x1
+  System_Int32_array *QuestPhaseIndividuality; // x0
 
   QuestPhaseIndividuality = BattleFieldEnvironmentData__GetQuestPhaseIndividuality(
                               (BattleFieldEnvironmentData_o *)this,
@@ -42,6 +43,7 @@ System_Int32_array *__fastcall WarboardBattleFieldEnvironmentData__GetFieldIndiv
            (BattleFieldEnvironmentData_o *)this,
            QuestPhaseIndividuality,
            addIndiv,
+           exceptDelTarget,
            0LL);
 }
 

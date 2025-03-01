@@ -9,22 +9,25 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   __int64 methodPtr_low; // x10
   DataManager_o *Instance; // x0
   System_String_o **p_name; // x8
   void *monitor; // x8
-  __int64 v9; // x9
-  int32_t v10; // w20
-  int32_t v11; // w21
+  __int64 v12; // x9
+  int32_t v13; // w20
+  int32_t v14; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BDD9D2 & 1) == 0 )
+  if ( (byte_4BFEC0F & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1C21E38(&RaceResultEffectParam_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&StringLiteral_1/*""*/);
-    byte_4BDD9D2 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
+    sub_1C2E12C(&RaceResultEffectParam_TypeInfo, v5);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C2E12C(&StringLiteral_1/*""*/, v7);
+    byte_4BFEC0F = 1;
   }
   entity = 0LL;
   if ( param )
@@ -36,26 +39,26 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
       monitor = param[1].monitor;
       if ( monitor )
       {
-        v9 = *((_QWORD *)monitor + 3);
-        if ( v9 )
+        v12 = *((_QWORD *)monitor + 3);
+        if ( v12 )
         {
-          if ( (int)v9 >= 2 )
+          if ( (int)v12 >= 2 )
           {
-            v10 = *((_DWORD *)monitor + 8);
-            v11 = *((_DWORD *)monitor + 10);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            v13 = *((_DWORD *)monitor + 8);
+            v14 = *((_DWORD *)monitor + 10);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventRaceMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventRaceMaster__TryGetEntity(
                                           (EventRaceMaster_o *)Instance,
                                           &entity,
-                                          v10,
-                                          v11,
+                                          v13,
+                                          v14,
                                           0LL);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
@@ -69,7 +72,7 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1C22094(Instance, param);
+              sub_1C2E388(Instance, param);
             }
           }
         }

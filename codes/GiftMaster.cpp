@@ -1,38 +1,40 @@
 void __fastcall GiftMaster___ctor(GiftMaster_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_int__object__o *v3; // x20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  __int64 v3; // x1
+  __int64 v4; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v5; // x20
+  int64_t v6; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  BattleSetupInfo_o *v9; // x5
+  FollowerInfo_o *v10; // x6
+  PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BDC82C & 1) == 0 )
+  if ( (byte_4BFDA37 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_GiftMaster__GiftEntity__string___ctor__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity____ctor__);
-    sub_1C21E38(&System_Collections_Generic_Dictionary_int__List_GiftEntity___TypeInfo);
-    byte_4BDC82C = 1;
+    sub_1C2E12C(&Method_DataMasterBase_GiftMaster__GiftEntity__string___ctor__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity____ctor__, v3);
+    sub_1C2E12C(&System_Collections_Generic_Dictionary_int__List_GiftEntity___TypeInfo, v4);
+    byte_4BFDA37 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C22084(System_Collections_Generic_Dictionary_int__List_GiftEntity___TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C2E378(System_Collections_Generic_Dictionary_int__List_GiftEntity___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v3,
-    (const MethodInfo_32B5078 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity____ctor__);
-  this->fields.idToGiftEntityListDictionary = (struct System_Collections_Generic_Dictionary_int__List_GiftEntity___o *)v3;
-  sub_1C21DDC(
-    (PartyOrganizationUtility_o *)&this->fields.idToGiftEntityListDictionary,
-    (int64_t)v3,
-    v4,
     v5,
+    (const MethodInfo_32D4500 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity____ctor__);
+  this->fields.idToGiftEntityListDictionary = (struct System_Collections_Generic_Dictionary_int__List_GiftEntity___o *)v5;
+  sub_1C2E0D0(
+    (PartyOrganizationUtility_o *)&this->fields.idToGiftEntityListDictionary,
+    (int64_t)v5,
     v6,
     v7,
     v8,
-    v9);
+    v9,
+    v10,
+    v11);
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     24,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_GiftMaster__GiftEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_GiftMaster__GiftEntity__string___ctor__);
 }
 
 
@@ -42,28 +44,32 @@ void __fastcall GiftMaster__AddIdToGiftEntityListDictionary(
         const MethodInfo *method)
 {
   GiftMaster_o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  System_Collections_Generic_List_object__o *v11; // x21
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  int64_t v9; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  BattleSetupInfo_o *v12; // x5
+  FollowerInfo_o *v13; // x6
+  PartyListViewItem_o *v14; // x7
+  System_Collections_Generic_List_object__o *v15; // x21
   Il2CppClass *klass; // x8
-  _QWORD *v13; // x9
+  _QWORD *v17; // x9
   __int64 MasterName_k__BackingField_low; // x10
-  void **v15; // x8
+  void **v19; // x8
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4BDC82E & 1) == 0 )
+  if ( (byte_4BFDA39 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___set_Item__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    this = (GiftMaster_o *)sub_1C21E38(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    byte_4BDC82E = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__, giftEntity);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___set_Item__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__Add__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v7);
+    this = (GiftMaster_o *)sub_1C2E12C(&System_Collections_Generic_List_GiftEntity__TypeInfo, v8);
+    byte_4BFDA39 = 1;
   }
   value = 0LL;
   if ( !giftEntity )
@@ -75,31 +81,31 @@ void __fastcall GiftMaster__AddIdToGiftEntityListDictionary(
           (System_Collections_Generic_Dictionary_int__object__o *)this,
           giftEntity->fields.id,
           &value,
-          (const MethodInfo_32B71D8 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
+          (const MethodInfo_32D6660 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
   {
-    v11 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    v15 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_GiftEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v11,
-      (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    value = (Il2CppObject *)v11;
+      v15,
+      (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    value = (Il2CppObject *)v15;
     this = (GiftMaster_o *)v4->fields.idToGiftEntityListDictionary;
     if ( !this )
       goto LABEL_14;
     System_Collections_Generic_Dictionary_int__object___set_Item(
       (System_Collections_Generic_Dictionary_int__object__o *)this,
       giftEntity->fields.id,
-      (Il2CppObject *)v11,
-      (const MethodInfo_32B5A38 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___set_Item__);
+      (Il2CppObject *)v15,
+      (const MethodInfo_32D4EC0 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___set_Item__);
   }
   this = (GiftMaster_o *)value;
   if ( !value
     || (klass = value[1].klass,
-        v13 = Method_System_Collections_Generic_List_GiftEntity__Add__,
+        v17 = Method_System_Collections_Generic_List_GiftEntity__Add__,
         ++HIDWORD(value[1].monitor),
         !klass) )
   {
 LABEL_14:
-    sub_1C22094(this, giftEntity);
+    sub_1C2E388(this, giftEntity);
   }
   MasterName_k__BackingField_low = SLODWORD(this->fields._MasterName_k__BackingField);
   if ( (unsigned int)MasterName_k__BackingField_low >= LODWORD(klass->_1.namespaze) )
@@ -107,73 +113,77 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)giftEntity,
-      *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_366B8AC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
-    v15 = &klass->_1.image + MasterName_k__BackingField_low;
+    v19 = &klass->_1.image + MasterName_k__BackingField_low;
     LODWORD(this->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
-    v15[4] = giftEntity;
-    sub_1C21DDC((PartyOrganizationUtility_o *)(v15 + 4), (int64_t)giftEntity, v5, v6, v7, v8, v9, v10);
+    v19[4] = giftEntity;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)(v19 + 4), (int64_t)giftEntity, v9, v10, v11, v12, v13, v14);
   }
 }
 
 
 void __fastcall GiftMaster__CreateIdToGiftEntityListDictionary(GiftMaster_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_Dictionary_int__object__o *idToGiftEntityListDictionary; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_Generic_Dictionary_int__object__o *idToGiftEntityListDictionary; // x0
+  __int64 v8; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v7; // x9
+  __int64 v11; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v10; // x8
-  __int64 v11; // x9
-  int32_t *v12; // x10
-  __int64 v13; // x0
-  GiftEntity_o *v14; // x1
-  const MethodInfo *v15; // x2
-  System_Collections_Generic_IEnumerator_T__c *v16; // x8
-  __int64 v17; // x9
-  int32_t *v18; // x10
-  __int64 v19; // x0
+  System_Collections_Generic_IEnumerator_T__c *v14; // x8
+  __int64 v15; // x9
+  int32_t *v16; // x10
+  __int64 v17; // x0
+  GiftEntity_o *v18; // x1
+  const MethodInfo *v19; // x2
+  System_Collections_Generic_IEnumerator_T__c *v20; // x8
+  __int64 v21; // x9
+  int32_t *v22; // x10
+  __int64 v23; // x0
 
-  if ( (byte_4BDC82D & 1) == 0 )
+  if ( (byte_4BFDA38 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_GiftEntity__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Clear__);
-    sub_1C21E38(&System_IDisposable_TypeInfo);
-    sub_1C21E38(&System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo);
-    sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
-    byte_4BDC82D = 1;
+    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_GiftEntity__GetEnumerator__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Clear__, v3);
+    sub_1C2E12C(&System_IDisposable_TypeInfo, v4);
+    sub_1C2E12C(&System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo, v5);
+    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v6);
+    byte_4BFDA38 = 1;
   }
   idToGiftEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.idToGiftEntityListDictionary;
   if ( !idToGiftEntityListDictionary
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           idToGiftEntityListDictionary,
-          (const MethodInfo_32B5BD4 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Clear__),
+          (const MethodInfo_32D505C *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Clear__),
         (idToGiftEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.list) == 0LL) )
   {
-    sub_1C22094(idToGiftEntityListDictionary, method);
+    sub_1C2E388(idToGiftEntityListDictionary, method);
   }
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)idToGiftEntityListDictionary,
-                 (const MethodInfo_31F66A4 *)Method_System_Collections_ObjectModel_Collection_GiftEntity__GetEnumerator__);
+                 (const MethodInfo_3216144 *)Method_System_Collections_ObjectModel_Collection_GiftEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v7 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v11 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v7;
+        --v11;
         p_offset += 4;
-        if ( !v7 )
+        if ( !v11 )
           goto LABEL_10;
       }
       p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -181,57 +191,57 @@ void __fastcall GiftMaster__CreateIdToGiftEntityListDictionary(GiftMaster_o *thi
     else
     {
 LABEL_10:
-      p_method = sub_1C73E18(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
             *(_QWORD *)(p_method + 8)) & 1) == 0 )
       break;
-    v10 = Enumerator->klass;
-    v11 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+    v14 = Enumerator->klass;
+    v15 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
     if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
     {
-      v12 = &v10->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_GiftEntity__c **)v12 - 1) != System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo )
+      v16 = &v14->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_GiftEntity__c **)v16 - 1) != System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo )
       {
-        --v11;
-        v12 += 4;
-        if ( !v11 )
+        --v15;
+        v16 += 4;
+        if ( !v15 )
           goto LABEL_17;
       }
-      v13 = (__int64)&v10->vtable[*v12].method;
+      v17 = (__int64)&v14->vtable[*v16].method;
     }
     else
     {
 LABEL_17:
-      v13 = sub_1C73E18(Enumerator, System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo, 0LL);
+      v17 = sub_1C8010C(Enumerator, System_Collections_Generic_IEnumerator_GiftEntity__TypeInfo, 0LL);
     }
-    v14 = (GiftEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
+    v18 = (GiftEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                             Enumerator,
-                            *(_QWORD *)(v13 + 8));
-    if ( v14 )
-      GiftMaster__AddIdToGiftEntityListDictionary(this, v14, v15);
+                            *(_QWORD *)(v17 + 8));
+    if ( v18 )
+      GiftMaster__AddIdToGiftEntityListDictionary(this, v18, v19);
   }
-  v16 = Enumerator->klass;
-  v17 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v20 = Enumerator->klass;
+  v21 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v18 = &v16->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v18 - 1) != System_IDisposable_TypeInfo )
+    v22 = &v20->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v22 - 1) != System_IDisposable_TypeInfo )
     {
-      --v17;
-      v18 += 4;
-      if ( !v17 )
+      --v21;
+      v22 += 4;
+      if ( !v21 )
         goto LABEL_25;
     }
-    v19 = (__int64)&v16->vtable[*v18].method;
+    v23 = (__int64)&v20->vtable[*v22].method;
   }
   else
   {
 LABEL_25:
-    v19 = sub_1C73E18(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v23 = sub_1C8010C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(Enumerator, *(_QWORD *)(v19 + 8));
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(Enumerator, *(_QWORD *)(v23 + 8));
 }
 
 
@@ -245,35 +255,36 @@ GiftEntity_o *__fastcall GiftMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BDC82A & 1) == 0 )
+  if ( (byte_4BFDA35 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_GiftMaster__GiftEntity__string__GetEntity__);
-    byte_4BDC82A = 1;
+    sub_1C2E12C(&Method_DataMasterBase_GiftMaster__GiftEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4BFDA35 = 1;
   }
   PK = (Il2CppObject *)GiftEntity__CreatePK(id, type, objectId, *(const MethodInfo **)&objectId);
   return (GiftEntity_o *)DataMasterBase_object__object__object___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                            PK,
-                           (const MethodInfo_3260880 *)Method_DataMasterBase_GiftMaster__GiftEntity__string__GetEntity__);
+                           (const MethodInfo_327FC38 *)Method_DataMasterBase_GiftMaster__GiftEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 GiftEntity_array *__fastcall GiftMaster__GetGiftListById(GiftMaster_o *this, int32_t giftId, const MethodInfo *method)
 {
   System_Collections_Generic_List_GiftEntity__o *ListById; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BDC833 & 1) == 0 )
+  if ( (byte_4BFDA3E & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
-    byte_4BDC833 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__ToArray__, *(_QWORD *)&giftId);
+    byte_4BFDA3E = 1;
   }
   ListById = GiftMaster__GetListById(this, giftId, method);
   if ( !ListById )
-    sub_1C22094(0LL, v6);
+    sub_1C2E388(0LL, v6);
   return (GiftEntity_array *)System_Collections_Generic_List_object___ToArray(
                                (System_Collections_Generic_List_object__o *)ListById,
-                               (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+                               (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
 }
 
 
@@ -282,58 +293,64 @@ System_Collections_Generic_List_GiftEntity__o *__fastcall GiftMaster__GetGiftLis
         System_Collections_Generic_IEnumerable_int__o *giftIds,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v5; // x19
-  __int64 v6; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
   __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x19
+  __int64 v12; // x0
+  __int64 v13; // x1
   System_Collections_Generic_IEnumerable_int__c *klass; // x8
-  __int64 v9; // x9
+  __int64 v15; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v12; // x1
-  __int64 v13; // x20
-  __int64 v14; // x8
-  __int64 v15; // x9
-  int *v16; // x10
-  __int64 v17; // x0
-  __int64 v18; // x8
-  __int64 v19; // x9
-  int *v20; // x10
-  __int64 v21; // x0
-  int32_t v22; // w1
-  const MethodInfo *v23; // x2
+  __int64 v18; // x1
+  __int64 v19; // x20
+  __int64 v20; // x8
+  __int64 v21; // x9
+  int *v22; // x10
+  __int64 v23; // x0
+  __int64 v24; // x8
+  __int64 v25; // x9
+  int *v26; // x10
+  __int64 v27; // x0
+  int32_t v28; // w1
+  const MethodInfo *v29; // x2
   System_Collections_Generic_IEnumerable_T__o *ListById; // x0
-  __int64 v25; // x8
-  __int64 v26; // x9
-  int *v27; // x10
-  __int64 v28; // x0
+  __int64 v31; // x8
+  __int64 v32; // x9
+  int *v33; // x10
+  __int64 v34; // x0
 
-  if ( (byte_4BDC832 & 1) == 0 )
+  if ( (byte_4BFDA3D & 1) == 0 )
   {
-    sub_1C21E38(&System_IDisposable_TypeInfo);
-    sub_1C21E38(&System_Collections_Generic_IEnumerable_int__TypeInfo);
-    sub_1C21E38(&System_Collections_Generic_IEnumerator_int__TypeInfo);
-    sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__AddRange__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    byte_4BDC832 = 1;
+    sub_1C2E12C(&System_IDisposable_TypeInfo, giftIds);
+    sub_1C2E12C(&System_Collections_Generic_IEnumerable_int__TypeInfo, v5);
+    sub_1C2E12C(&System_Collections_Generic_IEnumerator_int__TypeInfo, v6);
+    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__AddRange__, v8);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v9);
+    sub_1C2E12C(&System_Collections_Generic_List_GiftEntity__TypeInfo, v10);
+    byte_4BFDA3D = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    v11,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
   if ( !giftIds )
-    sub_1C22094(v6, v7);
+    sub_1C2E388(v12, v13);
   klass = giftIds->klass;
-  v9 = *(unsigned __int16 *)(&giftIds->klass->_2.bitflags2 + 3);
+  v15 = *(unsigned __int16 *)(&giftIds->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&giftIds->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_int__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
     {
-      --v9;
+      --v15;
       p_offset += 4;
-      if ( !v9 )
+      if ( !v15 )
         goto LABEL_8;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -341,186 +358,196 @@ System_Collections_Generic_List_GiftEntity__o *__fastcall GiftMaster__GetGiftLis
   else
   {
 LABEL_8:
-    p_method = sub_1C73E18(giftIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
+    p_method = sub_1C8010C(giftIds, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
   }
-  v13 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))p_method)(
+  v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))p_method)(
           giftIds,
           *(_QWORD *)(p_method + 8));
-  if ( !v13 )
-    sub_1C22094(0LL, v12);
+  if ( !v19 )
+    sub_1C2E388(0LL, v18);
   while ( 1 )
   {
-    v14 = *(_QWORD *)v13;
-    v15 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    v20 = *(_QWORD *)v19;
+    v21 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
     {
-      v16 = (int *)(*(_QWORD *)(v14 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v16 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v22 = (int *)(*(_QWORD *)(v20 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v22 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v15;
-        v16 += 4;
-        if ( !v15 )
+        --v21;
+        v22 += 4;
+        if ( !v21 )
           goto LABEL_15;
       }
-      v17 = v14 + 16LL * *v16 + 312;
+      v23 = v20 + 16LL * *v22 + 312;
     }
     else
     {
 LABEL_15:
-      v17 = sub_1C73E18(v13, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v23 = sub_1C8010C(v19, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v17)(v13, *(_QWORD *)(v17 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v19, *(_QWORD *)(v23 + 8)) & 1) == 0 )
       break;
-    v18 = *(_QWORD *)v13;
-    v19 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+    v24 = *(_QWORD *)v19;
+    v25 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
     {
-      v20 = (int *)(*(_QWORD *)(v18 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_int__c **)v20 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
+      v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_int__c **)v26 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
       {
-        --v19;
-        v20 += 4;
-        if ( !v19 )
+        --v25;
+        v26 += 4;
+        if ( !v25 )
           goto LABEL_22;
       }
-      v21 = v18 + 16LL * *v20 + 312;
+      v27 = v24 + 16LL * *v26 + 312;
     }
     else
     {
 LABEL_22:
-      v21 = sub_1C73E18(v13, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
+      v27 = sub_1C8010C(v19, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
     }
-    v22 = (*(__int64 (__fastcall **)(__int64, _QWORD))v21)(v13, *(_QWORD *)(v21 + 8));
-    ListById = (System_Collections_Generic_IEnumerable_T__o *)GiftMaster__GetListById(this, v22, v23);
-    if ( !v5 )
-      sub_1C22094(ListById, ListById);
+    v28 = (*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v19, *(_QWORD *)(v27 + 8));
+    ListById = (System_Collections_Generic_IEnumerable_T__o *)GiftMaster__GetListById(this, v28, v29);
+    if ( !v11 )
+      sub_1C2E388(ListById, ListById);
     System_Collections_Generic_List_object___AddRange(
-      v5,
+      v11,
       ListById,
-      (const MethodInfo_364F2C0 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
+      (const MethodInfo_366BAB8 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
   }
-  v25 = *(_QWORD *)v13;
-  v26 = *(unsigned __int16 *)(*(_QWORD *)v13 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v13 + 302LL) )
+  v31 = *(_QWORD *)v19;
+  v32 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
   {
-    v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
+    v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
     {
-      --v26;
-      v27 += 4;
-      if ( !v26 )
+      --v32;
+      v33 += 4;
+      if ( !v32 )
         goto LABEL_30;
     }
-    v28 = v25 + 16LL * *v27 + 312;
+    v34 = v31 + 16LL * *v33 + 312;
   }
   else
   {
 LABEL_30:
-    v28 = sub_1C73E18(v13, System_IDisposable_TypeInfo, 0LL);
+    v34 = sub_1C8010C(v19, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v28)(v13, *(_QWORD *)(v28 + 8));
-  return (System_Collections_Generic_List_GiftEntity__o *)v5;
+  (*(void (__fastcall **)(__int64, _QWORD))v34)(v19, *(_QWORD *)(v34 + 8));
+  return (System_Collections_Generic_List_GiftEntity__o *)v11;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_Collections_Generic_List_GiftEntity__o *__fastcall GiftMaster__GetListById(
         GiftMaster_o *this,
         int32_t giftId,
         const MethodInfo *method)
 {
-  void *Instance; // x0
+  int32_t v3; // w19
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  __int64 v8; // x21
-  bool v9; // w22
-  System_Collections_Generic_List_object__o *v10; // x20
-  signed __int64 v11; // x19
-  int v12; // w8
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  __int64 v11; // x1
+  void *Instance; // x0
+  __int64 v13; // x1
+  const MethodInfo *v14; // x2
+  __int64 v15; // x21
+  bool v16; // w22
+  System_Collections_Generic_List_object__o *v17; // x20
+  signed __int64 v18; // x19
+  int v19; // w8
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BDC834 & 1) == 0 )
+  v3 = giftId;
+  if ( (byte_4BFDA3F & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_GiftAddMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
-    sub_1C21E38(&Method_System_Linq_Enumerable_ToList_GiftEntity___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_1C21E38(&System_Collections_Generic_List_GiftEntity__TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDC834 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_GiftAddMaster___, *(_QWORD *)&giftId);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__, v5);
+    sub_1C2E12C(&Method_System_Linq_Enumerable_ToList_GiftEntity___, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v8);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v9);
+    sub_1C2E12C(&System_Collections_Generic_List_GiftEntity__TypeInfo, v10);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4BFDA3F = 1;
   }
   value = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_GiftAddMaster___);
+               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_GiftAddMaster___);
   if ( !Instance )
     goto LABEL_20;
-  Instance = GiftAddMaster__GetValidPriorDataById((GiftAddMaster_o *)Instance, giftId, v7);
+  Instance = GiftAddMaster__GetValidPriorDataById((GiftAddMaster_o *)Instance, v3, v14);
   if ( Instance )
   {
-    giftId = *((_DWORD *)Instance + 12);
-    v8 = *((_QWORD *)Instance + 5);
+    v3 = *((_DWORD *)Instance + 12);
+    v15 = *((_QWORD *)Instance + 5);
   }
   else
   {
-    v8 = 0LL;
+    v15 = 0LL;
   }
-  v9 = Instance != 0LL;
+  v16 = Instance != 0LL;
   if ( !this->fields.idToGiftEntityListDictionary )
     goto LABEL_20;
   Instance = (void *)System_Collections_Generic_Dictionary_int__object___TryGetValue(
                        (System_Collections_Generic_Dictionary_int__object__o *)this->fields.idToGiftEntityListDictionary,
-                       giftId,
+                       v3,
                        &value,
-                       (const MethodInfo_32B71D8 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
+                       (const MethodInfo_32D6660 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
-    v10 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_GiftEntity__TypeInfo);
+    v17 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_GiftEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v10,
-      (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-    return (System_Collections_Generic_List_GiftEntity__o *)v10;
+      v17,
+      (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    return (System_Collections_Generic_List_GiftEntity__o *)v17;
   }
-  v10 = (System_Collections_Generic_List_object__o *)value;
-  if ( v8 )
+  v17 = (System_Collections_Generic_List_object__o *)value;
+  if ( v15 )
   {
     if ( value )
     {
-      v11 = 0LL;
-      while ( v11 < v10->fields._size )
+      v18 = 0LL;
+      while ( v18 < v17->fields._size )
       {
         Instance = System_Collections_Generic_List_object___get_Item(
-                     v10,
-                     v11,
-                     (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                     v17,
+                     v18,
+                     (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
         if ( !Instance )
           goto LABEL_20;
-        *((_BYTE *)Instance + 48) = v9;
-        if ( v11 >= *(int *)(v8 + 24) )
+        *((_BYTE *)Instance + 48) = v16;
+        if ( v18 >= *(int *)(v15 + 24) )
         {
-          v10 = (System_Collections_Generic_List_object__o *)value;
+          v17 = (System_Collections_Generic_List_object__o *)value;
           return (System_Collections_Generic_List_GiftEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-                                                                    (const MethodInfo_2FED5C8 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
+                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v17,
+                                                                    (const MethodInfo_300FBA0 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
         }
         Instance = value;
         if ( value )
         {
           Instance = System_Collections_Generic_List_object___get_Item(
                        (System_Collections_Generic_List_object__o *)value,
-                       v11,
-                       (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-          if ( v11 >= (unsigned __int64)*(unsigned int *)(v8 + 24) )
-            sub_1C2209C(Instance, v6);
+                       v18,
+                       (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+          if ( v18 >= (unsigned __int64)*(unsigned int *)(v15 + 24) )
+            sub_1C2E390(Instance, v13);
           if ( Instance )
           {
-            v12 = *(_DWORD *)(v8 + 32 + 4 * v11++);
-            *((_DWORD *)Instance + 11) = v12;
-            v10 = (System_Collections_Generic_List_object__o *)value;
+            v19 = *(_DWORD *)(v15 + 32 + 4 * v18++);
+            *((_DWORD *)Instance + 11) = v19;
+            v17 = (System_Collections_Generic_List_object__o *)value;
             if ( value )
               continue;
           }
@@ -528,13 +555,13 @@ System_Collections_Generic_List_GiftEntity__o *__fastcall GiftMaster__GetListByI
         goto LABEL_20;
       }
       return (System_Collections_Generic_List_GiftEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-                                                                (const MethodInfo_2FED5C8 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
+                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v17,
+                                                                (const MethodInfo_300FBA0 *)Method_System_Linq_Enumerable_ToList_GiftEntity___);
     }
 LABEL_20:
-    sub_1C22094(Instance, v6);
+    sub_1C2E388(Instance, v13);
   }
-  return (System_Collections_Generic_List_GiftEntity__o *)v10;
+  return (System_Collections_Generic_List_GiftEntity__o *)v17;
 }
 
 
@@ -544,20 +571,22 @@ GiftEntity_array *__fastcall GiftMaster__GetOriginalGiftData(
         int32_t giftId,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   System_Collections_Generic_Dictionary_int__object__o *idToGiftEntityListDictionary; // x0
   long double inited; // q0
-  _QWORD *v8; // x19
-  __int64 v9; // x8
-  __int64 v10; // x0
-  __int64 v11; // x0
+  _QWORD *v10; // x19
+  __int64 v11; // x8
+  __int64 v12; // x0
+  __int64 v13; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BDC835 & 1) == 0 )
+  if ( (byte_4BFDA40 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Array_Empty_GiftEntity___);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
-    byte_4BDC835 = 1;
+    sub_1C2E12C(&Method_System_Array_Empty_GiftEntity___, *(_QWORD *)&giftId);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__ToArray__, v6);
+    byte_4BFDA40 = 1;
   }
   value = 0LL;
   idToGiftEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.idToGiftEntityListDictionary;
@@ -567,32 +596,32 @@ GiftEntity_array *__fastcall GiftMaster__GetOriginalGiftData(
          idToGiftEntityListDictionary,
          giftId,
          &value,
-         (const MethodInfo_32B71D8 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
+         (const MethodInfo_32D6660 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
   {
     idToGiftEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)value;
     if ( value )
       return (GiftEntity_array *)System_Collections_Generic_List_object___ToArray(
                                    (System_Collections_Generic_List_object__o *)value,
-                                   (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+                                   (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
 LABEL_17:
-    sub_1C22094(idToGiftEntityListDictionary, *(_QWORD *)&giftId);
+    sub_1C2E388(idToGiftEntityListDictionary, *(_QWORD *)&giftId);
   }
-  v8 = Method_System_Array_Empty_GiftEntity___;
-  v9 = *((_QWORD *)Method_System_Array_Empty_GiftEntity___ + 7);
-  if ( !v9 )
+  v10 = Method_System_Array_Empty_GiftEntity___;
+  v11 = *((_QWORD *)Method_System_Array_Empty_GiftEntity___ + 7);
+  if ( !v11 )
   {
-    sub_1C73D70(Method_System_Array_Empty_GiftEntity___);
-    v9 = v8[7];
+    sub_1C80064(Method_System_Array_Empty_GiftEntity___);
+    v11 = v10[7];
   }
-  v10 = *(_QWORD *)(v9 + 16);
-  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C73D14(inited);
-  if ( !*(_DWORD *)(v10 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v10);
-  v11 = *(_QWORD *)(v8[7] + 16LL);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C73D14(inited);
-  return **(GiftEntity_array ***)(v11 + 184);
+  v12 = *(_QWORD *)(v11 + 16);
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1C80008(inited);
+  if ( !*(_DWORD *)(v12 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v12);
+  v13 = *(_QWORD *)(v10[7] + 16LL);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C80008(inited);
+  return **(GiftEntity_array ***)(v13 + 184);
 }
 
 
@@ -602,74 +631,77 @@ void __fastcall GiftMaster__OnListChangedImplementation(
         const MethodInfo *method)
 {
   GiftMaster_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   unsigned int action; // w8
   struct System_Collections_IList_o *oldItems; // x21
   System_Collections_IList_c *klass; // x8
-  __int64 v8; // x9
+  __int64 v11; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v11; // x0
-  System_NotImplementedException_o *v12; // x19
-  __int64 v13; // x0
-  __int64 v14; // x1
-  __int64 v15; // x21
-  __int64 v16; // x8
-  __int64 v17; // x9
-  int *v18; // x10
-  __int64 v19; // x0
-  __int64 v20; // x8
-  __int64 v21; // x9
-  System_Collections_IEnumerator_c **v22; // x10
-  __int64 v23; // x0
-  __int64 v24; // x0
-  GiftEntity_o *v25; // x22
-  __int64 v26; // x8
+  __int64 v14; // x0
+  System_NotImplementedException_o *v15; // x19
+  __int64 v16; // x0
+  __int64 v17; // x1
+  __int64 v18; // x21
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
+  __int64 v22; // x0
+  __int64 v23; // x8
+  __int64 v24; // x9
+  System_Collections_IEnumerator_c **v25; // x10
+  __int64 v26; // x0
+  __int64 v27; // x0
+  GiftEntity_o *v28; // x22
+  __int64 v29; // x8
   __int64 methodPtr_low; // x10
-  const MethodInfo *v28; // x2
-  __int64 v29; // x0
-  __int64 v30; // x8
-  __int64 v31; // x21
-  __int64 v32; // x9
-  int *v33; // x10
-  __int64 v34; // x0
+  const MethodInfo *v31; // x2
+  __int64 v32; // x0
+  __int64 v33; // x8
+  __int64 v34; // x21
+  __int64 v35; // x9
+  int *v36; // x10
+  __int64 v37; // x0
   struct System_Collections_IList_o *newItems; // x20
-  System_Collections_IList_c *v36; // x8
-  __int64 v37; // x9
-  int32_t *v38; // x10
-  __int64 v39; // x0
-  __int64 v40; // x1
-  __int64 v41; // x20
-  __int64 v42; // x8
-  __int64 v43; // x9
-  int *v44; // x10
-  __int64 v45; // x0
-  __int64 v46; // x8
-  __int64 v47; // x9
-  System_Collections_IEnumerator_c **v48; // x10
-  __int64 v49; // x0
-  __int64 v50; // x0
-  GiftEntity_o *v51; // x21
-  __int64 v52; // x8
-  __int64 v53; // x10
-  const MethodInfo *v54; // x2
-  __int64 v55; // x0
-  __int64 v56; // x8
-  __int64 v57; // x20
-  __int64 v58; // x9
-  int *v59; // x10
-  __int64 v60; // x0
+  System_Collections_IList_c *v39; // x8
+  __int64 v40; // x9
+  int32_t *v41; // x10
+  __int64 v42; // x0
+  __int64 v43; // x1
+  __int64 v44; // x20
+  __int64 v45; // x8
+  __int64 v46; // x9
+  int *v47; // x10
+  __int64 v48; // x0
+  __int64 v49; // x8
+  __int64 v50; // x9
+  System_Collections_IEnumerator_c **v51; // x10
+  __int64 v52; // x0
+  __int64 v53; // x0
+  GiftEntity_o *v54; // x21
+  __int64 v55; // x8
+  __int64 v56; // x10
+  const MethodInfo *v57; // x2
+  __int64 v58; // x0
+  __int64 v59; // x8
+  __int64 v60; // x20
+  __int64 v61; // x9
+  int *v62; // x10
+  __int64 v63; // x0
 
   v4 = this;
-  if ( (byte_4BDC830 & 1) == 0 )
+  if ( (byte_4BFDA3B & 1) == 0 )
   {
-    sub_1C21E38(&GiftEntity_TypeInfo);
-    sub_1C21E38(&System_IDisposable_TypeInfo);
-    sub_1C21E38(&System_Collections_IEnumerable_TypeInfo);
-    this = (GiftMaster_o *)sub_1C21E38(&System_Collections_IEnumerator_TypeInfo);
-    byte_4BDC830 = 1;
+    sub_1C2E12C(&GiftEntity_TypeInfo, e);
+    sub_1C2E12C(&System_IDisposable_TypeInfo, v5);
+    sub_1C2E12C(&System_Collections_IEnumerable_TypeInfo, v6);
+    this = (GiftMaster_o *)sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v7);
+    byte_4BFDA3B = 1;
   }
   if ( !e )
-    sub_1C22094(this, e);
+    sub_1C2E388(this, e);
   action = e->fields._action;
   if ( action >= 3 )
   {
@@ -677,11 +709,11 @@ void __fastcall GiftMaster__OnListChangedImplementation(
     {
       if ( action != 4 )
       {
-        v11 = sub_1C21E4C(&System_NotImplementedException_TypeInfo);
-        v12 = (System_NotImplementedException_o *)sub_1C22084(v11);
-        System_NotImplementedException___ctor(v12, 0LL);
-        v13 = sub_1C21E4C(&Method_GiftMaster_OnListChangedImplementation__);
-        sub_1C21F60(v12, v13);
+        v14 = sub_1C2E140(&System_NotImplementedException_TypeInfo);
+        v15 = (System_NotImplementedException_o *)sub_1C2E378(v14);
+        System_NotImplementedException___ctor(v15, 0LL);
+        v16 = sub_1C2E140(&Method_GiftMaster_OnListChangedImplementation__);
+        sub_1C2E254(v15, v16);
       }
       GiftMaster__CreateIdToGiftEntityListDictionary(v4, (const MethodInfo *)e);
     }
@@ -692,15 +724,15 @@ void __fastcall GiftMaster__OnListChangedImplementation(
     if ( oldItems )
     {
       klass = oldItems->klass;
-      v8 = *(unsigned __int16 *)(&oldItems->klass->_2.bitflags2 + 3);
+      v11 = *(unsigned __int16 *)(&oldItems->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&oldItems->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Collections_IEnumerable_c **)p_offset - 1) != System_Collections_IEnumerable_TypeInfo )
         {
-          --v8;
+          --v11;
           p_offset += 4;
-          if ( !v8 )
+          if ( !v11 )
             goto LABEL_10;
         }
         p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -708,200 +740,200 @@ void __fastcall GiftMaster__OnListChangedImplementation(
       else
       {
 LABEL_10:
-        p_method = sub_1C73E18(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+        p_method = sub_1C8010C(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
       }
-      v15 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
+      v18 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
               oldItems,
               *(_QWORD *)(p_method + 8));
-      if ( !v15 )
-        sub_1C22094(0LL, v14);
+      if ( !v18 )
+        sub_1C2E388(0LL, v17);
       while ( 1 )
       {
-        v16 = *(_QWORD *)v15;
-        v17 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
+        v19 = *(_QWORD *)v18;
+        v20 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
         {
-          v18 = (int *)(*(_QWORD *)(v16 + 176) + 8LL);
-          while ( *((System_Collections_IEnumerator_c **)v18 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+          while ( *((System_Collections_IEnumerator_c **)v21 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v17;
-            v18 += 4;
-            if ( !v17 )
+            --v20;
+            v21 += 4;
+            if ( !v20 )
               goto LABEL_20;
           }
-          v19 = v16 + 16LL * *v18 + 312;
+          v22 = v19 + 16LL * *v21 + 312;
         }
         else
         {
 LABEL_20:
-          v19 = sub_1C73E18(v15, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v22 = sub_1C8010C(v18, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
-        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v19)(v15, *(_QWORD *)(v19 + 8)) & 1) == 0 )
+        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
           break;
-        v20 = *(_QWORD *)v15;
-        v21 = *(unsigned __int16 *)(*(_QWORD *)v15 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v15 + 302LL) )
+        v23 = *(_QWORD *)v18;
+        v24 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
         {
-          v22 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v20 + 176) + 8LL);
-          while ( *(v22 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v25 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v23 + 176) + 8LL);
+          while ( *(v25 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v21;
-            v22 += 2;
-            if ( !v21 )
+            --v24;
+            v25 += 2;
+            if ( !v24 )
               goto LABEL_27;
           }
-          v23 = v20 + 16LL * (*(_DWORD *)v22 + 1) + 312;
+          v26 = v23 + 16LL * (*(_DWORD *)v25 + 1) + 312;
         }
         else
         {
 LABEL_27:
-          v23 = sub_1C73E18(v15, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v26 = sub_1C8010C(v18, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
-        v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v15, *(_QWORD *)(v23 + 8));
-        v25 = (GiftEntity_o *)v24;
-        if ( v24 )
+        v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
+        v28 = (GiftEntity_o *)v27;
+        if ( v27 )
         {
-          v26 = *(_QWORD *)v24;
+          v29 = *(_QWORD *)v27;
           methodPtr_low = LOBYTE(GiftEntity_TypeInfo->vtable._0_Equals.methodPtr);
-          if ( *(unsigned __int8 *)(*(_QWORD *)v24 + 304LL) >= (unsigned int)methodPtr_low
-            && *(GiftEntity_c **)(*(_QWORD *)(v26 + 200) + 8 * methodPtr_low - 8) == GiftEntity_TypeInfo )
+          if ( *(unsigned __int8 *)(*(_QWORD *)v27 + 304LL) >= (unsigned int)methodPtr_low
+            && *(GiftEntity_c **)(*(_QWORD *)(v29 + 200) + 8 * methodPtr_low - 8) == GiftEntity_TypeInfo )
           {
-            if ( (*(__int64 (__fastcall **)(__int64, _QWORD))(v26 + 376))(v24, *(_QWORD *)(v26 + 384)) )
-              GiftMaster__RemoveIdToGiftEntityListDictionary(v4, v25, v28);
+            if ( (*(__int64 (__fastcall **)(__int64, _QWORD))(v29 + 376))(v27, *(_QWORD *)(v29 + 384)) )
+              GiftMaster__RemoveIdToGiftEntityListDictionary(v4, v28, v31);
           }
         }
       }
-      v29 = sub_1C21F74(v15, System_IDisposable_TypeInfo);
-      if ( v29 )
+      v32 = sub_1C2E268(v18, System_IDisposable_TypeInfo);
+      if ( v32 )
       {
-        v30 = *(_QWORD *)v29;
-        v31 = v29;
-        v32 = *(unsigned __int16 *)(*(_QWORD *)v29 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v29 + 302LL) )
+        v33 = *(_QWORD *)v32;
+        v34 = v32;
+        v35 = *(unsigned __int16 *)(*(_QWORD *)v32 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v32 + 302LL) )
         {
-          v33 = (int *)(*(_QWORD *)(v30 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
+          v36 = (int *)(*(_QWORD *)(v33 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v36 - 1) != System_IDisposable_TypeInfo )
           {
-            --v32;
-            v33 += 4;
-            if ( !v32 )
+            --v35;
+            v36 += 4;
+            if ( !v35 )
               goto LABEL_39;
           }
-          v34 = v30 + 16LL * *v33 + 312;
+          v37 = v33 + 16LL * *v36 + 312;
         }
         else
         {
 LABEL_39:
-          v34 = sub_1C73E18(v29, System_IDisposable_TypeInfo, 0LL);
+          v37 = sub_1C8010C(v32, System_IDisposable_TypeInfo, 0LL);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v34)(v31, *(_QWORD *)(v34 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v37)(v34, *(_QWORD *)(v37 + 8));
       }
     }
     newItems = e->fields._newItems;
     if ( newItems )
     {
-      v36 = newItems->klass;
-      v37 = *(unsigned __int16 *)(&newItems->klass->_2.bitflags2 + 3);
+      v39 = newItems->klass;
+      v40 = *(unsigned __int16 *)(&newItems->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&newItems->klass->_2.bitflags2 + 3) )
       {
-        v38 = &v36->_1.interfaceOffsets->offset;
-        while ( *((System_Collections_IEnumerable_c **)v38 - 1) != System_Collections_IEnumerable_TypeInfo )
+        v41 = &v39->_1.interfaceOffsets->offset;
+        while ( *((System_Collections_IEnumerable_c **)v41 - 1) != System_Collections_IEnumerable_TypeInfo )
         {
-          --v37;
-          v38 += 4;
-          if ( !v37 )
+          --v40;
+          v41 += 4;
+          if ( !v40 )
             goto LABEL_47;
         }
-        v39 = (__int64)&v36->vtable[*v38].method;
+        v42 = (__int64)&v39->vtable[*v41].method;
       }
       else
       {
 LABEL_47:
-        v39 = sub_1C73E18(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+        v42 = sub_1C8010C(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
       }
-      v41 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v39)(newItems, *(_QWORD *)(v39 + 8));
-      if ( !v41 )
-        sub_1C22094(0LL, v40);
+      v44 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v42)(newItems, *(_QWORD *)(v42 + 8));
+      if ( !v44 )
+        sub_1C2E388(0LL, v43);
       while ( 1 )
       {
-        v42 = *(_QWORD *)v41;
-        v43 = *(unsigned __int16 *)(*(_QWORD *)v41 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v41 + 302LL) )
+        v45 = *(_QWORD *)v44;
+        v46 = *(unsigned __int16 *)(*(_QWORD *)v44 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v44 + 302LL) )
         {
-          v44 = (int *)(*(_QWORD *)(v42 + 176) + 8LL);
-          while ( *((System_Collections_IEnumerator_c **)v44 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v47 = (int *)(*(_QWORD *)(v45 + 176) + 8LL);
+          while ( *((System_Collections_IEnumerator_c **)v47 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v43;
-            v44 += 4;
-            if ( !v43 )
+            --v46;
+            v47 += 4;
+            if ( !v46 )
               goto LABEL_54;
           }
-          v45 = v42 + 16LL * *v44 + 312;
+          v48 = v45 + 16LL * *v47 + 312;
         }
         else
         {
 LABEL_54:
-          v45 = sub_1C73E18(v41, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v48 = sub_1C8010C(v44, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
-        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v45)(v41, *(_QWORD *)(v45 + 8)) & 1) == 0 )
+        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v48)(v44, *(_QWORD *)(v48 + 8)) & 1) == 0 )
           break;
-        v46 = *(_QWORD *)v41;
-        v47 = *(unsigned __int16 *)(*(_QWORD *)v41 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v41 + 302LL) )
+        v49 = *(_QWORD *)v44;
+        v50 = *(unsigned __int16 *)(*(_QWORD *)v44 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v44 + 302LL) )
         {
-          v48 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v46 + 176) + 8LL);
-          while ( *(v48 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v51 = (System_Collections_IEnumerator_c **)(*(_QWORD *)(v49 + 176) + 8LL);
+          while ( *(v51 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v47;
-            v48 += 2;
-            if ( !v47 )
+            --v50;
+            v51 += 2;
+            if ( !v50 )
               goto LABEL_61;
           }
-          v49 = v46 + 16LL * (*(_DWORD *)v48 + 1) + 312;
+          v52 = v49 + 16LL * (*(_DWORD *)v51 + 1) + 312;
         }
         else
         {
 LABEL_61:
-          v49 = sub_1C73E18(v41, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v52 = sub_1C8010C(v44, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
-        v50 = (*(__int64 (__fastcall **)(__int64, _QWORD))v49)(v41, *(_QWORD *)(v49 + 8));
-        v51 = (GiftEntity_o *)v50;
-        if ( v50 )
+        v53 = (*(__int64 (__fastcall **)(__int64, _QWORD))v52)(v44, *(_QWORD *)(v52 + 8));
+        v54 = (GiftEntity_o *)v53;
+        if ( v53 )
         {
-          v52 = *(_QWORD *)v50;
-          v53 = LOBYTE(GiftEntity_TypeInfo->vtable._0_Equals.methodPtr);
-          if ( *(unsigned __int8 *)(*(_QWORD *)v50 + 304LL) >= (unsigned int)v53
-            && *(GiftEntity_c **)(*(_QWORD *)(v52 + 200) + 8 * v53 - 8) == GiftEntity_TypeInfo
-            && (*(__int64 (__fastcall **)(__int64, _QWORD))(v52 + 376))(v50, *(_QWORD *)(v52 + 384)) )
+          v55 = *(_QWORD *)v53;
+          v56 = LOBYTE(GiftEntity_TypeInfo->vtable._0_Equals.methodPtr);
+          if ( *(unsigned __int8 *)(*(_QWORD *)v53 + 304LL) >= (unsigned int)v56
+            && *(GiftEntity_c **)(*(_QWORD *)(v55 + 200) + 8 * v56 - 8) == GiftEntity_TypeInfo
+            && (*(__int64 (__fastcall **)(__int64, _QWORD))(v55 + 376))(v53, *(_QWORD *)(v55 + 384)) )
           {
-            GiftMaster__AddIdToGiftEntityListDictionary(v4, v51, v54);
+            GiftMaster__AddIdToGiftEntityListDictionary(v4, v54, v57);
           }
         }
       }
-      v55 = sub_1C21F74(v41, System_IDisposable_TypeInfo);
-      if ( v55 )
+      v58 = sub_1C2E268(v44, System_IDisposable_TypeInfo);
+      if ( v58 )
       {
-        v56 = *(_QWORD *)v55;
-        v57 = v55;
-        v58 = *(unsigned __int16 *)(*(_QWORD *)v55 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v55 + 302LL) )
+        v59 = *(_QWORD *)v58;
+        v60 = v58;
+        v61 = *(unsigned __int16 *)(*(_QWORD *)v58 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v58 + 302LL) )
         {
-          v59 = (int *)(*(_QWORD *)(v56 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v59 - 1) != System_IDisposable_TypeInfo )
+          v62 = (int *)(*(_QWORD *)(v59 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v62 - 1) != System_IDisposable_TypeInfo )
           {
-            --v58;
-            v59 += 4;
-            if ( !v58 )
+            --v61;
+            v62 += 4;
+            if ( !v61 )
               goto LABEL_73;
           }
-          v60 = v56 + 16LL * *v59 + 312;
+          v63 = v59 + 16LL * *v62 + 312;
         }
         else
         {
 LABEL_73:
-          v60 = sub_1C73E18(v55, System_IDisposable_TypeInfo, 0LL);
+          v63 = sub_1C8010C(v58, System_IDisposable_TypeInfo, 0LL);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v60)(v57, *(_QWORD *)(v60 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v63)(v60, *(_QWORD *)(v63 + 8));
       }
     }
   }
@@ -914,16 +946,19 @@ void __fastcall GiftMaster__RemoveIdToGiftEntityListDictionary(
         const MethodInfo *method)
 {
   GiftMaster_o *v4; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4BDC82F & 1) == 0 )
+  if ( (byte_4BFDA3A & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Remove__);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__Remove__);
-    this = (GiftMaster_o *)sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__get_Count__);
-    byte_4BDC82F = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Remove__, giftEntity);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__Remove__, v6);
+    this = (GiftMaster_o *)sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v7);
+    byte_4BFDA3A = 1;
   }
   value = 0LL;
   if ( !giftEntity )
@@ -935,7 +970,7 @@ void __fastcall GiftMaster__RemoveIdToGiftEntityListDictionary(
           (System_Collections_Generic_Dictionary_int__object__o *)this,
           giftEntity->fields.id,
           &value,
-          (const MethodInfo_32B71D8 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
+          (const MethodInfo_32D6660 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
     return;
   this = (GiftMaster_o *)value;
   if ( !value )
@@ -943,7 +978,7 @@ void __fastcall GiftMaster__RemoveIdToGiftEntityListDictionary(
   this = (GiftMaster_o *)System_Collections_Generic_List_object___Remove(
                            (System_Collections_Generic_List_object__o *)value,
                            (Il2CppObject *)giftEntity,
-                           (const MethodInfo_36505DC *)Method_System_Collections_Generic_List_GiftEntity__Remove__);
+                           (const MethodInfo_366CDD4 *)Method_System_Collections_Generic_List_GiftEntity__Remove__);
   if ( !value )
     goto LABEL_12;
   if ( LODWORD(value[1].monitor) )
@@ -951,11 +986,11 @@ void __fastcall GiftMaster__RemoveIdToGiftEntityListDictionary(
   this = (GiftMaster_o *)v4->fields.idToGiftEntityListDictionary;
   if ( !this )
 LABEL_12:
-    sub_1C22094(this, giftEntity);
+    sub_1C2E388(this, giftEntity);
   System_Collections_Generic_Dictionary_int__object___Remove(
     (System_Collections_Generic_Dictionary_int__object__o *)this,
     giftEntity->fields.id,
-    (const MethodInfo_32B6ED4 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Remove__);
+    (const MethodInfo_32D635C *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___Remove__);
 }
 
 
@@ -970,86 +1005,93 @@ bool __fastcall GiftMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BDC82B & 1) == 0 )
+  if ( (byte_4BFDA36 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_GiftMaster__GiftEntity__string__TryGetEntity__);
-    byte_4BDC82B = 1;
+    sub_1C2E12C(&Method_DataMasterBase_GiftMaster__GiftEntity__string__TryGetEntity__, entity);
+    byte_4BFDA36 = 1;
   }
   PK = (Il2CppObject *)GiftEntity__CreatePK(id, type, objectId, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32608CC *)Method_DataMasterBase_GiftMaster__GiftEntity__string__TryGetEntity__);
+           (const MethodInfo_327FC84 *)Method_DataMasterBase_GiftMaster__GiftEntity__string__TryGetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 GiftEntity_o *__fastcall GiftMaster__getDataById(GiftMaster_o *this, int32_t id, const MethodInfo *method)
 {
-  void *Instance; // x0
+  int32_t v3; // w19
+  __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  __int64 v8; // x8
-  int32_t v9; // w21
+  __int64 v7; // x1
+  __int64 v8; // x1
+  void *Instance; // x0
+  __int64 v10; // x1
+  const MethodInfo *v11; // x2
+  __int64 v12; // x8
+  int32_t v13; // w21
   struct System_Collections_Generic_Dictionary_int__List_GiftEntity___o *idToGiftEntityListDictionary; // x8
-  bool v11; // w20
+  bool v15; // w20
   Il2CppObject *Item; // x22
-  GiftEntity_o *v13; // x19
-  const MethodInfo *v14; // x4
+  GiftEntity_o *v17; // x19
+  const MethodInfo *v18; // x4
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BDC831 & 1) == 0 )
+  v3 = id;
+  if ( (byte_4BFDA3C & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_GiftAddMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__);
-    sub_1C21E38(&GiftEntity_TypeInfo);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BDC831 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_GiftAddMaster___, *(_QWORD *)&id);
+    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__, v5);
+    sub_1C2E12C(&GiftEntity_TypeInfo, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v7);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4BFDA3C = 1;
   }
   value = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_GiftAddMaster___);
+               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_GiftAddMaster___);
   if ( !Instance )
     goto LABEL_16;
-  Instance = GiftAddMaster__GetValidPriorDataById((GiftAddMaster_o *)Instance, id, v7);
+  Instance = GiftAddMaster__GetValidPriorDataById((GiftAddMaster_o *)Instance, v3, v11);
   if ( Instance )
   {
-    v8 = *((_QWORD *)Instance + 5);
-    if ( !v8 )
+    v12 = *((_QWORD *)Instance + 5);
+    if ( !v12 )
       goto LABEL_16;
-    if ( !*(_DWORD *)(v8 + 24) )
-      sub_1C2209C(Instance, v6);
-    id = *((_DWORD *)Instance + 12);
-    v9 = *(_DWORD *)(v8 + 32);
+    if ( !*(_DWORD *)(v12 + 24) )
+      sub_1C2E390(Instance, v10);
+    v3 = *((_DWORD *)Instance + 12);
+    v13 = *(_DWORD *)(v12 + 32);
   }
   else
   {
-    v9 = 0;
+    v13 = 0;
   }
   idToGiftEntityListDictionary = this->fields.idToGiftEntityListDictionary;
-  v11 = Instance != 0LL;
+  v15 = Instance != 0LL;
   if ( !idToGiftEntityListDictionary )
     goto LABEL_16;
   if ( !System_Collections_Generic_Dictionary_int__object___TryGetValue(
           (System_Collections_Generic_Dictionary_int__object__o *)idToGiftEntityListDictionary,
-          id,
+          v3,
           &value,
-          (const MethodInfo_32B71D8 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
+          (const MethodInfo_32D6660 *)Method_System_Collections_Generic_Dictionary_int__List_GiftEntity___TryGetValue__) )
     return 0LL;
   Instance = value;
   if ( !value )
 LABEL_16:
-    sub_1C22094(Instance, v6);
+    sub_1C2E388(Instance, v10);
   Item = System_Collections_Generic_List_object___get_Item(
            (System_Collections_Generic_List_object__o *)value,
            0,
-           (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
-  v13 = (GiftEntity_o *)sub_1C22084(GiftEntity_TypeInfo);
-  GiftEntity___ctor_40620900(v13, (GiftEntity_o *)Item, v9, v11, v14);
-  return v13;
+           (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+  v17 = (GiftEntity_o *)sub_1C2E378(GiftEntity_TypeInfo);
+  GiftEntity___ctor_40694064(v17, (GiftEntity_o *)Item, v13, v15, v18);
+  return v17;
 }

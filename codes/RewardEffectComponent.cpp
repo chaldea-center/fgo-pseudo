@@ -1,9 +1,9 @@
 void __fastcall RewardEffectComponent___ctor(RewardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BD9696 & 1) == 0 )
+  if ( (byte_4BFA882 & 1) == 0 )
   {
-    sub_1C21E38(&CommonEffectComponent_TypeInfo);
-    byte_4BD9696 = 1;
+    sub_1C2E12C(&CommonEffectComponent_TypeInfo, method);
+    byte_4BFA882 = 1;
   }
   this->fields.screenTouchInfoPosY = -221;
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
@@ -24,16 +24,16 @@ System_Collections_IEnumerator_o *__fastcall RewardEffectComponent__DisplayWait(
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BD9695 & 1) == 0 )
+  if ( (byte_4BFA881 & 1) == 0 )
   {
-    sub_1C21E38(&RewardEffectComponent__DisplayWait_d__9_TypeInfo);
-    byte_4BD9695 = 1;
+    sub_1C2E12C(&RewardEffectComponent__DisplayWait_d__9_TypeInfo, method);
+    byte_4BFA881 = 1;
   }
-  v3 = sub_1C22084(RewardEffectComponent__DisplayWait_d__9_TypeInfo);
+  v3 = sub_1C2E378(RewardEffectComponent__DisplayWait_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -53,7 +53,7 @@ void __fastcall RewardEffectComponent__NextPlayAnimation(
   {
     this->fields.status = 1;
     v6 = RewardEffectComponent__DisplayWait(this, v4);
-    UnityEngine_MonoBehaviour__StartCoroutine_70854884((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
   }
 }
 
@@ -70,7 +70,7 @@ void __fastcall RewardEffectComponent__SetEndAction(
   PartyListViewItem_o *v7; // x7
 
   this->fields.endAction = action;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.endAction,
     (int64_t)action,
     (int64_t)method,
@@ -84,26 +84,28 @@ void __fastcall RewardEffectComponent__SetEndAction(
 
 void __fastcall RewardEffectComponent__Start(RewardEffectComponent_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   struct ScreenTouchInformationComponent_o **p_screenTouchInfo; // x20
   UnityEngine_Object_o *screenTouchInfo; // x21
-  __int64 v5; // x1
+  __int64 v7; // x1
   Il2CppObject *Instance; // x21
   UnityEngine_Transform_o *transform; // x0
   Il2CppObject *Component_object; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int64_t v11; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  BattleSetupInfo_o *v14; // x5
+  FollowerInfo_o *v15; // x6
+  PartyListViewItem_o *v16; // x7
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4BD9693 & 1) == 0 )
+  if ( (byte_4BFA87F & 1) == 0 )
   {
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4BD9693 = 1;
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, method);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_4BFA87F = 1;
   }
   CommonEffectComponent__Start((CommonEffectComponent_o *)this, 0LL);
   p_screenTouchInfo = &this->fields.screenTouchInfo;
@@ -112,7 +114,7 @@ void __fastcall RewardEffectComponent__Start(RewardEffectComponent_o *this, cons
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !Instance
       || (transform = (UnityEngine_Transform_o *)CommonUI__CreateScreeenTouchInfo(
@@ -122,21 +124,21 @@ void __fastcall RewardEffectComponent__Start(RewardEffectComponent_o *this, cons
                                                    0LL)) == 0LL )
     {
 LABEL_13:
-      sub_1C22094(transform, v5);
+      sub_1C2E388(transform, v7);
     }
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                         (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
     *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-    sub_1C21DDC(
+    sub_1C2E0D0(
       (PartyOrganizationUtility_o *)&this->fields.screenTouchInfo,
       (int64_t)Component_object,
-      v9,
-      v10,
       v11,
       v12,
       v13,
-      v14);
+      v14,
+      v15,
+      v16);
   }
   transform = (UnityEngine_Transform_o *)*p_screenTouchInfo;
   if ( !*p_screenTouchInfo )
@@ -158,18 +160,21 @@ LABEL_13:
 void __fastcall RewardEffectComponent__Update(RewardEffectComponent_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   UnityEngine_Component_o *screenTouchInfo; // x0
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
+  _QWORD *v8; // x0
+  System_Reflection_MethodBase_o *v9; // x0
+  System_Action_o *v10; // x20
 
-  if ( (byte_4BD9694 & 1) == 0 )
+  if ( (byte_4BFA880 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&CTouch_TypeInfo);
-    sub_1C21E38(&Method_RewardEffectComponent__Update_b__7_0__);
-    sub_1C21E38(&Method_RewardEffectComponent_Update__);
-    byte_4BD9694 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, method);
+    sub_1C2E12C(&CTouch_TypeInfo, v3);
+    sub_1C2E12C(&Method_RewardEffectComponent__Update_b__7_0__, v4);
+    sub_1C2E12C(&Method_RewardEffectComponent_Update__, v5);
+    byte_4BFA880 = 1;
   }
   CommonEffectComponent__Update((CommonEffectComponent_o *)this, 0LL);
   if ( this->fields.isWaitTouch )
@@ -183,20 +188,20 @@ void __fastcall RewardEffectComponent__Update(RewardEffectComponent_o *this, con
       if ( !screenTouchInfo
         || (screenTouchInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(screenTouchInfo, 0LL)) == 0LL )
       {
-        sub_1C22094(screenTouchInfo, v3);
+        sub_1C2E388(screenTouchInfo, v6);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInfo, 0, 0LL);
-      v5 = Method_RewardEffectComponent_Update__;
+      v8 = Method_RewardEffectComponent_Update__;
       if ( (*((_BYTE *)Method_RewardEffectComponent_Update__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C21E50(Method_RewardEffectComponent_Update__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C21E1C(v5, v5[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-      v7 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
-      System_Action___ctor(v7, (Il2CppObject *)this, Method_RewardEffectComponent__Update_b__7_0__, 0LL);
+        v8 = (_QWORD *)sub_1C2E144(Method_RewardEffectComponent_Update__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1C2E110(v8, v8[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
+      v10 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+      System_Action___ctor(v10, (Il2CppObject *)this, Method_RewardEffectComponent__Update_b__7_0__, 0LL);
       ((void (__fastcall *)(RewardEffectComponent_o *, __int64, System_Action_o *, Il2CppMethodPointer))this->klass->vtable._8_Stop.method)(
         this,
         1LL,
-        v7,
+        v10,
         this->klass->vtable._9_ForceStop.methodPtr);
     }
   }
@@ -219,7 +224,7 @@ void __fastcall RewardEffectComponent___Update_b__7_0(RewardEffectComponent_o *t
   p_endAction[-1].fields._IsQuestStartMenuMode_k__BackingField = 0;
   ActionExtensions__Call(endAction, 0LL);
   p_endAction->klass = 0LL;
-  sub_1C21DDC(p_endAction, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_1C2E0D0(p_endAction, 0LL, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -258,10 +263,10 @@ bool __fastcall RewardEffectComponent__DisplayWait_d__9__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4BD9697 & 1) == 0 )
+  if ( (byte_4BFA883 & 1) == 0 )
   {
-    this = (RewardEffectComponent__DisplayWait_d__9_o *)sub_1C21E38(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4BD9697 = 1;
+    this = (RewardEffectComponent__DisplayWait_d__9_o *)sub_1C2E12C(&UnityEngine_WaitForSeconds_TypeInfo, method);
+    byte_4BFA883 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -288,17 +293,17 @@ bool __fastcall RewardEffectComponent__DisplayWait_d__9__MoveNext(
     if ( _4__this )
     {
       displayTouchWaitTime = _4__this->fields.displayTouchWaitTime;
-      v6 = (UnityEngine_WaitForSeconds_o *)sub_1C22084(UnityEngine_WaitForSeconds_TypeInfo);
+      v6 = (UnityEngine_WaitForSeconds_o *)sub_1C2E378(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v6, displayTouchWaitTime, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v6;
       p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-      sub_1C21DDC(p__2__current, (int64_t)v6, v8, v9, v10, v11, v12, v13);
+      sub_1C2E0D0(p__2__current, (int64_t)v6, v8, v9, v10, v11, v12, v13);
       result = 1;
       *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
       return result;
     }
 LABEL_12:
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   }
   return 0;
 }
@@ -320,11 +325,11 @@ void __fastcall __noreturn RewardEffectComponent__DisplayWait_d__9__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C21E4C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C22084(v2);
+  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C21E4C(&Method_RewardEffectComponent__DisplayWait_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1C21F60(v3, v4);
+  v4 = sub_1C2E140(&Method_RewardEffectComponent__DisplayWait_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1C2E254(v3, v4);
 }
 
 

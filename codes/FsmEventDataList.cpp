@@ -10,19 +10,21 @@ void __fastcall FsmEventDataList__Finalize(FsmEventDataList_o *this, const Metho
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 FsmEventData_o *__fastcall FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_1C22094(this, index);
+    sub_1C2E388(this, index);
   if ( eventDataList->max_length <= index )
-    sub_1C2209C(this, index);
+    sub_1C2E390(this, *(_QWORD *)&index);
   return eventDataList->m_Items[index];
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall FsmEventDataList__GetEventData(
         FsmEventDataList_o *this,
         int32_t index,
@@ -35,15 +37,16 @@ System_String_o *__fastcall FsmEventDataList__GetEventData(
   if ( !eventDataList )
     goto LABEL_5;
   if ( eventDataList->max_length <= index )
-    sub_1C2209C(this, index);
+    sub_1C2E390(this, *(_QWORD *)&index);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C22094(this, index);
+    sub_1C2E388(this, index);
   return v4->fields.eventData;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall FsmEventDataList__GetTitle(
         FsmEventDataList_o *this,
         int32_t index,
@@ -56,15 +59,16 @@ System_String_o *__fastcall FsmEventDataList__GetTitle(
   if ( !eventDataList )
     goto LABEL_5;
   if ( eventDataList->max_length <= index )
-    sub_1C2209C(this, index);
+    sub_1C2E390(this, *(_QWORD *)&index);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C22094(this, index);
+    sub_1C2E388(this, index);
   return v4->fields.title;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x21
@@ -73,10 +77,10 @@ void __fastcall FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t in
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v9; // x8
 
-  if ( (byte_4BDD9EC & 1) == 0 )
+  if ( (byte_4BFEC29 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BDD9EC = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4BFEC29 = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -88,11 +92,11 @@ void __fastcall FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t in
     if ( !eventDataList )
       goto LABEL_12;
     if ( eventDataList->max_length <= index )
-      sub_1C2209C(v6, v7);
+      sub_1C2E390(v6, v7);
     v9 = eventDataList->m_Items[index];
     if ( !v9 || (v6 = this->fields.targetFSM) == 0LL )
 LABEL_12:
-      sub_1C22094(v6, v7);
+      sub_1C2E388(v6, v7);
     PlayMakerFSM__SendEvent(v6, v9->fields.eventData, 0LL);
   }
 }
@@ -116,95 +120,97 @@ PlayMakerFSM_o *__fastcall FsmEventDataList__get_TargetFSM(FsmEventDataList_o *t
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const MethodInfo *method)
 {
-  struct FsmEventData_array *v5; // x8
+  __int64 v5; // x1
+  struct FsmEventData_array *v6; // x8
   PartyOrganizationUtility_o *p_eventDataList; // x19
   struct FsmEventData_array *eventDataList; // t1
   signed int max_length; // w22
-  __int64 v9; // x0
-  __int64 v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  unsigned int *v17; // x20
-  unsigned __int64 v18; // x23
-  signed __int64 v19; // x24
-  __int64 v20; // x25
-  PartyOrganizationUtility_o *v21; // x21
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int64_t v12; // x2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  BattleSetupInfo_o *v15; // x5
+  FollowerInfo_o *v16; // x6
+  PartyListViewItem_o *v17; // x7
+  unsigned int *v18; // x20
+  unsigned __int64 v19; // x23
+  signed __int64 v20; // x24
+  __int64 v21; // x25
+  PartyOrganizationUtility_o *v22; // x21
   PartyOrganizationUtility_c *klass; // x8
-  FsmEventData_o *v23; // x22
-  const MethodInfo *v24; // x1
-  __int64 v25; // x0
+  FsmEventData_o *v24; // x22
+  const MethodInfo *v25; // x1
+  __int64 v26; // x0
 
-  if ( (byte_4BDD9EB & 1) == 0 )
+  if ( (byte_4BFEC28 & 1) == 0 )
   {
-    sub_1C21E38(&FsmEventData___TypeInfo);
-    sub_1C21E38(&FsmEventData_TypeInfo);
-    byte_4BDD9EB = 1;
+    sub_1C2E12C(&FsmEventData___TypeInfo, *(_QWORD *)&value);
+    sub_1C2E12C(&FsmEventData_TypeInfo, v5);
+    byte_4BFEC28 = 1;
   }
   eventDataList = this->fields.eventDataList;
   p_eventDataList = (PartyOrganizationUtility_o *)&this->fields.eventDataList;
-  v5 = eventDataList;
+  v6 = eventDataList;
   if ( eventDataList )
-    max_length = v5->max_length;
+    max_length = v6->max_length;
   else
     max_length = 0;
   if ( max_length != value )
   {
-    v9 = sub_1C21EE0(FsmEventData___TypeInfo, (unsigned int)value);
-    v17 = (unsigned int *)v9;
+    v10 = sub_1C2E1D4(FsmEventData___TypeInfo, (unsigned int)value);
+    v18 = (unsigned int *)v10;
     if ( value >= 1 )
     {
-      v18 = 0LL;
-      v19 = max_length;
-      v20 = (unsigned int)value;
-      v21 = (PartyOrganizationUtility_o *)(v9 + 32);
+      v19 = 0LL;
+      v20 = max_length;
+      v21 = (unsigned int)value;
+      v22 = (PartyOrganizationUtility_o *)(v10 + 32);
       do
       {
-        if ( (__int64)v18 >= v19 )
+        if ( (__int64)v19 >= v20 )
         {
-          v23 = (FsmEventData_o *)sub_1C22084(FsmEventData_TypeInfo);
-          FsmEventData___ctor(v23, v24);
-          if ( !v17 )
+          v24 = (FsmEventData_o *)sub_1C2E378(FsmEventData_TypeInfo);
+          FsmEventData___ctor(v24, v25);
+          if ( !v18 )
 LABEL_20:
-            sub_1C22094(v9, v10);
+            sub_1C2E388(v10, v11);
         }
         else
         {
           klass = p_eventDataList->klass;
           if ( !p_eventDataList->klass )
             goto LABEL_20;
-          if ( v18 >= LODWORD(klass->_1.namespaze) )
+          if ( v19 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_1C2209C(v9, v10);
-          if ( !v17 )
+            sub_1C2E390(v10, v11);
+          if ( !v18 )
             goto LABEL_20;
-          v23 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v18);
+          v24 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v19);
         }
-        if ( v23 )
+        if ( v24 )
         {
-          v9 = sub_1C21F74(v23, *(_QWORD *)(*(_QWORD *)v17 + 64LL));
-          if ( !v9 )
+          v10 = sub_1C2E268(v24, *(_QWORD *)(*(_QWORD *)v18 + 64LL));
+          if ( !v10 )
           {
-            v25 = sub_1C220B8(0LL);
-            sub_1C21F60(v25, 0LL);
+            v26 = sub_1C2E3AC(0LL);
+            sub_1C2E254(v26, 0LL);
           }
         }
-        if ( v18 >= v17[6] )
+        if ( v19 >= v18[6] )
           goto LABEL_21;
-        v21->klass = (PartyOrganizationUtility_c *)v23;
-        sub_1C21DDC(v21, (int64_t)v23, v11, v12, v13, v14, v15, v16);
-        ++v18;
-        v21 = (PartyOrganizationUtility_o *)((char *)v21 + 8);
+        v22->klass = (PartyOrganizationUtility_c *)v24;
+        sub_1C2E0D0(v22, (int64_t)v24, v12, v13, v14, v15, v16, v17);
+        ++v19;
+        v22 = (PartyOrganizationUtility_o *)((char *)v22 + 8);
       }
-      while ( v20 != v18 );
+      while ( v21 != v19 );
     }
-    p_eventDataList->klass = (PartyOrganizationUtility_c *)v17;
-    sub_1C21DDC(p_eventDataList, (int64_t)v17, v11, v12, v13, v14, v15, v16);
+    p_eventDataList->klass = (PartyOrganizationUtility_c *)v18;
+    sub_1C2E0D0(p_eventDataList, (int64_t)v18, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -221,7 +227,7 @@ void __fastcall FsmEventDataList__set_TargetFSM(
   PartyListViewItem_o *v7; // x7
 
   this->fields.targetFSM = value;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.targetFSM,
     (int64_t)value,
     (int64_t)method,

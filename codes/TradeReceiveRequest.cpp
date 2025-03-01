@@ -4,6 +4,7 @@ void __fastcall TradeReceiveRequest___ctor(TradeReceiveRequest_o *this, const Me
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall TradeReceiveRequest__beginRequest(
         TradeReceiveRequest_o *this,
         int32_t eventId,
@@ -12,40 +13,45 @@ void __fastcall TradeReceiveRequest__beginRequest(
         int32_t cancelTradeFlag,
         const MethodInfo *method)
 {
-  if ( (byte_4BDDF99 & 1) == 0 )
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+
+  if ( (byte_4BFF1DD & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_19460/*"eventId"*/);
-    sub_1C21E38(&StringLiteral_18030/*"cancelTradeFlag"*/);
-    sub_1C21E38(&StringLiteral_23219/*"receiveNum"*/);
-    sub_1C21E38(&StringLiteral_24465/*"tradeStoreIdxs"*/);
-    byte_4BDDF99 = 1;
+    sub_1C2E12C(&StringLiteral_19472/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1C2E12C(&StringLiteral_18045/*"cancelTradeFlag"*/, v11);
+    sub_1C2E12C(&StringLiteral_23237/*"receiveNum"*/, v12);
+    sub_1C2E12C(&StringLiteral_24489/*"tradeStoreIdxs"*/, v13);
+    byte_4BFF1DD = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19460/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField_42423236(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19472/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField_42512364(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24465/*"tradeStoreIdxs"*/,
+    (System_String_o *)StringLiteral_24489/*"tradeStoreIdxs"*/,
     &tradeStoreIdxs->obj,
     0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23219/*"receiveNum"*/, receiveNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18030/*"cancelTradeFlag"*/, cancelTradeFlag, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23237/*"receiveNum"*/, receiveNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18045/*"cancelTradeFlag"*/, cancelTradeFlag, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall TradeReceiveRequest__getURL(TradeReceiveRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDF98 & 1) == 0 )
+  if ( (byte_4BFF1DC & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_19453/*"event/tradeReceive"*/);
-    byte_4BDDF98 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_19465/*"event/tradeReceive"*/, v2);
+    byte_4BFF1DC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19453/*"event/tradeReceive"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19465/*"event/tradeReceive"*/, 0LL);
 }
 
 
@@ -54,33 +60,35 @@ void __fastcall TradeReceiveRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
-  const MethodInfo *v6; // x2
-  ResponseData_o *v7; // x20
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
+  ResponseData_o *v9; // x20
   Il2CppObject *success; // x20
-  System_String_o *v9; // x1
+  System_String_o *v11; // x1
 
-  if ( (byte_4BDDF9A & 1) == 0 )
+  if ( (byte_4BFF1DE & 1) == 0 )
   {
-    sub_1C21E38(&JsonManager_TypeInfo);
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDF9A = 1;
+    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF1DE = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(130, responseList, 0LL);
-  if ( v5
-    && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6))
-    && (success = (Il2CppObject *)v7->fields.success) != 0LL )
+  v7 = ResponseCommandKind__SearchData(130, responseList, 0LL);
+  if ( v7
+    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
+    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v9 = JsonManager__toJson(success, 0, 0, 0LL);
+    v11 = JsonManager__toJson(success, 0, 0, 0LL);
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_22456/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22468/*"ng"*/;
   }
-  RequestBase__completed((RequestBase_o *)this, v9, 0LL);
+  RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

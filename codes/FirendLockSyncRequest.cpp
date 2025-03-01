@@ -4,14 +4,14 @@ void __fastcall FirendLockSyncRequest__AddField(
         System_Int64_array *data,
         const MethodInfo *method)
 {
-  if ( (byte_4BDDEAB & 1) == 0 )
+  if ( (byte_4BFF0EF & 1) == 0 )
   {
-    sub_1C21E38(&long___TypeInfo);
-    byte_4BDDEAB = 1;
+    sub_1C2E12C(&long___TypeInfo, fieldName);
+    byte_4BFF0EF = 1;
   }
   if ( !data )
-    data = (System_Int64_array *)sub_1C21EE0(long___TypeInfo, 0LL);
-  RequestBase__addField_42423236((RequestBase_o *)this, fieldName, &data->obj, method);
+    data = (System_Int64_array *)sub_1C2E1D4(long___TypeInfo, 0LL);
+  RequestBase__addField_42512364((RequestBase_o *)this, fieldName, &data->obj, method);
 }
 
 
@@ -23,45 +23,49 @@ void __fastcall FirendLockSyncRequest__beginRequest(
         System_Int64_array *unlockFollowUserIds,
         const MethodInfo *method)
 {
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4BDDEAA & 1) == 0 )
+  if ( (byte_4BFF0EE & 1) == 0 )
   {
-    sub_1C21E38(&StringLiteral_21568/*"lockFriendUserIds"*/);
-    sub_1C21E38(&StringLiteral_24725/*"unlockFriendUserIds"*/);
-    sub_1C21E38(&StringLiteral_24724/*"unlockFollowUserIds"*/);
-    sub_1C21E38(&StringLiteral_21567/*"lockFollowUserIds"*/);
-    byte_4BDDEAA = 1;
+    sub_1C2E12C(&StringLiteral_21579/*"lockFriendUserIds"*/, lockFriendUserIds);
+    sub_1C2E12C(&StringLiteral_24749/*"unlockFriendUserIds"*/, v11);
+    sub_1C2E12C(&StringLiteral_24748/*"unlockFollowUserIds"*/, v12);
+    sub_1C2E12C(&StringLiteral_21578/*"lockFollowUserIds"*/, v13);
+    byte_4BFF0EE = 1;
   }
   FirendLockSyncRequest__AddField(
     this,
-    (System_String_o *)StringLiteral_21568/*"lockFriendUserIds"*/,
+    (System_String_o *)StringLiteral_21579/*"lockFriendUserIds"*/,
     lockFriendUserIds,
     (const MethodInfo *)lockFollowUserIds);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24725/*"unlockFriendUserIds"*/, unlockFriendUserIds, v11);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_21567/*"lockFollowUserIds"*/, lockFollowUserIds, v12);
-  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24724/*"unlockFollowUserIds"*/, unlockFollowUserIds, v13);
-  RequestBase__beginRequest((RequestBase_o *)this, v14);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24749/*"unlockFriendUserIds"*/, unlockFriendUserIds, v14);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_21578/*"lockFollowUserIds"*/, lockFollowUserIds, v15);
+  FirendLockSyncRequest__AddField(this, (System_String_o *)StringLiteral_24748/*"unlockFollowUserIds"*/, unlockFollowUserIds, v16);
+  RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
 
 System_String_o *__fastcall FirendLockSyncRequest__getURL(FirendLockSyncRequest_o *this, const MethodInfo *method)
 {
+  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BDDEA9 & 1) == 0 )
+  if ( (byte_4BFF0ED & 1) == 0 )
   {
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    sub_1C21E38(&StringLiteral_19970/*"friend/lockSync"*/);
-    byte_4BDDEA9 = 1;
+    sub_1C2E12C(&NetworkManager_TypeInfo, method);
+    sub_1C2E12C(&StringLiteral_19985/*"friend/lockSync"*/, v2);
+    byte_4BFF0ED = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63115476(BaseUrl, (System_String_o *)StringLiteral_19970/*"friend/lockSync"*/, 0LL);
+  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19985/*"friend/lockSync"*/, 0LL);
 }
 
 
@@ -70,36 +74,38 @@ void __fastcall FirendLockSyncRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  ResponseData_o *v5; // x0
+  __int64 v5; // x1
+  __int64 v6; // x1
+  ResponseData_o *v7; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v7; // x9
+  __int64 *v9; // x9
 
-  if ( (byte_4BDDEAC & 1) == 0 )
+  if ( (byte_4BFF0F0 & 1) == 0 )
   {
-    sub_1C21E38(&ResponseCommandKind_TypeInfo);
-    sub_1C21E38(&StringLiteral_22632/*"ok"*/);
-    sub_1C21E38(&StringLiteral_22456/*"ng"*/);
-    byte_4BDDEAC = 1;
+    sub_1C2E12C(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1C2E12C(&StringLiteral_22644/*"ok"*/, v5);
+    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
+    byte_4BFF0F0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v5 = ResponseCommandKind__SearchData(87, responseList, 0LL);
-  if ( v5 && ResponseData__checkError_42505456(v5, 0LL) )
+  v7 = ResponseCommandKind__SearchData(87, responseList, 0LL);
+  if ( v7 && ResponseData__checkError_42594652(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22632/*"ok"*/;
+    v9 = &StringLiteral_22644/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v7 = &StringLiteral_22456/*"ng"*/;
+    v9 = &StringLiteral_22468/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v7,
+    *v9,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

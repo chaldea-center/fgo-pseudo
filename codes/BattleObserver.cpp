@@ -17,7 +17,7 @@ void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *sub
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)subject, v5, v6, v7, v8, v9, v10);
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)subject, v5, v6, v7, v8, v9, v10);
   }
 }
 

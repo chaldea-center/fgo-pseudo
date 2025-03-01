@@ -1,14 +1,14 @@
 void __fastcall TreasureBoxTalkMaster___ctor(TreasureBoxTalkMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD10D & 1) == 0 )
+  if ( (byte_4BFE343 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string___ctor__);
-    byte_4BDD10D = 1;
+    sub_1C2E12C(&Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string___ctor__, method);
+    byte_4BFE343 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     382,
-    (const MethodInfo_325E55C *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string___ctor__);
+    (const MethodInfo_327D914 *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string___ctor__);
 }
 
 
@@ -21,67 +21,77 @@ TreasureBoxTalkEntity_o *__fastcall TreasureBoxTalkMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BDD10B & 1) == 0 )
+  if ( (byte_4BFE341 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__GetEntity__);
-    byte_4BDD10B = 1;
+    sub_1C2E12C(
+      &Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__GetEntity__,
+      *(_QWORD *)&treasureBoxId);
+    byte_4BFE341 = 1;
   }
   PK = (Il2CppObject *)TreasureBoxTalkEntity__CreatePK(treasureBoxId, idx, *(const MethodInfo **)&idx);
   return (TreasureBoxTalkEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_3260880 *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__GetEntity__);
+                                      (const MethodInfo_327FC38 *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__GetEntity__);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 System_String_array *__fastcall TreasureBoxTalkMaster__GetTreasureBoxVoiceData(
         TreasureBoxTalkMaster_o *this,
         int32_t treasureBoxId,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v5; // x21
-  Il2CppObject *v6; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  System_Collections_Generic_List_object__o *v10; // x21
+  Il2CppObject *v11; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v8; // w22
-  int32_t v9; // w23
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  int v13; // w22
+  int32_t v14; // w23
+  int64_t v15; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  BattleSetupInfo_o *v18; // x5
+  FollowerInfo_o *v19; // x6
+  PartyListViewItem_o *v20; // x7
   System_Collections_ObjectModel_Collection_T__c *klass; // x26
   const char *namespaze; // x8
-  unsigned __int64 v18; // x27
+  unsigned __int64 v23; // x27
   struct System_Object_array *items; // x8
-  _QWORD *v20; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v22; // x0
+  Il2CppClass **v27; // x0
 
-  if ( (byte_4BDD10E & 1) == 0 )
+  if ( (byte_4BFE344 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Count__);
-    sub_1C21E38(&Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Item__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4BDD10E = 1;
+    sub_1C2E12C(
+      &Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Count__,
+      *(_QWORD *)&treasureBoxId);
+    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Item__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_string__Add__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_string__ToArray__, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_string___ctor__, v8);
+    sub_1C2E12C(&System_Collections_Generic_List_string__TypeInfo, v9);
+    byte_4BFE344 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_string__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_string___ctor__);
+    v10,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_string___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_22;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_31F60CC *)Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Count__);
+                                                             (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v8 = (int)list;
-    v9 = 0;
+    v13 = (int)list;
+    v14 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -89,8 +99,8 @@ System_String_array *__fastcall TreasureBoxTalkMaster__GetTreasureBoxVoiceData(
         goto LABEL_22;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v9,
-                                                                 (const MethodInfo_31F615C *)Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Item__);
+                                                                 v14,
+                                                                 (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_TreasureBoxTalkEntity__get_Item__);
       if ( list && LODWORD(list->fields.items) == treasureBoxId )
       {
         klass = list[1].klass;
@@ -101,50 +111,50 @@ System_String_array *__fastcall TreasureBoxTalkMaster__GetTreasureBoxVoiceData(
           break;
       }
 LABEL_19:
-      if ( ++v9 == v8 )
+      if ( ++v14 == v13 )
         goto LABEL_20;
     }
-    v18 = 0LL;
+    v23 = 0LL;
     while ( 1 )
     {
-      if ( v18 >= (unsigned int)namespaze )
-        sub_1C2209C(list, v6);
-      if ( !v5 )
+      if ( v23 >= (unsigned int)namespaze )
+        sub_1C2E390(list, v11);
+      if ( !v10 )
         break;
-      v6 = (Il2CppObject *)*((_QWORD *)&klass->_1.byval_arg.data + v18);
-      items = v5->fields._items;
-      v20 = Method_System_Collections_Generic_List_string__Add__;
-      ++v5->fields._version;
+      v11 = (Il2CppObject *)*((_QWORD *)&klass->_1.byval_arg.data + v23);
+      items = v10->fields._items;
+      v25 = Method_System_Collections_Generic_List_string__Add__;
+      ++v10->fields._version;
       if ( !items )
         break;
-      size = v5->fields._size;
+      size = v10->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v5,
-          v6,
-          *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+          v10,
+          v11,
+          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
-        v22 = &items->obj.klass + size;
-        v5->fields._size = size + 1;
-        v22[4] = (Il2CppClass *)v6;
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v22 + 4), (int64_t)v6, v10, v11, v12, v13, v14, v15);
+        v27 = &items->obj.klass + size;
+        v10->fields._size = size + 1;
+        v27[4] = (Il2CppClass *)v11;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v27 + 4), (int64_t)v11, v15, v16, v17, v18, v19, v20);
       }
       LODWORD(namespaze) = klass->_1.namespaze;
-      if ( (__int64)++v18 >= (int)namespaze )
+      if ( (__int64)++v23 >= (int)namespaze )
         goto LABEL_19;
     }
 LABEL_22:
-    sub_1C22094(list, v6);
+    sub_1C2E388(list, v11);
   }
 LABEL_20:
-  if ( !v5 )
+  if ( !v10 )
     goto LABEL_22;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                  v5,
-                                  (const MethodInfo_3650C0C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  v10,
+                                  (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -158,15 +168,15 @@ bool __fastcall TreasureBoxTalkMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BDD10C & 1) == 0 )
+  if ( (byte_4BFE342 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__TryGetEntity__);
-    byte_4BDD10C = 1;
+    sub_1C2E12C(&Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__TryGetEntity__, entity);
+    byte_4BFE342 = 1;
   }
   PK = (Il2CppObject *)TreasureBoxTalkEntity__CreatePK(treasureBoxId, idx, *(const MethodInfo **)&treasureBoxId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32608CC *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__TryGetEntity__);
+           (const MethodInfo_327FC84 *)Method_DataMasterBase_TreasureBoxTalkMaster__TreasureBoxTalkEntity__string__TryGetEntity__);
 }

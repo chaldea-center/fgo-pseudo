@@ -1,13 +1,13 @@
 void __fastcall MapUpdateScheduleEntity___ctor(MapUpdateScheduleEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD69D & 1) == 0 )
+  if ( (byte_4BFE8D8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_string___ctor__);
-    byte_4BDD69D = 1;
+    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
+    byte_4BFE8D8 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_325995C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall MapUpdateScheduleEntity__CreatePK(
         int64_t mapUpdatedAt,
         const MethodInfo *method)
 {
-  if ( (byte_4BDD69C & 1) == 0 )
+  if ( (byte_4BFE8D7 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_CreateMultiplePK_int__long___);
-    byte_4BDD69C = 1;
+    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__long___, mapUpdatedAt);
+    byte_4BFE8D7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            warId,
            mapUpdatedAt,
-           (const MethodInfo_2FAE0AC *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_2FCFAD8 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

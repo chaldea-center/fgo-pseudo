@@ -1,14 +1,14 @@
 void __fastcall TreasureBoxEntity___ctor(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BDD100 & 1) == 0 )
+  if ( (byte_4BFE336 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataEntityBase_int___ctor__);
-    byte_4BDD100 = 1;
+    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, method);
+    byte_4BFE336 = 1;
   }
   this->fields.consumeItemId = -1;
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32598E4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -20,47 +20,48 @@ int32_t __fastcall TreasureBoxEntity__CreatePrimaryKey(TreasureBoxEntity_o *this
 
 int32_t __fastcall TreasureBoxEntity__get_ConsumeItemId(TreasureBoxEntity_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
   int32_t result; // w0
   CommonConsumeEntity_array *Master_object; // x0
-  __int64 v5; // x1
-  __int64 v6; // x8
-  CommonConsumeEntity_o *v7; // x8
+  __int64 v6; // x1
+  __int64 v7; // x8
+  CommonConsumeEntity_o *v8; // x8
 
-  if ( (byte_4BDD0FF & 1) == 0 )
+  if ( (byte_4BFE335 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1C21E38(&DataManager_TypeInfo);
-    byte_4BDD0FF = 1;
+    sub_1C2E12C(&Method_DataManager_GetMaster_CommonConsumeMaster___, method);
+    sub_1C2E12C(&DataManager_TypeInfo, v3);
+    byte_4BFE335 = 1;
   }
   result = this->fields.consumeItemId;
   if ( result <= 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2FAFDB0 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+    Master_object = (CommonConsumeEntity_array *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
     if ( Master_object )
     {
       Master_object = CommonConsumeMaster__GetIdEntityList(
                         (CommonConsumeMaster_o *)Master_object,
                         this->fields.commonConsumeId,
                         0LL);
-      if ( !Master_object || (v6 = *(_QWORD *)&Master_object->max_length) == 0 )
+      if ( !Master_object || (v7 = *(_QWORD *)&Master_object->max_length) == 0 )
       {
         result = -1;
         goto LABEL_13;
       }
-      if ( !(_DWORD)v6 )
-        sub_1C2209C(Master_object, v5);
-      v7 = Master_object->m_Items[0];
-      if ( v7 )
+      if ( !(_DWORD)v7 )
+        sub_1C2E390(Master_object, v6);
+      v8 = Master_object->m_Items[0];
+      if ( v8 )
       {
-        result = v7->fields.objectId;
+        result = v8->fields.objectId;
 LABEL_13:
         this->fields.consumeItemId = result;
         return result;
       }
     }
-    sub_1C22094(Master_object, v5);
+    sub_1C2E388(Master_object, v6);
   }
   return result;
 }

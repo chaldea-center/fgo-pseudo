@@ -1,25 +1,26 @@
 void __fastcall BattleSubject___ctor(BattleSubject_o *this, const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v4; // x20
+  int64_t v5; // x2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  BattleSetupInfo_o *v8; // x5
+  FollowerInfo_o *v9; // x6
+  PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BDF39E & 1) == 0 )
+  if ( (byte_4C006E3 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleObserver___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_BattleObserver__TypeInfo);
-    byte_4BDF39E = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleObserver___ctor__, method);
+    sub_1C2E12C(&System_Collections_Generic_List_BattleObserver__TypeInfo, v3);
+    byte_4C006E3 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_BattleObserver__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_BattleObserver__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_BattleObserver___ctor__);
-  this->fields.observers = (struct System_Collections_Generic_List_BattleObserver__o *)v3;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+    v4,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_BattleObserver___ctor__);
+  this->fields.observers = (struct System_Collections_Generic_List_BattleObserver__o *)v4;
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -37,10 +38,10 @@ void __fastcall BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *obse
   __int64 size; // x10
   Il2CppClass **v14; // x8
 
-  if ( (byte_4BDF39B & 1) == 0 )
+  if ( (byte_4C006E0 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleObserver__Add__);
-    byte_4BDF39B = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleObserver__Add__, observer);
+    byte_4C006E0 = 1;
   }
   if ( observer )
   {
@@ -51,7 +52,7 @@ void __fastcall BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *obse
           ++observers->fields._version,
           !items) )
     {
-      sub_1C22094(observers, observer);
+      sub_1C2E388(observers, observer);
     }
     size = observers->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -59,14 +60,14 @@ void __fastcall BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *obse
       System_Collections_Generic_List_object___AddWithResize(
         observers,
         (Il2CppObject *)observer,
-        *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+        *(const MethodInfo_366B8AC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
     }
     else
     {
       v14 = &items->obj.klass + size;
       observers->fields._size = size + 1;
       v14[4] = (Il2CppClass *)observer;
-      sub_1C21DDC((PartyOrganizationUtility_o *)(v14 + 4), (int64_t)observer, (int64_t)method, v3, v4, v5, v6, v7);
+      sub_1C2E0D0((PartyOrganizationUtility_o *)(v14 + 4), (int64_t)observer, (int64_t)method, v3, v4, v5, v6, v7);
     }
   }
 }
@@ -74,27 +75,29 @@ void __fastcall BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *obse
 
 void __fastcall BattleSubject__Notify(BattleSubject_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
   System_Collections_Generic_List_object__o *observers; // x20
-  System_Action_object__o *v4; // x21
-  __int64 v5; // x0
-  __int64 v6; // x1
+  System_Action_object__o *v6; // x21
+  __int64 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4BDF39D & 1) == 0 )
+  if ( (byte_4C006E2 & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_BattleObserver__TypeInfo);
-    sub_1C21E38(&Method_BattleSubject__Notify_b__3_0__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleObserver__ForEach__);
-    byte_4BDF39D = 1;
+    sub_1C2E12C(&System_Action_BattleObserver__TypeInfo, method);
+    sub_1C2E12C(&Method_BattleSubject__Notify_b__3_0__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleObserver__ForEach__, v4);
+    byte_4C006E2 = 1;
   }
   observers = (System_Collections_Generic_List_object__o *)this->fields.observers;
-  v4 = (System_Action_object__o *)sub_1C22084(System_Action_BattleObserver__TypeInfo);
-  System_Action_object____ctor(v4, (Il2CppObject *)this, Method_BattleSubject__Notify_b__3_0__, 0LL);
+  v6 = (System_Action_object__o *)sub_1C2E378(System_Action_BattleObserver__TypeInfo);
+  System_Action_object____ctor(v6, (Il2CppObject *)this, Method_BattleSubject__Notify_b__3_0__, 0LL);
   if ( !observers )
-    sub_1C22094(v5, v6);
+    sub_1C2E388(v7, v8);
   System_Collections_Generic_List_object___ForEach(
     observers,
-    (System_Action_T__o *)v4,
-    (const MethodInfo_364FAF4 *)Method_System_Collections_Generic_List_BattleObserver__ForEach__);
+    (System_Action_T__o *)v6,
+    (const MethodInfo_366C2EC *)Method_System_Collections_Generic_List_BattleObserver__ForEach__);
 }
 
 
@@ -102,20 +105,20 @@ void __fastcall BattleSubject__Remove(BattleSubject_o *this, BattleObserver_o *o
 {
   System_Collections_Generic_List_object__o *observers; // x0
 
-  if ( (byte_4BDF39C & 1) == 0 )
+  if ( (byte_4C006E1 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_BattleObserver__Remove__);
-    byte_4BDF39C = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_BattleObserver__Remove__, observer);
+    byte_4C006E1 = 1;
   }
   if ( observer )
   {
     observers = (System_Collections_Generic_List_object__o *)this->fields.observers;
     if ( !observers )
-      sub_1C22094(0LL, observer);
+      sub_1C2E388(0LL, observer);
     System_Collections_Generic_List_object___Remove(
       observers,
       (Il2CppObject *)observer,
-      (const MethodInfo_36505DC *)Method_System_Collections_Generic_List_BattleObserver__Remove__);
+      (const MethodInfo_366CDD4 *)Method_System_Collections_Generic_List_BattleObserver__Remove__);
   }
 }
 
@@ -123,7 +126,7 @@ void __fastcall BattleSubject__Remove(BattleSubject_o *this, BattleObserver_o *o
 void __fastcall BattleSubject___Notify_b__3_0(BattleSubject_o *this, BattleObserver_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C22094(this, 0LL);
+    sub_1C2E388(this, 0LL);
   ((void (__fastcall *)(BattleObserver_o *, BattleSubject_o *, const char *))x->klass[1]._1.gc_desc)(
     x,
     this,

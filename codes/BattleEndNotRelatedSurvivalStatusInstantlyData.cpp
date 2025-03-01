@@ -1,11 +1,3 @@
-void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(
-        BattleEndNotRelatedSurvivalStatusInstantlyData_o *this,
-        const MethodInfo *method)
-{
-  ExecInActionData___ctor((ExecInActionData_o *)this, 0LL);
-}
-
-
 void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyData__ExecAction(
         BattleEndNotRelatedSurvivalStatusInstantlyData_o *this,
         BattlePerformance_o *perf,
@@ -14,7 +6,7 @@ void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyData__ExecAction(
   struct BattleData_o *data; // x8
 
   if ( !perf || (data = perf->fields.data) == 0LL )
-    sub_1C22094(this, perf);
+    sub_1C2E388(this, perf);
   data->fields.endbattleFlg = 1;
   data->fields.winBattleNotRelatedSurvivalStatus = 1;
   data->fields.IsEndBattleInstantly = 1;

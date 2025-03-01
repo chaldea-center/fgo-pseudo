@@ -12,227 +12,234 @@ void __fastcall SupportSelectListViewManager__CreateList(
         SupportSelectMenu_DragSwapCallbackFunc_o *dragSwapCallbackFunc,
         const MethodInfo *method)
 {
-  int64_t Instance; // x0
+  __int64 v11; // x1
   __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x1
+  __int64 v17; // x1
+  int64_t Instance; // x0
+  __int64 v19; // x1
   struct EventCampaignEntity_array *FriendPointCampaigns; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  __int64 v32; // x0
-  __int64 v33; // x1
-  __int64 v34; // x8
-  unsigned __int64 v35; // x27
-  char v36; // w26
-  int32_t v37; // w22
-  SupportServantData_o *v38; // x23
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
+  int64_t v27; // x2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  BattleSetupInfo_o *v30; // x5
+  FollowerInfo_o *v31; // x6
+  PartyListViewItem_o *v32; // x7
+  int64_t v33; // x2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  BattleSetupInfo_o *v36; // x5
+  FollowerInfo_o *v37; // x6
+  PartyListViewItem_o *v38; // x7
+  __int64 v39; // x0
+  __int64 v40; // x1
+  __int64 v41; // x8
+  unsigned __int64 v42; // x27
+  char v43; // w26
+  int32_t v44; // w22
+  SupportServantData_o *v45; // x23
   EventCampaignEntity_array *eventFriendPoints; // x25
-  SupportSelectListViewItem_o *v40; // x24
-  const MethodInfo *v41; // x4
-  int64_t v42; // x2
-  int32_t v43; // w3
-  System_String_o *v44; // x4
-  BattleSetupInfo_o *v45; // x5
-  FollowerInfo_o *v46; // x6
-  PartyListViewItem_o *v47; // x7
-  __int64 v48; // x8
-  _QWORD *v49; // x9
-  __int64 v50; // x10
-  __int64 v51; // x8
-  const MethodInfo *v52; // x1
+  SupportSelectListViewItem_o *v47; // x24
+  const MethodInfo *v48; // x4
+  int64_t v49; // x2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  BattleSetupInfo_o *v52; // x5
+  FollowerInfo_o *v53; // x6
+  PartyListViewItem_o *v54; // x7
+  __int64 v55; // x8
+  _QWORD *v56; // x9
+  __int64 v57; // x10
+  __int64 v58; // x8
+  const MethodInfo *v59; // x1
   int64_t EventFriendCampaignFinishedAt; // x0
   TimeOverChecker_o *timeOverChecker; // x8
-  int64_t v55; // x20
-  System_Action_o *v56; // x22
-  TimeOverChecker_o *v57; // x23
-  int64_t v58; // x2
-  int32_t v59; // w3
-  System_String_o *v60; // x4
-  BattleSetupInfo_o *v61; // x5
-  FollowerInfo_o *v62; // x6
-  PartyListViewItem_o *v63; // x7
-  const MethodInfo *v64; // x0
+  int64_t v62; // x20
+  System_Action_o *v63; // x22
+  TimeOverChecker_o *v64; // x23
+  int64_t v65; // x2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  BattleSetupInfo_o *v68; // x5
+  FollowerInfo_o *v69; // x6
+  PartyListViewItem_o *v70; // x7
+  const MethodInfo *v71; // x0
   TimeOverChecker_o *eventStartChecker; // x20
-  System_Action_o *v66; // x21
-  TimeOverChecker_o *v67; // x22
-  int64_t v68; // x2
-  int32_t v69; // w3
-  System_String_o *v70; // x4
-  BattleSetupInfo_o *v71; // x5
-  FollowerInfo_o *v72; // x6
-  PartyListViewItem_o *v73; // x7
-  const MethodInfo *v74; // x0
+  System_Action_o *v73; // x21
+  TimeOverChecker_o *v74; // x22
+  int64_t v75; // x2
+  int32_t v76; // w3
+  System_String_o *v77; // x4
+  BattleSetupInfo_o *v78; // x5
+  FollowerInfo_o *v79; // x6
+  PartyListViewItem_o *v80; // x7
+  const MethodInfo *v81; // x0
   int32_t selectIndex; // [xsp+Ch] [xbp-64h]
 
-  if ( (byte_4BD8DF6 & 1) == 0 )
+  if ( (byte_4BF9FDB & 1) == 0 )
   {
-    sub_1C21E38(&System_Action_TypeInfo);
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    sub_1C21E38(&Method_SupportSelectListViewManager_ResetEventCampaignListViewObjectsStart__);
-    sub_1C21E38(&Method_SupportSelectListViewManager_ResetEventCampaignListViewObjects__);
-    sub_1C21E38(&TimeOverChecker_TypeInfo);
-    byte_4BD8DF6 = 1;
+    sub_1C2E12C(&System_Action_TypeInfo, supportServantData);
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventCampaignMaster___, v11);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__Add__, v12);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v14);
+    sub_1C2E12C(&Method_SupportSelectListViewManager_ResetEventCampaignListViewObjectsStart__, v15);
+    sub_1C2E12C(&Method_SupportSelectListViewManager_ResetEventCampaignListViewObjects__, v16);
+    sub_1C2E12C(&TimeOverChecker_TypeInfo, v17);
+    byte_4BF9FDB = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !Instance )
     goto LABEL_27;
   FriendPointCampaigns = EventCampaignMaster__GetFriendPointCampaigns((EventCampaignMaster_o *)Instance, 0, 0LL);
   this->fields.eventFriendPoints = FriendPointCampaigns;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.eventFriendPoints,
     (int64_t)FriendPointCampaigns,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   this->fields.callbackFunc = callback;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v20, v21, v22, v23, v24, v25);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.callbackFunc, (int64_t)callback, v27, v28, v29, v30, v31, v32);
   this->fields.dragSwapCallbackFunc = dragSwapCallbackFunc;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.dragSwapCallbackFunc,
     (int64_t)dragSwapCallbackFunc,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31);
-  if ( !supportServantData || (v34 = *(_QWORD *)&supportServantData->max_length, (int)v34 <= 0) )
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
+  if ( !supportServantData || (v41 = *(_QWORD *)&supportServantData->max_length, (int)v41 <= 0) )
   {
     ListViewManager__SortItem((ListViewManager_o *)this, mainDeckIdx, 0, -1, 0LL);
     return;
   }
   selectIndex = mainDeckIdx;
-  v35 = 0LL;
-  v36 = 0;
-  v37 = 0;
+  v42 = 0LL;
+  v43 = 0;
+  v44 = 0;
   do
   {
-    if ( v35 >= (unsigned int)v34 )
-      sub_1C2209C(v32, v33);
-    v38 = supportServantData->m_Items[v35];
-    if ( v38 )
+    if ( v42 >= (unsigned int)v41 )
+      sub_1C2E390(v39, v40);
+    v45 = supportServantData->m_Items[v42];
+    if ( v45 )
     {
       eventFriendPoints = this->fields.eventFriendPoints;
-      v40 = (SupportSelectListViewItem_o *)sub_1C22084(SupportSelectListViewItem_TypeInfo);
-      SupportSelectListViewItem___ctor(v40, v37, v38, eventFriendPoints, v41);
+      v47 = (SupportSelectListViewItem_o *)sub_1C2E378(SupportSelectListViewItem_TypeInfo);
+      SupportSelectListViewItem___ctor(v47, v44, v45, eventFriendPoints, v48);
       Instance = (int64_t)this->fields.itemList;
       if ( !Instance )
         goto LABEL_27;
-      v48 = *(_QWORD *)(Instance + 16);
-      v49 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v55 = *(_QWORD *)(Instance + 16);
+      v56 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++*(_DWORD *)(Instance + 28);
-      if ( !v48 )
+      if ( !v55 )
         goto LABEL_27;
-      v50 = *(int *)(Instance + 24);
-      if ( (unsigned int)v50 >= *(_DWORD *)(v48 + 24) )
+      v57 = *(int *)(Instance + 24);
+      if ( (unsigned int)v57 >= *(_DWORD *)(v55 + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Instance,
-          (Il2CppObject *)v40,
-          *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+          (Il2CppObject *)v47,
+          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
       }
       else
       {
-        v51 = v48 + 8 * v50;
-        *(_DWORD *)(Instance + 24) = v50 + 1;
-        *(_QWORD *)(v51 + 32) = v40;
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v51 + 32), (int64_t)v40, v42, v43, v44, v45, v46, v47);
+        v58 = v55 + 8 * v57;
+        *(_DWORD *)(Instance + 24) = v57 + 1;
+        *(_QWORD *)(v58 + 32) = v47;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v58 + 32), (int64_t)v47, v49, v50, v51, v52, v53, v54);
       }
-      LODWORD(v34) = supportServantData->max_length;
-      ++v37;
-      if ( !v38->fields.isFriendInfo )
-        v36 = 1;
+      LODWORD(v41) = supportServantData->max_length;
+      ++v44;
+      if ( !v45->fields.isFriendInfo )
+        v43 = 1;
     }
-    ++v35;
+    ++v42;
   }
-  while ( (__int64)v35 < (int)v34 );
+  while ( (__int64)v42 < (int)v41 );
   ListViewManager__SortItem((ListViewManager_o *)this, selectIndex, 0, -1, 0LL);
-  if ( (v36 & 1) != 0 )
+  if ( (v43 & 1) != 0 )
   {
-    EventFriendCampaignFinishedAt = SupportSelectListViewManager__GetEventFriendCampaignFinishedAt(this, v52);
+    EventFriendCampaignFinishedAt = SupportSelectListViewManager__GetEventFriendCampaignFinishedAt(this, v59);
     timeOverChecker = this->fields.timeOverChecker;
-    v55 = EventFriendCampaignFinishedAt;
+    v62 = EventFriendCampaignFinishedAt;
     if ( timeOverChecker
-      || (v56 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo),
+      || (v63 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo),
           System_Action___ctor(
-            v56,
+            v63,
             (Il2CppObject *)this,
             Method_SupportSelectListViewManager_ResetEventCampaignListViewObjects__,
             0LL),
-          v57 = (TimeOverChecker_o *)sub_1C22084(TimeOverChecker_TypeInfo),
-          TimeOverChecker___ctor(v57, v56, (UnityEngine_MonoBehaviour_o *)this, 0LL),
-          this->fields.timeOverChecker = v57,
-          sub_1C21DDC(
+          v64 = (TimeOverChecker_o *)sub_1C2E378(TimeOverChecker_TypeInfo),
+          TimeOverChecker___ctor(v64, v63, (UnityEngine_MonoBehaviour_o *)this, 0LL),
+          this->fields.timeOverChecker = v64,
+          sub_1C2E0D0(
             (PartyOrganizationUtility_o *)&this->fields.timeOverChecker,
-            (int64_t)v57,
-            v58,
-            v59,
-            v60,
-            v61,
-            v62,
-            v63),
+            (int64_t)v64,
+            v65,
+            v66,
+            v67,
+            v68,
+            v69,
+            v70),
           (timeOverChecker = this->fields.timeOverChecker) != 0LL) )
     {
-      TimeOverChecker__Start(timeOverChecker, v55, 0LL);
+      TimeOverChecker__Start(timeOverChecker, v62, 0LL);
       eventStartChecker = this->fields.eventStartChecker;
       if ( eventStartChecker )
       {
-        Instance = SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(v64);
+        Instance = SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(v71);
 LABEL_26:
         TimeOverChecker__Start(eventStartChecker, Instance, 0LL);
         return;
       }
-      v66 = (System_Action_o *)sub_1C22084(System_Action_TypeInfo);
+      v73 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
       System_Action___ctor(
-        v66,
+        v73,
         (Il2CppObject *)this,
         Method_SupportSelectListViewManager_ResetEventCampaignListViewObjectsStart__,
         0LL);
-      v67 = (TimeOverChecker_o *)sub_1C22084(TimeOverChecker_TypeInfo);
-      TimeOverChecker___ctor(v67, v66, (UnityEngine_MonoBehaviour_o *)this, 0LL);
-      this->fields.eventStartChecker = v67;
-      sub_1C21DDC(
+      v74 = (TimeOverChecker_o *)sub_1C2E378(TimeOverChecker_TypeInfo);
+      TimeOverChecker___ctor(v74, v73, (UnityEngine_MonoBehaviour_o *)this, 0LL);
+      this->fields.eventStartChecker = v74;
+      sub_1C2E0D0(
         (PartyOrganizationUtility_o *)&this->fields.eventStartChecker,
-        (int64_t)v67,
-        v68,
-        v69,
-        v70,
-        v71,
-        v72,
-        v73);
+        (int64_t)v74,
+        v75,
+        v76,
+        v77,
+        v78,
+        v79,
+        v80);
       eventStartChecker = this->fields.eventStartChecker;
-      Instance = SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(v74);
+      Instance = SupportSelectCommonFunction__GetEventFriendCampaignStartedAt(v81);
       if ( eventStartChecker )
         goto LABEL_26;
     }
 LABEL_27:
-    sub_1C22094(Instance, v12);
+    sub_1C2E388(Instance, v19);
   }
 }
 
@@ -257,54 +264,56 @@ int64_t __fastcall SupportSelectListViewManager__GetEventFriendCampaignFinishedA
         SupportSelectListViewManager_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *Instance; // x0
+  __int64 v3; // x1
   __int64 v4; // x1
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
   struct EventCampaignEntity_array *eventFriendPoints; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v6; // x21
-  __int64 v7; // x22
+  DataMasterBase_TMaster__TEntity__PKType__o *v8; // x21
+  __int64 v9; // x22
   void *monitor; // x20
   int max_length; // w9
-  EventCampaignEntity_o *v10; // x8
+  EventCampaignEntity_o *v12; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BD8DFC & 1) == 0 )
+  if ( (byte_4BF9FE1 & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C21E38(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4BD8DFC = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventMaster___, method);
+    sub_1C2E12C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v3);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4BF9FE1 = 1;
   }
   entity = 0LL;
   if ( !this->fields.eventFriendPoints )
     return 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventMaster___),
+                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventMaster___),
         (eventFriendPoints = this->fields.eventFriendPoints) == 0LL) )
   {
 LABEL_19:
-    sub_1C22094(Instance, v4);
+    sub_1C2E388(Instance, v6);
   }
-  v6 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
-  v7 = 0LL;
+  v8 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
+  v9 = 0LL;
   monitor = 0LL;
   while ( 1 )
   {
     max_length = eventFriendPoints->max_length;
-    if ( (int)v7 >= max_length )
+    if ( (int)v9 >= max_length )
       return (int64_t)monitor;
-    if ( (unsigned int)v7 >= max_length )
-      sub_1C2209C(Instance, v4);
-    v10 = eventFriendPoints->m_Items[v7];
-    if ( v10 && v6 )
+    if ( (unsigned int)v9 >= max_length )
+      sub_1C2E390(Instance, v6);
+    v12 = eventFriendPoints->m_Items[v9];
+    if ( v12 && v8 )
     {
       Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
-                                   v6,
+                                   v8,
                                    &entity,
-                                   v10->fields.eventId,
-                                   (const MethodInfo_325BE14 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                   v12->fields.eventId,
+                                   (const MethodInfo_327B1CC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         if ( !entity )
@@ -320,7 +329,7 @@ LABEL_19:
         }
       }
       eventFriendPoints = this->fields.eventFriendPoints;
-      ++v7;
+      ++v9;
       if ( eventFriendPoints )
         continue;
     }
@@ -329,21 +338,24 @@ LABEL_19:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 SupportSelectListViewItem_o *__fastcall SupportSelectListViewManager__GetItem(
         SupportSelectListViewManager_o *this,
         int32_t index,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
+  __int64 v6; // x1
   SupportSelectListViewItem_o *result; // x0
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x8
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4BD8DF9 & 1) == 0 )
+  if ( (byte_4BF9FDE & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    byte_4BD8DF9 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, *(_QWORD *)&index);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v6);
+    byte_4BF9FDE = 1;
   }
   result = 0LL;
   if ( (index & 0x80000000) == 0 )
@@ -356,7 +368,7 @@ SupportSelectListViewItem_o *__fastcall SupportSelectListViewManager__GetItem(
       result = (SupportSelectListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                                 (System_Collections_Generic_List_object__o *)this->fields.itemList,
                                                 index,
-                                                (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( !result )
         return result;
       methodPtr_low = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -375,6 +387,7 @@ SupportSelectListViewItem_o *__fastcall SupportSelectListViewManager__GetItem(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall SupportSelectListViewManager__MoveCenterItem(
         SupportSelectListViewManager_o *this,
         int32_t index,
@@ -386,10 +399,10 @@ void __fastcall SupportSelectListViewManager__MoveCenterItem(
   __int64 v9; // x1
   UIScrollView_o *v10; // x19
 
-  if ( (byte_4BD8DFB & 1) == 0 )
+  if ( (byte_4BF9FE0 & 1) == 0 )
   {
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD8DFB = 1;
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
+    byte_4BF9FE0 = 1;
   }
   if ( this->fields.callbackCount <= 0 )
   {
@@ -401,13 +414,13 @@ void __fastcall SupportSelectListViewManager__MoveCenterItem(
     if ( (v8 & 1) != 0 )
     {
       v10 = this->fields.scrollView;
-      if ( !byte_4BD6BB1 )
+      if ( !byte_4BF7D91 )
       {
-        v8 = sub_1C21E38(&UnityEngine_Vector3_TypeInfo);
-        byte_4BD6BB1 = 1;
+        v8 = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v9);
+        byte_4BF7D91 = 1;
       }
       if ( !v10 )
-        sub_1C22094(v8, v9);
+        sub_1C2E388(v8, v9);
       UIScrollView__set_currentMomentum(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     }
   }
@@ -442,109 +455,115 @@ void __fastcall SupportSelectListViewManager__ResetEventCampaignListViewObjects(
         SupportSelectListViewManager_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   int64_t Instance; // x0
-  const MethodInfo *v4; // x1
+  const MethodInfo *v10; // x1
   struct EventCampaignEntity_array *FriendPointCampaigns; // x0
   struct EventCampaignEntity_array **p_eventFriendPoints; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int32_t v13; // w21
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  int32_t v19; // w21
   Il2CppObject *Item; // x0
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
   __int64 methodPtr_low; // x10
-  int64_t v22; // x1
-  int32_t v23; // w20
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x1
+  int64_t v28; // x1
+  int32_t v29; // w20
+  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x1
   TimeOverChecker_o *timeOverChecker; // x20
 
-  if ( (byte_4BD8DF7 & 1) == 0 )
+  if ( (byte_4BF9FDC & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    byte_4BD8DF7 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventCampaignMaster___, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v4);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__, v6);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v8);
+    byte_4BF9FDC = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !Instance )
     goto LABEL_23;
   FriendPointCampaigns = EventCampaignMaster__GetFriendPointCampaigns((EventCampaignMaster_o *)Instance, 0, 0LL);
   p_eventFriendPoints = &this->fields.eventFriendPoints;
   this->fields.eventFriendPoints = FriendPointCampaigns;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.eventFriendPoints,
     (int64_t)FriendPointCampaigns,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
   Instance = (int64_t)this->fields.itemList;
   if ( !Instance )
     goto LABEL_23;
-  v13 = 0;
-  while ( v13 < *(_DWORD *)(Instance + 24) )
+  v19 = 0;
+  while ( v19 < *(_DWORD *)(Instance + 24) )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Instance,
-             v13,
-             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+             v19,
+             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( Item )
     {
       methodPtr_low = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
         && (SupportSelectListViewItem_c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectListViewItem_TypeInfo )
       {
-        v22 = (int64_t)*p_eventFriendPoints;
+        v28 = (int64_t)*p_eventFriendPoints;
         Item[7].monitor = *p_eventFriendPoints;
-        sub_1C21DDC((PartyOrganizationUtility_o *)&Item[7].monitor, v22, v15, v16, v17, v18, v19, v20);
+        sub_1C2E0D0((PartyOrganizationUtility_o *)&Item[7].monitor, v28, v21, v22, v23, v24, v25, v26);
       }
     }
     Instance = (int64_t)this->fields.itemList;
-    ++v13;
+    ++v19;
     if ( !Instance )
       goto LABEL_23;
   }
-  Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v4);
+  Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v10);
   if ( !Instance )
     goto LABEL_23;
-  v23 = 0;
-  while ( v23 < *(_DWORD *)(Instance + 24) )
+  v29 = 0;
+  while ( v29 < *(_DWORD *)(Instance + 24) )
   {
-    Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v4);
+    Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v10);
     if ( Instance )
     {
       Instance = (int64_t)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)Instance,
-                            v23,
-                            (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
+                            v29,
+                            (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
       if ( Instance )
       {
         SupportSelectListViewObject__ResetEventCampaign(
           (SupportSelectListViewObject_o *)Instance,
           this->fields.eventFriendPoints,
-          v24);
-        ++v23;
-        Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v25);
+          v30);
+        ++v29;
+        Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v31);
         if ( Instance )
           continue;
       }
@@ -552,10 +571,10 @@ void __fastcall SupportSelectListViewManager__ResetEventCampaignListViewObjects(
     goto LABEL_23;
   }
   timeOverChecker = this->fields.timeOverChecker;
-  Instance = SupportSelectListViewManager__GetEventFriendCampaignFinishedAt(this, v4);
+  Instance = SupportSelectListViewManager__GetEventFriendCampaignFinishedAt(this, v10);
   if ( !timeOverChecker )
 LABEL_23:
-    sub_1C22094(Instance, v4);
+    sub_1C2E388(Instance, v10);
   TimeOverChecker__Start(timeOverChecker, Instance, 0LL);
 }
 
@@ -564,109 +583,115 @@ void __fastcall SupportSelectListViewManager__ResetEventCampaignListViewObjectsS
         SupportSelectListViewManager_o *this,
         const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   int64_t Instance; // x0
-  const MethodInfo *v4; // x1
+  const MethodInfo *v10; // x1
   struct EventCampaignEntity_array *FriendPointCampaigns; // x0
   struct EventCampaignEntity_array **p_eventFriendPoints; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int32_t v13; // w21
+  int64_t v13; // x2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  BattleSetupInfo_o *v16; // x5
+  FollowerInfo_o *v17; // x6
+  PartyListViewItem_o *v18; // x7
+  int32_t v19; // w21
   Il2CppObject *Item; // x0
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int64_t v21; // x2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  BattleSetupInfo_o *v24; // x5
+  FollowerInfo_o *v25; // x6
+  PartyListViewItem_o *v26; // x7
   __int64 methodPtr_low; // x10
-  int64_t v22; // x1
-  int32_t v23; // w20
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x1
+  int64_t v28; // x1
+  int32_t v29; // w20
+  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x1
   TimeOverChecker_o *eventStartChecker; // x19
 
-  if ( (byte_4BD8DF8 & 1) == 0 )
+  if ( (byte_4BF9FDD & 1) == 0 )
   {
-    sub_1C21E38(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
-    sub_1C21E38(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C21E38(&SupportServantListViewItem_TypeInfo);
-    byte_4BD8DF8 = 1;
+    sub_1C2E12C(&Method_DataManager_GetMasterData_EventCampaignMaster___, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v4);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__, v6);
+    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1C2E12C(&SupportServantListViewItem_TypeInfo, v8);
+    byte_4BF9FDD = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_388D058 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   Instance = (int64_t)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2FAFE04 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !Instance )
     goto LABEL_23;
   FriendPointCampaigns = EventCampaignMaster__GetFriendPointCampaigns((EventCampaignMaster_o *)Instance, 2, 0LL);
   p_eventFriendPoints = &this->fields.eventFriendPoints;
   this->fields.eventFriendPoints = FriendPointCampaigns;
-  sub_1C21DDC(
+  sub_1C2E0D0(
     (PartyOrganizationUtility_o *)&this->fields.eventFriendPoints,
     (int64_t)FriendPointCampaigns,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
   Instance = (int64_t)this->fields.itemList;
   if ( !Instance )
     goto LABEL_23;
-  v13 = 0;
-  while ( v13 < *(_DWORD *)(Instance + 24) )
+  v19 = 0;
+  while ( v19 < *(_DWORD *)(Instance + 24) )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Instance,
-             v13,
-             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+             v19,
+             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( Item )
     {
       methodPtr_low = LOBYTE(SupportServantListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(Item->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low
         && (SupportServantListViewItem_c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportServantListViewItem_TypeInfo )
       {
-        v22 = (int64_t)*p_eventFriendPoints;
+        v28 = (int64_t)*p_eventFriendPoints;
         Item[16].klass = (Il2CppClass *)*p_eventFriendPoints;
-        sub_1C21DDC((PartyOrganizationUtility_o *)&Item[16], v22, v15, v16, v17, v18, v19, v20);
+        sub_1C2E0D0((PartyOrganizationUtility_o *)&Item[16], v28, v21, v22, v23, v24, v25, v26);
       }
     }
     Instance = (int64_t)this->fields.itemList;
-    ++v13;
+    ++v19;
     if ( !Instance )
       goto LABEL_23;
   }
-  Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v4);
+  Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v10);
   if ( !Instance )
     goto LABEL_23;
-  v23 = 0;
-  while ( v23 < *(_DWORD *)(Instance + 24) )
+  v29 = 0;
+  while ( v29 < *(_DWORD *)(Instance + 24) )
   {
-    Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v4);
+    Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v10);
     if ( Instance )
     {
       Instance = (int64_t)System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)Instance,
-                            v23,
-                            (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
+                            v29,
+                            (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
       if ( Instance )
       {
         SupportSelectListViewObject__ResetEventCampaign(
           (SupportSelectListViewObject_o *)Instance,
           this->fields.eventFriendPoints,
-          v24);
-        ++v23;
-        Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v25);
+          v30);
+        ++v29;
+        Instance = (int64_t)SupportSelectListViewManager__get_ObjectList(this, v31);
         if ( Instance )
           continue;
       }
@@ -677,7 +702,7 @@ void __fastcall SupportSelectListViewManager__ResetEventCampaignListViewObjectsS
   Instance = SupportSelectCommonFunction__GetEventFriendCampaignStartedAt((const MethodInfo *)Instance);
   if ( !eventStartChecker )
 LABEL_23:
-    sub_1C22094(Instance, v4);
+    sub_1C2E388(Instance, v10);
   TimeOverChecker__Start(eventStartChecker, Instance, 0LL);
 }
 
@@ -703,43 +728,44 @@ void __fastcall SupportSelectListViewManager__SetActiveDragSwapGuide(
         bool flag,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  const MethodInfo *v6; // x1
-  int32_t v7; // w20
-  bool v8; // w21
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x1
+  const MethodInfo *v7; // x1
+  int32_t v8; // w20
+  bool v9; // w21
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4BD8DFF & 1) == 0 )
+  if ( (byte_4BF9FE4 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
-    byte_4BD8DFF = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__, flag);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__, v5);
+    byte_4BF9FE4 = 1;
   }
   ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(
                                                               this,
                                                               (const MethodInfo *)flag);
   if ( !ObjectList )
 LABEL_9:
-    sub_1C22094(ObjectList, v6);
-  v7 = 0;
-  v8 = flag;
-  while ( v7 < ObjectList->fields._size )
+    sub_1C2E388(ObjectList, v7);
+  v8 = 0;
+  v9 = flag;
+  while ( v8 < ObjectList->fields._size )
   {
-    ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(this, v6);
+    ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(this, v7);
     if ( ObjectList )
     {
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   ObjectList,
-                                                                  v7,
-                                                                  (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
+                                                                  v8,
+                                                                  (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
       if ( ObjectList )
       {
-        SupportSelectListViewObject__SetActiveDragSwapGuide((SupportSelectListViewObject_o *)ObjectList, v8, v9);
-        ++v7;
+        SupportSelectListViewObject__SetActiveDragSwapGuide((SupportSelectListViewObject_o *)ObjectList, v9, v10);
+        ++v8;
         ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(
                                                                     this,
-                                                                    v10);
+                                                                    v11);
         if ( ObjectList )
           continue;
       }
@@ -765,16 +791,17 @@ void __fastcall SupportSelectListViewManager__SetObjectItem(
         const MethodInfo *method)
 {
   SupportSelectListViewManager_o *v6; // x21
+  __int64 v7; // x1
   __int64 methodPtr_low; // x10
-  const MethodInfo *v8; // x2
-  __int64 v9; // x10
+  const MethodInfo *v9; // x2
+  __int64 v10; // x10
 
   v6 = this;
-  if ( (byte_4BD8DFA & 1) == 0 )
+  if ( (byte_4BF9FDF & 1) == 0 )
   {
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    this = (SupportSelectListViewManager_o *)sub_1C21E38(&SupportSelectListViewObject_TypeInfo);
-    byte_4BD8DFA = 1;
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, obj);
+    this = (SupportSelectListViewManager_o *)sub_1C2E12C(&SupportSelectListViewObject_TypeInfo, v7);
+    byte_4BF9FDF = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(SupportSelectListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
@@ -786,13 +813,13 @@ void __fastcall SupportSelectListViewManager__SetObjectItem(
           v6,
           method),
         !item)
-    || (v9 = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)v9)
-    || (SupportSelectListViewItem_c *)item->klass->_2.typeHierarchy[v9 - 1] != SupportSelectListViewItem_TypeInfo )
+    || (v10 = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
+        LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)v10)
+    || (SupportSelectListViewItem_c *)item->klass->_2.typeHierarchy[v10 - 1] != SupportSelectListViewItem_TypeInfo )
   {
-    sub_1C22094(this, obj);
+    sub_1C2E388(this, obj);
   }
-  SupportSelectListViewItem__setuplistObj((SupportSelectListViewItem_o *)item, (SupportSelectListViewObject_o *)obj, v8);
+  SupportSelectListViewItem__setuplistObj((SupportSelectListViewItem_o *)item, (SupportSelectListViewObject_o *)obj, v9);
 }
 
 
@@ -802,73 +829,76 @@ void __fastcall SupportSelectListViewManager__SetSurface(
         const MethodInfo *method)
 {
   SupportSelectListViewManager_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
   struct SupportSelectListViewObject_o *listObj_k__BackingField; // x8
   struct SupportSelectListViewDropObject_array *dropObjectList; // x22
-  unsigned __int64 v7; // x20
-  Il2CppObject *v8; // x0
+  unsigned __int64 v10; // x20
+  Il2CppObject *v11; // x0
   __int64 methodPtr_low; // x10
-  Il2CppObject *v10; // x21
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  int64_t v17; // x1
+  Il2CppObject *v13; // x21
+  int64_t v14; // x2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  BattleSetupInfo_o *v17; // x5
+  FollowerInfo_o *v18; // x6
+  PartyListViewItem_o *v19; // x7
+  int64_t v20; // x1
 
   v4 = this;
-  if ( (byte_4BD8DFD & 1) == 0 )
+  if ( (byte_4BF9FE2 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Item__);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    this = (SupportSelectListViewManager_o *)sub_1C21E38(&SupportSelectUIDragDropListViewSurface_TypeInfo);
-    byte_4BD8DFD = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Count__, item);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Item__, v5);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
+    this = (SupportSelectListViewManager_o *)sub_1C2E12C(&SupportSelectUIDragDropListViewSurface_TypeInfo, v7);
+    byte_4BF9FE2 = 1;
   }
   if ( item )
   {
     listObj_k__BackingField = item->fields._listObj_k__BackingField;
     if ( !listObj_k__BackingField || (this = (SupportSelectListViewManager_o *)v4->fields.dropList) == 0LL )
 LABEL_22:
-      sub_1C22094(this, item);
+      sub_1C2E388(this, item);
     dropObjectList = listObj_k__BackingField->fields.dropObjectList;
-    v7 = 0LL;
-    while ( (__int64)v7 < SLODWORD(this->fields.m_CancellationTokenSource) )
+    v10 = 0LL;
+    while ( (__int64)v10 < SLODWORD(this->fields.m_CancellationTokenSource) )
     {
-      v8 = System_Collections_Generic_List_object___get_Item(
-             (System_Collections_Generic_List_object__o *)this,
-             v7,
-             (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Item__);
-      if ( v8
+      v11 = System_Collections_Generic_List_object___get_Item(
+              (System_Collections_Generic_List_object__o *)this,
+              v10,
+              (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_UIDragDropListViewSurface__get_Item__);
+      if ( v11
         && (methodPtr_low = LOBYTE(SupportSelectUIDragDropListViewSurface_TypeInfo->vtable._0_Equals.methodPtr),
-            LOBYTE(v8->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low) )
+            LOBYTE(v11->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low) )
       {
-        if ( (SupportSelectUIDragDropListViewSurface_c *)v8->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectUIDragDropListViewSurface_TypeInfo )
-          v10 = v8;
+        if ( (SupportSelectUIDragDropListViewSurface_c *)v11->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectUIDragDropListViewSurface_TypeInfo )
+          v13 = v11;
         else
-          v10 = 0LL;
+          v13 = 0LL;
       }
       else
       {
-        v10 = 0LL;
+        v13 = 0LL;
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      this = (SupportSelectListViewManager_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0LL, 0LL);
+      this = (SupportSelectListViewManager_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0LL, 0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         if ( !dropObjectList )
           goto LABEL_22;
-        if ( v7 >= dropObjectList->max_length )
-          sub_1C2209C(this, item);
-        if ( !v10 )
+        if ( v10 >= dropObjectList->max_length )
+          sub_1C2E390(this, item);
+        if ( !v13 )
           goto LABEL_22;
-        v17 = (int64_t)dropObjectList->m_Items[v7];
-        v10[2].klass = (Il2CppClass *)v17;
-        sub_1C21DDC((PartyOrganizationUtility_o *)&v10[2], v17, v11, v12, v13, v14, v15, v16);
+        v20 = (int64_t)dropObjectList->m_Items[v10];
+        v13[2].klass = (Il2CppClass *)v20;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)&v13[2], v20, v14, v15, v16, v17, v18, v19);
       }
       this = (SupportSelectListViewManager_o *)v4->fields.dropList;
-      ++v7;
+      ++v10;
       if ( !this )
         goto LABEL_22;
     }
@@ -882,43 +912,44 @@ void __fastcall SupportSelectListViewManager__UpdateExplanationText(
         bool ableToSwapDragObj,
         const MethodInfo *method)
 {
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  const MethodInfo *v6; // x1
-  int32_t v7; // w20
-  bool v8; // w21
-  const MethodInfo *v9; // x2
-  const MethodInfo *v10; // x1
+  const MethodInfo *v7; // x1
+  int32_t v8; // w20
+  bool v9; // w21
+  const MethodInfo *v10; // x2
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4BD8DFE & 1) == 0 )
+  if ( (byte_4BF9FE3 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
-    byte_4BD8DFE = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Count__, ableToSwapDragObj);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__, v5);
+    byte_4BF9FE3 = 1;
   }
   ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(
                                                               this,
                                                               (const MethodInfo *)ableToSwapDragObj);
   if ( !ObjectList )
 LABEL_9:
-    sub_1C22094(ObjectList, v6);
-  v7 = 0;
-  v8 = ableToSwapDragObj;
-  while ( v7 < ObjectList->fields._size )
+    sub_1C2E388(ObjectList, v7);
+  v8 = 0;
+  v9 = ableToSwapDragObj;
+  while ( v8 < ObjectList->fields._size )
   {
-    ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(this, v6);
+    ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(this, v7);
     if ( ObjectList )
     {
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   ObjectList,
-                                                                  v7,
-                                                                  (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
+                                                                  v8,
+                                                                  (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_SupportSelectListViewObject__get_Item__);
       if ( ObjectList )
       {
-        SupportSelectListViewObject__UpdateExplanationLabel((SupportSelectListViewObject_o *)ObjectList, v8, v9);
-        ++v7;
+        SupportSelectListViewObject__UpdateExplanationLabel((SupportSelectListViewObject_o *)ObjectList, v9, v10);
+        ++v8;
         ObjectList = (System_Collections_Generic_List_object__o *)SupportSelectListViewManager__get_ObjectList(
                                                                     this,
-                                                                    v10);
+                                                                    v11);
         if ( ObjectList )
           continue;
       }
@@ -942,10 +973,10 @@ void __fastcall SupportSelectListViewManager__add_callbackFunc(
   SupportSelectMenu_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4BD8DED & 1) == 0 )
+  if ( (byte_4BF9FD2 & 1) == 0 )
   {
-    sub_1C21E38(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_4BD8DED = 1;
+    sub_1C2E12C(&SupportSelectMenu_CallbackFunc_TypeInfo, value);
+    byte_4BF9FD2 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -957,13 +988,13 @@ void __fastcall SupportSelectListViewManager__add_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v7->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C6961C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   SupportSelectListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -982,10 +1013,10 @@ void __fastcall SupportSelectListViewManager__add_dragSwapCallbackFunc(
   SupportSelectMenu_DragSwapCallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4BD8DEF & 1) == 0 )
+  if ( (byte_4BF9FD4 & 1) == 0 )
   {
-    sub_1C21E38(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
-    byte_4BD8DEF = 1;
+    sub_1C2E12C(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, value);
+    byte_4BF9FD4 = 1;
   }
   dragSwapCallbackFunc = (System_Delegate_o *)this->fields.dragSwapCallbackFunc;
   p_dragSwapCallbackFunc = &this->fields.dragSwapCallbackFunc;
@@ -997,13 +1028,13 @@ void __fastcall SupportSelectListViewManager__add_dragSwapCallbackFunc(
       if ( (SupportSelectMenu_DragSwapCallbackFunc_c *)v7->klass != SupportSelectMenu_DragSwapCallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_dragSwapCallbackFunc, v7, dragSwapCallbackFunc);
+    v8 = sub_1C6961C(p_dragSwapCallbackFunc, v7, dragSwapCallbackFunc);
     v9 = dragSwapCallbackFunc == (System_Delegate_o *)v8;
     dragSwapCallbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   SupportSelectListViewManager__remove_dragSwapCallbackFunc(v10, v11, v12);
 }
 
@@ -1030,34 +1061,37 @@ void __fastcall SupportSelectListViewManager__callbackFuncObj(
 
 void __fastcall SupportSelectListViewManager__clearItem(SupportSelectListViewManager_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *itemList; // x0
-  int32_t v4; // w20
-  System_Collections_Generic_List_object__o *v5; // x21
+  int32_t v7; // w20
+  System_Collections_Generic_List_object__o *v8; // x21
   __int64 methodPtr_low; // x10
   UnityEngine_Object_o *monitor; // x22
 
-  if ( (byte_4BD8DF4 & 1) == 0 )
+  if ( (byte_4BF9FD9 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    byte_4BD8DF4 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v3);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v5);
+    byte_4BF9FD9 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_15:
-    sub_1C22094(itemList, method);
-  v4 = 0;
-  while ( v4 < itemList->fields._size )
+    sub_1C2E388(itemList, method);
+  v7 = 0;
+  while ( v7 < itemList->fields._size )
   {
     itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               itemList,
-                                                              v4,
-                                                              (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                              v7,
+                                                              (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( itemList )
     {
-      v5 = itemList;
+      v8 = itemList;
       methodPtr_low = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(itemList->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
         && (SupportSelectListViewItem_c *)itemList->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectListViewItem_TypeInfo )
@@ -1067,13 +1101,13 @@ LABEL_15:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL) )
         {
-          itemList = (System_Collections_Generic_List_object__o *)v5[3].monitor;
+          itemList = (System_Collections_Generic_List_object__o *)v8[3].monitor;
           if ( !itemList )
             goto LABEL_15;
           SupportSelectListViewObject__clearItemObj((SupportSelectListViewObject_o *)itemList, method);
         }
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        ++v4;
+        ++v7;
         if ( itemList )
           continue;
       }
@@ -1087,127 +1121,135 @@ System_Collections_Generic_List_SupportSelectListViewObject__o *__fastcall Suppo
         SupportSelectListViewManager_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x19
+  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x21
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v15; // x0
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x0
-  const MethodInfo *v10; // x1
-  Il2CppObject *v11; // x21
+  const MethodInfo *v18; // x1
+  Il2CppObject *v19; // x21
   ListViewItem_o *Item; // x0
-  __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  _BOOL8 v20; // x0
   __int64 v21; // x1
+  int64_t v22; // x2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  BattleSetupInfo_o *v25; // x5
+  FollowerInfo_o *v26; // x6
+  PartyListViewItem_o *v27; // x7
+  _BOOL8 v28; // x0
+  __int64 v29; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v31; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v33; // x0
+  System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4BD8DF2 & 1) == 0 )
+  if ( (byte_4BF9FD7 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD8DF2 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__, v8);
+    sub_1C2E12C(&System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo, v9);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v10);
+    byte_4BF9FD7 = 1;
   }
-  memset(&v28, 0, sizeof(v28));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
+  memset(&v36, 0, sizeof(v36));
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
+    v11,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v27,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v35,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v28 = v27;
+    (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v36 = v35;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v28,
-            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v36,
+            (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v28.fields._current;
+    current = v36.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v7 )
+    v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v15 )
     {
       if ( !current )
-        sub_1C22094(v7, v8);
+        sub_1C2E388(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
-      v11 = Component_object;
+                           (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
+      v19 = Component_object;
       if ( !Component_object )
-        sub_1C22094(0LL, v10);
+        sub_1C2E388(0LL, v18);
       Item = (ListViewItem_o *)SupportSelectListViewObject__GetItem(
                                  (SupportSelectListViewObject_o *)Component_object,
-                                 v10);
+                                 v18);
       if ( !Item )
-        sub_1C22094(0LL, v13);
+        sub_1C2E388(0LL, v21);
       if ( Item->fields.isTermination )
       {
-        v20 = ListViewManager__ClippingItem_42012552((ListViewManager_o *)this, Item, 0LL);
-        if ( v20 )
+        v28 = ListViewManager__ClippingItem_42097292((ListViewManager_o *)this, Item, 0LL);
+        if ( v28 )
         {
-          if ( !v3 )
-            sub_1C22094(v20, v21);
-          items = v3->fields._items;
-          v23 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
-          ++v3->fields._version;
+          if ( !v11 )
+            sub_1C2E388(v28, v29);
+          items = v11->fields._items;
+          v31 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
+          ++v11->fields._version;
           if ( !items )
-            sub_1C22094(v20, v21);
-          size = v3->fields._size;
+            sub_1C2E388(v28, v29);
+          size = v11->fields._size;
           if ( (unsigned int)size < items->max_length )
             goto LABEL_17;
 LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
-            v3,
             v11,
-            *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            v19,
+            *(const MethodInfo_366B8AC **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
       }
       else
       {
-        if ( !v3 )
-          sub_1C22094(Item, v13);
-        items = v3->fields._items;
-        v23 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
-        ++v3->fields._version;
+        if ( !v11 )
+          sub_1C2E388(Item, v21);
+        items = v11->fields._items;
+        v31 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
+        ++v11->fields._version;
         if ( !items )
-          sub_1C22094(Item, v13);
-        size = v3->fields._size;
+          sub_1C2E388(Item, v21);
+        size = v11->fields._size;
         if ( (unsigned int)size >= items->max_length )
           goto LABEL_21;
 LABEL_17:
-        v25 = &items->obj.klass + size;
-        v3->fields._size = size + 1;
-        v25[4] = (Il2CppClass *)v11;
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)v11, v14, v15, v16, v17, v18, v19);
+        v33 = &items->obj.klass + size;
+        v11->fields._size = size + 1;
+        v33[4] = (Il2CppClass *)v19;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v33 + 4), (int64_t)v19, v22, v23, v24, v25, v26, v27);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v28,
-    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_SupportSelectListViewObject__o *)v3;
+    &v36,
+    (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_SupportSelectListViewObject__o *)v11;
 }
 
 
@@ -1215,131 +1257,142 @@ System_Collections_Generic_List_SupportSelectListViewObject__o *__fastcall Suppo
         SupportSelectListViewManager_o *this,
         const MethodInfo *method)
 {
-  System_Collections_Generic_List_object__o *v3; // x19
+  __int64 v3; // x1
   __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
+  System_Collections_Generic_List_object__o *v11; // x19
+  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v15; // x0
+  __int64 v16; // x1
   Il2CppObject *Component_object; // x0
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x1
+  int64_t v18; // x2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  BattleSetupInfo_o *v21; // x5
+  FollowerInfo_o *v22; // x6
+  PartyListViewItem_o *v23; // x7
+  int64_t v24; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v28; // x0
+  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4BD8DF1 & 1) == 0 )
+  if ( (byte_4BF9FD6 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C21E38(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
-    sub_1C21E38(&System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    byte_4BD8DF1 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___, v5);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__, v6);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__, v8);
+    sub_1C2E12C(&System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo, v9);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v10);
+    byte_4BF9FD6 = 1;
   }
-  memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C22084(System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
+  memset(&v31, 0, sizeof(v31));
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_SupportSelectListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v3,
-    (const MethodInfo_364E880 *)Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
+    v11,
+    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_SupportSelectListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C22094(0LL, v4);
+    sub_1C2E388(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_364FBAC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v23 = v22;
+    (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v31 = v30;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v23,
-            (const MethodInfo_33E129C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v31,
+            (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v23.fields._current;
+    current = v31.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v7 )
+    v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
+    if ( v15 )
     {
       if ( !current )
-        sub_1C22094(v7, v8);
+        sub_1C2E388(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3000534 *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
-      v16 = (int64_t)Component_object;
-      if ( !v3 )
-        sub_1C22094(Component_object, Component_object);
-      items = v3->fields._items;
-      v18 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
-      ++v3->fields._version;
+                           (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_SupportSelectListViewObject___);
+      v24 = (int64_t)Component_object;
+      if ( !v11 )
+        sub_1C2E388(Component_object, Component_object);
+      items = v11->fields._items;
+      v26 = Method_System_Collections_Generic_List_SupportSelectListViewObject__Add__;
+      ++v11->fields._version;
       if ( !items )
-        sub_1C22094(Component_object, Component_object);
-      size = v3->fields._size;
+        sub_1C2E388(Component_object, Component_object);
+      size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v3,
+          v11,
           Component_object,
-          *(const MethodInfo_364F0B4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
-        v20 = &items->obj.klass + size;
-        v3->fields._size = size + 1;
-        v20[4] = (Il2CppClass *)v16;
-        sub_1C21DDC((PartyOrganizationUtility_o *)(v20 + 4), v16, v10, v11, v12, v13, v14, v15);
+        v28 = &items->obj.klass + size;
+        v11->fields._size = size + 1;
+        v28[4] = (Il2CppClass *)v24;
+        sub_1C2E0D0((PartyOrganizationUtility_o *)(v28 + 4), v24, v18, v19, v20, v21, v22, v23);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v23,
-    (const MethodInfo_33E1298 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_SupportSelectListViewObject__o *)v3;
+    &v31,
+    (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_SupportSelectListViewObject__o *)v11;
 }
 
 
 void __fastcall SupportSelectListViewManager__reDisp(SupportSelectListViewManager_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *itemList; // x0
-  int32_t v4; // w20
-  System_Collections_Generic_List_object__o *v5; // x21
+  int32_t v7; // w20
+  System_Collections_Generic_List_object__o *v8; // x21
   __int64 methodPtr_low; // x10
   UnityEngine_Object_o *monitor; // x22
-  const MethodInfo *v8; // x2
+  const MethodInfo *v11; // x2
 
-  if ( (byte_4BD8DF5 & 1) == 0 )
+  if ( (byte_4BF9FDA & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    byte_4BD8DF5 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v3);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v5);
+    byte_4BF9FDA = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_15:
-    sub_1C22094(itemList, method);
-  v4 = 0;
-  while ( v4 < itemList->fields._size )
+    sub_1C2E388(itemList, method);
+  v7 = 0;
+  while ( v7 < itemList->fields._size )
   {
     itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               itemList,
-                                                              v4,
-                                                              (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                              v7,
+                                                              (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( itemList )
     {
-      v5 = itemList;
+      v8 = itemList;
       methodPtr_low = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(itemList->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
         && (SupportSelectListViewItem_c *)itemList->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectListViewItem_TypeInfo )
@@ -1349,13 +1402,13 @@ LABEL_15:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL) )
         {
-          itemList = (System_Collections_Generic_List_object__o *)v5[3].monitor;
+          itemList = (System_Collections_Generic_List_object__o *)v8[3].monitor;
           if ( !itemList )
             goto LABEL_15;
-          SupportSelectListViewObject__setDisp((SupportSelectListViewObject_o *)itemList, 1, v8);
+          SupportSelectListViewObject__setDisp((SupportSelectListViewObject_o *)itemList, 1, v11);
         }
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        ++v4;
+        ++v7;
         if ( itemList )
           continue;
       }
@@ -1379,10 +1432,10 @@ void __fastcall SupportSelectListViewManager__remove_callbackFunc(
   SupportSelectMenu_DragSwapCallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4BD8DEE & 1) == 0 )
+  if ( (byte_4BF9FD3 & 1) == 0 )
   {
-    sub_1C21E38(&SupportSelectMenu_CallbackFunc_TypeInfo);
-    byte_4BD8DEE = 1;
+    sub_1C2E12C(&SupportSelectMenu_CallbackFunc_TypeInfo, value);
+    byte_4BF9FD3 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1394,13 +1447,13 @@ void __fastcall SupportSelectListViewManager__remove_callbackFunc(
       if ( (SupportSelectMenu_CallbackFunc_c *)v7->klass != SupportSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C6961C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   SupportSelectListViewManager__add_dragSwapCallbackFunc(v10, v11, v12);
 }
 
@@ -1419,10 +1472,10 @@ void __fastcall SupportSelectListViewManager__remove_dragSwapCallbackFunc(
   bool v11; // w1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4BD8DF0 & 1) == 0 )
+  if ( (byte_4BF9FD5 & 1) == 0 )
   {
-    sub_1C21E38(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo);
-    byte_4BD8DF0 = 1;
+    sub_1C2E12C(&SupportSelectMenu_DragSwapCallbackFunc_TypeInfo, value);
+    byte_4BF9FD5 = 1;
   }
   dragSwapCallbackFunc = (System_Delegate_o *)this->fields.dragSwapCallbackFunc;
   p_dragSwapCallbackFunc = &this->fields.dragSwapCallbackFunc;
@@ -1434,50 +1487,53 @@ void __fastcall SupportSelectListViewManager__remove_dragSwapCallbackFunc(
       if ( (SupportSelectMenu_DragSwapCallbackFunc_c *)v7->klass != SupportSelectMenu_DragSwapCallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C5D328(p_dragSwapCallbackFunc, v7, dragSwapCallbackFunc);
+    v8 = sub_1C6961C(p_dragSwapCallbackFunc, v7, dragSwapCallbackFunc);
     v9 = dragSwapCallbackFunc == (System_Delegate_o *)v8;
     dragSwapCallbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C22354(v7);
+  sub_1C2E648(v7);
   SupportSelectListViewManager__SetLoopFlag(v10, v11, v12);
 }
 
 
 void __fastcall SupportSelectListViewManager__setItem(SupportSelectListViewManager_o *this, const MethodInfo *method)
 {
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
   System_Collections_Generic_List_object__o *itemList; // x0
-  int32_t v4; // w20
-  System_Collections_Generic_List_object__o *v5; // x21
+  int32_t v7; // w20
+  System_Collections_Generic_List_object__o *v8; // x21
   __int64 methodPtr_low; // x10
   UnityEngine_Object_o *monitor; // x22
-  ListViewObject_o *v8; // x21
+  ListViewObject_o *v11; // x21
   int32_t Index; // w0
-  const MethodInfo *v10; // x2
+  const MethodInfo *v13; // x2
 
-  if ( (byte_4BD8DF3 & 1) == 0 )
+  if ( (byte_4BF9FD8 & 1) == 0 )
   {
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C21E38(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C21E38(&UnityEngine_Object_TypeInfo);
-    sub_1C21E38(&SupportSelectListViewItem_TypeInfo);
-    byte_4BD8DF3 = 1;
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, method);
+    sub_1C2E12C(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v3);
+    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C2E12C(&SupportSelectListViewItem_TypeInfo, v5);
+    byte_4BF9FD8 = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_15:
-    sub_1C22094(itemList, method);
-  v4 = 0;
-  while ( v4 < itemList->fields._size )
+    sub_1C2E388(itemList, method);
+  v7 = 0;
+  while ( v7 < itemList->fields._size )
   {
     itemList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                               itemList,
-                                                              v4,
-                                                              (const MethodInfo_364EDE4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                                              v7,
+                                                              (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( itemList )
     {
-      v5 = itemList;
+      v8 = itemList;
       methodPtr_low = LOBYTE(SupportSelectListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
       if ( LOBYTE(itemList->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
         && (SupportSelectListViewItem_c *)itemList->klass->_2.typeHierarchy[methodPtr_low - 1] == SupportSelectListViewItem_TypeInfo )
@@ -1488,14 +1544,14 @@ LABEL_15:
         itemList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL);
         if ( ((unsigned __int8)itemList & 1) != 0 )
         {
-          v8 = (ListViewObject_o *)v5[3].monitor;
-          if ( !v8 )
+          v11 = (ListViewObject_o *)v8[3].monitor;
+          if ( !v11 )
             goto LABEL_15;
-          Index = ListViewObject__get_Index(v8, 0LL);
-          SupportSelectListViewObject__setItemObj((SupportSelectListViewObject_o *)v8, Index, v10);
+          Index = ListViewObject__get_Index(v11, 0LL);
+          SupportSelectListViewObject__setItemObj((SupportSelectListViewObject_o *)v11, Index, v13);
         }
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        ++v4;
+        ++v7;
         if ( itemList )
           continue;
       }

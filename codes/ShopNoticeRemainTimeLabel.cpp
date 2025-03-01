@@ -19,9 +19,9 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.label = label;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.label, (int64_t)label, v7, v8, v9, v10, v11, v12);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.label, (int64_t)label, v7, v8, v9, v10, v11, v12);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields, (int64_t)monoBehaviour, v13, v14, v15, v16, v17, v18);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)monoBehaviour, v13, v14, v15, v16, v17, v18);
 }
 
 
@@ -52,10 +52,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Start(ShopNoticeRemainTimeLabel_o *th
   monoBehaviour = this->fields.monoBehaviour;
   updated = ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel(this, v4);
   if ( !monoBehaviour )
-    sub_1C22094(updated, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_70854884(monoBehaviour, updated, 0LL);
+    sub_1C2E388(updated, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_70974992(monoBehaviour, updated, 0LL);
   this->fields.coroutine = started;
-  sub_1C21DDC((PartyOrganizationUtility_o *)&this->fields.coroutine, (int64_t)started, v8, v9, v10, v11, v12, v13);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.coroutine, (int64_t)started, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -77,10 +77,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Stop(ShopNoticeRemainTimeLabel_o *thi
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1C22094(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_70855504(monoBehaviour, coroutine, 0LL);
+      sub_1C2E388(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_70975612(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_1C21DDC(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C2E0D0(p_coroutine, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -97,16 +97,16 @@ System_Collections_IEnumerator_o *__fastcall ShopNoticeRemainTimeLabel__UpdateRe
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BD8A1C & 1) == 0 )
+  if ( (byte_4BF9C02 & 1) == 0 )
   {
-    sub_1C21E38(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
-    byte_4BD8A1C = 1;
+    sub_1C2E12C(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo, method);
+    byte_4BF9C02 = 1;
   }
-  v3 = sub_1C22084(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
+  v3 = sub_1C2E378(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C21DDC((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C2E0D0((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -126,35 +126,39 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
         const MethodInfo *method)
 {
   ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *v2; // x19
+  __int64 v3; // x1
+  __int64 v4; // x1
   int32_t _1__state; // w8
   struct ShopNoticeRemainTimeLabel_o *_4__this; // x22
-  UnityEngine_WaitForSeconds_o *v5; // x20
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  UnityEngine_WaitForSeconds_o *v7; // x20
+  int64_t v8; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  BattleSetupInfo_o *v11; // x5
+  FollowerInfo_o *v12; // x6
+  PartyListViewItem_o *v13; // x7
   UILabel_o *label; // x20
   int64_t timeLimit; // x21
-  int64_t v14; // x20
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int64_t v16; // x20
+  int64_t v17; // x2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  BattleSetupInfo_o *v20; // x5
+  FollowerInfo_o *v21; // x6
+  PartyListViewItem_o *v22; // x7
   bool result; // w0
   int64_t loopWait_5__2; // x1
   PartyOrganizationUtility_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4BD8A1D & 1) == 0 )
+  if ( (byte_4BF9C03 & 1) == 0 )
   {
-    sub_1C21E38(&LocalizationManager_TypeInfo);
-    sub_1C21E38(&NetworkManager_TypeInfo);
-    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_1C21E38(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4BD8A1D = 1;
+    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
+    sub_1C2E12C(&NetworkManager_TypeInfo, v3);
+    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_o *)sub_1C2E12C(
+                                                                        &UnityEngine_WaitForSeconds_TypeInfo,
+                                                                        v4);
+    byte_4BF9C03 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -167,10 +171,10 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
     if ( _1__state )
       return 0;
     v2->fields.__1__state = -1;
-    v5 = (UnityEngine_WaitForSeconds_o *)sub_1C22084(UnityEngine_WaitForSeconds_TypeInfo);
-    UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0LL);
-    v2->fields._loopWait_5__2 = v5;
-    sub_1C21DDC((PartyOrganizationUtility_o *)&v2->fields._loopWait_5__2, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+    v7 = (UnityEngine_WaitForSeconds_o *)sub_1C2E378(UnityEngine_WaitForSeconds_TypeInfo);
+    UnityEngine_WaitForSeconds___ctor(v7, 1.0, 0LL);
+    v2->fields._loopWait_5__2 = v7;
+    sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._loopWait_5__2, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
   if ( !_4__this )
     goto LABEL_16;
@@ -184,17 +188,17 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8__MoveNext(
                                                                       0LL);
   if ( !label )
 LABEL_16:
-    sub_1C22094(this, method);
+    sub_1C2E388(this, method);
   UILabel__set_text(label, (System_String_o *)this, 0LL);
-  v14 = _4__this->fields.timeLimit;
+  v16 = _4__this->fields.timeLimit;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( v14 < NetworkManager__getTime(0LL) )
+  if ( v16 < NetworkManager__getTime(0LL) )
     return 0;
   loopWait_5__2 = (int64_t)v2->fields._loopWait_5__2;
   v2->fields.__2__current = (Il2CppObject *)loopWait_5__2;
   p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-  sub_1C21DDC(p__2__current, loopWait_5__2, v15, v16, v17, v18, v19, v20);
+  sub_1C2E0D0(p__2__current, loopWait_5__2, v17, v18, v19, v20, v21, v22);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
   return result;
@@ -217,11 +221,11 @@ void __fastcall __noreturn ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C21E4C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C22084(v2);
+  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C21E4C(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1C21F60(v3, v4);
+  v4 = sub_1C2E140(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1C2E254(v3, v4);
 }
 
 
