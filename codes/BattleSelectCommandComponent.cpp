@@ -36,36 +36,36 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   FollowerInfo_o *v34; // x6
   PartyListViewItem_o *v35; // x7
 
-  if ( (byte_4C0037C & 1) == 0 )
+  if ( (byte_4C24BAA & 1) == 0 )
   {
-    sub_1C2E12C(&BattleSelectCommandComponent_TypeInfo, v1);
-    sub_1C2E12C(&string___TypeInfo, v2);
-    sub_1C2E12C(&StringLiteral_18487/*"commandcard_select_3rd"*/, v3);
-    sub_1C2E12C(&StringLiteral_18486/*"commandcard_select_2nd"*/, v4);
-    sub_1C2E12C(&StringLiteral_18485/*"commandcard_select_1st"*/, v5);
-    byte_4C0037C = 1;
+    sub_1C3B764(&BattleSelectCommandComponent_TypeInfo, v1);
+    sub_1C3B764(&string___TypeInfo, v2);
+    sub_1C3B764(&StringLiteral_18521/*"effect load failed. effectId = {0}"*/, v3);
+    sub_1C3B764(&StringLiteral_18520/*"effect"*/, v4);
+    sub_1C3B764(&StringLiteral_18519/*"ef_whitepoint"*/, v5);
+    byte_4C24BAA = 1;
   }
-  v6 = sub_1C2E1D4(string___TypeInfo, 3LL);
+  v6 = sub_1C3B80C(string___TypeInfo, 3LL);
   if ( !v6 )
-    sub_1C2E388(0LL, v7);
+    sub_1C3B9C0(0LL, v7);
   v14 = v6;
   if ( !*(_DWORD *)(v6 + 24)
-    || (v15 = StringLiteral_18485/*"commandcard_select_1st"*/,
-        *(_QWORD *)(v6 + 32) = StringLiteral_18485/*"commandcard_select_1st"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v6 + 32), v15, v8, v9, v10, v11, v12, v13),
+    || (v15 = StringLiteral_18519/*"ef_whitepoint"*/,
+        *(_QWORD *)(v6 + 32) = StringLiteral_18519/*"ef_whitepoint"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 32), v15, v8, v9, v10, v11, v12, v13),
         *(_DWORD *)(v14 + 24) <= 1u)
-    || (v22 = StringLiteral_18486/*"commandcard_select_2nd"*/,
-        *(_QWORD *)(v14 + 40) = StringLiteral_18486/*"commandcard_select_2nd"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v14 + 40), v22, v16, v17, v18, v19, v20, v21),
+    || (v22 = StringLiteral_18520/*"effect"*/,
+        *(_QWORD *)(v14 + 40) = StringLiteral_18520/*"effect"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v14 + 40), v22, v16, v17, v18, v19, v20, v21),
         *(_DWORD *)(v14 + 24) <= 2u) )
   {
-    sub_1C2E390(v6, v7);
+    sub_1C3B9C8(v6, v7);
   }
-  v29 = StringLiteral_18487/*"commandcard_select_3rd"*/;
-  *(_QWORD *)(v14 + 48) = StringLiteral_18487/*"commandcard_select_3rd"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v14 + 48), v29, v23, v24, v25, v26, v27, v28);
+  v29 = StringLiteral_18521/*"effect load failed. effectId = {0}"*/;
+  *(_QWORD *)(v14 + 48) = StringLiteral_18521/*"effect load failed. effectId = {0}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v14 + 48), v29, v23, v24, v25, v26, v27, v28);
   BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v14;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)BattleSelectCommandComponent_TypeInfo->static_fields,
     v14,
     v30,
@@ -96,12 +96,12 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   __int64 v9; // x8
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4C0037B & 1) == 0 )
+  if ( (byte_4C24BA9 & 1) == 0 )
   {
-    sub_1C2E12C(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C0037B = 1;
+    sub_1C3B764(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    byte_4C24BA9 = 1;
   }
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
   markSprite = this->fields.markSprite;
@@ -114,7 +114,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   if ( !v9 )
     goto LABEL_16;
   if ( *(_DWORD *)(v9 + 24) <= (unsigned int)index )
-    sub_1C2E390(gameObject, *(_QWORD *)&index);
+    sub_1C3B9C8(gameObject, *(_QWORD *)&index);
   if ( !markSprite )
     goto LABEL_16;
   UISprite__set_spriteName(markSprite, *(System_String_o **)(v9 + 8LL * index + 32), 0LL);
@@ -126,7 +126,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -142,6 +142,6 @@ void __fastcall BattleSelectCommandComponent__setIndex(
       return;
     }
 LABEL_16:
-    sub_1C2E388(gameObject, *(_QWORD *)&index);
+    sub_1C3B9C0(gameObject, *(_QWORD *)&index);
   }
 }

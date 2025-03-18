@@ -2,10 +2,10 @@ void __fastcall FriendPointNoticeDlgSvtInfo___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BFF836 & 1) == 0 )
+  if ( (byte_4C24064 & 1) == 0 )
   {
-    sub_1C2E12C(&FriendPointNoticeDlgSvtInfo_TypeInfo, v1);
-    byte_4BFF836 = 1;
+    sub_1C3B764(&FriendPointNoticeDlgSvtInfo_TypeInfo, v1);
+    byte_4C24064 = 1;
   }
   LODWORD(FriendPointNoticeDlgSvtInfo_TypeInfo->static_fields->SERVANT_NAME_LABEL_MAX_WIDTH) = (struct FriendPointNoticeDlgSvtInfo_StaticFields)1140457472;
 }
@@ -31,7 +31,7 @@ UnityEngine_Vector3_o __fastcall FriendPointNoticeDlgSvtInfo__GetServantNameCond
 
   supportServantNameLabel = (UnityEngine_Component_o *)this->fields.supportServantNameLabel;
   if ( !supportServantNameLabel )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   gameObject = UnityEngine_Component__get_gameObject(supportServantNameLabel, 0LL);
   *(UnityEngine_Vector3_o *)&v4 = GameObjectExtensions__GetLocalScale(gameObject, 0LL);
   result.fields.z = v6;
@@ -103,35 +103,35 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
   int32_t data; // [xsp+64h] [xbp-6Ch] BYREF
   Il2CppObject *entity; // [xsp+68h] [xbp-68h] BYREF
 
-  if ( (byte_4BFF834 & 1) == 0 )
+  if ( (byte_4C24062 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantExceedMaster___, *(_QWORD *)&svtId);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantLimitMaster___, v8);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantMaster___, v9);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v10);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserServantMaster___, v11);
-    sub_1C2E12C(&DataManager_TypeInfo, v12);
-    sub_1C2E12C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
-    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v14);
-    sub_1C2E12C(&FriendPointNoticeDlgSvtInfo_TypeInfo, v15);
-    sub_1C2E12C(&IconLabelInfo_TypeInfo, v16);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v17);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v18);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v19);
-    sub_1C2E12C(&StringLiteral_1454/*"3"*/, v20);
-    sub_1C2E12C(&StringLiteral_1392/*"2"*/, v21);
-    sub_1C2E12C(&StringLiteral_7080/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/, v22);
-    sub_1C2E12C(&StringLiteral_25940/*"４"*/, v23);
-    sub_1C2E12C(&StringLiteral_25939/*"３"*/, v24);
-    sub_1C2E12C(&StringLiteral_25937/*"１"*/, v25);
-    sub_1C2E12C(&StringLiteral_1472/*"4"*/, v26);
-    sub_1C2E12C(&StringLiteral_25941/*"５"*/, v27);
-    sub_1C2E12C(&StringLiteral_7079/*"GET_FRIEND_POINT_SERVANT_NAME"*/, v28);
-    sub_1C2E12C(&StringLiteral_25938/*"２"*/, v29);
-    sub_1C2E12C(&StringLiteral_1245/*"1"*/, v30);
-    sub_1C2E12C(&StringLiteral_1489/*"5"*/, v31);
-    byte_4BFF834 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantExceedMaster___, *(_QWORD *)&svtId);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantLimitMaster___, v8);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantMaster___, v9);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v10);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserServantMaster___, v11);
+    sub_1C3B764(&DataManager_TypeInfo, v12);
+    sub_1C3B764(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
+    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v14);
+    sub_1C3B764(&FriendPointNoticeDlgSvtInfo_TypeInfo, v15);
+    sub_1C3B764(&IconLabelInfo_TypeInfo, v16);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v17);
+    sub_1C3B764(&NetworkManager_TypeInfo, v18);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v19);
+    sub_1C3B764(&StringLiteral_1453/*"8"*/, v20);
+    sub_1C3B764(&StringLiteral_1391/*"2D UI"*/, v21);
+    sub_1C3B764(&StringLiteral_7082/*"Hash must be finalized before the hash value is retrieved."*/, v22);
+    sub_1C3B764(&StringLiteral_25985, v23);
+    sub_1C3B764(&StringLiteral_25984, v24);
+    sub_1C3B764(&StringLiteral_25982, v25);
+    sub_1C3B764(&StringLiteral_1471/*": Upgraded Array from "*/, v26);
+    sub_1C3B764(&StringLiteral_25986, v27);
+    sub_1C3B764(&StringLiteral_7081/*"Hash key cannot be changed after the first write to the stream."*/, v28);
+    sub_1C3B764(&StringLiteral_25983, v29);
+    sub_1C3B764(&StringLiteral_1244/*"1.2.840.113549.1.7.2"*/, v30);
+    sub_1C3B764(&StringLiteral_1488/*":*"*/, v31);
+    byte_4C24062 = 1;
   }
   entity = 0LL;
   data = 0;
@@ -139,12 +139,12 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
   v59 = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantMaster___);
-  v33 = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserServantMaster___);
-  v34 = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantLimitMaster___);
-  v35 = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantExceedMaster___);
-  v36 = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantMaster___);
+  v33 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserServantMaster___);
+  v34 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  v35 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantExceedMaster___);
+  v36 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( svtId < 1 )
     goto LABEL_59;
   if ( !Master_object )
@@ -154,7 +154,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
                                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                                   &entity,
                                                                   svtId,
-                                                                  (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)ServantLimitCountSealAfter & 1) == 0 )
     goto LABEL_59;
   if ( !v33 )
@@ -162,7 +162,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
   ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)DataMasterBase_object__object__long___GetEntity(
                                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)v33,
                                                                   usrSvtId,
-                                                                  (const MethodInfo_327D6DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                                                  (const MethodInfo_329D3A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   v40 = (UserServantEntity_o *)ServantLimitCountSealAfter;
   v41 = usrSvtId < 1 || ServantLimitCountSealAfter == 0LL;
   if ( v41 )
@@ -181,45 +181,45 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
     ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_Int32__ToString((int32_t)&data, 0LL);
     if ( !ServantLimitCountSealAfter )
       goto LABEL_66;
-    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63255212(
+    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63388240(
                                                                     (System_String_o *)ServantLimitCountSealAfter,
-                                                                    (System_String_o *)StringLiteral_1245/*"1"*/,
-                                                                    (System_String_o *)StringLiteral_25937/*"１"*/,
+                                                                    (System_String_o *)StringLiteral_1244/*"1.2.840.113549.1.7.2"*/,
+                                                                    (System_String_o *)StringLiteral_25982,
                                                                     0LL);
     if ( !ServantLimitCountSealAfter )
       goto LABEL_66;
-    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63255212(
+    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63388240(
                                                                     (System_String_o *)ServantLimitCountSealAfter,
-                                                                    (System_String_o *)StringLiteral_1392/*"2"*/,
-                                                                    (System_String_o *)StringLiteral_25938/*"２"*/,
+                                                                    (System_String_o *)StringLiteral_1391/*"2D UI"*/,
+                                                                    (System_String_o *)StringLiteral_25983,
                                                                     0LL);
     if ( !ServantLimitCountSealAfter )
       goto LABEL_66;
-    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63255212(
+    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63388240(
                                                                     (System_String_o *)ServantLimitCountSealAfter,
-                                                                    (System_String_o *)StringLiteral_1454/*"3"*/,
-                                                                    (System_String_o *)StringLiteral_25939/*"３"*/,
+                                                                    (System_String_o *)StringLiteral_1453/*"8"*/,
+                                                                    (System_String_o *)StringLiteral_25984,
                                                                     0LL);
     if ( !ServantLimitCountSealAfter )
       goto LABEL_66;
-    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63255212(
+    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Replace_63388240(
                                                                     (System_String_o *)ServantLimitCountSealAfter,
-                                                                    (System_String_o *)StringLiteral_1472/*"4"*/,
-                                                                    (System_String_o *)StringLiteral_25940/*"４"*/,
+                                                                    (System_String_o *)StringLiteral_1471/*": Upgraded Array from "*/,
+                                                                    (System_String_o *)StringLiteral_25985,
                                                                     0LL);
     if ( !ServantLimitCountSealAfter )
       goto LABEL_66;
-    v43 = (Il2CppObject *)System_String__Replace_63255212(
+    v43 = (Il2CppObject *)System_String__Replace_63388240(
                             (System_String_o *)ServantLimitCountSealAfter,
-                            (System_String_o *)StringLiteral_1489/*"5"*/,
-                            (System_String_o *)StringLiteral_25941/*"５"*/,
+                            (System_String_o *)StringLiteral_1488/*":*"*/,
+                            (System_String_o *)StringLiteral_25986,
                             0LL);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BF81D5 )
+    if ( !byte_4C1C955 )
     {
-      sub_1C2E12C(&NetworkManager_TypeInfo, v38);
-      byte_4BF81D5 = 1;
+      sub_1C3B764(&NetworkManager_TypeInfo, v38);
+      byte_4C1C955 = 1;
     }
     ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -258,7 +258,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_7079/*"GET_FRIEND_POINT_SERVANT_NAME"*/,
+                                                                    (System_String_o *)StringLiteral_7081/*"Hash key cannot be changed after the first write to the stream."*/,
                                                                     0LL);
     if ( !entity
       || (v49 = (System_String_o *)ServantLimitCountSealAfter,
@@ -271,7 +271,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
           !entity)
       || (v50 = (Il2CppObject *)ServantLimitCountSealAfter,
           ClassName = (Il2CppObject *)ServantEntity__getClassName((ServantEntity_o *)entity, 0LL),
-          ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Format_63250024(
+          ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Format_63383052(
                                                                           v49,
                                                                           v43,
                                                                           v50,
@@ -280,7 +280,7 @@ bool __fastcall FriendPointNoticeDlgSvtInfo__Set(
           !supportServantNameLabel) )
     {
 LABEL_66:
-      sub_1C2E388(ServantLimitCountSealAfter, v38);
+      sub_1C3B9C0(ServantLimitCountSealAfter, v38);
     }
   }
   else
@@ -289,7 +289,7 @@ LABEL_66:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_7080/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/,
+                                                                    (System_String_o *)StringLiteral_7082/*"Hash must be finalized before the hash value is retrieved."*/,
                                                                     0LL);
     if ( !entity )
       goto LABEL_66;
@@ -304,7 +304,7 @@ LABEL_66:
       goto LABEL_66;
     v47 = (Il2CppObject *)ServantLimitCountSealAfter;
     v48 = (Il2CppObject *)ServantEntity__getClassName((ServantEntity_o *)entity, 0LL);
-    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Format_63249956(v46, v47, v48, 0LL);
+    ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)System_String__Format_63382984(v46, v47, v48, 0LL);
     if ( !supportServantNameLabel )
       goto LABEL_66;
   }
@@ -315,7 +315,7 @@ LABEL_66:
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDlgSvtInfo_TypeInfo);
   if ( !v52 )
     goto LABEL_66;
-  UILabel__SetCondensedScale_48350976(
+  UILabel__SetCondensedScale_48474720(
     v52,
     FriendPointNoticeDlgSvtInfo_TypeInfo->static_fields->SERVANT_NAME_LABEL_MAX_WIDTH,
     0.0,
@@ -329,7 +329,7 @@ LABEL_59:
     LOBYTE(ServantLimitCountSealAfter) = 0;
     return (char)ServantLimitCountSealAfter;
   }
-  v54 = (IconLabelInfo_o *)sub_1C2E378(IconLabelInfo_TypeInfo);
+  v54 = (IconLabelInfo_o *)sub_1C3B9B0(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v54, 0LL);
   if ( v41 )
   {
@@ -345,11 +345,11 @@ LABEL_59:
         {
           if ( v54 )
           {
-            IconLabelInfo__Set_39452344(v54, 2, 1, v58->fields.lvMax, 0, 0, 0, 0, 0LL);
+            IconLabelInfo__Set_39561332(v54, 2, 1, v58->fields.lvMax, 0, 0, 0, 0, 0LL);
             ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)this->fields.supportServantFaceIcon;
             if ( ServantLimitCountSealAfter )
             {
-              ServantFaceIconComponent__Set_39531668(
+              ServantFaceIconComponent__Set_39640656(
                 (ServantFaceIconComponent_o *)ServantLimitCountSealAfter,
                 svtId,
                 0,
@@ -380,11 +380,11 @@ LABEL_59:
   ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)UserServantEntity__getLevelMax(v40, 0LL);
   if ( !v54 )
     goto LABEL_66;
-  IconLabelInfo__Set_39452344(v54, 2, lv, (int32_t)ServantLimitCountSealAfter, 0, 0, 0, 0, 0LL);
+  IconLabelInfo__Set_39561332(v54, 2, lv, (int32_t)ServantLimitCountSealAfter, 0, 0, 0, 0, 0LL);
   ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)this->fields.supportServantFaceIcon;
   if ( !ServantLimitCountSealAfter )
     goto LABEL_66;
-  ServantFaceIconComponent__Set_39534392(
+  ServantFaceIconComponent__Set_39643380(
     (ServantFaceIconComponent_o *)ServantLimitCountSealAfter,
     usrSvtId,
     v54,
@@ -394,7 +394,7 @@ LABEL_64:
   ServantLimitCountSealAfter = (UserServantCollectionMaster_o *)this->fields.supportServantSubLabel;
   if ( !ServantLimitCountSealAfter )
     goto LABEL_66;
-  UIIconLabel__Set_39550988((UIIconLabel_o *)ServantLimitCountSealAfter, 36, data, 0, 0, 0LL, 0, 0, 0, 0LL);
+  UIIconLabel__Set_39659976((UIIconLabel_o *)ServantLimitCountSealAfter, 36, data, 0, 0, 0LL, 0, 0, 0, 0LL);
   LOBYTE(ServantLimitCountSealAfter) = 1;
   return (char)ServantLimitCountSealAfter;
 }
@@ -408,10 +408,10 @@ void __fastcall FriendPointNoticeDlgSvtInfo__SetServantNameCondensedScale(
   FriendPointNoticeDlgSvtInfo_c *v5; // x0
   UILabel_o *supportServantNameLabel; // x0
 
-  if ( (byte_4BFF835 & 1) == 0 )
+  if ( (byte_4C24063 & 1) == 0 )
   {
-    sub_1C2E12C(&FriendPointNoticeDlgSvtInfo_TypeInfo, method);
-    byte_4BFF835 = 1;
+    sub_1C3B764(&FriendPointNoticeDlgSvtInfo_TypeInfo, method);
+    byte_4C24063 = 1;
   }
   if ( maxWidth <= 0.0 )
   {
@@ -425,6 +425,6 @@ void __fastcall FriendPointNoticeDlgSvtInfo__SetServantNameCondensedScale(
   }
   supportServantNameLabel = this->fields.supportServantNameLabel;
   if ( !supportServantNameLabel )
-    sub_1C2E388(0LL, method);
-  UILabel__SetCondensedScale_48350976(supportServantNameLabel, maxWidth, 0.0, 0LL);
+    sub_1C3B9C0(0LL, method);
+  UILabel__SetCondensedScale_48474720(supportServantNameLabel, maxWidth, 0.0, 0LL);
 }

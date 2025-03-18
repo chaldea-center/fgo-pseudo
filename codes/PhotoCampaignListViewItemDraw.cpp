@@ -21,11 +21,11 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4BF9009 & 1) == 0 )
+  if ( (byte_4C1D78C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BF9009 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    byte_4C1D78C = 1;
   }
   if ( item )
   {
@@ -46,7 +46,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetInput(
             goto LABEL_45;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_45;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
@@ -126,7 +126,7 @@ LABEL_43:
       }
     }
 LABEL_45:
-    sub_1C2E388(maskLb, item);
+    sub_1C3B9C0(maskLb, item);
   }
 }
 
@@ -147,17 +147,17 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4BF9008 & 1) == 0 )
+  if ( (byte_4C1D78B & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, item);
-    byte_4BF9008 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, item);
+    byte_4C1D78B = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_39534600(
+      ServantFaceIconComponent__Set_39643588(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -189,7 +189,7 @@ void __fastcall PhotoCampaignListViewItemDraw__SetItem(
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                 if ( !servantFaceIcon )
                   goto LABEL_47;
-                FlashingIconComponent__Set_39438484(
+                FlashingIconComponent__Set_39547472(
                   (FlashingIconComponent_o *)servantFaceIcon,
                   item->fields.partyIndex >= 0,
                   0LL);
@@ -272,7 +272,7 @@ LABEL_45:
       }
     }
 LABEL_47:
-    sub_1C2E388(servantFaceIcon, item);
+    sub_1C3B9C0(servantFaceIcon, item);
   }
 }
 
@@ -290,80 +290,82 @@ void __fastcall PhotoCampaignListViewItemDraw__SetMaskInfo(
   __int64 *v9; // x8
 
   v4 = this;
-  if ( (byte_4BF900A & 1) == 0 )
+  if ( (byte_4C1D78D & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, item);
-    sub_1C2E12C(&StringLiteral_11708/*"SELECT_CANNOT"*/, v5);
-    this = (PhotoCampaignListViewItemDraw_o *)sub_1C2E12C(&StringLiteral_11732/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    byte_4BF900A = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, item);
+    sub_1C3B764(&StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/, v5);
+    this = (PhotoCampaignListViewItemDraw_o *)sub_1C3B764(&StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, v6);
+    byte_4C1D78D = 1;
   }
   if ( !item )
-    goto LABEL_25;
-  if ( item->fields.isPushMode )
+    goto LABEL_28;
+  if ( !item->fields.isPushMode )
   {
-    userSvtEntity = item->fields.userSvtEntity;
-    if ( userSvtEntity )
+    if ( !PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item)
+      && !item->fields._IsCannotSelectSvt_k__BackingField )
     {
-      if ( UserServantEntity__IsEventJoin(userSvtEntity, 0LL) )
-      {
-        this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
-        if ( !this )
-          goto LABEL_25;
-        this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
-                                                    (UnityEngine_Component_o *)this,
-                                                    0LL);
-        if ( !this )
-          goto LABEL_25;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
-        if ( !this )
-          goto LABEL_25;
-        this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
-                                                    (UnityEngine_Component_o *)this,
-                                                    0LL);
-        if ( !this )
-          goto LABEL_25;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-        maskLb = v4->fields.maskLb;
-        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v9 = &StringLiteral_11732/*"SELECT_SERVANT_EVENT_JOIN"*/;
-LABEL_22:
-        this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v9, 0LL);
-        if ( maskLb )
-        {
-          UILabel__set_text(maskLb, (System_String_o *)this, 0LL);
-          return;
-        }
-LABEL_25:
-        sub_1C2E388(this, item);
-      }
+      return;
     }
-  }
-  if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
-  {
+LABEL_18:
     this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
     if ( !this )
-      goto LABEL_25;
+      goto LABEL_28;
     this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this,
                                                 0LL);
     if ( !this )
-      goto LABEL_25;
+      goto LABEL_28;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
     if ( !this )
-      goto LABEL_25;
+      goto LABEL_28;
     this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                 (UnityEngine_Component_o *)this,
                                                 0LL);
     if ( !this )
-      goto LABEL_25;
+      goto LABEL_28;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_11708/*"SELECT_CANNOT"*/;
-    goto LABEL_22;
+    v9 = &StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/;
+    goto LABEL_25;
   }
+  userSvtEntity = item->fields.userSvtEntity;
+  if ( userSvtEntity && UserServantEntity__IsEventJoin(userSvtEntity, 0LL) )
+  {
+    this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskSprite;
+    if ( !this )
+      goto LABEL_28;
+    this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
+                                                (UnityEngine_Component_o *)this,
+                                                0LL);
+    if ( !this )
+      goto LABEL_28;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+    this = (PhotoCampaignListViewItemDraw_o *)v4->fields.maskLb;
+    if ( !this )
+      goto LABEL_28;
+    this = (PhotoCampaignListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
+                                                (UnityEngine_Component_o *)this,
+                                                0LL);
+    if ( !this )
+      goto LABEL_28;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
+    maskLb = v4->fields.maskLb;
+    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v9 = &StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/;
+LABEL_25:
+    this = (PhotoCampaignListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v9, 0LL);
+    if ( maskLb )
+    {
+      UILabel__set_text(maskLb, (System_String_o *)this, 0LL);
+      return;
+    }
+LABEL_28:
+    sub_1C3B9C0(this, item);
+  }
+  if ( PhotoCampaignListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
+    goto LABEL_18;
 }

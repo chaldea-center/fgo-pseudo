@@ -16,25 +16,25 @@ void __fastcall SetMessageDispOptionControl__Init(SetMessageDispOptionControl_o 
   UILabel_o *infoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4BF8A77 & 1) == 0 )
+  if ( (byte_4C1D1F7 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    sub_1C2E12C(&OptionManager_TypeInfo, v3);
-    sub_1C2E12C(&StringLiteral_9853/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
-    sub_1C2E12C(&StringLiteral_9854/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
-    byte_4BF8A77 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    sub_1C3B764(&OptionManager_TypeInfo, v3);
+    sub_1C3B764(&StringLiteral_9855/*"P"*/, v4);
+    sub_1C3B764(&StringLiteral_9856/*"P1M"*/, v5);
+    byte_4C1D1F7 = 1;
   }
   dispTitle = this->fields.dispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9853/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9855/*"P"*/, 0LL);
   if ( !dispTitle
     || (UILabel__set_text(dispTitle, v7, 0LL),
         infoLb = this->fields.infoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9854/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9856/*"P1M"*/, 0LL),
         !infoLb) )
   {
-    sub_1C2E388(v7, v8);
+    sub_1C3B9C0(v7, v8);
   }
   UILabel__set_text(infoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -50,15 +50,15 @@ void __fastcall SetMessageDispOptionControl__OnChangeBtn(SetMessageDispOptionCon
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BF8A7A & 1) == 0 )
+  if ( (byte_4C1D1FA & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
-    byte_4BF8A7A = 1;
+    sub_1C3B764(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
+    byte_4C1D1FA = 1;
   }
   v3 = Method_SetMessageDispOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetMessageDispOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C2E144(Method_SetMessageDispOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C3B77C(Method_SetMessageDispOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isDisp, 0, 0LL);
   this->fields.isDisp ^= 1u;
   SetMessageDispOptionControl__setDispValue(this, v5);
@@ -69,10 +69,10 @@ void __fastcall SetMessageDispOptionControl__Reflection(SetMessageDispOptionCont
 {
   _BOOL4 isDisp; // w19
 
-  if ( (byte_4BF8A79 & 1) == 0 )
+  if ( (byte_4C1D1F9 & 1) == 0 )
   {
-    sub_1C2E12C(&OptionManager_TypeInfo, method);
-    byte_4BF8A79 = 1;
+    sub_1C3B764(&OptionManager_TypeInfo, method);
+    byte_4C1D1F9 = 1;
   }
   isDisp = this->fields.isDisp;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -89,18 +89,18 @@ void __fastcall SetMessageDispOptionControl__setDispValue(
   UIButton_o *switchButton; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BF8A78 & 1) == 0 )
+  if ( (byte_4C1D1F8 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17834/*"btn_on"*/, method);
-    sub_1C2E12C(&StringLiteral_17833/*"btn_off"*/, v3);
-    byte_4BF8A78 = 1;
+    sub_1C3B764(&StringLiteral_17864/*"confirm_subscription_price_change"*/, method);
+    sub_1C3B764(&StringLiteral_17863/*"confidence"*/, v3);
+    byte_4C1D1F8 = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( this->fields.isDisp )
-    v5 = &StringLiteral_17834/*"btn_on"*/;
+    v5 = &StringLiteral_17864/*"confirm_subscription_price_change"*/;
   else
-    v5 = &StringLiteral_17833/*"btn_off"*/;
+    v5 = &StringLiteral_17863/*"confidence"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v5, 0LL);
 }

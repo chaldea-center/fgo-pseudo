@@ -1,14 +1,14 @@
 void __fastcall QuestPhasePresentMaster___ctor(QuestPhasePresentMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDCF4 & 1) == 0 )
+  if ( (byte_4C22506 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string___ctor__, method);
-    byte_4BFDCF4 = 1;
+    sub_1C3B764(&Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string___ctor__, method);
+    byte_4C22506 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    494,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string___ctor__);
+    497,
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ QuestPhasePresentEntity_o *__fastcall QuestPhasePresentMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFDCF5 & 1) == 0 )
+  if ( (byte_4C22507 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4BFDCF5 = 1;
+    byte_4C22507 = 1;
   }
   PK = (Il2CppObject *)QuestPhasePresentEntity__CreatePK(questId, phase, *(const MethodInfo **)&phase);
   return (QuestPhasePresentEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_327FC38 *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__GetEntity__);
+                                        (const MethodInfo_329F900 *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__GetEntity__);
 }
 
 
@@ -79,31 +79,31 @@ System_Collections_Generic_List_QuestPhasePresentEntity__o *__fastcall QuestPhas
   int32_t *v39; // x10
   __int64 v40; // x0
 
-  if ( (byte_4BFDCF3 & 1) == 0 )
+  if ( (byte_4C22505 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_System_Collections_ObjectModel_Collection_QuestPhasePresentEntity__GetEnumerator__,
       *(_QWORD *)&questId);
-    sub_1C2E12C(&System_IDisposable_TypeInfo, v5);
-    sub_1C2E12C(&System_Collections_Generic_IEnumerator_QuestPhasePresentEntity__TypeInfo, v6);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPhasePresentEntity__Add__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPhasePresentEntity___ctor__, v9);
-    sub_1C2E12C(&System_Collections_Generic_List_QuestPhasePresentEntity__TypeInfo, v10);
-    byte_4BFDCF3 = 1;
+    sub_1C3B764(&System_IDisposable_TypeInfo, v5);
+    sub_1C3B764(&System_Collections_Generic_IEnumerator_QuestPhasePresentEntity__TypeInfo, v6);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPhasePresentEntity__Add__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPhasePresentEntity___ctor__, v9);
+    sub_1C3B764(&System_Collections_Generic_List_QuestPhasePresentEntity__TypeInfo, v10);
+    byte_4C22505 = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_QuestPhasePresentEntity__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_QuestPhasePresentEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_QuestPhasePresentEntity___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_QuestPhasePresentEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C2E388(0LL, v12);
+    sub_1C3B9C0(0LL, v12);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3216144 *)Method_System_Collections_ObjectModel_Collection_QuestPhasePresentEntity__GetEnumerator__);
+                 (const MethodInfo_32357CC *)Method_System_Collections_ObjectModel_Collection_QuestPhasePresentEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C2E388(0LL, v14);
+    sub_1C3B9C0(0LL, v14);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -123,7 +123,7 @@ System_Collections_Generic_List_QuestPhasePresentEntity__o *__fastcall QuestPhas
     else
     {
 LABEL_9:
-      p_method = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -146,37 +146,37 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v23 = sub_1C8010C(Enumerator, System_Collections_Generic_IEnumerator_QuestPhasePresentEntity__TypeInfo, 0LL);
+      v23 = sub_1C8D744(Enumerator, System_Collections_Generic_IEnumerator_QuestPhasePresentEntity__TypeInfo, 0LL);
     }
     v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
             Enumerator,
             *(_QWORD *)(v23 + 8));
     v32 = v24;
     if ( !v24 )
-      sub_1C2E388(0LL, v25);
+      sub_1C3B9C0(0LL, v25);
     if ( *(_DWORD *)(v24 + 16) == questId )
     {
       if ( !v11 )
-        sub_1C2E388(v24, v25);
+        sub_1C3B9C0(v24, v25);
       items = v11->fields._items;
       v34 = Method_System_Collections_Generic_List_QuestPhasePresentEntity__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1C2E388(v24, v25);
+        sub_1C3B9C0(v24, v25);
       size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           (Il2CppObject *)v24,
-          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
       }
       else
       {
         v36 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v36[4] = (Il2CppClass *)v32;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v36 + 4), v32, v26, v27, v28, v29, v30, v31);
+        sub_1C3B708((PartyOrganizationUtility_o *)(v36 + 4), v32, v26, v27, v28, v29, v30, v31);
       }
     }
   }
@@ -197,7 +197,7 @@ LABEL_16:
   else
   {
 LABEL_29:
-    v40 = sub_1C8010C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v40 = sub_1C8D744(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v40)(Enumerator, *(_QWORD *)(v40 + 8));
   return (System_Collections_Generic_List_QuestPhasePresentEntity__o *)v11;
@@ -290,37 +290,37 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
   PartyListViewItem_o *v85; // x7
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4BFDCF2 & 1) == 0 )
+  if ( (byte_4C22504 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_GiftDetailMaster___, presentEnt);
-    sub_1C2E12C(&Method_DataManager_GetMaster_GiftMaster___, v9);
-    sub_1C2E12C(&DataManager_TypeInfo, v10);
-    sub_1C2E12C(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__, v11);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_FirstOrDefault_QuestPhasePresentEntity___, v12);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_OrderBy_QuestPhasePresentEntity__int___, v13);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_GiftEntity___, v14);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_GiftEntity___, v15);
-    sub_1C2E12C(&System_Func_GiftEntity__bool__TypeInfo, v16);
-    sub_1C2E12C(&System_Func_QuestPhasePresentEntity__int__TypeInfo, v17);
-    sub_1C2E12C(&System_Func_QuestPhasePresentEntity__bool__TypeInfo, v18);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPhasePresentEntity__get_Count__, v19);
-    sub_1C2E12C(&Method_QuestPhasePresentMaster___c__IsContainEntityFromPhase_b__0_0__, v20);
-    sub_1C2E12C(&Method_QuestPhasePresentMaster___c__IsContainEntityFromPhase_b__0_2__, v21);
-    sub_1C2E12C(&Method_QuestPhasePresentMaster___c__DisplayClass0_0__IsContainEntityFromPhase_b__1__, v22);
-    sub_1C2E12C(&QuestPhasePresentMaster___c__DisplayClass0_0_TypeInfo, v23);
-    sub_1C2E12C(&Method_QuestPhasePresentMaster___c__DisplayClass0_1__IsContainEntityFromPhase_b__3__, v24);
-    sub_1C2E12C(&QuestPhasePresentMaster___c__DisplayClass0_1_TypeInfo, v25);
-    sub_1C2E12C(&QuestPhasePresentMaster___c_TypeInfo, v26);
-    byte_4BFDCF2 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_GiftDetailMaster___, presentEnt);
+    sub_1C3B764(&Method_DataManager_GetMaster_GiftMaster___, v9);
+    sub_1C3B764(&DataManager_TypeInfo, v10);
+    sub_1C3B764(&Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__, v11);
+    sub_1C3B764(&Method_System_Linq_Enumerable_FirstOrDefault_QuestPhasePresentEntity___, v12);
+    sub_1C3B764(&Method_System_Linq_Enumerable_OrderBy_QuestPhasePresentEntity__int___, v13);
+    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_GiftEntity___, v14);
+    sub_1C3B764(&Method_System_Linq_Enumerable_Where_GiftEntity___, v15);
+    sub_1C3B764(&System_Func_GiftEntity__bool__TypeInfo, v16);
+    sub_1C3B764(&System_Func_QuestPhasePresentEntity__int__TypeInfo, v17);
+    sub_1C3B764(&System_Func_QuestPhasePresentEntity__bool__TypeInfo, v18);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPhasePresentEntity__get_Count__, v19);
+    sub_1C3B764(&Method_QuestPhasePresentMaster___c__IsContainEntityFromPhase_b__0_0__, v20);
+    sub_1C3B764(&Method_QuestPhasePresentMaster___c__IsContainEntityFromPhase_b__0_2__, v21);
+    sub_1C3B764(&Method_QuestPhasePresentMaster___c__DisplayClass0_0__IsContainEntityFromPhase_b__1__, v22);
+    sub_1C3B764(&QuestPhasePresentMaster___c__DisplayClass0_0_TypeInfo, v23);
+    sub_1C3B764(&Method_QuestPhasePresentMaster___c__DisplayClass0_1__IsContainEntityFromPhase_b__3__, v24);
+    sub_1C3B764(&QuestPhasePresentMaster___c__DisplayClass0_1_TypeInfo, v25);
+    sub_1C3B764(&QuestPhasePresentMaster___c_TypeInfo, v26);
+    byte_4C22504 = 1;
   }
   entity = 0LL;
-  v27 = sub_1C2E378(QuestPhasePresentMaster___c__DisplayClass0_0_TypeInfo);
+  v27 = sub_1C3B9B0(QuestPhasePresentMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v27, 0LL);
   if ( !v27 )
     goto LABEL_36;
   *(_DWORD *)(v27 + 16) = currentPhase;
   *presentEnt = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)presentEnt, 0LL, v30, v31, v32, v33, v34, v35);
+  sub_1C3B708((PartyOrganizationUtility_o *)presentEnt, 0LL, v30, v31, v32, v33, v34, v35);
   List = (System_Collections_Generic_IEnumerable_TSource__o *)QuestPhasePresentMaster__GetList(this, questId, v36);
   if ( !List )
     goto LABEL_36;
@@ -342,7 +342,7 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
       v38 = QuestPhasePresentMaster___c_TypeInfo;
     }
     v40 = (Il2CppObject *)v38->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1C2E378(System_Func_QuestPhasePresentEntity__int__TypeInfo);
+    _9__0_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_QuestPhasePresentEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_0,
       v40,
@@ -350,38 +350,38 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
       0LL);
     static_fields = QuestPhasePresentMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_QuestPhasePresentEntity__int__o *)_9__0_0;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v42, v43, v44, v45, v46, v47);
+    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__0_0, (int64_t)_9__0_0, v42, v43, v44, v45, v46, v47);
   }
   v48 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                v37,
                                                                (System_Func_TSource__TKey__o *)_9__0_0,
-                                                               (const MethodInfo_2FFB4B4 *)Method_System_Linq_Enumerable_OrderBy_QuestPhasePresentEntity__int___);
-  v49 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_QuestPhasePresentEntity__bool__TypeInfo);
+                                                               (const MethodInfo_301A1E4 *)Method_System_Linq_Enumerable_OrderBy_QuestPhasePresentEntity__int___);
+  v49 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_QuestPhasePresentEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v49,
     (Il2CppObject *)v27,
     Method_QuestPhasePresentMaster___c__DisplayClass0_0__IsContainEntityFromPhase_b__1__,
     0LL);
-  v50 = System_Linq_Enumerable__FirstOrDefault_object__50289116(
+  v50 = System_Linq_Enumerable__FirstOrDefault_object__50415372(
           v48,
           (System_Func_TSource__bool__o *)v49,
-          (const MethodInfo_2FF59DC *)Method_System_Linq_Enumerable_FirstOrDefault_QuestPhasePresentEntity___);
+          (const MethodInfo_301470C *)Method_System_Linq_Enumerable_FirstOrDefault_QuestPhasePresentEntity___);
   *presentEnt = (QuestPhasePresentEntity_o *)v50;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)presentEnt, (int64_t)v50, v51, v52, v53, v54, v55, v56);
+  sub_1C3B708((PartyOrganizationUtility_o *)presentEnt, (int64_t)v50, v51, v52, v53, v54, v55, v56);
   if ( !*presentEnt )
     return 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  List = (System_Collections_Generic_IEnumerable_TSource__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_GiftDetailMaster___);
+  List = (System_Collections_Generic_IEnumerable_TSource__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_GiftDetailMaster___);
   if ( !*presentEnt || !List )
     goto LABEL_36;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)List,
           &entity,
           (*presentEnt)->fields.giftId,
-          (const MethodInfo_327B1CC *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_329AE94 *)Method_DataMasterBase_GiftDetailMaster__GiftDetailEntity__int__TryGetEntity__) )
     return 1;
-  v57 = sub_1C2E378(QuestPhasePresentMaster___c__DisplayClass0_1_TypeInfo);
+  v57 = sub_1C3B9B0(QuestPhasePresentMaster___c__DisplayClass0_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v57, 0LL);
   List = (System_Collections_Generic_IEnumerable_TSource__o *)entity;
   if ( !entity )
@@ -392,12 +392,12 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
   if ( !v57 )
     goto LABEL_36;
   *(_QWORD *)(v57 + 16) = List;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v57 + 16), (int64_t)List, v58, v59, v60, v61, v62, v63);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v57 + 16), (int64_t)List, v58, v59, v60, v61, v62, v63);
   if ( BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v57 + 16), 0LL) )
     return 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  List = (System_Collections_Generic_IEnumerable_TSource__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_GiftMaster___);
+  List = (System_Collections_Generic_IEnumerable_TSource__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !*presentEnt || !List )
     goto LABEL_36;
   GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)List, (*presentEnt)->fields.giftId, 0LL);
@@ -417,7 +417,7 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
       v65 = QuestPhasePresentMaster___c_TypeInfo;
     }
     v68 = (Il2CppObject *)v65->static_fields->__9;
-    _9__0_2 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_GiftEntity__bool__TypeInfo);
+    _9__0_2 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_GiftEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__0_2,
       v68,
@@ -425,16 +425,16 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
       0LL);
     v69 = QuestPhasePresentMaster___c_TypeInfo->static_fields;
     v69->__9__0_2 = (struct System_Func_GiftEntity__bool__o *)_9__0_2;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v69->__9__0_2, (int64_t)_9__0_2, v70, v71, v72, v73, v74, v75);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v69->__9__0_2, (int64_t)_9__0_2, v70, v71, v72, v73, v74, v75);
   }
   v76 = System_Linq_Enumerable__Where_object_(
           v66,
           (System_Func_TSource__bool__o *)_9__0_2,
-          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
+          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_GiftEntity___);
   v77 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                v76,
-                                                               (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_GiftEntity___);
-  v78 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_GiftEntity__bool__TypeInfo);
+                                                               (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_GiftEntity___);
+  v78 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_GiftEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v78,
     (Il2CppObject *)v57,
@@ -443,17 +443,17 @@ bool __fastcall QuestPhasePresentMaster__IsContainEntityFromPhase(
   v79 = System_Linq_Enumerable__Where_object_(
           v77,
           (System_Func_TSource__bool__o *)v78,
-          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_GiftEntity___);
+          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_GiftEntity___);
   List = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_object_(
                                                                 v79,
-                                                                (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_GiftEntity___);
+                                                                (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_GiftEntity___);
   if ( !List )
 LABEL_36:
-    sub_1C2E388(List, v29);
+    sub_1C3B9C0(List, v29);
   if ( List[1].monitor )
     return 1;
   *presentEnt = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)presentEnt, 0LL, v80, v81, v82, v83, v84, v85);
+  sub_1C3B708((PartyOrganizationUtility_o *)presentEnt, 0LL, v80, v81, v82, v83, v84, v85);
   return 0;
 }
 
@@ -468,17 +468,17 @@ bool __fastcall QuestPhasePresentMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFDCF6 & 1) == 0 )
+  if ( (byte_4C22508 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__TryGetEntity__, entity);
-    byte_4BFDCF6 = 1;
+    sub_1C3B764(&Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__TryGetEntity__, entity);
+    byte_4C22508 = 1;
   }
   PK = (Il2CppObject *)QuestPhasePresentEntity__CreatePK(questId, phase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_QuestPhasePresentMaster__QuestPhasePresentEntity__string__TryGetEntity__);
 }
 
 
@@ -493,15 +493,15 @@ void __fastcall QuestPhasePresentMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFDCF7 & 1) == 0 )
+  if ( (byte_4C22509 & 1) == 0 )
   {
-    sub_1C2E12C(&QuestPhasePresentMaster___c_TypeInfo, v1);
-    byte_4BFDCF7 = 1;
+    sub_1C3B764(&QuestPhasePresentMaster___c_TypeInfo, v1);
+    byte_4C22509 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(QuestPhasePresentMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(QuestPhasePresentMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestPhasePresentMaster___c_TypeInfo->static_fields->__9 = (struct QuestPhasePresentMaster___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)QuestPhasePresentMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -525,7 +525,7 @@ int32_t __fastcall QuestPhasePresentMaster___c___IsContainEntityFromPhase_b__0_0
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.phase;
 }
 
@@ -536,7 +536,7 @@ bool __fastcall QuestPhasePresentMaster___c___IsContainEntityFromPhase_b__0_2(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return ent->fields.type != 15;
 }
 
@@ -555,7 +555,7 @@ bool __fastcall QuestPhasePresentMaster___c__DisplayClass0_0___IsContainEntityFr
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.phase > this->fields.currentPhase;
 }
 
@@ -588,31 +588,31 @@ bool __fastcall QuestPhasePresentMaster___c__DisplayClass0_1___IsContainEntityFr
   System_Int32_array *itemList; // x19
   System_Func_int__bool__o *v18; // x20
 
-  if ( (byte_4BFDCF8 & 1) == 0 )
+  if ( (byte_4C2250A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_BasicHelper_Any_int____77760784, info);
-    sub_1C2E12C(&System_Func_int__bool__TypeInfo, v5);
-    sub_1C2E12C(&Method_QuestPhasePresentMaster___c__DisplayClass0_2__IsContainEntityFromPhase_b__4__, v6);
-    sub_1C2E12C(&QuestPhasePresentMaster___c__DisplayClass0_2_TypeInfo, v7);
-    byte_4BFDCF8 = 1;
+    sub_1C3B764(&Method_BasicHelper_Any_int____77906328, info);
+    sub_1C3B764(&System_Func_int__bool__TypeInfo, v5);
+    sub_1C3B764(&Method_QuestPhasePresentMaster___c__DisplayClass0_2__IsContainEntityFromPhase_b__4__, v6);
+    sub_1C3B764(&QuestPhasePresentMaster___c__DisplayClass0_2_TypeInfo, v7);
+    byte_4C2250A = 1;
   }
-  v8 = sub_1C2E378(QuestPhasePresentMaster___c__DisplayClass0_2_TypeInfo);
+  v8 = sub_1C3B9B0(QuestPhasePresentMaster___c__DisplayClass0_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C2E388(v9, v10);
+    sub_1C3B9C0(v9, v10);
   *(_QWORD *)(v8 + 16) = info;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)info, v11, v12, v13, v14, v15, v16);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)info, v11, v12, v13, v14, v15, v16);
   itemList = this->fields.itemList;
-  v18 = (System_Func_int__bool__o *)sub_1C2E378(System_Func_int__bool__TypeInfo);
+  v18 = (System_Func_int__bool__o *)sub_1C3B9B0(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
     v18,
     (Il2CppObject *)v8,
     Method_QuestPhasePresentMaster___c__DisplayClass0_2__IsContainEntityFromPhase_b__4__,
     0LL);
-  return !BasicHelper__Any_int__50053052(
+  return !BasicHelper__Any_int__50178292(
             itemList,
             (System_Func_T__bool__o *)v18,
-            (const MethodInfo_2FBBFBC *)Method_BasicHelper_Any_int____77760784);
+            (const MethodInfo_2FDA8F4 *)Method_BasicHelper_Any_int____77906328);
 }
 
 
@@ -633,6 +633,6 @@ bool __fastcall QuestPhasePresentMaster___c__DisplayClass0_2___IsContainEntityFr
 
   info = this->fields.info;
   if ( !info )
-    sub_1C2E388(this, x);
+    sub_1C3B9C0(this, x);
   return info->fields.objectId == x;
 }

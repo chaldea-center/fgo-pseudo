@@ -2,10 +2,10 @@ void __fastcall ExpeditionConfirmDialogComponent___ctor(
         ExpeditionConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C01776 & 1) == 0 )
+  if ( (byte_4C25FA4 & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4C01776 = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C25FA4 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,11 +19,11 @@ void __fastcall ExpeditionConfirmDialogComponent__Close(
 {
   const MethodInfo *v2; // x2
 
-  ExpeditionConfirmDialogComponent__Close_47175456(this, 0LL, v2);
+  ExpeditionConfirmDialogComponent__Close_47299200(this, 0LL, v2);
 }
 
 
-void __fastcall ExpeditionConfirmDialogComponent__Close_47175456(
+void __fastcall ExpeditionConfirmDialogComponent__Close_47299200(
         ExpeditionConfirmDialogComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -36,14 +36,14 @@ void __fastcall ExpeditionConfirmDialogComponent__Close_47175456(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4C01772 & 1) == 0 )
+  if ( (byte_4C25FA0 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent_EndClose__, v10);
-    byte_4C01772 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent_EndClose__, v10);
+    byte_4C25FA0 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -53,7 +53,7 @@ void __fastcall ExpeditionConfirmDialogComponent__Close_47175456(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_ExpeditionConfirmDialogComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -79,7 +79,7 @@ void __fastcall ExpeditionConfirmDialogComponent__EndClose(
   ExpeditionConfirmDialogComponent__Init(this, this->fields.eventId, v2);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v5);
+    sub_1C3B9C0(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
@@ -87,7 +87,7 @@ void __fastcall ExpeditionConfirmDialogComponent__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1C3B708(p_closeCallbackFunc, 0LL, v6, v7, v8, v9, v10, v11);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v13->fields.m_target)(
       v13->fields.original_method_info,
       *(_QWORD *)&v13->fields.extra_arg);
@@ -121,17 +121,17 @@ int32_t __fastcall ExpeditionConfirmDialogComponent__GetCurrentSelectPieceIdx(
   BattleSetupInfo_o *v14; // x5
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
-  Il2CppObject *object__50278768; // x0
+  Il2CppObject *object__50405024; // x0
   __int64 v18; // x1
   _DWORD *monitor; // x8
 
-  if ( (byte_4C01771 & 1) == 0 )
+  if ( (byte_4C25F9F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Linq_Enumerable_First_viewDogIcon___, method);
-    sub_1C2E12C(&System_Func_viewDogIcon__bool__TypeInfo, v3);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent___c__GetCurrentSelectPieceIdx_b__28_0__, v4);
-    sub_1C2E12C(&ExpeditionConfirmDialogComponent___c_TypeInfo, v5);
-    byte_4C01771 = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_First_viewDogIcon___, method);
+    sub_1C3B764(&System_Func_viewDogIcon__bool__TypeInfo, v3);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent___c__GetCurrentSelectPieceIdx_b__28_0__, v4);
+    sub_1C3B764(&ExpeditionConfirmDialogComponent___c_TypeInfo, v5);
+    byte_4C25F9F = 1;
   }
   v6 = ExpeditionConfirmDialogComponent___c_TypeInfo;
   viewDogIcons = this->fields.viewDogIcons;
@@ -149,7 +149,7 @@ int32_t __fastcall ExpeditionConfirmDialogComponent__GetCurrentSelectPieceIdx(
       v6 = ExpeditionConfirmDialogComponent___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__28_0 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_viewDogIcon__bool__TypeInfo);
+    _9__28_0 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_viewDogIcon__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__28_0,
       v9,
@@ -157,7 +157,7 @@ int32_t __fastcall ExpeditionConfirmDialogComponent__GetCurrentSelectPieceIdx(
       0LL);
     static_fields = ExpeditionConfirmDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__28_0 = (struct System_Func_viewDogIcon__bool__o *)_9__28_0;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&static_fields->__9__28_0,
       (int64_t)_9__28_0,
       v11,
@@ -167,12 +167,12 @@ int32_t __fastcall ExpeditionConfirmDialogComponent__GetCurrentSelectPieceIdx(
       v15,
       v16);
   }
-  object__50278768 = System_Linq_Enumerable__First_object__50278768(
+  object__50405024 = System_Linq_Enumerable__First_object__50405024(
                        (System_Collections_Generic_IEnumerable_TSource__o *)viewDogIcons,
                        (System_Func_TSource__bool__o *)_9__28_0,
-                       (const MethodInfo_2FF3170 *)Method_System_Linq_Enumerable_First_viewDogIcon___);
-  if ( !object__50278768 || (monitor = object__50278768[10].monitor) == 0LL )
-    sub_1C2E388(object__50278768, v18);
+                       (const MethodInfo_3011EA0 *)Method_System_Linq_Enumerable_First_viewDogIcon___);
+  if ( !object__50405024 || (monitor = object__50405024[10].monitor) == 0LL )
+    sub_1C3B9C0(object__50405024, v18);
   return monitor[5];
 }
 
@@ -204,22 +204,22 @@ void __fastcall ExpeditionConfirmDialogComponent__Init(
   viewDogIcon_o *v23; // x22
   const MethodInfo *v24; // x2
 
-  if ( (byte_4C0176E & 1) == 0 )
+  if ( (byte_4C25F9C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___, *(_QWORD *)&eventId);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Count__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Item__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_viewDogIcon__get_Item__, v8);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4C0176E = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventExpeditionPieceMaster___, *(_QWORD *)&eventId);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Count__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Item__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_viewDogIcon__get_Item__, v8);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4C25F9C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventExpeditionPieceMaster___);
   if ( !Instance )
     goto LABEL_16;
   PieceEntityList = EventExpeditionPieceMaster__GetPieceEntityList(
@@ -228,7 +228,7 @@ void __fastcall ExpeditionConfirmDialogComponent__Init(
                       0LL);
   p_eventExpeditionPieceEntityList = (System_Collections_Generic_List_object__o **)&this->fields.eventExpeditionPieceEntityList;
   this->fields.eventExpeditionPieceEntityList = PieceEntityList;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.eventExpeditionPieceEntityList,
     (int64_t)PieceEntityList,
     v14,
@@ -245,7 +245,7 @@ void __fastcall ExpeditionConfirmDialogComponent__Init(
   if ( !Instance
     || (Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                       (UnityEngine_GameObject_o *)Instance,
-                                      (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL
+                                      (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL
     || (((void (__fastcall *)(DataManager_o *, _QWORD, void *))Instance->klass[1]._1.namespaze)(
           Instance,
           0LL,
@@ -257,7 +257,7 @@ void __fastcall ExpeditionConfirmDialogComponent__Init(
         (v21 = *p_eventExpeditionPieceEntityList) == 0LL) )
   {
 LABEL_16:
-    sub_1C2E388(Instance, v11);
+    sub_1C3B9C0(Instance, v11);
   }
   v22 = 0;
   while ( v22 < v21->fields._size )
@@ -268,14 +268,14 @@ LABEL_16:
       Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)Instance,
                                     v22,
-                                    (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_viewDogIcon__get_Item__);
+                                    (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_viewDogIcon__get_Item__);
       if ( *p_eventExpeditionPieceEntityList )
       {
         v23 = (viewDogIcon_o *)Instance;
         Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
                                       *p_eventExpeditionPieceEntityList,
                                       v22,
-                                      (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Item__);
+                                      (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Item__);
         if ( v23 )
         {
           viewDogIcon__Init(v23, (EventExpeditionPieceEntity_o *)Instance, v24);
@@ -301,17 +301,17 @@ void __fastcall ExpeditionConfirmDialogComponent__OnClickCancel(
   const MethodInfo *v5; // x2
   struct ExpeditionConfirmDialogComponent_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4C01774 & 1) == 0 )
+  if ( (byte_4C25FA2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent_OnClickCancel__, method);
-    byte_4C01774 = 1;
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent_OnClickCancel__, method);
+    byte_4C25FA2 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ExpeditionConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_ExpeditionConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_ExpeditionConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_ExpeditionConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -321,7 +321,7 @@ void __fastcall ExpeditionConfirmDialogComponent__OnClickCancel(
         0LL,
         0LL,
         *(_QWORD *)&clickFunc->fields.extra_arg);
-    ExpeditionConfirmDialogComponent__Close_47175456(this, 0LL, v5);
+    ExpeditionConfirmDialogComponent__Close_47299200(this, 0LL, v5);
   }
 }
 
@@ -338,18 +338,18 @@ void __fastcall ExpeditionConfirmDialogComponent__OnClickDecide(
   struct EventExpeditionEntity_o *currentExpeditionEntity; // x20
   unsigned int CurrentSelectPieceIdx; // w0
 
-  if ( (byte_4C01773 & 1) == 0 )
+  if ( (byte_4C25FA1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent_OnClickDecide__, method);
-    byte_4C01773 = 1;
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent_OnClickDecide__, method);
+    byte_4C25FA1 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     isDecideBtnSe = this->fields.isDecideBtnSe;
     v4 = Method_ExpeditionConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_ExpeditionConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C2E144(Method_ExpeditionConfirmDialogComponent_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C3B77C(Method_ExpeditionConfirmDialogComponent_OnClickDecide__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C3B748(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 8 * isDecideBtnSe, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -502,60 +502,60 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
   UnityEngine_Vector3_o v135; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v136; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C0176F & 1) == 0 )
+  if ( (byte_4C25F9D & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_viewDogIcon__TypeInfo, eventExpeditionEntity);
-    sub_1C2E12C(&System_Action_TypeInfo, v13);
-    sub_1C2E12C(&AtlasManager_TypeInfo, v14);
-    sub_1C2E12C(&System_Comparison_GiftEntity__TypeInfo, v15);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___, v16);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v17);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_GiftMaster___, v18);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ItemMaster___, v19);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___, v20);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserItemMaster___, v21);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent_EndOpen__, v22);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_viewDogIcon__ForEach__, v23);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__Sort__, v24);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v25);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v26);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v27);
-    sub_1C2E12C(&System_Math_TypeInfo, v28);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v29);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v30);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent___c__Open_b__26_0__, v31);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent___c__DisplayClass26_0__Open_b__1__, v32);
-    sub_1C2E12C(&ExpeditionConfirmDialogComponent___c__DisplayClass26_0_TypeInfo, v33);
-    sub_1C2E12C(&ExpeditionConfirmDialogComponent___c_TypeInfo, v34);
-    sub_1C2E12C(&StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, v35);
-    sub_1C2E12C(&StringLiteral_5914/*"EXPEDITION_CONFIRM_DIALOG_DECIDE"*/, v36);
-    sub_1C2E12C(&StringLiteral_5911/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_REWARD"*/, v37);
-    sub_1C2E12C(&StringLiteral_5913/*"EXPEDITION_CONFIRM_DIALOG_CONSUMPTION"*/, v38);
-    sub_1C2E12C(&StringLiteral_5910/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_POINT"*/, v39);
-    sub_1C2E12C(&StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, v40);
-    sub_1C2E12C(&StringLiteral_5918/*"EXPEDITION_CONFIRM_DIALOG_TITLE"*/, v41);
-    sub_1C2E12C(&StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/, v42);
-    sub_1C2E12C(&StringLiteral_5919/*"EXPEDITION_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, v43);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v44);
-    sub_1C2E12C(&StringLiteral_5915/*"EXPEDITION_CONFIRM_DIALOG_DESCRIPTION"*/, v45);
-    byte_4C0176F = 1;
+    sub_1C3B764(&System_Action_viewDogIcon__TypeInfo, eventExpeditionEntity);
+    sub_1C3B764(&System_Action_TypeInfo, v13);
+    sub_1C3B764(&AtlasManager_TypeInfo, v14);
+    sub_1C3B764(&System_Comparison_GiftEntity__TypeInfo, v15);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___, v16);
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v17);
+    sub_1C3B764(&Method_DataManager_GetMasterData_GiftMaster___, v18);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v19);
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserEventExpeditionMaster___, v20);
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserItemMaster___, v21);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent_EndOpen__, v22);
+    sub_1C3B764(&Method_System_Collections_Generic_List_viewDogIcon__ForEach__, v23);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GiftEntity__Sort__, v24);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v25);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v26);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v27);
+    sub_1C3B764(&System_Math_TypeInfo, v28);
+    sub_1C3B764(&NetworkManager_TypeInfo, v29);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v30);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent___c__Open_b__26_0__, v31);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent___c__DisplayClass26_0__Open_b__1__, v32);
+    sub_1C3B764(&ExpeditionConfirmDialogComponent___c__DisplayClass26_0_TypeInfo, v33);
+    sub_1C3B764(&ExpeditionConfirmDialogComponent___c_TypeInfo, v34);
+    sub_1C3B764(&StringLiteral_3812/*"CP01143"*/, v35);
+    sub_1C3B764(&StringLiteral_5915/*"EndSlideIn"*/, v36);
+    sub_1C3B764(&StringLiteral_5912/*"EndSend"*/, v37);
+    sub_1C3B764(&StringLiteral_5914/*"EndSlideDown"*/, v38);
+    sub_1C3B764(&StringLiteral_5911/*"EndSelectDecideMove2"*/, v39);
+    sub_1C3B764(&StringLiteral_3798/*"COSTUME_OPEN_WARNING"*/, v40);
+    sub_1C3B764(&StringLiteral_5919/*"EndWaitVoice"*/, v41);
+    sub_1C3B764(&StringLiteral_3813/*"CP01144"*/, v42);
+    sub_1C3B764(&StringLiteral_5920/*"EndWrite can only be called once for each asynchronous operation."*/, v43);
+    sub_1C3B764(&StringLiteral_1/*""*/, v44);
+    sub_1C3B764(&StringLiteral_5916/*"EndSwitchFigure"*/, v45);
+    byte_4C25F9D = 1;
   }
-  v46 = sub_1C2E378(ExpeditionConfirmDialogComponent___c__DisplayClass26_0_TypeInfo);
+  v46 = sub_1C3B9B0(ExpeditionConfirmDialogComponent___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v46, 0LL);
   if ( !v46 )
     goto LABEL_103;
   *(_QWORD *)(v46 + 24) = eventExpeditionEntity;
   v55 = v46 + 24;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v46 + 24), (int64_t)eventExpeditionEntity, v49, v50, v51, v52, v53, v54);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v46 + 24), (int64_t)eventExpeditionEntity, v49, v50, v51, v52, v53, v54);
   *(_QWORD *)(v46 + 32) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v46 + 32), (int64_t)this, v56, v57, v58, v59, v60, v61);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v46 + 32), (int64_t)this, v56, v57, v58, v59, v60, v61);
   v68 = *(struct EventExpeditionEntity_o **)(v46 + 24);
   if ( !v68 )
     return;
   v131 = isDecideSe;
   v132 = canMaskTouchClose;
   this->fields.currentExpeditionEntity = v68;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.currentExpeditionEntity,
     (int64_t)v68,
     v62,
@@ -564,12 +564,12 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     v65,
     v66,
     v67);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_103;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*(_QWORD *)v55 || !Instance )
     goto LABEL_103;
   v75 = CommonConsumeMaster__GetEntity((CommonConsumeMaster_o *)Instance, *(_DWORD *)(*(_QWORD *)v55 + 36LL), 1, 0LL);
@@ -583,9 +583,9 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     consumptionNumLabel = this->fields.consumptionNumLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v79 = LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
+    v79 = LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"CP01143"*/, 0LL);
     v80 = System_Int32__ToString((int)v75 + 32, 0LL);
-    Instance = System_String__Concat_63235584(v79, v80, 0LL);
+    Instance = System_String__Concat_63368612(v79, v80, 0LL);
     if ( !consumptionNumLabel )
       goto LABEL_103;
     UILabel__set_text(consumptionNumLabel, (System_String_o *)Instance, 0LL);
@@ -595,13 +595,13 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     v81 = *((_DWORD *)Instance + 42);
     Instance = UnityEngine_Component__GetComponent_object_(
                  (UnityEngine_Component_o *)Instance,
-                 (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+                 (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
     if ( !Instance )
       goto LABEL_103;
     v82 = *((_DWORD *)Instance + 12);
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    Instance = (void *)System_Math__Min_64055056(v81, v82, 0LL);
+    Instance = (void *)System_Math__Min_64188084(v81, v82, 0LL);
     if ( !this->fields.consumIcon )
       goto LABEL_103;
     v83 = (int)Instance;
@@ -614,58 +614,58 @@ void __fastcall ExpeditionConfirmDialogComponent__Open(
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v134, 0LL);
   }
   this->fields.clickFunc = func;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)func, v69, v70, v71, v72, v73, v74);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)func, v69, v70, v71, v72, v73, v74);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5918/*"EXPEDITION_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5919/*"EndWaitVoice"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_103;
   UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
   dialogDescriptionLabel = this->fields.dialogDescriptionLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5915/*"EXPEDITION_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5916/*"EndSwitchFigure"*/, 0LL);
   if ( !dialogDescriptionLabel )
     goto LABEL_103;
   UILabel__set_text(dialogDescriptionLabel, (System_String_o *)Instance, 0LL);
   consumptionLabel = this->fields.consumptionLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5913/*"EXPEDITION_CONFIRM_DIALOG_CONSUMPTION"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5914/*"EndSlideDown"*/, 0LL);
   if ( !consumptionLabel )
     goto LABEL_103;
   UILabel__set_text(consumptionLabel, (System_String_o *)Instance, 0LL);
   acquiredRewardLabel = this->fields.acquiredRewardLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5911/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_REWARD"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5912/*"EndSend"*/, 0LL);
   if ( !acquiredRewardLabel )
     goto LABEL_103;
   UILabel__set_text(acquiredRewardLabel, (System_String_o *)Instance, 0LL);
   acquiredPointLabel = this->fields.acquiredPointLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5910/*"EXPEDITION_CONFIRM_DIALOG_ACQUIRED_POINT"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5911/*"EndSelectDecideMove2"*/, 0LL);
   if ( !acquiredPointLabel )
     goto LABEL_103;
   UILabel__set_text(acquiredPointLabel, (System_String_o *)Instance, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COSTUME_OPEN_WARNING"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_103;
   UILabel__set_text(buttonCancelLabel, (System_String_o *)Instance, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5914/*"EXPEDITION_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5915/*"EndSlideIn"*/, 0LL);
   if ( !buttonDecideLabel )
     goto LABEL_103;
   UILabel__set_text(buttonDecideLabel, (System_String_o *)Instance, 0LL);
   *(_BYTE *)(v46 + 40) = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_103;
   entity = 0LL;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BF81D5 )
+  if ( !byte_4C1C955 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, v48);
-    byte_4BF81D5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, v48);
+    byte_4C1C955 = 1;
   }
   Instance = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -709,7 +709,7 @@ LABEL_44:
   confirmationWarningLabel = this->fields.confirmationWarningLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_5919/*"EXPEDITION_CONFIRM_DIALOG_WARNIG_MESSAGE"*/, 0LL);
+  v97 = LocalizationManager__Get((System_String_o *)StringLiteral_5920/*"EndWrite can only be called once for each asynchronous operation."*/, 0LL);
   Name = (Il2CppObject *)CommonConsumeEntity__GetName(v75, 0LL);
   Instance = System_String__Format(v97, Name, 0LL);
   if ( !confirmationWarningLabel )
@@ -722,12 +722,12 @@ LABEL_44:
   if ( !Instance )
     goto LABEL_103;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, *(_BYTE *)(v46 + 40), 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_103;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_GiftMaster___);
+               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !*(_QWORD *)v55 || !Instance )
     goto LABEL_103;
   Instance = GiftMaster__GetListById((GiftMaster_o *)Instance, *(_DWORD *)(*(_QWORD *)v55 + 40LL), 0LL);
@@ -747,11 +747,11 @@ LABEL_44:
       v99 = ExpeditionConfirmDialogComponent___c_TypeInfo;
     }
     v102 = (Il2CppObject *)v99->static_fields->__9;
-    _9__26_0 = (System_Comparison_T__o *)sub_1C2E378(System_Comparison_GiftEntity__TypeInfo);
+    _9__26_0 = (System_Comparison_T__o *)sub_1C3B9B0(System_Comparison_GiftEntity__TypeInfo);
     System_Comparison_object____ctor(_9__26_0, v102, Method_ExpeditionConfirmDialogComponent___c__Open_b__26_0__, 0LL);
     static_fields = ExpeditionConfirmDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__26_0 = (struct System_Comparison_GiftEntity__o *)_9__26_0;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&static_fields->__9__26_0,
       (int64_t)_9__26_0,
       v104,
@@ -763,29 +763,29 @@ LABEL_44:
   }
   if ( !v100 )
     goto LABEL_103;
-  System_Collections_Generic_List_object___Sort_57070448(
+  System_Collections_Generic_List_object___Sort_57202480(
     v100,
     _9__26_0,
-    (const MethodInfo_366D370 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
+    (const MethodInfo_368D730 *)Method_System_Collections_Generic_List_GiftEntity__Sort__);
   if ( v100->fields._size < 1 )
     goto LABEL_77;
   Instance = System_Collections_Generic_List_object___get_Item(
                v100,
                0,
-               (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+               (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
   if ( !Instance )
     goto LABEL_103;
   v110 = (int32_t *)Instance;
   Instance = this->fields.rewardIcon;
   if ( !Instance )
     goto LABEL_103;
-  ItemIconComponent__SetGift_39457192((ItemIconComponent_o *)Instance, v110[5], v110[6], -1, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  ItemIconComponent__SetGift_39566180((ItemIconComponent_o *)Instance, v110[5], v110[6], -1, 0, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_103;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ItemMaster___);
+               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !Instance )
     goto LABEL_103;
   v111 = (ItemMaster_o *)Instance;
@@ -793,23 +793,23 @@ LABEL_44:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v112 = &StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/;
+    v112 = &StringLiteral_3813/*"CP01144"*/;
   }
   else
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v112 = &StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/;
+    v112 = &StringLiteral_3812/*"CP01143"*/;
   }
   v113 = LocalizationManager__Get((System_String_o *)*v112, 0LL);
   v114 = v110[7];
   rewardNumLabel = this->fields.rewardNumLabel;
   v116 = v113;
   v117 = BasicHelper__ToCommaString(v114, 0LL);
-  Instance = System_String__Concat_63235584(v116, v117, 0LL);
+  Instance = System_String__Concat_63368612(v116, v117, 0LL);
   if ( !rewardNumLabel )
 LABEL_103:
-    sub_1C2E388(Instance, v48);
+    sub_1C3B9C0(Instance, v48);
   UILabel__set_text(rewardNumLabel, (System_String_o *)Instance, 0LL);
 LABEL_77:
   Instance = this->fields.rewardNumLabel;
@@ -818,13 +818,13 @@ LABEL_77:
   v118 = *((_DWORD *)Instance + 42);
   Instance = UnityEngine_Component__GetComponent_object_(
                (UnityEngine_Component_o *)Instance,
-               (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+               (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
   if ( !Instance )
     goto LABEL_103;
   v119 = *((_DWORD *)Instance + 12);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  Instance = (void *)System_Math__Min_64055056(v118, v119, 0LL);
+  Instance = (void *)System_Math__Min_64188084(v118, v119, 0LL);
   if ( !this->fields.rewardIcon )
     goto LABEL_103;
   v120 = (int)Instance;
@@ -835,18 +835,18 @@ LABEL_77:
   v135.fields.y = 1.0;
   v135.fields.z = 1.0;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v135, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_103;
   v121 = DataManager__GetMasterData_object_(
            (DataManager_o *)Instance,
-           (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
+           (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserEventExpeditionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BF81D5 )
+  if ( !byte_4C1C955 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, v48);
-    byte_4BF81D5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, v48);
+    byte_4C1C955 = 1;
   }
   Instance = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -863,7 +863,7 @@ LABEL_77:
     this->fields.eventId,
     0LL);
   viewDogIcons = (System_Collections_Generic_List_object__o *)this->fields.viewDogIcons;
-  v123 = (System_Action_object__o *)sub_1C2E378(System_Action_viewDogIcon__TypeInfo);
+  v123 = (System_Action_object__o *)sub_1C3B9B0(System_Action_viewDogIcon__TypeInfo);
   System_Action_object____ctor(
     v123,
     (Il2CppObject *)v46,
@@ -874,7 +874,7 @@ LABEL_77:
   System_Collections_Generic_List_object___ForEach(
     viewDogIcons,
     (System_Action_T__o *)v123,
-    (const MethodInfo_366C2EC *)Method_System_Collections_Generic_List_viewDogIcon__ForEach__);
+    (const MethodInfo_368C6AC *)Method_System_Collections_Generic_List_viewDogIcon__ForEach__);
   if ( !*(_QWORD *)v55 )
     goto LABEL_103;
   acquiredPointIcon = this->fields.acquiredPointIcon;
@@ -896,10 +896,10 @@ LABEL_77:
   v128 = *((_DWORD *)Instance + 42);
   Instance = UnityEngine_Component__GetComponent_object_(
                (UnityEngine_Component_o *)Instance,
-               (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+               (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
   if ( !Instance )
     goto LABEL_103;
-  Instance = (void *)System_Math__Min_64055056(v128, *((_DWORD *)Instance + 12), 0LL);
+  Instance = (void *)System_Math__Min_64188084(v128, *((_DWORD *)Instance + 12), 0LL);
   if ( !this->fields.acquiredPointIcon )
     goto LABEL_103;
   v129 = (int)Instance;
@@ -913,7 +913,7 @@ LABEL_77:
   this->fields.isButtonEnable = 0;
   this->fields.isDecideBtnSe = v131;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, v132, 0LL);
-  v130 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v130 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v130, (Il2CppObject *)this, Method_ExpeditionConfirmDialogComponent_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v130, maskType, 0LL);
 }
@@ -929,16 +929,16 @@ void __fastcall ExpeditionConfirmDialogComponent__SerializeFieldNotNullCheck(
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4C01770 & 1) == 0 )
+  if ( (byte_4C25F9E & 1) == 0 )
   {
-    this = (ExpeditionConfirmDialogComponent_o *)sub_1C2E12C(
+    this = (ExpeditionConfirmDialogComponent_o *)sub_1C3B764(
                                                    &Method_System_Collections_Generic_List_EventExpeditionPieceEntity__get_Count__,
                                                    method);
-    byte_4C01770 = 1;
+    byte_4C25F9E = 1;
   }
   eventExpeditionPieceEntityList = v2->fields.eventExpeditionPieceEntityList;
   if ( !eventExpeditionPieceEntityList )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   size = eventExpeditionPieceEntityList->fields._size;
   v5 = -1;
   do
@@ -955,10 +955,10 @@ UnityEngine_GameObject_o *__fastcall ExpeditionConfirmDialogComponent__get_close
   __int64 v4; // x1
   UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_4C01775 & 1) == 0 )
+  if ( (byte_4C25FA3 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C01775 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C25FA3 = 1;
   }
   buttonCancel = (UnityEngine_Object_o *)this->fields.buttonCancel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -967,7 +967,7 @@ UnityEngine_GameObject_o *__fastcall ExpeditionConfirmDialogComponent__get_close
     return 0LL;
   v6 = this->fields.buttonCancel;
   if ( !v6 )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return UnityEngine_GameObject__get_gameObject(v6, 0LL);
 }
 
@@ -994,7 +994,7 @@ void __fastcall ExpeditionConfirmDialogComponent_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1005,12 +1005,12 @@ void __fastcall ExpeditionConfirmDialogComponent_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -1022,9 +1022,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A74410;
+  this->fields.m_target = (Il2CppObject *)sub_1A814C8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A743B0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A81468;
 }
 
 
@@ -1049,17 +1049,17 @@ System_IAsyncResult_o *__fastcall ExpeditionConfirmDialogComponent_ClickDelegate
 
   v19[0] = isDecide;
   v18 = pieceIdx;
-  if ( (byte_4C01777 & 1) == 0 )
+  if ( (byte_4C25FA5 & 1) == 0 )
   {
-    sub_1C2E12C(&bool_TypeInfo, isDecide);
-    sub_1C2E12C(&int_TypeInfo, v11);
-    byte_4C01777 = 1;
+    sub_1C3B764(&bool_TypeInfo, isDecide);
+    sub_1C3B764(&int_TypeInfo, v11);
+    byte_4C25FA5 = 1;
   }
   v17 = 0u;
   v16[0] = j_il2cpp_value_box_0(bool_TypeInfo, v19, eventExpeditionEntity, *(_QWORD *)&pieceIdx, callback);
   v16[1] = eventExpeditionEntity;
   *(_QWORD *)&v17 = j_il2cpp_value_box_0(int_TypeInfo, &v18, v12, v13, v14);
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v16, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, v16, callback, object);
 }
 
 
@@ -1068,7 +1068,7 @@ void __fastcall ExpeditionConfirmDialogComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
@@ -1099,15 +1099,15 @@ void __fastcall ExpeditionConfirmDialogComponent___c___cctor(const MethodInfo *m
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4C01778 & 1) == 0 )
+  if ( (byte_4C25FA6 & 1) == 0 )
   {
-    sub_1C2E12C(&ExpeditionConfirmDialogComponent___c_TypeInfo, v1);
-    byte_4C01778 = 1;
+    sub_1C3B764(&ExpeditionConfirmDialogComponent___c_TypeInfo, v1);
+    byte_4C25FA6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(ExpeditionConfirmDialogComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(ExpeditionConfirmDialogComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ExpeditionConfirmDialogComponent___c_TypeInfo->static_fields->__9 = (struct ExpeditionConfirmDialogComponent___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)ExpeditionConfirmDialogComponent___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1133,7 +1133,7 @@ bool __fastcall ExpeditionConfirmDialogComponent___c___GetCurrentSelectPieceIdx_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields._IsSelect_k__BackingField;
 }
 
@@ -1145,7 +1145,7 @@ int32_t __fastcall ExpeditionConfirmDialogComponent___c___Open_b__26_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C2E388(this, a);
+    sub_1C3B9C0(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -1156,7 +1156,7 @@ void __fastcall ExpeditionConfirmDialogComponent___c___Open_b__26_3(
         const MethodInfo *method)
 {
   if ( !y )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   viewDogIcon__IsSelectSetFalse(y, (const MethodInfo *)y);
 }
 
@@ -1206,13 +1206,13 @@ void __fastcall ExpeditionConfirmDialogComponent___c__DisplayClass26_0___Open_b_
   int32_t v33; // w2
 
   v5 = this;
-  if ( (byte_4C01779 & 1) == 0 )
+  if ( (byte_4C25FA7 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, x);
-    this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)sub_1C2E12C(
+    sub_1C3B764(&System_Action_TypeInfo, x);
+    this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)sub_1C3B764(
                                                                          &Method_ExpeditionConfirmDialogComponent___c__DisplayClass26_0__Open_b__2__,
                                                                          v6);
-    byte_4C01779 = 1;
+    byte_4C25FA7 = 1;
   }
   userEventExpeditionEntity = v5->fields.userEventExpeditionEntity;
   if ( userEventExpeditionEntity )
@@ -1228,7 +1228,7 @@ void __fastcall ExpeditionConfirmDialogComponent___c__DisplayClass26_0___Open_b_
       {
         if ( max_length == v10 )
 LABEL_35:
-          sub_1C2E390(this, x);
+          sub_1C3B9C8(this, x);
         v11 = expeditionInfos->m_Items[v10];
         if ( !v11 )
           break;
@@ -1243,7 +1243,7 @@ LABEL_35:
           goto LABEL_14;
       }
 LABEL_34:
-      sub_1C2E388(this, x);
+      sub_1C3B9C0(this, x);
     }
   }
 LABEL_14:
@@ -1294,14 +1294,14 @@ LABEL_26:
   _9__2 = v5->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v5,
       Method_ExpeditionConfirmDialogComponent___c__DisplayClass26_0__Open_b__2__,
       0LL);
     v5->fields.__9__2 = _9__2;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v5->fields.__9__2, (int64_t)_9__2, v27, v28, v29, v30, v31, v32);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v5->fields.__9__2, (int64_t)_9__2, v27, v28, v29, v30, v31, v32);
   }
   if ( !x )
     goto LABEL_34;
@@ -1336,16 +1336,16 @@ void __fastcall ExpeditionConfirmDialogComponent___c__DisplayClass26_0___Open_b_
   struct ExpeditionConfirmDialogComponent_o *v18; // x8
 
   v2 = this;
-  if ( (byte_4C0177A & 1) == 0 )
+  if ( (byte_4C25FA8 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_viewDogIcon__TypeInfo, method);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_viewDogIcon__ForEach__, v4);
-    sub_1C2E12C(&Method_ExpeditionConfirmDialogComponent___c__Open_b__26_3__, v5);
-    this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)sub_1C2E12C(
+    sub_1C3B764(&System_Action_viewDogIcon__TypeInfo, method);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_viewDogIcon__ForEach__, v4);
+    sub_1C3B764(&Method_ExpeditionConfirmDialogComponent___c__Open_b__26_3__, v5);
+    this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)sub_1C3B764(
                                                                          &ExpeditionConfirmDialogComponent___c_TypeInfo,
                                                                          v6);
-    byte_4C0177A = 1;
+    byte_4C25FA8 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1366,17 +1366,17 @@ void __fastcall ExpeditionConfirmDialogComponent___c__DisplayClass26_0___Open_b_
       this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)ExpeditionConfirmDialogComponent___c_TypeInfo;
     }
     klass = (Il2CppObject *)this[3].fields.userEventExpeditionEntity->klass;
-    userId = (System_Action_object__o *)sub_1C2E378(System_Action_viewDogIcon__TypeInfo);
+    userId = (System_Action_object__o *)sub_1C3B9B0(System_Action_viewDogIcon__TypeInfo);
     System_Action_object____ctor(userId, klass, Method_ExpeditionConfirmDialogComponent___c__Open_b__26_3__, 0LL);
     static_fields = ExpeditionConfirmDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__26_3 = (struct System_Action_viewDogIcon__o *)userId;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->__9__26_3, (int64_t)userId, v12, v13, v14, v15, v16, v17);
+    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__26_3, (int64_t)userId, v12, v13, v14, v15, v16, v17);
   }
   if ( !viewDogIcons
     || (System_Collections_Generic_List_object___ForEach(
           viewDogIcons,
           (System_Action_T__o *)userId,
-          (const MethodInfo_366C2EC *)Method_System_Collections_Generic_List_viewDogIcon__ForEach__),
+          (const MethodInfo_368C6AC *)Method_System_Collections_Generic_List_viewDogIcon__ForEach__),
         (v18 = v2->fields.__4__this) == 0LL)
     || (this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)v18->fields.buttonDecide) == 0LL
     || (this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)UnityEngine_GameObject__get_gameObject(
@@ -1384,10 +1384,10 @@ void __fastcall ExpeditionConfirmDialogComponent___c__DisplayClass26_0___Open_b_
                                                                              0LL)) == 0LL
     || (this = (ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                              (UnityEngine_GameObject_o *)this,
-                                                                             (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL )
+                                                                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0LL )
   {
 LABEL_16:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   ((void (__fastcall *)(ExpeditionConfirmDialogComponent___c__DisplayClass26_0_o *, bool, void *))this->klass[1]._1.namespaze)(
     this,

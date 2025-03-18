@@ -30,31 +30,31 @@ void __fastcall BattleDataDefine___cctor(const MethodInfo *method)
   FollowerInfo_o *v28; // x6
   PartyListViewItem_o *v29; // x7
 
-  if ( (byte_4BFFD7E & 1) == 0 )
+  if ( (byte_4C245AC & 1) == 0 )
   {
-    sub_1C2E12C(&BattleDataDefine_TypeInfo, v1);
-    sub_1C2E12C(&int___TypeInfo, v2);
-    sub_1C2E12C(&StringLiteral_11606/*"RootCameraPrefab"*/, v3);
-    sub_1C2E12C(&StringLiteral_3243/*"Battle/Common"*/, v4);
-    byte_4BFFD7E = 1;
+    sub_1C3B764(&BattleDataDefine_TypeInfo, v1);
+    sub_1C3B764(&int___TypeInfo, v2);
+    sub_1C3B764(&StringLiteral_11629/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, v3);
+    sub_1C3B764(&StringLiteral_3243/*"Buffer is empty"*/, v4);
+    byte_4C245AC = 1;
   }
   static_fields = BattleDataDefine_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->OVERWRITE_ATK_RATE_PRIORITY = 0x3E800000001LL;
   *(_QWORD *)&static_fields->PERCENTAGE_DENOMINATOR = 0x447A000042C80000LL;
-  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_C05C40;
-  v6 = sub_1C2E1D4(int___TypeInfo, 1LL);
+  *(_OWORD *)&static_fields->PERMILLAGE_DENOMINATOR_INT = xmmword_C0CFC0;
+  v6 = sub_1C3B80C(int___TypeInfo, 1LL);
   v7 = BattleDataDefine_TypeInfo->static_fields;
   v7->NO_INDIVIDUALITY_ARRAY = (struct System_Int32_array *)v6;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v7->NO_INDIVIDUALITY_ARRAY, v6, v8, v9, v10, v11, v12, v13);
-  v14 = StringLiteral_3243/*"Battle/Common"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v7->NO_INDIVIDUALITY_ARRAY, v6, v8, v9, v10, v11, v12, v13);
+  v14 = StringLiteral_3243/*"Buffer is empty"*/;
   v15 = BattleDataDefine_TypeInfo->static_fields;
-  v15->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3243/*"Battle/Common"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v15->ASSET_BATTLE_COMMON, v14, v16, v17, v18, v19, v20, v21);
-  v22 = StringLiteral_11606/*"RootCameraPrefab"*/;
+  v15->ASSET_BATTLE_COMMON = (struct System_String_o *)StringLiteral_3243/*"Buffer is empty"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v15->ASSET_BATTLE_COMMON, v14, v16, v17, v18, v19, v20, v21);
+  v22 = StringLiteral_11629/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/;
   v23 = BattleDataDefine_TypeInfo->static_fields;
-  v23->RootCameraAssetName = (struct System_String_o *)StringLiteral_11606/*"RootCameraPrefab"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v23->RootCameraAssetName, v22, v24, v25, v26, v27, v28, v29);
-  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_C05840;
+  v23->RootCameraAssetName = (struct System_String_o *)StringLiteral_11629/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v23->RootCameraAssetName, v22, v24, v25, v26, v27, v28, v29);
+  BattleDataDefine_TypeInfo->static_fields->ShadowServantDefaultColor = (struct UnityEngine_Color_o)xmmword_C0CBC0;
 }
 
 
@@ -67,15 +67,15 @@ System_String_o *__fastcall BattleDataDefine__AddUniqueCameraPath(int32_t camera
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BFFD7B & 1) == 0 )
+  if ( (byte_4C245A9 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_3259/*"Battle/UniqueCamera/Add/{0}"*/, v6);
-    byte_4BFFD7B = 1;
+    sub_1C3B764(&int_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_3259/*"Button"*/, v6);
+    byte_4C245A9 = 1;
   }
   v9 = cameraId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
-  return System_String__Format((System_String_o *)StringLiteral_3259/*"Battle/UniqueCamera/Add/{0}"*/, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3259/*"Button"*/, v7, 0LL);
 }
 
 
@@ -88,15 +88,15 @@ System_String_o *__fastcall BattleDataDefine__FieldMotionPath(int32_t motionId, 
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BFFD7A & 1) == 0 )
+  if ( (byte_4C245A8 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_3249/*"Battle/Field/{0}"*/, v6);
-    byte_4BFFD7A = 1;
+    sub_1C3B764(&int_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_3249/*"BuildCommandsList"*/, v6);
+    byte_4C245A8 = 1;
   }
   v9 = motionId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
-  return System_String__Format((System_String_o *)StringLiteral_3249/*"Battle/Field/{0}"*/, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3249/*"BuildCommandsList"*/, v7, 0LL);
 }
 
 
@@ -113,26 +113,26 @@ System_String_o *__fastcall BattleDataDefine__MakeBgPath(int32_t bgId, const Met
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = bgId;
-  if ( (byte_4BFFD7C & 1) == 0 )
+  if ( (byte_4C245AA & 1) == 0 )
   {
-    sub_1C2E12C(&BattleDataDefine_TypeInfo, method);
-    byte_4BFFD7C = 1;
+    sub_1C3B764(&BattleDataDefine_TypeInfo, method);
+    byte_4C245AA = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v5, 0LL);
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-  return BattleDataDefine__MakeBgPath_44103724(v3, v2);
+  return BattleDataDefine__MakeBgPath_44227068(v3, v2);
 }
 
 
-System_String_o *__fastcall BattleDataDefine__MakeBgPath_44103724(System_String_o *bgIdStr, const MethodInfo *method)
+System_String_o *__fastcall BattleDataDefine__MakeBgPath_44227068(System_String_o *bgIdStr, const MethodInfo *method)
 {
-  if ( (byte_4BFFD7D & 1) == 0 )
+  if ( (byte_4C245AB & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_3302/*"Bg/"*/, method);
-    byte_4BFFD7D = 1;
+    sub_1C3B764(&StringLiteral_3302/*"CCSID01142"*/, method);
+    byte_4C245AB = 1;
   }
-  return System_String__Concat_63235584((System_String_o *)StringLiteral_3302/*"Bg/"*/, bgIdStr, 0LL);
+  return System_String__Concat_63368612((System_String_o *)StringLiteral_3302/*"CCSID01142"*/, bgIdStr, 0LL);
 }
 
 

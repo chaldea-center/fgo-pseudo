@@ -35,11 +35,11 @@ void __fastcall EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_47882604(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_48006348(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void __fastcall EasingObject__Play_47882604(
+void __fastcall EasingObject__Play_48006348(
         EasingObject_o *this,
         float from,
         float to,
@@ -76,11 +76,11 @@ void __fastcall EasingObject__Play_47882604(
   this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
   this->fields.mTime = v15;
   this->fields.mEndAct = endAct;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mEndAct, (int64_t)endAct, v16, v17, v18, v19, v20, v21);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mEndAct, (int64_t)endAct, v16, v17, v18, v19, v20, v21);
   this->fields.mProcessAct = procAct;
   p_mProcessAct = &this->fields.mProcessAct;
   *((float *)p_mProcessAct - 6) = from;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p_mProcessAct, (int64_t)procAct, v23, v24, v25, v26, v27, v28);
+  sub_1C3B708((PartyOrganizationUtility_o *)p_mProcessAct, (int64_t)procAct, v23, v24, v25, v26, v27, v28);
   v29 = *p_mProcessAct;
   *((_DWORD *)p_mProcessAct + 4) = easingType;
   *((float *)p_mProcessAct - 3) = delay;
@@ -166,7 +166,7 @@ void __fastcall EasingObject__Update(EasingObject_o *this, const MethodInfo *met
         v10 = 1.0;
       else
         v10 = v7;
-      v11 = Easing__Func_47881428(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+      v11 = Easing__Func_48005172(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNow = v11;
       if ( mProcessAct )

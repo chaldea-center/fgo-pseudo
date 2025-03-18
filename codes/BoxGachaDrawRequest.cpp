@@ -9,14 +9,14 @@ void __fastcall BoxGachaDrawRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4BFF044 & 1) == 0 )
+  if ( (byte_4C2386E & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_22597/*"num"*/, *(_QWORD *)&gachaId);
-    sub_1C2E12C(&StringLiteral_17699/*"boxGachaId"*/, v7);
-    byte_4BFF044 = 1;
+    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&gachaId);
+    sub_1C3B764(&StringLiteral_17729/*"com.adjust.sdk.AdjustTestOptions"*/, v7);
+    byte_4C2386E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17699/*"boxGachaId"*/, gachaId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22597/*"num"*/, num, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17729/*"com.adjust.sdk.AdjustTestOptions"*/, gachaId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, num, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall BoxGachaDrawRequest__getURL(BoxGachaDrawRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF043 & 1) == 0 )
+  if ( (byte_4C2386D & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_17696/*"boxGacha/draw"*/, v2);
-    byte_4BFF043 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_17726/*"com.adjust.sdk.AdjustEvent"*/, v2);
+    byte_4C2386D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_17696/*"boxGacha/draw"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_17726/*"com.adjust.sdk.AdjustEvent"*/, 0LL);
 }
 
 
@@ -53,18 +53,18 @@ void __fastcall BoxGachaDrawRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BFF045 & 1) == 0 )
+  if ( (byte_4C2386F & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF045 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C2386F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(47, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ void __fastcall BoxGachaDrawRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22468/*"ng"*/,
+        StringLiteral_22507/*"referrerMapId"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

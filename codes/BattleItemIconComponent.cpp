@@ -9,17 +9,17 @@ void __fastcall BattleItemIconComponent___ctor(BattleItemIconComponent_o *this, 
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BFFEFB & 1) == 0 )
+  if ( (byte_4C24729 & 1) == 0 )
   {
-    sub_1C2E12C(&ItemIconComponent_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_837/*"+"*/, v3);
-    byte_4BFFEFB = 1;
+    sub_1C3B764(&ItemIconComponent_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_837/*", applePrice:"*/, v3);
+    byte_4C24729 = 1;
   }
-  this->fields.addCountColor.fields.rgba = sub_23DA40C(0LL, 1.0, 0.92157, 0.015686, 1.0);
-  v4 = StringLiteral_837/*"+"*/;
-  this->fields.addCountStr = (struct System_String_o *)StringLiteral_837/*"+"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.addCountStr, v4, v5, v6, v7, v8, v9, v10);
-  this->fields.nowAddCountColor.fields.rgba = sub_23DA40C(0LL, 1.0, 0.92157, 0.015686, 1.0);
+  this->fields.addCountColor.fields.rgba = sub_23F40D8(0LL, 1.0, 0.92157, 0.015686, 1.0);
+  v4 = StringLiteral_837/*", applePrice:"*/;
+  this->fields.addCountStr = (struct System_String_o *)StringLiteral_837/*", applePrice:"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.addCountStr, v4, v5, v6, v7, v8, v9, v10);
+  this->fields.nowAddCountColor.fields.rgba = sub_23F40D8(0LL, 1.0, 0.92157, 0.015686, 1.0);
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
   ItemIconComponent___ctor((ItemIconComponent_o *)this, 0LL);
@@ -53,7 +53,7 @@ void __fastcall BattleItemIconComponent__SetActiveDarkMode(
   v8.fields.b = b;
   v8.fields.a = a;
   ItemIconComponent__SetColor((ItemIconComponent_o *)this, v8, 0LL);
-  this->fields.nowAddCountColor.fields.rgba = sub_23DA40C(
+  this->fields.nowAddCountColor.fields.rgba = sub_23F40D8(
                                                 0LL,
                                                 r
                                               * (float)((float)(unsigned __int8)this->fields.addCountColor.fields.rgba
@@ -157,16 +157,16 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
   UnityEngine_Color_o v86; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BFFEFA & 1) == 0 )
+  if ( (byte_4C24728 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&type);
-    sub_1C2E12C(&object___TypeInfo, v9);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C2E12C(&StringLiteral_25577/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v11);
-    sub_1C2E12C(&StringLiteral_16314/*"[{0}]({1}{2:#,0})[-]"*/, v12);
-    sub_1C2E12C(&StringLiteral_25576/*"{0}{1:#,0}"*/, v13);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v14);
-    byte_4BFFEFA = 1;
+    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&type);
+    sub_1C3B764(&object___TypeInfo, v9);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C3B764(&StringLiteral_25621, v11);
+    sub_1C3B764(&StringLiteral_16342/*"adgroup"*/, v12);
+    sub_1C3B764(&StringLiteral_25620, v13);
+    sub_1C3B764(&StringLiteral_1/*""*/, v14);
+    byte_4C24728 = 1;
   }
   counterLabel = (UnityEngine_Object_o *)this->fields.counterLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -189,38 +189,38 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
     v27 = UnityEngine_ColorUtility__ToHtmlStringRGB(v86, 0LL);
     v28 = this->fields.counterLabel;
     v29 = (int64_t)v27;
-    v17 = (UILabel_o *)sub_1C2E1D4(object___TypeInfo, 5LL);
+    v17 = (UILabel_o *)sub_1C3B80C(object___TypeInfo, 5LL);
     if ( !v17 )
       goto LABEL_36;
     v36 = v17;
-    if ( !v26 || (v17 = (UILabel_o *)sub_1C2E268(v26, v17->klass->_1.element_class)) != 0LL )
+    if ( !v26 || (v17 = (UILabel_o *)sub_1C3B8A0(v26, v17->klass->_1.element_class)) != 0LL )
     {
       if ( !LODWORD(v36->fields.m_CancellationTokenSource) )
         goto LABEL_37;
       v36->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)v26;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v36->fields.leftAnchor, v26, v30, v31, v32, v33, v34, v35);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v36->fields.leftAnchor, v26, v30, v31, v32, v33, v34, v35);
       v85 = count;
       v17 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v85, v37, v38, v39);
       v46 = (int64_t)v17;
-      if ( !v17 || (v17 = (UILabel_o *)sub_1C2E268(v17, v36->klass->_1.element_class)) != 0LL )
+      if ( !v17 || (v17 = (UILabel_o *)sub_1C3B8A0(v17, v36->klass->_1.element_class)) != 0LL )
       {
         if ( LODWORD(v36->fields.m_CancellationTokenSource) <= 1 )
           goto LABEL_37;
         v36->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v46;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v36->fields.rightAnchor, v46, v40, v41, v42, v43, v44, v45);
-        if ( !v29 || (v17 = (UILabel_o *)sub_1C2E268(v29, v36->klass->_1.element_class)) != 0LL )
+        sub_1C3B708((PartyOrganizationUtility_o *)&v36->fields.rightAnchor, v46, v40, v41, v42, v43, v44, v45);
+        if ( !v29 || (v17 = (UILabel_o *)sub_1C3B8A0(v29, v36->klass->_1.element_class)) != 0LL )
         {
           if ( LODWORD(v36->fields.m_CancellationTokenSource) <= 2 )
             goto LABEL_37;
           v36->fields.bottomAnchor = (struct UIRect_AnchorPoint_o *)v29;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v36->fields.bottomAnchor, v29, v47, v48, v49, v50, v51, v52);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v36->fields.bottomAnchor, v29, v47, v48, v49, v50, v51, v52);
           addCountStr = this->fields.addCountStr;
-          if ( !addCountStr || (v17 = (UILabel_o *)sub_1C2E268(addCountStr, v36->klass->_1.element_class)) != 0LL )
+          if ( !addCountStr || (v17 = (UILabel_o *)sub_1C3B8A0(addCountStr, v36->klass->_1.element_class)) != 0LL )
           {
             if ( LODWORD(v36->fields.m_CancellationTokenSource) <= 3 )
               goto LABEL_37;
             v36->fields.topAnchor = (struct UIRect_AnchorPoint_o *)addCountStr;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v36->fields.topAnchor,
               (int64_t)addCountStr,
               v53,
@@ -232,14 +232,14 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
             v84 = addCount;
             v17 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v84, v60, v61, v62);
             v69 = (int64_t)v17;
-            if ( !v17 || (v17 = (UILabel_o *)sub_1C2E268(v17, v36->klass->_1.element_class)) != 0LL )
+            if ( !v17 || (v17 = (UILabel_o *)sub_1C3B8A0(v17, v36->klass->_1.element_class)) != 0LL )
             {
               if ( LODWORD(v36->fields.m_CancellationTokenSource) > 4 )
               {
                 *(_QWORD *)&v36->fields.updateAnchors = v69;
-                sub_1C2E0D0((PartyOrganizationUtility_o *)&v36->fields.updateAnchors, v69, v63, v64, v65, v66, v67, v68);
-                v17 = (UILabel_o *)System_String__Format_63250092(
-                                     (System_String_o *)StringLiteral_25577/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/,
+                sub_1C3B708((PartyOrganizationUtility_o *)&v36->fields.updateAnchors, v69, v63, v64, v65, v66, v67, v68);
+                v17 = (UILabel_o *)System_String__Format_63383120(
+                                     (System_String_o *)StringLiteral_25621,
                                      (System_Object_array *)v36,
                                      0LL);
                 if ( !v28 )
@@ -251,14 +251,14 @@ LABEL_34:
                 return;
               }
 LABEL_37:
-              sub_1C2E390(v17, v16);
+              sub_1C3B9C8(v17, v16);
             }
           }
         }
       }
     }
-    v83 = sub_1C2E3AC(v17);
-    sub_1C2E254(v83, 0LL);
+    v83 = sub_1C3B9E4(v17);
+    sub_1C3B88C(v83, 0LL);
   }
   UILabel__set_spacingY(v17, 0, 0LL);
   v17 = (UILabel_o *)ItemType__GetCountableString(type, 0LL);
@@ -274,11 +274,11 @@ LABEL_37:
     v22 = (Il2CppObject *)v17;
     v85 = count;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v85, v18, v19, v20);
-    v17 = (UILabel_o *)System_String__Format_63249956((System_String_o *)StringLiteral_25576/*"{0}{1:#,0}"*/, v22, v23, 0LL);
+    v17 = (UILabel_o *)System_String__Format_63382984((System_String_o *)StringLiteral_25620, v22, v23, 0LL);
     v16 = (System_String_o *)v17;
     if ( !v21 )
 LABEL_36:
-      sub_1C2E388(v17, v16);
+      sub_1C3B9C0(v17, v16);
   }
   UILabel__set_text(v21, v16, 0LL);
   if ( addCount >= 1 )
@@ -297,8 +297,8 @@ LABEL_36:
     v77 = (Il2CppObject *)v75;
     v85 = addCount;
     v81 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v85, v78, v79, v80);
-    v82 = System_String__Format_63250024((System_String_o *)StringLiteral_16314/*"[{0}]({1}{2:#,0})[-]"*/, v77, v76, v81, 0LL);
-    v70 = System_String__Concat_63235584(mText, v82, 0LL);
+    v82 = System_String__Format_63383052((System_String_o *)StringLiteral_16342/*"adgroup"*/, v77, v76, v81, 0LL);
+    v70 = System_String__Concat_63368612(mText, v82, 0LL);
     v71 = v72;
     goto LABEL_34;
   }

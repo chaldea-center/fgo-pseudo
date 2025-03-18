@@ -1,14 +1,14 @@
 void __fastcall QuestHintOverwriteMaster___ctor(QuestHintOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDC0B & 1) == 0 )
+  if ( (byte_4C2241D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string___ctor__, method);
-    byte_4BFDC0B = 1;
+    sub_1C3B764(&Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string___ctor__, method);
+    byte_4C2241D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    537,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string___ctor__);
+    540,
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string___ctor__);
 }
 
 
@@ -73,31 +73,31 @@ QuestHintOverwriteEntity_o *__fastcall QuestHintOverwriteMaster__GetCompleteCond
   int *v58; // x10
   __int64 v59; // x0
 
-  if ( (byte_4BFDC0A & 1) == 0 )
+  if ( (byte_4C2241C & 1) == 0 )
   {
-    sub_1C2E12C(&CondType_TypeInfo, *(_QWORD *)&questId);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_OrderByDescending_QuestHintOverwriteEntity__int___, v7);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_QuestHintOverwriteEntity___, v8);
-    sub_1C2E12C(&System_Func_QuestHintOverwriteEntity__int__TypeInfo, v9);
-    sub_1C2E12C(&System_Func_QuestHintOverwriteEntity__bool__TypeInfo, v10);
-    sub_1C2E12C(&System_IDisposable_TypeInfo, v11);
-    sub_1C2E12C(&System_Collections_Generic_IEnumerable_QuestHintOverwriteEntity__TypeInfo, v12);
-    sub_1C2E12C(&System_Collections_Generic_IEnumerator_QuestHintOverwriteEntity__TypeInfo, v13);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1C2E12C(&Method_QuestHintOverwriteMaster___c__GetCompleteCondEntity_b__0_1__, v15);
-    sub_1C2E12C(&Method_QuestHintOverwriteMaster___c__DisplayClass0_0__GetCompleteCondEntity_b__0__, v16);
-    sub_1C2E12C(&QuestHintOverwriteMaster___c__DisplayClass0_0_TypeInfo, v17);
-    sub_1C2E12C(&QuestHintOverwriteMaster___c_TypeInfo, v18);
-    byte_4BFDC0A = 1;
+    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&questId);
+    sub_1C3B764(&Method_System_Linq_Enumerable_OrderByDescending_QuestHintOverwriteEntity__int___, v7);
+    sub_1C3B764(&Method_System_Linq_Enumerable_Where_QuestHintOverwriteEntity___, v8);
+    sub_1C3B764(&System_Func_QuestHintOverwriteEntity__int__TypeInfo, v9);
+    sub_1C3B764(&System_Func_QuestHintOverwriteEntity__bool__TypeInfo, v10);
+    sub_1C3B764(&System_IDisposable_TypeInfo, v11);
+    sub_1C3B764(&System_Collections_Generic_IEnumerable_QuestHintOverwriteEntity__TypeInfo, v12);
+    sub_1C3B764(&System_Collections_Generic_IEnumerator_QuestHintOverwriteEntity__TypeInfo, v13);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1C3B764(&Method_QuestHintOverwriteMaster___c__GetCompleteCondEntity_b__0_1__, v15);
+    sub_1C3B764(&Method_QuestHintOverwriteMaster___c__DisplayClass0_0__GetCompleteCondEntity_b__0__, v16);
+    sub_1C3B764(&QuestHintOverwriteMaster___c__DisplayClass0_0_TypeInfo, v17);
+    sub_1C3B764(&QuestHintOverwriteMaster___c_TypeInfo, v18);
+    byte_4C2241C = 1;
   }
-  v19 = sub_1C2E378(QuestHintOverwriteMaster___c__DisplayClass0_0_TypeInfo);
+  v19 = sub_1C3B9B0(QuestHintOverwriteMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v19, 0LL);
   if ( !v19 )
     goto LABEL_45;
   *(_DWORD *)(v19 + 16) = questId;
   *(_DWORD *)(v19 + 20) = questPhase;
   list = this->fields.list;
-  v23 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_QuestHintOverwriteEntity__bool__TypeInfo);
+  v23 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_QuestHintOverwriteEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v23,
     (Il2CppObject *)v19,
@@ -106,7 +106,7 @@ QuestHintOverwriteEntity_o *__fastcall QuestHintOverwriteMaster__GetCompleteCond
   v24 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v23,
-          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_QuestHintOverwriteEntity___);
+          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_QuestHintOverwriteEntity___);
   v25 = QuestHintOverwriteMaster___c_TypeInfo;
   v26 = v24;
   if ( !QuestHintOverwriteMaster___c_TypeInfo->_2.cctor_finished )
@@ -123,7 +123,7 @@ QuestHintOverwriteEntity_o *__fastcall QuestHintOverwriteMaster__GetCompleteCond
       v25 = QuestHintOverwriteMaster___c_TypeInfo;
     }
     v28 = (Il2CppObject *)v25->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C2E378(System_Func_QuestHintOverwriteEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_QuestHintOverwriteEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
       v28,
@@ -131,15 +131,15 @@ QuestHintOverwriteEntity_o *__fastcall QuestHintOverwriteMaster__GetCompleteCond
       0LL);
     static_fields = QuestHintOverwriteMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_1 = (struct System_Func_QuestHintOverwriteEntity__int__o *)_9__0_1;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->__9__0_1, (int64_t)_9__0_1, v30, v31, v32, v33, v34, v35);
+    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__0_1, (int64_t)_9__0_1, v30, v31, v32, v33, v34, v35);
   }
   v20 = System_Linq_Enumerable__OrderByDescending_object__int_(
           v26,
           (System_Func_TSource__TKey__o *)_9__0_1,
-          (const MethodInfo_2FFB9E4 *)Method_System_Linq_Enumerable_OrderByDescending_QuestHintOverwriteEntity__int___);
+          (const MethodInfo_301A780 *)Method_System_Linq_Enumerable_OrderByDescending_QuestHintOverwriteEntity__int___);
   if ( !v20 )
 LABEL_45:
-    sub_1C2E388(v20, v21);
+    sub_1C3B9C0(v20, v21);
   klass = v20->klass;
   v37 = v20;
   v38 = *(unsigned __int16 *)(&v20->klass->_2.bitflags2 + 3);
@@ -158,13 +158,13 @@ LABEL_45:
   else
   {
 LABEL_15:
-    p_method = sub_1C8010C(v20, System_Collections_Generic_IEnumerable_QuestHintOverwriteEntity__TypeInfo, 0LL);
+    p_method = sub_1C8D744(v20, System_Collections_Generic_IEnumerable_QuestHintOverwriteEntity__TypeInfo, 0LL);
   }
   v42 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))p_method)(
           v37,
           *(_QWORD *)(p_method + 8));
   if ( !v42 )
-    sub_1C2E388(0LL, v41);
+    sub_1C3B9C0(0LL, v41);
   while ( 1 )
   {
     v43 = *(_QWORD *)v42;
@@ -184,7 +184,7 @@ LABEL_15:
     else
     {
 LABEL_22:
-      v46 = sub_1C8010C(v42, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v46 = sub_1C8D744(v42, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v46)(v42, *(_QWORD *)(v46 + 8)) & 1) == 0 )
       break;
@@ -205,11 +205,11 @@ LABEL_22:
     else
     {
 LABEL_29:
-      v50 = sub_1C8010C(v42, System_Collections_Generic_IEnumerator_QuestHintOverwriteEntity__TypeInfo, 0LL);
+      v50 = sub_1C8D744(v42, System_Collections_Generic_IEnumerator_QuestHintOverwriteEntity__TypeInfo, 0LL);
     }
     v52 = (QuestHintOverwriteEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v50)(v42, *(_QWORD *)(v50 + 8));
     if ( !v52 )
-      sub_1C2E388(0LL, v51);
+      sub_1C3B9C0(0LL, v51);
     condType = v52->fields.condType;
     condId = v52->fields.condId;
     condNum = v52->fields.condNum;
@@ -237,7 +237,7 @@ LABEL_37:
   else
   {
 LABEL_41:
-    v59 = sub_1C8010C(v42, System_IDisposable_TypeInfo, 0LL);
+    v59 = sub_1C8D744(v42, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v59)(v42, *(_QWORD *)(v59 + 8));
   return v52;
@@ -254,18 +254,18 @@ QuestHintOverwriteEntity_o *__fastcall QuestHintOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFDC0C & 1) == 0 )
+  if ( (byte_4C2241E & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4BFDC0C = 1;
+    byte_4C2241E = 1;
   }
   PK = (Il2CppObject *)QuestHintOverwriteEntity__CreatePK(questId, questPhase, priority, 0LL);
   return (QuestHintOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                          PK,
-                                         (const MethodInfo_327FC38 *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__GetEntity__);
+                                         (const MethodInfo_329F900 *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -279,19 +279,19 @@ bool __fastcall QuestHintOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFDC0D & 1) == 0 )
+  if ( (byte_4C2241F & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_4BFDC0D = 1;
+    byte_4C2241F = 1;
   }
   PK = (Il2CppObject *)QuestHintOverwriteEntity__CreatePK(questId, questPhase, priority, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_QuestHintOverwriteMaster__QuestHintOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -306,15 +306,15 @@ void __fastcall QuestHintOverwriteMaster___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFDC0E & 1) == 0 )
+  if ( (byte_4C22420 & 1) == 0 )
   {
-    sub_1C2E12C(&QuestHintOverwriteMaster___c_TypeInfo, v1);
-    byte_4BFDC0E = 1;
+    sub_1C3B764(&QuestHintOverwriteMaster___c_TypeInfo, v1);
+    byte_4C22420 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(QuestHintOverwriteMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(QuestHintOverwriteMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestHintOverwriteMaster___c_TypeInfo->static_fields->__9 = (struct QuestHintOverwriteMaster___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)QuestHintOverwriteMaster___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -338,7 +338,7 @@ int32_t __fastcall QuestHintOverwriteMaster___c___GetCompleteCondEntity_b__0_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.priority;
 }
 
@@ -357,6 +357,6 @@ bool __fastcall QuestHintOverwriteMaster___c__DisplayClass0_0___GetCompleteCondE
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.questId == this->fields.questId && x->fields.questPhase == this->fields.questPhase;
 }

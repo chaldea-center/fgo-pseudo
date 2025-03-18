@@ -18,10 +18,10 @@ System_String_o *__fastcall ResponseCommandBase__GetCommandName(ResponseCommandB
 {
   int32_t v3; // w19
 
-  if ( (byte_4BFF186 & 1) == 0 )
+  if ( (byte_4C239B0 & 1) == 0 )
   {
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, method);
-    byte_4BFF186 = 1;
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, method);
+    byte_4C239B0 = 1;
   }
   v3 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, Il2CppMethodPointer))this->klass->vtable._4_GetKind.method)(
          this,

@@ -17,18 +17,18 @@ void __fastcall WarBoardFinishRequest__beginRequest(
   __int64 v12; // x1
   __int64 v13; // x1
 
-  if ( (byte_4BFF21C & 1) == 0 )
+  if ( (byte_4C23A46 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_23927/*"stageId"*/, *(_QWORD *)&stageId);
-    sub_1C2E12C(&StringLiteral_25168/*"winCondId"*/, v11);
-    sub_1C2E12C(&StringLiteral_25167/*"winCondGroup"*/, v12);
-    sub_1C2E12C(&StringLiteral_21202/*"isResult"*/, v13);
-    byte_4BFF21C = 1;
+    sub_1C3B764(&StringLiteral_23970/*"updateDamageGauge"*/, *(_QWORD *)&stageId);
+    sub_1C3B764(&StringLiteral_25212, v11);
+    sub_1C3B764(&StringLiteral_25211, v12);
+    sub_1C3B764(&StringLiteral_21238/*"mstBgmRelease"*/, v13);
+    byte_4C23A46 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23927/*"stageId"*/, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21202/*"isResult"*/, isResult, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25168/*"winCondId"*/, winCondId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25167/*"winCondGroup"*/, winCondGroup, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23970/*"updateDamageGauge"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21238/*"mstBgmRelease"*/, isResult, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25212, winCondId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_25211, winCondGroup, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -38,16 +38,16 @@ System_String_o *__fastcall WarBoardFinishRequest__getURL(WarBoardFinishRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF21B & 1) == 0 )
+  if ( (byte_4C23A45 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_25082/*"warBoard/finish"*/, v2);
-    byte_4BFF21B = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_25126/*"［"*/, v2);
+    byte_4C23A45 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_25082/*"warBoard/finish"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_25126/*"［"*/, 0LL);
 }
 
 
@@ -64,12 +64,12 @@ void __fastcall WarBoardFinishRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BFF21D & 1) == 0 )
+  if ( (byte_4C23A47 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF21D = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C23A47 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -84,7 +84,7 @@ void __fastcall WarBoardFinishRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

@@ -2,10 +2,10 @@ void __fastcall CampaignInfoItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BF8197 & 1) == 0 )
+  if ( (byte_4C1C917 & 1) == 0 )
   {
-    sub_1C2E12C(&CampaignInfoItem_TypeInfo, v1);
-    byte_4BF8197 = 1;
+    sub_1C3B764(&CampaignInfoItem_TypeInfo, v1);
+    byte_4C1C917 = 1;
   }
   CampaignInfoItem_TypeInfo->static_fields->baseWidth = 900;
 }
@@ -35,13 +35,13 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
   System_String_o *v15; // x19
 
   v2 = this;
-  if ( (byte_4BF8196 & 1) == 0 )
+  if ( (byte_4C1C916 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Application_TypeInfo, method);
-    sub_1C2E12C(&Method_CampaignInfoItem_OnClick__, v3);
-    sub_1C2E12C(&WebViewManager_TypeInfo, v4);
-    this = (CampaignInfoItem_o *)sub_1C2E12C(&StringLiteral_1/*""*/, v5);
-    byte_4BF8196 = 1;
+    sub_1C3B764(&UnityEngine_Application_TypeInfo, method);
+    sub_1C3B764(&Method_CampaignInfoItem_OnClick__, v3);
+    sub_1C3B764(&WebViewManager_TypeInfo, v4);
+    this = (CampaignInfoItem_o *)sub_1C3B764(&StringLiteral_1/*""*/, v5);
+    byte_4C1C916 = 1;
   }
   target = v2->fields.target;
   if ( !target )
@@ -53,8 +53,8 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
       return;
     v8 = Method_CampaignInfoItem_OnClick__;
     if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C2E144();
-    v9 = (System_Reflection_MethodBase_o *)sub_1C2E110(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C3B77C();
+    v9 = (System_Reflection_MethodBase_o *)sub_1C3B748(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
     v10 = v2->fields.target;
     if ( v10 )
@@ -66,12 +66,12 @@ void __fastcall CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const Method
       return;
     }
 LABEL_19:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   v12 = Method_CampaignInfoItem_OnClick__;
   if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1C2E144();
-  v13 = (System_Reflection_MethodBase_o *)sub_1C2E110(v12, v12[4]);
+    v12 = (_QWORD *)sub_1C3B77C();
+  v13 = (System_Reflection_MethodBase_o *)sub_1C3B748(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0LL);
   v14 = v2->fields.target;
   if ( !v14 )
@@ -108,22 +108,22 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BF8195 & 1) == 0 )
+  if ( (byte_4C1C915 & 1) == 0 )
   {
-    sub_1C2E12C(&CampaignInfoItem_TypeInfo, info);
-    sub_1C2E12C(&UnityEngine_Material_TypeInfo, v11);
-    sub_1C2E12C(&StringLiteral_5069/*"Custom/SpriteWithMask"*/, v12);
-    sub_1C2E12C(&StringLiteral_16556/*"_MaskTex"*/, v13);
-    byte_4BF8195 = 1;
+    sub_1C3B764(&CampaignInfoItem_TypeInfo, info);
+    sub_1C3B764(&UnityEngine_Material_TypeInfo, v11);
+    sub_1C3B764(&StringLiteral_5069/*"DataTable.MinimumCapacity"*/, v12);
+    sub_1C3B764(&StringLiteral_16584/*"assemblyName cannot have zero length."*/, v13);
+    byte_4C1C915 = 1;
   }
   this->fields.target = info;
-  sub_1C2E0D0(&this->fields.target);
+  sub_1C3B708(&this->fields.target);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5069/*"Custom/SpriteWithMask"*/, 0LL);
-  v17 = (UnityEngine_Material_o *)sub_1C2E378(UnityEngine_Material_TypeInfo);
+  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_5069/*"DataTable.MinimumCapacity"*/, 0LL);
+  v17 = (UnityEngine_Material_o *)sub_1C3B9B0(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v17, v16, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
@@ -135,7 +135,7 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
   if ( !v17 )
     goto LABEL_15;
   UnityEngine_Material__set_mainTexture(v17, (UnityEngine_Texture_o *)tex, 0LL);
-  UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16556/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0LL);
+  UnityEngine_Material__SetTexture(v17, (System_String_o *)StringLiteral_16584/*"assemblyName cannot have zero length."*/, (UnityEngine_Texture_o *)maskTex, 0LL);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
     goto LABEL_15;
@@ -179,7 +179,7 @@ void __fastcall CampaignInfoItem__SetCampaignInfo(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.collider) == 0LL) )
   {
 LABEL_15:
-    sub_1C2E388(gameObject, v15);
+    sub_1C3B9C0(gameObject, v15);
   }
   v25.fields.x = 0.0;
   v25.fields.y = (float)-height * 0.5;

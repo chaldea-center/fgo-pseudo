@@ -1,13 +1,13 @@
 void __fastcall EventPointUpperReleaseEntity___ctor(EventPointUpperReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD7D2 & 1) == 0 )
+  if ( (byte_4C21FE4 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFD7D2 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C21FE4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4BFD7D1 & 1) == 0 )
+  if ( (byte_4C21FE3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&eventPointUpperId);
-    byte_4BFD7D1 = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&eventPointUpperId);
+    byte_4C21FE3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            version,
            eventPointUpperId,
            priority,
            idx,
-           (const MethodInfo_2FD03A4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2FEECDC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 

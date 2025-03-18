@@ -71,181 +71,181 @@ void __fastcall TutorialFlag___cctor(const MethodInfo *method)
   FollowerInfo_o *v69; // x6
   PartyListViewItem_o *v70; // x7
 
-  if ( (byte_4BFC74B & 1) == 0 )
+  if ( (byte_4C20F59 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v8);
-    sub_1C2E12C(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v9);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v10);
-    sub_1C2E12C(&StringLiteral_13720/*"TUTORIAL_LABEL_EVENT_GACHA"*/, v11);
-    sub_1C2E12C(&StringLiteral_13733/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/, v12);
-    sub_1C2E12C(&StringLiteral_13715/*"TUTORIAL_LABEL_COMBINE"*/, v13);
-    sub_1C2E12C(&StringLiteral_13731/*"TUTORIAL_LABEL_RAID2_BATTLE"*/, v14);
-    sub_1C2E12C(&StringLiteral_13719/*"TUTORIAL_LABEL_END"*/, v15);
-    sub_1C2E12C(&StringLiteral_13729/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/, v16);
-    sub_1C2E12C(&StringLiteral_14869/*"TutorialFlagConfigId"*/, v17);
-    sub_1C2E12C(&StringLiteral_13716/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/, v18);
-    sub_1C2E12C(&StringLiteral_14872/*"TutorialFlagProgress"*/, v19);
-    sub_1C2E12C(&StringLiteral_13723/*"TUTORIAL_LABEL_FAVORITE1"*/, v20);
-    sub_1C2E12C(&StringLiteral_14870/*"TutorialFlagGachaId"*/, v21);
-    sub_1C2E12C(&StringLiteral_13722/*"TUTORIAL_LABEL_EVENT_REWARD"*/, v22);
-    sub_1C2E12C(&StringLiteral_13718/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/, v23);
-    sub_1C2E12C(&StringLiteral_13728/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/, v24);
-    sub_1C2E12C(&StringLiteral_13735/*"TUTORIAL_LABEL_STONE_GACHA"*/, v25);
-    sub_1C2E12C(&StringLiteral_13736/*"TUTORIAL_LABEL_SVT_LEAVE"*/, v26);
-    sub_1C2E12C(&StringLiteral_13734/*"TUTORIAL_LABEL_SHOP"*/, v27);
-    sub_1C2E12C(&StringLiteral_13727/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/, v28);
-    sub_1C2E12C(&StringLiteral_14871/*"TutorialFlagLocalId"*/, v29);
-    sub_1C2E12C(&StringLiteral_13730/*"TUTORIAL_LABEL_MASHU_CHANGE"*/, v30);
-    sub_1C2E12C(&StringLiteral_13721/*"TUTORIAL_LABEL_EVENT_MISSION"*/, v31);
-    sub_1C2E12C(&StringLiteral_13726/*"TUTORIAL_LABEL_GACHA_SCENE"*/, v32);
-    sub_1C2E12C(&StringLiteral_13717/*"TUTORIAL_LABEL_DECK_SCENE"*/, v33);
-    sub_1C2E12C(&StringLiteral_13732/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/, v34);
-    sub_1C2E12C(&StringLiteral_13724/*"TUTORIAL_LABEL_FAVORITE2"*/, v35);
-    sub_1C2E12C(&StringLiteral_13725/*"TUTORIAL_LABEL_FES"*/, v36);
-    byte_4BFC74B = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__, v1);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__, v8);
+    sub_1C3B764(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo, v9);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v10);
+    sub_1C3B764(&StringLiteral_13748/*"The member '"*/, v11);
+    sub_1C3B764(&StringLiteral_13761/*"The namespace attribute cannot have empty string as its value."*/, v12);
+    sub_1C3B764(&StringLiteral_13743/*"The lock is being disposed while still being used. It either is being held by a thread and/or has active waiters waiting to acquire the lock."*/, v13);
+    sub_1C3B764(&StringLiteral_13759/*"The named node is from a different document context."*/, v14);
+    sub_1C3B764(&StringLiteral_13747/*"The maximumCount argument must be a positive number. If a maximum is not required, use the constructor without a maxCount parameter."*/, v15);
+    sub_1C3B764(&StringLiteral_13757/*"The name '{0}' is invalid. A DataTable cannot have the same name of the DataSet."*/, v16);
+    sub_1C3B764(&StringLiteral_14897/*"Uzbek"*/, v17);
+    sub_1C3B764(&StringLiteral_13744/*"The lower bound of target array must be zero."*/, v18);
+    sub_1C3B764(&StringLiteral_14900/*"V"*/, v19);
+    sub_1C3B764(&StringLiteral_13751/*"The method has {0} generic parameter(s) but {1} generic argument(s) were provided."*/, v20);
+    sub_1C3B764(&StringLiteral_14898/*"Uzbek (Cyrillic, Uzbekistan)"*/, v21);
+    sub_1C3B764(&StringLiteral_13750/*"The method cannot be called twice on the same instance."*/, v22);
+    sub_1C3B764(&StringLiteral_13746/*"The maxOccurs attribute must have a value of 1 or *."*/, v23);
+    sub_1C3B764(&StringLiteral_13756/*"The name '{0}' is invalid. A DataSet cannot have the same name of the DataTable."*/, v24);
+    sub_1C3B764(&StringLiteral_13763/*"The namespace of element '{0}'is not valid with respect to the wildcard's namespace constraint in the base, Elt:Any -- NSCompat Rule 1."*/, v25);
+    sub_1C3B764(&StringLiteral_13764/*"The network connection was lost."*/, v26);
+    sub_1C3B764(&StringLiteral_13762/*"The namespace declaration attribute has an incorrect 'namespaceURI': '{0}'."*/, v27);
+    sub_1C3B764(&StringLiteral_13755/*"The model attribute must have a value of open or closed, not '{0}'."*/, v28);
+    sub_1C3B764(&StringLiteral_14899/*"Uzbek (Latin, Uzbekistan)"*/, v29);
+    sub_1C3B764(&StringLiteral_13758/*"The name can be no more than 260 characters in length."*/, v30);
+    sub_1C3B764(&StringLiteral_13749/*"The member must be either a field or a property."*/, v31);
+    sub_1C3B764(&StringLiteral_13754/*"The minOccurs attribute must have a value of 0 or 1."*/, v32);
+    sub_1C3B764(&StringLiteral_13745/*"The maxLength value must be equal to or greater than the minLength value."*/, v33);
+    sub_1C3B764(&StringLiteral_13760/*"The namespace attribute '{0}' of an import should be the same value as the targetNamespace '{1}' of the imported schema."*/, v34);
+    sub_1C3B764(&StringLiteral_13752/*"The method or operation is not implemented."*/, v35);
+    sub_1C3B764(&StringLiteral_13753/*"The method signature cannot be null."*/, v36);
+    byte_4C20F59 = 1;
   }
-  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14872/*"TutorialFlagProgress"*/;
-  sub_1C2E0D0(
+  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14900/*"V"*/;
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)TutorialFlag_TypeInfo->static_fields,
-    StringLiteral_14872/*"TutorialFlagProgress"*/,
+    StringLiteral_14900/*"V"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v37 = StringLiteral_14871/*"TutorialFlagLocalId"*/;
+  v37 = StringLiteral_14899/*"Uzbek (Latin, Uzbekistan)"*/;
   static_fields = TutorialFlag_TypeInfo->static_fields;
-  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14871/*"TutorialFlagLocalId"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY2, v37, v39, v40, v41, v42, v43, v44);
-  v45 = StringLiteral_14869/*"TutorialFlagConfigId"*/;
+  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14899/*"Uzbek (Latin, Uzbekistan)"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->SAVE_KEY2, v37, v39, v40, v41, v42, v43, v44);
+  v45 = StringLiteral_14897/*"Uzbek"*/;
   v46 = TutorialFlag_TypeInfo->static_fields;
-  v46->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14869/*"TutorialFlagConfigId"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v46->SAVE_KEY3, v45, v47, v48, v49, v50, v51, v52);
-  v53 = StringLiteral_14870/*"TutorialFlagGachaId"*/;
+  v46->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14897/*"Uzbek"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v46->SAVE_KEY3, v45, v47, v48, v49, v50, v51, v52);
+  v53 = StringLiteral_14898/*"Uzbek (Cyrillic, Uzbekistan)"*/;
   v54 = TutorialFlag_TypeInfo->static_fields;
-  v54->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14870/*"TutorialFlagGachaId"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v54->SAVE_KEY4, v53, v55, v56, v57, v58, v59, v60);
-  v61 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C2E378(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
+  v54->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14898/*"Uzbek (Cyrillic, Uzbekistan)"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v54->SAVE_KEY4, v53, v55, v56, v57, v58, v59, v60);
+  v61 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
   System_Collections_Generic_Dictionary_object__Int32Enum____ctor(
     v61,
-    (const MethodInfo_332F1F8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
+    (const MethodInfo_334EDEC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
   if ( !v61 )
-    sub_1C2E388(v62, v63);
+    sub_1C3B9C0(v62, v63);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13735/*"TUTORIAL_LABEL_STONE_GACHA"*/,
+    (Il2CppObject *)StringLiteral_13763/*"The namespace of element '{0}'is not valid with respect to the wildcard's namespace constraint in the base, Elt:Any -- NSCompat Rule 1."*/,
     101,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13719/*"TUTORIAL_LABEL_END"*/,
+    (Il2CppObject *)StringLiteral_13747/*"The maximumCount argument must be a positive number. If a maximum is not required, use the constructor without a maxCount parameter."*/,
     102,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13734/*"TUTORIAL_LABEL_SHOP"*/,
+    (Il2CppObject *)StringLiteral_13762/*"The namespace declaration attribute has an incorrect 'namespaceURI': '{0}'."*/,
     103,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13715/*"TUTORIAL_LABEL_COMBINE"*/,
+    (Il2CppObject *)StringLiteral_13743/*"The lock is being disposed while still being used. It either is being held by a thread and/or has active waiters waiting to acquire the lock."*/,
     104,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13723/*"TUTORIAL_LABEL_FAVORITE1"*/,
+    (Il2CppObject *)StringLiteral_13751/*"The method has {0} generic parameter(s) but {1} generic argument(s) were provided."*/,
     105,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13724/*"TUTORIAL_LABEL_FAVORITE2"*/,
+    (Il2CppObject *)StringLiteral_13752/*"The method or operation is not implemented."*/,
     106,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13726/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
+    (Il2CppObject *)StringLiteral_13754/*"The minOccurs attribute must have a value of 0 or 1."*/,
     107,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13727/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13755/*"The model attribute must have a value of open or closed, not '{0}'."*/,
     108,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13717/*"TUTORIAL_LABEL_DECK_SCENE"*/,
+    (Il2CppObject *)StringLiteral_13745/*"The maxLength value must be equal to or greater than the minLength value."*/,
     109,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13718/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13746/*"The maxOccurs attribute must have a value of 1 or *."*/,
     110,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13720/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
+    (Il2CppObject *)StringLiteral_13748/*"The member '"*/,
     111,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13722/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13750/*"The method cannot be called twice on the same instance."*/,
     112,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13716/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
+    (Il2CppObject *)StringLiteral_13744/*"The lower bound of target array must be zero."*/,
     113,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13721/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
+    (Il2CppObject *)StringLiteral_13749/*"The member must be either a field or a property."*/,
     114,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13730/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
+    (Il2CppObject *)StringLiteral_13758/*"The name can be no more than 260 characters in length."*/,
     115,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13728/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
+    (Il2CppObject *)StringLiteral_13756/*"The name '{0}' is invalid. A DataSet cannot have the same name of the DataTable."*/,
     117,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13729/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13757/*"The name '{0}' is invalid. A DataTable cannot have the same name of the DataSet."*/,
     118,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13731/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
+    (Il2CppObject *)StringLiteral_13759/*"The named node is from a different document context."*/,
     120,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13733/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
+    (Il2CppObject *)StringLiteral_13761/*"The namespace attribute cannot have empty string as its value."*/,
     121,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13732/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
+    (Il2CppObject *)StringLiteral_13760/*"The namespace attribute '{0}' of an import should be the same value as the targetNamespace '{1}' of the imported schema."*/,
     122,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13736/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
+    (Il2CppObject *)StringLiteral_13764/*"The network connection was lost."*/,
     126,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
     v61,
-    (Il2CppObject *)StringLiteral_13725/*"TUTORIAL_LABEL_FES"*/,
+    (Il2CppObject *)StringLiteral_13753/*"The method signature cannot be null."*/,
     127,
-    (const MethodInfo_332FBAC *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_334F7A0 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   v64 = TutorialFlag_TypeInfo->static_fields;
   v64->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v61;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v64->flagNameList, (int64_t)v61, v65, v66, v67, v68, v69, v70);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v64->flagNameList, (int64_t)v61, v65, v66, v67, v68, v69, v70);
 }
 
 
@@ -262,11 +262,11 @@ void __fastcall TutorialFlag__ClearProgress(const MethodInfo *method)
   ManagerConfig_c *v3; // x0
   TutorialFlag_c *v4; // x0
 
-  if ( (byte_4BFC73D & 1) == 0 )
+  if ( (byte_4C20F4B & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, v1);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v2);
-    byte_4BFC73D = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, v1);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v2);
+    byte_4C20F4B = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -292,10 +292,10 @@ void __fastcall TutorialFlag__CompleteProgress(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_4BFC73E & 1) == 0 )
+  if ( (byte_4C20F4C & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v1);
-    byte_4BFC73E = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, v1);
+    byte_4C20F4C = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -308,10 +308,10 @@ void __fastcall TutorialFlag__DeleteContinueData(const MethodInfo *method)
   __int64 v1; // x1
   TutorialFlag_c *v2; // x0
 
-  if ( (byte_4BFC733 & 1) == 0 )
+  if ( (byte_4C20F41 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v1);
-    byte_4BFC733 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, v1);
+    byte_4C20F41 = 1;
   }
   v2 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -331,15 +331,15 @@ bool __fastcall TutorialFlag__Get(System_String_o *flagIdName, const MethodInfo 
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4BFC736 & 1) == 0 )
+  if ( (byte_4C20F44 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC736 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F44 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  return TutorialFlag__Get_39000124(Id, v4);
+  return TutorialFlag__Get_39109112(Id, v4);
 }
 
 
@@ -348,10 +348,10 @@ bool __fastcall TutorialFlag__GetConfigFlg(int32_t configFlagId, const MethodInf
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4BFC747 & 1) == 0 )
+  if ( (byte_4C20F55 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC747 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F55 = 1;
   }
   if ( (unsigned int)configFlagId > 0x63 )
     return 0;
@@ -372,10 +372,10 @@ bool __fastcall TutorialFlag__GetGachaFlg(int32_t gachaFlagId, const MethodInfo 
   TutorialFlag_c *v3; // x0
 
   v2 = gachaFlagId;
-  if ( (byte_4BFC749 & 1) == 0 )
+  if ( (byte_4C20F57 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC749 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F57 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -393,11 +393,11 @@ int32_t __fastcall TutorialFlag__GetId(System_String_o *flagIdName, const Method
   TutorialFlag_c *v4; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *flagNameList; // x0
 
-  if ( (byte_4BFC735 & 1) == 0 )
+  if ( (byte_4C20F43 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v3);
-    byte_4BFC735 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__, method);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v3);
+    byte_4C20F43 = 1;
   }
   v4 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -407,11 +407,11 @@ int32_t __fastcall TutorialFlag__GetId(System_String_o *flagIdName, const Method
   }
   flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v4->static_fields->flagNameList;
   if ( !flagNameList )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   return System_Collections_Generic_Dictionary_object__Int32Enum___get_Item(
            flagNameList,
            (Il2CppObject *)flagIdName,
-           (const MethodInfo_332FB2C *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
+           (const MethodInfo_334F720 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
 }
 
 
@@ -436,17 +436,17 @@ TutorialFlag_Id_array *__fastcall TutorialFlag__GetIdList(const MethodInfo *meth
   char *v17; // x9
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v19; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4BFC734 & 1) == 0 )
+  if ( (byte_4C20F42 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v2);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__, v5);
-    sub_1C2E12C(&TutorialFlag_Id___TypeInfo, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v7);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v8);
-    byte_4BFC734 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__, v1);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__, v2);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__, v5);
+    sub_1C3B764(&TutorialFlag_Id___TypeInfo, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__, v7);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v8);
+    byte_4C20F42 = 1;
   }
   v9 = TutorialFlag_TypeInfo;
   memset(&v19, 0, sizeof(v19));
@@ -459,36 +459,36 @@ TutorialFlag_Id_array *__fastcall TutorialFlag__GetIdList(const MethodInfo *meth
   if ( !flagNameList
     || (Count = System_Collections_Generic_Dictionary_object__Int32Enum___get_Count(
                   flagNameList,
-                  (const MethodInfo_332F87C *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
-        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C2E1D4(
+                  (const MethodInfo_334F470 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
+        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C3B80C(
                                                                                   TutorialFlag_Id___TypeInfo,
                                                                                   Count),
         (v12 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)TutorialFlag_TypeInfo->static_fields->flagNameList) == 0LL) )
   {
-    sub_1C2E388(flagNameList, v1);
+    sub_1C3B9C0(flagNameList, v1);
   }
   v13 = (TutorialFlag_Id_array *)flagNameList;
   System_Collections_Generic_Dictionary_object__Int32Enum___GetEnumerator(
     &v19,
     v12,
-    (const MethodInfo_332FF9C *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
+    (const MethodInfo_334FB90 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
   for ( i = 0; ; ++i )
   {
     v15 = System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___MoveNext(
             &v19,
-            (const MethodInfo_343001C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
+            (const MethodInfo_345021C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
     if ( !v15 )
       break;
     if ( !v13 )
-      sub_1C2E388(v15, v16);
+      sub_1C3B9C0(v15, v16);
     if ( i >= v13->max_length )
-      sub_1C2E390(v15, v16);
+      sub_1C3B9C8(v15, v16);
     v17 = (char *)v13 + 4 * (int)i;
     *((_DWORD *)v17 + 8) = v19.fields._current.fields.value;
   }
   System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___Dispose(
     &v19,
-    (const MethodInfo_3430140 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
+    (const MethodInfo_3450340 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
   return v13;
 }
 
@@ -498,10 +498,10 @@ int32_t __fastcall TutorialFlag__GetProgress(const MethodInfo *method)
   __int64 v1; // x1
   TutorialFlag_c *v2; // x0
 
-  if ( (byte_4BFC73C & 1) == 0 )
+  if ( (byte_4C20F4A & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v1);
-    byte_4BFC73C = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, v1);
+    byte_4C20F4A = 1;
   }
   v2 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -513,20 +513,20 @@ int32_t __fastcall TutorialFlag__GetProgress(const MethodInfo *method)
 }
 
 
-bool __fastcall TutorialFlag__Get_39000124(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39109112(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4BFC737 & 1) == 0 )
+  if ( (byte_4C20F45 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC737 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F45 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_39033412(flagId, method);
+  return TutorialFlag__Get_39142400(flagId, method);
 }
 
 
-bool __fastcall TutorialFlag__Get_39000304(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39109292(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial1; // x8
 
@@ -553,13 +553,13 @@ bool __fastcall TutorialFlag__Get_39000304(UserGameEntity_o *userGameEntity, int
                                                  + (1374389535LL * flagId < 0))))) != 0;
     }
 LABEL_9:
-    sub_1C2E388(userGameEntity, flagId);
+    sub_1C3B9C0(userGameEntity, flagId);
   }
   return 0;
 }
 
 
-bool __fastcall TutorialFlag__Get_39000524(
+bool __fastcall TutorialFlag__Get_39109512(
         OtherUserGameEntity_o *otherUserGameEntity,
         int32_t flagId,
         const MethodInfo *method)
@@ -567,7 +567,7 @@ bool __fastcall TutorialFlag__Get_39000524(
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !otherUserGameEntity )
-    sub_1C2E388(0LL, flagId);
+    sub_1C3B9C0(0LL, flagId);
   return (otherUserGameEntity->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                                      - 100
                                                                      * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -575,12 +575,12 @@ bool __fastcall TutorialFlag__Get_39000524(
 }
 
 
-bool __fastcall TutorialFlag__Get_39000716(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39109704(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !followerInfo )
-    sub_1C2E388(0LL, flagId);
+    sub_1C3B9C0(0LL, flagId);
   return (followerInfo->fields.tutorial1 & (unsigned int)(1 << (flagId
                                                               - 100
                                                               * (((unsigned __int64)(1374389535LL * flagId) >> 37)
@@ -588,32 +588,32 @@ bool __fastcall TutorialFlag__Get_39000716(FollowerInfo_o *followerInfo, int32_t
 }
 
 
-bool __fastcall TutorialFlag__Get_39033412(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39142400(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4BFC738 & 1) == 0 )
+  if ( (byte_4C20F46 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC738 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F46 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_39000304(SelfUserGame, flagId, v3);
+  return TutorialFlag__Get_39109292(SelfUserGame, flagId, v3);
 }
 
 
-bool __fastcall TutorialFlag__Get_39034848(int32_t flagId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39143836(int32_t flagId, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4BFC744 & 1) == 0 )
+  if ( (byte_4C20F52 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC744 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F52 = 1;
   }
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
@@ -629,7 +629,7 @@ bool __fastcall TutorialFlag__Get_39034848(int32_t flagId, const MethodInfo *met
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall TutorialFlag__Get_39035272(int32_t flagId, int32_t eventId, const MethodInfo *method)
+bool __fastcall TutorialFlag__Get_39144260(int32_t flagId, int32_t eventId, const MethodInfo *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
@@ -638,26 +638,26 @@ bool __fastcall TutorialFlag__Get_39035272(int32_t flagId, int32_t eventId, cons
   Il2CppObject *MasterData_object; // x21
   UserEventEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BFC746 & 1) == 0 )
+  if ( (byte_4C20F54 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v5);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4BFC746 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
+    sub_1C3B764(&NetworkManager_TypeInfo, v5);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4C20F54 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BF81D5 )
+  if ( !byte_4C1C955 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, v8);
-    byte_4BF81D5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, v8);
+    byte_4C1C955 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -677,7 +677,7 @@ bool __fastcall TutorialFlag__Get_39035272(int32_t flagId, int32_t eventId, cons
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_16:
-    sub_1C2E388(Instance, v8);
+    sub_1C3B9C0(Instance, v8);
   return UserEventEntity__getTutorialFlag(entity, flagId, 0LL);
 }
 
@@ -687,14 +687,14 @@ bool __fastcall TutorialFlag__IsProgressComplete(const MethodInfo *method)
   const MethodInfo *v1; // x1
   const MethodInfo *v2; // x1
 
-  if ( (byte_4BFC743 & 1) == 0 )
+  if ( (byte_4C20F51 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v1);
-    byte_4BFC743 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, v1);
+    byte_4C20F51 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_39000124(102, v1) )
+  if ( TutorialFlag__Get_39109112(102, v1) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -706,29 +706,29 @@ bool __fastcall TutorialFlag__IsProgressDone(int32_t count, const MethodInfo *me
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4BFC741 & 1) == 0 )
+  if ( (byte_4C20F4F & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC741 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F4F = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_39000124(102, method) )
+  if ( TutorialFlag__Get_39109112(102, method) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__IsProgressDone_39034632(count, v3);
+  return TutorialFlag__IsProgressDone_39143620(count, v3);
 }
 
 
-bool __fastcall TutorialFlag__IsProgressDone_39034632(int32_t count, const MethodInfo *method)
+bool __fastcall TutorialFlag__IsProgressDone_39143620(int32_t count, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4BFC742 & 1) == 0 )
+  if ( (byte_4C20F50 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC742 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F50 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -742,15 +742,15 @@ void __fastcall TutorialFlag__Set(System_String_o *flagIdName, const MethodInfo 
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4BFC739 & 1) == 0 )
+  if ( (byte_4C20F47 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC739 = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F47 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  TutorialFlag__Set_39033604(Id, v4);
+  TutorialFlag__Set_39142592(Id, v4);
 }
 
 
@@ -761,11 +761,11 @@ void __fastcall TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInf
   TutorialFlag_c *v5; // x0
   int32_t Int; // w0
 
-  if ( (byte_4BFC748 & 1) == 0 )
+  if ( (byte_4C20F56 & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, method);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v3);
-    byte_4BFC748 = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, method);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v3);
+    byte_4C20F56 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -801,11 +801,11 @@ void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo 
   int32_t Int; // w0
 
   v2 = gachaFlagId;
-  if ( (byte_4BFC74A & 1) == 0 )
+  if ( (byte_4C20F58 & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, method);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v3);
-    byte_4BFC74A = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, method);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v3);
+    byte_4C20F58 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -831,28 +831,28 @@ void __fastcall TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo 
 
 void __fastcall TutorialFlag__SetProgress(int32_t count, const MethodInfo *method)
 {
-  if ( (byte_4BFC73F & 1) == 0 )
+  if ( (byte_4C20F4D & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC73F = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F4D = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__SetProgress_39034332(count, method);
+  TutorialFlag__SetProgress_39143320(count, method);
 }
 
 
-void __fastcall TutorialFlag__SetProgress_39034332(int32_t count, const MethodInfo *method)
+void __fastcall TutorialFlag__SetProgress_39143320(int32_t count, const MethodInfo *method)
 {
   __int64 v3; // x1
   ManagerConfig_c *v4; // x0
   TutorialFlag_c *v5; // x0
 
-  if ( (byte_4BFC740 & 1) == 0 )
+  if ( (byte_4C20F4E & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, method);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v3);
-    byte_4BFC740 = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, method);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v3);
+    byte_4C20F4E = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -874,37 +874,37 @@ void __fastcall TutorialFlag__SetProgress_39034332(int32_t count, const MethodIn
 }
 
 
-void __fastcall TutorialFlag__Set_39033604(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_39142592(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4BFC73A & 1) == 0 )
+  if ( (byte_4C20F48 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC73A = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F48 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_39033688(flagId, method);
+  TutorialFlag__Set_39142676(flagId, method);
 }
 
 
-void __fastcall TutorialFlag__Set_39033688(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_39142676(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4BFC73B & 1) == 0 )
+  if ( (byte_4C20F49 & 1) == 0 )
   {
-    sub_1C2E12C(&TutorialFlag_TypeInfo, method);
-    byte_4BFC73B = 1;
+    sub_1C3B764(&TutorialFlag_TypeInfo, method);
+    byte_4C20F49 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_39033792(SelfUserGame, flagId, v3);
+  TutorialFlag__Set_39142780(SelfUserGame, flagId, v3);
 }
 
 
-void __fastcall TutorialFlag__Set_39033792(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_39142780(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial2; // x8
 
@@ -918,7 +918,7 @@ void __fastcall TutorialFlag__Set_39033792(UserGameEntity_o *userGameEntity, int
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1C2E388(userGameEntity, flagId);
+    sub_1C3B9C0(userGameEntity, flagId);
   }
   if ( !userGameEntity )
     goto LABEL_9;
@@ -930,7 +930,7 @@ LABEL_7:
 }
 
 
-void __fastcall TutorialFlag__Set_39035020(int32_t flagId, const MethodInfo *method)
+void __fastcall TutorialFlag__Set_39144008(int32_t flagId, const MethodInfo *method)
 {
   __int64 v3; // x1
   ManagerConfig_c *v4; // x0
@@ -938,11 +938,11 @@ void __fastcall TutorialFlag__Set_39035020(int32_t flagId, const MethodInfo *met
   int v6; // w19
   int32_t Int; // w0
 
-  if ( (byte_4BFC745 & 1) == 0 )
+  if ( (byte_4C20F53 & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, method);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v3);
-    byte_4BFC745 = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, method);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v3);
+    byte_4C20F53 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )

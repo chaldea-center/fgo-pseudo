@@ -15,22 +15,22 @@ void __fastcall BattleServantParamSetting___ctor(BattleServantParamSetting_o *th
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4C00AB6 & 1) == 0 )
+  if ( (byte_4C252E4 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, method);
-    byte_4C00AB6 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, method);
+    byte_4C252E4 = 1;
   }
   this->fields.BoxColliderPosition.fields.x = NAN;
   v9 = StringLiteral_1/*""*/;
   this->fields.TargetIconSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.TargetIconSpriteName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.TargetIconSpriteName, (int64_t)v9, v2, v3, v4, v5, v6, v7);
   this->fields.TargetIconPosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.TargetIconPosition.fields.x = 0x41B00000C25C0000LL;
-  *(_OWORD *)&this->fields.TargetIconWidth = xmmword_C074D0;
+  *(_OWORD *)&this->fields.TargetIconWidth = xmmword_C0E860;
   *(_QWORD *)&this->fields.TargetIconHeightWhenFix = 0xFFFFFFE300000046LL;
   v10 = StringLiteral_1/*""*/;
   this->fields.FixTargetIconSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.FixTargetIconSpriteName,
     (int64_t)v10,
     v11,
@@ -47,6 +47,6 @@ void __fastcall BattleServantParamSetting___ctor(BattleServantParamSetting_o *th
   this->fields.FixTargetIconPosition.fields.z = 0.0;
   this->fields.FixTargetIconDepth = -30;
   this->fields.FixTargetIconDepthWhenTarget = -30;
-  this->fields.FixTargetIconColorWhenTarget = (struct UnityEngine_Color_o)xmmword_C07620;
+  this->fields.FixTargetIconColorWhenTarget = (struct UnityEngine_Color_o)xmmword_C0E9B0;
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
 }

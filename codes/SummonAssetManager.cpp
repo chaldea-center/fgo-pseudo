@@ -1,13 +1,13 @@
 void __fastcall SummonAssetManager___ctor(SummonAssetManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFCA4B & 1) == 0 )
+  if ( (byte_4C21259 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__, method);
-    byte_4BFCA4B = 1;
+    sub_1C3B764(&Method_SingletonMonoBehaviour_SummonAssetManager___ctor__, method);
+    byte_4C21259 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38A83A8 *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
+    (const MethodInfo_38C8B4C *)Method_SingletonMonoBehaviour_SummonAssetManager___ctor__);
 }
 
 
@@ -24,7 +24,7 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
   __int64 v11; // x1
   ServantRewardAction_o *result; // x0
   System_String_o **v13; // x8
-  Il2CppObject *Object_object__50017172; // x19
+  Il2CppObject *Object_object__50142412; // x19
   UnityEngine_GameObject_o *transform; // x0
   __int64 v16; // x1
   UnityEngine_GameObject_o *v17; // x19
@@ -32,31 +32,31 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
   UnityEngine_Transform_o *v19; // x20
   UnityEngine_Transform_o *v20; // x20
 
-  if ( (byte_4BFCA49 & 1) == 0 )
+  if ( (byte_4C21257 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, parent);
-    sub_1C2E12C(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___, v7);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C2E12C(&StringLiteral_12906/*"Servant_get_prefab"*/, v10);
-    sub_1C2E12C(&StringLiteral_12907/*"Servant_get_prefab_for_battle"*/, v11);
-    byte_4BFCA49 = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, parent);
+    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___, v7);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v8);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C3B764(&StringLiteral_12934/*"System.Data.Objects.DataClasses.EntityObject"*/, v10);
+    sub_1C3B764(&StringLiteral_12935/*"System.Data.Objects.DataClasses.EntityReference`1"*/, v11);
+    byte_4C21257 = 1;
   }
   result = (ServantRewardAction_o *)this->fields.summonAssets;
   if ( result )
   {
-    v13 = (System_String_o **)&StringLiteral_12907/*"Servant_get_prefab_for_battle"*/;
+    v13 = (System_String_o **)&StringLiteral_12935/*"System.Data.Objects.DataClasses.EntityReference`1"*/;
     if ( !isForBattle )
-      v13 = (System_String_o **)&StringLiteral_12906/*"Servant_get_prefab"*/;
-    Object_object__50017172 = AssetData__GetObject_object__50017172(
+      v13 = (System_String_o **)&StringLiteral_12934/*"System.Data.Objects.DataClasses.EntityObject"*/;
+    Object_object__50142412 = AssetData__GetObject_object__50142412(
                                 (AssetData_o *)result,
                                 *v13,
-                                (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+                                (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                              Object_object__50017172,
-                                              (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              Object_object__50142412,
+                                              (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !transform )
       goto LABEL_21;
     v17 = transform;
@@ -66,20 +66,20 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
     UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)transform, parent, 0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v18 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4BF7D91 )
+    if ( !byte_4C1C511 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v16);
-      byte_4BF7D91 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v16);
+      byte_4C1C511 = 1;
     }
     if ( !v18 )
       goto LABEL_21;
     UnityEngine_Transform__set_localPosition(v18, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v19 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4BF7D97 )
+    if ( !byte_4C1C517 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1C2E12C(&UnityEngine_Quaternion_TypeInfo, v16);
-      byte_4BF7D97 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Quaternion_TypeInfo, v16);
+      byte_4C1C517 = 1;
     }
     if ( !v19 )
       goto LABEL_21;
@@ -89,18 +89,18 @@ ServantRewardAction_o *__fastcall SummonAssetManager__InstantiateSvtGetPrefab(
       0LL);
     transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
     v20 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4BF7D96 )
+    if ( !byte_4C1C516 )
     {
-      transform = (UnityEngine_GameObject_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v16);
-      byte_4BF7D96 = 1;
+      transform = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v16);
+      byte_4C1C516 = 1;
     }
     if ( !v20 )
 LABEL_21:
-      sub_1C2E388(transform, v16);
+      sub_1C3B9C0(transform, v16);
     UnityEngine_Transform__set_localScale(v20, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
     return (ServantRewardAction_o *)GameObjectExtensions__SafeGetComponent_object_(
                                       v17,
-                                      (const MethodInfo_30245F4 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
+                                      (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_ServantRewardAction___);
   }
   return result;
 }
@@ -133,23 +133,23 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
   AssetData_o *summonAssets; // x0
   AssetLoader_LoadEndDataHandler_o *v25; // x19
 
-  if ( (byte_4BFCA48 & 1) == 0 )
+  if ( (byte_4C21256 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, onLoad);
-    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_1C2E12C(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__, v6);
-    sub_1C2E12C(&SummonAssetManager___c__DisplayClass1_0_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_6000/*"Effect/Summon"*/, v8);
-    byte_4BFCA48 = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, onLoad);
+    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
+    sub_1C3B764(&Method_SummonAssetManager___c__DisplayClass1_0__LoadSummonAssets_b__0__, v6);
+    sub_1C3B764(&SummonAssetManager___c__DisplayClass1_0_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_6001/*"Error GZIP header,  second magic byte doesn't match"*/, v8);
+    byte_4C21256 = 1;
   }
-  v9 = sub_1C2E378(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
+  v9 = sub_1C3B9B0(SummonAssetManager___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1C2E388(v10, v11);
+    sub_1C3B9C0(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = onLoad;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)onLoad, v18, v19, v20, v21, v22, v23);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)onLoad, v18, v19, v20, v21, v22, v23);
   summonAssets = this->fields.summonAssets;
   if ( summonAssets && !AssetData__get_IsEmpty(summonAssets, 0LL) )
   {
@@ -157,7 +157,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
   }
   else
   {
-    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3B9B0(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v25,
       (Il2CppObject *)v9,
@@ -165,7 +165,7 @@ void __fastcall SummonAssetManager__LoadSummonAssets(
       0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6000/*"Effect/Summon"*/, v25, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6001/*"Error GZIP header,  second magic byte doesn't match"*/, v25, 1, 0LL);
   }
 }
 
@@ -182,10 +182,10 @@ void __fastcall SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *thi
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BFCA4A & 1) == 0 )
+  if ( (byte_4C21258 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    byte_4BFCA4A = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    byte_4C21258 = 1;
   }
   summonAssets = this->fields.summonAssets;
   p_summonAssets = (PartyOrganizationUtility_o *)&this->fields.summonAssets;
@@ -194,9 +194,9 @@ void __fastcall SummonAssetManager__UnloadSummonAssets(SummonAssetManager_o *thi
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_39104116(v4, 0LL);
+    AssetManager__releaseAsset_39213104(v4, 0LL);
     p_summonAssets->klass = 0LL;
-    sub_1C2E0D0(p_summonAssets, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1C3B708(p_summonAssets, 0LL, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -223,9 +223,9 @@ void __fastcall SummonAssetManager___c__DisplayClass1_0___LoadSummonAssets_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C2E388(0LL, data);
+    sub_1C3B9C0(0LL, data);
   _4__this->fields.summonAssets = data;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&_4__this->fields.summonAssets,
     (int64_t)data,
     (int64_t)method,

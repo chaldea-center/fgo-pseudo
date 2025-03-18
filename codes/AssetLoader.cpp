@@ -21,7 +21,7 @@ void __fastcall AssetLoader__AddEntry(AssetLoader_o *this, const MethodInfo *met
 
   data = this->fields.data;
   if ( !data )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   entryCount = data->fields.entryCount;
   if ( (entryCount & 0x80000000) == 0 )
     data->fields.entryCount = entryCount + 1;
@@ -343,243 +343,243 @@ void __fastcall AssetLoader__AssetLoadLogError(
   CrashReporter_o *v311; // x19
 
   v3 = errorCode;
-  if ( (byte_4BFC79E & 1) == 0 )
+  if ( (byte_4C20FAC & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Debug_TypeInfo, errorCode);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5);
-    sub_1C2E12C(&string___TypeInfo, v6);
-    sub_1C2E12C(&StringLiteral_14375/*"The request timed out."*/, v7);
-    sub_1C2E12C(&StringLiteral_21314/*"java.net.SocketException"*/, v8);
-    sub_1C2E12C(&StringLiteral_12461/*"SSL CA certificate error"*/, v9);
-    sub_1C2E12C(&StringLiteral_1483/*"404: Not Found"*/, v10);
-    sub_1C2E12C(&StringLiteral_14305/*"The network connection was lost."*/, v11);
-    sub_1C2E12C(&StringLiteral_1477/*"400: Bad Request"*/, v12);
-    sub_1C2E12C(&StringLiteral_15155/*"Unable to complete SSL connection"*/, v13);
-    sub_1C2E12C(&StringLiteral_15187/*"Unable to read data"*/, v14);
-    sub_1C2E12C(&StringLiteral_18527/*"connect failed"*/, v15);
-    sub_1C2E12C(&StringLiteral_7335/*"HTTP/1.1 500 Internal Server Error"*/, v16);
-    sub_1C2E12C(&StringLiteral_21316/*"java.net.UnknownHostException"*/, v17);
-    sub_1C2E12C(&StringLiteral_1491/*"500: Internal Server Error"*/, v18);
-    sub_1C2E12C(&StringLiteral_1493/*"502:"*/, v19);
-    sub_1C2E12C(&StringLiteral_11517/*"Request timeout"*/, v20);
-    sub_1C2E12C(&StringLiteral_4778/*"Connection reset by peer"*/, v21);
-    sub_1C2E12C(&StringLiteral_5151/*"DLErrorType"*/, v22);
-    sub_1C2E12C(&StringLiteral_5150/*"DLErrorAsset"*/, v23);
-    sub_1C2E12C(&StringLiteral_1505/*"504: Gateway Timeout"*/, v24);
-    sub_1C2E12C(&StringLiteral_15364/*"Unknown Error"*/, v25);
-    sub_1C2E12C(&StringLiteral_1495/*"503 Auto retry count"*/, v26);
-    sub_1C2E12C(&StringLiteral_21297/*"java.io.EOFException"*/, v27);
-    sub_1C2E12C(&StringLiteral_21311/*"java.net.ConnectException"*/, v28);
-    sub_1C2E12C(&StringLiteral_1481/*"403: Forbidden"*/, v29);
-    sub_1C2E12C(&StringLiteral_4777/*"Connection refused"*/, v30);
-    sub_1C2E12C(&StringLiteral_7336/*"HTTP/1.1 504 Gateway Timeout"*/, v31);
-    sub_1C2E12C(&StringLiteral_1479/*"401: Authorization Required"*/, v32);
-    sub_1C2E12C(&StringLiteral_21298/*"java.io.IOException"*/, v33);
-    sub_1C2E12C(&StringLiteral_9617/*"No address associated with hostname"*/, v34);
-    sub_1C2E12C(&StringLiteral_21313/*"java.net.ProtocolException"*/, v35);
-    sub_1C2E12C(&StringLiteral_2517/*"AssetBundle file download time over"*/, v36);
-    sub_1C2E12C(&StringLiteral_1484/*"408: Request Time-out"*/, v37);
-    sub_1C2E12C(&StringLiteral_14795/*"Too many redirects"*/, v38);
-    sub_1C2E12C(&StringLiteral_13083/*"Software caused connection abort"*/, v39);
-    sub_1C2E12C(&StringLiteral_2516/*"AssetBundle file check sum error"*/, v40);
-    sub_1C2E12C(&StringLiteral_21312/*"java.net.NoRouteToHostException"*/, v41);
-    sub_1C2E12C(&StringLiteral_5387/*"Destination host has an erroneous SSL certificate"*/, v42);
-    sub_1C2E12C(&StringLiteral_4779/*"Connection timed out"*/, v43);
-    sub_1C2E12C(&StringLiteral_4374/*"Cannot resolve destination host"*/, v44);
-    sub_1C2E12C(&StringLiteral_21315/*"java.net.SocketTimeoutException"*/, v45);
-    sub_1C2E12C(&StringLiteral_2520/*"AssetLoadError"*/, v46);
-    byte_4BFC79E = 1;
+    sub_1C3B764(&UnityEngine_Debug_TypeInfo, errorCode);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__, v5);
+    sub_1C3B764(&string___TypeInfo, v6);
+    sub_1C3B764(&StringLiteral_14403/*"UIMasterFace"*/, v7);
+    sub_1C3B764(&StringLiteral_21350/*"mstEventPanelMapDetail"*/, v8);
+    sub_1C3B764(&StringLiteral_12484/*"SetParentRow requires a child row whose Table is {0}, but the specified row's Table is {1}."*/, v9);
+    sub_1C3B764(&StringLiteral_1482/*": Upgraded from bool to FsmBool"*/, v10);
+    sub_1C3B764(&StringLiteral_14333/*"Type {0} is a generic type definition"*/, v11);
+    sub_1C3B764(&StringLiteral_1476/*": Upgraded from Object to FsmObject"*/, v12);
+    sub_1C3B764(&StringLiteral_15183/*"WAVE_BATTLE_PARTY_ORGANIZATION_DECK_DESTROY_CONFIRM_DIALOG_DECIDE"*/, v13);
+    sub_1C3B764(&StringLiteral_15215/*"WEB_VIEW_TITLE_INFOMATION"*/, v14);
+    sub_1C3B764(&StringLiteral_18561/*"effectBgmId"*/, v15);
+    sub_1C3B764(&StringLiteral_7337/*"If-Unmodified-Since"*/, v16);
+    sub_1C3B764(&StringLiteral_21352/*"mstEventPanelSpot"*/, v17);
+    sub_1C3B764(&StringLiteral_1490/*":/"*/, v18);
+    sub_1C3B764(&StringLiteral_1492/*":///"*/, v19);
+    sub_1C3B764(&StringLiteral_11540/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_FRIENDSHIP"*/, v20);
+    sub_1C3B764(&StringLiteral_4778/*"Create"*/, v21);
+    sub_1C3B764(&StringLiteral_5151/*"DeflaterOutputStream Seek not supported"*/, v22);
+    sub_1C3B764(&StringLiteral_5150/*"DeflaterOutputStream ReadByte not supported"*/, v23);
+    sub_1C3B764(&StringLiteral_1504/*"; charset="*/, v24);
+    sub_1C3B764(&StringLiteral_15392/*"XDR"*/, v25);
+    sub_1C3B764(&StringLiteral_1494/*"::"*/, v26);
+    sub_1C3B764(&StringLiteral_21333/*"mstEventFortification"*/, v27);
+    sub_1C3B764(&StringLiteral_21347/*"mstEventMissionGroup"*/, v28);
+    sub_1C3B764(&StringLiteral_1480/*": Upgraded from Vector2 to FsmVector2"*/, v29);
+    sub_1C3B764(&StringLiteral_4777/*"Crashlytics recording exception: {0}\nException stack trace:\n{1}"*/, v30);
+    sub_1C3B764(&StringLiteral_7338/*"Iff"*/, v31);
+    sub_1C3B764(&StringLiteral_1478/*": Upgraded from Rect to FsmRect"*/, v32);
+    sub_1C3B764(&StringLiteral_21334/*"mstEventFortificationDetail"*/, v33);
+    sub_1C3B764(&StringLiteral_9619/*"OnClickListDropServantDetail"*/, v34);
+    sub_1C3B764(&StringLiteral_21349/*"mstEventPanelMap"*/, v35);
+    sub_1C3B764(&StringLiteral_2517/*"B"*/, v36);
+    sub_1C3B764(&StringLiteral_1483/*": Upgraded from float to FsmFloat"*/, v37);
+    sub_1C3B764(&StringLiteral_14823/*"Unsupported encoding '{0}': {1}"*/, v38);
+    sub_1C3B764(&StringLiteral_13111/*"TIME_STR_DAYS"*/, v39);
+    sub_1C3B764(&StringLiteral_2516/*"Azure"*/, v40);
+    sub_1C3B764(&StringLiteral_21348/*"mstEventMural"*/, v41);
+    sub_1C3B764(&StringLiteral_5387/*"ENTITY"*/, v42);
+    sub_1C3B764(&StringLiteral_4779/*"CreateArrayPropertyBag"*/, v43);
+    sub_1C3B764(&StringLiteral_4374/*"ChrVoice_{0}"*/, v44);
+    sub_1C3B764(&StringLiteral_21351/*"mstEventPanelScan"*/, v45);
+    sub_1C3B764(&StringLiteral_2520/*"B030"*/, v46);
+    byte_4C20FAC = 1;
   }
-  Instance = sub_1C2E1D4(string___TypeInfo, 37LL);
+  Instance = sub_1C3B80C(string___TypeInfo, 37LL);
   if ( !Instance )
     goto LABEL_58;
   v55 = Instance;
   if ( !*(_DWORD *)(Instance + 24) )
     goto LABEL_47;
-  v56 = StringLiteral_9617/*"No address associated with hostname"*/;
-  *(_QWORD *)(Instance + 32) = StringLiteral_9617/*"No address associated with hostname"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(Instance + 32), v56, v49, v50, v51, v52, v53, v54);
+  v56 = StringLiteral_9619/*"OnClickListDropServantDetail"*/;
+  *(_QWORD *)(Instance + 32) = StringLiteral_9619/*"OnClickListDropServantDetail"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(Instance + 32), v56, v49, v50, v51, v52, v53, v54);
   if ( *(_DWORD *)(v55 + 24) <= 1u )
     goto LABEL_47;
-  v63 = StringLiteral_2517/*"AssetBundle file download time over"*/;
-  *(_QWORD *)(v55 + 40) = StringLiteral_2517/*"AssetBundle file download time over"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 40), v63, v57, v58, v59, v60, v61, v62);
+  v63 = StringLiteral_2517/*"B"*/;
+  *(_QWORD *)(v55 + 40) = StringLiteral_2517/*"B"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 40), v63, v57, v58, v59, v60, v61, v62);
   if ( *(_DWORD *)(v55 + 24) <= 2u )
     goto LABEL_47;
-  v70 = StringLiteral_14305/*"The network connection was lost."*/;
-  *(_QWORD *)(v55 + 48) = StringLiteral_14305/*"The network connection was lost."*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 48), v70, v64, v65, v66, v67, v68, v69);
+  v70 = StringLiteral_14333/*"Type {0} is a generic type definition"*/;
+  *(_QWORD *)(v55 + 48) = StringLiteral_14333/*"Type {0} is a generic type definition"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 48), v70, v64, v65, v66, v67, v68, v69);
   if ( *(_DWORD *)(v55 + 24) <= 3u )
     goto LABEL_47;
-  v77 = StringLiteral_4778/*"Connection reset by peer"*/;
-  *(_QWORD *)(v55 + 56) = StringLiteral_4778/*"Connection reset by peer"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 56), v77, v71, v72, v73, v74, v75, v76);
+  v77 = StringLiteral_4778/*"Create"*/;
+  *(_QWORD *)(v55 + 56) = StringLiteral_4778/*"Create"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 56), v77, v71, v72, v73, v74, v75, v76);
   if ( *(_DWORD *)(v55 + 24) <= 4u )
     goto LABEL_47;
-  v84 = StringLiteral_13083/*"Software caused connection abort"*/;
-  *(_QWORD *)(v55 + 64) = StringLiteral_13083/*"Software caused connection abort"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 64), v84, v78, v79, v80, v81, v82, v83);
+  v84 = StringLiteral_13111/*"TIME_STR_DAYS"*/;
+  *(_QWORD *)(v55 + 64) = StringLiteral_13111/*"TIME_STR_DAYS"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 64), v84, v78, v79, v80, v81, v82, v83);
   if ( *(_DWORD *)(v55 + 24) <= 5u )
     goto LABEL_47;
-  v91 = StringLiteral_4779/*"Connection timed out"*/;
-  *(_QWORD *)(v55 + 72) = StringLiteral_4779/*"Connection timed out"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 72), v91, v85, v86, v87, v88, v89, v90);
+  v91 = StringLiteral_4779/*"CreateArrayPropertyBag"*/;
+  *(_QWORD *)(v55 + 72) = StringLiteral_4779/*"CreateArrayPropertyBag"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 72), v91, v85, v86, v87, v88, v89, v90);
   if ( *(_DWORD *)(v55 + 24) <= 6u )
     goto LABEL_47;
-  v98 = StringLiteral_4777/*"Connection refused"*/;
-  *(_QWORD *)(v55 + 80) = StringLiteral_4777/*"Connection refused"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 80), v98, v92, v93, v94, v95, v96, v97);
+  v98 = StringLiteral_4777/*"Crashlytics recording exception: {0}\nException stack trace:\n{1}"*/;
+  *(_QWORD *)(v55 + 80) = StringLiteral_4777/*"Crashlytics recording exception: {0}\nException stack trace:\n{1}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 80), v98, v92, v93, v94, v95, v96, v97);
   if ( *(_DWORD *)(v55 + 24) <= 7u )
     goto LABEL_47;
-  v105 = StringLiteral_14375/*"The request timed out."*/;
-  *(_QWORD *)(v55 + 88) = StringLiteral_14375/*"The request timed out."*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 88), v105, v99, v100, v101, v102, v103, v104);
+  v105 = StringLiteral_14403/*"UIMasterFace"*/;
+  *(_QWORD *)(v55 + 88) = StringLiteral_14403/*"UIMasterFace"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 88), v105, v99, v100, v101, v102, v103, v104);
   if ( *(_DWORD *)(v55 + 24) <= 8u )
     goto LABEL_47;
-  v112 = StringLiteral_4374/*"Cannot resolve destination host"*/;
-  *(_QWORD *)(v55 + 96) = StringLiteral_4374/*"Cannot resolve destination host"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 96), v112, v106, v107, v108, v109, v110, v111);
+  v112 = StringLiteral_4374/*"ChrVoice_{0}"*/;
+  *(_QWORD *)(v55 + 96) = StringLiteral_4374/*"ChrVoice_{0}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 96), v112, v106, v107, v108, v109, v110, v111);
   if ( *(_DWORD *)(v55 + 24) <= 9u )
     goto LABEL_47;
-  v119 = StringLiteral_15155/*"Unable to complete SSL connection"*/;
-  *(_QWORD *)(v55 + 104) = StringLiteral_15155/*"Unable to complete SSL connection"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 104), v119, v113, v114, v115, v116, v117, v118);
+  v119 = StringLiteral_15183/*"WAVE_BATTLE_PARTY_ORGANIZATION_DECK_DESTROY_CONFIRM_DIALOG_DECIDE"*/;
+  *(_QWORD *)(v55 + 104) = StringLiteral_15183/*"WAVE_BATTLE_PARTY_ORGANIZATION_DECK_DESTROY_CONFIRM_DIALOG_DECIDE"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 104), v119, v113, v114, v115, v116, v117, v118);
   if ( *(_DWORD *)(v55 + 24) <= 0xAu )
     goto LABEL_47;
-  v126 = StringLiteral_15364/*"Unknown Error"*/;
-  *(_QWORD *)(v55 + 112) = StringLiteral_15364/*"Unknown Error"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 112), v126, v120, v121, v122, v123, v124, v125);
+  v126 = StringLiteral_15392/*"XDR"*/;
+  *(_QWORD *)(v55 + 112) = StringLiteral_15392/*"XDR"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 112), v126, v120, v121, v122, v123, v124, v125);
   if ( *(_DWORD *)(v55 + 24) <= 0xBu )
     goto LABEL_47;
-  v133 = StringLiteral_11517/*"Request timeout"*/;
-  *(_QWORD *)(v55 + 120) = StringLiteral_11517/*"Request timeout"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 120), v133, v127, v128, v129, v130, v131, v132);
+  v133 = StringLiteral_11540/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_FRIENDSHIP"*/;
+  *(_QWORD *)(v55 + 120) = StringLiteral_11540/*"SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_FRIENDSHIP"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 120), v133, v127, v128, v129, v130, v131, v132);
   if ( *(_DWORD *)(v55 + 24) <= 0xCu )
     goto LABEL_47;
-  v140 = StringLiteral_2516/*"AssetBundle file check sum error"*/;
-  *(_QWORD *)(v55 + 128) = StringLiteral_2516/*"AssetBundle file check sum error"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 128), v140, v134, v135, v136, v137, v138, v139);
+  v140 = StringLiteral_2516/*"Azure"*/;
+  *(_QWORD *)(v55 + 128) = StringLiteral_2516/*"Azure"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 128), v140, v134, v135, v136, v137, v138, v139);
   if ( *(_DWORD *)(v55 + 24) <= 0xDu )
     goto LABEL_47;
-  v147 = StringLiteral_12461/*"SSL CA certificate error"*/;
-  *(_QWORD *)(v55 + 136) = StringLiteral_12461/*"SSL CA certificate error"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 136), v147, v141, v142, v143, v144, v145, v146);
+  v147 = StringLiteral_12484/*"SetParentRow requires a child row whose Table is {0}, but the specified row's Table is {1}."*/;
+  *(_QWORD *)(v55 + 136) = StringLiteral_12484/*"SetParentRow requires a child row whose Table is {0}, but the specified row's Table is {1}."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 136), v147, v141, v142, v143, v144, v145, v146);
   if ( *(_DWORD *)(v55 + 24) <= 0xEu )
     goto LABEL_47;
-  v154 = StringLiteral_7335/*"HTTP/1.1 500 Internal Server Error"*/;
-  *(_QWORD *)(v55 + 144) = StringLiteral_7335/*"HTTP/1.1 500 Internal Server Error"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 144), v154, v148, v149, v150, v151, v152, v153);
+  v154 = StringLiteral_7337/*"If-Unmodified-Since"*/;
+  *(_QWORD *)(v55 + 144) = StringLiteral_7337/*"If-Unmodified-Since"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 144), v154, v148, v149, v150, v151, v152, v153);
   if ( *(_DWORD *)(v55 + 24) <= 0xFu )
     goto LABEL_47;
-  v161 = StringLiteral_7336/*"HTTP/1.1 504 Gateway Timeout"*/;
-  *(_QWORD *)(v55 + 152) = StringLiteral_7336/*"HTTP/1.1 504 Gateway Timeout"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 152), v161, v155, v156, v157, v158, v159, v160);
+  v161 = StringLiteral_7338/*"Iff"*/;
+  *(_QWORD *)(v55 + 152) = StringLiteral_7338/*"Iff"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 152), v161, v155, v156, v157, v158, v159, v160);
   if ( *(_DWORD *)(v55 + 24) <= 0x10u )
     goto LABEL_47;
-  v168 = StringLiteral_5387/*"Destination host has an erroneous SSL certificate"*/;
-  *(_QWORD *)(v55 + 160) = StringLiteral_5387/*"Destination host has an erroneous SSL certificate"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 160), v168, v162, v163, v164, v165, v166, v167);
+  v168 = StringLiteral_5387/*"ENTITY"*/;
+  *(_QWORD *)(v55 + 160) = StringLiteral_5387/*"ENTITY"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 160), v168, v162, v163, v164, v165, v166, v167);
   if ( *(_DWORD *)(v55 + 24) <= 0x11u )
     goto LABEL_47;
-  v175 = StringLiteral_14795/*"Too many redirects"*/;
-  *(_QWORD *)(v55 + 168) = StringLiteral_14795/*"Too many redirects"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 168), v175, v169, v170, v171, v172, v173, v174);
+  v175 = StringLiteral_14823/*"Unsupported encoding '{0}': {1}"*/;
+  *(_QWORD *)(v55 + 168) = StringLiteral_14823/*"Unsupported encoding '{0}': {1}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 168), v175, v169, v170, v171, v172, v173, v174);
   if ( *(_DWORD *)(v55 + 24) <= 0x12u )
     goto LABEL_47;
-  v182 = StringLiteral_21297/*"java.io.EOFException"*/;
-  *(_QWORD *)(v55 + 176) = StringLiteral_21297/*"java.io.EOFException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 176), v182, v176, v177, v178, v179, v180, v181);
+  v182 = StringLiteral_21333/*"mstEventFortification"*/;
+  *(_QWORD *)(v55 + 176) = StringLiteral_21333/*"mstEventFortification"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 176), v182, v176, v177, v178, v179, v180, v181);
   if ( *(_DWORD *)(v55 + 24) <= 0x13u )
     goto LABEL_47;
-  v189 = StringLiteral_21314/*"java.net.SocketException"*/;
-  *(_QWORD *)(v55 + 184) = StringLiteral_21314/*"java.net.SocketException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 184), v189, v183, v184, v185, v186, v187, v188);
+  v189 = StringLiteral_21350/*"mstEventPanelMapDetail"*/;
+  *(_QWORD *)(v55 + 184) = StringLiteral_21350/*"mstEventPanelMapDetail"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 184), v189, v183, v184, v185, v186, v187, v188);
   if ( *(_DWORD *)(v55 + 24) <= 0x14u )
     goto LABEL_47;
-  v196 = StringLiteral_21315/*"java.net.SocketTimeoutException"*/;
-  *(_QWORD *)(v55 + 192) = StringLiteral_21315/*"java.net.SocketTimeoutException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 192), v196, v190, v191, v192, v193, v194, v195);
+  v196 = StringLiteral_21351/*"mstEventPanelScan"*/;
+  *(_QWORD *)(v55 + 192) = StringLiteral_21351/*"mstEventPanelScan"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 192), v196, v190, v191, v192, v193, v194, v195);
   if ( *(_DWORD *)(v55 + 24) <= 0x15u )
     goto LABEL_47;
-  v203 = StringLiteral_21312/*"java.net.NoRouteToHostException"*/;
-  *(_QWORD *)(v55 + 200) = StringLiteral_21312/*"java.net.NoRouteToHostException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 200), v203, v197, v198, v199, v200, v201, v202);
+  v203 = StringLiteral_21348/*"mstEventMural"*/;
+  *(_QWORD *)(v55 + 200) = StringLiteral_21348/*"mstEventMural"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 200), v203, v197, v198, v199, v200, v201, v202);
   if ( *(_DWORD *)(v55 + 24) <= 0x16u )
     goto LABEL_47;
-  v210 = StringLiteral_21298/*"java.io.IOException"*/;
-  *(_QWORD *)(v55 + 208) = StringLiteral_21298/*"java.io.IOException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 208), v210, v204, v205, v206, v207, v208, v209);
+  v210 = StringLiteral_21334/*"mstEventFortificationDetail"*/;
+  *(_QWORD *)(v55 + 208) = StringLiteral_21334/*"mstEventFortificationDetail"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 208), v210, v204, v205, v206, v207, v208, v209);
   if ( *(_DWORD *)(v55 + 24) <= 0x17u )
     goto LABEL_47;
-  v217 = StringLiteral_21311/*"java.net.ConnectException"*/;
-  *(_QWORD *)(v55 + 216) = StringLiteral_21311/*"java.net.ConnectException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 216), v217, v211, v212, v213, v214, v215, v216);
+  v217 = StringLiteral_21347/*"mstEventMissionGroup"*/;
+  *(_QWORD *)(v55 + 216) = StringLiteral_21347/*"mstEventMissionGroup"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 216), v217, v211, v212, v213, v214, v215, v216);
   if ( *(_DWORD *)(v55 + 24) <= 0x18u )
     goto LABEL_47;
-  v224 = StringLiteral_18527/*"connect failed"*/;
-  *(_QWORD *)(v55 + 224) = StringLiteral_18527/*"connect failed"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 224), v224, v218, v219, v220, v221, v222, v223);
+  v224 = StringLiteral_18561/*"effectBgmId"*/;
+  *(_QWORD *)(v55 + 224) = StringLiteral_18561/*"effectBgmId"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 224), v224, v218, v219, v220, v221, v222, v223);
   if ( *(_DWORD *)(v55 + 24) <= 0x19u )
     goto LABEL_47;
-  v231 = StringLiteral_21313/*"java.net.ProtocolException"*/;
-  *(_QWORD *)(v55 + 232) = StringLiteral_21313/*"java.net.ProtocolException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 232), v231, v225, v226, v227, v228, v229, v230);
+  v231 = StringLiteral_21349/*"mstEventPanelMap"*/;
+  *(_QWORD *)(v55 + 232) = StringLiteral_21349/*"mstEventPanelMap"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 232), v231, v225, v226, v227, v228, v229, v230);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Au )
     goto LABEL_47;
-  v238 = StringLiteral_21316/*"java.net.UnknownHostException"*/;
-  *(_QWORD *)(v55 + 240) = StringLiteral_21316/*"java.net.UnknownHostException"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 240), v238, v232, v233, v234, v235, v236, v237);
+  v238 = StringLiteral_21352/*"mstEventPanelSpot"*/;
+  *(_QWORD *)(v55 + 240) = StringLiteral_21352/*"mstEventPanelSpot"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 240), v238, v232, v233, v234, v235, v236, v237);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Bu )
     goto LABEL_47;
-  v245 = StringLiteral_1477/*"400: Bad Request"*/;
-  *(_QWORD *)(v55 + 248) = StringLiteral_1477/*"400: Bad Request"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 248), v245, v239, v240, v241, v242, v243, v244);
+  v245 = StringLiteral_1476/*": Upgraded from Object to FsmObject"*/;
+  *(_QWORD *)(v55 + 248) = StringLiteral_1476/*": Upgraded from Object to FsmObject"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 248), v245, v239, v240, v241, v242, v243, v244);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Cu )
     goto LABEL_47;
-  v252 = StringLiteral_1479/*"401: Authorization Required"*/;
-  *(_QWORD *)(v55 + 256) = StringLiteral_1479/*"401: Authorization Required"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 256), v252, v246, v247, v248, v249, v250, v251);
+  v252 = StringLiteral_1478/*": Upgraded from Rect to FsmRect"*/;
+  *(_QWORD *)(v55 + 256) = StringLiteral_1478/*": Upgraded from Rect to FsmRect"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 256), v252, v246, v247, v248, v249, v250, v251);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Du )
     goto LABEL_47;
-  v259 = StringLiteral_1481/*"403: Forbidden"*/;
-  *(_QWORD *)(v55 + 264) = StringLiteral_1481/*"403: Forbidden"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 264), v259, v253, v254, v255, v256, v257, v258);
+  v259 = StringLiteral_1480/*": Upgraded from Vector2 to FsmVector2"*/;
+  *(_QWORD *)(v55 + 264) = StringLiteral_1480/*": Upgraded from Vector2 to FsmVector2"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 264), v259, v253, v254, v255, v256, v257, v258);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Eu )
     goto LABEL_47;
-  v266 = StringLiteral_1483/*"404: Not Found"*/;
-  *(_QWORD *)(v55 + 272) = StringLiteral_1483/*"404: Not Found"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 272), v266, v260, v261, v262, v263, v264, v265);
+  v266 = StringLiteral_1482/*": Upgraded from bool to FsmBool"*/;
+  *(_QWORD *)(v55 + 272) = StringLiteral_1482/*": Upgraded from bool to FsmBool"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 272), v266, v260, v261, v262, v263, v264, v265);
   if ( *(_DWORD *)(v55 + 24) <= 0x1Fu )
     goto LABEL_47;
-  v273 = StringLiteral_1484/*"408: Request Time-out"*/;
-  *(_QWORD *)(v55 + 280) = StringLiteral_1484/*"408: Request Time-out"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 280), v273, v267, v268, v269, v270, v271, v272);
+  v273 = StringLiteral_1483/*": Upgraded from float to FsmFloat"*/;
+  *(_QWORD *)(v55 + 280) = StringLiteral_1483/*": Upgraded from float to FsmFloat"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 280), v273, v267, v268, v269, v270, v271, v272);
   if ( *(_DWORD *)(v55 + 24) <= 0x20u )
     goto LABEL_47;
-  v280 = StringLiteral_1491/*"500: Internal Server Error"*/;
-  *(_QWORD *)(v55 + 288) = StringLiteral_1491/*"500: Internal Server Error"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 288), v280, v274, v275, v276, v277, v278, v279);
+  v280 = StringLiteral_1490/*":/"*/;
+  *(_QWORD *)(v55 + 288) = StringLiteral_1490/*":/"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 288), v280, v274, v275, v276, v277, v278, v279);
   if ( *(_DWORD *)(v55 + 24) <= 0x21u )
     goto LABEL_47;
-  v287 = StringLiteral_1493/*"502:"*/;
-  *(_QWORD *)(v55 + 296) = StringLiteral_1493/*"502:"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 296), v287, v281, v282, v283, v284, v285, v286);
+  v287 = StringLiteral_1492/*":///"*/;
+  *(_QWORD *)(v55 + 296) = StringLiteral_1492/*":///"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 296), v287, v281, v282, v283, v284, v285, v286);
   if ( *(_DWORD *)(v55 + 24) <= 0x22u
-    || (v294 = StringLiteral_1495/*"503 Auto retry count"*/,
-        *(_QWORD *)(v55 + 304) = StringLiteral_1495/*"503 Auto retry count"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 304), v294, v288, v289, v290, v291, v292, v293),
+    || (v294 = StringLiteral_1494/*"::"*/,
+        *(_QWORD *)(v55 + 304) = StringLiteral_1494/*"::"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 304), v294, v288, v289, v290, v291, v292, v293),
         *(_DWORD *)(v55 + 24) <= 0x23u)
-    || (v301 = StringLiteral_1505/*"504: Gateway Timeout"*/,
-        *(_QWORD *)(v55 + 312) = StringLiteral_1505/*"504: Gateway Timeout"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 312), v301, v295, v296, v297, v298, v299, v300),
+    || (v301 = StringLiteral_1504/*"; charset="*/,
+        *(_QWORD *)(v55 + 312) = StringLiteral_1504/*"; charset="*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 312), v301, v295, v296, v297, v298, v299, v300),
         *(_DWORD *)(v55 + 24) <= 0x24u) )
   {
 LABEL_47:
-    sub_1C2E390(Instance, v48);
+    sub_1C3B9C8(Instance, v48);
   }
-  v308 = StringLiteral_15187/*"Unable to read data"*/;
-  *(_QWORD *)(v55 + 320) = StringLiteral_15187/*"Unable to read data"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v55 + 320), v308, v302, v303, v304, v305, v306, v307);
+  v308 = StringLiteral_15215/*"WEB_VIEW_TITLE_INFOMATION"*/;
+  *(_QWORD *)(v55 + 320) = StringLiteral_15215/*"WEB_VIEW_TITLE_INFOMATION"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v55 + 320), v308, v302, v303, v304, v305, v306, v307);
   if ( (int)*(_QWORD *)(v55 + 24) < 1 )
   {
 LABEL_48:
@@ -601,27 +601,27 @@ LABEL_48:
     if ( ++v309 >= (unsigned __int64)*(unsigned int *)(v55 + 24) )
       goto LABEL_47;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( !this->fields.data
     || (v311 = (CrashReporter_o *)Instance, Instance = (__int64)AssetData__get_CacheName(this->fields.data, v48), !v311) )
   {
 LABEL_58:
-    sub_1C2E388(Instance, v48);
+    sub_1C3B9C0(Instance, v48);
   }
-  CrashReporter__AddCustomKey(v311, (System_String_o *)StringLiteral_5150/*"DLErrorAsset"*/, (System_String_o *)Instance, 0LL);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+  CrashReporter__AddCustomKey(v311, (System_String_o *)StringLiteral_5150/*"DeflaterOutputStream ReadByte not supported"*/, (System_String_o *)Instance, 0LL);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
   if ( (unsigned int)v309 >= *(_DWORD *)(v55 + 24) )
     goto LABEL_47;
   if ( !Instance )
     goto LABEL_58;
   CrashReporter__AddCustomKey(
     (CrashReporter_o *)Instance,
-    (System_String_o *)StringLiteral_5151/*"DLErrorType"*/,
+    (System_String_o *)StringLiteral_5151/*"DeflaterOutputStream Seek not supported"*/,
     *(System_String_o **)(v55 + 32 + 8 * v309),
     0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  v3 = (System_String_o *)StringLiteral_2520/*"AssetLoadError"*/;
+  v3 = (System_String_o *)StringLiteral_2520/*"B030"*/;
 LABEL_57:
   UnityEngine_Debug__LogError((Il2CppObject *)v3, 0LL);
 }
@@ -632,10 +632,10 @@ void __fastcall AssetLoader__EndLoad(AssetLoader_o *this, const MethodInfo *meth
   struct AssetLoader_LoadEndHandler_o *endCallback; // x8
   struct AssetLoader_LoadEndDataHandler_o *endCallback2; // x8
 
-  if ( (byte_4BFC79B & 1) == 0 )
+  if ( (byte_4C20FA9 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFC79B = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C20FA9 = 1;
   }
   endCallback = this->fields.endCallback;
   this->fields.isEndLoad = 1;
@@ -652,7 +652,7 @@ void __fastcall AssetLoader__EndLoad(AssetLoader_o *this, const MethodInfo *meth
       *(_QWORD *)&endCallback2->fields.extra_arg);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70989720((UnityEngine_Object_o *)this, 0LL);
+  UnityEngine_Object__Destroy_71122748((UnityEngine_Object_o *)this, 0LL);
 }
 
 
@@ -681,7 +681,7 @@ void __fastcall AssetLoader__Init(AssetLoader_o *this, AssetData_o *data, const 
   PartyListViewItem_o *v7; // x7
 
   this->fields.data = data;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)data, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -695,12 +695,12 @@ bool __fastcall AssetLoader__IsSame(AssetLoader_o *this, System_String_o *name, 
     return 0;
   v4 = data->fields.name;
   if ( !v4 )
-    sub_1C2E388(0LL, name);
-  return System_String__Equals_63243900(v4, name, 0LL);
+    sub_1C3B9C0(0LL, name);
+  return System_String__Equals_63376928(v4, name, 0LL);
 }
 
 
-bool __fastcall AssetLoader__IsSame_39085476(
+bool __fastcall AssetLoader__IsSame_39194464(
         AssetLoader_o *this,
         int32_t type,
         System_String_o *name,
@@ -710,7 +710,7 @@ bool __fastcall AssetLoader__IsSame_39085476(
 
   data = this->fields.data;
   if ( data )
-    LOBYTE(data) = AssetData__IsSame_39077920(data, type, name, method);
+    LOBYTE(data) = AssetData__IsSame_39186908(data, type, name, method);
   return (char)data;
 }
 
@@ -734,18 +734,18 @@ System_Collections_IEnumerator_o *__fastcall AssetLoader__LoadDataCR(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BFC79A & 1) == 0 )
+  if ( (byte_4C20FA8 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader__LoadDataCR_d__29_TypeInfo, resourceNames);
-    byte_4BFC79A = 1;
+    sub_1C3B764(&AssetLoader__LoadDataCR_d__29_TypeInfo, resourceNames);
+    byte_4C20FA8 = 1;
   }
-  v5 = sub_1C2E378(AssetLoader__LoadDataCR_d__29_TypeInfo);
+  v5 = sub_1C3B9B0(AssetLoader__LoadDataCR_d__29_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = resourceNames;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)resourceNames, v12, v13, v14, v15, v16, v17);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)resourceNames, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -761,17 +761,17 @@ void __fastcall AssetLoader__LoadUseThread(AssetLoader_o *this, const MethodInfo
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BFC79C & 1) == 0 )
+  if ( (byte_4C20FAA & 1) == 0 )
   {
-    sub_1C2E12C(&CatAndMouseGame_TypeInfo, method);
-    byte_4BFC79C = 1;
+    sub_1C3B764(&CatAndMouseGame_TypeInfo, method);
+    byte_4C20FAA = 1;
   }
   readData = this->fields.readData;
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   v4 = CatAndMouseGame__MouseGame4(readData, 0LL);
   this->fields._decData = v4;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields._decData, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._decData, (int64_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -797,28 +797,28 @@ void __fastcall AssetLoader__Reboot(AssetLoader_o *this, const MethodInfo *metho
   Il2CppObject *Instance; // x0
   __int64 v21; // x1
 
-  if ( (byte_4BFC79D & 1) == 0 )
+  if ( (byte_4C20FAB & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Application_TypeInfo, method);
-    sub_1C2E12C(&ManagementManager_TypeInfo, v9);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v10);
-    byte_4BFC79D = 1;
+    sub_1C3B764(&UnityEngine_Application_TypeInfo, method);
+    sub_1C3B764(&ManagementManager_TypeInfo, v9);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, v10);
+    byte_4C20FAB = 1;
   }
   loader = this->fields.loader;
   if ( loader )
   {
     UnityEngine_Networking_UnityWebRequest__Dispose(loader, 0LL);
     this->fields.loader = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.loader, 0LL, v12, v13, v14, v15, v16, v17);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.loader, 0LL, v12, v13, v14, v15, v16, v17);
   }
   this->fields.readData = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.readData, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.readData, 0LL, v2, v3, v4, v5, v6, v7);
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-  if ( !byte_4BFC80F )
+  if ( !byte_4C2101D )
   {
-    sub_1C2E12C(&ManagementManager_TypeInfo, v18);
-    byte_4BFC80F = 1;
+    sub_1C3B764(&ManagementManager_TypeInfo, v18);
+    byte_4C2101D = 1;
   }
   v19 = ManagementManager_TypeInfo;
   if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -830,13 +830,13 @@ void __fastcall AssetLoader__Reboot(AssetLoader_o *this, const MethodInfo *metho
   {
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-    UnityEngine_Application__Quit_70782992(0LL);
+    UnityEngine_Application__Quit_70916020(0LL);
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
     if ( !Instance )
-      sub_1C2E388(0LL, v21);
+      sub_1C3B9C0(0LL, v21);
     ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
   }
 }
@@ -862,7 +862,7 @@ void __fastcall AssetLoader__StartLoad(
 
   this->fields.endCallback = callbackFunc;
   p_endCallback = &this->fields.endCallback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.endCallback,
     (int64_t)callbackFunc,
     (int64_t)resourceNames,
@@ -873,12 +873,12 @@ void __fastcall AssetLoader__StartLoad(
     v7);
   v14 = (__int64)*(p_endCallback - 1);
   if ( !v14 )
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   v15 = *(_DWORD *)(v14 + 40) != *(_DWORD *)(v14 + 44);
   this->fields.isDownload = v15;
   this->fields.isRequestDownload = v15;
   DataCR = AssetLoader__LoadDataCR(this, resourceNames, v13);
-  UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)this, DataCR, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_71108020((UnityEngine_MonoBehaviour_o *)this, DataCR, 0LL);
 }
 
 
@@ -899,11 +899,11 @@ void __fastcall AssetLoader__abort_thread(AssetLoader_o *this, const MethodInfo 
   if ( threadDecrypt && !System_Threading_Thread__get_ThreadState(threadDecrypt, 0LL) )
   {
     if ( !*p_threadDecrypt )
-      sub_1C2E388(0LL, v10);
+      sub_1C3B9C0(0LL, v10);
     System_Threading_Thread__Abort(*p_threadDecrypt, 0LL);
   }
   *p_threadDecrypt = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p_threadDecrypt, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)p_threadDecrypt, 0LL, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -922,10 +922,10 @@ void __fastcall AssetLoader__add_endCallback(
   AssetLoader_LoadEndHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BFC796 & 1) == 0 )
+  if ( (byte_4C20FA4 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader_LoadEndHandler_TypeInfo, value);
-    byte_4BFC796 = 1;
+    sub_1C3B764(&AssetLoader_LoadEndHandler_TypeInfo, value);
+    byte_4C20FA4 = 1;
   }
   endCallback = this->fields.endCallback;
   p_endCallback = &this->fields.endCallback;
@@ -938,13 +938,13 @@ void __fastcall AssetLoader__add_endCallback(
       if ( (AssetLoader_LoadEndHandler_c *)v8->klass != AssetLoader_LoadEndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_endCallback, v8, v6);
+    v9 = sub_1C76C54(p_endCallback, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   AssetLoader__remove_endCallback(v11, v12, v13);
 }
 
@@ -964,10 +964,10 @@ void __fastcall AssetLoader__add_endCallback2(
   AssetLoader_LoadEndDataHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BFC798 & 1) == 0 )
+  if ( (byte_4C20FA6 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
-    byte_4BFC798 = 1;
+    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
+    byte_4C20FA6 = 1;
   }
   endCallback2 = this->fields.endCallback2;
   p_endCallback2 = &this->fields.endCallback2;
@@ -980,13 +980,13 @@ void __fastcall AssetLoader__add_endCallback2(
       if ( (AssetLoader_LoadEndDataHandler_c *)v8->klass != AssetLoader_LoadEndDataHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_endCallback2, v8, v6);
+    v9 = sub_1C76C54(p_endCallback2, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   AssetLoader__remove_endCallback2(v11, v12, v13);
 }
 
@@ -1022,7 +1022,7 @@ int32_t __fastcall AssetLoader__get_LoadSize(AssetLoader_o *this, const MethodIn
   v5 = this->fields.data;
   if ( !v5 )
 LABEL_10:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   v6 = downloadProgress * (float)v5->fields.size;
   if ( v6 == INFINITY )
     LODWORD(loader) = 0x80000000;
@@ -1038,7 +1038,7 @@ System_String_o *__fastcall AssetLoader__get_Name(AssetLoader_o *this, const Met
 
   data = this->fields.data;
   if ( !data )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return data->fields.name;
 }
 
@@ -1049,7 +1049,7 @@ int32_t __fastcall AssetLoader__get_Size(AssetLoader_o *this, const MethodInfo *
 
   data = this->fields.data;
   if ( !data )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return data->fields.size;
 }
 
@@ -1069,10 +1069,10 @@ void __fastcall AssetLoader__remove_endCallback(
   AssetLoader_LoadEndDataHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BFC797 & 1) == 0 )
+  if ( (byte_4C20FA5 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader_LoadEndHandler_TypeInfo, value);
-    byte_4BFC797 = 1;
+    sub_1C3B764(&AssetLoader_LoadEndHandler_TypeInfo, value);
+    byte_4C20FA5 = 1;
   }
   endCallback = this->fields.endCallback;
   p_endCallback = &this->fields.endCallback;
@@ -1085,13 +1085,13 @@ void __fastcall AssetLoader__remove_endCallback(
       if ( (AssetLoader_LoadEndHandler_c *)v8->klass != AssetLoader_LoadEndHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_endCallback, v8, v6);
+    v9 = sub_1C76C54(p_endCallback, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   AssetLoader__add_endCallback2(v11, v12, v13);
 }
 
@@ -1110,10 +1110,10 @@ void __fastcall AssetLoader__remove_endCallback2(
   AssetLoader_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BFC799 & 1) == 0 )
+  if ( (byte_4C20FA7 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
-    byte_4BFC799 = 1;
+    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, value);
+    byte_4C20FA7 = 1;
   }
   endCallback2 = this->fields.endCallback2;
   p_endCallback2 = &this->fields.endCallback2;
@@ -1126,13 +1126,13 @@ void __fastcall AssetLoader__remove_endCallback2(
       if ( (AssetLoader_LoadEndDataHandler_c *)v8->klass != AssetLoader_LoadEndDataHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_endCallback2, v8, v6);
+    v9 = sub_1C76C54(p_endCallback2, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   AssetLoader__get_IsRequestDownload(v11, v12);
 }
 
@@ -1162,7 +1162,7 @@ void __fastcall AssetLoader_LoadEndDataHandler___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1173,11 +1173,11 @@ void __fastcall AssetLoader_LoadEndDataHandler___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) != 0 )
+  if ( (sub_1C3B824(v10) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = (Il2CppObject *)sub_1A6EF94;
+      v13 = (Il2CppObject *)sub_1A7C04C;
 LABEL_16:
       this->fields.m_target = v13;
       goto LABEL_17;
@@ -1189,41 +1189,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v15 = sub_1C2E1E4(v10);
-        v16 = sub_1C2E6A0(v10);
+        v15 = sub_1C3B81C(v10);
+        v16 = sub_1C3BCD8(v10);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = (Il2CppObject *)sub_1A6F090;
+            v13 = (Il2CppObject *)sub_1A7C148;
           else
-            v13 = (Il2CppObject *)sub_1A6F054;
+            v13 = (Il2CppObject *)sub_1A7C10C;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = (Il2CppObject *)sub_1A6EFD0;
+          v13 = (Il2CppObject *)sub_1A7C088;
         }
         else
         {
-          v13 = (Il2CppObject *)sub_1A6EFA4;
+          v13 = (Il2CppObject *)sub_1A7C05C;
         }
       }
       else
       {
-        v13 = (Il2CppObject *)sub_1A6EF74;
+        v13 = (Il2CppObject *)sub_1A7C02C;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v17, 0LL);
+      v17 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v17, 0LL);
     }
   }
   v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v14;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6EF2C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7BFE4;
 }
 
 
@@ -1237,7 +1237,7 @@ System_IAsyncResult_o *__fastcall AssetLoader_LoadEndDataHandler__BeginInvoke(
   AssetData_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = data;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
 }
 
 
@@ -1246,7 +1246,7 @@ void __fastcall AssetLoader_LoadEndDataHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
@@ -1287,7 +1287,7 @@ void __fastcall AssetLoader_LoadEndHandler___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -1298,11 +1298,11 @@ void __fastcall AssetLoader_LoadEndHandler___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) != 0 )
+  if ( (sub_1C3B824(v10) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = (Il2CppObject *)sub_1A6EDA4;
+      v13 = (Il2CppObject *)sub_1A7BE5C;
 LABEL_16:
       this->fields.m_target = v13;
       goto LABEL_17;
@@ -1314,41 +1314,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v15 = sub_1C2E1E4(v10);
-        v16 = sub_1C2E6A0(v10);
+        v15 = sub_1C3B81C(v10);
+        v16 = sub_1C3BCD8(v10);
         if ( (v15 & 1) != 0 )
         {
           if ( (v16 & 1) != 0 )
-            v13 = (Il2CppObject *)sub_1A6EEA0;
+            v13 = (Il2CppObject *)sub_1A7BF58;
           else
-            v13 = (Il2CppObject *)sub_1A6EE64;
+            v13 = (Il2CppObject *)sub_1A7BF1C;
         }
         else if ( (v16 & 1) != 0 )
         {
-          v13 = (Il2CppObject *)sub_1A6EDE0;
+          v13 = (Il2CppObject *)sub_1A7BE98;
         }
         else
         {
-          v13 = (Il2CppObject *)sub_1A6EDB4;
+          v13 = (Il2CppObject *)sub_1A7BE6C;
         }
       }
       else
       {
-        v13 = (Il2CppObject *)sub_1A6ED84;
+        v13 = (Il2CppObject *)sub_1A7BE3C;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v17, 0LL);
+      v17 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v17, 0LL);
     }
   }
   v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v14;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6ED3C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7BDF4;
 }
 
 
@@ -1362,7 +1362,7 @@ System_IAsyncResult_o *__fastcall AssetLoader_LoadEndHandler__BeginInvoke(
   AssetLoader_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = loader;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
 }
 
 
@@ -1371,7 +1371,7 @@ void __fastcall AssetLoader_LoadEndHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
@@ -1956,62 +1956,62 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
   Il2CppObject *value; // [xsp+28h] [xbp-78h] BYREF
 
   v8 = this;
-  if ( (byte_4BFC7A1 & 1) == 0 )
+  if ( (byte_4C20FAF & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetLoader_EndRebootDialog__, method);
-    sub_1C2E12C(&Method_AssetLoader_EndRetryDialog__, v9);
-    sub_1C2E12C(&Method_AssetLoader_EndWarningDialog__, v10);
-    sub_1C2E12C(&AssetManager_TypeInfo, v11);
-    sub_1C2E12C(&CatAndMouseGame_TypeInfo, v12);
-    sub_1C2E12C(&char___TypeInfo, v13);
-    sub_1C2E12C(&ErrorDialog_ClickDelegate_TypeInfo, v14);
-    sub_1C2E12C(&CommonServicePluginScript_TypeInfo, v15);
-    sub_1C2E12C(&Crc32_TypeInfo, v16);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v17);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v18);
-    sub_1C2E12C(&DownloadHandlerDecryptFileWithCrc_TypeInfo, v19);
-    sub_1C2E12C(&DownloadHandlerFileWithCrcCheck_TypeInfo, v20);
-    sub_1C2E12C(&System_Func_bool__TypeInfo, v21);
-    sub_1C2E12C(&System_IO_IOException_TypeInfo, v22);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v23);
-    sub_1C2E12C(&ManagementManager_TypeInfo, v24);
-    sub_1C2E12C(&ManagerConfig_TypeInfo, v25);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v26);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v27);
-    sub_1C2E12C(&string___TypeInfo, v28);
-    sub_1C2E12C(&Method_AssetLoader___c__LoadDataCR_b__29_0__, v29);
-    sub_1C2E12C(&AssetLoader___c_TypeInfo, v30);
-    sub_1C2E12C(&UnityEngine_WaitForEndOfFrame_TypeInfo, v31);
-    sub_1C2E12C(&UnityEngine_WaitForSeconds_TypeInfo, v32);
-    sub_1C2E12C(&UnityEngine_WaitUntil_TypeInfo, v33);
-    sub_1C2E12C(&StringLiteral_43/*"\n"*/, v34);
-    sub_1C2E12C(&StringLiteral_9404/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/, v35);
-    sub_1C2E12C(&StringLiteral_7330/*"HTTP"*/, v36);
-    sub_1C2E12C(&StringLiteral_5428/*"Disk full"*/, v37);
-    sub_1C2E12C(&StringLiteral_2534/*"AssetStorageList download time over"*/, v38);
-    sub_1C2E12C(&StringLiteral_9413/*"NETWORK_ERROR_DISK_FULL"*/, v39);
-    sub_1C2E12C(&StringLiteral_117/*" "*/, v40);
-    sub_1C2E12C(&StringLiteral_2521/*"AssetName : "*/, v41);
-    sub_1C2E12C(&StringLiteral_794/*")\n\n503 Auto retry count "*/, v42);
-    sub_1C2E12C(&StringLiteral_797/*")\nfile crc ("*/, v43);
-    sub_1C2E12C(&StringLiteral_1494/*"503"*/, v44);
-    sub_1C2E12C(&StringLiteral_2150/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, v45);
-    sub_1C2E12C(&StringLiteral_16226/*"[FFFF80]Download error for debug"*/, v46);
-    sub_1C2E12C(&StringLiteral_2531/*"AssetStorageList download data error"*/, v47);
-    sub_1C2E12C(&StringLiteral_25631/*"~"*/, v48);
-    sub_1C2E12C(&StringLiteral_12507/*"STATUS"*/, v49);
-    sub_1C2E12C(&StringLiteral_793/*")\n\n"*/, v50);
-    sub_1C2E12C(&StringLiteral_9403/*"NETWORK_ERROR_ASSET_UPDATE"*/, v51);
-    sub_1C2E12C(&StringLiteral_672/*"("*/, v52);
-    sub_1C2E12C(&StringLiteral_795/*")\n\nAssetBundle file check sum error\nlist crc ("*/, v53);
-    sub_1C2E12C(&StringLiteral_791/*")"*/, v54);
-    sub_1C2E12C(&StringLiteral_19393/*"error "*/, v55);
-    sub_1C2E12C(&StringLiteral_1867/*"@"*/, v56);
-    sub_1C2E12C(&StringLiteral_2151/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, v57);
-    sub_1C2E12C(&StringLiteral_2532/*"AssetStorageList download error"*/, v58);
-    sub_1C2E12C(&StringLiteral_796/*")\n\nAssetBundle file download time over"*/, v59);
-    this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E12C(&StringLiteral_1/*""*/, v60);
-    byte_4BFC7A1 = 1;
+    sub_1C3B764(&Method_AssetLoader_EndRebootDialog__, method);
+    sub_1C3B764(&Method_AssetLoader_EndRetryDialog__, v9);
+    sub_1C3B764(&Method_AssetLoader_EndWarningDialog__, v10);
+    sub_1C3B764(&AssetManager_TypeInfo, v11);
+    sub_1C3B764(&CatAndMouseGame_TypeInfo, v12);
+    sub_1C3B764(&char___TypeInfo, v13);
+    sub_1C3B764(&ErrorDialog_ClickDelegate_TypeInfo, v14);
+    sub_1C3B764(&CommonServicePluginScript_TypeInfo, v15);
+    sub_1C3B764(&Crc32_TypeInfo, v16);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v17);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__, v18);
+    sub_1C3B764(&DownloadHandlerDecryptFileWithCrc_TypeInfo, v19);
+    sub_1C3B764(&DownloadHandlerFileWithCrcCheck_TypeInfo, v20);
+    sub_1C3B764(&System_Func_bool__TypeInfo, v21);
+    sub_1C3B764(&System_IO_IOException_TypeInfo, v22);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v23);
+    sub_1C3B764(&ManagementManager_TypeInfo, v24);
+    sub_1C3B764(&ManagerConfig_TypeInfo, v25);
+    sub_1C3B764(&NetworkManager_TypeInfo, v26);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v27);
+    sub_1C3B764(&string___TypeInfo, v28);
+    sub_1C3B764(&Method_AssetLoader___c__LoadDataCR_b__29_0__, v29);
+    sub_1C3B764(&AssetLoader___c_TypeInfo, v30);
+    sub_1C3B764(&UnityEngine_WaitForEndOfFrame_TypeInfo, v31);
+    sub_1C3B764(&UnityEngine_WaitForSeconds_TypeInfo, v32);
+    sub_1C3B764(&UnityEngine_WaitUntil_TypeInfo, v33);
+    sub_1C3B764(&StringLiteral_43/*"\n"*/, v34);
+    sub_1C3B764(&StringLiteral_9406/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_TITLE"*/, v35);
+    sub_1C3B764(&StringLiteral_7332/*"If type is being redefined, the base type has to be self-referenced."*/, v36);
+    sub_1C3B764(&StringLiteral_5428/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/, v37);
+    sub_1C3B764(&StringLiteral_2534/*"B063"*/, v38);
+    sub_1C3B764(&StringLiteral_9415/*"OPEN_ITEM"*/, v39);
+    sub_1C3B764(&StringLiteral_117/*"   "*/, v40);
+    sub_1C3B764(&StringLiteral_2521/*"B040"*/, v41);
+    sub_1C3B764(&StringLiteral_794/*"**"*/, v42);
+    sub_1C3B764(&StringLiteral_797/*"*.*"*/, v43);
+    sub_1C3B764(&StringLiteral_1493/*":/?#[]@!$&'()*+,;="*/, v44);
+    sub_1C3B764(&StringLiteral_2150/*"Add:"*/, v45);
+    sub_1C3B764(&StringLiteral_16254/*"_txt_servant"*/, v46);
+    sub_1C3B764(&StringLiteral_2531/*"B060"*/, v47);
+    sub_1C3B764(&StringLiteral_25675, v48);
+    sub_1C3B764(&StringLiteral_12535/*"ShowNobleInfo"*/, v49);
+    sub_1C3B764(&StringLiteral_793/*"* "*/, v50);
+    sub_1C3B764(&StringLiteral_9405/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_SKIP"*/, v51);
+    sub_1C3B764(&StringLiteral_672/*"(401) Unauthorized"*/, v52);
+    sub_1C3B764(&StringLiteral_795/*"**="*/, v53);
+    sub_1C3B764(&StringLiteral_791/*")|("*/, v54);
+    sub_1C3B764(&StringLiteral_19428/*"getNotificationFromIntent"*/, v55);
+    sub_1C3B764(&StringLiteral_1867/*"ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE"*/, v56);
+    sub_1C3B764(&StringLiteral_2151/*"AddArtsCardIds"*/, v57);
+    sub_1C3B764(&StringLiteral_2532/*"B061"*/, v58);
+    sub_1C3B764(&StringLiteral_796/*"*-record.json"*/, v59);
+    this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B764(&StringLiteral_1/*""*/, v60);
+    byte_4C20FAF = 1;
   }
   v553 = 0LL;
   value = 0LL;
@@ -2064,7 +2064,7 @@ bool __fastcall AssetLoader__LoadDataCR_d__29__MoveNext(
     case 8:
       v8->fields._asyncOperater_5__12 = 0LL;
       v8->fields.__1__state = -1;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
       goto LABEL_189;
     case 9:
       v8->fields.__1__state = -1;
@@ -2107,7 +2107,7 @@ LABEL_47:
             goto LABEL_375;
           UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
           _4__this->fields.loader = 0LL;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v89, v90, v91, v92, v93, v94);
+          sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v89, v90, v91, v92, v93, v94);
           data = _4__this->fields.data;
           *(_WORD *)&_4__this->fields.isRequestDownload = 257;
           if ( !data )
@@ -2136,7 +2136,7 @@ LABEL_30:
           goto LABEL_375;
         v96 = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0LL);
         _4__this->fields.readData = v96;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&_4__this->fields.readData,
           (int64_t)v96,
           v97,
@@ -2162,14 +2162,14 @@ LABEL_30:
         goto LABEL_375;
       UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
       _4__this->fields.loader = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v105, v106, v107, v108, v109, v110);
+      sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v105, v106, v107, v108, v109, v110);
       _4__this->fields.readData = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v111, v112, v113, v114, v115, v116);
+      sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v111, v112, v113, v114, v115, v116);
 LABEL_59:
       while ( 1 )
       {
         _4__this->fields.readData = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
         if ( _4__this->fields.isDownload )
           break;
 LABEL_292:
@@ -2187,7 +2187,7 @@ LABEL_312:
             LoadRequest = AssetData__GetLoadRequest((AssetData_o *)this, method);
             _4__this->fields.loader = LoadRequest;
             v457 = (PartyOrganizationUtility_o *)&_4__this->fields.loader;
-            sub_1C2E0D0(v457, (int64_t)LoadRequest, v458, v459, v460, v461, v462, v463);
+            sub_1C3B708(v457, (int64_t)LoadRequest, v458, v459, v460, v461, v462, v463);
             this = (AssetLoader__LoadDataCR_d__29_o *)v457->klass;
             if ( !v457->klass )
               goto LABEL_375;
@@ -2196,7 +2196,7 @@ LABEL_312:
                      0LL);
             v8->fields.__2__current = (Il2CppObject *)v464;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, (int64_t)v464, v465, v466, v467, v468, v469, v470);
+            sub_1C3B708(p__2__current, (int64_t)v464, v465, v466, v467, v468, v469, v470);
             v80 = 11;
           }
           else
@@ -2216,11 +2216,11 @@ LABEL_312:
                 v524 = AssetLoader___c_TypeInfo;
               }
               v526 = (Il2CppObject *)v524->static_fields->__9;
-              _9__29_0 = (System_Func_bool__o *)sub_1C2E378(System_Func_bool__TypeInfo);
+              _9__29_0 = (System_Func_bool__o *)sub_1C3B9B0(System_Func_bool__TypeInfo);
               System_Func_bool____ctor(_9__29_0, v526, Method_AssetLoader___c__LoadDataCR_b__29_0__, 0LL);
               static_fields = AssetLoader___c_TypeInfo->static_fields;
               static_fields->__9__29_0 = _9__29_0;
-              sub_1C2E0D0(
+              sub_1C3B708(
                 (PartyOrganizationUtility_o *)&static_fields->__9__29_0,
                 (int64_t)_9__29_0,
                 v528,
@@ -2230,11 +2230,11 @@ LABEL_312:
                 v532,
                 v533);
             }
-            v534 = (UnityEngine_WaitUntil_o *)sub_1C2E378(UnityEngine_WaitUntil_TypeInfo);
+            v534 = (UnityEngine_WaitUntil_o *)sub_1C3B9B0(UnityEngine_WaitUntil_TypeInfo);
             UnityEngine_WaitUntil___ctor(v534, _9__29_0, 0LL);
             v8->fields.__2__current = (Il2CppObject *)v534;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, (int64_t)v534, v535, v536, v537, v538, v539, v540);
+            sub_1C3B708(p__2__current, (int64_t)v534, v535, v536, v537, v538, v539, v540);
             v80 = 10;
           }
           goto LABEL_355;
@@ -2289,7 +2289,7 @@ LABEL_298:
                      0LL);
             v436 = UnityEngine_AssetBundle__LoadFromMemoryAsync(v435, 0LL);
             v8->fields._req_5__13 = v436;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v8->fields._req_5__13,
               (int64_t)v436,
               v437,
@@ -2303,11 +2303,11 @@ LABEL_298:
               goto LABEL_375;
             UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
             *v432 = 0LL;
-            sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v443, v444, v445, v446, v447, v448);
+            sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v443, v444, v445, v446, v447, v448);
             req_5__13 = (int64_t)v8->fields._req_5__13;
             v8->fields.__2__current = (Il2CppObject *)req_5__13;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, req_5__13, v450, v451, v452, v453, v454, v455);
+            sub_1C3B708(p__2__current, req_5__13, v450, v451, v452, v453, v454, v455);
             v80 = 12;
             goto LABEL_355;
           }
@@ -2324,18 +2324,18 @@ LABEL_38:
         {
           UnityEngine_Networking_UnityWebRequest__Dispose(loader, 0LL);
           _4__this->fields.loader = 0LL;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v82, v83, v84, v85, v86, v87);
+          sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v82, v83, v84, v85, v86, v87);
         }
         _4__this->fields.readData = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
         AssetLoader__EndLoad(_4__this, v88);
         return 0;
       }
       *(_WORD *)&v8->fields._isAutoRetry_5__4 = 0;
       v8->fields._errorCode_5__6 = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
       v8->fields._errorLocalizeCode_5__7 = 0LL;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7,
         0LL,
         v117,
@@ -2355,10 +2355,10 @@ LABEL_38:
       TIMEOUT = v124->static_fields->TIMEOUT;
       v8->fields._loadProgress_5__9 = 0.0;
       v8->fields._requestTime_5__8 = v125 + TIMEOUT;
-      v127 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C2E378(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v127 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3B9B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v127, 0LL);
       v8->fields._wait_5__10 = v127;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._wait_5__10,
         (int64_t)v127,
         v128,
@@ -2383,9 +2383,9 @@ LABEL_38:
         if ( v142 < v143->static_fields->LIMIT_FREE_SIZE )
         {
           _4__this->fields.isErrorDialog = 1;
-          v144 = StringLiteral_5428/*"Disk full"*/;
-          v8->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_5428/*"Disk full"*/;
-          sub_1C2E0D0(
+          v144 = StringLiteral_5428/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/;
+          v8->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_5428/*"EVENT_AREA_IMPROVE_REWARD_UNIT_TIME"*/;
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
             v144,
             v136,
@@ -2395,8 +2395,8 @@ LABEL_38:
             v140,
             v141);
           p_errorLocalizeCode_5__7 = (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7;
-          v152 = StringLiteral_9413/*"NETWORK_ERROR_DISK_FULL"*/;
-          v8->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9413/*"NETWORK_ERROR_DISK_FULL"*/;
+          v152 = StringLiteral_9415/*"OPEN_ITEM"*/;
+          v8->fields._errorLocalizeCode_5__7 = (struct System_String_o *)StringLiteral_9415/*"OPEN_ITEM"*/;
           goto LABEL_141;
         }
       }
@@ -2405,7 +2405,7 @@ LABEL_38:
         goto LABEL_375;
       Url = AssetData__get_Url((AssetData_o *)this, method);
       v8->fields._url_5__11 = Url;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._url_5__11,
         (int64_t)Url,
         v154,
@@ -2436,7 +2436,7 @@ LABEL_38:
       Key = AssetData__get_Key(_4__this->fields.data, method);
       v165 = UnityWebRequestFileWithCrcCheck__CreateRequest(url_5__11, (System_String_o *)v162, v163, Key, 0LL);
       _4__this->fields.loader = v165;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&_4__this->fields.loader,
         (int64_t)v165,
         v166,
@@ -2452,7 +2452,7 @@ LABEL_38:
                (UnityEngine_Networking_UnityWebRequest_o *)this,
                0LL);
       v8->fields._asyncOperater_5__12 = v172;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12,
         (int64_t)v172,
         v173,
@@ -2466,7 +2466,7 @@ LABEL_78:
       this = (AssetLoader__LoadDataCR_d__29_o *)v8->fields._asyncOperater_5__12;
       if ( !this )
 LABEL_375:
-        sub_1C2E388(this, method);
+        sub_1C3B9C0(this, method);
       this = (AssetLoader__LoadDataCR_d__29_o *)UnityEngine_AsyncOperation__get_isDone(
                                                   (UnityEngine_AsyncOperation_o *)this,
                                                   0LL);
@@ -2501,7 +2501,7 @@ LABEL_369:
           wait_5__10 = (int64_t)v8->fields._wait_5__10;
           v8->fields.__2__current = (Il2CppObject *)wait_5__10;
           v546 = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(v546, wait_5__10, v183, v184, v185, v186, v187, v188);
+          sub_1C3B708(v546, wait_5__10, v183, v184, v185, v186, v187, v188);
           result = 1;
           *(_DWORD *)&v546[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
           return result;
@@ -2534,13 +2534,13 @@ LABEL_369:
         goto LABEL_375;
       if ( !UnityEngine_Networking_UnityWebRequest__get_isDone((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL) )
       {
-        v203 = System_String__Concat_63246844(
-                 (System_String_o *)StringLiteral_672/*"("*/,
+        v203 = System_String__Concat_63379872(
+                 (System_String_o *)StringLiteral_672/*"(401) Unauthorized"*/,
                  v8->fields._url_5__11,
-                 (System_String_o *)StringLiteral_796/*")\n\nAssetBundle file download time over"*/,
+                 (System_String_o *)StringLiteral_796/*"*-record.json"*/,
                  0LL);
         v8->fields._errorCode_5__6 = v203;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
           (int64_t)v203,
           v204,
@@ -2579,20 +2579,20 @@ LABEL_127:
           }
           else
           {
-            this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(string___TypeInfo, 7LL);
+            this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(string___TypeInfo, 7LL);
             if ( !this )
               goto LABEL_375;
             v248 = this;
             if ( !LODWORD(this->fields.__2__current) )
               goto LABEL_258;
-            v249 = StringLiteral_672/*"("*/;
-            this->fields.__4__this = (struct AssetLoader_o *)StringLiteral_672/*"("*/;
-            sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.__4__this, v249, v242, v243, v244, v245, v246, v247);
+            v249 = StringLiteral_672/*"(401) Unauthorized"*/;
+            this->fields.__4__this = (struct AssetLoader_o *)StringLiteral_672/*"(401) Unauthorized"*/;
+            sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.__4__this, v249, v242, v243, v244, v245, v246, v247);
             if ( LODWORD(v248->fields.__2__current) <= 1 )
               goto LABEL_258;
             v256 = (int64_t)v8->fields._url_5__11;
             v248->fields.resourceNames = (struct System_String_array *)v256;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields.resourceNames,
               v256,
               v250,
@@ -2603,9 +2603,9 @@ LABEL_127:
               v255);
             if ( LODWORD(v248->fields.__2__current) <= 2 )
               goto LABEL_258;
-            v263 = StringLiteral_795/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
-            *(_QWORD *)&v248->fields._isEncrypted_5__2 = StringLiteral_795/*")\n\nAssetBundle file check sum error\nlist crc ("*/;
-            sub_1C2E0D0(
+            v263 = StringLiteral_795/*"**="*/;
+            *(_QWORD *)&v248->fields._isEncrypted_5__2 = StringLiteral_795/*"**="*/;
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields._isEncrypted_5__2,
               v263,
               v257,
@@ -2622,7 +2622,7 @@ LABEL_127:
             if ( LODWORD(v248->fields.__2__current) <= 3 )
               goto LABEL_258;
             *(_QWORD *)&v248->fields._isAutoRetry_5__4 = this;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields._isAutoRetry_5__4,
               (int64_t)this,
               v265,
@@ -2633,9 +2633,9 @@ LABEL_127:
               v270);
             if ( LODWORD(v248->fields.__2__current) <= 4 )
               goto LABEL_258;
-            v277 = StringLiteral_797/*")\nfile crc ("*/;
-            v248->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_797/*")\nfile crc ("*/;
-            sub_1C2E0D0(
+            v277 = StringLiteral_797/*"*.*"*/;
+            v248->fields._errorCode_5__6 = (struct System_String_o *)StringLiteral_797/*"*.*"*/;
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields._errorCode_5__6,
               v277,
               v271,
@@ -2648,7 +2648,7 @@ LABEL_127:
             if ( LODWORD(v248->fields.__2__current) <= 5 )
               goto LABEL_258;
             v248->fields._errorLocalizeCode_5__7 = (struct System_String_o *)this;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields._errorLocalizeCode_5__7,
               (int64_t)this,
               v278,
@@ -2659,9 +2659,9 @@ LABEL_127:
               v283);
             if ( LODWORD(v248->fields.__2__current) <= 6 )
               goto LABEL_258;
-            v290 = StringLiteral_791/*")"*/;
-            *(_QWORD *)&v248->fields._requestTime_5__8 = StringLiteral_791/*")"*/;
-            sub_1C2E0D0(
+            v290 = StringLiteral_791/*")|("*/;
+            *(_QWORD *)&v248->fields._requestTime_5__8 = StringLiteral_791/*")|("*/;
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v248->fields._requestTime_5__8,
               v290,
               v284,
@@ -2670,9 +2670,9 @@ LABEL_127:
               v287,
               v288,
               v289);
-            v291 = System_String__Concat_63249112((System_String_array *)v248, 0LL);
+            v291 = System_String__Concat_63382140((System_String_array *)v248, 0LL);
             v8->fields._errorCode_5__6 = v291;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
               (int64_t)v291,
               v292,
@@ -2699,14 +2699,14 @@ LABEL_110:
           goto LABEL_375;
         v225 = v8->fields._url_5__11;
         v226 = UnityEngine_Networking_UnityWebRequest__get_error((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
-        v227 = System_String__Concat_63248848(
-                 (System_String_o *)StringLiteral_672/*"("*/,
+        v227 = System_String__Concat_63381876(
+                 (System_String_o *)StringLiteral_672/*"(401) Unauthorized"*/,
                  v225,
-                 (System_String_o *)StringLiteral_793/*")\n\n"*/,
+                 (System_String_o *)StringLiteral_793/*"* "*/,
                  v226,
                  0LL);
         v8->fields._errorCode_5__6 = v227;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
           (int64_t)v227,
           v228,
@@ -2726,17 +2726,17 @@ LABEL_110:
         v235 = (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders;
         if ( System_Collections_Generic_Dictionary_object__object___get_Count(
                (System_Collections_Generic_Dictionary_object__object__o *)ResponseHeaders,
-               (const MethodInfo_3335844 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
+               (const MethodInfo_3355438 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) < 1
           || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
                 v235,
-                (Il2CppObject *)StringLiteral_12507/*"STATUS"*/,
+                (Il2CppObject *)StringLiteral_12535/*"ShowNobleInfo"*/,
                 &value,
-                (const MethodInfo_3337380 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+                (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
         {
           goto LABEL_140;
         }
         v236 = value;
-        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(char___TypeInfo, 1LL);
+        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(char___TypeInfo, 1LL);
         if ( !this )
           goto LABEL_375;
         method = (const MethodInfo *)this;
@@ -2745,7 +2745,7 @@ LABEL_110:
         LOWORD(this->fields.__4__this) = 32;
         if ( !v236 )
           goto LABEL_375;
-        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63257976(
+        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63391004(
                                                     (System_String_o *)v236,
                                                     (System_Char_array *)this,
                                                     1,
@@ -2760,7 +2760,7 @@ LABEL_110:
           goto LABEL_375;
         this = (AssetLoader__LoadDataCR_d__29_o *)System_String__StartsWith(
                                                     (System_String_o *)this,
-                                                    (System_String_o *)StringLiteral_7330/*"HTTP"*/,
+                                                    (System_String_o *)StringLiteral_7332/*"If type is being redefined, the base type has to be self-referenced."*/,
                                                     0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_140;
@@ -2769,17 +2769,17 @@ LABEL_110:
         this = (AssetLoader__LoadDataCR_d__29_o *)v237->fields.resourceNames;
         if ( !this )
           goto LABEL_375;
-        if ( !System_String__Equals_63243900((System_String_o *)this, (System_String_o *)StringLiteral_1494/*"503"*/, 0LL) )
+        if ( !System_String__Equals_63376928((System_String_o *)this, (System_String_o *)StringLiteral_1493/*":/?#[]@!$&'()*+,;="*/, 0LL) )
           goto LABEL_140;
         v238 = v8->fields._url_5__11;
         v239 = v8->fields._autoRetryCount_5__3 + 1;
         v8->fields._isAutoRetry_5__4 = 1;
         v8->fields._autoRetryCount_5__3 = v239;
         v240 = System_Int32__ToString((int)v8 + 52, 0LL);
-        v223 = System_String__Concat_63248848(
-                 (System_String_o *)StringLiteral_672/*"("*/,
+        v223 = System_String__Concat_63381876(
+                 (System_String_o *)StringLiteral_672/*"(401) Unauthorized"*/,
                  v238,
-                 (System_String_o *)StringLiteral_794/*")\n\n503 Auto retry count "*/,
+                 (System_String_o *)StringLiteral_794/*"**"*/,
                  v240,
                  0LL);
         v8->fields._errorCode_5__6 = v223;
@@ -2812,10 +2812,10 @@ LABEL_110:
                                    + 49))(
                                     v213,
                                     *((_QWORD *)v213->_1.image + 50));
-        v216 = System_String__Concat_63248848(
-                 (System_String_o *)StringLiteral_19393/*"error "*/,
+        v216 = System_String__Concat_63381876(
+                 (System_String_o *)StringLiteral_19428/*"getNotificationFromIntent"*/,
                  (System_String_o *)v214,
-                 (System_String_o *)StringLiteral_117/*" "*/,
+                 (System_String_o *)StringLiteral_117/*"   "*/,
                  v215,
                  0LL);
       }
@@ -2823,15 +2823,15 @@ LABEL_110:
       v8->fields._errorCode_5__6 = v216;
       p_errorCode_5__6 = (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6;
 LABEL_109:
-      sub_1C2E0D0(p_errorCode_5__6, (int64_t)v223, v217, v218, v219, v220, v221, v222);
+      sub_1C3B708(p_errorCode_5__6, (int64_t)v223, v217, v218, v219, v220, v221, v222);
 LABEL_140:
       v8->fields._url_5__11 = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, v196, v197, v198, v199, v200, v201);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, v196, v197, v198, v199, v200, v201);
       p_errorLocalizeCode_5__7 = (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12;
       v152 = 0LL;
       v8->fields._asyncOperater_5__12 = 0LL;
 LABEL_141:
-      sub_1C2E0D0(p_errorLocalizeCode_5__7, v152, v145, v146, v147, v148, v149, v150);
+      sub_1C3B708(p_errorLocalizeCode_5__7, v152, v145, v146, v147, v148, v149, v150);
       method = (const MethodInfo *)v8->fields._errorCode_5__6;
       if ( method )
       {
@@ -2845,18 +2845,18 @@ LABEL_141:
         if ( v298->static_fields->UseDebugCommand )
         {
           _4__this->fields.isErrorDialog = 1;
-          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v299 = _4__this->fields.data;
           if ( !v299 )
             goto LABEL_375;
           v300 = (CommonUI_o *)this;
-          v301 = System_String__Concat_63248848(
-                   (System_String_o *)StringLiteral_2521/*"AssetName : "*/,
+          v301 = System_String__Concat_63381876(
+                   (System_String_o *)StringLiteral_2521/*"B040"*/,
                    v299->fields.name,
                    (System_String_o *)StringLiteral_43/*"\n"*/,
                    v8->fields._errorCode_5__6,
                    0LL);
-          v302 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          v302 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(v302, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
           if ( !v300 )
             goto LABEL_375;
@@ -2865,7 +2865,7 @@ LABEL_141:
           LODWORD(effectDistance.fields.value.fields.y) = v552;
           CommonUI__OpenWarningDialog(
             v300,
-            (System_String_o *)StringLiteral_16226/*"[FFFF80]Download error for debug"*/,
+            (System_String_o *)StringLiteral_16254/*"_txt_servant"*/,
             v301,
             v302,
             1,
@@ -2880,7 +2880,7 @@ LABEL_148:
             v481 = (int64_t)v8->fields._wait_5__10;
             v8->fields.__2__current = (Il2CppObject *)v481;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, v481, (int64_t)v2, v3, v4, v5, v6, v7);
+            sub_1C3B708(p__2__current, v481, (int64_t)v2, v3, v4, v5, v6, v7);
             v80 = 2;
             goto LABEL_355;
           }
@@ -2895,11 +2895,11 @@ LABEL_148:
             v471 = ManagerConfig_TypeInfo;
           }
           DOWNLOAD_RETRY_DELAY_TIME = v471->static_fields->DOWNLOAD_RETRY_DELAY_TIME;
-          v474 = (UnityEngine_WaitForSeconds_o *)sub_1C2E378(UnityEngine_WaitForSeconds_TypeInfo);
+          v474 = (UnityEngine_WaitForSeconds_o *)sub_1C3B9B0(UnityEngine_WaitForSeconds_TypeInfo);
           UnityEngine_WaitForSeconds___ctor(v474, DOWNLOAD_RETRY_DELAY_TIME * (float)autoRetryCount_5__3, 0LL);
           v8->fields.__2__current = (Il2CppObject *)v474;
           p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(p__2__current, (int64_t)v474, v475, v476, v477, v478, v479, v480);
+          sub_1C3B708(p__2__current, (int64_t)v474, v475, v476, v477, v478, v479, v480);
           v80 = 3;
           goto LABEL_355;
         }
@@ -2908,10 +2908,10 @@ LABEL_148:
           _4__this->fields.isErrorDialog = 1;
           if ( !ManagementManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-          if ( !byte_4BFC80F )
+          if ( !byte_4C2101D )
           {
-            sub_1C2E12C(&ManagementManager_TypeInfo, method);
-            byte_4BFC80F = 1;
+            sub_1C3B764(&ManagementManager_TypeInfo, method);
+            byte_4C2101D = 1;
           }
           v303 = ManagementManager_TypeInfo;
           if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -2920,7 +2920,7 @@ LABEL_148:
             v303 = ManagementManager_TypeInfo;
           }
           isDuringStartup = v303->static_fields->isDuringStartup;
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           errorLocalizeCode_5__7 = v8->fields._errorLocalizeCode_5__7;
           v307 = (CommonUI_o *)Instance;
           v308 = (System_String_o *)StringLiteral_1/*""*/;
@@ -2929,11 +2929,11 @@ LABEL_148:
             if ( errorLocalizeCode_5__7 )
               v309 = v8->fields._errorLocalizeCode_5__7;
             else
-              v309 = (System_String_o *)StringLiteral_2150/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/;
+              v309 = (System_String_o *)StringLiteral_2150/*"Add:"*/;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v310 = LocalizationManager__Get(v309, 0LL);
-            v311 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+            v311 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(v311, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
             if ( !v307 )
               goto LABEL_375;
@@ -2944,11 +2944,11 @@ LABEL_148:
             if ( errorLocalizeCode_5__7 )
               v312 = v8->fields._errorLocalizeCode_5__7;
             else
-              v312 = (System_String_o *)StringLiteral_2151/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/;
+              v312 = (System_String_o *)StringLiteral_2151/*"AddArtsCardIds"*/;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v313 = LocalizationManager__Get(v312, 0LL);
-            v314 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+            v314 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(v314, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
             if ( !v307 )
               goto LABEL_375;
@@ -2960,7 +2960,7 @@ LABEL_172:
             v482 = (int64_t)v8->fields._wait_5__10;
             v8->fields.__2__current = (Il2CppObject *)v482;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, v482, (int64_t)v2, v3, v4, v5, v6, v7);
+            sub_1C3B708(p__2__current, v482, (int64_t)v2, v3, v4, v5, v6, v7);
             v80 = 4;
             goto LABEL_355;
           }
@@ -2969,10 +2969,10 @@ LABEL_172:
 LABEL_173:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF8DA5 )
+      if ( !byte_4C1D530 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, method);
-        byte_4BF8DA5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, method);
+        byte_4C1D530 = 1;
       }
       this = (AssetLoader__LoadDataCR_d__29_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2989,9 +2989,9 @@ LABEL_173:
           goto LABEL_375;
         UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)this, 0LL);
         _4__this->fields.loader = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v483, v484, v485, v486, v487, v488);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v483, v484, v485, v486, v487, v488);
         _4__this->fields.readData = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v489, v490, v491, v492, v493, v494);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v489, v490, v491, v492, v493, v494);
         return 0;
       }
       if ( !_4__this->fields.isDownload && !v8->fields._isEncrypted_5__2 )
@@ -3001,17 +3001,17 @@ LABEL_173:
       {
         UnityEngine_Networking_UnityWebRequest__Dispose(v315, 0LL);
         _4__this->fields.loader = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v316, v317, v318, v319, v320, v321);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v316, v317, v318, v319, v320, v321);
         _4__this->fields.readData = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v322, v323, v324, v325, v326, v327);
+        sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.readData, 0LL, v322, v323, v324, v325, v326, v327);
       }
       if ( !v8->fields._isCrcError_5__5 )
       {
 LABEL_291:
         v8->fields._errorCode_5__6 = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+        sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
         v8->fields._errorLocalizeCode_5__7 = 0LL;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&v8->fields._errorLocalizeCode_5__7,
           0LL,
           v418,
@@ -3021,7 +3021,7 @@ LABEL_291:
           v422,
           v423);
         v8->fields._wait_5__10 = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._wait_5__10, 0LL, v424, v425, v426, v427, v428, v429);
+        sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._wait_5__10, 0LL, v424, v425, v426, v427, v428, v429);
         goto LABEL_292;
       }
       v328 = AssetManager_TypeInfo;
@@ -3029,7 +3029,7 @@ LABEL_291:
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       ConfigFileAddress = AssetManager__get_ConfigFileAddress((const MethodInfo *)v328);
       v8->fields._url_5__11 = ConfigFileAddress;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._url_5__11,
         (int64_t)ConfigFileAddress,
         v330,
@@ -3048,7 +3048,7 @@ LABEL_189:
         goto LABEL_375;
       _4__this->fields.loader = (struct UnityEngine_Networking_UnityWebRequest_o *)this;
       v344 = (AssetLoader__LoadDataCR_d__29_o **)&_4__this->fields.loader;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&_4__this->fields.loader,
         (int64_t)this,
         v338,
@@ -3075,7 +3075,7 @@ LABEL_189:
                (UnityEngine_Networking_UnityWebRequest_o *)this,
                0LL);
       v8->fields._asyncOperater_5__12 = v349;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v8->fields._asyncOperater_5__12,
         (int64_t)v349,
         v350,
@@ -3123,14 +3123,14 @@ LABEL_374:
           v549 = (int64_t)v8->fields._wait_5__10;
           v8->fields.__2__current = (Il2CppObject *)v549;
           p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(p__2__current, v549, v356, v357, v358, v359, v360, v361);
+          sub_1C3B708(p__2__current, v549, v356, v357, v358, v359, v360, v361);
           v80 = 5;
           goto LABEL_355;
         }
       }
       v8->fields._errorCode_5__6 = 0LL;
       v367 = &v8->fields._errorCode_5__6;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, v356, v357, v358, v359, v360, v361);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6, 0LL, v356, v357, v358, v359, v360, v361);
       if ( !_4__this )
         goto LABEL_375;
       v368 = &_4__this->fields.loader;
@@ -3145,7 +3145,7 @@ LABEL_374:
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         UnityEngine_Networking_UnityWebRequest__Abort(*v368, 0LL);
-        v415 = &StringLiteral_2534/*"AssetStorageList download time over"*/;
+        v415 = &StringLiteral_2534/*"B063"*/;
         goto LABEL_327;
       }
       v369 = UnityEngine_Networking_UnityWebRequest__get_error(*v368, 0LL);
@@ -3166,10 +3166,10 @@ LABEL_374:
       v371 = CatAndMouseGame__MouseGame3(text, 0LL);
       if ( System_String__IsNullOrEmpty(v371, 0LL) )
       {
-        v415 = &StringLiteral_2532/*"AssetStorageList download error"*/;
+        v415 = &StringLiteral_2532/*"B061"*/;
         goto LABEL_327;
       }
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(char___TypeInfo, 1LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(char___TypeInfo, 1LL);
       if ( !this )
         goto LABEL_375;
       method = (const MethodInfo *)this;
@@ -3178,13 +3178,13 @@ LABEL_374:
       LOWORD(this->fields.__4__this) = -257;
       if ( !v371 )
         goto LABEL_375;
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Trim_63265332(v371, (System_Char_array *)this, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Trim_63398360(v371, (System_Char_array *)this, 0LL);
       if ( !this )
         goto LABEL_375;
       v378 = this;
-      if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25631/*"~"*/, 0LL) )
+      if ( !System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25675, 0LL) )
         goto LABEL_286;
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(char___TypeInfo, 2LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(char___TypeInfo, 2LL);
       if ( !this )
         goto LABEL_375;
       _2__current = (int)this->fields.__2__current;
@@ -3199,7 +3199,7 @@ LABEL_374:
       if ( v380 < 2 )
         goto LABEL_286;
       v381 = v380;
-      v382 = System_String__Substring_63254588((System_String_o *)v378, 1, v380 - 1, 0LL);
+      v382 = System_String__Substring_63387616((System_String_o *)v378, 1, v380 - 1, 0LL);
       v383 = System_String__Substring((System_String_o *)v378, v381 + 1, 0LL);
       this = (AssetLoader__LoadDataCR_d__29_o *)System_Text_Encoding__get_UTF8(0LL);
       if ( !this )
@@ -3214,12 +3214,12 @@ LABEL_374:
       if ( System_UInt32__Parse(v382, 0LL) != v385 )
       {
 LABEL_286:
-        v415 = &StringLiteral_2531/*"AssetStorageList download data error"*/;
+        v415 = &StringLiteral_2531/*"B060"*/;
 LABEL_327:
         v496 = (System_String_o *)*v415;
 LABEL_328:
         *v367 = v496;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&v8->fields._errorCode_5__6,
           (int64_t)v496,
           v372,
@@ -3232,7 +3232,7 @@ LABEL_328:
         {
           UnityEngine_Networking_UnityWebRequest__Dispose(*v368, 0LL);
           *v368 = 0LL;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v497, v498, v499, v500, v501, v502);
+          sub_1C3B708((PartyOrganizationUtility_o *)&_4__this->fields.loader, 0LL, v497, v498, v499, v500, v501, v502);
         }
         if ( !*v367 )
           goto LABEL_354;
@@ -3245,18 +3245,18 @@ LABEL_328:
         if ( v503->static_fields->UseDebugCommand )
         {
           _4__this->fields.isErrorDialog = 1;
-          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          this = (AssetLoader__LoadDataCR_d__29_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v504 = _4__this->fields.data;
           if ( !v504 )
             goto LABEL_375;
           v505 = (CommonUI_o *)this;
-          v506 = System_String__Concat_63248848(
-                   (System_String_o *)StringLiteral_2521/*"AssetName : "*/,
+          v506 = System_String__Concat_63381876(
+                   (System_String_o *)StringLiteral_2521/*"B040"*/,
                    v504->fields.name,
                    (System_String_o *)StringLiteral_43/*"\n"*/,
                    *v367,
                    0LL);
-          v507 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          v507 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(v507, (Il2CppObject *)_4__this, Method_AssetLoader_EndWarningDialog__, 0LL);
           if ( !v505 )
             goto LABEL_375;
@@ -3264,7 +3264,7 @@ LABEL_328:
           effectDistancea.fields.value.fields.y = 0.0;
           CommonUI__OpenWarningDialog(
             v505,
-            (System_String_o *)StringLiteral_16226/*"[FFFF80]Download error for debug"*/,
+            (System_String_o *)StringLiteral_16254/*"_txt_servant"*/,
             v506,
             v507,
             1,
@@ -3279,7 +3279,7 @@ LABEL_337:
             v508 = (int64_t)v8->fields._wait_5__10;
             v8->fields.__2__current = (Il2CppObject *)v508;
             p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-            sub_1C2E0D0(p__2__current, v508, (int64_t)v2, v3, v4, v5, v6, v7);
+            sub_1C3B708(p__2__current, v508, (int64_t)v2, v3, v4, v5, v6, v7);
             v80 = 6;
             goto LABEL_355;
           }
@@ -3287,10 +3287,10 @@ LABEL_337:
         _4__this->fields.isErrorDialog = 1;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        if ( !byte_4BFC80F )
+        if ( !byte_4C2101D )
         {
-          sub_1C2E12C(&ManagementManager_TypeInfo, method);
-          byte_4BFC80F = 1;
+          sub_1C3B764(&ManagementManager_TypeInfo, method);
+          byte_4C2101D = 1;
         }
         v509 = ManagementManager_TypeInfo;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -3299,13 +3299,13 @@ LABEL_337:
           v509 = ManagementManager_TypeInfo;
         }
         v510 = v509->static_fields->isDuringStartup;
-        v511 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v511 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v510 )
         {
-          v512 = LocalizationManager__Get((System_String_o *)StringLiteral_2150/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
-          v513 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          v512 = LocalizationManager__Get((System_String_o *)StringLiteral_2150/*"Add:"*/, 0LL);
+          v513 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(v513, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
           if ( !v511 )
             goto LABEL_375;
@@ -3313,8 +3313,8 @@ LABEL_337:
         }
         else
         {
-          v514 = LocalizationManager__Get((System_String_o *)StringLiteral_2151/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
-          v515 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          v514 = LocalizationManager__Get((System_String_o *)StringLiteral_2151/*"AddArtsCardIds"*/, 0LL);
+          v515 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(v515, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
           if ( !v511 )
             goto LABEL_375;
@@ -3326,17 +3326,17 @@ LABEL_352:
           v516 = (int64_t)v8->fields._wait_5__10;
           v8->fields.__2__current = (Il2CppObject *)v516;
           p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(p__2__current, v516, (int64_t)v2, v3, v4, v5, v6, v7);
+          sub_1C3B708(p__2__current, v516, (int64_t)v2, v3, v4, v5, v6, v7);
           v80 = 7;
         }
         else
         {
 LABEL_354:
-          v517 = (UnityEngine_WaitForSeconds_o *)sub_1C2E378(UnityEngine_WaitForSeconds_TypeInfo);
+          v517 = (UnityEngine_WaitForSeconds_o *)sub_1C3B9B0(UnityEngine_WaitForSeconds_TypeInfo);
           UnityEngine_WaitForSeconds___ctor(v517, 1.0, 0LL);
           v8->fields.__2__current = (Il2CppObject *)v517;
           p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(p__2__current, (int64_t)v517, v518, v519, v520, v521, v522, v523);
+          sub_1C3B708(p__2__current, (int64_t)v517, v518, v519, v520, v521, v522, v523);
           v80 = 8;
         }
 LABEL_355:
@@ -3345,16 +3345,16 @@ LABEL_355:
       }
       if ( !v383 )
         goto LABEL_272;
-      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(char___TypeInfo, 2LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(char___TypeInfo, 2LL);
       if ( !this )
         goto LABEL_375;
       v386 = (int)this->fields.__2__current;
       method = (const MethodInfo *)this;
       if ( !v386 || (LOWORD(this->fields.__4__this) = 13, v386 == 1) )
 LABEL_258:
-        sub_1C2E390(this, method);
+        sub_1C3B9C8(this, method);
       WORD1(this->fields.__4__this) = 10;
-      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63257976(v383, (System_Char_array *)this, 1, 0LL);
+      this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63391004(v383, (System_Char_array *)this, 1, 0LL);
       if ( !this )
         goto LABEL_375;
       v387 = this->fields.__2__current;
@@ -3366,7 +3366,7 @@ LABEL_258:
       while ( 2 )
       {
         v391 = (System_String_o *)*((_QWORD *)&v388->fields.__4__this + v390);
-        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C2E1D4(char___TypeInfo, 1LL);
+        this = (AssetLoader__LoadDataCR_d__29_o *)sub_1C3B80C(char___TypeInfo, 1LL);
         if ( !this )
           goto LABEL_375;
         method = (const MethodInfo *)this;
@@ -3375,7 +3375,7 @@ LABEL_258:
         LOWORD(this->fields.__4__this) = 44;
         if ( !v391 )
           goto LABEL_375;
-        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63257740(v391, (System_Char_array *)this, 0LL);
+        this = (AssetLoader__LoadDataCR_d__29_o *)System_String__Split_63390768(v391, (System_Char_array *)this, 0LL);
         if ( !this )
           goto LABEL_375;
         v392 = this->fields.__2__current;
@@ -3387,7 +3387,7 @@ LABEL_258:
             goto LABEL_375;
           this = (AssetLoader__LoadDataCR_d__29_o *)System_String__StartsWith(
                                                       (System_String_o *)this,
-                                                      (System_String_o *)StringLiteral_1867/*"@"*/,
+                                                      (System_String_o *)StringLiteral_1867/*"ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE"*/,
                                                       0LL);
           if ( !LODWORD(v393->fields.__2__current) )
             goto LABEL_258;
@@ -3411,7 +3411,7 @@ LABEL_258:
           }
           this = (AssetLoader__LoadDataCR_d__29_o *)System_String__StartsWith(
                                                       (System_String_o *)this,
-                                                      (System_String_o *)StringLiteral_25631/*"~"*/,
+                                                      (System_String_o *)StringLiteral_25675,
                                                       0LL);
           if ( ((unsigned __int8)this & 1) == 0 )
           {
@@ -3457,10 +3457,10 @@ LABEL_256:
         _4__this->fields.isErrorDialog = 1;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        if ( !byte_4BFC80F )
+        if ( !byte_4C2101D )
         {
-          sub_1C2E12C(&ManagementManager_TypeInfo, method);
-          byte_4BFC80F = 1;
+          sub_1C3B764(&ManagementManager_TypeInfo, method);
+          byte_4C2101D = 1;
         }
         v403 = ManagementManager_TypeInfo;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -3469,13 +3469,13 @@ LABEL_256:
           v403 = ManagementManager_TypeInfo;
         }
         v404 = v403->static_fields->isDuringStartup;
-        v405 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v405 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v404 )
         {
-          v406 = LocalizationManager__Get((System_String_o *)StringLiteral_2150/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0LL);
-          v407 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          v406 = LocalizationManager__Get((System_String_o *)StringLiteral_2150/*"Add:"*/, 0LL);
+          v407 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(v407, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
           if ( v405 )
           {
@@ -3484,8 +3484,8 @@ LABEL_256:
           }
           goto LABEL_375;
         }
-        v416 = LocalizationManager__Get((System_String_o *)StringLiteral_2151/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0LL);
-        v417 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+        v416 = LocalizationManager__Get((System_String_o *)StringLiteral_2151/*"AddArtsCardIds"*/, 0LL);
+        v417 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
         ErrorDialog_ClickDelegate___ctor(v417, (Il2CppObject *)_4__this, Method_AssetLoader_EndRetryDialog__, 0LL);
         if ( !v405 )
           goto LABEL_375;
@@ -3494,23 +3494,23 @@ LABEL_289:
         if ( !_4__this->fields.isErrorDialog )
         {
           v8->fields._url_5__11 = 0LL;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._url_5__11, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
           goto LABEL_291;
         }
         v495 = (int64_t)v8->fields._wait_5__10;
         v8->fields.__2__current = (Il2CppObject *)v495;
         p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-        sub_1C2E0D0(p__2__current, v495, (int64_t)v2, v3, v4, v5, v6, v7);
+        sub_1C3B708(p__2__current, v495, (int64_t)v2, v3, v4, v5, v6, v7);
         v80 = 9;
         goto LABEL_355;
       }
 LABEL_272:
       if ( !ManagementManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-      if ( !byte_4BFC80F )
+      if ( !byte_4C2101D )
       {
-        sub_1C2E12C(&ManagementManager_TypeInfo, method);
-        byte_4BFC80F = 1;
+        sub_1C3B764(&ManagementManager_TypeInfo, method);
+        byte_4C2101D = 1;
       }
       v408 = ManagementManager_TypeInfo;
       if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -3519,13 +3519,13 @@ LABEL_272:
         v408 = ManagementManager_TypeInfo;
       }
       v409 = v408->static_fields->isDuringStartup;
-      v410 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v410 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( LocalizationManager_TypeInfo->_2.cctor_finished )
       {
         if ( v409 )
           goto LABEL_280;
 LABEL_282:
-        v411 = &StringLiteral_9403/*"NETWORK_ERROR_ASSET_UPDATE"*/;
+        v411 = &StringLiteral_9405/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_SKIP"*/;
       }
       else
       {
@@ -3533,10 +3533,10 @@ LABEL_282:
         if ( !v409 )
           goto LABEL_282;
 LABEL_280:
-        v411 = &StringLiteral_9404/*"NETWORK_ERROR_ASSET_UPDATE_BOOT"*/;
+        v411 = &StringLiteral_9406/*"OPENING_MOVIE_SKIP_CONFIRM_DIALOG_TITLE"*/;
       }
       v412 = LocalizationManager__Get((System_String_o *)*v411, 0LL);
-      v413 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+      v413 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(v413, (Il2CppObject *)_4__this, Method_AssetLoader_EndRebootDialog__, 0LL);
       if ( !v410 )
         goto LABEL_375;
@@ -3558,14 +3558,14 @@ LABEL_280:
       v72 = AssetData__SetAssetBundleData(v70, (UnityEngine_AssetBundle_o *)this, v8->fields.resourceNames, v71);
       v8->fields.__2__current = (Il2CppObject *)v72;
       p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-      sub_1C2E0D0(p__2__current, (int64_t)v72, v74, v75, v76, v77, v78, v79);
+      sub_1C3B708(p__2__current, (int64_t)v72, v74, v75, v76, v77, v78, v79);
       v80 = 13;
       goto LABEL_355;
     case 0xD:
       v8->fields.__1__state = -1;
 LABEL_37:
       v8->fields._req_5__13 = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v8->fields._req_5__13, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._req_5__13, 0LL, (int64_t)v2, v3, v4, v5, v6, v7);
       if ( _4__this )
         goto LABEL_38;
       goto LABEL_375;
@@ -3591,11 +3591,11 @@ void __fastcall __noreturn AssetLoader__LoadDataCR_d__29__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_AssetLoader__LoadDataCR_d__29_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_AssetLoader__LoadDataCR_d__29_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -3626,15 +3626,15 @@ void __fastcall AssetLoader___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFC79F & 1) == 0 )
+  if ( (byte_4C20FAD & 1) == 0 )
   {
-    sub_1C2E12C(&AssetLoader___c_TypeInfo, v1);
-    byte_4BFC79F = 1;
+    sub_1C3B764(&AssetLoader___c_TypeInfo, v1);
+    byte_4C20FAD = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(AssetLoader___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(AssetLoader___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   AssetLoader___c_TypeInfo->static_fields->__9 = (struct AssetLoader___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)AssetLoader___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -3657,13 +3657,13 @@ bool __fastcall AssetLoader___c___LoadDataCR_b__29_0(AssetLoader___c_o *this, co
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4BFC7A0 & 1) == 0 )
+  if ( (byte_4C20FAE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
-    byte_4BFC7A0 = 1;
+    sub_1C3B764(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
+    byte_4C20FAE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance )
-    sub_1C2E388(0LL, v3);
+    sub_1C3B9C0(0LL, v3);
   return BYTE4(Instance[7].monitor) == 0;
 }

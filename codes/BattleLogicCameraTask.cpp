@@ -16,5 +16,5 @@ void __fastcall BattleLogicCameraTask___ctor(
   v4->fields._TransitionDestinationFromDetail_k__BackingField = cameraName;
   v4 = (PartyOrganizationUtility_o *)((char *)v4 + 152);
   LODWORD(v4[-1].fields._BasePartyItem_k__BackingField) = 27;
-  sub_1C2E0D0(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708(v4, (int64_t)cameraName, v5, v6, v7, v8, v9, v10);
 }

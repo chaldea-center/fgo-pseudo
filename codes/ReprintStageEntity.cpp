@@ -1,17 +1,17 @@
 void __fastcall ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDDAF & 1) == 0 )
+  if ( (byte_4C225C1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFDDAF = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C225C1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall ReprintStageEntity___ctor_40923832(
+void __fastcall ReprintStageEntity___ctor_41034676(
         ReprintStageEntity_o *this,
         ReprintStageEntity_o *cSrc,
         const MethodInfo *method)
@@ -19,16 +19,16 @@ void __fastcall ReprintStageEntity___ctor_40923832(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BFDDB0 & 1) == 0 )
+  if ( (byte_4C225C2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, cSrc);
-    byte_4BFDDB0 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, cSrc);
+    byte_4C225C2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
   *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
 }
@@ -41,16 +41,16 @@ System_String_o *__fastcall ReprintStageEntity__CreatePK(
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_4BFDDAE & 1) == 0 )
+  if ( (byte_4C225C0 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questPhase);
-    byte_4BFDDAE = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questPhase);
+    byte_4C225C0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FEE81C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

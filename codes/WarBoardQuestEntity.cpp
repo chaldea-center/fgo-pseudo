@@ -1,13 +1,13 @@
 void __fastcall WarBoardQuestEntity___ctor(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE7E5 & 1) == 0 )
+  if ( (byte_4C2300A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFE7E5 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C2300A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardQuestEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4BFE7E3 & 1) == 0 )
+  if ( (byte_4C23008 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
-    byte_4BFE7E3 = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&questPhase);
+    byte_4C23008 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,10 +41,10 @@ System_String_o *__fastcall WarBoardQuestEntity__CreatePrimaryKey(
 
 bool __fastcall WarBoardQuestEntity__IsUseEventUI(WarBoardQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE7E4 & 1) == 0 )
+  if ( (byte_4C23009 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_21212/*"isUseEventUI"*/, method);
-    byte_4BFE7E4 = 1;
+    sub_1C3B764(&StringLiteral_21248/*"mstBoxGachaBase"*/, method);
+    byte_4C23009 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21212/*"isUseEventUI"*/, 0, 0LL) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21248/*"mstBoxGachaBase"*/, 0, 0LL) > 0;
 }

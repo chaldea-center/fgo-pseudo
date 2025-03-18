@@ -10,17 +10,17 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BFFB10 & 1) == 0 )
+  if ( (byte_4C2433E & 1) == 0 )
   {
-    sub_1C2E12C(&BattleActionData_TypeInfo, actData);
-    byte_4BFFB10 = 1;
+    sub_1C3B764(&BattleActionData_TypeInfo, actData);
+    byte_4C2433E = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, 0LL);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetActionData, (int64_t)actData, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetActionData, (int64_t)actData, v5, v6, v7, v8, v9, v10);
 }
 
 

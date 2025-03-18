@@ -38,18 +38,18 @@ void __fastcall RecommendSupportCancelConfirmItemDraw__SetItem(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_4BF97B7 & 1) == 0 )
+  if ( (byte_4C1DFBE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
-    sub_1C2E12C(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C2E12C(&TutorialFlag_TypeInfo, v11);
-    sub_1C2E12C(&StringLiteral_11719/*"SELECT_NO_SORTIE"*/, v12);
-    sub_1C2E12C(&StringLiteral_19907/*"formation_blank_small"*/, v13);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v14);
-    byte_4BF97B7 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserServantMaster___, userServantEntity);
+    sub_1C3B764(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v7);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v8);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C3B764(&TutorialFlag_TypeInfo, v11);
+    sub_1C3B764(&StringLiteral_11742/*"SHOP_BULK_WINDOW_DESTINATION_KIND"*/, v12);
+    sub_1C3B764(&StringLiteral_19942/*"img_combine_12"*/, v13);
+    sub_1C3B764(&StringLiteral_1/*""*/, v14);
+    byte_4C1DFBE = 1;
   }
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
@@ -79,24 +79,24 @@ void __fastcall RecommendSupportCancelConfirmItemDraw__SetItem(
       goto LABEL_38;
     if ( !equipIdList->max_length )
       goto LABEL_39;
-    v21 = (System_String_o *)StringLiteral_19907/*"formation_blank_small"*/;
+    v21 = (System_String_o *)StringLiteral_19942/*"img_combine_12"*/;
     if ( !equipIdList->m_Items[0] )
       goto LABEL_36;
-    maskSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    maskSprite = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !maskSprite )
       goto LABEL_38;
     maskSprite = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)maskSprite,
-                                              (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                              (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !equipIdList->max_length )
 LABEL_39:
-      sub_1C2E390(maskSprite, userServantEntity);
+      sub_1C3B9C8(maskSprite, userServantEntity);
     if ( maskSprite )
     {
       maskSprite = (UnityEngine_Component_o *)DataMasterBase_object__object__long___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)maskSprite,
                                                 equipIdList->m_Items[0],
-                                                (const MethodInfo_327D6DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                                (const MethodInfo_329D3A4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       if ( this->fields.servantFaceIcon )
       {
         ServantFaceIconComponent__SetEquip(this->fields.servantFaceIcon, (UserServantEntity_o *)maskSprite, 0LL);
@@ -104,9 +104,9 @@ LABEL_39:
       }
     }
 LABEL_38:
-    sub_1C2E388(maskSprite, userServantEntity);
+    sub_1C3B9C0(maskSprite, userServantEntity);
   }
-  ServantFaceIconComponent__Set_39535696(
+  ServantFaceIconComponent__Set_39644684(
     (ServantFaceIconComponent_o *)maskSprite,
     userServantEntity,
     equipIdList,
@@ -117,7 +117,7 @@ LABEL_38:
   {
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    if ( TutorialFlag__Get_39000124(126, 0LL) )
+    if ( TutorialFlag__Get_39109112(126, 0LL) )
     {
       maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
       if ( !maskSprite )
@@ -129,7 +129,7 @@ LABEL_38:
       warningText = this->fields.warningText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11719/*"SELECT_NO_SORTIE"*/, 0LL);
+      maskSprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11742/*"SHOP_BULK_WINDOW_DESTINATION_KIND"*/, 0LL);
       if ( !warningText )
         goto LABEL_38;
       UILabel__set_text(warningText, (System_String_o *)maskSprite, 0LL);
@@ -146,7 +146,7 @@ LABEL_38:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v22 = v23;
-  v20 = klass == (UnityEngine_Component_c *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(
+  v20 = klass == (UnityEngine_Component_c *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(
                                               &v22,
                                               0LL);
   v21 = 0LL;

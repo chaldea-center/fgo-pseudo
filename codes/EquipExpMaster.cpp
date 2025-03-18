@@ -1,14 +1,14 @@
 void __fastcall EquipExpMaster___ctor(EquipExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD5D3 & 1) == 0 )
+  if ( (byte_4C21DE2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__, method);
-    byte_4BFD5D3 = 1;
+    sub_1C3B764(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__, method);
+    byte_4C21DE2 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     52,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__);
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ EquipExpEntity_o *__fastcall EquipExpMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFD5D1 & 1) == 0 )
+  if ( (byte_4C21DE0 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__, *(_QWORD *)&equipId);
-    byte_4BFD5D1 = 1;
+    sub_1C3B764(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__, *(_QWORD *)&equipId);
+    byte_4C21DE0 = 1;
   }
   PK = (Il2CppObject *)EquipExpEntity__CreatePK(equipId, lv, *(const MethodInfo **)&lv);
   return (EquipExpEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_327FC38 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__);
+                               (const MethodInfo_329F900 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall EquipExpMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFD5D2 & 1) == 0 )
+  if ( (byte_4C21DE1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__, entity);
-    byte_4BFD5D2 = 1;
+    sub_1C3B764(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__, entity);
+    byte_4C21DE1 = 1;
   }
   PK = (Il2CppObject *)EquipExpEntity__CreatePK(equipId, lv, *(const MethodInfo **)&equipId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__);
 }
 
 
@@ -108,18 +108,18 @@ int32_t __fastcall EquipExpMaster__getLevelMax(EquipExpMaster_o *this, int32_t i
   int32_t v10; // w23
   Il2CppObject *Item; // x0
 
-  if ( (byte_4BFD5D4 & 1) == 0 )
+  if ( (byte_4C21DE3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__, *(_QWORD *)&id);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__, v5);
-    byte_4BFD5D4 = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__, *(_QWORD *)&id);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__, v5);
+    byte_4C21DE3 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__);
+            (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__);
   if ( Count >= 1 )
   {
     v8 = Count;
@@ -133,14 +133,14 @@ int32_t __fastcall EquipExpMaster__getLevelMax(EquipExpMaster_o *this, int32_t i
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v10,
-               (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__);
+               (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__);
       if ( Item && LODWORD(Item[1].klass) == id && SHIDWORD(Item[1].klass) > klass_high )
         klass_high = HIDWORD(Item[1].klass);
       if ( v8 == ++v10 )
         return klass_high;
     }
 LABEL_15:
-    sub_1C2E388(list, *(_QWORD *)&id);
+    sub_1C3B9C0(list, *(_QWORD *)&id);
   }
   return 0;
 }

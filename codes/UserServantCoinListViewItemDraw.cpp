@@ -16,10 +16,10 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
   __int64 v6; // x1
   struct UICommonButton_o *v7; // x0
 
-  if ( (byte_4BF904E & 1) == 0 )
+  if ( (byte_4C1D855 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, item);
-    byte_4BF904E = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, item);
+    byte_4C1D855 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,7 +34,7 @@ void __fastcall UserServantCoinListViewItemDraw__SetInput(
             v7->klass->vtable._6_OnInit.methodPtr),
           (v7 = this->fields.baseButton) == 0LL) )
     {
-      sub_1C2E388(v7, v6);
+      sub_1C3B9C0(v7, v6);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v7->klass->vtable._14_SetState.method)(
       v7,
@@ -63,11 +63,11 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
   Il2CppObject *v16; // x0
   int v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BF904D & 1) == 0 )
+  if ( (byte_4C1D854 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, item);
-    sub_1C2E12C(&StringLiteral_25402/*"{0:#,0}"*/, v7);
-    byte_4BF904D = 1;
+    sub_1C3B764(&int_TypeInfo, item);
+    sub_1C3B764(&StringLiteral_25446, v7);
+    byte_4C1D854 = 1;
   }
   if ( item && mode )
   {
@@ -96,10 +96,10 @@ void __fastcall UserServantCoinListViewItemDraw__SetItem(
       LODWORD(userSvtCoinEntity) = userSvtCoinEntity->fields.num;
     v17 = (int)userSvtCoinEntity;
     v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v11, v12, v13);
-    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25402/*"{0:#,0}"*/, v16, 0LL);
+    itemIcon = (ItemIconComponent_o *)System_String__Format((System_String_o *)StringLiteral_25446, v16, 0LL);
     if ( !possessionNum )
 LABEL_15:
-      sub_1C2E388(itemIcon, itemId);
+      sub_1C3B9C0(itemIcon, itemId);
     UILabel__set_text(possessionNum, (System_String_o *)itemIcon, 0LL);
   }
 }

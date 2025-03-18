@@ -1,7 +1,7 @@
 void __fastcall BitValue_Int32Enum____ctor(
         BitValue_T__o *this,
         System_Func_T__int__o *func,
-        const MethodInfo_31FD158 *method)
+        const MethodInfo_321C7E0 *method)
 {
   int64_t v5; // x2
   int32_t v6; // w3
@@ -12,11 +12,11 @@ void __fastcall BitValue_Int32Enum____ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.convertFunc = func;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.convertFunc, (int64_t)func, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.convertFunc, (int64_t)func, v5, v6, v7, v8, v9, v10);
 }
 
 
-bool __fastcall BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_31FD208 *method)
+bool __fastcall BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_321C890 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w19
@@ -25,7 +25,7 @@ bool __fastcall BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, con
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C2E388(this, val);
+    sub_1C3B9C0(this, val);
   value = this->fields.value;
   v5 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
          convertFunc->fields.original_method_info,
@@ -35,9 +35,9 @@ bool __fastcall BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, con
 }
 
 
-bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_31FD23C *method)
+bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_321C8C4 *method)
 {
-  const MethodInfo_31FD23C *v3; // x19
+  const MethodInfo_321C8C4 *v3; // x19
   bool v6; // w0
   BitValue_T__c *klass; // x8
 
@@ -45,22 +45,22 @@ bool __fastcall BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t va
   v6 = BitValue_Int32Enum___Check(
          this,
          val,
-         (const MethodInfo_31FD208 *)method->klass->rgctx_data->_4_BitValue_T__Check);
+         (const MethodInfo_321C890 *)method->klass->rgctx_data->_4_BitValue_T__Check);
   klass = v3->klass;
   LOBYTE(v3) = v6;
-  BitValue_Int32Enum___Off(this, val, (const MethodInfo_31FD1C8 *)klass->rgctx_data->_5_BitValue_T__Off);
+  BitValue_Int32Enum___Off(this, val, (const MethodInfo_321C850 *)klass->rgctx_data->_5_BitValue_T__Off);
   return (unsigned __int8)v3 & 1;
 }
 
 
-void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_31FD1C8 *method)
+void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_321C850 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C2E388(this, val);
+    sub_1C3B9C0(this, val);
   value = this->fields.value;
   this->fields.value = value & ~((unsigned __int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
                                   convertFunc->fields.original_method_info,
@@ -69,14 +69,14 @@ void __fastcall BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const
 }
 
 
-void __fastcall BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_31FD188 *method)
+void __fastcall BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_321C810 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C2E388(this, val);
+    sub_1C3B9C0(this, val);
   value = this->fields.value;
   this->fields.value = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))convertFunc->fields.m_target)(
                          convertFunc->fields.original_method_info,
@@ -85,7 +85,7 @@ void __fastcall BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const 
 }
 
 
-void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_31FD28C *method)
+void __fastcall BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_321C914 *method)
 {
   this->fields.value = 0;
 }

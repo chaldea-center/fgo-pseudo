@@ -46,28 +46,28 @@ void __fastcall ServantCheckEquipListViewItemDraw__GetCanSkillCombineList(
   CombineAppendPassiveSkillEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
 
-  if ( (byte_4BF9946 & 1) == 0 )
+  if ( (byte_4C1E14D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_CombineAppendPassiveSkillMaster___, item);
-    sub_1C2E12C(&DataManager_TypeInfo, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Add__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    sub_1C2E12C(&System_Collections_Generic_List_int__TypeInfo, v10);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    byte_4BF9946 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_CombineAppendPassiveSkillMaster___, item);
+    sub_1C3B764(&DataManager_TypeInfo, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v10);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    byte_4C1E14D = 1;
   }
   entity = 0LL;
-  v12 = (System_Collections_Generic_List_int__o *)sub_1C2E378(System_Collections_Generic_List_int__TypeInfo);
+  v12 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v12,
-    (const MethodInfo_364E034 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.enableSkillList = v12;
   p_enableSkillList = &this->fields.enableSkillList;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.enableSkillList, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.enableSkillList, (int64_t)v12, v13, v14, v15, v16, v17, v18);
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame || !skillInfo || (svtUseSkillIdList = skillInfo->fields.svtUseSkillIdList) == 0LL )
 LABEL_35:
-    sub_1C2E388(SelfUserGame, v20);
+    sub_1C3B9C0(SelfUserGame, v20);
   v22 = *((_DWORD *)SelfUserGame + 24);
   v23 = 8LL;
   while ( 1 )
@@ -89,7 +89,7 @@ LABEL_35:
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        SelfUserGame = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_CombineAppendPassiveSkillMaster___);
+        SelfUserGame = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CombineAppendPassiveSkillMaster___);
         if ( !item )
           goto LABEL_35;
         materialUserServantEntity = item->fields.materialUserServantEntity;
@@ -102,7 +102,7 @@ LABEL_35:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v39.fields.currentCryptoKey = v30;
         *(_QWORD *)&v39.fields.fakeValue = v29;
-        SelfUserGame = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v39, 0LL);
+        SelfUserGame = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v39, 0LL);
         svtSkillNumsList = skillInfo->fields.svtSkillNumsList;
         if ( !svtSkillNumsList )
           goto LABEL_35;
@@ -140,7 +140,7 @@ LABEL_35:
               goto LABEL_35;
             if ( v25 >= v33->max_length )
 LABEL_37:
-              sub_1C2E390(SelfUserGame, v20);
+              sub_1C3B9C8(SelfUserGame, v20);
             SelfUserGame = *p_enableSkillList;
             if ( !*p_enableSkillList )
               goto LABEL_35;
@@ -156,7 +156,7 @@ LABEL_37:
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)SelfUserGame,
                 v20,
-                *(const MethodInfo_364E888 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+                *(const MethodInfo_366EC48 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
             }
             else
             {
@@ -232,30 +232,30 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
   bool v46; // w23
   UILabel_o *appendSkillLevelLabel; // x19
 
-  if ( (byte_4BF9945 & 1) == 0 )
+  if ( (byte_4C1E14C & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, item);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Contains__, v7);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
-    sub_1C2E12C(&Rarity_TypeInfo, v9);
-    sub_1C2E12C(&System_Text_StringBuilder_TypeInfo, v10);
-    sub_1C2E12C(&StringLiteral_12400/*"SKILL_LVDISP_TXT"*/, v11);
-    sub_1C2E12C(&StringLiteral_12398/*"SKILL_LVDISP_ENABLE_TXT"*/, v12);
-    sub_1C2E12C(&StringLiteral_23375/*"ribbon_noblephantasmup_01"*/, v13);
-    sub_1C2E12C(&StringLiteral_20534/*"icon_reinforced"*/, v14);
-    sub_1C2E12C(&StringLiteral_12397/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/, v15);
-    sub_1C2E12C(&StringLiteral_20523/*"icon_noblephantasmup"*/, v16);
-    sub_1C2E12C(&StringLiteral_20533/*"icon_rarity5"*/, v17);
-    sub_1C2E12C(&StringLiteral_12399/*"SKILL_LVDISP_SINGLE_TXT"*/, v18);
-    sub_1C2E12C(&StringLiteral_9450/*"NONSKILL_TXT"*/, v19);
-    byte_4BF9945 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, item);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__Contains__, v7);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v8);
+    sub_1C3B764(&Rarity_TypeInfo, v9);
+    sub_1C3B764(&System_Text_StringBuilder_TypeInfo, v10);
+    sub_1C3B764(&StringLiteral_12423/*"Servants"*/, v11);
+    sub_1C3B764(&StringLiteral_12421/*"Servant_get_prefab"*/, v12);
+    sub_1C3B764(&StringLiteral_23418/*"system.memory.free"*/, v13);
+    sub_1C3B764(&StringLiteral_20569/*"iu-latn"*/, v14);
+    sub_1C3B764(&StringLiteral_12420/*"Servant_SORT_FILTER2_EXCEED_"*/, v15);
+    sub_1C3B764(&StringLiteral_20558/*"itemSelectNum"*/, v16);
+    sub_1C3B764(&StringLiteral_20568/*"iu-cans"*/, v17);
+    sub_1C3B764(&StringLiteral_12422/*"Servant_get_prefab_for_battle"*/, v18);
+    sub_1C3B764(&StringLiteral_9452/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/, v19);
+    byte_4C1E14C = 1;
   }
   if ( item && mode )
   {
     servantEquipIcon = this->fields.servantEquipIcon;
     if ( !servantEquipIcon )
       goto LABEL_96;
-    ServantFaceIconComponent__Set_39534600(
+    ServantFaceIconComponent__Set_39643588(
       servantEquipIcon,
       item->fields.materialUserServantEntity,
       item->fields.materialIconLabelInfo,
@@ -319,7 +319,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
         servantEquipIcon = (ServantFaceIconComponent_o *)this->fields.warningSprite;
         if ( !servantEquipIcon )
           goto LABEL_96;
-        v27 = &StringLiteral_20534/*"icon_reinforced"*/;
+        v27 = &StringLiteral_20569/*"iu-latn"*/;
         goto LABEL_32;
       case 2:
         servantEquipIcon = (ServantFaceIconComponent_o *)this->fields.equipSprite;
@@ -347,7 +347,7 @@ void __fastcall ServantCheckEquipListViewItemDraw__SetItem(
         servantEquipIcon = (ServantFaceIconComponent_o *)this->fields.warningSprite;
         if ( !servantEquipIcon )
           goto LABEL_96;
-        v27 = &StringLiteral_20533/*"icon_rarity5"*/;
+        v27 = &StringLiteral_20568/*"iu-cans"*/;
 LABEL_32:
         UISprite__set_spriteName((UISprite_o *)servantEquipIcon, (System_String_o *)*v27, 0LL);
 LABEL_33:
@@ -393,7 +393,7 @@ LABEL_45:
         v29 = this->fields.warningSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_20523/*"icon_noblephantasmup"*/, 0LL);
+        AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_20558/*"itemSelectNum"*/, 0LL);
         servantEquipIcon = (ServantFaceIconComponent_o *)this->fields.materialTdSprite;
         if ( !servantEquipIcon )
           goto LABEL_96;
@@ -403,7 +403,7 @@ LABEL_45:
         if ( !servantEquipIcon )
           goto LABEL_96;
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantEquipIcon, 1, 0LL);
-        AtlasManager__SetEventSprite(this->fields.materialTdSprite, (System_String_o *)StringLiteral_23375/*"ribbon_noblephantasmup_01"*/, 0LL);
+        AtlasManager__SetEventSprite(this->fields.materialTdSprite, (System_String_o *)StringLiteral_23418/*"system.memory.free"*/, 0LL);
         goto LABEL_45;
       case 4:
         servantEquipIcon = this->fields.servantEquipIcon;
@@ -451,7 +451,7 @@ LABEL_45:
           goto LABEL_96;
         AppendSkillInfo = UserServantEntity__getAppendSkillInfo((UserServantEntity_o *)servantEquipIcon, 0LL);
         ServantCheckEquipListViewItemDraw__GetCanSkillCombineList(this, item, AppendSkillInfo, v31);
-        v32 = (System_Text_StringBuilder_o *)sub_1C2E378(System_Text_StringBuilder_TypeInfo);
+        v32 = (System_Text_StringBuilder_o *)sub_1C3B9B0(System_Text_StringBuilder_TypeInfo);
         System_Text_StringBuilder___ctor(v32, 0LL);
         if ( !AppendSkillInfo )
           goto LABEL_96;
@@ -494,13 +494,13 @@ LABEL_45:
               goto LABEL_96;
             if ( v35 >= v41->max_length )
 LABEL_97:
-              sub_1C2E390(servantEquipIcon, item);
+              sub_1C3B9C8(servantEquipIcon, item);
             v42 = *(_DWORD *)((char *)&v40->obj.klass + v38);
             if ( *(int *)((char *)&v41->obj.klass + v38) <= 0 )
             {
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v43 = LocalizationManager__Get((System_String_o *)StringLiteral_9450/*"NONSKILL_TXT"*/, 0LL);
+              v43 = LocalizationManager__Get((System_String_o *)StringLiteral_9452/*"OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION"*/, 0LL);
             }
             else
             {
@@ -514,22 +514,22 @@ LABEL_97:
                 && System_Collections_Generic_List_int___Contains(
                      (System_Collections_Generic_List_int__o *)servantEquipIcon,
                      v42,
-                     (const MethodInfo_364EC00 *)Method_System_Collections_Generic_List_int__Contains__) )
+                     (const MethodInfo_366EFC0 *)Method_System_Collections_Generic_List_int__Contains__) )
               {
-                v45 = &StringLiteral_12397/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
+                v45 = &StringLiteral_12420/*"Servant_SORT_FILTER2_EXCEED_"*/;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v45 = &StringLiteral_12397/*"SKILL_LVDISP_ENABLE_SINGLE_TXT"*/;
+                  v45 = &StringLiteral_12420/*"Servant_SORT_FILTER2_EXCEED_"*/;
                 }
               }
               else
               {
-                v45 = &StringLiteral_12399/*"SKILL_LVDISP_SINGLE_TXT"*/;
+                v45 = &StringLiteral_12422/*"Servant_get_prefab_for_battle"*/;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v45 = &StringLiteral_12399/*"SKILL_LVDISP_SINGLE_TXT"*/;
+                  v45 = &StringLiteral_12422/*"Servant_get_prefab_for_battle"*/;
                 }
               }
             }
@@ -540,12 +540,12 @@ LABEL_97:
               v46 = System_Collections_Generic_List_int___Contains(
                       (System_Collections_Generic_List_int__o *)servantEquipIcon,
                       v42,
-                      (const MethodInfo_364EC00 *)Method_System_Collections_Generic_List_int__Contains__);
+                      (const MethodInfo_366EFC0 *)Method_System_Collections_Generic_List_int__Contains__);
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v45 = &StringLiteral_12398/*"SKILL_LVDISP_ENABLE_TXT"*/;
+              v45 = &StringLiteral_12421/*"Servant_get_prefab"*/;
               if ( !v46 )
-                v45 = &StringLiteral_12400/*"SKILL_LVDISP_TXT"*/;
+                v45 = &StringLiteral_12423/*"Servants"*/;
             }
             servantEquipIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v45, 0LL);
             if ( !v32 )
@@ -570,7 +570,7 @@ LABEL_94:
                                                            v32->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
         if ( !appendSkillLevelLabel )
 LABEL_96:
-          sub_1C2E388(servantEquipIcon, item);
+          sub_1C3B9C0(servantEquipIcon, item);
         UILabel__set_text(appendSkillLevelLabel, (System_String_o *)servantEquipIcon, 0LL);
         break;
       default:

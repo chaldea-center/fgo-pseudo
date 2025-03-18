@@ -1,14 +1,14 @@
 void __fastcall EquipMaster___ctor(EquipMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD5D7 & 1) == 0 )
+  if ( (byte_4C21DE6 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_EquipMaster__EquipEntity__int___ctor__, method);
-    byte_4BFD5D7 = 1;
+    sub_1C3B764(&Method_DataMasterBase_EquipMaster__EquipEntity__int___ctor__, method);
+    byte_4C21DE6 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     51,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_EquipMaster__EquipEntity__int___ctor__);
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_EquipMaster__EquipEntity__int___ctor__);
 }
 
 
@@ -22,32 +22,32 @@ System_String_o *__fastcall EquipMaster__getEquipName(int32_t equipId, const Met
   System_String_o *result; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *monitor; // x19
 
-  if ( (byte_4BFD5D8 & 1) == 0 )
+  if ( (byte_4C21DE7 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EquipMaster___, method);
-    sub_1C2E12C(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__, v3);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v4);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4BFD5D8 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EquipMaster___, method);
+    sub_1C3B764(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__, v3);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v4);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4C21DE7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EquipMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EquipMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v7);
+    sub_1C3B9C0(Instance, v7);
   }
   result = (System_String_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 equipId,
-                                (const MethodInfo_327B180 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+                                (const MethodInfo_329AE48 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
   if ( result )
   {
     monitor = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)result[1].monitor;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47794660(monitor, 0LL);
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(monitor, 0LL);
   }
   return result;
 }

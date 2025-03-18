@@ -23,17 +23,17 @@ void __fastcall WarBoardContinueRequest__beginRequest(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4BFF218 & 1) == 0 )
+  if ( (byte_4C23A42 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&stageId);
-    sub_1C2E12C(&StringLiteral_23927/*"stageId"*/, v9);
-    sub_1C2E12C(&StringLiteral_18538/*"consumeType"*/, v10);
-    byte_4BFF218 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&stageId);
+    sub_1C3B764(&StringLiteral_23970/*"updateDamageGauge"*/, v9);
+    sub_1C3B764(&StringLiteral_18572/*"effectStart"*/, v10);
+    byte_4C23A42 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23927/*"stageId"*/, stageId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18538/*"consumeType"*/, consumeType, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23970/*"updateDamageGauge"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18572/*"effectStart"*/, consumeType, 0LL);
   if ( !warBoardData )
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   WarBoardData__SetRequest(warBoardData, (RequestBase_o *)this, 0LL);
   RequestBase__addBaseField((RequestBase_o *)this, 0LL);
   RequestBase__WriteParameter((RequestBase_o *)this, 0LL);
@@ -52,12 +52,12 @@ System_String_o *__fastcall WarBoardContinueRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4BFF21A & 1) == 0 )
+  if ( (byte_4C23A44 & 1) == 0 )
   {
-    sub_1C2E12C(&AndroidUtil_TypeInfo, method);
-    sub_1C2E12C(&DatFileName_TypeInfo, v2);
-    sub_1C2E12C(&StringLiteral_1102/*"/"*/, v3);
-    byte_4BFF21A = 1;
+    sub_1C3B764(&AndroidUtil_TypeInfo, method);
+    sub_1C3B764(&DatFileName_TypeInfo, v2);
+    sub_1C3B764(&StringLiteral_1102/*"/[delegate]"*/, v3);
+    byte_4C23A44 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -65,7 +65,7 @@ System_String_o *__fastcall WarBoardContinueRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(41, 0LL);
-  return System_String__Concat_63246844(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/"*/, FileName, 0LL);
+  return System_String__Concat_63379872(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, FileName, 0LL);
 }
 
 
@@ -74,16 +74,16 @@ System_String_o *__fastcall WarBoardContinueRequest__getURL(WarBoardContinueRequ
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF217 & 1) == 0 )
+  if ( (byte_4C23A41 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_25081/*"warBoard/continue"*/, v2);
-    byte_4BFF217 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_25125/*"＠"*/, v2);
+    byte_4C23A41 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_25081/*"warBoard/continue"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_25125/*"＠"*/, 0LL);
 }
 
 
@@ -105,15 +105,15 @@ void __fastcall WarBoardContinueRequest__requestCompleted(
   Il2CppObject *v15; // x0
   System_String_o *v16; // x1
 
-  if ( (byte_4BFF219 & 1) == 0 )
+  if ( (byte_4C23A43 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1C2E12C(&JsonManager_TypeInfo, v6);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v8);
-    sub_1C2E12C(&StringLiteral_25092/*"warBoardData"*/, v9);
-    byte_4BFF219 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1C3B764(&JsonManager_TypeInfo, v6);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v8);
+    sub_1C3B764(&StringLiteral_25136, v9);
+    byte_4C23A43 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -124,21 +124,21 @@ void __fastcall WarBoardContinueRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_25092/*"warBoardData"*/,
-             (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_25136,
+             (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v15 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_25092/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_25136,
       v15,
-      (const MethodInfo_3335B60 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_3355754 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v16 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v16 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v16 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v16, 0LL);
 }

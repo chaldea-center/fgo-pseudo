@@ -8,14 +8,14 @@ void __fastcall SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *
   PartyListViewItem_o *v7; // x7
   int64_t v9; // x1
 
-  if ( (byte_4BFCC4E & 1) == 0 )
+  if ( (byte_4C2145C & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_22527/*"none"*/, method);
-    byte_4BFCC4E = 1;
+    sub_1C3B764(&StringLiteral_22566/*"reset_purchase_num"*/, method);
+    byte_4C2145C = 1;
   }
-  v9 = StringLiteral_22527/*"none"*/;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22527/*"none"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_22566/*"reset_purchase_num"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22566/*"reset_purchase_num"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -44,10 +44,10 @@ void __fastcall SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInf
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BFCC4B & 1) == 0 )
+  if ( (byte_4C21459 & 1) == 0 )
   {
-    sub_1C2E12C(&UICamera_TypeInfo, method);
-    byte_4BFCC4B = 1;
+    sub_1C3B764(&UICamera_TypeInfo, method);
+    byte_4C21459 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -110,10 +110,10 @@ void __fastcall SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4BFCC4C & 1) == 0 )
+  if ( (byte_4C2145A & 1) == 0 )
   {
-    sub_1C2E12C(&UICamera_TypeInfo, isSelected);
-    byte_4BFCC4C = 1;
+    sub_1C3B764(&UICamera_TypeInfo, isSelected);
+    byte_4C2145A = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
   {
@@ -138,10 +138,10 @@ void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *m
   __int64 v4; // x1
   PlayMakerFSM_o *v5; // x0
 
-  if ( (byte_4BFCC4D & 1) == 0 )
+  if ( (byte_4C2145B & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFCC4D = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C2145B = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -150,7 +150,7 @@ void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *m
   {
     v5 = this->fields.targetFSM;
     if ( !v5 )
-      sub_1C2E388(0LL, v4);
+      sub_1C3B9C0(0LL, v4);
     PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0LL);
   }
 }

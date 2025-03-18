@@ -35,11 +35,11 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
   ScriptBranchListViewItem_o *v29; // x1
 
-  if ( (byte_4BFAE48 & 1) == 0 )
+  if ( (byte_4C1F64F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v11);
-    byte_4BFAE48 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, item);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
+    byte_4C1F64F = 1;
   }
   if ( !item || !mode )
   {
@@ -72,7 +72,7 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -97,7 +97,7 @@ void __fastcall ScriptBranchListViewItemDraw__SetItem(
   v24 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1C2E388(titleTextLabel, title);
+    sub_1C3B9C0(titleTextLabel, title);
   v25 = 1.0;
   v26 = v24;
   v27 = v24;
@@ -106,7 +106,7 @@ LABEL_29:
   p_drawItem = &this->fields.drawItem;
   v29 = item;
 LABEL_28:
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)p_drawItem,
     (int64_t)v29,
     *(int64_t *)&mode,
@@ -156,7 +156,7 @@ void __fastcall ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDra
     v6 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1C2E388(drawItem, method);
+    sub_1C3B9C0(drawItem, method);
   v7 = 1.0;
   v8 = v6;
   v9 = v6;

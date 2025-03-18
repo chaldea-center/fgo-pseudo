@@ -1,9 +1,9 @@
 void __fastcall DiggingConfirmDialogComponent___ctor(DiggingConfirmDialogComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C01AE5 & 1) == 0 )
+  if ( (byte_4C26313 & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4C01AE5 = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C26313 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,17 +33,17 @@ UnityEngine_GameObject_o *__fastcall DiggingConfirmDialogComponent__CreatePrefab
   __int64 v18; // x1
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C01AE0 & 1) == 0 )
+  if ( (byte_4C2630E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, prefab);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C01AE0 = 1;
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, prefab);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    byte_4C2630E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                      (Il2CppObject *)prefab,
-                                     (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v7
     || (v9 = v7,
         transform = UnityEngine_GameObject__get_transform(v7, 0LL),
@@ -51,22 +51,22 @@ UnityEngine_GameObject_o *__fastcall DiggingConfirmDialogComponent__CreatePrefab
     || (*(UnityEngine_Vector3_o *)&v11 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)v7, 0LL),
         !transform) )
   {
-    sub_1C2E388(v7, v8);
+    sub_1C3B9C0(v7, v8);
   }
   v14 = v11;
   v15 = v12;
   v16 = v13;
   UnityEngine_Transform__set_parent(transform, parentObject, 0LL);
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4BF7D91 = 1;
+    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_4C1C511 = 1;
   }
   UnityEngine_Transform__set_localPosition(transform, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  if ( !byte_4BF7D97 )
+  if ( !byte_4C1C517 )
   {
-    sub_1C2E12C(&UnityEngine_Quaternion_TypeInfo, v18);
-    byte_4BF7D97 = 1;
+    sub_1C3B764(&UnityEngine_Quaternion_TypeInfo, v18);
+    byte_4C1C517 = 1;
   }
   UnityEngine_Transform__set_localRotation(
     transform,
@@ -101,7 +101,7 @@ void __fastcall DiggingConfirmDialogComponent__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C3B708(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -117,7 +117,7 @@ void __fastcall DiggingConfirmDialogComponent__Init(DiggingConfirmDialogComponen
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -134,15 +134,15 @@ void __fastcall DiggingConfirmDialogComponent__OnClickCheckBtn(
   UnityEngine_Component_o *v7; // x8
   UnityEngine_GameObject_o *v8; // x19
 
-  if ( (byte_4C01AE1 & 1) == 0 )
+  if ( (byte_4C2630F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent_OnClickCheckBtn__, method);
-    byte_4C01AE1 = 1;
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent_OnClickCheckBtn__, method);
+    byte_4C2630F = 1;
   }
   v3 = Method_DiggingConfirmDialogComponent_OnClickCheckBtn__;
   if ( (*((_BYTE *)Method_DiggingConfirmDialogComponent_OnClickCheckBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C2E144(Method_DiggingConfirmDialogComponent_OnClickCheckBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C3B77C(Method_DiggingConfirmDialogComponent_OnClickCheckBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   checkedSp = (UnityEngine_Component_o *)this->fields.checkedSp;
   if ( !checkedSp
@@ -155,7 +155,7 @@ void __fastcall DiggingConfirmDialogComponent__OnClickCheckBtn(
                                                  0LL),
         !v8) )
   {
-    sub_1C2E388(checkedSp, v5);
+    sub_1C3B9C0(checkedSp, v5);
   }
   UnityEngine_GameObject__SetActive(v8, ((unsigned __int8)checkedSp & 1) == 0, 0LL);
 }
@@ -173,29 +173,29 @@ void __fastcall DiggingConfirmDialogComponent__OnClickCloseBtn(
   const MethodInfo *v8; // x1
   System_Action_o *v9; // x20
 
-  if ( (byte_4C01AE3 & 1) == 0 )
+  if ( (byte_4C26311 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ActionExtensions_Call_bool___, method);
-    sub_1C2E12C(&System_Action_TypeInfo, v3);
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent_OnClickCloseBtn__, v4);
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent__OnClickCloseBtn_b__24_0__, v5);
-    byte_4C01AE3 = 1;
+    sub_1C3B764(&Method_ActionExtensions_Call_bool___, method);
+    sub_1C3B764(&System_Action_TypeInfo, v3);
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent_OnClickCloseBtn__, v4);
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent__OnClickCloseBtn_b__24_0__, v5);
+    byte_4C26311 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v6 = Method_DiggingConfirmDialogComponent_OnClickCloseBtn__;
     if ( (*((_BYTE *)Method_DiggingConfirmDialogComponent_OnClickCloseBtn__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C2E144(Method_DiggingConfirmDialogComponent_OnClickCloseBtn__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C2E110(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C3B77C(Method_DiggingConfirmDialogComponent_OnClickCloseBtn__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C3B748(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
     MainMenuBar__SetMenuBtnColliderEnable(1, 0, 0LL);
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)this->fields.activateMaskPanel,
       1,
-      (const MethodInfo_2F23EB0 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_2F42210 *)Method_ActionExtensions_Call_bool___);
     DiggingConfirmDialogComponent__StopSelectBlockAnim(this, v8);
-    v9 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, Method_DiggingConfirmDialogComponent__OnClickCloseBtn_b__24_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
   }
@@ -219,22 +219,22 @@ void __fastcall DiggingConfirmDialogComponent__OnClickDecideBtn(
   const MethodInfo *v13; // x1
   System_Action_o *v14; // x20
 
-  if ( (byte_4C01AE2 & 1) == 0 )
+  if ( (byte_4C26310 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ActionExtensions_Call_bool___, method);
-    sub_1C2E12C(&System_Action_TypeInfo, v3);
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent_EndClose__, v4);
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent_OnClickDecideBtn__, v5);
-    sub_1C2E12C(&DiggingManager_TypeInfo, v6);
-    byte_4C01AE2 = 1;
+    sub_1C3B764(&Method_ActionExtensions_Call_bool___, method);
+    sub_1C3B764(&System_Action_TypeInfo, v3);
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent_EndClose__, v4);
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent_OnClickDecideBtn__, v5);
+    sub_1C3B764(&DiggingManager_TypeInfo, v6);
+    byte_4C26310 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v7 = Method_DiggingConfirmDialogComponent_OnClickDecideBtn__;
     if ( (*((_BYTE *)Method_DiggingConfirmDialogComponent_OnClickDecideBtn__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C2E144(Method_DiggingConfirmDialogComponent_OnClickDecideBtn__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C2E110(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C3B77C(Method_DiggingConfirmDialogComponent_OnClickDecideBtn__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C3B748(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 8, 0, 0LL);
     gameObject = DiggingManager_TypeInfo;
     if ( !DiggingManager_TypeInfo->_2.cctor_finished )
@@ -246,7 +246,7 @@ void __fastcall DiggingConfirmDialogComponent__OnClickDecideBtn(
       || (v11 = (System_String_o *)**((_QWORD **)gameObject + 23),
           (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this->fields.checkedSp, 0LL)) == 0LL) )
     {
-      sub_1C2E388(gameObject, v9);
+      sub_1C3B9C0(gameObject, v9);
     }
     activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)gameObject, 0LL);
     UnityEngine_PlayerPrefs__SetInt(v11, activeSelf, 0LL);
@@ -255,8 +255,8 @@ void __fastcall DiggingConfirmDialogComponent__OnClickDecideBtn(
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)this->fields.activateMaskPanel,
       1,
-      (const MethodInfo_2F23EB0 *)Method_ActionExtensions_Call_bool___);
-    v14 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+      (const MethodInfo_2F42210 *)Method_ActionExtensions_Call_bool___);
+    v14 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(v14, (Il2CppObject *)this, Method_DiggingConfirmDialogComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v14, 0LL);
   }
@@ -334,36 +334,36 @@ void __fastcall DiggingConfirmDialogComponent__Open(
   System_Action_o *v71; // x20
   int v72; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C01ADB & 1) == 0 )
+  if ( (byte_4C26309 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, panelData);
-    sub_1C2E12C(&AtlasManager_TypeInfo, v11);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____77779832, v12);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v13);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v14);
-    sub_1C2E12C(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v15);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v16);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v17);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_1C2E12C(&Method_DiggingConfirmDialogComponent___c__DisplayClass16_0__Open_b__0__, v19);
-    sub_1C2E12C(&DiggingConfirmDialogComponent___c__DisplayClass16_0_TypeInfo, v20);
-    sub_1C2E12C(&StringLiteral_5128/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, v21);
-    sub_1C2E12C(&StringLiteral_5127/*"DIGGING_CONFIRM_DIALOG_CHECK_MESSAGE"*/, v22);
-    sub_1C2E12C(&StringLiteral_5129/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v23);
-    sub_1C2E12C(&StringLiteral_11281/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v24);
-    sub_1C2E12C(&StringLiteral_5126/*"DIGGING_CONFIRM_DIALOG_CANCEL"*/, v25);
-    byte_4C01ADB = 1;
+    sub_1C3B764(&System_Action_TypeInfo, panelData);
+    sub_1C3B764(&AtlasManager_TypeInfo, v11);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____77925392, v12);
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v13);
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v14);
+    sub_1C3B764(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v15);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v16);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v17);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    sub_1C3B764(&Method_DiggingConfirmDialogComponent___c__DisplayClass16_0__Open_b__0__, v19);
+    sub_1C3B764(&DiggingConfirmDialogComponent___c__DisplayClass16_0_TypeInfo, v20);
+    sub_1C3B764(&StringLiteral_5128/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/, v21);
+    sub_1C3B764(&StringLiteral_5127/*"DeclaringType"*/, v22);
+    sub_1C3B764(&StringLiteral_5129/*"Decrement"*/, v23);
+    sub_1C3B764(&StringLiteral_11302/*"SERVANT_COMMAND_CODE_SELLE_MSG_ERROR"*/, v24);
+    sub_1C3B764(&StringLiteral_5126/*"DeclaringMethod"*/, v25);
+    byte_4C26309 = 1;
   }
   v72 = 0;
-  v26 = sub_1C2E378(DiggingConfirmDialogComponent___c__DisplayClass16_0_TypeInfo);
+  v26 = sub_1C3B9B0(DiggingConfirmDialogComponent___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v26, 0LL);
   if ( !v26 )
     goto LABEL_40;
   *(_QWORD *)(v26 + 16) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)this, v29, v30, v31, v32, v33, v34);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v26 + 16), (int64_t)this, v29, v30, v31, v32, v33, v34);
   *(_QWORD *)(v26 + 24) = panelData;
   v35 = (DataManager_o **)(v26 + 24);
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v26 + 24), (int64_t)panelData, v36, v37, v38, v39, v40, v41);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v26 + 24), (int64_t)panelData, v36, v37, v38, v39, v40, v41);
   this->fields.state = 1;
   tutorialPeepWindow = (UnityEngine_Object_o *)this->fields.tutorialPeepWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -373,14 +373,14 @@ void __fastcall DiggingConfirmDialogComponent__Open(
     v43 = (UnityEngine_Object_o *)this->fields.tutorialPeepWindow;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(v43, 0LL);
+    UnityEngine_Object__Destroy_71122748(v43, 0LL);
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
   if ( !*v35 )
     goto LABEL_40;
   saveDataMapList = (*v35)->fields.saveDataMapList;
@@ -389,16 +389,16 @@ void __fastcall DiggingConfirmDialogComponent__Open(
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              saveDataMapList->fields._size,
-             (const MethodInfo_327B180 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+             (const MethodInfo_329AE48 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
   if ( Entity )
   {
     v46 = Entity;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_40;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
     if ( !Instance )
       goto LABEL_40;
     v47 = CommonConsumeMaster__GetEntity((CommonConsumeMaster_o *)Instance, HIDWORD(v46[1].monitor), 1, 0LL);
@@ -413,7 +413,7 @@ void __fastcall DiggingConfirmDialogComponent__Open(
       titleLabel = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5129/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+      Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5129/*"Decrement"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
@@ -432,7 +432,7 @@ void __fastcall DiggingConfirmDialogComponent__Open(
         }
       }
 LABEL_40:
-      sub_1C2E388(Instance, v28);
+      sub_1C3B9C0(Instance, v28);
     }
   }
 LABEL_26:
@@ -445,7 +445,7 @@ LABEL_26:
   Instance = (DataManager_o *)UnityEngine_Component__GetComponentInChildren_object_(
                                 (UnityEngine_Component_o *)Instance,
                                 1,
-                                (const MethodInfo_2FC8758 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77779832);
+                                (const MethodInfo_2FE7090 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77925392);
   if ( !this->fields.closeButton )
     goto LABEL_40;
   v54 = (UILabel_o *)Instance;
@@ -457,29 +457,29 @@ LABEL_26:
   ComponentInChildren_object = UnityEngine_Component__GetComponentInChildren_object_(
                                  (UnityEngine_Component_o *)Instance,
                                  1,
-                                 (const MethodInfo_2FC8758 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77779832);
+                                 (const MethodInfo_2FE7090 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____77925392);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11281/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11302/*"SERVANT_COMMAND_CODE_SELLE_MSG_ERROR"*/, 0LL);
   if ( !v54 )
     goto LABEL_40;
   UILabel__set_text(v54, (System_String_o *)Instance, 0LL);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5126/*"DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5126/*"DeclaringMethod"*/, 0LL);
   if ( !ComponentInChildren_object )
     goto LABEL_40;
   UILabel__set_text((UILabel_o *)ComponentInChildren_object, (System_String_o *)Instance, 0LL);
   consumeLabel = this->fields.consumeLabel;
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5128/*"DIGGING_CONFIRM_DIALOG_CONSUME"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5128/*"Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}"*/, 0LL);
   if ( !consumeLabel )
     goto LABEL_40;
   UILabel__set_text(consumeLabel, (System_String_o *)Instance, 0LL);
   checkBoxLabel = this->fields.checkBoxLabel;
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5127/*"DIGGING_CONFIRM_DIALOG_CHECK_MESSAGE"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5127/*"DeclaringType"*/, 0LL);
   if ( !checkBoxLabel )
     goto LABEL_40;
   UILabel__set_text(checkBoxLabel, (System_String_o *)Instance, 0LL);
   this->fields.activateMaskPanel = setMask;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.activateMaskPanel,
     (int64_t)setMask,
     v58,
@@ -489,7 +489,7 @@ LABEL_26:
     v62,
     v63);
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)closeCallback,
     v64,
@@ -511,7 +511,7 @@ LABEL_26:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   DiggingConfirmDialogComponent__SetClippingMask(this, tutorialPeepWindowTexturePrefab, v70);
   MainMenuBar__SetMenuBtnColliderEnable(0, 0, 0LL);
-  v71 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v71 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(
     v71,
     (Il2CppObject *)v26,
@@ -537,16 +537,16 @@ void __fastcall DiggingConfirmDialogComponent__PlaySelectBlockAnim(
   UnityEngine_GameObject_o *selectAnimObj; // x0
   __int64 v14; // x1
 
-  if ( (byte_4C01ADD & 1) == 0 )
+  if ( (byte_4C2630B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_Animation___, panelData);
-    sub_1C2E12C(&StringLiteral_12828/*"SelectAnimation"*/, v5);
-    byte_4C01ADD = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_Animation___, panelData);
+    sub_1C3B764(&StringLiteral_12856/*"SupportServantSelectEXTRA"*/, v5);
+    byte_4C2630B = 1;
   }
   DiggingConfirmDialogComponent__StopSelectBlockAnim(this, (const MethodInfo *)panelData);
   this->fields.nowPlaySelectAnimBlock = panelData;
   p_nowPlaySelectAnimBlock = &this->fields.nowPlaySelectAnimBlock;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p_nowPlaySelectAnimBlock, (int64_t)panelData, v7, v8, v9, v10, v11, v12);
+  sub_1C3B708((PartyOrganizationUtility_o *)p_nowPlaySelectAnimBlock, (int64_t)panelData, v7, v8, v9, v10, v11, v12);
   if ( !*p_nowPlaySelectAnimBlock
     || (selectAnimObj = (*p_nowPlaySelectAnimBlock)->fields.selectAnimObj) == 0LL
     || (UnityEngine_GameObject__SetActive(selectAnimObj, 1, 0LL),
@@ -554,13 +554,13 @@ void __fastcall DiggingConfirmDialogComponent__PlaySelectBlockAnim(
     || (selectAnimObj = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)selectAnimObj, 0LL)) == 0LL
     || (selectAnimObj = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       selectAnimObj,
-                                                      (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL )
+                                                      (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL )
   {
-    sub_1C2E388(selectAnimObj, v14);
+    sub_1C3B9C0(selectAnimObj, v14);
   }
-  UnityEngine_Animation__Play_70734128(
+  UnityEngine_Animation__Play_70867156(
     (UnityEngine_Animation_o *)selectAnimObj,
-    (System_String_o *)StringLiteral_12828/*"SelectAnimation"*/,
+    (System_String_o *)StringLiteral_12856/*"SupportServantSelectEXTRA"*/,
     0LL);
 }
 
@@ -606,26 +606,26 @@ void __fastcall DiggingConfirmDialogComponent__Redisplay(
   PartyListViewItem_o *v40; // x7
   int v41; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C01ADC & 1) == 0 )
+  if ( (byte_4C2630A & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, panelData);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v9);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v10);
-    sub_1C2E12C(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v11);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v12);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_1C2E12C(&StringLiteral_5129/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v14);
-    byte_4C01ADC = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, panelData);
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v9);
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v10);
+    sub_1C3B764(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v11);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1C3B764(&StringLiteral_5129/*"Decrement"*/, v14);
+    byte_4C2630A = 1;
   }
   v41 = 0;
   if ( this->fields.state == 2 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                                    (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
       if ( panelData )
       {
         blockInfo = panelData->fields.blockInfo;
@@ -636,16 +636,16 @@ void __fastcall DiggingConfirmDialogComponent__Redisplay(
             Entity = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                        blockInfo->fields.diggingBlockId,
-                       (const MethodInfo_327B180 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+                       (const MethodInfo_329AE48 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
             if ( !Entity )
               goto LABEL_19;
             v20 = Entity;
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_21;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                                          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
             if ( !Instance )
               goto LABEL_21;
             v21 = CommonConsumeMaster__GetEntity((CommonConsumeMaster_o *)Instance, HIDWORD(v20[1].monitor), 1, 0LL);
@@ -654,7 +654,7 @@ void __fastcall DiggingConfirmDialogComponent__Redisplay(
 LABEL_19:
               DiggingConfirmDialogComponent__PlaySelectBlockAnim(this, panelData, v19);
               this->fields.activateMaskPanel = setMask;
-              sub_1C2E0D0(
+              sub_1C3B708(
                 (PartyOrganizationUtility_o *)&this->fields.activateMaskPanel,
                 (int64_t)setMask,
                 v29,
@@ -664,7 +664,7 @@ LABEL_19:
                 v33,
                 v34);
               this->fields.closeCallbackFunc = closeCallback;
-              sub_1C2E0D0(
+              sub_1C3B708(
                 (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
                 (int64_t)closeCallback,
                 v35,
@@ -684,7 +684,7 @@ LABEL_19:
             titleLabel = this->fields.titleLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5129/*"DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+            Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5129/*"Decrement"*/, 0LL);
             if ( titleLabel )
             {
               UILabel__set_text(titleLabel, (System_String_o *)Instance, 0LL);
@@ -703,7 +703,7 @@ LABEL_19:
       }
     }
 LABEL_21:
-    sub_1C2E388(Instance, v16);
+    sub_1C3B9C0(Instance, v16);
   }
 }
 
@@ -736,12 +736,12 @@ void __fastcall DiggingConfirmDialogComponent__SetClippingMask(
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C01ADF & 1) == 0 )
+  if ( (byte_4C2630D & 1) == 0 )
   {
-    sub_1C2E12C(&FSUtility_TypeInfo, tutorialPeepWindowTexturePrefab);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UITexture___, v5);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C01ADF = 1;
+    sub_1C3B764(&FSUtility_TypeInfo, tutorialPeepWindowTexturePrefab);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UITexture___, v5);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    byte_4C2630D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -773,7 +773,7 @@ void __fastcall DiggingConfirmDialogComponent__SetClippingMask(
     v15 = gameObject;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                                               (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
     if ( !gameObject
       || (v16 = (UnityEngine_Component_o *)gameObject,
           (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
@@ -786,7 +786,7 @@ void __fastcall DiggingConfirmDialogComponent__SetClippingMask(
           (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v16, 0LL)) == 0LL) )
     {
 LABEL_24:
-      sub_1C2E388(gameObject, v12);
+      sub_1C3B9C0(gameObject, v12);
     }
     v26.fields.x = 0.1;
     v26.fields.z = 1.0;
@@ -803,7 +803,7 @@ LABEL_24:
       v18 = (int)m_Height;
     UIWidget__set_height((UIWidget_o *)v16, v18, 0LL);
     this->fields.tutorialPeepWindow = v15;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.tutorialPeepWindow,
       (int64_t)v15,
       v19,
@@ -826,11 +826,11 @@ void __fastcall DiggingConfirmDialogComponent__StopSelectBlockAnim(
   UnityEngine_Component_o *gameObject; // x0
   struct DiggingBlockComponent_o *v7; // x8
 
-  if ( (byte_4C01ADE & 1) == 0 )
+  if ( (byte_4C2630C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C01ADE = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C2630C = 1;
   }
   nowPlaySelectAnimBlock = (UnityEngine_Object_o *)this->fields.nowPlaySelectAnimBlock;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -842,12 +842,12 @@ void __fastcall DiggingConfirmDialogComponent__StopSelectBlockAnim(
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     (UnityEngine_GameObject_o *)gameObject,
-                                                    (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL
+                                                    (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_Animation___)) == 0LL
       || (UnityEngine_Animation__Stop((UnityEngine_Animation_o *)gameObject, 0LL),
           (v7 = this->fields.nowPlaySelectAnimBlock) == 0LL)
       || (gameObject = (UnityEngine_Component_o *)v7->fields.selectAnimObj) == 0LL )
     {
-      sub_1C2E388(gameObject, v5);
+      sub_1C3B9C0(gameObject, v5);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
@@ -858,16 +858,16 @@ void __fastcall DiggingConfirmDialogComponent___OnClickCloseBtn_b__24_0(
         DiggingConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C01AE6 & 1) == 0 )
+  if ( (byte_4C26314 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ActionExtensions_Call_bool___, method);
-    byte_4C01AE6 = 1;
+    sub_1C3B764(&Method_ActionExtensions_Call_bool___, method);
+    byte_4C26314 = 1;
   }
   DiggingConfirmDialogComponent__Init(this, method);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.activateMaskPanel,
     0,
-    (const MethodInfo_2F23EB0 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2F42210 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -879,10 +879,10 @@ UnityEngine_GameObject_o *__fastcall DiggingConfirmDialogComponent__get_closeBtn
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C01AE4 & 1) == 0 )
+  if ( (byte_4C26312 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C01AE4 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C26312 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -891,7 +891,7 @@ UnityEngine_GameObject_o *__fastcall DiggingConfirmDialogComponent__get_closeBtn
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -917,7 +917,7 @@ void __fastcall DiggingConfirmDialogComponent___c__DisplayClass16_0___Open_b__0(
     || (DiggingConfirmDialogComponent__PlaySelectBlockAnim(_4__this, this->fields.panelData, v2),
         (v5 = this->fields.__4__this) == 0LL) )
   {
-    sub_1C2E388(_4__this, method);
+    sub_1C3B9C0(_4__this, method);
   }
   v5->fields.state = 2;
 }

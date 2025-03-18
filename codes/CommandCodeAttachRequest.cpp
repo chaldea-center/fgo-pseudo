@@ -15,24 +15,24 @@ void __fastcall CommandCodeAttachRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_4BFF07E & 1) == 0 )
+  if ( (byte_4C238A8 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_24158/*"svtId"*/, *(_QWORD *)&servantId);
-    sub_1C2E12C(&StringLiteral_24842/*"userCommandCodeId"*/, v11);
-    sub_1C2E12C(&StringLiteral_20581/*"idx"*/, v12);
-    sub_1C2E12C(&StringLiteral_17249/*"attachedUserCommandCodeId"*/, v13);
-    byte_4BFF07E = 1;
+    sub_1C3B764(&StringLiteral_24201/*"verticalImageSet"*/, *(_QWORD *)&servantId);
+    sub_1C3B764(&StringLiteral_24886/*" ⁰"*/, v11);
+    sub_1C3B764(&StringLiteral_20616/*"jingle"*/, v12);
+    sub_1C3B764(&StringLiteral_17279/*"btn_txt_trade"*/, v13);
+    byte_4C238A8 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24158/*"svtId"*/,
+    (System_String_o *)StringLiteral_24201/*"verticalImageSet"*/,
     servantId,
     (const MethodInfo *)userCommandCodeId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20581/*"idx"*/, idx, v14);
-  RequestBase__addField_42510212((RequestBase_o *)this, (System_String_o *)StringLiteral_24842/*"userCommandCodeId"*/, userCommandCodeId, v15);
-  RequestBase__addField_42510212(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20616/*"jingle"*/, idx, v14);
+  RequestBase__addField_42628192((RequestBase_o *)this, (System_String_o *)StringLiteral_24886/*" ⁰"*/, userCommandCodeId, v15);
+  RequestBase__addField_42628192(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17249/*"attachedUserCommandCodeId"*/,
+    (System_String_o *)StringLiteral_17279/*"btn_txt_trade"*/,
     attachedUserCommandCodeId,
     v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
@@ -46,16 +46,16 @@ System_String_o *__fastcall CommandCodeAttachRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF07D & 1) == 0 )
+  if ( (byte_4C238A7 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_18469/*"commandCode/attach"*/, v2);
-    byte_4BFF07D = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_18503/*"ef_resistarrow"*/, v2);
+    byte_4C238A7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_18469/*"commandCode/attach"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18503/*"ef_resistarrow"*/, 0LL);
 }
 
 
@@ -73,17 +73,17 @@ void __fastcall CommandCodeAttachRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BFF07F & 1) == 0 )
+  if ( (byte_4C238A9 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF07F = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C238A9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(77, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -102,7 +102,7 @@ void __fastcall CommandCodeAttachRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22468/*"ng"*/,
+        StringLiteral_22507/*"referrerMapId"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

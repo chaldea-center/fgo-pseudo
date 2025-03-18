@@ -48,16 +48,16 @@ void __fastcall WarBoardEffectComponent__Initialize(
   __int64 v43; // x0
   int32_t iconId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BFB090 & 1) == 0 )
+  if ( (byte_4C1F897 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, data);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
-    sub_1C2E12C(&UnityEngine_Transform___TypeInfo, v12);
-    sub_1C2E12C(&StringLiteral_25453/*"{0}"*/, v13);
-    byte_4BFB090 = 1;
+    sub_1C3B764(&int_TypeInfo, data);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v11);
+    sub_1C3B764(&UnityEngine_Transform___TypeInfo, v12);
+    sub_1C3B764(&StringLiteral_25497, v13);
+    byte_4C1F897 = 1;
   }
   this->fields.effectData = data;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.effectData,
     (int64_t)data,
     (int64_t)itemIconAtlas,
@@ -70,7 +70,7 @@ void __fastcall WarBoardEffectComponent__Initialize(
   if ( !effectData )
     goto LABEL_17;
   *((_QWORD *)effectData + 5) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(effectData + 40), (int64_t)this, v15, v16, v17, v18, v19, v20);
+  sub_1C3B708((PartyOrganizationUtility_o *)(effectData + 40), (int64_t)this, v15, v16, v17, v18, v19, v20);
   effectData = (char *)this->fields.effectIcon;
   if ( !effectData )
     goto LABEL_17;
@@ -84,7 +84,7 @@ void __fastcall WarBoardEffectComponent__Initialize(
   effectIcon = this->fields.effectIcon;
   iconId = effectEntity->fields.iconId;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId, v22, v23, v24);
-  effectData = (char *)System_String__Format((System_String_o *)StringLiteral_25453/*"{0}"*/, v28, 0LL);
+  effectData = (char *)System_String__Format((System_String_o *)StringLiteral_25497, v28, 0LL);
   if ( !effectIcon )
     goto LABEL_17;
   UISprite__set_spriteName(effectIcon, (System_String_o *)effectData, 0LL);
@@ -95,7 +95,7 @@ void __fastcall WarBoardEffectComponent__Initialize(
     effectData,
     *(_QWORD *)(*(_QWORD *)effectData + 848LL));
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  effectData = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  effectData = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   v30 = this->fields.effectData;
   if ( !v30
     || !effectData
@@ -105,27 +105,27 @@ void __fastcall WarBoardEffectComponent__Initialize(
                                            0LL),
         !transform)
     || (UnityEngine_Transform__set_localPosition(transform, *(UnityEngine_Vector3_o *)&v31, 0LL),
-        v34 = (UnityEngine_Transform_array *)sub_1C2E1D4(UnityEngine_Transform___TypeInfo, 1LL),
+        v34 = (UnityEngine_Transform_array *)sub_1C3B80C(UnityEngine_Transform___TypeInfo, 1LL),
         effectData = (char *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL),
         !v34) )
   {
 LABEL_17:
-    sub_1C2E388(effectData, v14);
+    sub_1C3B9C0(effectData, v14);
   }
   v41 = (int64_t)effectData;
   if ( effectData )
   {
-    effectData = (char *)sub_1C2E268(effectData, v34->obj.klass->_1.element_class);
+    effectData = (char *)sub_1C3B8A0(effectData, v34->obj.klass->_1.element_class);
     if ( !effectData )
     {
-      v43 = sub_1C2E3AC();
-      sub_1C2E254(v43, 0LL);
+      v43 = sub_1C3B9E4();
+      sub_1C3B88C(v43, 0LL);
     }
   }
   if ( !v34->max_length )
-    sub_1C2E390(effectData, v14);
+    sub_1C3B9C8(effectData, v14);
   v34->m_Items[0] = (UnityEngine_Transform_o *)v41;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)v34->m_Items, v41, v35, v36, v37, v38, v39, v40);
+  sub_1C3B708((PartyOrganizationUtility_o *)v34->m_Items, v41, v35, v36, v37, v38, v39, v40);
   WarBoardEffectComponent__SetButtonTweenTarget(this, v34, v42);
   this->fields.isSelectable = 0;
 }
@@ -149,29 +149,29 @@ void __fastcall WarBoardEffectComponent__OnClick(WarBoardEffectComponent_o *this
   WarBoardManager_o *v15; // x21
   int v16; // s0
 
-  if ( (byte_4BFB093 & 1) == 0 )
+  if ( (byte_4C1F89A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    sub_1C2E12C(&Method_WarBoardEffectComponent_OnClick__, v3);
-    byte_4BFB093 = 1;
+    sub_1C3B764(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    sub_1C3B764(&Method_WarBoardEffectComponent_OnClick__, v3);
+    byte_4C1F89A = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   if ( WarBoardManager__get_isSelectedPiece(Instance, 0LL) && this->fields.isSelectable )
   {
     v6 = Method_WarBoardEffectComponent_OnClick__;
     if ( (*((_BYTE *)Method_WarBoardEffectComponent_OnClick__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C2E144(Method_WarBoardEffectComponent_OnClick__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C2E110(v6, v6[4]);
-    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+      v6 = (_QWORD *)sub_1C3B77C(Method_WarBoardEffectComponent_OnClick__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C3B748(v6, v6[4]);
+    Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     if ( Instance )
     {
       seSetting = Instance->fields.seSetting;
       if ( seSetting )
       {
         OverwriteAssetSoundName__PlaySe(v7, seSetting->fields.SelectSe, 0, 0LL);
-        Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         effectData = this->fields.effectData;
         if ( effectData )
         {
@@ -184,20 +184,20 @@ void __fastcall WarBoardEffectComponent__OnClick(WarBoardEffectComponent_o *this
       }
     }
 LABEL_20:
-    sub_1C2E388(Instance, v5);
+    sub_1C3B9C0(Instance, v5);
   }
   v10 = Method_WarBoardEffectComponent_OnClick__;
   if ( (*((_BYTE *)Method_WarBoardEffectComponent_OnClick__ + 83) & 2) != 0 )
-    v10 = (_QWORD *)sub_1C2E144(Method_WarBoardEffectComponent_OnClick__);
-  v11 = (System_Reflection_MethodBase_o *)sub_1C2E110(v10, v10[4]);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    v10 = (_QWORD *)sub_1C3B77C(Method_WarBoardEffectComponent_OnClick__);
+  v11 = (System_Reflection_MethodBase_o *)sub_1C3B748(v10, v10[4]);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   v12 = Instance->fields.seSetting;
   if ( !v12 )
     goto LABEL_20;
   OverwriteAssetSoundName__PlaySe(v11, v12->fields.OpenSimpleInfoSe, 0, 0LL);
-  v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   v14 = this->fields.effectData;
   v15 = (WarBoardManager_o *)v13;
   Instance = (WarBoardManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -224,27 +224,27 @@ void __fastcall WarBoardEffectComponent__OnLongClick(WarBoardEffectComponent_o *
   WarBoardManager_o *v11; // x21
   int v12; // s0
 
-  if ( (byte_4BFB094 & 1) == 0 )
+  if ( (byte_4C1F89B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    sub_1C2E12C(&Method_WarBoardEffectComponent_OnLongClick__, v3);
-    byte_4BFB094 = 1;
+    sub_1C3B764(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    sub_1C3B764(&Method_WarBoardEffectComponent_OnLongClick__, v3);
+    byte_4C1F89B = 1;
   }
   v4 = Method_WarBoardEffectComponent_OnLongClick__;
   if ( (*((_BYTE *)Method_WarBoardEffectComponent_OnLongClick__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C2E144(Method_WarBoardEffectComponent_OnLongClick__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
-  Instance = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    v4 = (_QWORD *)sub_1C3B77C(Method_WarBoardEffectComponent_OnLongClick__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3B748(v4, v4[4]);
+  Instance = (UnityEngine_Transform_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (klass = Instance[14].klass) == 0LL
     || (OverwriteAssetSoundName__PlaySe(v5, *(System_String_o **)&klass->_1.byval_arg.bits, 0, 0LL),
-        v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__),
+        v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__),
         effectData = this->fields.effectData,
         v11 = (WarBoardManager_o *)v9,
         (Instance = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL)
     || (*(UnityEngine_Vector3_o *)&v12 = UnityEngine_Transform__get_position(Instance, 0LL), !v11) )
   {
-    sub_1C2E388(Instance, v7);
+    sub_1C3B9C0(Instance, v7);
   }
   WarBoardManager__ShowEffectSimplePopup(v11, effectData, *(UnityEngine_Vector3_o *)&v12, 0LL);
 }
@@ -295,21 +295,21 @@ void __fastcall WarBoardEffectComponent__SetButtonTweenTarget(
   FollowerInfo_o *v35; // x6
   PartyListViewItem_o *v36; // x7
 
-  if ( (byte_4BFB091 & 1) == 0 )
+  if ( (byte_4C1F898 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77780256, parents);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject__Contains__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject__ToArray__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_GameObject___ctor__, v7);
-    sub_1C2E12C(&System_Collections_Generic_List_GameObject__TypeInfo, v8);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BFB091 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77925816, parents);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Contains__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__ToArray__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject___ctor__, v7);
+    sub_1C3B764(&System_Collections_Generic_List_GameObject__TypeInfo, v8);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    byte_4C1F898 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_GameObject__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   if ( parents )
   {
     max_length = parents->max_length;
@@ -326,7 +326,7 @@ void __fastcall WarBoardEffectComponent__SetButtonTweenTarget(
         ComponentsInChildren_object = (int64_t)UnityEngine_Component__GetComponentsInChildren_object_(
                                                  (UnityEngine_Component_o *)ComponentsInChildren_object,
                                                  1,
-                                                 (const MethodInfo_2FC8DC0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77780256);
+                                                 (const MethodInfo_2FE76F8 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77925816);
         if ( ComponentsInChildren_object )
         {
           v15 = *(UnityEngine_Component_c **)(ComponentsInChildren_object + 24);
@@ -358,7 +358,7 @@ LABEL_23:
           ComponentsInChildren_object = System_Collections_Generic_List_object___Contains(
                                           v10,
                                           (Il2CppObject *)ComponentsInChildren_object,
-                                          (const MethodInfo_366BC3C *)Method_System_Collections_Generic_List_GameObject__Contains__);
+                                          (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_GameObject__Contains__);
           if ( (ComponentsInChildren_object & 1) == 0 )
           {
             ComponentsInChildren_object = (int64_t)UnityEngine_Component__get_gameObject(
@@ -376,14 +376,14 @@ LABEL_23:
               System_Collections_Generic_List_object___AddWithResize(
                 v10,
                 (Il2CppObject *)ComponentsInChildren_object,
-                *(const MethodInfo_366B8AC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+                *(const MethodInfo_368BC6C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
             }
             else
             {
               v29 = &items->obj.klass + size;
               v10->fields._size = size + 1;
               v29[4] = (Il2CppClass *)v28;
-              sub_1C2E0D0((PartyOrganizationUtility_o *)(v29 + 4), v28, v19, v20, v21, v22, v23, v24);
+              sub_1C3B708((PartyOrganizationUtility_o *)(v29 + 4), v28, v19, v20, v21, v22, v23, v24);
             }
           }
         }
@@ -392,7 +392,7 @@ LABEL_23:
           goto LABEL_23;
       }
 LABEL_28:
-      sub_1C2E390(ComponentsInChildren_object, v12);
+      sub_1C3B9C8(ComponentsInChildren_object, v12);
     }
   }
 LABEL_24:
@@ -400,14 +400,14 @@ LABEL_24:
     || (button = this->fields.button,
         ComponentsInChildren_object = (int64_t)System_Collections_Generic_List_object___ToArray(
                                                  v10,
-                                                 (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_GameObject__ToArray__),
+                                                 (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_GameObject__ToArray__),
         !button) )
   {
 LABEL_27:
-    sub_1C2E388(ComponentsInChildren_object, v12);
+    sub_1C3B9C0(ComponentsInChildren_object, v12);
   }
   button->fields.tweenTargets = (struct UnityEngine_GameObject_array *)ComponentsInChildren_object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&button->fields.tweenTargets,
     ComponentsInChildren_object,
     v31,
@@ -430,10 +430,10 @@ void __fastcall WarBoardEffectComponent__SetColliderEnable(
   struct UICommonButton_o *v7; // x0
   bool v8; // w1
 
-  if ( (byte_4BFB096 & 1) == 0 )
+  if ( (byte_4C1F89D & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, enable);
-    byte_4BFB096 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, enable);
+    byte_4C1F89D = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -442,7 +442,7 @@ void __fastcall WarBoardEffectComponent__SetColliderEnable(
   {
     v7 = this->fields.button;
     if ( !v7 )
-      sub_1C2E388(0LL, v6);
+      sub_1C3B9C0(0LL, v6);
     if ( enable )
     {
       v8 = 1;
@@ -470,10 +470,10 @@ void __fastcall WarBoardEffectComponent__SetTouchEnable(
   __int64 v6; // x1
   UICommonButton_o *v7; // x0
 
-  if ( (byte_4BFB092 & 1) == 0 )
+  if ( (byte_4C1F899 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, enable);
-    byte_4BFB092 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, enable);
+    byte_4C1F899 = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -482,7 +482,7 @@ void __fastcall WarBoardEffectComponent__SetTouchEnable(
   {
     v7 = this->fields.button;
     if ( !v7 )
-      sub_1C2E388(0LL, v6);
+      sub_1C3B9C0(0LL, v6);
     UICommonButton__SetButtonEnableAndKeepState(v7, enable, 0, 0LL);
   }
 }
@@ -514,12 +514,12 @@ void __fastcall WarBoardEffectComponent__WidgetDepthIncrement(
   il2cpp_array_size_t v15; // w22
 
   v4 = this;
-  if ( (byte_4BFB095 & 1) == 0 )
+  if ( (byte_4C1F89C & 1) == 0 )
   {
-    this = (WarBoardEffectComponent_o *)sub_1C2E12C(
-                                          &Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77780256,
+    this = (WarBoardEffectComponent_o *)sub_1C3B764(
+                                          &Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77925816,
                                           *(_QWORD *)&value);
-    byte_4BFB095 = 1;
+    byte_4C1F89C = 1;
   }
   p_uIWidgets = &v4->fields.uIWidgets;
   uIWidgets = v4->fields.uIWidgets;
@@ -528,9 +528,9 @@ void __fastcall WarBoardEffectComponent__WidgetDepthIncrement(
     ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                     (UnityEngine_Component_o *)v4,
                                     1,
-                                    (const MethodInfo_2FC8DC0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77780256);
+                                    (const MethodInfo_2FE76F8 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77925816);
     v4->fields.uIWidgets = (struct UIWidget_array *)ComponentsInChildren_object;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&v4->fields.uIWidgets,
       (int64_t)ComponentsInChildren_object,
       v8,
@@ -550,7 +550,7 @@ void __fastcall WarBoardEffectComponent__WidgetDepthIncrement(
     do
     {
       if ( v15 >= uIWidgets->max_length )
-        sub_1C2E390(this, *(_QWORD *)&value);
+        sub_1C3B9C8(this, *(_QWORD *)&value);
       this = (WarBoardEffectComponent_o *)uIWidgets->m_Items[v15];
       if ( !this )
         break;
@@ -561,6 +561,6 @@ void __fastcall WarBoardEffectComponent__WidgetDepthIncrement(
     }
     while ( *p_uIWidgets );
 LABEL_11:
-    sub_1C2E388(this, *(_QWORD *)&value);
+    sub_1C3B9C0(this, *(_QWORD *)&value);
   }
 }

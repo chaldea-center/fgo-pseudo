@@ -9,12 +9,12 @@ void __fastcall ServantLimitCombineRequest__beginRequest(
         int64_t baseUsrSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4BFF1A7 & 1) == 0 )
+  if ( (byte_4C239D1 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17385/*"baseUserSvtId"*/, baseUsrSvtId);
-    byte_4BFF1A7 = 1;
+    sub_1C3B764(&StringLiteral_17415/*"card/statusSync"*/, baseUsrSvtId);
+    byte_4C239D1 = 1;
   }
-  RequestBase__addField_42510212((RequestBase_o *)this, (System_String_o *)StringLiteral_17385/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField_42628192((RequestBase_o *)this, (System_String_o *)StringLiteral_17415/*"card/statusSync"*/, baseUsrSvtId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall ServantLimitCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF1A6 & 1) == 0 )
+  if ( (byte_4C239D0 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_18064/*"card/combineLimit"*/, v2);
-    byte_4BFF1A6 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_18094/*"da-DK"*/, v2);
+    byte_4C239D0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_18064/*"card/combineLimit"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18094/*"da-DK"*/, 0LL);
 }
 
 
@@ -52,12 +52,12 @@ void __fastcall ServantLimitCombineRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BFF1A8 & 1) == 0 )
+  if ( (byte_4C239D2 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF1A8 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C239D2 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -71,7 +71,7 @@ void __fastcall ServantLimitCombineRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

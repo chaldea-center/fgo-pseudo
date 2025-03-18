@@ -14,16 +14,16 @@ ObjectDomain_o *__fastcall ClosePanelTextureUtil__CreateClosedPanelDomain(
   v3 = positionCalculator;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4BFA23D & 1) == 0 )
+  if ( (byte_4C1EA44 & 1) == 0 )
   {
-    positionCalculator = (SubmarinePanelPositionCalculator_o *)sub_1C2E12C(&ObjectDomain_TypeInfo, method);
-    byte_4BFA23D = 1;
+    positionCalculator = (SubmarinePanelPositionCalculator_o *)sub_1C3B764(&ObjectDomain_TypeInfo, method);
+    byte_4C1EA44 = 1;
   }
   if ( !v3 )
-    sub_1C2E388(positionCalculator, method);
+    sub_1C3B9C0(positionCalculator, method);
   v6 = v3->fields._PanelUnitSize_k__BackingField.fields.x;
   v7 = v3->fields._PanelUnitSize_k__BackingField.fields.y;
-  v8 = sub_1C2E378(ObjectDomain_TypeInfo);
+  v8 = sub_1C3B9B0(ObjectDomain_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   *(float *)(v8 + 16) = x - (float)(v6 * 0.5);
   *(float *)(v8 + 20) = y - (float)(v7 * 0.5);
@@ -41,7 +41,7 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDarkTexture2D(
 {
   __int64 v4; // x1
   __int64 v5; // x1
-  UnityEngine_Color_array *Pixels_70880472; // x0
+  UnityEngine_Color_array *Pixels_71013500; // x0
   __int64 v7; // x1
   UnityEngine_Texture2D_o *v8; // x21
   UnityEngine_Color_array *v9; // x21
@@ -58,43 +58,43 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDarkTexture2D(
   int32x2_t v21; // [xsp+0h] [xbp-40h]
 
   v21.n64_u64[0] = *(unsigned __int64 *)&darkRate;
-  if ( (byte_4BFA241 & 1) == 0 )
+  if ( (byte_4C1EA48 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Color___TypeInfo, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&UnityEngine_Texture2D_TypeInfo, v5);
-    byte_4BFA241 = 1;
+    sub_1C3B764(&UnityEngine_Color___TypeInfo, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&UnityEngine_Texture2D_TypeInfo, v5);
+    byte_4C1EA48 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Pixels_70880472 = (UnityEngine_Color_array *)UnityEngine_Object__op_Equality(
+  Pixels_71013500 = (UnityEngine_Color_array *)UnityEngine_Object__op_Equality(
                                                  (UnityEngine_Object_o *)baseTexture,
                                                  0LL,
                                                  0LL);
   v8 = 0LL;
-  if ( ((unsigned __int8)Pixels_70880472 & 1) == 0 )
+  if ( ((unsigned __int8)Pixels_71013500 & 1) == 0 )
   {
     if ( !baseTexture )
       goto LABEL_19;
-    Pixels_70880472 = UnityEngine_Texture2D__GetPixels_70880472(baseTexture, 0LL);
-    if ( !Pixels_70880472 )
+    Pixels_71013500 = UnityEngine_Texture2D__GetPixels_71013500(baseTexture, 0LL);
+    if ( !Pixels_71013500 )
       goto LABEL_19;
-    v9 = Pixels_70880472;
-    Pixels_70880472 = (UnityEngine_Color_array *)sub_1C2E1D4(UnityEngine_Color___TypeInfo, Pixels_70880472->max_length);
-    v10 = Pixels_70880472;
+    v9 = Pixels_71013500;
+    Pixels_71013500 = (UnityEngine_Color_array *)sub_1C3B80C(UnityEngine_Color___TypeInfo, Pixels_71013500->max_length);
+    v10 = Pixels_71013500;
     if ( (int)*(_QWORD *)&v9->max_length >= 1 )
     {
       if ( !(unsigned int)*(_QWORD *)&v9->max_length )
 LABEL_15:
-        sub_1C2E390(Pixels_70880472, v7);
+        sub_1C3B9C8(Pixels_71013500, v7);
       v11 = 0LL;
       v12.n64_u64[0] = vdup_lane_s32(v21, 0).n64_u64[0];
       v13 = (unsigned int)*(_QWORD *)&v9->max_length - 1LL;
-      p_r = &Pixels_70880472->m_Items[1].fields.r;
+      p_r = &Pixels_71013500->m_Items[1].fields.r;
       v15 = &v9->m_Items[1].fields.r;
-      while ( Pixels_70880472 )
+      while ( Pixels_71013500 )
       {
-        if ( v11 >= Pixels_70880472->max_length )
+        if ( v11 >= Pixels_71013500->max_length )
           goto LABEL_15;
         v16 = *v15;
         v17 = *(v15 - 1) * v21.n64_f32[0];
@@ -110,7 +110,7 @@ LABEL_15:
           goto LABEL_15;
       }
 LABEL_19:
-      sub_1C2E388(Pixels_70880472, v7);
+      sub_1C3B9C0(Pixels_71013500, v7);
     }
 LABEL_16:
     v18 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))baseTexture->klass->vtable._4_get_width.method)(
@@ -119,12 +119,12 @@ LABEL_16:
     v19 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))baseTexture->klass->vtable._6_get_height.method)(
             baseTexture,
             baseTexture->klass->vtable._7_set_height.methodPtr);
-    v8 = (UnityEngine_Texture2D_o *)sub_1C2E378(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_70878084(v8, v18, v19, 0LL);
+    v8 = (UnityEngine_Texture2D_o *)sub_1C3B9B0(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_71011112(v8, v18, v19, 0LL);
     if ( !v8 )
       goto LABEL_19;
-    UnityEngine_Texture2D__SetPixels_70878976(v8, v10, 0LL);
-    UnityEngine_Texture2D__Apply_70879748(v8, 0LL);
+    UnityEngine_Texture2D__SetPixels_71012004(v8, v10, 0LL);
+    UnityEngine_Texture2D__Apply_71012776(v8, 0LL);
   }
   return v8;
 }
@@ -175,11 +175,11 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDomainSubtractT
   unsigned int v44; // [xsp+Ch] [xbp-74h]
 
   v8 = objDomain;
-  if ( (byte_4BFA23F & 1) == 0 )
+  if ( (byte_4C1EA46 & 1) == 0 )
   {
-    sub_1C2E12C(&PanelUniqueIDUtil_TypeInfo, excludePanelUniqueIds);
-    objDomain = (ObjectDomain_o *)sub_1C2E12C(&UnityEngine_Texture2D_TypeInfo, v9);
-    byte_4BFA23F = 1;
+    sub_1C3B764(&PanelUniqueIDUtil_TypeInfo, excludePanelUniqueIds);
+    objDomain = (ObjectDomain_o *)sub_1C3B764(&UnityEngine_Texture2D_TypeInfo, v9);
+    byte_4C1EA46 = 1;
   }
   if ( !v8 )
     goto LABEL_48;
@@ -196,8 +196,8 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDomainSubtractT
   v11 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._6_get_height.method)(
           closedPanelTexture,
           closedPanelTexture->klass->vtable._7_set_height.methodPtr);
-  v43 = (UnityEngine_Texture2D_o *)sub_1C2E378(UnityEngine_Texture2D_TypeInfo);
-  UnityEngine_Texture2D___ctor_70878084(v43, v10, v11, 0LL);
+  v43 = (UnityEngine_Texture2D_o *)sub_1C3B9B0(UnityEngine_Texture2D_TypeInfo);
+  UnityEngine_Texture2D___ctor_71011112(v43, v10, v11, 0LL);
   X_k__BackingField = v8->fields._X_k__BackingField;
   v13 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._4_get_width.method)(
           closedPanelTexture,
@@ -230,7 +230,7 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDomainSubtractT
     v28 = 0x80000000;
   else
     v28 = (int)y;
-  objDomain = (ObjectDomain_o *)UnityEngine_Texture2D__GetPixels_70880472(closedPanelTexture, 0LL);
+  objDomain = (ObjectDomain_o *)UnityEngine_Texture2D__GetPixels_71013500(closedPanelTexture, 0LL);
   HorizontalPanelNum_k__BackingField = positionCalculator->fields._HorizontalPanelNum_k__BackingField;
   v31 = (UnityEngine_Color_array *)objDomain;
   if ( HorizontalPanelNum_k__BackingField >= 1 )
@@ -264,7 +264,7 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDomainSubtractT
                 do
                 {
                   if ( v39 >= v31->max_length )
-                    sub_1C2E390(objDomain, excludePanelUniqueIds);
+                    sub_1C3B9C8(objDomain, excludePanelUniqueIds);
                   v40 = &v31->obj + (int)v39;
                   --v38;
                   v39 += v26;
@@ -294,9 +294,9 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateDomainSubtractT
   v41 = v43;
   if ( !v43 )
 LABEL_48:
-    sub_1C2E388(objDomain, excludePanelUniqueIds);
-  UnityEngine_Texture2D__SetPixels_70878976(v43, v31, 0LL);
-  UnityEngine_Texture2D__Apply_70879748(v43, 0LL);
+    sub_1C3B9C0(objDomain, excludePanelUniqueIds);
+  UnityEngine_Texture2D__SetPixels_71012004(v43, v31, 0LL);
+  UnityEngine_Texture2D__Apply_71012776(v43, 0LL);
   return v41;
 }
 
@@ -403,14 +403,14 @@ ObjectDomain_array *__fastcall ClosePanelTextureUtil__CreateNeverOpenSurroundsDo
   __int64 v99; // x0
   UnityEngine_Vector3_o v100; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFA23B & 1) == 0 )
+  if ( (byte_4C1EA42 & 1) == 0 )
   {
-    sub_1C2E12C(&ObjectDomain___TypeInfo, closedPanelTexture);
-    sub_1C2E12C(&ObjectDomain_TypeInfo, v5);
-    sub_1C2E12C(&float___TypeInfo, v6);
-    byte_4BFA23B = 1;
+    sub_1C3B764(&ObjectDomain___TypeInfo, closedPanelTexture);
+    sub_1C3B764(&ObjectDomain_TypeInfo, v5);
+    sub_1C3B764(&float___TypeInfo, v6);
+    byte_4C1EA42 = 1;
   }
-  v7 = sub_1C2E1D4(float___TypeInfo, 4LL);
+  v7 = sub_1C3B80C(float___TypeInfo, 4LL);
   if ( !positionCalculator )
     goto LABEL_62;
   v9 = v7;
@@ -453,7 +453,7 @@ ObjectDomain_array *__fastcall ClosePanelTextureUtil__CreateNeverOpenSurroundsDo
     goto LABEL_61;
   v20 = v18 >= 0 ? v18 : v18 + 1;
   *(float *)(v9 + 44) = (float)(v20 >> 1) - v19;
-  v21 = (ObjectDomain_array *)sub_1C2E1D4(ObjectDomain___TypeInfo, 4LL);
+  v21 = (ObjectDomain_array *)sub_1C3B80C(ObjectDomain___TypeInfo, 4LL);
   v22 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._4_get_width.method)(
           closedPanelTexture,
           closedPanelTexture->klass->vtable._5_set_width.methodPtr);
@@ -467,7 +467,7 @@ ObjectDomain_array *__fastcall ClosePanelTextureUtil__CreateNeverOpenSurroundsDo
   v25 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._6_get_height.method)(
           closedPanelTexture,
           closedPanelTexture->klass->vtable._7_set_height.methodPtr);
-  v26 = (Il2CppObject *)sub_1C2E378(ObjectDomain_TypeInfo);
+  v26 = (Il2CppObject *)sub_1C3B9B0(ObjectDomain_TypeInfo);
   v27 = 1 - v24;
   if ( v22 <= 0 )
     v28 = -v22;
@@ -485,14 +485,14 @@ ObjectDomain_array *__fastcall ClosePanelTextureUtil__CreateNeverOpenSurroundsDo
   *(float *)(v29 + 28) = (float)v25;
   if ( !v21 )
 LABEL_62:
-    sub_1C2E388(v7, v8);
-  v7 = sub_1C2E268(v29, v21->obj.klass->_1.element_class);
+    sub_1C3B9C0(v7, v8);
+  v7 = sub_1C3B8A0(v29, v21->obj.klass->_1.element_class);
   if ( !v7 )
     goto LABEL_63;
   if ( !v21->max_length )
     goto LABEL_61;
   v21->m_Items[0] = (ObjectDomain_o *)v29;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)v21->m_Items, v29, v32, v33, v34, v35, v36, v37);
+  sub_1C3B708((PartyOrganizationUtility_o *)v21->m_Items, v29, v32, v33, v34, v35, v36, v37);
   v7 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._4_get_width.method)(
          closedPanelTexture,
          closedPanelTexture->klass->vtable._5_set_width.methodPtr);
@@ -512,7 +512,7 @@ LABEL_62:
   v43 = *(_DWORD *)(v9 + 36);
   v42 = *(float *)(v9 + 40);
   v44 = *(float *)(v9 + 32);
-  v45 = (Il2CppObject *)sub_1C2E378(ObjectDomain_TypeInfo);
+  v45 = (Il2CppObject *)sub_1C3B9B0(ObjectDomain_TypeInfo);
   v46 = 1 - v40;
   if ( v39 <= 0 )
     v47 = -v39;
@@ -531,16 +531,16 @@ LABEL_62:
   *(float *)(v50 + 20) = v52;
   *(float *)(v50 + 24) = v53;
   *(_DWORD *)(v50 + 28) = v43;
-  v7 = sub_1C2E268(v50, v21->obj.klass->_1.element_class);
+  v7 = sub_1C3B8A0(v50, v21->obj.klass->_1.element_class);
   if ( !v7 )
   {
 LABEL_63:
-    v99 = sub_1C2E3AC();
-    sub_1C2E254(v99, 0LL);
+    v99 = sub_1C3B9E4();
+    sub_1C3B88C(v99, 0LL);
   }
   if ( v21->max_length <= 1
     || (v21->m_Items[1] = (ObjectDomain_o *)v50,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v21->m_Items[1], v50, v54, v55, v56, v57, v58, v59),
+        sub_1C3B708((PartyOrganizationUtility_o *)&v21->m_Items[1], v50, v54, v55, v56, v57, v58, v59),
         v7 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._4_get_width.method)(
                closedPanelTexture,
                closedPanelTexture->klass->vtable._5_set_width.methodPtr),
@@ -553,14 +553,14 @@ LABEL_63:
         *(_DWORD *)(v9 + 24) <= 2u) )
   {
 LABEL_61:
-    sub_1C2E390(v7, v8);
+    sub_1C3B9C8(v7, v8);
   }
   v62 = *(_DWORD *)(v9 + 40);
   v63 = v7;
   v64 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._6_get_height.method)(
           closedPanelTexture,
           closedPanelTexture->klass->vtable._7_set_height.methodPtr);
-  v65 = (Il2CppObject *)sub_1C2E378(ObjectDomain_TypeInfo);
+  v65 = (Il2CppObject *)sub_1C3B9B0(ObjectDomain_TypeInfo);
   if ( v61 >= 0 )
     v66 = v61;
   else
@@ -576,13 +576,13 @@ LABEL_61:
   *(float *)(v68 + 20) = v70;
   *(_DWORD *)(v68 + 24) = v62;
   *(float *)(v68 + 28) = (float)v64;
-  v7 = sub_1C2E268(v68, v21->obj.klass->_1.element_class);
+  v7 = sub_1C3B8A0(v68, v21->obj.klass->_1.element_class);
   if ( !v7 )
     goto LABEL_63;
   if ( v21->max_length <= 2 )
     goto LABEL_61;
   v21->m_Items[2] = (ObjectDomain_o *)v68;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v21->m_Items[2], v68, v71, v72, v73, v74, v75, v76);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v21->m_Items[2], v68, v71, v72, v73, v74, v75, v76);
   v7 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, Il2CppMethodPointer))closedPanelTexture->klass->vtable._4_get_width.method)(
          closedPanelTexture,
          closedPanelTexture->klass->vtable._5_set_width.methodPtr);
@@ -606,7 +606,7 @@ LABEL_61:
   v82 = *(float *)(v9 + 32);
   v83 = *(float *)(v9 + 40);
   v84 = *(_DWORD *)(v9 + 44);
-  v85 = (Il2CppObject *)sub_1C2E378(ObjectDomain_TypeInfo);
+  v85 = (Il2CppObject *)sub_1C3B9B0(ObjectDomain_TypeInfo);
   if ( v78 <= 0 )
     v86 = -v78;
   else
@@ -624,13 +624,13 @@ LABEL_61:
   *(float *)(v90 + 20) = v91;
   *(float *)(v90 + 24) = (float)((float)v81 - v82) - v83;
   *(_DWORD *)(v90 + 28) = v84;
-  v7 = sub_1C2E268(v90, v21->obj.klass->_1.element_class);
+  v7 = sub_1C3B8A0(v90, v21->obj.klass->_1.element_class);
   if ( !v7 )
     goto LABEL_63;
   if ( v21->max_length <= 3 )
     goto LABEL_61;
   v21->m_Items[3] = (ObjectDomain_o *)v90;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v21->m_Items[3], v90, v92, v93, v94, v95, v96, v97);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v21->m_Items[3], v90, v92, v93, v94, v95, v96, v97);
   return v21;
 }
 
@@ -653,13 +653,13 @@ ObjectDomain_o *__fastcall ClosePanelTextureUtil__CreatePanelOccupiedTotalDomain
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = positionCalculator;
-  if ( (byte_4BFA23C & 1) == 0 )
+  if ( (byte_4C1EA43 & 1) == 0 )
   {
-    positionCalculator = (SubmarinePanelPositionCalculator_o *)sub_1C2E12C(&ObjectDomain_TypeInfo, closedPanelTexture);
-    byte_4BFA23C = 1;
+    positionCalculator = (SubmarinePanelPositionCalculator_o *)sub_1C3B764(&ObjectDomain_TypeInfo, closedPanelTexture);
+    byte_4C1EA43 = 1;
   }
   if ( !v3 )
-    sub_1C2E388(positionCalculator, closedPanelTexture);
+    sub_1C3B9C0(positionCalculator, closedPanelTexture);
   LeftBottomEdgePos = (unsigned int)SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(v3, 0LL);
   v12 = SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(v3, 0LL);
   y = v12.fields.y;
@@ -669,7 +669,7 @@ ObjectDomain_o *__fastcall ClosePanelTextureUtil__CreatePanelOccupiedTotalDomain
   v8 = RightTopEdgePos.fields.y;
   v14 = SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(v3, 0LL);
   v9 = v14.fields.y;
-  v10 = sub_1C2E378(ObjectDomain_TypeInfo);
+  v10 = sub_1C3B9B0(ObjectDomain_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   *(_DWORD *)(v10 + 16) = LeftBottomEdgePos;
   *(float *)(v10 + 20) = y;
@@ -689,42 +689,42 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__CreateResizedTexture2
   __int64 v7; // x1
   __int64 v8; // x1
   UnityEngine_Texture2D_o *v9; // x23
-  UnityEngine_RenderTexture_o *Temporary_70897876; // x22
+  UnityEngine_RenderTexture_o *Temporary_71030904; // x22
   UnityEngine_RenderTexture_o *active; // x21
   __int64 v12; // x0
   __int64 v13; // x1
   UnityEngine_Rect_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BFA240 & 1) == 0 )
+  if ( (byte_4C1EA47 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Graphics_TypeInfo, *(_QWORD *)&resizeWidth);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C2E12C(&UnityEngine_Texture2D_TypeInfo, v8);
-    byte_4BFA240 = 1;
+    sub_1C3B764(&UnityEngine_Graphics_TypeInfo, *(_QWORD *)&resizeWidth);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C3B764(&UnityEngine_Texture2D_TypeInfo, v8);
+    byte_4C1EA47 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = 0LL;
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)baseTexture, 0LL, 0LL) )
   {
-    Temporary_70897876 = UnityEngine_RenderTexture__GetTemporary_70897876(resizeWidth, resizeHeight, 0, 7, 1, 0LL);
+    Temporary_71030904 = UnityEngine_RenderTexture__GetTemporary_71030904(resizeWidth, resizeHeight, 0, 7, 1, 0LL);
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit((UnityEngine_Texture_o *)baseTexture, Temporary_70897876, 0LL);
+    UnityEngine_Graphics__Blit((UnityEngine_Texture_o *)baseTexture, Temporary_71030904, 0LL);
     active = UnityEngine_RenderTexture__get_active(0LL);
-    UnityEngine_RenderTexture__set_active(Temporary_70897876, 0LL);
-    v9 = (UnityEngine_Texture2D_o *)sub_1C2E378(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_70878084(v9, resizeWidth, resizeHeight, 0LL);
+    UnityEngine_RenderTexture__set_active(Temporary_71030904, 0LL);
+    v9 = (UnityEngine_Texture2D_o *)sub_1C3B9B0(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_71011112(v9, resizeWidth, resizeHeight, 0LL);
     if ( !v9 )
-      sub_1C2E388(v12, v13);
+      sub_1C3B9C0(v12, v13);
     v15.fields.m_Height = (float)resizeHeight;
     v15.fields.m_Width = (float)resizeWidth;
     v15.fields.m_XMin = 0.0;
     v15.fields.m_YMin = 0.0;
-    UnityEngine_Texture2D__ReadPixels_70880168(v9, v15, 0, 0, 0LL);
-    UnityEngine_Texture2D__Apply_70879748(v9, 0LL);
+    UnityEngine_Texture2D__ReadPixels_71013196(v9, v15, 0, 0, 0LL);
+    UnityEngine_Texture2D__Apply_71012776(v9, 0LL);
     UnityEngine_RenderTexture__set_active(active, 0LL);
-    UnityEngine_RenderTexture__ReleaseTemporary(Temporary_70897876, 0LL);
+    UnityEngine_RenderTexture__ReleaseTemporary(Temporary_71030904, 0LL);
   }
   return v9;
 }
@@ -761,10 +761,10 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__ExtractCutTextureFrom
   int32_t v27; // w4
 
   v5 = objDomain;
-  if ( (byte_4BFA23E & 1) == 0 )
+  if ( (byte_4C1EA45 & 1) == 0 )
   {
-    objDomain = (ObjectDomain_o *)sub_1C2E12C(&UnityEngine_Texture2D_TypeInfo, positionCalculator);
-    byte_4BFA23E = 1;
+    objDomain = (ObjectDomain_o *)sub_1C3B764(&UnityEngine_Texture2D_TypeInfo, positionCalculator);
+    byte_4C1EA45 = 1;
   }
   if ( !v5 )
     goto LABEL_35;
@@ -774,11 +774,11 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__ExtractCutTextureFrom
   Height_k__BackingField = v5->fields._Height_k__BackingField;
   if ( Height_k__BackingField <= 0.0 )
     return 0LL;
-  v8 = (UnityEngine_Texture2D_o *)sub_1C2E378(UnityEngine_Texture2D_TypeInfo);
+  v8 = (UnityEngine_Texture2D_o *)sub_1C3B9B0(UnityEngine_Texture2D_TypeInfo);
   v9 = Width_k__BackingField == INFINITY ? 0x80000000 : (int)Width_k__BackingField;
   v10 = Height_k__BackingField == INFINITY ? 0x80000000 : (int)Height_k__BackingField;
   v11 = v8;
-  UnityEngine_Texture2D___ctor_70878084(v8, v9, v10, 0LL);
+  UnityEngine_Texture2D___ctor_71011112(v8, v9, v10, 0LL);
   if ( !closedPanelTexture )
     goto LABEL_35;
   X_k__BackingField = v5->fields._X_k__BackingField;
@@ -801,11 +801,11 @@ UnityEngine_Texture2D_o *__fastcall ClosePanelTextureUtil__ExtractCutTextureFrom
   v25 = v23 == INFINITY ? 0x80000000 : (int)v23;
   v26 = v20 == INFINITY ? 0x80000000 : (int)v20;
   v27 = v21 == INFINITY ? 0x80000000 : (int)v21;
-  objDomain = (ObjectDomain_o *)UnityEngine_Texture2D__GetPixels_70876772(closedPanelTexture, v24, v25, v26, v27, 0LL);
+  objDomain = (ObjectDomain_o *)UnityEngine_Texture2D__GetPixels_71009800(closedPanelTexture, v24, v25, v26, v27, 0LL);
   if ( !v11 )
 LABEL_35:
-    sub_1C2E388(objDomain, positionCalculator);
-  UnityEngine_Texture2D__SetPixels_70878976(v11, (UnityEngine_Color_array *)objDomain, 0LL);
-  UnityEngine_Texture2D__Apply_70879748(v11, 0LL);
+    sub_1C3B9C0(objDomain, positionCalculator);
+  UnityEngine_Texture2D__SetPixels_71012004(v11, (UnityEngine_Color_array *)objDomain, 0LL);
+  UnityEngine_Texture2D__Apply_71012776(v11, 0LL);
   return v11;
 }

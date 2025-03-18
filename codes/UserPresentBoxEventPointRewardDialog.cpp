@@ -2,13 +2,13 @@ void __fastcall UserPresentBoxEventPointRewardDialog___ctor(
         UserPresentBoxEventPointRewardDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BFC4FF & 1) == 0 )
+  if ( (byte_4C20D0D & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4BFC4FF = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C20D0D = 1;
   }
   this->fields.MESSAGE_BASE_POS_Y = 54.0;
-  *(_OWORD *)&this->fields.MESSAGE_FONT_SIZE = xmmword_C06F00;
+  *(_OWORD *)&this->fields.MESSAGE_FONT_SIZE = xmmword_C0E290;
   this->fields.isInitPanelDepth = 1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -22,11 +22,11 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  UserPresentBoxEventPointRewardDialog__Close_38772632(this, 0LL, v2);
+  UserPresentBoxEventPointRewardDialog__Close_38881500(this, 0LL, v2);
 }
 
 
-void __fastcall UserPresentBoxEventPointRewardDialog__Close_38772632(
+void __fastcall UserPresentBoxEventPointRewardDialog__Close_38881500(
         UserPresentBoxEventPointRewardDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -39,14 +39,14 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Close_38772632(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4BFC4FD & 1) == 0 )
+  if ( (byte_4C20D0B & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&Method_UserPresentBoxEventPointRewardDialog_EndClose__, v10);
-    byte_4BFC4FD = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&Method_UserPresentBoxEventPointRewardDialog_EndClose__, v10);
+    byte_4C20D0B = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeEndFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -56,7 +56,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Close_38772632(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_UserPresentBoxEventPointRewardDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -83,7 +83,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__EndClose(
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C3B708(p_closeEndFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -111,11 +111,11 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
   UnityEngine_Object_o *messageLabel; // x20
   UnityEngine_Object_o *okBtnLabel; // x20
 
-  if ( (byte_4BFC4FB & 1) == 0 )
+  if ( (byte_4C20D09 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v3);
-    byte_4BFC4FB = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_1/*""*/, v3);
+    byte_4C20D09 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -178,7 +178,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Init(
   titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !titleLabel )
 LABEL_32:
-    sub_1C2E388(titleLabel, method);
+    sub_1C3B9C0(titleLabel, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -192,17 +192,17 @@ void __fastcall UserPresentBoxEventPointRewardDialog__OnClickOk(
   System_Reflection_MethodBase_o *v4; // x0
   struct UserPresentBoxEventPointRewardDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4BFC4FE & 1) == 0 )
+  if ( (byte_4C20D0C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UserPresentBoxEventPointRewardDialog_OnClickOk__, method);
-    byte_4BFC4FE = 1;
+    sub_1C3B764(&Method_UserPresentBoxEventPointRewardDialog_OnClickOk__, method);
+    byte_4C20D0C = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_UserPresentBoxEventPointRewardDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_UserPresentBoxEventPointRewardDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_UserPresentBoxEventPointRewardDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_UserPresentBoxEventPointRewardDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -285,20 +285,20 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Open(
   UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v70; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFC4FC & 1) == 0 )
+  if ( (byte_4C20D0A & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, evpReward);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ItemMaster___, v7);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1C2E12C(&Method_UserPresentBoxEventPointRewardDialog_EndOpen__, v11);
-    sub_1C2E12C(&StringLiteral_43/*"\n"*/, v12);
-    sub_1C2E12C(&StringLiteral_10606/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, v13);
-    sub_1C2E12C(&StringLiteral_10607/*"PRESENT_BOX_EVENT_POINT_REWARD_TITLE"*/, v14);
-    sub_1C2E12C(&StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, v15);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v16);
-    byte_4BFC4FC = 1;
+    sub_1C3B764(&System_Action_TypeInfo, evpReward);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v7);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v8);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1C3B764(&Method_UserPresentBoxEventPointRewardDialog_EndOpen__, v11);
+    sub_1C3B764(&StringLiteral_43/*"\n"*/, v12);
+    sub_1C3B764(&StringLiteral_10625/*"QUEST_CONFIRM_START"*/, v13);
+    sub_1C3B764(&StringLiteral_10626/*"QUEST_CONFIRM_START2"*/, v14);
+    sub_1C3B764(&StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, v15);
+    sub_1C3B764(&StringLiteral_1/*""*/, v16);
+    byte_4C20D0A = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
   if ( this->fields.isInitPanelDepth )
@@ -316,19 +316,19 @@ void __fastcall UserPresentBoxEventPointRewardDialog__Open(
     }
   }
   this->fields.clickFunc = func;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)func, v18, v19, v20, v21, v22, v23);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.clickFunc, (int64_t)func, v18, v19, v20, v21, v22, v23);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ItemMaster___),
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___),
         !evpReward)
     || !Instance
     || (Instance = ItemMaster__GetItemData((ItemMaster_o *)Instance, evpReward->fields.itemId, -1, 0LL)) == 0LL
     || (eventPointReward = evpReward->fields.eventPointReward) == 0LL )
   {
 LABEL_87:
-    sub_1C2E388(Instance, v26);
+    sub_1C3B9C0(Instance, v26);
   }
   v28 = (System_String_o *)StringLiteral_1/*""*/;
   v29 = (Il2CppObject *)*((_QWORD *)Instance + 3);
@@ -341,8 +341,8 @@ LABEL_87:
       break;
     if ( (_DWORD)v30 != 4 )
     {
-      v28 = System_String__Concat_63235584(v28, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
-      Instance = System_String__Concat_63235584(v31, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
+      v28 = System_String__Concat_63368612(v28, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
+      Instance = System_String__Concat_63368612(v31, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
       eventPointReward = evpReward->fields.eventPointReward;
       if ( !eventPointReward )
         goto LABEL_87;
@@ -350,11 +350,11 @@ LABEL_87:
     }
     if ( v32 >= eventPointReward->max_length )
 LABEL_88:
-      sub_1C2E390(Instance, v26);
+      sub_1C3B9C8(Instance, v26);
     v33 = *((_QWORD *)&eventPointReward->obj.klass + v30);
     if ( v33 )
     {
-      Instance = System_String__Concat_63235584(v28, *(System_String_o **)(v33 + 16), 0LL);
+      Instance = System_String__Concat_63368612(v28, *(System_String_o **)(v33 + 16), 0LL);
       v34 = evpReward->fields.eventPointReward;
       if ( v34 )
       {
@@ -364,7 +364,7 @@ LABEL_88:
         if ( v35 )
         {
           v28 = (System_String_o *)Instance;
-          Instance = System_String__Concat_63235584(v31, *(System_String_o **)(v35 + 24), 0LL);
+          Instance = System_String__Concat_63368612(v31, *(System_String_o **)(v35 + 24), 0LL);
           eventPointReward = evpReward->fields.eventPointReward;
           v31 = (System_String_o *)Instance;
           ++v30;
@@ -383,7 +383,7 @@ LABEL_88:
     v37 = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_10607/*"PRESENT_BOX_EVENT_POINT_REWARD_TITLE"*/, 0LL);
+    v38 = LocalizationManager__Get((System_String_o *)StringLiteral_10626/*"QUEST_CONFIRM_START2"*/, 0LL);
     Instance = System_String__Format(v38, v29, 0LL);
     if ( !v37 )
       goto LABEL_87;
@@ -534,7 +534,7 @@ LABEL_88:
     v61 = this->fields.messageLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10606/*"PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE"*/, 0LL);
+    v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10625/*"QUEST_CONFIRM_START"*/, 0LL);
     Instance = System_String__Format(v62, v29, 0LL);
     if ( !v61 )
       goto LABEL_87;
@@ -548,7 +548,7 @@ LABEL_88:
     v64 = this->fields.okBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0LL);
     if ( v64 )
     {
       UILabel__set_text(v64, (System_String_o *)Instance, 0LL);
@@ -558,7 +558,7 @@ LABEL_88:
   }
 LABEL_86:
   this->fields.isButtonEnable = 0;
-  v65 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v65 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v65, (Il2CppObject *)this, Method_UserPresentBoxEventPointRewardDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
 }
@@ -586,7 +586,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -597,12 +597,12 @@ void __fastcall UserPresentBoxEventPointRewardDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -614,9 +614,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A6EAF0;
+  this->fields.m_target = (Il2CppObject *)sub_1A7BBA8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6EAA8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7BB60;
 }
 
 
@@ -632,14 +632,14 @@ System_IAsyncResult_o *__fastcall UserPresentBoxEventPointRewardDialog_ClickDele
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4BFC500 & 1) == 0 )
+  if ( (byte_4C20D0E & 1) == 0 )
   {
-    sub_1C2E12C(&bool_TypeInfo, isOk);
-    byte_4BFC500 = 1;
+    sub_1C3B764(&bool_TypeInfo, isOk);
+    byte_4C20D0E = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, v9, callback, object);
 }
 
 
@@ -648,7 +648,7 @@ void __fastcall UserPresentBoxEventPointRewardDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 

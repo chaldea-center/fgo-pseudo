@@ -1,14 +1,14 @@
 void __fastcall SkillDetailMaster___ctor(SkillDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE1E0 & 1) == 0 )
+  if ( (byte_4C229F3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__, method);
-    byte_4BFE1E0 = 1;
+    sub_1C3B764(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__, method);
+    byte_4C229F3 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     58,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int___ctor__);
 }
 
 
@@ -24,21 +24,21 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
   LocalizationManager_c *v10; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BFE1E1 & 1) == 0 )
+  if ( (byte_4C229F4 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__, *(_QWORD *)&id);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v7);
-    byte_4BFE1E1 = 1;
+    sub_1C3B764(&Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__, *(_QWORD *)&id);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
+    byte_4C229F4 = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_327B1CC *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_329AE94 *)Method_DataMasterBase_SkillDetailMaster__SkillDetailEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_1C2E388(0LL, v8);
+      sub_1C3B9C0(0LL, v8);
     if ( isShort )
       return SkillDetailEntity__getDetailShort((SkillDetailEntity_o *)entity, v8);
     else
@@ -48,10 +48,10 @@ System_String_o *__fastcall SkillDetailMaster__getDetail(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4BF8DA3 )
+    if ( !byte_4C1D52E )
     {
-      sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
-      byte_4BF8DA3 = 1;
+      sub_1C3B764(&LocalizationManager_TypeInfo, v8);
+      byte_4C1D52E = 1;
     }
     v10 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )

@@ -2,10 +2,10 @@ void __fastcall QuestRewardTokenAction___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BFA67C & 1) == 0 )
+  if ( (byte_4C1EED5 & 1) == 0 )
   {
-    sub_1C2E12C(&QuestRewardTokenAction_TypeInfo, v1);
-    byte_4BFA67C = 1;
+    sub_1C3B764(&QuestRewardTokenAction_TypeInfo, v1);
+    byte_4C1EED5 = 1;
   }
   *QuestRewardTokenAction_TypeInfo->static_fields = (struct QuestRewardTokenAction_StaticFields)0x59B0DD404C90D48LL;
 }
@@ -42,29 +42,29 @@ void __fastcall QuestRewardTokenAction__Awake(QuestRewardTokenAction_o *this, co
   Il2CppObject *v23; // x21
   const MethodInfo *v24; // x2
 
-  if ( (byte_4BFA66F & 1) == 0 )
+  if ( (byte_4C1EEC8 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_CStateManager_QuestRewardTokenAction___ctor__, method);
-    sub_1C2E12C(&Method_CStateManager_QuestRewardTokenAction__add__, v3);
-    sub_1C2E12C(&CStateManager_QuestRewardTokenAction__TypeInfo, v4);
-    sub_1C2E12C(&QuestRewardTokenAction_StateNone_TypeInfo, v5);
-    sub_1C2E12C(&QuestRewardTokenAction_StatePlay_TypeInfo, v6);
-    sub_1C2E12C(&QuestRewardTokenAction_StateTouchWait_TypeInfo, v7);
-    byte_4BFA66F = 1;
+    sub_1C3B764(&Method_CStateManager_QuestRewardTokenAction___ctor__, method);
+    sub_1C3B764(&Method_CStateManager_QuestRewardTokenAction__add__, v3);
+    sub_1C3B764(&CStateManager_QuestRewardTokenAction__TypeInfo, v4);
+    sub_1C3B764(&QuestRewardTokenAction_StateNone_TypeInfo, v5);
+    sub_1C3B764(&QuestRewardTokenAction_StatePlay_TypeInfo, v6);
+    sub_1C3B764(&QuestRewardTokenAction_StateTouchWait_TypeInfo, v7);
+    byte_4C1EEC8 = 1;
   }
   p_fsm = &this->fields.fsm;
   if ( !this->fields.fsm )
   {
-    v9 = (CStateManager_T__o *)sub_1C2E378(CStateManager_QuestRewardTokenAction__TypeInfo);
+    v9 = (CStateManager_T__o *)sub_1C3B9B0(CStateManager_QuestRewardTokenAction__TypeInfo);
     CStateManager_object____ctor(
       v9,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_32064C0 *)Method_CStateManager_QuestRewardTokenAction___ctor__);
+      (const MethodInfo_3225B48 *)Method_CStateManager_QuestRewardTokenAction___ctor__);
     this->fields.fsm = (struct CStateManager_QuestRewardTokenAction__o *)v9;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.fsm, (int64_t)v9, v10, v11, v12, v13, v14, v15);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.fsm, (int64_t)v9, v10, v11, v12, v13, v14, v15);
     fsm = (CStateManager_T__o *)this->fields.fsm;
-    v17 = (Il2CppObject *)sub_1C2E378(QuestRewardTokenAction_StateNone_TypeInfo);
+    v17 = (Il2CppObject *)sub_1C3B9B0(QuestRewardTokenAction_StateNone_TypeInfo);
     System_Object___ctor(v17, 0LL);
     if ( !fsm )
       goto LABEL_8;
@@ -72,29 +72,29 @@ void __fastcall QuestRewardTokenAction__Awake(QuestRewardTokenAction_o *this, co
       fsm,
       0,
       (IState_T__o *)v17,
-      (const MethodInfo_3206568 *)Method_CStateManager_QuestRewardTokenAction__add__);
+      (const MethodInfo_3225BF0 *)Method_CStateManager_QuestRewardTokenAction__add__);
     v20 = (CStateManager_T__o *)*p_fsm;
-    v21 = (Il2CppObject *)sub_1C2E378(QuestRewardTokenAction_StatePlay_TypeInfo);
+    v21 = (Il2CppObject *)sub_1C3B9B0(QuestRewardTokenAction_StatePlay_TypeInfo);
     System_Object___ctor(v21, 0LL);
     if ( !v20
       || (CStateManager_object___add(
             v20,
             1,
             (IState_T__o *)v21,
-            (const MethodInfo_3206568 *)Method_CStateManager_QuestRewardTokenAction__add__),
+            (const MethodInfo_3225BF0 *)Method_CStateManager_QuestRewardTokenAction__add__),
           v22 = (CStateManager_T__o *)*p_fsm,
-          v23 = (Il2CppObject *)sub_1C2E378(QuestRewardTokenAction_StateTouchWait_TypeInfo),
+          v23 = (Il2CppObject *)sub_1C3B9B0(QuestRewardTokenAction_StateTouchWait_TypeInfo),
           System_Object___ctor(v23, 0LL),
           !v22) )
     {
 LABEL_8:
-      sub_1C2E388(v18, v19);
+      sub_1C3B9C0(v18, v19);
     }
     CStateManager_object___add(
       v22,
       2,
       (IState_T__o *)v23,
-      (const MethodInfo_3206568 *)Method_CStateManager_QuestRewardTokenAction__add__);
+      (const MethodInfo_3225BF0 *)Method_CStateManager_QuestRewardTokenAction__add__);
     QuestRewardTokenAction__SetState(this, 0, v24);
   }
 }
@@ -110,30 +110,30 @@ UIAtlas_o *__fastcall QuestRewardTokenAction__CreateUIAtlasFromAssetData(
   __int64 v7; // x1
   System_Object_array *ObjectList_object; // x0
 
-  if ( (byte_4BFA674 & 1) == 0 )
+  if ( (byte_4C1EECD & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObjectList_GameObject___, assetData);
-    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, v6);
-    this = (QuestRewardTokenAction_o *)sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
-    byte_4BFA674 = 1;
+    sub_1C3B764(&Method_AssetData_GetObjectList_GameObject___, assetData);
+    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, v6);
+    this = (QuestRewardTokenAction_o *)sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
+    byte_4C1EECD = 1;
   }
   if ( !assetData )
     goto LABEL_9;
   ObjectList_object = AssetData__GetObjectList_object_(
                         assetData,
-                        (const MethodInfo_2FB354C *)Method_AssetData_GetObjectList_GameObject___);
+                        (const MethodInfo_2FD1E84 *)Method_AssetData_GetObjectList_GameObject___);
   if ( ObjectList_object && *(_QWORD *)&ObjectList_object->max_length )
   {
-    this = (QuestRewardTokenAction_o *)AssetData__GetObject_object__50017172(
+    this = (QuestRewardTokenAction_o *)AssetData__GetObject_object__50142412(
                                          assetData,
                                          name,
-                                         (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+                                         (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
     if ( this )
       return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                             (UnityEngine_GameObject_o *)this,
-                            (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                            (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 LABEL_9:
-    sub_1C2E388(this, assetData);
+    sub_1C3B9C0(this, assetData);
   }
   return 0LL;
 }
@@ -152,14 +152,14 @@ int32_t __fastcall QuestRewardTokenAction__GetState(QuestRewardTokenAction_o *th
   struct CStateManager_QuestRewardTokenAction__o *fsm; // x8
 
   v2 = this;
-  if ( (byte_4BFA67A & 1) == 0 )
+  if ( (byte_4C1EED3 & 1) == 0 )
   {
-    this = (QuestRewardTokenAction_o *)sub_1C2E12C(&Method_CStateManager_QuestRewardTokenAction__getState__, method);
-    byte_4BFA67A = 1;
+    this = (QuestRewardTokenAction_o *)sub_1C3B764(&Method_CStateManager_QuestRewardTokenAction__getState__, method);
+    byte_4C1EED3 = 1;
   }
   fsm = v2->fields.fsm;
   if ( !fsm )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return fsm->fields.m_state;
 }
 
@@ -181,7 +181,7 @@ void __fastcall QuestRewardTokenAction__Init(QuestRewardTokenAction_o *this, con
   __int64 v14; // x22
   UnityEngine_Object_o *v15; // x20
   struct UILabel_array *v16; // x8
-  Il2CppObject *ComponentInChildren_object__50103608; // x0
+  Il2CppObject *ComponentInChildren_object__50228848; // x0
   UnityEngine_Animation_o **p_animation; // x20
   int64_t v19; // x2
   int32_t v20; // w3
@@ -219,13 +219,13 @@ void __fastcall QuestRewardTokenAction__Init(QuestRewardTokenAction_o *this, con
   __int64 v52; // x0
 
   v2 = this;
-  if ( (byte_4BFA677 & 1) == 0 )
+  if ( (byte_4C1EED0 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, method);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    this = (QuestRewardTokenAction_o *)sub_1C2E12C(&SimpleAnimation_State_TypeInfo, v5);
-    byte_4BFA677 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, method);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    this = (QuestRewardTokenAction_o *)sub_1C3B764(&SimpleAnimation_State_TypeInfo, v5);
+    byte_4C1EED0 = 1;
   }
   tokenSprite = v2->fields.tokenSprite;
   if ( tokenSprite && (int)*(_QWORD *)&tokenSprite->max_length >= 1 )
@@ -265,7 +265,7 @@ void __fastcall QuestRewardTokenAction__Init(QuestRewardTokenAction_o *this, con
         goto LABEL_70;
     }
 LABEL_71:
-    sub_1C2E390(this, method);
+    sub_1C3B9C8(this, method);
   }
 LABEL_19:
   tokenName = v2->fields.tokenName;
@@ -307,14 +307,14 @@ LABEL_34:
   this = (QuestRewardTokenAction_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0LL);
   if ( !this )
     goto LABEL_70;
-  ComponentInChildren_object__50103608 = UnityEngine_Component__GetComponentInChildren_object__50103608(
+  ComponentInChildren_object__50228848 = UnityEngine_Component__GetComponentInChildren_object__50228848(
                                            (UnityEngine_Component_o *)this,
-                                           (const MethodInfo_2FC8538 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-  v2->fields.animation = (struct UnityEngine_Animation_o *)ComponentInChildren_object__50103608;
+                                           (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+  v2->fields.animation = (struct UnityEngine_Animation_o *)ComponentInChildren_object__50228848;
   p_animation = &v2->fields.animation;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&v2->fields.animation,
-    (int64_t)ComponentInChildren_object__50103608,
+    (int64_t)ComponentInChildren_object__50228848,
     v19,
     v20,
     v21,
@@ -324,12 +324,12 @@ LABEL_34:
   this = (QuestRewardTokenAction_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0LL);
   if ( !this )
     goto LABEL_70;
-  v25 = UnityEngine_Component__GetComponentInChildren_object__50103608(
+  v25 = UnityEngine_Component__GetComponentInChildren_object__50228848(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_2FC8538 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+          (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
   v2->fields.simpleAnimation = (struct SimpleAnimation_o *)v25;
   p_simpleAnimation = &v2->fields.simpleAnimation;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields.simpleAnimation, (int64_t)v25, v27, v28, v29, v30, v31, v32);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields.simpleAnimation, (int64_t)v25, v27, v28, v29, v30, v31, v32);
   simpleAnimation = (UnityEngine_Object_o *)v2->fields.simpleAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -372,7 +372,7 @@ LABEL_34:
       }
     }
 LABEL_70:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   v34 = *p_simpleAnimation;
   if ( !*p_simpleAnimation )
@@ -402,7 +402,7 @@ LABEL_70:
   else
   {
 LABEL_46:
-    v40 = sub_1C8010C(this, SimpleAnimation_State_TypeInfo, 8LL);
+    v40 = sub_1C8D744(this, SimpleAnimation_State_TypeInfo, 8LL);
   }
   this = (QuestRewardTokenAction_o *)(*(__int64 (__fastcall **)(QuestRewardTokenAction_o *, _QWORD, float))v40)(
                                        v37,
@@ -436,7 +436,7 @@ LABEL_46:
   else
   {
 LABEL_65:
-    v52 = sub_1C8010C(this, SimpleAnimation_State_TypeInfo, 6LL);
+    v52 = sub_1C8D744(this, SimpleAnimation_State_TypeInfo, 6LL);
   }
   (*(void (__fastcall **)(QuestRewardTokenAction_o *, _QWORD, float))v52)(v49, *(_QWORD *)(v52 + 8), 0.0);
 LABEL_68:
@@ -466,20 +466,20 @@ void __fastcall QuestRewardTokenAction__LoadData(
   System_Action_o *v16; // x20
   const MethodInfo *v17; // x3
 
-  if ( (byte_4BFA671 & 1) == 0 )
+  if ( (byte_4C1EECA & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, endAct);
-    sub_1C2E12C(&Method_QuestRewardTokenAction___c__DisplayClass17_0__LoadData_b__0__, v5);
-    sub_1C2E12C(&QuestRewardTokenAction___c__DisplayClass17_0_TypeInfo, v6);
-    byte_4BFA671 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, endAct);
+    sub_1C3B764(&Method_QuestRewardTokenAction___c__DisplayClass17_0__LoadData_b__0__, v5);
+    sub_1C3B764(&QuestRewardTokenAction___c__DisplayClass17_0_TypeInfo, v6);
+    byte_4C1EECA = 1;
   }
-  v7 = sub_1C2E378(QuestRewardTokenAction___c__DisplayClass17_0_TypeInfo);
+  v7 = sub_1C3B9B0(QuestRewardTokenAction___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1C2E388(v8, v9);
+    sub_1C3B9C0(v8, v9);
   *(_QWORD *)(v7 + 16) = endAct;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)endAct, v10, v11, v12, v13, v14, v15);
-  v16 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)endAct, v10, v11, v12, v13, v14, v15);
+  v16 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v7,
@@ -513,14 +513,14 @@ void __fastcall QuestRewardTokenAction__LoadEventUI(
   AssetLoader_LoadEndDataHandler_o *v22; // x21
   const MethodInfo *v23; // x2
 
-  if ( (byte_4BFA672 & 1) == 0 )
+  if ( (byte_4C1EECB & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&AssetManager_TypeInfo, v7);
-    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
-    sub_1C2E12C(&Method_QuestRewardTokenAction_LoadEventUIEnd__, v9);
-    sub_1C2E12C(&StringLiteral_6388/*"EventUI/Prefabs/80285"*/, v10);
-    byte_4BFA672 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&AssetManager_TypeInfo, v7);
+    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
+    sub_1C3B764(&Method_QuestRewardTokenAction_LoadEventUIEnd__, v9);
+    sub_1C3B764(&StringLiteral_6391/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, v10);
+    byte_4C1EECB = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0LL) )
@@ -536,7 +536,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUI(
     if ( (System_Action_c *)v14->klass != System_Action_TypeInfo
       || (*p_eventUILoadCallbackFunc = (struct System_Action_o *)v14, (System_Action_c *)v14->klass != v21) )
     {
-      v12 = sub_1C2E648(v14);
+      v12 = sub_1C3BC80(v14);
 LABEL_9:
       if ( callback )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, long double))callback->fields.m_target)(
@@ -550,7 +550,7 @@ LABEL_9:
   {
     *p_eventUILoadCallbackFunc = 0LL;
   }
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.eventUILoadCallbackFunc,
     (int64_t)v14,
     v15,
@@ -562,7 +562,7 @@ LABEL_9:
   if ( !this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 1;
-    v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3B9B0(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v22,
       (Il2CppObject *)this,
@@ -570,7 +570,7 @@ LABEL_9:
       0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6388/*"EventUI/Prefabs/80285"*/, v22, loadParallelMax, 0LL) )
+    if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6391/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, v22, loadParallelMax, 0LL) )
     {
       this->fields.isEventUILoad = 0;
       QuestRewardTokenAction__LoadEventUIEnd(this, 0LL, v23);
@@ -602,16 +602,16 @@ void __fastcall QuestRewardTokenAction__LoadEventUIEnd(
   struct System_Action_o *v20; // x20
   struct System_Action_o *eventUILoadCallbackFunc; // t1
 
-  if ( (byte_4BFA673 & 1) == 0 )
+  if ( (byte_4C1EECC & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_5479/*"DownloadEventUIAtlas8028500"*/, assetData);
-    byte_4BFA673 = 1;
+    sub_1C3B764(&StringLiteral_5479/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/, assetData);
+    byte_4C1EECC = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     this->fields.eventUIAssetData = assetData;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.eventUIAssetData,
       (int64_t)assetData,
       (int64_t)method,
@@ -623,10 +623,10 @@ void __fastcall QuestRewardTokenAction__LoadEventUIEnd(
     UIAtlasFromAssetData = QuestRewardTokenAction__CreateUIAtlasFromAssetData(
                              v10,
                              assetData,
-                             (System_String_o *)StringLiteral_5479/*"DownloadEventUIAtlas8028500"*/,
+                             (System_String_o *)StringLiteral_5479/*"EVENT_CONQUEST_POS_ITEM_FORMAT"*/,
                              v11);
     this->fields.eventUIDownloadAtlas = UIAtlasFromAssetData;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas,
       (int64_t)UIAtlasFromAssetData,
       v13,
@@ -642,7 +642,7 @@ void __fastcall QuestRewardTokenAction__LoadEventUIEnd(
   if ( eventUILoadCallbackFunc )
   {
     p_eventUILoadCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_eventUILoadCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C3B708(p_eventUILoadCallbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v20->fields.m_target)(
       v20->fields.original_method_info,
       *(_QWORD *)&v20->fields.extra_arg);
@@ -670,21 +670,21 @@ void __fastcall QuestRewardTokenAction__Play(
   AvalonSceneManager_c *v18; // x0
   System_Action_o *v19; // x21
 
-  if ( (byte_4BFA679 & 1) == 0 )
+  if ( (byte_4C1EED2 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, end_act);
-    sub_1C2E12C(&AvalonSceneManager_TypeInfo, v12);
-    sub_1C2E12C(&Method_QuestRewardTokenAction__Play_b__25_0__, v13);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    byte_4BFA679 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, end_act);
+    sub_1C3B764(&AvalonSceneManager_TypeInfo, v12);
+    sub_1C3B764(&Method_QuestRewardTokenAction__Play_b__25_0__, v13);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
+    byte_4C1EED2 = 1;
   }
   this->fields.endAct = end_act;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.endAct, (int64_t)end_act, (int64_t)method, v4, v5, v6, v7, v8);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.endAct, (int64_t)end_act, (int64_t)method, v4, v5, v6, v7, v8);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_10;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( fade_in_time <= 0.0 )
   {
     v18 = AvalonSceneManager_TypeInfo;
@@ -695,11 +695,11 @@ void __fastcall QuestRewardTokenAction__Play(
     }
     fade_in_time = v18->static_fields->DEFAULT_FADE_TIME;
   }
-  v19 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_QuestRewardTokenAction__Play_b__25_0__, 0LL);
   if ( !Instance )
 LABEL_10:
-    sub_1C2E388(gameObject, v16);
+    sub_1C3B9C0(gameObject, v16);
   CommonUI__maskFadein((CommonUI_o *)Instance, fade_in_time, v19, 0LL);
 }
 
@@ -721,18 +721,18 @@ void __fastcall QuestRewardTokenAction__ReleaseEventUI(QuestRewardTokenAction_o 
   FollowerInfo_o *v15; // x6
   PartyListViewItem_o *v16; // x7
 
-  if ( (byte_4BFA675 & 1) == 0 )
+  if ( (byte_4C1EECE & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_6388/*"EventUI/Prefabs/80285"*/, v9);
-    byte_4BFA675 = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_6391/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, v9);
+    byte_4C1EECE = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6388/*"EventUI/Prefabs/80285"*/, 0LL);
+    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6391/*"FORTUNE_BONUS_RESULT_DAY_FORMAT"*/, 0LL);
   }
   else
   {
@@ -741,13 +741,13 @@ void __fastcall QuestRewardTokenAction__ReleaseEventUI(QuestRewardTokenAction_o 
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_39104116(eventUIAssetData, 0LL);
+      AssetManager__releaseAsset_39213104(eventUIAssetData, 0LL);
     }
   }
   this->fields.eventUIDownloadAtlas = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.eventUIDownloadAtlas, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.eventUIAssetData = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.eventUIAssetData, 0LL, v11, v12, v13, v14, v15, v16);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.eventUIAssetData, 0LL, v11, v12, v13, v14, v15, v16);
 }
 
 
@@ -762,10 +762,10 @@ bool __fastcall QuestRewardTokenAction__SetEventUI(
   UnityEngine_Object_o *eventUIDownloadAtlas; // x22
   bool v10; // w21
 
-  if ( (byte_4BFA676 & 1) == 0 )
+  if ( (byte_4C1EECF & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4BFA676 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, sprite);
+    byte_4C1EECF = 1;
   }
   IsNullOrEmpty = (UIAtlas_o *)System_String__IsNullOrEmpty(spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
@@ -796,7 +796,7 @@ bool __fastcall QuestRewardTokenAction__SetEventUI(
         }
       }
 LABEL_17:
-      sub_1C2E388(IsNullOrEmpty, v8);
+      sub_1C3B9C0(IsNullOrEmpty, v8);
     }
   }
   if ( !sprite )
@@ -818,18 +818,18 @@ void __fastcall QuestRewardTokenAction__SetState(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4BFA67B & 1) == 0 )
+  if ( (byte_4C1EED4 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_CStateManager_QuestRewardTokenAction__setState__, *(_QWORD *)&state);
-    byte_4BFA67B = 1;
+    sub_1C3B764(&Method_CStateManager_QuestRewardTokenAction__setState__, *(_QWORD *)&state);
+    byte_4C1EED4 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_1C2E388(0LL, *(_QWORD *)&state);
+    sub_1C3B9C0(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_32065F4 *)Method_CStateManager_QuestRewardTokenAction__setState__);
+    (const MethodInfo_3225C7C *)Method_CStateManager_QuestRewardTokenAction__setState__);
 }
 
 
@@ -893,26 +893,26 @@ void __fastcall QuestRewardTokenAction__Setup(
   PartyListViewItem_o *v57; // x7
   __int64 v58; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BFA678 & 1) == 0 )
+  if ( (byte_4C1EED1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Array_Sort_QuestRewardInfo___, infos);
-    sub_1C2E12C(&System_Comparison_QuestRewardInfo__TypeInfo, v5);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v6);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v7);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C2E12C(&QuestRewardTokenAction_TypeInfo, v9);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_1C2E12C(&Method_QuestRewardTokenAction___c__Setup_b__24_0__, v11);
-    sub_1C2E12C(&QuestRewardTokenAction___c_TypeInfo, v12);
-    byte_4BFA678 = 1;
+    sub_1C3B764(&Method_System_Array_Sort_QuestRewardInfo___, infos);
+    sub_1C3B764(&System_Comparison_QuestRewardInfo__TypeInfo, v5);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v6);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___, v7);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C3B764(&QuestRewardTokenAction_TypeInfo, v9);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1C3B764(&Method_QuestRewardTokenAction___c__Setup_b__24_0__, v11);
+    sub_1C3B764(&QuestRewardTokenAction___c_TypeInfo, v12);
+    byte_4C1EED1 = 1;
   }
   v58 = 0LL;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_54;
-  transform = UnityEngine_Component__GetComponentInChildren_object__50103608(
+  transform = UnityEngine_Component__GetComponentInChildren_object__50228848(
                 (UnityEngine_Component_o *)transform,
-                (const MethodInfo_2FC8538 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+                (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
   if ( !transform )
     goto LABEL_54;
   *((_BYTE *)transform + 109) = 1;
@@ -931,11 +931,11 @@ void __fastcall QuestRewardTokenAction__Setup(
       v15 = QuestRewardTokenAction___c_TypeInfo;
     }
     v17 = (Il2CppObject *)v15->static_fields->__9;
-    _9__24_0 = (System_Comparison_T__o *)sub_1C2E378(System_Comparison_QuestRewardInfo__TypeInfo);
+    _9__24_0 = (System_Comparison_T__o *)sub_1C3B9B0(System_Comparison_QuestRewardInfo__TypeInfo);
     System_Comparison_object____ctor(_9__24_0, v17, Method_QuestRewardTokenAction___c__Setup_b__24_0__, 0LL);
     static_fields = QuestRewardTokenAction___c_TypeInfo->static_fields;
     static_fields->__9__24_0 = (struct System_Comparison_QuestRewardInfo__o *)_9__24_0;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&static_fields->__9__24_0,
       (int64_t)_9__24_0,
       v19,
@@ -945,10 +945,10 @@ void __fastcall QuestRewardTokenAction__Setup(
       v23,
       v24);
   }
-  System_Array__Sort_object__49934080(
+  System_Array__Sort_object__50059320(
     (System_Object_array *)infos,
     _9__24_0,
-    (const MethodInfo_2F9EF00 *)Method_System_Array_Sort_QuestRewardInfo___);
+    (const MethodInfo_2FBD838 *)Method_System_Array_Sort_QuestRewardInfo___);
   if ( !infos )
     goto LABEL_54;
   if ( (int)*(_QWORD *)&infos->max_length >= 1 )
@@ -1043,7 +1043,7 @@ void __fastcall QuestRewardTokenAction__Setup(
       ++v26;
       if ( v47 >= infos->max_length )
 LABEL_44:
-        sub_1C2E390(transform, v14);
+        sub_1C3B9C8(transform, v14);
     }
   }
   p_screenTouchInfo = &this->fields.screenTouchInfo;
@@ -1052,7 +1052,7 @@ LABEL_44:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(screenTouchInfo, 0LL, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( Instance )
     {
@@ -1061,9 +1061,9 @@ LABEL_44:
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)transform,
-                             (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
         *p_screenTouchInfo = (struct ScreenTouchInformationComponent_o *)Component_object;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&this->fields.screenTouchInfo,
           (int64_t)Component_object,
           v52,
@@ -1076,7 +1076,7 @@ LABEL_44:
       }
     }
 LABEL_54:
-    sub_1C2E388(transform, v14);
+    sub_1C3B9C0(transform, v14);
   }
 LABEL_51:
   transform = *p_screenTouchInfo;
@@ -1094,11 +1094,11 @@ void __fastcall QuestRewardTokenAction__Update(QuestRewardTokenAction_o *this, c
   __int64 v3; // x1
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4BFA670 & 1) == 0 )
+  if ( (byte_4C1EEC9 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_CStateManager_QuestRewardTokenAction__update__, method);
-    sub_1C2E12C(&CTouch_TypeInfo, v3);
-    byte_4BFA670 = 1;
+    sub_1C3B764(&Method_CStateManager_QuestRewardTokenAction__update__, method);
+    sub_1C3B764(&CTouch_TypeInfo, v3);
+    byte_4C1EEC9 = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -1107,7 +1107,7 @@ void __fastcall QuestRewardTokenAction__Update(QuestRewardTokenAction_o *this, c
   if ( fsm )
     CStateManager_object___update(
       fsm,
-      (const MethodInfo_32065D0 *)Method_CStateManager_QuestRewardTokenAction__update__);
+      (const MethodInfo_3225C58 *)Method_CStateManager_QuestRewardTokenAction__update__);
 }
 
 
@@ -1197,11 +1197,11 @@ void __fastcall QuestRewardTokenAction_StatePlay__begin(
   int32_t *v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_4BFA67D & 1) == 0 )
+  if ( (byte_4C1EED6 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, that);
-    this = (QuestRewardTokenAction_StatePlay_o *)sub_1C2E12C(&SimpleAnimation_State_TypeInfo, v4);
-    byte_4BFA67D = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, that);
+    this = (QuestRewardTokenAction_StatePlay_o *)sub_1C3B764(&SimpleAnimation_State_TypeInfo, v4);
+    byte_4C1EED6 = 1;
   }
   if ( !that )
     goto LABEL_49;
@@ -1234,7 +1234,7 @@ void __fastcall QuestRewardTokenAction_StatePlay__begin(
           if ( !this )
             goto LABEL_49;
           v21 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-          this = (QuestRewardTokenAction_StatePlay_o *)UnityEngine_Animation__Play_70734128(v20, v21, 0LL);
+          this = (QuestRewardTokenAction_StatePlay_o *)UnityEngine_Animation__Play_70867156(v20, v21, 0LL);
         }
         v22 = that->fields.animation;
         if ( v22 )
@@ -1268,7 +1268,7 @@ void __fastcall QuestRewardTokenAction_StatePlay__begin(
       }
     }
 LABEL_49:
-    sub_1C2E388(this, that);
+    sub_1C3B9C0(this, that);
   }
   v6 = that->fields.simpleAnimation;
   if ( !v6 )
@@ -1287,7 +1287,7 @@ LABEL_49:
     if ( !this )
       goto LABEL_49;
     v9 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-    this = (QuestRewardTokenAction_StatePlay_o *)SimpleAnimation__Play_65373960(v8, v9, 0LL);
+    this = (QuestRewardTokenAction_StatePlay_o *)SimpleAnimation__Play_65506988(v8, v9, 0LL);
   }
   v10 = that->fields.simpleAnimation;
   if ( !v10 )
@@ -1317,7 +1317,7 @@ LABEL_49:
   else
   {
 LABEL_20:
-    v16 = sub_1C8010C(this, SimpleAnimation_State_TypeInfo, 6LL);
+    v16 = sub_1C8D744(this, SimpleAnimation_State_TypeInfo, 6LL);
   }
   this = (QuestRewardTokenAction_StatePlay_o *)(*(__int64 (__fastcall **)(QuestRewardTokenAction_StatePlay_o *, _QWORD, float))v16)(
                                                  v13,
@@ -1351,7 +1351,7 @@ LABEL_20:
   else
   {
 LABEL_46:
-    v32 = sub_1C8010C(this, SimpleAnimation_State_TypeInfo, 8LL);
+    v32 = sub_1C8D744(this, SimpleAnimation_State_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(QuestRewardTokenAction_StatePlay_o *, _QWORD, float))v32)(v29, *(_QWORD *)(v32 + 8), 1.0);
 }
@@ -1380,13 +1380,13 @@ void __fastcall QuestRewardTokenAction_StatePlay__update(
   System_String_o *v10; // x0
   const MethodInfo *v11; // x2
 
-  if ( (byte_4BFA67E & 1) == 0 )
+  if ( (byte_4C1EED7 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, that);
-    this = (QuestRewardTokenAction_StatePlay_o *)sub_1C2E12C(
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, that);
+    this = (QuestRewardTokenAction_StatePlay_o *)sub_1C3B764(
                                                    &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                    v4);
-    byte_4BFA67E = 1;
+    byte_4C1EED7 = 1;
   }
   if ( !that )
     goto LABEL_21;
@@ -1406,7 +1406,7 @@ void __fastcall QuestRewardTokenAction_StatePlay__update(
     if ( SimpleAnimation__IsPlaying(v6, name, 0LL) )
       return;
 LABEL_17:
-    this = (QuestRewardTokenAction_StatePlay_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (QuestRewardTokenAction_StatePlay_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( this )
     {
       if ( !CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0LL) )
@@ -1414,7 +1414,7 @@ LABEL_17:
       return;
     }
 LABEL_21:
-    sub_1C2E388(this, that);
+    sub_1C3B9C0(this, that);
   }
   animation = (UnityEngine_Object_o *)that->fields.animation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1455,7 +1455,7 @@ void __fastcall QuestRewardTokenAction_StateTouchWait__begin(
                                                             (UnityEngine_Component_o *)this,
                                                             0LL)) == 0LL )
   {
-    sub_1C2E388(this, that);
+    sub_1C3B9C0(this, that);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
 }
@@ -1499,24 +1499,24 @@ void __fastcall QuestRewardTokenAction_StateTouchWait__update(
   System_Action_o *v25; // x22
   const MethodInfo *v26; // x2
 
-  if ( (byte_4BFA67F & 1) == 0 )
+  if ( (byte_4C1EED8 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, that);
-    sub_1C2E12C(&AvalonSceneManager_TypeInfo, v4);
-    sub_1C2E12C(&CTouch_TypeInfo, v5);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1C2E12C(&Method_QuestRewardTokenAction_StateTouchWait_update__, v7);
-    sub_1C2E12C(&Method_QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0__update_b__0__, v8);
-    sub_1C2E12C(&QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0_TypeInfo, v9);
-    byte_4BFA67F = 1;
+    sub_1C3B764(&System_Action_TypeInfo, that);
+    sub_1C3B764(&AvalonSceneManager_TypeInfo, v4);
+    sub_1C3B764(&CTouch_TypeInfo, v5);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1C3B764(&Method_QuestRewardTokenAction_StateTouchWait_update__, v7);
+    sub_1C3B764(&Method_QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0__update_b__0__, v8);
+    sub_1C3B764(&QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0_TypeInfo, v9);
+    byte_4C1EED8 = 1;
   }
-  v10 = sub_1C2E378(QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
+  v10 = sub_1C3B9B0(QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_18;
   *(_QWORD *)(v10 + 16) = that;
   v19 = v10 + 16;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)that, v13, v14, v15, v16, v17, v18);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)that, v13, v14, v15, v16, v17, v18);
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
   isTouchPush = (UnityEngine_GameObject_o *)CTouch__isTouchPush(0LL);
@@ -1533,10 +1533,10 @@ void __fastcall QuestRewardTokenAction_StateTouchWait__update(
           UnityEngine_GameObject__SetActive(isTouchPush, 0, 0LL);
           v20 = Method_QuestRewardTokenAction_StateTouchWait_update__;
           if ( (*((_BYTE *)Method_QuestRewardTokenAction_StateTouchWait_update__ + 83) & 2) != 0 )
-            v20 = (_QWORD *)sub_1C2E144(Method_QuestRewardTokenAction_StateTouchWait_update__);
-          v21 = (System_Reflection_MethodBase_o *)sub_1C2E110(v20, v20[4]);
+            v20 = (_QWORD *)sub_1C3B77C(Method_QuestRewardTokenAction_StateTouchWait_update__);
+          v21 = (System_Reflection_MethodBase_o *)sub_1C3B748(v20, v20[4]);
           OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0LL);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           v23 = AvalonSceneManager_TypeInfo;
           if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
           {
@@ -1544,7 +1544,7 @@ void __fastcall QuestRewardTokenAction_StateTouchWait__update(
             v23 = AvalonSceneManager_TypeInfo;
           }
           DEFAULT_FADE_TIME = v23->static_fields->DEFAULT_FADE_TIME;
-          v25 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+          v25 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
           System_Action___ctor(
             v25,
             (Il2CppObject *)v10,
@@ -1564,7 +1564,7 @@ void __fastcall QuestRewardTokenAction_StateTouchWait__update(
       }
     }
 LABEL_18:
-    sub_1C2E388(isTouchPush, v12);
+    sub_1C3B9C0(isTouchPush, v12);
   }
 }
 
@@ -1585,7 +1585,7 @@ void __fastcall QuestRewardTokenAction_StateTouchWait___c__DisplayClass1_0___upd
 
   that = this->fields.that;
   if ( !that )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   ActionExtensions__Call(that->fields.endAct, 0LL);
 }
 
@@ -1601,15 +1601,15 @@ void __fastcall QuestRewardTokenAction___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFA680 & 1) == 0 )
+  if ( (byte_4C1EED9 & 1) == 0 )
   {
-    sub_1C2E12C(&QuestRewardTokenAction___c_TypeInfo, v1);
-    byte_4BFA680 = 1;
+    sub_1C3B764(&QuestRewardTokenAction___c_TypeInfo, v1);
+    byte_4C1EED9 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(QuestRewardTokenAction___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(QuestRewardTokenAction___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestRewardTokenAction___c_TypeInfo->static_fields->__9 = (struct QuestRewardTokenAction___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)QuestRewardTokenAction___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1634,7 +1634,7 @@ int32_t __fastcall QuestRewardTokenAction___c___Setup_b__24_0(
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_1C2E388(this, x);
+    sub_1C3B9C0(this, x);
   return x->fields.objectId - y->fields.objectId;
 }
 

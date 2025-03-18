@@ -1,20 +1,20 @@
 void __fastcall WarBoardTacticalTrendEntity___ctor(WarBoardTacticalTrendEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE859 & 1) == 0 )
+  if ( (byte_4C2307E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, method);
-    byte_4BFE859 = 1;
+    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
+    byte_4C2307E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.value = 0LL;
   *(_QWORD *)&this->fields.lowestMagnification = 0LL;
 }
 
 
-void __fastcall WarBoardTacticalTrendEntity___ctor_41723724(
+void __fastcall WarBoardTacticalTrendEntity___ctor_41841156(
         WarBoardTacticalTrendEntity_o *this,
         WarBoardTacticalTrendEntity_o *cSrc,
         const MethodInfo *method)
@@ -22,16 +22,16 @@ void __fastcall WarBoardTacticalTrendEntity___ctor_41723724(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4BFE85A & 1) == 0 )
+  if ( (byte_4C2307F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_4BFE85A = 1;
+    sub_1C3B764(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_4C2307F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   *(_QWORD *)&this->fields.lowestMagnification = *(_QWORD *)&cSrc->fields.lowestMagnification;
 }

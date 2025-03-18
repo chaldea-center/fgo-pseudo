@@ -1,9 +1,9 @@
 void __fastcall WarBoardTreasureListComponent___ctor(WarBoardTreasureListComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFB61E & 1) == 0 )
+  if ( (byte_4C1FE25 & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4BFB61E = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C1FE25 = 1;
   }
   *(_QWORD *)&this->fields.iconScale = 0x743F59999ALL;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -28,21 +28,21 @@ void __fastcall WarBoardTreasureListComponent__EndClose(
   struct System_Action_o *closeCallbackFunc; // x21
   UnityEngine_Object_o *v13; // x19
 
-  if ( (byte_4BFB61C & 1) == 0 )
+  if ( (byte_4C1FE23 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFB61C = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C1FE23 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeCallbackFunc->fields.m_target)(
       closeCallbackFunc->fields.original_method_info,
       *(_QWORD *)&closeCallbackFunc->fields.extra_arg);
@@ -50,7 +50,7 @@ void __fastcall WarBoardTreasureListComponent__EndClose(
   v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70989720(v13, 0LL);
+  UnityEngine_Object__Destroy_71122748(v13, 0LL);
 }
 
 
@@ -61,7 +61,7 @@ void __fastcall WarBoardTreasureListComponent__Init(WarBoardTreasureListComponen
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -78,23 +78,23 @@ void __fastcall WarBoardTreasureListComponent__OnClickCloseButton(
   System_Reflection_MethodBase_o *v7; // x0
   System_Action_o *v8; // x20
 
-  if ( (byte_4BFB61A & 1) == 0 )
+  if ( (byte_4C1FE21 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, method);
-    sub_1C2E12C(&Method_WarBoardTreasureListComponent_EndClose__, v3);
-    sub_1C2E12C(&Method_WarBoardTreasureListComponent_OnClickCloseButton__, v4);
-    byte_4BFB61A = 1;
+    sub_1C3B764(&System_Action_TypeInfo, method);
+    sub_1C3B764(&Method_WarBoardTreasureListComponent_EndClose__, v3);
+    sub_1C3B764(&Method_WarBoardTreasureListComponent_OnClickCloseButton__, v4);
+    byte_4C1FE21 = 1;
   }
   v5 = Method_WarBoardTreasureListComponent_OnClickCloseButton__;
   dialogType = this->fields.dialogType;
   if ( (*((_BYTE *)Method_WarBoardTreasureListComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C2E144(Method_WarBoardTreasureListComponent_OnClickCloseButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C3B77C(Method_WarBoardTreasureListComponent_OnClickCloseButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C3B748(v5, v5[4]);
   if ( dialogType == 2 )
     OverwriteAssetSoundName__PlayCommonSe(v7, 10, 0, 0LL);
   else
     OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
-  v8 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_WarBoardTreasureListComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v8, 0LL);
 }
@@ -149,30 +149,30 @@ void __fastcall WarBoardTreasureListComponent__Open(
   System_Action_o *v48; // x20
   UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFB619 & 1) == 0 )
+  if ( (byte_4C1FE20 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, treasureList);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v9);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_UISprite___, v10);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v11);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v12);
-    sub_1C2E12C(&Method_WarBoardTreasureListComponent___c__DisplayClass18_0__Open_b__0__, v13);
-    sub_1C2E12C(&WarBoardTreasureListComponent___c__DisplayClass18_0_TypeInfo, v14);
-    sub_1C2E12C(&StringLiteral_15675/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT"*/, v15);
-    sub_1C2E12C(&StringLiteral_15674/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_GET"*/, v16);
-    sub_1C2E12C(&StringLiteral_15673/*"WARBOARD_GET_TREASURE_DIALOG_MESSAGE"*/, v17);
-    byte_4BFB619 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, treasureList);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v9);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UISprite___, v10);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v11);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
+    sub_1C3B764(&Method_WarBoardTreasureListComponent___c__DisplayClass18_0__Open_b__0__, v13);
+    sub_1C3B764(&WarBoardTreasureListComponent___c__DisplayClass18_0_TypeInfo, v14);
+    sub_1C3B764(&StringLiteral_15703/*"\\[\\s*servantName\\s*\\]"*/, v15);
+    sub_1C3B764(&StringLiteral_15702/*"\\[#[^:]+:[^:]+\\]"*/, v16);
+    sub_1C3B764(&StringLiteral_15701/*"\\P{_xmlW}"*/, v17);
+    byte_4C1FE20 = 1;
   }
-  v18 = sub_1C2E378(WarBoardTreasureListComponent___c__DisplayClass18_0_TypeInfo);
+  v18 = sub_1C3B9B0(WarBoardTreasureListComponent___c__DisplayClass18_0_TypeInfo);
   WarBoardTreasureListComponent___c__DisplayClass18_0___ctor(
     (WarBoardTreasureListComponent___c__DisplayClass18_0_o *)v18,
     0LL);
   if ( !v18 )
     goto LABEL_36;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 16), (int64_t)this, v21, v22, v23, v24, v25, v26);
   *(_QWORD *)(v18 + 24) = treasureList;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)treasureList, v27, v28, v29, v30, v31, v32);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)treasureList, v27, v28, v29, v30, v31, v32);
   this->fields.dialogType = type;
   if ( type != 1 )
   {
@@ -181,12 +181,12 @@ void __fastcall WarBoardTreasureListComponent__Open(
     textLabel = this->fields.textLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15673/*"WARBOARD_GET_TREASURE_DIALOG_MESSAGE"*/, 0LL);
+    scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15701/*"\\P{_xmlW}"*/, 0LL);
     if ( textLabel )
     {
       UILabel__set_text(textLabel, scrollView, 0LL);
       titleLabel = this->fields.titleLabel;
-      scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15674/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_GET"*/, 0LL);
+      scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15702/*"\\[#[^:]+:[^:]+\\]"*/, 0LL);
       if ( titleLabel )
       {
         UILabel__set_text(titleLabel, scrollView, 0LL);
@@ -194,12 +194,12 @@ void __fastcall WarBoardTreasureListComponent__Open(
       }
     }
 LABEL_36:
-    sub_1C2E388(scrollView, v20);
+    sub_1C3B9C0(scrollView, v20);
   }
   v41 = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15675/*"WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT"*/, 0LL);
+  scrollView = LocalizationManager__Get((System_String_o *)StringLiteral_15703/*"\\[\\s*servantName\\s*\\]"*/, 0LL);
   if ( !v41 )
     goto LABEL_36;
   UILabel__set_text(v41, scrollView, 0LL);
@@ -231,7 +231,7 @@ LABEL_36:
     goto LABEL_36;
   scrollView = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)scrollView,
-                                    (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
   if ( !scrollView )
     goto LABEL_36;
   v49.fields.z = 0.0;
@@ -255,7 +255,7 @@ LABEL_36:
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)scrollView, this->fields.basePos, 0LL);
   scrollView = (System_String_o *)UnityEngine_GameObject__GetComponent_object_(
                                     v44,
-                                    (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                                    (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !scrollView )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)scrollView, this->fields.height, 0LL);
@@ -276,7 +276,7 @@ LABEL_36:
     goto LABEL_36;
   scrollView = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)scrollView,
-                                    (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !scrollView )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)scrollView, this->fields.height - 10, 0LL);
@@ -289,13 +289,13 @@ LABEL_36:
     goto LABEL_36;
   scrollView = (System_String_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)scrollView,
-                                    (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !scrollView )
     goto LABEL_36;
   UIWidget__set_height((UIWidget_o *)scrollView, this->fields.height, 0LL);
 LABEL_34:
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)closeCallback,
     v33,
@@ -308,7 +308,7 @@ LABEL_34:
   if ( !scrollView )
     goto LABEL_36;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollView, 1, 0LL);
-  v48 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v48 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(
     v48,
     (Il2CppObject *)v18,
@@ -326,10 +326,10 @@ UnityEngine_GameObject_o *__fastcall WarBoardTreasureListComponent__get_closeBtn
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4BFB61D & 1) == 0 )
+  if ( (byte_4C1FE24 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFB61D = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C1FE24 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -338,7 +338,7 @@ UnityEngine_GameObject_o *__fastcall WarBoardTreasureListComponent__get_closeBtn
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -379,33 +379,33 @@ void __fastcall WarBoardTreasureListComponent__setListData(
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = treasureList;
-  if ( (byte_4BFB61B & 1) == 0 )
+  if ( (byte_4C1FE22 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_UIGrid___, treasureList);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_GiftMaster___, v6);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___, v7);
-    sub_1C2E12C(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__, v8);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v9);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    byte_4BFB61B = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UIGrid___, treasureList);
+    sub_1C3B764(&Method_DataManager_GetMasterData_GiftMaster___, v6);
+    sub_1C3B764(&Method_DataManager_GetMasterData_WarBoardTreasureMaster___, v7);
+    sub_1C3B764(&Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__, v8);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v9);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    byte_4C1FE22 = 1;
   }
   if ( v4 )
   {
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___),
-          (Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_WarBoardTreasureMaster___),
+          (Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0) )
     {
 LABEL_34:
-      sub_1C2E388(Instance, v14);
+      sub_1C3B9C0(Instance, v14);
     }
     Instance = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_GiftMaster___);
+                          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_GiftMaster___);
     v16 = *(_QWORD *)&v4->max_length;
     if ( (int)v16 >= 1 )
     {
@@ -423,7 +423,7 @@ LABEL_34:
         Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                               v4->m_Items[v18 + 1],
-                              (const MethodInfo_327B180 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
+                              (const MethodInfo_329AE48 *)Method_DataMasterBase_WarBoardTreasureMaster__WarBoardTreasureEntity__int__GetEntity__);
         if ( !Instance )
           goto LABEL_34;
         if ( !v17 )
@@ -454,7 +454,7 @@ LABEL_32:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         Instance = (__int64)UnityEngine_Object__Instantiate_object_(
                               prefabResultItem,
-                              (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                              (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !Instance )
           goto LABEL_34;
         v24 = (UnityEngine_GameObject_o *)Instance;
@@ -464,10 +464,10 @@ LABEL_32:
         UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)Instance, this->fields.listRoot, 0LL);
         Instance = (__int64)UnityEngine_GameObject__get_transform(v24, 0LL);
         v25 = (UnityEngine_Transform_o *)Instance;
-        if ( !byte_4BF7D91 )
+        if ( !byte_4C1C511 )
         {
-          Instance = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v14);
-          byte_4BF7D91 = 1;
+          Instance = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v14);
+          byte_4C1C511 = 1;
         }
         if ( !v25 )
           goto LABEL_34;
@@ -481,14 +481,14 @@ LABEL_32:
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v32, 0LL);
         Instance = (__int64)UnityEngine_GameObject__GetComponent_object_(
                               v24,
-                              (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                              (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !v23 )
           goto LABEL_34;
         v26 = (ItemIconComponent_o *)Instance;
         if ( !Instance )
           goto LABEL_34;
         v27 = v23[7] <= 1 ? -1 : v23[7];
-        ItemIconComponent__SetGift_39457192((ItemIconComponent_o *)Instance, v23[5], v23[6], v27, 0, 0LL);
+        ItemIconComponent__SetGift_39566180((ItemIconComponent_o *)Instance, v23[5], v23[6], v27, 0, 0LL);
         ItemIconComponent__SetCondensedScale(v26, this->fields.counterLabelMaxWidth, 0LL);
         UnityEngine_GameObject__SetActive(v24, 1, 0LL);
         Instance = (__int64)this->fields.listRoot;
@@ -496,7 +496,7 @@ LABEL_32:
           goto LABEL_34;
         Instance = (__int64)UnityEngine_Component__GetComponent_object_(
                               (UnityEngine_Component_o *)Instance,
-                              (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                              (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UIGrid___);
         if ( !Instance )
           goto LABEL_34;
         Instance = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)Instance + 440LL))(
@@ -507,7 +507,7 @@ LABEL_32:
           goto LABEL_32;
       }
 LABEL_35:
-      sub_1C2E390(Instance, v14);
+      sub_1C3B9C8(Instance, v14);
     }
   }
 }
@@ -529,6 +529,6 @@ void __fastcall WarBoardTreasureListComponent___c__DisplayClass18_0___Open_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   WarBoardTreasureListComponent__setListData(_4__this, this->fields.treasureList, 0, 0LL);
 }

@@ -356,277 +356,277 @@ void __fastcall AccountExtensions___cctor(const MethodInfo *method)
   FollowerInfo_o *v354; // x6
   PartyListViewItem_o *v355; // x7
 
-  if ( (byte_4BFB703 & 1) == 0 )
+  if ( (byte_4C1FF0A & 1) == 0 )
   {
-    sub_1C2E12C(&AccountExtensions_TypeInfo, v1);
-    sub_1C2E12C(&string___TypeInfo, v2);
-    sub_1C2E12C(&StringLiteral_9108/*"Maverick"*/, v3);
-    sub_1C2E12C(&StringLiteral_14003/*"The Evacuator"*/, v4);
-    sub_1C2E12C(&StringLiteral_22394/*"n3o"*/, v5);
-    sub_1C2E12C(&StringLiteral_10830/*"Plank"*/, v6);
-    sub_1C2E12C(&StringLiteral_11376/*"Read End Connection"*/, v7);
-    sub_1C2E12C(&StringLiteral_9070/*"Mark"*/, v8);
-    sub_1C2E12C(&StringLiteral_10797/*"Penis Man"*/, v9);
-    sub_1C2E12C(&StringLiteral_2821/*"BARRY"*/, v10);
-    sub_1C2E12C(&StringLiteral_15947/*"Wizard"*/, v11);
-    sub_1C2E12C(&StringLiteral_13350/*"Sundown"*/, v12);
-    sub_1C2E12C(&StringLiteral_10751/*"Parmesian"*/, v13);
-    sub_1C2E12C(&StringLiteral_2196/*"AXIX"*/, v14);
-    sub_1C2E12C(&StringLiteral_15206/*"Unconventional"*/, v15);
-    sub_1C2E12C(&StringLiteral_9109/*"Max"*/, v16);
-    sub_1C2E12C(&StringLiteral_9169/*"Merlin"*/, v17);
-    sub_1C2E12C(&StringLiteral_16092/*"Z - Ray"*/, v18);
-    sub_1C2E12C(&StringLiteral_3335/*"Blind"*/, v19);
-    sub_1C2E12C(&StringLiteral_8363/*"Kenneth"*/, v20);
-    sub_1C2E12C(&StringLiteral_8103/*"Ironside"*/, v21);
-    sub_1C2E12C(&StringLiteral_15637/*"Vitamin C"*/, v22);
-    sub_1C2E12C(&StringLiteral_10796/*"Penetrator"*/, v23);
-    sub_1C2E12C(&StringLiteral_15907/*"White Mice"*/, v24);
-    sub_1C2E12C(&StringLiteral_16095/*"Zoolander"*/, v25);
-    sub_1C2E12C(&StringLiteral_13974/*"The Bin Man"*/, v26);
-    sub_1C2E12C(&StringLiteral_13067/*"Slider"*/, v27);
-    sub_1C2E12C(&StringLiteral_8323/*"Jester"*/, v28);
-    sub_1C2E12C(&StringLiteral_2315/*"Alpro"*/, v29);
-    sub_1C2E12C(&StringLiteral_6034/*"Egg-man"*/, v30);
-    sub_1C2E12C(&StringLiteral_13159/*"Spitfire"*/, v31);
-    sub_1C2E12C(&StringLiteral_11429/*"Redtail"*/, v32);
-    sub_1C2E12C(&StringLiteral_10709/*"Palette"*/, v33);
-    sub_1C2E12C(&StringLiteral_13500/*"T-Bag"*/, v34);
-    sub_1C2E12C(&StringLiteral_7602/*"Ice Man"*/, v35);
-    sub_1C2E12C(&StringLiteral_9567/*"Neo1988"*/, v36);
-    sub_1C2E12C(&StringLiteral_7215/*"Giant Lump"*/, v37);
-    sub_1C2E12C(&StringLiteral_14063/*"The Sperminator"*/, v38);
-    sub_1C2E12C(&StringLiteral_6043/*"Ejaculatory"*/, v39);
-    sub_1C2E12C(&StringLiteral_12864/*"Sergio Georgini"*/, v40);
-    sub_1C2E12C(&StringLiteral_6310/*"Eva"*/, v41);
-    sub_1C2E12C(&StringLiteral_5632/*"ETC"*/, v42);
-    sub_1C2E12C(&StringLiteral_11392/*"RearEnd"*/, v43);
-    sub_1C2E12C(&StringLiteral_7741/*"Infiltrator"*/, v44);
-    sub_1C2E12C(&StringLiteral_4632/*"Coaster"*/, v45);
-    byte_4BFB703 = 1;
+    sub_1C3B764(&AccountExtensions_TypeInfo, v1);
+    sub_1C3B764(&string___TypeInfo, v2);
+    sub_1C3B764(&StringLiteral_9110/*"NPButton"*/, v3);
+    sub_1C3B764(&StringLiteral_14031/*"There seems to be an issue with the formatting of the <a> tag. Possible issues include: missing or misplaced closing '>', missing or incorrect attribute, or unclosed quotes for attribute values. Please review the tag syntax."*/, v4);
+    sub_1C3B764(&StringLiteral_22433/*"rad"*/, v5);
+    sub_1C3B764(&StringLiteral_10853/*"RESULT_FRIENDANDFOLLOW_TITLE"*/, v6);
+    sub_1C3B764(&StringLiteral_11399/*"SERVANT_SELL_RARE_TEXT2"*/, v7);
+    sub_1C3B764(&StringLiteral_9072/*"NOTIFICATION_COMPLETE_CRAFT_MESSAGE"*/, v8);
+    sub_1C3B764(&StringLiteral_10816/*"REQUEST_OK"*/, v9);
+    sub_1C3B764(&StringLiteral_2821/*"BATTLE_RAID_REMAINING_TIME"*/, v10);
+    sub_1C3B764(&StringLiteral_15975/*"_S"*/, v11);
+    sub_1C3B764(&StringLiteral_13378/*"TerminalTimeStatusLoopCount"*/, v12);
+    sub_1C3B764(&StringLiteral_10770/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/, v13);
+    sub_1C3B764(&StringLiteral_2196/*"All schemas in the set should be successfully preprocessed prior to compilation."*/, v14);
+    sub_1C3B764(&StringLiteral_15234/*"WallHack Detector"*/, v15);
+    sub_1C3B764(&StringLiteral_9111/*"NPC_"*/, v16);
+    sub_1C3B764(&StringLiteral_9171/*"Need a dictionary"*/, v17);
+    sub_1C3B764(&StringLiteral_16120/*"__drag-hover-marker"*/, v18);
+    sub_1C3B764(&StringLiteral_3335/*"CHAPTER2_PROLOGUE_WAR_ID"*/, v19);
+    sub_1C3B764(&StringLiteral_8365/*"MATERIAL_FIND_SERVANT"*/, v20);
+    sub_1C3B764(&StringLiteral_8105/*"LOGIN_BONUS_SEQ"*/, v21);
+    sub_1C3B764(&StringLiteral_15665/*"[purchase log]\n"*/, v22);
+    sub_1C3B764(&StringLiteral_10815/*"REQUEST_NG_RESULT"*/, v23);
+    sub_1C3B764(&StringLiteral_15935/*"_Offset"*/, v24);
+    sub_1C3B764(&StringLiteral_16123/*"__empty-label"*/, v25);
+    sub_1C3B764(&StringLiteral_14002/*"The xsi:type '{0}' cannot be abstract."*/, v26);
+    sub_1C3B764(&StringLiteral_13095/*"TIME_REST_PRESENT_LIMITED"*/, v27);
+    sub_1C3B764(&StringLiteral_8325/*"MASHU_SVT_ID1"*/, v28);
+    sub_1C3B764(&StringLiteral_2315/*"Arabic (Bahrain)"*/, v29);
+    sub_1C3B764(&StringLiteral_6035/*"Error reading JConstructor from JsonReader. Current JsonReader item is not a constructor: {0}"*/, v30);
+    sub_1C3B764(&StringLiteral_13187/*"TREASURE_BOX_EVENT_POINT_REWARD"*/, v31);
+    sub_1C3B764(&StringLiteral_11452/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE"*/, v32);
+    sub_1C3B764(&StringLiteral_10728/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_DESCRIPTION"*/, v33);
+    sub_1C3B764(&StringLiteral_13528/*"The Pattern constraining facet is invalid - {0}"*/, v34);
+    sub_1C3B764(&StringLiteral_7604/*"Invalid animation property id. Can't apply value of type 'Background' to property '"*/, v35);
+    sub_1C3B764(&StringLiteral_9569/*"Object of type '{0}' cannot be converted to type '{1}'."*/, v36);
+    sub_1C3B764(&StringLiteral_7217/*"IBM869"*/, v37);
+    sub_1C3B764(&StringLiteral_14091/*"This parser does not support document type."*/, v38);
+    sub_1C3B764(&StringLiteral_6044/*"Error reading date. Unexpected token: {0}."*/, v39);
+    sub_1C3B764(&StringLiteral_12892/*"System Normal"*/, v40);
+    sub_1C3B764(&StringLiteral_6313/*"FLAG_UNDER"*/, v41);
+    sub_1C3B764(&StringLiteral_5633/*"EVENT_VS_GAUGE_REST_TIME"*/, v42);
+    sub_1C3B764(&StringLiteral_11415/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/, v43);
+    sub_1C3B764(&StringLiteral_7743/*"Invariant Language (Invariant Country)"*/, v44);
+    sub_1C3B764(&StringLiteral_4632/*"ContinueChangeFade"*/, v45);
+    byte_4C1FF0A = 1;
   }
-  v46 = sub_1C2E1D4(string___TypeInfo, 43LL);
+  v46 = sub_1C3B80C(string___TypeInfo, 43LL);
   if ( !v46 )
-    sub_1C2E388(0LL, v47);
+    sub_1C3B9C0(0LL, v47);
   v54 = v46;
   if ( !*(_DWORD *)(v46 + 24) )
     goto LABEL_48;
-  v55 = StringLiteral_10796/*"Penetrator"*/;
-  *(_QWORD *)(v46 + 32) = StringLiteral_10796/*"Penetrator"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v46 + 32), v55, v48, v49, v50, v51, v52, v53);
+  v55 = StringLiteral_10815/*"REQUEST_NG_RESULT"*/;
+  *(_QWORD *)(v46 + 32) = StringLiteral_10815/*"REQUEST_NG_RESULT"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v46 + 32), v55, v48, v49, v50, v51, v52, v53);
   if ( *(_DWORD *)(v54 + 24) <= 1u )
     goto LABEL_48;
-  v62 = StringLiteral_8363/*"Kenneth"*/;
-  *(_QWORD *)(v54 + 40) = StringLiteral_8363/*"Kenneth"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 40), v62, v56, v57, v58, v59, v60, v61);
+  v62 = StringLiteral_8365/*"MATERIAL_FIND_SERVANT"*/;
+  *(_QWORD *)(v54 + 40) = StringLiteral_8365/*"MATERIAL_FIND_SERVANT"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 40), v62, v56, v57, v58, v59, v60, v61);
   if ( *(_DWORD *)(v54 + 24) <= 2u )
     goto LABEL_48;
-  v69 = StringLiteral_10709/*"Palette"*/;
-  *(_QWORD *)(v54 + 48) = StringLiteral_10709/*"Palette"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 48), v69, v63, v64, v65, v66, v67, v68);
+  v69 = StringLiteral_10728/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_DESCRIPTION"*/;
+  *(_QWORD *)(v54 + 48) = StringLiteral_10728/*"RECIPE_CONFIRM_DIALOG_REWARD_LIST_DESCRIPTION"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 48), v69, v63, v64, v65, v66, v67, v68);
   if ( *(_DWORD *)(v54 + 24) <= 3u )
     goto LABEL_48;
-  v76 = StringLiteral_9070/*"Mark"*/;
-  *(_QWORD *)(v54 + 56) = StringLiteral_9070/*"Mark"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 56), v76, v70, v71, v72, v73, v74, v75);
+  v76 = StringLiteral_9072/*"NOTIFICATION_COMPLETE_CRAFT_MESSAGE"*/;
+  *(_QWORD *)(v54 + 56) = StringLiteral_9072/*"NOTIFICATION_COMPLETE_CRAFT_MESSAGE"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 56), v76, v70, v71, v72, v73, v74, v75);
   if ( *(_DWORD *)(v54 + 24) <= 4u )
     goto LABEL_48;
-  v83 = StringLiteral_10751/*"Parmesian"*/;
-  *(_QWORD *)(v54 + 64) = StringLiteral_10751/*"Parmesian"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 64), v83, v77, v78, v79, v80, v81, v82);
+  v83 = StringLiteral_10770/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/;
+  *(_QWORD *)(v54 + 64) = StringLiteral_10770/*"RECOMMEND_SUPPORT_FRIEND_POINT"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 64), v83, v77, v78, v79, v80, v81, v82);
   if ( *(_DWORD *)(v54 + 24) <= 5u )
     goto LABEL_48;
-  v90 = StringLiteral_13159/*"Spitfire"*/;
-  *(_QWORD *)(v54 + 72) = StringLiteral_13159/*"Spitfire"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 72), v90, v84, v85, v86, v87, v88, v89);
+  v90 = StringLiteral_13187/*"TREASURE_BOX_EVENT_POINT_REWARD"*/;
+  *(_QWORD *)(v54 + 72) = StringLiteral_13187/*"TREASURE_BOX_EVENT_POINT_REWARD"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 72), v90, v84, v85, v86, v87, v88, v89);
   if ( *(_DWORD *)(v54 + 24) <= 6u )
     goto LABEL_48;
-  v97 = StringLiteral_6310/*"Eva"*/;
-  *(_QWORD *)(v54 + 80) = StringLiteral_6310/*"Eva"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 80), v97, v91, v92, v93, v94, v95, v96);
+  v97 = StringLiteral_6313/*"FLAG_UNDER"*/;
+  *(_QWORD *)(v54 + 80) = StringLiteral_6313/*"FLAG_UNDER"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 80), v97, v91, v92, v93, v94, v95, v96);
   if ( *(_DWORD *)(v54 + 24) <= 7u )
     goto LABEL_48;
-  v104 = StringLiteral_2315/*"Alpro"*/;
-  *(_QWORD *)(v54 + 88) = StringLiteral_2315/*"Alpro"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 88), v104, v98, v99, v100, v101, v102, v103);
+  v104 = StringLiteral_2315/*"Arabic (Bahrain)"*/;
+  *(_QWORD *)(v54 + 88) = StringLiteral_2315/*"Arabic (Bahrain)"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 88), v104, v98, v99, v100, v101, v102, v103);
   if ( *(_DWORD *)(v54 + 24) <= 8u )
     goto LABEL_48;
-  v111 = StringLiteral_11429/*"Redtail"*/;
-  *(_QWORD *)(v54 + 96) = StringLiteral_11429/*"Redtail"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 96), v111, v105, v106, v107, v108, v109, v110);
+  v111 = StringLiteral_11452/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE"*/;
+  *(_QWORD *)(v54 + 96) = StringLiteral_11452/*"SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 96), v111, v105, v106, v107, v108, v109, v110);
   if ( *(_DWORD *)(v54 + 24) <= 9u )
     goto LABEL_48;
-  v118 = StringLiteral_7741/*"Infiltrator"*/;
-  *(_QWORD *)(v54 + 104) = StringLiteral_7741/*"Infiltrator"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 104), v118, v112, v113, v114, v115, v116, v117);
+  v118 = StringLiteral_7743/*"Invariant Language (Invariant Country)"*/;
+  *(_QWORD *)(v54 + 104) = StringLiteral_7743/*"Invariant Language (Invariant Country)"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 104), v118, v112, v113, v114, v115, v116, v117);
   if ( *(_DWORD *)(v54 + 24) <= 0xAu )
     goto LABEL_48;
-  v125 = StringLiteral_11392/*"RearEnd"*/;
-  *(_QWORD *)(v54 + 112) = StringLiteral_11392/*"RearEnd"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 112), v125, v119, v120, v121, v122, v123, v124);
+  v125 = StringLiteral_11415/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/;
+  *(_QWORD *)(v54 + 112) = StringLiteral_11415/*"SERVANT_SORT_BONUS_KIND_CAMPAIGN_FRIENDSHIP"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 112), v125, v119, v120, v121, v122, v123, v124);
   if ( *(_DWORD *)(v54 + 24) <= 0xBu )
     goto LABEL_48;
-  v132 = StringLiteral_15907/*"White Mice"*/;
-  *(_QWORD *)(v54 + 120) = StringLiteral_15907/*"White Mice"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 120), v132, v126, v127, v128, v129, v130, v131);
+  v132 = StringLiteral_15935/*"_Offset"*/;
+  *(_QWORD *)(v54 + 120) = StringLiteral_15935/*"_Offset"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 120), v132, v126, v127, v128, v129, v130, v131);
   if ( *(_DWORD *)(v54 + 24) <= 0xCu )
     goto LABEL_48;
-  v139 = StringLiteral_15206/*"Unconventional"*/;
-  *(_QWORD *)(v54 + 128) = StringLiteral_15206/*"Unconventional"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 128), v139, v133, v134, v135, v136, v137, v138);
+  v139 = StringLiteral_15234/*"WallHack Detector"*/;
+  *(_QWORD *)(v54 + 128) = StringLiteral_15234/*"WallHack Detector"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 128), v139, v133, v134, v135, v136, v137, v138);
   if ( *(_DWORD *)(v54 + 24) <= 0xDu )
     goto LABEL_48;
-  v146 = StringLiteral_10797/*"Penis Man"*/;
-  *(_QWORD *)(v54 + 136) = StringLiteral_10797/*"Penis Man"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 136), v146, v140, v141, v142, v143, v144, v145);
+  v146 = StringLiteral_10816/*"REQUEST_OK"*/;
+  *(_QWORD *)(v54 + 136) = StringLiteral_10816/*"REQUEST_OK"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 136), v146, v140, v141, v142, v143, v144, v145);
   if ( *(_DWORD *)(v54 + 24) <= 0xEu )
     goto LABEL_48;
-  v153 = StringLiteral_13974/*"The Bin Man"*/;
-  *(_QWORD *)(v54 + 144) = StringLiteral_13974/*"The Bin Man"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 144), v153, v147, v148, v149, v150, v151, v152);
+  v153 = StringLiteral_14002/*"The xsi:type '{0}' cannot be abstract."*/;
+  *(_QWORD *)(v54 + 144) = StringLiteral_14002/*"The xsi:type '{0}' cannot be abstract."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 144), v153, v147, v148, v149, v150, v151, v152);
   if ( *(_DWORD *)(v54 + 24) <= 0xFu )
     goto LABEL_48;
-  v160 = StringLiteral_14003/*"The Evacuator"*/;
-  *(_QWORD *)(v54 + 152) = StringLiteral_14003/*"The Evacuator"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 152), v160, v154, v155, v156, v157, v158, v159);
+  v160 = StringLiteral_14031/*"There seems to be an issue with the formatting of the <a> tag. Possible issues include: missing or misplaced closing '>', missing or incorrect attribute, or unclosed quotes for attribute values. Please review the tag syntax."*/;
+  *(_QWORD *)(v54 + 152) = StringLiteral_14031/*"There seems to be an issue with the formatting of the <a> tag. Possible issues include: missing or misplaced closing '>', missing or incorrect attribute, or unclosed quotes for attribute values. Please review the tag syntax."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 152), v160, v154, v155, v156, v157, v158, v159);
   if ( *(_DWORD *)(v54 + 24) <= 0x10u )
     goto LABEL_48;
-  v167 = StringLiteral_7215/*"Giant Lump"*/;
-  *(_QWORD *)(v54 + 160) = StringLiteral_7215/*"Giant Lump"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 160), v167, v161, v162, v163, v164, v165, v166);
+  v167 = StringLiteral_7217/*"IBM869"*/;
+  *(_QWORD *)(v54 + 160) = StringLiteral_7217/*"IBM869"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 160), v167, v161, v162, v163, v164, v165, v166);
   if ( *(_DWORD *)(v54 + 24) <= 0x11u )
     goto LABEL_48;
-  v174 = StringLiteral_6043/*"Ejaculatory"*/;
-  *(_QWORD *)(v54 + 168) = StringLiteral_6043/*"Ejaculatory"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 168), v174, v168, v169, v170, v171, v172, v173);
+  v174 = StringLiteral_6044/*"Error reading date. Unexpected token: {0}."*/;
+  *(_QWORD *)(v54 + 168) = StringLiteral_6044/*"Error reading date. Unexpected token: {0}."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 168), v174, v168, v169, v170, v171, v172, v173);
   if ( *(_DWORD *)(v54 + 24) <= 0x12u )
     goto LABEL_48;
-  v181 = StringLiteral_14063/*"The Sperminator"*/;
-  *(_QWORD *)(v54 + 176) = StringLiteral_14063/*"The Sperminator"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 176), v181, v175, v176, v177, v178, v179, v180);
+  v181 = StringLiteral_14091/*"This parser does not support document type."*/;
+  *(_QWORD *)(v54 + 176) = StringLiteral_14091/*"This parser does not support document type."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 176), v181, v175, v176, v177, v178, v179, v180);
   if ( *(_DWORD *)(v54 + 24) <= 0x13u )
     goto LABEL_48;
-  v188 = StringLiteral_8323/*"Jester"*/;
-  *(_QWORD *)(v54 + 184) = StringLiteral_8323/*"Jester"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 184), v188, v182, v183, v184, v185, v186, v187);
+  v188 = StringLiteral_8325/*"MASHU_SVT_ID1"*/;
+  *(_QWORD *)(v54 + 184) = StringLiteral_8325/*"MASHU_SVT_ID1"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 184), v188, v182, v183, v184, v185, v186, v187);
   if ( *(_DWORD *)(v54 + 24) <= 0x14u )
     goto LABEL_48;
-  v195 = StringLiteral_9108/*"Maverick"*/;
-  *(_QWORD *)(v54 + 192) = StringLiteral_9108/*"Maverick"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 192), v195, v189, v190, v191, v192, v193, v194);
+  v195 = StringLiteral_9110/*"NPButton"*/;
+  *(_QWORD *)(v54 + 192) = StringLiteral_9110/*"NPButton"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 192), v195, v189, v190, v191, v192, v193, v194);
   if ( *(_DWORD *)(v54 + 24) <= 0x15u )
     goto LABEL_48;
-  v202 = StringLiteral_7602/*"Ice Man"*/;
-  *(_QWORD *)(v54 + 200) = StringLiteral_7602/*"Ice Man"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 200), v202, v196, v197, v198, v199, v200, v201);
+  v202 = StringLiteral_7604/*"Invalid animation property id. Can't apply value of type 'Background' to property '"*/;
+  *(_QWORD *)(v54 + 200) = StringLiteral_7604/*"Invalid animation property id. Can't apply value of type 'Background' to property '"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 200), v202, v196, v197, v198, v199, v200, v201);
   if ( *(_DWORD *)(v54 + 24) <= 0x16u )
     goto LABEL_48;
-  v209 = StringLiteral_13067/*"Slider"*/;
-  *(_QWORD *)(v54 + 208) = StringLiteral_13067/*"Slider"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 208), (int64_t)v209, v203, v204, v205, v206, v207, v208);
+  v209 = StringLiteral_13095/*"TIME_REST_PRESENT_LIMITED"*/;
+  *(_QWORD *)(v54 + 208) = StringLiteral_13095/*"TIME_REST_PRESENT_LIMITED"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 208), (int64_t)v209, v203, v204, v205, v206, v207, v208);
   if ( *(_DWORD *)(v54 + 24) <= 0x17u )
     goto LABEL_48;
-  v216 = StringLiteral_8103/*"Ironside"*/;
-  *(_QWORD *)(v54 + 216) = StringLiteral_8103/*"Ironside"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 216), v216, v210, v211, v212, v213, v214, v215);
+  v216 = StringLiteral_8105/*"LOGIN_BONUS_SEQ"*/;
+  *(_QWORD *)(v54 + 216) = StringLiteral_8105/*"LOGIN_BONUS_SEQ"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 216), v216, v210, v211, v212, v213, v214, v215);
   if ( *(_DWORD *)(v54 + 24) <= 0x18u )
     goto LABEL_48;
-  v223 = StringLiteral_13500/*"T-Bag"*/;
-  *(_QWORD *)(v54 + 224) = StringLiteral_13500/*"T-Bag"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 224), v223, v217, v218, v219, v220, v221, v222);
+  v223 = StringLiteral_13528/*"The Pattern constraining facet is invalid - {0}"*/;
+  *(_QWORD *)(v54 + 224) = StringLiteral_13528/*"The Pattern constraining facet is invalid - {0}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 224), v223, v217, v218, v219, v220, v221, v222);
   if ( *(_DWORD *)(v54 + 24) <= 0x19u )
     goto LABEL_48;
-  v230 = StringLiteral_13350/*"Sundown"*/;
-  *(_QWORD *)(v54 + 232) = StringLiteral_13350/*"Sundown"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 232), v230, v224, v225, v226, v227, v228, v229);
+  v230 = StringLiteral_13378/*"TerminalTimeStatusLoopCount"*/;
+  *(_QWORD *)(v54 + 232) = StringLiteral_13378/*"TerminalTimeStatusLoopCount"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 232), v230, v224, v225, v226, v227, v228, v229);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Au )
     goto LABEL_48;
-  v237 = StringLiteral_9109/*"Max"*/;
-  *(_QWORD *)(v54 + 240) = StringLiteral_9109/*"Max"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 240), v237, v231, v232, v233, v234, v235, v236);
+  v237 = StringLiteral_9111/*"NPC_"*/;
+  *(_QWORD *)(v54 + 240) = StringLiteral_9111/*"NPC_"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 240), v237, v231, v232, v233, v234, v235, v236);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Bu )
     goto LABEL_48;
-  v244 = StringLiteral_15947/*"Wizard"*/;
-  *(_QWORD *)(v54 + 248) = StringLiteral_15947/*"Wizard"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 248), v244, v238, v239, v240, v241, v242, v243);
+  v244 = StringLiteral_15975/*"_S"*/;
+  *(_QWORD *)(v54 + 248) = StringLiteral_15975/*"_S"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 248), v244, v238, v239, v240, v241, v242, v243);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Cu )
     goto LABEL_48;
-  v251 = StringLiteral_9169/*"Merlin"*/;
-  *(_QWORD *)(v54 + 256) = StringLiteral_9169/*"Merlin"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 256), v251, v245, v246, v247, v248, v249, v250);
+  v251 = StringLiteral_9171/*"Need a dictionary"*/;
+  *(_QWORD *)(v54 + 256) = StringLiteral_9171/*"Need a dictionary"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 256), v251, v245, v246, v247, v248, v249, v250);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Du )
     goto LABEL_48;
-  v258 = StringLiteral_2821/*"BARRY"*/;
-  *(_QWORD *)(v54 + 264) = StringLiteral_2821/*"BARRY"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 264), v258, v252, v253, v254, v255, v256, v257);
+  v258 = StringLiteral_2821/*"BATTLE_RAID_REMAINING_TIME"*/;
+  *(_QWORD *)(v54 + 264) = StringLiteral_2821/*"BATTLE_RAID_REMAINING_TIME"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 264), v258, v252, v253, v254, v255, v256, v257);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Eu )
     goto LABEL_48;
-  v265 = StringLiteral_15637/*"Vitamin C"*/;
-  *(_QWORD *)(v54 + 272) = StringLiteral_15637/*"Vitamin C"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 272), v265, v259, v260, v261, v262, v263, v264);
+  v265 = StringLiteral_15665/*"[purchase log]\n"*/;
+  *(_QWORD *)(v54 + 272) = StringLiteral_15665/*"[purchase log]\n"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 272), v265, v259, v260, v261, v262, v263, v264);
   if ( *(_DWORD *)(v54 + 24) <= 0x1Fu )
     goto LABEL_48;
-  v272 = StringLiteral_16095/*"Zoolander"*/;
-  *(_QWORD *)(v54 + 280) = StringLiteral_16095/*"Zoolander"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 280), v272, v266, v267, v268, v269, v270, v271);
+  v272 = StringLiteral_16123/*"__empty-label"*/;
+  *(_QWORD *)(v54 + 280) = StringLiteral_16123/*"__empty-label"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 280), v272, v266, v267, v268, v269, v270, v271);
   if ( *(_DWORD *)(v54 + 24) <= 0x20u )
     goto LABEL_48;
-  v279 = StringLiteral_4632/*"Coaster"*/;
-  *(_QWORD *)(v54 + 288) = StringLiteral_4632/*"Coaster"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 288), v279, v273, v274, v275, v276, v277, v278);
+  v279 = StringLiteral_4632/*"ContinueChangeFade"*/;
+  *(_QWORD *)(v54 + 288) = StringLiteral_4632/*"ContinueChangeFade"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 288), v279, v273, v274, v275, v276, v277, v278);
   if ( *(_DWORD *)(v54 + 24) <= 0x21u )
     goto LABEL_48;
-  v286 = StringLiteral_10830/*"Plank"*/;
-  *(_QWORD *)(v54 + 296) = StringLiteral_10830/*"Plank"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 296), v286, v280, v281, v282, v283, v284, v285);
+  v286 = StringLiteral_10853/*"RESULT_FRIENDANDFOLLOW_TITLE"*/;
+  *(_QWORD *)(v54 + 296) = StringLiteral_10853/*"RESULT_FRIENDANDFOLLOW_TITLE"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 296), v286, v280, v281, v282, v283, v284, v285);
   if ( *(_DWORD *)(v54 + 24) <= 0x22u )
     goto LABEL_48;
-  v293 = StringLiteral_9567/*"Neo1988"*/;
-  *(_QWORD *)(v54 + 304) = StringLiteral_9567/*"Neo1988"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 304), v293, v287, v288, v289, v290, v291, v292);
+  v293 = StringLiteral_9569/*"Object of type '{0}' cannot be converted to type '{1}'."*/;
+  *(_QWORD *)(v54 + 304) = StringLiteral_9569/*"Object of type '{0}' cannot be converted to type '{1}'."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 304), v293, v287, v288, v289, v290, v291, v292);
   if ( *(_DWORD *)(v54 + 24) <= 0x23u )
     goto LABEL_48;
-  v300 = StringLiteral_22394/*"n3o"*/;
-  *(_QWORD *)(v54 + 312) = StringLiteral_22394/*"n3o"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 312), v300, v294, v295, v296, v297, v298, v299);
+  v300 = StringLiteral_22433/*"rad"*/;
+  *(_QWORD *)(v54 + 312) = StringLiteral_22433/*"rad"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 312), v300, v294, v295, v296, v297, v298, v299);
   if ( *(_DWORD *)(v54 + 24) <= 0x24u )
     goto LABEL_48;
-  v307 = StringLiteral_5632/*"ETC"*/;
-  *(_QWORD *)(v54 + 320) = StringLiteral_5632/*"ETC"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 320), v307, v301, v302, v303, v304, v305, v306);
+  v307 = StringLiteral_5633/*"EVENT_VS_GAUGE_REST_TIME"*/;
+  *(_QWORD *)(v54 + 320) = StringLiteral_5633/*"EVENT_VS_GAUGE_REST_TIME"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 320), v307, v301, v302, v303, v304, v305, v306);
   if ( *(_DWORD *)(v54 + 24) <= 0x25u )
     goto LABEL_48;
-  v314 = StringLiteral_11376/*"Read End Connection"*/;
-  *(_QWORD *)(v54 + 328) = StringLiteral_11376/*"Read End Connection"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 328), v314, v308, v309, v310, v311, v312, v313);
+  v314 = StringLiteral_11399/*"SERVANT_SELL_RARE_TEXT2"*/;
+  *(_QWORD *)(v54 + 328) = StringLiteral_11399/*"SERVANT_SELL_RARE_TEXT2"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 328), v314, v308, v309, v310, v311, v312, v313);
   if ( *(_DWORD *)(v54 + 24) <= 0x26u )
     goto LABEL_48;
-  v321 = StringLiteral_3335/*"Blind"*/;
-  *(_QWORD *)(v54 + 336) = StringLiteral_3335/*"Blind"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 336), v321, v315, v316, v317, v318, v319, v320);
+  v321 = StringLiteral_3335/*"CHAPTER2_PROLOGUE_WAR_ID"*/;
+  *(_QWORD *)(v54 + 336) = StringLiteral_3335/*"CHAPTER2_PROLOGUE_WAR_ID"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 336), v321, v315, v316, v317, v318, v319, v320);
   if ( *(_DWORD *)(v54 + 24) <= 0x27u )
     goto LABEL_48;
-  v328 = StringLiteral_16092/*"Z - Ray"*/;
-  *(_QWORD *)(v54 + 344) = StringLiteral_16092/*"Z - Ray"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 344), v328, v322, v323, v324, v325, v326, v327);
+  v328 = StringLiteral_16120/*"__drag-hover-marker"*/;
+  *(_QWORD *)(v54 + 344) = StringLiteral_16120/*"__drag-hover-marker"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 344), v328, v322, v323, v324, v325, v326, v327);
   if ( *(_DWORD *)(v54 + 24) <= 0x28u
-    || (v335 = StringLiteral_6034/*"Egg-man"*/,
-        *(_QWORD *)(v54 + 352) = StringLiteral_6034/*"Egg-man"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 352), v335, v329, v330, v331, v332, v333, v334),
+    || (v335 = StringLiteral_6035/*"Error reading JConstructor from JsonReader. Current JsonReader item is not a constructor: {0}"*/,
+        *(_QWORD *)(v54 + 352) = StringLiteral_6035/*"Error reading JConstructor from JsonReader. Current JsonReader item is not a constructor: {0}"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 352), v335, v329, v330, v331, v332, v333, v334),
         *(_DWORD *)(v54 + 24) <= 0x29u)
-    || (v342 = StringLiteral_2196/*"AXIX"*/,
-        *(_QWORD *)(v54 + 360) = StringLiteral_2196/*"AXIX"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 360), v342, v336, v337, v338, v339, v340, v341),
+    || (v342 = StringLiteral_2196/*"All schemas in the set should be successfully preprocessed prior to compilation."*/,
+        *(_QWORD *)(v54 + 360) = StringLiteral_2196/*"All schemas in the set should be successfully preprocessed prior to compilation."*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 360), v342, v336, v337, v338, v339, v340, v341),
         *(_DWORD *)(v54 + 24) <= 0x2Au) )
   {
 LABEL_48:
-    sub_1C2E390(v46, v47);
+    sub_1C3B9C8(v46, v47);
   }
-  v349 = StringLiteral_12864/*"Sergio Georgini"*/;
-  *(_QWORD *)(v54 + 368) = StringLiteral_12864/*"Sergio Georgini"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v54 + 368), v349, v343, v344, v345, v346, v347, v348);
+  v349 = StringLiteral_12892/*"System Normal"*/;
+  *(_QWORD *)(v54 + 368) = StringLiteral_12892/*"System Normal"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v54 + 368), v349, v343, v344, v345, v346, v347, v348);
   AccountExtensions_TypeInfo->static_fields->names = (struct System_String_array *)v54;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)AccountExtensions_TypeInfo->static_fields,
     v54,
     v350,
@@ -646,10 +646,10 @@ System_String_o *__fastcall AccountExtensions__GetRandomName(const MethodInfo *m
   __int64 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4BFB702 & 1) == 0 )
+  if ( (byte_4C1FF09 & 1) == 0 )
   {
-    sub_1C2E12C(&AccountExtensions_TypeInfo, v1);
-    byte_4BFB702 = 1;
+    sub_1C3B764(&AccountExtensions_TypeInfo, v1);
+    byte_4C1FF09 = 1;
   }
   v2 = AccountExtensions_TypeInfo;
   if ( !AccountExtensions_TypeInfo->_2.cctor_finished )
@@ -659,10 +659,10 @@ System_String_o *__fastcall AccountExtensions__GetRandomName(const MethodInfo *m
   }
   names = v2->static_fields->names;
   if ( !names )
-    sub_1C2E388(v2, v1);
-  v4 = UnityEngine_Random__Range_70949460(0, names->max_length - 1, 0LL);
+    sub_1C3B9C0(v2, v1);
+  v4 = UnityEngine_Random__Range_71082488(0, names->max_length - 1, 0LL);
   if ( (unsigned int)v4 >= names->max_length )
-    sub_1C2E390(v4, v5);
+    sub_1C3B9C8(v4, v5);
   return names->m_Items[(int)v4];
 }
 
@@ -674,17 +674,17 @@ bool __fastcall AccountExtensions__IsValidEmailAddress(System_String_o *email, c
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BFB701 & 1) == 0 )
+  if ( (byte_4C1FF08 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Text_RegularExpressions_Regex_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_16387/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, v3);
-    byte_4BFB701 = 1;
+    sub_1C3B764(&System_Text_RegularExpressions_Regex_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_16415/*"android.os.Environment"*/, v3);
+    byte_4C1FF08 = 1;
   }
   if ( System_String__IsNullOrEmpty(email, 0LL) )
     return 0;
-  v5 = (System_Text_RegularExpressions_Regex_o *)sub_1C2E378(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_69796904(v5, (System_String_o *)StringLiteral_16387/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, 1, 0LL);
+  v5 = (System_Text_RegularExpressions_Regex_o *)sub_1C3B9B0(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_69929932(v5, (System_String_o *)StringLiteral_16415/*"android.os.Environment"*/, 1, 0LL);
   if ( !v5 )
-    sub_1C2E388(v6, v7);
-  return System_Text_RegularExpressions_Regex__IsMatch_69792012(v5, email, 0LL);
+    sub_1C3B9C0(v6, v7);
+  return System_Text_RegularExpressions_Regex__IsMatch_69925040(v5, email, 0LL);
 }

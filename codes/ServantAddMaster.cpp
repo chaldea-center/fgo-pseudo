@@ -9,16 +9,16 @@ void __fastcall ServantAddMaster___cctor(const MethodInfo *method)
   PartyListViewItem_o *v7; // x7
   __int64 v8; // x1
 
-  if ( (byte_4BFDDF5 & 1) == 0 )
+  if ( (byte_4C22607 & 1) == 0 )
   {
-    sub_1C2E12C(&ServantAddMaster_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_23018/*"presentDialogMessageId"*/, v8);
-    byte_4BFDDF5 = 1;
+    sub_1C3B764(&ServantAddMaster_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_23060/*"smn"*/, v8);
+    byte_4C22607 = 1;
   }
-  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_23018/*"presentDialogMessageId"*/;
-  sub_1C2E0D0(
+  ServantAddMaster_TypeInfo->static_fields->PRESENT_DIALOG_MESSAGE_ID = (struct System_String_o *)StringLiteral_23060/*"smn"*/;
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)ServantAddMaster_TypeInfo->static_fields,
-    StringLiteral_23018/*"presentDialogMessageId"*/,
+    StringLiteral_23060/*"smn"*/,
     v2,
     v3,
     v4,
@@ -30,15 +30,15 @@ void __fastcall ServantAddMaster___cctor(const MethodInfo *method)
 
 void __fastcall ServantAddMaster___ctor(ServantAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDDF3 & 1) == 0 )
+  if ( (byte_4C22605 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__, method);
-    byte_4BFDDF3 = 1;
+    sub_1C3B764(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__, method);
+    byte_4C22605 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    379,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
+    381,
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int___ctor__);
 }
 
 
@@ -56,29 +56,29 @@ System_String_o *__fastcall ServantAddMaster__AddIdentifyText(
   System_String_o *v11; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BFDDF4 & 1) == 0 )
+  if ( (byte_4C22606 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__, *(_QWORD *)&svtId);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_12071/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/, v8);
-    byte_4BFDDF4 = 1;
+    sub_1C3B764(&Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__, *(_QWORD *)&svtId);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_12094/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, v8);
+    byte_4C22606 = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          svtId,
-         (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
+         (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantAddMaster__ServantAddEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_1C2E388(0LL, v9);
+      sub_1C3B9C0(0LL, v9);
     IdentifyText = (Il2CppObject *)ServantAddEntity__GetIdentifyText((ServantAddEntity_o *)entity, v9);
     if ( !System_String__IsNullOrEmpty((System_String_o *)IdentifyText, 0LL) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12071/*"SERVANT_STATUS_ADD_IDENTIFY_TEXT"*/, 0LL);
-      return System_String__Format_63249956(v11, (Il2CppObject *)baseName, IdentifyText, 0LL);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12094/*"SUMMON_AUTOSALE_EQUIP_TXT"*/, 0LL);
+      return System_String__Format_63382984(v11, (Il2CppObject *)baseName, IdentifyText, 0LL);
     }
   }
   return baseName;

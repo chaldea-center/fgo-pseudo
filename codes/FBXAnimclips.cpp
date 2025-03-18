@@ -2,10 +2,10 @@ void __fastcall FBXAnimclips___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4BFCBC9 & 1) == 0 )
+  if ( (byte_4C213D7 & 1) == 0 )
   {
-    sub_1C2E12C(&FBXAnimclips_TypeInfo, v1);
-    byte_4BFCBC9 = 1;
+    sub_1C3B764(&FBXAnimclips_TypeInfo, v1);
+    byte_4C213D7 = 1;
   }
   LODWORD(FBXAnimclips_TypeInfo->static_fields->animFps) = (struct FBXAnimclips_StaticFields)1106247680;
 }
@@ -56,37 +56,37 @@ void __fastcall FBXAnimclips__loadAnimationEvents(
   System_RuntimeTypeHandle_o v22; // 0:w0.4
 
   v21 = svtId;
-  if ( (byte_4BFCBC8 & 1) == 0 )
+  if ( (byte_4C213D6 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1C2E12C(&Method_UnityEngine_Resources_Load_GameObject___, v4);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1C2E12C(&UnityEngine_TextAsset_var, v6);
-    sub_1C2E12C(&UnityEngine_TextAsset_TypeInfo, v7);
-    sub_1C2E12C(&System_Type_TypeInfo, v8);
-    sub_1C2E12C(&StringLiteral_1158/*"/fbxevent"*/, v9);
-    sub_1C2E12C(&StringLiteral_12909/*"Servants/"*/, v10);
-    sub_1C2E12C(&StringLiteral_1151/*"/chr"*/, v11);
-    byte_4BFCBC8 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1C3B764(&Method_UnityEngine_Resources_Load_GameObject___, v4);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C3B764(&UnityEngine_TextAsset_var, v6);
+    sub_1C3B764(&UnityEngine_TextAsset_TypeInfo, v7);
+    sub_1C3B764(&System_Type_TypeInfo, v8);
+    sub_1C3B764(&StringLiteral_1158/*"0123456789abcdef"*/, v9);
+    sub_1C3B764(&StringLiteral_12937/*"System.Drawing.Design.ToolboxItem, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"*/, v10);
+    sub_1C3B764(&StringLiteral_1151/*"00000000-0000-0000-0000-000000000000"*/, v11);
+    byte_4C213D6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C2E388(0LL, v13);
+    sub_1C3B9C0(0LL, v13);
   DataManager__GetMasterData_object_(
     (DataManager_o *)Instance,
-    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+    (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantMaster___);
   v14 = System_Int32__ToString((int32_t)&v21, 0LL);
-  v15 = System_String__Concat_63246844(
-          (System_String_o *)StringLiteral_12909/*"Servants/"*/,
+  v15 = System_String__Concat_63379872(
+          (System_String_o *)StringLiteral_12937/*"System.Drawing.Design.ToolboxItem, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"*/,
           v14,
-          (System_String_o *)StringLiteral_1151/*"/chr"*/,
+          (System_String_o *)StringLiteral_1151/*"00000000-0000-0000-0000-000000000000"*/,
           0LL);
-  UnityEngine_Resources__Load_object_(v15, (const MethodInfo_30676E8 *)Method_UnityEngine_Resources_Load_GameObject___);
+  UnityEngine_Resources__Load_object_(v15, (const MethodInfo_308660C *)Method_UnityEngine_Resources_Load_GameObject___);
   v16 = System_Int32__ToString((int32_t)&v21, 0LL);
-  v17 = System_String__Concat_63246844(
-          (System_String_o *)StringLiteral_12909/*"Servants/"*/,
+  v17 = System_String__Concat_63379872(
+          (System_String_o *)StringLiteral_12937/*"System.Drawing.Design.ToolboxItem, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"*/,
           v16,
-          (System_String_o *)StringLiteral_1158/*"/fbxevent"*/,
+          (System_String_o *)StringLiteral_1158/*"0123456789abcdef"*/,
           0LL);
   v18 = (int)UnityEngine_TextAsset_var;
   v19 = v17;
@@ -94,5 +94,5 @@ void __fastcall FBXAnimclips__loadAnimationEvents(
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v22.fields.value = v18;
   TypeFromHandle = System_Type__GetTypeFromHandle(v22, 0LL);
-  UnityEngine_Resources__Load_70949648(v19, TypeFromHandle, 0LL);
+  UnityEngine_Resources__Load_71082676(v19, TypeFromHandle, 0LL);
 }

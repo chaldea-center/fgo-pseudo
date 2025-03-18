@@ -23,11 +23,11 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4BFCAB7 & 1) == 0 )
+  if ( (byte_4C212C5 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Contains_long___, *(_QWORD *)&index);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    byte_4BFCAB7 = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_Contains_long___, *(_QWORD *)&index);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
+    byte_4C212C5 = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -44,17 +44,17 @@ void __fastcall CharaGraphEquipListViewItem___ctor(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v24 = v25;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v24, 0LL);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(&v24, 0LL);
   if ( !this->fields._UserServantEntity_k__BackingField )
 LABEL_10:
-    sub_1C2E388(v12, v13);
+    sub_1C3B9C0(v12, v13);
   v16 = v12;
   EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(
                           this->fields._UserServantEntity_k__BackingField,
                           1,
                           0LL);
   this->fields._EquipCategoryIdArray_k__BackingField = EquipCategoryIdList;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int64_t)EquipCategoryIdList,
     v18,
@@ -66,7 +66,7 @@ LABEL_10:
   if ( System_Linq_Enumerable__Contains_long_(
          (System_Collections_Generic_IEnumerable_TSource__o *)partyUserEquipList,
          v16,
-         (const MethodInfo_2FE9F80 *)Method_System_Linq_Enumerable_Contains_long___) )
+         (const MethodInfo_3008954 *)Method_System_Linq_Enumerable_Contains_long___) )
   {
     this->fields._IsUse_k__BackingField = 1;
   }
@@ -93,7 +93,7 @@ void __fastcall CharaGraphEquipListViewItem__set_EquipCategoryIdArray(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EquipCategoryIdArray_k__BackingField = value;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._EquipCategoryIdArray_k__BackingField,
     (int64_t)value,
     (int64_t)method,

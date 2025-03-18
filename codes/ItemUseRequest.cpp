@@ -12,20 +12,20 @@ void __fastcall ItemUseRequest__beginRequest(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x1
 
-  if ( (byte_4BFF137 & 1) == 0 )
+  if ( (byte_4C23961 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_22597/*"num"*/, *(_QWORD *)&itemId);
-    sub_1C2E12C(&StringLiteral_19472/*"eventId"*/, v9);
-    sub_1C2E12C(&StringLiteral_24817/*"useItemId"*/, v10);
-    byte_4BFF137 = 1;
+    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&itemId);
+    sub_1C3B764(&StringLiteral_19507/*"graphic.shader"*/, v9);
+    sub_1C3B764(&StringLiteral_24861/*"඀฀"*/, v10);
+    byte_4C23961 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19472/*"eventId"*/,
+    (System_String_o *)StringLiteral_19507/*"graphic.shader"*/,
     eventId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24817/*"useItemId"*/, itemId, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22597/*"num"*/, num, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24861/*"඀฀"*/, itemId, v11);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, num, v12);
   RequestBase__beginRequest((RequestBase_o *)this, v13);
 }
 
@@ -35,16 +35,16 @@ System_String_o *__fastcall ItemUseRequest__getURL(ItemUseRequest_o *this, const
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF136 & 1) == 0 )
+  if ( (byte_4C23960 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_21268/*"item/use"*/, v2);
-    byte_4BFF136 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_21304/*"mstEventBoardGameCell"*/, v2);
+    byte_4C23960 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_21268/*"item/use"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_21304/*"mstEventBoardGameCell"*/, 0LL);
 }
 
 
@@ -62,17 +62,17 @@ void __fastcall ItemUseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BFF138 & 1) == 0 )
+  if ( (byte_4C23962 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF138 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C23962 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(44, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( success )
@@ -94,7 +94,7 @@ void __fastcall ItemUseRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22468/*"ng"*/,
+        StringLiteral_22507/*"referrerMapId"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

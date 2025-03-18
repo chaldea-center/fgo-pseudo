@@ -35,27 +35,27 @@ void __fastcall AutoFortificationButtonComponent__Init(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4C017A2 & 1) == 0 )
+  if ( (byte_4C25FD0 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_2164/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
-    sub_1C2E12C(&StringLiteral_17790/*"btn_bg_auto_organization"*/, v9);
-    byte_4C017A2 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_2164/*"AddStrengthCardWeights"*/, v8);
+    sub_1C3B764(&StringLiteral_17820/*"command_code_statussync"*/, v9);
+    byte_4C25FD0 = 1;
   }
   ButtonBg = this->fields.ButtonBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39173640(eventId, ButtonBg, (System_String_o *)StringLiteral_17790/*"btn_bg_auto_organization"*/, 0LL);
+  AtlasManager__SetEventUI_39282628(eventId, ButtonBg, (System_String_o *)StringLiteral_17820/*"command_code_statussync"*/, 0LL);
   ButtonLb = this->fields.ButtonLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2164/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2164/*"AddStrengthCardWeights"*/, 0LL);
   if ( !ButtonLb )
-    sub_1C2E388(v12, v13);
+    sub_1C3B9C0(v12, v13);
   UILabel__set_text(ButtonLb, v12, 0LL);
   this->fields.onClickAction = onClickAction;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.onClickAction,
     (int64_t)onClickAction,
     v14,

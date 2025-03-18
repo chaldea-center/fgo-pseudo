@@ -20,15 +20,15 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
   Il2CppObject *v15; // x0
   int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BFC719 & 1) == 0 )
+  if ( (byte_4C20F27 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&num);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_11023/*"QP_UNIT"*/, v6);
-    sub_1C2E12C(&StringLiteral_8683/*"MANA_UNIT"*/, v7);
-    sub_1C2E12C(&StringLiteral_12552/*"STONE_UNIT"*/, v8);
-    sub_1C2E12C(&StringLiteral_6683/*"FRIEND_POINT_UNIT"*/, v9);
-    byte_4BFC719 = 1;
+    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&num);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_11044/*"RenderTextureDesc height must be greater than zero."*/, v6);
+    sub_1C3B764(&StringLiteral_8685/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/, v7);
+    sub_1C3B764(&StringLiteral_12580/*"Slider.value"*/, v8);
+    sub_1C3B764(&StringLiteral_6686/*"For attribute '{0}', either the name or the ref attribute must be present, but not both."*/, v9);
+    byte_4C20F27 = 1;
   }
   if ( type <= 13 )
   {
@@ -38,7 +38,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v10 = &StringLiteral_8683/*"MANA_UNIT"*/;
+        v10 = &StringLiteral_8685/*"MapGimmickEffect_GappolyQuestArrivalPanel"*/;
       }
       else
       {
@@ -46,7 +46,7 @@ System_String_o *__fastcall ItemType__GetCountText(int32_t type, int32_t num, co
           goto LABEL_19;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v10 = &StringLiteral_6683/*"FRIEND_POINT_UNIT"*/;
+        v10 = &StringLiteral_6686/*"For attribute '{0}', either the name or the ref attribute must be present, but not both."*/;
       }
 LABEL_13:
       v11 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
@@ -58,7 +58,7 @@ LABEL_13:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11023/*"QP_UNIT"*/;
+      v10 = &StringLiteral_11044/*"RenderTextureDesc height must be greater than zero."*/;
       goto LABEL_13;
     }
     if ( type != 2 )
@@ -66,7 +66,7 @@ LABEL_13:
 LABEL_10:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = &StringLiteral_12552/*"STONE_UNIT"*/;
+    v10 = &StringLiteral_12580/*"Slider.value"*/;
     goto LABEL_13;
   }
   if ( type == 17 || type == 36 )
@@ -99,15 +99,15 @@ System_String_o *__fastcall ItemType__get_CrossOperatorString(const MethodInfo *
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BFC717 & 1) == 0 )
+  if ( (byte_4C20F25 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, v2);
-    byte_4BFC717 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_3812/*"CP01143"*/, v2);
+    byte_4C20F25 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"COMMON_COUNT_OPERATOR_CROSS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3812/*"CP01143"*/, 0LL);
 }
 
 
@@ -116,13 +116,13 @@ System_String_o *__fastcall ItemType__get_PlusOperatorString(const MethodInfo *m
   __int64 v1; // x1
   __int64 v2; // x1
 
-  if ( (byte_4BFC718 & 1) == 0 )
+  if ( (byte_4C20F26 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/, v2);
-    byte_4BFC718 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_3813/*"CP01144"*/, v2);
+    byte_4C20F26 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_3813/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0LL);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_3813/*"CP01144"*/, 0LL);
 }

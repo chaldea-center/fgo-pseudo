@@ -1,6 +1,6 @@
 void __fastcall MyRoomBackGroundManager___ctor(MyRoomBackGroundManager_o *this, const MethodInfo *method)
 {
-  this->fields.DISP_RECT = (struct UnityEngine_Rect_o)xmmword_C07600;
+  this->fields.DISP_RECT = (struct UnityEngine_Rect_o)xmmword_C0E990;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -17,11 +17,11 @@ void __fastcall MyRoomBackGroundManager__ClearBackObject(MyRoomBackGroundManager
   UnityEngine_Object_o *v10; // x20
   System_String_o *assetName; // x20
 
-  if ( (byte_4BF8970 & 1) == 0 )
+  if ( (byte_4C1D0F0 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BF8970 = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C1D0F0 = 1;
   }
   backObject = this->fields.backObject;
   p_backObject = &this->fields.backObject;
@@ -39,10 +39,10 @@ void __fastcall MyRoomBackGroundManager__ClearBackObject(MyRoomBackGroundManager
       v10 = (UnityEngine_Object_o *)(*p_backObject)->fields.instanceObject;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_70989908(v10, 0LL);
+      UnityEngine_Object__DestroyImmediate_71122936(v10, 0LL);
       if ( !*p_backObject )
 LABEL_15:
-        sub_1C2E388(v8, v9);
+        sub_1C3B9C0(v8, v9);
       assetName = (*p_backObject)->fields.assetName;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -50,7 +50,7 @@ LABEL_15:
     }
   }
   *p_backObject = 0LL;
-  sub_1C2E0D0(p_backObject);
+  sub_1C3B708(p_backObject);
 }
 
 
@@ -62,19 +62,19 @@ int32_t __fastcall MyRoomBackGroundManager__GetBackObjectAnimationNum(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BF8975 & 1) == 0 )
+  if ( (byte_4C1D0F5 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BF8975 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C1D0F5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v4);
+    sub_1C3B9C0(Instance, v4);
   }
   return MyRoomAddMaster__GetBackObjAnimationNum((MyRoomAddMaster_o *)Instance, 0LL);
 }
@@ -87,19 +87,19 @@ int32_t __fastcall MyRoomBackGroundManager__GetBackObjectId(MyRoomBackGroundMana
   __int64 v4; // x1
   int32_t v5; // w0
 
-  if ( (byte_4BF8972 & 1) == 0 )
+  if ( (byte_4C1D0F2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BF8972 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C1D0F2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v4);
+    sub_1C3B9C0(Instance, v4);
   }
   v5 = MyRoomAddMaster__GetChangeMyRoomBackObjId((MyRoomAddMaster_o *)Instance, 0LL);
   return v5 & ~(v5 >> 31);
@@ -123,21 +123,21 @@ System_String_o *__fastcall MyRoomBackGroundManager__GetBgImgName(
   Il2CppObject *v12; // x0
   int v14; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4BF8971 & 1) == 0 )
+  if ( (byte_4C1D0F1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
-    sub_1C2E12C(&int_TypeInfo, v2);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    sub_1C2E12C(&StringLiteral_3166/*"Back/back{0}"*/, v4);
-    byte_4BF8971 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
+    sub_1C3B764(&int_TypeInfo, v2);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    sub_1C3B764(&StringLiteral_3166/*"BigInteger cannot represent infinity."*/, v4);
+    byte_4C1D0F1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v6);
+    sub_1C3B9C0(Instance, v6);
   }
   v7 = MyRoomAddMaster__GetChangeMyRoomMultipleViewBgId((MyRoomAddMaster_o *)Instance, 0LL);
   if ( v7 >= 1 )
@@ -146,7 +146,7 @@ System_String_o *__fastcall MyRoomBackGroundManager__GetBgImgName(
     v11 = 10400;
   v14 = v11;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v8, v9, v10);
-  return System_String__Format((System_String_o *)StringLiteral_3166/*"Back/back{0}"*/, v12, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_3166/*"BigInteger cannot represent infinity."*/, v12, 0LL);
 }
 
 
@@ -159,19 +159,19 @@ int64_t __fastcall MyRoomBackGroundManager__GetScheduleUpdateAt(
   __int64 v4; // x1
   int64_t v5; // x0
 
-  if ( (byte_4BF8974 & 1) == 0 )
+  if ( (byte_4C1D0F4 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BF8974 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C1D0F4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v4);
+    sub_1C3B9C0(Instance, v4);
   }
   v5 = MyRoomAddMaster__GetChangeMyRoomGetScheduleUpdateAt((MyRoomAddMaster_o *)Instance, 0LL);
   return v5 & ~(v5 >> 63);
@@ -188,7 +188,7 @@ void __fastcall MyRoomBackGroundManager__Init(MyRoomBackGroundManager_o *this, c
   UnityEngine_MonoBehaviour__StopAllCoroutines((UnityEngine_MonoBehaviour_o *)this, 0LL);
   backTexture = this->fields.backTexture;
   if ( !backTexture )
-    sub_1C2E388(0LL, v3);
+    sub_1C3B9C0(0LL, v3);
   ExUITexture__ClearImage(backTexture, 0LL);
   MyRoomBackGroundManager__ClearBackObject(this, v5);
 }
@@ -210,18 +210,18 @@ System_Collections_IEnumerator_o *__fastcall MyRoomBackGroundManager__LoadBackGr
 {
   __int64 v5; // x21
 
-  if ( (byte_4BF8978 & 1) == 0 )
+  if ( (byte_4C1D0F8 & 1) == 0 )
   {
-    sub_1C2E12C(&MyRoomBackGroundManager__LoadBackGround_d__28_TypeInfo, callback);
-    byte_4BF8978 = 1;
+    sub_1C3B764(&MyRoomBackGroundManager__LoadBackGround_d__28_TypeInfo, callback);
+    byte_4C1D0F8 = 1;
   }
-  v5 = sub_1C2E378(MyRoomBackGroundManager__LoadBackGround_d__28_TypeInfo);
+  v5 = sub_1C3B9B0(MyRoomBackGroundManager__LoadBackGround_d__28_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C2E0D0(v5 + 32);
+  sub_1C3B708(v5 + 32);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_1C2E0D0(v5 + 40);
+  sub_1C3B708(v5 + 40);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -233,18 +233,18 @@ System_Collections_IEnumerator_o *__fastcall MyRoomBackGroundManager__LoadBackGr
 {
   __int64 v5; // x21
 
-  if ( (byte_4BF8977 & 1) == 0 )
+  if ( (byte_4C1D0F7 & 1) == 0 )
   {
-    sub_1C2E12C(&MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_TypeInfo, callback);
-    byte_4BF8977 = 1;
+    sub_1C3B764(&MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_TypeInfo, callback);
+    byte_4C1D0F7 = 1;
   }
-  v5 = sub_1C2E378(MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_TypeInfo);
+  v5 = sub_1C3B9B0(MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C2E0D0(v5 + 32);
+  sub_1C3B708(v5 + 32);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_1C2E0D0(v5 + 40);
+  sub_1C3B708(v5 + 40);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -256,18 +256,18 @@ System_Collections_IEnumerator_o *__fastcall MyRoomBackGroundManager__LoadBackOb
 {
   __int64 v5; // x21
 
-  if ( (byte_4BF8979 & 1) == 0 )
+  if ( (byte_4C1D0F9 & 1) == 0 )
   {
-    sub_1C2E12C(&MyRoomBackGroundManager__LoadBackObject_d__29_TypeInfo, callback);
-    byte_4BF8979 = 1;
+    sub_1C3B764(&MyRoomBackGroundManager__LoadBackObject_d__29_TypeInfo, callback);
+    byte_4C1D0F9 = 1;
   }
-  v5 = sub_1C2E378(MyRoomBackGroundManager__LoadBackObject_d__29_TypeInfo);
+  v5 = sub_1C3B9B0(MyRoomBackGroundManager__LoadBackObject_d__29_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C2E0D0(v5 + 32);
+  sub_1C3B708(v5 + 32);
   *(_QWORD *)(v5 + 40) = callback;
-  sub_1C2E0D0(v5 + 40);
+  sub_1C3B708(v5 + 40);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -295,7 +295,7 @@ void __fastcall MyRoomBackGroundManager__PlayForceBackObjectAnimation(
   __int64 v5; // x1
   struct MyRoomBackGroundManager_BackObject_o *backObject; // x8
   UnityEngine_Object_o *instanceObject; // x20
-  UnityEngine_GameObject_o *ComponentsInChildren_object__50476848; // x0
+  UnityEngine_GameObject_o *ComponentsInChildren_object__50603580; // x0
   __int64 v9; // x1
   struct MyRoomBackGroundManager_BackObject_o *v10; // x8
   int klass; // w8
@@ -318,13 +318,13 @@ void __fastcall MyRoomBackGroundManager__PlayForceBackObjectAnimation(
   System_String_o *v28; // x0
   int32_t BackObjectAnimationNum; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BF8976 & 1) == 0 )
+  if ( (byte_4C1D0F6 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___, method);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponentsInChildren_SimpleAnimation___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&StringLiteral_9386/*"MyRoomBackObj_loop"*/, v5);
-    byte_4BF8976 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___, method);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponentsInChildren_SimpleAnimation___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&StringLiteral_9388/*"OFB isn't supported by the framework"*/, v5);
+    byte_4C1D0F6 = 1;
   }
   BackObjectAnimationNum = 0;
   backObject = this->fields.backObject;
@@ -333,25 +333,25 @@ void __fastcall MyRoomBackGroundManager__PlayForceBackObjectAnimation(
     instanceObject = (UnityEngine_Object_o *)backObject->fields.instanceObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
+    ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                                                           instanceObject,
                                                                           0LL,
                                                                           0LL);
-    if ( ((unsigned __int8)ComponentsInChildren_object__50476848 & 1) != 0 )
+    if ( ((unsigned __int8)ComponentsInChildren_object__50603580 & 1) != 0 )
     {
       v10 = this->fields.backObject;
       if ( !v10 )
         goto LABEL_29;
-      ComponentsInChildren_object__50476848 = v10->fields.instanceObject;
-      if ( !ComponentsInChildren_object__50476848 )
+      ComponentsInChildren_object__50603580 = v10->fields.instanceObject;
+      if ( !ComponentsInChildren_object__50603580 )
         goto LABEL_29;
-      ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50476848(
-                                                                            ComponentsInChildren_object__50476848,
-                                                                            (const MethodInfo_3023730 *)Method_UnityEngine_GameObject_GetComponentsInChildren_SimpleAnimation___);
-      if ( !ComponentsInChildren_object__50476848 )
+      ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50603580(
+                                                                            ComponentsInChildren_object__50603580,
+                                                                            (const MethodInfo_304263C *)Method_UnityEngine_GameObject_GetComponentsInChildren_SimpleAnimation___);
+      if ( !ComponentsInChildren_object__50603580 )
         goto LABEL_29;
-      klass = (int)ComponentsInChildren_object__50476848[1].klass;
-      v12 = ComponentsInChildren_object__50476848;
+      klass = (int)ComponentsInChildren_object__50603580[1].klass;
+      v12 = ComponentsInChildren_object__50603580;
       if ( klass >= 1 )
       {
         v13 = 0;
@@ -362,27 +362,27 @@ void __fastcall MyRoomBackGroundManager__PlayForceBackObjectAnimation(
           if ( !v15 )
             goto LABEL_29;
           SimpleAnimation__Rewind((SimpleAnimation_o *)v14[4], 0LL);
-          ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)SimpleAnimation__Play(v15, 0LL);
+          ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)SimpleAnimation__Play(v15, 0LL);
           klass = (int)v12[1].klass;
           if ( (int)++v13 >= klass )
             goto LABEL_15;
         }
 LABEL_30:
-        sub_1C2E390(ComponentsInChildren_object__50476848, v9);
+        sub_1C3B9C8(ComponentsInChildren_object__50603580, v9);
       }
 LABEL_15:
       v16 = this->fields.backObject;
       if ( !v16
-        || (ComponentsInChildren_object__50476848 = v16->fields.instanceObject) == 0LL
-        || (ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50476848(
-                                                                                  ComponentsInChildren_object__50476848,
-                                                                                  (const MethodInfo_3023730 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___)) == 0LL )
+        || (ComponentsInChildren_object__50603580 = v16->fields.instanceObject) == 0LL
+        || (ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50603580(
+                                                                                  ComponentsInChildren_object__50603580,
+                                                                                  (const MethodInfo_304263C *)Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___)) == 0LL )
       {
 LABEL_29:
-        sub_1C2E388(ComponentsInChildren_object__50476848, v9);
+        sub_1C3B9C0(ComponentsInChildren_object__50603580, v9);
       }
-      v17 = (int)ComponentsInChildren_object__50476848[1].klass;
-      v18 = ComponentsInChildren_object__50476848;
+      v17 = (int)ComponentsInChildren_object__50603580[1].klass;
+      v18 = ComponentsInChildren_object__50603580;
       if ( v17 >= 1 )
       {
         v19 = 0;
@@ -396,7 +396,7 @@ LABEL_29:
           ScheduleUpdateAt = (MyRoomBackGroundManager_o *)MyRoomBackGroundManager__GetScheduleUpdateAt(v22, v23);
           if ( (__int64)ScheduleUpdateAt < 1 )
           {
-            ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play(v21, 0LL);
+            ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play(v21, 0LL);
           }
           else
           {
@@ -405,8 +405,8 @@ LABEL_29:
             if ( ClipCount < BackObjectAnimationNum )
               BackObjectAnimationNum = UnityEngine_Animation__GetClipCount(v21, 0LL);
             v27 = System_Int32__ToString((int32_t)&BackObjectAnimationNum, 0LL);
-            v28 = System_String__Concat_63235584((System_String_o *)StringLiteral_9386/*"MyRoomBackObj_loop"*/, v27, 0LL);
-            ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play_70734128(
+            v28 = System_String__Concat_63368612((System_String_o *)StringLiteral_9388/*"OFB isn't supported by the framework"*/, v27, 0LL);
+            ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play_70867156(
                                                                                   v21,
                                                                                   v28,
                                                                                   0LL);
@@ -430,7 +430,7 @@ void __fastcall MyRoomBackGroundManager__QuitBackGround(MyRoomBackGroundManager_
   MyRoomBackGroundManager__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -441,19 +441,19 @@ void __fastcall MyRoomBackGroundManager__ScheduleUpdate(MyRoomBackGroundManager_
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BF8973 & 1) == 0 )
+  if ( (byte_4C1D0F3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BF8973 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_MyRoomAddMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C1D0F3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_MyRoomAddMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v4);
+    sub_1C3B9C0(Instance, v4);
   }
   MyRoomAddMaster__GetChangeMyRoomBackObjId((MyRoomAddMaster_o *)Instance, 0LL);
 }
@@ -475,10 +475,10 @@ void __fastcall MyRoomBackGroundManager__SetBackGround(
   this->fields.loadType = type;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v8);
+    sub_1C3B9C0(0LL, v8);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   BackGroundByLoadType = MyRoomBackGroundManager__LoadBackGroundByLoadType(this, callback, v9);
-  UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)this, BackGroundByLoadType, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_71108020((UnityEngine_MonoBehaviour_o *)this, BackGroundByLoadType, 0LL);
 }
 
 
@@ -497,7 +497,7 @@ void __fastcall MyRoomBackGroundManager__Update(MyRoomBackGroundManager_o *this,
   const MethodInfo *v13; // x1
   MyRoomBackGroundManager_o *ScheduleUpdateAt; // x0
   const MethodInfo *v15; // x1
-  UnityEngine_GameObject_o *ComponentsInChildren_object__50476848; // x0
+  UnityEngine_GameObject_o *ComponentsInChildren_object__50603580; // x0
   __int64 v17; // x1
   struct MyRoomBackGroundManager_BackObject_o *v18; // x8
   int klass; // w8
@@ -512,13 +512,13 @@ void __fastcall MyRoomBackGroundManager__Update(MyRoomBackGroundManager_o *this,
   System_String_o *v28; // x0
   int32_t BackObjectAnimationNum; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BF896E & 1) == 0 )
+  if ( (byte_4C1D0EE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___, method);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&StringLiteral_9386/*"MyRoomBackObj_loop"*/, v5);
-    byte_4BF896E = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___, method);
+    sub_1C3B764(&NetworkManager_TypeInfo, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&StringLiteral_9388/*"OFB isn't supported by the framework"*/, v5);
+    byte_4C1D0EE = 1;
   }
   BackObjectAnimationNum = 0;
   backObject = this->fields.backObject;
@@ -543,23 +543,23 @@ void __fastcall MyRoomBackGroundManager__Update(MyRoomBackGroundManager_o *this,
         v18 = this->fields.backObject;
         if ( !v18 )
           goto LABEL_23;
-        ComponentsInChildren_object__50476848 = v18->fields.instanceObject;
-        if ( !ComponentsInChildren_object__50476848 )
+        ComponentsInChildren_object__50603580 = v18->fields.instanceObject;
+        if ( !ComponentsInChildren_object__50603580 )
           goto LABEL_23;
-        ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50476848(
-                                                                              ComponentsInChildren_object__50476848,
-                                                                              (const MethodInfo_3023730 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___);
-        if ( !ComponentsInChildren_object__50476848 )
+        ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50603580(
+                                                                              ComponentsInChildren_object__50603580,
+                                                                              (const MethodInfo_304263C *)Method_UnityEngine_GameObject_GetComponentsInChildren_Animation___);
+        if ( !ComponentsInChildren_object__50603580 )
           goto LABEL_23;
-        klass = (int)ComponentsInChildren_object__50476848[1].klass;
-        v20 = ComponentsInChildren_object__50476848;
+        klass = (int)ComponentsInChildren_object__50603580[1].klass;
+        v20 = ComponentsInChildren_object__50603580;
         if ( klass >= 1 )
         {
           v21 = 0;
           while ( 1 )
           {
             if ( v21 >= klass )
-              sub_1C2E390(ComponentsInChildren_object__50476848, v17);
+              sub_1C3B9C8(ComponentsInChildren_object__50603580, v17);
             v22 = &v20->klass + (int)v21;
             v23 = (UnityEngine_Animation_o *)v22[4];
             if ( !v23 )
@@ -570,8 +570,8 @@ void __fastcall MyRoomBackGroundManager__Update(MyRoomBackGroundManager_o *this,
             if ( ClipCount < BackObjectAnimationNum )
               BackObjectAnimationNum = UnityEngine_Animation__GetClipCount(v23, 0LL);
             v27 = System_Int32__ToString((int32_t)&BackObjectAnimationNum, 0LL);
-            v28 = System_String__Concat_63235584((System_String_o *)StringLiteral_9386/*"MyRoomBackObj_loop"*/, v27, 0LL);
-            ComponentsInChildren_object__50476848 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play_70734128(
+            v28 = System_String__Concat_63368612((System_String_o *)StringLiteral_9388/*"OFB isn't supported by the framework"*/, v27, 0LL);
+            ComponentsInChildren_object__50603580 = (UnityEngine_GameObject_o *)UnityEngine_Animation__Play_70867156(
                                                                                   v23,
                                                                                   v28,
                                                                                   0LL);
@@ -580,7 +580,7 @@ void __fastcall MyRoomBackGroundManager__Update(MyRoomBackGroundManager_o *this,
               return;
           }
 LABEL_23:
-          sub_1C2E388(ComponentsInChildren_object__50476848, v17);
+          sub_1C3B9C0(ComponentsInChildren_object__50603580, v17);
         }
       }
     }
@@ -632,20 +632,20 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
   __int64 v41; // [xsp+8h] [xbp-48h] BYREF
 
   v2 = this;
-  if ( (byte_4BF896F & 1) == 0 )
+  if ( (byte_4C1D0EF & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&StringLiteral_23406/*"root/numD"*/, v5);
-    sub_1C2E12C(&StringLiteral_22597/*"num"*/, v6);
-    sub_1C2E12C(&StringLiteral_17998/*"c"*/, v7);
-    sub_1C2E12C(&StringLiteral_23402/*"root/line"*/, v8);
-    sub_1C2E12C(&StringLiteral_23404/*"root/numB"*/, v9);
-    sub_1C2E12C(&StringLiteral_19152/*"ef_clock_num"*/, v10);
-    sub_1C2E12C(&StringLiteral_23403/*"root/numA"*/, v11);
-    this = (MyRoomBackGroundManager_o *)sub_1C2E12C(&StringLiteral_23405/*"root/numC"*/, v12);
-    byte_4BF896F = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
+    sub_1C3B764(&NetworkManager_TypeInfo, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&StringLiteral_23449/*"system.security.cryptography.keyedhashalgorithm"*/, v5);
+    sub_1C3B764(&StringLiteral_22636/*"root"*/, v6);
+    sub_1C3B764(&StringLiteral_18028/*"csISOLatin5"*/, v7);
+    sub_1C3B764(&StringLiteral_23445/*"system.security.cryptography.hmacsha1"*/, v8);
+    sub_1C3B764(&StringLiteral_23447/*"system.security.cryptography.hmacsha384"*/, v9);
+    sub_1C3B764(&StringLiteral_19186/*"fontStyle"*/, v10);
+    sub_1C3B764(&StringLiteral_23446/*"system.security.cryptography.hmacsha256"*/, v11);
+    this = (MyRoomBackGroundManager_o *)sub_1C3B764(&StringLiteral_23448/*"system.security.cryptography.hmacsha512"*/, v12);
+    byte_4C1D0EF = 1;
   }
   v41 = 0LL;
   backObject = v2->fields.backObject;
@@ -653,7 +653,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
     goto LABEL_89;
   v14 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                   backObject->fields.instanceObject,
-                                  (System_String_o *)StringLiteral_23403/*"root/numA"*/,
+                                  (System_String_o *)StringLiteral_23446/*"system.security.cryptography.hmacsha256"*/,
                                   0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -679,7 +679,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       goto LABEL_89;
     v19 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                     v17->fields.instanceObject,
-                                    (System_String_o *)StringLiteral_23402/*"root/line"*/,
+                                    (System_String_o *)StringLiteral_23445/*"system.security.cryptography.hmacsha1"*/,
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -705,7 +705,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       goto LABEL_89;
     v21 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                     v20->fields.instanceObject,
-                                    (System_String_o *)StringLiteral_23403/*"root/numA"*/,
+                                    (System_String_o *)StringLiteral_23446/*"system.security.cryptography.hmacsha256"*/,
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -722,7 +722,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       {
         v22 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                         (UnityEngine_Transform_o *)v21,
-                                        (System_String_o *)StringLiteral_22597/*"num"*/,
+                                        (System_String_o *)StringLiteral_22636/*"root"*/,
                                         0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -733,7 +733,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
             goto LABEL_89;
           Component_object = UnityEngine_Component__GetComponent_object_(
                                (UnityEngine_Component_o *)v22,
-                               (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                               (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           this = (MyRoomBackGroundManager_o *)UnityEngine_Object__op_Implicit(
@@ -743,10 +743,10 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
           {
             v41 = v18 / 600;
             v24 = System_Int64__ToString((int64_t)&v41, 0LL);
-            this = (MyRoomBackGroundManager_o *)System_String__Concat_63246844(
-                                                  (System_String_o *)StringLiteral_19152/*"ef_clock_num"*/,
+            this = (MyRoomBackGroundManager_o *)System_String__Concat_63379872(
+                                                  (System_String_o *)StringLiteral_19186/*"fontStyle"*/,
                                                   v24,
-                                                  (System_String_o *)StringLiteral_17998/*"c"*/,
+                                                  (System_String_o *)StringLiteral_18028/*"csISOLatin5"*/,
                                                   0LL);
             if ( !Component_object )
               goto LABEL_89;
@@ -760,7 +760,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       goto LABEL_89;
     v26 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                     v25->fields.instanceObject,
-                                    (System_String_o *)StringLiteral_23404/*"root/numB"*/,
+                                    (System_String_o *)StringLiteral_23447/*"system.security.cryptography.hmacsha384"*/,
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -777,7 +777,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       {
         v27 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                         (UnityEngine_Transform_o *)v26,
-                                        (System_String_o *)StringLiteral_22597/*"num"*/,
+                                        (System_String_o *)StringLiteral_22636/*"root"*/,
                                         0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -788,7 +788,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
             goto LABEL_89;
           v28 = UnityEngine_Component__GetComponent_object_(
                   (UnityEngine_Component_o *)v27,
-                  (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                  (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           this = (MyRoomBackGroundManager_o *)UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v28, 0LL);
@@ -796,10 +796,10 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
           {
             v41 = v18 / 60 % 10;
             v29 = System_Int64__ToString((int64_t)&v41, 0LL);
-            this = (MyRoomBackGroundManager_o *)System_String__Concat_63246844(
-                                                  (System_String_o *)StringLiteral_19152/*"ef_clock_num"*/,
+            this = (MyRoomBackGroundManager_o *)System_String__Concat_63379872(
+                                                  (System_String_o *)StringLiteral_19186/*"fontStyle"*/,
                                                   v29,
-                                                  (System_String_o *)StringLiteral_17998/*"c"*/,
+                                                  (System_String_o *)StringLiteral_18028/*"csISOLatin5"*/,
                                                   0LL);
             if ( !v28 )
               goto LABEL_89;
@@ -814,7 +814,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
     v31 = v18 % 60;
     v32 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                     v30->fields.instanceObject,
-                                    (System_String_o *)StringLiteral_23405/*"root/numC"*/,
+                                    (System_String_o *)StringLiteral_23448/*"system.security.cryptography.hmacsha512"*/,
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -831,7 +831,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       {
         v33 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                         (UnityEngine_Transform_o *)v32,
-                                        (System_String_o *)StringLiteral_22597/*"num"*/,
+                                        (System_String_o *)StringLiteral_22636/*"root"*/,
                                         0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -842,7 +842,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
             goto LABEL_89;
           v34 = UnityEngine_Component__GetComponent_object_(
                   (UnityEngine_Component_o *)v33,
-                  (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                  (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           this = (MyRoomBackGroundManager_o *)UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v34, 0LL);
@@ -850,10 +850,10 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
           {
             v41 = v31 / 10;
             v35 = System_Int64__ToString((int64_t)&v41, 0LL);
-            this = (MyRoomBackGroundManager_o *)System_String__Concat_63246844(
-                                                  (System_String_o *)StringLiteral_19152/*"ef_clock_num"*/,
+            this = (MyRoomBackGroundManager_o *)System_String__Concat_63379872(
+                                                  (System_String_o *)StringLiteral_19186/*"fontStyle"*/,
                                                   v35,
-                                                  (System_String_o *)StringLiteral_17998/*"c"*/,
+                                                  (System_String_o *)StringLiteral_18028/*"csISOLatin5"*/,
                                                   0LL);
             if ( !v34 )
               goto LABEL_89;
@@ -867,7 +867,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       goto LABEL_89;
     v37 = (UnityEngine_Object_o *)GameObjectExtensions__Find(
                                     v36->fields.instanceObject,
-                                    (System_String_o *)StringLiteral_23406/*"root/numD"*/,
+                                    (System_String_o *)StringLiteral_23449/*"system.security.cryptography.keyedhashalgorithm"*/,
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -883,7 +883,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
       {
         v38 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(
                                         (UnityEngine_Transform_o *)v37,
-                                        (System_String_o *)StringLiteral_22597/*"num"*/,
+                                        (System_String_o *)StringLiteral_22636/*"root"*/,
                                         0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -894,17 +894,17 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
             goto LABEL_89;
           v39 = UnityEngine_Component__GetComponent_object_(
                   (UnityEngine_Component_o *)v38,
-                  (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                  (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v39, 0LL) )
           {
             v41 = (char)(v31 - 10 * (((1717986919LL * v31) >> 34) + (1717986919LL * v31 < 0)));
             v40 = System_Int64__ToString((int64_t)&v41, 0LL);
-            this = (MyRoomBackGroundManager_o *)System_String__Concat_63246844(
-                                                  (System_String_o *)StringLiteral_19152/*"ef_clock_num"*/,
+            this = (MyRoomBackGroundManager_o *)System_String__Concat_63379872(
+                                                  (System_String_o *)StringLiteral_19186/*"fontStyle"*/,
                                                   v40,
-                                                  (System_String_o *)StringLiteral_17998/*"c"*/,
+                                                  (System_String_o *)StringLiteral_18028/*"csISOLatin5"*/,
                                                   0LL);
             if ( v39 )
             {
@@ -912,7 +912,7 @@ void __fastcall MyRoomBackGroundManager__UpdateTimer(MyRoomBackGroundManager_o *
               return;
             }
 LABEL_89:
-            sub_1C2E388(this, method);
+            sub_1C3B9C0(this, method);
           }
         }
       }
@@ -934,20 +934,20 @@ void __fastcall MyRoomBackGroundManager_BackObject___ctor(
   Il2CppObject *v9; // x0
   int32_t v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4BF897A & 1) == 0 )
+  if ( (byte_4C1D0FA & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&id);
-    sub_1C2E12C(&StringLiteral_9380/*"MyRoom/BackObject/{0}"*/, v5);
-    byte_4BF897A = 1;
+    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&id);
+    sub_1C3B764(&StringLiteral_9382/*"O"*/, v5);
+    byte_4C1D0FA = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.assetId = id;
   v10 = id;
   v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10, v6, v7, v8);
-  this->fields.assetName = System_String__Format((System_String_o *)StringLiteral_9380/*"MyRoom/BackObject/{0}"*/, v9, 0LL);
-  sub_1C2E0D0(&this->fields.assetName);
+  this->fields.assetName = System_String__Format((System_String_o *)StringLiteral_9382/*"O"*/, v9, 0LL);
+  sub_1C3B708(&this->fields.assetName);
   this->fields.instanceObject = 0LL;
-  sub_1C2E0D0(&this->fields.instanceObject);
+  sub_1C3B708(&this->fields.instanceObject);
 }
 
 
@@ -990,17 +990,17 @@ bool __fastcall MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27__MoveNex
   bool result; // w0
   struct System_Action_o *callback; // x8
 
-  if ( (byte_4BF897E & 1) == 0 )
+  if ( (byte_4C1D0FE & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, method);
-    sub_1C2E12C(&System_Func_bool__TypeInfo, v3);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__0__, v5);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__1__, v6);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__2__, v7);
-    sub_1C2E12C(&MyRoomBackGroundManager___c__DisplayClass27_0_TypeInfo, v8);
-    sub_1C2E12C(&UnityEngine_WaitWhile_TypeInfo, v9);
-    byte_4BF897E = 1;
+    sub_1C3B764(&System_Action_TypeInfo, method);
+    sub_1C3B764(&System_Func_bool__TypeInfo, v3);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__0__, v5);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__1__, v6);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__2__, v7);
+    sub_1C3B764(&MyRoomBackGroundManager___c__DisplayClass27_0_TypeInfo, v8);
+    sub_1C3B764(&UnityEngine_WaitWhile_TypeInfo, v9);
+    byte_4C1D0FE = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -1017,52 +1017,52 @@ bool __fastcall MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27__MoveNex
     return 0;
   this->fields.__1__state = -1;
   _4__this = this->fields.__4__this;
-  v12 = sub_1C2E378(MyRoomBackGroundManager___c__DisplayClass27_0_TypeInfo);
+  v12 = sub_1C3B9B0(MyRoomBackGroundManager___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12
     || (*(_DWORD *)(v12 + 16) = 0,
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0LL)
     || (CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0LL), !_4__this) )
   {
-    sub_1C2E388(Instance, v14);
+    sub_1C3B9C0(Instance, v14);
   }
   loadType = _4__this->fields.loadType;
   if ( (loadType & 1) != 0 )
   {
     ++*(_DWORD *)(v12 + 16);
-    v16 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(
       v16,
       (Il2CppObject *)v12,
       Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__0__,
       0LL);
     BackGround = MyRoomBackGroundManager__LoadBackGround(_4__this, v16, v17);
-    UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)_4__this, BackGround, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_71108020((UnityEngine_MonoBehaviour_o *)_4__this, BackGround, 0LL);
     loadType = _4__this->fields.loadType;
   }
   if ( (loadType & 2) != 0 )
   {
     ++*(_DWORD *)(v12 + 16);
-    v19 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    v19 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(
       v19,
       (Il2CppObject *)v12,
       Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__1__,
       0LL);
     BackObject = MyRoomBackGroundManager__LoadBackObject(_4__this, v19, v20);
-    UnityEngine_MonoBehaviour__StartCoroutine_70974992((UnityEngine_MonoBehaviour_o *)_4__this, BackObject, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_71108020((UnityEngine_MonoBehaviour_o *)_4__this, BackObject, 0LL);
   }
-  v22 = (System_Func_bool__o *)sub_1C2E378(System_Func_bool__TypeInfo);
+  v22 = (System_Func_bool__o *)sub_1C3B9B0(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v22,
     (Il2CppObject *)v12,
     Method_MyRoomBackGroundManager___c__DisplayClass27_0__LoadBackGroundByLoadType_b__2__,
     0LL);
-  v23 = (UnityEngine_WaitWhile_o *)sub_1C2E378(UnityEngine_WaitWhile_TypeInfo);
+  v23 = (UnityEngine_WaitWhile_o *)sub_1C3B9B0(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v23, v22, 0LL);
   this->fields.__2__current = (Il2CppObject *)v23;
   p__2__current = &this->fields.__2__current;
-  sub_1C2E0D0(p__2__current);
+  sub_1C3B708(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -1085,11 +1085,11 @@ void __fastcall __noreturn MyRoomBackGroundManager__LoadBackGroundByLoadType_d__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_MyRoomBackGroundManager__LoadBackGroundByLoadType_d__27_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -1145,17 +1145,17 @@ bool __fastcall MyRoomBackGroundManager__LoadBackGround_d__28__MoveNext(
   bool result; // w0
   struct System_Action_o *callback; // x8
 
-  if ( (byte_4BF897D & 1) == 0 )
+  if ( (byte_4C1D0FD & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, method);
-    sub_1C2E12C(&AtlasManager_TypeInfo, v3);
-    sub_1C2E12C(&System_Func_bool__TypeInfo, v4);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__0__, v5);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__1__, v6);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__2__, v7);
-    sub_1C2E12C(&MyRoomBackGroundManager___c__DisplayClass28_0_TypeInfo, v8);
-    sub_1C2E12C(&UnityEngine_WaitWhile_TypeInfo, v9);
-    byte_4BF897D = 1;
+    sub_1C3B764(&System_Action_TypeInfo, method);
+    sub_1C3B764(&AtlasManager_TypeInfo, v3);
+    sub_1C3B764(&System_Func_bool__TypeInfo, v4);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__0__, v5);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__1__, v6);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__2__, v7);
+    sub_1C3B764(&MyRoomBackGroundManager___c__DisplayClass28_0_TypeInfo, v8);
+    sub_1C3B764(&UnityEngine_WaitWhile_TypeInfo, v9);
+    byte_4C1D0FD = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -1172,34 +1172,34 @@ bool __fastcall MyRoomBackGroundManager__LoadBackGround_d__28__MoveNext(
     return 0;
   this->fields.__1__state = -1;
   _4__this = this->fields.__4__this;
-  v12 = sub_1C2E378(MyRoomBackGroundManager___c__DisplayClass28_0_TypeInfo);
+  v12 = sub_1C3B9B0(MyRoomBackGroundManager___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_16;
   *(_QWORD *)(v12 + 24) = this->fields.__4__this;
-  sub_1C2E0D0(v12 + 24);
+  sub_1C3B708(v12 + 24);
   *(_BYTE *)(v12 + 16) = 1;
-  v15 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(
     v15,
     (Il2CppObject *)v12,
     Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__0__,
     0LL);
   *(_QWORD *)(v12 + 40) = v15;
-  backTexture = (UnityEngine_Component_o *)sub_1C2E0D0(v12 + 40);
+  backTexture = (UnityEngine_Component_o *)sub_1C3B708(v12 + 40);
   if ( !_4__this
     || (backTexture = (UnityEngine_Component_o *)_4__this->fields.backTexture) == 0LL
     || (backTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(backTexture, 0LL)) == 0LL
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)backTexture, 1, 0LL),
         *(_QWORD *)(v12 + 32) = MyRoomBackGroundManager__GetBgImgName(v16, v17),
-        sub_1C2E0D0(v12 + 32),
+        sub_1C3B708(v12 + 32),
         (backTexture = (UnityEngine_Component_o *)_4__this->fields.backTexture) == 0LL) )
   {
 LABEL_16:
-    sub_1C2E388(backTexture, v14);
+    sub_1C3B9C0(backTexture, v14);
   }
   UITexture__set_uvRect((UITexture_o *)backTexture, _4__this->fields.DISP_RECT, 0LL);
-  v18 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(
     v18,
     (Il2CppObject *)v12,
@@ -1208,17 +1208,17 @@ LABEL_16:
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__LoadOutGameAtlas(v18, 0LL);
-  v19 = (System_Func_bool__o *)sub_1C2E378(System_Func_bool__TypeInfo);
+  v19 = (System_Func_bool__o *)sub_1C3B9B0(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v19,
     (Il2CppObject *)v12,
     Method_MyRoomBackGroundManager___c__DisplayClass28_0__LoadBackGround_b__2__,
     0LL);
-  v20 = (UnityEngine_WaitWhile_o *)sub_1C2E378(UnityEngine_WaitWhile_TypeInfo);
+  v20 = (UnityEngine_WaitWhile_o *)sub_1C3B9B0(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v20, v19, 0LL);
   this->fields.__2__current = (Il2CppObject *)v20;
   p__2__current = &this->fields.__2__current;
-  sub_1C2E0D0(p__2__current);
+  sub_1C3B708(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -1241,11 +1241,11 @@ void __fastcall __noreturn MyRoomBackGroundManager__LoadBackGround_d__28__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_MyRoomBackGroundManager__LoadBackGround_d__28_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_MyRoomBackGroundManager__LoadBackGround_d__28_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -1305,17 +1305,17 @@ bool __fastcall MyRoomBackGroundManager__LoadBackObject_d__29__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4BF897F & 1) == 0 )
+  if ( (byte_4C1D0FF & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    sub_1C2E12C(&MyRoomBackGroundManager_BackObject_TypeInfo, v3);
-    sub_1C2E12C(&System_Func_bool__TypeInfo, v4);
-    sub_1C2E12C(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass29_0__LoadBackObject_b__0__, v6);
-    sub_1C2E12C(&Method_MyRoomBackGroundManager___c__DisplayClass29_0__LoadBackObject_b__1__, v7);
-    sub_1C2E12C(&MyRoomBackGroundManager___c__DisplayClass29_0_TypeInfo, v8);
-    this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C2E12C(&UnityEngine_WaitWhile_TypeInfo, v9);
-    byte_4BF897F = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    sub_1C3B764(&MyRoomBackGroundManager_BackObject_TypeInfo, v3);
+    sub_1C3B764(&System_Func_bool__TypeInfo, v4);
+    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, v5);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass29_0__LoadBackObject_b__0__, v6);
+    sub_1C3B764(&Method_MyRoomBackGroundManager___c__DisplayClass29_0__LoadBackObject_b__1__, v7);
+    sub_1C3B764(&MyRoomBackGroundManager___c__DisplayClass29_0_TypeInfo, v8);
+    this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C3B764(&UnityEngine_WaitWhile_TypeInfo, v9);
+    byte_4C1D0FF = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1335,12 +1335,12 @@ bool __fastcall MyRoomBackGroundManager__LoadBackObject_d__29__MoveNext(
   if ( _1__state )
     return 0;
   v2->fields.__1__state = -1;
-  v12 = sub_1C2E378(MyRoomBackGroundManager___c__DisplayClass29_0_TypeInfo);
+  v12 = sub_1C3B9B0(MyRoomBackGroundManager___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_22;
   *(_QWORD *)(v12 + 16) = v2->fields.__4__this;
-  this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C2E0D0(v12 + 16);
+  this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C3B708(v12 + 16);
   *(_BYTE *)(v12 + 24) = 0;
   if ( !_4__this )
     goto LABEL_22;
@@ -1348,11 +1348,11 @@ bool __fastcall MyRoomBackGroundManager__LoadBackObject_d__29__MoveNext(
   if ( BackObjectId >= 1 )
   {
     v14 = BackObjectId;
-    v15 = (MyRoomBackGroundManager_BackObject_o *)sub_1C2E378(MyRoomBackGroundManager_BackObject_TypeInfo);
+    v15 = (MyRoomBackGroundManager_BackObject_o *)sub_1C3B9B0(MyRoomBackGroundManager_BackObject_TypeInfo);
     MyRoomBackGroundManager_BackObject___ctor(v15, v14, v16);
     _4__this->fields.backObject = v15;
     p_backObject = &_4__this->fields.backObject;
-    this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C2E0D0(p_backObject);
+    this = (MyRoomBackGroundManager__LoadBackObject_d__29_o *)sub_1C3B708(p_backObject);
     if ( !*p_backObject )
       goto LABEL_22;
     assetName = (*p_backObject)->fields.assetName;
@@ -1365,7 +1365,7 @@ bool __fastcall MyRoomBackGroundManager__LoadBackObject_d__29__MoveNext(
       if ( *p_backObject )
       {
         v19 = (*p_backObject)->fields.assetName;
-        v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2E378(AssetLoader_LoadEndDataHandler_TypeInfo);
+        v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3B9B0(AssetLoader_LoadEndDataHandler_TypeInfo);
         AssetLoader_LoadEndDataHandler___ctor(
           v20,
           (Il2CppObject *)v12,
@@ -1377,23 +1377,23 @@ bool __fastcall MyRoomBackGroundManager__LoadBackObject_d__29__MoveNext(
         goto LABEL_21;
       }
 LABEL_22:
-      sub_1C2E388(this, method);
+      sub_1C3B9C0(this, method);
     }
     *p_backObject = 0LL;
-    sub_1C2E0D0(p_backObject);
+    sub_1C3B708(p_backObject);
   }
 LABEL_21:
-  v23 = (System_Func_bool__o *)sub_1C2E378(System_Func_bool__TypeInfo);
+  v23 = (System_Func_bool__o *)sub_1C3B9B0(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v23,
     (Il2CppObject *)v12,
     Method_MyRoomBackGroundManager___c__DisplayClass29_0__LoadBackObject_b__1__,
     0LL);
-  v24 = (UnityEngine_WaitWhile_o *)sub_1C2E378(UnityEngine_WaitWhile_TypeInfo);
+  v24 = (UnityEngine_WaitWhile_o *)sub_1C3B9B0(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v24, v23, 0LL);
   v2->fields.__2__current = (Il2CppObject *)v24;
   p__2__current = &v2->fields.__2__current;
-  sub_1C2E0D0(p__2__current);
+  sub_1C3B708(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -1416,11 +1416,11 @@ void __fastcall __noreturn MyRoomBackGroundManager__LoadBackObject_d__29__System
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_MyRoomBackGroundManager__LoadBackObject_d__29_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_MyRoomBackGroundManager__LoadBackObject_d__29_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -1508,12 +1508,12 @@ void __fastcall MyRoomBackGroundManager___c__DisplayClass28_0___LoadBackGround_b
   int v15; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_4BF897B & 1) == 0 )
+  if ( (byte_4C1D0FB & 1) == 0 )
   {
-    sub_1C2E12C(&FSUtility_TypeInfo, method);
-    sub_1C2E12C(&int_TypeInfo, v3);
-    this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)sub_1C2E12C(&StringLiteral_3166/*"Back/back{0}"*/, v4);
-    byte_4BF897B = 1;
+    sub_1C3B764(&FSUtility_TypeInfo, method);
+    sub_1C3B764(&int_TypeInfo, v3);
+    this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)sub_1C3B764(&StringLiteral_3166/*"BigInteger cannot represent infinity."*/, v4);
+    byte_4C1D0FB = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1531,12 +1531,12 @@ void __fastcall MyRoomBackGroundManager___c__DisplayClass28_0___LoadBackGround_b
     goto LABEL_9;
   v15 = 10400;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v7, v8, v9);
-  v2->fields.imgName = System_String__Format((System_String_o *)StringLiteral_3166/*"Back/back{0}"*/, v10, 0LL);
-  this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)sub_1C2E0D0(&v2->fields.imgName);
+  v2->fields.imgName = System_String__Format((System_String_o *)StringLiteral_3166/*"BigInteger cannot represent infinity."*/, v10, 0LL);
+  this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)sub_1C3B708(&v2->fields.imgName);
   v11 = v2->fields.__4__this;
   if ( !v11 || (this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)v11->fields.backTexture) == 0LL )
 LABEL_13:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   this = (MyRoomBackGroundManager___c__DisplayClass28_0_o *)ExUITexture__SetAssetImage(
                                                               (ExUITexture_o *)this,
                                                               v2->fields.imgName,
@@ -1578,30 +1578,30 @@ void __fastcall MyRoomBackGroundManager___c__DisplayClass29_0___LoadBackObject_b
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  Il2CppObject *Object_object__50017172; // x20
+  Il2CppObject *Object_object__50142412; // x20
   __int64 v9; // x1
   UnityEngine_Component_o *_4__this; // x0
   UnityEngine_Transform_o *transform; // x21
   UnityEngine_Component_o *v12; // x20
   struct MyRoomBackGroundManager_o *v13; // x8
 
-  if ( (byte_4BF897C & 1) == 0 )
+  if ( (byte_4C1D0FC & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, assetData);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject____77847040, v5);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    sub_1C2E12C(&StringLiteral_9385/*"MyRoomBackObj"*/, v7);
-    byte_4BF897C = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, assetData);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject____77992824, v5);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    sub_1C3B764(&StringLiteral_9387/*"OCTET STRING"*/, v7);
+    byte_4C1D0FC = 1;
   }
   if ( assetData )
   {
-    Object_object__50017172 = AssetData__GetObject_object__50017172(
+    Object_object__50142412 = AssetData__GetObject_object__50142412(
                                 assetData,
-                                (System_String_o *)StringLiteral_9385/*"MyRoomBackObj"*/,
-                                (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+                                (System_String_o *)StringLiteral_9387/*"OCTET STRING"*/,
+                                (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__50017172, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__50142412, 0LL, 0LL) )
     {
       _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
       if ( !_4__this )
@@ -1609,10 +1609,10 @@ void __fastcall MyRoomBackGroundManager___c__DisplayClass29_0___LoadBackObject_b
       transform = UnityEngine_Component__get_transform(_4__this, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      _4__this = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__50692032(
-                                              Object_object__50017172,
+      _4__this = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__50818788(
+                                              Object_object__50142412,
                                               transform,
-                                              (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_GameObject____77847040);
+                                              (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_GameObject____77992824);
       if ( !_4__this
         || (v12 = _4__this,
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)_4__this, 1, 0LL),
@@ -1620,10 +1620,10 @@ void __fastcall MyRoomBackGroundManager___c__DisplayClass29_0___LoadBackObject_b
         || (_4__this = (UnityEngine_Component_o *)v13->fields.backObject) == 0LL )
       {
 LABEL_15:
-        sub_1C2E388(_4__this, v9);
+        sub_1C3B9C0(_4__this, v9);
       }
       _4__this[1].monitor = v12;
-      sub_1C2E0D0(&_4__this[1].monitor);
+      sub_1C3B708(&_4__this[1].monitor);
     }
   }
   this->fields.wait = 0;

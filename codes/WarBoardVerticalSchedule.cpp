@@ -9,11 +9,11 @@ void __fastcall WarBoardVerticalSchedule___ctor(WarBoardVerticalSchedule_o *this
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, method);
   this->fields.tasks = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.tasks, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tasks, 0LL, v3, v4, v5, v6, v7, v8);
 }
 
 
-void __fastcall WarBoardVerticalSchedule___ctor_36945600(
+void __fastcall WarBoardVerticalSchedule___ctor_37051276(
         WarBoardVerticalSchedule_o *this,
         WarBoardTaskBase_array *taskBases,
         const MethodInfo *method)
@@ -27,11 +27,11 @@ void __fastcall WarBoardVerticalSchedule___ctor_36945600(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   this->fields.tasks = taskBases;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.tasks, (int64_t)taskBases, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tasks, (int64_t)taskBases, v5, v6, v7, v8, v9, v10);
 }
 
 
-void __fastcall WarBoardVerticalSchedule___ctor_36945644(
+void __fastcall WarBoardVerticalSchedule___ctor_37051320(
         WarBoardVerticalSchedule_o *this,
         System_Collections_Generic_List_WarBoardTaskBase__o *taskBases,
         const MethodInfo *method)
@@ -46,19 +46,19 @@ void __fastcall WarBoardVerticalSchedule___ctor_36945644(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BFB57C & 1) == 0 )
+  if ( (byte_4C1FD83 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
-    byte_4BFB57C = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
+    byte_4C1FD83 = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   if ( !taskBases )
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   v7 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   this->fields.tasks = (struct WarBoardTaskBase_array *)v7;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.tasks, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tasks, (int64_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -74,16 +74,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardVerticalSchedule__Execute(
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BFB57E & 1) == 0 )
+  if ( (byte_4C1FD85 & 1) == 0 )
   {
-    sub_1C2E12C(&WarBoardVerticalSchedule__Execute_d__7_TypeInfo, method);
-    byte_4BFB57E = 1;
+    sub_1C3B764(&WarBoardVerticalSchedule__Execute_d__7_TypeInfo, method);
+    byte_4C1FD85 = 1;
   }
-  v3 = sub_1C2E378(WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
+  v3 = sub_1C3B9B0(WarBoardVerticalSchedule__Execute_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -129,7 +129,7 @@ void __fastcall WarBoardVerticalSchedule__OnStart(WarBoardVerticalSchedule_o *th
       return;
     }
 LABEL_8:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
 }
 
@@ -149,20 +149,20 @@ void __fastcall WarBoardVerticalSchedule__SetTask(
   PartyListViewItem_o *v11; // x7
 
   v4 = this;
-  if ( (byte_4BFB57D & 1) == 0 )
+  if ( (byte_4C1FD84 & 1) == 0 )
   {
-    this = (WarBoardVerticalSchedule_o *)sub_1C2E12C(
+    this = (WarBoardVerticalSchedule_o *)sub_1C3B764(
                                            &Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__,
                                            taskBases);
-    byte_4BFB57D = 1;
+    byte_4C1FD84 = 1;
   }
   if ( !taskBases )
-    sub_1C2E388(this, taskBases);
+    sub_1C3B9C0(this, taskBases);
   v5 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   v4->fields.tasks = (struct WarBoardTaskBase_array *)v5;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->fields.tasks, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v4->fields.tasks, (int64_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -277,18 +277,18 @@ bool __fastcall WarBoardVerticalSchedule__Execute_d__7__MoveNext(
   __int64 v96; // x0
 
   v2 = this;
-  if ( (byte_4BFB580 & 1) == 0 )
+  if ( (byte_4C1FD87 & 1) == 0 )
   {
-    sub_1C2E12C(&bool___TypeInfo, method);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_All_bool___, v3);
-    sub_1C2E12C(&System_Func_bool__bool__TypeInfo, v4);
-    sub_1C2E12C(&System_Collections_IEnumerator___TypeInfo, v5);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v6);
-    sub_1C2E12C(&object___TypeInfo, v7);
-    sub_1C2E12C(&Method_WarBoardVerticalSchedule___c__Execute_b__7_0__, v8);
-    sub_1C2E12C(&WarBoardVerticalSchedule___c_TypeInfo, v9);
-    this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C2E12C(&WarBoardManager_TypeInfo, v10);
-    byte_4BFB580 = 1;
+    sub_1C3B764(&bool___TypeInfo, method);
+    sub_1C3B764(&Method_System_Linq_Enumerable_All_bool___, v3);
+    sub_1C3B764(&System_Func_bool__bool__TypeInfo, v4);
+    sub_1C3B764(&System_Collections_IEnumerator___TypeInfo, v5);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v6);
+    sub_1C3B764(&object___TypeInfo, v7);
+    sub_1C3B764(&Method_WarBoardVerticalSchedule___c__Execute_b__7_0__, v8);
+    sub_1C3B764(&WarBoardVerticalSchedule___c_TypeInfo, v9);
+    this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C3B764(&WarBoardManager_TypeInfo, v10);
+    byte_4C1FD87 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -308,16 +308,16 @@ bool __fastcall WarBoardVerticalSchedule__Execute_d__7__MoveNext(
       goto LABEL_72;
     max_length = tasks->max_length;
     v2->fields._count_5__2 = max_length;
-    v15 = sub_1C2E1D4(bool___TypeInfo, max_length);
+    v15 = sub_1C3B80C(bool___TypeInfo, max_length);
     v2->fields._endFlags_5__3 = (struct System_Boolean_array *)v15;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._endFlags_5__3, v15, v16, v17, v18, v19, v20, v21);
-    v22 = sub_1C2E1D4(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._endFlags_5__3, v15, v16, v17, v18, v19, v20, v21);
+    v22 = sub_1C3B80C(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._currentObjects_5__4 = (struct System_Object_array *)v22;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._currentObjects_5__4, v22, v23, v24, v25, v26, v27, v28);
-    v29 = sub_1C2E1D4(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._currentObjects_5__4, v22, v23, v24, v25, v26, v27, v28);
+    v29 = sub_1C3B80C(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._executes_5__5 = (struct System_Collections_IEnumerator_array *)v29;
     p_executes_5__5 = (unsigned int **)&v2->fields._executes_5__5;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._executes_5__5, v29, v31, v32, v33, v34, v35, v36);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._executes_5__5, v29, v31, v32, v33, v34, v35, v36);
     if ( v2->fields._count_5__2 >= 1 )
     {
       v43 = 0LL;
@@ -330,7 +330,7 @@ bool __fastcall WarBoardVerticalSchedule__Execute_d__7__MoveNext(
         if ( v43 >= v45[6] )
           goto LABEL_73;
         *(_QWORD *)&v45[v44] = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v45[v44], 0LL, v37, v38, v39, v40, v41, v42);
+        sub_1C3B708((PartyOrganizationUtility_o *)&v45[v44], 0LL, v37, v38, v39, v40, v41, v42);
         v46 = _4__this->fields.tasks;
         if ( !v46 )
           break;
@@ -348,19 +348,19 @@ bool __fastcall WarBoardVerticalSchedule__Execute_d__7__MoveNext(
           v54 = this;
           if ( this )
           {
-            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C2E268(this, *(_QWORD *)(*(_QWORD *)v47 + 64LL));
+            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C3B8A0(this, *(_QWORD *)(*(_QWORD *)v47 + 64LL));
             if ( !this )
             {
 LABEL_74:
-              v96 = sub_1C2E3AC();
-              sub_1C2E254(v96, 0LL);
+              v96 = sub_1C3B9E4();
+              sub_1C3B88C(v96, 0LL);
             }
           }
           if ( v43 >= v47[6] )
 LABEL_73:
-            sub_1C2E390(this, method);
+            sub_1C3B9C8(this, method);
           *(_QWORD *)&v47[v44] = v54;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v47[v44], (int64_t)v54, v48, v49, v50, v51, v52, v53);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v47[v44], (int64_t)v54, v48, v49, v50, v51, v52, v53);
         }
         ++v43;
         v44 += 2LL;
@@ -368,7 +368,7 @@ LABEL_73:
           goto LABEL_22;
       }
 LABEL_72:
-      sub_1C2E388(this, method);
+      sub_1C3B9C0(this, method);
     }
   }
 LABEL_22:
@@ -388,16 +388,16 @@ LABEL_22:
       v56 = WarBoardVerticalSchedule___c_TypeInfo;
     }
     v58 = (Il2CppObject *)v56->static_fields->__9;
-    _9__7_0 = (System_Func_bool__bool__o *)sub_1C2E378(System_Func_bool__bool__TypeInfo);
+    _9__7_0 = (System_Func_bool__bool__o *)sub_1C3B9B0(System_Func_bool__bool__TypeInfo);
     System_Func_bool__bool____ctor(_9__7_0, v58, Method_WarBoardVerticalSchedule___c__Execute_b__7_0__, 0LL);
     static_fields = WarBoardVerticalSchedule___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = _9__7_0;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->__9__7_0, (int64_t)_9__7_0, v60, v61, v62, v63, v64, v65);
+    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__7_0, (int64_t)_9__7_0, v60, v61, v62, v63, v64, v65);
   }
   this = (WarBoardVerticalSchedule__Execute_d__7_o *)System_Linq_Enumerable__All_bool_(
                                                        endFlags_5__3,
                                                        (System_Func_TSource__bool__o *)_9__7_0,
-                                                       (const MethodInfo_2FDB474 *)Method_System_Linq_Enumerable_All_bool___);
+                                                       (const MethodInfo_2FF9E48 *)Method_System_Linq_Enumerable_All_bool___);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0;
   count_5__2 = v2->fields._count_5__2;
@@ -446,7 +446,7 @@ LABEL_22:
           else
           {
 LABEL_45:
-            p_method = sub_1C8010C(v78, System_Collections_IEnumerator_TypeInfo, 1LL);
+            p_method = sub_1C8D744(v78, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
           this = (WarBoardVerticalSchedule__Execute_d__7_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
                                                                v78,
@@ -456,7 +456,7 @@ LABEL_45:
           v86 = this;
           if ( this )
           {
-            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C2E268(
+            this = (WarBoardVerticalSchedule__Execute_d__7_o *)sub_1C3B8A0(
                                                                  this,
                                                                  *(_QWORD *)(*(_QWORD *)currentObjects_5__4 + 64LL));
             if ( !this )
@@ -481,7 +481,7 @@ LABEL_45:
           v85[4] = 0LL;
           v87 = (PartyOrganizationUtility_o *)(v85 + 4);
         }
-        sub_1C2E0D0(v87, (int64_t)v86, v66, v67, v68, v69, v70, v71);
+        sub_1C3B708(v87, (int64_t)v86, v66, v67, v68, v69, v70, v71);
         v89 = v2->fields._endFlags_5__3;
         if ( !v89 )
           goto LABEL_72;
@@ -534,7 +534,7 @@ LABEL_45:
   v94 = (int64_t)v2->fields._currentObjects_5__4;
   v2->fields.__2__current = (Il2CppObject *)v94;
   p__2__current = (PartyOrganizationUtility_o *)&v2->fields.__2__current;
-  sub_1C2E0D0(p__2__current, v94, v66, v67, v68, v69, v70, v71);
+  sub_1C3B708(p__2__current, v94, v66, v67, v68, v69, v70, v71);
   result = 1;
   *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
   return result;
@@ -557,11 +557,11 @@ void __fastcall __noreturn WarBoardVerticalSchedule__Execute_d__7__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_WarBoardVerticalSchedule__Execute_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_WarBoardVerticalSchedule__Execute_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -592,15 +592,15 @@ void __fastcall WarBoardVerticalSchedule___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFB57F & 1) == 0 )
+  if ( (byte_4C1FD86 & 1) == 0 )
   {
-    sub_1C2E12C(&WarBoardVerticalSchedule___c_TypeInfo, v1);
-    byte_4BFB57F = 1;
+    sub_1C3B764(&WarBoardVerticalSchedule___c_TypeInfo, v1);
+    byte_4C1FD86 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(WarBoardVerticalSchedule___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(WarBoardVerticalSchedule___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardVerticalSchedule___c_TypeInfo->static_fields->__9 = (struct WarBoardVerticalSchedule___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)WarBoardVerticalSchedule___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,

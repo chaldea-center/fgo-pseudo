@@ -20,20 +20,20 @@ UnityEngine_GameObject_o *__fastcall FGOActionUtil__getEffectObject(
   __int64 v14; // x1
   bool v15; // w8
 
-  if ( (byte_4BFEF83 & 1) == 0 )
+  if ( (byte_4C237AD & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
-    sub_1C2E12C(&UnityEngine_GameObject_TypeInfo, v7);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C2E12C(&StringLiteral_3244/*"Battle/CommonEffects/"*/, v9);
-    sub_1C2E12C(&StringLiteral_19204/*"effect/"*/, v10);
-    byte_4BFEF83 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_BattleActorControl___, name);
+    sub_1C3B764(&UnityEngine_GameObject_TypeInfo, v7);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C3B764(&StringLiteral_3244/*"Buffer too small. count/offset wrong."*/, v9);
+    sub_1C3B764(&StringLiteral_19238/*"formation_limit"*/, v10);
+    byte_4C237AD = 1;
   }
   if ( folder == 2 )
   {
-    v11 = &StringLiteral_19204/*"effect/"*/;
+    v11 = &StringLiteral_19238/*"formation_limit"*/;
 LABEL_8:
-    v12 = System_String__Concat_63235584((System_String_o *)*v11, name, 0LL);
+    v12 = System_String__Concat_63368612((System_String_o *)*v11, name, 0LL);
     result = (UnityEngine_GameObject_o *)UnityEngine_Resources__Load(v12, 0LL);
     if ( result )
     {
@@ -46,7 +46,7 @@ LABEL_8:
   {
     if ( folder )
       return 0LL;
-    v11 = &StringLiteral_3244/*"Battle/CommonEffects/"*/;
+    v11 = &StringLiteral_3244/*"Buffer too small. count/offset wrong."*/;
     goto LABEL_8;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,9 +58,9 @@ LABEL_8:
     if ( !actorObject
       || (result = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  actorObject,
-                                                 (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
+                                                 (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_BattleActorControl___)) == 0LL )
     {
-      sub_1C2E388(result, v14);
+      sub_1C3B9C0(result, v14);
     }
     return BattleActorControl__getActorEffect((BattleActorControl_o *)result, name, 0LL);
   }

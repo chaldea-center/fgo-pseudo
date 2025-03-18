@@ -59,26 +59,26 @@ void __fastcall BattleCameraHitJudgment___ctor(BattleCameraHitJudgment_o *this, 
   __int64 v59; // d0
   float v60; // s1
 
-  if ( (byte_4BFFD3A & 1) == 0 )
+  if ( (byte_4C24568 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer___ctor__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action___ctor__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds___ctor__, v5);
-    sub_1C2E12C(&System_Collections_Generic_Dictionary_MeshCollider__Action__TypeInfo, v6);
-    sub_1C2E12C(&System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__TypeInfo, v7);
-    sub_1C2E12C(&System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo, v8);
-    sub_1C2E12C(&System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__TypeInfo, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__, v10);
-    sub_1C2E12C(&System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo, v11);
-    byte_4BFFD3A = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer___ctor__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action___ctor__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds___ctor__, v5);
+    sub_1C3B764(&System_Collections_Generic_Dictionary_MeshCollider__Action__TypeInfo, v6);
+    sub_1C3B764(&System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__TypeInfo, v7);
+    sub_1C3B764(&System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo, v8);
+    sub_1C3B764(&System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__TypeInfo, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__, v10);
+    sub_1C3B764(&System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo, v11);
+    byte_4C24568 = 1;
   }
-  v12 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C2E378(System_Collections_Generic_Dictionary_MeshCollider__Action__TypeInfo);
+  v12 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_MeshCollider__Action__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v12,
-    (const MethodInfo_33351C4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action___ctor__);
+    (const MethodInfo_3354DB8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action___ctor__);
   this->fields.targetColliderAction = (struct System_Collections_Generic_Dictionary_MeshCollider__Action__o *)v12;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.targetColliderAction,
     (int64_t)v12,
     v13,
@@ -87,18 +87,18 @@ void __fastcall BattleCameraHitJudgment___ctor(BattleCameraHitJudgment_o *this, 
     v16,
     v17,
     v18);
-  v19 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C2E378(System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__TypeInfo);
+  v19 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v19,
-    (const MethodInfo_33351C4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer___ctor__);
+    (const MethodInfo_3354DB8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer___ctor__);
   this->fields.targetSkinnedMesh = (struct System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__o *)v19;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetSkinnedMesh, (int64_t)v19, v20, v21, v22, v23, v24, v25);
-  v26 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C2E378(System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetSkinnedMesh, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  v26 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v26,
-    (const MethodInfo_332C2D8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__);
+    (const MethodInfo_334BECC *)Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__);
   this->fields.targetColliderUIColliderIndex = (struct System_Collections_Generic_Dictionary_MeshCollider__int__o *)v26;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.targetColliderUIColliderIndex,
     (int64_t)v26,
     v27,
@@ -107,18 +107,18 @@ void __fastcall BattleCameraHitJudgment___ctor(BattleCameraHitJudgment_o *this, 
     v30,
     v31,
     v32);
-  v33 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C2E378(System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo);
+  v33 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_MeshCollider__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v33,
-    (const MethodInfo_332C2D8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__);
+    (const MethodInfo_334BECC *)Method_System_Collections_Generic_Dictionary_MeshCollider__int___ctor__);
   this->fields.targetSvtId = (struct System_Collections_Generic_Dictionary_MeshCollider__int__o *)v33;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetSvtId, (int64_t)v33, v34, v35, v36, v37, v38, v39);
-  v40 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetSvtId, (int64_t)v33, v34, v35, v36, v37, v38, v39);
+  v40 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_SkinnedMeshRenderer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v40,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer___ctor__);
   this->fields.updatedSkinnedMeshs = (struct System_Collections_Generic_List_SkinnedMeshRenderer__o *)v40;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.updatedSkinnedMeshs,
     (int64_t)v40,
     v41,
@@ -127,12 +127,12 @@ void __fastcall BattleCameraHitJudgment___ctor(BattleCameraHitJudgment_o *this, 
     v44,
     v45,
     v46);
-  v47 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C2E378(System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__TypeInfo);
+  v47 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__TypeInfo);
   System_Collections_Generic_Dictionary_object__Bounds____ctor(
     v47,
-    (const MethodInfo_3323200 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds___ctor__);
+    (const MethodInfo_3342DF4 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds___ctor__);
   this->fields.prevSkinnedMeshBounds = (struct System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__o *)v47;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.prevSkinnedMeshBounds,
     (int64_t)v47,
     v48,
@@ -141,21 +141,21 @@ void __fastcall BattleCameraHitJudgment___ctor(BattleCameraHitJudgment_o *this, 
     v51,
     v52,
     v53);
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v54);
-    byte_4BF7D91 = 1;
+    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v54);
+    byte_4C1C511 = 1;
   }
   v55 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.enemyInputRootDefaultPosition.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.enemyInputRootDefaultPosition.fields.z = z;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v54);
+    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v54);
     v55 = UnityEngine_Vector3_TypeInfo;
-    byte_4BF7D96 = 1;
+    byte_4C1C516 = 1;
   }
   v58 = v55->static_fields;
   v59 = *(_QWORD *)&v58->oneVector.fields.x;
@@ -184,16 +184,16 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
   __int64 v16; // x1
   System_Collections_Generic_Dictionary_object__object__o *targetColliderAction; // x0
 
-  if ( (byte_4BFFD34 & 1) == 0 )
+  if ( (byte_4C24562 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Add__, collider);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Add__, v11);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Add__, v12);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__, v13);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__, v14);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__, v15);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__, v16);
-    byte_4BFFD34 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Add__, collider);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Add__, v11);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Add__, v12);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__, v13);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__, v14);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__, v15);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__, v16);
+    byte_4C24562 = 1;
   }
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderAction;
   if ( !targetColliderAction )
@@ -201,7 +201,7 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          targetColliderAction,
          (Il2CppObject *)collider,
-         (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__) )
+         (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__) )
   {
     targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderAction;
     if ( !targetColliderAction )
@@ -209,21 +209,21 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
     System_Collections_Generic_Dictionary_object__object___Remove(
       targetColliderAction,
       (Il2CppObject *)collider,
-      (const MethodInfo_3337070 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__);
+      (const MethodInfo_3356C64 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__);
     targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
     if ( !targetColliderAction )
       goto LABEL_15;
     System_Collections_Generic_Dictionary_object__object___Remove(
       targetColliderAction,
       (Il2CppObject *)collider,
-      (const MethodInfo_3337070 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__);
+      (const MethodInfo_3356C64 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__);
     targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSvtId;
     if ( !targetColliderAction )
       goto LABEL_15;
     System_Collections_Generic_Dictionary_object__int___Remove(
       (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
       (Il2CppObject *)collider,
-      (const MethodInfo_332E138 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
+      (const MethodInfo_334DD2C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
   }
   if ( clickAction )
   {
@@ -234,7 +234,7 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
         targetColliderAction,
         (Il2CppObject *)collider,
         (Il2CppObject *)clickAction,
-        (const MethodInfo_3335B74 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Add__);
+        (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Add__);
       targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
       if ( targetColliderAction )
       {
@@ -242,7 +242,7 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
           targetColliderAction,
           (Il2CppObject *)collider,
           (Il2CppObject *)skinnedMesh,
-          (const MethodInfo_3335B74 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Add__);
+          (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Add__);
         targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSvtId;
         if ( targetColliderAction )
         {
@@ -250,13 +250,13 @@ void __fastcall BattleCameraHitJudgment__AddCollider(
             (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
             (Il2CppObject *)collider,
             svtId,
-            (const MethodInfo_332CC8C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Add__);
+            (const MethodInfo_334C880 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Add__);
           return;
         }
       }
     }
 LABEL_15:
-    sub_1C2E388(targetColliderAction, collider);
+    sub_1C3B9C0(targetColliderAction, collider);
   }
 }
 
@@ -269,19 +269,19 @@ void __fastcall BattleCameraHitJudgment__AddUiCollider(
 {
   struct System_Collections_Generic_Dictionary_MeshCollider__int__o *targetColliderUIColliderIndex; // x0
 
-  if ( (byte_4BFFD35 & 1) == 0 )
+  if ( (byte_4C24563 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__TryAdd__, collider);
-    byte_4BFFD35 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__TryAdd__, collider);
+    byte_4C24563 = 1;
   }
   targetColliderUIColliderIndex = this->fields.targetColliderUIColliderIndex;
   if ( !targetColliderUIColliderIndex )
-    sub_1C2E388(0LL, collider);
+    sub_1C3B9C0(0LL, collider);
   System_Collections_Generic_Dictionary_object__int___TryAdd(
     (System_Collections_Generic_Dictionary_object__int__o *)targetColliderUIColliderIndex,
     (Il2CppObject *)collider,
     uiColliderIndex,
-    (const MethodInfo_332E4B4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__TryAdd__);
+    (const MethodInfo_334E0A8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__TryAdd__);
 }
 
 
@@ -297,7 +297,7 @@ void __fastcall BattleCameraHitJudgment__Awake(BattleCameraHitJudgment_o *this, 
         this->fields.enemyInputRootDefaultPosition = localPosition,
         !enemyInputRoot) )
   {
-    sub_1C2E388(enemyInputRoot, method);
+    sub_1C3B9C0(enemyInputRoot, method);
   }
   this->fields.enemyInputRootDefaultScale = UnityEngine_Transform__get_localScale(enemyInputRoot, 0LL);
 }
@@ -373,22 +373,22 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
   UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v69; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFFD38 & 1) == 0 )
+  if ( (byte_4C24566 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Array_FindIndex_int___, meshCollider);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__ContainsKey__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__get_Item__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__set_Item__, v10);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Add__, v11);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Contains__, v12);
-    sub_1C2E12C(&System_Predicate_int__TypeInfo, v13);
-    sub_1C2E12C(&Method_BattleCameraHitJudgment___c__DisplayClass30_0__BakeMesh_b__0__, v14);
-    sub_1C2E12C(&BattleCameraHitJudgment___c__DisplayClass30_0_TypeInfo, v15);
-    sub_1C2E12C(&StringLiteral_16897/*"_xscale"*/, v16);
-    byte_4BFFD38 = 1;
+    sub_1C3B764(&Method_System_Array_FindIndex_int___, meshCollider);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__ContainsKey__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__get_Item__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__set_Item__, v10);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Add__, v11);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Contains__, v12);
+    sub_1C3B764(&System_Predicate_int__TypeInfo, v13);
+    sub_1C3B764(&Method_BattleCameraHitJudgment___c__DisplayClass30_0__BakeMesh_b__0__, v14);
+    sub_1C3B764(&BattleCameraHitJudgment___c__DisplayClass30_0_TypeInfo, v15);
+    sub_1C3B764(&StringLiteral_16927/*"bit_result_grail_02"*/, v16);
+    byte_4C24566 = 1;
   }
-  v17 = sub_1C2E378(BattleCameraHitJudgment___c__DisplayClass30_0_TypeInfo);
+  v17 = sub_1C3B9B0(BattleCameraHitJudgment___c__DisplayClass30_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   updatedSkinnedMeshs = (__int64)this->fields.updatedSkinnedMeshs;
   if ( !updatedSkinnedMeshs )
@@ -396,7 +396,7 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
   if ( System_Collections_Generic_List_object___Contains(
          (System_Collections_Generic_List_object__o *)updatedSkinnedMeshs,
          (Il2CppObject *)skinnedMesh,
-         (const MethodInfo_366BC3C *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__Contains__) )
+         (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__Contains__) )
   {
     return;
   }
@@ -406,7 +406,7 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
   updatedSkinnedMeshs = System_Collections_Generic_Dictionary_object__Bounds___ContainsKey(
                           (System_Collections_Generic_Dictionary_TKey__TValue__o *)updatedSkinnedMeshs,
                           (Il2CppObject *)skinnedMesh,
-                          (const MethodInfo_3323F30 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__ContainsKey__);
+                          (const MethodInfo_3343B24 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__ContainsKey__);
   if ( (updatedSkinnedMeshs & 1) == 0 )
     goto LABEL_52;
   if ( !skinnedMesh )
@@ -425,14 +425,14 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
     &v66,
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)updatedSkinnedMeshs,
     (Il2CppObject *)skinnedMesh,
-    (const MethodInfo_3323B78 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__);
+    (const MethodInfo_334376C *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__);
   v23 = *(_QWORD *)&v66.fields.m_Center.fields.x;
   v24 = *(_QWORD *)&v66.fields.m_Center.fields.z;
   v25 = *(_QWORD *)&v66.fields.m_Extents.fields.y;
-  if ( !byte_4BF7D8F )
+  if ( !byte_4C1C50F )
   {
-    sub_1C2E12C(&System_Math_TypeInfo, v22);
-    byte_4BF7D8F = 1;
+    sub_1C3B764(&System_Math_TypeInfo, v22);
+    byte_4C1C50F = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -455,15 +455,15 @@ void __fastcall BattleCameraHitJudgment__BakeMesh(
     &v66,
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)updatedSkinnedMeshs,
     (Il2CppObject *)skinnedMesh,
-    (const MethodInfo_3323B78 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__);
+    (const MethodInfo_334376C *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__get_Item__);
   v37 = v66.fields.m_Center.fields.x;
   v38.n64_u64[0] = *(unsigned __int64 *)&v66.fields.m_Center.fields.y;
   v39 = v66.fields.m_Extents.fields.x;
   v40.n64_u64[0] = *(unsigned __int64 *)&v66.fields.m_Extents.fields.y;
-  if ( !byte_4BF7D8F )
+  if ( !byte_4C1C50F )
   {
-    sub_1C2E12C(&System_Math_TypeInfo, v18);
-    byte_4BF7D8F = 1;
+    sub_1C3B764(&System_Math_TypeInfo, v18);
+    byte_4C1C50F = 1;
   }
   updatedSkinnedMeshs = (__int64)System_Math_TypeInfo;
   v41 = sqrtf(v30);
@@ -494,10 +494,10 @@ LABEL_52:
                                          (UnityEngine_Component_o *)meshCollider,
                                          0LL);
         v49 = (UnityEngine_Transform_o *)updatedSkinnedMeshs;
-        if ( !byte_4BF7D96 )
+        if ( !byte_4C1C516 )
         {
-          updatedSkinnedMeshs = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v18);
-          byte_4BF7D96 = 1;
+          updatedSkinnedMeshs = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v18);
+          byte_4C1C516 = 1;
         }
         if ( v49 )
         {
@@ -508,12 +508,12 @@ LABEL_52:
             updatedSkinnedMeshs = System_Collections_Generic_Dictionary_object__int___get_Item(
                                     (System_Collections_Generic_Dictionary_object__int__o *)updatedSkinnedMeshs,
                                     (Il2CppObject *)meshCollider,
-                                    (const MethodInfo_332CC0C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__get_Item__);
+                                    (const MethodInfo_334C800 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__get_Item__);
             if ( v17 )
             {
               *(_DWORD *)(v17 + 16) = updatedSkinnedMeshs;
               XScaleApplySvtId = BattleCameraHitJudgment__get_XScaleApplySvtId(this, v18);
-              v51 = (System_Predicate_int__o *)sub_1C2E378(System_Predicate_int__TypeInfo);
+              v51 = (System_Predicate_int__o *)sub_1C3B9B0(System_Predicate_int__TypeInfo);
               System_Predicate_int____ctor(
                 v51,
                 (Il2CppObject *)v17,
@@ -522,7 +522,7 @@ LABEL_52:
               updatedSkinnedMeshs = System_Array__FindIndex_int_(
                                       XScaleApplySvtId,
                                       (System_Predicate_T__o *)v51,
-                                      (const MethodInfo_30CDBC8 *)Method_System_Array_FindIndex_int___);
+                                      (const MethodInfo_30ED01C *)Method_System_Array_FindIndex_int___);
               if ( (updatedSkinnedMeshs & 0x80000000) != 0 )
               {
                 if ( !skinnedMesh )
@@ -537,9 +537,9 @@ LABEL_52:
                                                  0LL);
                 if ( !updatedSkinnedMeshs )
                   goto LABEL_49;
-                if ( UnityEngine_Material__HasProperty_70855900(
+                if ( UnityEngine_Material__HasProperty_70988928(
                        (UnityEngine_Material_o *)updatedSkinnedMeshs,
-                       (System_String_o *)StringLiteral_16897/*"_xscale"*/,
+                       (System_String_o *)StringLiteral_16927/*"bit_result_grail_02"*/,
                        0LL) )
                 {
                   updatedSkinnedMeshs = (__int64)UnityEngine_Renderer__get_material(
@@ -549,12 +549,12 @@ LABEL_52:
                     goto LABEL_49;
                   Float = UnityEngine_Material__GetFloat(
                             (UnityEngine_Material_o *)updatedSkinnedMeshs,
-                            (System_String_o *)StringLiteral_16897/*"_xscale"*/,
+                            (System_String_o *)StringLiteral_16927/*"bit_result_grail_02"*/,
                             0LL);
-                  if ( !byte_4BF7D95 )
+                  if ( !byte_4C1C515 )
                   {
-                    sub_1C2E12C(&UnityEngine_Mathf_TypeInfo, v52);
-                    byte_4BF7D95 = 1;
+                    sub_1C3B764(&UnityEngine_Mathf_TypeInfo, v52);
+                    byte_4C1C515 = 1;
                   }
                   v54 = fmaxf(fabsf(Float), 1.0) * 0.000001;
                   static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
@@ -596,7 +596,7 @@ LABEL_52:
                     prevSkinnedMeshBounds,
                     (Il2CppObject *)skinnedMesh,
                     &v66,
-                    (const MethodInfo_3323BF8 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__set_Item__);
+                    (const MethodInfo_33437EC *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__set_Item__);
                   goto LABEL_43;
                 }
               }
@@ -606,7 +606,7 @@ LABEL_52:
       }
     }
 LABEL_49:
-    sub_1C2E388(updatedSkinnedMeshs, v18);
+    sub_1C3B9C0(updatedSkinnedMeshs, v18);
   }
 LABEL_43:
   updatedSkinnedMeshs = (__int64)this->fields.updatedSkinnedMeshs;
@@ -623,14 +623,14 @@ LABEL_43:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)updatedSkinnedMeshs,
       (Il2CppObject *)skinnedMesh,
-      *(const MethodInfo_366B8AC **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
   }
   else
   {
     v60 = v57 + 8 * v59;
     *(_DWORD *)(updatedSkinnedMeshs + 24) = v59 + 1;
     *(_QWORD *)(v60 + 32) = skinnedMesh;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)(v60 + 32), (int64_t)skinnedMesh, v31, v32, v33, v34, v35, v36);
+    sub_1C3B708((PartyOrganizationUtility_o *)(v60 + 32), (int64_t)skinnedMesh, v31, v32, v33, v34, v35, v36);
   }
 }
 
@@ -646,33 +646,33 @@ void __fastcall BattleCameraHitJudgment__Clear(BattleCameraHitJudgment_o *this, 
   int32_t size; // w2
   int v10; // w9
 
-  if ( (byte_4BFFD33 & 1) == 0 )
+  if ( (byte_4C24561 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Clear__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Clear__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Clear__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Clear__, v6);
-    byte_4BFFD33 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Clear__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Clear__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Clear__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Clear__, v6);
+    byte_4C24561 = 1;
   }
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderAction;
   if ( !targetColliderAction )
     goto LABEL_12;
   System_Collections_Generic_Dictionary_object__object___Clear(
     targetColliderAction,
-    (const MethodInfo_3335CFC *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Clear__);
+    (const MethodInfo_33558F0 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Clear__);
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
   if ( !targetColliderAction )
     goto LABEL_12;
   System_Collections_Generic_Dictionary_object__object___Clear(
     targetColliderAction,
-    (const MethodInfo_3335CFC *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Clear__);
+    (const MethodInfo_33558F0 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Clear__);
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.prevSkinnedMeshBounds;
   if ( !targetColliderAction )
     goto LABEL_12;
   System_Collections_Generic_Dictionary_object__Bounds___Clear(
     (System_Collections_Generic_Dictionary_TKey__TValue__o *)targetColliderAction,
-    (const MethodInfo_3323EC4 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Clear__);
+    (const MethodInfo_3343AB8 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Clear__);
   updatedSkinnedMeshs = this->fields.updatedSkinnedMeshs;
   if ( !updatedSkinnedMeshs )
     goto LABEL_12;
@@ -686,15 +686,15 @@ void __fastcall BattleCameraHitJudgment__Clear(BattleCameraHitJudgment_o *this, 
   if ( !targetColliderAction
     || (System_Collections_Generic_Dictionary_object__int___Clear(
           (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
-          (const MethodInfo_332CE14 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__),
+          (const MethodInfo_334CA08 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__),
         (targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSvtId) == 0LL) )
   {
 LABEL_12:
-    sub_1C2E388(targetColliderAction, method);
+    sub_1C3B9C0(targetColliderAction, method);
   }
   System_Collections_Generic_Dictionary_object__int___Clear(
     (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
-    (const MethodInfo_332CE14 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__);
+    (const MethodInfo_334CA08 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Clear__);
 }
 
 
@@ -710,7 +710,7 @@ void __fastcall BattleCameraHitJudgment__ClearTouchInfo(BattleCameraHitJudgment_
 
   this->fields.touchedCollision = 0LL;
   p_touchedCollision = &this->fields.touchedCollision;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v2, v3, v4, v5, v6, v7);
   *((_DWORD *)p_touchedCollision + 3) = -1;
   *((_BYTE *)p_touchedCollision + 8) = 0;
 }
@@ -739,28 +739,28 @@ System_Int32_array *__fastcall BattleCameraHitJudgment__GetEnableUiColliderIndex
   System_Collections_Generic_IEnumerable_T__o *targetColliderUIColliderIndex; // x19
   System_Action_T__o *v20; // x21
 
-  if ( (byte_4BFFD36 & 1) == 0 )
+  if ( (byte_4C24564 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_KeyValuePair_MeshCollider__int___TypeInfo, method);
-    sub_1C2E12C(&Method_BasicHelper_ForEach_KeyValuePair_MeshCollider__int____, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__ToArray__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int___ctor__, v5);
-    sub_1C2E12C(&System_Collections_Generic_List_int__TypeInfo, v6);
-    sub_1C2E12C(&Method_BattleCameraHitJudgment___c__DisplayClass28_0__GetEnableUiColliderIndexes_b__0__, v7);
-    sub_1C2E12C(&BattleCameraHitJudgment___c__DisplayClass28_0_TypeInfo, v8);
-    byte_4BFFD36 = 1;
+    sub_1C3B764(&System_Action_KeyValuePair_MeshCollider__int___TypeInfo, method);
+    sub_1C3B764(&Method_BasicHelper_ForEach_KeyValuePair_MeshCollider__int____, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__ToArray__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v5);
+    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v6);
+    sub_1C3B764(&Method_BattleCameraHitJudgment___c__DisplayClass28_0__GetEnableUiColliderIndexes_b__0__, v7);
+    sub_1C3B764(&BattleCameraHitJudgment___c__DisplayClass28_0_TypeInfo, v8);
+    byte_4C24564 = 1;
   }
-  v9 = sub_1C2E378(BattleCameraHitJudgment___c__DisplayClass28_0_TypeInfo);
+  v9 = sub_1C3B9B0(BattleCameraHitJudgment___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
-  v10 = (System_Collections_Generic_List_int__o *)sub_1C2E378(System_Collections_Generic_List_int__TypeInfo);
+  v10 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v10,
-    (const MethodInfo_364E034 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !v9
     || (*(_QWORD *)(v9 + 16) = v10,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)v10, v13, v14, v15, v16, v17, v18),
+        sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)v10, v13, v14, v15, v16, v17, v18),
         targetColliderUIColliderIndex = (System_Collections_Generic_IEnumerable_T__o *)this->fields.targetColliderUIColliderIndex,
-        v20 = (System_Action_T__o *)sub_1C2E378(System_Action_KeyValuePair_MeshCollider__int___TypeInfo),
+        v20 = (System_Action_T__o *)sub_1C3B9B0(System_Action_KeyValuePair_MeshCollider__int___TypeInfo),
         System_Action_KeyValuePair_object__int_____ctor(
           v20,
           (Il2CppObject *)v9,
@@ -769,14 +769,14 @@ System_Int32_array *__fastcall BattleCameraHitJudgment__GetEnableUiColliderIndex
         BasicHelper__ForEach_KeyValuePair_object__int__(
           targetColliderUIColliderIndex,
           v20,
-          (const MethodInfo_2FBD608 *)Method_BasicHelper_ForEach_KeyValuePair_MeshCollider__int____),
+          (const MethodInfo_2FDBF40 *)Method_BasicHelper_ForEach_KeyValuePair_MeshCollider__int____),
         (v11 = *(System_Collections_Generic_List_int__o **)(v9 + 16)) == 0LL) )
   {
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   }
   return System_Collections_Generic_List_int___ToArray(
            v11,
-           (const MethodInfo_3650340 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3670700 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -933,28 +933,28 @@ void __fastcall BattleCameraHitJudgment__LateUpdate(BattleCameraHitJudgment_o *t
   UnityEngine_Vector3_o v154; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v155; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFFD39 & 1) == 0 )
+  if ( (byte_4C24567 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Array_FindIndex_BoxCollider___, method);
-    sub_1C2E12C(&Method_BattleCameraHitJudgment__LateUpdate_b__31_0__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__GetEnumerator__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__GetEnumerator__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__Dispose__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__Dispose__, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__MoveNext__, v10);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__MoveNext__, v11);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__get_Current__, v12);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__get_Current__, v13);
-    sub_1C2E12C(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__Action__get_Key__, v14);
-    sub_1C2E12C(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__int__get_Value__, v15);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Clear__, v16);
-    sub_1C2E12C(&UnityEngine_MeshCollider_TypeInfo, v17);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v18);
-    sub_1C2E12C(&System_Predicate_BoxCollider__TypeInfo, v19);
-    sub_1C2E12C(&UICamera_TypeInfo, v20);
-    byte_4BFFD39 = 1;
+    sub_1C3B764(&Method_System_Array_FindIndex_BoxCollider___, method);
+    sub_1C3B764(&Method_BattleCameraHitJudgment__LateUpdate_b__31_0__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__GetEnumerator__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__GetEnumerator__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__Dispose__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__Dispose__, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__MoveNext__, v10);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__MoveNext__, v11);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__get_Current__, v12);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__get_Current__, v13);
+    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__Action__get_Key__, v14);
+    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__int__get_Value__, v15);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Clear__, v16);
+    sub_1C3B764(&UnityEngine_MeshCollider_TypeInfo, v17);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v18);
+    sub_1C3B764(&System_Predicate_BoxCollider__TypeInfo, v19);
+    sub_1C3B764(&UICamera_TypeInfo, v20);
+    byte_4C24567 = 1;
   }
   v144 = 0uLL;
   v145 = 0LL;
@@ -1002,7 +1002,7 @@ void __fastcall BattleCameraHitJudgment__LateUpdate(BattleCameraHitJudgment_o *t
         {
           this->fields.touchedCollision = 0LL;
           p_touchedCollision = &this->fields.touchedCollision;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)p_touchedCollision, 0LL, v29, v30, v31, v32, v33, v34);
+          sub_1C3B708((PartyOrganizationUtility_o *)p_touchedCollision, 0LL, v29, v30, v31, v32, v33, v34);
           *((_DWORD *)p_touchedCollision + 3) = -1;
           *((_BYTE *)p_touchedCollision + 8) = 0;
           return;
@@ -1053,14 +1053,14 @@ void __fastcall BattleCameraHitJudgment__LateUpdate(BattleCameraHitJudgment_o *t
         enemyInputRoot = (__int64)this->fields.battleActorCamera;
         if ( !enemyInputRoot )
           goto LABEL_124;
-        *(UnityEngine_Vector3_o *)&v44 = UnityEngine_Camera__WorldToScreenPoint_70795692(
+        *(UnityEngine_Vector3_o *)&v44 = UnityEngine_Camera__WorldToScreenPoint_70928720(
                                            (UnityEngine_Camera_o *)enemyInputRoot,
                                            *(UnityEngine_Vector3_o *)&v41,
                                            0LL);
         enemyInputRoot = (__int64)this->fields.battleUICamera;
         if ( !enemyInputRoot )
           goto LABEL_124;
-        *(UnityEngine_Vector3_o *)&v47 = UnityEngine_Camera__ScreenToWorldPoint_70795716(
+        *(UnityEngine_Vector3_o *)&v47 = UnityEngine_Camera__ScreenToWorldPoint_70928744(
                                            (UnityEngine_Camera_o *)enemyInputRoot,
                                            *(UnityEngine_Vector3_o *)&v44,
                                            0LL);
@@ -1095,10 +1095,10 @@ void __fastcall BattleCameraHitJudgment__LateUpdate(BattleCameraHitJudgment_o *t
           *(UnityEngine_Vector3_o *)&v53,
           0LL);
         v56 = this->fields.enemyInputRoot;
-        if ( !byte_4BF7D96 )
+        if ( !byte_4C1C516 )
         {
-          enemyInputRoot = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v25);
-          byte_4BF7D96 = 1;
+          enemyInputRoot = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v25);
+          byte_4C1C516 = 1;
         }
         if ( !v56 )
           goto LABEL_124;
@@ -1136,7 +1136,7 @@ void __fastcall BattleCameraHitJudgment__LateUpdate(BattleCameraHitJudgment_o *t
         {
 LABEL_50:
           this->fields.touchedCollision = 0LL;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v60, v61, v62, v63, v64, v65);
+          sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v60, v61, v62, v63, v64, v65);
           this->fields.touchFinderID = -1;
           this->fields.isTouched = 0;
         }
@@ -1176,7 +1176,7 @@ LABEL_50:
                 if ( !v113 )
                   goto LABEL_124;
                 v115 = 0;
-                enemyInputRoot = (__int64)UnityEngine_Camera__ScreenPointToRay_70796180(
+                enemyInputRoot = (__int64)UnityEngine_Camera__ScreenPointToRay_70929208(
                                             (UnityEngine_Ray_o *)&src,
                                             v113,
                                             *(UnityEngine_Vector3_o *)&position.fields.x,
@@ -1200,7 +1200,7 @@ LABEL_50:
                 Item = System_Collections_Generic_Dictionary_object__object___get_Item(
                          (System_Collections_Generic_Dictionary_object__object__o *)enemyInputRoot,
                          (Il2CppObject *)v71,
-                         (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
+                         (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
                 BattleCameraHitJudgment__BakeMesh(
                   this,
                   (UnityEngine_MeshCollider_o *)v71,
@@ -1214,7 +1214,7 @@ LABEL_50:
                     if ( !System_Collections_Generic_Dictionary_object__object___get_Item(
                             (System_Collections_Generic_Dictionary_object__object__o *)enemyInputRoot,
                             (Il2CppObject *)v71,
-                            (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__) )
+                            (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__) )
                       goto LABEL_122;
                     enemyInputRoot = (__int64)this->fields.targetColliderAction;
                     if ( enemyInputRoot )
@@ -1222,7 +1222,7 @@ LABEL_50:
                       enemyInputRoot = (__int64)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                   (System_Collections_Generic_Dictionary_object__object__o *)enemyInputRoot,
                                                   (Il2CppObject *)v71,
-                                                  (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__);
+                                                  (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__get_Item__);
                       if ( enemyInputRoot )
                       {
                         (*(void (__fastcall **)(_QWORD, _QWORD))(enemyInputRoot + 24))(
@@ -1233,7 +1233,7 @@ LABEL_50:
                     }
                   }
 LABEL_124:
-                  sub_1C2E388(enemyInputRoot, v25);
+                  sub_1C3B9C0(enemyInputRoot, v25);
                 }
                 if ( UnityEngine_Touch__get_phase(&dest, 0LL) == 4 )
                   goto LABEL_122;
@@ -1242,7 +1242,7 @@ LABEL_124:
                 v134 = v144;
                 enemyInputRoot = (__int64)v71;
 LABEL_121:
-                if ( UnityEngine_Collider__Raycast_71315268(
+                if ( UnityEngine_Collider__Raycast_71448296(
                        (UnityEngine_Collider_o *)enemyInputRoot,
                        (UnityEngine_Ray_o *)v129,
                        &v146,
@@ -1253,7 +1253,7 @@ LABEL_121:
                 }
 LABEL_122:
                 this->fields.touchedCollision = 0LL;
-                sub_1C2E0D0(
+                sub_1C3B708(
                   (PartyOrganizationUtility_o *)&this->fields.touchedCollision,
                   0LL,
                   v116,
@@ -1272,7 +1272,7 @@ LABEL_122:
               if ( UnityEngine_Object__op_Inequality(v86, 0LL, 0LL) )
               {
                 uiCollider = (System_Object_array *)this->fields.uiCollider;
-                v94 = (System_Predicate_object__o *)sub_1C2E378(System_Predicate_BoxCollider__TypeInfo);
+                v94 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_BoxCollider__TypeInfo);
                 System_Predicate_object____ctor(
                   v94,
                   (Il2CppObject *)this,
@@ -1281,7 +1281,7 @@ LABEL_122:
                 Index_object = System_Array__FindIndex_object_(
                                  uiCollider,
                                  (System_Predicate_T__o *)v94,
-                                 (const MethodInfo_30CDD60 *)Method_System_Array_FindIndex_BoxCollider___);
+                                 (const MethodInfo_30ED1B4 *)Method_System_Array_FindIndex_BoxCollider___);
                 if ( (Index_object & 0x80000000) == 0 )
                 {
                   v124 = this->fields.battleUICamera;
@@ -1290,7 +1290,7 @@ LABEL_122:
                   if ( !v124 )
                     goto LABEL_124;
                   v127 = 0;
-                  UnityEngine_Camera__ScreenPointToRay_70796180(
+                  UnityEngine_Camera__ScreenPointToRay_70929208(
                     (UnityEngine_Ray_o *)&src,
                     v124,
                     *(UnityEngine_Vector3_o *)&v126.fields.x,
@@ -1304,7 +1304,7 @@ LABEL_122:
                     if ( !uiColliderAction )
                       goto LABEL_124;
                     if ( v125 >= uiColliderAction->max_length )
-                      sub_1C2E390(enemyInputRoot, v25);
+                      sub_1C3B9C8(enemyInputRoot, v25);
                     enemyInputRoot = (__int64)uiColliderAction->m_Items[v125];
                     if ( !enemyInputRoot )
                       goto LABEL_124;
@@ -1325,7 +1325,7 @@ LABEL_122:
                 }
               }
               this->fields.touchedCollision = 0LL;
-              sub_1C2E0D0(
+              sub_1C3B708(
                 (PartyOrganizationUtility_o *)&this->fields.touchedCollision,
                 0LL,
                 v87,
@@ -1345,7 +1345,7 @@ LABEL_122:
             if ( !v72 )
               goto LABEL_124;
             v74 = 0;
-            UnityEngine_Camera__ScreenPointToRay_70796180(
+            UnityEngine_Camera__ScreenPointToRay_70929208(
               (UnityEngine_Ray_o *)&src,
               v72,
               *(UnityEngine_Vector3_o *)&v73.fields.x,
@@ -1358,7 +1358,7 @@ LABEL_122:
             System_Collections_Generic_Dictionary_object__int___GetEnumerator(
               (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&src,
               (System_Collections_Generic_Dictionary_object__int__o *)enemyInputRoot,
-              (const MethodInfo_332D07C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__GetEnumerator__);
+              (const MethodInfo_334CC70 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__GetEnumerator__);
             distance = 3.4028e38;
             *(_OWORD *)&v140[0].fields._dictionary = *(_OWORD *)&src.fields.m_FingerId;
             v140[0].fields._current = *(struct System_Collections_Generic_KeyValuePair_TKey__TValue__o *)&src.fields.m_RawPosition.fields.y;
@@ -1367,22 +1367,22 @@ LABEL_122:
             {
               v76 = System_Collections_Generic_Dictionary_Enumerator_object__int___MoveNext(
                       v140,
-                      (const MethodInfo_342F848 *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__MoveNext__);
+                      (const MethodInfo_344FA48 *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__MoveNext__);
               if ( !v76 )
                 break;
               v78 = this->fields.uiCollider;
               if ( !v78 )
-                sub_1C2E388(v76, v77);
+                sub_1C3B9C0(v76, v77);
               if ( LODWORD(v140[0].fields._current.fields.value) >= v78->max_length )
-                sub_1C2E390(v76, v77);
+                sub_1C3B9C8(v76, v77);
               v79 = (struct UnityEngine_Collider_o *)v78->m_Items[SLODWORD(v140[0].fields._current.fields.value)];
               *(_OWORD *)&src.fields.m_FingerId = *(_OWORD *)&v140[1].fields._version;
               *(_QWORD *)&src.fields.m_RawPosition.fields.y = v140[1].fields._current.fields.value;
               if ( !v79 )
-                sub_1C2E388(v76, v77);
+                sub_1C3B9C0(v76, v77);
               *(_OWORD *)&v131.fields.m_Origin.fields.x = *(_OWORD *)&src.fields.m_FingerId;
               *(_QWORD *)&v131.fields.m_Direction.fields.y = *(_QWORD *)&src.fields.m_RawPosition.fields.y;
-              if ( UnityEngine_Collider__Raycast_71315268(v79, &v131, &v139, 3.4028e38, 0LL) )
+              if ( UnityEngine_Collider__Raycast_71448296(v79, &v131, &v139, 3.4028e38, 0LL) )
               {
                 this->fields.touchFinderID = UnityEngine_Touch__get_fingerId(&dest, 0LL);
                 if ( distance > UnityEngine_RaycastHit__get_distance(&v139, 0LL) )
@@ -1390,7 +1390,7 @@ LABEL_122:
                   distance = UnityEngine_RaycastHit__get_distance(&v139, 0LL);
                   this->fields.isTouched = 1;
                   this->fields.touchedCollision = v79;
-                  sub_1C2E0D0(
+                  sub_1C3B708(
                     (PartyOrganizationUtility_o *)&this->fields.touchedCollision,
                     (int64_t)v79,
                     v80,
@@ -1404,7 +1404,7 @@ LABEL_122:
             }
             System_Collections_Generic_Dictionary_Enumerator_object__int___Dispose(
               v140,
-              (const MethodInfo_342F96C *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__Dispose__);
+              (const MethodInfo_344FB6C *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__int__Dispose__);
             if ( this->fields.isTouched )
               return;
             v96 = this->fields.battleActorCamera;
@@ -1412,7 +1412,7 @@ LABEL_122:
             if ( !v96 )
               goto LABEL_124;
             v98 = 0;
-            UnityEngine_Camera__ScreenPointToRay_70796180(
+            UnityEngine_Camera__ScreenPointToRay_70929208(
               (UnityEngine_Ray_o *)&src,
               v96,
               *(UnityEngine_Vector3_o *)&v97.fields.x,
@@ -1425,7 +1425,7 @@ LABEL_122:
             System_Collections_Generic_Dictionary_object__object___GetEnumerator(
               (System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o *)&src,
               (System_Collections_Generic_Dictionary_object__object__o *)enemyInputRoot,
-              (const MethodInfo_3335FA4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__GetEnumerator__);
+              (const MethodInfo_3355B98 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__GetEnumerator__);
             v99 = 3.4028e38;
             *(_OWORD *)&v138.fields._dictionary = *(_OWORD *)&src.fields.m_FingerId;
             v138.fields._current = *(struct System_Collections_Generic_KeyValuePair_TKey__TValue__o *)&src.fields.m_RawPosition.fields.y;
@@ -1434,12 +1434,12 @@ LABEL_122:
             {
               v100 = System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
                        &v138,
-                       (const MethodInfo_34313CC *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__MoveNext__);
+                       (const MethodInfo_34515CC *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__MoveNext__);
               if ( !v100 )
                 break;
               key = v138.fields._current.fields.key;
               if ( !v138.fields._current.fields.key )
-                sub_1C2E388(v100, v101);
+                sub_1C3B9C0(v100, v101);
               UnityEngine_Collider__get_bounds(
                 (UnityEngine_Bounds_o *)&src,
                 (UnityEngine_Collider_o *)v138.fields._current.fields.key,
@@ -1454,24 +1454,24 @@ LABEL_122:
               {
                 targetSkinnedMesh = this->fields.targetSkinnedMesh;
                 if ( !targetSkinnedMesh )
-                  sub_1C2E388(0LL, v103);
+                  sub_1C3B9C0(0LL, v103);
                 v105 = System_Collections_Generic_Dictionary_object__object___get_Item(
                          (System_Collections_Generic_Dictionary_object__object__o *)targetSkinnedMesh,
                          key,
-                         (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
+                         (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
                 BattleCameraHitJudgment__BakeMesh(
                   this,
                   (UnityEngine_MeshCollider_o *)key,
                   (UnityEngine_SkinnedMeshRenderer_o *)v105,
                   v106);
                 v130 = *(UnityEngine_Ray_o *)&v140[1].fields._version;
-                if ( UnityEngine_Collider__Raycast_71315268((UnityEngine_Collider_o *)key, &v130, &v137, 3.4028e38, 0LL) )
+                if ( UnityEngine_Collider__Raycast_71448296((UnityEngine_Collider_o *)key, &v130, &v137, 3.4028e38, 0LL) )
                 {
                   this->fields.touchFinderID = UnityEngine_Touch__get_fingerId(&dest, 0LL);
                   if ( v99 > UnityEngine_RaycastHit__get_distance(&v137, 0LL) )
                   {
                     *v68 = (struct UnityEngine_Collider_o *)key;
-                    sub_1C2E0D0(
+                    sub_1C3B708(
                       (PartyOrganizationUtility_o *)&this->fields.touchedCollision,
                       (int64_t)key,
                       v107,
@@ -1488,7 +1488,7 @@ LABEL_122:
             }
             System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
               &v138,
-              (const MethodInfo_34314EC *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__Dispose__);
+              (const MethodInfo_34516EC *)Method_System_Collections_Generic_Dictionary_Enumerator_MeshCollider__Action__Dispose__);
             if ( this->fields.isTouched )
               return;
           }
@@ -1525,18 +1525,18 @@ void __fastcall BattleCameraHitJudgment__RemoveCollider(
   FollowerInfo_o *v21; // x6
   PartyListViewItem_o *v22; // x7
 
-  if ( (byte_4BFFD37 & 1) == 0 )
+  if ( (byte_4C24565 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__, collider);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__ContainsKey__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Remove__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__, v10);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Remove__, v11);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v12);
-    byte_4BFFD37 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__, collider);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__ContainsKey__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Remove__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__, v10);
+    sub_1C3B764(&Method_System_Collections_Generic_List_SkinnedMeshRenderer__Remove__, v11);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v12);
+    byte_4C24565 = 1;
   }
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderAction;
   if ( !targetColliderAction )
@@ -1544,7 +1544,7 @@ void __fastcall BattleCameraHitJudgment__RemoveCollider(
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           targetColliderAction,
           (Il2CppObject *)collider,
-          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__) )
+          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__ContainsKey__) )
     return;
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderAction;
   if ( !targetColliderAction )
@@ -1552,14 +1552,14 @@ void __fastcall BattleCameraHitJudgment__RemoveCollider(
   System_Collections_Generic_Dictionary_object__object___Remove(
     targetColliderAction,
     (Il2CppObject *)collider,
-    (const MethodInfo_3337070 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__);
+    (const MethodInfo_3356C64 *)Method_System_Collections_Generic_Dictionary_MeshCollider__Action__Remove__);
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
   if ( !targetColliderAction )
     goto LABEL_21;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          targetColliderAction,
          (Il2CppObject *)collider,
-         (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__ContainsKey__) )
+         (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__ContainsKey__) )
   {
     targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
     if ( targetColliderAction )
@@ -1568,13 +1568,13 @@ void __fastcall BattleCameraHitJudgment__RemoveCollider(
       targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                           targetColliderAction,
                                                                                           (Il2CppObject *)collider,
-                                                                                          (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
+                                                                                          (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
       if ( prevSkinnedMeshBounds )
       {
         System_Collections_Generic_Dictionary_object__Bounds___Remove(
           prevSkinnedMeshBounds,
           (Il2CppObject *)targetColliderAction,
-          (const MethodInfo_332529C *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Remove__);
+          (const MethodInfo_3344E90 *)Method_System_Collections_Generic_Dictionary_SkinnedMeshRenderer__Bounds__Remove__);
         targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
         if ( targetColliderAction )
         {
@@ -1582,20 +1582,20 @@ void __fastcall BattleCameraHitJudgment__RemoveCollider(
           targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                               targetColliderAction,
                                                                                               (Il2CppObject *)collider,
-                                                                                              (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
+                                                                                              (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__get_Item__);
           if ( updatedSkinnedMeshs )
           {
             System_Collections_Generic_List_object___Remove(
               (System_Collections_Generic_List_object__o *)updatedSkinnedMeshs,
               (Il2CppObject *)targetColliderAction,
-              (const MethodInfo_366CDD4 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__Remove__);
+              (const MethodInfo_368D194 *)Method_System_Collections_Generic_List_SkinnedMeshRenderer__Remove__);
             goto LABEL_13;
           }
         }
       }
     }
 LABEL_21:
-    sub_1C2E388(targetColliderAction, collider);
+    sub_1C3B9C0(targetColliderAction, collider);
   }
 LABEL_13:
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSkinnedMesh;
@@ -1604,28 +1604,28 @@ LABEL_13:
   System_Collections_Generic_Dictionary_object__object___Remove(
     targetColliderAction,
     (Il2CppObject *)collider,
-    (const MethodInfo_3337070 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__);
+    (const MethodInfo_3356C64 *)Method_System_Collections_Generic_Dictionary_MeshCollider__SkinnedMeshRenderer__Remove__);
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetColliderUIColliderIndex;
   if ( !targetColliderAction )
     goto LABEL_21;
   System_Collections_Generic_Dictionary_object__int___Remove(
     (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
     (Il2CppObject *)collider,
-    (const MethodInfo_332E138 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
+    (const MethodInfo_334DD2C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
   targetColliderAction = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.targetSvtId;
   if ( !targetColliderAction )
     goto LABEL_21;
   System_Collections_Generic_Dictionary_object__int___Remove(
     (System_Collections_Generic_Dictionary_object__int__o *)targetColliderAction,
     (Il2CppObject *)collider,
-    (const MethodInfo_332E138 *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
+    (const MethodInfo_334DD2C *)Method_System_Collections_Generic_Dictionary_MeshCollider__int__Remove__);
   touchedCollision = (UnityEngine_Object_o *)this->fields.touchedCollision;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(touchedCollision, (UnityEngine_Object_o *)collider, 0LL) )
   {
     this->fields.touchedCollision = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v17, v18, v19, v20, v21, v22);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.touchedCollision, 0LL, v17, v18, v19, v20, v21, v22);
     this->fields.touchFinderID = -1;
     this->fields.isTouched = 0;
   }
@@ -1644,7 +1644,7 @@ void __fastcall BattleCameraHitJudgment__SetBattlePerformance(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battlePerformance = battlePerformance;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.battlePerformance,
     (int64_t)battlePerformance,
     (int64_t)method,
@@ -1668,7 +1668,7 @@ void __fastcall BattleCameraHitJudgment__SetCamera(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battleActorCamera = camera;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.battleActorCamera,
     (int64_t)camera,
     (int64_t)method,
@@ -1692,7 +1692,7 @@ void __fastcall BattleCameraHitJudgment__SetUICamera(
   PartyListViewItem_o *v7; // x7
 
   this->fields.battleUICamera = camera;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.battleUICamera,
     (int64_t)camera,
     (int64_t)method,
@@ -1711,10 +1711,10 @@ bool __fastcall BattleCameraHitJudgment___LateUpdate_b__31_0(
 {
   UnityEngine_Object_o *touchedCollision; // x20
 
-  if ( (byte_4BFFD3B & 1) == 0 )
+  if ( (byte_4C24569 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, x);
-    byte_4BFFD3B = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, x);
+    byte_4C24569 = 1;
   }
   touchedCollision = (UnityEngine_Object_o *)this->fields.touchedCollision;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1739,23 +1739,23 @@ System_Int32_array *__fastcall BattleCameraHitJudgment__get_XScaleApplySvtId(
   FollowerInfo_o *v12; // x6
   PartyListViewItem_o *v13; // x7
 
-  if ( (byte_4BFFD32 & 1) == 0 )
+  if ( (byte_4C24560 & 1) == 0 )
   {
-    sub_1C2E12C(&int___TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_16026/*"X_SCALE_APPLY_SVTIDS"*/, v3);
-    byte_4BFFD32 = 1;
+    sub_1C3B764(&int___TypeInfo, method);
+    sub_1C3B764(&StringLiteral_16054/*"_VertexOffsetY"*/, v3);
+    byte_4C24560 = 1;
   }
   xScaleApplySvtId = this->fields.xScaleApplySvtId;
   p_xScaleApplySvtId = (PartyOrganizationUtility_o *)&this->fields.xScaleApplySvtId;
   if ( !xScaleApplySvtId )
   {
-    Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_16026/*"X_SCALE_APPLY_SVTIDS"*/, 0LL);
+    Value = ConstantStrMaster__getValue((System_String_o *)StringLiteral_16054/*"_VertexOffsetY"*/, 0LL);
     if ( System_String__IsNullOrEmpty(Value, 0LL) )
-      v7 = (System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
+      v7 = (System_Int32_array *)sub_1C3B80C(int___TypeInfo, 0LL);
     else
       v7 = BasicHelper__Convert2IntArray(Value, 0x2Cu, 0LL);
     p_xScaleApplySvtId->klass = (PartyOrganizationUtility_c *)v7;
-    sub_1C2E0D0(p_xScaleApplySvtId, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C3B708(p_xScaleApplySvtId, (int64_t)v7, v8, v9, v10, v11, v12, v13);
   }
   return (System_Int32_array *)p_xScaleApplySvtId->klass;
 }
@@ -1782,11 +1782,11 @@ void __fastcall BattleCameraHitJudgment___c__DisplayClass28_0___GetEnableUiColli
   __int64 size; // x10
 
   value = x.fields.value;
-  if ( (byte_4BFFD3C & 1) == 0 )
+  if ( (byte_4C2456A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__int__get_Value__, x.fields.key);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Add__, v5);
-    byte_4BFFD3C = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_MeshCollider__int__get_Value__, x.fields.key);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__Add__, v5);
+    byte_4C2456A = 1;
   }
   retList = this->fields.retList;
   if ( !retList
@@ -1795,7 +1795,7 @@ void __fastcall BattleCameraHitJudgment___c__DisplayClass28_0___GetEnableUiColli
         ++retList->fields._version,
         !items) )
   {
-    sub_1C2E388(retList, x.fields.key);
+    sub_1C3B9C0(retList, x.fields.key);
   }
   size = retList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -1803,7 +1803,7 @@ void __fastcall BattleCameraHitJudgment___c__DisplayClass28_0___GetEnableUiColli
     System_Collections_Generic_List_int___AddWithResize(
       retList,
       value,
-      *(const MethodInfo_364E888 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_366EC48 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {

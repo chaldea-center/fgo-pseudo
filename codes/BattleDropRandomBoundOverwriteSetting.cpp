@@ -54,48 +54,48 @@ void __fastcall BattleDropRandomBoundOverwriteSetting___ctor(
   FollowerInfo_o *v52; // x6
   PartyListViewItem_o *v53; // x7
 
-  if ( (byte_4BFFE0D & 1) == 0 )
+  if ( (byte_4C2463B & 1) == 0 )
   {
-    sub_1C2E12C(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
-    sub_1C2E12C(&BattleDropRandomBound_RangeInt_TypeInfo, v3);
-    byte_4BFFE0D = 1;
+    sub_1C3B764(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
+    sub_1C3B764(&BattleDropRandomBound_RangeInt_TypeInfo, v3);
+    byte_4C2463B = 1;
   }
   LODWORD(this->fields.moveSpeedXRange) = 1036831949;
-  v4 = sub_1C2E378(BattleDropRandomBound_RangeFloat_TypeInfo);
+  v4 = sub_1C3B9B0(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v4, v5);
   if ( !v4 )
     goto LABEL_10;
   *(_QWORD *)(v4 + 16) = 0x3DCCCCCDBDCCCCCDLL;
   this->fields.moveSpeedYRange = (struct BattleDropRandomBound_RangeFloat_o *)v4;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.moveSpeedYRange, v4, v8, v9, v10, v11, v12, v13);
-  v14 = sub_1C2E378(BattleDropRandomBound_RangeFloat_TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.moveSpeedYRange, v4, v8, v9, v10, v11, v12, v13);
+  v14 = sub_1C3B9B0(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v14, v15);
   if ( !v14 )
     goto LABEL_10;
   *(int32x2_t *)(v14 + 16) = vdup_n_s32(0x3F266666u);
   this->fields.delayStartTimeRange = (struct BattleDropRandomBound_RangeFloat_o *)v14;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.delayStartTimeRange, v14, v16, v17, v18, v19, v20, v21);
-  v22 = sub_1C2E378(BattleDropRandomBound_RangeFloat_TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.delayStartTimeRange, v14, v16, v17, v18, v19, v20, v21);
+  v22 = sub_1C3B9B0(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v22, v23);
   if ( !v22 )
     goto LABEL_10;
   *(_QWORD *)(v22 + 16) = 0x3ECCCCCD3DCCCCCDLL;
   this->fields.boundCountRange = (struct BattleDropRandomBound_RangeInt_o *)v22;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.boundCountRange, v22, v24, v25, v26, v27, v28, v29);
-  v30 = sub_1C2E378(BattleDropRandomBound_RangeInt_TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.boundCountRange, v22, v24, v25, v26, v27, v28, v29);
+  v30 = sub_1C3B9B0(BattleDropRandomBound_RangeInt_TypeInfo);
   BattleDropRandomBound_RangeInt___ctor((BattleDropRandomBound_RangeInt_o *)v30, v31);
   if ( !v30 )
     goto LABEL_10;
   *(_QWORD *)(v30 + 16) = 0x200000001LL;
   *(_QWORD *)&this->fields.boundSpeedYRate = v30;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.boundSpeedYRate, v30, v32, v33, v34, v35, v36, v37);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.boundSpeedYRate, v30, v32, v33, v34, v35, v36, v37);
   LODWORD(this->fields.initScatterPosBaseRectXRange) = 1056964608;
-  v38 = sub_1C2E378(BattleDropRandomBound_RangeFloat_TypeInfo);
+  v38 = sub_1C3B9B0(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v38, v39);
   if ( !v38
     || (*(_QWORD *)(v38 + 16) = 0x3DCCCCCDBDCCCCCDLL,
         this->fields.initScatterPosBaseRectYRange = (struct BattleDropRandomBound_RangeFloat_o *)v38,
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&this->fields.initScatterPosBaseRectYRange,
           v38,
           v40,
@@ -104,16 +104,16 @@ void __fastcall BattleDropRandomBoundOverwriteSetting___ctor(
           v43,
           v44,
           v45),
-        v46 = sub_1C2E378(BattleDropRandomBound_RangeFloat_TypeInfo),
+        v46 = sub_1C3B9B0(BattleDropRandomBound_RangeFloat_TypeInfo),
         BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v46, v47),
         !v46) )
   {
 LABEL_10:
-    sub_1C2E388(v6, v7);
+    sub_1C3B9C0(v6, v7);
   }
   *(_QWORD *)(v46 + 16) = 0x3DCCCCCDBDCCCCCDLL;
   *(_QWORD *)&this->fields.initScatterPosBaseRectAngle = v46;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.initScatterPosBaseRectAngle,
     v46,
     v48,

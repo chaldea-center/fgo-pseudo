@@ -1,14 +1,14 @@
 void __fastcall EventDataLostBattleMaster___ctor(EventDataLostBattleMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD67E & 1) == 0 )
+  if ( (byte_4C21E90 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_EventDataLostBattleMaster__EventDataLostBattleEntity__int___ctor__, method);
-    byte_4BFD67E = 1;
+    sub_1C3B764(&Method_DataMasterBase_EventDataLostBattleMaster__EventDataLostBattleEntity__int___ctor__, method);
+    byte_4C21E90 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    440,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_EventDataLostBattleMaster__EventDataLostBattleEntity__int___ctor__);
+    442,
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_EventDataLostBattleMaster__EventDataLostBattleEntity__int___ctor__);
 }
 
 
@@ -40,24 +40,24 @@ int32_t __fastcall EventDataLostBattleMaster__GetEventDataLostBattleId(
   int32_t *v25; // x10
   __int64 v26; // x0
 
-  if ( (byte_4BFD67D & 1) == 0 )
+  if ( (byte_4C21E8F & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_System_Collections_ObjectModel_Collection_EventDataLostBattleEntity__GetEnumerator__,
       *(_QWORD *)&warId);
-    sub_1C2E12C(&System_IDisposable_TypeInfo, v7);
-    sub_1C2E12C(&System_Collections_Generic_IEnumerator_EventDataLostBattleEntity__TypeInfo, v8);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4BFD67D = 1;
+    sub_1C3B764(&System_IDisposable_TypeInfo, v7);
+    sub_1C3B764(&System_Collections_Generic_IEnumerator_EventDataLostBattleEntity__TypeInfo, v8);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4C21E8F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C2E388(0LL, *(_QWORD *)&warId);
+    sub_1C3B9C0(0LL, *(_QWORD *)&warId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3216144 *)Method_System_Collections_ObjectModel_Collection_EventDataLostBattleEntity__GetEnumerator__);
+                 (const MethodInfo_32357CC *)Method_System_Collections_ObjectModel_Collection_EventDataLostBattleEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C2E388(0LL, v11);
+    sub_1C3B9C0(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -77,7 +77,7 @@ int32_t __fastcall EventDataLostBattleMaster__GetEventDataLostBattleId(
     else
     {
 LABEL_9:
-      p_method = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -100,7 +100,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v20 = sub_1C8010C(Enumerator, System_Collections_Generic_IEnumerator_EventDataLostBattleEntity__TypeInfo, 0LL);
+      v20 = sub_1C8D744(Enumerator, System_Collections_Generic_IEnumerator_EventDataLostBattleEntity__TypeInfo, 0LL);
     }
     v21 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
                       Enumerator,
@@ -130,7 +130,7 @@ LABEL_23:
   else
   {
 LABEL_27:
-    v26 = sub_1C8010C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v26 = sub_1C8D744(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
   return v22;

@@ -2,10 +2,10 @@ int32_t __fastcall NumSpriteUtility__GetDigit(int64_t num, const MethodInfo *met
 {
   double v3; // d0
 
-  if ( (byte_4BF9D4E & 1) == 0 )
+  if ( (byte_4C1E555 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Math_TypeInfo, method);
-    byte_4BF9D4E = 1;
+    sub_1C3B764(&System_Math_TypeInfo, method);
+    byte_4C1E555 = 1;
   }
   if ( !num )
     return 0;
@@ -24,10 +24,10 @@ int64_t __fastcall NumSpriteUtility__GetDigitNumber(int64_t number, int64_t digi
   double v5; // d0
   signed __int64 v6; // x8
 
-  if ( (byte_4BF9D4F & 1) == 0 )
+  if ( (byte_4C1E556 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Math_TypeInfo, digit);
-    byte_4BF9D4F = 1;
+    sub_1C3B764(&System_Math_TypeInfo, digit);
+    byte_4C1E556 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -64,12 +64,12 @@ void __fastcall NumSpriteUtility__SetNumSprite(
   int64_t DigitNumber; // [xsp+10h] [xbp-70h] BYREF
   int v26; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4BF9D4D & 1) == 0 )
+  if ( (byte_4C1E554 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Count_UISprite___, sprites);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C2E12C(&string_TypeInfo, v11);
-    byte_4BF9D4D = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_Count_UISprite___, sprites);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C3B764(&string_TypeInfo, v11);
+    byte_4C1E554 = 1;
   }
   v26 = 0;
   DigitNumber = 0LL;
@@ -78,7 +78,7 @@ void __fastcall NumSpriteUtility__SetNumSprite(
     Digit = NumSpriteUtility__GetDigit(number, (const MethodInfo *)sprites);
     v13 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                               (const MethodInfo_2FECD94 *)Method_System_Linq_Enumerable_Count_UISprite___);
+                               (const MethodInfo_300B768 *)Method_System_Linq_Enumerable_Count_UISprite___);
     if ( (int)v13 >= 1 )
     {
       v15 = 0LL;
@@ -100,7 +100,7 @@ void __fastcall NumSpriteUtility__SetNumSprite(
           {
             DigitNumber = NumSpriteUtility__GetDigitNumber(number, v16, v20);
             v23 = System_Int64__ToString((int64_t)&DigitNumber, 0LL);
-            v13 = System_String__Concat_63235584(baseName, v23, 0LL);
+            v13 = System_String__Concat_63368612(baseName, v23, 0LL);
             if ( !setSprite )
               goto LABEL_25;
             v13 = (System_String_o *)((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, UISprite_o *, System_String_o *, _QWORD))setSprite->fields.m_target)(
@@ -121,7 +121,7 @@ void __fastcall NumSpriteUtility__SetNumSprite(
           {
             v26 = 0;
             v22 = System_Int32__ToString((int32_t)&v26, 0LL);
-            v13 = System_String__Concat_63235584(baseName, v22, 0LL);
+            v13 = System_String__Concat_63368612(baseName, v22, 0LL);
             if ( !setSprite )
               goto LABEL_25;
             ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, UISprite_o *, System_String_o *, _QWORD))setSprite->fields.m_target)(
@@ -134,7 +134,7 @@ void __fastcall NumSpriteUtility__SetNumSprite(
           {
             if ( !setSprite )
 LABEL_25:
-              sub_1C2E388(v13, v14);
+              sub_1C3B9C0(v13, v14);
             ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, UISprite_o *, struct System_String_o *, _QWORD))setSprite->fields.m_target)(
               setSprite->fields.original_method_info,
               m_Items[v15],
@@ -146,11 +146,11 @@ LABEL_25:
         ++v15;
         v13 = (System_String_o *)System_Linq_Enumerable__Count_object_(
                                    (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                   (const MethodInfo_2FECD94 *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                   (const MethodInfo_300B768 *)Method_System_Linq_Enumerable_Count_UISprite___);
         if ( (__int64)v15 >= (int)v13 )
           return;
       }
-      sub_1C2E390(v13, v14);
+      sub_1C3B9C8(v13, v14);
     }
   }
 }

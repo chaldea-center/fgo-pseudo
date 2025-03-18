@@ -35,21 +35,21 @@ void __fastcall SelectImageLimitListViewItemDraw__SetButton(
   ServantCostumeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BF8CF8 & 1) == 0 )
+  if ( (byte_4C1D478 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantCostumeMaster___, item);
-    sub_1C2E12C(&DataManager_TypeInfo, v5);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v6);
-    sub_1C2E12C(&StringLiteral_12113/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v7);
-    sub_1C2E12C(&StringLiteral_17783/*"btn_bg_20"*/, v8);
-    sub_1C2E12C(&StringLiteral_17784/*"btn_bg_21"*/, v9);
-    byte_4BF8CF8 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantCostumeMaster___, item);
+    sub_1C3B764(&DataManager_TypeInfo, v5);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v6);
+    sub_1C3B764(&StringLiteral_12136/*"SUMMON_OPEN_FRINEDQUEST_NAME"*/, v7);
+    sub_1C3B764(&StringLiteral_17813/*"commandCodeId"*/, v8);
+    sub_1C3B764(&StringLiteral_17814/*"commandSpell/use"*/, v9);
+    byte_4C1D478 = 1;
   }
   entity = 0LL;
   limitCount = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ServantCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+  Master_object = (ServantCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
   if ( !item || !Master_object )
     goto LABEL_43;
   if ( ServantCostumeMaster__TryGetEntity(Master_object, &entity, item->fields.svtId, item->fields.limitCount, 0LL) )
@@ -70,7 +70,7 @@ LABEL_23:
   {
     limitCount = item->fields.limitCount;
     v14 = System_Int32__ToString((int32_t)&limitCount, 0LL);
-    v15 = System_String__Concat_63235584((System_String_o *)StringLiteral_12113/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v14, 0LL);
+    v15 = System_String__Concat_63368612((System_String_o *)StringLiteral_12136/*"SUMMON_OPEN_FRINEDQUEST_NAME"*/, v14, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Master_object = (ServantCostumeMaster_o *)LocalizationManager__Get(v15, 0LL);
@@ -80,10 +80,10 @@ LABEL_23:
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4BF8DA3 )
+  if ( !byte_4C1D52E )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v11);
-    byte_4BF8DA3 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, v11);
+    byte_4C1D52E = 1;
   }
   Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -108,10 +108,10 @@ LABEL_24:
   if ( !isSelected )
   {
 LABEL_33:
-    if ( !byte_4BF8542 )
+    if ( !byte_4C1CCC2 )
     {
-      sub_1C2E12C(&LocalizationManager_TypeInfo, v11);
-      byte_4BF8542 = 1;
+      sub_1C3B764(&LocalizationManager_TypeInfo, v11);
+      byte_4C1CCC2 = 1;
     }
     Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -127,13 +127,13 @@ LABEL_33:
     if ( v16 )
       goto LABEL_38;
 LABEL_43:
-    sub_1C2E388(Master_object, v11);
+    sub_1C3B9C0(Master_object, v11);
   }
 LABEL_26:
-  if ( !byte_4BF8543 )
+  if ( !byte_4C1CCC3 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v11);
-    byte_4BF8543 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, v11);
+    byte_4C1CCC3 = 1;
   }
   Master_object = (ServantCostumeMaster_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -158,9 +158,9 @@ LABEL_38:
   if ( !Master_object )
     goto LABEL_43;
   if ( item->fields.isSelected )
-    v24 = &StringLiteral_17784/*"btn_bg_21"*/;
+    v24 = &StringLiteral_17814/*"commandSpell/use"*/;
   else
-    v24 = &StringLiteral_17783/*"btn_bg_20"*/;
+    v24 = &StringLiteral_17813/*"commandCodeId"*/;
   UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)*v24, 0LL);
 }
 
@@ -181,12 +181,12 @@ void __fastcall SelectImageLimitListViewItemDraw__SetInput(
   int32_t svtId; // w23
   const MethodInfo *v15; // x2
 
-  if ( (byte_4BF8CF7 & 1) == 0 )
+  if ( (byte_4C1D477 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, item);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v8);
-    byte_4BF8CF7 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, item);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
+    byte_4C1D477 = 1;
   }
   if ( item )
   {
@@ -199,11 +199,11 @@ void __fastcall SelectImageLimitListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                            (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_1C2E388(Component_object, v10);
+        sub_1C3B9C0(Component_object, v10);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
         Component_object,
@@ -233,10 +233,10 @@ void __fastcall SelectImageLimitListViewItemDraw__SetItem(
   int32_t svtId; // w23
   const MethodInfo *v10; // x2
 
-  if ( (byte_4BF8CF6 & 1) == 0 )
+  if ( (byte_4C1D476 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, item);
-    byte_4BF8CF6 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, item);
+    byte_4C1D476 = 1;
   }
   if ( item && mode )
   {

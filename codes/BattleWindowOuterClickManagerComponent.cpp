@@ -27,10 +27,10 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   FollowerInfo_o *v18; // x6
   PartyListViewItem_o *v19; // x7
 
-  if ( (byte_4C00B24 & 1) == 0 )
+  if ( (byte_4C25352 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, callBack);
-    byte_4C00B24 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, callBack);
+    byte_4C25352 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -40,7 +40,7 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
     v13 = this->fields.outerPanel;
     if ( !v13
       || (v13->fields.clickCallBack = callBack,
-          sub_1C2E0D0(
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v13->fields.clickCallBack,
             (int64_t)callBack,
             v7,
@@ -51,9 +51,9 @@ void __fastcall BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
             v12),
           (v13 = this->fields.outerPanel) == 0LL) )
     {
-      sub_1C2E388(v13, v6);
+      sub_1C3B9C0(v13, v6);
     }
     v13->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v13->fields.targetWindow, (int64_t)this, v14, v15, v16, v17, v18, v19);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v13->fields.targetWindow, (int64_t)this, v14, v15, v16, v17, v18, v19);
   }
 }

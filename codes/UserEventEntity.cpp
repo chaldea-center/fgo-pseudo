@@ -1,30 +1,30 @@
 void __fastcall UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE430 & 1) == 0 )
+  if ( (byte_4C22C55 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFE430 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C22C55 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserEventEntity___ctor_41431352(
+void __fastcall UserEventEntity___ctor_41548788(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4BFE431 & 1) == 0 )
+  if ( (byte_4C22C56 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, userId);
-    byte_4BFE431 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, userId);
+    byte_4C22C56 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.updatedAt = 0LL;
@@ -37,15 +37,15 @@ void __fastcall UserEventEntity___ctor_41431352(
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4BFE42F & 1) == 0 )
+  if ( (byte_4C22C54 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&eventId);
-    byte_4BFE42F = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&eventId);
+    byte_4C22C54 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_2FCFB5C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2FEE494 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -63,7 +63,7 @@ bool __fastcall UserEventEntity__getEventFlag(UserEventEntity_o *this, int32_t f
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_41431544(
+bool __fastcall UserEventEntity__getEventFlag_41548980(
         UserEventEntity_o *this,
         int32_t flagId,
         const MethodInfo *method)
@@ -72,7 +72,7 @@ bool __fastcall UserEventEntity__getEventFlag_41431544(
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_41431560(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
+bool __fastcall UserEventEntity__getEventFlag_41548996(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
 {
   return (this->fields.flag & flag) != 0;
 }

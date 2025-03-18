@@ -16,22 +16,22 @@ void __fastcall CommandCardExceedRequest__beginRequest(
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x1
 
-  if ( (byte_4BFF07B & 1) == 0 )
+  if ( (byte_4C238A5 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_24918/*"userSvtId"*/, userId);
-    sub_1C2E12C(&StringLiteral_19640/*"exceedCount"*/, v12);
-    sub_1C2E12C(&StringLiteral_24817/*"useItemId"*/, v13);
-    sub_1C2E12C(&StringLiteral_20581/*"idx"*/, v14);
-    byte_4BFF07B = 1;
+    sub_1C3B764(&StringLiteral_24962/*"ストーリークエスト敗北【画面】クエスト"*/, userId);
+    sub_1C3B764(&StringLiteral_19675/*"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"*/, v12);
+    sub_1C3B764(&StringLiteral_24861/*"඀฀"*/, v13);
+    sub_1C3B764(&StringLiteral_20616/*"jingle"*/, v14);
+    byte_4C238A5 = 1;
   }
-  RequestBase__addField_42510212(
+  RequestBase__addField_42628192(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_24918/*"userSvtId"*/,
+    (System_String_o *)StringLiteral_24962/*"ストーリークエスト敗北【画面】クエスト"*/,
     userServantId,
     *(const MethodInfo **)&index);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20581/*"idx"*/, index, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24817/*"useItemId"*/, useItemId, v16);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19640/*"exceedCount"*/, exceedCount, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20616/*"jingle"*/, index, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24861/*"඀฀"*/, useItemId, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19675/*"http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"*/, exceedCount, v17);
   RequestBase__beginRequest((RequestBase_o *)this, v18);
 }
 
@@ -43,16 +43,16 @@ System_String_o *__fastcall CommandCardExceedRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF07A & 1) == 0 )
+  if ( (byte_4C238A4 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_18068/*"card/commandCardExceed"*/, v2);
-    byte_4BFF07A = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_18098/*"darkWipe"*/, v2);
+    byte_4C238A4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_18068/*"card/commandCardExceed"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18098/*"darkWipe"*/, 0LL);
 }
 
 
@@ -70,17 +70,17 @@ void __fastcall CommandCardExceedRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BFF07C & 1) == 0 )
+  if ( (byte_4C238A6 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF07C = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C238A6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(84, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -99,7 +99,7 @@ void __fastcall CommandCardExceedRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22468/*"ng"*/,
+        StringLiteral_22507/*"referrerMapId"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

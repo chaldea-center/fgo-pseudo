@@ -2,10 +2,10 @@ void __fastcall WarBoardConsumedPieceActionPointPopup___ctor(
         WarBoardConsumedPieceActionPointPopup_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BFB5A9 & 1) == 0 )
+  if ( (byte_4C1FDB0 & 1) == 0 )
   {
-    sub_1C2E12C(&WarBoardInfoPopupBase_TypeInfo, method);
-    byte_4BFB5A9 = 1;
+    sub_1C3B764(&WarBoardInfoPopupBase_TypeInfo, method);
+    byte_4C1FDB0 = 1;
   }
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
@@ -43,14 +43,14 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__ClosePopup(
   System_Action_c *v19; // x1
   const MethodInfo *v20; // x1
 
-  if ( (byte_4BFB5A8 & 1) == 0 )
+  if ( (byte_4C1FDAF & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, hideCallback);
-    byte_4BFB5A8 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, hideCallback);
+    byte_4C1FDAF = 1;
   }
   this->fields.hideCompleteCallback = 0LL;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback,
     0LL,
     (int64_t)method,
@@ -70,11 +70,11 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__ClosePopup(
   if ( (System_Action_c *)v11->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v11, (System_Action_c *)v11->klass != v19) )
   {
-    sub_1C2E648(v11);
+    sub_1C3BC80(v11);
 LABEL_7:
     *p_hideCompleteCallback = (struct System_Action_o *)v18;
   }
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback, v18, v12, v13, v14, v15, v16, v17);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.hideCompleteCallback, v18, v12, v13, v14, v15, v16, v17);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v20);
 }
 
@@ -89,7 +89,7 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__Initialize(
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1C2E388(0LL, v3);
+    sub_1C3B9C0(0LL, v3);
   UISkinSprite__setupSprite(windowBase, 0LL);
 }
 
@@ -102,10 +102,10 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4BFB5A7 & 1) == 0 )
+  if ( (byte_4C1FDAE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__, method);
-    byte_4BFB5A7 = 1;
+    sub_1C3B764(&Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__, method);
+    byte_4C1FDAE = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -113,8 +113,8 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OnClickClose(
   {
     v3 = Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_WarBoardConsumedPieceActionPointPopup_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -166,21 +166,21 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
   int v38; // w8
   int32_t v39; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4BFB5A6 & 1) == 0 )
+  if ( (byte_4C1FDAD & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, clickCallback);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v12);
-    sub_1C2E12C(&NGUITools_TypeInfo, v13);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v14);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__, v15);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__, v16);
-    sub_1C2E12C(&System_Text_StringBuilder_TypeInfo, v17);
-    sub_1C2E12C(&StringLiteral_15669/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, v18);
-    sub_1C2E12C(&StringLiteral_15670/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, v19);
-    byte_4BFB5A6 = 1;
+    sub_1C3B764(&int_TypeInfo, clickCallback);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
+    sub_1C3B764(&NGUITools_TypeInfo, v13);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v14);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__, v15);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__, v16);
+    sub_1C3B764(&System_Text_StringBuilder_TypeInfo, v17);
+    sub_1C3B764(&StringLiteral_15697/*"\\>"*/, v18);
+    sub_1C3B764(&StringLiteral_15698/*"\\P{_xmlC}"*/, v19);
+    byte_4C1FDAD = 1;
   }
   this->fields.clickCallback = clickCallback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.clickCallback,
     (int64_t)clickCallback,
     *(int64_t *)&consumedPoint,
@@ -191,20 +191,20 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
     v7);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15670/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_15698/*"\\P{_xmlC}"*/, 0LL);
   v39 = consumedPoint;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39, v21, v22, v23);
   Count = System_String__Format(v20, v24, 0LL);
   if ( !this->fields.messgeLabel )
     goto LABEL_36;
   UILabel__set_text(this->fields.messgeLabel, Count, 0LL);
-  v27 = (System_Text_StringBuilder_o *)sub_1C2E378(System_Text_StringBuilder_TypeInfo);
+  v27 = (System_Text_StringBuilder_o *)sub_1C3B9B0(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v27, 0LL);
   if ( !consumedPieceList )
     goto LABEL_36;
   Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                               (const MethodInfo_3855298 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                               (const MethodInfo_3875A3C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
   if ( (int)Count >= 1 )
   {
     v28 = 0;
@@ -213,10 +213,10 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
       Item = System_Collections_ObjectModel_ReadOnlyCollection_object___get_Item(
                (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
                v28,
-               (const MethodInfo_3855320 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
+               (const MethodInfo_3875AC4 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Item__);
       Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                                   (const MethodInfo_3855298 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                                   (const MethodInfo_3875A3C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
       if ( !Item )
         break;
       v30 = (int)Count;
@@ -227,18 +227,18 @@ void __fastcall WarBoardConsumedPieceActionPointPopup__OpenNoticePopup(
       if ( !v27 )
         break;
       if ( v28 == v30 - 1 )
-        System_Text_StringBuilder__Append_62396736(v27, Count, 0LL);
+        System_Text_StringBuilder__Append_62529764(v27, Count, 0LL);
       else
-        System_Text_StringBuilder__AppendLine_62397960(v27, Count, 0LL);
+        System_Text_StringBuilder__AppendLine_62530988(v27, Count, 0LL);
       ++v28;
       Count = (System_String_o *)System_Collections_ObjectModel_ReadOnlyCollection_object___get_Count(
                                    (System_Collections_ObjectModel_ReadOnlyCollection_T__o *)consumedPieceList,
-                                   (const MethodInfo_3855298 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
+                                   (const MethodInfo_3875A3C *)Method_System_Collections_ObjectModel_ReadOnlyCollection_WarBoardPieceData__get_Count__);
       if ( v28 >= (int)Count )
         goto LABEL_16;
     }
 LABEL_36:
-    sub_1C2E388(Count, v26);
+    sub_1C3B9C0(Count, v26);
   }
 LABEL_16:
   if ( !v27 )
@@ -253,7 +253,7 @@ LABEL_16:
   closeButtonLabel = this->fields.closeButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Count = LocalizationManager__Get((System_String_o *)StringLiteral_15669/*"WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE"*/, 0LL);
+  Count = LocalizationManager__Get((System_String_o *)StringLiteral_15697/*"\\>"*/, 0LL);
   if ( !closeButtonLabel )
     goto LABEL_36;
   UILabel__set_text(closeButtonLabel, Count, 0LL);
@@ -263,7 +263,7 @@ LABEL_16:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Count, 0LL);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_48173428(gameObject, 1, 0LL);
+  NGUITools__UpdateWidgetCollider_48297172(gameObject, 1, 0LL);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);

@@ -38,13 +38,13 @@ void __fastcall CommandCodeCharaGraphSortLogic__SetSortValueLocal(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v36; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v37; // 0:x0.16
 
-  if ( (byte_4BFCB21 & 1) == 0 )
+  if ( (byte_4C2132F & 1) == 0 )
   {
-    sub_1C2E12C(&CharaGraphListViewManager_TypeInfo, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
-    byte_4BFCB21 = 1;
+    sub_1C3B764(&CharaGraphListViewManager_TypeInfo, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v5);
+    byte_4C2132F = 1;
   }
   CharaGraphSortLogicBase__SetSortValueLocal((CharaGraphSortLogicBase_o *)this, method);
   ListViewItem = CommandCodeCharaGraphSortLogic__get_ListViewItem(this, v6);
@@ -65,7 +65,7 @@ void __fastcall CommandCodeCharaGraphSortLogic__SetSortValueLocal(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v36.fields.currentCryptoKey = v13;
   *(_QWORD *)&v36.fields.fakeValue = v12;
-  this->fields._SortValue2_k__BackingField = ((__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(
+  this->fields._SortValue2_k__BackingField = ((__int64)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(
                                                          v36,
                                                          0LL) << 16) | (v9 << 48);
   ListViewItem = CommandCodeCharaGraphSortLogic__get_ListViewItem(this, v14);
@@ -90,7 +90,7 @@ void __fastcall CommandCodeCharaGraphSortLogic__SetSortValueLocal(
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v34 = v35;
-        v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47762340(&v34, 0LL);
+        v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(&v34, 0LL);
         IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
         this->fields._SortValue1_k__BackingField = v20;
         ListViewItem = CommandCodeCharaGraphSortLogic__get_ListViewItem(this, v22);
@@ -150,13 +150,13 @@ LABEL_36:
           *(_QWORD *)&v37.fields.fakeValue = v32;
           v17 = (v29 << 32)
               + (AmountSortValue_k__BackingField << 48)
-              + CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v37, 0LL);
+              + CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v37, 0LL);
           goto LABEL_42;
         }
       }
     }
 LABEL_44:
-    sub_1C2E388(ListViewItem, v8);
+    sub_1C3B9C0(ListViewItem, v8);
   }
   manager = sort->fields.manager;
   if ( manager
@@ -207,10 +207,10 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphSortLogic__
   CommandCodeCharaGraphSortLogic_o *v14; // x0
   const MethodInfo *v15; // x1
 
-  if ( (byte_4BFCB20 & 1) == 0 )
+  if ( (byte_4C2132E & 1) == 0 )
   {
-    sub_1C2E12C(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
-    byte_4BFCB20 = 1;
+    sub_1C3B764(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
+    byte_4C2132E = 1;
   }
   p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -224,10 +224,10 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphSortLogic__
   {
     item = this->fields.item;
     p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
-    sub_1C2E0D0(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
+    sub_1C3B708(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
     return listViewItem;
   }
-  sub_1C2E648(this->fields.item);
+  sub_1C3BC80(this->fields.item);
   CommandCodeCharaGraphSortLogic__SetSortValueLocal(v14, v15);
   return result;
 }

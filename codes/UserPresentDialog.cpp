@@ -3,10 +3,10 @@ void __fastcall UserPresentDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct UserPresentDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4BFC54A & 1) == 0 )
+  if ( (byte_4C20D58 & 1) == 0 )
   {
-    sub_1C2E12C(&UserPresentDialog_TypeInfo, v1);
-    byte_4BFC54A = 1;
+    sub_1C3B764(&UserPresentDialog_TypeInfo, v1);
+    byte_4C20D58 = 1;
   }
   static_fields = UserPresentDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_RECIEVE_POS_Y = 0xFFFFFF6200000032LL;
@@ -49,18 +49,18 @@ void __fastcall UserPresentDialog__OpenRecieve(
   UILabel_o *decideLabel; // x19
   int32_t PresentBoxCheckMax; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4BFC548 & 1) == 0 )
+  if ( (byte_4C20D56 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, message);
-    sub_1C2E12C(&int_TypeInfo, v9);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v10);
-    sub_1C2E12C(&UserPresentDialog_TypeInfo, v11);
-    sub_1C2E12C(&StringLiteral_10658/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, v12);
-    sub_1C2E12C(&StringLiteral_10661/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, v13);
-    sub_1C2E12C(&StringLiteral_10660/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, v14);
-    sub_1C2E12C(&StringLiteral_10659/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, v15);
-    sub_1C2E12C(&StringLiteral_10657/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, v16);
-    byte_4BFC548 = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, message);
+    sub_1C3B764(&int_TypeInfo, v9);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v10);
+    sub_1C3B764(&UserPresentDialog_TypeInfo, v11);
+    sub_1C3B764(&StringLiteral_10677/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/, v12);
+    sub_1C3B764(&StringLiteral_10680/*"QuestStartBlack"*/, v13);
+    sub_1C3B764(&StringLiteral_10679/*"QuestStart"*/, v14);
+    sub_1C3B764(&StringLiteral_10678/*"QuestMessageAdd"*/, v15);
+    sub_1C3B764(&StringLiteral_10676/*"Quest"*/, v16);
+    byte_4C20D56 = 1;
   }
   v17 = UserPresentDialog_TypeInfo;
   messageRoot = this->fields.messageRoot;
@@ -73,7 +73,7 @@ void __fastcall UserPresentDialog__OpenRecieve(
   subtitle = this->fields.subtitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10659/*"PRESENT_RECIEVE_DIALOG_SUBTITLE"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10678/*"QuestMessageAdd"*/, 0LL);
   if ( !subtitle )
     goto LABEL_16;
   UILabel__set_text(subtitle, decideButton, 0LL);
@@ -86,7 +86,7 @@ void __fastcall UserPresentDialog__OpenRecieve(
     (float)UserPresentDialog_TypeInfo->static_fields->SUB_TITLE_RECIEVE_POS_Y,
     0LL);
   subtitleSmall = this->fields.subtitleSmall;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10660/*"PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL"*/, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10679/*"QuestStart"*/, 0LL);
   v28 = BalanceConfig_TypeInfo;
   v29 = v24;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -108,18 +108,18 @@ void __fastcall UserPresentDialog__OpenRecieve(
   if ( !decideButton )
     goto LABEL_16;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)decideButton, 1, 0LL);
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10661/*"PRESENT_RECIEVE_DIALOG_TITLE"*/, 0LL);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_10680/*"QuestStartBlack"*/, 0LL);
   TextLabelScrollDialog__Open((TextLabelScrollDialog_o *)this, v31, message, closeAction, decideAction, v32);
   closeLabel = this->fields.closeLabel;
-  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10657/*"PRESENT_RECIEVE_DIALOG_CANCEL"*/, 0LL);
+  decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10676/*"Quest"*/, 0LL);
   if ( !closeLabel
     || (UILabel__set_text(closeLabel, decideButton, 0LL),
         decideLabel = this->fields.decideLabel,
-        decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10658/*"PRESENT_RECIEVE_DIALOG_DECIDE"*/, 0LL),
+        decideButton = LocalizationManager__Get((System_String_o *)StringLiteral_10677/*"QuestInfoWindowPrefab/QuestInfo/BgSp/CloseButton"*/, 0LL),
         !decideLabel) )
   {
 LABEL_16:
-    sub_1C2E388(decideButton, v21);
+    sub_1C3B9C0(decideButton, v21);
   }
   UILabel__set_text(decideLabel, decideButton, 0LL);
 }
@@ -127,10 +127,10 @@ LABEL_16:
 
 System_String_o *__fastcall UserPresentDialog__get_closeBtnPath(UserPresentDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFC549 & 1) == 0 )
+  if ( (byte_4C20D57 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_15924/*"Window/CloseButton"*/, method);
-    byte_4BFC549 = 1;
+    sub_1C3B764(&StringLiteral_15952/*"_Padding"*/, method);
+    byte_4C20D57 = 1;
   }
-  return (System_String_o *)StringLiteral_15924/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15952/*"_Padding"*/;
 }

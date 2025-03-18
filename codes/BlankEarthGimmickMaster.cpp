@@ -1,14 +1,14 @@
 void __fastcall BlankEarthGimmickMaster___ctor(BlankEarthGimmickMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD3FD & 1) == 0 )
+  if ( (byte_4C21C0C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__, method);
-    byte_4BFD3FD = 1;
+    sub_1C3B764(&Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__, method);
+    byte_4C21C0C = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    466,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__);
+    468,
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_BlankEarthGimmickMaster__BlankEarthGimmickEntity__int___ctor__);
 }
 
 
@@ -37,20 +37,20 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
   int64_t v21; // x1
   Il2CppClass **v22; // x0
 
-  if ( (byte_4BFD3FC & 1) == 0 )
+  if ( (byte_4C21C0B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Count__, method);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Item__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__, v6);
-    sub_1C2E12C(&System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo, v7);
-    byte_4BFD3FC = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Count__, method);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Item__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__Add__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__, v6);
+    sub_1C3B764(&System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo, v7);
+    byte_4C21C0B = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_BlankEarthGimmickEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
     goto LABEL_17;
@@ -59,7 +59,7 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
   {
     list = System_Collections_ObjectModel_Collection_object___get_Count(
              (System_Collections_ObjectModel_Collection_T__o *)list,
-             (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Count__);
+             (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Count__);
     if ( v11 >= (int)list )
       break;
     list = (int64_t)this->fields.list;
@@ -68,7 +68,7 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
     list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                       (System_Collections_ObjectModel_Collection_T__o *)list,
                       v11,
-                      (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Item__);
+                      (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickEntity__get_Item__);
     if ( list )
     {
       if ( !v8 )
@@ -85,14 +85,14 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
         System_Collections_Generic_List_object___AddWithResize(
           v8,
           (Il2CppObject *)list,
-          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
       }
       else
       {
         v22 = &items->obj.klass + size;
         v8->fields._size = size + 1;
         v22[4] = (Il2CppClass *)v21;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v22 + 4), v21, v12, v13, v14, v15, v16, v17);
+        sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 4), v21, v12, v13, v14, v15, v16, v17);
       }
     }
     list = (int64_t)this->fields.list;
@@ -102,8 +102,8 @@ BlankEarthGimmickEntity_array *__fastcall BlankEarthGimmickMaster__GetAllGimmick
   }
   if ( !v8 )
 LABEL_17:
-    sub_1C2E388(list, v9);
+    sub_1C3B9C0(list, v9);
   return (BlankEarthGimmickEntity_array *)System_Collections_Generic_List_object___ToArray(
                                             v8,
-                                            (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__);
+                                            (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_BlankEarthGimmickEntity__ToArray__);
 }

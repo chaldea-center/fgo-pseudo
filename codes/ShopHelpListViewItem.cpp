@@ -11,9 +11,9 @@ void __fastcall ShopHelpListViewItem___ctor(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  ListViewItem___ctor_42081352((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.info, (int64_t)info, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.info, (int64_t)info, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -23,7 +23,7 @@ System_String_o *__fastcall ShopHelpListViewItem__get_ImageName(ShopHelpListView
 
   info = this->fields.info;
   if ( !info )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -41,14 +41,14 @@ System_String_o *__fastcall ShopHelpListViewItem__get_InfoText(ShopHelpListViewI
   System_String_o *TextCode_k__BackingField; // x19
 
   v2 = this;
-  if ( (byte_4BF9BDB & 1) == 0 )
+  if ( (byte_4C1E3DE & 1) == 0 )
   {
-    this = (ShopHelpListViewItem_o *)sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    byte_4BF9BDB = 1;
+    this = (ShopHelpListViewItem_o *)sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    byte_4C1E3DE = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -62,7 +62,7 @@ bool __fastcall ShopHelpListViewItem__get_IsStone(ShopHelpListViewItem_o *this, 
 
   info = this->fields.info;
   if ( !info )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return info->fields._Kind_k__BackingField == 6;
 }
 
@@ -73,6 +73,6 @@ int32_t __fastcall ShopHelpListViewItem__get_LineCount(ShopHelpListViewItem_o *t
 
   info = this->fields.info;
   if ( !info )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return info->fields._Line_k__BackingField;
 }

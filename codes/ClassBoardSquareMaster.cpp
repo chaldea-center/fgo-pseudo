@@ -1,14 +1,14 @@
 void __fastcall ClassBoardSquareMaster___ctor(ClassBoardSquareMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD4D9 & 1) == 0 )
+  if ( (byte_4C21CE8 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__, method);
-    byte_4BFD4D9 = 1;
+    sub_1C3B764(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__, method);
+    byte_4C21CE8 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    433,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
+    435,
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string___ctor__);
 }
 
 
@@ -31,31 +31,31 @@ ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetAllEntity(
   System_Func_object__bool__o *v15; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4BFD4D7 & 1) == 0 )
+  if ( (byte_4C21CE6 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___,
       *(_QWORD *)&baseId);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
-    sub_1C2E12C(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
-    sub_1C2E12C(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__, v8);
-    sub_1C2E12C(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo, v9);
-    byte_4BFD4D7 = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1C3B764(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1C3B764(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1C3B764(&Method_ClassBoardSquareMaster___c__DisplayClass0_0__GetAllEntity_b__0__, v8);
+    sub_1C3B764(&ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo, v9);
+    byte_4C21CE6 = 1;
   }
-  v10 = sub_1C2E378(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
+  v10 = sub_1C3B9B0(ClassBoardSquareMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   *(_DWORD *)(v10 + 16) = baseId;
-  v13 = sub_1C2E260(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
+  v13 = sub_1C3B898(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
                     + 2
                     * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
                       + 40)));
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v13 + 8))(
                                                                this,
                                                                v13);
-  v15 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v10,
@@ -64,10 +64,10 @@ ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetAllEntity(
   v16 = System_Linq_Enumerable__Where_object_(
           v14,
           (System_Func_TSource__bool__o *)v15,
-          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
   return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                            v16,
-                                           (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+                                           (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -80,18 +80,18 @@ ClassBoardSquareEntity_o *__fastcall ClassBoardSquareMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFD4DA & 1) == 0 )
+  if ( (byte_4C21CE9 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__,
       *(_QWORD *)&classBoardBaseId);
-    byte_4BFD4DA = 1;
+    byte_4C21CE9 = 1;
   }
   PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&id);
   return (ClassBoardSquareEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_327FC38 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
+                                       (const MethodInfo_329F900 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__GetEntity__);
 }
 
 
@@ -114,31 +114,31 @@ ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetOtherThanNon
   System_Func_object__bool__o *v15; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4BFD4D8 & 1) == 0 )
+  if ( (byte_4C21CE7 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___,
       *(_QWORD *)&baseId);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
-    sub_1C2E12C(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
-    sub_1C2E12C(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__, v8);
-    sub_1C2E12C(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo, v9);
-    byte_4BFD4D8 = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___, v5);
+    sub_1C3B764(&Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___, v6);
+    sub_1C3B764(&System_Func_ClassBoardSquareEntity__bool__TypeInfo, v7);
+    sub_1C3B764(&Method_ClassBoardSquareMaster___c__DisplayClass1_0__GetOtherThanNoneEntity_b__0__, v8);
+    sub_1C3B764(&ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo, v9);
+    byte_4C21CE7 = 1;
   }
-  v10 = sub_1C2E378(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
+  v10 = sub_1C3B9B0(ClassBoardSquareMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   *(_DWORD *)(v10 + 16) = baseId;
-  v13 = sub_1C2E260(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
+  v13 = sub_1C3B898(*((_QWORD *)&this->klass->vtable._1_Finalize.methodPtr
                     + 2
                     * *((unsigned __int16 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__getEntitys_ClassBoardSquareEntity___
                       + 40)));
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(ClassBoardSquareMaster_o *, __int64))(v13 + 8))(
                                                                this,
                                                                v13);
-  v15 = (System_Func_object__bool__o *)sub_1C2E378(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_ClassBoardSquareEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v10,
@@ -147,10 +147,10 @@ ClassBoardSquareEntity_array *__fastcall ClassBoardSquareMaster__GetOtherThanNon
   v16 = System_Linq_Enumerable__Where_object_(
           v14,
           (System_Func_TSource__bool__o *)v15,
-          (const MethodInfo_3011CD0 *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
+          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_ClassBoardSquareEntity___);
   return (ClassBoardSquareEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                            v16,
-                                           (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
+                                           (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_ClassBoardSquareEntity___);
 }
 
 
@@ -164,17 +164,17 @@ bool __fastcall ClassBoardSquareMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFD4DB & 1) == 0 )
+  if ( (byte_4C21CEA & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__, entity);
-    byte_4BFD4DB = 1;
+    sub_1C3B764(&Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__, entity);
+    byte_4C21CEA = 1;
   }
   PK = (Il2CppObject *)ClassBoardSquareEntity__CreatePK(classBoardBaseId, id, *(const MethodInfo **)&classBoardBaseId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_ClassBoardSquareMaster__ClassBoardSquareEntity__string__TryGetEntity__);
 }
 
 
@@ -192,7 +192,7 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass0_0___GetAllEntity_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId;
 }
 
@@ -211,6 +211,6 @@ bool __fastcall ClassBoardSquareMaster___c__DisplayClass1_0___GetOtherThanNoneEn
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.classBoardBaseId == this->fields.baseId && x->fields.skillType != 0;
 }

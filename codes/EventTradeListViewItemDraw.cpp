@@ -28,13 +28,13 @@ void __fastcall EventTradeListViewItemDraw__DestroyAnimObj(
   Il2CppObject *v9; // x21
   struct EventTradeListViewItemDraw___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4BF86A1 & 1) == 0 )
+  if ( (byte_4C1CE21 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_UISprite__TypeInfo, method);
-    sub_1C2E12C(&Method_BasicHelper_ForEach_UISprite___, v3);
-    sub_1C2E12C(&Method_EventTradeListViewItemDraw___c__DestroyAnimObj_b__46_0__, v4);
-    sub_1C2E12C(&EventTradeListViewItemDraw___c_TypeInfo, v5);
-    byte_4BF86A1 = 1;
+    sub_1C3B764(&System_Action_UISprite__TypeInfo, method);
+    sub_1C3B764(&Method_BasicHelper_ForEach_UISprite___, v3);
+    sub_1C3B764(&Method_EventTradeListViewItemDraw___c__DestroyAnimObj_b__46_0__, v4);
+    sub_1C3B764(&EventTradeListViewItemDraw___c_TypeInfo, v5);
+    byte_4C1CE21 = 1;
   }
   v6 = EventTradeListViewItemDraw___c_TypeInfo;
   sweetsAnimSpriteArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.sweetsAnimSpriteArray;
@@ -52,16 +52,16 @@ void __fastcall EventTradeListViewItemDraw__DestroyAnimObj(
       v6 = EventTradeListViewItemDraw___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__46_0 = (System_Action_object__o *)sub_1C2E378(System_Action_UISprite__TypeInfo);
+    _9__46_0 = (System_Action_object__o *)sub_1C3B9B0(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(_9__46_0, v9, Method_EventTradeListViewItemDraw___c__DestroyAnimObj_b__46_0__, 0LL);
     static_fields = EventTradeListViewItemDraw___c_TypeInfo->static_fields;
     static_fields->__9__46_0 = (struct System_Action_UISprite__o *)_9__46_0;
-    sub_1C2E0D0(&static_fields->__9__46_0);
+    sub_1C3B708(&static_fields->__9__46_0);
   }
   BasicHelper__ForEach_object_(
     sweetsAnimSpriteArray,
     (System_Action_T__o *)_9__46_0,
-    (const MethodInfo_2FBE538 *)Method_BasicHelper_ForEach_UISprite___);
+    (const MethodInfo_2FDCE70 *)Method_BasicHelper_ForEach_UISprite___);
 }
 
 
@@ -75,7 +75,7 @@ int32_t __fastcall EventTradeListViewItemDraw__GetDisplayMode(
   if ( initMode == 3 )
   {
     if ( !item )
-      sub_1C2E388(initMode, 0LL);
+      sub_1C3B9C0(initMode, 0LL);
     EventTradeListViewItem__UpdateTradeUserInfo(item, (const MethodInfo *)item);
     if ( item->fields._TradeInfo_k__BackingField )
     {
@@ -189,153 +189,153 @@ void __fastcall EventTradeListViewItemDraw__SetItem(
   int32_t goodsIconId; // [xsp+Ch] [xbp-54h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4BF869C & 1) == 0 )
+  if ( (byte_4C1CE1C & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_UISprite__TypeInfo, item);
-    sub_1C2E12C(&AtlasManager_TypeInfo, v7);
-    sub_1C2E12C(&Method_BasicHelper_ForEach_UISprite___, v8);
-    sub_1C2E12C(&Method_DataManager_GetMaster_EventMaster___, v9);
-    sub_1C2E12C(&DataManager_TypeInfo, v10);
-    sub_1C2E12C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v11);
-    sub_1C2E12C(&int_TypeInfo, v12);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v13);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v14);
-    sub_1C2E12C(&string_TypeInfo, v15);
-    sub_1C2E12C(&Method_EventTradeListViewItemDraw___c__DisplayClass41_0__SetItem_b__0__, v16);
-    sub_1C2E12C(&EventTradeListViewItemDraw___c__DisplayClass41_0_TypeInfo, v17);
-    sub_1C2E12C(&StringLiteral_17857/*"btn_trade_bg_01"*/, v18);
-    sub_1C2E12C(&StringLiteral_20564/*"icon_{0}"*/, v19);
-    sub_1C2E12C(&StringLiteral_20704/*"img_item_brank"*/, v20);
-    sub_1C2E12C(&StringLiteral_20562/*"icon_trade_reward"*/, v21);
-    sub_1C2E12C(&StringLiteral_13639/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/, v22);
-    sub_1C2E12C(&StringLiteral_19620/*"event_trade_8048001"*/, v23);
-    sub_1C2E12C(&StringLiteral_13577/*"TIME_REST2_NONE"*/, v24);
-    sub_1C2E12C(&StringLiteral_13635/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/, v25);
-    sub_1C2E12C(&StringLiteral_24491/*"tradegauge_bg"*/, v26);
-    sub_1C2E12C(&StringLiteral_20529/*"icon_popularitem"*/, v27);
-    sub_1C2E12C(&StringLiteral_13636/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/, v28);
-    sub_1C2E12C(&StringLiteral_13665/*"TRADE_EVENT_REST_TIME_LABEL"*/, v29);
-    sub_1C2E12C(&StringLiteral_19621/*"event_trade_8048002"*/, v30);
-    sub_1C2E12C(&StringLiteral_13647/*"TRADE_EVENT_END"*/, v31);
-    sub_1C2E12C(&StringLiteral_24490/*"tradegauge_bar"*/, v32);
-    sub_1C2E12C(&StringLiteral_17858/*"btn_trade_bg_02"*/, v33);
-    sub_1C2E12C(&StringLiteral_19622/*"event_trade_8048003"*/, v34);
-    sub_1C2E12C(&StringLiteral_20559/*"icon_trade_arrow"*/, v35);
-    sub_1C2E12C(&StringLiteral_13637/*"TRADE_EVENT_BOARD_START_BUTTON"*/, v36);
-    sub_1C2E12C(&StringLiteral_13638/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, v37);
-    byte_4BF869C = 1;
+    sub_1C3B764(&System_Action_UISprite__TypeInfo, item);
+    sub_1C3B764(&AtlasManager_TypeInfo, v7);
+    sub_1C3B764(&Method_BasicHelper_ForEach_UISprite___, v8);
+    sub_1C3B764(&Method_DataManager_GetMaster_EventMaster___, v9);
+    sub_1C3B764(&DataManager_TypeInfo, v10);
+    sub_1C3B764(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v11);
+    sub_1C3B764(&int_TypeInfo, v12);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v13);
+    sub_1C3B764(&NetworkManager_TypeInfo, v14);
+    sub_1C3B764(&string_TypeInfo, v15);
+    sub_1C3B764(&Method_EventTradeListViewItemDraw___c__DisplayClass41_0__SetItem_b__0__, v16);
+    sub_1C3B764(&EventTradeListViewItemDraw___c__DisplayClass41_0_TypeInfo, v17);
+    sub_1C3B764(&StringLiteral_17887/*"contentType"*/, v18);
+    sub_1C3B764(&StringLiteral_20599/*"java.util.HashMap"*/, v19);
+    sub_1C3B764(&StringLiteral_20739/*"length < 0"*/, v20);
+    sub_1C3B764(&StringLiteral_20597/*"java.net.UnknownHostException"*/, v21);
+    sub_1C3B764(&StringLiteral_13667/*"The element {0} cannot contain text."*/, v22);
+    sub_1C3B764(&StringLiteral_19655/*"http://schemas.microsoft.com/clr/assem/"*/, v23);
+    sub_1C3B764(&StringLiteral_13605/*"The builder was not properly initialized."*/, v24);
+    sub_1C3B764(&StringLiteral_13663/*"The element cannot contain comment or processing instruction. Content model is empty."*/, v25);
+    sub_1C3B764(&StringLiteral_24535/*"yyyy-MM-ddTHH:mm:ss.FFFFFFF"*/, v26);
+    sub_1C3B764(&StringLiteral_20564/*"iterator"*/, v27);
+    sub_1C3B764(&StringLiteral_13664/*"The element cannot contain text. Content model is empty."*/, v28);
+    sub_1C3B764(&StringLiteral_13693/*"The feature not implemented. {0}."*/, v29);
+    sub_1C3B764(&StringLiteral_19656/*"http://schemas.microsoft.com/clr/ns/"*/, v30);
+    sub_1C3B764(&StringLiteral_13675/*"The element {0} has invalid child element {1}."*/, v31);
+    sub_1C3B764(&StringLiteral_24534/*"yyyy-MM-ddT"*/, v32);
+    sub_1C3B764(&StringLiteral_17888/*"contents"*/, v33);
+    sub_1C3B764(&StringLiteral_19657/*"http://schemas.microsoft.com/clr/nsassem/"*/, v34);
+    sub_1C3B764(&StringLiteral_20594/*"java.net.ProtocolException"*/, v35);
+    sub_1C3B764(&StringLiteral_13665/*"The element cannot contain white space. Content model is empty."*/, v36);
+    sub_1C3B764(&StringLiteral_13666/*"The element name '{0}' does not match the name '{1}' of the 'XmlSchemaElement' set as a partial validation type."*/, v37);
+    byte_4C1CE1C = 1;
   }
   entity = 0LL;
-  v38 = (Il2CppObject *)sub_1C2E378(EventTradeListViewItemDraw___c__DisplayClass41_0_TypeInfo);
+  v38 = (Il2CppObject *)sub_1C3B9B0(EventTradeListViewItemDraw___c__DisplayClass41_0_TypeInfo);
   System_Object___ctor(v38, 0LL);
   if ( !v38 )
     goto LABEL_90;
   v38[1].klass = (Il2CppClass *)item;
   v41 = (EventTradeListViewItem_o **)&v38[1];
-  sub_1C2E0D0(&v38[1]);
+  sub_1C3B708(&v38[1]);
   if ( mode && *v41 )
   {
     EventId_k__BackingField = (*v41)->fields._EventId_k__BackingField;
     tradingBaseSprite = this->fields.tradingBaseSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    nameTextLabel = AtlasManager__SetEventUI_39173640(
+    nameTextLabel = AtlasManager__SetEventUI_39282628(
                       EventId_k__BackingField,
                       tradingBaseSprite,
-                      (System_String_o *)StringLiteral_19621/*"event_trade_8048002"*/,
+                      (System_String_o *)StringLiteral_19656/*"http://schemas.microsoft.com/clr/ns/"*/,
                       0LL);
     if ( !*v41 )
       goto LABEL_90;
-    nameTextLabel = AtlasManager__SetEventUI_39173640(
+    nameTextLabel = AtlasManager__SetEventUI_39282628(
                       (*v41)->fields._EventId_k__BackingField,
                       this->fields.progressGaugeFront,
-                      (System_String_o *)StringLiteral_24490/*"tradegauge_bar"*/,
+                      (System_String_o *)StringLiteral_24534/*"yyyy-MM-ddT"*/,
                       0LL);
     if ( !*v41 )
       goto LABEL_90;
-    nameTextLabel = AtlasManager__SetEventUI_39173640(
+    nameTextLabel = AtlasManager__SetEventUI_39282628(
                       (*v41)->fields._EventId_k__BackingField,
                       this->fields.progressGaugeBack,
-                      (System_String_o *)StringLiteral_24491/*"tradegauge_bg"*/,
+                      (System_String_o *)StringLiteral_24535/*"yyyy-MM-ddTHH:mm:ss.FFFFFFF"*/,
                       0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.pickupSprite,
-      (System_String_o *)StringLiteral_20529/*"icon_popularitem"*/,
+      (System_String_o *)StringLiteral_20564/*"iterator"*/,
       0LL);
     tradeStartLabel = this->fields.tradeStartLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13637/*"TRADE_EVENT_BOARD_START_BUTTON"*/, 0LL);
+    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13665/*"The element cannot contain white space. Content model is empty."*/, 0LL);
     if ( !tradeStartLabel )
       goto LABEL_90;
     UILabel__set_text(tradeStartLabel, (System_String_o *)nameTextLabel, 0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.tradeStartButtonSprite,
-      (System_String_o *)StringLiteral_17857/*"btn_trade_bg_01"*/,
+      (System_String_o *)StringLiteral_17887/*"contentType"*/,
       0LL);
     rewardReceivedPossibleLabel = this->fields.rewardReceivedPossibleLabel;
-    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13635/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/, 0LL);
+    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13663/*"The element cannot contain comment or processing instruction. Content model is empty."*/, 0LL);
     if ( !rewardReceivedPossibleLabel )
       goto LABEL_90;
     UILabel__set_text(rewardReceivedPossibleLabel, (System_String_o *)nameTextLabel, 0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.rewardReceivedPossibleButtonSprite,
-      (System_String_o *)StringLiteral_17858/*"btn_trade_bg_02"*/,
+      (System_String_o *)StringLiteral_17888/*"contents"*/,
       0LL);
     replenishmentLabel = this->fields.replenishmentLabel;
-    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13636/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/, 0LL);
+    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13664/*"The element cannot contain text. Content model is empty."*/, 0LL);
     if ( !replenishmentLabel )
       goto LABEL_90;
     UILabel__set_text(replenishmentLabel, (System_String_o *)nameTextLabel, 0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.replenishmentButtonSprite,
-      (System_String_o *)StringLiteral_17857/*"btn_trade_bg_01"*/,
+      (System_String_o *)StringLiteral_17887/*"contentType"*/,
       0LL);
     withdrawalLabel = this->fields.withdrawalLabel;
-    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13639/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/, 0LL);
+    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13667/*"The element {0} cannot contain text."*/, 0LL);
     if ( !withdrawalLabel )
       goto LABEL_90;
     UILabel__set_text(withdrawalLabel, (System_String_o *)nameTextLabel, 0LL);
     if ( !*v41 )
       goto LABEL_90;
-    nameTextLabel = AtlasManager__SetEventUI_39173640(
+    nameTextLabel = AtlasManager__SetEventUI_39282628(
                       (*v41)->fields._EventId_k__BackingField,
                       this->fields.withdrawalButtonSprite,
-                      (System_String_o *)StringLiteral_17857/*"btn_trade_bg_01"*/,
+                      (System_String_o *)StringLiteral_17887/*"contentType"*/,
                       0LL);
     if ( !*v41 )
       goto LABEL_90;
-    nameTextLabel = AtlasManager__SetEventUI_39173640(
+    nameTextLabel = AtlasManager__SetEventUI_39282628(
                       (*v41)->fields._EventId_k__BackingField,
                       this->fields.tradeRewardIconSprite,
-                      (System_String_o *)StringLiteral_20562/*"icon_trade_reward"*/,
+                      (System_String_o *)StringLiteral_20597/*"java.net.UnknownHostException"*/,
                       0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.tradeArrowIconSprite,
-      (System_String_o *)StringLiteral_20559/*"icon_trade_arrow"*/,
+      (System_String_o *)StringLiteral_20594/*"java.net.ProtocolException"*/,
       0LL);
     sweetsAnimSpriteArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.sweetsAnimSpriteArray;
-    v49 = (System_Action_object__o *)sub_1C2E378(System_Action_UISprite__TypeInfo);
+    v49 = (System_Action_object__o *)sub_1C3B9B0(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(v49, v38, Method_EventTradeListViewItemDraw___c__DisplayClass41_0__SetItem_b__0__, 0LL);
     BasicHelper__ForEach_object_(
       sweetsAnimSpriteArray,
       (System_Action_T__o *)v49,
-      (const MethodInfo_2FBE538 *)Method_BasicHelper_ForEach_UISprite___);
+      (const MethodInfo_2FDCE70 *)Method_BasicHelper_ForEach_UISprite___);
     klass = v38[1].klass;
     if ( !klass )
       goto LABEL_90;
@@ -357,7 +357,7 @@ void __fastcall EventTradeListViewItemDraw__SetItem(
       if ( IsRelease_k__BackingField )
       {
 LABEL_27:
-        nameTextLabel = AtlasManager__SetEventUI_39173640(v54, baseSprite, (System_String_o *)StringLiteral_19620/*"event_trade_8048001"*/, 0LL);
+        nameTextLabel = AtlasManager__SetEventUI_39282628(v54, baseSprite, (System_String_o *)StringLiteral_19655/*"http://schemas.microsoft.com/clr/assem/"*/, 0LL);
         v59 = *v41;
         if ( !*v41 )
           goto LABEL_90;
@@ -368,8 +368,8 @@ LABEL_27:
         itemIcon = this->fields.itemIcon;
         goodsIconId = TradeGoodsEntity_k__BackingField->fields.goodsIconId;
         v63 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &goodsIconId, v56, v57, v58);
-        v64 = System_String__Format((System_String_o *)StringLiteral_20564/*"icon_{0}"*/, v63, 0LL);
-        nameTextLabel = AtlasManager__SetEventUI_39173640(v61, itemIcon, v64, 0LL);
+        v64 = System_String__Format((System_String_o *)StringLiteral_20599/*"java.util.HashMap"*/, v63, 0LL);
+        nameTextLabel = AtlasManager__SetEventUI_39282628(v61, itemIcon, v64, 0LL);
         if ( !*v41 )
           goto LABEL_90;
         v65 = (*v41)->fields._TradeGoodsEntity_k__BackingField;
@@ -382,18 +382,18 @@ LABEL_27:
         goto LABEL_42;
       }
     }
-    nameTextLabel = AtlasManager__SetEventUI_39173640(v54, baseSprite, (System_String_o *)StringLiteral_19622/*"event_trade_8048003"*/, 0LL);
+    nameTextLabel = AtlasManager__SetEventUI_39282628(v54, baseSprite, (System_String_o *)StringLiteral_19657/*"http://schemas.microsoft.com/clr/nsassem/"*/, 0LL);
     if ( !*v41 )
       goto LABEL_90;
-    AtlasManager__SetEventUI_39173640(
+    AtlasManager__SetEventUI_39282628(
       (*v41)->fields._EventId_k__BackingField,
       this->fields.itemIcon,
-      (System_String_o *)StringLiteral_20704/*"img_item_brank"*/,
+      (System_String_o *)StringLiteral_20739/*"length < 0"*/,
       0LL);
     v67 = (UILabel_o *)this->fields.nameTextLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13638/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, 0LL);
+    nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13666/*"The element name '{0}' does not match the name '{1}' of the 'XmlSchemaElement' set as a partial validation type."*/, 0LL);
     if ( !v67 )
       goto LABEL_90;
     UILabel__set_text(v67, (System_String_o *)nameTextLabel, 0LL);
@@ -414,14 +414,14 @@ LABEL_42:
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      nameTextLabel = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_EventMaster___);
+      nameTextLabel = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventMaster___);
       if ( !*v41 || !nameTextLabel )
         goto LABEL_90;
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)nameTextLabel,
              &entity,
              (*v41)->fields._EventId_k__BackingField,
-             (const MethodInfo_327B1CC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+             (const MethodInfo_329AE94 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
       {
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -435,11 +435,11 @@ LABEL_42:
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v70 >= (__int64)monitor )
         {
-          nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13577/*"TIME_REST2_NONE"*/, 0LL);
+          nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13605/*"The builder was not properly initialized."*/, 0LL);
         }
         else
         {
-          nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13665/*"TRADE_EVENT_REST_TIME_LABEL"*/, 0LL);
+          nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13693/*"The feature not implemented. {0}."*/, 0LL);
           if ( !entity )
             goto LABEL_90;
           v73 = (System_String_o *)nameTextLabel;
@@ -453,7 +453,7 @@ LABEL_42:
         v40 = (const MethodInfo *)nameTextLabel;
         if ( !restTimeLabel )
 LABEL_90:
-          sub_1C2E388(nameTextLabel, v40);
+          sub_1C3B9C0(nameTextLabel, v40);
         UILabel__set_text(restTimeLabel, (System_String_o *)nameTextLabel, 0LL);
       }
     }
@@ -524,7 +524,7 @@ LABEL_88:
             textOnMask = this->fields.textOnMask;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13647/*"TRADE_EVENT_END"*/, 0LL);
+            nameTextLabel = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_13675/*"The element {0} has invalid child element {1}."*/, 0LL);
             if ( textOnMask )
             {
               UILabel__set_text(textOnMask, (System_String_o *)nameTextLabel, 0LL);
@@ -571,10 +571,10 @@ void __fastcall EventTradeListViewItemDraw__SetPriceIconText(
   il2cpp_array_size_t max_length; // w9
   UnityEngine_Object_o *priceInfoTriple; // x20
 
-  if ( (byte_4BF869D & 1) == 0 )
+  if ( (byte_4C1CE1D & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, item);
-    byte_4BF869D = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, item);
+    byte_4C1CE1D = 1;
   }
   priceInfoSingle = (UnityEngine_Component_o *)this->fields.priceInfoSingle;
   if ( !priceInfoSingle )
@@ -644,7 +644,7 @@ LABEL_18:
       }
     }
 LABEL_24:
-    sub_1C2E388(priceInfoSingle, item);
+    sub_1C3B9C0(priceInfoSingle, item);
   }
 }
 
@@ -737,7 +737,7 @@ void __fastcall EventTradeListViewItemDraw__SetReleaseDisplayObject(
     || (maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0LL)) == 0LL )
   {
 LABEL_28:
-    sub_1C2E388(maskSprite, isRelease);
+    sub_1C3B9C0(maskSprite, isRelease);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, isRelease, 0LL);
 }
@@ -766,35 +766,35 @@ void __fastcall EventTradeListViewItemDraw__SetRewardIconText(
   UILabel_o *rewardNumTitleLabel; // x19
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BF869E & 1) == 0 )
+  if ( (byte_4C1CE1E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_GiftMaster___, item);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserItemMaster___, v5);
-    sub_1C2E12C(&DataManager_TypeInfo, v6);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v7);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v8);
-    sub_1C2E12C(&StringLiteral_405/*"#,0"*/, v9);
-    sub_1C2E12C(&StringLiteral_13649/*"TRADE_EVENT_HAVE_NUM"*/, v10);
-    sub_1C2E12C(&StringLiteral_1191/*"0"*/, v11);
-    byte_4BF869E = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_GiftMaster___, item);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserItemMaster___, v5);
+    sub_1C3B764(&DataManager_TypeInfo, v6);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
+    sub_1C3B764(&NetworkManager_TypeInfo, v8);
+    sub_1C3B764(&StringLiteral_405/*"#0039E2"*/, v9);
+    sub_1C3B764(&StringLiteral_13677/*"The element {0} has invalid child element {1}. List of possible elements expected: {2}. {3}"*/, v10);
+    sub_1C3B764(&StringLiteral_1191/*"1.0"*/, v11);
+    byte_4C1CE1E = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !item )
     goto LABEL_32;
   TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
   if ( !TradeGoodsEntity_k__BackingField || !Master_object )
     goto LABEL_32;
   GiftListById = GiftMaster__GetGiftListById(Master_object, TradeGoodsEntity_k__BackingField->fields.giftId, 0LL);
-  v16 = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserItemMaster___);
+  v16 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BF81D5 )
+  if ( !byte_4C1C955 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, v13);
-    byte_4BF81D5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, v13);
+    byte_4C1C955 = 1;
   }
   Master_object = (GiftMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -820,9 +820,9 @@ void __fastcall EventTradeListViewItemDraw__SetRewardIconText(
   {
     if ( !entity )
       goto LABEL_32;
-    Master_object = (GiftMaster_o *)System_Int32__ToString_64041192(
+    Master_object = (GiftMaster_o *)System_Int32__ToString_64174220(
                                       (int)entity + 28,
-                                      (System_String_o *)StringLiteral_405/*"#,0"*/,
+                                      (System_String_o *)StringLiteral_405/*"#0039E2"*/,
                                       0LL);
     if ( !rewardNumTextLabel )
       goto LABEL_32;
@@ -836,11 +836,11 @@ void __fastcall EventTradeListViewItemDraw__SetRewardIconText(
   {
     if ( !rewardNumTextLabel )
       goto LABEL_32;
-    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_1191/*"0"*/, 0LL);
+    UILabel__set_text(this->fields.rewardNumTextLabel, (System_String_o *)StringLiteral_1191/*"1.0"*/, 0LL);
   }
   if ( !GiftListById->max_length )
 LABEL_33:
-    sub_1C2E390(Master_object, v13);
+    sub_1C3B9C8(Master_object, v13);
   v19 = GiftListById->m_Items[0];
   if ( !v19 )
     goto LABEL_32;
@@ -851,10 +851,10 @@ LABEL_33:
   rewardNumTitleLabel = this->fields.rewardNumTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (GiftMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13649/*"TRADE_EVENT_HAVE_NUM"*/, 0LL);
+  Master_object = (GiftMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13677/*"The element {0} has invalid child element {1}. List of possible elements expected: {2}. {3}"*/, 0LL);
   if ( !rewardNumTitleLabel )
 LABEL_32:
-    sub_1C2E388(Master_object, v13);
+    sub_1C3B9C0(Master_object, v13);
   UILabel__set_text(rewardNumTitleLabel, (System_String_o *)Master_object, 0LL);
 }
 
@@ -956,27 +956,27 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
   UnityEngine_Color_o v94; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v95; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BF869F & 1) == 0 )
+  if ( (byte_4C1CE1F & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, item);
-    sub_1C2E12C(&System_Convert_TypeInfo, v7);
-    sub_1C2E12C(&Method_DataManager_GetMaster_EventTradePickupMaster___, v8);
-    sub_1C2E12C(&DataManager_TypeInfo, v9);
-    sub_1C2E12C(&EventTradePickupMaster_TypeInfo, v10);
-    sub_1C2E12C(&EventTradeTimeCalculation_TypeInfo, v11);
-    sub_1C2E12C(&int_TypeInfo, v12);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v13);
-    sub_1C2E12C(&System_Math_TypeInfo, v14);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v15);
-    sub_1C2E12C(&string_TypeInfo, v16);
-    sub_1C2E12C(&StringLiteral_20561/*"icon_trade_intrade"*/, v17);
-    sub_1C2E12C(&StringLiteral_25545/*"{0}:{1:D2}:{2:D2}"*/, v18);
-    sub_1C2E12C(&StringLiteral_20560/*"icon_trade_compleate"*/, v19);
-    sub_1C2E12C(&StringLiteral_13666/*"TRADE_EVENT_REWARD_AVAILABLE_NUM_MESSAGE"*/, v20);
-    sub_1C2E12C(&StringLiteral_13660/*"TRADE_EVENT_PROGRESS_NUM"*/, v21);
-    sub_1C2E12C(&StringLiteral_13674/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/, v22);
-    sub_1C2E12C(&StringLiteral_13673/*"TRADE_EVENT_TRADE_COMPLETE"*/, v23);
-    byte_4BF869F = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, item);
+    sub_1C3B764(&System_Convert_TypeInfo, v7);
+    sub_1C3B764(&Method_DataManager_GetMaster_EventTradePickupMaster___, v8);
+    sub_1C3B764(&DataManager_TypeInfo, v9);
+    sub_1C3B764(&EventTradePickupMaster_TypeInfo, v10);
+    sub_1C3B764(&EventTradeTimeCalculation_TypeInfo, v11);
+    sub_1C3B764(&int_TypeInfo, v12);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v13);
+    sub_1C3B764(&System_Math_TypeInfo, v14);
+    sub_1C3B764(&NetworkManager_TypeInfo, v15);
+    sub_1C3B764(&string_TypeInfo, v16);
+    sub_1C3B764(&StringLiteral_20596/*"java.net.SocketTimeoutException"*/, v17);
+    sub_1C3B764(&StringLiteral_25589, v18);
+    sub_1C3B764(&StringLiteral_20595/*"java.net.SocketException"*/, v19);
+    sub_1C3B764(&StringLiteral_13694/*"The field '{0}' is expecting an element or attribute with simple type or simple content."*/, v20);
+    sub_1C3B764(&StringLiteral_13688/*"The expression contains undefined function call {0}()."*/, v21);
+    sub_1C3B764(&StringLiteral_13702/*"The given key '{0}' was not present in the dictionary."*/, v22);
+    sub_1C3B764(&StringLiteral_13701/*"The following text is not allowed in this context: '{0}'."*/, v23);
+    byte_4C1CE1F = 1;
   }
   pickupEntity = 0LL;
   if ( item && mode && item->fields._TradeGoodsEntity_k__BackingField && item->fields._IsRelease_k__BackingField )
@@ -1049,7 +1049,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                           progressLabel = this->fields.progressLabel;
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_13660/*"TRADE_EVENT_PROGRESS_NUM"*/, 0LL);
+                          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_13688/*"The expression contains undefined function call {0}()."*/, 0LL);
                           NowTradeNum = EventTradeListViewItem__get_NowTradeNum(item, v35);
                           pickupSprite = j_il2cpp_value_box_0(int_TypeInfo, &NowTradeNum, v36, v37, v38);
                           v42 = item->fields._TradeInfo_k__BackingField;
@@ -1058,7 +1058,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                             v43 = (Il2CppObject *)pickupSprite;
                             v91 = v42->fields.maxTradeNum;
                             v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v91, v39, v40, v41);
-                            pickupSprite = (__int64)System_String__Format_63249956(v34, v43, v44, 0LL);
+                            pickupSprite = (__int64)System_String__Format_63382984(v34, v43, v44, 0LL);
                             if ( progressLabel )
                             {
                               UILabel__set_text(progressLabel, (System_String_o *)pickupSprite, 0LL);
@@ -1109,7 +1109,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                     rewardAvailableNumTextLabel = this->fields.rewardAvailableNumTextLabel;
                                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13666/*"TRADE_EVENT_REWARD_AVAILABLE_NUM_MESSAGE"*/, 0LL);
+                                    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13694/*"The field '{0}' is expecting an element or attribute with simple type or simple content."*/, 0LL);
                                     NowTradeNum = EventTradeListViewItem__get_NowCompleteNum(item, v48);
                                     v52 = (Il2CppObject *)j_il2cpp_value_box_0(
                                                             int_TypeInfo,
@@ -1193,14 +1193,14 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                     pickupSprite = (__int64)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_13673/*"TRADE_EVENT_TRADE_COMPLETE"*/,
+                                                              (System_String_o *)StringLiteral_13701/*"The following text is not allowed in this context: '{0}'."*/,
                                                               0LL);
                                     if ( !tradeCompleteLabel )
                                       goto LABEL_130;
                                     UILabel__set_text(tradeCompleteLabel, (System_String_o *)pickupSprite, 0LL);
                                     timeLeftLabel = this->fields.timeLeftLabel;
                                     pickupSprite = (__int64)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_13674/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/,
+                                                              (System_String_o *)StringLiteral_13702/*"The given key '{0}' was not present in the dictionary."*/,
                                                               0LL);
                                     if ( !timeLeftLabel )
                                       goto LABEL_130;
@@ -1209,7 +1209,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                     tradingStateSprite = this->fields.tradingStateSprite;
                                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                    v85 = &StringLiteral_20560/*"icon_trade_compleate"*/;
+                                    v85 = &StringLiteral_20595/*"java.net.SocketException"*/;
                                   }
                                   else
                                   {
@@ -1225,7 +1225,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                     pickupSprite = (__int64)LocalizationManager__GetRestTimeInFormat(
                                                               v79,
                                                               0LL,
-                                                              (System_String_o *)StringLiteral_25545/*"{0}:{1:D2}:{2:D2}"*/,
+                                                              (System_String_o *)StringLiteral_25589,
                                                               0LL);
                                     if ( !v82 )
                                       goto LABEL_130;
@@ -1234,9 +1234,9 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                     tradingStateSprite = this->fields.tradingStateSprite;
                                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                    v85 = &StringLiteral_20561/*"icon_trade_intrade"*/;
+                                    v85 = &StringLiteral_20596/*"java.net.SocketTimeoutException"*/;
                                   }
-                                  AtlasManager__SetEventUI_39173640(
+                                  AtlasManager__SetEventUI_39282628(
                                     EventId_k__BackingField,
                                     tradingStateSprite,
                                     (System_String_o *)*v85,
@@ -1367,7 +1367,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                               0LL);
                                             if ( !DataManager_TypeInfo->_2.cctor_finished )
                                               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                                            pickupSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+                                            pickupSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventTradePickupMaster___);
                                             v54 = item->fields._TradeGoodsEntity_k__BackingField;
                                             if ( v54 )
                                             {
@@ -1421,7 +1421,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                                         / (double)DEFAULT_EVENT_TRADE_TIME_RATE);
                                                   if ( !System_Convert_TypeInfo->_2.cctor_finished )
                                                     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-                                                  v65 = System_Convert__ToInt64_63894484(v64, 0LL);
+                                                  v65 = System_Convert__ToInt64_64027512(v64, 0LL);
                                                   timeRequiredTrade = this->fields.timeRequiredTrade;
                                                   v67 = v65;
                                                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1429,7 +1429,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateItem(
                                                   pickupSprite = (__int64)LocalizationManager__GetRestTimeInFormat(
                                                                             v67,
                                                                             0LL,
-                                                                            (System_String_o *)StringLiteral_25545/*"{0}:{1:D2}:{2:D2}"*/,
+                                                                            (System_String_o *)StringLiteral_25589,
                                                                             0LL);
                                                   if ( timeRequiredTrade )
                                                   {
@@ -1500,7 +1500,7 @@ LABEL_128:
       }
     }
 LABEL_130:
-    sub_1C2E388(pickupSprite, item);
+    sub_1C3B9C0(pickupSprite, item);
   }
 }
 
@@ -1524,13 +1524,13 @@ void __fastcall EventTradeListViewItemDraw__UpdateSweetsAnim(
   struct UISprite_array *v16; // x8
   const MethodInfo *v17; // x1
 
-  if ( (byte_4BF86A0 & 1) == 0 )
+  if ( (byte_4C1CE20 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_UISprite__TypeInfo, item);
-    sub_1C2E12C(&Method_BasicHelper_ForEach_UISprite___, v5);
-    sub_1C2E12C(&Method_EventTradeListViewItemDraw___c__UpdateSweetsAnim_b__45_0__, v6);
-    sub_1C2E12C(&EventTradeListViewItemDraw___c_TypeInfo, v7);
-    byte_4BF86A0 = 1;
+    sub_1C3B764(&System_Action_UISprite__TypeInfo, item);
+    sub_1C3B764(&Method_BasicHelper_ForEach_UISprite___, v5);
+    sub_1C3B764(&Method_EventTradeListViewItemDraw___c__UpdateSweetsAnim_b__45_0__, v6);
+    sub_1C3B764(&EventTradeListViewItemDraw___c_TypeInfo, v7);
+    byte_4C1CE20 = 1;
   }
   v8 = EventTradeListViewItemDraw___c_TypeInfo;
   sweetsAnimSpriteArray = (System_Collections_Generic_IEnumerable_T__o *)this->fields.sweetsAnimSpriteArray;
@@ -1548,16 +1548,16 @@ void __fastcall EventTradeListViewItemDraw__UpdateSweetsAnim(
       v8 = EventTradeListViewItemDraw___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v8->static_fields->__9;
-    _9__45_0 = (System_Action_object__o *)sub_1C2E378(System_Action_UISprite__TypeInfo);
+    _9__45_0 = (System_Action_object__o *)sub_1C3B9B0(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(_9__45_0, v11, Method_EventTradeListViewItemDraw___c__UpdateSweetsAnim_b__45_0__, 0LL);
     static_fields = EventTradeListViewItemDraw___c_TypeInfo->static_fields;
     static_fields->__9__45_0 = (struct System_Action_UISprite__o *)_9__45_0;
-    sub_1C2E0D0(&static_fields->__9__45_0);
+    sub_1C3B708(&static_fields->__9__45_0);
   }
   BasicHelper__ForEach_object_(
     sweetsAnimSpriteArray,
     (System_Action_T__o *)_9__45_0,
-    (const MethodInfo_2FBE538 *)Method_BasicHelper_ForEach_UISprite___);
+    (const MethodInfo_2FDCE70 *)Method_BasicHelper_ForEach_UISprite___);
   if ( !item )
     goto LABEL_18;
   NowTradeNum = (UnityEngine_GameObject_o *)EventTradeListViewItem__get_NowTradeNum(item, v14);
@@ -1570,7 +1570,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateSweetsAnim(
       if ( !v16 )
         break;
       if ( v15 >= v16->max_length )
-        sub_1C2E390(NowTradeNum, v14);
+        sub_1C3B9C8(NowTradeNum, v14);
       NowTradeNum = (UnityEngine_GameObject_o *)v16->m_Items[v15];
       if ( !NowTradeNum )
         break;
@@ -1584,7 +1584,7 @@ void __fastcall EventTradeListViewItemDraw__UpdateSweetsAnim(
         return;
     }
 LABEL_18:
-    sub_1C2E388(NowTradeNum, v14);
+    sub_1C3B9C0(NowTradeNum, v14);
   }
 }
 
@@ -1594,15 +1594,15 @@ void __fastcall EventTradeListViewItemDraw___c___cctor(const MethodInfo *method)
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4BF86A2 & 1) == 0 )
+  if ( (byte_4C1CE22 & 1) == 0 )
   {
-    sub_1C2E12C(&EventTradeListViewItemDraw___c_TypeInfo, v1);
-    byte_4BF86A2 = 1;
+    sub_1C3B764(&EventTradeListViewItemDraw___c_TypeInfo, v1);
+    byte_4C1CE22 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(EventTradeListViewItemDraw___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(EventTradeListViewItemDraw___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventTradeListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct EventTradeListViewItemDraw___c_o *)v2;
-  sub_1C2E0D0(EventTradeListViewItemDraw___c_TypeInfo->static_fields);
+  sub_1C3B708(EventTradeListViewItemDraw___c_TypeInfo->static_fields);
 }
 
 
@@ -1622,7 +1622,7 @@ void __fastcall EventTradeListViewItemDraw___c___DestroyAnimObj_b__46_0(
                                                      (UnityEngine_Component_o *)sprite,
                                                      0LL)) == 0LL )
   {
-    sub_1C2E388(this, sprite);
+    sub_1C3B9C0(this, sprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -1638,7 +1638,7 @@ void __fastcall EventTradeListViewItemDraw___c___UpdateSweetsAnim_b__45_0(
                                                      (UnityEngine_Component_o *)sprite,
                                                      0LL)) == 0LL )
   {
-    sub_1C2E388(this, sprite);
+    sub_1C3B9C0(this, sprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -1670,21 +1670,21 @@ void __fastcall EventTradeListViewItemDraw___c__DisplayClass41_0___SetItem_b__0(
   int32_t goodsIconId; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = this;
-  if ( (byte_4BF86A3 & 1) == 0 )
+  if ( (byte_4C1CE23 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, sprite);
-    sub_1C2E12C(&int_TypeInfo, v7);
-    this = (EventTradeListViewItemDraw___c__DisplayClass41_0_o *)sub_1C2E12C(&StringLiteral_20564/*"icon_{0}"*/, v8);
-    byte_4BF86A3 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, sprite);
+    sub_1C3B764(&int_TypeInfo, v7);
+    this = (EventTradeListViewItemDraw___c__DisplayClass41_0_o *)sub_1C3B764(&StringLiteral_20599/*"java.util.HashMap"*/, v8);
+    byte_4C1CE23 = 1;
   }
   item = v6->fields.item;
   if ( !item || (TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField) == 0LL )
-    sub_1C2E388(this, sprite);
+    sub_1C3B9C0(this, sprite);
   EventId_k__BackingField = item->fields._EventId_k__BackingField;
   goodsIconId = TradeGoodsEntity_k__BackingField->fields.goodsIconId;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &goodsIconId, method, v3, v4);
-  v13 = System_String__Format((System_String_o *)StringLiteral_20564/*"icon_{0}"*/, v12, 0LL);
+  v13 = System_String__Format((System_String_o *)StringLiteral_20599/*"java.util.HashMap"*/, v12, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39173640(EventId_k__BackingField, sprite, v13, 0LL);
+  AtlasManager__SetEventUI_39282628(EventId_k__BackingField, sprite, v13, 0LL);
 }

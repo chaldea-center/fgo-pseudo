@@ -229,36 +229,36 @@ void __fastcall UICharaGraphRender___cctor(const MethodInfo *method)
   PartyListViewItem_o *v227; // x7
   System_RuntimeFieldHandle_o v228; // 0:w1.4
 
-  if ( (byte_4BFECFC & 1) == 0 )
+  if ( (byte_4C23526 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Array_AsReadOnly_Rect___, v1);
-    sub_1C2E12C(&int___TypeInfo, v2);
-    sub_1C2E12C(&UnityEngine_Rect___TypeInfo, v3);
-    sub_1C2E12C(&string___TypeInfo, v4);
-    sub_1C2E12C(
+    sub_1C3B764(&Method_System_Array_AsReadOnly_Rect___, v1);
+    sub_1C3B764(&int___TypeInfo, v2);
+    sub_1C3B764(&UnityEngine_Rect___TypeInfo, v3);
+    sub_1C3B764(&string___TypeInfo, v4);
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C,
       v5);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v6);
-    sub_1C2E12C(&StringLiteral_19963/*"frame5"*/, v7);
-    sub_1C2E12C(&StringLiteral_16912/*"a"*/, v8);
-    sub_1C2E12C(&StringLiteral_19964/*"frame6"*/, v9);
-    sub_1C2E12C(&StringLiteral_19965/*"frame7"*/, v10);
-    sub_1C2E12C(&StringLiteral_17297/*"b"*/, v11);
-    sub_1C2E12C(&StringLiteral_17998/*"c"*/, v12);
-    sub_1C2E12C(&StringLiteral_19961/*"frame3"*/, v13);
-    sub_1C2E12C(&StringLiteral_19959/*"frame1"*/, v14);
-    sub_1C2E12C(&StringLiteral_19958/*"frame0"*/, v15);
-    sub_1C2E12C(&StringLiteral_19960/*"frame2"*/, v16);
-    sub_1C2E12C(&StringLiteral_19962/*"frame4"*/, v17);
-    byte_4BFECFC = 1;
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v6);
+    sub_1C3B764(&StringLiteral_19998/*"img_list_atk"*/, v7);
+    sub_1C3B764(&StringLiteral_16942/*"bit_result{0:D2}"*/, v8);
+    sub_1C3B764(&StringLiteral_19999/*"img_list_bg01"*/, v9);
+    sub_1C3B764(&StringLiteral_20000/*"img_list_bg02"*/, v10);
+    sub_1C3B764(&StringLiteral_17327/*"buttontxt_notsynthesis"*/, v11);
+    sub_1C3B764(&StringLiteral_18028/*"csISOLatin5"*/, v12);
+    sub_1C3B764(&StringLiteral_19996/*"img_itembg_mission"*/, v13);
+    sub_1C3B764(&StringLiteral_19994/*"img_item_bg"*/, v14);
+    sub_1C3B764(&StringLiteral_19993/*"img_index_03"*/, v15);
+    sub_1C3B764(&StringLiteral_19995/*"img_item_brank"*/, v16);
+    sub_1C3B764(&StringLiteral_19997/*"img_line_summon"*/, v17);
+    byte_4C23526 = 1;
   }
   static_fields = UICharaGraphRender_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->OTHER_IMAGE_LIMIT_COUNT = xmmword_C06330;
+  *(_OWORD *)&static_fields->OTHER_IMAGE_LIMIT_COUNT = xmmword_C0D6C0;
   *(_QWORD *)&static_fields->SERVANT_BODY_SIZE_Y = 0x1FE000002D2LL;
-  *(_OWORD *)&static_fields->SERVANT_BODY_U = xmmword_C06FD0;
+  *(_OWORD *)&static_fields->SERVANT_BODY_U = xmmword_C0E360;
   static_fields->SERVANT_EQUIP_BODY_SIZE_Y = 872;
-  *(_OWORD *)&static_fields->SERVANT_EQUIP_BODY_U = xmmword_C071F0;
-  v19 = sub_1C2E1D4(UnityEngine_Rect___TypeInfo, 12LL);
+  *(_OWORD *)&static_fields->SERVANT_EQUIP_BODY_U = xmmword_C0E580;
+  v19 = sub_1C3B80C(UnityEngine_Rect___TypeInfo, 12LL);
   if ( !v19 )
     goto LABEL_41;
   v21 = *(_DWORD *)(v19 + 24);
@@ -336,10 +336,10 @@ void __fastcall UICharaGraphRender___cctor(const MethodInfo *method)
   *(_QWORD *)(v19 + 216) = v45;
   Only_Rect = System_Array__AsReadOnly_Rect_(
                 (UnityEngine_Rect_array *)v19,
-                (const MethodInfo_309BFB0 *)Method_System_Array_AsReadOnly_Rect___);
+                (const MethodInfo_30BAED4 *)Method_System_Array_AsReadOnly_Rect___);
   v47 = UICharaGraphRender_TypeInfo->static_fields;
   v47->servantBodyRectTable = (struct System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *)Only_Rect;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&v47->servantBodyRectTable,
     (int64_t)Only_Rect,
     v48,
@@ -351,136 +351,136 @@ void __fastcall UICharaGraphRender___cctor(const MethodInfo *method)
   v54 = UICharaGraphRender_TypeInfo;
   UICharaGraphRender_TypeInfo->static_fields->servantEquipBodyRect = *(struct UnityEngine_Rect_o *)&UICharaGraphRender_TypeInfo->static_fields->SERVANT_EQUIP_BODY_U;
   *(_QWORD *)&v54->static_fields->SERVANT_NAME_UV_DIFF_Y = 0x43E800000LL;
-  v55 = (System_Array_o *)sub_1C2E1D4(int___TypeInfo, 4LL);
+  v55 = (System_Array_o *)sub_1C3B80C(int___TypeInfo, 4LL);
   v228.fields.value = Field__PrivateImplementationDetails__F239810D17032E35383496434C64894FFE055A198BA7CFB907D73BAF26A70F0C;
   v56 = (int64_t)v55;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v55, v228, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v55, v228, 0LL);
   v57 = UICharaGraphRender_TypeInfo->static_fields;
   v57->SERVANT_NAME_TARGET_LIMIT_COUNT = (struct System_Int32_array *)v56;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v57->SERVANT_NAME_TARGET_LIMIT_COUNT, v56, v58, v59, v60, v61, v62, v63);
-  v19 = sub_1C2E1D4(string___TypeInfo, 6LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v57->SERVANT_NAME_TARGET_LIMIT_COUNT, v56, v58, v59, v60, v61, v62, v63);
+  v19 = sub_1C3B80C(string___TypeInfo, 6LL);
   if ( !v19 )
     goto LABEL_41;
   v70 = v19;
   if ( !*(_DWORD *)(v19 + 24) )
     goto LABEL_40;
-  v71 = StringLiteral_16912/*"a"*/;
-  *(_QWORD *)(v19 + 32) = StringLiteral_16912/*"a"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v19 + 32), v71, v64, v65, v66, v67, v68, v69);
+  v71 = StringLiteral_16942/*"bit_result{0:D2}"*/;
+  *(_QWORD *)(v19 + 32) = StringLiteral_16942/*"bit_result{0:D2}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v19 + 32), v71, v64, v65, v66, v67, v68, v69);
   if ( *(_DWORD *)(v70 + 24) <= 1u )
     goto LABEL_40;
-  v78 = StringLiteral_16912/*"a"*/;
-  *(_QWORD *)(v70 + 40) = StringLiteral_16912/*"a"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v70 + 40), v78, v72, v73, v74, v75, v76, v77);
+  v78 = StringLiteral_16942/*"bit_result{0:D2}"*/;
+  *(_QWORD *)(v70 + 40) = StringLiteral_16942/*"bit_result{0:D2}"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v70 + 40), v78, v72, v73, v74, v75, v76, v77);
   if ( *(_DWORD *)(v70 + 24) <= 2u )
     goto LABEL_40;
-  v85 = StringLiteral_17297/*"b"*/;
-  *(_QWORD *)(v70 + 48) = StringLiteral_17297/*"b"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v70 + 48), v85, v79, v80, v81, v82, v83, v84);
+  v85 = StringLiteral_17327/*"buttontxt_notsynthesis"*/;
+  *(_QWORD *)(v70 + 48) = StringLiteral_17327/*"buttontxt_notsynthesis"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v70 + 48), v85, v79, v80, v81, v82, v83, v84);
   if ( *(_DWORD *)(v70 + 24) <= 3u )
     goto LABEL_40;
-  v92 = StringLiteral_17297/*"b"*/;
-  *(_QWORD *)(v70 + 56) = StringLiteral_17297/*"b"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v70 + 56), v92, v86, v87, v88, v89, v90, v91);
+  v92 = StringLiteral_17327/*"buttontxt_notsynthesis"*/;
+  *(_QWORD *)(v70 + 56) = StringLiteral_17327/*"buttontxt_notsynthesis"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v70 + 56), v92, v86, v87, v88, v89, v90, v91);
   if ( *(_DWORD *)(v70 + 24) <= 4u )
     goto LABEL_40;
-  v99 = StringLiteral_17998/*"c"*/;
-  *(_QWORD *)(v70 + 64) = StringLiteral_17998/*"c"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v70 + 64), (int64_t)v99, v93, v94, v95, v96, v97, v98);
+  v99 = StringLiteral_18028/*"csISOLatin5"*/;
+  *(_QWORD *)(v70 + 64) = StringLiteral_18028/*"csISOLatin5"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v70 + 64), (int64_t)v99, v93, v94, v95, v96, v97, v98);
   if ( *(_DWORD *)(v70 + 24) <= 5u )
     goto LABEL_40;
-  v106 = StringLiteral_17998/*"c"*/;
-  *(_QWORD *)(v70 + 72) = StringLiteral_17998/*"c"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v70 + 72), (int64_t)v106, v100, v101, v102, v103, v104, v105);
+  v106 = StringLiteral_18028/*"csISOLatin5"*/;
+  *(_QWORD *)(v70 + 72) = StringLiteral_18028/*"csISOLatin5"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v70 + 72), (int64_t)v106, v100, v101, v102, v103, v104, v105);
   v107 = UICharaGraphRender_TypeInfo->static_fields;
   v107->bodyTextureNameTable = (struct System_String_array *)v70;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v107->bodyTextureNameTable, v70, v108, v109, v110, v111, v112, v113);
-  v19 = sub_1C2E1D4(string___TypeInfo, 8LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v107->bodyTextureNameTable, v70, v108, v109, v110, v111, v112, v113);
+  v19 = sub_1C3B80C(string___TypeInfo, 8LL);
   if ( !v19 )
     goto LABEL_41;
   v120 = v19;
   if ( !*(_DWORD *)(v19 + 24) )
     goto LABEL_40;
-  v121 = StringLiteral_19958/*"frame0"*/;
-  *(_QWORD *)(v19 + 32) = StringLiteral_19958/*"frame0"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v19 + 32), v121, v114, v115, v116, v117, v118, v119);
+  v121 = StringLiteral_19993/*"img_index_03"*/;
+  *(_QWORD *)(v19 + 32) = StringLiteral_19993/*"img_index_03"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v19 + 32), v121, v114, v115, v116, v117, v118, v119);
   if ( *(_DWORD *)(v120 + 24) <= 1u )
     goto LABEL_40;
-  v128 = StringLiteral_19959/*"frame1"*/;
-  *(_QWORD *)(v120 + 40) = StringLiteral_19959/*"frame1"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 40), v128, v122, v123, v124, v125, v126, v127);
+  v128 = StringLiteral_19994/*"img_item_bg"*/;
+  *(_QWORD *)(v120 + 40) = StringLiteral_19994/*"img_item_bg"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 40), v128, v122, v123, v124, v125, v126, v127);
   if ( *(_DWORD *)(v120 + 24) <= 2u )
     goto LABEL_40;
-  v135 = StringLiteral_19960/*"frame2"*/;
-  *(_QWORD *)(v120 + 48) = StringLiteral_19960/*"frame2"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 48), v135, v129, v130, v131, v132, v133, v134);
+  v135 = StringLiteral_19995/*"img_item_brank"*/;
+  *(_QWORD *)(v120 + 48) = StringLiteral_19995/*"img_item_brank"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 48), v135, v129, v130, v131, v132, v133, v134);
   if ( *(_DWORD *)(v120 + 24) <= 3u )
     goto LABEL_40;
-  v142 = StringLiteral_19961/*"frame3"*/;
-  *(_QWORD *)(v120 + 56) = StringLiteral_19961/*"frame3"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 56), v142, v136, v137, v138, v139, v140, v141);
+  v142 = StringLiteral_19996/*"img_itembg_mission"*/;
+  *(_QWORD *)(v120 + 56) = StringLiteral_19996/*"img_itembg_mission"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 56), v142, v136, v137, v138, v139, v140, v141);
   if ( *(_DWORD *)(v120 + 24) <= 4u )
     goto LABEL_40;
-  v149 = StringLiteral_19962/*"frame4"*/;
-  *(_QWORD *)(v120 + 64) = StringLiteral_19962/*"frame4"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 64), v149, v143, v144, v145, v146, v147, v148);
+  v149 = StringLiteral_19997/*"img_line_summon"*/;
+  *(_QWORD *)(v120 + 64) = StringLiteral_19997/*"img_line_summon"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 64), v149, v143, v144, v145, v146, v147, v148);
   if ( *(_DWORD *)(v120 + 24) <= 5u
-    || (v156 = StringLiteral_19963/*"frame5"*/,
-        *(_QWORD *)(v120 + 72) = StringLiteral_19963/*"frame5"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 72), v156, v150, v151, v152, v153, v154, v155),
+    || (v156 = StringLiteral_19998/*"img_list_atk"*/,
+        *(_QWORD *)(v120 + 72) = StringLiteral_19998/*"img_list_atk"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 72), v156, v150, v151, v152, v153, v154, v155),
         *(_DWORD *)(v120 + 24) <= 6u)
-    || (v163 = StringLiteral_19964/*"frame6"*/,
-        *(_QWORD *)(v120 + 80) = StringLiteral_19964/*"frame6"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 80), v163, v157, v158, v159, v160, v161, v162),
+    || (v163 = StringLiteral_19999/*"img_list_bg01"*/,
+        *(_QWORD *)(v120 + 80) = StringLiteral_19999/*"img_list_bg01"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 80), v163, v157, v158, v159, v160, v161, v162),
         *(_DWORD *)(v120 + 24) <= 7u) )
   {
 LABEL_40:
-    sub_1C2E390(v19, v20);
+    sub_1C3B9C8(v19, v20);
   }
-  v170 = StringLiteral_19965/*"frame7"*/;
-  *(_QWORD *)(v120 + 88) = StringLiteral_19965/*"frame7"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v120 + 88), v170, v164, v165, v166, v167, v168, v169);
+  v170 = StringLiteral_20000/*"img_list_bg02"*/;
+  *(_QWORD *)(v120 + 88) = StringLiteral_20000/*"img_list_bg02"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v120 + 88), v170, v164, v165, v166, v167, v168, v169);
   v171 = UICharaGraphRender_TypeInfo->static_fields;
   v171->baseFrameList = (struct System_String_array *)v120;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v171->baseFrameList, v120, v172, v173, v174, v175, v176, v177);
-  v19 = sub_1C2E1D4(string___TypeInfo, 6LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v171->baseFrameList, v120, v172, v173, v174, v175, v176, v177);
+  v19 = sub_1C3B80C(string___TypeInfo, 6LL);
   if ( !v19 )
 LABEL_41:
-    sub_1C2E388(v19, v20);
+    sub_1C3B9C0(v19, v20);
   v184 = v19;
   if ( !*(_DWORD *)(v19 + 24) )
     goto LABEL_40;
-  v185 = StringLiteral_19958/*"frame0"*/;
-  *(_QWORD *)(v19 + 32) = StringLiteral_19958/*"frame0"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v19 + 32), v185, v178, v179, v180, v181, v182, v183);
+  v185 = StringLiteral_19993/*"img_index_03"*/;
+  *(_QWORD *)(v19 + 32) = StringLiteral_19993/*"img_index_03"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v19 + 32), v185, v178, v179, v180, v181, v182, v183);
   if ( *(_DWORD *)(v184 + 24) <= 1u )
     goto LABEL_40;
-  v192 = StringLiteral_19959/*"frame1"*/;
-  *(_QWORD *)(v184 + 40) = StringLiteral_19959/*"frame1"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v184 + 40), v192, v186, v187, v188, v189, v190, v191);
+  v192 = StringLiteral_19994/*"img_item_bg"*/;
+  *(_QWORD *)(v184 + 40) = StringLiteral_19994/*"img_item_bg"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v184 + 40), v192, v186, v187, v188, v189, v190, v191);
   if ( *(_DWORD *)(v184 + 24) <= 2u )
     goto LABEL_40;
-  v199 = StringLiteral_19959/*"frame1"*/;
-  *(_QWORD *)(v184 + 48) = StringLiteral_19959/*"frame1"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v184 + 48), v199, v193, v194, v195, v196, v197, v198);
+  v199 = StringLiteral_19994/*"img_item_bg"*/;
+  *(_QWORD *)(v184 + 48) = StringLiteral_19994/*"img_item_bg"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v184 + 48), v199, v193, v194, v195, v196, v197, v198);
   if ( *(_DWORD *)(v184 + 24) <= 3u )
     goto LABEL_40;
-  v206 = StringLiteral_19960/*"frame2"*/;
-  *(_QWORD *)(v184 + 56) = StringLiteral_19960/*"frame2"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v184 + 56), v206, v200, v201, v202, v203, v204, v205);
+  v206 = StringLiteral_19995/*"img_item_brank"*/;
+  *(_QWORD *)(v184 + 56) = StringLiteral_19995/*"img_item_brank"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v184 + 56), v206, v200, v201, v202, v203, v204, v205);
   if ( *(_DWORD *)(v184 + 24) <= 4u )
     goto LABEL_40;
-  v213 = StringLiteral_19961/*"frame3"*/;
-  *(_QWORD *)(v184 + 64) = StringLiteral_19961/*"frame3"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v184 + 64), v213, v207, v208, v209, v210, v211, v212);
+  v213 = StringLiteral_19996/*"img_itembg_mission"*/;
+  *(_QWORD *)(v184 + 64) = StringLiteral_19996/*"img_itembg_mission"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v184 + 64), v213, v207, v208, v209, v210, v211, v212);
   if ( *(_DWORD *)(v184 + 24) <= 5u )
     goto LABEL_40;
-  v220 = StringLiteral_19961/*"frame3"*/;
-  *(_QWORD *)(v184 + 72) = StringLiteral_19961/*"frame3"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v184 + 72), v220, v214, v215, v216, v217, v218, v219);
+  v220 = StringLiteral_19996/*"img_itembg_mission"*/;
+  *(_QWORD *)(v184 + 72) = StringLiteral_19996/*"img_itembg_mission"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v184 + 72), v220, v214, v215, v216, v217, v218, v219);
   v221 = UICharaGraphRender_TypeInfo->static_fields;
   v221->commandCodeBaseFrameList = (struct System_String_array *)v184;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v221->commandCodeBaseFrameList, v184, v222, v223, v224, v225, v226, v227);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v221->commandCodeBaseFrameList, v184, v222, v223, v224, v225, v226, v227);
 }
 
 
@@ -533,24 +533,24 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
 
   imageLimitCounta = imageLimitCount;
   svtIda = svtId;
-  if ( (byte_4BFECE9 & 1) == 0 )
+  if ( (byte_4C23513 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v4);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, v5);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v6);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantMaster___, v7);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserImagePartsGroupMaster___, v8);
-    sub_1C2E12C(&DataManager_TypeInfo, v9);
-    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v10);
-    sub_1C2E12C(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__, v11);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_1C2E12C(&StringLiteral_21659/*"maleImageId"*/, v14);
-    sub_1C2E12C(&StringLiteral_4512/*"CharaGraph/100000"*/, v15);
-    sub_1C2E12C(&StringLiteral_20604/*"imagePartsGroupId"*/, v16);
-    sub_1C2E12C(&StringLiteral_4511/*"CharaGraph/"*/, v17);
-    byte_4BFECE9 = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, *(_QWORD *)&imageLimitCount);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v4);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantMaster___, v5);
+    sub_1C3B764(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v6);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantMaster___, v7);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserImagePartsGroupMaster___, v8);
+    sub_1C3B764(&DataManager_TypeInfo, v9);
+    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v10);
+    sub_1C3B764(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__, v11);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v12);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1C3B764(&StringLiteral_21695/*"nested-interaction-kind"*/, v14);
+    sub_1C3B764(&StringLiteral_4512/*"CombineServant"*/, v15);
+    sub_1C3B764(&StringLiteral_20639/*"keep-alive"*/, v16);
+    sub_1C3B764(&StringLiteral_4511/*"CombineScene"*/, v17);
+    byte_4C23513 = 1;
   }
   entity = 0LL;
   defaultName = 0LL;
@@ -559,28 +559,28 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
   v31 = 0;
   if ( imageLimitCount >= 11 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_46;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
     if ( !Instance )
       goto LABEL_46;
     ServantLimitAddMaster__getCostumeId((ServantLimitAddMaster_o *)Instance, &svtIda, &imageLimitCounta, 0LL);
   }
   v20 = System_Int32__ToString((int32_t)&svtIda, 0LL);
-  defaultName = System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v20, 0LL);
+  defaultName = System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v20, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Instance )
     goto LABEL_46;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          svtIda,
-         (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
     Instance = (DataManager_o *)UserGameMaster__getSelfUserGame(0LL);
     if ( !Instance )
@@ -592,14 +592,14 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
         goto LABEL_46;
       Instance = (DataManager_o *)EntityScriptUtil__GetIntValue(
                                     (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-                                    (System_String_o *)StringLiteral_21659/*"maleImageId"*/,
+                                    (System_String_o *)StringLiteral_21695/*"nested-interaction-kind"*/,
                                     0,
                                     0LL);
       v31 = (int)Instance;
       if ( (_DWORD)Instance )
       {
         v21 = System_Int32__ToString((int32_t)&v31, 0LL);
-        Instance = (DataManager_o *)System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v21, 0LL);
+        Instance = (DataManager_o *)System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v21, 0LL);
         defaultName = (System_String_o *)Instance;
       }
     }
@@ -607,7 +607,7 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
       goto LABEL_46;
     IntValue = EntityScriptUtil__GetIntValue(
                  (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-                 (System_String_o *)StringLiteral_20604/*"imagePartsGroupId"*/,
+                 (System_String_o *)StringLiteral_20639/*"keep-alive"*/,
                  0,
                  0LL);
     if ( IntValue )
@@ -615,14 +615,14 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
       v23 = IntValue;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserImagePartsGroupMaster___);
+      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserImagePartsGroupMaster___);
       if ( !Instance )
         goto LABEL_46;
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              &v32,
              v23,
-             (const MethodInfo_327B1CC *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
+             (const MethodInfo_329AE94 *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
       {
         Instance = (DataManager_o *)v32;
         if ( !v32 )
@@ -633,7 +633,7 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+        Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
         if ( !Instance )
           goto LABEL_46;
         ImagePartsGroupMaster__ConcatDefaultImageValues((ImagePartsGroupMaster_o *)Instance, v23, &defaultName, 0LL);
@@ -645,19 +645,19 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__isExistAssetStorage(v24, 0LL) )
     goto LABEL_32;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_46;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &v33,
           svtIda,
-          (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     goto LABEL_44;
   Instance = (DataManager_o *)v33;
   if ( !v33 )
@@ -666,19 +666,19 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName(
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
 LABEL_44:
-    p_defaultName = (System_String_o **)&StringLiteral_4512/*"CharaGraph/100000"*/;
+    p_defaultName = (System_String_o **)&StringLiteral_4512/*"CombineServant"*/;
     return *p_defaultName;
   }
   if ( !v33 )
 LABEL_46:
-    sub_1C2E388(Instance, v19);
+    sub_1C3B9C0(Instance, v19);
   v27 = v33 + 2;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v38.fields.currentCryptoKey = v27;
   *(_QWORD *)&v38.fields.fakeValue = 0LL;
   v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v38, v26);
-  defaultName = System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v28, 0LL);
+  defaultName = System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v28, 0LL);
   v29 = defaultName;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -690,7 +690,7 @@ LABEL_32:
 }
 
 
-System_String_o *__fastcall UICharaGraphRender__GetAssetName_42185220(
+System_String_o *__fastcall UICharaGraphRender__GetAssetName_42303200(
         int32_t imageSvtId,
         System_Int32_array *imagePartsGroupIdxs,
         const MethodInfo *method)
@@ -730,40 +730,40 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName_42185220(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v37; // 0:x0.16
 
   key = imageSvtId;
-  if ( (byte_4BFECEA & 1) == 0 )
+  if ( (byte_4C23514 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, imagePartsGroupIdxs);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, v4);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v5);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantMaster___, v6);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserImagePartsGroupMaster___, v7);
-    sub_1C2E12C(&DataManager_TypeInfo, v8);
-    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v9);
-    sub_1C2E12C(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__, v10);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1C2E12C(&StringLiteral_21659/*"maleImageId"*/, v13);
-    sub_1C2E12C(&StringLiteral_4512/*"CharaGraph/100000"*/, v14);
-    sub_1C2E12C(&StringLiteral_20604/*"imagePartsGroupId"*/, v15);
-    sub_1C2E12C(&StringLiteral_4511/*"CharaGraph/"*/, v16);
-    byte_4BFECEA = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, imagePartsGroupIdxs);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantMaster___, v4);
+    sub_1C3B764(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, v5);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantMaster___, v6);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserImagePartsGroupMaster___, v7);
+    sub_1C3B764(&DataManager_TypeInfo, v8);
+    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v9);
+    sub_1C3B764(&Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__, v10);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v11);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1C3B764(&StringLiteral_21695/*"nested-interaction-kind"*/, v13);
+    sub_1C3B764(&StringLiteral_4512/*"CombineServant"*/, v14);
+    sub_1C3B764(&StringLiteral_20639/*"keep-alive"*/, v15);
+    sub_1C3B764(&StringLiteral_4511/*"CombineScene"*/, v16);
+    byte_4C23514 = 1;
   }
   entity = 0LL;
   v31 = 0LL;
   v32 = 0LL;
   v35 = 0;
   v17 = System_Int32__ToString((int32_t)&key, 0LL);
-  defaultName = System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v17, 0LL);
+  defaultName = System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v17, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Master_object )
     goto LABEL_44;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &entity,
           key,
-          (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     goto LABEL_27;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserGameMaster__getSelfUserGame(0LL);
   if ( !Master_object )
@@ -777,15 +777,15 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName_42185220(
       goto LABEL_44;
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)EntityScriptUtil__GetIntValue(
                                                                     (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-                                                                    (System_String_o *)StringLiteral_21659/*"maleImageId"*/,
+                                                                    (System_String_o *)StringLiteral_21695/*"nested-interaction-kind"*/,
                                                                     0,
                                                                     0LL);
     v35 = (int)Master_object;
     if ( (_DWORD)Master_object )
     {
       v20 = System_Int32__ToString((int32_t)&v35, 0LL);
-      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat_63235584(
-                                                                      (System_String_o *)StringLiteral_4511/*"CharaGraph/"*/,
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Concat_63368612(
+                                                                      (System_String_o *)StringLiteral_4511/*"CombineScene"*/,
                                                                       v20,
                                                                       0LL);
       defaultName = (System_String_o *)Master_object;
@@ -795,7 +795,7 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName_42185220(
     goto LABEL_44;
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-               (System_String_o *)StringLiteral_20604/*"imagePartsGroupId"*/,
+               (System_String_o *)StringLiteral_20639/*"keep-alive"*/,
                0,
                0LL);
   if ( !IntValue )
@@ -807,7 +807,7 @@ System_String_o *__fastcall UICharaGraphRender__GetAssetName_42185220(
     if ( IsNullOrEmpty )
       goto LABEL_16;
 LABEL_21:
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
     if ( !Master_object )
       goto LABEL_44;
     ImagePartsGroupMaster__ConcatImageValues(
@@ -822,14 +822,14 @@ LABEL_21:
   if ( !IsNullOrEmpty )
     goto LABEL_21;
 LABEL_16:
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserImagePartsGroupMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserImagePartsGroupMaster___);
   if ( !Master_object )
     goto LABEL_44;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          Master_object,
          (Il2CppObject **)&v31,
          v22,
-         (const MethodInfo_327B1CC *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
+         (const MethodInfo_329AE94 *)Method_DataMasterBase_UserImagePartsGroupMaster__UserImagePartsGroupEntity__int__TryGetEntity__) )
   {
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v31;
     if ( !v31 )
@@ -840,7 +840,7 @@ LABEL_16:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
     if ( !Master_object )
       goto LABEL_44;
     ImagePartsGroupMaster__ConcatDefaultImageValues((ImagePartsGroupMaster_o *)Master_object, v22, &defaultName, 0LL);
@@ -851,19 +851,19 @@ LABEL_27:
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__isExistAssetStorage(v24, 0LL) )
     goto LABEL_30;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_44;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                   (DataManager_o *)Master_object,
-                                                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Master_object )
     goto LABEL_44;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           Master_object,
           &v32,
           key,
-          (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     goto LABEL_42;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v32;
   if ( !v32 )
@@ -874,19 +874,19 @@ LABEL_27:
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
 LABEL_42:
-    p_defaultName = (System_String_o **)&StringLiteral_4512/*"CharaGraph/100000"*/;
+    p_defaultName = (System_String_o **)&StringLiteral_4512/*"CombineServant"*/;
     return *p_defaultName;
   }
   if ( !v32 )
 LABEL_44:
-    sub_1C2E388(Master_object, v19);
+    sub_1C3B9C0(Master_object, v19);
   v27 = v32 + 2;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v37.fields.currentCryptoKey = v27;
   *(_QWORD *)&v37.fields.fakeValue = 0LL;
   v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v37, v26);
-  defaultName = System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v28, 0LL);
+  defaultName = System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v28, 0LL);
   v29 = defaultName;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -915,10 +915,10 @@ UnityEngine_Vector2_o __fastcall UICharaGraphRender__GetBodySize(UICharaGraphRen
   float v9; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4BFECF1 & 1) == 0 )
+  if ( (byte_4C2351B & 1) == 0 )
   {
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, method);
-    byte_4BFECF1 = 1;
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, method);
+    byte_4C2351B = 1;
   }
   v3 = UICharaGraphRender_TypeInfo;
   baseKind = this->fields.baseKind;
@@ -960,18 +960,18 @@ UnityEngine_Texture2D_o *__fastcall UICharaGraphRender__GetBodyTexture(
   System_String_o *v13; // x21
   System_String_o *v14; // x0
   System_String_o *v15; // x0
-  Il2CppObject *Object_object__50017172; // x22
+  Il2CppObject *Object_object__50142412; // x22
   UnityEngine_Texture2D_o *result; // x0
   System_String_o *v18; // x1
 
   v4 = this;
-  if ( (byte_4BFECF3 & 1) == 0 )
+  if ( (byte_4C2351D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_Texture2D____77757336, data);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v6);
-    this = (UICharaGraphRender_o *)sub_1C2E12C(&StringLiteral_16912/*"a"*/, v7);
-    byte_4BFECF3 = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_Texture2D____77902880, data);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v6);
+    this = (UICharaGraphRender_o *)sub_1C3B764(&StringLiteral_16942/*"bit_result{0:D2}"*/, v7);
+    byte_4C2351D = 1;
   }
   if ( v4->fields.baseKind )
   {
@@ -979,11 +979,11 @@ UnityEngine_Texture2D_o *__fastcall UICharaGraphRender__GetBodyTexture(
     if ( data )
     {
       LastName = AssetData__get_LastName(data, 0LL);
-      v9 = (System_String_o *)StringLiteral_16912/*"a"*/;
+      v9 = (System_String_o *)StringLiteral_16942/*"bit_result{0:D2}"*/;
       goto LABEL_19;
     }
 LABEL_20:
-    sub_1C2E388(this, data);
+    sub_1C3B9C0(this, data);
   }
   if ( v4->fields.isChangeGraph )
   {
@@ -1004,23 +1004,23 @@ LABEL_20:
       goto LABEL_20;
     imageLimitCount = v4->fields.imageLimitCount;
     if ( (unsigned int)imageLimitCount >= monitor[6] )
-      sub_1C2E390(this, data);
+      sub_1C3B9C8(this, data);
     p_changeGraphSuffix = (System_String_o **)&monitor[2 * imageLimitCount + 8];
     if ( !data )
       goto LABEL_20;
   }
   v13 = *p_changeGraphSuffix;
   v14 = AssetData__get_LastName(data, 0LL);
-  v15 = System_String__Concat_63235584(v14, v13, 0LL);
-  Object_object__50017172 = AssetData__GetObject_object__50017172(
+  v15 = System_String__Concat_63368612(v14, v13, 0LL);
+  Object_object__50142412 = AssetData__GetObject_object__50142412(
                               data,
                               v15,
-                              (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_Texture2D____77757336);
+                              (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_Texture2D____77902880);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__50017172, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__50142412, 0LL, 0LL) )
   {
-    result = (UnityEngine_Texture2D_o *)Object_object__50017172;
+    result = (UnityEngine_Texture2D_o *)Object_object__50142412;
     v4->fields.textureImageLimitCount = v4->fields.imageLimitCount;
     return result;
   }
@@ -1028,11 +1028,11 @@ LABEL_20:
   LastName = AssetData__get_LastName(data, 0LL);
   v9 = v13;
 LABEL_19:
-  v18 = System_String__Concat_63235584(LastName, v9, 0LL);
-  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50017172(
+  v18 = System_String__Concat_63368612(LastName, v9, 0LL);
+  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50142412(
                                       data,
                                       v18,
-                                      (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_Texture2D____77757336);
+                                      (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_Texture2D____77902880);
 }
 
 
@@ -1050,11 +1050,11 @@ UnityEngine_Rect_o __fastcall UICharaGraphRender__GetBodyUvRect(UICharaGraphRend
   System_Collections_ObjectModel_ReadOnlyCollection_Rect__o *servantBodyRectTable; // x0
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BFECF2 & 1) == 0 )
+  if ( (byte_4C2351C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__, method);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v3);
-    byte_4BFECF2 = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__, method);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v3);
+    byte_4C2351C = 1;
   }
   v4 = UICharaGraphRender_TypeInfo;
   baseKind = this->fields.baseKind;
@@ -1075,11 +1075,11 @@ UnityEngine_Rect_o __fastcall UICharaGraphRender__GetBodyUvRect(UICharaGraphRend
   {
     servantBodyRectTable = static_fields->servantBodyRectTable;
     if ( !servantBodyRectTable )
-      sub_1C2E388(0LL, method);
+      sub_1C3B9C0(0LL, method);
     *(UnityEngine_Rect_o *)&m_XMin = System_Collections_ObjectModel_ReadOnlyCollection_Rect___get_Item(
                                        servantBodyRectTable,
                                        this->fields.textureImageLimitCount,
-                                       (const MethodInfo_385AB20 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
+                                       (const MethodInfo_387B2C4 *)Method_System_Collections_ObjectModel_ReadOnlyCollection_Rect__get_Item__);
   }
   result.fields.m_Height = m_Height;
   result.fields.m_Width = m_Width;
@@ -1105,28 +1105,28 @@ System_String_o *__fastcall UICharaGraphRender__GetClassSprite(UICharaGraphRende
   System_String_o *v14; // x0
   int32_t AdjustFrameTypeForClass; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4BFECF9 & 1) == 0 )
+  if ( (byte_4C23523 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, method);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantClassMaster___, v3);
-    sub_1C2E12C(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__, v4);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1C2E12C(&StringLiteral_16410/*"_"*/, v6);
-    sub_1C2E12C(&StringLiteral_18297/*"class"*/, v7);
-    byte_4BFECF9 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, method);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantClassMaster___, v3);
+    sub_1C3B764(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__, v4);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C3B764(&StringLiteral_16438/*"animationId"*/, v6);
+    sub_1C3B764(&StringLiteral_18331/*"dst"*/, v7);
+    byte_4C23523 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v9);
+    sub_1C3B9C0(Instance, v9);
   }
   result = (System_String_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 this->fields.classId,
-                                (const MethodInfo_327B180 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+                                (const MethodInfo_329AE48 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
   if ( result )
   {
     v11 = (int)result;
@@ -1136,10 +1136,10 @@ System_String_o *__fastcall UICharaGraphRender__GetClassSprite(UICharaGraphRende
     AdjustFrameTypeForClass = AtlasManager__GetAdjustFrameTypeForClass(frameType, 0LL);
     v13 = System_Int32__ToString((int32_t)&AdjustFrameTypeForClass, 0LL);
     v14 = System_Int32__ToString(v11 + 44, 0LL);
-    return System_String__Concat_63248848(
-             (System_String_o *)StringLiteral_18297/*"class"*/,
+    return System_String__Concat_63381876(
+             (System_String_o *)StringLiteral_18331/*"dst"*/,
              v13,
-             (System_String_o *)StringLiteral_16410/*"_"*/,
+             (System_String_o *)StringLiteral_16438/*"animationId"*/,
              v14,
              0LL);
   }
@@ -1156,21 +1156,21 @@ System_String_o *__fastcall UICharaGraphRender__GetCommandAssetName(int32_t comm
   int32_t v7; // [xsp+Ch] [xbp-24h] BYREF
 
   v7 = commandCodeId;
-  if ( (byte_4BFECEB & 1) == 0 )
+  if ( (byte_4C23515 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_4702/*"CommandGraph/1000000"*/, v2);
-    sub_1C2E12C(&StringLiteral_4701/*"CommandGraph/"*/, v3);
-    byte_4BFECEB = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_4702/*"Could not create setter for {0}."*/, v2);
+    sub_1C3B764(&StringLiteral_4701/*"Could not create machine key store '{0}'."*/, v3);
+    byte_4C23515 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v7, 0LL);
-  v5 = System_String__Concat_63235584((System_String_o *)StringLiteral_4701/*"CommandGraph/"*/, v4, 0LL);
+  v5 = System_String__Concat_63368612((System_String_o *)StringLiteral_4701/*"Could not create machine key store '{0}'."*/, v4, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__isExistAssetStorage(v5, 0LL) )
     return v5;
   else
-    return (System_String_o *)StringLiteral_4702/*"CommandGraph/1000000"*/;
+    return (System_String_o *)StringLiteral_4702/*"Could not create setter for {0}."*/;
 }
 
 
@@ -1195,59 +1195,59 @@ System_String_o *__fastcall UICharaGraphRender__GetExCharaGraphAssetName(int32_t
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
   key = svtId;
-  if ( (byte_4BFECEC & 1) == 0 )
+  if ( (byte_4C23516 & 1) == 0 )
   {
-    sub_1C2E12C(&AssetManager_TypeInfo, method);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, v2);
-    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v3);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1C2E12C(&StringLiteral_4514/*"CharaGraph/CharaGraphEx/"*/, v6);
-    sub_1C2E12C(&StringLiteral_4512/*"CharaGraph/100000"*/, v7);
-    sub_1C2E12C(&StringLiteral_4511/*"CharaGraph/"*/, v8);
-    byte_4BFECEC = 1;
+    sub_1C3B764(&AssetManager_TypeInfo, method);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantMaster___, v2);
+    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v3);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v4);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1C3B764(&StringLiteral_4514/*"Combining FileMode: {0} with FileAccess: {1} is invalid."*/, v6);
+    sub_1C3B764(&StringLiteral_4512/*"CombineServant"*/, v7);
+    sub_1C3B764(&StringLiteral_4511/*"CombineScene"*/, v8);
+    byte_4C23516 = 1;
   }
   v17 = 0LL;
   v9 = System_Int32__ToString((int32_t)&key, 0LL);
-  v10 = System_String__Concat_63235584((System_String_o *)StringLiteral_4514/*"CharaGraph/CharaGraphEx/"*/, v9, 0LL);
+  v10 = System_String__Concat_63368612((System_String_o *)StringLiteral_4514/*"Combining FileMode: {0} with FileAccess: {1} is invalid."*/, v9, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( AssetManager__isExistAssetStorage(v10, 0LL) )
     return v10;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_19;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           (Il2CppObject **)&v17,
           key,
-          (const MethodInfo_327B1CC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
-    return (System_String_o *)StringLiteral_4512/*"CharaGraph/100000"*/;
+          (const MethodInfo_329AE94 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+    return (System_String_o *)StringLiteral_4512/*"CombineServant"*/;
   Instance = (DataManager_o *)v17;
   if ( !v17 )
     goto LABEL_19;
   Instance = (DataManager_o *)ServantEntity__get_IsServantMaterialTd(v17, 0LL);
   if ( ((unsigned __int8)Instance & 1) == 0 )
-    return (System_String_o *)StringLiteral_4512/*"CharaGraph/100000"*/;
+    return (System_String_o *)StringLiteral_4512/*"CombineServant"*/;
   if ( !v17 )
 LABEL_19:
-    sub_1C2E388(Instance, v12);
+    sub_1C3B9C0(Instance, v12);
   p_baseSvtId = &v17->fields.baseSvtId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = p_baseSvtId;
   *(_QWORD *)&v19.fields.fakeValue = 0LL;
   v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__ToString(v19, v13);
-  v10 = System_String__Concat_63235584((System_String_o *)StringLiteral_4511/*"CharaGraph/"*/, v15, 0LL);
+  v10 = System_String__Concat_63368612((System_String_o *)StringLiteral_4511/*"CombineScene"*/, v15, 0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !AssetManager__isExistAssetStorage(v10, 0LL) )
-    return (System_String_o *)StringLiteral_4512/*"CharaGraph/100000"*/;
+    return (System_String_o *)StringLiteral_4512/*"CombineServant"*/;
   return v10;
 }
 
@@ -1270,10 +1270,10 @@ int32_t __fastcall UICharaGraphRender__GetNameTargetLimitCount(UICharaGraphRende
   struct System_Int32_array *SERVANT_NAME_TARGET_LIMIT_COUNT; // x8
   int32_t imageLimitCount; // w9
 
-  if ( (byte_4BFECF4 & 1) == 0 )
+  if ( (byte_4C2351E & 1) == 0 )
   {
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, method);
-    byte_4BFECF4 = 1;
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, method);
+    byte_4C2351E = 1;
   }
   v3 = UICharaGraphRender_TypeInfo;
   if ( !UICharaGraphRender_TypeInfo->_2.cctor_finished )
@@ -1297,11 +1297,11 @@ int32_t __fastcall UICharaGraphRender__GetNameTargetLimitCount(UICharaGraphRende
       goto LABEL_10;
     }
 LABEL_13:
-    sub_1C2E388(v3, method);
+    sub_1C3B9C0(v3, method);
   }
 LABEL_10:
   if ( imageLimitCount >= SERVANT_NAME_TARGET_LIMIT_COUNT->max_length )
-    sub_1C2E390(v3, method);
+    sub_1C3B9C8(v3, method);
   return SERVANT_NAME_TARGET_LIMIT_COUNT->m_Items[imageLimitCount + 1];
 }
 
@@ -1319,25 +1319,25 @@ UnityEngine_Texture2D_o *__fastcall UICharaGraphRender__GetNameTexture(
   System_String_o *v9; // x1
 
   v4 = this;
-  if ( (byte_4BFECF5 & 1) == 0 )
+  if ( (byte_4C2351F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_Texture2D____77757336, data);
-    sub_1C2E12C(&StringLiteral_17297/*"b"*/, v5);
-    this = (UICharaGraphRender_o *)sub_1C2E12C(&StringLiteral_22395/*"name"*/, v6);
-    byte_4BFECF5 = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_Texture2D____77902880, data);
+    sub_1C3B764(&StringLiteral_17327/*"buttontxt_notsynthesis"*/, v5);
+    this = (UICharaGraphRender_o *)sub_1C3B764(&StringLiteral_22434/*"radix"*/, v6);
+    byte_4C2351F = 1;
   }
   if ( v4->fields.isEventJoinNameExist )
   {
     if ( data )
     {
       LastName = AssetData__get_LastName(data, 0LL);
-      v8 = (System_String_o *)StringLiteral_22395/*"name"*/;
+      v8 = (System_String_o *)StringLiteral_22434/*"radix"*/;
 LABEL_6:
-      v9 = System_String__Concat_63235584(LastName, v8, 0LL);
-      return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50017172(
+      v9 = System_String__Concat_63368612(LastName, v8, 0LL);
+      return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50142412(
                                           data,
                                           v9,
-                                          (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_Texture2D____77757336);
+                                          (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_Texture2D____77902880);
     }
     goto LABEL_11;
   }
@@ -1346,11 +1346,11 @@ LABEL_6:
     if ( data )
     {
       LastName = AssetData__get_LastName(data, 0LL);
-      v8 = (System_String_o *)StringLiteral_17297/*"b"*/;
+      v8 = (System_String_o *)StringLiteral_17327/*"buttontxt_notsynthesis"*/;
       goto LABEL_6;
     }
 LABEL_11:
-    sub_1C2E388(this, data);
+    sub_1C3B9C0(this, data);
   }
   return UICharaGraphRender__GetTrueNameTexture(v4, data, method);
 }
@@ -1389,22 +1389,22 @@ UnityEngine_Rect_o __fastcall UICharaGraphRender__GetNameUvRect(
   m_Width = defaultValue.fields.m_Width;
   m_YMin = defaultValue.fields.m_YMin;
   m_XMin = defaultValue.fields.m_XMin;
-  if ( (byte_4BFECF7 & 1) == 0 )
+  if ( (byte_4C23521 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLimitMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v9);
-    byte_4BFECF7 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v9);
+    byte_4C23521 = 1;
   }
   if ( !this->fields.baseKind )
   {
     entity = 0LL;
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_18;
     MasterData_object = DataManager__GetMasterData_object_(
                           Instance,
-                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
     svtId = this->fields.svtId;
     v14 = (ServantLimitMaster_o *)MasterData_object;
     Instance = (DataManager_o *)UICharaGraphRender__GetNameTargetLimitCount(this, v15);
@@ -1421,7 +1421,7 @@ UnityEngine_Rect_o __fastcall UICharaGraphRender__GetNameUvRect(
     Instance = (DataManager_o *)entity;
     if ( !entity )
 LABEL_18:
-      sub_1C2E388(Instance, v11);
+      sub_1C3B9C0(Instance, v11);
     SaintGraphNameIndex = ServantLimitEntity__GetSaintGraphNameIndex(entity, -1, 0LL);
     if ( (SaintGraphNameIndex & 0x80000000) == 0 )
     {
@@ -1465,18 +1465,18 @@ System_String_o *__fastcall UICharaGraphRender__GetRaritySprite(UICharaGraphRend
   System_String_o *v5; // x0
 
   v2 = (int)this;
-  if ( (byte_4BFECF8 & 1) == 0 )
+  if ( (byte_4C23522 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_23216/*"rarity"*/, method);
-    sub_1C2E12C(&StringLiteral_16410/*"_"*/, v3);
-    byte_4BFECF8 = 1;
+    sub_1C3B764(&StringLiteral_23258/*"stringToEscape"*/, method);
+    sub_1C3B764(&StringLiteral_16438/*"animationId"*/, v3);
+    byte_4C23522 = 1;
   }
   v4 = System_Int32__ToString(v2 + 488, 0LL);
   v5 = System_Int32__ToString(v2 + 448, 0LL);
-  return System_String__Concat_63248848(
-           (System_String_o *)StringLiteral_23216/*"rarity"*/,
+  return System_String__Concat_63381876(
+           (System_String_o *)StringLiteral_23258/*"stringToEscape"*/,
            v4,
-           (System_String_o *)StringLiteral_16410/*"_"*/,
+           (System_String_o *)StringLiteral_16438/*"animationId"*/,
            v5,
            0LL);
 }
@@ -1502,22 +1502,22 @@ UnityEngine_Texture2D_o *__fastcall UICharaGraphRender__GetTrueNameTexture(
   System_String_o *v17; // x0
   ServantLimitEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BFECF6 & 1) == 0 )
+  if ( (byte_4C23520 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_Texture2D____77757336, data);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLimitMaster___, v5);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C2E12C(&StringLiteral_16912/*"a"*/, v7);
-    sub_1C2E12C(&StringLiteral_22395/*"name"*/, v8);
-    byte_4BFECF6 = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_Texture2D____77902880, data);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitMaster___, v5);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C3B764(&StringLiteral_16942/*"bit_result{0:D2}"*/, v7);
+    sub_1C3B764(&StringLiteral_22434/*"radix"*/, v8);
+    byte_4C23520 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   svtId = this->fields.svtId;
   v13 = (ServantLimitMaster_o *)MasterData_object;
   Instance = (DataManager_o *)UICharaGraphRender__GetNameTargetLimitCount(this, v14);
@@ -1535,22 +1535,22 @@ UnityEngine_Texture2D_o *__fastcall UICharaGraphRender__GetTrueNameTexture(
 LABEL_10:
     if ( data )
     {
-      v15 = &StringLiteral_16912/*"a"*/;
+      v15 = &StringLiteral_16942/*"bit_result{0:D2}"*/;
       goto LABEL_12;
     }
 LABEL_13:
-    sub_1C2E388(Instance, v10);
+    sub_1C3B9C0(Instance, v10);
   }
   if ( !data )
     goto LABEL_13;
-  v15 = &StringLiteral_22395/*"name"*/;
+  v15 = &StringLiteral_22434/*"radix"*/;
 LABEL_12:
   LastName = AssetData__get_LastName(data, 0LL);
-  v17 = System_String__Concat_63235584(LastName, (System_String_o *)*v15, 0LL);
-  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50017172(
+  v17 = System_String__Concat_63368612(LastName, (System_String_o *)*v15, 0LL);
+  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__50142412(
                                       data,
                                       v17,
-                                      (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_Texture2D____77757336);
+                                      (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_Texture2D____77902880);
 }
 
 
@@ -1594,7 +1594,7 @@ void __fastcall UICharaGraphRender__MoveAlpha(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UICharaGraphRender__MoveAlpha_42191672(
+void __fastcall UICharaGraphRender__MoveAlpha_42309652(
         UICharaGraphRender_o *this,
         float duration,
         float alpha,
@@ -1626,10 +1626,10 @@ void __fastcall UICharaGraphRender__MoveAlpha_42191672(
   UnityEngine_Color_o v31; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
   v11 = *(long double *)&alpha;
-  if ( (byte_4BFECFA & 1) == 0 )
+  if ( (byte_4C23524 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, callbackObject);
-    byte_4BFECFA = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, callbackObject);
+    byte_4C23524 = 1;
   }
   *(float *)&v8 = this->fields.mColor.fields.r;
   *(float *)&v7 = this->fields.mColor.fields.g;
@@ -1652,7 +1652,7 @@ void __fastcall UICharaGraphRender__MoveAlpha_42191672(
     {
       if ( !callbackObject )
         goto LABEL_18;
-      UnityEngine_GameObject__SendMessage_70971180(callbackObject, callbackFunc, 0LL);
+      UnityEngine_GameObject__SendMessage_71104208(callbackObject, callbackFunc, 0LL);
     }
   }
   else
@@ -1675,7 +1675,7 @@ void __fastcall UICharaGraphRender__MoveAlpha_42191672(
         if ( v16 )
         {
           v16->fields.eventReceiver = callbackObject;
-          sub_1C2E0D0(
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v16->fields.eventReceiver,
             (int64_t)callbackObject,
             v19,
@@ -1685,7 +1685,7 @@ void __fastcall UICharaGraphRender__MoveAlpha_42191672(
             v23,
             v24);
           v16->fields.callWhenFinished = callbackFunc;
-          sub_1C2E0D0(
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v16->fields.callWhenFinished,
             (int64_t)callbackFunc,
             v25,
@@ -1697,7 +1697,7 @@ void __fastcall UICharaGraphRender__MoveAlpha_42191672(
           return;
         }
 LABEL_18:
-        sub_1C2E388(v17, v18);
+        sub_1C3B9C0(v17, v18);
       }
     }
   }
@@ -1751,11 +1751,11 @@ void __fastcall UICharaGraphRender__SetCharacter(
   int32_t ServantLimitMax; // w8
   const MethodInfo *v20; // x3
 
-  if ( (byte_4BFECED & 1) == 0 )
+  if ( (byte_4C23517 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
-    sub_1C2E12C(&ImageLimitCount_TypeInfo, v17);
-    byte_4BFECED = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
+    sub_1C3B764(&ImageLimitCount_TypeInfo, v17);
+    byte_4C23517 = 1;
   }
   this->fields.imageSvtId = svtId;
   this->fields.svtId = svtId;
@@ -1781,12 +1781,12 @@ void __fastcall UICharaGraphRender__SetCharacter(
   this->fields.imageLimitCount = ImageLimitCount__GetCardImageLimitCount(svtId, limitCount, isOwn, 0, 0LL);
   this->fields.exceedCount = exceedCount;
   this->fields.lv = lv;
-  UICharaGraphRender__SetCharacter_42187164(this, changeNameType, saintGraphType, v20);
+  UICharaGraphRender__SetCharacter_42305144(this, changeNameType, saintGraphType, v20);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UICharaGraphRender__SetCharacter_42187164(
+void __fastcall UICharaGraphRender__SetCharacter_42305144(
         UICharaGraphRender_o *this,
         int32_t changeNameType,
         int32_t saintGraphType,
@@ -1854,45 +1854,45 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
   ServantLimitEntity_o *v66; // [xsp+0h] [xbp-70h] BYREF
   int32_t FrameId; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4BFECEF & 1) == 0 )
+  if ( (byte_4C23519 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&changeNameType);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantExceedMaster___, v7);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLimitMaster___, v8);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLvDetailMaster___, v9);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantMaster___, v10);
-    sub_1C2E12C(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantLvDetailMaster___, v12);
-    sub_1C2E12C(&DataManager_TypeInfo, v13);
-    sub_1C2E12C(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
-    sub_1C2E12C(&ImageLimitCount_TypeInfo, v15);
-    sub_1C2E12C(&Rarity_TypeInfo, v16);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v18);
-    sub_1C2E12C(&StringLiteral_19957/*"frame"*/, v19);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v20);
-    byte_4BFECEF = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&changeNameType);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantExceedMaster___, v7);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitMaster___, v8);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLvDetailMaster___, v9);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantMaster___, v10);
+    sub_1C3B764(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantLvDetailMaster___, v12);
+    sub_1C3B764(&DataManager_TypeInfo, v13);
+    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
+    sub_1C3B764(&ImageLimitCount_TypeInfo, v15);
+    sub_1C3B764(&Rarity_TypeInfo, v16);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v18);
+    sub_1C3B764(&StringLiteral_19992/*"img_index_02"*/, v19);
+    sub_1C3B764(&StringLiteral_1/*""*/, v20);
+    byte_4C23519 = 1;
   }
   FrameId = 0;
   v66 = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Instance )
     goto LABEL_60;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.svtId,
-             (const MethodInfo_327B180 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+             (const MethodInfo_329AE48 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !Instance )
     goto LABEL_60;
   v24 = ServantLimitMaster__GetEntity(
@@ -1900,12 +1900,12 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
           this->fields.svtId,
           this->fields.limitCount,
           0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantExceedMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantExceedMaster___);
   if ( !Entity )
     goto LABEL_60;
   *(int32x2_t *)&this->fields.svtType = vrev64_s32((int32x2_t)Entity[5].klass);
@@ -1932,12 +1932,12 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
   this->fields.frameType = frameType;
   if ( exceedCount >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_60;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLvDetailMaster___);
+                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLvDetailMaster___);
     if ( !Instance )
       goto LABEL_60;
     this->fields.frameType = ServantLvDetailMaster__GetFrameType(
@@ -1964,16 +1964,16 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
       goto LABEL_60;
     v40 = this->fields.frameType;
     if ( (unsigned int)v40 >= *(_DWORD *)(v39 + 24) )
-      sub_1C2E390(Instance, rarity);
+      sub_1C3B9C8(Instance, rarity);
     v38 = *(struct System_String_o **)(v39 + 8 * v40 + 32);
   }
   else
   {
     v37 = System_Int32__ToString((int32_t)&FrameId, 0LL);
-    v38 = System_String__Concat_63235584((System_String_o *)StringLiteral_19957/*"frame"*/, v37, 0LL);
+    v38 = System_String__Concat_63368612((System_String_o *)StringLiteral_19992/*"img_index_02"*/, v37, 0LL);
   }
   this->fields.frameName = v38;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.frameName, (int64_t)v38, v31, v32, v33, v34, v35, v36);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.frameName, (int64_t)v38, v31, v32, v33, v34, v35, v36);
   if ( this->fields.exceedCount < 1 )
   {
     v42 = 0;
@@ -1986,7 +1986,7 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
       rarityIcon = 1;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantLvDetailMaster___);
+    Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantLvDetailMaster___);
     if ( !Instance )
       goto LABEL_60;
     v42 = ServantLvDetailMaster__GetRarityIcon(
@@ -2016,13 +2016,13 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
   this->fields.isChangeGraph = 0;
   v51 = StringLiteral_1/*""*/;
   this->fields.changeGraphSuffix = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.changeGraphSuffix, (int64_t)v51, v45, v46, v47, v48, v49, v50);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.changeGraphSuffix, (int64_t)v51, v45, v46, v47, v48, v49, v50);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_60;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   svtId = this->fields.svtId;
   imageLimitCount = this->fields.imageLimitCount;
   v55 = (ServantLimitMaster_o *)MasterData_object;
@@ -2042,7 +2042,7 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
   v57 = v56;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Instance )
     goto LABEL_60;
   if ( !CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v57, 0LL, 0, 0LL) )
@@ -2051,10 +2051,10 @@ void __fastcall UICharaGraphRender__SetCharacter_42187164(
   Instance = (DataManager_o *)v66;
   if ( !v66 )
 LABEL_60:
-    sub_1C2E388(Instance, rarity);
+    sub_1C3B9C0(Instance, rarity);
   v58 = ServantLimitEntity__GetChangeGraphSuffix(v66, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.changeGraphSuffix = v58;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.changeGraphSuffix, (int64_t)v58, v59, v60, v61, v62, v63, v64);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.changeGraphSuffix, (int64_t)v58, v59, v60, v61, v62, v63, v64);
 LABEL_56:
   if ( (unsigned int)(changeNameType - 1) >= 3 )
     LOBYTE(v65) = ServantEntity__IsNameTrue((ServantEntity_o *)Entity, 0LL);
@@ -2065,7 +2065,7 @@ LABEL_56:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UICharaGraphRender__SetCharacter_42188480(
+void __fastcall UICharaGraphRender__SetCharacter_42306460(
         UICharaGraphRender_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -2092,25 +2092,25 @@ void __fastcall UICharaGraphRender__SetCharacter_42188480(
 
   ServantLimitMax = limitCount;
   imageLimitCounta = imageLimitCount;
-  if ( (byte_4BFECEE & 1) == 0 )
+  if ( (byte_4C23518 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v18);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v20);
-    byte_4BFECEE = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v18);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v20);
+    byte_4C23518 = 1;
   }
   this->fields.imageSvtId = svtId;
   this->fields.svtId = svtId;
   if ( imageLimitCount >= 11 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0LL )
+                       (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0LL )
     {
-      sub_1C2E388(Instance, v24);
+      sub_1C3B9C0(Instance, v24);
     }
     ServantLimitAddMaster__getCostumeId(
       (ServantLimitAddMaster_o *)Instance,
@@ -2158,7 +2158,7 @@ void __fastcall UICharaGraphRender__SetCharacter_42188480(
   this->fields.lv = lv;
   this->fields.imageLimitCount = v26;
   this->fields.imagePartsGroupIdxs = idxs;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.imagePartsGroupIdxs,
     (int64_t)idxs,
     *(int64_t *)&limitCount,
@@ -2167,7 +2167,7 @@ void __fastcall UICharaGraphRender__SetCharacter_42188480(
     *(BattleSetupInfo_o **)&lv,
     *(FollowerInfo_o **)&changeNameType,
     *(PartyListViewItem_o **)&saintGraphType);
-  UICharaGraphRender__SetCharacter_42187164(this, changeNameType, saintGraphType, v27);
+  UICharaGraphRender__SetCharacter_42305144(this, changeNameType, saintGraphType, v27);
 }
 
 
@@ -2192,27 +2192,27 @@ void __fastcall UICharaGraphRender__SetCommand(
   __int64 v17; // x9
   struct System_String_o *v18; // x1
 
-  if ( (byte_4BFECF0 & 1) == 0 )
+  if ( (byte_4C2351A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&commandCodeId);
-    sub_1C2E12C(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v5);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C2E12C(&UICharaGraphRender_TypeInfo, v7);
-    byte_4BFECF0 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommandCodeMaster___, *(_QWORD *)&commandCodeId);
+    sub_1C3B764(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v5);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C3B764(&UICharaGraphRender_TypeInfo, v7);
+    byte_4C2351A = 1;
   }
   this->fields.commandCodeId = commandCodeId;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   if ( !Instance )
     goto LABEL_11;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                this->fields.commandCodeId,
-               (const MethodInfo_327B180 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+               (const MethodInfo_329AE48 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   *(_QWORD *)&this->fields.svtType = 0LL;
   if ( !Instance )
     goto LABEL_11;
@@ -2228,13 +2228,13 @@ void __fastcall UICharaGraphRender__SetCommand(
   v17 = *(_QWORD *)(*((_QWORD *)Instance + 23) + 120LL);
   if ( !v17 )
 LABEL_11:
-    sub_1C2E388(Instance, v9);
+    sub_1C3B9C0(Instance, v9);
   if ( (unsigned int)rarity >= *(_DWORD *)(v17 + 24) )
-    sub_1C2E390(Instance, v9);
+    sub_1C3B9C8(Instance, v9);
   v18 = *(struct System_String_o **)(v17 + 8LL * rarity + 32);
   this->fields.frameName = v18;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.frameName, (int64_t)v18, v10, v11, v12, v13, v14, v15);
-  *(_OWORD *)&this->fields.atk = xmmword_C06510;
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.frameName, (int64_t)v18, v10, v11, v12, v13, v14, v15);
+  *(_OWORD *)&this->fields.atk = xmmword_C0D8A0;
   this->fields.realNameCheck = 0;
   this->fields.isNameTrue = 1;
 }
@@ -2263,16 +2263,16 @@ void __fastcall UICharaGraphRender__SetLayer(UICharaGraphRender_o *this, int32_t
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v6);
+    sub_1C3B9C0(0LL, v6);
   if ( UnityEngine_GameObject__get_layer(gameObject, 0LL) != layer )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    UICharaGraphRender__SetLayer_42192200(this, transform, layer, v8);
+    UICharaGraphRender__SetLayer_42310180(this, transform, layer, v8);
   }
 }
 
 
-void __fastcall UICharaGraphRender__SetLayer_42192200(
+void __fastcall UICharaGraphRender__SetLayer_42310180(
         UICharaGraphRender_o *this,
         UnityEngine_Transform_o *tf,
         int32_t layer,
@@ -2302,23 +2302,23 @@ void __fastcall UICharaGraphRender__SetLayer_42192200(
   __int64 v27; // x0
 
   v6 = this;
-  if ( (byte_4BFECFB & 1) == 0 )
+  if ( (byte_4C23525 & 1) == 0 )
   {
-    sub_1C2E12C(&System_IDisposable_TypeInfo, tf);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v7);
-    this = (UICharaGraphRender_o *)sub_1C2E12C(&UnityEngine_Transform_TypeInfo, v8);
-    byte_4BFECFB = 1;
+    sub_1C3B764(&System_IDisposable_TypeInfo, tf);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v7);
+    this = (UICharaGraphRender_o *)sub_1C3B764(&UnityEngine_Transform_TypeInfo, v8);
+    byte_4C23525 = 1;
   }
   if ( !tf
     || (this = (UICharaGraphRender_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)tf, 0LL)) == 0LL )
   {
 LABEL_33:
-    sub_1C2E388(this, tf);
+    sub_1C3B9C0(this, tf);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)this, layer, 0LL);
   Enumerator = UnityEngine_Transform__GetEnumerator(tf, 0LL);
   if ( !Enumerator )
-    sub_1C2E388(0LL, v9);
+    sub_1C3B9C0(0LL, v9);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -2338,7 +2338,7 @@ LABEL_33:
     else
     {
 LABEL_10:
-      p_method = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -2361,7 +2361,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v18 = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v18 = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v19 = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
                                        Enumerator,
@@ -2372,13 +2372,13 @@ LABEL_17:
       if ( LOBYTE(v19->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
         || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[methodPtr_low - 1] != UnityEngine_Transform_TypeInfo )
       {
-        sub_1C2E648(v19);
+        sub_1C3BC80(v19);
         goto LABEL_33;
       }
     }
-    UICharaGraphRender__SetLayer_42192200(v6, v19, layer, v20);
+    UICharaGraphRender__SetLayer_42310180(v6, v19, layer, v20);
   }
-  v22 = sub_1C2E268(Enumerator, System_IDisposable_TypeInfo);
+  v22 = sub_1C3B8A0(Enumerator, System_IDisposable_TypeInfo);
   if ( v22 )
   {
     v23 = *(_QWORD *)v22;
@@ -2399,7 +2399,7 @@ LABEL_17:
     else
     {
 LABEL_28:
-      v27 = sub_1C8010C(v22, System_IDisposable_TypeInfo, 0LL);
+      v27 = sub_1C8D744(v22, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v27)(v24, *(_QWORD *)(v27 + 8));
   }

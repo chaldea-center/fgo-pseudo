@@ -12,7 +12,7 @@ void __fastcall BattleMultiMessageDisplay___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.perf = inputPerf;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)inputPerf, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)inputPerf, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -37,18 +37,18 @@ System_Collections_IEnumerator_o *__fastcall BattleMultiMessageDisplay__Coroutin
   FollowerInfo_o *v20; // x6
   PartyListViewItem_o *v21; // x7
 
-  if ( (byte_4C007AD & 1) == 0 )
+  if ( (byte_4C24FDB & 1) == 0 )
   {
-    sub_1C2E12C(&BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_TypeInfo, message);
-    byte_4C007AD = 1;
+    sub_1C3B764(&BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_TypeInfo, message);
+    byte_4C24FDB = 1;
   }
-  v9 = sub_1C2E378(BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_TypeInfo);
+  v9 = sub_1C3B9B0(BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 40) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 40), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 40), (int64_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v9 + 48) = message;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v9 + 48), (int64_t)message, v16, v17, v18, v19, v20, v21);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 48), (int64_t)message, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v9 + 56) = index;
   *(float *)(v9 + 32) = startDelayTime;
   return (System_Collections_IEnumerator_o *)v9;
@@ -74,18 +74,18 @@ System_Collections_IEnumerator_o *__fastcall BattleMultiMessageDisplay__Coroutin
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4C007AE & 1) == 0 )
+  if ( (byte_4C24FDC & 1) == 0 )
   {
-    sub_1C2E12C(&BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_TypeInfo, callBack);
-    byte_4C007AE = 1;
+    sub_1C3B764(&BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_TypeInfo, callBack);
+    byte_4C24FDC = 1;
   }
-  v5 = sub_1C2E378(BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_TypeInfo);
+  v5 = sub_1C3B9B0(BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v5 + 32), (int64_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = callBack;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)callBack, v12, v13, v14, v15, v16, v17);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v5 + 40), (int64_t)callBack, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -105,10 +105,10 @@ void __fastcall BattleMultiMessageDisplay__DestroyMessageObject(
   FollowerInfo_o *v11; // x6
   PartyListViewItem_o *v12; // x7
 
-  if ( (byte_4C007AF & 1) == 0 )
+  if ( (byte_4C24FDD & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C007AF = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C24FDD = 1;
   }
   messageObject = this->fields.messageObject;
   p_messageObject = (PartyOrganizationUtility_o *)&this->fields.messageObject;
@@ -120,9 +120,9 @@ void __fastcall BattleMultiMessageDisplay__DestroyMessageObject(
     klass = (UnityEngine_Object_o *)p_messageObject->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(klass, 0LL);
+    UnityEngine_Object__Destroy_71122748(klass, 0LL);
     p_messageObject->klass = 0LL;
-    sub_1C2E0D0(p_messageObject, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_1C3B708(p_messageObject, 0LL, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -170,10 +170,10 @@ void __fastcall BattleMultiMessageDisplay__DisplayMessage(
             MessageStartDelayTime_k__BackingField,
             v11);
     if ( !perf )
-      sub_1C2E388(v12, v13);
-    started = UnityEngine_MonoBehaviour__StartCoroutine_70974992(perf, v12, 0LL);
+      sub_1C3B9C0(v12, v13);
+    started = UnityEngine_MonoBehaviour__StartCoroutine_71108020(perf, v12, 0LL);
     this->fields.corDisplayMessage = started;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.corDisplayMessage,
       (int64_t)started,
       v15,
@@ -185,7 +185,7 @@ void __fastcall BattleMultiMessageDisplay__DisplayMessage(
   }
   else
   {
-    BattleMultiMessageDisplay__ReleaseMessage_45322272(this, *(const MethodInfo **)&index);
+    BattleMultiMessageDisplay__ReleaseMessage_45445616(this, *(const MethodInfo **)&index);
   }
 }
 
@@ -218,12 +218,12 @@ void __fastcall BattleMultiMessageDisplay__DisplayStart(
           (v6 = v4->fields.perf) == 0LL)
       || (this = (BattleMultiMessageDisplay_o *)v6->fields.logic) == 0LL )
     {
-      sub_1C2E388(this, inputArg);
+      sub_1C3B9C0(this, inputArg);
     }
     ParseBattleMsg = BattleLogic__get_ParseBattleMsg((BattleLogic_o *)this, 0LL);
     BattleMultiMessageDisplay_Argument__InitPreDisplayMessage(inputArg, ParseBattleMsg, v8);
     v4->fields.arg = inputArg;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->fields.arg, (int64_t)inputArg, v9, v10, v11, v12, v13, v14);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v4->fields.arg, (int64_t)inputArg, v9, v10, v11, v12, v13, v14);
     BattleMultiMessageDisplay__DisplayMessage(v4, 0, v15);
   }
 }
@@ -238,11 +238,11 @@ void __fastcall BattleMultiMessageDisplay__ReleaseMessage(
   struct BattleMultiMessageDisplay_Argument_o *arg; // x8
 
   if ( isDisplayNextMessage || (arg = this->fields.arg) == 0LL || !arg->fields._IsContinueDisplayMessage_k__BackingField )
-    BattleMultiMessageDisplay__ReleaseMessage_45322272(this, (const MethodInfo *)isDisplayNextMessage);
+    BattleMultiMessageDisplay__ReleaseMessage_45445616(this, (const MethodInfo *)isDisplayNextMessage);
 }
 
 
-void __fastcall BattleMultiMessageDisplay__ReleaseMessage_45322272(
+void __fastcall BattleMultiMessageDisplay__ReleaseMessage_45445616(
         BattleMultiMessageDisplay_o *this,
         const MethodInfo *method)
 {
@@ -257,7 +257,7 @@ void __fastcall BattleMultiMessageDisplay__ReleaseMessage_45322272(
   BattleMultiMessageDisplay__StopMessageCoroutine(this, method);
   BattleMultiMessageDisplay__DestroyMessageObject(this, v3);
   this->fields.arg = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.arg, 0LL, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.arg, 0LL, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -281,10 +281,10 @@ void __fastcall BattleMultiMessageDisplay__StopMessageCoroutine(
   {
     perf = (UnityEngine_MonoBehaviour_o *)this->fields.perf;
     if ( !perf )
-      sub_1C2E388(0LL, corDisplayMessage);
-    UnityEngine_MonoBehaviour__StopCoroutine_70975612(perf, corDisplayMessage, 0LL);
+      sub_1C3B9C0(0LL, corDisplayMessage);
+    UnityEngine_MonoBehaviour__StopCoroutine_71108640(perf, corDisplayMessage, 0LL);
     p_corDisplayMessage->klass = 0LL;
-    sub_1C2E0D0(p_corDisplayMessage, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708(p_corDisplayMessage, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -305,8 +305,8 @@ void __fastcall BattleMultiMessageDisplay__WaitEndMessage(
     perf = (UnityEngine_MonoBehaviour_o *)this->fields.perf;
     v5 = BattleMultiMessageDisplay__CoroutineWaitEndMessage(this, callBack, method);
     if ( !perf )
-      sub_1C2E388(v5, v6);
-    UnityEngine_MonoBehaviour__StartCoroutine_70974992(perf, v5, 0LL);
+      sub_1C3B9C0(v5, v6);
+    UnityEngine_MonoBehaviour__StartCoroutine_71108020(perf, v5, 0LL);
   }
   else
   {
@@ -336,7 +336,7 @@ BattleInformationComponent_o *__fastcall BattleMultiMessageDisplay__get_InfoComp
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return perf->fields.infoComp;
 }
 
@@ -373,7 +373,7 @@ void __fastcall BattleMultiMessageDisplay_Argument___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !dataVal )
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   this->fields._MessageId_k__BackingField = DataVals__GetValue(dataVal, 0LL);
   this->fields._IsWaitMessageEnd_k__BackingField = DataVals__GetParam(dataVal, 204, 0, 0LL) > 0;
   this->fields._IsContinueDisplayMessage_k__BackingField = DataVals__GetParam(dataVal, 205, 0, 0LL) > 0;
@@ -387,16 +387,16 @@ BattleActionData_DisplayMessageData_o *__fastcall BattleMultiMessageDisplay_Argu
         int32_t index,
         const MethodInfo *method)
 {
-  if ( (byte_4C007B1 & 1) == 0 )
+  if ( (byte_4C24FDF & 1) == 0 )
   {
-    sub_1C2E12C(&Method_BasicHelper_IndexValue_BattleActionData_DisplayMessageData___, *(_QWORD *)&index);
-    byte_4C007B1 = 1;
+    sub_1C3B764(&Method_BasicHelper_IndexValue_BattleActionData_DisplayMessageData___, *(_QWORD *)&index);
+    byte_4C24FDF = 1;
   }
   return (BattleActionData_DisplayMessageData_o *)BasicHelper__IndexValue_object_(
                                                     (System_Object_array *)this->fields.messageArray,
                                                     index,
                                                     0LL,
-                                                    (const MethodInfo_2FC01A4 *)Method_BasicHelper_IndexValue_BattleActionData_DisplayMessageData___);
+                                                    (const MethodInfo_2FDEADC *)Method_BasicHelper_IndexValue_BattleActionData_DisplayMessageData___);
 }
 
 
@@ -416,24 +416,24 @@ BattleMultiMessageDisplay_Argument_o *__fastcall BattleMultiMessageDisplay_Argum
   FollowerInfo_o *v13; // x6
   PartyListViewItem_o *v14; // x7
 
-  if ( (byte_4C007B0 & 1) == 0 )
+  if ( (byte_4C24FDE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_BattleMessageMaster___, parse);
-    sub_1C2E12C(&DataManager_TypeInfo, v5);
-    byte_4C007B0 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_BattleMessageMaster___, parse);
+    sub_1C3B764(&DataManager_TypeInfo, v5);
+    byte_4C24FDE = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_BattleMessageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_BattleMessageMaster___);
   if ( !Master_object )
-    sub_1C2E388(0LL, v7);
+    sub_1C3B9C0(0LL, v7);
   DisplayMessageArray = BattleMessageMaster__GetDisplayMessageArray(
                           (BattleMessageMaster_o *)Master_object,
                           this->fields._MessageId_k__BackingField,
                           parse,
                           0LL);
   this->fields.messageArray = DisplayMessageArray;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.messageArray,
     (int64_t)DisplayMessageArray,
     v9,
@@ -548,13 +548,13 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17__MoveNe
   PartyListViewItem_o *v47; // x7
 
   v8 = this;
-  if ( (byte_4C007B2 & 1) == 0 )
+  if ( (byte_4C24FE0 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_WaitForSecondsRealtime_TypeInfo, method);
-    this = (BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_o *)sub_1C2E12C(
+    sub_1C3B764(&UnityEngine_WaitForSecondsRealtime_TypeInfo, method);
+    this = (BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_o *)sub_1C3B764(
                                                                            &UnityEngine_WaitForSeconds_TypeInfo,
                                                                            v9);
-    byte_4C007B2 = 1;
+    byte_4C24FE0 = 1;
   }
   _4__this = v8->fields.__4__this;
   switch ( v8->fields.__1__state )
@@ -564,18 +564,18 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17__MoveNe
       v8->fields.__1__state = -1;
       if ( startDelayTime > 0.0 )
       {
-        v31 = (UnityEngine_WaitForSeconds_o *)sub_1C2E378(UnityEngine_WaitForSeconds_TypeInfo);
+        v31 = (UnityEngine_WaitForSeconds_o *)sub_1C3B9B0(UnityEngine_WaitForSeconds_TypeInfo);
         UnityEngine_WaitForSeconds___ctor(v31, startDelayTime, 0LL);
         v8->fields.__2__current = (Il2CppObject *)v31;
         p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-        sub_1C2E0D0(p__2__current, (int64_t)v31, v33, v34, v35, v36, v37, v38);
+        sub_1C3B708(p__2__current, (int64_t)v31, v33, v34, v35, v36, v37, v38);
         result = 1;
         *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
         return result;
       }
       v8->fields.__2__current = 0LL;
       v22 = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-      sub_1C2E0D0(v22, 0LL, (int64_t)v2, (int32_t)v3, v4, v5, v6, v7);
+      sub_1C3B708(v22, 0LL, (int64_t)v2, (int32_t)v3, v4, v5, v6, v7);
       v29 = 2;
       goto LABEL_23;
     case 1:
@@ -598,7 +598,7 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17__MoveNe
                         message->fields._MessageType_k__BackingField,
                         v3);
       _4__this->fields.messageObject = BattleMessage;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&_4__this->fields.messageObject,
         (int64_t)BattleMessage,
         v14,
@@ -618,11 +618,11 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17__MoveNe
           DispTime = BattleActionData_DisplayMessageData__get_DispTime(
                        (BattleActionData_DisplayMessageData_o *)this,
                        0LL);
-          v21 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1C2E378(UnityEngine_WaitForSecondsRealtime_TypeInfo);
+          v21 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1C3B9B0(UnityEngine_WaitForSecondsRealtime_TypeInfo);
           UnityEngine_WaitForSecondsRealtime___ctor(v21, DispTime, 0LL);
           v8->fields.__2__current = (Il2CppObject *)v21;
           v22 = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(v22, (int64_t)v21, v23, v24, v25, v26, v27, v28);
+          sub_1C3B708(v22, (int64_t)v21, v23, v24, v25, v26, v27, v28);
           v29 = 3;
 LABEL_23:
           *(_DWORD *)&v22[-1].fields._IsQuestStartMenuMode_k__BackingField = v29;
@@ -643,16 +643,16 @@ LABEL_15:
           Interval = BattleActionData_DisplayMessageData__get_Interval(
                        (BattleActionData_DisplayMessageData_o *)this,
                        0LL);
-          v41 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1C2E378(UnityEngine_WaitForSecondsRealtime_TypeInfo);
+          v41 = (UnityEngine_WaitForSecondsRealtime_o *)sub_1C3B9B0(UnityEngine_WaitForSecondsRealtime_TypeInfo);
           UnityEngine_WaitForSecondsRealtime___ctor(v41, Interval, 0LL);
           v8->fields.__2__current = (Il2CppObject *)v41;
           v22 = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-          sub_1C2E0D0(v22, (int64_t)v41, v42, v43, v44, v45, v46, v47);
+          sub_1C3B708(v22, (int64_t)v41, v42, v43, v44, v45, v46, v47);
           v29 = 4;
           goto LABEL_23;
         }
 LABEL_24:
-        sub_1C2E388(this, method);
+        sub_1C3B9C0(this, method);
       }
 LABEL_20:
       BattleMultiMessageDisplay__DisplayMessage(_4__this, v8->fields.index + 1, v2);
@@ -689,11 +689,11 @@ void __fastcall __noreturn BattleMultiMessageDisplay__CoroutineDisplayMessage_d_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_BattleMultiMessageDisplay__CoroutineDisplayMessage_d__17_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 
@@ -743,7 +743,7 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19__MoveNe
   _4__this = this->fields.__4__this;
   this->fields.__1__state = -1;
   if ( !_4__this )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   arg = _4__this->fields.arg;
   if ( !arg || BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)arg->fields.messageArray, 0LL) )
   {
@@ -752,7 +752,7 @@ bool __fastcall BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19__MoveNe
   }
   this->fields.__2__current = 0LL;
   p__2__current = &this->fields.__2__current;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p__2__current, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)p__2__current, 0LL, v5, v6, v7, v8, v9, v10);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -775,11 +775,11 @@ void __fastcall __noreturn BattleMultiMessageDisplay__CoroutineWaitEndMessage_d_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_BattleMultiMessageDisplay__CoroutineWaitEndMessage_d__19_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 

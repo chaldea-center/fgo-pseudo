@@ -1,13 +1,13 @@
 void __fastcall WarBoardOnboardSkillEntity___ctor(WarBoardOnboardSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE7D2 & 1) == 0 )
+  if ( (byte_4C22FF7 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFE7D2 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C22FF7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardOnboardSkillEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4BFE7CE & 1) == 0 )
+  if ( (byte_4C22FF3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4BFE7CE = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4C22FF3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -45,12 +45,12 @@ int32_t __fastcall WarBoardOnboardSkillEntity__GetBreakPointDamageType(
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BFE7D0 & 1) == 0 )
+  if ( (byte_4C22FF5 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_15860/*"WarBoardBreakPointDamageType"*/, method);
-    byte_4BFE7D0 = 1;
+    sub_1C3B764(&StringLiteral_15888/*"_GlowOuter"*/, method);
+    byte_4C22FF5 = 1;
   }
-  return WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15860/*"WarBoardBreakPointDamageType"*/, 0, v2);
+  return WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_15888/*"_GlowOuter"*/, 0, v2);
 }
 
 
@@ -70,19 +70,19 @@ int32_t __fastcall WarBoardOnboardSkillEntity__GetIntFromScript(
   WarBoardOnboardSkillEntity_o *v15; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_4BFE7CF & 1) == 0 )
+  if ( (byte_4C22FF4 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1C2E12C(&long_TypeInfo, v8);
-    byte_4BFE7CF = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1C3B764(&long_TypeInfo, v8);
+    byte_4C22FF4 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_3335D68 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -91,13 +91,13 @@ int32_t __fastcall WarBoardOnboardSkillEntity__GetIntFromScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1C2E388(Item, v10);
+    sub_1C3B9C0(Item, v10);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
-  sub_1C2E648(Item);
+  sub_1C3BC80(Item);
   return WarBoardOnboardSkillEntity__GetBreakPointDamageType(v15, v16);
 }
 
@@ -118,21 +118,21 @@ System_Int32_array *__fastcall WarBoardOnboardSkillEntity__GetSquareIndexGroup(
   __int64 v12; // x1
   const MethodInfo *v13; // x3
 
-  if ( (byte_4BFE7D1 & 1) == 0 )
+  if ( (byte_4C22FF6 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___, *(_QWORD *)&stageId);
-    sub_1C2E12C(&DataManager_TypeInfo, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__ToArray__, v7);
-    sub_1C2E12C(&StringLiteral_23905/*"squareIndexGroup"*/, v8);
-    byte_4BFE7D1 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___, *(_QWORD *)&stageId);
+    sub_1C3B764(&DataManager_TypeInfo, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__ToArray__, v7);
+    sub_1C3B764(&StringLiteral_23948/*"unknown"*/, v8);
+    byte_4C22FF6 = 1;
   }
-  IntFromScript = WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23905/*"squareIndexGroup"*/, -1, v3);
+  IntFromScript = WarBoardOnboardSkillEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_23948/*"unknown"*/, -1, v3);
   if ( IntFromScript == -1 )
     return this->fields.targetSquareIndex;
   v10 = IntFromScript;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (WarBoardSquareIndexGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
+  Master_object = (WarBoardSquareIndexGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_WarBoardSquareIndexGroupMaster___);
   if ( !Master_object
     || (Master_object = (WarBoardSquareIndexGroupMaster_o *)WarBoardSquareIndexGroupMaster__GetStageList(
                                                               Master_object,
@@ -140,9 +140,9 @@ System_Int32_array *__fastcall WarBoardOnboardSkillEntity__GetSquareIndexGroup(
                                                               stageId,
                                                               v13)) == 0LL )
   {
-    sub_1C2E388(Master_object, v12);
+    sub_1C3B9C0(Master_object, v12);
   }
   return System_Collections_Generic_List_int___ToArray(
            (System_Collections_Generic_List_int__o *)Master_object,
-           (const MethodInfo_3650340 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3670700 *)Method_System_Collections_Generic_List_int__ToArray__);
 }

@@ -19,20 +19,20 @@ void __fastcall TradeStartRequest__beginRequest(
   __int64 v15; // x1
   __int64 v16; // x1
 
-  if ( (byte_4BFF1E0 & 1) == 0 )
+  if ( (byte_4C23A0A & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_19472/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1C2E12C(&StringLiteral_23253/*"reduceTimeItemId"*/, v13);
-    sub_1C2E12C(&StringLiteral_24486/*"tradeGoodsNum"*/, v14);
-    sub_1C2E12C(&StringLiteral_24488/*"tradeStoreIdx"*/, v15);
-    sub_1C2E12C(&StringLiteral_24485/*"tradeGoodsId"*/, v16);
-    byte_4BFF1E0 = 1;
+    sub_1C3B764(&StringLiteral_19507/*"graphic.shader"*/, *(_QWORD *)&eventId);
+    sub_1C3B764(&StringLiteral_23295/*"subRenderMoveEaseFSSideR"*/, v13);
+    sub_1C3B764(&StringLiteral_24530/*"yyyy-MM"*/, v14);
+    sub_1C3B764(&StringLiteral_24532/*"yyyy-MM-dd"*/, v15);
+    sub_1C3B764(&StringLiteral_24529/*"yyyy-"*/, v16);
+    byte_4C23A0A = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19472/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24488/*"tradeStoreIdx"*/, tradeStoreIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24485/*"tradeGoodsId"*/, tradeGoodsId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24486/*"tradeGoodsNum"*/, tradeGoodsNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23253/*"reduceTimeItemId"*/, itemId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19507/*"graphic.shader"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24532/*"yyyy-MM-dd"*/, tradeStoreIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24529/*"yyyy-"*/, tradeGoodsId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24530/*"yyyy-MM"*/, tradeGoodsNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23295/*"subRenderMoveEaseFSSideR"*/, itemId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -42,16 +42,16 @@ System_String_o *__fastcall TradeStartRequest__getURL(TradeStartRequest_o *this,
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF1DF & 1) == 0 )
+  if ( (byte_4C23A09 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_19466/*"event/tradeStart"*/, v2);
-    byte_4BFF1DF = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_19501/*"graph"*/, v2);
+    byte_4C23A09 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19466/*"event/tradeStart"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_19501/*"graph"*/, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ void __fastcall TradeStartRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BFF1E1 & 1) == 0 )
+  if ( (byte_4C23A0B & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF1E1 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C23A0B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -88,7 +88,7 @@ void __fastcall TradeStartRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

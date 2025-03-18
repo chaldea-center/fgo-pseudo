@@ -1,6 +1,6 @@
 void __fastcall FadeOutScript___ctor(FadeOutScript_o *this, const MethodInfo *method)
 {
-  this->fields.alpha = (struct UnityEngine_Color_o)xmmword_C05870;
+  this->fields.alpha = (struct UnityEngine_Color_o)xmmword_C0CBF0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -19,14 +19,14 @@ void __fastcall FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *m
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BFC5A0 & 1) == 0 )
+  if ( (byte_4C20DAE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_4BFC5A0 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    byte_4C20DAE = 1;
   }
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                 (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_object )
     goto LABEL_9;
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_object, 0LL);
@@ -37,12 +37,12 @@ void __fastcall FadeOutScript__Update(FadeOutScript_o *this, const MethodInfo *m
     return;
   Component_object = (UnityEngine_Renderer_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                                 (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_object
     || (Component_object = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(Component_object, 0LL)) == 0LL )
   {
 LABEL_9:
-    sub_1C2E388(Component_object, v4);
+    sub_1C3B9C0(Component_object, v4);
   }
   v5 = (UnityEngine_Material_o *)Component_object;
   v7 = UnityEngine_Material__get_color((UnityEngine_Material_o *)Component_object, 0LL);

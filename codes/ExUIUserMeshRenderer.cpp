@@ -1,6 +1,6 @@
 void __fastcall ExUIUserMeshRenderer___ctor(ExUIUserMeshRenderer_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.uvSize.fields.x = xmmword_C05C20;
+  *(_OWORD *)&this->fields.uvSize.fields.x = xmmword_C0CFA0;
   this->fields.isFirst = 1;
   UITweenRenderer___ctor((UITweenRenderer_o *)this, 0LL);
 }
@@ -39,11 +39,11 @@ void __fastcall ExUIUserMeshRenderer__ClearUserMesh(ExUIUserMeshRenderer_o *this
   }
   this->fields.isChangeMesh = (char)baseVertexs;
   this->fields.baseVertexs = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p_baseVertexs, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)p_baseVertexs, 0LL, v2, v3, v4, v5, v6, v7);
   this->fields.baseUvs = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.baseUvs, 0LL, v11, v12, v13, v14, v15, v16);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.baseUvs, 0LL, v11, v12, v13, v14, v15, v16);
   this->fields.baseTriangles = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.baseTriangles, 0LL, v17, v18, v19, v20, v21, v22);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.baseTriangles, 0LL, v17, v18, v19, v20, v21, v22);
   ((void (__fastcall *)(ExUIUserMeshRenderer_o *, void *))this->klass->vtable._43_ReScale.method)(
     this,
     this->klass[1]._1.image);
@@ -109,16 +109,16 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
   unsigned __int64 v50; // x10
   System_RuntimeFieldHandle_o v51; // 0:w1.4
 
-  if ( (byte_4BFCBBE & 1) == 0 )
+  if ( (byte_4C213CC & 1) == 0 )
   {
-    sub_1C2E12C(&int___TypeInfo, method);
-    sub_1C2E12C(&ManagerConfig_TypeInfo, v3);
-    sub_1C2E12C(
+    sub_1C3B764(&int___TypeInfo, method);
+    sub_1C3B764(&ManagerConfig_TypeInfo, v3);
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__DB96679C1D0C73505AD9AF543CB906F56E002FE26A9E2CD34DA2FF02F61EBB53,
       v4);
-    sub_1C2E12C(&UnityEngine_Vector2___TypeInfo, v5);
-    sub_1C2E12C(&UnityEngine_Vector3___TypeInfo, v6);
-    byte_4BFCBBE = 1;
+    sub_1C3B764(&UnityEngine_Vector2___TypeInfo, v5);
+    sub_1C3B764(&UnityEngine_Vector3___TypeInfo, v6);
+    byte_4C213CC = 1;
   }
   if ( this->fields.isFirst )
   {
@@ -183,7 +183,7 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
     v29 = (float)v17 * v27;
     if ( baseVertexs && this->fields.baseUvs && this->fields.baseTriangles )
     {
-      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C2E1D4(
+      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C3B80C(
                                                         UnityEngine_Vector3___TypeInfo,
                                                         baseVertexs->max_length);
       v30 = this->fields.baseVertexs;
@@ -225,7 +225,7 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
       baseUvs = this->fields.baseUvs;
       if ( !baseUvs )
         goto LABEL_64;
-      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C2E1D4(UnityEngine_Vector2___TypeInfo, baseUvs->max_length);
+      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C3B80C(UnityEngine_Vector2___TypeInfo, baseUvs->max_length);
       v47 = this->fields.baseUvs;
       if ( !v47 )
         goto LABEL_64;
@@ -260,7 +260,7 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
     }
     else
     {
-      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C2E1D4(UnityEngine_Vector3___TypeInfo, 4LL);
+      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C3B80C(UnityEngine_Vector3___TypeInfo, 4LL);
       if ( !meshFilter )
         goto LABEL_64;
       klass = (unsigned int)meshFilter[1].klass;
@@ -290,7 +290,7 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
       if ( !mesh )
         goto LABEL_64;
       UnityEngine_Mesh__set_vertices(mesh, (UnityEngine_Vector3_array *)meshFilter, 0LL);
-      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C2E1D4(UnityEngine_Vector2___TypeInfo, 4LL);
+      meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C3B80C(UnityEngine_Vector2___TypeInfo, 4LL);
       if ( !meshFilter )
         goto LABEL_64;
       v42 = (unsigned int)meshFilter[1].klass;
@@ -307,7 +307,7 @@ void __fastcall ExUIUserMeshRenderer__ReScale(ExUIUserMeshRenderer_o *this, cons
             v42 == 3) )
       {
 LABEL_63:
-        sub_1C2E390(meshFilter, v18);
+        sub_1C3B9C8(meshFilter, v18);
       }
       v44 = this->fields.uvOffset.fields.y + this->fields.uvSize.fields.y;
       *(float *)&meshFilter[2].monitor = this->fields.uvOffset.fields.x;
@@ -315,9 +315,9 @@ LABEL_63:
       UnityEngine_Mesh__set_uv(mesh, (UnityEngine_Vector2_array *)meshFilter, 0LL);
       if ( !this->fields.isUseUserMesh )
         goto LABEL_60;
-      baseTriangles = (System_Array_o *)sub_1C2E1D4(int___TypeInfo, 6LL);
+      baseTriangles = (System_Array_o *)sub_1C3B80C(int___TypeInfo, 6LL);
       v51.fields.value = Field__PrivateImplementationDetails__DB96679C1D0C73505AD9AF543CB906F56E002FE26A9E2CD34DA2FF02F61EBB53;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(baseTriangles, v51, 0LL);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(baseTriangles, v51, 0LL);
     }
     UnityEngine_Mesh__set_triangles(mesh, (System_Int32_array *)baseTriangles, 0LL);
 LABEL_60:
@@ -328,7 +328,7 @@ LABEL_60:
       return;
     }
 LABEL_64:
-    sub_1C2E388(meshFilter, v18);
+    sub_1C3B9C0(meshFilter, v18);
   }
 }
 
@@ -358,7 +358,7 @@ void __fastcall ExUIUserMeshRenderer__SetUserMesh(
   ExUIUserMeshRenderer_c *klass; // x8
 
   this->fields.baseVertexs = vertexs;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.baseVertexs,
     (int64_t)vertexs,
     (int64_t)uvs,
@@ -368,9 +368,9 @@ void __fastcall ExUIUserMeshRenderer__SetUserMesh(
     v6,
     v7);
   this->fields.baseUvs = uvs;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.baseUvs, (int64_t)uvs, v11, v12, v13, v14, v15, v16);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.baseUvs, (int64_t)uvs, v11, v12, v13, v14, v15, v16);
   this->fields.baseTriangles = triangles;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.baseTriangles,
     (int64_t)triangles,
     v17,

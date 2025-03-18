@@ -36,50 +36,50 @@ void __fastcall ServantCommentEntity___cctor(const MethodInfo *method)
   FollowerInfo_o *v34; // x6
   PartyListViewItem_o *v35; // x7
 
-  if ( (byte_4BFDE68 & 1) == 0 )
+  if ( (byte_4C2267A & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_23226/*"readJudgeKey"*/, v8);
-    sub_1C2E12C(&StringLiteral_18522/*"condTitle"*/, v9);
-    sub_1C2E12C(&StringLiteral_23608/*"setLabel"*/, v10);
-    sub_1C2E12C(&StringLiteral_20602/*"imageLimit"*/, v11);
-    byte_4BFDE68 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_23268/*"subBgmStop"*/, v8);
+    sub_1C3B764(&StringLiteral_18556/*"effect/ef_sideeffect01"*/, v9);
+    sub_1C3B764(&StringLiteral_23651/*"topRight"*/, v10);
+    sub_1C3B764(&StringLiteral_20637/*"ka"*/, v11);
+    byte_4C2267A = 1;
   }
-  ServantCommentEntity_TypeInfo->static_fields->SCRIPT_IMAGE_LIMIT = (struct System_String_o *)StringLiteral_20602/*"imageLimit"*/;
-  sub_1C2E0D0(
+  ServantCommentEntity_TypeInfo->static_fields->SCRIPT_IMAGE_LIMIT = (struct System_String_o *)StringLiteral_20637/*"ka"*/;
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)ServantCommentEntity_TypeInfo->static_fields,
-    StringLiteral_20602/*"imageLimit"*/,
+    StringLiteral_20637/*"ka"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v12 = StringLiteral_18522/*"condTitle"*/;
+  v12 = StringLiteral_18556/*"effect/ef_sideeffect01"*/;
   static_fields = ServantCommentEntity_TypeInfo->static_fields;
-  static_fields->SCRIPT_COND_TITLE = (struct System_String_o *)StringLiteral_18522/*"condTitle"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->SCRIPT_COND_TITLE, v12, v14, v15, v16, v17, v18, v19);
-  v20 = StringLiteral_23608/*"setLabel"*/;
+  static_fields->SCRIPT_COND_TITLE = (struct System_String_o *)StringLiteral_18556/*"effect/ef_sideeffect01"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->SCRIPT_COND_TITLE, v12, v14, v15, v16, v17, v18, v19);
+  v20 = StringLiteral_23651/*"topRight"*/;
   v21 = ServantCommentEntity_TypeInfo->static_fields;
-  v21->SCRIPT_LABEL_TYPE = (struct System_String_o *)StringLiteral_23608/*"setLabel"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v21->SCRIPT_LABEL_TYPE, v20, v22, v23, v24, v25, v26, v27);
-  v28 = StringLiteral_23226/*"readJudgeKey"*/;
+  v21->SCRIPT_LABEL_TYPE = (struct System_String_o *)StringLiteral_23651/*"topRight"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v21->SCRIPT_LABEL_TYPE, v20, v22, v23, v24, v25, v26, v27);
+  v28 = StringLiteral_23268/*"subBgmStop"*/;
   v29 = ServantCommentEntity_TypeInfo->static_fields;
-  v29->SCRIPT_READ_JUDGE = (struct System_String_o *)StringLiteral_23226/*"readJudgeKey"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v29->SCRIPT_READ_JUDGE, v28, v30, v31, v32, v33, v34, v35);
+  v29->SCRIPT_READ_JUDGE = (struct System_String_o *)StringLiteral_23268/*"subBgmStop"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&v29->SCRIPT_READ_JUDGE, v28, v30, v31, v32, v33, v34, v35);
 }
 
 
 void __fastcall ServantCommentEntity___ctor(ServantCommentEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDE67 & 1) == 0 )
+  if ( (byte_4C22679 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFDE67 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C22679 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -90,16 +90,16 @@ System_String_o *__fastcall ServantCommentEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4BFDE55 & 1) == 0 )
+  if ( (byte_4C22667 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&id);
-    byte_4BFDE55 = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&id);
+    byte_4C22667 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            id,
            priority,
-           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FEE81C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -112,10 +112,10 @@ System_String_o *__fastcall ServantCommentEntity__CreatePrimaryKey(
   int32_t svtId; // w21
   int32_t priority; // w19
 
-  if ( (byte_4BFDE54 & 1) == 0 )
+  if ( (byte_4C22666 & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    byte_4BFDE54 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    byte_4C22666 = 1;
   }
   svtId = this->fields.svtId;
   id = this->fields.id;
@@ -130,10 +130,10 @@ System_String_o *__fastcall ServantCommentEntity__GetComment(ServantCommentEntit
 {
   System_String_o *comment; // x19
 
-  if ( (byte_4BFDE5E & 1) == 0 )
+  if ( (byte_4C22670 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    byte_4BFDE5E = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    byte_4C22670 = 1;
   }
   comment = this->fields.comment;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -148,11 +148,11 @@ System_String_o *__fastcall ServantCommentEntity__GetCondTitle(ServantCommentEnt
   __int64 v4; // x1
   ServantCommentEntity_c *v5; // x0
 
-  if ( (byte_4BFDE65 & 1) == 0 )
+  if ( (byte_4C22677 & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v4);
-    byte_4BFDE65 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_1/*""*/, v4);
+    byte_4C22677 = 1;
   }
   v5 = ServantCommentEntity_TypeInfo;
   if ( !ServantCommentEntity_TypeInfo->_2.cctor_finished )
@@ -181,10 +181,10 @@ System_String_o *__fastcall ServantCommentEntity__GetConditionText(
   __int64 v11; // x8
 
   v10 = textType;
-  if ( (byte_4BFDE5D & 1) == 0 )
+  if ( (byte_4C2266F & 1) == 0 )
   {
-    textType = (System_String_o *)sub_1C2E12C(&CondType_TypeInfo, *(_QWORD *)&condType);
-    byte_4BFDE5D = 1;
+    textType = (System_String_o *)sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&condType);
+    byte_4C2266F = 1;
   }
   if ( condValues )
   {
@@ -192,7 +192,7 @@ System_String_o *__fastcall ServantCommentEntity__GetConditionText(
     if ( v11 )
     {
       if ( !(_DWORD)v11 )
-        sub_1C2E390(textType, *(_QWORD *)&condType);
+        sub_1C3B9C8(textType, *(_QWORD *)&condType);
       condValue = condValues->m_Items[1];
     }
   }
@@ -216,10 +216,10 @@ System_String_o *__fastcall ServantCommentEntity__GetConditiontext(
   System_Int32_array *condValues; // x21
   int32_t condValue2; // w20
 
-  if ( (byte_4BFDE5C & 1) == 0 )
+  if ( (byte_4C2266E & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, textType);
-    byte_4BFDE5C = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, textType);
+    byte_4C2266E = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.condMessage, 0LL) )
     return this->fields.condMessage;
@@ -240,10 +240,10 @@ System_Int32_array *__fastcall ServantCommentEntity__GetImageLimit(
   const MethodInfo *v2; // x3
   ServantCommentEntity_c *v4; // x0
 
-  if ( (byte_4BFDE64 & 1) == 0 )
+  if ( (byte_4C22676 & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    byte_4BFDE64 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    byte_4C22676 = 1;
   }
   v4 = ServantCommentEntity_TypeInfo;
   if ( !ServantCommentEntity_TypeInfo->_2.cctor_finished )
@@ -260,10 +260,10 @@ int32_t __fastcall ServantCommentEntity__GetReadJudgeKey(ServantCommentEntity_o 
   ServantCommentEntity_c *v3; // x0
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
 
-  if ( (byte_4BFDE66 & 1) == 0 )
+  if ( (byte_4C22678 & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    byte_4BFDE66 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    byte_4C22678 = 1;
   }
   v3 = ServantCommentEntity_TypeInfo;
   script = this->fields.script;
@@ -291,17 +291,17 @@ int32_t __fastcall ServantCommentEntity__GetScriptInt(
   const MethodInfo *v12; // x1
 
   v4 = defVal;
-  if ( (byte_4BFDE60 & 1) == 0 )
+  if ( (byte_4C22672 & 1) == 0 )
   {
-    sub_1C2E12C(&long_TypeInfo, key);
-    byte_4BFDE60 = 1;
+    sub_1C3B764(&long_TypeInfo, key);
+    byte_4C22672 = 1;
   }
   ScriptObj = ServantCommentEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C2E648(ScriptObj);
+  sub_1C3BC80(ScriptObj);
   return ServantCommentEntity__IsProfileLabel(v11, v12);
 }
 
@@ -335,35 +335,35 @@ System_Int32_array *__fastcall ServantCommentEntity__GetScriptIntArray(
   PartyListViewItem_o *v28; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
 
-  if ( (byte_4BFDE63 & 1) == 0 )
+  if ( (byte_4C22675 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Select_string__int___, key);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_int___, v7);
-    sub_1C2E12C(&System_Func_string__int__TypeInfo, v8);
-    sub_1C2E12C(&Method_ServantCommentEntity___c__GetScriptIntArray_b__30_0__, v9);
-    sub_1C2E12C(&ServantCommentEntity___c_TypeInfo, v10);
-    sub_1C2E12C(&StringLiteral_16099/*"["*/, v11);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v12);
-    sub_1C2E12C(&StringLiteral_16358/*"]"*/, v13);
-    byte_4BFDE63 = 1;
+    sub_1C3B764(&Method_System_Linq_Enumerable_Select_string__int___, key);
+    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_int___, v7);
+    sub_1C3B764(&System_Func_string__int__TypeInfo, v8);
+    sub_1C3B764(&Method_ServantCommentEntity___c__GetScriptIntArray_b__30_0__, v9);
+    sub_1C3B764(&ServantCommentEntity___c_TypeInfo, v10);
+    sub_1C3B764(&StringLiteral_16127/*"__field-group"*/, v11);
+    sub_1C3B764(&StringLiteral_1/*""*/, v12);
+    sub_1C3B764(&StringLiteral_16386/*"align-items"*/, v13);
+    byte_4C22675 = 1;
   }
   ScriptString = ServantCommentEntity__GetScriptString(this, key, (System_String_o *)StringLiteral_1/*""*/, method);
   IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(ScriptString, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     return defVal;
   if ( !ScriptString
-    || (IsNullOrEmpty = System_String__Replace_63255212(
+    || (IsNullOrEmpty = System_String__Replace_63388240(
                           ScriptString,
-                          (System_String_o *)StringLiteral_16099/*"["*/,
+                          (System_String_o *)StringLiteral_16127/*"__field-group"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0LL)) == 0LL
-    || (IsNullOrEmpty = System_String__Replace_63255212(
+    || (IsNullOrEmpty = System_String__Replace_63388240(
                           IsNullOrEmpty,
-                          (System_String_o *)StringLiteral_16358/*"]"*/,
+                          (System_String_o *)StringLiteral_16386/*"align-items"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0LL)) == 0LL )
   {
-    sub_1C2E388(IsNullOrEmpty, v16);
+    sub_1C3B9C0(IsNullOrEmpty, v16);
   }
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(IsNullOrEmpty, 0x2Cu, 0, 0LL);
   v19 = ServantCommentEntity___c_TypeInfo;
@@ -381,11 +381,11 @@ System_Int32_array *__fastcall ServantCommentEntity__GetScriptIntArray(
       v19 = ServantCommentEntity___c_TypeInfo;
     }
     v21 = (Il2CppObject *)v19->static_fields->__9;
-    _9__30_0 = (System_Func_object__int__o *)sub_1C2E378(System_Func_string__int__TypeInfo);
+    _9__30_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(_9__30_0, v21, Method_ServantCommentEntity___c__GetScriptIntArray_b__30_0__, 0LL);
     static_fields = ServantCommentEntity___c_TypeInfo->static_fields;
     static_fields->__9__30_0 = (struct System_Func_string__int__o *)_9__30_0;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&static_fields->__9__30_0,
       (int64_t)_9__30_0,
       v23,
@@ -398,10 +398,10 @@ System_Int32_array *__fastcall ServantCommentEntity__GetScriptIntArray(
   v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v18,
                                                                (System_Func_TSource__TResult__o *)_9__30_0,
-                                                               (const MethodInfo_30032B4 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                               (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_string__int___);
   return System_Linq_Enumerable__ToArray_int_(
            v29,
-           (const MethodInfo_300BC24 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_302AB30 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -413,10 +413,10 @@ Il2CppObject *__fastcall ServantCommentEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BFDE5F & 1) == 0 )
+  if ( (byte_4C22671 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4BFDE5F = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4C22671 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -426,7 +426,7 @@ Il2CppObject *__fastcall ServantCommentEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3337380 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -451,10 +451,10 @@ System_Collections_Generic_List_object__o *__fastcall ServantCommentEntity__GetS
   System_String_o *v9; // x2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4BFDE61 & 1) == 0 )
+  if ( (byte_4C22673 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Collections_Generic_List_object__TypeInfo, key);
-    byte_4BFDE61 = 1;
+    sub_1C3B764(&System_Collections_Generic_List_object__TypeInfo, key);
+    byte_4C22673 = 1;
   }
   result = (System_Collections_Generic_List_object__o *)ServantCommentEntity__GetScriptObj(this, key, method);
   if ( result )
@@ -463,7 +463,7 @@ System_Collections_Generic_List_object__o *__fastcall ServantCommentEntity__GetS
     if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1C2E648(result);
+      sub_1C3BC80(result);
       return (System_Collections_Generic_List_object__o *)ServantCommentEntity__GetScriptString(v7, v8, v9, v10);
     }
   }
@@ -485,17 +485,17 @@ System_String_o *__fastcall ServantCommentEntity__GetScriptString(
   const MethodInfo *v12; // x3
 
   v4 = defVal;
-  if ( (byte_4BFDE62 & 1) == 0 )
+  if ( (byte_4C22674 & 1) == 0 )
   {
-    sub_1C2E12C(&string_TypeInfo, key);
-    byte_4BFDE62 = 1;
+    sub_1C3B764(&string_TypeInfo, key);
+    byte_4C22674 = 1;
   }
   ScriptObj = ServantCommentEntity__GetScriptObj(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObj )
     return v4;
   if ( (System_String_c *)ScriptObj->klass == string_TypeInfo )
     return (System_String_o *)ScriptObj;
-  sub_1C2E648(ScriptObj);
+  sub_1C3BC80(ScriptObj);
   return (System_String_o *)ServantCommentEntity__GetScriptIntArray(v9, v10, v11, v12);
 }
 
@@ -504,10 +504,10 @@ bool __fastcall ServantCommentEntity__IsConst(ServantCommentEntity_o *this, cons
 {
   int32_t condType; // w19
 
-  if ( (byte_4BFDE56 & 1) == 0 )
+  if ( (byte_4C22668 & 1) == 0 )
   {
-    sub_1C2E12C(&CondType_TypeInfo, method);
-    byte_4BFDE56 = 1;
+    sub_1C3B764(&CondType_TypeInfo, method);
+    byte_4C22668 = 1;
   }
   condType = this->fields.condType;
   if ( !CondType_TypeInfo->_2.cctor_finished )
@@ -524,10 +524,10 @@ bool __fastcall ServantCommentEntity__IsDetailLabel(ServantCommentEntity_o *this
   const MethodInfo *v6; // x3
   ServantCommentEntity_c *v7; // x0
 
-  if ( (byte_4BFDE5A & 1) == 0 )
+  if ( (byte_4C2266C & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    byte_4BFDE5A = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    byte_4C2266C = 1;
   }
   v4 = ServantCommentEntity_TypeInfo;
   if ( !ServantCommentEntity_TypeInfo->_2.cctor_finished )
@@ -570,11 +570,11 @@ bool __fastcall ServantCommentEntity__IsNew(ServantCommentEntity_o *this, const 
   ServantCommentEntity_c *v12; // x8
   bool HasKey; // w23
 
-  if ( (byte_4BFDE59 & 1) == 0 )
+  if ( (byte_4C2266B & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    sub_1C2E12C(&ServantCommentManager_TypeInfo, v3);
-    byte_4BFDE59 = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    sub_1C3B764(&ServantCommentManager_TypeInfo, v3);
+    byte_4C2266B = 1;
   }
   if ( ServantCommentEntity__IsConst(this, method)
     || this->fields.id == 1
@@ -621,11 +621,11 @@ bool __fastcall ServantCommentEntity__IsOnlyOpenQuestCond(
   int64_t userIdNumber; // x23
 
   v6 = this;
-  if ( (byte_4BFDE58 & 1) == 0 )
+  if ( (byte_4C2266A & 1) == 0 )
   {
-    sub_1C2E12C(&CondType_TypeInfo, *(_QWORD *)&questId);
-    this = (ServantCommentEntity_o *)sub_1C2E12C(&NetworkManager_TypeInfo, v7);
-    byte_4BFDE58 = 1;
+    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&questId);
+    this = (ServantCommentEntity_o *)sub_1C3B764(&NetworkManager_TypeInfo, v7);
+    byte_4C2266A = 1;
   }
   if ( v6->fields.condType != 1 || v6->fields.condValue2 != questPhase )
     return 0;
@@ -646,16 +646,16 @@ bool __fastcall ServantCommentEntity__IsOnlyOpenQuestCond(
       while ( 1 )
       {
         if ( v13 >= condValues->max_length )
-          sub_1C2E390(this, *(_QWORD *)&questId);
+          sub_1C3B9C8(this, *(_QWORD *)&questId);
         v14 = condValues->m_Items[v13 + 1];
         if ( v14 != questId )
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BF81D5 )
+          if ( !byte_4C1C955 )
           {
-            sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
-            byte_4BF81D5 = 1;
+            sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
+            byte_4C1C955 = 1;
           }
           v15 = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -675,7 +675,7 @@ bool __fastcall ServantCommentEntity__IsOnlyOpenQuestCond(
           return 1;
         condValues = v6->fields.condValues;
         if ( !condValues )
-          sub_1C2E388(this, *(_QWORD *)&questId);
+          sub_1C3B9C0(this, *(_QWORD *)&questId);
       }
     }
     return 0;
@@ -720,13 +720,13 @@ bool __fastcall ServantCommentEntity__IsOpen(
   bool v33; // [xsp+Ch] [xbp-64h]
 
   v6 = this;
-  if ( (byte_4BFDE57 & 1) == 0 )
+  if ( (byte_4C22669 & 1) == 0 )
   {
-    sub_1C2E12C(&CondType_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ServantCommentAddMaster___, v7);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v8);
-    this = (ServantCommentEntity_o *)sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4BFDE57 = 1;
+    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ServantCommentAddMaster___, v7);
+    sub_1C3B764(&NetworkManager_TypeInfo, v8);
+    this = (ServantCommentEntity_o *)sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4C22669 = 1;
   }
   condValues = v6->fields.condValues;
   if ( condValues )
@@ -739,17 +739,17 @@ bool __fastcall ServantCommentEntity__IsOpen(
       while ( 1 )
       {
         if ( v11 >= condValues->max_length )
-          sub_1C2E390(this, *(_QWORD *)&oldFriendShipRank);
+          sub_1C3B9C8(this, *(_QWORD *)&oldFriendShipRank);
         condType = v6->fields.condType;
         v14 = condValues->m_Items[v11 + 1];
         if ( condType == 1 )
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BF81D5 )
+          if ( !byte_4C1C955 )
           {
-            sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-            byte_4BF81D5 = 1;
+            sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+            byte_4C1C955 = 1;
           }
           v15 = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -769,10 +769,10 @@ bool __fastcall ServantCommentEntity__IsOpen(
         {
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BF81D5 )
+          if ( !byte_4C1C955 )
           {
-            sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-            byte_4BF81D5 = 1;
+            sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+            byte_4C1C955 = 1;
           }
           v18 = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -784,7 +784,7 @@ bool __fastcall ServantCommentEntity__IsOpen(
           v20 = v18->static_fields->userIdNumber;
           if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          this = (ServantCommentEntity_o *)CondType__IsOpen_38943668(condType, v14, v20, svtId, 0LL);
+          this = (ServantCommentEntity_o *)CondType__IsOpen_39052536(condType, v14, v20, svtId, 0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
 LABEL_46:
@@ -811,10 +811,10 @@ LABEL_46:
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4BF81D5 )
+    if ( !byte_4C1C955 )
     {
-      sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-      byte_4BF81D5 = 1;
+      sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+      byte_4C1C955 = 1;
     }
     v23 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -838,10 +838,10 @@ LABEL_46:
     {
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&oldFriendShipRank);
+        byte_4C1C955 = 1;
       }
       v28 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -853,7 +853,7 @@ LABEL_46:
       v30 = v28->static_fields->userIdNumber;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsQuestPhaseClear = CondType__IsOpen_38943668(v22, v27, v30, v29, 0LL);
+      IsQuestPhaseClear = CondType__IsOpen_39052536(v22, v27, v30, v29, 0LL);
       if ( !IsQuestPhaseClear )
         return IsQuestPhaseClear;
     }
@@ -867,14 +867,14 @@ LABEL_46:
 LABEL_60:
   if ( !addCheck )
     return IsQuestPhaseClear;
-  this = (ServantCommentEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (ServantCommentEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (ServantCommentEntity_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)this,
-                                           (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ServantCommentAddMaster___)) == 0LL )
+                                           (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantCommentAddMaster___)) == 0LL )
   {
 LABEL_33:
-    sub_1C2E388(this, *(_QWORD *)&oldFriendShipRank);
+    sub_1C3B9C0(this, *(_QWORD *)&oldFriendShipRank);
   }
   return ServantCommentAddMaster__IsOpen(
            (ServantCommentAddMaster_o *)this,
@@ -893,10 +893,10 @@ bool __fastcall ServantCommentEntity__IsProfileLabel(ServantCommentEntity_o *thi
   const MethodInfo *v5; // x3
   ServantCommentEntity_c *v7; // x0
 
-  if ( (byte_4BFDE5B & 1) == 0 )
+  if ( (byte_4C2266D & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity_TypeInfo, method);
-    byte_4BFDE5B = 1;
+    sub_1C3B764(&ServantCommentEntity_TypeInfo, method);
+    byte_4C2266D = 1;
   }
   v4 = ServantCommentEntity_TypeInfo;
   if ( !ServantCommentEntity_TypeInfo->_2.cctor_finished )
@@ -929,15 +929,15 @@ void __fastcall ServantCommentEntity___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFDE69 & 1) == 0 )
+  if ( (byte_4C2267B & 1) == 0 )
   {
-    sub_1C2E12C(&ServantCommentEntity___c_TypeInfo, v1);
-    byte_4BFDE69 = 1;
+    sub_1C3B764(&ServantCommentEntity___c_TypeInfo, v1);
+    byte_4C2267B = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(ServantCommentEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(ServantCommentEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ServantCommentEntity___c_TypeInfo->static_fields->__9 = (struct ServantCommentEntity___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)ServantCommentEntity___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,

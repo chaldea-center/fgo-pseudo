@@ -21,21 +21,21 @@ void __fastcall BattleRetryConfirmQuestUseItemButtons__SetButtonEnabled(
   System_Collections_Generic_IEnumerable_T__o *buttons; // x19
   System_Action_object__o *v12; // x20
 
-  if ( (byte_4C00C94 & 1) == 0 )
+  if ( (byte_4C254C2 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_FriendshipUpItemUseItem__TypeInfo, value);
-    sub_1C2E12C(&Method_BasicHelper_ForEach_FriendshipUpItemUseItem___, v5);
-    sub_1C2E12C(&Method_BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0__SetButtonEnabled_b__0__, v6);
-    sub_1C2E12C(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4C00C94 = 1;
+    sub_1C3B764(&System_Action_FriendshipUpItemUseItem__TypeInfo, value);
+    sub_1C3B764(&Method_BasicHelper_ForEach_FriendshipUpItemUseItem___, v5);
+    sub_1C3B764(&Method_BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0__SetButtonEnabled_b__0__, v6);
+    sub_1C3B764(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0_TypeInfo, v7);
+    byte_4C254C2 = 1;
   }
-  v8 = sub_1C2E378(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0_TypeInfo);
+  v8 = sub_1C3B9B0(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C2E388(v9, v10);
+    sub_1C3B9C0(v9, v10);
   *(_BYTE *)(v8 + 16) = value;
   buttons = (System_Collections_Generic_IEnumerable_T__o *)this->fields.buttons;
-  v12 = (System_Action_object__o *)sub_1C2E378(System_Action_FriendshipUpItemUseItem__TypeInfo);
+  v12 = (System_Action_object__o *)sub_1C3B9B0(System_Action_FriendshipUpItemUseItem__TypeInfo);
   System_Action_object____ctor(
     v12,
     (Il2CppObject *)v8,
@@ -44,7 +44,7 @@ void __fastcall BattleRetryConfirmQuestUseItemButtons__SetButtonEnabled(
   BasicHelper__ForEach_object_(
     buttons,
     (System_Action_T__o *)v12,
-    (const MethodInfo_2FBE538 *)Method_BasicHelper_ForEach_FriendshipUpItemUseItem___);
+    (const MethodInfo_2FDCE70 *)Method_BasicHelper_ForEach_FriendshipUpItemUseItem___);
 }
 
 
@@ -95,23 +95,23 @@ void __fastcall BattleRetryConfirmQuestUseItemButtons__Setup(
   FriendshipUpItemInfo_o *v45; // x24
   System_Action_o *v46; // x25
 
-  if ( (byte_4C00C93 & 1) == 0 )
+  if ( (byte_4C254C1 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, itemInfos);
-    sub_1C2E12C(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_0_TypeInfo, v7);
-    sub_1C2E12C(&Method_BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1__Setup_b__0__, v8);
-    sub_1C2E12C(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1_TypeInfo, v9);
-    byte_4C00C93 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, itemInfos);
+    sub_1C3B764(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_0_TypeInfo, v7);
+    sub_1C3B764(&Method_BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1__Setup_b__0__, v8);
+    sub_1C3B764(&BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1_TypeInfo, v9);
+    byte_4C254C1 = 1;
   }
-  v10 = sub_1C2E378(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_0_TypeInfo);
+  v10 = sub_1C3B9B0(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10
     || (*(_QWORD *)(v10 + 16) = callback,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)callback, v13, v14, v15, v16, v17, v18),
+        sub_1C3B708((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)callback, v13, v14, v15, v16, v17, v18),
         (buttons = this->fields.buttons) == 0LL) )
   {
 LABEL_15:
-    sub_1C2E388(v11, v12);
+    sub_1C3B9C0(v11, v12);
   }
   v20 = 4LL;
   while ( 1 )
@@ -123,29 +123,29 @@ LABEL_15:
       goto LABEL_15;
     if ( (__int64)v21 >= (int)itemInfos->max_length )
       break;
-    v22 = sub_1C2E378(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1_TypeInfo);
+    v22 = sub_1C3B9B0(BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v22, 0LL);
     if ( !v22 )
       goto LABEL_15;
     *(_QWORD *)(v22 + 32) = v10;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)(v22 + 32), v10, v23, v24, v25, v26, v27, v28);
+    sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 32), v10, v23, v24, v25, v26, v27, v28);
     if ( v21 >= itemInfos->max_length )
       goto LABEL_17;
     v35 = *((_QWORD *)&itemInfos->obj.klass + v20);
     *(_QWORD *)(v22 + 16) = v35;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)(v22 + 16), v35, v29, v30, v31, v32, v33, v34);
+    sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 16), v35, v29, v30, v31, v32, v33, v34);
     v42 = this->fields.buttons;
     if ( !v42 )
       goto LABEL_15;
     if ( v21 >= v42->max_length )
 LABEL_17:
-      sub_1C2E390(v11, v12);
+      sub_1C3B9C8(v11, v12);
     v43 = *((_QWORD *)&v42->obj.klass + v20);
     *(_QWORD *)(v22 + 24) = v43;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)(v22 + 24), v43, v36, v37, v38, v39, v40, v41);
+    sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 24), v43, v36, v37, v38, v39, v40, v41);
     v44 = *(FriendshipUpItemUseItem_o **)(v22 + 24);
     v45 = *(FriendshipUpItemInfo_o **)(v22 + 16);
-    v46 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+    v46 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
     System_Action___ctor(
       v46,
       (Il2CppObject *)v22,
@@ -189,7 +189,7 @@ void __fastcall BattleRetryConfirmQuestUseItemButtons___c__DisplayClass1_1___Set
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 || (callback = CS___8__locals1->fields.callback) == 0LL )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct FriendshipUpItemInfo_o *, struct FriendshipUpItemUseItem_o *, _QWORD))callback->fields.m_target)(
     callback->fields.original_method_info,
     this->fields.info,
@@ -212,6 +212,6 @@ void __fastcall BattleRetryConfirmQuestUseItemButtons___c__DisplayClass2_0___Set
         const MethodInfo *method)
 {
   if ( !btn )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   FriendshipUpItemUseItem__SetButtonEnabled(btn, this->fields.value, 0LL);
 }

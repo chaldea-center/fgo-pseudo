@@ -17,18 +17,18 @@ void __fastcall BattleMotionSkipManager___ctor(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BFFF01 & 1) == 0 )
+  if ( (byte_4C2472F & 1) == 0 )
   {
-    sub_1C2E12C(&BaseMotionSkip_TypeInfo, perf);
-    byte_4BFFF01 = 1;
+    sub_1C3B764(&BaseMotionSkip_TypeInfo, perf);
+    byte_4C2472F = 1;
   }
-  v5 = (Il2CppObject *)sub_1C2E378(BaseMotionSkip_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C3B9B0(BaseMotionSkip_TypeInfo);
   System_Object___ctor(v5, 0LL);
   this->fields.defaultMotionSkip = (struct BaseMotionSkip_o *)v5;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._Perf_k__BackingField,
     (int64_t)perf,
     v12,
@@ -57,13 +57,13 @@ void __fastcall BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManag
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_1C2E388(0LL, method);
+      sub_1C3B9C0(0LL, method);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._7_Release.method)(
     mainMotionSkip,
     mainMotionSkip->klass->vtable._8_ResetSkipTimeScale.methodPtr);
   p_mainMotionSkip->klass = 0LL;
-  sub_1C2E0D0(p_mainMotionSkip, 0LL, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708(p_mainMotionSkip, 0LL, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -88,11 +88,11 @@ void __fastcall BattleMotionSkipManager__SetMotionSkip(
                                           skillInfo,
                                           skillInfo->klass->vtable._15_CommonMakeSkillSkip.methodPtr),
         this->fields.mainMotionSkip = v7,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mainMotionSkip, (int64_t)v7, v8, v9, v10, v11, v12, v13),
+        sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mainMotionSkip, (int64_t)v7, v8, v9, v10, v11, v12, v13),
         (mainMotionSkip = this->fields.mainMotionSkip) == 0LL)
     && (mainMotionSkip = this->fields.defaultMotionSkip) == 0LL )
   {
-    sub_1C2E388(mainMotionSkip, v6);
+    sub_1C3B9C0(mainMotionSkip, v6);
   }
   ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._6_Init.method)(
     mainMotionSkip,
@@ -134,7 +134,7 @@ void __fastcall BattleMotionSkipManager__set_Current(
   PartyListViewItem_o *v7; // x7
 
   this->fields.mainMotionSkip = value;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.mainMotionSkip,
     (int64_t)value,
     (int64_t)method,
@@ -158,7 +158,7 @@ void __fastcall BattleMotionSkipManager__set_Perf(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Perf_k__BackingField = value;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._Perf_k__BackingField,
     (int64_t)value,
     (int64_t)method,

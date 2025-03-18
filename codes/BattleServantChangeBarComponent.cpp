@@ -10,15 +10,15 @@ void __fastcall BattleServantChangeBarComponent___ctor(
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4C00950 & 1) == 0 )
+  if ( (byte_4C2517E & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_GameObject___TypeInfo, method);
-    byte_4C00950 = 1;
+    sub_1C3B764(&UnityEngine_GameObject___TypeInfo, method);
+    byte_4C2517E = 1;
   }
   this->fields.isBoss = 1;
-  v3 = (struct UnityEngine_GameObject_array *)sub_1C2E1D4(UnityEngine_GameObject___TypeInfo, 0LL);
+  v3 = (struct UnityEngine_GameObject_array *)sub_1C3B80C(UnityEngine_GameObject___TypeInfo, 0LL);
   this->fields.splitList = v3;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.splitList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.splitList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -124,36 +124,36 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
   int32_t v98; // [xsp+8h] [xbp-68h] BYREF
   int32_t v99; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C0094C & 1) == 0 )
+  if ( (byte_4C2517A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_AssetData_GetObject_GameObject____77757312, *(_QWORD *)&type);
-    sub_1C2E12C(&AssetManager_TypeInfo, v7);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v8);
-    sub_1C2E12C(&int_TypeInfo, v9);
-    sub_1C2E12C(&object___TypeInfo, v10);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C2E12C(&StringLiteral_16410/*"_"*/, v12);
-    sub_1C2E12C(&StringLiteral_3243/*"Battle/Common"*/, v13);
-    sub_1C2E12C(&StringLiteral_3261/*"BattleAssetUIAtlas"*/, v14);
-    sub_1C2E12C(&StringLiteral_20336/*"hp_gauge_"*/, v15);
-    byte_4C0094C = 1;
+    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, *(_QWORD *)&type);
+    sub_1C3B764(&AssetManager_TypeInfo, v7);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v8);
+    sub_1C3B764(&int_TypeInfo, v9);
+    sub_1C3B764(&object___TypeInfo, v10);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C3B764(&StringLiteral_16438/*"animationId"*/, v12);
+    sub_1C3B764(&StringLiteral_3243/*"Buffer is empty"*/, v13);
+    sub_1C3B764(&StringLiteral_3261/*"Button.onClick"*/, v14);
+    sub_1C3B764(&StringLiteral_20371/*"interface"*/, v15);
+    byte_4C2517A = 1;
   }
   if ( !this->fields.isSuperBossNormal || this->fields.isSuperBossShift )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3243/*"Battle/Common"*/, 0LL);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_3243/*"Buffer is empty"*/, 0LL);
     if ( !AssetStorage )
       goto LABEL_69;
-    AssetStorage = (AssetData_o *)AssetData__GetObject_object__50017172(
+    AssetStorage = (AssetData_o *)AssetData__GetObject_object__50142412(
                                     AssetStorage,
-                                    (System_String_o *)StringLiteral_3261/*"BattleAssetUIAtlas"*/,
-                                    (const MethodInfo_2FB3394 *)Method_AssetData_GetObject_GameObject____77757312);
+                                    (System_String_o *)StringLiteral_3261/*"Button.onClick"*/,
+                                    (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
     if ( !AssetStorage )
       goto LABEL_69;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)AssetStorage,
-                         (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                         (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     isSuperBossShift = this->fields.isSuperBossShift;
     v20 = (UIAtlas_o *)Component_object;
     this->fields.bartype = type;
@@ -164,17 +164,17 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
         goto LABEL_69;
       UISprite__set_atlas((UISprite_o *)AssetStorage, v20, 0LL);
       frontHpBart = this->fields.frontHpBart;
-      AssetStorage = (AssetData_o *)sub_1C2E1D4(object___TypeInfo, 4LL);
+      AssetStorage = (AssetData_o *)sub_1C3B80C(object___TypeInfo, 4LL);
       if ( !AssetStorage )
         goto LABEL_69;
       v28 = (System_Object_array *)AssetStorage;
-      v29 = StringLiteral_20336/*"hp_gauge_"*/;
-      if ( StringLiteral_20336/*"hp_gauge_"*/ )
+      v29 = StringLiteral_20371/*"interface"*/;
+      if ( StringLiteral_20371/*"interface"*/ )
       {
-        v29 = sub_1C2E268(StringLiteral_20336/*"hp_gauge_"*/, v28->obj.klass->_1.element_class);
+        v29 = sub_1C3B8A0(StringLiteral_20371/*"interface"*/, v28->obj.klass->_1.element_class);
         if ( !v29 )
           goto LABEL_71;
-        v30 = StringLiteral_20336/*"hp_gauge_"*/;
+        v30 = StringLiteral_20371/*"interface"*/;
       }
       else
       {
@@ -183,27 +183,27 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
       if ( !v28->max_length )
         goto LABEL_70;
       v28->m_Items[0] = (Il2CppObject *)v30;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)v28->m_Items, v30, v22, v23, v24, v25, v26, v27);
+      sub_1C3B708((PartyOrganizationUtility_o *)v28->m_Items, v30, v22, v23, v24, v25, v26, v27);
       v99 = type;
       v29 = j_il2cpp_value_box_0(int_TypeInfo, &v99, v36, v37, v38);
       v45 = v29;
       if ( v29 )
       {
-        v29 = sub_1C2E268(v29, v28->obj.klass->_1.element_class);
+        v29 = sub_1C3B8A0(v29, v28->obj.klass->_1.element_class);
         if ( !v29 )
           goto LABEL_71;
       }
       if ( v28->max_length <= 1 )
         goto LABEL_70;
       v28->m_Items[1] = (Il2CppObject *)v45;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v28->m_Items[1], v45, v39, v40, v41, v42, v43, v44);
-      v29 = StringLiteral_16410/*"_"*/;
-      if ( StringLiteral_16410/*"_"*/ )
+      sub_1C3B708((PartyOrganizationUtility_o *)&v28->m_Items[1], v45, v39, v40, v41, v42, v43, v44);
+      v29 = StringLiteral_16438/*"animationId"*/;
+      if ( StringLiteral_16438/*"animationId"*/ )
       {
-        v29 = sub_1C2E268(StringLiteral_16410/*"_"*/, v28->obj.klass->_1.element_class);
+        v29 = sub_1C3B8A0(StringLiteral_16438/*"animationId"*/, v28->obj.klass->_1.element_class);
         if ( !v29 )
           goto LABEL_71;
-        v30 = StringLiteral_16410/*"_"*/;
+        v30 = StringLiteral_16438/*"animationId"*/;
       }
       else
       {
@@ -212,21 +212,21 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
       if ( v28->max_length <= 2 )
         goto LABEL_70;
       v28->m_Items[2] = (Il2CppObject *)v30;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v28->m_Items[2], v30, v46, v47, v48, v49, v50, v51);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v28->m_Items[2], v30, v46, v47, v48, v49, v50, v51);
       v98 = shiftIndex + 1;
       v29 = j_il2cpp_value_box_0(int_TypeInfo, &v98, v52, v53, v54);
       v61 = v29;
       if ( v29 )
       {
-        v29 = sub_1C2E268(v29, v28->obj.klass->_1.element_class);
+        v29 = sub_1C3B8A0(v29, v28->obj.klass->_1.element_class);
         if ( !v29 )
           goto LABEL_71;
       }
       if ( v28->max_length <= 3 )
         goto LABEL_70;
       v28->m_Items[3] = (Il2CppObject *)v61;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v28->m_Items[3], v61, v55, v56, v57, v58, v59, v60);
-      AssetStorage = (AssetData_o *)System_String__Concat_63247036(v28, 0LL);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v28->m_Items[3], v61, v55, v56, v57, v58, v59, v60);
+      AssetStorage = (AssetData_o *)System_String__Concat_63380064(v28, 0LL);
       if ( !frontHpBart )
         goto LABEL_69;
       UISprite__set_spriteName(frontHpBart, (System_String_o *)AssetStorage, 0LL);
@@ -240,17 +240,17 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
           goto LABEL_69;
         UISprite__set_atlas((UISprite_o *)AssetStorage, v20, 0LL);
         v63 = this->fields.backHpBar;
-        AssetStorage = (AssetData_o *)sub_1C2E1D4(object___TypeInfo, 4LL);
+        AssetStorage = (AssetData_o *)sub_1C3B80C(object___TypeInfo, 4LL);
         if ( !AssetStorage )
           goto LABEL_69;
         v70 = (System_Object_array *)AssetStorage;
-        v29 = StringLiteral_20336/*"hp_gauge_"*/;
-        if ( StringLiteral_20336/*"hp_gauge_"*/ )
+        v29 = StringLiteral_20371/*"interface"*/;
+        if ( StringLiteral_20371/*"interface"*/ )
         {
-          v29 = sub_1C2E268(StringLiteral_20336/*"hp_gauge_"*/, v70->obj.klass->_1.element_class);
+          v29 = sub_1C3B8A0(StringLiteral_20371/*"interface"*/, v70->obj.klass->_1.element_class);
           if ( !v29 )
             goto LABEL_71;
-          v30 = StringLiteral_20336/*"hp_gauge_"*/;
+          v30 = StringLiteral_20371/*"interface"*/;
         }
         else
         {
@@ -259,23 +259,23 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
         if ( !v70->max_length )
           goto LABEL_70;
         v70->m_Items[0] = (Il2CppObject *)v30;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)v70->m_Items, v30, v64, v65, v66, v67, v68, v69);
+        sub_1C3B708((PartyOrganizationUtility_o *)v70->m_Items, v30, v64, v65, v66, v67, v68, v69);
         v99 = type;
         v29 = j_il2cpp_value_box_0(int_TypeInfo, &v99, v71, v72, v73);
         v80 = v29;
-        if ( !v29 || (v29 = sub_1C2E268(v29, v70->obj.klass->_1.element_class)) != 0 )
+        if ( !v29 || (v29 = sub_1C3B8A0(v29, v70->obj.klass->_1.element_class)) != 0 )
         {
           if ( v70->max_length <= 1 )
             goto LABEL_70;
           v70->m_Items[1] = (Il2CppObject *)v80;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v70->m_Items[1], v80, v74, v75, v76, v77, v78, v79);
-          v29 = StringLiteral_16410/*"_"*/;
-          if ( StringLiteral_16410/*"_"*/ )
+          sub_1C3B708((PartyOrganizationUtility_o *)&v70->m_Items[1], v80, v74, v75, v76, v77, v78, v79);
+          v29 = StringLiteral_16438/*"animationId"*/;
+          if ( StringLiteral_16438/*"animationId"*/ )
           {
-            v29 = sub_1C2E268(StringLiteral_16410/*"_"*/, v70->obj.klass->_1.element_class);
+            v29 = sub_1C3B8A0(StringLiteral_16438/*"animationId"*/, v70->obj.klass->_1.element_class);
             if ( !v29 )
               goto LABEL_71;
-            v30 = StringLiteral_16410/*"_"*/;
+            v30 = StringLiteral_16438/*"animationId"*/;
           }
           else
           {
@@ -284,32 +284,32 @@ void __fastcall BattleServantChangeBarComponent__setBarType(
           if ( v70->max_length <= 2 )
             goto LABEL_70;
           v70->m_Items[2] = (Il2CppObject *)v30;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v70->m_Items[2], v30, v81, v82, v83, v84, v85, v86);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v70->m_Items[2], v30, v81, v82, v83, v84, v85, v86);
           v98 = shiftIndex;
           v29 = j_il2cpp_value_box_0(int_TypeInfo, &v98, v87, v88, v89);
           v96 = v29;
-          if ( !v29 || (v29 = sub_1C2E268(v29, v70->obj.klass->_1.element_class)) != 0 )
+          if ( !v29 || (v29 = sub_1C3B8A0(v29, v70->obj.klass->_1.element_class)) != 0 )
           {
             if ( v70->max_length > 3 )
             {
               v70->m_Items[3] = (Il2CppObject *)v96;
-              sub_1C2E0D0((PartyOrganizationUtility_o *)&v70->m_Items[3], v96, v90, v91, v92, v93, v94, v95);
-              AssetStorage = (AssetData_o *)System_String__Concat_63247036(v70, 0LL);
+              sub_1C3B708((PartyOrganizationUtility_o *)&v70->m_Items[3], v96, v90, v91, v92, v93, v94, v95);
+              AssetStorage = (AssetData_o *)System_String__Concat_63380064(v70, 0LL);
               if ( v63 )
               {
                 UISprite__set_spriteName(v63, (System_String_o *)AssetStorage, 0LL);
                 return;
               }
 LABEL_69:
-              sub_1C2E388(AssetStorage, v17);
+              sub_1C3B9C0(AssetStorage, v17);
             }
 LABEL_70:
-            sub_1C2E390(v29, v30);
+            sub_1C3B9C8(v29, v30);
           }
         }
 LABEL_71:
-        v97 = sub_1C2E3AC(v29);
-        sub_1C2E254(v97, 0LL);
+        v97 = sub_1C3B9E4(v29);
+        sub_1C3B88C(v97, 0LL);
       }
     }
     else
@@ -486,36 +486,36 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   int32_t v127; // [xsp+18h] [xbp-68h] BYREF
   int32_t v128; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C0094D & 1) == 0 )
+  if ( (byte_4C2517B & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&type);
-    sub_1C2E12C(&object___TypeInfo, v8);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C2E12C(&StringLiteral_16410/*"_"*/, v10);
-    sub_1C2E12C(&StringLiteral_20335/*"hp_frame_"*/, v11);
-    sub_1C2E12C(&StringLiteral_20336/*"hp_gauge_"*/, v12);
-    sub_1C2E12C(&StringLiteral_20334/*"hp_damage_"*/, v13);
-    byte_4C0094D = 1;
+    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&type);
+    sub_1C3B764(&object___TypeInfo, v8);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    sub_1C3B764(&StringLiteral_16438/*"animationId"*/, v10);
+    sub_1C3B764(&StringLiteral_20370/*"integer"*/, v11);
+    sub_1C3B764(&StringLiteral_20371/*"interface"*/, v12);
+    sub_1C3B764(&StringLiteral_20369/*"intValue"*/, v13);
+    byte_4C2517B = 1;
   }
   hpframe = this->fields.hpframe;
   v128 = type;
   v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v128, *(_QWORD *)&shiftIndex, method, v4);
-  v16 = System_String__Concat((Il2CppObject *)StringLiteral_20335/*"hp_frame_"*/, v15, 0LL);
+  v16 = System_String__Concat((Il2CppObject *)StringLiteral_20370/*"integer"*/, v15, 0LL);
   if ( !hpframe )
     goto LABEL_65;
   UISprite__set_spriteName(hpframe, v16, 0LL);
   frontHpBart = this->fields.frontHpBart;
-  v16 = (System_String_o *)sub_1C2E1D4(object___TypeInfo, 4LL);
+  v16 = (System_String_o *)sub_1C3B80C(object___TypeInfo, 4LL);
   if ( !v16 )
     goto LABEL_65;
   v25 = (System_Object_array *)v16;
-  v26 = StringLiteral_20336/*"hp_gauge_"*/;
-  if ( StringLiteral_20336/*"hp_gauge_"*/ )
+  v26 = StringLiteral_20371/*"interface"*/;
+  if ( StringLiteral_20371/*"interface"*/ )
   {
-    v26 = sub_1C2E268(StringLiteral_20336/*"hp_gauge_"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(StringLiteral_20371/*"interface"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
-    v27 = StringLiteral_20336/*"hp_gauge_"*/;
+    v27 = StringLiteral_20371/*"interface"*/;
   }
   else
   {
@@ -524,27 +524,27 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( !v25->max_length )
     goto LABEL_63;
   v25->m_Items[0] = (Il2CppObject *)v27;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
+  sub_1C3B708((PartyOrganizationUtility_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
   v127 = type;
   v26 = j_il2cpp_value_box_0(int_TypeInfo, &v127, v28, v29, v30);
   v37 = v26;
   if ( v26 )
   {
-    v26 = sub_1C2E268(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
   }
   if ( v25->max_length <= 1 )
     goto LABEL_63;
   v25->m_Items[1] = (Il2CppObject *)v37;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v25->m_Items[1], v37, v31, v32, v33, v34, v35, v36);
-  v26 = StringLiteral_16410/*"_"*/;
-  if ( StringLiteral_16410/*"_"*/ )
+  sub_1C3B708((PartyOrganizationUtility_o *)&v25->m_Items[1], v37, v31, v32, v33, v34, v35, v36);
+  v26 = StringLiteral_16438/*"animationId"*/;
+  if ( StringLiteral_16438/*"animationId"*/ )
   {
-    v26 = sub_1C2E268(StringLiteral_16410/*"_"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(StringLiteral_16438/*"animationId"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
-    v27 = StringLiteral_16410/*"_"*/;
+    v27 = StringLiteral_16438/*"animationId"*/;
   }
   else
   {
@@ -553,36 +553,36 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( v25->max_length <= 2 )
     goto LABEL_63;
   v25->m_Items[2] = (Il2CppObject *)v27;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v25->m_Items[2], v27, v38, v39, v40, v41, v42, v43);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v25->m_Items[2], v27, v38, v39, v40, v41, v42, v43);
   v126 = shiftIndex + 1;
   v26 = j_il2cpp_value_box_0(int_TypeInfo, &v126, v44, v45, v46);
   v53 = v26;
   if ( v26 )
   {
-    v26 = sub_1C2E268(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
   }
   if ( v25->max_length <= 3 )
     goto LABEL_63;
   v25->m_Items[3] = (Il2CppObject *)v53;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v25->m_Items[3], v53, v47, v48, v49, v50, v51, v52);
-  v16 = System_String__Concat_63247036(v25, 0LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v25->m_Items[3], v53, v47, v48, v49, v50, v51, v52);
+  v16 = System_String__Concat_63380064(v25, 0LL);
   if ( !frontHpBart )
     goto LABEL_65;
   UISprite__set_spriteName(frontHpBart, v16, 0LL);
   damageHpBart = this->fields.damageHpBart;
-  v16 = (System_String_o *)sub_1C2E1D4(object___TypeInfo, 4LL);
+  v16 = (System_String_o *)sub_1C3B80C(object___TypeInfo, 4LL);
   if ( !v16 )
     goto LABEL_65;
   v61 = (System_Object_array *)v16;
-  v26 = StringLiteral_20334/*"hp_damage_"*/;
-  if ( StringLiteral_20334/*"hp_damage_"*/ )
+  v26 = StringLiteral_20369/*"intValue"*/;
+  if ( StringLiteral_20369/*"intValue"*/ )
   {
-    v26 = sub_1C2E268(StringLiteral_20334/*"hp_damage_"*/, v61->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(StringLiteral_20369/*"intValue"*/, v61->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
-    v27 = StringLiteral_20334/*"hp_damage_"*/;
+    v27 = StringLiteral_20369/*"intValue"*/;
   }
   else
   {
@@ -591,27 +591,27 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( !v61->max_length )
     goto LABEL_63;
   v61->m_Items[0] = (Il2CppObject *)v27;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)v61->m_Items, v27, v55, v56, v57, v58, v59, v60);
+  sub_1C3B708((PartyOrganizationUtility_o *)v61->m_Items, v27, v55, v56, v57, v58, v59, v60);
   v125 = type;
   v26 = j_il2cpp_value_box_0(int_TypeInfo, &v125, v62, v63, v64);
   v71 = v26;
   if ( v26 )
   {
-    v26 = sub_1C2E268(v26, v61->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(v26, v61->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
   }
   if ( v61->max_length <= 1 )
     goto LABEL_63;
   v61->m_Items[1] = (Il2CppObject *)v71;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v61->m_Items[1], v71, v65, v66, v67, v68, v69, v70);
-  v26 = StringLiteral_16410/*"_"*/;
-  if ( StringLiteral_16410/*"_"*/ )
+  sub_1C3B708((PartyOrganizationUtility_o *)&v61->m_Items[1], v71, v65, v66, v67, v68, v69, v70);
+  v26 = StringLiteral_16438/*"animationId"*/;
+  if ( StringLiteral_16438/*"animationId"*/ )
   {
-    v26 = sub_1C2E268(StringLiteral_16410/*"_"*/, v61->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(StringLiteral_16438/*"animationId"*/, v61->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
-    v27 = StringLiteral_16410/*"_"*/;
+    v27 = StringLiteral_16438/*"animationId"*/;
   }
   else
   {
@@ -620,21 +620,21 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( v61->max_length <= 2 )
     goto LABEL_63;
   v61->m_Items[2] = (Il2CppObject *)v27;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v61->m_Items[2], v27, v72, v73, v74, v75, v76, v77);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v61->m_Items[2], v27, v72, v73, v74, v75, v76, v77);
   v124 = shiftIndex + 1;
   v26 = j_il2cpp_value_box_0(int_TypeInfo, &v124, v78, v79, v80);
   v87 = v26;
   if ( v26 )
   {
-    v26 = sub_1C2E268(v26, v61->obj.klass->_1.element_class);
+    v26 = sub_1C3B8A0(v26, v61->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_64;
   }
   if ( v61->max_length <= 3 )
     goto LABEL_63;
   v61->m_Items[3] = (Il2CppObject *)v87;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v61->m_Items[3], v87, v81, v82, v83, v84, v85, v86);
-  v16 = System_String__Concat_63247036(v61, 0LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v61->m_Items[3], v87, v81, v82, v83, v84, v85, v86);
+  v16 = System_String__Concat_63380064(v61, 0LL);
   if ( !damageHpBart )
     goto LABEL_65;
   UISprite__set_spriteName(damageHpBart, v16, 0LL);
@@ -644,17 +644,17 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
   if ( UnityEngine_Object__op_Inequality(backHpBar, 0LL, 0LL) )
   {
     v89 = this->fields.backHpBar;
-    v16 = (System_String_o *)sub_1C2E1D4(object___TypeInfo, 4LL);
+    v16 = (System_String_o *)sub_1C3B80C(object___TypeInfo, 4LL);
     if ( !v16 )
       goto LABEL_65;
     v96 = (System_Object_array *)v16;
-    v26 = StringLiteral_20336/*"hp_gauge_"*/;
-    if ( StringLiteral_20336/*"hp_gauge_"*/ )
+    v26 = StringLiteral_20371/*"interface"*/;
+    if ( StringLiteral_20371/*"interface"*/ )
     {
-      v26 = sub_1C2E268(StringLiteral_20336/*"hp_gauge_"*/, v96->obj.klass->_1.element_class);
+      v26 = sub_1C3B8A0(StringLiteral_20371/*"interface"*/, v96->obj.klass->_1.element_class);
       if ( !v26 )
         goto LABEL_64;
-      v27 = StringLiteral_20336/*"hp_gauge_"*/;
+      v27 = StringLiteral_20371/*"interface"*/;
     }
     else
     {
@@ -663,23 +663,23 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
     if ( !v96->max_length )
       goto LABEL_63;
     v96->m_Items[0] = (Il2CppObject *)v27;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)v96->m_Items, v27, v90, v91, v92, v93, v94, v95);
+    sub_1C3B708((PartyOrganizationUtility_o *)v96->m_Items, v27, v90, v91, v92, v93, v94, v95);
     v128 = type;
     v26 = j_il2cpp_value_box_0(int_TypeInfo, &v128, v97, v98, v99);
     v106 = v26;
-    if ( !v26 || (v26 = sub_1C2E268(v26, v96->obj.klass->_1.element_class)) != 0 )
+    if ( !v26 || (v26 = sub_1C3B8A0(v26, v96->obj.klass->_1.element_class)) != 0 )
     {
       if ( v96->max_length <= 1 )
         goto LABEL_63;
       v96->m_Items[1] = (Il2CppObject *)v106;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v96->m_Items[1], v106, v100, v101, v102, v103, v104, v105);
-      v26 = StringLiteral_16410/*"_"*/;
-      if ( StringLiteral_16410/*"_"*/ )
+      sub_1C3B708((PartyOrganizationUtility_o *)&v96->m_Items[1], v106, v100, v101, v102, v103, v104, v105);
+      v26 = StringLiteral_16438/*"animationId"*/;
+      if ( StringLiteral_16438/*"animationId"*/ )
       {
-        v26 = sub_1C2E268(StringLiteral_16410/*"_"*/, v96->obj.klass->_1.element_class);
+        v26 = sub_1C3B8A0(StringLiteral_16438/*"animationId"*/, v96->obj.klass->_1.element_class);
         if ( !v26 )
           goto LABEL_64;
-        v27 = StringLiteral_16410/*"_"*/;
+        v27 = StringLiteral_16438/*"animationId"*/;
       }
       else
       {
@@ -688,32 +688,32 @@ void __fastcall BattleServantChangeBarComponent__setHpFrames(
       if ( v96->max_length <= 2 )
         goto LABEL_63;
       v96->m_Items[2] = (Il2CppObject *)v27;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v96->m_Items[2], v27, v107, v108, v109, v110, v111, v112);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v96->m_Items[2], v27, v107, v108, v109, v110, v111, v112);
       v127 = shiftIndex;
       v26 = j_il2cpp_value_box_0(int_TypeInfo, &v127, v113, v114, v115);
       v122 = v26;
-      if ( !v26 || (v26 = sub_1C2E268(v26, v96->obj.klass->_1.element_class)) != 0 )
+      if ( !v26 || (v26 = sub_1C3B8A0(v26, v96->obj.klass->_1.element_class)) != 0 )
       {
         if ( v96->max_length > 3 )
         {
           v96->m_Items[3] = (Il2CppObject *)v122;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v96->m_Items[3], v122, v116, v117, v118, v119, v120, v121);
-          v16 = System_String__Concat_63247036(v96, 0LL);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v96->m_Items[3], v122, v116, v117, v118, v119, v120, v121);
+          v16 = System_String__Concat_63380064(v96, 0LL);
           if ( v89 )
           {
             UISprite__set_spriteName(v89, v16, 0LL);
             return;
           }
 LABEL_65:
-          sub_1C2E388(v16, v17);
+          sub_1C3B9C0(v16, v17);
         }
 LABEL_63:
-        sub_1C2E390(v26, v27);
+        sub_1C3B9C8(v26, v27);
       }
     }
 LABEL_64:
-    v123 = sub_1C2E3AC(v26);
-    sub_1C2E254(v123, 0LL);
+    v123 = sub_1C3B9E4(v26);
+    sub_1C3B88C(v123, 0LL);
   }
 }
 
@@ -755,27 +755,27 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
   int32_t v33; // [xsp+8h] [xbp-38h] BYREF
   int32_t v34; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C0094E & 1) == 0 )
+  if ( (byte_4C2517C & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, *(_QWORD *)&type);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_21929/*"mp_framebg_"*/, v8);
-    sub_1C2E12C(&StringLiteral_19369/*"enemymp_"*/, v9);
-    sub_1C2E12C(&StringLiteral_21930/*"mp_mark_"*/, v10);
-    sub_1C2E12C(&StringLiteral_21928/*"mp_frame_"*/, v11);
-    byte_4C0094E = 1;
+    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&type);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_21965/*"op_Equality"*/, v8);
+    sub_1C3B764(&StringLiteral_19404/*"getExp"*/, v9);
+    sub_1C3B764(&StringLiteral_21966/*"op_ExclusiveOr"*/, v10);
+    sub_1C3B764(&StringLiteral_21964/*"op_Division"*/, v11);
+    byte_4C2517C = 1;
   }
   hpframe = this->fields.hpframe;
   v34 = type;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, method, v3, v4);
-  v14 = System_String__Concat((Il2CppObject *)StringLiteral_21928/*"mp_frame_"*/, v13, 0LL);
+  v14 = System_String__Concat((Il2CppObject *)StringLiteral_21964/*"op_Division"*/, v13, 0LL);
   if ( !hpframe )
     goto LABEL_16;
   UISprite__set_spriteName(hpframe, v14, 0LL);
   frontHpBart = this->fields.frontHpBart;
   v33 = type;
   v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v17, v18, v19);
-  v14 = System_String__Concat((Il2CppObject *)StringLiteral_19369/*"enemymp_"*/, v20, 0LL);
+  v14 = System_String__Concat((Il2CppObject *)StringLiteral_19404/*"getExp"*/, v20, 0LL);
   if ( !frontHpBart )
     goto LABEL_16;
   UISprite__set_spriteName(frontHpBart, v14, 0LL);
@@ -787,7 +787,7 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
     v25 = this->fields.splitSprite;
     v34 = type;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v22, v23, v24);
-    v14 = System_String__Concat((Il2CppObject *)StringLiteral_21930/*"mp_mark_"*/, v26, 0LL);
+    v14 = System_String__Concat((Il2CppObject *)StringLiteral_21966/*"op_ExclusiveOr"*/, v26, 0LL);
     if ( !v25 )
       goto LABEL_16;
     UISprite__set_spriteName(v25, v14, 0LL);
@@ -800,14 +800,14 @@ void __fastcall BattleServantChangeBarComponent__setMpFrames(
     v31 = this->fields.backHpBar;
     v34 = type;
     v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v28, v29, v30);
-    v14 = System_String__Concat((Il2CppObject *)StringLiteral_21929/*"mp_framebg_"*/, v32, 0LL);
+    v14 = System_String__Concat((Il2CppObject *)StringLiteral_21965/*"op_Equality"*/, v32, 0LL);
     if ( v31 )
     {
       UISprite__set_spriteName(v31, v14, 0LL);
       return;
     }
 LABEL_16:
-    sub_1C2E388(v14, v15);
+    sub_1C3B9C0(v14, v15);
   }
 }
 
@@ -849,11 +849,11 @@ void __fastcall BattleServantChangeBarComponent__setSplitHp(
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4C0094F & 1) == 0 )
+  if ( (byte_4C2517D & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_GameObject___TypeInfo, split);
-    this = (BattleServantChangeBarComponent_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C0094F = 1;
+    sub_1C3B764(&UnityEngine_GameObject___TypeInfo, split);
+    this = (BattleServantChangeBarComponent_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    byte_4C2517D = 1;
   }
   p_splitList = &v6->fields.splitList;
   splitList = v6->fields.splitList;
@@ -867,11 +867,11 @@ void __fastcall BattleServantChangeBarComponent__setSplitHp(
       break;
     if ( v10 >= max_length )
 LABEL_25:
-      sub_1C2E390(this, split);
+      sub_1C3B9C8(this, split);
     v12 = (UnityEngine_Object_o *)splitList->m_Items[v10];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(v12, 0LL);
+    UnityEngine_Object__Destroy_71122748(v12, 0LL);
     splitList = *p_splitList;
     ++v10;
     if ( !*p_splitList )
@@ -881,9 +881,9 @@ LABEL_25:
   {
     if ( !split )
       goto LABEL_24;
-    v13 = sub_1C2E1D4(UnityEngine_GameObject___TypeInfo, split->max_length);
+    v13 = sub_1C3B80C(UnityEngine_GameObject___TypeInfo, split->max_length);
     *p_splitList = (struct UnityEngine_GameObject_array *)v13;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&v6->fields.splitList, v13, v14, v15, v16, v17, v18, v19);
+    sub_1C3B708((PartyOrganizationUtility_o *)&v6->fields.splitList, v13, v14, v15, v16, v17, v18, v19);
     if ( (int)split->max_length >= 1 )
     {
       v20 = 0LL;
@@ -925,12 +925,12 @@ LABEL_25:
         if ( v20 >= v33->max_length )
           goto LABEL_25;
         *(Il2CppClass **)((char *)&v33->obj.klass + i) = (Il2CppClass *)v24;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)((char *)v33 + i), (int64_t)v24, v27, v28, v29, v30, v31, v32);
+        sub_1C3B708((PartyOrganizationUtility_o *)((char *)v33 + i), (int64_t)v24, v27, v28, v29, v30, v31, v32);
         if ( (__int64)++v20 >= (int)split->max_length )
           return;
       }
 LABEL_24:
-      sub_1C2E388(this, split);
+      sub_1C3B9C0(this, split);
     }
   }
 }

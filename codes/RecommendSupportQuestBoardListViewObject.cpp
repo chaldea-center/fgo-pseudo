@@ -2,10 +2,10 @@ void __fastcall RecommendSupportQuestBoardListViewObject___ctor(
         RecommendSupportQuestBoardListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BF9880 & 1) == 0 )
+  if ( (byte_4C1E087 & 1) == 0 )
   {
-    sub_1C2E12C(&ListViewObject_TypeInfo, method);
-    byte_4BF9880 = 1;
+    sub_1C3B764(&ListViewObject_TypeInfo, method);
+    byte_4C1E087 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -27,20 +27,20 @@ void __fastcall RecommendSupportQuestBoardListViewObject__Awake(
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BF987D & 1) == 0 )
+  if ( (byte_4C1E084 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___, method);
-    byte_4BF987D = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___, method);
+    byte_4C1E084 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C2E388(0LL, v3);
+    sub_1C3B9C0(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
   this->fields.itemDraw = (struct RecommendSupportQuestBoardListViewItemDraw_o *)Component_object;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -51,10 +51,10 @@ RecommendSupportQuestBoardListViewItem_o *__fastcall RecommendSupportQuestBoardL
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4BF987F & 1) == 0 )
+  if ( (byte_4C1E086 & 1) == 0 )
   {
-    sub_1C2E12C(&RecommendSupportQuestBoardListViewItem_TypeInfo, method);
-    byte_4BF987F = 1;
+    sub_1C3B764(&RecommendSupportQuestBoardListViewItem_TypeInfo, method);
+    byte_4C1E086 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -75,28 +75,29 @@ void __fastcall RecommendSupportQuestBoardListViewObject__SetItem(
         const MethodInfo *method)
 {
   __int64 v7; // x1
+  const MethodInfo *v8; // x2
   RecommendSupportQuestBoardListViewItemDraw_o *itemDraw; // x0
   __int64 methodPtr_low; // x9
 
-  if ( (byte_4BF987E & 1) == 0 )
+  if ( (byte_4C1E085 & 1) == 0 )
   {
-    sub_1C2E12C(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
-    byte_4BF987E = 1;
+    sub_1C3B764(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
+    byte_4C1E085 = 1;
   }
-  ListViewObject__SetItem_42112092((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42230072((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1C2E388(itemDraw, v7);
+    sub_1C3B9C0(itemDraw, v7);
   if ( item )
   {
     methodPtr_low = LOBYTE(RecommendSupportQuestBoardListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (RecommendSupportQuestBoardListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != RecommendSupportQuestBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1C2E648(item);
+      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1C3BC80(item);
       goto LABEL_9;
     }
   }
-  RecommendSupportQuestBoardListViewItemDraw__SetItem(itemDraw, (RecommendSupportQuestBoardListViewItem_o *)item, 0LL);
+  RecommendSupportQuestBoardListViewItemDraw__SetItem(itemDraw, (RecommendSupportQuestBoardListViewItem_o *)item, v8);
 }

@@ -18,27 +18,27 @@ void __fastcall EventInfoCommandAssistLevelComponent___cctor(const MethodInfo *m
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BFDF68 & 1) == 0 )
+  if ( (byte_4C2277A & 1) == 0 )
   {
-    sub_1C2E12C(&EventInfoCommandAssistLevelComponent_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_17353/*"badge_lock"*/, v8);
-    sub_1C2E12C(&StringLiteral_16280/*"[ffff00]"*/, v9);
-    byte_4BFDF68 = 1;
+    sub_1C3B764(&EventInfoCommandAssistLevelComponent_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_17383/*"cancelBtnWidth"*/, v8);
+    sub_1C3B764(&StringLiteral_16308/*"activateFetched"*/, v9);
+    byte_4C2277A = 1;
   }
-  EventInfoCommandAssistLevelComponent_TypeInfo->static_fields->ICON_SPRITE_NAME_LOCK = (struct System_String_o *)StringLiteral_17353/*"badge_lock"*/;
-  sub_1C2E0D0(
+  EventInfoCommandAssistLevelComponent_TypeInfo->static_fields->ICON_SPRITE_NAME_LOCK = (struct System_String_o *)StringLiteral_17383/*"cancelBtnWidth"*/;
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)EventInfoCommandAssistLevelComponent_TypeInfo->static_fields,
-    StringLiteral_17353/*"badge_lock"*/,
+    StringLiteral_17383/*"cancelBtnWidth"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v10 = StringLiteral_16280/*"[ffff00]"*/;
+  v10 = StringLiteral_16308/*"activateFetched"*/;
   static_fields = EventInfoCommandAssistLevelComponent_TypeInfo->static_fields;
-  static_fields->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_16280/*"[ffff00]"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->MAX_LEVEL_TEXT_COLOR, v10, v12, v13, v14, v15, v16, v17);
+  static_fields->MAX_LEVEL_TEXT_COLOR = (struct System_String_o *)StringLiteral_16308/*"activateFetched"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->MAX_LEVEL_TEXT_COLOR, v10, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -74,7 +74,7 @@ bool __fastcall EventInfoCommandAssistLevelComponent__IsReleasedNow(
 
   assistData = this->fields.assistData;
   if ( !assistData )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return assistData->fields.oldLv <= 0 && assistData->fields.lv > 0;
 }
 
@@ -105,10 +105,10 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
   const MethodInfo *v24; // x2
   struct EventInfoCommandAssistLevelComponent_AssistData_o *v25; // x8
 
-  if ( (byte_4BFDF64 & 1) == 0 )
+  if ( (byte_4C22776 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, control);
-    byte_4BFDF64 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, control);
+    byte_4C22776 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -116,7 +116,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
   if ( data && !v7 )
   {
     this->fields.commandAssistLevelControl = control;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.commandAssistLevelControl,
       (int64_t)control,
       v8,
@@ -126,13 +126,13 @@ void __fastcall EventInfoCommandAssistLevelComponent__Setup(
       v12,
       v13);
     this->fields.assistData = data;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.assistData, (int64_t)data, v14, v15, v16, v17, v18, v19);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.assistData, (int64_t)data, v14, v15, v16, v17, v18, v19);
     assistData = this->fields.assistData;
     if ( !assistData
       || (EventInfoCommandAssistLevelComponent__SetupIcon(this, assistData->fields.oldLv, v22),
           (v25 = this->fields.assistData) == 0LL) )
     {
-      sub_1C2E388(v20, v21);
+      sub_1C3B9C0(v20, v21);
     }
     EventInfoCommandAssistLevelComponent__SetupLevel(this, v25->fields.oldLv, v24);
   }
@@ -151,11 +151,11 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupIcon(
   EventInfoCommandAssistLevelComponent_c *v8; // x0
   UISprite_o *skillIconSprite; // x19
 
-  if ( (byte_4BFDF65 & 1) == 0 )
+  if ( (byte_4C22777 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&level);
-    sub_1C2E12C(&EventInfoCommandAssistLevelComponent_TypeInfo, v5);
-    byte_4BFDF65 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&level);
+    sub_1C3B764(&EventInfoCommandAssistLevelComponent_TypeInfo, v5);
+    byte_4C22777 = 1;
   }
   if ( level >= 1 && (assistData = this->fields.assistData) != 0LL )
   {
@@ -198,13 +198,13 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
   int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
   v16 = level;
-  if ( (byte_4BFDF66 & 1) == 0 )
+  if ( (byte_4C22778 & 1) == 0 )
   {
-    sub_1C2E12C(&EventInfoCommandAssistLevelComponent_TypeInfo, *(_QWORD *)&level);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_8406/*"LEVEL_INFO"*/, v6);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v7);
-    byte_4BFDF66 = 1;
+    sub_1C3B764(&EventInfoCommandAssistLevelComponent_TypeInfo, *(_QWORD *)&level);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_8408/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/, v6);
+    sub_1C3B764(&StringLiteral_1/*""*/, v7);
+    byte_4C22778 = 1;
   }
   if ( level < 1 )
   {
@@ -215,7 +215,7 @@ void __fastcall EventInfoCommandAssistLevelComponent__SetupLevel(
       return;
     }
 LABEL_15:
-    sub_1C2E388(levelLabel, *(_QWORD *)&level);
+    sub_1C3B9C0(levelLabel, *(_QWORD *)&level);
   }
   if ( level < 10 )
   {
@@ -235,9 +235,9 @@ LABEL_15:
   v12 = this->fields.levelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8406/*"LEVEL_INFO"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8408/*"MAX_RECOMMEND_SUPPORT_DECK_NUM"*/, 0LL);
   v14 = System_Int32__ToString((int32_t)&v16, 0LL);
-  v15 = (Il2CppObject *)System_String__Concat_63235584(v11, v14, 0LL);
+  v15 = (Il2CppObject *)System_String__Concat_63368612(v11, v14, 0LL);
   levelLabel = (UILabel_o *)System_String__Format(v13, v15, 0LL);
   if ( !v12 )
     goto LABEL_15;
@@ -257,10 +257,10 @@ void __fastcall EventInfoCommandAssistLevelComponent__UpdateDisp(
   struct EventInfoCommandAssistLevelComponent_AssistData_o *v9; // x8
   int32_t lv; // w1
 
-  if ( (byte_4BFDF67 & 1) == 0 )
+  if ( (byte_4C22779 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, endAction);
-    byte_4BFDF67 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, endAction);
+    byte_4C22779 = 1;
   }
   commandAssistLevelControl = (UnityEngine_Object_o *)this->fields.commandAssistLevelControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

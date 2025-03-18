@@ -1,13 +1,13 @@
 void __fastcall GachaBonusSelectLineupEntity___ctor(GachaBonusSelectLineupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFD9C7 & 1) == 0 )
+  if ( (byte_4C221D9 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFD9C7 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C221D9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaBonusSelectLineupEntity__CreatePK(
         int32_t giftId,
         const MethodInfo *method)
 {
-  if ( (byte_4BFD9C5 & 1) == 0 )
+  if ( (byte_4C221D7 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4BFD9C5 = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4C221D7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            type,
            giftId,
-           (const MethodInfo_2FCFEE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2FEE81C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -47,10 +47,10 @@ int32_t __fastcall GachaBonusSelectLineupEntity__GetSummonCategoryId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_4BFD9C6 & 1) == 0 )
+  if ( (byte_4C221D8 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_24121/*"summonCategoryId"*/, *(_QWORD *)&defId);
-    byte_4BFD9C6 = 1;
+    sub_1C3B764(&StringLiteral_24164/*"value is less than 0"*/, *(_QWORD *)&defId);
+    byte_4C221D8 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24121/*"summonCategoryId"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24164/*"value is less than 0"*/, defId, 0LL);
 }

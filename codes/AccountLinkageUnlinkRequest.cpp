@@ -5,10 +5,10 @@ void __fastcall AccountLinkageUnlinkRequest__beginRequest(
 {
   const MethodInfo *v4; // x1
 
-  if ( (byte_4BFEFF4 & 1) == 0 )
+  if ( (byte_4C2381E & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, accountLinkageToken);
-    byte_4BFEFF4 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, accountLinkageToken);
+    byte_4C2381E = 1;
   }
   RequestBase__addBaseField((RequestBase_o *)this, (const MethodInfo *)accountLinkageToken);
   RequestBase__WriteParameter((RequestBase_o *)this, v4);
@@ -25,16 +25,16 @@ System_String_o *__fastcall AccountLinkageUnlinkRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFEFF3 & 1) == 0 )
+  if ( (byte_4C2381D & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_16930/*"accountLinkageAnx/unlink"*/, v2);
-    byte_4BFEFF3 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_16960/*"bit_treasure_get"*/, v2);
+    byte_4C2381D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_16930/*"accountLinkageAnx/unlink"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_16960/*"bit_treasure_get"*/, 0LL);
 }
 
 
@@ -50,27 +50,27 @@ void __fastcall AccountLinkageUnlinkRequest__requestCompleted(
   __int64 *v8; // x9
 
   v4 = this;
-  if ( (byte_4BFEFF5 & 1) == 0 )
+  if ( (byte_4C2381F & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_22644/*"ok"*/, responseList);
-    this = (AccountLinkageUnlinkRequest_o *)sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v5);
-    byte_4BFEFF5 = 1;
+    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, responseList);
+    this = (AccountLinkageUnlinkRequest_o *)sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v5);
+    byte_4C2381F = 1;
   }
   if ( !responseList )
     goto LABEL_13;
   if ( !responseList->max_length )
-    sub_1C2E390(this, responseList);
+    sub_1C3B9C8(this, responseList);
   this = (AccountLinkageUnlinkRequest_o *)responseList->m_Items[0];
   if ( !this )
 LABEL_13:
-    sub_1C2E388(this, responseList);
-  v6 = ResponseData__checkError_42594652((ResponseData_o *)this, 0LL);
+    sub_1C3B9C0(this, responseList);
+  v6 = ResponseData__checkError_42712632((ResponseData_o *)this, 0LL);
   CallBack = v4->fields.CallBack;
   if ( v6 )
   {
     if ( CallBack )
     {
-      v8 = &StringLiteral_22644/*"ok"*/;
+      v8 = &StringLiteral_22683/*"sandboxSeurity"*/;
 LABEL_11:
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
         CallBack->fields.original_method_info,
@@ -80,7 +80,7 @@ LABEL_11:
   }
   else if ( CallBack )
   {
-    v8 = &StringLiteral_22468/*"ng"*/;
+    v8 = &StringLiteral_22507/*"referrerMapId"*/;
     goto LABEL_11;
   }
 }

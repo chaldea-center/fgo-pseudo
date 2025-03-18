@@ -16,25 +16,25 @@ void __fastcall SetSwitchOptionControl__Init(SetSwitchOptionControl_o *this, con
   UILabel_o *friendDispInfoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4BF8AB9 & 1) == 0 )
+  if ( (byte_4C1D239 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    sub_1C2E12C(&OptionManager_TypeInfo, v3);
-    sub_1C2E12C(&StringLiteral_9852/*"OPTION_FRIEND_DISP_EXPLANATION"*/, v4);
-    sub_1C2E12C(&StringLiteral_9849/*"OPTION_FIREND_DISP"*/, v5);
-    byte_4BF8AB9 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    sub_1C3B764(&OptionManager_TypeInfo, v3);
+    sub_1C3B764(&StringLiteral_9854/*"Owner"*/, v4);
+    sub_1C3B764(&StringLiteral_9851/*"OverwriteShadowServantEffectNodes"*/, v5);
+    byte_4C1D239 = 1;
   }
   firnedDispTitle = this->fields.firnedDispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9849/*"OPTION_FIREND_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9851/*"OverwriteShadowServantEffectNodes"*/, 0LL);
   if ( !firnedDispTitle
     || (UILabel__set_text(firnedDispTitle, v7, 0LL),
         friendDispInfoLb = this->fields.friendDispInfoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9852/*"OPTION_FRIEND_DISP_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9854/*"Owner"*/, 0LL),
         !friendDispInfoLb) )
   {
-    sub_1C2E388(v7, v8);
+    sub_1C3B9C0(v7, v8);
   }
   UILabel__set_text(friendDispInfoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -56,36 +56,36 @@ void __fastcall SetSwitchOptionControl__OnFriendDispChangeBtn(SetSwitchOptionCon
   __int64 *v10; // x8
   bool v11; // w20
 
-  if ( (byte_4BF8ABC & 1) == 0 )
+  if ( (byte_4C1D23C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SetSwitchOptionControl_OnFriendDispChangeBtn__, method);
-    sub_1C2E12C(&StringLiteral_17834/*"btn_on"*/, v3);
-    sub_1C2E12C(&StringLiteral_17833/*"btn_off"*/, v4);
-    byte_4BF8ABC = 1;
+    sub_1C3B764(&Method_SetSwitchOptionControl_OnFriendDispChangeBtn__, method);
+    sub_1C3B764(&StringLiteral_17864/*"confirm_subscription_price_change"*/, v3);
+    sub_1C3B764(&StringLiteral_17863/*"confidence"*/, v4);
+    byte_4C1D23C = 1;
   }
   v5 = Method_SetSwitchOptionControl_OnFriendDispChangeBtn__;
   isFriendDisp = this->fields.isFriendDisp;
   if ( (*((_BYTE *)Method_SetSwitchOptionControl_OnFriendDispChangeBtn__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C2E144(Method_SetSwitchOptionControl_OnFriendDispChangeBtn__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C3B77C(Method_SetSwitchOptionControl_OnFriendDispChangeBtn__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C3B748(v5, v5[4]);
   if ( !isFriendDisp )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
     friendDispBtn = this->fields.friendDispBtn;
     if ( friendDispBtn )
     {
-      v10 = &StringLiteral_17834/*"btn_on"*/;
+      v10 = &StringLiteral_17864/*"confirm_subscription_price_change"*/;
       v11 = 1;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C2E388(friendDispBtn, v8);
+    sub_1C3B9C0(friendDispBtn, v8);
   }
   OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
   friendDispBtn = this->fields.friendDispBtn;
   if ( !friendDispBtn )
     goto LABEL_11;
-  v10 = &StringLiteral_17833/*"btn_off"*/;
+  v10 = &StringLiteral_17863/*"confidence"*/;
   v11 = 0;
 LABEL_10:
   UIButton__set_normalSprite(friendDispBtn, (System_String_o *)*v10, 0LL);
@@ -97,10 +97,10 @@ void __fastcall SetSwitchOptionControl__Reflection(SetSwitchOptionControl_o *thi
 {
   _BOOL4 isFriendDisp; // w19
 
-  if ( (byte_4BF8ABA & 1) == 0 )
+  if ( (byte_4C1D23A & 1) == 0 )
   {
-    sub_1C2E12C(&OptionManager_TypeInfo, method);
-    byte_4BF8ABA = 1;
+    sub_1C3B764(&OptionManager_TypeInfo, method);
+    byte_4C1D23A = 1;
   }
   isFriendDisp = this->fields.isFriendDisp;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -115,18 +115,18 @@ void __fastcall SetSwitchOptionControl__setFriendDispValue(SetSwitchOptionContro
   UIButton_o *friendDispBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BF8ABB & 1) == 0 )
+  if ( (byte_4C1D23B & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17834/*"btn_on"*/, method);
-    sub_1C2E12C(&StringLiteral_17833/*"btn_off"*/, v3);
-    byte_4BF8ABB = 1;
+    sub_1C3B764(&StringLiteral_17864/*"confirm_subscription_price_change"*/, method);
+    sub_1C3B764(&StringLiteral_17863/*"confidence"*/, v3);
+    byte_4C1D23B = 1;
   }
   friendDispBtn = this->fields.friendDispBtn;
   if ( !friendDispBtn )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( this->fields.isFriendDisp )
-    v5 = &StringLiteral_17834/*"btn_on"*/;
+    v5 = &StringLiteral_17864/*"confirm_subscription_price_change"*/;
   else
-    v5 = &StringLiteral_17833/*"btn_off"*/;
+    v5 = &StringLiteral_17863/*"confidence"*/;
   UIButton__set_normalSprite(friendDispBtn, (System_String_o *)*v5, 0LL);
 }

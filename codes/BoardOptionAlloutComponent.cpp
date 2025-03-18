@@ -28,20 +28,20 @@ void __fastcall BoardOptionAlloutComponent__SetIcon(
   int32_t *v20; // x28
   IconLabelInfo_o *v21; // x24
 
-  if ( (byte_4BFA189 & 1) == 0 )
+  if ( (byte_4C1E990 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&questId);
-    sub_1C2E12C(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___, v5);
-    sub_1C2E12C(&DataManager_TypeInfo, v6);
-    sub_1C2E12C(&IconLabelInfo_TypeInfo, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__, v10);
-    byte_4BFA189 = 1;
+    sub_1C3B764(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&questId);
+    sub_1C3B764(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___, v5);
+    sub_1C3B764(&DataManager_TypeInfo, v6);
+    sub_1C3B764(&IconLabelInfo_TypeInfo, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__, v10);
+    byte_4C1E990 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
   if ( Master_object )
   {
     ClearDeckInfo = (System_Collections_Generic_List_object__o *)UserEventAlloutBattleMaster__GetClearDeckInfo(
@@ -52,14 +52,14 @@ void __fastcall BoardOptionAlloutComponent__SetIcon(
       goto LABEL_23;
     v14 = System_Collections_Generic_List_object___ToArray(
             ClearDeckInfo,
-            (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
+            (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    ClearDeckInfo = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_2FD17DC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    ClearDeckInfo = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     servantFaceIconList = (System_Collections_Generic_List_object__o *)this->fields.servantFaceIconList;
     if ( !servantFaceIconList )
 LABEL_23:
-      sub_1C2E388(ClearDeckInfo, v13);
+      sub_1C3B9C0(ClearDeckInfo, v13);
     v16 = (ServantLimitImageMaster_o *)ClearDeckInfo;
     v17 = 0LL;
     while ( v17 < servantFaceIconList->fields._size )
@@ -67,20 +67,20 @@ LABEL_23:
       ClearDeckInfo = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      servantFaceIconList,
                                                                      v17,
-                                                                     (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
+                                                                     (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
       v18 = (ServantFaceIconComponent_o *)ClearDeckInfo;
       if ( v14 && (max_length = v14->max_length, v17 < (int)max_length) )
       {
         if ( v17 >= max_length )
-          sub_1C2E390(ClearDeckInfo, v13);
+          sub_1C3B9C8(ClearDeckInfo, v13);
         v20 = (int32_t *)v14->m_Items[v17];
-        v21 = (IconLabelInfo_o *)sub_1C2E378(IconLabelInfo_TypeInfo);
+        v21 = (IconLabelInfo_o *)sub_1C3B9B0(IconLabelInfo_TypeInfo);
         IconLabelInfo___ctor(v21, 0LL);
         if ( !v20 )
           goto LABEL_23;
         if ( !v21 )
           goto LABEL_23;
-        IconLabelInfo__Set_39452344(v21, 2, v20[6], v20[6], 0, 0, 1, 0, 0LL);
+        IconLabelInfo__Set_39561332(v21, 2, v20[6], v20[6], 0, 0, 1, 0, 0LL);
         if ( !v16 )
           goto LABEL_23;
         ClearDeckInfo = (System_Collections_Generic_List_object__o *)ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -90,7 +90,7 @@ LABEL_23:
                                                                        0LL);
         if ( !v18 )
           goto LABEL_23;
-        ServantFaceIconComponent__Set_39531668(
+        ServantFaceIconComponent__Set_39640656(
           v18,
           v20[5],
           v20[7],

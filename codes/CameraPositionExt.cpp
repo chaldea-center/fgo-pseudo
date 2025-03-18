@@ -44,47 +44,47 @@ System_String_o *__fastcall CameraPositionExt__DisplayName(int32_t camPos, const
   PartyListViewItem_o *v44; // x7
   int64_t v45; // x1
 
-  if ( (byte_4BFC5FB & 1) == 0 )
+  if ( (byte_4C20E09 & 1) == 0 )
   {
-    sub_1C2E12C(&string___TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_9694/*"NobleStartPos_enemy"*/, v3);
-    sub_1C2E12C(&StringLiteral_15324/*"Unit_Player2"*/, v4);
-    sub_1C2E12C(&StringLiteral_9695/*"NobleStartPos_player"*/, v5);
-    sub_1C2E12C(&StringLiteral_3273/*"BattleFazeCameraPos"*/, v6);
-    sub_1C2E12C(&StringLiteral_15323/*"Unit_Enemy2"*/, v7);
-    byte_4BFC5FB = 1;
+    sub_1C3B764(&string___TypeInfo, method);
+    sub_1C3B764(&StringLiteral_9696/*"OnLongPushServantEquip"*/, v3);
+    sub_1C3B764(&StringLiteral_15352/*"WriteStartDocument needs to be the first call."*/, v4);
+    sub_1C3B764(&StringLiteral_9697/*"OnLongPushSkill1ListView"*/, v5);
+    sub_1C3B764(&StringLiteral_3273/*"C++ destructor does not have public access"*/, v6);
+    sub_1C3B764(&StringLiteral_15351/*"WriteStartDocument cannot be called on writers created with ConformanceLevel.Fragment."*/, v7);
+    byte_4C20E09 = 1;
   }
-  v8 = sub_1C2E1D4(string___TypeInfo, 5LL);
+  v8 = sub_1C3B80C(string___TypeInfo, 5LL);
   if ( !v8 )
-    sub_1C2E388(0LL, v9);
+    sub_1C3B9C0(0LL, v9);
   v16 = v8;
   if ( !*(_DWORD *)(v8 + 24) )
     goto LABEL_11;
-  v17 = StringLiteral_15324/*"Unit_Player2"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_15324/*"Unit_Player2"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v8 + 32), v17, v10, v11, v12, v13, v14, v15);
+  v17 = StringLiteral_15352/*"WriteStartDocument needs to be the first call."*/;
+  *(_QWORD *)(v8 + 32) = StringLiteral_15352/*"WriteStartDocument needs to be the first call."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 32), v17, v10, v11, v12, v13, v14, v15);
   if ( *(_DWORD *)(v16 + 24) <= 1u )
     goto LABEL_11;
-  v24 = StringLiteral_15323/*"Unit_Enemy2"*/;
-  *(_QWORD *)(v16 + 40) = StringLiteral_15323/*"Unit_Enemy2"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_15351/*"WriteStartDocument cannot be called on writers created with ConformanceLevel.Fragment."*/;
+  *(_QWORD *)(v16 + 40) = StringLiteral_15351/*"WriteStartDocument cannot be called on writers created with ConformanceLevel.Fragment."*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v16 + 40), v24, v18, v19, v20, v21, v22, v23);
   if ( *(_DWORD *)(v16 + 24) <= 2u )
     goto LABEL_11;
-  v31 = StringLiteral_9695/*"NobleStartPos_player"*/;
-  *(_QWORD *)(v16 + 48) = StringLiteral_9695/*"NobleStartPos_player"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 48), v31, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_9697/*"OnLongPushSkill1ListView"*/;
+  *(_QWORD *)(v16 + 48) = StringLiteral_9697/*"OnLongPushSkill1ListView"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)(v16 + 48), v31, v25, v26, v27, v28, v29, v30);
   if ( *(_DWORD *)(v16 + 24) <= 3u
-    || (v38 = StringLiteral_9694/*"NobleStartPos_enemy"*/,
-        *(_QWORD *)(v16 + 56) = StringLiteral_9694/*"NobleStartPos_enemy"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 56), v38, v32, v33, v34, v35, v36, v37),
+    || (v38 = StringLiteral_9696/*"OnLongPushServantEquip"*/,
+        *(_QWORD *)(v16 + 56) = StringLiteral_9696/*"OnLongPushServantEquip"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v16 + 56), v38, v32, v33, v34, v35, v36, v37),
         *(_DWORD *)(v16 + 24) <= 4u)
-    || (v45 = StringLiteral_3273/*"BattleFazeCameraPos"*/,
-        *(_QWORD *)(v16 + 64) = StringLiteral_3273/*"BattleFazeCameraPos"*/,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v16 + 64), v45, v39, v40, v41, v42, v43, v44),
+    || (v45 = StringLiteral_3273/*"C++ destructor does not have public access"*/,
+        *(_QWORD *)(v16 + 64) = StringLiteral_3273/*"C++ destructor does not have public access"*/,
+        sub_1C3B708((PartyOrganizationUtility_o *)(v16 + 64), v45, v39, v40, v41, v42, v43, v44),
         *(_DWORD *)(v16 + 24) <= (unsigned int)camPos) )
   {
 LABEL_11:
-    sub_1C2E390(v8, v9);
+    sub_1C3B9C8(v8, v9);
   }
   return *(System_String_o **)(v16 + 8LL * camPos + 32);
 }

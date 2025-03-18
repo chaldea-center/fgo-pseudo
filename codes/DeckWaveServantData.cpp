@@ -10,11 +10,11 @@ void __fastcall DeckWaveServantData___ctor(DeckWaveServantData_o *this, const Me
   FollowerInfo_o *v10; // x6
   PartyListViewItem_o *v11; // x7
 
-  if ( (byte_4BFD2C2 & 1) == 0 )
+  if ( (byte_4C21AD1 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, method);
-    sub_1C2E12C(&int___TypeInfo, v3);
-    byte_4BFD2C2 = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, method);
+    sub_1C3B764(&int___TypeInfo, v3);
+    byte_4C21AD1 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v4 = BalanceConfig_TypeInfo;
@@ -23,7 +23,7 @@ void __fastcall DeckWaveServantData___ctor(DeckWaveServantData_o *this, const Me
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct System_Int32_array *)sub_1C2E1D4(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
+  v5 = (struct System_Int32_array *)sub_1C3B80C(int___TypeInfo, (unsigned int)v4->static_fields->DeckMainMemberMax);
   this->fields.uniqueIds = v5;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.uniqueIds, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.uniqueIds, (int64_t)v5, v6, v7, v8, v9, v10, v11);
 }

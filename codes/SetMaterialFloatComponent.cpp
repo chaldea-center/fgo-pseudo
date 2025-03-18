@@ -13,18 +13,18 @@ void __fastcall SetMaterialFloatComponent__Finish(SetMaterialFloatComponent_o *t
   FollowerInfo_o *v6; // x6
   PartyListViewItem_o *v7; // x7
 
-  if ( (byte_4C00CBB & 1) == 0 )
+  if ( (byte_4C254E9 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C00CBB = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C254E9 = 1;
   }
   this->fields.targetRenderer = 0LL;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetRenderer, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetRenderer, 0LL, v2, v3, v4, v5, v6, v7);
   if ( this->fields.destroyOnFinished )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720((UnityEngine_Object_o *)this, 0LL);
+    UnityEngine_Object__Destroy_71122748((UnityEngine_Object_o *)this, 0LL);
   }
   else
   {
@@ -79,10 +79,10 @@ void __fastcall SetMaterialFloatComponent__SetMaterialFloat(
   __int64 materialIndex; // x8
   UnityEngine_Material_array *v10; // x20
 
-  if ( (byte_4C00CBC & 1) == 0 )
+  if ( (byte_4C254EA & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C00CBC = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C254EA = 1;
   }
   targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -116,11 +116,11 @@ void __fastcall SetMaterialFloatComponent__SetMaterialFloat(
               materialIndex = this->fields.materialIndex;
               v10 = (UnityEngine_Material_array *)materials;
               if ( (unsigned int)materialIndex >= LODWORD(materials[1].klass) )
-                sub_1C2E390(materials, v6);
+                sub_1C3B9C8(materials, v6);
               materials = (UnityEngine_Renderer_o *)*((_QWORD *)&materials[1].monitor + materialIndex);
               if ( materials )
               {
-                UnityEngine_Material__SetFloat_70859412(
+                UnityEngine_Material__SetFloat_70992440(
                   (UnityEngine_Material_o *)materials,
                   this->fields.propertyId,
                   floatValue,
@@ -135,7 +135,7 @@ void __fastcall SetMaterialFloatComponent__SetMaterialFloat(
             }
           }
 LABEL_23:
-          sub_1C2E388(materials, v6);
+          sub_1C3B9C0(materials, v6);
         }
       }
       else
@@ -143,7 +143,7 @@ LABEL_23:
         materials = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(materials, 0LL);
         if ( !materials )
           goto LABEL_23;
-        UnityEngine_Material__SetFloat_70859412(
+        UnityEngine_Material__SetFloat_70992440(
           (UnityEngine_Material_o *)materials,
           this->fields.propertyId,
           floatValue,
@@ -182,14 +182,14 @@ void __fastcall SetMaterialFloatComponent__Setup(
 
   v17 = realTime;
   v18 = destroyOnFinished;
-  if ( (byte_4C00CB9 & 1) == 0 )
+  if ( (byte_4C254E7 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, propertyName);
-    byte_4C00CB9 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, propertyName);
+    byte_4C254E7 = 1;
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0LL);
   this->fields.propertyName = propertyName;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.propertyName,
     (int64_t)propertyName,
     v19,
@@ -205,7 +205,7 @@ void __fastcall SetMaterialFloatComponent__Setup(
   this->fields.realTime = v17;
   this->fields.materialIndex = materialIndex;
   this->fields.destroyOnFinished = v18;
-  SetMaterialFloatComponent__Setup_45868236(this, v25);
+  SetMaterialFloatComponent__Setup_45992008(this, v25);
   targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -214,14 +214,14 @@ void __fastcall SetMaterialFloatComponent__Setup(
     goto LABEL_10;
   materials = this->fields.targetRenderer;
   if ( !materials || (materials = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_materials(materials, 0LL)) == 0LL )
-    sub_1C2E388(materials, v28);
+    sub_1C3B9C0(materials, v28);
   if ( SLODWORD(materials[1].klass) <= materialIndex )
 LABEL_10:
     SetMaterialFloatComponent__Finish(this, v28);
 }
 
 
-void __fastcall SetMaterialFloatComponent__Setup_45868236(SetMaterialFloatComponent_o *this, const MethodInfo *method)
+void __fastcall SetMaterialFloatComponent__Setup_45992008(SetMaterialFloatComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   struct UnityEngine_Renderer_o **p_targetRenderer; // x19
@@ -232,17 +232,17 @@ void __fastcall SetMaterialFloatComponent__Setup_45868236(SetMaterialFloatCompon
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4C00CBA & 1) == 0 )
+  if ( (byte_4C254E8 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_4C00CBA = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    byte_4C254E8 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.targetRenderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_targetRenderer = &this->fields.targetRenderer;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)p_targetRenderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)p_targetRenderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_targetRenderer + 2) = UnityEngine_Shader__PropertyToID((System_String_o *)*(p_targetRenderer - 6), 0LL);
   *((float *)p_targetRenderer - 3) = UnityEngine_Time__get_realtimeSinceStartup(0LL);
   *((_DWORD *)p_targetRenderer - 2) = 0;
@@ -252,7 +252,7 @@ void __fastcall SetMaterialFloatComponent__Setup_45868236(SetMaterialFloatCompon
 // attributes: thunk
 void __fastcall SetMaterialFloatComponent__Start(SetMaterialFloatComponent_o *this, const MethodInfo *method)
 {
-  SetMaterialFloatComponent__Setup_45868236(this, method);
+  SetMaterialFloatComponent__Setup_45992008(this, method);
 }
 
 

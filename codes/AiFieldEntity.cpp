@@ -18,27 +18,27 @@ void __fastcall AiFieldEntity___cctor(const MethodInfo *method)
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BFD356 & 1) == 0 )
+  if ( (byte_4C21B65 & 1) == 0 )
   {
-    sub_1C2E12C(&AiFieldEntity_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_19361/*"enemyMasterEffectType"*/, v8);
-    sub_1C2E12C(&StringLiteral_25055/*"voicePlay"*/, v9);
-    byte_4BFD356 = 1;
+    sub_1C3B764(&AiFieldEntity_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_19396/*"getConnectionState"*/, v8);
+    sub_1C3B764(&StringLiteral_25099/*"�"*/, v9);
+    byte_4C21B65 = 1;
   }
-  AiFieldEntity_TypeInfo->static_fields->KEY_VOICE_NAME = (struct System_String_o *)StringLiteral_25055/*"voicePlay"*/;
-  sub_1C2E0D0(
+  AiFieldEntity_TypeInfo->static_fields->KEY_VOICE_NAME = (struct System_String_o *)StringLiteral_25099/*"�"*/;
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)AiFieldEntity_TypeInfo->static_fields,
-    StringLiteral_25055/*"voicePlay"*/,
+    StringLiteral_25099/*"�"*/,
     v2,
     v3,
     v4,
     v5,
     v6,
     v7);
-  v10 = StringLiteral_19361/*"enemyMasterEffectType"*/;
+  v10 = StringLiteral_19396/*"getConnectionState"*/;
   static_fields = AiFieldEntity_TypeInfo->static_fields;
-  static_fields->KEY_EFFECT_TYPE = (struct System_String_o *)StringLiteral_19361/*"enemyMasterEffectType"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->KEY_EFFECT_TYPE, v10, v12, v13, v14, v15, v16, v17);
+  static_fields->KEY_EFFECT_TYPE = (struct System_String_o *)StringLiteral_19396/*"getConnectionState"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->KEY_EFFECT_TYPE, v10, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -46,12 +46,12 @@ float __fastcall AiFieldEntity__GetCutinAdditionalTime(AiFieldEntity_o *this, fl
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4BFD355 & 1) == 0 )
+  if ( (byte_4C21B64 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_18739/*"cutinAdditionalTime"*/, method);
-    byte_4BFD355 = 1;
+    sub_1C3B764(&StringLiteral_18773/*"event/location"*/, method);
+    byte_4C21B64 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18739/*"cutinAdditionalTime"*/, def, v3);
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_18773/*"event/location"*/, def, v3);
 }
 
 
@@ -59,12 +59,12 @@ int32_t __fastcall AiFieldEntity__GetFieldHp(AiFieldEntity_o *this, const Method
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BFD353 & 1) == 0 )
+  if ( (byte_4C21B62 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_19743/*"fieldHp"*/, method);
-    byte_4BFD353 = 1;
+    sub_1C3B764(&StringLiteral_19778/*"icon_class_{0:D3}"*/, method);
+    byte_4C21B62 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19743/*"fieldHp"*/, -1, v2);
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19778/*"icon_class_{0:D3}"*/, -1, v2);
 }
 
 
@@ -72,12 +72,12 @@ int32_t __fastcall AiFieldEntity__GetFieldUIId(AiFieldEntity_o *this, const Meth
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BFD354 & 1) == 0 )
+  if ( (byte_4C21B63 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_19750/*"fieldHpUiId"*/, method);
-    byte_4BFD354 = 1;
+    sub_1C3B764(&StringLiteral_19785/*"icon_common_new01"*/, method);
+    byte_4C21B63 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19750/*"fieldHpUiId"*/, -1, v2);
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19785/*"icon_common_new01"*/, -1, v2);
 }
 
 
@@ -86,10 +86,10 @@ int32_t __fastcall AiFieldEntity__getEffectType(AiFieldEntity_o *this, const Met
   const MethodInfo *v2; // x3
   AiFieldEntity_c *v4; // x0
 
-  if ( (byte_4BFD350 & 1) == 0 )
+  if ( (byte_4C21B5F & 1) == 0 )
   {
-    sub_1C2E12C(&AiFieldEntity_TypeInfo, method);
-    byte_4BFD350 = 1;
+    sub_1C3B764(&AiFieldEntity_TypeInfo, method);
+    byte_4C21B5F = 1;
   }
   v4 = AiFieldEntity_TypeInfo;
   if ( !AiFieldEntity_TypeInfo->_2.cctor_finished )
@@ -107,10 +107,10 @@ System_String_o *__fastcall AiFieldEntity__getVoice(AiFieldEntity_o *this, const
   AiFieldEntity_c *v4; // x0
   System_String_o *result; // x0
 
-  if ( (byte_4BFD351 & 1) == 0 )
+  if ( (byte_4C21B60 & 1) == 0 )
   {
-    sub_1C2E12C(&AiFieldEntity_TypeInfo, method);
-    byte_4BFD351 = 1;
+    sub_1C3B764(&AiFieldEntity_TypeInfo, method);
+    byte_4C21B60 = 1;
   }
   v4 = AiFieldEntity_TypeInfo;
   if ( !AiFieldEntity_TypeInfo->_2.cctor_finished )
@@ -131,12 +131,12 @@ bool __fastcall AiFieldEntity__isForcedSkillSpeedOne(AiFieldEntity_o *this, cons
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4BFD352 & 1) == 0 )
+  if ( (byte_4C21B61 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_19891/*"forcedSkillSpeed"*/, method);
-    byte_4BFD352 = 1;
+    sub_1C3B764(&StringLiteral_19926/*"img_bg_seed"*/, method);
+    byte_4C21B61 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19891/*"forcedSkillSpeed"*/, 0, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_19926/*"img_bg_seed"*/, 0, v2) == 1;
 }
 
 
@@ -150,5 +150,5 @@ bool __fastcall AiFieldEntity__isTiming(
   int v5; // w8
 
   v5 = state - 2;
-  return (unsigned int)(state - 2) <= 0x15 && ((0x3A2F15u >> v5) & 1) != 0 && this->fields.timing == dword_C41640[v5];
+  return (unsigned int)(state - 2) <= 0x15 && ((0x3A2F15u >> v5) & 1) != 0 && this->fields.timing == dword_C489E0[v5];
 }

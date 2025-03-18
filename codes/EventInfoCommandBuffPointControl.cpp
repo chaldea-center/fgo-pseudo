@@ -19,37 +19,37 @@ UnityEngine_GameObject_o *__fastcall EventInfoCommandBuffPointControl__CreateBuf
   __int64 v10; // x1
   UnityEngine_Object_o *name; // x0
 
-  if ( (byte_4BFDF77 & 1) == 0 )
+  if ( (byte_4C22789 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_672/*"("*/, v6);
-    sub_1C2E12C(&StringLiteral_791/*")"*/, v7);
-    byte_4BFDF77 = 1;
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, ent);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_672/*"(401) Unauthorized"*/, v6);
+    sub_1C3B764(&StringLiteral_791/*")|("*/, v7);
+    byte_4C22789 = 1;
   }
   baseBuffPointPrefab = (Il2CppObject *)this->fields.baseBuffPointPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__Instantiate_object_(
          baseBuffPointPrefab,
-         (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0LL, 0LL) )
   {
     name = (UnityEngine_Object_o *)this->fields.baseBuffPointPrefab;
     if ( !name
       || (name = (UnityEngine_Object_o *)UnityEngine_Object__get_name(name, 0LL), !ent)
-      || (name = (UnityEngine_Object_o *)System_String__Concat_63248848(
+      || (name = (UnityEngine_Object_o *)System_String__Concat_63381876(
                                            (System_String_o *)name,
-                                           (System_String_o *)StringLiteral_672/*"("*/,
+                                           (System_String_o *)StringLiteral_672/*"(401) Unauthorized"*/,
                                            ent->fields.value,
-                                           (System_String_o *)StringLiteral_791/*")"*/,
+                                           (System_String_o *)StringLiteral_791/*")|("*/,
                                            0LL),
           !v9) )
     {
-      sub_1C2E388(name, v10);
+      sub_1C3B9C0(name, v10);
     }
     UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, (System_String_o *)name, 0LL);
-    GameObjectExtensions__SafeSetParent_34863736((UnityEngine_GameObject_o *)v9, this->fields.rootObject, 0LL);
+    GameObjectExtensions__SafeSetParent_34969340((UnityEngine_GameObject_o *)v9, this->fields.rootObject, 0LL);
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
   }
   return (UnityEngine_GameObject_o *)v9;
@@ -71,22 +71,22 @@ EventInfoCommandBuffPointComponent_ViewData_o *__fastcall EventInfoCommandBuffPo
   struct System_Collections_Generic_List_EventInfoCommandBuffPointComponent_ViewData__o *ViewDataList; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4BFDF78 & 1) == 0 )
+  if ( (byte_4C2278A & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent_ViewData__Find__,
       *(_QWORD *)&GroupId);
-    sub_1C2E12C(&System_Predicate_EventInfoCommandBuffPointComponent_ViewData__TypeInfo, v5);
-    sub_1C2E12C(&Method_EventInfoCommandBuffPointControl___c__DisplayClass15_0__GetViewData_b__0__, v6);
-    sub_1C2E12C(&EventInfoCommandBuffPointControl___c__DisplayClass15_0_TypeInfo, v7);
-    byte_4BFDF78 = 1;
+    sub_1C3B764(&System_Predicate_EventInfoCommandBuffPointComponent_ViewData__TypeInfo, v5);
+    sub_1C3B764(&Method_EventInfoCommandBuffPointControl___c__DisplayClass15_0__GetViewData_b__0__, v6);
+    sub_1C3B764(&EventInfoCommandBuffPointControl___c__DisplayClass15_0_TypeInfo, v7);
+    byte_4C2278A = 1;
   }
-  v8 = sub_1C2E378(EventInfoCommandBuffPointControl___c__DisplayClass15_0_TypeInfo);
+  v8 = sub_1C3B9B0(EventInfoCommandBuffPointControl___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_DWORD *)(v8 + 16) = GroupId,
         ViewDataList = this->fields.ViewDataList,
-        v12 = (System_Predicate_object__o *)sub_1C2E378(System_Predicate_EventInfoCommandBuffPointComponent_ViewData__TypeInfo),
+        v12 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventInfoCommandBuffPointComponent_ViewData__TypeInfo),
         System_Predicate_object____ctor(
           v12,
           (Il2CppObject *)v8,
@@ -94,12 +94,12 @@ EventInfoCommandBuffPointComponent_ViewData_o *__fastcall EventInfoCommandBuffPo
           0LL),
         !ViewDataList) )
   {
-    sub_1C2E388(v9, v10);
+    sub_1C3B9C0(v9, v10);
   }
   return (EventInfoCommandBuffPointComponent_ViewData_o *)System_Collections_Generic_List_object___Find(
                                                             (System_Collections_Generic_List_object__o *)ViewDataList,
                                                             (System_Predicate_T__o *)v12,
-                                                            (const MethodInfo_366BF14 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent_ViewData__Find__);
+                                                            (const MethodInfo_368C2D4 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent_ViewData__Find__);
 }
 
 
@@ -122,14 +122,14 @@ void __fastcall EventInfoCommandBuffPointControl__Initialization(
   FollowerInfo_o *v16; // x6
   PartyListViewItem_o *v17; // x7
 
-  if ( (byte_4BFDF75 & 1) == 0 )
+  if ( (byte_4C22787 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent___ctor__, entity);
-    sub_1C2E12C(&System_Collections_Generic_List_EventInfoCommandBuffPointComponent__TypeInfo, v10);
-    byte_4BFDF75 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent___ctor__, entity);
+    sub_1C3B764(&System_Collections_Generic_List_EventInfoCommandBuffPointComponent__TypeInfo, v10);
+    byte_4C22787 = 1;
   }
   this->fields.eventUiEntity = entity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.eventUiEntity,
     (int64_t)entity,
     (int64_t)method,
@@ -138,12 +138,12 @@ void __fastcall EventInfoCommandBuffPointControl__Initialization(
     v5,
     v6,
     v7);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_EventInfoCommandBuffPointComponent__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_EventInfoCommandBuffPointComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent___ctor__);
   this->fields.buffPointCompnentList = (struct System_Collections_Generic_List_EventInfoCommandBuffPointComponent__o *)v11;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.buffPointCompnentList,
     (int64_t)v11,
     v12,
@@ -170,41 +170,41 @@ void __fastcall EventInfoCommandBuffPointControl__Redisplay(
   const MethodInfo *v11; // x2
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4BFDF79 & 1) == 0 )
+  if ( (byte_4C2278B & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__Dispose__,
       method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__MoveNext__, v3);
-    sub_1C2E12C(
+    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__MoveNext__, v3);
+    sub_1C3B764(
       &Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__get_Current__,
       v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__GetEnumerator__, v5);
-    byte_4BFDF79 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__GetEnumerator__, v5);
+    byte_4C2278B = 1;
   }
   memset(&v12, 0, sizeof(v12));
   buffPointCompnentList = this->fields.buffPointCompnentList;
   if ( !buffPointCompnentList )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     (System_Collections_Generic_List_object__o *)buffPointCompnentList,
-    (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__GetEnumerator__);
+    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__GetEnumerator__);
   for ( i = 0LL; ; i += (int64_t)current[5].klass )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v12,
-           (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__MoveNext__);
+           (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__MoveNext__);
     if ( !v8 )
       break;
     current = v12.fields._current;
     if ( !v12.fields._current )
-      sub_1C2E388(v8, v9);
+      sub_1C3B9C0(v8, v9);
     EventInfoCommandBuffPointComponent__UpdatePoint((EventInfoCommandBuffPointComponent_o *)v12.fields._current, v9);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v12,
-    (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__Dispose__);
+    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_EventInfoCommandBuffPointComponent__Dispose__);
   EventInfoCommandBuffPointControl__SetTotalPointLabel(this, i, v11);
 }
 
@@ -232,15 +232,15 @@ void __fastcall EventInfoCommandBuffPointControl__SetTotalPointLabel(
   __int64 v20; // x1
   int64_t v21; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4BFDF7A & 1) == 0 )
+  if ( (byte_4C2278C & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, totalPoint);
-    sub_1C2E12C(&long_TypeInfo, v5);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v6);
-    sub_1C2E12C(&System_Math_TypeInfo, v7);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C2E12C(&StringLiteral_5762/*"EVENT_POINT_COMMON_FORMAT"*/, v9);
-    byte_4BFDF7A = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, totalPoint);
+    sub_1C3B764(&long_TypeInfo, v5);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v6);
+    sub_1C3B764(&System_Math_TypeInfo, v7);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
+    sub_1C3B764(&StringLiteral_5763/*"Effect/Dedicate"*/, v9);
+    byte_4C2278C = 1;
   }
   totalPointLabel = (UnityEngine_Object_o *)this->fields.totalPointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -250,7 +250,7 @@ void __fastcall EventInfoCommandBuffPointControl__SetTotalPointLabel(
     v11 = this->fields.totalPointLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5762/*"EVENT_POINT_COMMON_FORMAT"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5763/*"Effect/Dedicate"*/, 0LL);
     v13 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
@@ -260,11 +260,11 @@ void __fastcall EventInfoCommandBuffPointControl__SetTotalPointLabel(
     UserPointEventMax = v13->static_fields->UserPointEventMax;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v21 = System_Math__Min_64055068(totalPoint, UserPointEventMax, 0LL);
+    v21 = System_Math__Min_64188096(totalPoint, UserPointEventMax, 0LL);
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v21, v15, v16, v17);
     v19 = System_String__Format(v12, v18, 0LL);
     if ( !v11 )
-      sub_1C2E388(v19, v20);
+      sub_1C3B9C0(v19, v20);
     UILabel__set_text(v11, v19, 0LL);
   }
 }
@@ -334,19 +334,19 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
   System_String_o *totalPointBgSpriteName; // x20
   UISprite_o *v62; // x21
 
-  if ( (byte_4BFDF76 & 1) == 0 )
+  if ( (byte_4C22788 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, entitys);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___, v5);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___, v6);
-    sub_1C2E12C(&System_Func_EventUiValueEntity__int__TypeInfo, v7);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_EventInfoCommandBuffPointComponent___, v8);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__Add__, v10);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v11);
-    sub_1C2E12C(&Method_EventInfoCommandBuffPointControl___c__Setup_b__13_0__, v12);
-    sub_1C2E12C(&EventInfoCommandBuffPointControl___c_TypeInfo, v13);
-    byte_4BFDF76 = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, entitys);
+    sub_1C3B764(&Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___, v5);
+    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___, v6);
+    sub_1C3B764(&System_Func_EventUiValueEntity__int__TypeInfo, v7);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_EventInfoCommandBuffPointComponent___, v8);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_List_EventInfoCommandBuffPointComponent__Add__, v10);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
+    sub_1C3B764(&Method_EventInfoCommandBuffPointControl___c__Setup_b__13_0__, v12);
+    sub_1C3B764(&EventInfoCommandBuffPointControl___c_TypeInfo, v13);
+    byte_4C22788 = 1;
   }
   if ( entitys )
   {
@@ -367,7 +367,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
           goto LABEL_66;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)totalPointBgSprite,
-                             (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         totalPointBgSprite = (void *)UnityEngine_Object__op_Inequality(
@@ -415,7 +415,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
           v23 = EventInfoCommandBuffPointControl___c_TypeInfo;
         }
         v25 = (Il2CppObject *)v23->static_fields->__9;
-        _9__13_0 = (System_Func_object__int__o *)sub_1C2E378(System_Func_EventUiValueEntity__int__TypeInfo);
+        _9__13_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_EventUiValueEntity__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__13_0,
           v25,
@@ -423,7 +423,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
           0LL);
         static_fields = EventInfoCommandBuffPointControl___c_TypeInfo->static_fields;
         static_fields->__9__13_0 = (struct System_Func_EventUiValueEntity__int__o *)_9__13_0;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&static_fields->__9__13_0,
           (int64_t)_9__13_0,
           v27,
@@ -436,10 +436,10 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
       v33 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)entitys,
                                                                    (System_Func_TSource__TKey__o *)_9__13_0,
-                                                                   (const MethodInfo_2FFB9E4 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
+                                                                   (const MethodInfo_301A780 *)Method_System_Linq_Enumerable_OrderByDescending_EventUiValueEntity__int___);
       totalPointBgSprite = System_Linq_Enumerable__ToArray_object_(
                              v33,
-                             (const MethodInfo_300BDBC *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
+                             (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_EventUiValueEntity___);
       if ( !totalPointBgSprite )
         goto LABEL_66;
       v35 = *((_DWORD *)totalPointBgSprite + 6);
@@ -451,7 +451,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
         while ( 1 )
         {
           if ( v37 >= v35 )
-            sub_1C2E390(totalPointBgSprite, v17);
+            sub_1C3B9C8(totalPointBgSprite, v17);
           v39 = (EventUiValueEntity_o *)*((_QWORD *)v36 + (int)v37 + 4);
           if ( !v39 )
             break;
@@ -471,7 +471,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
                 break;
               v41 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)BuffPointObject,
-                                              (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_EventInfoCommandBuffPointComponent___);
+                                              (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_EventInfoCommandBuffPointComponent___);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               totalPointBgSprite = (void *)UnityEngine_Object__op_Equality(v41, 0LL, 0LL);
@@ -508,14 +508,14 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
                   System_Collections_Generic_List_object___AddWithResize(
                     (System_Collections_Generic_List_object__o *)totalPointBgSprite,
                     (Il2CppObject *)v41,
-                    *(const MethodInfo_366B8AC **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+                    *(const MethodInfo_368BC6C **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v57 = v54 + 8 * v56;
                   *((_DWORD *)totalPointBgSprite + 6) = v56 + 1;
                   *(_QWORD *)(v57 + 32) = v41;
-                  sub_1C2E0D0((PartyOrganizationUtility_o *)(v57 + 32), (int64_t)v41, v45, v46, v47, v48, v49, v50);
+                  sub_1C3B708((PartyOrganizationUtility_o *)(v57 + 32), (int64_t)v41, v45, v46, v47, v48, v49, v50);
                 }
               }
             }
@@ -525,7 +525,7 @@ void __fastcall EventInfoCommandBuffPointControl__Setup(
             goto LABEL_53;
         }
 LABEL_66:
-        sub_1C2E388(totalPointBgSprite, v17);
+        sub_1C3B9C0(totalPointBgSprite, v17);
       }
       v38 = 0LL;
 LABEL_53:
@@ -569,15 +569,15 @@ void __fastcall EventInfoCommandBuffPointControl___c___cctor(const MethodInfo *m
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BFDF7B & 1) == 0 )
+  if ( (byte_4C2278D & 1) == 0 )
   {
-    sub_1C2E12C(&EventInfoCommandBuffPointControl___c_TypeInfo, v1);
-    byte_4BFDF7B = 1;
+    sub_1C3B764(&EventInfoCommandBuffPointControl___c_TypeInfo, v1);
+    byte_4C2278D = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(EventInfoCommandBuffPointControl___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(EventInfoCommandBuffPointControl___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventInfoCommandBuffPointControl___c_TypeInfo->static_fields->__9 = (struct EventInfoCommandBuffPointControl___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)EventInfoCommandBuffPointControl___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -603,7 +603,7 @@ int32_t __fastcall EventInfoCommandBuffPointControl___c___Setup_b__13_0(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return ent->fields.priority;
 }
 
@@ -622,6 +622,6 @@ bool __fastcall EventInfoCommandBuffPointControl___c__DisplayClass15_0___GetView
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.GroupId == this->fields.GroupId;
 }

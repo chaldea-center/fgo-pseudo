@@ -37,9 +37,9 @@ void __fastcall CommonConsumeDetailInfo___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
   this->fields.targetEntity = targetEntity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.targetEntity,
     (int64_t)targetEntity,
     v15,
@@ -49,7 +49,7 @@ void __fastcall CommonConsumeDetailInfo___ctor(
     v19,
     v20);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.userOwnStatusEntity,
     (int64_t)userOwnStatusEntity,
     v21,
@@ -60,11 +60,11 @@ void __fastcall CommonConsumeDetailInfo___ctor(
     v26);
   v29 = this->fields.CommonConsumeEntity;
   if ( !v29 )
-    sub_1C2E388(v27, v28);
+    sub_1C3B9C0(v27, v28);
   this->fields._Num_k__BackingField = v29->fields.num;
   TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)TargetName,
     v31,
@@ -88,11 +88,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_4BFD246 & 1) == 0 )
+  if ( (byte_4C21A55 & 1) == 0 )
   {
-    sub_1C2E12C(&ItemEntity_TypeInfo, method);
-    sub_1C2E12C(&UserItemEntity_TypeInfo, v3);
-    byte_4BFD246 = 1;
+    sub_1C3B764(&ItemEntity_TypeInfo, method);
+    sub_1C3B764(&UserItemEntity_TypeInfo, v3);
+    byte_4C21A55 = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -117,11 +117,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 methodPtr_low; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4BFD245 & 1) == 0 )
+  if ( (byte_4C21A54 & 1) == 0 )
   {
-    sub_1C2E12C(&ItemEntity_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v3);
-    byte_4BFD245 = 1;
+    sub_1C3B764(&ItemEntity_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_1/*""*/, v3);
+    byte_4C21A54 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -180,7 +180,7 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
     (int64_t)value,
     (int64_t)method,

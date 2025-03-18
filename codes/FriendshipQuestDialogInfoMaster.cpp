@@ -2,17 +2,17 @@ void __fastcall FriendshipQuestDialogInfoMaster___ctor(
         FriendshipQuestDialogInfoMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BFD984 & 1) == 0 )
+  if ( (byte_4C22196 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string___ctor__,
       method);
-    byte_4BFD984 = 1;
+    byte_4C22196 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    358,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string___ctor__);
+    360,
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string___ctor__);
 }
 
 
@@ -25,18 +25,18 @@ FriendshipQuestDialogInfoEntity_o *__fastcall FriendshipQuestDialogInfoMaster__G
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFD982 & 1) == 0 )
+  if ( (byte_4C22194 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4BFD982 = 1;
+    byte_4C22194 = 1;
   }
   PK = (Il2CppObject *)FriendshipQuestDialogInfoEntity__CreatePK(svtId, questId, *(const MethodInfo **)&questId);
   return (FriendshipQuestDialogInfoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_327FC38 *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__GetEntity__);
+                                                (const MethodInfo_329F900 *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__GetEntity__);
 }
 
 
@@ -57,12 +57,12 @@ bool __fastcall FriendshipQuestDialogInfoMaster__GetLimitCountUnsealInfo(
   Il2CppClass *klass; // x22
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
-  if ( (byte_4BFD985 & 1) == 0 )
+  if ( (byte_4C22197 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__, svtId);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Item__, v7);
-    sub_1C2E12C(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    byte_4BFD985 = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__, svtId);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Item__, v7);
+    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    byte_4C22197 = 1;
   }
   *svtId = 0;
   *questId = 0;
@@ -71,16 +71,16 @@ bool __fastcall FriendshipQuestDialogInfoMaster__GetLimitCountUnsealInfo(
     goto LABEL_11;
   if ( System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__) < 1 )
+         (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__) < 1 )
     return 0;
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_11:
-    sub_1C2E388(list, svtId);
+    sub_1C3B9C0(list, svtId);
   v10 = 0;
   while ( v10 < System_Collections_ObjectModel_Collection_object___get_Count(
                   list,
-                  (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__) )
+                  (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Count__) )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
@@ -88,7 +88,7 @@ LABEL_11:
     Item = System_Collections_ObjectModel_Collection_object___get_Item(
              list,
              v10,
-             (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Item__);
+             (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_FriendshipQuestDialogInfoEntity__get_Item__);
     if ( Item )
     {
       v13 = Item;
@@ -98,7 +98,7 @@ LABEL_11:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v16.fields.currentCryptoKey = klass;
       *(_QWORD *)&v16.fields.fakeValue = monitor;
-      *svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47758816(v16, 0LL);
+      *svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v16, 0LL);
       result = 1;
       *questId = (int32_t)v13[2].klass;
       return result;
@@ -122,17 +122,17 @@ bool __fastcall FriendshipQuestDialogInfoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFD983 & 1) == 0 )
+  if ( (byte_4C22195 & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__TryGetEntity__,
       entity);
-    byte_4BFD983 = 1;
+    byte_4C22195 = 1;
   }
   PK = (Il2CppObject *)FriendshipQuestDialogInfoEntity__CreatePK(svtId, questId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_FriendshipQuestDialogInfoMaster__FriendshipQuestDialogInfoEntity__string__TryGetEntity__);
 }

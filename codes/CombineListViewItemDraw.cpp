@@ -18,11 +18,11 @@ void __fastcall CombineListViewItemDraw__SetItem(
   UnityEngine_Object_o *baseButton; // x20
   char v13; // w20
 
-  if ( (byte_4C01084 & 1) == 0 )
+  if ( (byte_4C258B2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C01084 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    byte_4C258B2 = 1;
   }
   if ( item && mode )
   {
@@ -50,7 +50,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
       {
         Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                            (UnityEngine_Component_o *)Component_object,
-                                           (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                           (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
         if ( Component_object )
         {
           Component_object = (UISprite_o *)UnityEngine_Collider__get_enabled(
@@ -61,7 +61,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
             v13 = (char)Component_object;
             Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this->fields.baseButton,
-                                               (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                               (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
             if ( Component_object )
             {
               UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, 1, 0LL);
@@ -78,7 +78,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
                 {
                   Component_object = (UISprite_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)Component_object,
-                                                     (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                     (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
                   if ( Component_object )
                   {
                     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, v13 & 1, 0LL);
@@ -91,7 +91,7 @@ void __fastcall CombineListViewItemDraw__SetItem(
         }
       }
 LABEL_23:
-      sub_1C2E388(Component_object, v10);
+      sub_1C3B9C0(Component_object, v10);
     }
   }
 }

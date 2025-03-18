@@ -16,10 +16,10 @@ void __fastcall EnableCommonReleaseComponent__Awake(EnableCommonReleaseComponent
   FollowerInfo_o *v9; // x6
   PartyListViewItem_o *v10; // x7
 
-  if ( (byte_4BFCECB & 1) == 0 )
+  if ( (byte_4C216DA & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFCECB = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C216DA = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -28,7 +28,7 @@ void __fastcall EnableCommonReleaseComponent__Awake(EnableCommonReleaseComponent
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     this->fields.target = gameObject;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)gameObject, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.target, (int64_t)gameObject, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -39,21 +39,21 @@ bool __fastcall EnableCommonReleaseComponent__IsOpen(EnableCommonReleaseComponen
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4BFCECC & 1) == 0 )
+  if ( (byte_4C216DB & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4BFCECC = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4C216DB = 1;
   }
   if ( this->fields.commonReleaseId < 1 )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1C2E388(Instance, v5);
+    sub_1C3B9C0(Instance, v5);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }
@@ -79,7 +79,7 @@ void __fastcall EnableCommonReleaseComponent__Refresh(EnableCommonReleaseCompone
   v5 = IsOpen;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v7);
+    sub_1C3B9C0(0LL, v7);
   UnityEngine_GameObject__SetActive(gameObject, (v5 ^ !visibleCommonReleaseIsOpen) & 1, 0LL);
 }
 

@@ -24,34 +24,34 @@ void __fastcall EventPointBuffEntity___ctor(EventPointBuffEntity_o *this, const 
   FollowerInfo_o *v24; // x6
   PartyListViewItem_o *v25; // x7
 
-  if ( (byte_4BFD7A8 & 1) == 0 )
+  if ( (byte_4C21FBA & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, method);
-    sub_1C2E12C(&int___TypeInfo, v3);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v4);
-    byte_4BFD7A8 = 1;
+    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
+    sub_1C3B764(&int___TypeInfo, v3);
+    sub_1C3B764(&StringLiteral_1/*""*/, v4);
+    byte_4C21FBA = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.groupId = 0LL;
   v5 = StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)v5, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields.detail = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)v12, v13, v14, v15, v16, v17, v18);
   *(_QWORD *)&this->fields.imageId = 0LL;
   *(_QWORD *)&this->fields.skillIconId = 0LL;
   this->fields.value = 0;
-  v19 = (struct System_Int32_array *)sub_1C2E1D4(int___TypeInfo, 0LL);
+  v19 = (struct System_Int32_array *)sub_1C3B80C(int___TypeInfo, 0LL);
   this->fields.funcIds = v19;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)v19, v20, v21, v22, v23, v24, v25);
 }
 
 
-void __fastcall EventPointBuffEntity___ctor_40527832(
+void __fastcall EventPointBuffEntity___ctor_40638676(
         EventPointBuffEntity_o *this,
         EventPointBuffEntity_o *cSrc,
         const MethodInfo *method)
@@ -80,28 +80,28 @@ void __fastcall EventPointBuffEntity___ctor_40527832(
   FollowerInfo_o *v26; // x6
   PartyListViewItem_o *v27; // x7
 
-  if ( (byte_4BFD7A9 & 1) == 0 )
+  if ( (byte_4C21FBB & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_4BFD7A9 = 1;
+    sub_1C3B764(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_4C21FBB = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3278C9C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   name = cSrc->fields.name;
   this->fields.name = name;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.name, (int64_t)name, v7, v8, v9, v10, v11, v12);
   detail = cSrc->fields.detail;
   this->fields.detail = detail;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)detail, v15, v16, v17, v18, v19, v20);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.detail, (int64_t)detail, v15, v16, v17, v18, v19, v20);
   *(_OWORD *)&this->fields.imageId = *(_OWORD *)&cSrc->fields.imageId;
   this->fields.value = cSrc->fields.value;
   funcIds = cSrc->fields.funcIds;
   this->fields.funcIds = funcIds;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)funcIds, v22, v23, v24, v25, v26, v27);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.funcIds, (int64_t)funcIds, v22, v23, v24, v25, v26, v27);
 }
 
 

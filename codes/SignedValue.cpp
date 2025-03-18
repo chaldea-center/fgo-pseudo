@@ -145,156 +145,156 @@ void __fastcall SignedValue___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v143; // 0:w1.4
   System_RuntimeFieldHandle_o v144; // 0:w1.4
 
-  if ( (byte_4BFB6ED & 1) == 0 )
+  if ( (byte_4C1FEF4 & 1) == 0 )
   {
-    sub_1C2E12C(&byte_____TypeInfo, v1);
-    sub_1C2E12C(&byte___TypeInfo, v2);
-    sub_1C2E12C(&int___TypeInfo, v3);
-    sub_1C2E12C(&SignedValue_TypeInfo, v4);
-    sub_1C2E12C(
+    sub_1C3B764(&byte_____TypeInfo, v1);
+    sub_1C3B764(&byte___TypeInfo, v2);
+    sub_1C3B764(&int___TypeInfo, v3);
+    sub_1C3B764(&SignedValue_TypeInfo, v4);
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__05BC062C146EB261FCEF9597EC2D37213E65DA7D8700FD3E423EB66BF543EE0E,
       v5);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__5D03B9D1D2D687E0F9A41938DA6461ECE8F70BAE8E2039EC533CEECCCB7D2545,
       v6);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__5E8058FCE46433F2A2AFE7D89F945E52848269557763A801058E7838150974A8,
       v7);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__8D858561180CEF7E113915FE1FA0FFAA16B13DBA80D43CA3AAD7A32D87EBFDBA,
       v8);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__A8A8F22DDBA3AF21495CF365DB4D4671F8744FD3AADB3F6913D7708A66BD7D1E,
       v9);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__AC7889A850BC7102A3ADD0BC7C7F6C99E547CDBE49BEBA989D8449F79FD0797D,
       v10);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__C9BD6B347F45C975ADD7337A2F6D7D4E8C4D3882F7CC1FBB43F9E9575953B3D7,
       v11);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__CE0AC0B63FF7568D87883EC291257CDE63770AA0A84997E56A14E7D1EBF75E7A,
       v12);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__D25B1C4FA94F2D4D2226DFF249A1CE463849318E4B77389FE1112152FA082061,
       v13);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__E15FDC9FBDBE7FE7B3CAF13E6EB0BB0E48196AFCA28BF9E90B7FB0921BAB1641,
       v14);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__E3EA1395C5426E45D8C27945F194A024B3E729F0F75D1160176329BA78B2254C,
       v15);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__E6559CAD584B6A6DCEB54AAC78272DEC346DC02215FC4F676E79646044B26D3E,
       v16);
-    sub_1C2E12C(
+    sub_1C3B764(
       &Field__PrivateImplementationDetails__FB8FCAFBF6A137AB7CC19820E92784D878A60900872FCF88443C4910EDD3A437,
       v17);
-    byte_4BFB6ED = 1;
+    byte_4C1FEF4 = 1;
   }
-  v18 = sub_1C2E1D4(byte_____TypeInfo, 12LL);
-  v19 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  v18 = sub_1C3B80C(byte_____TypeInfo, 12LL);
+  v19 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v132.fields.value = Field__PrivateImplementationDetails__E15FDC9FBDBE7FE7B3CAF13E6EB0BB0E48196AFCA28BF9E90B7FB0921BAB1641;
   v20 = (int64_t)v19;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v19, v132, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v19, v132, 0LL);
   if ( !v18 )
-    sub_1C2E388(v21, v22);
+    sub_1C3B9C0(v21, v22);
   if ( !*(_DWORD *)(v18 + 24) )
     goto LABEL_17;
   *(_QWORD *)(v18 + 32) = v20;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 32), v20, v23, v24, v25, v26, v27, v28);
-  v29 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 32), v20, v23, v24, v25, v26, v27, v28);
+  v29 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v133.fields.value = Field__PrivateImplementationDetails__05BC062C146EB261FCEF9597EC2D37213E65DA7D8700FD3E423EB66BF543EE0E;
   v30 = (int64_t)v29;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v29, v133, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v29, v133, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 1u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 40) = v30;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 40), v30, v31, v32, v33, v34, v35, v36);
-  v37 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 40), v30, v31, v32, v33, v34, v35, v36);
+  v37 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v134.fields.value = Field__PrivateImplementationDetails__8D858561180CEF7E113915FE1FA0FFAA16B13DBA80D43CA3AAD7A32D87EBFDBA;
   v38 = (int64_t)v37;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v37, v134, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v37, v134, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 2u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 48) = v38;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 48), v38, v39, v40, v41, v42, v43, v44);
-  v45 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 48), v38, v39, v40, v41, v42, v43, v44);
+  v45 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v135.fields.value = Field__PrivateImplementationDetails__A8A8F22DDBA3AF21495CF365DB4D4671F8744FD3AADB3F6913D7708A66BD7D1E;
   v46 = (int64_t)v45;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v45, v135, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v45, v135, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 3u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 56) = v46;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 56), v46, v47, v48, v49, v50, v51, v52);
-  v53 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 56), v46, v47, v48, v49, v50, v51, v52);
+  v53 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v136.fields.value = Field__PrivateImplementationDetails__CE0AC0B63FF7568D87883EC291257CDE63770AA0A84997E56A14E7D1EBF75E7A;
   v54 = (int64_t)v53;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v53, v136, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v53, v136, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 4u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 64) = v54;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 64), v54, v55, v56, v57, v58, v59, v60);
-  v61 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 64), v54, v55, v56, v57, v58, v59, v60);
+  v61 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v137.fields.value = Field__PrivateImplementationDetails__D25B1C4FA94F2D4D2226DFF249A1CE463849318E4B77389FE1112152FA082061;
   v62 = (int64_t)v61;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v61, v137, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v61, v137, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 5u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 72) = v62;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 72), v62, v63, v64, v65, v66, v67, v68);
-  v69 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 72), v62, v63, v64, v65, v66, v67, v68);
+  v69 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v138.fields.value = Field__PrivateImplementationDetails__FB8FCAFBF6A137AB7CC19820E92784D878A60900872FCF88443C4910EDD3A437;
   v70 = (int64_t)v69;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v69, v138, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v69, v138, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 6u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 80) = v70;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 80), v70, v71, v72, v73, v74, v75, v76);
-  v77 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 80), v70, v71, v72, v73, v74, v75, v76);
+  v77 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v139.fields.value = Field__PrivateImplementationDetails__E3EA1395C5426E45D8C27945F194A024B3E729F0F75D1160176329BA78B2254C;
   v78 = (int64_t)v77;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v77, v139, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v77, v139, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 7u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 88) = v78;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 88), v78, v79, v80, v81, v82, v83, v84);
-  v85 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 88), v78, v79, v80, v81, v82, v83, v84);
+  v85 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v140.fields.value = Field__PrivateImplementationDetails__C9BD6B347F45C975ADD7337A2F6D7D4E8C4D3882F7CC1FBB43F9E9575953B3D7;
   v86 = (int64_t)v85;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v85, v140, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v85, v140, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 8u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 96) = v86;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 96), v86, v87, v88, v89, v90, v91, v92);
-  v93 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 96), v86, v87, v88, v89, v90, v91, v92);
+  v93 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL);
   v141.fields.value = Field__PrivateImplementationDetails__5D03B9D1D2D687E0F9A41938DA6461ECE8F70BAE8E2039EC533CEECCCB7D2545;
   v94 = (int64_t)v93;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v93, v141, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v93, v141, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 9u )
     goto LABEL_17;
   *(_QWORD *)(v18 + 104) = v94;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 104), v94, v95, v96, v97, v98, v99, v100);
-  v101 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 6LL);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 104), v94, v95, v96, v97, v98, v99, v100);
+  v101 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 6LL);
   v142.fields.value = Field__PrivateImplementationDetails__5E8058FCE46433F2A2AFE7D89F945E52848269557763A801058E7838150974A8;
   v102 = (int64_t)v101;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v101, v142, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v101, v142, 0LL);
   if ( *(_DWORD *)(v18 + 24) <= 0xAu
     || (*(_QWORD *)(v18 + 112) = v102,
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 112), v102, v103, v104, v105, v106, v107, v108),
-        v109 = (System_Array_o *)sub_1C2E1D4(byte___TypeInfo, 79LL),
+        sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 112), v102, v103, v104, v105, v106, v107, v108),
+        v109 = (System_Array_o *)sub_1C3B80C(byte___TypeInfo, 79LL),
         v143.fields.value = Field__PrivateImplementationDetails__AC7889A850BC7102A3ADD0BC7C7F6C99E547CDBE49BEBA989D8449F79FD0797D,
         v110 = (int64_t)v109,
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v109, v143, 0LL),
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v109, v143, 0LL),
         *(_DWORD *)(v18 + 24) <= 0xBu) )
   {
 LABEL_17:
-    sub_1C2E390(v21, v22);
+    sub_1C3B9C8(v21, v22);
   }
   *(_QWORD *)(v18 + 120) = v110;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v18 + 120), v110, v111, v112, v113, v114, v115, v116);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 120), v110, v111, v112, v113, v114, v115, v116);
   SignedValue_TypeInfo->static_fields->ks = (struct System_Byte_array_array *)v18;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)SignedValue_TypeInfo->static_fields,
     v18,
     v117,
@@ -303,13 +303,13 @@ LABEL_17:
     v120,
     v121,
     v122);
-  v123 = (System_Array_o *)sub_1C2E1D4(int___TypeInfo, 12LL);
+  v123 = (System_Array_o *)sub_1C3B80C(int___TypeInfo, 12LL);
   v144.fields.value = Field__PrivateImplementationDetails__E6559CAD584B6A6DCEB54AAC78272DEC346DC02215FC4F676E79646044B26D3E;
   v124 = (int64_t)v123;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63142920(v123, v144, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v123, v144, 0LL);
   static_fields = SignedValue_TypeInfo->static_fields;
   static_fields->io = (struct System_Int32_array *)v124;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&static_fields->io, v124, v126, v127, v128, v129, v130, v131);
+  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->io, v124, v126, v127, v128, v129, v130, v131);
   SignedValue_TypeInfo->static_fields->exist = 1871552300;
 }
 

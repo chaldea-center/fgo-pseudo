@@ -44,30 +44,30 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
   System_String_o *v42; // x0
   int v44; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4BFD244 & 1) == 0 )
+  if ( (byte_4C21A53 & 1) == 0 )
   {
-    sub_1C2E12C(&int_TypeInfo, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string__Add__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string__ToArray__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string___ctor__, v5);
-    sub_1C2E12C(&System_Collections_Generic_List_string__TypeInfo, v6);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_3809/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, v8);
-    sub_1C2E12C(&StringLiteral_3808/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, v9);
-    sub_1C2E12C(&StringLiteral_3811/*"COMMON_CONSUME_INFO_SEPARATOR"*/, v10);
-    sub_1C2E12C(&StringLiteral_3810/*"COMMON_CONSUME_INFO_IF_LACKING"*/, v11);
-    byte_4BFD244 = 1;
+    sub_1C3B764(&int_TypeInfo, method);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string__Add__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string__ToArray__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string___ctor__, v5);
+    sub_1C3B764(&System_Collections_Generic_List_string__TypeInfo, v6);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_3809/*"CP01140"*/, v8);
+    sub_1C3B764(&StringLiteral_3808/*"CP00924"*/, v9);
+    sub_1C3B764(&StringLiteral_3811/*"CP01142"*/, v10);
+    sub_1C3B764(&StringLiteral_3810/*"CP01141"*/, v11);
+    byte_4C21A53 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3808/*"COMMON_CONSUME_DESCRIPTION_TITLE"*/, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3809/*"COMMON_CONSUME_INFO_IF_ENOUGH"*/, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3810/*"COMMON_CONSUME_INFO_IF_LACKING"*/, 0LL);
-  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3811/*"COMMON_CONSUME_INFO_SEPARATOR"*/, 0LL);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_string__TypeInfo);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3808/*"CP00924"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3809/*"CP01140"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3810/*"CP01141"*/, 0LL);
+  v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3811/*"CP01142"*/, 0LL);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !consumeItemInfoArray )
     goto LABEL_21;
   max_length = consumeItemInfoArray->max_length;
@@ -77,7 +77,7 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
     while ( 1 )
     {
       if ( v23 >= max_length )
-        sub_1C2E390(v17, v18);
+        sub_1C3B9C8(v17, v18);
       v24 = consumeItemInfoArray->m_Items[v23];
       if ( !v24 )
         break;
@@ -87,7 +87,7 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
       v28 = IsOwnedEnoughly_k__BackingField ? v13 : v14;
       v44 = Num_k__BackingField;
       v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v19, v20, v21);
-      v17 = (Il2CppObject *)System_String__Format_63249956(v28, Name_k__BackingField, v29, 0LL);
+      v17 = (Il2CppObject *)System_String__Format_63382984(v28, Name_k__BackingField, v29, 0LL);
       if ( !v16 )
         break;
       items = v16->fields._items;
@@ -102,30 +102,30 @@ System_String_o *__fastcall CommonConsumeDetail__GetConsumeDetailDescription(
         System_Collections_Generic_List_object___AddWithResize(
           v16,
           v17,
-          *(const MethodInfo_366B8AC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
       }
       else
       {
         v40 = &items->obj.klass + size;
         v16->fields._size = size + 1;
         v40[4] = (Il2CppClass *)v39;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)(v40 + 4), v39, v30, v31, v32, v33, v34, v35);
+        sub_1C3B708((PartyOrganizationUtility_o *)(v40 + 4), v39, v30, v31, v32, v33, v34, v35);
       }
       max_length = consumeItemInfoArray->max_length;
       if ( (int)++v23 >= max_length )
         goto LABEL_19;
     }
 LABEL_21:
-    sub_1C2E388(v17, v18);
+    sub_1C3B9C0(v17, v18);
   }
 LABEL_19:
   if ( !v16 )
     goto LABEL_21;
   v41 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                  v16,
-                                 (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                 (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_string__ToArray__);
   v42 = System_String__Join(v15, v41, 0LL);
-  return System_String__Concat_63235584(v12, v42, 0LL);
+  return System_String__Concat_63368612(v12, v42, 0LL);
 }
 
 
@@ -163,21 +163,21 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
   __int64 size; // x10
   Il2CppClass **v31; // x0
 
-  if ( (byte_4BFD243 & 1) == 0 )
+  if ( (byte_4C21A52 & 1) == 0 )
   {
-    sub_1C2E12C(&CommonConsumeDetailInfo_TypeInfo, method);
-    sub_1C2E12C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo__Add__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo__ToArray__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo___ctor__, v6);
-    sub_1C2E12C(&System_Collections_Generic_List_CommonConsumeDetailInfo__TypeInfo, v7);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v8);
-    byte_4BFD243 = 1;
+    sub_1C3B764(&CommonConsumeDetailInfo_TypeInfo, method);
+    sub_1C3B764(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo__Add__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo__ToArray__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_CommonConsumeDetailInfo___ctor__, v6);
+    sub_1C3B764(&System_Collections_Generic_List_CommonConsumeDetailInfo__TypeInfo, v7);
+    sub_1C3B764(&NetworkManager_TypeInfo, v8);
+    byte_4C21A52 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_CommonConsumeDetailInfo__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_CommonConsumeDetailInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_CommonConsumeDetailInfo___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_CommonConsumeDetailInfo___ctor__);
   commonConusmeMaster = CommonConsumeDetail__get_commonConusmeMaster(v10);
   if ( !commonConusmeMaster )
     goto LABEL_27;
@@ -195,7 +195,7 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
     while ( 1 )
     {
       if ( v15 >= v13 )
-        sub_1C2E390(commonConusmeMaster, v12);
+        sub_1C3B9C8(commonConusmeMaster, v12);
       v16 = (CommonConsumeEntity_o *)*((_QWORD *)v14 + (int)v15 + 4);
       if ( !v16 )
         break;
@@ -207,17 +207,17 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
         commonConusmeMaster = DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)commonConusmeMaster,
                                 v16->fields.objectId,
-                                (const MethodInfo_327B180 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                (const MethodInfo_329AE48 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
         if ( commonConusmeMaster )
         {
           v17 = (Il2CppObject *)commonConusmeMaster;
           userItemMaster = CommonConsumeDetail__get_userItemMaster((const MethodInfo *)commonConusmeMaster);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4BF81D5 )
+          if ( !byte_4C1C955 )
           {
-            sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-            byte_4BF81D5 = 1;
+            sub_1C3B764(&NetworkManager_TypeInfo, v12);
+            byte_4C1C955 = 1;
           }
           commonConusmeMaster = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -232,7 +232,7 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
                                      *(_QWORD *)(*((_QWORD *)commonConusmeMaster + 23) + 64LL),
                                      (int32_t)v17[1].klass,
                                      0LL);
-          v20 = (CommonConsumeDetailInfo_o *)sub_1C2E378(CommonConsumeDetailInfo_TypeInfo);
+          v20 = (CommonConsumeDetailInfo_o *)sub_1C3B9B0(CommonConsumeDetailInfo_TypeInfo);
           CommonConsumeDetailInfo___ctor(v20, v16, v17, Entity, v21);
           if ( !v9 )
             break;
@@ -247,14 +247,14 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
             System_Collections_Generic_List_object___AddWithResize(
               v9,
               (Il2CppObject *)v20,
-              *(const MethodInfo_366B8AC **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
           }
           else
           {
             v31 = &items->obj.klass + size;
             v9->fields._size = size + 1;
             v31[4] = (Il2CppClass *)v20;
-            sub_1C2E0D0((PartyOrganizationUtility_o *)(v31 + 4), (int64_t)v20, v22, v23, v24, v25, v26, v27);
+            sub_1C3B708((PartyOrganizationUtility_o *)(v31 + 4), (int64_t)v20, v22, v23, v24, v25, v26, v27);
           }
         }
       }
@@ -263,14 +263,14 @@ CommonConsumeDetailInfo_array *__fastcall CommonConsumeDetail__GetConsumeDetailI
         goto LABEL_25;
     }
 LABEL_27:
-    sub_1C2E388(commonConusmeMaster, v12);
+    sub_1C3B9C0(commonConusmeMaster, v12);
   }
 LABEL_25:
   if ( !v9 )
     goto LABEL_27;
   return (CommonConsumeDetailInfo_array *)System_Collections_Generic_List_object___ToArray(
                                             v9,
-                                            (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_CommonConsumeDetailInfo__ToArray__);
+                                            (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_CommonConsumeDetailInfo__ToArray__);
 }
 
 
@@ -291,7 +291,7 @@ bool __fastcall CommonConsumeDetail__IsAllSatisfied(
     while ( 1 )
     {
       if ( max_length == v3 )
-        sub_1C2E390(consumeItemInfoArray, method);
+        sub_1C3B9C8(consumeItemInfoArray, method);
       v4 = consumeItemInfoArray->m_Items[v3];
       if ( !v4 )
         break;
@@ -300,7 +300,7 @@ bool __fastcall CommonConsumeDetail__IsAllSatisfied(
       return v3 >= max_length;
     }
 LABEL_12:
-    sub_1C2E388(consumeItemInfoArray, method);
+    sub_1C3B9C0(consumeItemInfoArray, method);
   }
   v3 = 0;
   return v3 >= max_length;
@@ -314,18 +314,18 @@ CommonConsumeMaster_o *__fastcall CommonConsumeDetail__get_commonConusmeMaster(c
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BFD240 & 1) == 0 )
+  if ( (byte_4C21A4F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v1);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BFD240 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v1);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C21A4F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return (CommonConsumeMaster_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                                    (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
 }
 
 
@@ -336,18 +336,18 @@ ItemMaster_o *__fastcall CommonConsumeDetail__get_itemMaster(const MethodInfo *m
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BFD241 & 1) == 0 )
+  if ( (byte_4C21A50 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ItemMaster___, v1);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BFD241 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v1);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C21A50 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return (ItemMaster_o *)DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ItemMaster___);
+                           (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___);
 }
 
 
@@ -358,16 +358,16 @@ UserItemMaster_o *__fastcall CommonConsumeDetail__get_userItemMaster(const Metho
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4BFD242 & 1) == 0 )
+  if ( (byte_4C21A51 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserItemMaster___, v1);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4BFD242 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserItemMaster___, v1);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4C21A51 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return (UserItemMaster_o *)DataManager__GetMasterData_object_(
                                (DataManager_o *)Instance,
-                               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserItemMaster___);
 }

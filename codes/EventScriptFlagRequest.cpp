@@ -9,14 +9,14 @@ void __fastcall EventScriptFlagRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4BFF0E6 & 1) == 0 )
+  if ( (byte_4C23910 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_19472/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1C2E12C(&StringLiteral_19809/*"flagId"*/, v7);
-    byte_4BFF0E6 = 1;
+    sub_1C3B764(&StringLiteral_19507/*"graphic.shader"*/, *(_QWORD *)&eventId);
+    sub_1C3B764(&StringLiteral_19844/*"icon_spot_free"*/, v7);
+    byte_4C23910 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19472/*"eventId"*/, eventId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19809/*"flagId"*/, flagId, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19507/*"graphic.shader"*/, eventId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19844/*"icon_spot_free"*/, flagId, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall EventScriptFlagRequest__getURL(EventScriptFlagReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF0E5 & 1) == 0 )
+  if ( (byte_4C2390F & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_19464/*"event/scriptFlag"*/, v2);
-    byte_4BFF0E5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_19499/*"grad"*/, v2);
+    byte_4C2390F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_19464/*"event/scriptFlag"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_19499/*"grad"*/, 0LL);
 }
 
 
@@ -52,16 +52,16 @@ void __fastcall EventScriptFlagRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4BFF0E7 & 1) == 0 )
+  if ( (byte_4C23911 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    byte_4BFF0E7 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    byte_4C23911 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(67, responseList, 0LL);
-  if ( v6 && (v7 = v6, ResponseData__checkError_42594652(v6, 0LL)) )
+  if ( v6 && (v7 = v6, ResponseData__checkError_42712632(v6, 0LL)) )
   {
     success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )

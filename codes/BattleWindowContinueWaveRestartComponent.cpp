@@ -13,18 +13,18 @@ void __fastcall BattleWindowContinueWaveRestartComponent__OnClickCancel(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4C00B1D & 1) == 0 )
+  if ( (byte_4C2534B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__, method);
-    byte_4C00B1D = 1;
+    sub_1C3B764(&Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__, method);
+    byte_4C2534B = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0LL)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0LL) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_BattleWindowContinueWaveRestartComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     ActionExtensions__Call(this->fields.cancelCallback, 0LL);
   }
@@ -38,18 +38,18 @@ void __fastcall BattleWindowContinueWaveRestartComponent__OnClickDecide(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4C00B1C & 1) == 0 )
+  if ( (byte_4C2534A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__, method);
-    byte_4C00B1C = 1;
+    sub_1C3B764(&Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__, method);
+    byte_4C2534A = 1;
   }
   if ( !BattleWindowComponent__IsCloseorClosing((BattleWindowComponent_o *)this, 0LL)
     && !BattleWindowComponent__isOpening((BattleWindowComponent_o *)this, 0LL) )
   {
     v3 = Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_BattleWindowContinueWaveRestartComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     ActionExtensions__Call(this->fields.decideCallback, 0LL);
   }
@@ -72,26 +72,26 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow(
   System_String_o *v14; // x6
   const MethodInfo *v15; // x7
 
-  if ( (byte_4C00B1B & 1) == 0 )
+  if ( (byte_4C25349 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, decideCall);
-    sub_1C2E12C(&StringLiteral_3931/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, v7);
-    sub_1C2E12C(&StringLiteral_3930/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, v8);
-    sub_1C2E12C(&StringLiteral_3932/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, v9);
-    sub_1C2E12C(&StringLiteral_3933/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, v10);
-    byte_4C00B1B = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, decideCall);
+    sub_1C3B764(&StringLiteral_3931/*"Can not convert {0} to Char."*/, v7);
+    sub_1C3B764(&StringLiteral_3930/*"Can not convert {0} to Byte."*/, v8);
+    sub_1C3B764(&StringLiteral_3932/*"Can not convert {0} to DateTime."*/, v9);
+    sub_1C3B764(&StringLiteral_3933/*"Can not convert {0} to DateTimeOffset."*/, v10);
+    byte_4C25349 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3933/*"CONTINUE_WAVE_RESTART_WINDOW_TITLE"*/, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3932/*"CONTINUE_WAVE_RESTART_WINDOW_MESSAGE"*/, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3930/*"CONTINUE_WAVE_RESTART_WINDOW_DECIDE_BUTTON"*/, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3931/*"CONTINUE_WAVE_RESTART_WINDOW_GIVE_UP_BUTTON"*/, 0LL);
-  BattleWindowContinueWaveRestartComponent__SetWindow_45687440(this, decideCall, cancelCall, v11, v12, v13, v14, v15);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3933/*"Can not convert {0} to DateTimeOffset."*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3932/*"Can not convert {0} to DateTime."*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3930/*"Can not convert {0} to Byte."*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3931/*"Can not convert {0} to Char."*/, 0LL);
+  BattleWindowContinueWaveRestartComponent__SetWindow_45810784(this, decideCall, cancelCall, v11, v12, v13, v14, v15);
 }
 
 
-void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_45687440(
+void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_45810784(
         BattleWindowContinueWaveRestartComponent_o *this,
         System_Action_o *decideCall,
         System_Action_o *cancelCall,
@@ -111,7 +111,7 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_45687440(
   UILabel_o *titleLabel; // x0
 
   this->fields.decideCallback = decideCall;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.decideCallback,
     (int64_t)decideCall,
     (int64_t)cancelCall,
@@ -121,7 +121,7 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_45687440(
     (FollowerInfo_o *)cancelLabel,
     (PartyListViewItem_o *)method);
   this->fields.cancelCallback = cancelCall;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.cancelCallback,
     (int64_t)cancelCall,
     v14,
@@ -136,7 +136,7 @@ void __fastcall BattleWindowContinueWaveRestartComponent__SetWindow_45687440(
     || (UILabel__set_text(titleLabel, message, 0LL), (titleLabel = this->fields.decideButtonLabel) == 0LL)
     || (UILabel__set_text(titleLabel, decideLabel, 0LL), (titleLabel = this->fields.cancelButtonLabel) == 0LL) )
   {
-    sub_1C2E388(titleLabel, v20);
+    sub_1C3B9C0(titleLabel, v20);
   }
   UILabel__set_text(titleLabel, cancelLabel, 0LL);
 }

@@ -8,14 +8,14 @@ void __fastcall viewDogIcon___ctor(viewDogIcon_o *this, const MethodInfo *method
   PartyListViewItem_o *v7; // x7
   int64_t v9; // x1
 
-  if ( (byte_4C017A1 & 1) == 0 )
+  if ( (byte_4C25FCF & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_20693/*"img_frameselect"*/, method);
-    byte_4C017A1 = 1;
+    sub_1C3B764(&StringLiteral_20728/*"ldap"*/, method);
+    byte_4C25FCF = 1;
   }
-  v9 = StringLiteral_20693/*"img_frameselect"*/;
-  this->fields.FRAME_SELECT_NAME = (struct System_String_o *)StringLiteral_20693/*"img_frameselect"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.FRAME_SELECT_NAME, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_20728/*"ldap"*/;
+  this->fields.FRAME_SELECT_NAME = (struct System_String_o *)StringLiteral_20728/*"ldap"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.FRAME_SELECT_NAME, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -25,15 +25,15 @@ void __fastcall viewDogIcon__ClickNotReleased(viewDogIcon_o *this, const MethodI
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_4C017A0 & 1) == 0 )
+  if ( (byte_4C25FCE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_viewDogIcon_ClickNotReleased__, method);
-    byte_4C017A0 = 1;
+    sub_1C3B764(&Method_viewDogIcon_ClickNotReleased__, method);
+    byte_4C25FCE = 1;
   }
   v2 = Method_viewDogIcon_ClickNotReleased__;
   if ( (*((_BYTE *)Method_viewDogIcon_ClickNotReleased__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1C2E144(Method_viewDogIcon_ClickNotReleased__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1C2E110(v2, v2[4]);
+    v2 = (_QWORD *)sub_1C3B77C(Method_viewDogIcon_ClickNotReleased__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1C3B748(v2, v2[4]);
   OverwriteAssetSoundName__PlaySystemSe(v3, 2, 0, 0LL);
 }
 
@@ -45,10 +45,10 @@ void __fastcall viewDogIcon__ClickPanel(viewDogIcon_o *this, const MethodInfo *m
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_4C0179F & 1) == 0 )
+  if ( (byte_4C25FCD & 1) == 0 )
   {
-    sub_1C2E12C(&Method_viewDogIcon_ClickPanel__, method);
-    byte_4C0179F = 1;
+    sub_1C3B764(&Method_viewDogIcon_ClickPanel__, method);
+    byte_4C25FCD = 1;
   }
   onClickPanel = this->fields.onClickPanel;
   if ( onClickPanel )
@@ -58,7 +58,7 @@ void __fastcall viewDogIcon__ClickPanel(viewDogIcon_o *this, const MethodInfo *m
   if ( !selectSprite
     || (selectSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(selectSprite, 0LL)) == 0LL )
   {
-    sub_1C2E388(selectSprite, method);
+    sub_1C3B9C0(selectSprite, method);
   }
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)selectSprite,
@@ -66,8 +66,8 @@ void __fastcall viewDogIcon__ClickPanel(viewDogIcon_o *this, const MethodInfo *m
     0LL);
   v5 = Method_viewDogIcon_ClickPanel__;
   if ( (*((_BYTE *)Method_viewDogIcon_ClickPanel__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C2E144(Method_viewDogIcon_ClickPanel__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C2E110(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C3B77C(Method_viewDogIcon_ClickPanel__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C3B748(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
 }
 
@@ -99,12 +99,12 @@ System_String_o *__fastcall viewDogIcon__GetExpeditionTimeLabel(
   unsigned __int64 v24; // [xsp+10h] [xbp-40h] BYREF
   unsigned __int64 v25; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C0179E & 1) == 0 )
+  if ( (byte_4C25FCC & 1) == 0 )
   {
-    sub_1C2E12C(&long_TypeInfo, time);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v4);
-    sub_1C2E12C(&StringLiteral_5930/*"EXPEDITION_TIME_FORMAT"*/, v5);
-    byte_4C0179E = 1;
+    sub_1C3B764(&long_TypeInfo, time);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v4);
+    sub_1C3B764(&StringLiteral_5931/*"Enemy_Dead_Effect"*/, v5);
+    byte_4C25FCC = 1;
   }
   if ( time < 1 )
   {
@@ -120,14 +120,14 @@ System_String_o *__fastcall viewDogIcon__GetExpeditionTimeLabel(
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5930/*"EXPEDITION_TIME_FORMAT"*/, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_5931/*"Enemy_Dead_Effect"*/, 0LL);
   v25 = v8;
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v25, v10, v11, v12);
   v24 = v7;
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v24, v14, v15, v16);
   v23 = v6;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v23, v18, v19, v20);
-  return System_String__Format_63250024(v9, v13, v17, v21, 0LL);
+  return System_String__Format_63383052(v9, v13, v17, v21, 0LL);
 }
 
 
@@ -157,13 +157,13 @@ void __fastcall viewDogIcon__Init(
   PartyListViewItem_o *v23; // x7
   bool v24; // w1
 
-  if ( (byte_4C0179C & 1) == 0 )
+  if ( (byte_4C25FCA & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, eventExpeditionPieceEntity);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v5);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v7);
-    byte_4C0179C = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, eventExpeditionPieceEntity);
+    sub_1C3B764(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v5);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1C3B764(&StringLiteral_1/*""*/, v7);
+    byte_4C25FCA = 1;
   }
   compatibilityLabel = this->fields.compatibilityLabel;
   if ( !compatibilityLabel )
@@ -187,7 +187,7 @@ void __fastcall viewDogIcon__Init(
   UILabel__set_text(compatibilityLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.onClickPanel = 0LL;
   *(_WORD *)&this->fields._IsSelect_k__BackingField = 0;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.onClickPanel, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.onClickPanel, 0LL, v9, v10, v11, v12, v13, v14);
   if ( !eventExpeditionPieceEntity )
     goto LABEL_31;
   eventId = eventExpeditionPieceEntity->fields.eventId;
@@ -195,7 +195,7 @@ void __fastcall viewDogIcon__Init(
   FRAME_SELECT_NAME = this->fields.FRAME_SELECT_NAME;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39173640(eventId, selectSprite, FRAME_SELECT_NAME, 0LL);
+  AtlasManager__SetEventUI_39282628(eventId, selectSprite, FRAME_SELECT_NAME, 0LL);
   compatibilityLabel = (UILabel_o *)this->fields.onAnExpedition;
   if ( !compatibilityLabel )
     goto LABEL_31;
@@ -213,7 +213,7 @@ void __fastcall viewDogIcon__Init(
     this->fields._IsSelect_k__BackingField,
     0LL);
   this->fields._EventExpeditionPieceEntity_k__BackingField = eventExpeditionPieceEntity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._EventExpeditionPieceEntity_k__BackingField,
     (int64_t)eventExpeditionPieceEntity,
     v18,
@@ -224,12 +224,12 @@ void __fastcall viewDogIcon__Init(
     v23);
   if ( eventExpeditionPieceEntity->fields.commonReleaseId )
   {
-    compatibilityLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    compatibilityLabel = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( compatibilityLabel )
     {
       compatibilityLabel = (UILabel_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)compatibilityLabel,
-                                          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
       if ( compatibilityLabel )
       {
         if ( CommonReleaseMaster__IsOpen(
@@ -272,7 +272,7 @@ void __fastcall viewDogIcon__Init(
       }
     }
 LABEL_31:
-    sub_1C2E388(compatibilityLabel, eventExpeditionPieceEntity);
+    sub_1C3B9C0(compatibilityLabel, eventExpeditionPieceEntity);
   }
 LABEL_18:
   compatibilityLabel = (UILabel_o *)this->fields.dispLabelRoot;
@@ -317,7 +317,7 @@ void __fastcall viewDogIcon__IsSelectSetFalse(viewDogIcon_o *this, const MethodI
   if ( !selectSprite
     || (selectSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(selectSprite, 0LL)) == 0LL )
   {
-    sub_1C2E388(selectSprite, method);
+    sub_1C3B9C0(selectSprite, method);
   }
   UnityEngine_GameObject__SetActive(
     (UnityEngine_GameObject_o *)selectSprite,
@@ -381,30 +381,30 @@ void __fastcall viewDogIcon__Set(
   UnityEngine_Color_o v47; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v9 = compatibilityPercent;
-  if ( (byte_4C0179D & 1) == 0 )
+  if ( (byte_4C25FCB & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&compatibilityPercent);
-    sub_1C2E12C(&int_TypeInfo, v11);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v12);
-    sub_1C2E12C(&StringLiteral_20564/*"icon_{0}"*/, v13);
-    sub_1C2E12C(&StringLiteral_5912/*"EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY"*/, v14);
-    sub_1C2E12C(&StringLiteral_5916/*"EXPEDITION_CONFIRM_DIALOG_ON_AN_EXPEDITION"*/, v15);
-    sub_1C2E12C(&StringLiteral_16225/*"[FFFF00]{0}[-]"*/, v16);
-    sub_1C2E12C(&StringLiteral_5917/*"EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED"*/, v17);
-    byte_4C0179D = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&compatibilityPercent);
+    sub_1C3B764(&int_TypeInfo, v11);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
+    sub_1C3B764(&StringLiteral_20599/*"java.util.HashMap"*/, v13);
+    sub_1C3B764(&StringLiteral_5913/*"EndSendTo"*/, v14);
+    sub_1C3B764(&StringLiteral_5917/*"EndTweenFunc"*/, v15);
+    sub_1C3B764(&StringLiteral_16253/*"_txt_plain"*/, v16);
+    sub_1C3B764(&StringLiteral_5918/*"EndValidation"*/, v17);
+    byte_4C25FCB = 1;
   }
   if ( v9 >= 1 )
   {
     compatibilityLabel = this->fields.compatibilityLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5912/*"EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY"*/, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5913/*"EndSendTo"*/, 0LL);
     v44 = v9;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v44, v20, v21, v22);
     onAnExpedition = System_String__Format(v19, v23, 0LL);
     if ( !compatibilityLabel )
 LABEL_35:
-      sub_1C2E388(onAnExpedition, *(_QWORD *)&compatibilityPercent);
+      sub_1C3B9C0(onAnExpedition, *(_QWORD *)&compatibilityPercent);
     UILabel__set_text(compatibilityLabel, onAnExpedition, 0LL);
   }
   if ( this->fields._IsDoingTheExpedition_k__BackingField )
@@ -412,7 +412,7 @@ LABEL_35:
     onAnExpeditionLabel = this->fields.onAnExpeditionLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    onAnExpedition = LocalizationManager__Get((System_String_o *)StringLiteral_5916/*"EXPEDITION_CONFIRM_DIALOG_ON_AN_EXPEDITION"*/, 0LL);
+    onAnExpedition = LocalizationManager__Get((System_String_o *)StringLiteral_5917/*"EndTweenFunc"*/, 0LL);
     if ( !onAnExpeditionLabel )
       goto LABEL_35;
     UILabel__set_text(onAnExpeditionLabel, onAnExpedition, 0LL);
@@ -465,7 +465,7 @@ LABEL_35:
   timeRequiredTextLabel = this->fields.timeRequiredTextLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  onAnExpedition = LocalizationManager__Get((System_String_o *)StringLiteral_5917/*"EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED"*/, 0LL);
+  onAnExpedition = LocalizationManager__Get((System_String_o *)StringLiteral_5918/*"EndValidation"*/, 0LL);
   if ( !timeRequiredTextLabel )
     goto LABEL_35;
   UILabel__set_text(timeRequiredTextLabel, onAnExpedition, 0LL);
@@ -474,7 +474,7 @@ LABEL_35:
   *(_QWORD *)&compatibilityPercent = onAnExpedition;
   if ( v9 >= 1 )
   {
-    onAnExpedition = System_String__Format((System_String_o *)StringLiteral_16225/*"[FFFF00]{0}[-]"*/, (Il2CppObject *)onAnExpedition, 0LL);
+    onAnExpedition = System_String__Format((System_String_o *)StringLiteral_16253/*"_txt_plain"*/, (Il2CppObject *)onAnExpedition, 0LL);
     *(_QWORD *)&compatibilityPercent = onAnExpedition;
   }
   if ( !timeRequiredNumLabel )
@@ -501,13 +501,13 @@ LABEL_35:
     icon = this->fields.icon;
     iconImageId = v39->fields.iconImageId;
     v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId, v33, v34, v35);
-    v42 = System_String__Format((System_String_o *)StringLiteral_20564/*"icon_{0}"*/, v41, 0LL);
+    v42 = System_String__Format((System_String_o *)StringLiteral_20599/*"java.util.HashMap"*/, v41, 0LL);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI_39173640(eventId, icon, v42, 0LL);
+    AtlasManager__SetEventUI_39282628(eventId, icon, v42, 0LL);
   }
   this->fields.onClickPanel = callback;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.onClickPanel, (int64_t)callback, v33, v34, v35, v36, v37, v38);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.onClickPanel, (int64_t)callback, v33, v34, v35, v36, v37, v38);
 }
 
 
@@ -543,7 +543,7 @@ void __fastcall viewDogIcon__set_EventExpeditionPieceEntity(
   PartyListViewItem_o *v7; // x7
 
   this->fields._EventExpeditionPieceEntity_k__BackingField = value;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields._EventExpeditionPieceEntity_k__BackingField,
     (int64_t)value,
     (int64_t)method,

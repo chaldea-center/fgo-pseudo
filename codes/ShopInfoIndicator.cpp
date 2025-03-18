@@ -17,16 +17,16 @@ System_Collections_IEnumerator_o *__fastcall ShopInfoIndicator__InformationChang
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4BF9BEE & 1) == 0 )
+  if ( (byte_4C1E3F1 & 1) == 0 )
   {
-    sub_1C2E12C(&ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo, method);
-    byte_4BF9BEE = 1;
+    sub_1C3B764(&ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo, method);
+    byte_4C1E3F1 = 1;
   }
-  v3 = sub_1C2E378(ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
+  v3 = sub_1C3B9B0(ShopInfoIndicator__InformationChangeCR_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -37,18 +37,18 @@ void __fastcall ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_
   struct UIPanel_o *informationPanel; // x0
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4BF9BEF & 1) == 0 )
+  if ( (byte_4C1E3F2 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BF9BEF = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_TweenAlpha___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C1E3F2 = 1;
   }
   informationPanel = this->fields.informationPanel;
   if ( !informationPanel )
     goto LABEL_11;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)informationPanel,
-                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
+                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_TweenAlpha___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   informationPanel = (struct UIPanel_o *)UnityEngine_Object__op_Equality(
@@ -64,7 +64,7 @@ void __fastcall ShopInfoIndicator__InformationPanelTweenAlpha(ShopInfoIndicator_
       return;
     }
 LABEL_11:
-    sub_1C2E388(informationPanel, method);
+    sub_1C3B9C0(informationPanel, method);
   }
 }
 
@@ -75,18 +75,18 @@ void __fastcall ShopInfoIndicator__OnClick(ShopInfoIndicator_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BF9BF0 & 1) == 0 )
+  if ( (byte_4C1E3F3 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_ShopInfoIndicator_OnClick__, method);
-    byte_4BF9BF0 = 1;
+    sub_1C3B764(&Method_ShopInfoIndicator_OnClick__, method);
+    byte_4C1E3F3 = 1;
   }
   if ( !this->fields.isClick )
   {
     this->fields.isClick = 1;
     v3 = Method_ShopInfoIndicator_OnClick__;
     if ( (*((_BYTE *)Method_ShopInfoIndicator_OnClick__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_ShopInfoIndicator_OnClick__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_ShopInfoIndicator_OnClick__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     ShopInfoIndicator__SwitchInfo(this, v5);
   }
@@ -108,8 +108,8 @@ void __fastcall ShopInfoIndicator__StartInformationChange(ShopInfoIndicator_o *t
   ShopInfoIndicator__StopInformationChange(this, method);
   v4 = ShopInfoIndicator__InformationChangeCR(this, v3);
   this->fields.InformationChangeCRW = v4;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.InformationChangeCRW, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_70974992(
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.InformationChangeCRW, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  UnityEngine_MonoBehaviour__StartCoroutine_71108020(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.InformationChangeCRW,
     0LL);
@@ -134,7 +134,7 @@ void __fastcall ShopInfoIndicator__StopInformationChange(ShopInfoIndicator_o *th
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, InformationChangeCRW, 0LL);
     this->fields.InformationChangeCRW = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)p_InformationChangeCRW, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708((PartyOrganizationUtility_o *)p_InformationChangeCRW, 0LL, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -174,7 +174,7 @@ void __fastcall ShopInfoIndicator__SwitchInfo(ShopInfoIndicator_o *this, const M
         goto LABEL_7;
     }
 LABEL_22:
-    sub_1C2E390(this, method);
+    sub_1C3B9C8(this, method);
   }
 LABEL_7:
   v6 = v4->fields.infos;
@@ -218,7 +218,7 @@ LABEL_19:
       goto LABEL_20;
     }
 LABEL_21:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   v11 = v10 + 1;
 LABEL_20:
@@ -289,11 +289,11 @@ bool __fastcall ShopInfoIndicator__InformationChangeCR_d__8__MoveNext(
   UnityEngine_Object_o *ta_5__2; // x22
 
   v2 = this;
-  if ( (byte_4BF9BF1 & 1) == 0 )
+  if ( (byte_4C1E3F4 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    this = (ShopInfoIndicator__InformationChangeCR_d__8_o *)sub_1C2E12C(&UnityEngine_WaitForEndOfFrame_TypeInfo, v3);
-    byte_4BF9BF1 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    this = (ShopInfoIndicator__InformationChangeCR_d__8_o *)sub_1C3B764(&UnityEngine_WaitForEndOfFrame_TypeInfo, v3);
+    byte_4C1E3F4 = 1;
   }
   _4__this = v2->fields.__4__this;
   switch ( v2->fields.__1__state )
@@ -312,11 +312,11 @@ bool __fastcall ShopInfoIndicator__InformationChangeCR_d__8__MoveNext(
         1.0);
       _4__this->fields.isClick = 1;
       v2->fields._ta_5__2 = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, 0LL, v5, v6, v7, v8, v9, v10);
-      v11 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C2E378(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, 0LL, v5, v6, v7, v8, v9, v10);
+      v11 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3B9B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v11, 0LL);
       v2->fields._wait_5__3 = v11;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._wait_5__3, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._wait_5__3, (int64_t)v11, v12, v13, v14, v15, v16, v17);
       goto LABEL_17;
     case 1:
       this = (ShopInfoIndicator__InformationChangeCR_d__8_o *)v2->fields._ta_5__2;
@@ -353,7 +353,7 @@ LABEL_34:
         v40 = TweenAlpha__Begin(gameObject, 0.5, 0.0, 0LL);
         v2->fields._ta_5__2 = v40;
         p_ta_5__2 = (ShopInfoIndicator__InformationChangeCR_d__8_o **)&v2->fields._ta_5__2;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, (int64_t)v40, v42, v43, v44, v45, v46, v47);
+        sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, (int64_t)v40, v42, v43, v44, v45, v46, v47);
         ta_5__2 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -385,7 +385,7 @@ LABEL_17:
           v26 = TweenAlpha__Begin(v25, 0.5, 1.0, 0LL);
           v2->fields._ta_5__2 = v26;
           v27 = (ShopInfoIndicator__InformationChangeCR_d__8_o **)&v2->fields._ta_5__2;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, (int64_t)v26, v28, v29, v30, v31, v32, v33);
+          sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._ta_5__2, (int64_t)v26, v28, v29, v30, v31, v32, v33);
           ShopInfoIndicator__SwitchInfo(_4__this, v34);
           v35 = (UnityEngine_Object_o *)v2->fields._ta_5__2;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -431,7 +431,7 @@ LABEL_32:
       }
       if ( !_4__this )
 LABEL_48:
-        sub_1C2E388(this, method);
+        sub_1C3B9C0(this, method);
       if ( _4__this->fields.isClick )
         goto LABEL_17;
       wait_5__3 = (int64_t)v2->fields._wait_5__3;
@@ -439,7 +439,7 @@ LABEL_48:
       v38 = 3;
 LABEL_46:
       v37->fields.__2__current = (Il2CppObject *)wait_5__3;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v37->fields.__2__current, wait_5__3, v19, v20, v21, v22, v23, v24);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v37->fields.__2__current, wait_5__3, v19, v20, v21, v22, v23, v24);
       result = 1;
       v2->fields.__1__state = v38;
       return result;
@@ -471,11 +471,11 @@ void __fastcall __noreturn ShopInfoIndicator__InformationChangeCR_d__8__System_C
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2E140(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2E378(v2);
+  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C2E140(&Method_ShopInfoIndicator__InformationChangeCR_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1C2E254(v3, v4);
+  v4 = sub_1C3B778(&Method_ShopInfoIndicator__InformationChangeCR_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1C3B88C(v3, v4);
 }
 
 

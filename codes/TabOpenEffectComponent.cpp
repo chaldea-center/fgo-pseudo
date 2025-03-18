@@ -1,9 +1,9 @@
 void __fastcall TabOpenEffectComponent___ctor(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BF85E7 & 1) == 0 )
+  if ( (byte_4C1CD67 & 1) == 0 )
   {
-    sub_1C2E12C(&CommonEffectComponent_TypeInfo, method);
-    byte_4BF85E7 = 1;
+    sub_1C3B764(&CommonEffectComponent_TypeInfo, method);
+    byte_4C1CD67 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -40,19 +40,19 @@ void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BF85E6 & 1) == 0 )
+  if ( (byte_4C1CD66 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BF85E6 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    byte_4C1CD66 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -64,7 +64,7 @@ void __fastcall TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *
       return;
     }
 LABEL_14:
-    sub_1C2E388(v7, v8);
+    sub_1C3B9C0(v7, v8);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -86,7 +86,7 @@ void __fastcall TabOpenEffectComponent__SetAnimationEndCallback(
   if ( callback )
   {
     this->fields.animEndCallback = callback;
-    sub_1C2E0D0(&this->fields.animEndCallback);
+    sub_1C3B708(&this->fields.animEndCallback);
   }
 }
 
@@ -99,6 +99,6 @@ void __fastcall TabOpenEffectComponent__SetChangeUICallback(
   if ( callback )
   {
     this->fields.changeUICallback = callback;
-    sub_1C2E0D0(&this->fields.changeUICallback);
+    sub_1C3B708(&this->fields.changeUICallback);
   }
 }

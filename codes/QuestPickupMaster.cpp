@@ -1,14 +1,14 @@
 void __fastcall QuestPickupMaster___ctor(QuestPickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDCFA & 1) == 0 )
+  if ( (byte_4C2250C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__, method);
-    byte_4BFDCFA = 1;
+    sub_1C3B764(&Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__, method);
+    byte_4C2250C = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    274,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__);
+    276,
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_QuestPickupMaster__QuestPickupEntity__int___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ int32_t __fastcall QuestPickupMaster__GetPriority(QuestPickupMaster_o *this, int
   int v10; // w9
   int *v11; // x10
 
-  if ( (byte_4BFDCFC & 1) == 0 )
+  if ( (byte_4C2250E & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
-    byte_4BFDCFC = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&questId);
+    byte_4C2250E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -34,7 +34,7 @@ int32_t __fastcall QuestPickupMaster__GetPriority(QuestPickupMaster_o *this, int
   List = QuestPickupMaster__getList(this, questId, v6);
   if ( !List )
 LABEL_15:
-    sub_1C2E388(List, v8);
+    sub_1C3B9C0(List, v8);
   v9 = *(_QWORD *)&List->max_length;
   if ( !v9 || (int)v9 < 1 )
     return 0;
@@ -78,20 +78,20 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4BFDCFB & 1) == 0 )
+  if ( (byte_4C2250D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Count__, *(_QWORD *)&questId);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Item__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPickupEntity__Add__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_QuestPickupEntity___ctor__, v8);
-    sub_1C2E12C(&System_Collections_Generic_List_QuestPickupEntity__TypeInfo, v9);
-    byte_4BFDCFB = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Count__, *(_QWORD *)&questId);
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Item__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPickupEntity__Add__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_QuestPickupEntity___ctor__, v8);
+    sub_1C3B764(&System_Collections_Generic_List_QuestPickupEntity__TypeInfo, v9);
+    byte_4C2250D = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_QuestPickupEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_QuestPickupEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_QuestPickupEntity___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_QuestPickupEntity___ctor__);
   list = (int64_t)this->fields.list;
   if ( !list )
     goto LABEL_18;
@@ -100,7 +100,7 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
   {
     list = System_Collections_ObjectModel_Collection_object___get_Count(
              (System_Collections_ObjectModel_Collection_T__o *)list,
-             (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Count__);
+             (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Count__);
     if ( v13 >= (int)list )
       break;
     list = (int64_t)this->fields.list;
@@ -109,7 +109,7 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
     list = (int64_t)System_Collections_ObjectModel_Collection_object___get_Item(
                       (System_Collections_ObjectModel_Collection_T__o *)list,
                       v13,
-                      (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Item__);
+                      (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_QuestPickupEntity__get_Item__);
     if ( list )
     {
       v11 = list;
@@ -128,14 +128,14 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
           System_Collections_Generic_List_object___AddWithResize(
             v10,
             (Il2CppObject *)list,
-            *(const MethodInfo_366B8AC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
           v23 = &items->obj.klass + size;
           v10->fields._size = size + 1;
           v23[4] = (Il2CppClass *)v11;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)(v23 + 4), v11, v14, v15, v16, v17, v18, v19);
+          sub_1C3B708((PartyOrganizationUtility_o *)(v23 + 4), v11, v14, v15, v16, v17, v18, v19);
         }
       }
     }
@@ -146,8 +146,8 @@ QuestPickupEntity_array *__fastcall QuestPickupMaster__getList(
   }
   if ( !v10 )
 LABEL_18:
-    sub_1C2E388(list, v11);
+    sub_1C3B9C0(list, v11);
   return (QuestPickupEntity_array *)System_Collections_Generic_List_object___ToArray(
                                       v10,
-                                      (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__);
+                                      (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_QuestPickupEntity__ToArray__);
 }

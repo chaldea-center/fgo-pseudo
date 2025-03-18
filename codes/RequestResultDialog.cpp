@@ -1,9 +1,9 @@
 void __fastcall RequestResultDialog___ctor(RequestResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BF9A15 & 1) == 0 )
+  if ( (byte_4C1E21C & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4BF9A15 = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C1E21C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall RequestResultDialog__CallOnClose(RequestResultDialog_o *this, co
   {
     p_onClose = (PartyOrganizationUtility_o *)&this->fields.onClose;
     p_onClose->klass = 0LL;
-    sub_1C2E0D0(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1C3B708(p_onClose, 0LL, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onClose->fields.m_target)(
       onClose->fields.original_method_info,
       *(_QWORD *)&onClose->fields.extra_arg);
@@ -50,7 +50,7 @@ void __fastcall RequestResultDialog__CallOnDecide(RequestResultDialog_o *this, b
   {
     p_onDecide = (PartyOrganizationUtility_o *)&this->fields.onDecide;
     p_onDecide->klass = 0LL;
-    sub_1C2E0D0(p_onDecide, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C3B708(p_onDecide, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       isOk,
@@ -63,11 +63,11 @@ void __fastcall RequestResultDialog__Close(RequestResultDialog_o *this, const Me
 {
   const MethodInfo *v2; // x2
 
-  RequestResultDialog__Close_33806808(this, 0LL, v2);
+  RequestResultDialog__Close_33912268(this, 0LL, v2);
 }
 
 
-void __fastcall RequestResultDialog__Close_33806808(
+void __fastcall RequestResultDialog__Close_33912268(
         RequestResultDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -80,14 +80,14 @@ void __fastcall RequestResultDialog__Close_33806808(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4BF9A0C & 1) == 0 )
+  if ( (byte_4C1E213 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&Method_RequestResultDialog_EndClose__, v10);
-    byte_4BF9A0C = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&Method_RequestResultDialog_EndClose__, v10);
+    byte_4C1E213 = 1;
   }
   this->fields.onClose = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.onClose,
     (int64_t)callback,
     (int64_t)method,
@@ -97,7 +97,7 @@ void __fastcall RequestResultDialog__Close_33806808(
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_RequestResultDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -125,10 +125,10 @@ int32_t __fastcall RequestResultDialog__GetKeepPanelDepth(RequestResultDialog_o 
   __int64 v5; // x1
   int32_t *p_keepPanelDepth; // x8
 
-  if ( (byte_4BF9A0B & 1) == 0 )
+  if ( (byte_4C1E212 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BF9A0B = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C1E212 = 1;
   }
   if ( this->fields.isInitPanelDepth )
     goto LABEL_9;
@@ -145,7 +145,7 @@ LABEL_9:
   {
     v4 = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
     if ( !v4 )
-      sub_1C2E388(0LL, v5);
+      sub_1C3B9C0(0LL, v5);
     p_keepPanelDepth = &v4->fields.mDepth;
   }
   return *p_keepPanelDepth;
@@ -172,10 +172,10 @@ void __fastcall RequestResultDialog__Init(RequestResultDialog_o *this, const Met
   __int64 v17; // x1
 
   v3 = this;
-  if ( (byte_4BF9A06 & 1) == 0 )
+  if ( (byte_4C1E20D & 1) == 0 )
   {
-    this = (RequestResultDialog_o *)sub_1C2E12C(&StringLiteral_1/*""*/, method);
-    byte_4BF9A06 = 1;
+    this = (RequestResultDialog_o *)sub_1C3B764(&StringLiteral_1/*""*/, method);
+    byte_4C1E20D = 1;
   }
   RequestResultDialog__SetLabelText(this, v3->fields.titleLabel, (System_String_o *)StringLiteral_1/*""*/, v2);
   RequestResultDialog__SetLabelText(v4, v3->fields.messageLabel, (System_String_o *)StringLiteral_1/*""*/, v5);
@@ -186,7 +186,7 @@ void __fastcall RequestResultDialog__Init(RequestResultDialog_o *this, const Met
   RequestResultDialog__SetLabelText(v14, v3->fields.decideButtonLabel, (System_String_o *)StringLiteral_1/*""*/, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v17);
+    sub_1C3B9C0(0LL, v17);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)v3, 0LL);
 }
@@ -198,17 +198,17 @@ void __fastcall RequestResultDialog__OnClickCancel(RequestResultDialog_o *this, 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BF9A0F & 1) == 0 )
+  if ( (byte_4C1E216 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_RequestResultDialog_OnClickCancel__, method);
-    byte_4BF9A0F = 1;
+    sub_1C3B764(&Method_RequestResultDialog_OnClickCancel__, method);
+    byte_4C1E216 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_RequestResultDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_RequestResultDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     RequestResultDialog__CallOnDecide(this, 0, v5);
   }
@@ -221,17 +221,17 @@ void __fastcall RequestResultDialog__OnClickDecide(RequestResultDialog_o *this, 
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BF9A0E & 1) == 0 )
+  if ( (byte_4C1E215 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_RequestResultDialog_OnClickDecide__, method);
-    byte_4BF9A0E = 1;
+    sub_1C3B764(&Method_RequestResultDialog_OnClickDecide__, method);
+    byte_4C1E215 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_RequestResultDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_RequestResultDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     RequestResultDialog__CallOnDecide(this, 1, v5);
   }
@@ -244,17 +244,17 @@ void __fastcall RequestResultDialog__OnClickOk(RequestResultDialog_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4BF9A0D & 1) == 0 )
+  if ( (byte_4C1E214 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_RequestResultDialog_OnClickOk__, method);
-    byte_4BF9A0D = 1;
+    sub_1C3B764(&Method_RequestResultDialog_OnClickOk__, method);
+    byte_4C1E214 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_RequestResultDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_RequestResultDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_RequestResultDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_RequestResultDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     RequestResultDialog__CallOnDecide(this, 1, v5);
   }
@@ -271,10 +271,10 @@ void __fastcall RequestResultDialog__Open(
 {
   const MethodInfo *v6; // x6
 
-  if ( (byte_4BF9A07 & 1) == 0 )
+  if ( (byte_4C1E20E & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, message);
-    byte_4BF9A07 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, message);
+    byte_4C1E20E = 1;
   }
   RequestResultDialog__OpenAddMsg(
     this,
@@ -333,13 +333,13 @@ void __fastcall RequestResultDialog__OpenAddMsg(
   const MethodInfo *v47; // x3
   System_Action_o *v48; // x20
 
-  if ( (byte_4BF9A08 & 1) == 0 )
+  if ( (byte_4C1E20F & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, message);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v13);
-    sub_1C2E12C(&Method_RequestResultDialog_EndOpen__, v14);
-    sub_1C2E12C(&StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, v15);
-    byte_4BF9A08 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, message);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v13);
+    sub_1C3B764(&Method_RequestResultDialog_EndOpen__, v14);
+    sub_1C3B764(&StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, v15);
+    byte_4C1E20F = 1;
   }
   KeepPanelDepth = (UnityEngine_GameObject_o *)RequestResultDialog__GetKeepPanelDepth(this, (const MethodInfo *)message);
   normalBuyWindowObj = this->fields.normalBuyWindowObj;
@@ -352,7 +352,7 @@ void __fastcall RequestResultDialog__OpenAddMsg(
     goto LABEL_20;
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 0, 0LL);
   this->fields.onDecide = onDecide;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)onDecide, v19, v20, v21, v22, v23, v24);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)onDecide, v19, v20, v21, v22, v23, v24);
   KeepPanelDepth = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(addMessage, 0LL);
   if ( !this->fields.itemBuyWindowObj )
     goto LABEL_20;
@@ -396,7 +396,7 @@ void __fastcall RequestResultDialog__OpenAddMsg(
   okBtnLabel = this->fields.okBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v44 = (RequestResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  v44 = (RequestResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0LL);
   RequestResultDialog__SetLabelText(v44, okBtnLabel, (System_String_o *)v44, v45);
   TargetPanel = (RequestResultDialog_o *)BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
   RequestResultDialog__SetPanelDepth(TargetPanel, (UIPanel_o *)TargetPanel, this->fields.keepPanelDepth, v47);
@@ -407,16 +407,16 @@ void __fastcall RequestResultDialog__OpenAddMsg(
   KeepPanelDepth = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !KeepPanelDepth )
 LABEL_20:
-    sub_1C2E388(KeepPanelDepth, v17);
+    sub_1C3B9C0(KeepPanelDepth, v17);
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 1, 0LL);
   this->fields.isButtonEnable = 0;
-  v48 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v48 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v48, (Il2CppObject *)this, Method_RequestResultDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v48, 0, 0LL);
 }
 
 
-void __fastcall RequestResultDialog__OpenAddMsg_33805792(
+void __fastcall RequestResultDialog__OpenAddMsg_33911252(
         RequestResultDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -476,14 +476,14 @@ void __fastcall RequestResultDialog__OpenAddMsg_33805792(
   const MethodInfo *v63; // x3
   System_Action_o *v64; // x20
 
-  if ( (byte_4BF9A0A & 1) == 0 )
+  if ( (byte_4C1E211 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, title);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v20);
-    sub_1C2E12C(&Method_RequestResultDialog_EndOpen__, v21);
-    sub_1C2E12C(&StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, v22);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v23);
-    byte_4BF9A0A = 1;
+    sub_1C3B764(&System_Action_TypeInfo, title);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v20);
+    sub_1C3B764(&Method_RequestResultDialog_EndOpen__, v21);
+    sub_1C3B764(&StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, v22);
+    sub_1C3B764(&StringLiteral_1/*""*/, v23);
+    byte_4C1E211 = 1;
   }
   BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0LL);
   KeepPanelDepth = (UnityEngine_GameObject_o *)RequestResultDialog__GetKeepPanelDepth(this, v24);
@@ -497,7 +497,7 @@ void __fastcall RequestResultDialog__OpenAddMsg_33805792(
     goto LABEL_27;
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 0, 0LL);
   this->fields.onDecide = onDecide;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)onDecide, v28, v29, v30, v31, v32, v33);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.onDecide, (int64_t)onDecide, v28, v29, v30, v31, v32, v33);
   KeepPanelDepth = (UnityEngine_GameObject_o *)System_String__IsNullOrEmpty(addMessage, 0LL);
   if ( !this->fields.normalBuyWindowObj )
     goto LABEL_27;
@@ -546,7 +546,7 @@ void __fastcall RequestResultDialog__OpenAddMsg_33805792(
       }
     }
 LABEL_27:
-    sub_1C2E388(KeepPanelDepth, v26);
+    sub_1C3B9C0(KeepPanelDepth, v26);
   }
   UnityEngine_GameObject__SetActive(KeepPanelDepth, 1, 0LL);
   KeepPanelDepth = this->fields.cancelButtonObj;
@@ -560,7 +560,7 @@ LABEL_27:
   okBtnLabel = this->fields.okBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v56 = (RequestResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  v56 = (RequestResultDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0LL);
   decideButtonLabel = okBtnLabel;
   v59 = (System_String_o *)v56;
 LABEL_23:
@@ -578,13 +578,13 @@ LABEL_23:
     panelDepth = this->fields.keepPanelDepth;
   RequestResultDialog__SetPanelDepth(TargetPanel, (UIPanel_o *)TargetPanel, panelDepth, v63);
   this->fields.isButtonEnable = 0;
-  v64 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v64 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v64, (Il2CppObject *)this, Method_RequestResultDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v64, 0, 0LL);
 }
 
 
-void __fastcall RequestResultDialog__Open_33805640(
+void __fastcall RequestResultDialog__Open_33911100(
         RequestResultDialog_o *this,
         System_String_o *title,
         System_String_o *message,
@@ -594,12 +594,12 @@ void __fastcall RequestResultDialog__Open_33805640(
 {
   const MethodInfo *v11; // [xsp+18h] [xbp-48h]
 
-  if ( (byte_4BF9A09 & 1) == 0 )
+  if ( (byte_4C1E210 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, title);
-    byte_4BF9A09 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, title);
+    byte_4C1E210 = 1;
   }
-  RequestResultDialog__OpenAddMsg_33805792(
+  RequestResultDialog__OpenAddMsg_33911252(
     this,
     title,
     message,
@@ -622,10 +622,10 @@ void __fastcall RequestResultDialog__SetLabelFontSizeAdjust(
         int32_t size,
         const MethodInfo *method)
 {
-  if ( (byte_4BF9A11 & 1) == 0 )
+  if ( (byte_4C1E218 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, label);
-    byte_4BF9A11 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, label);
+    byte_4C1E218 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -644,10 +644,10 @@ void __fastcall RequestResultDialog__SetLabelLacalPositionY(
   __int64 v7; // x1
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4BF9A13 & 1) == 0 )
+  if ( (byte_4C1E21A & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, label);
-    byte_4BF9A13 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, label);
+    byte_4C1E21A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -655,7 +655,7 @@ void __fastcall RequestResultDialog__SetLabelLacalPositionY(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C2E388(v6, v7);
+      sub_1C3B9C0(v6, v7);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL);
     GameObjectExtensions__SetLocalPositionY(gameObject, y, 0LL);
   }
@@ -671,10 +671,10 @@ void __fastcall RequestResultDialog__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BF9A10 & 1) == 0 )
+  if ( (byte_4C1E217 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, label);
-    byte_4BF9A10 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, label);
+    byte_4C1E217 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -682,7 +682,7 @@ void __fastcall RequestResultDialog__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C2E388(v6, v7);
+      sub_1C3B9C0(v6, v7);
     UILabel__set_text(label, text, 0LL);
   }
 }
@@ -697,10 +697,10 @@ void __fastcall RequestResultDialog__SetPanelDepth(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4BF9A12 & 1) == 0 )
+  if ( (byte_4C1E219 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, panel);
-    byte_4BF9A12 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, panel);
+    byte_4C1E219 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -708,7 +708,7 @@ void __fastcall RequestResultDialog__SetPanelDepth(
   if ( !v6 )
   {
     if ( !panel )
-      sub_1C2E388(v6, v7);
+      sub_1C3B9C0(v6, v7);
     UIPanel__set_depth(panel, depth, 0LL);
   }
 }
@@ -722,18 +722,18 @@ System_String_o *__fastcall RequestResultDialog__get_closeBtnPath(
   UnityEngine_GameObject_o *cancelButtonObj; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BF9A14 & 1) == 0 )
+  if ( (byte_4C1E21B & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_15922/*"Window/CancelButton"*/, method);
-    sub_1C2E12C(&StringLiteral_15933/*"Window/OkBtn"*/, v3);
-    byte_4BF9A14 = 1;
+    sub_1C3B764(&StringLiteral_15950/*"_PIG"*/, method);
+    sub_1C3B764(&StringLiteral_15961/*"_PositionOffset"*/, v3);
+    byte_4C1E21B = 1;
   }
   cancelButtonObj = this->fields.cancelButtonObj;
   if ( !cancelButtonObj )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( UnityEngine_GameObject__get_activeInHierarchy(cancelButtonObj, 0LL) )
-    v5 = &StringLiteral_15922/*"Window/CancelButton"*/;
+    v5 = &StringLiteral_15950/*"_PIG"*/;
   else
-    v5 = &StringLiteral_15933/*"Window/OkBtn"*/;
+    v5 = &StringLiteral_15961/*"_PositionOffset"*/;
   return (System_String_o *)*v5;
 }

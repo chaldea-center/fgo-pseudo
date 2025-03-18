@@ -8,17 +8,17 @@ void __fastcall BattleComboData___ctor(BattleComboData_o *this, const MethodInfo
   FollowerInfo_o *v8; // x6
   PartyListViewItem_o *v9; // x7
 
-  if ( (byte_4C00157 & 1) == 0 )
+  if ( (byte_4C24985 & 1) == 0 )
   {
-    sub_1C2E12C(&bool___TypeInfo, method);
-    byte_4C00157 = 1;
+    sub_1C3B764(&bool___TypeInfo, method);
+    byte_4C24985 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v3 = (struct System_Boolean_array *)sub_1C2E1D4(bool___TypeInfo, 3LL);
+  v3 = (struct System_Boolean_array *)sub_1C3B80C(bool___TypeInfo, 3LL);
   this->fields.sameflg = v3;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.sameflg, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sameflg, (int64_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -27,10 +27,10 @@ bool __fastcall BattleComboData__AchieveAnyChain(BattleComboData_o *this, const 
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4C00158 & 1) == 0 )
+  if ( (byte_4C24986 & 1) == 0 )
   {
-    sub_1C2E12C(&BattleDataDefine_TypeInfo, method);
-    byte_4C00158 = 1;
+    sub_1C3B764(&BattleDataDefine_TypeInfo, method);
+    byte_4C24986 = 1;
   }
   if ( this->fields.flash )
     return 1;

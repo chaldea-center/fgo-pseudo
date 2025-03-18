@@ -20,23 +20,23 @@ System_String_o *__fastcall SpotCooltimeComponent__GetCooltimeText(
   int v12; // [xsp+8h] [xbp-28h] BYREF
   int v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C019D9 & 1) == 0 )
+  if ( (byte_4C26207 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, *(_QWORD *)&remainTime);
-    sub_1C2E12C(&StringLiteral_5081/*"D2"*/, v4);
-    sub_1C2E12C(&StringLiteral_5713/*"EVENT_COOLTIME_REMAIN"*/, v5);
-    byte_4C019D9 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, *(_QWORD *)&remainTime);
+    sub_1C3B764(&StringLiteral_5081/*"DataTable_{0}.DataColumn_{1}.Expression"*/, v4);
+    sub_1C3B764(&StringLiteral_5714/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/, v5);
+    byte_4C26207 = 1;
   }
   v13 = remainTime / 3600;
   v11 = remainTime % 60;
   v12 = remainTime % 3600 / 60;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5713/*"EVENT_COOLTIME_REMAIN"*/, 0LL);
-  v7 = (Il2CppObject *)System_Int32__ToString_64041192((int32_t)&v13, (System_String_o *)StringLiteral_5081/*"D2"*/, 0LL);
-  v8 = (Il2CppObject *)System_Int32__ToString_64041192((int32_t)&v12, (System_String_o *)StringLiteral_5081/*"D2"*/, 0LL);
-  v9 = (Il2CppObject *)System_Int32__ToString_64041192((int32_t)&v11, (System_String_o *)StringLiteral_5081/*"D2"*/, 0LL);
-  return System_String__Format_63250024(v6, v7, v8, v9, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_5714/*"EXTERNAL_PAYSTONE_INFO_TITLE"*/, 0LL);
+  v7 = (Il2CppObject *)System_Int32__ToString_64174220((int32_t)&v13, (System_String_o *)StringLiteral_5081/*"DataTable_{0}.DataColumn_{1}.Expression"*/, 0LL);
+  v8 = (Il2CppObject *)System_Int32__ToString_64174220((int32_t)&v12, (System_String_o *)StringLiteral_5081/*"DataTable_{0}.DataColumn_{1}.Expression"*/, 0LL);
+  v9 = (Il2CppObject *)System_Int32__ToString_64174220((int32_t)&v11, (System_String_o *)StringLiteral_5081/*"DataTable_{0}.DataColumn_{1}.Expression"*/, 0LL);
+  return System_String__Format_63383052(v6, v7, v8, v9, 0LL);
 }
 
 
@@ -48,10 +48,10 @@ void __fastcall SpotCooltimeComponent__OnDestroyObject(SpotCooltimeComponent_o *
   struct SrcSpotBasePrefab_o *v6; // x8
   struct MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x8
 
-  if ( (byte_4C019DC & 1) == 0 )
+  if ( (byte_4C2620A & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4C019DC = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C2620A = 1;
   }
   targetSpot = (UnityEngine_Object_o *)this->fields.targetSpot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -61,7 +61,7 @@ void __fastcall SpotCooltimeComponent__OnDestroyObject(SpotCooltimeComponent_o *
   {
     v6 = this->fields.targetSpot;
     if ( !v6 || (mMapCtrl_SpotInfo = v6->fields.mMapCtrl_SpotInfo) == 0LL )
-      sub_1C2E388(v4, v5);
+      sub_1C3B9C0(v4, v5);
     *(_QWORD *)&mMapCtrl_SpotInfo->fields.dispType = 0x100000001LL;
   }
 }
@@ -90,7 +90,7 @@ void __fastcall SpotCooltimeComponent__SetSpotActiveGimmick(
   else
     p_spotActiveGimmick = &this->fields.spotInactiveGimmick;
   *(SpotCooltimeComponent_c **)((char *)&this->klass + v8) = (SpotCooltimeComponent_c *)mapGimmick;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)p_spotActiveGimmick,
     (int64_t)mapGimmick,
     isActiveCooltimeGimmick,
@@ -132,14 +132,14 @@ void __fastcall SpotCooltimeComponent__Setup(
   UISprite_o *bgSprite; // x20
   const MethodInfo *v28; // x1
 
-  if ( (byte_4C019DB & 1) == 0 )
+  if ( (byte_4C26209 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, userCooltimeEntity);
-    sub_1C2E12C(&StringLiteral_18585/*"cooltime_base"*/, v11);
-    byte_4C019DB = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, userCooltimeEntity);
+    sub_1C3B764(&StringLiteral_18619/*"en-SG"*/, v11);
+    byte_4C26209 = 1;
   }
   this->fields.userCooltimeEntity = userCooltimeEntity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.userCooltimeEntity,
     (int64_t)userCooltimeEntity,
     (int64_t)targetSpot,
@@ -149,10 +149,10 @@ void __fastcall SpotCooltimeComponent__Setup(
     v6,
     v7);
   if ( !userCooltimeEntity )
-    sub_1C2E388(v12, v13);
+    sub_1C3B9C0(v12, v13);
   MasterEntity = UserEventQuestCooltimeEntity__GetMasterEntity(userCooltimeEntity, 0LL);
   this->fields.cooltimeEntity = MasterEntity;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.cooltimeEntity,
     (int64_t)MasterEntity,
     v15,
@@ -162,11 +162,11 @@ void __fastcall SpotCooltimeComponent__Setup(
     v19,
     v20);
   this->fields.targetSpot = targetSpot;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.targetSpot, (int64_t)targetSpot, v21, v22, v23, v24, v25, v26);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetSpot, (int64_t)targetSpot, v21, v22, v23, v24, v25, v26);
   bgSprite = this->fields.bgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_18585/*"cooltime_base"*/, 0LL);
+  AtlasManager__SetEventUI(bgSprite, (System_String_o *)StringLiteral_18619/*"en-SG"*/, 0LL);
   SpotCooltimeComponent__UpdateDisp(this, v28);
 }
 
@@ -211,12 +211,12 @@ void __fastcall SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this,
   System_DateTime_o v30; // 0:x0.8
 
   v2 = this;
-  if ( (byte_4C019D8 & 1) == 0 )
+  if ( (byte_4C26206 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    this = (SpotCooltimeComponent_o *)sub_1C2E12C(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v4);
-    byte_4C019D8 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    this = (SpotCooltimeComponent_o *)sub_1C3B764(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, v4);
+    byte_4C26206 = 1;
   }
   targetSpot = v2->fields.targetSpot;
   if ( !targetSpot )
@@ -242,7 +242,7 @@ void __fastcall SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this,
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   v30.fields._dateData = NetworkManager__getDateTime(0LL).fields._dateData;
-  this = (SpotCooltimeComponent_o *)NetworkManager__getTime_39876888(v30, 0LL);
+  this = (SpotCooltimeComponent_o *)NetworkManager__getTime_39986252(v30, 0LL);
   cooltimeEntity = v2->fields.cooltimeEntity;
   if ( !cooltimeEntity )
     goto LABEL_54;
@@ -292,10 +292,10 @@ void __fastcall SpotCooltimeComponent__UpdateDisp(SpotCooltimeComponent_o *this,
     || (SrcSpotBasePrefab__UpdateDisp((SrcSpotBasePrefab_o *)this, 1, 0LL),
         (this = (SpotCooltimeComponent_o *)v2->fields.cooltimeObj) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v16, 0LL),
-        (this = (SpotCooltimeComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__)) == 0LL) )
+        (this = (SpotCooltimeComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__)) == 0LL) )
   {
 LABEL_54:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   if ( !QuestAfterAction__IsPlaying((QuestAfterAction_o *)this, 0LL) )
   {
@@ -371,11 +371,11 @@ void __fastcall SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o 
   MapGimmickComponent_c *klass; // x8
 
   v2 = this;
-  if ( (byte_4C019DA & 1) == 0 )
+  if ( (byte_4C26208 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
-    this = (SpotCooltimeComponent_o *)sub_1C2E12C(&TerminalSceneComponent_TypeInfo, v3);
-    byte_4C019DA = 1;
+    sub_1C3B764(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
+    this = (SpotCooltimeComponent_o *)sub_1C3B764(&TerminalSceneComponent_TypeInfo, v3);
+    byte_4C26208 = 1;
   }
   targetSpot = v2->fields.targetSpot;
   if ( !targetSpot )
@@ -383,7 +383,7 @@ void __fastcall SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o 
   mMapCtrl_SpotInfo = targetSpot->fields.mMapCtrl_SpotInfo;
   if ( mMapCtrl_SpotInfo && !mMapCtrl_SpotInfo->fields.questCount )
   {
-    this = (SpotCooltimeComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38A83B0 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    this = (SpotCooltimeComponent_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38C8B54 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     cooltimeEntity = v2->fields.cooltimeEntity;
     if ( cooltimeEntity && this )
     {
@@ -397,10 +397,10 @@ void __fastcall SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o 
         SrcSpotBasePrefab__mfSetQuestCount((SrcSpotBasePrefab_o *)this, 1, 0LL);
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        if ( !byte_4BF8363 )
+        if ( !byte_4C1CAE3 )
         {
-          sub_1C2E12C(&TerminalSceneComponent_TypeInfo, method);
-          byte_4BF8363 = 1;
+          sub_1C3B764(&TerminalSceneComponent_TypeInfo, method);
+          byte_4C1CAE3 = 1;
         }
         this = (SpotCooltimeComponent_o *)TerminalSceneComponent_TypeInfo;
         if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -421,7 +421,7 @@ void __fastcall SpotCooltimeComponent__UpdateQuestCount(SpotCooltimeComponent_o 
       }
     }
 LABEL_21:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
 }
 

@@ -37,17 +37,17 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4C006ED & 1) == 0 )
+  if ( (byte_4C24F1B & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Graphics_TypeInfo, source);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_16538/*"_IsSet"*/, v8);
-    sub_1C2E12C(&StringLiteral_16583/*"_OverTex"*/, v9);
-    sub_1C2E12C(&StringLiteral_16630/*"_Size"*/, v10);
-    sub_1C2E12C(&StringLiteral_16612/*"_Saturation"*/, v11);
-    sub_1C2E12C(&StringLiteral_16669/*"_UVPosition"*/, v12);
-    this = (PartiallyModifiableGrayScale_o *)sub_1C2E12C(&StringLiteral_16556/*"_MaskTex"*/, v13);
-    byte_4C006ED = 1;
+    sub_1C3B764(&UnityEngine_Graphics_TypeInfo, source);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_16566/*"arrayIndex is less than 0."*/, v8);
+    sub_1C3B764(&StringLiteral_16611/*"attributeValue"*/, v9);
+    sub_1C3B764(&StringLiteral_16658/*"ba17"*/, v10);
+    sub_1C3B764(&StringLiteral_16640/*"az-Latn-AZ"*/, v11);
+    sub_1C3B764(&StringLiteral_16697/*"badRoute"*/, v12);
+    this = (PartiallyModifiableGrayScale_o *)sub_1C3B764(&StringLiteral_16584/*"assemblyName cannot have zero length."*/, v13);
+    byte_4C24F1B = 1;
   }
   if ( !source )
     goto LABEL_46;
@@ -66,7 +66,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16556/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16584/*"assemblyName cannot have zero length."*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0LL);
   }
@@ -80,7 +80,7 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16583/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16611/*"attributeValue"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0LL);
   }
@@ -88,35 +88,35 @@ void __fastcall PartiallyModifiableGrayScale__OnRenderImage(
   if ( !this
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16612/*"_Saturation"*/,
+          (System_String_o *)StringLiteral_16640/*"az-Latn-AZ"*/,
           v6->fields.saturation,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL)
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16630/*"_Size"*/,
+          (System_String_o *)StringLiteral_16658/*"ba17"*/,
           v6->fields.radius,
           0LL),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL)) == 0LL) )
   {
 LABEL_46:
-    sub_1C2E388(this, source);
+    sub_1C3B9C0(this, source);
   }
   v30.fields.x = posX + 0.5;
   v30.fields.z = 0.0;
   v30.fields.w = 0.0;
   v30.fields.y = v15;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16669/*"_UVPosition"*/, v30, 0LL);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16697/*"badRoute"*/, v30, 0LL);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   radius = v6->fields.radius;
-  v20 = (System_String_o *)StringLiteral_16538/*"_IsSet"*/;
+  v20 = (System_String_o *)StringLiteral_16566/*"arrayIndex is less than 0."*/;
   v21 = this;
   if ( radius >= 0.03 )
     v22 = this;
   else
     v22 = 0LL;
   if ( radius >= 0.03 )
-    v23 = StringLiteral_16538/*"_IsSet"*/;
+    v23 = StringLiteral_16566/*"arrayIndex is less than 0."*/;
   else
     v23 = 0LL;
   if ( radius < 0.03 )
@@ -166,5 +166,5 @@ LABEL_42:
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0LL);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_70835448((UnityEngine_Texture_o *)source, destination, material, 0LL);
+  UnityEngine_Graphics__Blit_70968476((UnityEngine_Texture_o *)source, destination, material, 0LL);
 }

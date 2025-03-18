@@ -14,7 +14,7 @@ void __fastcall CombineCommandCardEquipmentComponent__HideStatusInfo(
 
   statusInfoObj = this->fields.statusInfoObj;
   if ( !statusInfoObj )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   UnityEngine_GameObject__SetActive(statusInfoObj, 0, 0LL);
 }
 
@@ -30,7 +30,7 @@ void __fastcall CombineCommandCardEquipmentComponent__SetEquippedInfo(
 
   equippedInfo = this->fields.equippedInfo;
   if ( !equippedInfo )
-    sub_1C2E388(0LL, DispInfo);
+    sub_1C3B9C0(0LL, DispInfo);
   if ( DispInfo )
   {
     UnityEngine_GameObject__SetActive(equippedInfo, 1, 0LL);
@@ -73,13 +73,13 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
   const MethodInfo *v24; // x3
 
   v9 = userCommandCode;
-  if ( (byte_4C010D1 & 1) == 0 )
+  if ( (byte_4C258FF & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, userCommandCode);
-    sub_1C2E12C(&Rarity_TypeInfo, v11);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v12);
-    sub_1C2E12C(&StringLiteral_11705/*"SELECTED_COMMAND_CODE"*/, v13);
-    byte_4C010D1 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, userCommandCode);
+    sub_1C3B764(&Rarity_TypeInfo, v11);
+    sub_1C3B764(&StringLiteral_1/*""*/, v12);
+    sub_1C3B764(&StringLiteral_11728/*"SHA512"*/, v13);
+    byte_4C258FF = 1;
   }
   raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
   if ( !raritySprite )
@@ -89,7 +89,7 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
     goto LABEL_22;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, v9 != 0LL, 0LL);
   this->fields.userCommandCodeEntity = v9;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.userCommandCodeEntity,
     (int64_t)v9,
     v15,
@@ -111,9 +111,9 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIcon(
       return;
     }
 LABEL_22:
-    sub_1C2E388(raritySprite, userCommandCode);
+    sub_1C3B9C0(raritySprite, userCommandCode);
   }
-  ServantFaceIconComponent__Set_39541488((ServantFaceIconComponent_o *)raritySprite, v9, 0LL, 0LL, 0LL);
+  ServantFaceIconComponent__Set_39650476((ServantFaceIconComponent_o *)raritySprite, v9, 0LL, 0LL, 0LL);
   if ( !v9 )
     goto LABEL_22;
   v21 = this->fields.raritySprite;
@@ -139,7 +139,7 @@ LABEL_22:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    raritySprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11705/*"SELECTED_COMMAND_CODE"*/, 0LL);
+    raritySprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11728/*"SHA512"*/, 0LL);
     userCommandCode = (UserCommandCodeEntity_o *)raritySprite;
   }
   if ( !statusInfoLabel )
@@ -170,10 +170,10 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
   int32_t Rarity; // w21
 
   v3 = userCommandCode;
-  if ( (byte_4C010D2 & 1) == 0 )
+  if ( (byte_4C25900 & 1) == 0 )
   {
-    sub_1C2E12C(&Rarity_TypeInfo, userCommandCode);
-    byte_4C010D2 = 1;
+    sub_1C3B764(&Rarity_TypeInfo, userCommandCode);
+    byte_4C25900 = 1;
   }
   raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
   if ( !raritySprite )
@@ -183,14 +183,14 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
     goto LABEL_15;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, v3 != 0LL, 0LL);
   this->fields.userCommandCodeEntity = v3;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.userCommandCodeEntity, (int64_t)v3, v6, v7, v8, v9, v10, v11);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.userCommandCodeEntity, (int64_t)v3, v6, v7, v8, v9, v10, v11);
   userCommandCode = this->fields.userCommandCodeEntity;
   if ( userCommandCode )
   {
     raritySprite = (UnityEngine_Component_o *)this->fields.icon;
     if ( raritySprite )
     {
-      ServantFaceIconComponent__Set_39541488((ServantFaceIconComponent_o *)raritySprite, userCommandCode, 0LL, 0LL, 0LL);
+      ServantFaceIconComponent__Set_39650476((ServantFaceIconComponent_o *)raritySprite, userCommandCode, 0LL, 0LL, 0LL);
       raritySprite = (UnityEngine_Component_o *)this->fields.userCommandCodeEntity;
       if ( raritySprite )
       {
@@ -219,6 +219,6 @@ void __fastcall CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
       }
     }
 LABEL_15:
-    sub_1C2E388(raritySprite, userCommandCode);
+    sub_1C3B9C0(raritySprite, userCommandCode);
   }
 }

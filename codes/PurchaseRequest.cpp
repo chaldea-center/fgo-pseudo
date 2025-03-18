@@ -15,24 +15,24 @@ void __fastcall PurchaseRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x3
 
-  if ( (byte_4BFF15D & 1) == 0 )
+  if ( (byte_4C23987 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_22597/*"num"*/, *(_QWORD *)&id);
-    sub_1C2E12C(&StringLiteral_17089/*"anotherPayUsedItem"*/, v11);
-    sub_1C2E12C(&StringLiteral_20566/*"id"*/, v12);
-    sub_1C2E12C(&StringLiteral_17086/*"anotherPayFlag"*/, v13);
-    byte_4BFF15D = 1;
+    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&id);
+    sub_1C3B764(&StringLiteral_17119/*"btn_bg_08"*/, v11);
+    sub_1C3B764(&StringLiteral_20601/*"java/lang/Boolean"*/, v12);
+    sub_1C3B764(&StringLiteral_17116/*"btn_bg_04"*/, v13);
+    byte_4C23987 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_20566/*"id"*/,
+    (System_String_o *)StringLiteral_20601/*"java/lang/Boolean"*/,
     id,
     *(const MethodInfo **)&anotherPayFlag);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22597/*"num"*/, num, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, num, v14);
   if ( anotherPayFlag >= 1 )
   {
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17086/*"anotherPayFlag"*/, anotherPayFlag, v16);
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17089/*"anotherPayUsedItem"*/, anotherPayUsedItem, v17);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17116/*"btn_bg_04"*/, anotherPayFlag, v16);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17119/*"btn_bg_08"*/, anotherPayUsedItem, v17);
   }
   RequestBase__beginRequest((RequestBase_o *)this, v15);
 }
@@ -43,16 +43,16 @@ System_String_o *__fastcall PurchaseRequest__getURL(PurchaseRequest_o *this, con
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF15C & 1) == 0 )
+  if ( (byte_4C23986 & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_23714/*"shop/purchase"*/, v2);
-    byte_4BFF15C = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_23757/*"turnPageOn"*/, v2);
+    byte_4C23986 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_23714/*"shop/purchase"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_23757/*"turnPageOn"*/, 0LL);
 }
 
 
@@ -70,18 +70,18 @@ void __fastcall PurchaseRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4BFF15E & 1) == 0 )
+  if ( (byte_4C23988 & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF15E = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C23988 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(9, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42594652(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -100,7 +100,7 @@ void __fastcall PurchaseRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22468/*"ng"*/,
+        StringLiteral_22507/*"referrerMapId"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

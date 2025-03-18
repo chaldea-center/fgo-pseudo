@@ -1,14 +1,14 @@
 void __fastcall UserFriendRequestHistoryMaster___ctor(UserFriendRequestHistoryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE4E6 & 1) == 0 )
+  if ( (byte_4C22D0B & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_UserFriendRequestHistoryMaster__UserFriendRequestHistoryEntity__int___ctor__,
       method);
-    byte_4BFE4E6 = 1;
+    byte_4C22D0B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    212,
-    (const MethodInfo_3278E5C *)Method_DataMasterBase_UserFriendRequestHistoryMaster__UserFriendRequestHistoryEntity__int___ctor__);
+    214,
+    (const MethodInfo_3298B24 *)Method_DataMasterBase_UserFriendRequestHistoryMaster__UserFriendRequestHistoryEntity__int___ctor__);
 }

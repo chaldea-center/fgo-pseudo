@@ -51,59 +51,59 @@ void __fastcall ScriptMessageCommonManager___ctor(ScriptMessageCommonManager_o *
   FollowerInfo_o *v56; // x6
   PartyListViewItem_o *v57; // x7
 
-  if ( (byte_4BFF480 & 1) == 0 )
+  if ( (byte_4C23CAA & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__, method);
-    sub_1C2E12C(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo, v9);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel___ctor__, v10);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite___ctor__, v11);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__, v12);
-    sub_1C2E12C(&System_Collections_Generic_Stack_UILabel__TypeInfo, v13);
-    sub_1C2E12C(&System_Collections_Generic_Stack_UISprite__TypeInfo, v14);
-    sub_1C2E12C(&System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo, v15);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v16);
-    byte_4BFF480 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__, method);
+    sub_1C3B764(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo, v9);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel___ctor__, v10);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite___ctor__, v11);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__, v12);
+    sub_1C3B764(&System_Collections_Generic_Stack_UILabel__TypeInfo, v13);
+    sub_1C3B764(&System_Collections_Generic_Stack_UISprite__TypeInfo, v14);
+    sub_1C3B764(&System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo, v15);
+    sub_1C3B764(&StringLiteral_1/*""*/, v16);
+    byte_4C23CAA = 1;
   }
   this->fields.defaultBetweenLineHeight = 4.0;
-  *(_OWORD *)&this->fields.defaultScrollTime = xmmword_C05DC0;
-  *(_OWORD *)&this->fields.defaultAllDispSize.fields.x = xmmword_C074A0;
+  *(_OWORD *)&this->fields.defaultScrollTime = xmmword_C0D140;
+  *(_OWORD *)&this->fields.defaultAllDispSize.fields.x = xmmword_C0E830;
   *(int32x2_t *)&this->fields.windowOpenTime = vdup_n_s32(0x3ECCCCCDu);
   __asm { FMOV            V0.2S, #1.0 }
   this->fields.windowClosePosY = -200.0;
   *(_QWORD *)&this->fields.messageSpeed = _D0;
   v22 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.defaultColorTag, (int64_t)v22, v2, v3, v4, v5, v6, v7);
-  v23 = (System_Collections_Generic_Stack_T__o *)sub_1C2E378(System_Collections_Generic_Stack_UILabel__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.defaultColorTag, (int64_t)v22, v2, v3, v4, v5, v6, v7);
+  v23 = (System_Collections_Generic_Stack_T__o *)sub_1C3B9B0(System_Collections_Generic_Stack_UILabel__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v23,
-    (const MethodInfo_38C12E8 *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
+    (const MethodInfo_38E1A8C *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
   this->fields.mainStock = (struct System_Collections_Generic_Stack_UILabel__o *)v23;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mainStock, (int64_t)v23, v24, v25, v26, v27, v28, v29);
-  v30 = (System_Collections_Generic_Stack_T__o *)sub_1C2E378(System_Collections_Generic_Stack_UILabel__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mainStock, (int64_t)v23, v24, v25, v26, v27, v28, v29);
+  v30 = (System_Collections_Generic_Stack_T__o *)sub_1C3B9B0(System_Collections_Generic_Stack_UILabel__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v30,
-    (const MethodInfo_38C12E8 *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
+    (const MethodInfo_38E1A8C *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
   this->fields.rubyStock = (struct System_Collections_Generic_Stack_UILabel__o *)v30;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.rubyStock, (int64_t)v30, v31, v32, v33, v34, v35, v36);
-  v37 = (System_Collections_Generic_Stack_T__o *)sub_1C2E378(System_Collections_Generic_Stack_UISprite__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.rubyStock, (int64_t)v30, v31, v32, v33, v34, v35, v36);
+  v37 = (System_Collections_Generic_Stack_T__o *)sub_1C3B9B0(System_Collections_Generic_Stack_UISprite__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v37,
-    (const MethodInfo_38C12E8 *)Method_System_Collections_Generic_Stack_UISprite___ctor__);
+    (const MethodInfo_38E1A8C *)Method_System_Collections_Generic_Stack_UISprite___ctor__);
   this->fields.imageStock = (struct System_Collections_Generic_Stack_UISprite__o *)v37;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.imageStock, (int64_t)v37, v38, v39, v40, v41, v42, v43);
-  v44 = (System_Collections_Generic_Stack_T__o *)sub_1C2E378(System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.imageStock, (int64_t)v37, v38, v39, v40, v41, v42, v43);
+  v44 = (System_Collections_Generic_Stack_T__o *)sub_1C3B9B0(System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
   System_Collections_Generic_Stack_object____ctor(
     v44,
-    (const MethodInfo_38C12E8 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
+    (const MethodInfo_38E1A8C *)Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
   this->fields.labelStock = (struct System_Collections_Generic_Stack_ScriptMessageLabel__o *)v44;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.labelStock, (int64_t)v44, v45, v46, v47, v48, v49, v50);
-  v51 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.labelStock, (int64_t)v44, v45, v46, v47, v48, v49, v50);
+  v51 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v51,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
   this->fields.dispLabelList = (struct System_Collections_Generic_List_ScriptMessageLabel__o *)v51;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.dispLabelList, (int64_t)v51, v52, v53, v54, v55, v56, v57);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.dispLabelList, (int64_t)v51, v52, v53, v54, v55, v56, v57);
   this->fields.dispCountTimer = -1.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -207,15 +207,15 @@ void __fastcall ScriptMessageCommonManager__AddLabel(
   UnityEngine_Vector2_o pos; // [xsp+28h] [xbp-68h] BYREF
   UnityEngine_Vector2_o v99; // 0:s1.4,4:s2.4
 
-  if ( (byte_4BFF459 & 1) == 0 )
+  if ( (byte_4C23C83 & 1) == 0 )
   {
-    sub_1C2E12C(&char___TypeInfo, text);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__, v11);
-    sub_1C2E12C(&StringLiteral_13802/*"Talk/"*/, v12);
-    sub_1C2E12C(&StringLiteral_1102/*"/"*/, v13);
-    sub_1C2E12C(&StringLiteral_21498/*"line"*/, v14);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v15);
-    byte_4BFF459 = 1;
+    sub_1C3B764(&char___TypeInfo, text);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__, v11);
+    sub_1C3B764(&StringLiteral_13830/*"The required attribute must have a value of yes or no."*/, v12);
+    sub_1C3B764(&StringLiteral_1102/*"/[delegate]"*/, v13);
+    sub_1C3B764(&StringLiteral_21534/*"mstSvt"*/, v14);
+    sub_1C3B764(&StringLiteral_1/*""*/, v15);
+    byte_4C23C83 = 1;
   }
   pos = 0LL;
   Label = (__int64)ScriptMessageCommonManager__FetchLabel(this, (const MethodInfo *)text);
@@ -225,7 +225,7 @@ void __fastcall ScriptMessageCommonManager__AddLabel(
   *(_QWORD *)(Label + 112) = colorTag;
   v25 = Label + 112;
   *(float *)(v25 + 52) = tm;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)v25, (int64_t)colorTag, v18, v19, v20, v21, v22, v23);
+  sub_1C3B708((PartyOrganizationUtility_o *)v25, (int64_t)colorTag, v18, v19, v20, v21, v22, v23);
   if ( !text )
     goto LABEL_112;
   dispPosition = this->fields.dispPosition;
@@ -233,8 +233,8 @@ void __fastcall ScriptMessageCommonManager__AddLabel(
     goto LABEL_70;
   if ( System_String__get_Chars(text, 1, 0LL) == 35 )
   {
-    v28 = System_String__Substring_63254588(text, 2, text->fields._stringLength - 3, 0LL);
-    Label = sub_1C2E1D4(char___TypeInfo, 1LL);
+    v28 = System_String__Substring_63387616(text, 2, text->fields._stringLength - 3, 0LL);
+    Label = sub_1C3B80C(char___TypeInfo, 1LL);
     if ( !Label )
       goto LABEL_112;
     v17 = Label;
@@ -243,7 +243,7 @@ void __fastcall ScriptMessageCommonManager__AddLabel(
       *(_WORD *)(Label + 32) = 58;
       if ( !v28 )
         goto LABEL_112;
-      v29 = System_String__Split_63257740(v28, (System_Char_array *)Label, 0LL);
+      v29 = System_String__Split_63390768(v28, (System_Char_array *)Label, 0LL);
       ScriptMessageCommonManager__PreProcLabel(this, v24, 1, 0, 0, v30);
       if ( !v29 )
         goto LABEL_112;
@@ -318,29 +318,29 @@ LABEL_74:
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)Label,
                 (Il2CppObject *)v24,
-                *(const MethodInfo_366B8AC **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
+                *(const MethodInfo_368BC6C **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
             }
             else
             {
               v86 = v83 + 8 * v85;
               *(_DWORD *)(Label + 24) = v85 + 1;
               *(_QWORD *)(v86 + 32) = v24;
-              sub_1C2E0D0((PartyOrganizationUtility_o *)(v86 + 32), (int64_t)v24, v38, v39, v40, v41, v42, v43);
+              sub_1C3B708((PartyOrganizationUtility_o *)(v86 + 32), (int64_t)v24, v38, v39, v40, v41, v42, v43);
             }
             return;
           }
         }
 LABEL_112:
-        sub_1C2E388(Label, v17);
+        sub_1C3B9C0(Label, v17);
       }
     }
 LABEL_113:
-    sub_1C2E390(Label, v17);
+    sub_1C3B9C8(Label, v17);
   }
   if ( System_String__get_Chars(text, 1, 0LL) == 94 )
   {
-    v44 = System_String__Substring_63254588(text, 2, text->fields._stringLength - 3, 0LL);
-    Label = sub_1C2E1D4(char___TypeInfo, 1LL);
+    v44 = System_String__Substring_63387616(text, 2, text->fields._stringLength - 3, 0LL);
+    Label = sub_1C3B80C(char___TypeInfo, 1LL);
     if ( !Label )
       goto LABEL_112;
     v17 = Label;
@@ -349,7 +349,7 @@ LABEL_113:
     *(_WORD *)(Label + 32) = 32;
     if ( !v44 )
       goto LABEL_112;
-    Label = (__int64)System_String__Split_63257740(v44, (System_Char_array *)Label, 0LL);
+    Label = (__int64)System_String__Split_63390768(v44, (System_Char_array *)Label, 0LL);
     if ( !Label )
       goto LABEL_112;
     v46 = *(_DWORD *)(Label + 24);
@@ -359,7 +359,7 @@ LABEL_113:
       if ( !v46 )
         goto LABEL_113;
       v87 = *(System_String_o **)(Label + 32);
-      Label = sub_1C2E1D4(char___TypeInfo, 1LL);
+      Label = sub_1C3B80C(char___TypeInfo, 1LL);
       if ( !Label )
         goto LABEL_112;
       v17 = Label;
@@ -368,7 +368,7 @@ LABEL_113:
       *(_WORD *)(Label + 32) = 58;
       if ( !v87 )
         goto LABEL_112;
-      Label = (__int64)System_String__Split_63257740(v87, (System_Char_array *)Label, 0LL);
+      Label = (__int64)System_String__Split_63390768(v87, (System_Char_array *)Label, 0LL);
       if ( !Label )
         goto LABEL_112;
       v88 = Label;
@@ -384,7 +384,7 @@ LABEL_113:
         v92 = this->fields.currentMessageWindow;
         if ( !v92 )
           goto LABEL_112;
-        v90 = System_String__Concat_63235584(v90, v92->fields.imageSuffix, 0LL);
+        v90 = System_String__Concat_63368612(v90, v92->fields.imageSuffix, 0LL);
       }
       if ( *(int *)(v88 + 24) <= 1 )
       {
@@ -433,13 +433,13 @@ LABEL_113:
         v52 = this->fields.currentMessageWindow;
         if ( !v52 )
           goto LABEL_112;
-        Label = (__int64)System_String__Concat_63235584(v48, v52->fields.imageSuffix, 0LL);
+        Label = (__int64)System_String__Concat_63368612(v48, v52->fields.imageSuffix, 0LL);
         v48 = (System_String_o *)Label;
       }
       v53 = *(_DWORD *)(v47 + 24);
       if ( v53 == 2 )
       {
-        ScriptMessageLabel__UpdateImage_43098752(
+        ScriptMessageLabel__UpdateImage_43219472(
           v24,
           &v24->fields.image,
           &this->fields.dispPosition,
@@ -454,7 +454,7 @@ LABEL_113:
         if ( (unsigned int)v53 <= 2 )
           goto LABEL_113;
         v93 = *(System_String_o **)(v47 + 48);
-        Label = sub_1C2E1D4(char___TypeInfo, 1LL);
+        Label = sub_1C3B80C(char___TypeInfo, 1LL);
         if ( !Label )
           goto LABEL_112;
         v17 = Label;
@@ -463,7 +463,7 @@ LABEL_113:
         *(_WORD *)(Label + 32) = 44;
         if ( !v93 )
           goto LABEL_112;
-        Label = (__int64)System_String__Split_63257740(v93, (System_Char_array *)Label, 0LL);
+        Label = (__int64)System_String__Split_63390768(v93, (System_Char_array *)Label, 0LL);
         if ( !Label )
           goto LABEL_112;
         v94 = Label;
@@ -476,7 +476,7 @@ LABEL_113:
         v96 = System_Int32__Parse(*(System_String_o **)(v94 + 40), 0LL);
         v99.fields.x = (float)v95;
         v99.fields.y = (float)v96;
-        ScriptMessageLabel__UpdateImage_43098904(
+        ScriptMessageLabel__UpdateImage_43219624(
           v24,
           &v24->fields.image,
           &this->fields.dispPosition,
@@ -497,8 +497,8 @@ LABEL_113:
   }
   if ( System_String__get_Chars(text, 1, 0LL) == 126 )
   {
-    v54 = System_String__Substring_63254588(text, 2, text->fields._stringLength - 3, 0LL);
-    Label = sub_1C2E1D4(char___TypeInfo, 1LL);
+    v54 = System_String__Substring_63387616(text, 2, text->fields._stringLength - 3, 0LL);
+    Label = sub_1C3B80C(char___TypeInfo, 1LL);
     if ( !Label )
       goto LABEL_112;
     v17 = Label;
@@ -507,7 +507,7 @@ LABEL_113:
     *(_WORD *)(Label + 32) = 32;
     if ( !v54 )
       goto LABEL_112;
-    Label = (__int64)System_String__Split_63257740(v54, (System_Char_array *)Label, 0LL);
+    Label = (__int64)System_String__Split_63390768(v54, (System_Char_array *)Label, 0LL);
     if ( !Label )
       goto LABEL_112;
     v55 = Label;
@@ -518,7 +518,7 @@ LABEL_113:
     if ( *(int *)(v55 + 24) >= 2 )
       v57 = (System_String_o **)(v55 + 40);
     else
-      v57 = (System_String_o **)&StringLiteral_21498/*"line"*/;
+      v57 = (System_String_o **)&StringLiteral_21534/*"mstSvt"*/;
     if ( !v56 )
       goto LABEL_112;
     v58 = Label;
@@ -529,7 +529,7 @@ LABEL_113:
       v61 = this->fields.currentMessageWindow;
       if ( !v61 )
         goto LABEL_112;
-      v59 = System_String__Concat_63235584(v59, v61->fields.imageSuffix, 0LL);
+      v59 = System_String__Concat_63368612(v59, v61->fields.imageSuffix, 0LL);
     }
     ScriptMessageCommonManager__PreProcLabel(this, v24, 0, 1, 0, v60);
     p_image = (__int64 *)&v24->fields.image;
@@ -576,7 +576,7 @@ LABEL_70:
     v63 = (System_String_o *)StringLiteral_1/*""*/;
     goto LABEL_73;
   }
-  Label = (__int64)System_String__Substring_63254588(text, 2, text->fields._stringLength - 3, 0LL);
+  Label = (__int64)System_String__Substring_63387616(text, 2, text->fields._stringLength - 3, 0LL);
   if ( !Label )
     goto LABEL_112;
   v64 = System_String__Split((System_String_o *)Label, 0x20u, 0, 0LL);
@@ -588,7 +588,7 @@ LABEL_70:
       v66 = v64->m_Items[0];
       if ( v66 )
       {
-        Label = System_String__op_Equality(v66, (System_String_o *)StringLiteral_1102/*"/"*/, 0LL);
+        Label = System_String__op_Equality(v66, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, 0LL);
         if ( (Label & 1) == 0 )
         {
           if ( !v65->max_length )
@@ -597,7 +597,7 @@ LABEL_70:
           if ( !Label )
             goto LABEL_112;
           v67 = System_String__Trim((System_String_o *)Label, 0LL);
-          v69 = System_String__Concat_63235584((System_String_o *)StringLiteral_13802/*"Talk/"*/, v67, 0LL);
+          v69 = System_String__Concat_63368612((System_String_o *)StringLiteral_13830/*"The required attribute must have a value of yes or no."*/, v67, 0LL);
           v70 = 0.0;
           v71 = 0.0;
           v72 = 0.0;
@@ -747,7 +747,7 @@ void __fastcall ScriptMessageCommonManager__CancelNextTouch(
   nextTouchRootObject = this->fields.nextTouchRootObject;
   *(_WORD *)&this->fields.isWaitNextTouchRequest = 0;
   if ( !nextTouchRootObject )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   UnityEngine_GameObject__SetActive(nextTouchRootObject, 0, 0LL);
 }
 
@@ -840,12 +840,12 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
   const MethodInfo *v79; // x6
   const MethodInfo *v80; // x1
 
-  if ( (byte_4BFF46D & 1) == 0 )
+  if ( (byte_4C23C97 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_ScriptMessageWindow___, prefab);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_UILabel____77847096, v5);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4BFF46D = 1;
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_ScriptMessageWindow___, prefab);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_UILabel____77992888, v5);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    byte_4C23C97 = 1;
   }
   ScriptMessageCommonManager__DeleteLabels(this, (const MethodInfo *)prefab);
   talkNameManager = (int64_t)this->fields.talkNameManager;
@@ -874,7 +874,7 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
                                            0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(gameObject, 0LL);
+    UnityEngine_Object__Destroy_71122748(gameObject, 0LL);
   }
   talkNameManager = (int64_t)this->fields.messageShake;
   if ( !talkNameManager )
@@ -882,10 +882,10 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)talkNameManager, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  talkNameManager = (int64_t)UnityEngine_Object__Instantiate_object__50692032(
+  talkNameManager = (int64_t)UnityEngine_Object__Instantiate_object__50818788(
                                (Il2CppObject *)prefab,
                                transform,
-                               (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_ScriptMessageWindow___);
+                               (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_ScriptMessageWindow___);
   if ( !talkNameManager )
     goto LABEL_57;
   v14 = talkNameManager;
@@ -903,10 +903,10 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
     v17 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v14, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    messageMainLabel = UnityEngine_Object__Instantiate_object__50692032(
+    messageMainLabel = UnityEngine_Object__Instantiate_object__50818788(
                          messageMainLabel,
                          v17,
-                         (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_UILabel____77847096);
+                         (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_UILabel____77992888);
     ScriptMessageCommonManager__CopyFontEffects(
       (ScriptMessageCommonManager_o *)messageMainLabel,
       *(UILabel_o **)(v14 + 128),
@@ -917,7 +917,7 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
     goto LABEL_57;
   v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageMainLabel, 0LL);
   this->fields.mainPrefab = v19;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mainPrefab, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mainPrefab, (int64_t)v19, v20, v21, v22, v23, v24, v25);
   v26 = *(UnityEngine_Object_o **)(v14 + 136);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -931,10 +931,10 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
     v29 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v14, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    messageRubyLabel = UnityEngine_Object__Instantiate_object__50692032(
+    messageRubyLabel = UnityEngine_Object__Instantiate_object__50818788(
                          messageRubyLabel,
                          v29,
-                         (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_UILabel____77847096);
+                         (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_UILabel____77992888);
     ScriptMessageCommonManager__CopyFontEffects(
       (ScriptMessageCommonManager_o *)messageRubyLabel,
       *(UILabel_o **)(v14 + 136),
@@ -945,7 +945,7 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
     goto LABEL_57;
   v31 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageRubyLabel, 0LL);
   this->fields.rubyPrefab = v31;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.rubyPrefab, (int64_t)v31, v32, v33, v34, v35, v36, v37);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.rubyPrefab, (int64_t)v31, v32, v33, v34, v35, v36, v37);
   v38 = *(UnityEngine_Object_o **)(v14 + 144);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -959,10 +959,10 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
     v41 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v14, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v42 = UnityEngine_Object__Instantiate_object__50692032(
+    v42 = UnityEngine_Object__Instantiate_object__50818788(
             talkNameMainLabel,
             v41,
-            (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_UILabel____77847096);
+            (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_UILabel____77992888);
     ScriptMessageCommonManager__CopyFontEffects(
       (ScriptMessageCommonManager_o *)v42,
       *(UILabel_o **)(v14 + 144),
@@ -987,7 +987,7 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
   if ( !v44 )
     goto LABEL_57;
   v44->fields.mainPrefab = (struct UnityEngine_GameObject_o *)talkNameManager;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v44->fields.mainPrefab, talkNameManager, v46, v47, v48, v49, v50, v51);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v44->fields.mainPrefab, talkNameManager, v46, v47, v48, v49, v50, v51);
   v52 = *(UnityEngine_Object_o **)(v14 + 152);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1005,7 +1005,7 @@ void __fastcall ScriptMessageCommonManager__ChangeMessageWindow(
       }
     }
 LABEL_57:
-    sub_1C2E388(talkNameManager, v7);
+    sub_1C3B9C0(talkNameManager, v7);
   }
   v53 = this->fields.defaultMessageWindow;
   if ( !v53 )
@@ -1014,10 +1014,10 @@ LABEL_57:
   v55 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v14, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v56 = UnityEngine_Object__Instantiate_object__50692032(
+  v56 = UnityEngine_Object__Instantiate_object__50818788(
           talkNameRubyLabel,
           v55,
-          (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_UILabel____77847096);
+          (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_UILabel____77992888);
   ScriptMessageCommonManager__CopyFontEffects(
     (ScriptMessageCommonManager_o *)v56,
     *(UILabel_o **)(v14 + 152),
@@ -1032,15 +1032,15 @@ LABEL_54:
   if ( !v58 )
     goto LABEL_57;
   v58->fields.rubyPrefab = (struct UnityEngine_GameObject_o *)talkNameManager;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v58->fields.rubyPrefab, talkNameManager, v60, v61, v62, v63, v64, v65);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v58->fields.rubyPrefab, talkNameManager, v60, v61, v62, v63, v64, v65);
   talkNameManager = (int64_t)this->fields.talkNameManager;
   if ( !talkNameManager )
     goto LABEL_57;
   v72 = *(_QWORD *)(v14 + 88);
   *(_QWORD *)(talkNameManager + 56) = v72;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(talkNameManager + 56), v72, v66, v67, v68, v69, v70, v71);
+  sub_1C3B708((PartyOrganizationUtility_o *)(talkNameManager + 56), v72, v66, v67, v68, v69, v70, v71);
   this->fields.currentMessageWindow = (struct ScriptMessageWindow_o *)v14;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.currentMessageWindow, v14, v73, v74, v75, v76, v77, v78);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.currentMessageWindow, v14, v73, v74, v75, v76, v77, v78);
   ScriptMessageCommonManager__SetScreen(this, 0, 0, 0, 0, 1, v79);
   ScriptMessageCommonManager__ResetScroll(this, v80);
 }
@@ -1065,14 +1065,14 @@ void __fastcall ScriptMessageCommonManager__ClearLabels(ScriptMessageCommonManag
   int v11; // w9
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BFF452 & 1) == 0 )
+  if ( (byte_4C23C7C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__, v6);
-    byte_4BFF452 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__, v6);
+    byte_4C23C7C = 1;
   }
   memset(&v12, 0, sizeof(v12));
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
@@ -1081,18 +1081,18 @@ void __fastcall ScriptMessageCommonManager__ClearLabels(ScriptMessageCommonManag
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     dispLabelList,
-    (const MethodInfo_366C3A4 *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v12,
-            (const MethodInfo_34001C4 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__) )
+            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__) )
     ScriptMessageCommonManager__ReleaseLabel(this, (ScriptMessageLabel_o *)v12.fields._current, v8);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v12,
-    (const MethodInfo_34001C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
   v9 = this->fields.dispLabelList;
   if ( !v9 )
 LABEL_11:
-    sub_1C2E388(dispLabelList, method);
+    sub_1C3B9C0(dispLabelList, method);
   size = v9->fields._size;
   v11 = v9->fields._version + 1;
   v9->fields._size = 0;
@@ -1134,10 +1134,10 @@ void __fastcall ScriptMessageCommonManager__ClearTalkName(ScriptMessageCommonMan
   struct ScriptMessageWindow_o *v18; // x8
 
   v2 = this;
-  if ( (byte_4BFF46B & 1) == 0 )
+  if ( (byte_4C23C95 & 1) == 0 )
   {
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&StringLiteral_1/*""*/, method);
-    byte_4BFF46B = 1;
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&StringLiteral_1/*""*/, method);
+    byte_4C23C95 = 1;
   }
   currentMessageWindow = v2->fields.currentMessageWindow;
   if ( !currentMessageWindow )
@@ -1148,10 +1148,10 @@ void __fastcall ScriptMessageCommonManager__ClearTalkName(ScriptMessageCommonMan
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
   v4 = StringLiteral_1/*""*/;
   v2->fields.talkName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields.talkName, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields.talkName, (int64_t)v4, v5, v6, v7, v8, v9, v10);
   v11 = StringLiteral_1/*""*/;
   v2->fields.talkNameOnly = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v2->fields.talkNameOnly, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields.talkNameOnly, (int64_t)v11, v12, v13, v14, v15, v16, v17);
   this = (ScriptMessageCommonManager_o *)v2->fields.talkNameManager;
   v2->fields.talkNameIndex = -1;
   if ( !this
@@ -1159,7 +1159,7 @@ void __fastcall ScriptMessageCommonManager__ClearTalkName(ScriptMessageCommonMan
     || (this = (ScriptMessageCommonManager_o *)v18->fields.talkNameIcon) == 0LL )
   {
 LABEL_9:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   ((void (__fastcall *)(ScriptMessageCommonManager_o *, Il2CppMethodPointer, float))this->klass->vtable._8_IsEnableCloseDown.method)(
     this,
@@ -1199,10 +1199,10 @@ void __fastcall ScriptMessageCommonManager__ClearText(ScriptMessageCommonManager
   struct ScriptMessageWindow_o *v28; // x8
 
   p_startPosition = &this->fields.startPosition;
-  if ( (byte_4BFF469 & 1) == 0 )
+  if ( (byte_4C23C93 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, method);
-    byte_4BFF469 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, method);
+    byte_4C23C93 = 1;
   }
   ScriptMessageCommonManager__ClearLabels(this, method);
   p_startPosition[1] = *p_startPosition;
@@ -1236,10 +1236,10 @@ void __fastcall ScriptMessageCommonManager__ClearText(ScriptMessageCommonManager
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageScroll, 0, 0LL);
   v14 = StringLiteral_1/*""*/;
   this->fields.talkName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.talkName, (int64_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.talkName, (int64_t)v14, v15, v16, v17, v18, v19, v20);
   v21 = StringLiteral_1/*""*/;
   this->fields.talkNameOnly = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.talkNameOnly, (int64_t)v21, v22, v23, v24, v25, v26, v27);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.talkNameOnly, (int64_t)v21, v22, v23, v24, v25, v26, v27);
   messageScroll = (UnityEngine_Transform_o *)this->fields.talkNameManager;
   this->fields.talkNameIndex = -1;
   if ( !messageScroll
@@ -1253,7 +1253,7 @@ void __fastcall ScriptMessageCommonManager__ClearText(ScriptMessageCommonManager
         (messageScroll = (UnityEngine_Transform_o *)this->fields.nextTouchRootObject) == 0LL) )
   {
 LABEL_12:
-    sub_1C2E388(messageScroll, v5);
+    sub_1C3B9C0(messageScroll, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageScroll, 0, 0LL);
 }
@@ -1284,12 +1284,12 @@ void __fastcall ScriptMessageCommonManager__CloseDown(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4BFF463 & 1) == 0 )
+  if ( (byte_4C23C8D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, isFast);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C2E12C(&Method_ScriptMessageCommonManager_CloseDown__, v6);
-    byte_4BFF463 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, isFast);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C3B764(&Method_ScriptMessageCommonManager_CloseDown__, v6);
+    byte_4C23C8D = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -1299,7 +1299,7 @@ void __fastcall ScriptMessageCommonManager__CloseDown(
     goto LABEL_24;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        rootObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1327,7 +1327,7 @@ void __fastcall ScriptMessageCommonManager__CloseDown(
   rootObject = (UnityEngine_GameObject_o *)this->fields.rootPanel;
   if ( !rootObject )
 LABEL_24:
-    sub_1C2E388(rootObject, isFast);
+    sub_1C3B9C0(rootObject, isFast);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)rootObject, 0LL);
   windowCloseTime = 0.0;
   if ( !isFast )
@@ -1346,7 +1346,7 @@ LABEL_24:
       v11->fields.method = 0;
       windowDownCurve = this->fields.windowDownCurve;
       v11->fields.animationCurve = windowDownCurve;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v11->fields.animationCurve,
         (int64_t)windowDownCurve,
         v12,
@@ -1358,8 +1358,8 @@ LABEL_24:
       UITweener__PlayForward((UITweener_o *)v11, 0LL);
       v19 = Method_ScriptMessageCommonManager_CloseDown__;
       if ( (*((_BYTE *)Method_ScriptMessageCommonManager_CloseDown__ + 83) & 2) != 0 )
-        v19 = (_QWORD *)sub_1C2E144(Method_ScriptMessageCommonManager_CloseDown__);
-      v20 = (System_Reflection_MethodBase_o *)sub_1C2E110(v19, v19[4]);
+        v19 = (_QWORD *)sub_1C3B77C(Method_ScriptMessageCommonManager_CloseDown__);
+      v20 = (System_Reflection_MethodBase_o *)sub_1C3B748(v19, v19[4]);
       OverwriteAssetSoundName__PlaySystemSe(v20, 7, 0, 0LL);
       return;
     }
@@ -1375,7 +1375,7 @@ void __fastcall ScriptMessageCommonManager__CopyFontEffects(
         const MethodInfo *method)
 {
   if ( !src || !dst )
-    sub_1C2E388(this, src);
+    sub_1C3B9C0(this, src);
   UILabel__set_effectStyle(dst, src->fields.mEffectStyle, 0LL);
   UILabel__set_effectColor(dst, src->fields.mEffectColor, 0LL);
   UILabel__set_effectDistance(dst, src->fields.mEffectDistance, 0LL);
@@ -1399,24 +1399,24 @@ UILabel_o *__fastcall ScriptMessageCommonManager__CreateLabel(
   UnityEngine_Transform_o *v10; // x20
   UnityEngine_Transform_o *v11; // x20
 
-  if ( (byte_4BFF47E & 1) == 0 )
+  if ( (byte_4C23CA8 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BFF47E = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    byte_4C23CA8 = 1;
   }
   mainPrefab = (Il2CppObject *)this->fields.mainPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                    mainPrefab,
-                                                   (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                   (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !Component_object )
     goto LABEL_15;
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    Component_object,
-                                                   (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                                   (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
   if ( !Component_object )
     goto LABEL_15;
   currentMessageWindow = this->fields.currentMessageWindow;
@@ -1429,24 +1429,24 @@ UILabel_o *__fastcall ScriptMessageCommonManager__CreateLabel(
   ScriptMessageWindow__AddChildMessageScroll(currentMessageWindow, (UnityEngine_Transform_o *)Component_object, 0LL);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v9, 0LL);
   v10 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    Component_object = (UnityEngine_GameObject_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BF7D91 = 1;
+    Component_object = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_4C1C511 = 1;
   }
   if ( !v10 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   Component_object = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(v9, 0LL);
   v11 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    Component_object = (UnityEngine_GameObject_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4BF7D96 = 1;
+    Component_object = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_4C1C516 = 1;
   }
   if ( !v11 )
 LABEL_15:
-    sub_1C2E388(Component_object, v7);
+    sub_1C3B9C0(Component_object, v7);
   UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   return (UILabel_o *)v9;
 }
@@ -1466,16 +1466,16 @@ void __fastcall ScriptMessageCommonManager__DeleteLabels(ScriptMessageCommonMana
   UnityEngine_Object_o *v12; // x20
   UnityEngine_Object_o *v13; // x20
 
-  if ( (byte_4BFF451 & 1) == 0 )
+  if ( (byte_4C23C7B & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v8);
-    byte_4BFF451 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v8);
+    byte_4C23C7B = 1;
   }
   ScriptMessageCommonManager__ClearLabels(this, method);
   labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.labelStock;
@@ -1485,7 +1485,7 @@ void __fastcall ScriptMessageCommonManager__DeleteLabels(ScriptMessageCommonMana
   {
     labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                             labelStock,
-                                                            (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+                                                            (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
     if ( labelStock )
     {
       ScriptMessageLabel__Destroy((ScriptMessageLabel_o *)labelStock, 0LL);
@@ -1502,7 +1502,7 @@ void __fastcall ScriptMessageCommonManager__DeleteLabels(ScriptMessageCommonMana
   {
     labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                             labelStock,
-                                                            (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                                            (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
     if ( labelStock )
     {
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
@@ -1510,7 +1510,7 @@ void __fastcall ScriptMessageCommonManager__DeleteLabels(ScriptMessageCommonMana
                                              0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70989720(gameObject, 0LL);
+      UnityEngine_Object__Destroy_71122748(gameObject, 0LL);
       labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.mainStock;
       if ( labelStock )
         continue;
@@ -1526,29 +1526,29 @@ void __fastcall ScriptMessageCommonManager__DeleteLabels(ScriptMessageCommonMana
       break;
     labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                             labelStock,
-                                                            (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                                            (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
     if ( !labelStock )
       goto LABEL_27;
     v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)labelStock, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(v12, 0LL);
+    UnityEngine_Object__Destroy_71122748(v12, 0LL);
   }
   labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.imageStock;
   if ( !labelStock )
 LABEL_27:
-    sub_1C2E388(labelStock, v9);
+    sub_1C3B9C0(labelStock, v9);
   while ( labelStock->fields._size > 0 )
   {
     labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                             labelStock,
-                                                            (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
+                                                            (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
     if ( labelStock )
     {
       v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)labelStock, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70989720(v13, 0LL);
+      UnityEngine_Object__Destroy_71122748(v13, 0LL);
       labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.imageStock;
       if ( labelStock )
         continue;
@@ -1580,14 +1580,14 @@ UISprite_o *__fastcall ScriptMessageCommonManager__FetchImageSprite(
   UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x20
 
-  if ( (byte_4BFF456 & 1) == 0 )
+  if ( (byte_4C23C80 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v6);
-    byte_4BFF456 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v6);
+    byte_4C23C80 = 1;
   }
   imageStock = (__int64)this->fields.imageStock;
   if ( !imageStock )
@@ -1599,12 +1599,12 @@ UISprite_o *__fastcall ScriptMessageCommonManager__FetchImageSprite(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     imageStock = (__int64)UnityEngine_Object__Instantiate_object_(
                             imagePrefab,
-                            (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                            (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( imageStock )
     {
       imageStock = (__int64)UnityEngine_GameObject__GetComponent_object_(
                               (UnityEngine_GameObject_o *)imageStock,
-                              (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                              (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( imageStock )
       {
         currentMessageWindow = this->fields.currentMessageWindow;
@@ -1618,31 +1618,31 @@ UISprite_o *__fastcall ScriptMessageCommonManager__FetchImageSprite(
       }
     }
 LABEL_20:
-    sub_1C2E388(imageStock, method);
+    sub_1C3B9C0(imageStock, method);
   }
   imageStock = (__int64)System_Collections_Generic_Stack_object___Pop(
                           (System_Collections_Generic_Stack_T__o *)imageStock,
-                          (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
+                          (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
   v8 = (UnityEngine_Component_o *)imageStock;
   if ( !imageStock )
     goto LABEL_20;
 LABEL_13:
   imageStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v11 = (UnityEngine_Transform_o *)imageStock;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    imageStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D91 = 1;
+    imageStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C511 = 1;
   }
   if ( !v11 )
     goto LABEL_20;
   UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   imageStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v12 = (UnityEngine_Transform_o *)imageStock;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    imageStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D96 = 1;
+    imageStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C516 = 1;
   }
   if ( !v12 )
     goto LABEL_20;
@@ -1660,21 +1660,21 @@ ScriptMessageLabel_o *__fastcall ScriptMessageCommonManager__FetchLabel(
   System_Collections_Generic_Stack_T__o *labelStock; // x0
   ScriptMessageLabel_o *v7; // x19
 
-  if ( (byte_4BFF457 & 1) == 0 )
+  if ( (byte_4C23C81 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptMessageLabel_TypeInfo, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__, v3);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__, v4);
-    byte_4BFF457 = 1;
+    sub_1C3B764(&ScriptMessageLabel_TypeInfo, method);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__, v3);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__, v4);
+    byte_4C23C81 = 1;
   }
   labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.labelStock;
   if ( !labelStock )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( labelStock->fields._size >= 1 )
     return (ScriptMessageLabel_o *)System_Collections_Generic_Stack_object___Pop(
                                      labelStock,
-                                     (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
-  v7 = (ScriptMessageLabel_o *)sub_1C2E378(ScriptMessageLabel_TypeInfo);
+                                     (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+  v7 = (ScriptMessageLabel_o *)sub_1C3B9B0(ScriptMessageLabel_TypeInfo);
   ScriptMessageLabel___ctor(v7, 0LL);
   return v7;
 }
@@ -1695,14 +1695,14 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchMainLabel(
   UnityEngine_Transform_o *v11; // x20
   UnityEngine_Transform_o *v12; // x20
 
-  if ( (byte_4BFF454 & 1) == 0 )
+  if ( (byte_4C23C7E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
-    byte_4BFF454 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
+    byte_4C23C7E = 1;
   }
   mainStock = (__int64)this->fields.mainStock;
   if ( !mainStock )
@@ -1714,12 +1714,12 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchMainLabel(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     mainStock = (__int64)UnityEngine_Object__Instantiate_object_(
                            mainPrefab,
-                           (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( mainStock )
     {
       mainStock = (__int64)UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)mainStock,
-                             (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( mainStock )
       {
         currentMessageWindow = this->fields.currentMessageWindow;
@@ -1733,11 +1733,11 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchMainLabel(
       }
     }
 LABEL_20:
-    sub_1C2E388(mainStock, method);
+    sub_1C3B9C0(mainStock, method);
   }
   mainStock = (__int64)System_Collections_Generic_Stack_object___Pop(
                          (System_Collections_Generic_Stack_T__o *)mainStock,
-                         (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                         (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
   if ( !mainStock )
     goto LABEL_20;
   v8 = (UnityEngine_Component_o *)mainStock;
@@ -1745,20 +1745,20 @@ LABEL_20:
 LABEL_13:
   mainStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v11 = (UnityEngine_Transform_o *)mainStock;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    mainStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D91 = 1;
+    mainStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C511 = 1;
   }
   if ( !v11 )
     goto LABEL_20;
   UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   mainStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v12 = (UnityEngine_Transform_o *)mainStock;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    mainStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D96 = 1;
+    mainStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C516 = 1;
   }
   if ( !v12 )
     goto LABEL_20;
@@ -1782,14 +1782,14 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchRubyLabel(
   UnityEngine_Transform_o *v11; // x21
   UnityEngine_Transform_o *v12; // x21
 
-  if ( (byte_4BFF455 & 1) == 0 )
+  if ( (byte_4C23C7F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
-    byte_4BFF455 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UILabel___, method);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v6);
+    byte_4C23C7F = 1;
   }
   rubyStock = (__int64)this->fields.rubyStock;
   if ( !rubyStock )
@@ -1801,12 +1801,12 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchRubyLabel(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     rubyStock = (__int64)UnityEngine_Object__Instantiate_object_(
                            rubyPrefab,
-                           (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( rubyStock )
     {
       rubyStock = (__int64)UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)rubyStock,
-                             (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( rubyStock )
       {
         currentMessageWindow = this->fields.currentMessageWindow;
@@ -1820,31 +1820,31 @@ UILabel_o *__fastcall ScriptMessageCommonManager__FetchRubyLabel(
       }
     }
 LABEL_20:
-    sub_1C2E388(rubyStock, method);
+    sub_1C3B9C0(rubyStock, method);
   }
   rubyStock = (__int64)System_Collections_Generic_Stack_object___Pop(
                          (System_Collections_Generic_Stack_T__o *)rubyStock,
-                         (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                         (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
   v8 = (UnityEngine_Component_o *)rubyStock;
   if ( !rubyStock )
     goto LABEL_20;
 LABEL_13:
   rubyStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v11 = (UnityEngine_Transform_o *)rubyStock;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    rubyStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D91 = 1;
+    rubyStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C511 = 1;
   }
   if ( !v11 )
     goto LABEL_20;
   UnityEngine_Transform__set_localPosition(v11, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   rubyStock = (__int64)UnityEngine_Component__get_transform(v8, 0LL);
   v12 = (UnityEngine_Transform_o *)rubyStock;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    rubyStock = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D96 = 1;
+    rubyStock = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C516 = 1;
   }
   if ( !v12 )
     goto LABEL_20;
@@ -1866,11 +1866,11 @@ void __fastcall ScriptMessageCommonManager__ForceOpen(ScriptMessageCommonManager
   Il2CppObject *Component_object; // x20
   UnityEngine_Transform_o *v11; // x20
 
-  if ( (byte_4BFF461 & 1) == 0 )
+  if ( (byte_4C23C8B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BFF461 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C23C8B = 1;
   }
   rootObject = (UnityEngine_Object_o *)this->fields.rootObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1908,7 +1908,7 @@ void __fastcall ScriptMessageCommonManager__ForceOpen(ScriptMessageCommonManager
             {
               Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)transform,
-                                   (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                                   (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -1926,10 +1926,10 @@ void __fastcall ScriptMessageCommonManager__ForceOpen(ScriptMessageCommonManager
                 {
                   transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0LL);
                   v11 = (UnityEngine_Transform_o *)transform;
-                  if ( !byte_4BF7D91 )
+                  if ( !byte_4C1C511 )
                   {
-                    transform = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v5);
-                    byte_4BF7D91 = 1;
+                    transform = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v5);
+                    byte_4C1C511 = 1;
                   }
                   if ( v11 )
                   {
@@ -1967,7 +1967,7 @@ void __fastcall ScriptMessageCommonManager__ForceOpen(ScriptMessageCommonManager
             }
           }
 LABEL_36:
-          sub_1C2E388(transform, v5);
+          sub_1C3B9C0(transform, v5);
         }
       }
     }
@@ -1987,17 +1987,17 @@ int32_t __fastcall ScriptMessageCommonManager__GetAllDispLength(
   void *v8; // x22
   UnityEngine_Object_o *v9; // x23
 
-  if ( (byte_4BFF473 & 1) == 0 )
+  if ( (byte_4C23C9D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BFF473 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    byte_4C23C9D = 1;
   }
   dispLabelList = this->fields.dispLabelList;
   if ( !dispLabelList )
 LABEL_15:
-    sub_1C2E388(dispLabelList, method);
+    sub_1C3B9C0(dispLabelList, method);
   v6 = 0;
   v7 = 0;
   while ( v7 < *((_DWORD *)dispLabelList + 6) )
@@ -2005,7 +2005,7 @@ LABEL_15:
     dispLabelList = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)dispLabelList,
                       v7,
-                      (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+                      (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( dispLabelList )
     {
       v8 = dispLabelList;
@@ -2038,7 +2038,7 @@ UnityEngine_GameObject_o *__fastcall ScriptMessageCommonManager__GetBackLogButto
 
   backLogButton = (UnityEngine_Component_o *)this->fields.backLogButton;
   if ( !backLogButton )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   return UnityEngine_Component__get_gameObject(backLogButton, 0LL);
 }
 
@@ -2061,10 +2061,10 @@ UnityEngine_Vector3_o __fastcall ScriptMessageCommonManager__GetFaceIconPosition
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D91 = 1;
+    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C511 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -2093,7 +2093,7 @@ UISprite_o *__fastcall ScriptMessageCommonManager__GetMessageBackSprite(
 
   currentMessageWindow = this->fields.currentMessageWindow;
   if ( !currentMessageWindow )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return currentMessageWindow->fields.messageWindowBack;
 }
 
@@ -2122,7 +2122,7 @@ UISprite_o *__fastcall ScriptMessageCommonManager__GetTalkNameBackSprite(
 
   currentMessageWindow = this->fields.currentMessageWindow;
   if ( !currentMessageWindow )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   return currentMessageWindow->fields.talkNameBack;
 }
 
@@ -2186,15 +2186,15 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
   int32_t fontSize; // [xsp+Ch] [xbp-84h]
 
   v4 = this;
-  if ( (byte_4BFF46A & 1) == 0 )
+  if ( (byte_4C23C94 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Math_TypeInfo, dataList);
-    sub_1C2E12C(&ScriptMessageLabel_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_19676/*"f"*/, v6);
-    sub_1C2E12C(&StringLiteral_25802/*"・"*/, v7);
-    sub_1C2E12C(&StringLiteral_23172/*"r"*/, v8);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&StringLiteral_21415/*"l"*/, v9);
-    byte_4BFF46A = 1;
+    sub_1C3B764(&System_Math_TypeInfo, dataList);
+    sub_1C3B764(&ScriptMessageLabel_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_19711/*"iTween Error: AudioTo requires an AudioSource."*/, v6);
+    sub_1C3B764(&StringLiteral_25847, v7);
+    sub_1C3B764(&StringLiteral_23214/*"stay_no_dialog"*/, v8);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&StringLiteral_21451/*"mstMaterialFolder"*/, v9);
+    byte_4C23C94 = 1;
   }
   defaultTextOnlyLineHeight = v4->fields.defaultTextOnlyLineHeight;
   if ( defaultTextOnlyLineHeight == INFINITY )
@@ -2202,7 +2202,7 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
   else
     v11 = (int)defaultTextOnlyLineHeight;
   if ( !dataList )
-    sub_1C2E388(this, dataList);
+    sub_1C3B9C0(this, dataList);
   max_length = dataList->max_length;
   defaultBetweenLineHeight = v4->fields.defaultBetweenLineHeight;
   fontSize = v11;
@@ -2221,7 +2221,7 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
       v21 = dataList->m_Items[v15];
       this = (ScriptMessageCommonManager_o *)System_String__op_Equality(
                                                v21,
-                                               (System_String_o *)StringLiteral_19676/*"f"*/,
+                                               (System_String_o *)StringLiteral_19711/*"iTween Error: AudioTo requires an AudioSource."*/,
                                                0LL);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
@@ -2244,14 +2244,14 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
         VerticalAlignFromString = ScriptMessageLabel__GetVerticalAlignFromString(v24, 0LL);
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        this = (ScriptMessageCommonManager_o *)System_Math__Max_64054728(VerticalAlignFromString, v16, 0LL);
+        this = (ScriptMessageCommonManager_o *)System_Math__Max_64187756(VerticalAlignFromString, v16, 0LL);
         v16 = (int)this;
       }
       else
       {
         this = (ScriptMessageCommonManager_o *)System_String__op_Equality(
                                                  v21,
-                                                 (System_String_o *)StringLiteral_21415/*"l"*/,
+                                                 (System_String_o *)StringLiteral_21451/*"mstMaterialFolder"*/,
                                                  0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
@@ -2268,7 +2268,7 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
         {
           this = (ScriptMessageCommonManager_o *)System_String__op_Equality(
                                                    v21,
-                                                   (System_String_o *)StringLiteral_23172/*"r"*/,
+                                                   (System_String_o *)StringLiteral_23214/*"stay_no_dialog"*/,
                                                    0LL);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
@@ -2291,7 +2291,7 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
           {
             this = (ScriptMessageCommonManager_o *)System_String__op_Equality(
                                                      v21,
-                                                     (System_String_o *)StringLiteral_25802/*"・"*/,
+                                                     (System_String_o *)StringLiteral_25847,
                                                      0LL);
             if ( ((v19 < defaultFontSize) & (v17 == 1) & (unsigned __int8)this) != 0 )
               v19 = defaultFontSize;
@@ -2302,7 +2302,7 @@ float __fastcall ScriptMessageCommonManager__GetVerticalAlignedOffset(
       if ( (int)++v15 >= max_length )
         goto LABEL_38;
     }
-    sub_1C2E390(this, dataList);
+    sub_1C3B9C8(this, dataList);
   }
   vAlign = 0;
   v19 = -1;
@@ -2314,10 +2314,10 @@ LABEL_38:
   }
   else
   {
-    if ( !byte_4BF8445 )
+    if ( !byte_4C1CBC5 )
     {
-      sub_1C2E12C(&System_Math_TypeInfo, dataList);
-      byte_4BF8445 = 1;
+      sub_1C3B764(&System_Math_TypeInfo, dataList);
+      byte_4C1CBC5 = 1;
     }
     v29 = (float)v19 * 0.37;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2361,10 +2361,10 @@ int32_t __fastcall ScriptMessageCommonManager__InitScreen(ScriptMessageCommonMan
   UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v6; // x6
 
-  if ( (byte_4BFF45C & 1) == 0 )
+  if ( (byte_4C23C86 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_9185/*"MessageShake/LogMark/BackLogButton"*/, method);
-    byte_4BFF45C = 1;
+    sub_1C3B764(&StringLiteral_9187/*"Netscape Cert Type"*/, method);
+    byte_4C23C86 = 1;
   }
   this->fields.isTapSkip = 0;
   this->fields.isMessageSpeedForcedNormal = 0;
@@ -2383,11 +2383,34 @@ int32_t __fastcall ScriptMessageCommonManager__InitScreen(ScriptMessageCommonMan
         this->fields.messageAlign = 0,
         !rootPanel) )
   {
-    sub_1C2E388(rootPanel, method);
+    sub_1C3B9C0(rootPanel, method);
   }
   transform = UnityEngine_GameObject__get_transform(rootPanel, 0LL);
-  AndroidBackKeyManager__AddBackBtn_43187880(transform, (System_String_o *)StringLiteral_9185/*"MessageShake/LogMark/BackLogButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_43310944(transform, (System_String_o *)StringLiteral_9187/*"Netscape Cert Type"*/, 0LL);
   return ScriptMessageCommonManager__SetScreen(this, 0, 0, 0, 0, 1, v6);
+}
+
+
+bool __fastcall ScriptMessageCommonManager__IsActiveMessageWindow(
+        ScriptMessageCommonManager_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_GameObject_o *rootObject; // x0
+
+  rootObject = this->fields.rootObject;
+  if ( !rootObject )
+    goto LABEL_6;
+  if ( UnityEngine_GameObject__get_activeSelf(rootObject, 0LL) )
+  {
+    rootObject = (UnityEngine_GameObject_o *)this->fields.rootPanel;
+    if ( rootObject )
+      return (*(float (__fastcall **)(UnityEngine_GameObject_o *, Il2CppClass *))&rootObject->klass[1]._1.this_arg.bits)(
+               rootObject,
+               rootObject->klass[1]._1.element_class) > 0.0;
+LABEL_6:
+    sub_1C3B9C0(rootObject, method);
+  }
+  return 0;
 }
 
 
@@ -2440,7 +2463,7 @@ bool __fastcall ScriptMessageCommonManager__IsLongPress(ScriptMessageCommonManag
     return 0;
   touchPress = this->fields.touchPress;
   if ( !touchPress )
-    sub_1C2E388(0LL, v3);
+    sub_1C3B9C0(0LL, v3);
   return UITouchPress__get_IsLongPress(touchPress, 0LL);
 }
 
@@ -2452,11 +2475,11 @@ bool __fastcall ScriptMessageCommonManager__IsOpen(ScriptMessageCommonManager_o 
   Il2CppObject *Component_object; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFF45F & 1) == 0 )
+  if ( (byte_4C23C89 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BFF45F = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C23C89 = 1;
   }
   rootPanel = (UnityEngine_Component_o *)this->fields.rootPanel;
   if ( !rootPanel )
@@ -2466,7 +2489,7 @@ bool __fastcall ScriptMessageCommonManager__IsOpen(ScriptMessageCommonManager_o 
     goto LABEL_14;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)rootPanel,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootPanel = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -2485,7 +2508,7 @@ bool __fastcall ScriptMessageCommonManager__IsOpen(ScriptMessageCommonManager_o 
     || (rootPanel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(rootPanel, 0LL)) == 0LL )
   {
 LABEL_14:
-    sub_1C2E388(rootPanel, method);
+    sub_1C3B9C0(rootPanel, method);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)rootPanel, 0LL);
   return localPosition.fields.y >= this->fields.windowNormalPosY;
@@ -2528,10 +2551,10 @@ bool __fastcall ScriptMessageCommonManager__IsRootActive(ScriptMessageCommonMana
   __int64 v4; // x1
   UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_4BFF47D & 1) == 0 )
+  if ( (byte_4C23CA7 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFF47D = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C23CA7 = 1;
   }
   rootObject = (UnityEngine_Object_o *)this->fields.rootObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2540,7 +2563,7 @@ bool __fastcall ScriptMessageCommonManager__IsRootActive(ScriptMessageCommonMana
     return 0;
   v6 = this->fields.rootObject;
   if ( !v6 )
-    sub_1C2E388(0LL, v4);
+    sub_1C3B9C0(0LL, v4);
   return UnityEngine_GameObject__get_activeSelf(v6, 0LL);
 }
 
@@ -2586,11 +2609,11 @@ bool __fastcall ScriptMessageCommonManager__IsWindowCloseDown(
   Il2CppObject *Component_object; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFF460 & 1) == 0 )
+  if ( (byte_4C23C8A & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BFF460 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C23C8A = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -2600,7 +2623,7 @@ bool __fastcall ScriptMessageCommonManager__IsWindowCloseDown(
     goto LABEL_15;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        rootObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -2620,7 +2643,7 @@ bool __fastcall ScriptMessageCommonManager__IsWindowCloseDown(
     || (rootObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(rootObject, 0LL)) == 0LL )
   {
 LABEL_15:
-    sub_1C2E388(rootObject, method);
+    sub_1C3B9C0(rootObject, method);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)rootObject, 0LL);
   return localPosition.fields.y <= this->fields.windowClosePosY;
@@ -2643,12 +2666,12 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectExist(
   UnityEngine_Object_o *klass; // x23
   UnityEngine_Object_o *monitor; // x22
 
-  if ( (byte_4BFF47C & 1) == 0 )
+  if ( (byte_4C23CA6 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    byte_4BFF47C = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    byte_4C23CA6 = 1;
   }
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
   if ( !dispLabelList )
@@ -2662,7 +2685,7 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectExist(
     Item = System_Collections_Generic_List_object___get_Item(
              dispLabelList,
              i,
-             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( Item )
     {
       v11 = Item;
@@ -2680,7 +2703,7 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectExist(
     }
     dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
     if ( !dispLabelList )
-      sub_1C2E388(0LL, v10);
+      sub_1C3B9C0(0LL, v10);
   }
   return v8;
 }
@@ -2703,18 +2726,18 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectIsBusy(
   UnityEngine_Object_o *monitor; // x23
   UnityEngine_GameObject_o *v15; // x22
 
-  if ( (byte_4BFF47A & 1) == 0 )
+  if ( (byte_4C23CA4 & 1) == 0 )
   {
-    sub_1C2E12C(&CommonEffectManager_TypeInfo, effectName);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v6);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BFF47A = 1;
+    sub_1C3B764(&CommonEffectManager_TypeInfo, effectName);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v6);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    byte_4C23CA4 = 1;
   }
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
   if ( !dispLabelList )
 LABEL_17:
-    sub_1C2E388(dispLabelList, effectName);
+    sub_1C3B9C0(dispLabelList, effectName);
   v9 = 0;
   while ( 1 )
   {
@@ -2724,7 +2747,7 @@ LABEL_17:
     Item = System_Collections_Generic_List_object___get_Item(
              dispLabelList,
              v9,
-             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( Item )
     {
       v12 = Item;
@@ -2741,7 +2764,7 @@ LABEL_17:
           v15 = (UnityEngine_GameObject_o *)v12[3].monitor;
           if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-          if ( CommonEffectManager__IsBusy_42028192(v15, effectName, 0LL) )
+          if ( CommonEffectManager__IsBusy_42146172(v15, effectName, 0LL) )
             break;
         }
       }
@@ -2772,18 +2795,18 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectIsStart(
   UnityEngine_Object_o *monitor; // x23
   UnityEngine_GameObject_o *v15; // x22
 
-  if ( (byte_4BFF47B & 1) == 0 )
+  if ( (byte_4C23CA5 & 1) == 0 )
   {
-    sub_1C2E12C(&CommonEffectManager_TypeInfo, effectName);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v6);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    byte_4BFF47B = 1;
+    sub_1C3B764(&CommonEffectManager_TypeInfo, effectName);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v6);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    byte_4C23CA5 = 1;
   }
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
   if ( !dispLabelList )
 LABEL_17:
-    sub_1C2E388(dispLabelList, effectName);
+    sub_1C3B9C0(dispLabelList, effectName);
   v9 = 0;
   while ( 1 )
   {
@@ -2793,7 +2816,7 @@ LABEL_17:
     Item = System_Collections_Generic_List_object___get_Item(
              dispLabelList,
              v9,
-             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( Item )
     {
       v12 = Item;
@@ -2810,7 +2833,7 @@ LABEL_17:
           v15 = (UnityEngine_GameObject_o *)v12[3].monitor;
           if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-          if ( CommonEffectManager__IsStart_42029108(v15, effectName, 0LL) )
+          if ( CommonEffectManager__IsStart_42147088(v15, effectName, 0LL) )
             break;
         }
       }
@@ -2843,18 +2866,18 @@ bool __fastcall ScriptMessageCommonManager__MessageEffectStop(
   UnityEngine_Object_o *monitor; // x24
   UnityEngine_GameObject_o *v18; // x23
 
-  if ( (byte_4BFF479 & 1) == 0 )
+  if ( (byte_4C23CA3 & 1) == 0 )
   {
-    sub_1C2E12C(&CommonEffectManager_TypeInfo, effectName);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v8);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v9);
-    byte_4BFF479 = 1;
+    sub_1C3B764(&CommonEffectManager_TypeInfo, effectName);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v8);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    byte_4C23CA3 = 1;
   }
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
   if ( !dispLabelList )
 LABEL_17:
-    sub_1C2E388(dispLabelList, effectName);
+    sub_1C3B9C0(dispLabelList, effectName);
   v11 = 0;
   v12 = 1;
   v13 = isSkip;
@@ -2863,7 +2886,7 @@ LABEL_17:
     Item = System_Collections_Generic_List_object___get_Item(
              dispLabelList,
              v11,
-             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( Item )
     {
       v15 = Item;
@@ -2880,7 +2903,7 @@ LABEL_17:
           v18 = (UnityEngine_GameObject_o *)v15[3].monitor;
           if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-          v12 &= CommonEffectManager__Stop_42036184(v18, effectName, v13, 0, 0LL, 0LL);
+          v12 &= CommonEffectManager__Stop_42154164(v18, effectName, v13, 0, 0LL, 0LL);
         }
       }
     }
@@ -2945,14 +2968,14 @@ bool __fastcall ScriptMessageCommonManager__MessageUpdate(
   double iptr; // [xsp+18h] [xbp-58h] BYREF
 
   v3 = isMessageDelta;
-  if ( (byte_4BFF474 & 1) == 0 )
+  if ( (byte_4C23C9E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, isMessageDelta);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v5);
-    sub_1C2E12C(&System_Math_TypeInfo, v6);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C2E12C(&ScriptMessageLabel_TypeInfo, v8);
-    byte_4BFF474 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__, isMessageDelta);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__, v5);
+    sub_1C3B764(&System_Math_TypeInfo, v6);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C3B764(&ScriptMessageLabel_TypeInfo, v8);
+    byte_4C23C9E = 1;
   }
   if ( !this->fields.isBusy )
   {
@@ -2971,7 +2994,7 @@ bool __fastcall ScriptMessageCommonManager__MessageUpdate(
     dispLabelList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                    dispLabelList,
                                                                    dispIndex,
-                                                                   (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
+                                                                   (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ScriptMessageLabel__get_Item__);
     if ( !dispLabelList )
       goto LABEL_79;
     v11 = dispLabelList;
@@ -3013,7 +3036,7 @@ LABEL_29:
     if ( ((unsigned __int8)dispLabelList & 1) != 0 )
     {
       v22 = (UILabel_o *)v11->fields._items;
-      dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63235584(
+      dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63368612(
                                                                      (System_String_o *)v11[2].fields._syncRoot,
                                                                      (System_String_o *)v11[3].klass,
                                                                      0LL);
@@ -3026,7 +3049,7 @@ LABEL_29:
       if ( *(int *)(isMessageDelta + 16LL) >= 1 )
       {
         v23 = *(UILabel_o **)&v11->fields._size;
-        dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63235584(
+        dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63368612(
                                                                        (System_String_o *)v11[2].fields._syncRoot,
                                                                        (System_String_o *)isMessageDelta,
                                                                        0LL);
@@ -3102,7 +3125,7 @@ LABEL_22:
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
     v32 = ScriptMessageLabel__SubstrByDisp(klass, v20, 0LL);
-    dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63235584(syncRoot, v32, 0LL);
+    dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63368612(syncRoot, v32, 0LL);
     if ( v29 )
     {
       UILabel__set_text(v29, (System_String_o *)dispLabelList, 0LL);
@@ -3152,7 +3175,7 @@ LABEL_69:
         else
           v46 = (int)v43;
         v47 = ScriptMessageLabel__SubstrByDisp(v33, v46, 0LL);
-        dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63235584(v36, v47, 0LL);
+        dispLabelList = (System_Collections_Generic_List_object__o *)System_String__Concat_63368612(v36, v47, 0LL);
         if ( v35 )
         {
           UILabel__set_text(v35, (System_String_o *)dispLabelList, 0LL);
@@ -3161,7 +3184,7 @@ LABEL_69:
       }
     }
 LABEL_79:
-    sub_1C2E388(dispLabelList, isMessageDelta);
+    sub_1C3B9C0(dispLabelList, isMessageDelta);
   }
   return this->fields.isBusy;
 }
@@ -3174,7 +3197,7 @@ void __fastcall ScriptMessageCommonManager__OffScreen(ScriptMessageCommonManager
   rootPanel = this->fields.rootPanel;
   this->fields.isMessageOut = 0;
   if ( !rootPanel )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, float))rootPanel->klass->vtable._8_set_alpha.method)(
     rootPanel,
     rootPanel->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -3187,10 +3210,10 @@ void __fastcall ScriptMessageCommonManager__OnClickWindow(ScriptMessageCommonMan
   __int64 v3; // x1
   UnityEngine_GameObject_o *nextTouchRootObject; // x0
 
-  if ( (byte_4BFF471 & 1) == 0 )
+  if ( (byte_4C23C9B & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_10071/*"OnDelayWaitNextTouch"*/, method);
-    byte_4BFF471 = 1;
+    sub_1C3B764(&StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, method);
+    byte_4C23C9B = 1;
   }
   if ( ScriptMessageCommonManager__IsOpen(this, method) )
   {
@@ -3201,11 +3224,11 @@ void __fastcall ScriptMessageCommonManager__OnClickWindow(ScriptMessageCommonMan
         nextTouchRootObject = this->fields.nextTouchRootObject;
         this->fields.isWaitNextTouchDelay = 1;
         if ( !nextTouchRootObject )
-          sub_1C2E388(0LL, v3);
+          sub_1C3B9C0(0LL, v3);
         UnityEngine_GameObject__SetActive(nextTouchRootObject, 0, 0LL);
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_10071/*"OnDelayWaitNextTouch"*/,
+          (System_String_o *)StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/,
           this->fields.defaultKeyDelayTime,
           0LL);
       }
@@ -3248,11 +3271,11 @@ void __fastcall ScriptMessageCommonManager__OnEndUpDownAnime(
   float v6; // s8
   float windowClosePosY; // s9
 
-  if ( (byte_4BFF464 & 1) == 0 )
+  if ( (byte_4C23C8E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BFF464 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C23C8E = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -3262,7 +3285,7 @@ void __fastcall ScriptMessageCommonManager__OnEndUpDownAnime(
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        rootObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -3287,7 +3310,7 @@ void __fastcall ScriptMessageCommonManager__OnEndUpDownAnime(
       }
     }
 LABEL_13:
-    sub_1C2E388(rootObject, method);
+    sub_1C3B9C0(rootObject, method);
   }
 }
 
@@ -3299,10 +3322,10 @@ void __fastcall ScriptMessageCommonManager__OnLongPressWindow(
   __int64 v3; // x1
   UnityEngine_GameObject_o *nextTouchRootObject; // x0
 
-  if ( (byte_4BFF472 & 1) == 0 )
+  if ( (byte_4C23C9C & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_10071/*"OnDelayWaitNextTouch"*/, method);
-    byte_4BFF472 = 1;
+    sub_1C3B764(&StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, method);
+    byte_4C23C9C = 1;
   }
   if ( !this->fields.isTapSkip
     && ScriptMessageCommonManager__IsOpen(this, method)
@@ -3312,11 +3335,11 @@ void __fastcall ScriptMessageCommonManager__OnLongPressWindow(
     nextTouchRootObject = this->fields.nextTouchRootObject;
     this->fields.isWaitNextTouchDelay = 1;
     if ( !nextTouchRootObject )
-      sub_1C2E388(0LL, v3);
+      sub_1C3B9C0(0LL, v3);
     UnityEngine_GameObject__SetActive(nextTouchRootObject, 0, 0LL);
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10071/*"OnDelayWaitNextTouch"*/,
+      (System_String_o *)StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/,
       this->fields.defaultKeyDelayTime,
       0LL);
   }
@@ -3327,10 +3350,10 @@ void __fastcall ScriptMessageCommonManager__OnPressWindow(ScriptMessageCommonMan
 {
   UnityEngine_GameObject_o *nextTouchRootObject; // x0
 
-  if ( (byte_4BFF470 & 1) == 0 )
+  if ( (byte_4C23C9A & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_10071/*"OnDelayWaitNextTouch"*/, method);
-    byte_4BFF470 = 1;
+    sub_1C3B764(&StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/, method);
+    byte_4C23C9A = 1;
   }
   if ( this->fields.isWaitNextTouchRequest )
   {
@@ -3339,11 +3362,11 @@ void __fastcall ScriptMessageCommonManager__OnPressWindow(ScriptMessageCommonMan
       nextTouchRootObject = this->fields.nextTouchRootObject;
       this->fields.isWaitNextTouchDelay = 1;
       if ( !nextTouchRootObject )
-        sub_1C2E388(0LL, method);
+        sub_1C3B9C0(0LL, method);
       UnityEngine_GameObject__SetActive(nextTouchRootObject, 0, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_10071/*"OnDelayWaitNextTouch"*/,
+        (System_String_o *)StringLiteral_10073/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT"*/,
         this->fields.defaultKeyDelayTime,
         0LL);
     }
@@ -3370,10 +3393,10 @@ void __fastcall ScriptMessageCommonManager__OnShake(ScriptMessageCommonManager_o
   UnityEngine_Transform_o *v8; // x20
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BFF478 & 1) == 0 )
+  if ( (byte_4C23CA2 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_10145/*"OnShake"*/, method);
-    byte_4BFF478 = 1;
+    sub_1C3B764(&StringLiteral_10147/*"PLAYER CONNECTED"*/, method);
+    byte_4C23CA2 = 1;
   }
   if ( this->fields.shakeCycle > 0.0
     && (this->fields.shakeTime == 0.0 || UnityEngine_Time__get_time(0LL) < this->fields.shakeTime) )
@@ -3389,23 +3412,23 @@ void __fastcall ScriptMessageCommonManager__OnShake(ScriptMessageCommonManager_o
       UnityEngine_Transform__set_localPosition(messageShake, v9, 0LL);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_10145/*"OnShake"*/,
+        (System_String_o *)StringLiteral_10147/*"PLAYER CONNECTED"*/,
         this->fields.shakeCycle,
         0LL);
       return;
     }
 LABEL_12:
-    sub_1C2E388(v5, v6);
+    sub_1C3B9C0(v5, v6);
   }
-  UnityEngine_MonoBehaviour__CancelInvoke_70974300(
+  UnityEngine_MonoBehaviour__CancelInvoke_71107328(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10145/*"OnShake"*/,
+    (System_String_o *)StringLiteral_10147/*"PLAYER CONNECTED"*/,
     0LL);
   v8 = this->fields.messageShake;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    v5 = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v6);
-    byte_4BF7D91 = 1;
+    v5 = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v6);
+    byte_4C1C511 = 1;
   }
   if ( !v8 )
     goto LABEL_12;
@@ -3439,12 +3462,12 @@ void __fastcall ScriptMessageCommonManager__OpenUp(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v22; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4BFF462 & 1) == 0 )
+  if ( (byte_4C23C8C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, isFast);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    sub_1C2E12C(&Method_ScriptMessageCommonManager_OpenUp__, v6);
-    byte_4BFF462 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, isFast);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    sub_1C3B764(&Method_ScriptMessageCommonManager_OpenUp__, v6);
+    byte_4C23C8C = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
@@ -3454,7 +3477,7 @@ void __fastcall ScriptMessageCommonManager__OpenUp(
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        rootObject,
-                       (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rootObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -3500,7 +3523,7 @@ LABEL_30:
         v11->fields.method = 0;
         windowUpCurve = this->fields.windowUpCurve;
         v11->fields.animationCurve = windowUpCurve;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&v11->fields.animationCurve,
           (int64_t)windowUpCurve,
           v12,
@@ -3512,8 +3535,8 @@ LABEL_30:
         UITweener__PlayForward((UITweener_o *)v11, 0LL);
         v19 = Method_ScriptMessageCommonManager_OpenUp__;
         if ( (*((_BYTE *)Method_ScriptMessageCommonManager_OpenUp__ + 83) & 2) != 0 )
-          v19 = (_QWORD *)sub_1C2E144(Method_ScriptMessageCommonManager_OpenUp__);
-        v20 = (System_Reflection_MethodBase_o *)sub_1C2E110(v19, v19[4]);
+          v19 = (_QWORD *)sub_1C3B77C(Method_ScriptMessageCommonManager_OpenUp__);
+        v20 = (System_Reflection_MethodBase_o *)sub_1C3B748(v19, v19[4]);
         OverwriteAssetSoundName__PlaySystemSe(v20, 7, 0, 0LL);
       }
       rootObject = this->fields.rootObject;
@@ -3527,7 +3550,7 @@ LABEL_30:
         }
       }
 LABEL_27:
-      sub_1C2E388(rootObject, isFast);
+      sub_1C3B9C0(rootObject, isFast);
     }
   }
 }
@@ -3556,10 +3579,10 @@ void __fastcall ScriptMessageCommonManager__PageScroll(
   void *v19; // x1
   const MethodInfo *v20; // x2
 
-  if ( (byte_4BFF475 & 1) == 0 )
+  if ( (byte_4C23C9F & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, isFast);
-    byte_4BFF475 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, isFast);
+    byte_4C23C9F = 1;
   }
   x = this->fields.startPosition.fields.x;
   if ( this->fields.dispPosition.fields.x <= x )
@@ -3587,7 +3610,7 @@ void __fastcall ScriptMessageCommonManager__PageScroll(
   this->fields.beforeTextOnlyLineHeight = defaultTextOnlyLineHeight + rubyLineHeight;
   v19 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.defaultColorTag,
     (int64_t)v19,
     (int64_t)method,
@@ -3687,20 +3710,20 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
   ScriptMessageCommonManager_o *v86; // x22
 
   v10 = this;
-  if ( (byte_4BFF453 & 1) == 0 )
+  if ( (byte_4C23C7D & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UILabel___, label);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v11);
-    sub_1C2E12C(&UnityEngine_GameObject_TypeInfo, v12);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v14);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v15);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v16);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v17);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v18);
-    sub_1C2E12C(&StringLiteral_5957/*"Effect Parent"*/, v19);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&StringLiteral_5955/*"Effect Child"*/, v20);
-    byte_4BFF453 = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UILabel___, label);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v11);
+    sub_1C3B764(&UnityEngine_GameObject_TypeInfo, v12);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v13);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v14);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__Pop__, v15);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__Pop__, v16);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__get_Count__, v17);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__get_Count__, v18);
+    sub_1C3B764(&StringLiteral_5958/*"EnterTryCatch"*/, v19);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&StringLiteral_5956/*"EnterFault"*/, v20);
+    byte_4C23C7D = 1;
   }
   if ( !hasImage )
   {
@@ -3714,10 +3737,10 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(effect, 0LL, 0LL) )
       {
-        v29 = (UnityEngine_GameObject_o *)sub_1C2E378(UnityEngine_GameObject_TypeInfo);
-        UnityEngine_GameObject___ctor(v29, (System_String_o *)StringLiteral_5957/*"Effect Parent"*/, 0LL);
+        v29 = (UnityEngine_GameObject_o *)sub_1C3B9B0(UnityEngine_GameObject_TypeInfo);
+        UnityEngine_GameObject___ctor(v29, (System_String_o *)StringLiteral_5958/*"EnterTryCatch"*/, 0LL);
         *p_effect = (ScriptMessageCommonManager_o *)v29;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.effect, (int64_t)v29, v30, v31, v32, v33, v34, v35);
+        sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.effect, (int64_t)v29, v30, v31, v32, v33, v34, v35);
         this = *p_effect;
         if ( !*p_effect )
           goto LABEL_73;
@@ -3728,10 +3751,10 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
         if ( !currentMessageWindow )
           goto LABEL_73;
         ScriptMessageWindow__AddChildMessageScroll(currentMessageWindow, (UnityEngine_Transform_o *)this, 0LL);
-        v37 = (UnityEngine_GameObject_o *)sub_1C2E378(UnityEngine_GameObject_TypeInfo);
-        UnityEngine_GameObject___ctor(v37, (System_String_o *)StringLiteral_5955/*"Effect Child"*/, 0LL);
+        v37 = (UnityEngine_GameObject_o *)sub_1C3B9B0(UnityEngine_GameObject_TypeInfo);
+        UnityEngine_GameObject___ctor(v37, (System_String_o *)StringLiteral_5956/*"EnterFault"*/, 0LL);
         label->fields.frontEffect = v37;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&label->fields.frontEffect,
           (int64_t)v37,
           v38,
@@ -3748,7 +3771,7 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
                                                  0LL);
         if ( !this )
           goto LABEL_73;
-        UnityEngine_Transform__SetParent_71011128(
+        UnityEngine_Transform__SetParent_71144156(
           (UnityEngine_Transform_o *)this,
           v10->fields.frontCommonUIPanel,
           0,
@@ -3768,16 +3791,16 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (ScriptMessageCommonManager_o *)UnityEngine_Object__Instantiate_object_(
                                                mainPrefab,
-                                               (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !this )
         goto LABEL_73;
       this = (ScriptMessageCommonManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)this,
-                                               (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                               (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !label )
         goto LABEL_73;
       label->fields.main = (struct UILabel_o *)this;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields, (int64_t)this, v78, v79, v80, v81, v82, v83);
+      sub_1C3B708((PartyOrganizationUtility_o *)&label->fields, (int64_t)this, v78, v79, v80, v81, v82, v83);
       this = (ScriptMessageCommonManager_o *)label->fields.main;
       if ( !this )
         goto LABEL_73;
@@ -3791,11 +3814,11 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
     {
       this = (ScriptMessageCommonManager_o *)System_Collections_Generic_Stack_object___Pop(
                                                (System_Collections_Generic_Stack_T__o *)this,
-                                               (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                               (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
       if ( !label )
         goto LABEL_73;
       label->fields.main = (struct UILabel_o *)this;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields, (int64_t)this, v51, v52, v53, v54, v55, v56);
+      sub_1C3B708((PartyOrganizationUtility_o *)&label->fields, (int64_t)this, v51, v52, v53, v54, v55, v56);
       this = (ScriptMessageCommonManager_o *)label->fields.main;
       if ( !this )
         goto LABEL_73;
@@ -3806,10 +3829,10 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
     {
       this = (ScriptMessageCommonManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       v85 = this;
-      if ( !byte_4BF7D91 )
+      if ( !byte_4C1C511 )
       {
-        this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, label);
-        byte_4BF7D91 = 1;
+        this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, label);
+        byte_4C1C511 = 1;
       }
       if ( v85 )
       {
@@ -3823,7 +3846,7 @@ void __fastcall ScriptMessageCommonManager__PreProcLabel(
       }
     }
 LABEL_73:
-    sub_1C2E388(this, label);
+    sub_1C3B9C0(this, label);
   }
   this = (ScriptMessageCommonManager_o *)v10->fields.imageStock;
   if ( !this )
@@ -3835,16 +3858,16 @@ LABEL_73:
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (ScriptMessageCommonManager_o *)UnityEngine_Object__Instantiate_object_(
                                              imagePrefab,
-                                             (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                             (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( this )
     {
       this = (ScriptMessageCommonManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)this,
-                                               (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                               (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( label )
       {
         label->fields.image = (struct UISprite_o *)this;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.image, (int64_t)this, v58, v59, v60, v61, v62, v63);
+        sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.image, (int64_t)this, v58, v59, v60, v61, v62, v63);
         this = (ScriptMessageCommonManager_o *)label->fields.image;
         if ( this )
         {
@@ -3864,21 +3887,21 @@ LABEL_73:
   }
   this = (ScriptMessageCommonManager_o *)System_Collections_Generic_Stack_object___Pop(
                                            (System_Collections_Generic_Stack_T__o *)this,
-                                           (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
+                                           (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
   if ( !label )
     goto LABEL_73;
   label->fields.image = (struct UISprite_o *)this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.image, (int64_t)this, v21, v22, v23, v24, v25, v26);
+  sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.image, (int64_t)this, v21, v22, v23, v24, v25, v26);
 LABEL_34:
   this = (ScriptMessageCommonManager_o *)label->fields.image;
   if ( !this )
     goto LABEL_73;
   this = (ScriptMessageCommonManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v65 = this;
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, label);
-    byte_4BF7D91 = 1;
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, label);
+    byte_4C1C511 = 1;
   }
   if ( !v65 )
     goto LABEL_73;
@@ -3892,10 +3915,10 @@ LABEL_34:
 LABEL_68:
   this = (ScriptMessageCommonManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v86 = this;
-  if ( !byte_4BF7D96 )
+  if ( !byte_4C1C516 )
   {
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, label);
-    byte_4BF7D96 = 1;
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, label);
+    byte_4C1C516 = 1;
   }
   if ( !v86 )
     goto LABEL_73;
@@ -3916,14 +3939,14 @@ LABEL_19:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (ScriptMessageCommonManager_o *)UnityEngine_Object__Instantiate_object_(
                                                rubyPrefab,
-                                               (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !this )
         goto LABEL_73;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)this,
-                           (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       label->fields.ruby = (struct UILabel_o *)Component_object;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&label->fields.ruby,
         (int64_t)Component_object,
         v68,
@@ -3945,19 +3968,19 @@ LABEL_19:
     {
       v44 = System_Collections_Generic_Stack_object___Pop(
               (System_Collections_Generic_Stack_T__o *)this,
-              (const MethodInfo_38C18B0 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+              (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
       label->fields.ruby = (struct UILabel_o *)v44;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.ruby, (int64_t)v44, v45, v46, v47, v48, v49, v50);
+      sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.ruby, (int64_t)v44, v45, v46, v47, v48, v49, v50);
     }
     this = (ScriptMessageCommonManager_o *)label->fields.ruby;
     if ( !this )
       goto LABEL_73;
     this = (ScriptMessageCommonManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v75 = this;
-    if ( !byte_4BF7D91 )
+    if ( !byte_4C1C511 )
     {
-      this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, label);
-      byte_4BF7D91 = 1;
+      this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, label);
+      byte_4C1C511 = 1;
     }
     if ( !v75 )
       goto LABEL_73;
@@ -3970,10 +3993,10 @@ LABEL_19:
       goto LABEL_73;
     this = (ScriptMessageCommonManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v76 = this;
-    if ( !byte_4BF7D96 )
+    if ( !byte_4C1C516 )
     {
-      this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, label);
-      byte_4BF7D96 = 1;
+      this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, label);
+      byte_4C1C516 = 1;
     }
     if ( !v76 )
       goto LABEL_73;
@@ -3995,10 +4018,10 @@ void __fastcall ScriptMessageCommonManager__QuitScreen(ScriptMessageCommonManage
   const MethodInfo *v4; // x1
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4BFF45D & 1) == 0 )
+  if ( (byte_4C23C87 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_9185/*"MessageShake/LogMark/BackLogButton"*/, method);
-    byte_4BFF45D = 1;
+    sub_1C3B764(&StringLiteral_9187/*"Netscape Cert Type"*/, method);
+    byte_4C23C87 = 1;
   }
   rootPanel = (ScriptLineMessage_o *)this->fields.rootPanel;
   if ( !rootPanel
@@ -4013,10 +4036,10 @@ void __fastcall ScriptMessageCommonManager__QuitScreen(ScriptMessageCommonManage
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rootPanel, 0, 0LL),
         (rootPanel = (ScriptLineMessage_o *)this->fields.messageBase) == 0LL) )
   {
-    sub_1C2E388(rootPanel, method);
+    sub_1C3B9C0(rootPanel, method);
   }
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)rootPanel, 0LL);
-  AndroidBackKeyManager__RemoveBackBtn_43188480(transform, (System_String_o *)StringLiteral_9185/*"MessageShake/LogMark/BackLogButton"*/, 0LL);
+  AndroidBackKeyManager__RemoveBackBtn_43311544(transform, (System_String_o *)StringLiteral_9187/*"Netscape Cert Type"*/, 0LL);
 }
 
 
@@ -4056,14 +4079,14 @@ void __fastcall ScriptMessageCommonManager__ReleaseLabel(
   PartyListViewItem_o *v32; // x7
 
   v4 = (ScriptMessageCommonManager_o **)this;
-  if ( (byte_4BFF458 & 1) == 0 )
+  if ( (byte_4C23C82 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, label);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UILabel__Push__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_Stack_UISprite__Push__, v7);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&StringLiteral_1/*""*/, v8);
-    byte_4BFF458 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, label);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UILabel__Push__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_Stack_UISprite__Push__, v7);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&StringLiteral_1/*""*/, v8);
+    byte_4C23C82 = 1;
   }
   if ( !label )
     goto LABEL_25;
@@ -4087,9 +4110,9 @@ void __fastcall ScriptMessageCommonManager__ReleaseLabel(
     System_Collections_Generic_Stack_object___Push(
       (System_Collections_Generic_Stack_T__o *)this,
       (Il2CppObject *)*p_fields,
-      (const MethodInfo_38C1910 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
+      (const MethodInfo_38E20B4 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
     *p_fields = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields, 0LL, v11, v12, v13, v14, v15, v16);
+    sub_1C3B708((PartyOrganizationUtility_o *)&label->fields, 0LL, v11, v12, v13, v14, v15, v16);
   }
   p_ruby = &label->fields.ruby;
   ruby = (UnityEngine_Object_o *)label->fields.ruby;
@@ -4107,9 +4130,9 @@ void __fastcall ScriptMessageCommonManager__ReleaseLabel(
     System_Collections_Generic_Stack_object___Push(
       (System_Collections_Generic_Stack_T__o *)this,
       (Il2CppObject *)*p_ruby,
-      (const MethodInfo_38C1910 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
+      (const MethodInfo_38E20B4 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
     *p_ruby = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.ruby, 0LL, v19, v20, v21, v22, v23, v24);
+    sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.ruby, 0LL, v19, v20, v21, v22, v23, v24);
   }
   p_image = &label->fields.image;
   image = (UnityEngine_Object_o *)label->fields.image;
@@ -4130,14 +4153,14 @@ void __fastcall ScriptMessageCommonManager__ReleaseLabel(
         System_Collections_Generic_Stack_object___Push(
           (System_Collections_Generic_Stack_T__o *)this,
           (Il2CppObject *)*p_image,
-          (const MethodInfo_38C1910 *)Method_System_Collections_Generic_Stack_UISprite__Push__);
+          (const MethodInfo_38E20B4 *)Method_System_Collections_Generic_Stack_UISprite__Push__);
         *p_image = 0LL;
-        sub_1C2E0D0((PartyOrganizationUtility_o *)&label->fields.image, 0LL, v27, v28, v29, v30, v31, v32);
+        sub_1C3B708((PartyOrganizationUtility_o *)&label->fields.image, 0LL, v27, v28, v29, v30, v31, v32);
         goto LABEL_23;
       }
     }
 LABEL_25:
-    sub_1C2E388(this, label);
+    sub_1C3B9C0(this, label);
   }
 LABEL_23:
   ScriptMessageLabel__Release(label, 0LL);
@@ -4147,7 +4170,7 @@ LABEL_23:
   System_Collections_Generic_Stack_object___Push(
     (System_Collections_Generic_Stack_T__o *)this,
     (Il2CppObject *)label,
-    (const MethodInfo_38C1910 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
+    (const MethodInfo_38E20B4 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
 }
 
 
@@ -4167,7 +4190,7 @@ void __fastcall ScriptMessageCommonManager__ResetLongPress(
 
   touchPress = this->fields.touchPress;
   if ( !touchPress )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   UITouchPress__PressReset(touchPress, 0LL);
   this->fields.isFastMessageRequest = 0;
 }
@@ -4258,10 +4281,10 @@ void __fastcall ScriptMessageCommonManager__ResetMessageWindow(
   const MethodInfo *v81; // x6
   const MethodInfo *v82; // x1
 
-  if ( (byte_4BFF46E & 1) == 0 )
+  if ( (byte_4C23C98 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BFF46E = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C23C98 = 1;
   }
   currentMessageWindow = (UnityEngine_Object_o *)this->fields.currentMessageWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4271,7 +4294,7 @@ void __fastcall ScriptMessageCommonManager__ResetMessageWindow(
   {
     defaultMessageWindow = this->fields.defaultMessageWindow;
     this->fields.currentMessageWindow = defaultMessageWindow;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.currentMessageWindow,
       (int64_t)defaultMessageWindow,
       v5,
@@ -4288,7 +4311,7 @@ void __fastcall ScriptMessageCommonManager__ResetMessageWindow(
       {
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageMainLabel, 0LL);
         this->fields.mainPrefab = gameObject;
-        sub_1C2E0D0(
+        sub_1C3B708(
           (PartyOrganizationUtility_o *)&this->fields.mainPrefab,
           (int64_t)gameObject,
           v16,
@@ -4305,7 +4328,7 @@ void __fastcall ScriptMessageCommonManager__ResetMessageWindow(
           {
             v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageMainLabel, 0LL);
             this->fields.rubyPrefab = v23;
-            sub_1C2E0D0(
+            sub_1C3B708(
               (PartyOrganizationUtility_o *)&this->fields.rubyPrefab,
               (int64_t)v23,
               v24,
@@ -4320,7 +4343,7 @@ void __fastcall ScriptMessageCommonManager__ResetMessageWindow(
       }
     }
 LABEL_33:
-    sub_1C2E388(messageMainLabel, v13);
+    sub_1C3B9C0(messageMainLabel, v13);
   }
   v30 = (UnityEngine_Object_o *)this->fields.currentMessageWindow;
   v31 = (UnityEngine_Object_o *)this->fields.defaultMessageWindow;
@@ -4341,7 +4364,7 @@ LABEL_33:
                                     0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(v33, 0LL);
+    UnityEngine_Object__Destroy_71122748(v33, 0LL);
     v34 = this->fields.defaultMessageWindow;
     if ( !v34 )
       goto LABEL_33;
@@ -4350,7 +4373,7 @@ LABEL_33:
       goto LABEL_33;
     v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageMainLabel, 0LL);
     this->fields.mainPrefab = v35;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.mainPrefab, (int64_t)v35, v36, v37, v38, v39, v40, v41);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mainPrefab, (int64_t)v35, v36, v37, v38, v39, v40, v41);
     v42 = this->fields.defaultMessageWindow;
     if ( !v42 )
       goto LABEL_33;
@@ -4359,7 +4382,7 @@ LABEL_33:
       goto LABEL_33;
     v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)messageMainLabel, 0LL);
     this->fields.rubyPrefab = v43;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.rubyPrefab, (int64_t)v43, v44, v45, v46, v47, v48, v49);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.rubyPrefab, (int64_t)v43, v44, v45, v46, v47, v48, v49);
     v56 = this->fields.defaultMessageWindow;
     if ( !v56 )
       goto LABEL_33;
@@ -4368,7 +4391,7 @@ LABEL_33:
       goto LABEL_33;
     talkNameMessageRoot = (int64_t)v56->fields.talkNameMessageRoot;
     *((_QWORD *)messageMainLabel + 7) = talkNameMessageRoot;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)(messageMainLabel + 56),
       talkNameMessageRoot,
       v50,
@@ -4388,7 +4411,7 @@ LABEL_33:
     if ( !talkNameManager )
       goto LABEL_33;
     talkNameManager->fields.mainPrefab = (struct UnityEngine_GameObject_o *)messageMainLabel;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&talkNameManager->fields.mainPrefab,
       (int64_t)messageMainLabel,
       v60,
@@ -4408,7 +4431,7 @@ LABEL_33:
     if ( !v67 )
       goto LABEL_33;
     v67->fields.rubyPrefab = (struct UnityEngine_GameObject_o *)messageMainLabel;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&v67->fields.rubyPrefab,
       (int64_t)messageMainLabel,
       v68,
@@ -4426,7 +4449,7 @@ LABEL_33:
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageMainLabel, 1, 0LL);
     v74 = this->fields.defaultMessageWindow;
     this->fields.currentMessageWindow = v74;
-    sub_1C2E0D0(
+    sub_1C3B708(
       (PartyOrganizationUtility_o *)&this->fields.currentMessageWindow,
       (int64_t)v74,
       v75,
@@ -4458,11 +4481,11 @@ void __fastcall ScriptMessageCommonManager__ResetScroll(ScriptMessageCommonManag
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4BFF477 & 1) == 0 )
+  if ( (byte_4C23CA1 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_TweenPosition___, method);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    byte_4BFF477 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_TweenPosition___, method);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    byte_4C23CA1 = 1;
   }
   currentMessageWindow = v2->fields.currentMessageWindow;
   if ( !currentMessageWindow )
@@ -4472,7 +4495,7 @@ void __fastcall ScriptMessageCommonManager__ResetScroll(ScriptMessageCommonManag
     goto LABEL_17;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
+                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (ScriptMessageCommonManager_o *)UnityEngine_Object__op_Inequality(
@@ -4504,7 +4527,7 @@ void __fastcall ScriptMessageCommonManager__ResetScroll(ScriptMessageCommonManag
                                                   0LL)) == 0LL) )
   {
 LABEL_17:
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   }
   v13.fields.y = y * 0.5;
   v13.fields.x = v11;
@@ -4629,7 +4652,7 @@ void __fastcall ScriptMessageCommonManager__SetActiveButton(
                                                  0LL)) == 0LL
     || (this = (ScriptMessageCommonManager_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)this, 0LL)) == 0LL )
   {
-    sub_1C2E388(this, button);
+    sub_1C3B9C0(this, button);
   }
   if ( isOn )
     v7 = 1.0;
@@ -4691,18 +4714,18 @@ void __fastcall ScriptMessageCommonManager__SetAutoMessageSprite(
   UISprite_o *autoMessageSprite; // x0
   System_String_o **v7; // x8
 
-  if ( (byte_4BFF47F & 1) == 0 )
+  if ( (byte_4C23CA9 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17769/*"btn_auto_on"*/, isOn);
-    sub_1C2E12C(&StringLiteral_17768/*"btn_auto_off"*/, v5);
-    byte_4BFF47F = 1;
+    sub_1C3B764(&StringLiteral_17799/*"combine_fodder01"*/, isOn);
+    sub_1C3B764(&StringLiteral_17798/*"combine_20"*/, v5);
+    byte_4C23CA9 = 1;
   }
   autoMessageSprite = this->fields.autoMessageSprite;
   if ( !autoMessageSprite )
-    sub_1C2E388(0LL, isOn);
-  v7 = (System_String_o **)&StringLiteral_17769/*"btn_auto_on"*/;
+    sub_1C3B9C0(0LL, isOn);
+  v7 = (System_String_o **)&StringLiteral_17799/*"combine_fodder01"*/;
   if ( !isOn )
-    v7 = (System_String_o **)&StringLiteral_17768/*"btn_auto_off"*/;
+    v7 = (System_String_o **)&StringLiteral_17798/*"combine_20"*/;
   UISprite__set_spriteName(autoMessageSprite, *v7, 0LL);
 }
 
@@ -4715,7 +4738,7 @@ void __fastcall ScriptMessageCommonManager__SetBetweenLineHeight(
   if ( height >= 0.0 )
   {
     if ( !this )
-      sub_1C2E388(0LL, method);
+      sub_1C3B9C0(0LL, method);
   }
   else
   {
@@ -4740,10 +4763,10 @@ void __fastcall ScriptMessageCommonManager__SetDefaultState(
   void *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BFF465 & 1) == 0 )
+  if ( (byte_4C23C8F & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, method);
-    byte_4BFF465 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, method);
+    byte_4C23C8F = 1;
   }
   defaultTextOnlyLineHeight = this->fields.defaultTextOnlyLineHeight;
   defaultBetweenLineHeight = this->fields.defaultBetweenLineHeight;
@@ -4752,7 +4775,7 @@ void __fastcall ScriptMessageCommonManager__SetDefaultState(
   this->fields.betweenLineHeight = defaultBetweenLineHeight;
   v11 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.defaultColorTag, (int64_t)v11, v2, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.defaultColorTag, (int64_t)v11, v2, v3, v4, v5, v6, v7);
   ScriptMessageCommonManager__SetTextScrollSpeed(this, v12);
 }
 
@@ -4766,7 +4789,7 @@ void __fastcall ScriptMessageCommonManager__SetEnableAutoMessageButton(
 
   autoMessageButton = this->fields.autoMessageButton;
   if ( !autoMessageButton )
-    sub_1C2E388(0LL, enable);
+    sub_1C3B9C0(0LL, enable);
   UICommonButton__SetButtonEnable(autoMessageButton, enable, 1, 0LL);
 }
 
@@ -4780,7 +4803,7 @@ void __fastcall ScriptMessageCommonManager__SetEnableBackLogButton(
 
   backLogButton = this->fields.backLogButton;
   if ( !backLogButton )
-    sub_1C2E388(0LL, enable);
+    sub_1C3B9C0(0LL, enable);
   UICommonButton__SetButtonEnable(backLogButton, enable, 1, 0LL);
 }
 
@@ -4807,10 +4830,10 @@ void __fastcall ScriptMessageCommonManager__SetFontSize(
   float textOnlyLineHeight; // s1
   float v11; // s0
 
-  if ( (byte_4BFF468 & 1) == 0 )
+  if ( (byte_4C23C92 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptMessageLabel_TypeInfo, sizeName);
-    byte_4BFF468 = 1;
+    sub_1C3B764(&ScriptMessageLabel_TypeInfo, sizeName);
+    byte_4C23C92 = 1;
   }
   defaultFontSize = this->fields.defaultFontSize;
   if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
@@ -4842,10 +4865,10 @@ void __fastcall ScriptMessageCommonManager__SetFontType(
   PartyListViewItem_o *v12; // x7
 
   defaultFontType = (UnityEngine_Object_o *)font;
-  if ( (byte_4BFF467 & 1) == 0 )
+  if ( (byte_4C23C91 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, font);
-    byte_4BFF467 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, font);
+    byte_4C23C91 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -4853,14 +4876,14 @@ void __fastcall ScriptMessageCommonManager__SetFontType(
   if ( v5 )
   {
     if ( !this )
-      sub_1C2E388(v5, v6);
+      sub_1C3B9C0(v5, v6);
   }
   else
   {
     defaultFontType = (UnityEngine_Object_o *)this->fields.defaultFontType;
   }
   this->fields.fontType = (struct UnityEngine_Font_o *)defaultFontType;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.fontType, (int64_t)defaultFontType, v7, v8, v9, v10, v11, v12);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.fontType, (int64_t)defaultFontType, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -4905,7 +4928,7 @@ void __fastcall ScriptMessageCommonManager__SetMessageOffMode(
   rootPanel = this->fields.rootPanel;
   this->fields.isMessageOff = flag;
   if ( !rootPanel )
-    sub_1C2E388(0LL, flag);
+    sub_1C3B9C0(0LL, flag);
   LODWORD(v3) = 1.0;
   LODWORD(v4) = 0;
   if ( !this->fields.isMessageOut || flag )
@@ -4947,7 +4970,7 @@ void __fastcall ScriptMessageCommonManager__SetMessageWindowCollider(
 
   currentMessageWindow = this->fields.currentMessageWindow;
   if ( !currentMessageWindow )
-    sub_1C2E388(0LL, isEnable);
+    sub_1C3B9C0(0LL, isEnable);
   ScriptMessageWindow__SetEnabledCollider(currentMessageWindow, isEnable, 0LL);
 }
 
@@ -4962,10 +4985,10 @@ void __fastcall ScriptMessageCommonManager__SetRootActive(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4BFF45B & 1) == 0 )
+  if ( (byte_4C23C85 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, isActive);
-    byte_4BFF45B = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, isActive);
+    byte_4C23C85 = 1;
   }
   rootObject = (UnityEngine_Object_o *)this->fields.rootObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4974,7 +4997,7 @@ void __fastcall ScriptMessageCommonManager__SetRootActive(
   {
     v7 = this->fields.rootObject;
     if ( !v7 )
-      sub_1C2E388(0LL, v6);
+      sub_1C3B9C0(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isActive, 0LL);
   }
 }
@@ -5007,11 +5030,11 @@ int32_t __fastcall ScriptMessageCommonManager__SetScreen(
   float v27; // s0
   UnityEngine_Vector4_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4BFF45E & 1) == 0 )
+  if ( (byte_4C23C88 & 1) == 0 )
   {
-    sub_1C2E12C(&ManagerConfig_TypeInfo, *(_QWORD *)&x);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v13);
-    byte_4BFF45E = 1;
+    sub_1C3B764(&ManagerConfig_TypeInfo, *(_QWORD *)&x);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v13);
+    byte_4C23C88 = 1;
   }
   rootPanel = (UnityEngine_GameObject_o *)this->fields.rootPanel;
   this->fields.isMessageOut = 0;
@@ -5089,7 +5112,7 @@ int32_t __fastcall ScriptMessageCommonManager__SetScreen(
         (v23 = this->fields.currentMessageWindow) == 0LL) )
   {
 LABEL_33:
-    sub_1C2E388(rootPanel, *(_QWORD *)&x);
+    sub_1C3B9C0(rootPanel, *(_QWORD *)&x);
   }
   messageWindowBack = (UnityEngine_Object_o *)v23->fields.messageWindowBack;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5199,23 +5222,23 @@ bool __fastcall ScriptMessageCommonManager__SetTalkName(
   struct ScriptMessageWindow_o *v51; // x8
   long double v52; // q0
 
-  if ( (byte_4BFF46F & 1) == 0 )
+  if ( (byte_4C23C99 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, imageName);
-    sub_1C2E12C(&StringLiteral_168/*" 1.5]"*/, v11);
-    sub_1C2E12C(&StringLiteral_16283/*"[image "*/, v12);
-    byte_4BFF46F = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, imageName);
+    sub_1C3B764(&StringLiteral_168/*" <--> "*/, v11);
+    sub_1C3B764(&StringLiteral_16311/*"activeDeckId"*/, v12);
+    byte_4C23C99 = 1;
   }
-  v13 = System_String__Concat_63235584(classname, charaname, 0LL);
+  v13 = System_String__Concat_63368612(classname, charaname, 0LL);
   if ( System_String__IsNullOrEmpty(v13, 0LL) )
   {
     ScriptMessageCommonManager__ClearTalkName(this, v14);
     return 1;
   }
   this->fields.talkName = v13;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.talkName, (int64_t)v13, v15, v16, v17, v18, v19, v20);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.talkName, (int64_t)v13, v15, v16, v17, v18, v19, v20);
   this->fields.talkNameOnly = charaname;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.talkNameOnly,
     (int64_t)charaname,
     v21,
@@ -5302,16 +5325,16 @@ bool __fastcall ScriptMessageCommonManager__SetTalkName(
         }
       }
 LABEL_39:
-      sub_1C2E388(talkNameRootObject, v28);
+      sub_1C3B9C0(talkNameRootObject, v28);
     }
   }
   else
   {
     if ( imageName )
-      v13 = System_String__Concat_63248848(
-              (System_String_o *)StringLiteral_16283/*"[image "*/,
+      v13 = System_String__Concat_63381876(
+              (System_String_o *)StringLiteral_16311/*"activeDeckId"*/,
               imageName,
-              (System_String_o *)StringLiteral_168/*" 1.5]"*/,
+              (System_String_o *)StringLiteral_168/*" <--> "*/,
               v13,
               0LL);
     v45 = this->fields.startPosition.fields.x + -50.0;
@@ -5379,11 +5402,11 @@ void __fastcall ScriptMessageCommonManager__SetTalkNameBack(
   UISpriteData_o *AtlasSprite; // x0
 
   v4 = this;
-  if ( (byte_4BFF46C & 1) == 0 )
+  if ( (byte_4C23C96 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, imageName);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    byte_4BFF46C = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, imageName);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    byte_4C23C96 = 1;
   }
   currentMessageWindow = v4->fields.currentMessageWindow;
   if ( !currentMessageWindow )
@@ -5403,10 +5426,10 @@ void __fastcall ScriptMessageCommonManager__SetTalkNameBack(
         goto LABEL_21;
       mAtlas = (int64_t)talkNameBack->fields.mAtlas;
       v4->fields.talkNameAtlas = (struct UIAtlas_o *)mAtlas;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&v4->fields.talkNameAtlas, mAtlas, v9, v10, v11, v12, v13, v14);
+      sub_1C3B708((PartyOrganizationUtility_o *)&v4->fields.talkNameAtlas, mAtlas, v9, v10, v11, v12, v13, v14);
       mSpriteName = (int64_t)talkNameBack->fields.mSpriteName;
       v4->fields.talkNameSpriteName = (struct System_String_o *)mSpriteName;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&v4->fields.talkNameSpriteName,
         mSpriteName,
         v17,
@@ -5442,7 +5465,7 @@ LABEL_18:
         goto LABEL_18;
     }
 LABEL_21:
-    sub_1C2E388(this, imageName);
+    sub_1C3B9C0(this, imageName);
   }
 }
 
@@ -5486,11 +5509,11 @@ void __fastcall ScriptMessageCommonManager__SetTextScrollSpeed(
   float v14; // s0
   float fastScrollTime; // s1
 
-  if ( (byte_4BFF466 & 1) == 0 )
+  if ( (byte_4C23C90 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, method);
-    sub_1C2E12C(&OptionManager_TypeInfo, v3);
-    byte_4BFF466 = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, method);
+    sub_1C3B764(&OptionManager_TypeInfo, v3);
+    byte_4C23C90 = 1;
   }
   if ( this->fields.isMessageSpeedForcedNormal )
   {
@@ -5556,7 +5579,7 @@ void __fastcall ScriptMessageCommonManager__Shake(
   if ( !v11 )
     v12 = UnityEngine_Time__get_time(0LL) + duration;
   if ( !this )
-    sub_1C2E388(this, method);
+    sub_1C3B9C0(this, method);
   this->fields.shakeTime = v12;
   this->fields.shakeCycle = cycle;
   this->fields.shakeX = x;
@@ -5598,12 +5621,12 @@ void __fastcall ScriptMessageCommonManager__StartScroll(
   struct ScriptMessageWindow_o *v28; // x8
 
   v4 = this;
-  if ( (byte_4BFF476 & 1) == 0 )
+  if ( (byte_4C23CA0 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_TweenPosition___, isFast);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    this = (ScriptMessageCommonManager_o *)sub_1C2E12C(&StringLiteral_6141/*"EndScroll"*/, v6);
-    byte_4BFF476 = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_TweenPosition___, isFast);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    this = (ScriptMessageCommonManager_o *)sub_1C3B764(&StringLiteral_6144/*"EventTradeSweetsSelectConfirmDialog"*/, v6);
+    byte_4C23CA0 = 1;
   }
   v7 = 316LL;
   if ( isFast )
@@ -5627,7 +5650,7 @@ void __fastcall ScriptMessageCommonManager__StartScroll(
           LODWORD(v11->fields.rootPanel) = 3;
           v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
           v11->fields.messageShake = (struct UnityEngine_Transform_o *)v12;
-          sub_1C2E0D0(
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v11->fields.messageShake,
             (int64_t)v12,
             v13,
@@ -5636,9 +5659,9 @@ void __fastcall ScriptMessageCommonManager__StartScroll(
             v16,
             v17,
             v18);
-          v19 = StringLiteral_6141/*"EndScroll"*/;
-          v11->fields.defaultMessageWindow = (struct ScriptMessageWindow_o *)StringLiteral_6141/*"EndScroll"*/;
-          sub_1C2E0D0(
+          v19 = StringLiteral_6144/*"EventTradeSweetsSelectConfirmDialog"*/;
+          v11->fields.defaultMessageWindow = (struct ScriptMessageWindow_o *)StringLiteral_6144/*"EventTradeSweetsSelectConfirmDialog"*/;
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&v11->fields.defaultMessageWindow,
             v19,
             v20,
@@ -5661,7 +5684,7 @@ void __fastcall ScriptMessageCommonManager__StartScroll(
     goto LABEL_21;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
+                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (ScriptMessageCommonManager_o *)UnityEngine_Object__op_Inequality(
@@ -5682,7 +5705,7 @@ void __fastcall ScriptMessageCommonManager__StartScroll(
                                                  0LL)) == 0LL )
   {
 LABEL_21:
-    sub_1C2E388(this, isFast);
+    sub_1C3B9C0(this, isFast);
   }
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v4->fields.scrollPosition, 0LL);
   v4->fields.isFastMessageRequest = 0;
@@ -5816,42 +5839,42 @@ void __fastcall ScriptMessageCommonManager__UpdateLabels(
   System_String_o **colorTag; // [xsp+10h] [xbp-80h]
   System_String_o *text; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4BFF45A & 1) == 0 )
+  if ( (byte_4C23C84 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptMessageCommonManager_ProcAddLabel2_TypeInfo, txt);
-    sub_1C2E12C(&ScriptMessageCommonManager_ProcAddLabel_TypeInfo, v8);
-    sub_1C2E12C(&ScriptMessageLabel_TypeInfo, v9);
-    sub_1C2E12C(&ScriptReplaceString_TypeInfo, v10);
-    sub_1C2E12C(&System_Text_StringBuilder_TypeInfo, v11);
-    sub_1C2E12C(&Method_ScriptMessageCommonManager___c__DisplayClass113_0__UpdateLabels_b__0__, v12);
-    sub_1C2E12C(&Method_ScriptMessageCommonManager___c__DisplayClass113_0__UpdateLabels_b__1__, v13);
-    sub_1C2E12C(&ScriptMessageCommonManager___c__DisplayClass113_0_TypeInfo, v14);
-    sub_1C2E12C(&StringLiteral_23558/*"servantName"*/, v15);
-    sub_1C2E12C(&StringLiteral_16118/*"[-]"*/, v16);
-    sub_1C2E12C(&StringLiteral_20408/*"i"*/, v17);
-    sub_1C2E12C(&StringLiteral_117/*" "*/, v18);
-    sub_1C2E12C(&StringLiteral_16114/*"[*"*/, v19);
-    sub_1C2E12C(&StringLiteral_16320/*"[~1]"*/, v20);
-    sub_1C2E12C(&StringLiteral_16255/*"[^"*/, v21);
-    sub_1C2E12C(&StringLiteral_1102/*"/"*/, v22);
-    sub_1C2E12C(&StringLiteral_23172/*"r"*/, v23);
-    sub_1C2E12C(&StringLiteral_19263/*"effectmessage"*/, v24);
-    sub_1C2E12C(&StringLiteral_21498/*"line"*/, v25);
-    sub_1C2E12C(&StringLiteral_20600/*"image"*/, v26);
-    sub_1C2E12C(&StringLiteral_16099/*"["*/, v27);
-    sub_1C2E12C(&StringLiteral_16319/*"[~"*/, v28);
-    sub_1C2E12C(&StringLiteral_16358/*"]"*/, v29);
-    byte_4BFF45A = 1;
+    sub_1C3B764(&ScriptMessageCommonManager_ProcAddLabel2_TypeInfo, txt);
+    sub_1C3B764(&ScriptMessageCommonManager_ProcAddLabel_TypeInfo, v8);
+    sub_1C3B764(&ScriptMessageLabel_TypeInfo, v9);
+    sub_1C3B764(&ScriptReplaceString_TypeInfo, v10);
+    sub_1C3B764(&System_Text_StringBuilder_TypeInfo, v11);
+    sub_1C3B764(&Method_ScriptMessageCommonManager___c__DisplayClass113_0__UpdateLabels_b__0__, v12);
+    sub_1C3B764(&Method_ScriptMessageCommonManager___c__DisplayClass113_0__UpdateLabels_b__1__, v13);
+    sub_1C3B764(&ScriptMessageCommonManager___c__DisplayClass113_0_TypeInfo, v14);
+    sub_1C3B764(&StringLiteral_23601/*"time_status_fes01"*/, v15);
+    sub_1C3B764(&StringLiteral_16146/*"__max-thumb"*/, v16);
+    sub_1C3B764(&StringLiteral_20443/*"is"*/, v17);
+    sub_1C3B764(&StringLiteral_117/*"   "*/, v18);
+    sub_1C3B764(&StringLiteral_16142/*"__item-indents"*/, v19);
+    sub_1C3B764(&StringLiteral_16348/*"advActorHide"*/, v20);
+    sub_1C3B764(&StringLiteral_16283/*"a77d"*/, v21);
+    sub_1C3B764(&StringLiteral_1102/*"/[delegate]"*/, v22);
+    sub_1C3B764(&StringLiteral_23214/*"stay_no_dialog"*/, v23);
+    sub_1C3B764(&StringLiteral_19297/*"friend/top"*/, v24);
+    sub_1C3B764(&StringLiteral_21534/*"mstSvt"*/, v25);
+    sub_1C3B764(&StringLiteral_20635/*"k_PKCS7Key"*/, v26);
+    sub_1C3B764(&StringLiteral_16127/*"__field-group"*/, v27);
+    sub_1C3B764(&StringLiteral_16347/*"adjustedHorizontalAdvance"*/, v28);
+    sub_1C3B764(&StringLiteral_16386/*"align-items"*/, v29);
+    byte_4C23C84 = 1;
   }
   text = 0LL;
-  v30 = sub_1C2E378(ScriptMessageCommonManager___c__DisplayClass113_0_TypeInfo);
+  v30 = sub_1C3B9B0(ScriptMessageCommonManager___c__DisplayClass113_0_TypeInfo);
   ScriptMessageCommonManager___c__DisplayClass113_0___ctor(
     (ScriptMessageCommonManager___c__DisplayClass113_0_o *)v30,
     0LL);
   if ( !v30 )
     goto LABEL_107;
   *(_QWORD *)(v30 + 24) = this;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v30 + 24), (int64_t)this, v33, v34, v35, v36, v37, v38);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v30 + 24), (int64_t)this, v33, v34, v35, v36, v37, v38);
   *(_BYTE *)(v30 + 36) = isFoward;
   if ( !this->fields.isBusy )
     this->fields.isBusy = 1;
@@ -5870,22 +5893,22 @@ void __fastcall ScriptMessageCommonManager__UpdateLabels(
   if ( !isStretch )
     stepTime = this->fields.stepTime;
   *(float *)(v30 + 32) = stepTime;
-  v41 = (System_Text_StringBuilder_o *)sub_1C2E378(System_Text_StringBuilder_TypeInfo);
+  v41 = (System_Text_StringBuilder_o *)sub_1C3B9B0(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v41, 0LL);
   *(_QWORD *)(v30 + 16) = v41;
   v42 = (System_Text_StringBuilder_o **)(v30 + 16);
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v30 + 16), (int64_t)v41, v43, v44, v45, v46, v47, v48);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v30 + 16), (int64_t)v41, v43, v44, v45, v46, v47, v48);
   defaultColorTag = this->fields.defaultColorTag;
   *(_QWORD *)(v30 + 40) = defaultColorTag;
   colorTag = (System_String_o **)(v30 + 40);
-  sub_1C2E0D0((PartyOrganizationUtility_o *)(v30 + 40), (int64_t)defaultColorTag, v50, v51, v52, v53, v54, v55);
-  v56 = sub_1C2E378(ScriptMessageCommonManager_ProcAddLabel_TypeInfo);
+  sub_1C3B708((PartyOrganizationUtility_o *)(v30 + 40), (int64_t)defaultColorTag, v50, v51, v52, v53, v54, v55);
+  v56 = sub_1C3B9B0(ScriptMessageCommonManager_ProcAddLabel_TypeInfo);
   ScriptMessageCommonManager_ProcAddLabel___ctor(
     (ScriptMessageCommonManager_ProcAddLabel_o *)v56,
     (Il2CppObject *)v30,
     Method_ScriptMessageCommonManager___c__DisplayClass113_0__UpdateLabels_b__0__,
     0LL);
-  v57 = sub_1C2E378(ScriptMessageCommonManager_ProcAddLabel2_TypeInfo);
+  v57 = sub_1C3B9B0(ScriptMessageCommonManager_ProcAddLabel2_TypeInfo);
   ScriptMessageCommonManager_ProcAddLabel2___ctor(
     (ScriptMessageCommonManager_ProcAddLabel2_o *)v57,
     (Il2CppObject *)v30,
@@ -5919,23 +5942,23 @@ void __fastcall ScriptMessageCommonManager__UpdateLabels(
       if ( !rootPanel )
         goto LABEL_107;
       v62 = (System_String_o *)rootPanel;
-      if ( System_String__Equals_63243900((System_String_o *)rootPanel, (System_String_o *)StringLiteral_19263/*"effectmessage"*/, 0LL) )
+      if ( System_String__Equals_63376928((System_String_o *)rootPanel, (System_String_o *)StringLiteral_19297/*"friend/top"*/, 0LL) )
       {
-        v63 = System_String__Substring_63254588(txt, v58 + 15, v59 + v61 - 15, 0LL);
-        rootPanel = System_String__op_Equality(v63, (System_String_o *)StringLiteral_1102/*"/"*/, 0LL);
+        v63 = System_String__Substring_63387616(txt, v58 + 15, v59 + v61 - 15, 0LL);
+        rootPanel = System_String__op_Equality(v63, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, 0LL);
         if ( (rootPanel & 1) != 0 )
           this->fields.isEffectMessage = 0;
       }
       else
       {
-        rootPanel = System_String__Equals_63243900(v62, (System_String_o *)StringLiteral_23172/*"r"*/, 0LL);
+        rootPanel = System_String__Equals_63376928(v62, (System_String_o *)StringLiteral_23214/*"stay_no_dialog"*/, 0LL);
         if ( (rootPanel & 1) != 0 )
         {
           if ( !v57 )
             goto LABEL_107;
           (*(void (__fastcall **)(_QWORD, void *, _QWORD))(v57 + 24))(
             *(_QWORD *)(v57 + 64),
-            StringLiteral_117/*" "*/,
+            StringLiteral_117/*"   "*/,
             *(_QWORD *)(v57 + 40));
           betweenLineHeight = this->fields.betweenLineHeight;
           y = this->fields.dispPosition.fields.y;
@@ -5963,7 +5986,7 @@ LABEL_58:
     if ( !v76 )
       goto LABEL_107;
     v75 = v58 + 1;
-    rootPanel = (__int64)System_Text_StringBuilder__Append_62399064(v76, rootPanel, 0LL);
+    rootPanel = (__int64)System_Text_StringBuilder__Append_62532092(v76, rootPanel, 0LL);
     goto LABEL_58;
   }
   if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
@@ -5975,9 +5998,9 @@ LABEL_58:
     rootPanel = (__int64)*v42;
     if ( !*v42 )
       goto LABEL_107;
-    rootPanel = (__int64)System_Text_StringBuilder__Append_62396736(
+    rootPanel = (__int64)System_Text_StringBuilder__Append_62529764(
                            (System_Text_StringBuilder_o *)rootPanel,
-                           (System_String_o *)StringLiteral_16099/*"["*/,
+                           (System_String_o *)StringLiteral_16127/*"__field-group"*/,
                            0LL);
     goto LABEL_58;
   }
@@ -5988,12 +6011,12 @@ LABEL_58:
     if ( !v56 )
       goto LABEL_107;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
-    v65 = System_String__Substring_63254588(txt, v58 + 2, v59 + v61 - 2, 0LL);
+    v65 = System_String__Substring_63387616(txt, v58 + 2, v59 + v61 - 2, 0LL);
     v66 = System_Int32__Parse(v65, 0LL);
     if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
     String = ScriptReplaceString__GetString(v66, 0LL);
-    TagSplitString = System_String__Concat_63235584(String, (System_String_o *)StringLiteral_16118/*"[-]"*/, 0LL);
+    TagSplitString = System_String__Concat_63368612(String, (System_String_o *)StringLiteral_16146/*"__max-thumb"*/, 0LL);
     goto LABEL_54;
   }
   rootPanel = System_String__get_Chars(txt, v75, 0LL);
@@ -6004,10 +6027,10 @@ LABEL_58:
     (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
     if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
-    if ( !byte_4BFF2A6 )
+    if ( !byte_4C23AD0 )
     {
-      sub_1C2E12C(&ScriptReplaceString_TypeInfo, v82);
-      byte_4BFF2A6 = 1;
+      sub_1C3B764(&ScriptReplaceString_TypeInfo, v82);
+      byte_4C23AD0 = 1;
     }
     v83 = ScriptReplaceString_TypeInfo;
     if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -6023,7 +6046,7 @@ LABEL_54:
     v85 = TagSplitString;
     v86 = *(struct System_String_o **)(v30 + 40);
     this->fields.defaultColorTag = v86;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)p_defaultColorTag, (int64_t)v86, v69, v70, v71, v72, v73, v74);
+    sub_1C3B708((PartyOrganizationUtility_o *)p_defaultColorTag, (int64_t)v86, v69, v70, v71, v72, v73, v74);
     v88 = isStretch;
     v89 = *(_BYTE *)(v30 + 36);
     v90 = this;
@@ -6034,7 +6057,7 @@ LABEL_55:
     v99 = (PartyOrganizationUtility_o *)(v30 + 40);
     *(_QWORD *)(v30 + 40) = v98;
 LABEL_56:
-    sub_1C2E0D0(v99, (int64_t)v98, v92, v93, v94, v95, v96, v97);
+    sub_1C3B708(v99, (int64_t)v98, v92, v93, v94, v95, v96, v97);
 LABEL_57:
     v75 = v61 + 1;
     goto LABEL_58;
@@ -6045,7 +6068,7 @@ LABEL_57:
     if ( !v56 )
       goto LABEL_107;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
-    rootPanel = (__int64)System_String__Substring_63254588(txt, v58, v59 + v61 + 1, 0LL);
+    rootPanel = (__int64)System_String__Substring_63387616(txt, v58, v59 + v61 + 1, 0LL);
     if ( !v57 )
       goto LABEL_107;
 LABEL_81:
@@ -6066,7 +6089,7 @@ LABEL_82:
   if ( !rootPanel )
     goto LABEL_107;
   v100 = (System_String_o *)rootPanel;
-  rootPanel = System_String__Equals_63243900((System_String_o *)rootPanel, (System_String_o *)StringLiteral_20600/*"image"*/, 0LL);
+  rootPanel = System_String__Equals_63376928((System_String_o *)rootPanel, (System_String_o *)StringLiteral_20635/*"k_PKCS7Key"*/, 0LL);
   if ( (rootPanel & 1) != 0 )
   {
     if ( !v56 )
@@ -6076,19 +6099,19 @@ LABEL_82:
     v102 = v59 + v61 - 7;
     goto LABEL_79;
   }
-  if ( System_String__Equals_63243900(v100, (System_String_o *)StringLiteral_19263/*"effectmessage"*/, 0LL) )
+  if ( System_String__Equals_63376928(v100, (System_String_o *)StringLiteral_19297/*"friend/top"*/, 0LL) )
   {
-    v103 = System_String__Substring_63254588(txt, v58 + 15, v59 + v61 - 15, 0LL);
-    rootPanel = System_String__op_Inequality(v103, (System_String_o *)StringLiteral_1102/*"/"*/, 0LL);
+    v103 = System_String__Substring_63387616(txt, v58 + 15, v59 + v61 - 15, 0LL);
+    rootPanel = System_String__op_Inequality(v103, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, 0LL);
     if ( (rootPanel & 1) != 0 )
     {
       if ( !v56 )
         goto LABEL_107;
       (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
-      rootPanel = (__int64)System_String__Concat_63246844(
-                             (System_String_o *)StringLiteral_16114/*"[*"*/,
+      rootPanel = (__int64)System_String__Concat_63379872(
+                             (System_String_o *)StringLiteral_16142/*"__item-indents"*/,
                              v103,
-                             (System_String_o *)StringLiteral_16358/*"]"*/,
+                             (System_String_o *)StringLiteral_16386/*"align-items"*/,
                              0LL);
       if ( !v57 )
         goto LABEL_107;
@@ -6100,7 +6123,7 @@ LABEL_82:
     }
     goto LABEL_57;
   }
-  rootPanel = System_String__Equals_63243900(v100, (System_String_o *)StringLiteral_20408/*"i"*/, 0LL);
+  rootPanel = System_String__Equals_63376928(v100, (System_String_o *)StringLiteral_20443/*"is"*/, 0LL);
   if ( (rootPanel & 1) != 0 )
   {
     if ( !v56 )
@@ -6109,19 +6132,19 @@ LABEL_82:
     v101 = v58 + 3;
     v102 = v59 + v61 - 3;
 LABEL_79:
-    v104 = System_String__Substring_63254588(txt, v101, v102, 0LL);
-    v105 = &StringLiteral_16255/*"[^"*/;
+    v104 = System_String__Substring_63387616(txt, v101, v102, 0LL);
+    v105 = &StringLiteral_16283/*"a77d"*/;
 LABEL_80:
-    rootPanel = (__int64)System_String__Concat_63246844(
+    rootPanel = (__int64)System_String__Concat_63379872(
                            (System_String_o *)*v105,
                            v104,
-                           (System_String_o *)StringLiteral_16358/*"]"*/,
+                           (System_String_o *)StringLiteral_16386/*"align-items"*/,
                            0LL);
     if ( !v57 )
       goto LABEL_107;
     goto LABEL_81;
   }
-  rootPanel = System_String__Equals_63243900(v100, (System_String_o *)StringLiteral_23172/*"r"*/, 0LL);
+  rootPanel = System_String__Equals_63376928(v100, (System_String_o *)StringLiteral_23214/*"stay_no_dialog"*/, 0LL);
   if ( (rootPanel & 1) != 0 )
   {
     if ( !v56 )
@@ -6140,19 +6163,19 @@ LABEL_80:
     *colorTag = v98;
     goto LABEL_56;
   }
-  rootPanel = System_String__Equals_63243900(v100, (System_String_o *)StringLiteral_23558/*"servantName"*/, 0LL);
+  rootPanel = System_String__Equals_63376928(v100, (System_String_o *)StringLiteral_23601/*"time_status_fes01"*/, 0LL);
   if ( (rootPanel & 1) != 0 )
   {
     if ( !v56 )
       goto LABEL_107;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
-    v112 = System_String__Substring_63254588(txt, v58 + 12, v59 + v61 - 12, 0LL);
+    v112 = System_String__Substring_63387616(txt, v58 + 12, v59 + v61 - 12, 0LL);
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
     v113 = ScriptMessageLabel__AnalysTagParam(v112, 0, 0LL);
     v114 = *(struct System_String_o **)(v30 + 40);
     this->fields.defaultColorTag = v114;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)p_defaultColorTag, (int64_t)v114, v115, v116, v117, v118, v119, v120);
+    sub_1C3B708((PartyOrganizationUtility_o *)p_defaultColorTag, (int64_t)v114, v115, v116, v117, v118, v119, v120);
     v121 = ScriptMessageLabel__GetServantChangeName(v113, 0LL);
     v88 = isStretch;
     v89 = *(_BYTE *)(v30 + 36);
@@ -6160,47 +6183,47 @@ LABEL_80:
     v90 = this;
     goto LABEL_55;
   }
-  rootPanel = System_String__StartsWith(v100, (System_String_o *)StringLiteral_21498/*"line"*/, 0LL);
+  rootPanel = System_String__StartsWith(v100, (System_String_o *)StringLiteral_21534/*"mstSvt"*/, 0LL);
   if ( (rootPanel & 1) != 0 )
   {
     if ( !v56 )
       goto LABEL_107;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
-    rootPanel = (__int64)System_String__Substring_63254588(txt, v58 + 5, v59 + v61 - 5, 0LL);
+    rootPanel = (__int64)System_String__Substring_63387616(txt, v58 + 5, v59 + v61 - 5, 0LL);
     if ( !rootPanel )
       goto LABEL_107;
     if ( *(int *)(rootPanel + 16) < 1 )
     {
       if ( !v57 )
         goto LABEL_107;
-      v106 = StringLiteral_16320/*"[~1]"*/;
+      v106 = StringLiteral_16348/*"advActorHide"*/;
       goto LABEL_82;
     }
     v104 = System_String__Trim((System_String_o *)rootPanel, 0LL);
-    v105 = &StringLiteral_16319/*"[~"*/;
+    v105 = &StringLiteral_16347/*"adjustedHorizontalAdvance"*/;
     goto LABEL_80;
   }
   if ( v61 < txt->fields._stringLength )
   {
-    text = System_String__Substring_63254588(txt, v58, v59 + v61 + 1, 0LL);
+    text = System_String__Substring_63387616(txt, v58, v59 + v61 + 1, 0LL);
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
     ScriptMessageLabel__EnforceColorTag(colorTag, &text, 0LL, 0LL);
     rootPanel = (__int64)*v42;
     if ( !*v42 )
       goto LABEL_107;
-    rootPanel = (__int64)System_Text_StringBuilder__Append_62396736((System_Text_StringBuilder_o *)rootPanel, text, 0LL);
+    rootPanel = (__int64)System_Text_StringBuilder__Append_62529764((System_Text_StringBuilder_o *)rootPanel, text, 0LL);
     goto LABEL_57;
   }
   v122 = *v42;
   rootPanel = (__int64)System_String__Substring(txt, v58, 0LL);
   if ( !v122 )
     goto LABEL_107;
-  rootPanel = (__int64)System_Text_StringBuilder__Append_62396736(v122, (System_String_o *)rootPanel, 0LL);
+  rootPanel = (__int64)System_Text_StringBuilder__Append_62529764(v122, (System_String_o *)rootPanel, 0LL);
 LABEL_105:
   if ( !v56 )
 LABEL_107:
-    sub_1C2E388(rootPanel, v32);
+    sub_1C3B9C0(rootPanel, v32);
   (*(void (__fastcall **)(_QWORD, _QWORD))(v56 + 24))(*(_QWORD *)(v56 + 64), *(_QWORD *)(v56 + 40));
 }
 
@@ -6228,7 +6251,7 @@ void __fastcall ScriptMessageCommonManager__WaitNextTouch(
         return;
       }
     }
-    sub_1C2E388(touchPress, isShowNextTouchObject);
+    sub_1C3B9C0(touchPress, isShowNextTouchObject);
   }
 }
 
@@ -6294,7 +6317,7 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -6305,12 +6328,12 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -6322,9 +6345,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A70E90;
+  this->fields.m_target = (Il2CppObject *)sub_1A7DF48;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A70E50;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7DF08;
 }
 
 
@@ -6337,7 +6360,7 @@ System_IAsyncResult_o *__fastcall ScriptMessageCommonManager_ProcAddLabel__Begin
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, &v5, callback, object);
 }
 
 
@@ -6346,7 +6369,7 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
@@ -6383,7 +6406,7 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel2___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -6394,11 +6417,11 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel2___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) != 0 )
+  if ( (sub_1C3B824(v10) & 1) != 0 )
   {
     if ( v12 == 1 )
     {
-      v13 = (Il2CppObject *)sub_1A70F0C;
+      v13 = (Il2CppObject *)sub_1A7DFC4;
 LABEL_8:
       this->fields.m_target = v13;
       goto LABEL_9;
@@ -6408,20 +6431,20 @@ LABEL_8:
   {
     if ( !v12 )
     {
-      v13 = (Il2CppObject *)sub_1A70EEC;
+      v13 = (Il2CppObject *)sub_1A7DFA4;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v15 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v15, 0LL);
+      v15 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v15, 0LL);
     }
   }
   v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v14;
 LABEL_9:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A70EA4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7DF5C;
 }
 
 
@@ -6435,7 +6458,7 @@ System_IAsyncResult_o *__fastcall ScriptMessageCommonManager_ProcAddLabel2__Begi
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = txt;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
 }
 
 
@@ -6444,7 +6467,7 @@ void __fastcall ScriptMessageCommonManager_ProcAddLabel2__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
@@ -6508,7 +6531,7 @@ void __fastcall ScriptMessageCommonManager___c__DisplayClass113_0___UpdateLabels
         (tmpTxt = this->fields.tmpTxt) == 0LL) )
   {
 LABEL_10:
-    sub_1C2E388(tmpTxt, method);
+    sub_1C3B9C0(tmpTxt, method);
   }
   System_Text_StringBuilder__set_Length(tmpTxt, 0, 0LL);
 LABEL_8:
@@ -6517,7 +6540,7 @@ LABEL_8:
     goto LABEL_10;
   tmpColorTag = this->fields.tmpColorTag;
   v12->fields.defaultColorTag = tmpColorTag;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v12->fields.defaultColorTag, (int64_t)tmpColorTag, v4, v5, v6, v7, v8, v9);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v12->fields.defaultColorTag, (int64_t)tmpColorTag, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -6554,10 +6577,10 @@ void __fastcall ScriptMessageCommonManager___c__DisplayClass113_0___UpdateLabels
   _4__this = v8->fields.__4__this;
   if ( !_4__this )
 LABEL_7:
-    sub_1C2E388(this, text);
+    sub_1C3B9C0(this, text);
   tmpColorTag = (int64_t)v8->fields.tmpColorTag;
   _4__this->fields.defaultColorTag = (struct System_String_o *)tmpColorTag;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&_4__this->fields.defaultColorTag,
     tmpColorTag,
     (int64_t)method,

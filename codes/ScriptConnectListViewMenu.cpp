@@ -24,7 +24,7 @@ void __fastcall ScriptConnectListViewMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_callbackFunc, 0LL, (int64_t)objectName, (int32_t)method, v4, v5, v6, v7);
+    sub_1C3B708(p_callbackFunc, 0LL, (int64_t)objectName, (int32_t)method, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, System_String_o *, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       (unsigned int)result,
@@ -59,12 +59,12 @@ void __fastcall ScriptConnectListViewMenu__Close(ScriptConnectListViewMenu_o *th
   if ( this->fields.scriptFileList )
   {
     p_scriptFileList->klass = 0LL;
-    sub_1C2E0D0(p_scriptFileList, 0LL, v4, v5, v6, v7, v8, v9);
+    sub_1C3B708(p_scriptFileList, 0LL, v4, v5, v6, v7, v8, v9);
   }
   listViewManager = (ListViewManager_o *)this->fields.scriptTestObjectRootObject;
   if ( !listViewManager )
 LABEL_8:
-    sub_1C2E388(listViewManager, v3);
+    sub_1C3B9C0(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0LL);
 }
 
@@ -84,7 +84,7 @@ void __fastcall ScriptConnectListViewMenu__EndInput(ScriptConnectListViewMenu_o 
       || (UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0LL),
           (listViewManager = (ListViewManager_o *)this->fields.jumpLineObjectInput) == 0LL) )
     {
-      sub_1C2E388(listViewManager, method);
+      sub_1C3B9C0(listViewManager, method);
     }
     UILineInput__SetInputEnable((UILineInput_o *)listViewManager, 0, 0LL);
   }
@@ -98,7 +98,7 @@ int32_t __fastcall ScriptConnectListViewMenu__GetJumpLine(ScriptConnectListViewM
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   Text = UILineInput__GetText(jumpLineObjectInput, 0LL);
   if ( System_String__IsNullOrEmpty(Text, 0LL) )
     return -1;
@@ -115,7 +115,7 @@ System_String_o *__fastcall ScriptConnectListViewMenu__GetJumpLineString(
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   return UILineInput__GetText(jumpLineObjectInput, 0LL);
 }
 
@@ -173,7 +173,7 @@ void __fastcall ScriptConnectListViewMenu__OnClickItem(
         goto LABEL_9;
       }
 LABEL_10:
-      sub_1C2E388(v6, v7);
+      sub_1C3B9C0(v6, v7);
     }
     if ( result == 2 )
     {
@@ -211,10 +211,10 @@ void __fastcall ScriptConnectListViewMenu__OnClickUpdate(ScriptConnectListViewMe
     ScriptConnectListViewMenu__EndInput(this, method);
     listViewManager = (ListViewManager_o *)this->fields.listViewManager;
     if ( !listViewManager )
-      sub_1C2E388(0LL, v3);
+      sub_1C3B9C0(0LL, v3);
     ListViewManager__DestroyList(listViewManager, 0LL);
     this->fields.scriptFileList = 0LL;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.scriptFileList, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.scriptFileList, 0LL, v5, v6, v7, v8, v9, v10);
     ScriptConnectListViewMenu__RequestList(this, this->fields.path, v11);
   }
 }
@@ -251,10 +251,10 @@ void __fastcall ScriptConnectListViewMenu__Open(
   const MethodInfo *v30; // x2
   const MethodInfo *v31; // x1
 
-  if ( (byte_4BFAE6D & 1) == 0 )
+  if ( (byte_4C1F674 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_Component_GetComponent_UIInput___, path);
-    byte_4BFAE6D = 1;
+    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UIInput___, path);
+    byte_4C1F674 = 1;
   }
   state = this->fields.state;
   switch ( state )
@@ -263,7 +263,7 @@ void __fastcall ScriptConnectListViewMenu__Open(
       goto LABEL_6;
     case 5:
       this->fields.callbackFunc = callback;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
         (int64_t)callback,
         (int64_t)objectName,
@@ -277,7 +277,7 @@ void __fastcall ScriptConnectListViewMenu__Open(
     case 0:
 LABEL_6:
       this->fields.path = path;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&this->fields.path,
         (int64_t)path,
         (int64_t)objectName,
@@ -287,7 +287,7 @@ LABEL_6:
         v6,
         v7);
       this->fields.callbackFunc = callback;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
         (int64_t)callback,
         v13,
@@ -334,15 +334,15 @@ LABEL_6:
             (scriptTestObjectRootObject = (UnityEngine_GameObject_o *)this->fields.jumpLineObjectInput) == 0LL)
         || (scriptTestObjectRootObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                                        (UnityEngine_Component_o *)scriptTestObjectRootObject,
-                                                                       (const MethodInfo_2FC82D4 *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0LL )
+                                                                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UIInput___)) == 0LL )
       {
 LABEL_20:
-        sub_1C2E388(scriptTestObjectRootObject, v19);
+        sub_1C3B9C0(scriptTestObjectRootObject, v19);
       }
       UIInput__set_value((UIInput_o *)scriptTestObjectRootObject, jumpLine, 0LL);
       this->fields.state = 1;
       this->fields.scriptFileList = 0LL;
-      sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.scriptFileList, 0LL, v24, v25, v26, v27, v28, v29);
+      sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.scriptFileList, 0LL, v24, v25, v26, v27, v28, v29);
       ScriptConnectListViewMenu__RequestList(this, this->fields.path, v30);
       break;
   }
@@ -377,7 +377,7 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
   System_IO_DirectoryInfo_o *v25; // x22
   __int64 v26; // x0
   __int64 v27; // x1
-  System_IO_FileInfo_array *Files_63423940; // x21
+  System_IO_FileInfo_array *Files_63556968; // x21
   System_Collections_Generic_List_object__o *v29; // x22
   _BOOL8 v30; // x0
   __int64 v31; // x1
@@ -411,25 +411,25 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-70h]
   __int16 v61[2]; // [xsp+2Ch] [xbp-44h] BYREF
 
-  if ( (byte_4BFAE6E & 1) == 0 )
+  if ( (byte_4C1F675 & 1) == 0 )
   {
-    sub_1C2E12C(&char_TypeInfo, path);
-    sub_1C2E12C(&ErrorDialog_ClickDelegate_TypeInfo, v5);
-    sub_1C2E12C(&System_IO_DirectoryInfo_TypeInfo, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string__Add__, v7);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string__ToArray__, v8);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_string___ctor__, v9);
-    sub_1C2E12C(&System_Collections_Generic_List_string__TypeInfo, v10);
-    sub_1C2E12C(&Method_ScriptConnectListViewMenu_OnClickErrorDialog__, v11);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_1C2E12C(&StringLiteral_19767/*"file://"*/, v13);
-    sub_1C2E12C(&StringLiteral_22552/*"not find directory ["*/, v14);
-    sub_1C2E12C(&StringLiteral_4772/*"Connect Script Error"*/, v15);
-    sub_1C2E12C(&StringLiteral_19768/*"file:///"*/, v16);
-    sub_1C2E12C(&StringLiteral_833/*"*.txt"*/, v17);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v18);
-    sub_1C2E12C(&StringLiteral_16358/*"]"*/, v19);
-    byte_4BFAE6E = 1;
+    sub_1C3B764(&char_TypeInfo, path);
+    sub_1C3B764(&ErrorDialog_ClickDelegate_TypeInfo, v5);
+    sub_1C3B764(&System_IO_DirectoryInfo_TypeInfo, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string__Add__, v7);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string__ToArray__, v8);
+    sub_1C3B764(&Method_System_Collections_Generic_List_string___ctor__, v9);
+    sub_1C3B764(&System_Collections_Generic_List_string__TypeInfo, v10);
+    sub_1C3B764(&Method_ScriptConnectListViewMenu_OnClickErrorDialog__, v11);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    sub_1C3B764(&StringLiteral_19802/*"icon_equip_fixation"*/, v13);
+    sub_1C3B764(&StringLiteral_22591/*"return"*/, v14);
+    sub_1C3B764(&StringLiteral_4772/*"CrashReporter:InitializeCrashlytics"*/, v15);
+    sub_1C3B764(&StringLiteral_19803/*"icon_error"*/, v16);
+    sub_1C3B764(&StringLiteral_833/*", UnityEngine"*/, v17);
+    sub_1C3B764(&StringLiteral_1/*""*/, v18);
+    sub_1C3B764(&StringLiteral_16386/*"align-items"*/, v19);
+    byte_4C1F675 = 1;
   }
   v20 = (System_String_o *)StringLiteral_1/*""*/;
   v61[0] = 0;
@@ -439,93 +439,93 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
   {
     if ( path )
     {
-      listViewManager = System_String__Replace_63255212(
+      listViewManager = System_String__Replace_63388240(
                           path,
-                          (System_String_o *)StringLiteral_19768/*"file:///"*/,
+                          (System_String_o *)StringLiteral_19803/*"icon_error"*/,
                           (System_String_o *)StringLiteral_1/*""*/,
                           0LL);
       if ( listViewManager )
       {
-        v24 = System_String__Replace_63255212(
+        v24 = System_String__Replace_63388240(
                 listViewManager,
-                (System_String_o *)StringLiteral_19767/*"file://"*/,
+                (System_String_o *)StringLiteral_19802/*"icon_equip_fixation"*/,
                 (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( System_IO_Directory__Exists(v24, 0LL) )
         {
-          v25 = (System_IO_DirectoryInfo_o *)sub_1C2E378(System_IO_DirectoryInfo_TypeInfo);
+          v25 = (System_IO_DirectoryInfo_o *)sub_1C3B9B0(System_IO_DirectoryInfo_TypeInfo);
           System_IO_DirectoryInfo___ctor(v25, v24, 0LL);
           if ( !v25 )
-            sub_1C2E388(v26, v27);
-          Files_63423940 = System_IO_DirectoryInfo__GetFiles_63423940(v25, (System_String_o *)StringLiteral_833/*"*.txt"*/, 0LL);
-          v29 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_string__TypeInfo);
+            sub_1C3B9C0(v26, v27);
+          Files_63556968 = System_IO_DirectoryInfo__GetFiles_63556968(v25, (System_String_o *)StringLiteral_833/*", UnityEngine"*/, 0LL);
+          v29 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
           System_Collections_Generic_List_object____ctor(
             v29,
-            (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_string___ctor__);
-          if ( !Files_63423940 )
-            sub_1C2E388(v30, v31);
-          max_length = Files_63423940->max_length;
+            (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
+          if ( !Files_63556968 )
+            sub_1C3B9C0(v30, v31);
+          max_length = Files_63556968->max_length;
           if ( max_length >= 1 )
           {
             for ( i = 0; i < max_length; ++i )
             {
               if ( i >= (unsigned int)max_length )
-                sub_1C2E390(v30, v31);
-              v34 = Files_63423940->m_Items[i];
+                sub_1C3B9C8(v30, v31);
+              v34 = Files_63556968->m_Items[i];
               if ( !v34 )
-                sub_1C2E388(0LL, v31);
+                sub_1C3B9C0(0LL, v31);
               v35 = (System_String_o *)((__int64 (__fastcall *)(System_IO_FileInfo_o *, Il2CppMethodPointer))v34->klass->vtable._9_get_Name.method)(
                                          v34,
                                          v34->klass->vtable._10_get_Exists.methodPtr);
               v37 = v35;
               if ( !v35 )
-                sub_1C2E388(0LL, v36);
+                sub_1C3B9C0(0LL, v36);
               v61[0] = System_String__get_Chars(v35, 0, 0LL);
               if ( !char_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(char_TypeInfo);
-              v30 = System_Char__Equals_63867548((uint16_t)v61, 0x2Eu, 0LL);
+              v30 = System_Char__Equals_64000576((uint16_t)v61, 0x2Eu, 0LL);
               if ( !v30 )
               {
                 v61[0] = System_String__get_Chars(v37, 0, 0LL);
                 if ( !char_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(char_TypeInfo);
-                v30 = System_Char__Equals_63867548((uint16_t)v61, 0x5Fu, 0LL);
+                v30 = System_Char__Equals_64000576((uint16_t)v61, 0x5Fu, 0LL);
                 if ( !v30 )
                 {
                   if ( !v29 )
-                    sub_1C2E388(v30, v31);
+                    sub_1C3B9C0(v30, v31);
                   items = v29->fields._items;
                   v45 = Method_System_Collections_Generic_List_string__Add__;
                   ++v29->fields._version;
                   if ( !items )
-                    sub_1C2E388(v30, v31);
+                    sub_1C3B9C0(v30, v31);
                   size = v29->fields._size;
                   if ( (unsigned int)size >= items->max_length )
                   {
                     System_Collections_Generic_List_object___AddWithResize(
                       v29,
                       (Il2CppObject *)v37,
-                      *(const MethodInfo_366B8AC **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+                      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v47 = &items->obj.klass + size;
                     v29->fields._size = size + 1;
                     v47[4] = (Il2CppClass *)v37;
-                    sub_1C2E0D0((PartyOrganizationUtility_o *)(v47 + 4), (int64_t)v37, v38, v39, v40, v41, v42, v43);
+                    sub_1C3B708((PartyOrganizationUtility_o *)(v47 + 4), (int64_t)v37, v38, v39, v40, v41, v42, v43);
                   }
                 }
               }
-              max_length = Files_63423940->max_length;
+              max_length = Files_63556968->max_length;
             }
           }
           if ( !v29 )
-            sub_1C2E388(v30, v31);
+            sub_1C3B9C0(v30, v31);
           v48 = (struct System_String_array *)System_Collections_Generic_List_object___ToArray(
                                                 v29,
-                                                (const MethodInfo_366D404 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                                (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_string__ToArray__);
           this->fields.scriptFileList = v48;
-          sub_1C2E0D0(
+          sub_1C3B708(
             (PartyOrganizationUtility_o *)&this->fields.scriptFileList,
             (int64_t)v48,
             v49,
@@ -537,10 +537,10 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
         }
         else
         {
-          v20 = System_String__Concat_63246844(
-                  (System_String_o *)StringLiteral_22552/*"not find directory ["*/,
+          v20 = System_String__Concat_63379872(
+                  (System_String_o *)StringLiteral_22591/*"return"*/,
                   v24,
-                  (System_String_o *)StringLiteral_16358/*"]"*/,
+                  (System_String_o *)StringLiteral_16386/*"align-items"*/,
                   0LL);
         }
         if ( System_String__IsNullOrEmpty(v20, 0LL) )
@@ -559,8 +559,8 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
         }
         else
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v58 = (ErrorDialog_ClickDelegate_o *)sub_1C2E378(ErrorDialog_ClickDelegate_TypeInfo);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          v58 = (ErrorDialog_ClickDelegate_o *)sub_1C3B9B0(ErrorDialog_ClickDelegate_TypeInfo);
           ErrorDialog_ClickDelegate___ctor(
             v58,
             (Il2CppObject *)this,
@@ -572,7 +572,7 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
             effectDistance.fields.value.fields.y = 0.0;
             CommonUI__OpenWarningDialog(
               (CommonUI_o *)Instance,
-              (System_String_o *)StringLiteral_4772/*"Connect Script Error"*/,
+              (System_String_o *)StringLiteral_4772/*"CrashReporter:InitializeCrashlytics"*/,
               v20,
               v58,
               1,
@@ -587,7 +587,7 @@ bool __fastcall ScriptConnectListViewMenu__RequestList(
         }
       }
     }
-    sub_1C2E388(listViewManager, v21);
+    sub_1C3B9C0(listViewManager, v21);
   }
   return (char)listViewManager;
 }
@@ -603,29 +603,29 @@ void __fastcall ScriptConnectListViewMenu__StartInput(ScriptConnectListViewMenu_
   __int64 v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4BFAE6F & 1) == 0 )
+  if ( (byte_4C1F676 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptConnectListViewManager_CallbackFunc_TypeInfo, method);
-    sub_1C2E12C(&Method_ScriptConnectListViewMenu_OnClickItem__, v3);
-    byte_4BFAE6F = 1;
+    sub_1C3B764(&ScriptConnectListViewManager_CallbackFunc_TypeInfo, method);
+    sub_1C3B764(&Method_ScriptConnectListViewMenu_OnClickItem__, v3);
+    byte_4C1F676 = 1;
   }
   this->fields.state = 3;
   listViewManager = this->fields.listViewManager;
-  v5 = (ScriptConnectListViewManager_CallbackFunc_o *)sub_1C2E378(ScriptConnectListViewManager_CallbackFunc_TypeInfo);
+  v5 = (ScriptConnectListViewManager_CallbackFunc_o *)sub_1C3B9B0(ScriptConnectListViewManager_CallbackFunc_TypeInfo);
   ScriptConnectListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     Method_ScriptConnectListViewMenu_OnClickItem__,
     v6);
   if ( !listViewManager
-    || (ScriptConnectListViewManager__SetMode_36094200(listViewManager, 1, v5, v9),
+    || (ScriptConnectListViewManager__SetMode_36199876(listViewManager, 1, v5, v9),
         (scriptTestObjectCancelButton = (UnityEngine_Behaviour_o *)this->fields.scriptTestObjectCancelButton) == 0LL)
     || (UnityEngine_Behaviour__set_enabled(scriptTestObjectCancelButton, 1, 0LL),
         (scriptTestObjectCancelButton = (UnityEngine_Behaviour_o *)this->fields.scriptTestObjectUpdateButton) == 0LL)
     || (UnityEngine_Behaviour__set_enabled(scriptTestObjectCancelButton, 1, 0LL),
         (scriptTestObjectCancelButton = (UnityEngine_Behaviour_o *)this->fields.jumpLineObjectInput) == 0LL) )
   {
-    sub_1C2E388(scriptTestObjectCancelButton, v8);
+    sub_1C3B9C0(scriptTestObjectCancelButton, v8);
   }
   UILineInput__SetInputEnable((UILineInput_o *)scriptTestObjectCancelButton, 1, 0LL);
 }
@@ -646,10 +646,10 @@ void __fastcall ScriptConnectListViewMenu__add_callbackFunc(
   ScriptConnectListViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BFAE6B & 1) == 0 )
+  if ( (byte_4C1F672 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4BFAE6B = 1;
+    sub_1C3B764(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4C1F672 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -662,13 +662,13 @@ void __fastcall ScriptConnectListViewMenu__add_callbackFunc(
       if ( (ScriptConnectListViewMenu_CallbackFunc_c *)v8->klass != ScriptConnectListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
+    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   ScriptConnectListViewMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -691,10 +691,10 @@ void __fastcall ScriptConnectListViewMenu__remove_callbackFunc(
   ScriptConnectListViewMenu_CallbackFunc_o *v15; // x4
   const MethodInfo *v16; // x5
 
-  if ( (byte_4BFAE6C & 1) == 0 )
+  if ( (byte_4C1F673 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo, value);
-    byte_4BFAE6C = 1;
+    sub_1C3B764(&ScriptConnectListViewMenu_CallbackFunc_TypeInfo, value);
+    byte_4C1F673 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -707,13 +707,13 @@ void __fastcall ScriptConnectListViewMenu__remove_callbackFunc(
       if ( (ScriptConnectListViewMenu_CallbackFunc_c *)v8->klass != ScriptConnectListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
+    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   ScriptConnectListViewMenu__Open(v11, v12, v13, v14, v15, v16);
 }
 
@@ -740,7 +740,7 @@ void __fastcall ScriptConnectListViewMenu_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -751,12 +751,12 @@ void __fastcall ScriptConnectListViewMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -768,9 +768,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A6C914;
+  this->fields.m_target = (Il2CppObject *)sub_1A799CC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6C8BC;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A79974;
 }
 
 
@@ -787,15 +787,15 @@ System_IAsyncResult_o *__fastcall ScriptConnectListViewMenu_CallbackFunc__BeginI
   int32_t v12; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12 = result;
-  if ( (byte_4BFAE70 & 1) == 0 )
+  if ( (byte_4C1F677 & 1) == 0 )
   {
-    sub_1C2E12C(&ScriptConnectListViewMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
-    byte_4BFAE70 = 1;
+    sub_1C3B764(&ScriptConnectListViewMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
+    byte_4C1F677 = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(ScriptConnectListViewMenu_ResultKind_TypeInfo, &v12, objectName, callback, object);
   v11[1] = (__int64)objectName;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, v11, callback, object);
 }
 
 
@@ -804,7 +804,7 @@ void __fastcall ScriptConnectListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 

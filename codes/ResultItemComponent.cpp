@@ -16,7 +16,7 @@ void __fastcall ResultItemComponent__Clear(ResultItemComponent_o *this, const Me
     || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
   {
-    sub_1C2E388(baseObject, method);
+    sub_1C3B9C0(baseObject, method);
   }
   ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0LL);
 }
@@ -56,7 +56,7 @@ void __fastcall ResultItemComponent__Set(
         num = -1;
       else
         num = v4->fields.num;
-      ItemIconComponent__SetItemImage_39460860(
+      ItemIconComponent__SetItemImage_39569848(
         (ItemIconComponent_o *)this,
         (int32_t)giftEnt,
         v4->fields.objectId,
@@ -65,7 +65,7 @@ void __fastcall ResultItemComponent__Set(
       return;
     }
 LABEL_16:
-    sub_1C2E388(this, giftEnt);
+    sub_1C3B9C0(this, giftEnt);
   }
   if ( !this )
     goto LABEL_16;
@@ -73,7 +73,7 @@ LABEL_16:
     v8 = -1;
   else
     v8 = count;
-  ItemIconComponent__SetGift_39457192((ItemIconComponent_o *)this, v4->fields.type, v4->fields.objectId, v8, 0, 0LL);
+  ItemIconComponent__SetGift_39566180((ItemIconComponent_o *)this, v4->fields.type, v4->fields.objectId, v8, 0, 0LL);
 }
 
 
@@ -97,9 +97,9 @@ void __fastcall ResultItemComponent__SetExtra(
       || (UnityEngine_GameObject__SetActive(baseObject, 1, 0LL),
           (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
     {
-      sub_1C2E388(baseObject, *(_QWORD *)&imgId);
+      sub_1C3B9C0(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_39454860((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0LL);
+    ItemIconComponent__SetItemImage_39563848((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0LL);
   }
 }
 
@@ -119,7 +119,7 @@ void __fastcall ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
@@ -139,7 +139,7 @@ void __fastcall ResultItemComponent__SetRareItem(ResultItemComponent_o *this, co
   if ( !bonusSprite
     || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL )
   {
-    sub_1C2E388(bonusSprite, method);
+    sub_1C3B9C0(bonusSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0LL);
 }

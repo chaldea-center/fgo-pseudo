@@ -8,7 +8,7 @@ void __fastcall BattlePanelEvent__OnDestroy(BattlePanelEvent_o *this, const Meth
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_44257728(this, 0, v2);
+  BattlePanelEvent__SetPanelActive_44381072(this, 0, v2);
 }
 
 
@@ -16,12 +16,12 @@ void __fastcall BattlePanelEvent__SetPanelActive(BattlePanelEvent_o *this, const
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_44257728(this, 1, v2);
+  BattlePanelEvent__SetPanelActive_44381072(this, 1, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattlePanelEvent__SetPanelActive_44257728(
+void __fastcall BattlePanelEvent__SetPanelActive_44381072(
         BattlePanelEvent_o *this,
         bool flag,
         const MethodInfo *method)
@@ -30,10 +30,10 @@ void __fastcall BattlePanelEvent__SetPanelActive_44257728(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4BFFF28 & 1) == 0 )
+  if ( (byte_4C24756 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, flag);
-    byte_4BFFF28 = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, flag);
+    byte_4C24756 = 1;
   }
   Panel = (UnityEngine_Object_o *)this->fields.Panel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -42,7 +42,7 @@ void __fastcall BattlePanelEvent__SetPanelActive_44257728(
   {
     v7 = this->fields.Panel;
     if ( !v7 )
-      sub_1C2E388(0LL, v6);
+      sub_1C3B9C0(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, flag, 0LL);
   }
 }
@@ -52,5 +52,5 @@ void __fastcall BattlePanelEvent__SetPanelDisable(BattlePanelEvent_o *this, cons
 {
   const MethodInfo *v2; // x2
 
-  BattlePanelEvent__SetPanelActive_44257728(this, 0, v2);
+  BattlePanelEvent__SetPanelActive_44381072(this, 0, v2);
 }

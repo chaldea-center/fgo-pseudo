@@ -1,13 +1,13 @@
 void __fastcall WarBoardMessageScriptEntity___ctor(WarBoardMessageScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE7CB & 1) == 0 )
+  if ( (byte_4C22FF0 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFE7CB = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C22FF0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall WarBoardMessageScriptEntity__CreatePK(
         int32_t form,
         const MethodInfo *method)
 {
-  if ( (byte_4BFE7CA & 1) == 0 )
+  if ( (byte_4C22FEF & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_string__int___, *(_QWORD *)&form);
-    byte_4BFE7CA = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_string__int___, *(_QWORD *)&form);
+    byte_4C22FEF = 1;
   }
   return DataEntityBase__CreateMultiplePK_object__int_(
            (Il2CppObject *)imageId,
            form,
-           (const MethodInfo_2FCFC64 *)Method_DataEntityBase_CreateMultiplePK_string__int___);
+           (const MethodInfo_2FEE59C *)Method_DataEntityBase_CreateMultiplePK_string__int___);
 }
 
 

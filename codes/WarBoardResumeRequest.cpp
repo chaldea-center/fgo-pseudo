@@ -13,15 +13,15 @@ void __fastcall WarBoardResumeRequest__beginRequest(
   int32_t id; // w0
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4BFF226 & 1) == 0 )
+  if ( (byte_4C23A50 & 1) == 0 )
   {
-    this = (WarBoardResumeRequest_o *)sub_1C2E12C(&StringLiteral_23927/*"stageId"*/, warBoardData);
-    byte_4BFF226 = 1;
+    this = (WarBoardResumeRequest_o *)sub_1C3B764(&StringLiteral_23970/*"updateDamageGauge"*/, warBoardData);
+    byte_4C23A50 = 1;
   }
   if ( !warBoardData )
-    sub_1C2E388(this, warBoardData);
+    sub_1C3B9C0(this, warBoardData);
   id = WarBoardData__get_id(warBoardData, 0LL);
-  RequestBase__addField(v4, (System_String_o *)StringLiteral_23927/*"stageId"*/, id, 0LL);
+  RequestBase__addField(v4, (System_String_o *)StringLiteral_23970/*"updateDamageGauge"*/, id, 0LL);
   WarBoardData__SetRequest(warBoardData, v4, 0LL);
   RequestBase__beginRequest(v4, 0LL);
 }
@@ -32,16 +32,16 @@ System_String_o *__fastcall WarBoardResumeRequest__getURL(WarBoardResumeRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF225 & 1) == 0 )
+  if ( (byte_4C23A4F & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_25085/*"warBoard/resume"*/, v2);
-    byte_4BFF225 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_25129/*"￰"*/, v2);
+    byte_4C23A4F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_25085/*"warBoard/resume"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_25129/*"￰"*/, 0LL);
 }
 
 
@@ -63,15 +63,15 @@ void __fastcall WarBoardResumeRequest__requestCompleted(
   Il2CppObject *v15; // x0
   System_String_o *v16; // x1
 
-  if ( (byte_4BFF227 & 1) == 0 )
+  if ( (byte_4C23A51 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1C2E12C(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1C2E12C(&JsonManager_TypeInfo, v6);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v8);
-    sub_1C2E12C(&StringLiteral_25092/*"warBoardData"*/, v9);
-    byte_4BFF227 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1C3B764(&JsonManager_TypeInfo, v6);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v8);
+    sub_1C3B764(&StringLiteral_25136, v9);
+    byte_4C23A51 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -82,21 +82,21 @@ void __fastcall WarBoardResumeRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_25092/*"warBoardData"*/,
-             (const MethodInfo_3335AF4 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_25136,
+             (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v15 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_25092/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_25136,
       v15,
-      (const MethodInfo_3335B60 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_3355754 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v16 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v16 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v16 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v16, 0LL);
 }

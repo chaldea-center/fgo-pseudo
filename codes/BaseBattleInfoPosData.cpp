@@ -16,7 +16,7 @@ void __fastcall BaseBattleInfoPosData__Init(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Perf_k__BackingField = perf;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)perf, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)perf, (int64_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -49,10 +49,10 @@ UnityEngine_Vector3_o __fastcall BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4BF7D91 )
+  if ( !byte_4C1C511 )
   {
-    sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4BF7D91 = 1;
+    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4C1C511 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -77,5 +77,5 @@ void __fastcall BaseBattleInfoPosData__set_Perf(
   PartyListViewItem_o *v7; // x7
 
   this->fields._Perf_k__BackingField = value;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
 }

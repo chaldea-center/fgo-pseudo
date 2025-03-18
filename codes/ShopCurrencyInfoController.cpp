@@ -1,6 +1,6 @@
 void __fastcall ShopCurrencyInfoController___ctor(ShopCurrencyInfoController_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.currencySpritePosTypeA.fields.x = xmmword_C06590;
+  *(_OWORD *)&this->fields.currencySpritePosTypeA.fields.x = xmmword_C0D920;
   *(_QWORD *)&this->fields.currencySpritePosTypeB.fields.y = 1110441984LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -51,31 +51,31 @@ System_String_o *__fastcall ShopCurrencyInfoController__GetCurrencyNumber(
   int64_t v22; // x1
   UserItemMaster_o *v23; // x0
 
-  if ( (byte_4BF9BB0 & 1) == 0 )
+  if ( (byte_4C1E3B3 & 1) == 0 )
   {
-    sub_1C2E12C(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ItemMaster___, v4);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v6);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v7);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1C2E12C(&StringLiteral_1191/*"0"*/, v9);
-    byte_4BF9BB0 = 1;
+    sub_1C3B764(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v4);
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserItemMaster___, v5);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v6);
+    sub_1C3B764(&NetworkManager_TypeInfo, v7);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1C3B764(&StringLiteral_1191/*"1.0"*/, v9);
+    byte_4C1E3B3 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ItemMaster___),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
+                              (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___),
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
   {
 LABEL_90:
-    sub_1C2E388(Instance, v12);
+    sub_1C3B9C0(Instance, v12);
   }
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserItemMaster___);
+               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserItemMaster___);
   v14 = kind - 2;
   v15 = (UserItemMaster_o *)Instance;
   switch ( v14 )
@@ -90,10 +90,10 @@ LABEL_90:
     case 5:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -109,10 +109,10 @@ LABEL_90:
     case 6:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -139,10 +139,10 @@ LABEL_10:
     case 11:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -160,10 +160,10 @@ LABEL_10:
     case 14:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -181,10 +181,10 @@ LABEL_10:
     case 15:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -203,10 +203,10 @@ LABEL_60:
     case 16:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -229,10 +229,10 @@ LABEL_60:
     case 18:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v12);
+        byte_4C1C955 = 1;
       }
       Instance = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -263,7 +263,7 @@ LABEL_88:
       }
       return LocalizationManager__GetNumberFormat(mana, 0LL);
     default:
-      return (System_String_o *)StringLiteral_1191/*"0"*/;
+      return (System_String_o *)StringLiteral_1191/*"1.0"*/;
   }
 }
 
@@ -285,24 +285,24 @@ System_String_o *__fastcall ShopCurrencyInfoController__GetCurrencySprite(
   __int64 v12; // x1
   System_String_o **v13; // x8
 
-  if ( (byte_4BF9BAF & 1) == 0 )
+  if ( (byte_4C1E3B2 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_20635/*"img_bg_seed"*/, *(_QWORD *)&kind);
-    sub_1C2E12C(&StringLiteral_20628/*"img_bg_mp"*/, v4);
-    sub_1C2E12C(&StringLiteral_20624/*"img_bg_evocation"*/, v5);
-    sub_1C2E12C(&StringLiteral_20625/*"img_bg_fragments"*/, v6);
-    sub_1C2E12C(&StringLiteral_20630/*"img_bg_pureprism_itemstock_resetticket"*/, v7);
-    sub_1C2E12C(&StringLiteral_20617/*"img_bg_ap"*/, v8);
-    sub_1C2E12C(&StringLiteral_20632/*"img_bg_rp"*/, v9);
-    sub_1C2E12C(&StringLiteral_20627/*"img_bg_hgd"*/, v10);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v11);
-    sub_1C2E12C(&StringLiteral_20637/*"img_bg_spsummon"*/, v12);
-    byte_4BF9BAF = 1;
+    sub_1C3B764(&StringLiteral_20670/*"kn-IN"*/, *(_QWORD *)&kind);
+    sub_1C3B764(&StringLiteral_20663/*"kk"*/, v4);
+    sub_1C3B764(&StringLiteral_20659/*"keys"*/, v5);
+    sub_1C3B764(&StringLiteral_20660/*"khaki"*/, v6);
+    sub_1C3B764(&StringLiteral_20665/*"kl"*/, v7);
+    sub_1C3B764(&StringLiteral_20652/*"keySelector"*/, v8);
+    sub_1C3B764(&StringLiteral_20667/*"km"*/, v9);
+    sub_1C3B764(&StringLiteral_20662/*"kind"*/, v10);
+    sub_1C3B764(&StringLiteral_1/*""*/, v11);
+    sub_1C3B764(&StringLiteral_20672/*"ko"*/, v12);
+    byte_4C1E3B2 = 1;
   }
   if ( (unsigned int)(kind - 2) > 0x13 )
     v13 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v13 = (System_String_o **)*(&off_4626DB0 + kind - 2);
+    v13 = (System_String_o **)*(&off_4647A30 + kind - 2);
   return *v13;
 }
 
@@ -360,28 +360,28 @@ bool __fastcall ShopCurrencyInfoController__GetIsRarePriShopPurchased(
   bool v13; // w19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4BF9BB4 & 1) == 0 )
+  if ( (byte_4C1E3B7 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&eventId);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserEventMaster___, v4);
-    sub_1C2E12C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v6);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4BF9BB4 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&eventId);
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserEventMaster___, v4);
+    sub_1C3B764(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v5);
+    sub_1C3B764(&NetworkManager_TypeInfo, v6);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4C1E3B7 = 1;
   }
   entity = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4BF81D5 )
+  if ( !byte_4C1C955 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, v9);
-    byte_4BF81D5 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, v9);
+    byte_4C1C955 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -396,19 +396,19 @@ bool __fastcall ShopCurrencyInfoController__GetIsRarePriShopPurchased(
           *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
           eventId,
           0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_22;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          eventId,
-         (const MethodInfo_327B1CC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_329AE94 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     Instance = (DataManager_o *)entity;
     if ( entity )
@@ -419,7 +419,7 @@ bool __fastcall ShopCurrencyInfoController__GetIsRarePriShopPurchased(
       goto LABEL_19;
     }
 LABEL_22:
-    sub_1C2E388(Instance, v9);
+    sub_1C3B9C0(Instance, v9);
   }
   if ( !v11 )
     return 0;
@@ -463,7 +463,7 @@ UnityEngine_Vector3_o __fastcall ShopCurrencyInfoController__GetRestLabelPositio
   {
     v5 = 0.0;
     if ( (unsigned int)(textCount - 2) <= 2 )
-      v5 = flt_C40240[textCount - 2];
+      v5 = flt_C475B0[textCount - 2];
   }
   v6 = -1.7;
   v7 = 0.0;
@@ -538,12 +538,12 @@ void __fastcall ShopCurrencyInfoController__RefreshCurrencyInfo(
   const MethodInfo *v61; // x2
   UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BF9BAD & 1) == 0 )
+  if ( (byte_4C1E3B0 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&kind);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v7);
-    sub_1C2E12C(&StringLiteral_20629/*"img_bg_pp"*/, v8);
-    byte_4BF9BAD = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&kind);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C3B764(&StringLiteral_20664/*"kk-KZ"*/, v8);
+    byte_4C1E3B0 = 1;
   }
   this->fields.kind = kind;
   shopEventItemWindow = (UnityEngine_Object_o *)this->fields.shopEventItemWindow;
@@ -598,7 +598,7 @@ void __fastcall ShopCurrencyInfoController__RefreshCurrencyInfo(
       goto LABEL_84;
     mAtlas = v23->fields.mAtlas;
     this->fields.baseAtlas = mAtlas;
-    sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.baseAtlas, (int64_t)mAtlas, v17, v18, v19, v20, v21, v22);
+    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.baseAtlas, (int64_t)mAtlas, v17, v18, v19, v20, v21, v22);
   }
   gameObject = (UnityEngine_Component_o *)this->fields.shopEventItemWindowPanel;
   if ( !gameObject )
@@ -654,9 +654,9 @@ LABEL_41:
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   v31 = v30;
-  v32 = (System_String_o *)StringLiteral_20629/*"img_bg_pp"*/;
+  v32 = (System_String_o *)StringLiteral_20664/*"kk-KZ"*/;
 LABEL_44:
-  AtlasManager__SetShopBanner_39175184(v31, v32, 0LL);
+  AtlasManager__SetShopBanner_39284172(v31, v32, 0LL);
 LABEL_48:
   gameObject = (UnityEngine_Component_o *)this->fields.currencySprite;
   if ( !gameObject )
@@ -718,15 +718,15 @@ LABEL_48:
           IsFLAG20241004 = 0;
           break;
       }
-      GameObjectExtensions__SetLocalPosition_34857788(this->fields.itemInfo1, 0.0, 0.0, 0LL);
+      GameObjectExtensions__SetLocalPosition_34963392(this->fields.itemInfo1, 0.0, 0.0, 0LL);
       gameObject = (UnityEngine_Component_o *)this->fields.itemInfo2;
       if ( gameObject )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, IsFLAG20241004, 0LL);
         if ( IsFLAG20241004 )
         {
-          GameObjectExtensions__SetLocalPosition_34857788(this->fields.itemInfo1, -90.0, 0.0, 0LL);
-          GameObjectExtensions__SetLocalPosition_34857788(this->fields.itemInfo2, 90.0, 0.0, 0LL);
+          GameObjectExtensions__SetLocalPosition_34963392(this->fields.itemInfo1, -90.0, 0.0, 0LL);
+          GameObjectExtensions__SetLocalPosition_34963392(this->fields.itemInfo2, 90.0, 0.0, 0LL);
           switch ( v47 )
           {
             case 0:
@@ -769,7 +769,7 @@ LABEL_79:
               v56 = ShopCurrencyInfoController__GetCurrencySprite(v49, 17, v50);
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetShopBanner_39175184(v55, v56, 0LL);
+              AtlasManager__SetShopBanner_39284172(v55, v56, 0LL);
               v54 = 17;
               goto LABEL_79;
             case 4:
@@ -777,7 +777,7 @@ LABEL_79:
               v58 = ShopCurrencyInfoController__GetCurrencySprite(v49, 19, v50);
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetShopBanner_39175184(v57, v58, 0LL);
+              AtlasManager__SetShopBanner_39284172(v57, v58, 0LL);
               v54 = 19;
               goto LABEL_79;
             default:
@@ -787,7 +787,7 @@ LABEL_79:
         return;
       }
 LABEL_84:
-      sub_1C2E388(gameObject, v10);
+      sub_1C3B9C0(gameObject, v10);
     }
   }
 }
@@ -816,7 +816,7 @@ void __fastcall ShopCurrencyInfoController__RefreshEventItemInfo(
   __int64 v23; // x1
   UnityEngine_Object_o *currencyWindow; // x25
   EventItemComponent_o *gameObject; // x0
-  __int64 targetId; // x1
+  const MethodInfo *targetId; // x1
   EventItemDisplayEntity_array *ListByEventIdAndScreenFlag; // x23
   System_Collections_Generic_List_int__o *v28; // x22
   int max_length; // w8
@@ -864,21 +864,21 @@ void __fastcall ShopCurrencyInfoController__RefreshEventItemInfo(
   UnityEngine_Vector3_o v77; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v78; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4BF9BAC & 1) == 0 )
+  if ( (byte_4C1E3AF & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&kind);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventItemDisplayMaster___, v13);
-    sub_1C2E12C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v14);
-    sub_1C2E12C(&EventItemWindowMaker_TypeInfo, v15);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__Add__, v16);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int___ctor__, v17);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__get_Count__, v18);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_int__get_Item__, v19);
-    sub_1C2E12C(&System_Collections_Generic_List_int__TypeInfo, v20);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v21);
-    sub_1C2E12C(&ShopBuyItemListViewManager_TypeInfo, v22);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    byte_4BF9BAC = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&kind);
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventItemDisplayMaster___, v13);
+    sub_1C3B764(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v14);
+    sub_1C3B764(&EventItemWindowMaker_TypeInfo, v15);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__Add__, v16);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v17);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__get_Count__, v18);
+    sub_1C3B764(&Method_System_Collections_Generic_List_int__get_Item__, v19);
+    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v20);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v21);
+    sub_1C3B764(&ShopBuyItemListViewManager_TypeInfo, v22);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
+    byte_4C1E3AF = 1;
   }
   this->fields.eventId = eventId;
   currencyWindow = (UnityEngine_Object_o *)this->fields.currencyWindow;
@@ -893,7 +893,7 @@ void __fastcall ShopCurrencyInfoController__RefreshEventItemInfo(
     {
       if ( !ShopBuyItemListViewManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ShopBuyItemListViewManager_TypeInfo);
-      switch ( ShopBuyItemListViewManager__GetPayType(eventId, 0LL) )
+      switch ( ShopBuyItemListViewManager__GetPayType(eventId, targetId) )
       {
         case 4:
           v74 = 2;
@@ -927,12 +927,12 @@ LABEL_108:
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
   this->fields.kind = kind;
-  gameObject = (EventItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (EventItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_109;
   gameObject = (EventItemComponent_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)gameObject,
-                                         (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventItemDisplayMaster___);
+                                         (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventItemDisplayMaster___);
   if ( !gameObject )
     goto LABEL_109;
   ListByEventIdAndScreenFlag = EventItemDisplayMaster__GetListByEventIdAndScreenFlag(
@@ -941,10 +941,10 @@ LABEL_108:
                                  8,
                                  0,
                                  0LL);
-  v28 = (System_Collections_Generic_List_int__o *)sub_1C2E378(System_Collections_Generic_List_int__TypeInfo);
+  v28 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v28,
-    (const MethodInfo_364E034 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !ListByEventIdAndScreenFlag )
     goto LABEL_109;
   max_length = ListByEventIdAndScreenFlag->max_length;
@@ -955,7 +955,7 @@ LABEL_108:
     {
       if ( v30 >= max_length )
 LABEL_110:
-        sub_1C2E390(gameObject, targetId);
+        sub_1C3B9C8(gameObject, targetId);
       v31 = ListByEventIdAndScreenFlag->m_Items[v30];
       if ( !v31 )
         break;
@@ -963,7 +963,7 @@ LABEL_110:
       {
         if ( !v28 )
           break;
-        targetId = (unsigned int)v31->fields.targetId;
+        targetId = (const MethodInfo *)(unsigned int)v31->fields.targetId;
         items = v28->fields._items;
         v33 = Method_System_Collections_Generic_List_int__Add__;
         ++v28->fields._version;
@@ -974,13 +974,13 @@ LABEL_110:
         {
           System_Collections_Generic_List_int___AddWithResize(
             v28,
-            targetId,
-            *(const MethodInfo_364E888 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+            (int32_t)targetId,
+            *(const MethodInfo_366EC48 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
         }
         else
         {
           v28->fields._size = size + 1;
-          items->m_Items[size + 1] = targetId;
+          items->m_Items[size + 1] = (int)targetId;
         }
       }
       max_length = ListByEventIdAndScreenFlag->max_length;
@@ -988,7 +988,7 @@ LABEL_110:
         goto LABEL_25;
     }
 LABEL_109:
-    sub_1C2E388(gameObject, targetId);
+    sub_1C3B9C0(gameObject, targetId);
   }
 LABEL_25:
   if ( isEventShop )
@@ -1043,18 +1043,18 @@ LABEL_25:
   if ( !gameObject )
     goto LABEL_109;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, v43 & 1, 0LL);
-  gameObject = (EventItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  gameObject = (EventItemComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_109;
   gameObject = (EventItemComponent_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)gameObject,
-                                         (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                         (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !gameObject )
     goto LABEL_109;
   gameObject = (EventItemComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                          eventId,
-                                         (const MethodInfo_327B180 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                         (const MethodInfo_329AE48 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   if ( !gameObject )
     goto LABEL_109;
   if ( EventDetailEntity__HasFlag((EventDetailEntity_o *)gameObject, 0x4000000000LL, 0LL) )
@@ -1098,7 +1098,7 @@ LABEL_45:
           gameObject = (EventItemComponent_o *)System_Collections_Generic_List_int___get_Item(
                                                  v28,
                                                  v48,
-                                                 (const MethodInfo_364E598 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                 (const MethodInfo_366E958 *)Method_System_Collections_Generic_List_int__get_Item__);
           if ( !v51 )
             goto LABEL_109;
           EventItemComponent__Set(v51, (int32_t)gameObject, 0LL);
@@ -1171,7 +1171,7 @@ LABEL_45:
       gameObject = (EventItemComponent_o *)System_Collections_Generic_List_int___get_Item(
                                              v28,
                                              v59,
-                                             (const MethodInfo_364E598 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                             (const MethodInfo_366E958 *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( !v62 )
         goto LABEL_109;
       EventItemComponent__Set(v62, (int32_t)gameObject, 0LL);
@@ -1264,32 +1264,32 @@ void __fastcall ShopCurrencyInfoController__RefreshEventItemWindow(
   bool IsForcedAdjustmentDialog; // w5
   const MethodInfo *v16; // x6
 
-  if ( (byte_4BF9BAB & 1) == 0 )
+  if ( (byte_4C1E3AE & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&kind);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ShopMaster___, v9);
-    sub_1C2E12C(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v10);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    byte_4BF9BAB = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventDetailMaster___, *(_QWORD *)&kind);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ShopMaster___, v9);
+    sub_1C3B764(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v10);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    byte_4C1E3AE = 1;
   }
   if ( kind == 6 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL
+                       (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ShopMaster___)) == 0LL
       || (EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Instance, eventId, 0LL),
-          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0LL
+                       (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventDetailMaster___)) == 0LL
       || (Instance = DataMasterBase_object__object__int___GetEntity(
                        (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                        eventId,
-                       (const MethodInfo_327B180 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__)) == 0LL )
+                       (const MethodInfo_329AE48 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__)) == 0LL )
     {
-      sub_1C2E388(Instance, v13);
+      sub_1C3B9C0(Instance, v13);
     }
     IsForcedAdjustmentDialog = EventDetailEntity__IsForcedAdjustmentDialog((EventDetailEntity_o *)Instance, 0LL);
     ShopCurrencyInfoController__RefreshEventItemInfo(
@@ -1330,10 +1330,10 @@ void __fastcall ShopCurrencyInfoController__ResetEventEnableTime(
   PartyOrganizationUtility_o *p_eventItemRestLabel; // x19
 
   v9 = this;
-  if ( (byte_4BF9BB2 & 1) == 0 )
+  if ( (byte_4C1E3B5 & 1) == 0 )
   {
-    this = (ShopCurrencyInfoController_o *)sub_1C2E12C(&StringLiteral_1/*""*/, isLimitOver);
-    byte_4BF9BB2 = 1;
+    this = (ShopCurrencyInfoController_o *)sub_1C3B764(&StringLiteral_1/*""*/, isLimitOver);
+    byte_4C1E3B5 = 1;
   }
   v10 = 160LL;
   if ( isLimitOver )
@@ -1343,21 +1343,21 @@ void __fastcall ShopCurrencyInfoController__ResetEventEnableTime(
   v11 = *(int64_t *)((char *)&v9->klass + v10);
   v9->fields.eventItemTimeLabel = (struct UILabel_o *)v11;
   p_eventItemTimeLabel = (ShopCurrencyInfoController_o **)&v9->fields.eventItemTimeLabel;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v9->fields.eventItemTimeLabel, v11, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v9->fields.eventItemTimeLabel, v11, (int64_t)method, v3, v4, v5, v6, v7);
   v19 = 168LL;
   if ( isLimitOver )
     v19 = 184LL;
   v20 = *(int64_t *)((char *)&v9->klass + v19);
   v9->fields.eventItemRestLabel = (struct UILabel_o *)v20;
   p_eventItemRestLabel = (PartyOrganizationUtility_o *)&v9->fields.eventItemRestLabel;
-  sub_1C2E0D0(p_eventItemRestLabel, v20, v13, v14, v15, v16, v17, v18);
+  sub_1C3B708(p_eventItemRestLabel, v20, v13, v14, v15, v16, v17, v18);
   this = *p_eventItemTimeLabel;
   if ( !*p_eventItemTimeLabel
     || (UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (this = (ShopCurrencyInfoController_o *)p_eventItemRestLabel->klass) == 0LL) )
   {
 LABEL_11:
-    sub_1C2E388(this, isLimitOver);
+    sub_1C3B9C0(this, isLimitOver);
   }
   UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -1390,19 +1390,19 @@ void __fastcall ShopCurrencyInfoController__SetEventEnableTime(
   const MethodInfo *v23; // x1
 
   v10 = this;
-  if ( (byte_4BF9BB1 & 1) == 0 )
+  if ( (byte_4C1E3B4 & 1) == 0 )
   {
-    this = (ShopCurrencyInfoController_o *)sub_1C2E12C(&StringLiteral_15464/*"UpdateRemainTime"*/, *(_QWORD *)&eventId);
-    byte_4BF9BB1 = 1;
+    this = (ShopCurrencyInfoController_o *)sub_1C3B764(&StringLiteral_15492/*"[.]"*/, *(_QWORD *)&eventId);
+    byte_4C1E3B4 = 1;
   }
   v11 = 160LL;
   if ( isLimitOver )
     v11 = 176LL;
   if ( !v10 )
-    sub_1C2E388(this, *(_QWORD *)&eventId);
+    sub_1C3B9C0(this, *(_QWORD *)&eventId);
   v12 = *(int64_t *)((char *)&v10->klass + v11);
   v10->fields.eventItemTimeLabel = (struct UILabel_o *)v12;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&v10->fields.eventItemTimeLabel,
     v12,
     isLimitOver,
@@ -1416,16 +1416,16 @@ void __fastcall ShopCurrencyInfoController__SetEventEnableTime(
     v19 = 184LL;
   v20 = *(int64_t *)((char *)&v10->klass + v19);
   v10->fields.eventItemRestLabel = (struct UILabel_o *)v20;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&v10->fields.eventItemRestLabel, v20, v13, v14, v15, v16, v17, v18);
+  sub_1C3B708((PartyOrganizationUtility_o *)&v10->fields.eventItemRestLabel, v20, v13, v14, v15, v16, v17, v18);
   v10->fields.isRarePriShopPurchased = ShopCurrencyInfoController__GetIsRarePriShopPurchased(v21, eventId, v22);
   ShopCurrencyInfoController__UpdateRemainTime(v10, v23);
-  UnityEngine_MonoBehaviour__CancelInvoke_70974300(
+  UnityEngine_MonoBehaviour__CancelInvoke_71107328(
     (UnityEngine_MonoBehaviour_o *)v10,
-    (System_String_o *)StringLiteral_15464/*"UpdateRemainTime"*/,
+    (System_String_o *)StringLiteral_15492/*"[.]"*/,
     0LL);
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)v10,
-    (System_String_o *)StringLiteral_15464/*"UpdateRemainTime"*/,
+    (System_String_o *)StringLiteral_15492/*"[.]"*/,
     1.0,
     1.0,
     0LL);
@@ -1478,23 +1478,23 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
   int v44; // s1
   int v45; // s2
 
-  if ( (byte_4BF9BB6 & 1) == 0 )
+  if ( (byte_4C1E3B9 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataManager_GetMasterData_EventMaster___, restLabel);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ShopMaster___, v7);
-    sub_1C2E12C(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v8);
-    sub_1C2E12C(&Method_System_Linq_Enumerable_Max_ShopEntity___, v9);
-    sub_1C2E12C(&System_Func_ShopEntity__long__TypeInfo, v10);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v11);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v12);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_1C2E12C(&Method_ShopCurrencyInfoController___c__SetEventItemRestTimeLabels_b__48_0__, v14);
-    sub_1C2E12C(&ShopCurrencyInfoController___c_TypeInfo, v15);
-    sub_1C2E12C(&StringLiteral_13571/*"TIME_OVER_EVENTREWARD"*/, v16);
-    sub_1C2E12C(&StringLiteral_12294/*"SHOP_INDEFINITE_PERIOD"*/, v17);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v18);
-    sub_1C2E12C(&StringLiteral_13593/*"TIME_REST_EVENTREWARD"*/, v19);
-    byte_4BF9BB6 = 1;
+    sub_1C3B764(&Method_DataManager_GetMasterData_EventMaster___, restLabel);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ShopMaster___, v7);
+    sub_1C3B764(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v8);
+    sub_1C3B764(&Method_System_Linq_Enumerable_Max_ShopEntity___, v9);
+    sub_1C3B764(&System_Func_ShopEntity__long__TypeInfo, v10);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v11);
+    sub_1C3B764(&NetworkManager_TypeInfo, v12);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1C3B764(&Method_ShopCurrencyInfoController___c__SetEventItemRestTimeLabels_b__48_0__, v14);
+    sub_1C3B764(&ShopCurrencyInfoController___c_TypeInfo, v15);
+    sub_1C3B764(&StringLiteral_13599/*"The base type is the final union."*/, v16);
+    sub_1C3B764(&StringLiteral_12317/*"Scroll View"*/, v17);
+    sub_1C3B764(&StringLiteral_1/*""*/, v18);
+    sub_1C3B764(&StringLiteral_13621/*"The content attribute must have a value of 'textOnly', 'eltOnly', 'mixed', or 'empty', not '{0}'."*/, v19);
+    byte_4C1E3B9 = 1;
   }
   if ( this->fields.kind != 6 )
     return;
@@ -1502,19 +1502,19 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
   eventEntity = this->fields.eventEntity;
   if ( !eventEntity || eventEntity->fields.id != this->fields.eventId )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_50;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_EventMaster___);
+                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventMaster___);
     if ( !Instance )
       goto LABEL_50;
     Instance = (DataManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                   (Il2CppObject **)&this->fields.eventEntity,
                                   this->fields.eventId,
-                                  (const MethodInfo_327B1CC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                  (const MethodInfo_329AE94 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) == 0 )
     {
       if ( !timeLabel )
@@ -1534,18 +1534,18 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12294/*"SHOP_INDEFINITE_PERIOD"*/, 0LL);
+    Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12317/*"Scroll View"*/, 0LL);
     if ( !timeLabel )
       goto LABEL_50;
   }
   else
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_50;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ShopMaster___);
+                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ShopMaster___);
     if ( !*p_eventEntity || !Instance )
       goto LABEL_50;
     EventEntitiyList = (System_Collections_Generic_IEnumerable_TSource__o *)ShopMaster__GetEventEntitiyList(
@@ -1567,7 +1567,7 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
         v26 = ShopCurrencyInfoController___c_TypeInfo;
       }
       v28 = (Il2CppObject *)v26->static_fields->__9;
-      _9__48_0 = (System_Func_T__TResult__o *)sub_1C2E378(System_Func_ShopEntity__long__TypeInfo);
+      _9__48_0 = (System_Func_T__TResult__o *)sub_1C3B9B0(System_Func_ShopEntity__long__TypeInfo);
       System_Func_object__long____ctor(
         _9__48_0,
         v28,
@@ -1575,7 +1575,7 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
         0LL);
       static_fields = ShopCurrencyInfoController___c_TypeInfo->static_fields;
       static_fields->__9__48_0 = (struct System_Func_ShopEntity__long__o *)_9__48_0;
-      sub_1C2E0D0(
+      sub_1C3B708(
         (PartyOrganizationUtility_o *)&static_fields->__9__48_0,
         (int64_t)_9__48_0,
         v30,
@@ -1585,10 +1585,10 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
         v34,
         v35);
     }
-    v36 = System_Linq_Enumerable__Max_object__50307612(
+    v36 = System_Linq_Enumerable__Max_object__50433868(
             EventEntitiyList,
             (System_Func_TSource__long__o *)_9__48_0,
-            (const MethodInfo_2FFA21C *)Method_System_Linq_Enumerable_Max_ShopEntity___);
+            (const MethodInfo_3018F4C *)Method_System_Linq_Enumerable_Max_ShopEntity___);
     if ( finishedAt > v36 && v36 > 0 )
       finishedAt = v36;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1596,7 +1596,7 @@ void __fastcall ShopCurrencyInfoController__SetEventItemRestTimeLabels(
     Instance = (DataManager_o *)LocalizationManager__GetRestTime2(finishedAt, -1LL, 0LL);
     if ( !timeLabel )
 LABEL_50:
-      sub_1C2E388(Instance, v23);
+      sub_1C3B9C0(Instance, v23);
   }
   UILabel__set_text(timeLabel, (System_String_o *)Instance, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1605,9 +1605,9 @@ LABEL_50:
   v39 = this->fields.isRarePriShopPurchased || finishedAt < Time;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v40 = (System_String_o **)&StringLiteral_13593/*"TIME_REST_EVENTREWARD"*/;
+  v40 = (System_String_o **)&StringLiteral_13621/*"The content attribute must have a value of 'textOnly', 'eltOnly', 'mixed', or 'empty', not '{0}'."*/;
   if ( v39 )
-    v40 = (System_String_o **)&StringLiteral_13571/*"TIME_OVER_EVENTREWARD"*/;
+    v40 = (System_String_o **)&StringLiteral_13599/*"The base type is the final union."*/;
   Instance = (DataManager_o *)LocalizationManager__Get(*v40, 0LL);
   if ( !restLabel )
     goto LABEL_50;
@@ -1622,7 +1622,7 @@ LABEL_50:
     v42 = 0;
     v43 = mText->fields._stringLength - 2;
     if ( v43 <= 2 )
-      v42 = LODWORD(flt_C40240[v43]);
+      v42 = LODWORD(flt_C475B0[v43]);
   }
   if ( !Instance )
     goto LABEL_50;
@@ -1644,7 +1644,7 @@ void __fastcall ShopCurrencyInfoController__SetObjectList(
   PartyListViewItem_o *v7; // x7
 
   this->fields.objectList = objectList;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.objectList,
     (int64_t)objectList,
     (int64_t)method,
@@ -1660,14 +1660,14 @@ void __fastcall ShopCurrencyInfoController__StopUpdateRemainTime(
         ShopCurrencyInfoController_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BF9BB3 & 1) == 0 )
+  if ( (byte_4C1E3B6 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_15464/*"UpdateRemainTime"*/, method);
-    byte_4BF9BB3 = 1;
+    sub_1C3B764(&StringLiteral_15492/*"[.]"*/, method);
+    byte_4C1E3B6 = 1;
   }
-  UnityEngine_MonoBehaviour__CancelInvoke_70974300(
+  UnityEngine_MonoBehaviour__CancelInvoke_71107328(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_15464/*"UpdateRemainTime"*/,
+    (System_String_o *)StringLiteral_15492/*"[.]"*/,
     0LL);
 }
 
@@ -1688,10 +1688,10 @@ void __fastcall ShopCurrencyInfoController__UpdateApLabel(ShopCurrencyInfoContro
   System_String_o *CurrencyNumber; // x0
   __int64 v8; // x1
 
-  if ( (byte_4BF9BAE & 1) == 0 )
+  if ( (byte_4C1E3B1 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BF9BAE = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C1E3B1 = 1;
   }
   currencyLabel2 = (UnityEngine_Object_o *)this->fields.currencyLabel2;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1702,7 +1702,7 @@ void __fastcall ShopCurrencyInfoController__UpdateApLabel(ShopCurrencyInfoContro
     v6 = this->fields.currencyLabel2;
     CurrencyNumber = ShopCurrencyInfoController__GetCurrencyNumber((ShopCurrencyInfoController_o *)v4, 19, v5);
     if ( !v6 )
-      sub_1C2E388(CurrencyNumber, v8);
+      sub_1C3B9C0(CurrencyNumber, v8);
     UILabel__set_text(v6, CurrencyNumber, 0LL);
   }
 }
@@ -1715,17 +1715,17 @@ void __fastcall ShopCurrencyInfoController__UpdateRemainTime(
   const MethodInfo *v2; // x3
   __int64 v4; // x1
   __int64 v5; // x1
-  __int64 v6; // x1
+  const MethodInfo *v6; // x1
   System_Collections_Generic_List_object__o *objectList; // x0
   int32_t v8; // w20
   Il2CppObject *Item; // x21
 
-  if ( (byte_4BF9BB5 & 1) == 0 )
+  if ( (byte_4C1E3B8 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Count__, method);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__, v4);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v5);
-    byte_4BF9BB5 = 1;
+    sub_1C3B764(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Count__, method);
+    sub_1C3B764(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__, v4);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
+    byte_4C1E3B8 = 1;
   }
   ShopCurrencyInfoController__SetEventItemRestTimeLabels(
     this,
@@ -1735,14 +1735,14 @@ void __fastcall ShopCurrencyInfoController__UpdateRemainTime(
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
 LABEL_13:
-    sub_1C2E388(objectList, v6);
+    sub_1C3B9C0(objectList, v6);
   v8 = 0;
   while ( v8 < objectList->fields._size )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              objectList,
              v8,
-             (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__);
+             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
@@ -1753,10 +1753,10 @@ LABEL_13:
       objectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   objectList,
                                                                   v8,
-                                                                  (const MethodInfo_366B5DC *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__);
+                                                                  (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject__get_Item__);
       if ( !objectList )
         goto LABEL_13;
-      ShopBuyItemListViewObject__UpdateRemaingTime((ShopBuyItemListViewObject_o *)objectList, 0LL);
+      ShopBuyItemListViewObject__UpdateRemaingTime((ShopBuyItemListViewObject_o *)objectList, v6);
     }
     objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
     ++v8;
@@ -1794,15 +1794,15 @@ void __fastcall ShopCurrencyInfoController___c___cctor(const MethodInfo *method)
   FollowerInfo_o *v7; // x6
   PartyListViewItem_o *v8; // x7
 
-  if ( (byte_4BF9BB7 & 1) == 0 )
+  if ( (byte_4C1E3BA & 1) == 0 )
   {
-    sub_1C2E12C(&ShopCurrencyInfoController___c_TypeInfo, v1);
-    byte_4BF9BB7 = 1;
+    sub_1C3B764(&ShopCurrencyInfoController___c_TypeInfo, v1);
+    byte_4C1E3BA = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2E378(ShopCurrencyInfoController___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C3B9B0(ShopCurrencyInfoController___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ShopCurrencyInfoController___c_TypeInfo->static_fields->__9 = (struct ShopCurrencyInfoController___c_o *)v2;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)ShopCurrencyInfoController___c_TypeInfo->static_fields,
     (int64_t)v2,
     v3,
@@ -1826,6 +1826,6 @@ int64_t __fastcall ShopCurrencyInfoController___c___SetEventItemRestTimeLabels_b
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2E388(this, 0LL);
+    sub_1C3B9C0(this, 0LL);
   return x->fields.closedAt;
 }

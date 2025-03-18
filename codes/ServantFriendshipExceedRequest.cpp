@@ -9,12 +9,12 @@ void __fastcall ServantFriendshipExceedRequest__beginRequest(
         int64_t baseUserSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4BFF1A1 & 1) == 0 )
+  if ( (byte_4C239CB & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17385/*"baseUserSvtId"*/, baseUserSvtId);
-    byte_4BFF1A1 = 1;
+    sub_1C3B764(&StringLiteral_17415/*"card/statusSync"*/, baseUserSvtId);
+    byte_4C239CB = 1;
   }
-  RequestBase__addField_42510212((RequestBase_o *)this, (System_String_o *)StringLiteral_17385/*"baseUserSvtId"*/, baseUserSvtId, 0LL);
+  RequestBase__addField_42628192((RequestBase_o *)this, (System_String_o *)StringLiteral_17415/*"card/statusSync"*/, baseUserSvtId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall ServantFriendshipExceedRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4BFF1A0 & 1) == 0 )
+  if ( (byte_4C239CA & 1) == 0 )
   {
-    sub_1C2E12C(&NetworkManager_TypeInfo, method);
-    sub_1C2E12C(&StringLiteral_18071/*"card/friendshipExceed"*/, v2);
-    byte_4BFF1A0 = 1;
+    sub_1C3B764(&NetworkManager_TypeInfo, method);
+    sub_1C3B764(&StringLiteral_18101/*"darkgoldenrod"*/, v2);
+    byte_4C239CA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63235584(BaseUrl, (System_String_o *)StringLiteral_18071/*"card/friendshipExceed"*/, 0LL);
+  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18101/*"darkgoldenrod"*/, 0LL);
 }
 
 
@@ -52,12 +52,12 @@ void __fastcall ServantFriendshipExceedRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4BFF1A2 & 1) == 0 )
+  if ( (byte_4C239CC & 1) == 0 )
   {
-    sub_1C2E12C(&JsonManager_TypeInfo, responseList);
-    sub_1C2E12C(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_22468/*"ng"*/, v6);
-    byte_4BFF1A2 = 1;
+    sub_1C3B764(&JsonManager_TypeInfo, responseList);
+    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
+    byte_4C239CC = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -71,7 +71,7 @@ void __fastcall ServantFriendshipExceedRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22468/*"ng"*/;
+    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

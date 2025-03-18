@@ -1,9 +1,9 @@
 void __fastcall EventConquestGetDialog___ctor(EventConquestGetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C01662 & 1) == 0 )
+  if ( (byte_4C25E90 & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4C01662 = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C25E90 = 1;
   }
   *(_QWORD *)&this->fields.ICON_SCALE_SIZE = 0xC27C00003F59999ALL;
   *(_QWORD *)&this->fields.NORMAL_FONT_SIZE = 0x180000001ELL;
@@ -17,11 +17,11 @@ void __fastcall EventConquestGetDialog__Close(EventConquestGetDialog_o *this, co
 {
   const MethodInfo *v2; // x2
 
-  EventConquestGetDialog__Close_47054060(this, 0LL, v2);
+  EventConquestGetDialog__Close_47177804(this, 0LL, v2);
 }
 
 
-void __fastcall EventConquestGetDialog__Close_47054060(
+void __fastcall EventConquestGetDialog__Close_47177804(
         EventConquestGetDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -34,14 +34,14 @@ void __fastcall EventConquestGetDialog__Close_47054060(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4C01660 & 1) == 0 )
+  if ( (byte_4C25E8E & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&Method_EventConquestGetDialog_EndClose__, v10);
-    byte_4C01660 = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&Method_EventConquestGetDialog_EndClose__, v10);
+    byte_4C25E8E = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -51,7 +51,7 @@ void __fastcall EventConquestGetDialog__Close_47054060(
     v6,
     v7);
   this->fields.state = 3;
-  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_EventConquestGetDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -76,7 +76,7 @@ void __fastcall EventConquestGetDialog__EndClose(EventConquestGetDialog_o *this,
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1C3B708(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
       v10->fields.original_method_info,
       *(_QWORD *)&v10->fields.extra_arg);
@@ -118,14 +118,14 @@ void __fastcall EventConquestGetDialog__Init(EventConquestGetDialog_o *this, con
   int *v26; // x10
   __int64 v27; // x0
 
-  if ( (byte_4C0165D & 1) == 0 )
+  if ( (byte_4C25E8B & 1) == 0 )
   {
-    sub_1C2E12C(&System_IDisposable_TypeInfo, method);
-    sub_1C2E12C(&System_Collections_IEnumerator_TypeInfo, v3);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C2E12C(&UnityEngine_Transform_TypeInfo, v5);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v6);
-    byte_4C0165D = 1;
+    sub_1C3B764(&System_IDisposable_TypeInfo, method);
+    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v3);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
+    sub_1C3B764(&UnityEngine_Transform_TypeInfo, v5);
+    sub_1C3B764(&StringLiteral_1/*""*/, v6);
+    byte_4C25E8B = 1;
   }
   itemGetDetailLabel = this->fields.itemGetDetailLabel;
   this->fields.state = 0;
@@ -142,7 +142,7 @@ void __fastcall EventConquestGetDialog__Init(EventConquestGetDialog_o *this, con
     goto LABEL_38;
   Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)itemGetDetailLabel, 0LL);
   if ( !Enumerator )
-    sub_1C2E388(0LL, v8);
+    sub_1C3B9C0(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -162,7 +162,7 @@ void __fastcall EventConquestGetDialog__Init(EventConquestGetDialog_o *this, con
     else
     {
 LABEL_11:
-      p_method = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
             Enumerator,
@@ -185,7 +185,7 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v17 = sub_1C8010C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+      v17 = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
     }
     v18 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v17)(
                                        Enumerator,
@@ -196,16 +196,16 @@ LABEL_18:
     if ( LOBYTE(v18->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (UnityEngine_Transform_c *)v18->klass->_2.typeHierarchy[methodPtr_low - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1C2E648(v18);
+      sub_1C3BC80(v18);
 LABEL_37:
-      sub_1C2E388(v18, v19);
+      sub_1C3B9C0(v18, v19);
     }
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v18, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70989720(gameObject, 0LL);
+    UnityEngine_Object__Destroy_71122748(gameObject, 0LL);
   }
-  v22 = sub_1C2E268(Enumerator, System_IDisposable_TypeInfo);
+  v22 = sub_1C3B8A0(Enumerator, System_IDisposable_TypeInfo);
   if ( v22 )
   {
     v23 = *(_QWORD *)v22;
@@ -226,14 +226,14 @@ LABEL_37:
     else
     {
 LABEL_31:
-      v27 = sub_1C8010C(v22, System_IDisposable_TypeInfo, 0LL);
+      v27 = sub_1C8D744(v22, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v27)(v24, *(_QWORD *)(v27 + 8));
   }
   itemGetDetailLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !itemGetDetailLabel )
 LABEL_38:
-    sub_1C2E388(itemGetDetailLabel, method);
+    sub_1C3B9C0(itemGetDetailLabel, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemGetDetailLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -247,21 +247,21 @@ void __fastcall EventConquestGetDialog__OnClickClose(EventConquestGetDialog_o *t
   __int64 v6; // x1
   struct EventConquestGetDialog_ClickDelegate_o *closeFunc; // x8
 
-  if ( (byte_4C01661 & 1) == 0 )
+  if ( (byte_4C25E8F & 1) == 0 )
   {
-    sub_1C2E12C(&Method_EventConquestGetDialog_OnClickClose__, method);
-    byte_4C01661 = 1;
+    sub_1C3B764(&Method_EventConquestGetDialog_OnClickClose__, method);
+    byte_4C25E8F = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_EventConquestGetDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_EventConquestGetDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2E144(Method_EventConquestGetDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C3B77C(Method_EventConquestGetDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     closeFunc = this->fields.closeFunc;
     if ( !closeFunc )
-      sub_1C2E388(v5, v6);
+      sub_1C3B9C0(v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeFunc->fields.m_target)(
       closeFunc->fields.original_method_info,
       *(_QWORD *)&closeFunc->fields.extra_arg);
@@ -323,23 +323,23 @@ void __fastcall EventConquestGetDialog__Open(
   signed int v54; // [xsp+1Ch] [xbp-64h]
   UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C0165E & 1) == 0 )
+  if ( (byte_4C25E8C & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, rewards);
-    sub_1C2E12C(&BalanceConfig_TypeInfo, v13);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_ItemMaster___, v14);
-    sub_1C2E12C(&Method_DataManager_GetMasterData_UserItemMaster___, v15);
-    sub_1C2E12C(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v16);
-    sub_1C2E12C(&Method_EventConquestGetDialog_EndOpen__, v17);
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_EventConquestGetIconComponent___, v18);
-    sub_1C2E12C(&NetworkManager_TypeInfo, v19);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject___, v20);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v21);
-    sub_1C2E12C(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
-    byte_4C0165E = 1;
+    sub_1C3B764(&System_Action_TypeInfo, rewards);
+    sub_1C3B764(&BalanceConfig_TypeInfo, v13);
+    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v14);
+    sub_1C3B764(&Method_DataManager_GetMasterData_UserItemMaster___, v15);
+    sub_1C3B764(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v16);
+    sub_1C3B764(&Method_EventConquestGetDialog_EndOpen__, v17);
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_EventConquestGetIconComponent___, v18);
+    sub_1C3B764(&NetworkManager_TypeInfo, v19);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v20);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v21);
+    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v22);
+    byte_4C25E8C = 1;
   }
   this->fields.closeFunc = closeCb;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeFunc,
     (int64_t)closeCb,
     (int64_t)title,
@@ -351,20 +351,20 @@ void __fastcall EventConquestGetDialog__Open(
   if ( !rewards )
     goto LABEL_84;
   max_length = rewards->max_length;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_84;
   v51 = detail;
   v52 = title;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_ItemMaster___);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38A7F90 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_84;
   v27 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_2FD1830 *)Method_DataManager_GetMasterData_UserItemMaster___);
+          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserItemMaster___);
   Instance = (__int64)UserGameMaster__getSelfUserGame(0LL);
   if ( max_length >= 1 )
   {
@@ -376,7 +376,7 @@ void __fastcall EventConquestGetDialog__Open(
     do
     {
       if ( v30 >= rewards->max_length )
-        sub_1C2E390(Instance, v24);
+        sub_1C3B9C8(Instance, v24);
       v31 = rewards->m_Items[v30];
       if ( !v31 )
         goto LABEL_84;
@@ -385,7 +385,7 @@ void __fastcall EventConquestGetDialog__Open(
       Instance = (__int64)DataMasterBase_object__object__int___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                             v31->fields.objectId,
-                            (const MethodInfo_327B180 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                            (const MethodInfo_329AE48 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( !Instance )
         goto LABEL_84;
       v32 = *(_DWORD *)(Instance + 48);
@@ -429,10 +429,10 @@ void __fastcall EventConquestGetDialog__Open(
       }
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4BF81D5 )
+      if ( !byte_4C1C955 )
       {
-        sub_1C2E12C(&NetworkManager_TypeInfo, v24);
-        byte_4BF81D5 = 1;
+        sub_1C3B764(&NetworkManager_TypeInfo, v24);
+        byte_4C1C955 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -464,7 +464,7 @@ LABEL_37:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Instance = (__int64)UnityEngine_Object__Instantiate_object_(
                             itemIcon,
-                            (const MethodInfo_3057E94 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                            (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !Instance )
         goto LABEL_84;
       v38 = (UnityEngine_GameObject_o *)Instance;
@@ -480,10 +480,10 @@ LABEL_37:
       UnityEngine_Transform__set_parent(v39, (UnityEngine_Transform_o *)Instance, 0LL);
       Instance = (__int64)UnityEngine_GameObject__get_transform(v38, 0LL);
       v40 = (UnityEngine_Transform_o *)Instance;
-      if ( !byte_4BF7D91 )
+      if ( !byte_4C1C511 )
       {
-        Instance = sub_1C2E12C(&UnityEngine_Vector3_TypeInfo, v24);
-        byte_4BF7D91 = 1;
+        Instance = sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v24);
+        byte_4C1C511 = 1;
       }
       if ( !v40 )
         goto LABEL_84;
@@ -497,12 +497,12 @@ LABEL_37:
       UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Instance, v55, 0LL);
       Instance = (__int64)UnityEngine_GameObject__GetComponent_object_(
                             v38,
-                            (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_EventConquestGetIconComponent___);
+                            (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_EventConquestGetIconComponent___);
       v41 = v31->fields.num < 0 ? -1 : v31->fields.num;
       if ( !Instance )
         goto LABEL_84;
       v42 = (ItemIconComponent_o *)Instance;
-      ItemIconComponent__SetGift_39457192(
+      ItemIconComponent__SetGift_39566180(
         (ItemIconComponent_o *)Instance,
         v31->fields.type,
         v31->fields.objectId,
@@ -532,7 +532,7 @@ LABEL_37:
     || (UILabel__set_text((UILabel_o *)Instance, v51, 0LL), !v51) )
   {
 LABEL_84:
-    sub_1C2E388(Instance, v24);
+    sub_1C3B9C0(Instance, v24);
   }
   if ( v51->fields._stringLength < 1 )
   {
@@ -606,13 +606,13 @@ LABEL_82:
   if ( !Instance )
     goto LABEL_84;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
-  v50 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v50 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v50, (Il2CppObject *)this, Method_EventConquestGetDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v50, 0, 0LL);
 }
 
 
-void __fastcall EventConquestGetDialog__Open_47053860(
+void __fastcall EventConquestGetDialog__Open_47177604(
         EventConquestGetDialog_o *this,
         EventRewardSetEntity_o *reward,
         System_String_o *detail,
@@ -627,14 +627,14 @@ void __fastcall EventConquestGetDialog__Open_47053860(
   __int64 v12; // x1
   System_Action_o *v13; // x20
 
-  if ( (byte_4C0165F & 1) == 0 )
+  if ( (byte_4C25E8D & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, reward);
-    sub_1C2E12C(&Method_EventConquestGetDialog_EndOpen__, v10);
-    byte_4C0165F = 1;
+    sub_1C3B764(&System_Action_TypeInfo, reward);
+    sub_1C3B764(&Method_EventConquestGetDialog_EndOpen__, v10);
+    byte_4C25E8D = 1;
   }
   this->fields.closeFunc = closeCb;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeFunc,
     (int64_t)closeCb,
     (int64_t)detail,
@@ -645,9 +645,9 @@ void __fastcall EventConquestGetDialog__Open_47053860(
     v7);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C2E388(0LL, v12);
+    sub_1C3B9C0(0LL, v12);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v13 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v13, (Il2CppObject *)this, Method_EventConquestGetDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v13, 0, 0LL);
 }
@@ -675,7 +675,7 @@ void __fastcall EventConquestGetDialog_ClickDelegate___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -686,12 +686,12 @@ void __fastcall EventConquestGetDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -703,9 +703,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A7439C;
+  this->fields.m_target = (Il2CppObject *)sub_1A81454;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7435C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A81414;
 }
 
 
@@ -718,7 +718,7 @@ System_IAsyncResult_o *__fastcall EventConquestGetDialog_ClickDelegate__BeginInv
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, &v5, callback, object);
 }
 
 
@@ -727,7 +727,7 @@ void __fastcall EventConquestGetDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 

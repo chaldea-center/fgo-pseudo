@@ -1,28 +1,28 @@
 void __fastcall GachaSubEntity___ctor(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDA10 & 1) == 0 )
+  if ( (byte_4C22222 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_string___ctor__, method);
-    byte_4BFDA10 = 1;
+    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
+    byte_4C22222 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3278D14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall GachaSubEntity__CreatePK(int32_t gachaId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4BFDA0F & 1) == 0 )
+  if ( (byte_4C22221 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
-    byte_4BFDA0F = 1;
+    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
+    byte_4C22221 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            gachaId,
            id,
-           (const MethodInfo_2FCFA54 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -36,43 +36,43 @@ System_String_o *__fastcall GachaSubEntity__CreatePrimaryKey(GachaSubEntity_o *t
 
 System_String_o *__fastcall GachaSubEntity__GetSummonConfirmMessage(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDA0B & 1) == 0 )
+  if ( (byte_4C2221D & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_13338/*"SummonConfirmMessage"*/, method);
-    byte_4BFDA0B = 1;
+    sub_1C3B764(&StringLiteral_13366/*"TerminalLastPlayedFreeQuestSpotId"*/, method);
+    byte_4C2221D = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_13338/*"SummonConfirmMessage"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_13366/*"TerminalLastPlayedFreeQuestSpotId"*/, 0LL, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageFontSize(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDA0E & 1) == 0 )
+  if ( (byte_4C22220 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_6930/*"FontSize"*/, method);
-    byte_4BFDA0E = 1;
+    sub_1C3B764(&StringLiteral_6932/*"GetResponse"*/, method);
+    byte_4C22220 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6930/*"FontSize"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6932/*"GetResponse"*/, 0, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageSpacingX(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDA0D & 1) == 0 )
+  if ( (byte_4C2221F & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_13102/*"SpacingX"*/, method);
-    byte_4BFDA0D = 1;
+    sub_1C3B764(&StringLiteral_13130/*"TRADE_EVENT_BOARD_START_BUTTON"*/, method);
+    byte_4C2221F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13102/*"SpacingX"*/, -1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13130/*"TRADE_EVENT_BOARD_START_BUTTON"*/, -1, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageSpacingY(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFDA0C & 1) == 0 )
+  if ( (byte_4C2221E & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_13103/*"SpacingY"*/, method);
-    byte_4BFDA0C = 1;
+    sub_1C3B764(&StringLiteral_13131/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, method);
+    byte_4C2221E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13103/*"SpacingY"*/, -1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13131/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, -1, 0LL);
 }

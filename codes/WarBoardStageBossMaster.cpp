@@ -1,14 +1,14 @@
 void __fastcall WarBoardStageBossMaster___ctor(WarBoardStageBossMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BFE817 & 1) == 0 )
+  if ( (byte_4C2303C & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string___ctor__, method);
-    byte_4BFE817 = 1;
+    sub_1C3B764(&Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string___ctor__, method);
+    byte_4C2303C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    472,
-    (const MethodInfo_327D914 *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string___ctor__);
+    474,
+    (const MethodInfo_329D5DC *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string___ctor__);
 }
 
 
@@ -21,18 +21,18 @@ WarBoardStageBossEntity_o *__fastcall WarBoardStageBossMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4BFE818 & 1) == 0 )
+  if ( (byte_4C2303D & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__GetEntity__,
       *(_QWORD *)&stageId);
-    byte_4BFE818 = 1;
+    byte_4C2303D = 1;
   }
   PK = (Il2CppObject *)WarBoardStageBossEntity__CreatePK(stageId, idx, *(const MethodInfo **)&idx);
   return (WarBoardStageBossEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_327FC38 *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__GetEntity__);
+                                        (const MethodInfo_329F900 *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__GetEntity__);
 }
 
 
@@ -63,27 +63,27 @@ System_Collections_Generic_List_WarBoardStageBossEntity__o *__fastcall WarBoardS
   __int64 size; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4BFE816 & 1) == 0 )
+  if ( (byte_4C2303B & 1) == 0 )
   {
-    sub_1C2E12C(
+    sub_1C3B764(
       &Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Count__,
       *(_QWORD *)&stageId);
-    sub_1C2E12C(&Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Item__, v5);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_WarBoardStageBossEntity__Add__, v6);
-    sub_1C2E12C(&Method_System_Collections_Generic_List_WarBoardStageBossEntity___ctor__, v7);
-    sub_1C2E12C(&System_Collections_Generic_List_WarBoardStageBossEntity__TypeInfo, v8);
-    byte_4BFE816 = 1;
+    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Item__, v5);
+    sub_1C3B764(&Method_System_Collections_Generic_List_WarBoardStageBossEntity__Add__, v6);
+    sub_1C3B764(&Method_System_Collections_Generic_List_WarBoardStageBossEntity___ctor__, v7);
+    sub_1C3B764(&System_Collections_Generic_List_WarBoardStageBossEntity__TypeInfo, v8);
+    byte_4C2303B = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C2E378(System_Collections_Generic_List_WarBoardStageBossEntity__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_WarBoardStageBossEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_366B078 *)Method_System_Collections_Generic_List_WarBoardStageBossEntity___ctor__);
+    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_WarBoardStageBossEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3215B6C *)Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Count__);
+            (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Count__);
   if ( Count >= 1 )
   {
     v13 = Count;
@@ -96,7 +96,7 @@ System_Collections_Generic_List_WarBoardStageBossEntity__o *__fastcall WarBoardS
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v14,
-                                                                 (const MethodInfo_3215BFC *)Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Item__);
+                                                                 (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageBossEntity__get_Item__);
       if ( !list )
         break;
       v10 = (int64_t)list;
@@ -115,21 +115,21 @@ System_Collections_Generic_List_WarBoardStageBossEntity__o *__fastcall WarBoardS
           System_Collections_Generic_List_object___AddWithResize(
             v9,
             (Il2CppObject *)list,
-            *(const MethodInfo_366B8AC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
           v24 = &items->obj.klass + size;
           v9->fields._size = size + 1;
           v24[4] = (Il2CppClass *)v10;
-          sub_1C2E0D0((PartyOrganizationUtility_o *)(v24 + 4), v10, v15, v16, v17, v18, v19, v20);
+          sub_1C3B708((PartyOrganizationUtility_o *)(v24 + 4), v10, v15, v16, v17, v18, v19, v20);
         }
       }
       if ( v13 == ++v14 )
         return (System_Collections_Generic_List_WarBoardStageBossEntity__o *)v9;
     }
 LABEL_16:
-    sub_1C2E388(list, v10);
+    sub_1C3B9C0(list, v10);
   }
   return (System_Collections_Generic_List_WarBoardStageBossEntity__o *)v9;
 }
@@ -145,15 +145,15 @@ bool __fastcall WarBoardStageBossMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4BFE819 & 1) == 0 )
+  if ( (byte_4C2303E & 1) == 0 )
   {
-    sub_1C2E12C(&Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__TryGetEntity__, entity);
-    byte_4BFE819 = 1;
+    sub_1C3B764(&Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__TryGetEntity__, entity);
+    byte_4C2303E = 1;
   }
   PK = (Il2CppObject *)WarBoardStageBossEntity__CreatePK(stageId, idx, *(const MethodInfo **)&stageId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_327FC84 *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__TryGetEntity__);
+           (const MethodInfo_329F94C *)Method_DataMasterBase_WarBoardStageBossMaster__WarBoardStageBossEntity__string__TryGetEntity__);
 }

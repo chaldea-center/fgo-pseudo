@@ -15,25 +15,25 @@ void __fastcall SetSvtRandOptionControl__Init(SetSvtRandOptionControl_o *this, c
   UILabel_o *svtRandDispInfoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4BF8AB1 & 1) == 0 )
+  if ( (byte_4C1D231 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    sub_1C2E12C(&OptionManager_TypeInfo, v3);
-    sub_1C2E12C(&StringLiteral_9898/*"OPTION_SVT_RAND_DISP"*/, v4);
-    sub_1C2E12C(&StringLiteral_9897/*"OPTION_SVT_EXPLANATION"*/, v5);
-    byte_4BF8AB1 = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    sub_1C3B764(&OptionManager_TypeInfo, v3);
+    sub_1C3B764(&StringLiteral_9900/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_CLOSE"*/, v4);
+    sub_1C3B764(&StringLiteral_9899/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, v5);
+    byte_4C1D231 = 1;
   }
   svtRandDispTitle = this->fields.svtRandDispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9898/*"OPTION_SVT_RAND_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9900/*"PARTY_ORGANIZATION_CONFIRM_FATIGURE_SERVANT_CLOSE"*/, 0LL);
   if ( !svtRandDispTitle
     || (UILabel__set_text(svtRandDispTitle, v7, 0LL),
         svtRandDispInfoLb = this->fields.svtRandDispInfoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9897/*"OPTION_SVT_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9899/*"PARTY_ORGANIZATION_CONFIRM_EMPTY_DECK_MEMBER_TITLE"*/, 0LL),
         !svtRandDispInfoLb) )
   {
-    sub_1C2E388(v7, v8);
+    sub_1C3B9C0(v7, v8);
   }
   UILabel__set_text(svtRandDispInfoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -49,15 +49,15 @@ void __fastcall SetSvtRandOptionControl__OnChangeBtn(SetSvtRandOptionControl_o *
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4BF8AB4 & 1) == 0 )
+  if ( (byte_4C1D234 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_SetSvtRandOptionControl_OnChangeBtn__, method);
-    byte_4BF8AB4 = 1;
+    sub_1C3B764(&Method_SetSvtRandOptionControl_OnChangeBtn__, method);
+    byte_4C1D234 = 1;
   }
   v3 = Method_SetSvtRandOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetSvtRandOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C2E144(Method_SetSvtRandOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C2E110(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C3B77C(Method_SetSvtRandOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isSvtRand, 0, 0LL);
   this->fields.isSvtRand ^= 1u;
   SetSvtRandOptionControl__setDispValue(this, v5);
@@ -68,10 +68,10 @@ void __fastcall SetSvtRandOptionControl__Reflection(SetSvtRandOptionControl_o *t
 {
   _BOOL4 isSvtRand; // w19
 
-  if ( (byte_4BF8AB3 & 1) == 0 )
+  if ( (byte_4C1D233 & 1) == 0 )
   {
-    sub_1C2E12C(&OptionManager_TypeInfo, method);
-    byte_4BF8AB3 = 1;
+    sub_1C3B764(&OptionManager_TypeInfo, method);
+    byte_4C1D233 = 1;
   }
   isSvtRand = this->fields.isSvtRand;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -86,18 +86,18 @@ void __fastcall SetSvtRandOptionControl__setDispValue(SetSvtRandOptionControl_o 
   UIButton_o *svtRandDispBtn; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BF8AB2 & 1) == 0 )
+  if ( (byte_4C1D232 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17834/*"btn_on"*/, method);
-    sub_1C2E12C(&StringLiteral_17833/*"btn_off"*/, v3);
-    byte_4BF8AB2 = 1;
+    sub_1C3B764(&StringLiteral_17864/*"confirm_subscription_price_change"*/, method);
+    sub_1C3B764(&StringLiteral_17863/*"confidence"*/, v3);
+    byte_4C1D232 = 1;
   }
   svtRandDispBtn = this->fields.svtRandDispBtn;
   if ( !svtRandDispBtn )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( this->fields.isSvtRand )
-    v5 = &StringLiteral_17834/*"btn_on"*/;
+    v5 = &StringLiteral_17864/*"confirm_subscription_price_change"*/;
   else
-    v5 = &StringLiteral_17833/*"btn_off"*/;
+    v5 = &StringLiteral_17863/*"confidence"*/;
   UIButton__set_normalSprite(svtRandDispBtn, (System_String_o *)*v5, 0LL);
 }

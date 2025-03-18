@@ -5,18 +5,18 @@ void __fastcall EventTowerListViewItemDraw___cctor(const MethodInfo *method)
   __int64 v3; // x1
   struct EventTowerListViewItemDraw_StaticFields *static_fields; // x0
 
-  if ( (byte_4BF8672 & 1) == 0 )
+  if ( (byte_4C1CDF2 & 1) == 0 )
   {
-    sub_1C2E12C(&EventTowerListViewItemDraw_TypeInfo, v1);
-    sub_1C2E12C(&StringLiteral_19618/*"event_tower_rewardget_"*/, v2);
-    sub_1C2E12C(&StringLiteral_19619/*"event_towerbanner_"*/, v3);
-    byte_4BF8672 = 1;
+    sub_1C3B764(&EventTowerListViewItemDraw_TypeInfo, v1);
+    sub_1C3B764(&StringLiteral_19653/*"http://james.newtonking.com/projects/json"*/, v2);
+    sub_1C3B764(&StringLiteral_19654/*"http://microsoft.com/wsdl/types/"*/, v3);
+    byte_4C1CDF2 = 1;
   }
-  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19619/*"event_towerbanner_"*/;
-  sub_1C2E0D0(EventTowerListViewItemDraw_TypeInfo->static_fields);
+  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19654/*"http://microsoft.com/wsdl/types/"*/;
+  sub_1C3B708(EventTowerListViewItemDraw_TypeInfo->static_fields);
   static_fields = EventTowerListViewItemDraw_TypeInfo->static_fields;
-  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19618/*"event_tower_rewardget_"*/;
-  sub_1C2E0D0(&static_fields->REWARD_GET_NAME);
+  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19653/*"http://james.newtonking.com/projects/json"*/;
+  sub_1C3B708(&static_fields->REWARD_GET_NAME);
 }
 
 
@@ -72,14 +72,14 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = item;
-  if ( (byte_4BF8671 & 1) == 0 )
+  if ( (byte_4C1CDF1 & 1) == 0 )
   {
-    sub_1C2E12C(&EventRewardRootComponent_TypeInfo, item);
-    sub_1C2E12C(&EventTowerListViewItemDraw_TypeInfo, v7);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v8);
-    sub_1C2E12C(&StringLiteral_5851/*"EVENT_TOWER_HIDE_COND"*/, v9);
-    sub_1C2E12C(&StringLiteral_1199/*"00"*/, v10);
-    byte_4BF8671 = 1;
+    sub_1C3B764(&EventRewardRootComponent_TypeInfo, item);
+    sub_1C3B764(&EventTowerListViewItemDraw_TypeInfo, v7);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v8);
+    sub_1C3B764(&StringLiteral_5852/*"Encoding {0} data could not be found. Make sure you have correct international codeset assembly installed and enabled."*/, v9);
+    sub_1C3B764(&StringLiteral_1199/*"1.2.840.10045.2.1"*/, v10);
+    byte_4C1CDF1 = 1;
   }
   if ( v5 && mode )
   {
@@ -112,7 +112,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.eventId;
               v17 = System_Int32__ToString((int32_t)&eventId, 0LL);
-              v16 = System_String__Concat_63246844(v14, v17, (System_String_o *)StringLiteral_1199/*"00"*/, 0LL);
+              v16 = System_String__Concat_63379872(v14, v17, (System_String_o *)StringLiteral_1199/*"1.2.840.10045.2.1"*/, 0LL);
             }
             else
             {
@@ -120,7 +120,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.boardImageId;
               v15 = System_Int32__ToString((int32_t)&eventId, 0LL);
-              v16 = System_String__Concat_63235584(v14, v15, 0LL);
+              v16 = System_String__Concat_63368612(v14, v15, 0LL);
             }
             v18 = v16;
             baseSprite = this->fields.baseSprite;
@@ -134,7 +134,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
               if ( rewardGetInfo )
               {
                 v21 = clearReward[7] <= 1 ? -1 : clearReward[7];
-                ItemIconComponent__SetGift_39457192(
+                ItemIconComponent__SetGift_39566180(
                   (ItemIconComponent_o *)rewardGetInfo,
                   clearReward[5],
                   clearReward[6],
@@ -189,7 +189,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                               goto LABEL_51;
                             eventId = v25->fields.eventId;
                             v30 = System_Int32__ToString((int32_t)&eventId, 0LL);
-                            v29 = System_String__Concat_63246844(v27, v30, (System_String_o *)StringLiteral_1199/*"00"*/, 0LL);
+                            v29 = System_String__Concat_63379872(v27, v30, (System_String_o *)StringLiteral_1199/*"1.2.840.10045.2.1"*/, 0LL);
                           }
                           else
                           {
@@ -197,7 +197,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                               goto LABEL_51;
                             eventId = v25->fields.boardImageId;
                             v28 = System_Int32__ToString((int32_t)&eventId, 0LL);
-                            v29 = System_String__Concat_63235584(v27, v28, 0LL);
+                            v29 = System_String__Concat_63368612(v27, v28, 0LL);
                           }
                           v31 = v29;
                           rewardGetSprite = this->fields.rewardGetSprite;
@@ -219,7 +219,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                             v33 = this->fields.rewardCondMessage;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5851/*"EVENT_TOWER_HIDE_COND"*/, 0LL);
+                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5852/*"Encoding {0} data could not be found. Make sure you have correct international codeset assembly installed and enabled."*/, 0LL);
                             if ( v33 )
                             {
                               UILabel__set_text(v33, (System_String_o *)rewardGetInfo, 0LL);
@@ -238,6 +238,6 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
       }
     }
 LABEL_51:
-    sub_1C2E388(rewardGetInfo, item);
+    sub_1C3B9C0(rewardGetInfo, item);
   }
 }

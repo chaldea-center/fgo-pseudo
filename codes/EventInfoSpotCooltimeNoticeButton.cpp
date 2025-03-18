@@ -10,14 +10,14 @@ void __fastcall EventInfoSpotCooltimeNoticeButton___ctor(
   PartyListViewItem_o *v7; // x7
   int64_t v9; // x1
 
-  if ( (byte_4BFEE33 & 1) == 0 )
+  if ( (byte_4C2365D & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_12444/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/, method);
-    byte_4BFEE33 = 1;
+    sub_1C3B764(&StringLiteral_12467/*"SetEventBoardQuestArrivalPanel"*/, method);
+    byte_4C2365D = 1;
   }
-  v9 = StringLiteral_12444/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12444/*"SPOT_COOLTIME_NOTICE_BUTTON_TITLE_"*/;
-  sub_1C2E0D0((PartyOrganizationUtility_o *)&this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v9, v2, v3, v4, v5, v6, v7);
+  v9 = StringLiteral_12467/*"SetEventBoardQuestArrivalPanel"*/;
+  this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE = (struct System_String_o *)StringLiteral_12467/*"SetEventBoardQuestArrivalPanel"*/;
+  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v9, v2, v3, v4, v5, v6, v7);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
@@ -31,10 +31,10 @@ System_String_o *__fastcall EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameBy
   EventInfoSpotCooltimeNoticeButton_EventInfo_o *EventInfo; // x0
   System_String_o **p_BgSpriteName; // x8
 
-  if ( (byte_4BFEE32 & 1) == 0 )
+  if ( (byte_4C2365C & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_1/*""*/, *(_QWORD *)&eventId);
-    byte_4BFEE32 = 1;
+    sub_1C3B764(&StringLiteral_1/*""*/, *(_QWORD *)&eventId);
+    byte_4C2365C = 1;
   }
   EventInfo = EventInfoSpotCooltimeNoticeButton__GetEventInfo(this, eventId, method);
   p_BgSpriteName = &EventInfo->fields.BgSpriteName;
@@ -85,7 +85,7 @@ EventInfoSpotCooltimeNoticeButton_EventInfo_o *__fastcall EventInfoSpotCooltimeN
         return 0LL;
     }
 LABEL_9:
-    sub_1C2E388(this, eventId);
+    sub_1C3B9C0(this, eventId);
   }
   return 0LL;
 }
@@ -115,12 +115,12 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
   int32_t eventIda; // [xsp+Ch] [xbp-34h] BYREF
 
   eventIda = eventId;
-  if ( (byte_4BFEE2F & 1) == 0 )
+  if ( (byte_4C23659 & 1) == 0 )
   {
-    sub_1C2E12C(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v5);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v6);
-    byte_4BFEE2F = 1;
+    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v5);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
+    byte_4C23659 = 1;
   }
   this->fields.eventId = eventId;
   BgSpriteNameByEventId = EventInfoSpotCooltimeNoticeButton__GetBgSpriteNameByEventId(this, eventId, method);
@@ -147,7 +147,7 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
   }
   SPOT_COOLTIME_NOTICE_BUTTON_TITLE = this->fields.SPOT_COOLTIME_NOTICE_BUTTON_TITLE;
   v14 = System_Int32__ToString((int32_t)&eventIda, 0LL);
-  v15 = System_String__Concat_63235584(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v14, 0LL);
+  v15 = System_String__Concat_63368612(SPOT_COOLTIME_NOTICE_BUTTON_TITLE, v14, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( LocalizationManager__ContainsKey(v15, 0LL) )
@@ -159,7 +159,7 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__Initialization(
     if ( !buttonTextLabel
       || (UILabel__set_text(buttonTextLabel, v17, 0LL), (v17 = (System_String_o *)this->fields.buttonTextLabel) == 0LL) )
     {
-      sub_1C2E388(v17, v18);
+      sub_1C3B9C0(v17, v18);
     }
     UILabel__SetCondensedScale((UILabel_o *)v17, this->fields.buttonTextMaxWidth, 0, 0LL);
   }
@@ -177,17 +177,17 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__OnClickButton(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4BFEE31 & 1) == 0 )
+  if ( (byte_4C2365B & 1) == 0 )
   {
-    sub_1C2E12C(&Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__, method);
-    byte_4BFEE31 = 1;
+    sub_1C3B764(&Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__, method);
+    byte_4C2365B = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = !isButtonOn;
   v4 = Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__;
   if ( (*((_BYTE *)Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C2E144(Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C2E110(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C3B77C(Method_EventInfoSpotCooltimeNoticeButton_OnClickButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C3B748(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0LL);
   EventRewardSaveData__SetSpotCooltimeNotification(this->fields.eventId, this->fields.isButtonOn, 0LL);
   EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(this, v6);
@@ -209,7 +209,7 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__SetDispActive(
         (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0LL)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL )
   {
-    sub_1C2E388(bgSprite, isActive);
+    sub_1C3B9C0(bgSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0LL);
 }
@@ -223,19 +223,19 @@ void __fastcall EventInfoSpotCooltimeNoticeButton__UpdateButtonDisp(
   UIButton_o *noticeButton; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4BFEE30 & 1) == 0 )
+  if ( (byte_4C2365A & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_17834/*"btn_on"*/, method);
-    sub_1C2E12C(&StringLiteral_17833/*"btn_off"*/, v3);
-    byte_4BFEE30 = 1;
+    sub_1C3B764(&StringLiteral_17864/*"confirm_subscription_price_change"*/, method);
+    sub_1C3B764(&StringLiteral_17863/*"confidence"*/, v3);
+    byte_4C2365A = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_1C2E388(0LL, method);
+    sub_1C3B9C0(0LL, method);
   if ( this->fields.isButtonOn )
-    v5 = &StringLiteral_17834/*"btn_on"*/;
+    v5 = &StringLiteral_17864/*"confirm_subscription_price_change"*/;
   else
-    v5 = &StringLiteral_17833/*"btn_off"*/;
+    v5 = &StringLiteral_17863/*"confidence"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v5, 0LL);
 }
 

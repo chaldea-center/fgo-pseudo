@@ -3,23 +3,23 @@ void __fastcall SummonCautionDlgComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct SummonCautionDlgComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4BF9D71 & 1) == 0 )
+  if ( (byte_4C1E578 & 1) == 0 )
   {
-    sub_1C2E12C(&SummonCautionDlgComponent_TypeInfo, v1);
-    byte_4BF9D71 = 1;
+    sub_1C3B764(&SummonCautionDlgComponent_TypeInfo, v1);
+    byte_4C1E578 = 1;
   }
   static_fields = SummonCautionDlgComponent_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->TITLE_LABEL_POS_Y = xmmword_C06450;
+  *(_OWORD *)&static_fields->TITLE_LABEL_POS_Y = xmmword_C0D7E0;
   static_fields->DEFAULT_FONT_SIZE = 25;
 }
 
 
 void __fastcall SummonCautionDlgComponent___ctor(SummonCautionDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4BF9D70 & 1) == 0 )
+  if ( (byte_4C1E577 & 1) == 0 )
   {
-    sub_1C2E12C(&BaseDialog_TypeInfo, method);
-    byte_4BF9D70 = 1;
+    sub_1C3B764(&BaseDialog_TypeInfo, method);
+    byte_4C1E577 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -47,7 +47,7 @@ void __fastcall SummonCautionDlgComponent__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
+    sub_1C3B708(p_callbackFunc, 0LL, (int64_t)method, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v9->fields.m_target)(
       v9->fields.original_method_info,
       result,
@@ -69,14 +69,14 @@ void __fastcall SummonCautionDlgComponent__Close(
   __int64 v10; // x1
   System_Action_o *v11; // x20
 
-  if ( (byte_4BF9D6D & 1) == 0 )
+  if ( (byte_4C1E574 & 1) == 0 )
   {
-    sub_1C2E12C(&System_Action_TypeInfo, callback);
-    sub_1C2E12C(&Method_SummonCautionDlgComponent_EndClose__, v10);
-    byte_4BF9D6D = 1;
+    sub_1C3B764(&System_Action_TypeInfo, callback);
+    sub_1C3B764(&Method_SummonCautionDlgComponent_EndClose__, v10);
+    byte_4C1E574 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
     (int64_t)callback,
     (int64_t)method,
@@ -85,7 +85,7 @@ void __fastcall SummonCautionDlgComponent__Close(
     v5,
     v6,
     v7);
-  v11 = (System_Action_o *)sub_1C2E378(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_SummonCautionDlgComponent_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
 }
@@ -94,7 +94,7 @@ void __fastcall SummonCautionDlgComponent__Close(
 void __fastcall SummonCautionDlgComponent__EndClose(SummonCautionDlgComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *bonusSelectMsgInfo; // x20
-  __int64 v4; // x1
+  const MethodInfo *v4; // x1
   int64_t v5; // x2
   int32_t v6; // w3
   System_String_o *v7; // x4
@@ -106,10 +106,10 @@ void __fastcall SummonCautionDlgComponent__EndClose(SummonCautionDlgComponent_o 
   struct System_Action_o *v13; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
-  if ( (byte_4BF9D6E & 1) == 0 )
+  if ( (byte_4C1E575 & 1) == 0 )
   {
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, method);
-    byte_4BF9D6E = 1;
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
+    byte_4C1E575 = 1;
   }
   SummonCautionDlgComponent__Init(this, method);
   bonusSelectMsgInfo = (UnityEngine_Object_o *)this->fields.bonusSelectMsgInfo;
@@ -119,8 +119,8 @@ void __fastcall SummonCautionDlgComponent__EndClose(SummonCautionDlgComponent_o 
   {
     v11 = this->fields.bonusSelectMsgInfo;
     if ( !v11 )
-      sub_1C2E388(0LL, v4);
-    BonusSelectSummonMsgInfo__Init(v11, 0LL);
+      sub_1C3B9C0(0LL, v4);
+    BonusSelectSummonMsgInfo__Init(v11, v4);
   }
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
@@ -128,7 +128,7 @@ void __fastcall SummonCautionDlgComponent__EndClose(SummonCautionDlgComponent_o 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C2E0D0(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1C3B708(p_closeCallbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v13->fields.m_target)(
       v13->fields.original_method_info,
       *(_QWORD *)&v13->fields.extra_arg);
@@ -151,15 +151,15 @@ void __fastcall SummonCautionDlgComponent__Init(SummonCautionDlgComponent_o *thi
   UnityEngine_Object_o *bonusSelectMsgInfo; // x20
   UnityEngine_GameObject_o *v14; // x0
 
-  if ( (byte_4BF9D6B & 1) == 0 )
+  if ( (byte_4C1E572 & 1) == 0 )
   {
-    sub_1C2E12C(&LocalizationManager_TypeInfo, method);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v3);
-    sub_1C2E12C(&SummonCautionDlgComponent_TypeInfo, v4);
-    sub_1C2E12C(&StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, v5);
-    sub_1C2E12C(&StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, v6);
-    sub_1C2E12C(&StringLiteral_1/*""*/, v7);
-    byte_4BF9D6B = 1;
+    sub_1C3B764(&LocalizationManager_TypeInfo, method);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
+    sub_1C3B764(&SummonCautionDlgComponent_TypeInfo, v4);
+    sub_1C3B764(&StringLiteral_3800/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, v5);
+    sub_1C3B764(&StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, v6);
+    sub_1C3B764(&StringLiteral_1/*""*/, v7);
+    byte_4C1E572 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -183,12 +183,12 @@ void __fastcall SummonCautionDlgComponent__Init(SummonCautionDlgComponent_o *thi
   confirmBtnLabel = this->fields.confirmBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, 0LL);
   if ( !confirmBtnLabel )
     goto LABEL_26;
   UILabel__set_text(confirmBtnLabel, (System_String_o *)titleLabel, 0LL);
   cancelBtnLb = this->fields.cancelBtnLb;
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3799/*"COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG"*/, 0LL);
   if ( !cancelBtnLb )
     goto LABEL_26;
   UILabel__set_text(cancelBtnLb, (System_String_o *)titleLabel, 0LL);
@@ -222,7 +222,7 @@ void __fastcall SummonCautionDlgComponent__Init(SummonCautionDlgComponent_o *thi
     titleLabel = (UILabel_o *)this->fields.bonusSelectMsgInfo;
     if ( !titleLabel )
       goto LABEL_26;
-    BonusSelectSummonMsgInfo__Init((BonusSelectSummonMsgInfo_o *)titleLabel, 0LL);
+    BonusSelectSummonMsgInfo__Init((BonusSelectSummonMsgInfo_o *)titleLabel, method);
   }
   titleLabel = (UILabel_o *)this->fields.baseWindowSprite;
   if ( !titleLabel
@@ -230,7 +230,7 @@ void __fastcall SummonCautionDlgComponent__Init(SummonCautionDlgComponent_o *thi
         (titleLabel = (UILabel_o *)this->fields.confirmBtnObject) == 0LL) )
   {
 LABEL_26:
-    sub_1C2E388(titleLabel, method);
+    sub_1C3B9C0(titleLabel, method);
   }
   v14 = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)titleLabel, 0LL);
   GameObjectExtensions__SetLocalPositionY(v14, 0.0, 0LL);
@@ -318,26 +318,27 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
   PartyListViewItem_o *v66; // x7
   UILabel_o *v67; // x26
   UILabel_o *cancelBtnLb; // x26
-  bool v69; // w1
+  const MethodInfo *v69; // x6
+  bool v70; // w1
   BonusSelectSummonMsgInfo_TryGetBonusSelectData_o *tryGetBonusSelectDataa; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4BF9D6C & 1) == 0 )
+  if ( (byte_4C1E573 & 1) == 0 )
   {
-    sub_1C2E12C(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___, title);
-    sub_1C2E12C(&LocalizationManager_TypeInfo, v21);
-    sub_1C2E12C(&Method_UnityEngine_Object_Instantiate_GameObject____77847040, v22);
-    sub_1C2E12C(&UnityEngine_Object_TypeInfo, v23);
-    sub_1C2E12C(&SummonCautionDlgComponent_TypeInfo, v24);
-    sub_1C2E12C(&StringLiteral_12600/*"SUMMON_GROUP_STONEPAY_WARNING_MSG"*/, v25);
-    sub_1C2E12C(&StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, v26);
-    sub_1C2E12C(&StringLiteral_12627/*"SUMMON_STONEPAY_WARNING_MSG"*/, v27);
-    sub_1C2E12C(&StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, v28);
-    sub_1C2E12C(&StringLiteral_12580/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, v29);
-    sub_1C2E12C(&StringLiteral_12576/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, v30);
-    byte_4BF9D6C = 1;
+    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___, title);
+    sub_1C3B764(&LocalizationManager_TypeInfo, v21);
+    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject____77992824, v22);
+    sub_1C3B764(&UnityEngine_Object_TypeInfo, v23);
+    sub_1C3B764(&SummonCautionDlgComponent_TypeInfo, v24);
+    sub_1C3B764(&StringLiteral_12628/*"Spanish (Nicaragua)"*/, v25);
+    sub_1C3B764(&StringLiteral_3800/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, v26);
+    sub_1C3B764(&StringLiteral_12655/*"Specified method is not supported."*/, v27);
+    sub_1C3B764(&StringLiteral_3798/*"COSTUME_OPEN_WARNING"*/, v28);
+    sub_1C3B764(&StringLiteral_12608/*"Soundex"*/, v29);
+    sub_1C3B764(&StringLiteral_12604/*"SortKind-"*/, v30);
+    byte_4C1E573 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
     (int64_t)callback,
     (int64_t)message,
@@ -357,7 +358,7 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
   confirmBtnLabel = this->fields.confirmBtnLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3800/*"COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG"*/, 0LL);
   if ( !confirmBtnLabel )
     goto LABEL_61;
   UILabel__set_text(confirmBtnLabel, (System_String_o *)titleLabel, 0LL);
@@ -439,11 +440,11 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 1, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12627/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0LL);
-      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12600/*"SUMMON_GROUP_STONEPAY_WARNING_MSG"*/, 0LL);
+      v47 = LocalizationManager__Get((System_String_o *)StringLiteral_12655/*"Specified method is not supported."*/, 0LL);
+      v48 = LocalizationManager__Get((System_String_o *)StringLiteral_12628/*"Spanish (Nicaragua)"*/, 0LL);
       DateTime = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0LL);
       v50 = System_String__Format(v48, DateTime, 0LL);
-      titleLabel = (UILabel_o *)System_String__Concat_63235584(v47, v50, 0LL);
+      titleLabel = (UILabel_o *)System_String__Concat_63368612(v47, v50, 0LL);
       if ( !this->fields.addMsgLabel )
         goto LABEL_61;
       UILabel__set_text(this->fields.addMsgLabel, (System_String_o *)titleLabel, 0LL);
@@ -458,11 +459,11 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
       GameObjectExtensions__SetLocalPositionY(this->fields.addMsgInfo, -100.0, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12627/*"SUMMON_STONEPAY_WARNING_MSG"*/, 0LL);
-      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_12580/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, 0LL);
+      v51 = LocalizationManager__Get((System_String_o *)StringLiteral_12655/*"Specified method is not supported."*/, 0LL);
+      v52 = LocalizationManager__Get((System_String_o *)StringLiteral_12608/*"Soundex"*/, 0LL);
       v53 = (Il2CppObject *)LocalizationManager__GetDateTime(summonCloseAt, 0LL);
       v54 = System_String__Format(v52, v53, 0LL);
-      titleLabel = (UILabel_o *)System_String__Concat_63235584(v51, v54, 0LL);
+      titleLabel = (UILabel_o *)System_String__Concat_63368612(v51, v54, 0LL);
       if ( this->fields.addMsgLabel )
       {
         UILabel__set_text(this->fields.addMsgLabel, (System_String_o *)titleLabel, 0LL);
@@ -491,17 +492,17 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
               transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)titleLabel, 0LL);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              titleLabel = (UILabel_o *)UnityEngine_Object__Instantiate_object__50692032(
+              titleLabel = (UILabel_o *)UnityEngine_Object__Instantiate_object__50818788(
                                           MsgInfoPrefab_k__BackingField,
                                           transform,
-                                          (const MethodInfo_3057FC0 *)Method_UnityEngine_Object_Instantiate_GameObject____77847040);
+                                          (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_GameObject____77992824);
               if ( !titleLabel )
                 goto LABEL_61;
               Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)titleLabel,
-                                   (const MethodInfo_3022B0C *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
+                                   (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfo___);
               *p_bonusSelectMsgInfo = (struct BonusSelectSummonMsgInfo_o *)Component_object;
-              sub_1C2E0D0(
+              sub_1C3B708(
                 (PartyOrganizationUtility_o *)&this->fields.bonusSelectMsgInfo,
                 (int64_t)Component_object,
                 v61,
@@ -519,12 +520,12 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
               v67 = this->fields.confirmBtnLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12576/*"SUMMON_BONUS_SELECT_DIALOG_SUMMON"*/, 0LL);
+              titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12604/*"SortKind-"*/, 0LL);
               if ( v67 )
               {
                 UILabel__set_text(v67, (System_String_o *)titleLabel, 0LL);
                 cancelBtnLb = this->fields.cancelBtnLb;
-                titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+                titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3798/*"COSTUME_OPEN_WARNING"*/, 0LL);
                 if ( cancelBtnLb )
                 {
                   UILabel__set_text(cancelBtnLb, (System_String_o *)titleLabel, 0LL);
@@ -538,11 +539,11 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
                       message,
                       tryGetBonusSelectDataa,
                       assetManager,
-                      0LL);
+                      v69);
                     titleLabel = (UILabel_o *)this->fields.cautionInfo;
                     if ( titleLabel )
                     {
-                      v69 = 0;
+                      v70 = 0;
                       goto LABEL_59;
                     }
                   }
@@ -554,14 +555,14 @@ void __fastcall SummonCautionDlgComponent__OpenCautionMessageDlg(
       }
     }
 LABEL_61:
-    sub_1C2E388(titleLabel, v31);
+    sub_1C3B9C0(titleLabel, v31);
   }
   titleLabel = (UILabel_o *)this->fields.cautionInfo;
   if ( !titleLabel )
     goto LABEL_61;
-  v69 = 1;
+  v70 = 1;
 LABEL_59:
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, v69, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, v70, 0LL);
   titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !titleLabel )
     goto LABEL_61;
@@ -585,10 +586,10 @@ void __fastcall SummonCautionDlgComponent__add_callbackFunc(
   SummonCautionDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4BF9D69 & 1) == 0 )
+  if ( (byte_4C1E570 & 1) == 0 )
   {
-    sub_1C2E12C(&SummonCautionDlgComponent_CallbackFunc_TypeInfo, value);
-    byte_4BF9D69 = 1;
+    sub_1C3B764(&SummonCautionDlgComponent_CallbackFunc_TypeInfo, value);
+    byte_4C1E570 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -601,13 +602,13 @@ void __fastcall SummonCautionDlgComponent__add_callbackFunc(
       if ( (SummonCautionDlgComponent_CallbackFunc_c *)v8->klass != SummonCautionDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
+    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   SummonCautionDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -616,12 +617,12 @@ System_String_o *__fastcall SummonCautionDlgComponent__get_closeBtnPath(
         SummonCautionDlgComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4BF9D6F & 1) == 0 )
+  if ( (byte_4C1E576 & 1) == 0 )
   {
-    sub_1C2E12C(&StringLiteral_4763/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/, method);
-    byte_4BF9D6F = 1;
+    sub_1C3B764(&StringLiteral_4763/*"Count_Hit"*/, method);
+    byte_4C1E576 = 1;
   }
-  return (System_String_o *)StringLiteral_4763/*"ConfirmWindow/ConfirmBntInfo/CancleButton"*/;
+  return (System_String_o *)StringLiteral_4763/*"Count_Hit"*/;
 }
 
 
@@ -639,10 +640,10 @@ void __fastcall SummonCautionDlgComponent__remove_callbackFunc(
   SummonCautionDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4BF9D6A & 1) == 0 )
+  if ( (byte_4C1E571 & 1) == 0 )
   {
-    sub_1C2E12C(&SummonCautionDlgComponent_CallbackFunc_TypeInfo, value);
-    byte_4BF9D6A = 1;
+    sub_1C3B764(&SummonCautionDlgComponent_CallbackFunc_TypeInfo, value);
+    byte_4C1E571 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -655,13 +656,13 @@ void __fastcall SummonCautionDlgComponent__remove_callbackFunc(
       if ( (SummonCautionDlgComponent_CallbackFunc_c *)v8->klass != SummonCautionDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C6961C(p_callbackFunc, v8, v6);
+    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2E648(v8);
+  sub_1C3BC80(v8);
   SummonCautionDlgComponent__Init(v11, v12);
 }
 
@@ -688,7 +689,7 @@ void __fastcall SummonCautionDlgComponent_CallbackFunc___ctor(
   v10 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v8;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C2E0D0(
+  sub_1C3B708(
     (PartyOrganizationUtility_o *)&this->fields.method,
     (int64_t)object,
     *(int64_t *)&method,
@@ -699,12 +700,12 @@ void __fastcall SummonCautionDlgComponent_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(v10 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C2E1EC(v10) & 1) == 0 )
+  if ( (sub_1C3B824(v10) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C2E3A4(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2E254(v14, 0LL);
+      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C3B88C(v14, 0LL);
     }
     goto LABEL_5;
   }
@@ -716,9 +717,9 @@ LABEL_5:
     this->fields.original_method_info = v13;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A6B5D8;
+  this->fields.m_target = (Il2CppObject *)sub_1A78690;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A6B590;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A78648;
 }
 
 
@@ -734,14 +735,14 @@ System_IAsyncResult_o *__fastcall SummonCautionDlgComponent_CallbackFunc__BeginI
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4BF9D72 & 1) == 0 )
+  if ( (byte_4C1E579 & 1) == 0 )
   {
-    sub_1C2E12C(&bool_TypeInfo, result);
-    byte_4BF9D72 = 1;
+    sub_1C3B764(&bool_TypeInfo, result);
+    byte_4C1E579 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2E0E0(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C3B718(this, v9, callback, object);
 }
 
 
@@ -750,7 +751,7 @@ void __fastcall SummonCautionDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2E0E4(result, 0LL, method);
+  sub_1C3B71C(result, 0LL, method);
 }
 
 
