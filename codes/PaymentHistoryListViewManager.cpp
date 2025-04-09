@@ -42,121 +42,117 @@ void __fastcall PaymentHistoryListViewManager__CreateList(
   const MethodInfo *v34; // x4
   __int64 v35; // x0
   __int64 v36; // x1
-  int64_t v37; // x2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  BattleSetupInfo_o *v40; // x5
-  FollowerInfo_o *v41; // x6
-  PartyListViewItem_o *v42; // x7
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v44; // x9
+  _QWORD *v40; // x9
   __int64 size; // x10
-  Il2CppClass **v46; // x0
+  Il2CppClass **v42; // x0
   struct ListViewSort_o *sort; // x8
-  System_Collections_Generic_List_Enumerator_object__o v48; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v49; // [xsp+20h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C1E1FD & 1) == 0 )
+  if ( (byte_49B70EF & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_PaymentHistoryMaster___, method);
-    sub_1C3B764(&DataManager_TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__Dispose__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__MoveNext__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__get_Current__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_PaymentHistoryEntity__GetEnumerator__, v8);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v9);
-    sub_1C3B764(&PaymentHistoryListViewItem_TypeInfo, v10);
-    sub_1C3B764(&StringLiteral_10562/*"Q"*/, v11);
-    sub_1C3B764(&StringLiteral_10560/*"Purple"*/, v12);
-    sub_1C3B764(&StringLiteral_10561/*"PushNotification"*/, v13);
-    sub_1C3B764(&StringLiteral_1/*""*/, v14);
-    byte_4C1E1FD = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_PaymentHistoryMaster___, method);
+    sub_1B4CF90(&DataManager_TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__Dispose__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__MoveNext__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__get_Current__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_PaymentHistoryEntity__GetEnumerator__, v8);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v9);
+    sub_1B4CF90(&PaymentHistoryListViewItem_TypeInfo, v10);
+    sub_1B4CF90(&StringLiteral_10136/*"PAYMENT_HISTORY_TEMPLATE_UPSIDE"*/, v11);
+    sub_1B4CF90(&StringLiteral_10134/*"PAYMENT_HISTORY_SP_TEMPLATE"*/, v12);
+    sub_1B4CF90(&StringLiteral_10135/*"PAYMENT_HISTORY_TEMPLATE"*/, v13);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v14);
+    byte_49B70EF = 1;
   }
-  memset(&v49, 0, sizeof(v49));
+  memset(&v45, 0, sizeof(v45));
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (PaymentHistoryMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_PaymentHistoryMaster___);
+  Master_object = (PaymentHistoryMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_PaymentHistoryMaster___);
   if ( Master_object )
   {
     Master_object = (PaymentHistoryMaster_o *)PaymentHistoryMaster__GetEntityList(Master_object, 0LL);
     if ( !Master_object )
       goto LABEL_30;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v48,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v44,
       (System_Collections_Generic_List_object__o *)Master_object,
-      (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_PaymentHistoryEntity__GetEnumerator__);
-    v49 = v48;
+      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_PaymentHistoryEntity__GetEnumerator__);
+    v45 = v44;
     while ( 1 )
     {
       v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v49,
-              (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__MoveNext__);
+              &v45,
+              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__MoveNext__);
       if ( !v17 )
         break;
-      current = (PaymentHistoryEntity_o *)v49.fields._current;
-      if ( !v49.fields._current )
-        sub_1C3B9C0(v17, v18);
+      current = (PaymentHistoryEntity_o *)v45.fields._current;
+      if ( !v45.fields._current )
+        sub_1B4D1EC(v17, v18);
       cctor_finished = LocalizationManager_TypeInfo->_2.cctor_finished;
-      if ( LOBYTE(v49.fields._current[1].monitor) )
+      if ( LOBYTE(v45.fields._current[1].monitor) )
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10560/*"Purple"*/, 0LL);
+        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10134/*"PAYMENT_HISTORY_SP_TEMPLATE"*/, 0LL);
       }
       else
       {
         if ( !cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10561/*"PushNotification"*/, 0LL);
+        v21 = LocalizationManager__Get((System_String_o *)StringLiteral_10135/*"PAYMENT_HISTORY_TEMPLATE"*/, 0LL);
       }
       v22 = v21;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10562/*"Q"*/, 0LL);
+      v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10136/*"PAYMENT_HISTORY_TEMPLATE_UPSIDE"*/, 0LL);
       CreatedAtToString = (Il2CppObject *)PaymentHistoryEntity__get_CreatedAtToString(current, 0LL);
       TypeText = (Il2CppObject *)PaymentHistoryEntity__GetTypeText(current, 0LL);
-      v26 = System_String__Format_63382984(v23, CreatedAtToString, TypeText, 0LL);
+      v26 = System_String__Format_61134760(v23, CreatedAtToString, TypeText, 0LL);
       name = (Il2CppObject *)current->fields.name;
       v28 = v26;
       DispPrice = (Il2CppObject *)PaymentHistoryEntity__GetDispPrice(current, 0LL);
-      v30 = System_String__Format_63382984(v22, name, DispPrice, 0LL);
+      v30 = System_String__Format_61134760(v22, name, DispPrice, 0LL);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       idx = current->fields.idx;
-      v33 = (PaymentHistoryListViewItem_o *)sub_1C3B9B0(PaymentHistoryListViewItem_TypeInfo);
+      v33 = (PaymentHistoryListViewItem_o *)sub_1B4D1DC(PaymentHistoryListViewItem_TypeInfo);
       PaymentHistoryListViewItem___ctor(v33, idx, v28, v30, v34);
       if ( !itemList )
-        sub_1C3B9C0(v35, v36);
+        sub_1B4D1EC(v35, v36);
       items = itemList->fields._items;
-      v44 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v40 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++itemList->fields._version;
       if ( !items )
-        sub_1C3B9C0(v35, v36);
+        sub_1B4D1EC(v35, v36);
       size = itemList->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v33,
-          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+          *(const MethodInfo_35801DC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
-        v46 = &items->obj.klass + size;
+        v42 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
-        v46[4] = (Il2CppClass *)v33;
-        sub_1C3B708((PartyOrganizationUtility_o *)(v46 + 4), (int64_t)v33, v37, v38, v39, v40, v41, v42);
+        v42[4] = (Il2CppClass *)v33;
+        sub_1B4CF34((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v33, v37, v38);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v49,
-      (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__Dispose__);
+      &v45,
+      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_PaymentHistoryEntity__Dispose__);
   }
   sort = this->fields.sort;
   if ( !sort )
 LABEL_30:
-    sub_1C3B9C0(Master_object, v16);
+    sub_1B4D1EC(Master_object, v16);
   sort->fields.isAscendingOrder = 0;
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
 }
@@ -170,17 +166,17 @@ void __fastcall PaymentHistoryListViewManager__SetObjectItem(
 {
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4C1E1FE & 1) == 0 )
+  if ( (byte_49B70F0 & 1) == 0 )
   {
-    this = (PaymentHistoryListViewManager_o *)sub_1C3B764(&PaymentHistoryListViewObject_TypeInfo, obj);
-    byte_4C1E1FE = 1;
+    this = (PaymentHistoryListViewManager_o *)sub_1B4CF90(&PaymentHistoryListViewObject_TypeInfo, obj);
+    byte_49B70F0 = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(PaymentHistoryListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (PaymentHistoryListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != PaymentHistoryListViewObject_TypeInfo )
   {
-    sub_1C3B9C0(this, obj);
+    sub_1B4D1EC(this, obj);
   }
   PaymentHistoryListViewObject__SetupDisp((PaymentHistoryListViewObject_o *)obj, (const MethodInfo *)obj);
 }
@@ -197,6 +193,6 @@ float __fastcall PaymentHistoryListViewManager__get_ListViewHeight(
   ItemSum = ListViewManager__get_ItemSum((ListViewManager_o *)this, 0LL);
   seed = this->fields.seed;
   if ( !seed )
-    sub_1C3B9C0(ItemSum, v4);
+    sub_1B4D1EC(ItemSum, v4);
   return seed->fields.arrangementPich.fields.y * (float)(int)ItemSum;
 }

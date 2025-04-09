@@ -22,54 +22,46 @@ BattleAttackManager_o *__fastcall EnemyFirstAttackManager__Init(
   BattleLogic_LOGICTYPE_array *v21; // x23
   BattleAttack_o *v22; // x22
   const MethodInfo *v23; // x2
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v31; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  Il2CppClass **v33; // x0
-  System_Collections_Generic_List_object__o *v34; // x21
-  BattleAttack_o *v35; // x22
-  const MethodInfo *v36; // x2
-  int64_t v37; // x2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  BattleSetupInfo_o *v40; // x5
-  FollowerInfo_o *v41; // x6
-  PartyListViewItem_o *v42; // x7
-  struct System_Object_array *v43; // x8
-  _QWORD *v44; // x9
-  __int64 v45; // x10
-  Il2CppClass **v46; // x0
+  Il2CppClass **v29; // x0
+  System_Collections_Generic_List_object__o *v30; // x21
+  BattleAttack_o *v31; // x22
+  const MethodInfo *v32; // x2
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  struct System_Object_array *v35; // x8
+  _QWORD *v36; // x9
+  __int64 v37; // x10
+  Il2CppClass **v38; // x0
 
-  if ( (byte_4C2435B & 1) == 0 )
+  if ( (byte_49BD290 & 1) == 0 )
   {
-    sub_1C3B764(&BattleAttackEnemy_TypeInfo, allLogicArray);
-    sub_1C3B764(&BattleAttackPlayer_TypeInfo, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleAttack__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__IndexOf__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE___ctor__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__get_Count__, v11);
-    sub_1C3B764(&System_Collections_Generic_List_BattleLogic_LOGICTYPE__TypeInfo, v12);
-    byte_4C2435B = 1;
+    sub_1B4CF90(&BattleAttackEnemy_TypeInfo, allLogicArray);
+    sub_1B4CF90(&BattleAttackPlayer_TypeInfo, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleAttack__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__IndexOf__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE___ctor__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__get_Count__, v11);
+    sub_1B4CF90(&System_Collections_Generic_List_BattleLogic_LOGICTYPE__TypeInfo, v12);
+    byte_49BD290 = 1;
   }
-  v13 = (System_Collections_Generic_List_T__o *)sub_1C3B9B0(System_Collections_Generic_List_BattleLogic_LOGICTYPE__TypeInfo);
-  System_Collections_Generic_List_Int32Enum____ctor_57085256(
+  v13 = (System_Collections_Generic_List_T__o *)sub_1B4D1DC(System_Collections_Generic_List_BattleLogic_LOGICTYPE__TypeInfo);
+  System_Collections_Generic_List_Int32Enum____ctor_55988920(
     v13,
     (System_Collections_Generic_IEnumerable_T__o *)allLogicArray,
-    (const MethodInfo_3670D48 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE___ctor__);
+    (const MethodInfo_35652B8 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE___ctor__);
   if ( !v13 )
     goto LABEL_18;
   v16 = System_Collections_Generic_List_Int32Enum___IndexOf(
           v13,
           58,
-          (const MethodInfo_36720F0 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__IndexOf__);
+          (const MethodInfo_3566660 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__IndexOf__);
   if ( v16 == -1 )
     return (BattleAttackManager_o *)this;
   v17 = v16 + 1;
@@ -77,30 +69,30 @@ BattleAttackManager_o *__fastcall EnemyFirstAttackManager__Init(
             v13,
             0,
             v16 + 1,
-            (const MethodInfo_3672020 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__);
+            (const MethodInfo_3566590 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__);
   if ( !Range )
     goto LABEL_18;
   v18 = System_Collections_Generic_List_Int32Enum___ToArray(
           Range,
-          (const MethodInfo_3672F2C *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__);
+          (const MethodInfo_356749C *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__);
   Range = System_Collections_Generic_List_Int32Enum___GetRange(
             v13,
             v17,
             v13->fields._size - v17,
-            (const MethodInfo_3672020 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__);
+            (const MethodInfo_3566590 *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__GetRange__);
   if ( !Range )
     goto LABEL_18;
   v19 = System_Collections_Generic_List_Int32Enum___ToArray(
           Range,
-          (const MethodInfo_3672F2C *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__);
+          (const MethodInfo_356749C *)Method_System_Collections_Generic_List_BattleLogic_LOGICTYPE__ToArray__);
   attackList = (System_Collections_Generic_List_object__o *)this->fields.attackList;
   v21 = (BattleLogic_LOGICTYPE_array *)v19;
-  v22 = (BattleAttack_o *)sub_1C3B9B0(BattleAttackEnemy_TypeInfo);
+  v22 = (BattleAttack_o *)sub_1B4D1DC(BattleAttackEnemy_TypeInfo);
   BattleAttack___ctor(v22, v21, v23);
   if ( !attackList )
     goto LABEL_18;
   items = attackList->fields._items;
-  v31 = Method_System_Collections_Generic_List_BattleAttack__Add__;
+  v27 = Method_System_Collections_Generic_List_BattleAttack__Add__;
   ++attackList->fields._version;
   if ( !items )
     goto LABEL_18;
@@ -110,41 +102,41 @@ BattleAttackManager_o *__fastcall EnemyFirstAttackManager__Init(
     System_Collections_Generic_List_object___AddWithResize(
       attackList,
       (Il2CppObject *)v22,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
-    v33 = &items->obj.klass + size;
+    v29 = &items->obj.klass + size;
     attackList->fields._size = size + 1;
-    v33[4] = (Il2CppClass *)v22;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v33 + 4), (int64_t)v22, v24, v25, v26, v27, v28, v29);
+    v29[4] = (Il2CppClass *)v22;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v29 + 4), (int32_t)v22, v24, v25);
   }
-  v34 = (System_Collections_Generic_List_object__o *)this->fields.attackList;
-  v35 = (BattleAttack_o *)sub_1C3B9B0(BattleAttackPlayer_TypeInfo);
-  BattleAttack___ctor(v35, (BattleLogic_LOGICTYPE_array *)v18, v36);
-  if ( !v34
-    || (v43 = v34->fields._items,
-        v44 = Method_System_Collections_Generic_List_BattleAttack__Add__,
-        ++v34->fields._version,
-        !v43) )
+  v30 = (System_Collections_Generic_List_object__o *)this->fields.attackList;
+  v31 = (BattleAttack_o *)sub_1B4D1DC(BattleAttackPlayer_TypeInfo);
+  BattleAttack___ctor(v31, (BattleLogic_LOGICTYPE_array *)v18, v32);
+  if ( !v30
+    || (v35 = v30->fields._items,
+        v36 = Method_System_Collections_Generic_List_BattleAttack__Add__,
+        ++v30->fields._version,
+        !v35) )
   {
 LABEL_18:
-    sub_1C3B9C0(Range, v15);
+    sub_1B4D1EC(Range, v15);
   }
-  v45 = v34->fields._size;
-  if ( (unsigned int)v45 >= v43->max_length )
+  v37 = v30->fields._size;
+  if ( (unsigned int)v37 >= v35->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v34,
-      (Il2CppObject *)v35,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+      v30,
+      (Il2CppObject *)v31,
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
   }
   else
   {
-    v46 = &v43->obj.klass + v45;
-    v34->fields._size = v45 + 1;
-    v46[4] = (Il2CppClass *)v35;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v46 + 4), (int64_t)v35, v37, v38, v39, v40, v41, v42);
+    v38 = &v35->obj.klass + v37;
+    v30->fields._size = v37 + 1;
+    v38[4] = (Il2CppClass *)v31;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v31, v33, v34);
   }
   return (BattleAttackManager_o *)this;
 }
@@ -166,7 +158,7 @@ void __fastcall EnemyFirstAttackManager__PrevProcTactical(
       return;
     }
 LABEL_6:
-    sub_1C3B9C0(this, data);
+    sub_1B4D1EC(this, data);
   }
 }
 

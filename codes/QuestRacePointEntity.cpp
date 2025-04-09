@@ -1,58 +1,46 @@
 void __fastcall QuestRacePointEntity___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v4; // x1
 
-  if ( (byte_4C22516 & 1) == 0 )
+  if ( (byte_49BB440 & 1) == 0 )
   {
-    sub_1C3B764(&QuestRacePointEntity_TypeInfo, v1);
-    sub_1C3B764(&StringLiteral_25095/*"󰀀"*/, v8);
-    byte_4C22516 = 1;
+    sub_1B4CF90(&QuestRacePointEntity_TypeInfo, v1);
+    sub_1B4CF90(&StringLiteral_24298/*"voice"*/, v4);
+    byte_49BB440 = 1;
   }
-  QuestRacePointEntity_TypeInfo->static_fields->VOICE_KEY = (struct System_String_o *)StringLiteral_25095/*"󰀀"*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)QuestRacePointEntity_TypeInfo->static_fields,
-    StringLiteral_25095/*"󰀀"*/,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  QuestRacePointEntity_TypeInfo->static_fields->VOICE_KEY = (struct System_String_o *)StringLiteral_24298/*"voice"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)QuestRacePointEntity_TypeInfo->static_fields, StringLiteral_24298/*"voice"*/, v2, v3);
 }
 
 
 void __fastcall QuestRacePointEntity___ctor(QuestRacePointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22515 & 1) == 0 )
+  if ( (byte_49BB43F & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22515 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB43F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall QuestRacePointEntity__CreatePK(int32_t questId, int32_t itemId, const MethodInfo *method)
 {
-  if ( (byte_4C22510 & 1) == 0 )
+  if ( (byte_49BB43A & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&itemId);
-    byte_4C22510 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&itemId);
+    byte_49BB43A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            itemId,
-           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -64,10 +52,10 @@ System_String_o *__fastcall QuestRacePointEntity__CreatePrimaryKey(
   int32_t itemId; // w19
   int32_t questId; // w20
 
-  if ( (byte_4C2250F & 1) == 0 )
+  if ( (byte_49BB439 & 1) == 0 )
   {
-    sub_1C3B764(&QuestRacePointEntity_TypeInfo, method);
-    byte_4C2250F = 1;
+    sub_1B4CF90(&QuestRacePointEntity_TypeInfo, method);
+    byte_49BB439 = 1;
   }
   questId = this->fields.questId;
   itemId = this->fields.itemId;
@@ -85,11 +73,11 @@ int32_t __fastcall QuestRacePointEntity__GetBoostTypeColor(QuestRacePointEntity_
   System_String_o *v6; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C22511 & 1) == 0 )
+  if ( (byte_49BB43B & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_1C3B764(&StringLiteral_19278/*"frame_master_bg1"*/, v3);
-    byte_4C22511 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
+    sub_1B4CF90(&StringLiteral_18599/*"effectColor"*/, v3);
+    byte_49BB43B = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -97,12 +85,12 @@ int32_t __fastcall QuestRacePointEntity__GetBoostTypeColor(QuestRacePointEntity_
   {
     if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
-           (Il2CppObject *)StringLiteral_19278/*"frame_master_bg1"*/,
+           (Il2CppObject *)StringLiteral_18599/*"effectColor"*/,
            &value,
-           (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       if ( !value )
-        sub_1C3B9C0(0LL, v5);
+        sub_1B4D1EC(0LL, v5);
       v6 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))value->klass->vtable[3].method)(
                                 value,
                                 value->klass->vtable[4].methodPtr);
@@ -134,23 +122,23 @@ int32_t __fastcall QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
   System_RuntimeTypeHandle_o v16; // 0:w0.4
 
-  if ( (byte_4C22512 & 1) == 0 )
+  if ( (byte_49BB43C & 1) == 0 )
   {
-    sub_1C3B764(&EventRaceBoostEffect_BoostGrade_var, method);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
-    sub_1C3B764(&System_Enum_TypeInfo, v4);
-    sub_1C3B764(&System_Type_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_20229/*"img_txt_mainscenario"*/, v6);
-    byte_4C22512 = 1;
+    sub_1B4CF90(&EventRaceBoostEffect_BoostGrade_var, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v3);
+    sub_1B4CF90(&System_Enum_TypeInfo, v4);
+    sub_1B4CF90(&System_Type_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_19537/*"grade"*/, v6);
+    byte_49BB43C = 1;
   }
   value = 0LL;
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
-          (Il2CppObject *)StringLiteral_20229/*"img_txt_mainscenario"*/,
+          (Il2CppObject *)StringLiteral_19537/*"grade"*/,
           &value,
-          (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return 1;
   }
@@ -171,7 +159,7 @@ int32_t __fastcall QuestRacePointEntity__GetEffectGrade(QuestRacePointEntity_o *
   Values = System_Enum__GetValues(TypeFromHandle, 0LL);
   if ( !Values )
 LABEL_16:
-    sub_1C3B9C0(Values, v8);
+    sub_1B4D1EC(Values, v8);
   result = System_Array__get_Length(Values, 0LL);
   if ( v11 < 1 )
     return 1;
@@ -196,9 +184,9 @@ System_String_o *__fastcall QuestRacePointEntity__GetRandVoice(QuestRacePointEnt
     v4 = result;
     if ( klass )
     {
-      v5 = UnityEngine_Random__Range_71082488(0, (int32_t)klass, 0LL);
+      v5 = UnityEngine_Random__Range_68764200(0, (int32_t)klass, 0LL);
       if ( (unsigned int)v5 >= LODWORD(v4[1].klass) )
-        sub_1C3B9C8(v5, v6);
+        sub_1B4D1F4(v5, v6);
       return (System_String_o *)*((_QWORD *)&v4[1].monitor + (int)v5);
     }
     else
@@ -217,12 +205,12 @@ System_String_o *__fastcall QuestRacePointEntity__GetSe(QuestRacePointEntity_o *
   System_String_o *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C22513 & 1) == 0 )
+  if ( (byte_49BB43D & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
-    sub_1C3B764(&string_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_23540/*"tdelay"*/, v4);
-    byte_4C22513 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, method);
+    sub_1B4CF90(&string_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_22779/*"se"*/, v4);
+    byte_49BB43D = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -230,14 +218,14 @@ System_String_o *__fastcall QuestRacePointEntity__GetSe(QuestRacePointEntity_o *
   {
     if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
             (System_Collections_Generic_Dictionary_object__object__o *)result,
-            (Il2CppObject *)StringLiteral_23540/*"tdelay"*/,
+            (Il2CppObject *)StringLiteral_22779/*"se"*/,
             &value,
-            (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0LL;
     result = (System_String_o *)value;
     if ( value && (System_String_c *)value->klass != string_TypeInfo )
     {
-      sub_1C3BC80(value);
+      sub_1B4D4AC(value);
       return 0LL;
     }
   }
@@ -266,27 +254,23 @@ System_String_array *__fastcall QuestRacePointEntity__GetVoices(QuestRacePointEn
   __int64 methodPtr_low; // x10
   Il2CppObject *v20; // x21
   struct QuestRacePointEntity___c_StaticFields *static_fields; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  QuestRacePointEntity_o *v29; // x0
-  const MethodInfo *v30; // x1
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  QuestRacePointEntity_o *v25; // x0
+  const MethodInfo *v26; // x1
 
-  if ( (byte_4C22514 & 1) == 0 )
+  if ( (byte_49BB43E & 1) == 0 )
   {
-    sub_1C3B764(&System_Converter_object__string__TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_object__ConvertAll_string___, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__ToArray__, v6);
-    sub_1C3B764(&System_Collections_Generic_List_object__TypeInfo, v7);
-    sub_1C3B764(&QuestRacePointEntity_TypeInfo, v8);
-    sub_1C3B764(&Method_QuestRacePointEntity___c__GetVoices_b__10_0__, v9);
-    sub_1C3B764(&QuestRacePointEntity___c_TypeInfo, v10);
-    byte_4C22514 = 1;
+    sub_1B4CF90(&System_Converter_object__string__TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_object__ConvertAll_string___, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__ToArray__, v6);
+    sub_1B4CF90(&System_Collections_Generic_List_object__TypeInfo, v7);
+    sub_1B4CF90(&QuestRacePointEntity_TypeInfo, v8);
+    sub_1B4CF90(&Method_QuestRacePointEntity___c__GetVoices_b__10_0__, v9);
+    sub_1B4CF90(&QuestRacePointEntity___c_TypeInfo, v10);
+    byte_49BB43E = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -300,7 +284,7 @@ System_String_array *__fastcall QuestRacePointEntity__GetVoices(QuestRacePointEn
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)v12->static_fields->VOICE_KEY,
-          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0LL;
   Item = (System_Collections_Generic_List_object__o *)QuestRacePointEntity_TypeInfo;
   v15 = this->fields.script;
@@ -311,7 +295,7 @@ System_String_array *__fastcall QuestRacePointEntity__GetVoices(QuestRacePointEn
   Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                         (System_Collections_Generic_Dictionary_object__object__o *)v15,
                                                         (Il2CppObject *)QuestRacePointEntity_TypeInfo->static_fields->VOICE_KEY,
-                                                        (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                        (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   v16 = Item;
   v17 = QuestRacePointEntity___c_TypeInfo;
   if ( !QuestRacePointEntity___c_TypeInfo->_2.cctor_finished )
@@ -334,36 +318,28 @@ System_String_array *__fastcall QuestRacePointEntity__GetVoices(QuestRacePointEn
         v17 = QuestRacePointEntity___c_TypeInfo;
       }
       v20 = (Il2CppObject *)v17->static_fields->__9;
-      _9__10_0 = (System_Converter_TInput__TOutput__o *)sub_1C3B9B0(System_Converter_object__string__TypeInfo);
+      _9__10_0 = (System_Converter_TInput__TOutput__o *)sub_1B4D1DC(System_Converter_object__string__TypeInfo);
       System_Converter_object__object____ctor(_9__10_0, v20, Method_QuestRacePointEntity___c__GetVoices_b__10_0__, 0LL);
       static_fields = QuestRacePointEntity___c_TypeInfo->static_fields;
       static_fields->__9__10_0 = (struct System_Converter_object__string__o *)_9__10_0;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&static_fields->__9__10_0,
-        (int64_t)_9__10_0,
-        v22,
-        v23,
-        v24,
-        v25,
-        v26,
-        v27);
+      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v22, v23);
     }
     if ( v16 )
     {
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ConvertAll_object_(
                                                             v16,
                                                             (System_Converter_T__TOutput__o *)_9__10_0,
-                                                            (const MethodInfo_2F1F9D8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___);
+                                                            (const MethodInfo_2E391E8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___);
       if ( Item )
         return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                         Item,
-                                        (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                        (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_string__ToArray__);
     }
 LABEL_23:
-    sub_1C3B9C0(Item, v13);
+    sub_1B4D1EC(Item, v13);
   }
-  sub_1C3BC80(v16);
-  return (System_String_array *)QuestRacePointEntity__GetRandVoice(v29, v30);
+  sub_1B4D4AC(v16);
+  return (System_String_array *)QuestRacePointEntity__GetRandVoice(v25, v26);
 }
 
 
@@ -371,30 +347,18 @@ void __fastcall QuestRacePointEntity___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C22517 & 1) == 0 )
+  if ( (byte_49BB441 & 1) == 0 )
   {
-    sub_1C3B764(&QuestRacePointEntity___c_TypeInfo, v1);
-    byte_4C22517 = 1;
+    sub_1B4CF90(&QuestRacePointEntity___c_TypeInfo, v1);
+    byte_49BB441 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(QuestRacePointEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(QuestRacePointEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestRacePointEntity___c_TypeInfo->static_fields->__9 = (struct QuestRacePointEntity___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)QuestRacePointEntity___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)QuestRacePointEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -410,7 +374,7 @@ System_String_o *__fastcall QuestRacePointEntity___c___GetVoices_b__10_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))x->klass->vtable[3].method)(
                               x,
                               x->klass->vtable[4].methodPtr);

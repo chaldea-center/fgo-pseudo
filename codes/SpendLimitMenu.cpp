@@ -8,88 +8,68 @@ void __fastcall SpendLimitMenu___cctor(const MethodInfo *method)
   __int64 v6; // x1
   __int64 v7; // x0
   __int64 v8; // x1
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x19
-  int64_t v16; // x1
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  int64_t v23; // x1
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  int64_t v30; // x1
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
-  int64_t v37; // x1
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  __int64 v11; // x19
+  int32_t v12; // w1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int32_t v15; // w1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  int32_t v21; // w1
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
 
-  if ( (byte_4C1F959 & 1) == 0 )
+  if ( (byte_49B8786 & 1) == 0 )
   {
-    sub_1C3B764(&SpendLimitMenu_TypeInfo, v1);
-    sub_1C3B764(&string___TypeInfo, v2);
-    sub_1C3B764(&StringLiteral_2047/*"AP_TXT"*/, v3);
-    sub_1C3B764(&StringLiteral_2043/*"AP_RECOVER_RESULT_OVER"*/, v4);
-    sub_1C3B764(&StringLiteral_2045/*"AP_RECOVER_TITLE"*/, v5);
-    sub_1C3B764(&StringLiteral_2046/*"AP_RECOVER_TXT"*/, v6);
-    byte_4C1F959 = 1;
+    sub_1B4CF90(&SpendLimitMenu_TypeInfo, v1);
+    sub_1B4CF90(&string___TypeInfo, v2);
+    sub_1B4CF90(&StringLiteral_1950/*"AGE_VEIFICATION_TYPE3"*/, v3);
+    sub_1B4CF90(&StringLiteral_1946/*"AGE_VEIFICATION_NONE"*/, v4);
+    sub_1B4CF90(&StringLiteral_1948/*"AGE_VEIFICATION_TYPE1"*/, v5);
+    sub_1B4CF90(&StringLiteral_1949/*"AGE_VEIFICATION_TYPE2"*/, v6);
+    byte_49B8786 = 1;
   }
-  v7 = sub_1C3B80C(string___TypeInfo, 4LL);
+  v7 = sub_1B4D038(string___TypeInfo, 4LL);
   if ( !v7 )
-    sub_1C3B9C0(0LL, v8);
-  v15 = v7;
+    sub_1B4D1EC(0LL, v8);
+  v11 = v7;
   if ( !*(_DWORD *)(v7 + 24) )
     goto LABEL_9;
-  v16 = StringLiteral_2043/*"AP_RECOVER_RESULT_OVER"*/;
-  *(_QWORD *)(v7 + 32) = StringLiteral_2043/*"AP_RECOVER_RESULT_OVER"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 32), v16, v9, v10, v11, v12, v13, v14);
-  if ( *(_DWORD *)(v15 + 24) <= 1u
-    || (v23 = StringLiteral_2045/*"AP_RECOVER_TITLE"*/,
-        *(_QWORD *)(v15 + 40) = StringLiteral_2045/*"AP_RECOVER_TITLE"*/,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v15 + 40), v23, v17, v18, v19, v20, v21, v22),
-        *(_DWORD *)(v15 + 24) <= 2u)
-    || (v30 = StringLiteral_2046/*"AP_RECOVER_TXT"*/,
-        *(_QWORD *)(v15 + 48) = StringLiteral_2046/*"AP_RECOVER_TXT"*/,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v15 + 48), v30, v24, v25, v26, v27, v28, v29),
-        *(_DWORD *)(v15 + 24) <= 3u) )
+  v12 = StringLiteral_1946/*"AGE_VEIFICATION_NONE"*/;
+  *(_QWORD *)(v7 + 32) = StringLiteral_1946/*"AGE_VEIFICATION_NONE"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 32), v12, v9, v10);
+  if ( *(_DWORD *)(v11 + 24) <= 1u
+    || (v15 = StringLiteral_1948/*"AGE_VEIFICATION_TYPE1"*/,
+        *(_QWORD *)(v11 + 40) = StringLiteral_1948/*"AGE_VEIFICATION_TYPE1"*/,
+        sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 40), v15, v13, v14),
+        *(_DWORD *)(v11 + 24) <= 2u)
+    || (v18 = StringLiteral_1949/*"AGE_VEIFICATION_TYPE2"*/,
+        *(_QWORD *)(v11 + 48) = StringLiteral_1949/*"AGE_VEIFICATION_TYPE2"*/,
+        sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 48), v18, v16, v17),
+        *(_DWORD *)(v11 + 24) <= 3u) )
   {
 LABEL_9:
-    sub_1C3B9C8(v7, v8);
+    sub_1B4D1F4(v7, v8);
   }
-  v37 = StringLiteral_2047/*"AP_TXT"*/;
-  *(_QWORD *)(v15 + 56) = StringLiteral_2047/*"AP_TXT"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v15 + 56), v37, v31, v32, v33, v34, v35, v36);
-  SpendLimitMenu_TypeInfo->static_fields->typeTextList = (struct System_String_array *)v15;
-  sub_1C3B708((PartyOrganizationUtility_o *)SpendLimitMenu_TypeInfo->static_fields, v15, v38, v39, v40, v41, v42, v43);
+  v21 = StringLiteral_1950/*"AGE_VEIFICATION_TYPE3"*/;
+  *(_QWORD *)(v11 + 56) = StringLiteral_1950/*"AGE_VEIFICATION_TYPE3"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 56), v21, v19, v20);
+  SpendLimitMenu_TypeInfo->static_fields->typeTextList = (struct System_String_array *)v11;
+  sub_1B4CF34((CGThumbnailListItem_o *)SpendLimitMenu_TypeInfo->static_fields, v11, v22, v23);
 }
 
 
 void __fastcall SpendLimitMenu___ctor(SpendLimitMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1F958 & 1) == 0 )
+  if ( (byte_49B8785 & 1) == 0 )
   {
-    sub_1C3B764(&BaseDialog_TypeInfo, method);
-    byte_4C1F958 = 1;
+    sub_1B4CF90(&BaseDialog_TypeInfo, method);
+    byte_49B8785 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -99,26 +79,22 @@ void __fastcall SpendLimitMenu___ctor(SpendLimitMenu_o *this, const MethodInfo *
 
 void __fastcall SpendLimitMenu__Callback(SpendLimitMenu_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  PartyOrganizationUtility_o *p_callbackFunc; // x0
-  struct SpendLimitMenu_CallbackFunc_o *v9; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  CGThumbnailListItem_o *p_callbackFunc; // x0
+  struct SpendLimitMenu_CallbackFunc_o *v5; // x19
   struct SpendLimitMenu_CallbackFunc_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (PartyOrganizationUtility_o *)&this->fields.callbackFunc;
-  v9 = callbackFunc;
+  p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
+  v5 = callbackFunc;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C3B708(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
-      v9->fields.original_method_info,
-      *(_QWORD *)&v9->fields.extra_arg);
+    sub_1B4CF34(p_callbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
   }
 }
 
@@ -127,69 +103,53 @@ void __fastcall SpendLimitMenu__Close(SpendLimitMenu_o *this, const MethodInfo *
 {
   const MethodInfo *v2; // x2
 
-  SpendLimitMenu__Close_36502816(this, 0LL, v2);
+  SpendLimitMenu__Close_35520568(this, 0LL, v2);
 }
 
 
-void __fastcall SpendLimitMenu__Close_36502816(
+void __fastcall SpendLimitMenu__Close_35520568(
         SpendLimitMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v10; // x1
-  System_Action_o *v11; // x20
+  const MethodInfo *v3; // x3
+  __int64 v6; // x1
+  System_Action_o *v7; // x20
 
-  if ( (byte_4C1F955 & 1) == 0 )
+  if ( (byte_49B8782 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, callback);
-    sub_1C3B764(&Method_SpendLimitMenu_EndClose__, v10);
-    byte_4C1F955 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, callback);
+    sub_1B4CF90(&Method_SpendLimitMenu_EndClose__, v6);
+    byte_49B8782 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc,
-    (int64_t)callback,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
-  v11 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
-  System_Action___ctor(v11, (Il2CppObject *)this, Method_SpendLimitMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v11, 0LL);
+  v7 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_SpendLimitMenu_EndClose__, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
 
 
 void __fastcall SpendLimitMenu__EndClose(SpendLimitMenu_o *this, const MethodInfo *method)
 {
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
-  PartyOrganizationUtility_o *p_closeCallbackFunc; // x19
-  struct System_Action_o *v10; // x20
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  CGThumbnailListItem_o *p_closeCallbackFunc; // x19
+  struct System_Action_o *v6; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   SpendLimitMenu__Init(this, method);
   closeCallbackFunc = this->fields.closeCallbackFunc;
-  p_closeCallbackFunc = (PartyOrganizationUtility_o *)&this->fields.closeCallbackFunc;
-  v10 = closeCallbackFunc;
+  p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
+  v6 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1C3B708(p_closeCallbackFunc, 0LL, v3, v4, v5, v6, v7, v8);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v10->fields.m_target)(
-      v10->fields.original_method_info,
-      *(_QWORD *)&v10->fields.extra_arg);
+    sub_1B4CF34(p_closeCallbackFunc, 0, v3, v4);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
+      v6->fields.original_method_info,
+      *(_QWORD *)&v6->fields.extra_arg);
   }
 }
 
@@ -204,10 +164,10 @@ void __fastcall SpendLimitMenu__Init(SpendLimitMenu_o *this, const MethodInfo *m
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C1F953 & 1) == 0 )
+  if ( (byte_49B8780 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C1F953 = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49B8780 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -216,7 +176,7 @@ void __fastcall SpendLimitMenu__Init(SpendLimitMenu_o *this, const MethodInfo *m
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = this->fields.closeLabel) == 0LL) )
   {
-    sub_1C3B9C0(titleLabel, method);
+    sub_1B4D1EC(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -232,11 +192,11 @@ bool __fastcall SpendLimitMenu__IsLimitOver(SpendLimitMenu_o *this, int32_t valu
   AgeVerificationMenu_c *v7; // x0
   int32_t Limit; // w0
 
-  if ( (byte_4C1F952 & 1) == 0 )
+  if ( (byte_49B877F & 1) == 0 )
   {
-    sub_1C3B764(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&value);
-    sub_1C3B764(&ManagerConfig_TypeInfo, v4);
-    byte_4C1F952 = 1;
+    sub_1B4CF90(&AgeVerificationMenu_TypeInfo, *(_QWORD *)&value);
+    sub_1B4CF90(&ManagerConfig_TypeInfo, v4);
+    byte_49B877F = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -260,18 +220,18 @@ void __fastcall SpendLimitMenu__OnClickClose(SpendLimitMenu_o *this, const Metho
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C1F956 & 1) == 0 )
+  if ( (byte_49B8783 & 1) == 0 )
   {
-    sub_1C3B764(&Method_SpendLimitMenu_OnClickClose__, method);
-    byte_4C1F956 = 1;
+    sub_1B4CF90(&Method_SpendLimitMenu_OnClickClose__, method);
+    byte_49B8783 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SpendLimitMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_SpendLimitMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3B77C(Method_SpendLimitMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B4CFA8(Method_SpendLimitMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     SpendLimitMenu__Callback(this, v5);
   }
@@ -285,121 +245,101 @@ void __fastcall SpendLimitMenu__Open(
         SpendLimitMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
   int32_t state; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v20; // x1
-  AgeVerificationMenu_c *v21; // x0
+  __int64 v16; // x1
+  AgeVerificationMenu_c *v17; // x0
   int32_t AgeType; // w0
   UILabel_o *titleLabel; // x22
-  int32_t v24; // w21
+  int32_t v20; // w21
   UILabel_o *messageLabel; // x22
-  System_String_o *v26; // x23
-  SpendLimitMenu_c *v27; // x8
+  System_String_o *v22; // x23
+  SpendLimitMenu_c *v23; // x8
   struct System_String_array *typeTextList; // x8
-  Il2CppObject *v29; // x21
+  Il2CppObject *v25; // x21
   Il2CppObject *PriceInfo; // x0
   UILabel_o *closeLabel; // x20
-  System_Action_o *v32; // x20
+  System_Action_o *v28; // x20
   struct SpendLimitMenu_CallbackFunc_o **p_callbackFunc; // x19
 
-  if ( (byte_4C1F954 & 1) == 0 )
+  if ( (byte_49B8781 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&value);
-    sub_1C3B764(&AgeVerificationMenu_TypeInfo, v11);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
-    sub_1C3B764(&Method_SpendLimitMenu_EndOpen__, v13);
-    sub_1C3B764(&SpendLimitMenu_TypeInfo, v14);
-    sub_1C3B764(&StringLiteral_12460/*"SetCameraAccess"*/, v15);
-    sub_1C3B764(&StringLiteral_12461/*"SetClearAlpha"*/, v16);
-    sub_1C3B764(&StringLiteral_12462/*"SetCrashlyticsCollectionEnabled"*/, v17);
-    byte_4C1F954 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&value);
+    sub_1B4CF90(&AgeVerificationMenu_TypeInfo, v7);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v8);
+    sub_1B4CF90(&Method_SpendLimitMenu_EndOpen__, v9);
+    sub_1B4CF90(&SpendLimitMenu_TypeInfo, v10);
+    sub_1B4CF90(&StringLiteral_11993/*"SPEND_LIMIT_CLOSE"*/, v11);
+    sub_1B4CF90(&StringLiteral_11994/*"SPEND_LIMIT_MESSAGE"*/, v12);
+    sub_1B4CF90(&StringLiteral_11995/*"SPEND_LIMIT_TITLE"*/, v13);
+    byte_49B8781 = 1;
   }
   state = this->fields.state;
   if ( state == 3 )
   {
     this->fields.callbackFunc = callback;
     p_callbackFunc = &this->fields.callbackFunc;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)p_callbackFunc,
-      (int64_t)callback,
-      (int64_t)callback,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    sub_1B4CF34((CGThumbnailListItem_o *)p_callbackFunc, (int32_t)callback, (int32_t)callback, method);
     *((_DWORD *)p_callbackFunc - 2) = 0;
   }
   else if ( !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-      (int64_t)callback,
-      (int64_t)callback,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_20;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-    v21 = AgeVerificationMenu_TypeInfo;
+    v17 = AgeVerificationMenu_TypeInfo;
     if ( !AgeVerificationMenu_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AgeVerificationMenu_TypeInfo);
-    AgeType = AgeVerificationMenu__GetAgeType((const MethodInfo *)v21);
+    AgeType = AgeVerificationMenu__GetAgeType((const MethodInfo *)v17);
     titleLabel = this->fields.titleLabel;
-    v24 = AgeType;
+    v20 = AgeType;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12462/*"SetCrashlyticsCollectionEnabled"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11995/*"SPEND_LIMIT_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_20;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
     messageLabel = this->fields.messageLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12461/*"SetClearAlpha"*/, 0LL);
-    v26 = (System_String_o *)gameObject;
-    v27 = SpendLimitMenu_TypeInfo;
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11994/*"SPEND_LIMIT_MESSAGE"*/, 0LL);
+    v22 = (System_String_o *)gameObject;
+    v23 = SpendLimitMenu_TypeInfo;
     if ( !SpendLimitMenu_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SpendLimitMenu_TypeInfo);
-      v27 = SpendLimitMenu_TypeInfo;
+      v23 = SpendLimitMenu_TypeInfo;
     }
-    typeTextList = v27->static_fields->typeTextList;
+    typeTextList = v23->static_fields->typeTextList;
     if ( !typeTextList )
       goto LABEL_20;
-    if ( v24 >= typeTextList->max_length )
-      sub_1C3B9C8(gameObject, v20);
-    v29 = (Il2CppObject *)LocalizationManager__Get(typeTextList->m_Items[v24], 0LL);
+    if ( v20 >= typeTextList->max_length )
+      sub_1B4D1F4(gameObject, v16);
+    v25 = (Il2CppObject *)LocalizationManager__Get(typeTextList->m_Items[v20], 0LL);
     PriceInfo = (Il2CppObject *)LocalizationManager__GetPriceInfo(value, 0LL);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format_63382984(v26, v29, PriceInfo, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format_61134760(v22, v25, PriceInfo, 0LL);
     if ( !messageLabel
       || (UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL),
           closeLabel = this->fields.closeLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12460/*"SetCameraAccess"*/, 0LL),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11993/*"SPEND_LIMIT_CLOSE"*/, 0LL),
           !closeLabel) )
     {
 LABEL_20:
-      sub_1C3B9C0(gameObject, v20);
+      sub_1B4D1EC(gameObject, v16);
     }
     UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
     this->fields.state = 1;
-    v32 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
-    System_Action___ctor(v32, (Il2CppObject *)this, Method_SpendLimitMenu_EndOpen__, 0LL);
-    BaseDialog__Open((BaseDialog_o *)this, v32, 0, 0LL);
+    v28 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    System_Action___ctor(v28, (Il2CppObject *)this, Method_SpendLimitMenu_EndOpen__, 0LL);
+    BaseDialog__Open((BaseDialog_o *)this, v28, 0, 0LL);
   }
 }
 
@@ -419,10 +359,10 @@ void __fastcall SpendLimitMenu__add_callbackFunc(
   SpendLimitMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1F950 & 1) == 0 )
+  if ( (byte_49B877D & 1) == 0 )
   {
-    sub_1C3B764(&SpendLimitMenu_CallbackFunc_TypeInfo, value);
-    byte_4C1F950 = 1;
+    sub_1B4CF90(&SpendLimitMenu_CallbackFunc_TypeInfo, value);
+    byte_49B877D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -435,25 +375,25 @@ void __fastcall SpendLimitMenu__add_callbackFunc(
       if ( (SpendLimitMenu_CallbackFunc_c *)v8->klass != SpendLimitMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3BC80(v8);
+  sub_1B4D4AC(v8);
   SpendLimitMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *__fastcall SpendLimitMenu__get_closeBtnPath(SpendLimitMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1F957 & 1) == 0 )
+  if ( (byte_49B8784 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_15952/*"_Padding"*/, method);
-    byte_4C1F957 = 1;
+    sub_1B4CF90(&StringLiteral_15343/*"Window/CloseButton"*/, method);
+    byte_49B8784 = 1;
   }
-  return (System_String_o *)StringLiteral_15952/*"_Padding"*/;
+  return (System_String_o *)StringLiteral_15343/*"Window/CloseButton"*/;
 }
 
 
@@ -472,10 +412,10 @@ void __fastcall SpendLimitMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1F951 & 1) == 0 )
+  if ( (byte_49B877E & 1) == 0 )
   {
-    sub_1C3B764(&SpendLimitMenu_CallbackFunc_TypeInfo, value);
-    byte_4C1F951 = 1;
+    sub_1B4CF90(&SpendLimitMenu_CallbackFunc_TypeInfo, value);
+    byte_49B877E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -488,13 +428,13 @@ void __fastcall SpendLimitMenu__remove_callbackFunc(
       if ( (SpendLimitMenu_CallbackFunc_c *)v8->klass != SpendLimitMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3BC80(v8);
+  sub_1B4D4AC(v8);
   SpendLimitMenu__IsLimitOver(v11, v12, v13);
 }
 
@@ -506,52 +446,40 @@ void __fastcall SpendLimitMenu_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x8
-  __int64 v10; // x21
-  int v12; // w22
-  struct System_Reflection_MethodInfo_o *v13; // x9
-  __int64 v14; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v10 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v8;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.method,
-    (int64_t)object,
-    *(int64_t *)&method,
-    (int32_t)a4,
-    v4,
-    v5,
-    v6,
-    v7);
-  v12 = *(unsigned __int8 *)(v10 + 82);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v10) & 1) == 0 )
+  if ( (sub_1B4D050(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v14, 0LL);
+      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v10, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v12 )
+  if ( v8 )
   {
 LABEL_5:
-    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v13;
+    this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A7A4A8;
+  this->fields.m_target = (Il2CppObject *)sub_199A140;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7A468;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_199A100;
 }
 
 
@@ -564,7 +492,7 @@ System_IAsyncResult_o *__fastcall SpendLimitMenu_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1C3B718(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, &v5, callback, object);
 }
 
 
@@ -573,7 +501,7 @@ void __fastcall SpendLimitMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 

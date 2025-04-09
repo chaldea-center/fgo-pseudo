@@ -1,21 +1,17 @@
 void __fastcall FGO_TexTrimer___ctor(FGO_TexTrimer_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v9; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  int32_t v5; // w1
 
-  if ( (byte_4C20DDD & 1) == 0 )
+  if ( (byte_49B9CEF & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_16874/*"bit_enemymastercutin01"*/, method);
-    byte_4C20DDD = 1;
+    sub_1B4CF90(&StringLiteral_16249/*"_mainTex"*/, method);
+    byte_49B9CEF = 1;
   }
-  v9 = StringLiteral_16874/*"bit_enemymastercutin01"*/;
-  this->fields.targetTexName = (struct System_String_o *)StringLiteral_16874/*"bit_enemymastercutin01"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetTexName, v9, v2, v3, v4, v5, v6, v7);
+  v5 = StringLiteral_16249/*"_mainTex"*/;
+  this->fields.targetTexName = (struct System_String_o *)StringLiteral_16249/*"_mainTex"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetTexName, v5, v2, v3);
   *(_QWORD *)&this->fields.EndXpx = 0x80000000800LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
@@ -26,10 +22,10 @@ void __fastcall FGO_TexTrimer__OnDestroy(FGO_TexTrimer_o *this, const MethodInfo
   UnityEngine_Object_o *change_texture; // x20
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4C20DDC & 1) == 0 )
+  if ( (byte_49B9CEE & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C20DDC = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B9CEE = 1;
   }
   change_texture = (UnityEngine_Object_o *)this->fields.change_texture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -39,7 +35,7 @@ void __fastcall FGO_TexTrimer__OnDestroy(FGO_TexTrimer_o *this, const MethodInfo
     v4 = (UnityEngine_Object_o *)this->fields.change_texture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_71122936(v4, 0LL);
+    UnityEngine_Object__DestroyImmediate_68804644(v4, 0LL);
   }
 }
 
@@ -52,7 +48,7 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
   __int64 Component_object; // x0
   __int64 v7; // x1
   UnityEngine_Texture_o *v8; // x20
-  UnityEngine_Color_array *Pixels_71013500; // x22
+  UnityEngine_Color_array *Pixels_68695212; // x22
   __int64 v10; // x0
   int32_t StartYpx; // w26
   int32_t EndYpx; // w28
@@ -67,28 +63,24 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
   int32_t v21; // w22
   UnityEngine_Texture2D_o *v22; // x23
   struct UnityEngine_Texture2D_o **p_change_texture; // x22
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   UnityEngine_Texture_o *change_texture; // x23
-  FGO_TexTrimer_o *v31; // x0
-  const MethodInfo *v32; // x1
-  __int128 v33; // [xsp+0h] [xbp-70h] BYREF
+  FGO_TexTrimer_o *v27; // x0
+  const MethodInfo *v28; // x1
+  __int128 v29; // [xsp+0h] [xbp-70h] BYREF
 
-  if ( (byte_4C20DDB & 1) == 0 )
+  if ( (byte_49B9CED & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Color___TypeInfo, method);
-    sub_1C3B764(&UnityEngine_Color_TypeInfo, v3);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, v4);
-    sub_1C3B764(&UnityEngine_Texture2D_TypeInfo, v5);
-    byte_4C20DDB = 1;
+    sub_1B4CF90(&UnityEngine_Color___TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_Color_TypeInfo, v3);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, v4);
+    sub_1B4CF90(&UnityEngine_Texture2D_TypeInfo, v5);
+    byte_49B9CED = 1;
   }
   Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                 (UnityEngine_Component_o *)this,
-                                (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !Component_object )
     goto LABEL_24;
   Component_object = (__int64)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0LL);
@@ -103,8 +95,8 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
   v8 = (UnityEngine_Texture_o *)Component_object;
   if ( *(UnityEngine_Texture2D_c **)Component_object == UnityEngine_Texture2D_TypeInfo )
   {
-    Pixels_71013500 = UnityEngine_Texture2D__GetPixels_71013500((UnityEngine_Texture2D_o *)Component_object, 0LL);
-    v10 = sub_1C3B80C(
+    Pixels_68695212 = UnityEngine_Texture2D__GetPixels_68695212((UnityEngine_Texture2D_o *)Component_object, 0LL);
+    v10 = sub_1B4D038(
             UnityEngine_Color___TypeInfo,
             (unsigned int)((this->fields.EndYpx - this->fields.StartYpx) * (this->fields.EndXpx - this->fields.StartXpx)));
     StartYpx = this->fields.StartYpx;
@@ -128,16 +120,16 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
             Component_object = ((__int64 (__fastcall *)(UnityEngine_Texture_o *, Il2CppMethodPointer))v8->klass->vtable._4_get_width.method)(
                                  v8,
                                  v8->klass->vtable._5_set_width.methodPtr);
-            if ( !Pixels_71013500 )
+            if ( !Pixels_68695212 )
               goto LABEL_24;
             v20 = StartXpx + StartYpx * Component_object;
-            if ( v20 >= Pixels_71013500->max_length )
-              sub_1C3B9C8(Component_object, v7);
-            v33 = *(_OWORD *)&Pixels_71013500->m_Items[v20].fields.g;
-            Component_object = j_il2cpp_value_box_0(UnityEngine_Color_TypeInfo, &v33, v17, v18, v19);
+            if ( v20 >= Pixels_68695212->max_length )
+              sub_1B4D1F4(Component_object, v7);
+            v29 = *(_OWORD *)&Pixels_68695212->m_Items[v20].fields.g;
+            Component_object = j_il2cpp_value_box_0(UnityEngine_Color_TypeInfo, &v29, v17, v18, v19);
             if ( !v13 )
               goto LABEL_24;
-            System_Array__SetValue_64323208(v13, (Il2CppObject *)Component_object, v15, 0LL);
+            System_Array__SetValue_62759276(v13, (Il2CppObject *)Component_object, v15, 0LL);
             EndXpx = this->fields.EndXpx;
             ++StartXpx;
             ++v15;
@@ -151,11 +143,11 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
       StartYpx = this->fields.StartYpx;
     }
     v21 = this->fields.StartXpx;
-    v22 = (UnityEngine_Texture2D_o *)sub_1C3B9B0(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_71010924(v22, EndXpx - v21, EndYpx - StartYpx, 4, 0, 0LL);
+    v22 = (UnityEngine_Texture2D_o *)sub_1B4D1DC(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_68692636(v22, EndXpx - v21, EndYpx - StartYpx, 4, 0, 0LL);
     this->fields.change_texture = v22;
     p_change_texture = &this->fields.change_texture;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.change_texture, (int64_t)v22, v24, v25, v26, v27, v28, v29);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.change_texture, (int32_t)v22, v24, v25);
     change_texture = (UnityEngine_Texture_o *)this->fields.change_texture;
     Component_object = UnityEngine_Texture__get_filterMode(v8, 0LL);
     if ( change_texture )
@@ -164,17 +156,17 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
       Component_object = (__int64)*p_change_texture;
       if ( *p_change_texture )
       {
-        UnityEngine_Texture2D__SetPixels_71012004(
+        UnityEngine_Texture2D__SetPixels_68693716(
           (UnityEngine_Texture2D_o *)Component_object,
           (UnityEngine_Color_array *)v13,
           0LL);
         Component_object = (__int64)*p_change_texture;
         if ( *p_change_texture )
         {
-          UnityEngine_Texture2D__Apply_71012776((UnityEngine_Texture2D_o *)Component_object, 0LL);
+          UnityEngine_Texture2D__Apply_68694488((UnityEngine_Texture2D_o *)Component_object, 0LL);
           Component_object = (__int64)UnityEngine_Component__GetComponent_object_(
                                         (UnityEngine_Component_o *)this,
-                                        (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                        (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
           if ( Component_object )
           {
             Component_object = (__int64)UnityEngine_Renderer__get_material(
@@ -194,8 +186,8 @@ void __fastcall FGO_TexTrimer__Start(FGO_TexTrimer_o *this, const MethodInfo *me
       }
     }
 LABEL_24:
-    sub_1C3B9C0(Component_object, v7);
+    sub_1B4D1EC(Component_object, v7);
   }
-  sub_1C3BC80(Component_object);
-  FGO_TexTrimer__OnDestroy(v31, v32);
+  sub_1B4D4AC(Component_object);
+  FGO_TexTrimer__OnDestroy(v27, v28);
 }

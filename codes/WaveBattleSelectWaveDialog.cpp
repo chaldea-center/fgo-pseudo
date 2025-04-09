@@ -1,9 +1,9 @@
 void __fastcall WaveBattleSelectWaveDialog___ctor(WaveBattleSelectWaveDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1DF7B & 1) == 0 )
+  if ( (byte_49B6E6D & 1) == 0 )
   {
-    sub_1C3B764(&BaseDialog_TypeInfo, method);
-    byte_4C1DF7B = 1;
+    sub_1B4CF90(&BaseDialog_TypeInfo, method);
+    byte_49B6E6D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -23,11 +23,11 @@ void __fastcall WaveBattleSelectWaveDialog__Close(WaveBattleSelectWaveDialog_o *
   UnityEngine_GameObject_o *maskObject; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C1DF77 & 1) == 0 )
+  if ( (byte_49B6E69 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog_EndClose__, v3);
-    byte_4C1DF77 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog_EndClose__, v3);
+    byte_49B6E69 = 1;
   }
   maskObject = this->fields.maskObject;
   this->fields.state = 2;
@@ -35,16 +35,16 @@ void __fastcall WaveBattleSelectWaveDialog__Close(WaveBattleSelectWaveDialog_o *
     || (UnityEngine_GameObject__SetActive(maskObject, 1, 0LL),
         (maskObject = (UnityEngine_GameObject_o *)this->fields.waveInfoListManager) == 0LL) )
   {
-    sub_1C3B9C0(maskObject, method);
+    sub_1B4D1EC(maskObject, method);
   }
   WaveBattleWaveInfoListManager__DestroyList((WaveBattleWaveInfoListManager_o *)maskObject, method);
-  v5 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_WaveBattleSelectWaveDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0LL);
 }
 
 
-void __fastcall WaveBattleSelectWaveDialog__Close_33646080(
+void __fastcall WaveBattleSelectWaveDialog__Close_32745160(
         WaveBattleSelectWaveDialog_o *this,
         System_Action_o *closeCallback,
         const MethodInfo *method)
@@ -54,46 +54,38 @@ void __fastcall WaveBattleSelectWaveDialog__Close_33646080(
   __int64 v7; // x21
   WaveBattleWaveInfoListManager_o *waveInfoListManager; // x0
   const MethodInfo *v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Action_o *v22; // x20
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  System_Action_o *v14; // x20
 
-  if ( (byte_4C1DF78 & 1) == 0 )
+  if ( (byte_49B6E6A & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, closeCallback);
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog___c__DisplayClass27_0__Close_b__0__, v5);
-    sub_1C3B764(&WaveBattleSelectWaveDialog___c__DisplayClass27_0_TypeInfo, v6);
-    byte_4C1DF78 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, closeCallback);
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog___c__DisplayClass27_0__Close_b__0__, v5);
+    sub_1B4CF90(&WaveBattleSelectWaveDialog___c__DisplayClass27_0_TypeInfo, v6);
+    byte_49B6E6A = 1;
   }
-  v7 = sub_1C3B9B0(WaveBattleSelectWaveDialog___c__DisplayClass27_0_TypeInfo);
+  v7 = sub_1B4D1DC(WaveBattleSelectWaveDialog___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7
     || (*(_QWORD *)(v7 + 16) = this,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15),
+        sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11),
         *(_QWORD *)(v7 + 24) = closeCallback,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)closeCallback, v16, v17, v18, v19, v20, v21),
+        sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 24), (int32_t)closeCallback, v12, v13),
         (waveInfoListManager = this->fields.waveInfoListManager) == 0LL) )
   {
-    sub_1C3B9C0(waveInfoListManager, v9);
+    sub_1B4D1EC(waveInfoListManager, v9);
   }
   WaveBattleWaveInfoListManager__DestroyWaveInfoObj(waveInfoListManager, v9);
-  v22 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
+    v14,
     (Il2CppObject *)v7,
     Method_WaveBattleSelectWaveDialog___c__DisplayClass27_0__Close_b__0__,
     0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v22, 0LL);
+  BaseDialog__Close((BaseDialog_o *)this, v14, 0LL);
 }
 
 
@@ -103,7 +95,7 @@ void __fastcall WaveBattleSelectWaveDialog__EndOpen(WaveBattleSelectWaveDialog_o
 
   maskObject = this->fields.maskObject;
   if ( !maskObject )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   UnityEngine_GameObject__SetActive(maskObject, 0, 0LL);
   this->fields.state = 1;
 }
@@ -113,10 +105,10 @@ void __fastcall WaveBattleSelectWaveDialog__Init(WaveBattleSelectWaveDialog_o *t
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C1DF73 & 1) == 0 )
+  if ( (byte_49B6E65 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C1DF73 = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49B6E65 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -127,7 +119,7 @@ void __fastcall WaveBattleSelectWaveDialog__Init(WaveBattleSelectWaveDialog_o *t
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(titleLabel, method);
+    sub_1B4D1EC(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
   this->fields.state = 0;
@@ -142,22 +134,22 @@ void __fastcall WaveBattleSelectWaveDialog__OnClickCancel(WaveBattleSelectWaveDi
   System_Reflection_MethodBase_o *v5; // x0
   struct WaveBattleSelectWaveDialog_CloseDelegate_o *CloseFunc; // x8
 
-  if ( (byte_4C1DF79 & 1) == 0 )
+  if ( (byte_49B6E6B & 1) == 0 )
   {
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog_OnClickCancel__, method);
-    byte_4C1DF79 = 1;
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog_OnClickCancel__, method);
+    byte_49B6E6B = 1;
   }
   if ( this->fields.state == 1 )
   {
     maskObject = this->fields.maskObject;
     this->fields.state = 2;
     if ( !maskObject )
-      sub_1C3B9C0(0LL, method);
+      sub_1B4D1EC(0LL, method);
     UnityEngine_GameObject__SetActive(maskObject, 1, 0LL);
     v4 = Method_WaveBattleSelectWaveDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_WaveBattleSelectWaveDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C3B77C(Method_WaveBattleSelectWaveDialog_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C3B748(v4, v4[4]);
+      v4 = (_QWORD *)sub_1B4CFA8(Method_WaveBattleSelectWaveDialog_OnClickCancel__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0LL);
     CloseFunc = this->fields.CloseFunc;
     if ( CloseFunc )
@@ -195,11 +187,11 @@ void __fastcall WaveBattleSelectWaveDialog__Open(
   __int64 v15; // x1
   System_Action_o *v16; // x20
 
-  if ( (byte_4C1DF75 & 1) == 0 )
+  if ( (byte_49B6E67 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, deckEntity);
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog_EndOpen__, v15);
-    byte_4C1DF75 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, deckEntity);
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog_EndOpen__, v15);
+    byte_49B6E67 = 1;
   }
   WaveBattleSelectWaveDialog__SetDialog(
     this,
@@ -210,13 +202,13 @@ void __fastcall WaveBattleSelectWaveDialog__Open(
     fromScene,
     func,
     method);
-  v16 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_WaveBattleSelectWaveDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v16, 0, 0LL);
 }
 
 
-void __fastcall WaveBattleSelectWaveDialog__Open_33648772(
+void __fastcall WaveBattleSelectWaveDialog__Open_32747852(
         WaveBattleSelectWaveDialog_o *this,
         System_Action_o *endOpenCallback,
         const MethodInfo *method)
@@ -226,42 +218,34 @@ void __fastcall WaveBattleSelectWaveDialog__Open_33648772(
   __int64 v7; // x21
   __int64 v8; // x0
   __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Action_o *v22; // x20
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  System_Action_o *v14; // x20
 
-  if ( (byte_4C1DF76 & 1) == 0 )
+  if ( (byte_49B6E68 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, endOpenCallback);
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog___c__DisplayClass23_0__Open_b__0__, v5);
-    sub_1C3B764(&WaveBattleSelectWaveDialog___c__DisplayClass23_0_TypeInfo, v6);
-    byte_4C1DF76 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, endOpenCallback);
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog___c__DisplayClass23_0__Open_b__0__, v5);
+    sub_1B4CF90(&WaveBattleSelectWaveDialog___c__DisplayClass23_0_TypeInfo, v6);
+    byte_49B6E68 = 1;
   }
-  v7 = sub_1C3B9B0(WaveBattleSelectWaveDialog___c__DisplayClass23_0_TypeInfo);
+  v7 = sub_1B4D1DC(WaveBattleSelectWaveDialog___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1C3B9C0(v8, v9);
+    sub_1B4D1EC(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 24) = endOpenCallback;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 24), (int64_t)endOpenCallback, v16, v17, v18, v19, v20, v21);
-  v22 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 24), (int32_t)endOpenCallback, v12, v13);
+  v14 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v22,
+    v14,
     (Il2CppObject *)v7,
     Method_WaveBattleSelectWaveDialog___c__DisplayClass23_0__Open_b__0__,
     0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v14, 0, 0LL);
 }
 
 
@@ -274,7 +258,7 @@ void __fastcall WaveBattleSelectWaveDialog__OverwriteMoveToPartyButton(
 
   waveInfoListManager = this->fields.waveInfoListManager;
   if ( !waveInfoListManager )
-    sub_1C3B9C0(0LL, callback);
+    sub_1B4D1EC(0LL, callback);
   WaveBattleWaveInfoListManager__OverwriteMoveToPartyButton(waveInfoListManager, callback, method);
 }
 
@@ -289,7 +273,7 @@ void __fastcall WaveBattleSelectWaveDialog__OverwriteSpecifiedWaveCanNotSelectLa
 
   waveInfoListManager = this->fields.waveInfoListManager;
   if ( !waveInfoListManager )
-    sub_1C3B9C0(0LL, wave);
+    sub_1B4D1EC(0LL, wave);
   WaveBattleWaveInfoListManager__OverwriteSpecifiedWaveCanNotSelectLabel(
     waveInfoListManager,
     wave,
@@ -343,35 +327,31 @@ void __fastcall WaveBattleSelectWaveDialog__SetDialog(
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C1DF74 & 1) == 0 )
+  if ( (byte_49B6E66 & 1) == 0 )
   {
-    sub_1C3B764(&WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo, deckEntity);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v15);
-    sub_1C3B764(&Method_DataManager_GetMaster_QuestPhaseMaster___, v16);
-    sub_1C3B764(&DataManager_TypeInfo, v17);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v18);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v19);
-    sub_1C3B764(&Method_WaveBattleSelectWaveDialog_OnSelectWavePartyList__, v20);
-    sub_1C3B764(&StringLiteral_15844/*"_DisplayColor"*/, v21);
-    sub_1C3B764(&StringLiteral_15843/*"_DepthLimit"*/, v22);
-    sub_1C3B764(&StringLiteral_15841/*"_CultureInfo"*/, v23);
-    sub_1C3B764(&StringLiteral_15842/*"_CurTex"*/, v24);
-    byte_4C1DF74 = 1;
+    sub_1B4CF90(&WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo, deckEntity);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_BoxCollider___, v15);
+    sub_1B4CF90(&Method_DataManager_GetMaster_QuestPhaseMaster___, v16);
+    sub_1B4CF90(&DataManager_TypeInfo, v17);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v18);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v19);
+    sub_1B4CF90(&Method_WaveBattleSelectWaveDialog_OnSelectWavePartyList__, v20);
+    sub_1B4CF90(&StringLiteral_15237/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_TITLE_IN_BATTLE"*/, v21);
+    sub_1B4CF90(&StringLiteral_15236/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_TITLE"*/, v22);
+    sub_1B4CF90(&StringLiteral_15234/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_CANCEL_BUTTON"*/, v23);
+    sub_1B4CF90(&StringLiteral_15235/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_MESSAGE"*/, v24);
+    byte_49B6E66 = 1;
   }
   entity = 0LL;
   this->fields.CloseFunc = func;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.CloseFunc,
-    (int64_t)func,
-    (int64_t)questRestrictionInfo,
-    waveCount,
-    *(System_String_o **)&restartWave,
-    *(BattleSetupInfo_o **)&fromScene,
-    (FollowerInfo_o *)func,
-    (PartyListViewItem_o *)method);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields.CloseFunc,
+    (int32_t)func,
+    (int32_t)questRestrictionInfo,
+    *(const MethodInfo **)&waveCount);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = (QuestPhaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !questRestrictionInfo || !Master_object )
     goto LABEL_30;
   QuestPhaseMaster__TryGetEntity(
@@ -395,7 +375,7 @@ void __fastcall WaveBattleSelectWaveDialog__SetDialog(
       goto LABEL_30;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)Master_object,
-                         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                         (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Master_object = (QuestPhaseMaster_o *)UnityEngine_Object__op_Inequality(
@@ -435,11 +415,11 @@ void __fastcall WaveBattleSelectWaveDialog__SetDialog(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0LL);
     v32 = 0;
   }
-  v33 = (System_String_o **)&StringLiteral_15843/*"_DepthLimit"*/;
+  v33 = (System_String_o **)&StringLiteral_15236/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_TITLE"*/;
   v34 = fromScene == 0;
   titleLabel = this->fields.titleLabel;
   if ( !v34 )
-    v33 = (System_String_o **)&StringLiteral_15844/*"_DisplayColor"*/;
+    v33 = (System_String_o **)&StringLiteral_15237/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_TITLE_IN_BATTLE"*/;
   v36 = *v33;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -448,15 +428,15 @@ void __fastcall WaveBattleSelectWaveDialog__SetDialog(
     goto LABEL_30;
   UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0LL);
   messageLabel = this->fields.messageLabel;
-  Master_object = (QuestPhaseMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15842/*"_CurTex"*/, 0LL);
+  Master_object = (QuestPhaseMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15235/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_MESSAGE"*/, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, (System_String_o *)Master_object, 0LL),
         cancelLabel = this->fields.cancelLabel,
-        Master_object = (QuestPhaseMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15841/*"_CultureInfo"*/, 0LL),
+        Master_object = (QuestPhaseMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_15234/*"WAVE_BATTLE_RESTART_SELECT_DIALOG_CANCEL_BUTTON"*/, 0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, (System_String_o *)Master_object, 0LL),
         waveInfoListManager = this->fields.waveInfoListManager,
-        v40 = (WaveBattleWaveInfoListManager_CallbackFunc_o *)sub_1C3B9B0(WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo),
+        v40 = (WaveBattleWaveInfoListManager_CallbackFunc_o *)sub_1B4D1DC(WaveBattleWaveInfoListManager_CallbackFunc_TypeInfo),
         WaveBattleWaveInfoListManager_CallbackFunc___ctor(
           v40,
           (Il2CppObject *)this,
@@ -465,7 +445,7 @@ void __fastcall WaveBattleSelectWaveDialog__SetDialog(
         !waveInfoListManager) )
   {
 LABEL_30:
-    sub_1C3B9C0(Master_object, v26);
+    sub_1B4D1EC(Master_object, v26);
   }
   WaveBattleWaveInfoListManager__CreateList(
     waveInfoListManager,
@@ -485,22 +465,10 @@ void __fastcall WaveBattleSelectWaveDialog__SetPartySelectCallback(
         WaveBattleSelectWaveDialog_CallbackFunc_o *partySelectCallback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = partySelectCallback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-    (int64_t)partySelectCallback,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)partySelectCallback, (int32_t)method, v3);
 }
 
 
@@ -514,7 +482,7 @@ void __fastcall WaveBattleSelectWaveDialog__SetWave(
 
   waveInfoListManager = this->fields.waveInfoListManager;
   if ( !waveInfoListManager )
-    sub_1C3B9C0(0LL, wave);
+    sub_1B4D1EC(0LL, wave);
   WaveBattleWaveInfoListManager__SetScrollPos(waveInfoListManager, wave, 1, v3);
 }
 
@@ -528,7 +496,7 @@ void __fastcall WaveBattleSelectWaveDialog__SetWaveInfoMaskActive(
 
   waveInfoListManager = this->fields.waveInfoListManager;
   if ( !waveInfoListManager )
-    sub_1C3B9C0(0LL, currentWave);
+    sub_1B4D1EC(0LL, currentWave);
   WaveBattleWaveInfoListManager__SetWaveInfoMaskActive(waveInfoListManager, currentWave, method);
 }
 
@@ -548,10 +516,10 @@ void __fastcall WaveBattleSelectWaveDialog__add_CloseFunc(
   WaveBattleSelectWaveDialog_CloseDelegate_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1DF71 & 1) == 0 )
+  if ( (byte_49B6E63 & 1) == 0 )
   {
-    sub_1C3B764(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, value);
-    byte_4C1DF71 = 1;
+    sub_1B4CF90(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, value);
+    byte_49B6E63 = 1;
   }
   CloseFunc = this->fields.CloseFunc;
   p_CloseFunc = &this->fields.CloseFunc;
@@ -564,13 +532,13 @@ void __fastcall WaveBattleSelectWaveDialog__add_CloseFunc(
       if ( (WaveBattleSelectWaveDialog_CloseDelegate_c *)v8->klass != WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_CloseFunc, v8, v6);
+    v9 = sub_1B8724C(p_CloseFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleSelectWaveDialog_o *)sub_1C3BC80(v8);
+  v11 = (WaveBattleSelectWaveDialog_o *)sub_1B4D4AC(v8);
   WaveBattleSelectWaveDialog__remove_CloseFunc(v11, v12, v13);
 }
 
@@ -590,10 +558,10 @@ void __fastcall WaveBattleSelectWaveDialog__add_callbackFunc(
   WaveBattleSelectWaveDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1DF6F & 1) == 0 )
+  if ( (byte_49B6E61 & 1) == 0 )
   {
-    sub_1C3B764(&WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo, value);
-    byte_4C1DF6F = 1;
+    sub_1B4CF90(&WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo, value);
+    byte_49B6E61 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -606,13 +574,13 @@ void __fastcall WaveBattleSelectWaveDialog__add_callbackFunc(
       if ( (WaveBattleSelectWaveDialog_CallbackFunc_c *)v8->klass != WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleSelectWaveDialog_o *)sub_1C3BC80(v8);
+  v11 = (WaveBattleSelectWaveDialog_o *)sub_1B4D4AC(v8);
   WaveBattleSelectWaveDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -625,10 +593,10 @@ UnityEngine_GameObject_o *__fastcall WaveBattleSelectWaveDialog__get_closeBtnObj
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C1DF7A & 1) == 0 )
+  if ( (byte_49B6E6C & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C1DF7A = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B6E6C = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -637,7 +605,7 @@ UnityEngine_GameObject_o *__fastcall WaveBattleSelectWaveDialog__get_closeBtnObj
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -656,10 +624,10 @@ void __fastcall WaveBattleSelectWaveDialog__remove_CloseFunc(
   WaveBattleSelectWaveDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C1DF72 & 1) == 0 )
+  if ( (byte_49B6E64 & 1) == 0 )
   {
-    sub_1C3B764(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, value);
-    byte_4C1DF72 = 1;
+    sub_1B4CF90(&WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo, value);
+    byte_49B6E64 = 1;
   }
   CloseFunc = this->fields.CloseFunc;
   p_CloseFunc = &this->fields.CloseFunc;
@@ -672,13 +640,13 @@ void __fastcall WaveBattleSelectWaveDialog__remove_CloseFunc(
       if ( (WaveBattleSelectWaveDialog_CloseDelegate_c *)v8->klass != WaveBattleSelectWaveDialog_CloseDelegate_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_CloseFunc, v8, v6);
+    v9 = sub_1B8724C(p_CloseFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleSelectWaveDialog_o *)sub_1C3BC80(v8);
+  v11 = (WaveBattleSelectWaveDialog_o *)sub_1B4D4AC(v8);
   WaveBattleSelectWaveDialog__Awake(v11, v12);
 }
 
@@ -698,10 +666,10 @@ void __fastcall WaveBattleSelectWaveDialog__remove_callbackFunc(
   WaveBattleSelectWaveDialog_CloseDelegate_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1DF70 & 1) == 0 )
+  if ( (byte_49B6E62 & 1) == 0 )
   {
-    sub_1C3B764(&WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo, value);
-    byte_4C1DF70 = 1;
+    sub_1B4CF90(&WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo, value);
+    byte_49B6E62 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -714,13 +682,13 @@ void __fastcall WaveBattleSelectWaveDialog__remove_callbackFunc(
       if ( (WaveBattleSelectWaveDialog_CallbackFunc_c *)v8->klass != WaveBattleSelectWaveDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_callbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (WaveBattleSelectWaveDialog_o *)sub_1C3BC80(v8);
+  v11 = (WaveBattleSelectWaveDialog_o *)sub_1B4D4AC(v8);
   WaveBattleSelectWaveDialog__add_CloseFunc(v11, v12, v13);
 }
 
@@ -732,52 +700,40 @@ void __fastcall WaveBattleSelectWaveDialog_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x8
-  __int64 v10; // x21
-  int v12; // w22
-  struct System_Reflection_MethodInfo_o *v13; // x9
-  __int64 v14; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v10 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v8;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.method,
-    (int64_t)object,
-    *(int64_t *)&method,
-    (int32_t)a4,
-    v4,
-    v5,
-    v6,
-    v7);
-  v12 = *(unsigned __int8 *)(v10 + 82);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v10) & 1) == 0 )
+  if ( (sub_1B4D050(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v14, 0LL);
+      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v10, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v12 != 3 )
+  if ( v8 != 3 )
   {
 LABEL_5:
-    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v13;
+    this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A776E4;
+  this->fields.m_target = (Il2CppObject *)sub_19974A8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A77684;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1997448;
 }
 
 
@@ -807,11 +763,11 @@ System_IAsyncResult_o *__fastcall WaveBattleSelectWaveDialog_CallbackFunc__Begin
   v21 = n;
   v22 = result;
   v20 = m;
-  if ( (byte_4C1DF7C & 1) == 0 )
+  if ( (byte_49B6E6E & 1) == 0 )
   {
-    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&result);
-    sub_1C3B764(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, v10);
-    byte_4C1DF7C = 1;
+    sub_1B4CF90(&int_TypeInfo, *(_QWORD *)&result);
+    sub_1B4CF90(&WaveBattlePartyOrganizationMenu_ResultKind_TypeInfo, v10);
+    byte_49B6E6E = 1;
   }
   v19 = 0u;
   v18[0] = j_il2cpp_value_box_0(
@@ -822,7 +778,7 @@ System_IAsyncResult_o *__fastcall WaveBattleSelectWaveDialog_CallbackFunc__Begin
              callback);
   v18[1] = j_il2cpp_value_box_0(int_TypeInfo, &v21, v11, v12, v13);
   *(_QWORD *)&v19 = j_il2cpp_value_box_0(int_TypeInfo, &v20, v14, v15, v16);
-  return (System_IAsyncResult_o *)sub_1C3B718(this, v18, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, v18, callback, object);
 }
 
 
@@ -831,7 +787,7 @@ void __fastcall WaveBattleSelectWaveDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 
@@ -858,52 +814,40 @@ void __fastcall WaveBattleSelectWaveDialog_CloseDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x8
-  __int64 v10; // x21
-  int v12; // w22
-  struct System_Reflection_MethodInfo_o *v13; // x9
-  __int64 v14; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v10 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v8;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.method,
-    (int64_t)object,
-    *(int64_t *)&method,
-    (int32_t)a4,
-    v4,
-    v5,
-    v6,
-    v7);
-  v12 = *(unsigned __int8 *)(v10 + 82);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v10) & 1) == 0 )
+  if ( (sub_1B4D050(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v14, 0LL);
+      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v10, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v12 != 1 )
+  if ( v8 != 1 )
   {
 LABEL_5:
-    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v13;
+    this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A77758;
+  this->fields.m_target = (Il2CppObject *)sub_199751C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A77710;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19974D4;
 }
 
 
@@ -919,14 +863,14 @@ System_IAsyncResult_o *__fastcall WaveBattleSelectWaveDialog_CloseDelegate__Begi
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4C1DF7D & 1) == 0 )
+  if ( (byte_49B6E6F & 1) == 0 )
   {
-    sub_1C3B764(&bool_TypeInfo, isDecide);
-    byte_4C1DF7D = 1;
+    sub_1B4CF90(&bool_TypeInfo, isDecide);
+    byte_49B6E6F = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C3B718(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, v9, callback, object);
 }
 
 
@@ -935,7 +879,7 @@ void __fastcall WaveBattleSelectWaveDialog_CloseDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 
@@ -972,7 +916,7 @@ void __fastcall WaveBattleSelectWaveDialog___c__DisplayClass23_0___Open_b__0(
     || (v3 = this, (this = (WaveBattleSelectWaveDialog___c__DisplayClass23_0_o *)_4__this->fields.maskObject) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL), (v4 = v3->fields.__4__this) == 0LL) )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   v4->fields.state = 1;
   ActionExtensions__Call(v3->fields.endOpenCallback, 0LL);
@@ -995,7 +939,7 @@ void __fastcall WaveBattleSelectWaveDialog___c__DisplayClass27_0___Close_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   WaveBattleSelectWaveDialog__Init(_4__this, method);
   ActionExtensions__Call(this->fields.closeCallback, 0LL);
 }

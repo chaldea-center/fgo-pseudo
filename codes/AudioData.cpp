@@ -3,93 +3,69 @@ void __fastcall AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *cli
   __int64 v5; // x0
   __int64 v6; // x1
   struct System_String_o *name; // x0
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !clip )
-    sub_1C3B9C0(v5, v6);
+    sub_1B4D1EC(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0LL);
   this->fields.name = name;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v8, v9, v10, v11, v12, v13);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v8, v9);
   this->fields.data = clip;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v10, v11);
 }
 
 
-void __fastcall AudioData___ctor_39327788(
+void __fastcall AudioData___ctor_38444204(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
   this->fields.data = clip;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)clip, v13, v14, v15, v16, v17, v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v9, v10);
 }
 
 
-void __fastcall AudioData___ctor_39327856(
+void __fastcall AudioData___ctor_38444272(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  UnityEngine_AudioClip_o *v13; // x0
-  __int64 v14; // x1
-  struct UnityEngine_AudioClip_o *v15; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  UnityEngine_AudioClip_o *v9; // x0
+  __int64 v10; // x1
+  struct UnityEngine_AudioClip_o *v11; // x0
   struct UnityEngine_AudioClip_o **p_data; // x20
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.name = name;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
   if ( !buf
-    || (v15 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0LL),
-        this->fields.data = v15,
+    || (v11 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0LL),
+        this->fields.data = v11,
         p_data = &this->fields.data,
-        sub_1C3B708((PartyOrganizationUtility_o *)p_data, (int64_t)v15, v17, v18, v19, v20, v21, v22),
-        (v13 = *p_data) == 0LL) )
+        sub_1B4CF34((CGThumbnailListItem_o *)p_data, (int32_t)v11, v13, v14),
+        (v9 = *p_data) == 0LL) )
   {
-    sub_1C3B9C0(v13, v14);
+    sub_1B4D1EC(v9, v10);
   }
-  UnityEngine_AudioClip__SetData_70897116(v13, buf, 0, 0LL);
+  UnityEngine_AudioClip__SetData_68578828(v9, buf, 0, 0LL);
 }
 
 
@@ -99,8 +75,8 @@ bool __fastcall AudioData__IsSame(AudioData_o *this, System_String_o *name, cons
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_1C3B9C0(0LL, name);
-  return System_String__Equals_63376928(v3, name, 0LL);
+    sub_1B4D1EC(0LL, name);
+  return System_String__Equals_61128772(v3, name, 0LL);
 }
 
 

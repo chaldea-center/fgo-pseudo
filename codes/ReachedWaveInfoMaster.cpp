@@ -1,14 +1,14 @@
 void __fastcall ReachedWaveInfoMaster___ctor(ReachedWaveInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C225A9 & 1) == 0 )
+  if ( (byte_49BB4D3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__, method);
-    byte_4C225A9 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__, method);
+    byte_49BB4D3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     541,
-    (const MethodInfo_329D5DC *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
+    (const MethodInfo_31A0130 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
 }
 
 
@@ -20,18 +20,18 @@ ReachedWaveInfoEntity_o *__fastcall ReachedWaveInfoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C225A7 & 1) == 0 )
+  if ( (byte_49BB4D1 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4C225A7 = 1;
+    byte_49BB4D1 = 1;
   }
   PK = (Il2CppObject *)ReachedWaveInfoEntity__CreatePK(questId, *(const MethodInfo **)&questId);
   return (ReachedWaveInfoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_329F900 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
+                                      (const MethodInfo_31A2454 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
 }
 
 
@@ -49,17 +49,17 @@ int32_t __fastcall ReachedWaveInfoMaster__GetReachedWave(
   TerminalPramsManager_c *v10; // x0
   ReachedWaveInfoEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C225AA & 1) == 0 )
+  if ( (byte_49BB4D4 & 1) == 0 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
-    byte_4C225AA = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, *(_QWORD *)&questId);
+    byte_49BB4D4 = 1;
   }
   entity = 0LL;
   v6 = ReachedWaveInfoMaster__TryGetEntity(this, &entity, questId, v3);
   if ( v6 )
   {
     if ( !entity )
-      sub_1C3B9C0(v6, v7);
+      sub_1B4D1EC(v6, v7);
     wave = entity->fields.wave;
   }
   else
@@ -68,10 +68,10 @@ int32_t __fastcall ReachedWaveInfoMaster__GetReachedWave(
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1F077 )
+  if ( !byte_49B7F7D )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v7);
-    byte_4C1F077 = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v7);
+    byte_49B7F7D = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -83,10 +83,10 @@ int32_t __fastcall ReachedWaveInfoMaster__GetReachedWave(
   {
     if ( !v9->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v9);
-    if ( !byte_4C1F077 )
+    if ( !byte_49B7F7D )
     {
-      sub_1C3B764(&TerminalPramsManager_TypeInfo, v7);
-      byte_4C1F077 = 1;
+      sub_1B4CF90(&TerminalPramsManager_TypeInfo, v7);
+      byte_49B7F7D = 1;
     }
     v10 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -108,15 +108,15 @@ bool __fastcall ReachedWaveInfoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C225A8 & 1) == 0 )
+  if ( (byte_49BB4D2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__, entity);
-    byte_4C225A8 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__, entity);
+    byte_49BB4D2 = 1;
   }
   PK = (Il2CppObject *)ReachedWaveInfoEntity__CreatePK(questId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_329F94C *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
+           (const MethodInfo_31A24A0 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
 }

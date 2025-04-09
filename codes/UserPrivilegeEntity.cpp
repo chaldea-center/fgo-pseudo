@@ -1,13 +1,13 @@
 void __fastcall UserPrivilegeEntity___ctor(UserPrivilegeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22D87 & 1) == 0 )
+  if ( (byte_49BBCB5 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22D87 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BBCB5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserPrivilegeEntity__CreatePK(
         int32_t privilegeId,
         const MethodInfo *method)
 {
-  if ( (byte_4C22D86 & 1) == 0 )
+  if ( (byte_49BBCB4 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&privilegeId);
-    byte_4C22D86 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&privilegeId);
+    byte_49BBCB4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            privilegeId,
-           (const MethodInfo_2FEE494 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2EFFDB4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -62,27 +62,27 @@ bool __fastcall UserPrivilegeEntity__IsValidPeriod(
   __int64 v13; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C22D85 & 1) == 0 )
+  if ( (byte_49BBCB3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_PrivilegeMaster___, startAt);
-    sub_1C3B764(&DataManager_TypeInfo, v9);
-    sub_1C3B764(&Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__, v10);
-    sub_1C3B764(&NetworkManager_TypeInfo, v11);
-    byte_4C22D85 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_PrivilegeMaster___, startAt);
+    sub_1B4CF90(&DataManager_TypeInfo, v9);
+    sub_1B4CF90(&Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__, v10);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v11);
+    byte_49BBCB3 = 1;
   }
   entity = 0LL;
   *startAt = 0LL;
   *endAt = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_PrivilegeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_PrivilegeMaster___);
   if ( !Master_object )
     goto LABEL_18;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           this->fields.privilegeId,
-          (const MethodInfo_329AE94 *)Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__) )
+          (const MethodInfo_319D9E8 *)Method_DataMasterBase_PrivilegeMaster__PrivilegeEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
@@ -93,7 +93,7 @@ bool __fastcall UserPrivilegeEntity__IsValidPeriod(
   *startAt = this->fields.startedAt;
   if ( !entity )
 LABEL_18:
-    sub_1C3B9C0(Master_object, v13);
+    sub_1B4D1EC(Master_object, v13);
   *endAt = (int64_t)entity[1].monitor + this->fields.startedAt;
   if ( !nowTime )
   {

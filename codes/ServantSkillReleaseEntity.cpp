@@ -1,13 +1,13 @@
 void __fastcall ServantSkillReleaseEntity___ctor(ServantSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C228E9 & 1) == 0 )
+  if ( (byte_49BB815 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C228E9 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB815 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall ServantSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4C228E7 & 1) == 0 )
+  if ( (byte_49BB813 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
-    byte_4C228E7 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&num);
+    byte_49BB813 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_2FEECDC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2F005FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -60,106 +60,78 @@ System_String_o *__fastcall ServantSkillReleaseEntity__getCreatePrimarykey(
   __int64 v6; // x19
   System_String_o *v7; // x0
   __int64 v8; // x1
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  int64_t v34; // x1
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
-  int64_t v47; // x1
-  int64_t v48; // x2
-  int32_t v49; // w3
-  System_String_o *v50; // x4
-  BattleSetupInfo_o *v51; // x5
-  FollowerInfo_o *v52; // x6
-  PartyListViewItem_o *v53; // x7
-  int32_t v55; // [xsp+0h] [xbp-30h] BYREF
-  int32_t v56; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v57; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v58; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  int32_t v23; // w1
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  int32_t v27; // [xsp+0h] [xbp-30h] BYREF
+  int32_t v28; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v29; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v30; // [xsp+Ch] [xbp-24h] BYREF
 
-  v57 = num;
-  v58 = svtId;
-  v55 = idx;
-  v56 = priority;
-  if ( (byte_4C228E6 & 1) == 0 )
+  v29 = num;
+  v30 = svtId;
+  v27 = idx;
+  v28 = priority;
+  if ( (byte_49BB812 & 1) == 0 )
   {
-    sub_1C3B764(&string___TypeInfo, *(_QWORD *)&num);
-    sub_1C3B764(&StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/, v5);
-    byte_4C228E6 = 1;
+    sub_1B4CF90(&string___TypeInfo, *(_QWORD *)&num);
+    sub_1B4CF90(&StringLiteral_1468/*":"*/, v5);
+    byte_49BB812 = 1;
   }
-  v6 = sub_1C3B80C(string___TypeInfo, 7LL);
-  v7 = System_Int32__ToString((int32_t)&v58, 0LL);
+  v6 = sub_1B4D038(string___TypeInfo, 7LL);
+  v7 = System_Int32__ToString((int32_t)&v30, 0LL);
   if ( !v6 )
-    sub_1C3B9C0(v7, v8);
+    sub_1B4D1EC(v7, v8);
   if ( !*(_DWORD *)(v6 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v6 + 32) = v7;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 32), (int64_t)v7, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 32), (int32_t)v7, v9, v10);
   if ( *(_DWORD *)(v6 + 24) <= 1u )
     goto LABEL_12;
-  v21 = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/;
-  *(_QWORD *)(v6 + 40) = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 40), v21, v15, v16, v17, v18, v19, v20);
-  v7 = System_Int32__ToString((int32_t)&v57, 0LL);
+  v13 = StringLiteral_1468/*":"*/;
+  *(_QWORD *)(v6 + 40) = StringLiteral_1468/*":"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 40), v13, v11, v12);
+  v7 = System_Int32__ToString((int32_t)&v29, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v6 + 48) = v7;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 48), (int64_t)v7, v22, v23, v24, v25, v26, v27);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 48), (int32_t)v7, v14, v15);
   if ( *(_DWORD *)(v6 + 24) <= 3u )
     goto LABEL_12;
-  v34 = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/;
-  *(_QWORD *)(v6 + 56) = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 56), v34, v28, v29, v30, v31, v32, v33);
-  v7 = System_Int32__ToString((int32_t)&v56, 0LL);
+  v18 = StringLiteral_1468/*":"*/;
+  *(_QWORD *)(v6 + 56) = StringLiteral_1468/*":"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 56), v18, v16, v17);
+  v7 = System_Int32__ToString((int32_t)&v28, 0LL);
   if ( *(_DWORD *)(v6 + 24) <= 4u
     || (*(_QWORD *)(v6 + 64) = v7,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 64), (int64_t)v7, v35, v36, v37, v38, v39, v40),
+        sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 64), (int32_t)v7, v19, v20),
         *(_DWORD *)(v6 + 24) <= 5u)
-    || (v47 = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/,
-        *(_QWORD *)(v6 + 72) = StringLiteral_1525/*"</Exponent></RSAKeyValue>"*/,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 72), v47, v41, v42, v43, v44, v45, v46),
-        v7 = System_Int32__ToString((int32_t)&v55, 0LL),
+    || (v23 = StringLiteral_1468/*":"*/,
+        *(_QWORD *)(v6 + 72) = StringLiteral_1468/*":"*/,
+        sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 72), v23, v21, v22),
+        v7 = System_Int32__ToString((int32_t)&v27, 0LL),
         *(_DWORD *)(v6 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C3B9C8(v7, v8);
+    sub_1B4D1F4(v7, v8);
   }
   *(_QWORD *)(v6 + 80) = v7;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 80), (int64_t)v7, v48, v49, v50, v51, v52, v53);
-  return System_String__Concat_63382140((System_String_array *)v6, 0LL);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 80), (int32_t)v7, v24, v25);
+  return System_String__Concat_61133984((System_String_array *)v6, 0LL);
 }
 
 
@@ -185,21 +157,21 @@ bool __fastcall ServantSkillReleaseEntity__isUse(
   int32_t v22; // w20
   int64_t v23; // x19
 
-  if ( (byte_4C228E8 & 1) == 0 )
+  if ( (byte_49BB814 & 1) == 0 )
   {
-    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
-    sub_1C3B764(&NetworkManager_TypeInfo, v11);
-    byte_4C228E8 = 1;
+    sub_1B4CF90(&CondType_TypeInfo, *(_QWORD *)&dispLimitCount);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v11);
+    byte_49BB814 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C1C955 )
+    if ( !byte_49B57A5 )
     {
-      sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&dispLimitCount);
-      byte_4C1C955 = 1;
+      sub_1B4CF90(&NetworkManager_TypeInfo, *(_QWORD *)&dispLimitCount);
+      byte_49B57A5 = 1;
     }
     v15 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )

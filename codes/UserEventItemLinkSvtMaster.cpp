@@ -1,14 +1,14 @@
 void __fastcall UserEventItemLinkSvtMaster___ctor(UserEventItemLinkSvtMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22C6B & 1) == 0 )
+  if ( (byte_49BBB99 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int___ctor__, method);
-    byte_4C22C6B = 1;
+    sub_1B4CF90(&Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int___ctor__, method);
+    byte_49BBB99 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     539,
-    (const MethodInfo_3298B24 *)Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int___ctor__);
+    (const MethodInfo_319B678 *)Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int___ctor__);
 }
 
 
@@ -32,98 +32,90 @@ EventItemUsedInfo_array *__fastcall UserEventItemLinkSvtMaster__EnableEventItemU
   __int64 v17; // x0
   __int64 v18; // x1
   Il2CppObject *Master_object; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v27; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v28; // x0
-  UserEventItemLinkSvtMaster___c_c *v29; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v30; // x19
+  System_Func_object__bool__o *v23; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  UserEventItemLinkSvtMaster___c_c *v25; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v26; // x19
   System_Func_object__object__o *_9__1_1; // x20
-  Il2CppObject *v32; // x21
+  Il2CppObject *v28; // x21
   struct UserEventItemLinkSvtMaster___c_StaticFields *static_fields; // x0
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v40; // x0
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v32; // x0
 
-  if ( (byte_4C22C6C & 1) == 0 )
+  if ( (byte_49BBB9A & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventMaster___, nowTime);
-    sub_1C3B764(&DataManager_TypeInfo, v5);
-    sub_1C3B764(&Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int__getEntityList__, v6);
-    sub_1C3B764(&Method_System_Linq_Enumerable_SelectMany_UserEventItemLinkSvtEntity__EventItemUsedInfo___, v7);
-    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_EventItemUsedInfo___, v8);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Where_UserEventItemLinkSvtEntity___, v9);
-    sub_1C3B764(&System_Func_UserEventItemLinkSvtEntity__bool__TypeInfo, v10);
-    sub_1C3B764(&System_Func_UserEventItemLinkSvtEntity__IEnumerable_EventItemUsedInfo___TypeInfo, v11);
-    sub_1C3B764(&Method_UserEventItemLinkSvtMaster___c__EnableEventItemUsedInfo_b__1_1__, v12);
-    sub_1C3B764(&Method_UserEventItemLinkSvtMaster___c__DisplayClass1_0__EnableEventItemUsedInfo_b__0__, v13);
-    sub_1C3B764(&UserEventItemLinkSvtMaster___c__DisplayClass1_0_TypeInfo, v14);
-    sub_1C3B764(&UserEventItemLinkSvtMaster___c_TypeInfo, v15);
-    byte_4C22C6C = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventMaster___, nowTime);
+    sub_1B4CF90(&DataManager_TypeInfo, v5);
+    sub_1B4CF90(&Method_DataMasterBase_UserEventItemLinkSvtMaster__UserEventItemLinkSvtEntity__int__getEntityList__, v6);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_SelectMany_UserEventItemLinkSvtEntity__EventItemUsedInfo___, v7);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_ToArray_EventItemUsedInfo___, v8);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_UserEventItemLinkSvtEntity___, v9);
+    sub_1B4CF90(&System_Func_UserEventItemLinkSvtEntity__bool__TypeInfo, v10);
+    sub_1B4CF90(&System_Func_UserEventItemLinkSvtEntity__IEnumerable_EventItemUsedInfo___TypeInfo, v11);
+    sub_1B4CF90(&Method_UserEventItemLinkSvtMaster___c__EnableEventItemUsedInfo_b__1_1__, v12);
+    sub_1B4CF90(&Method_UserEventItemLinkSvtMaster___c__DisplayClass1_0__EnableEventItemUsedInfo_b__0__, v13);
+    sub_1B4CF90(&UserEventItemLinkSvtMaster___c__DisplayClass1_0_TypeInfo, v14);
+    sub_1B4CF90(&UserEventItemLinkSvtMaster___c_TypeInfo, v15);
+    byte_49BBB9A = 1;
   }
-  v16 = sub_1C3B9B0(UserEventItemLinkSvtMaster___c__DisplayClass1_0_TypeInfo);
+  v16 = sub_1B4D1DC(UserEventItemLinkSvtMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v16, 0LL);
   if ( !v16 )
-    sub_1C3B9C0(v17, v18);
+    sub_1B4D1EC(v17, v18);
   *(_QWORD *)(v16 + 24) = nowTime;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventMaster___);
   *(_QWORD *)(v16 + 16) = Master_object;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v16 + 16), (int64_t)Master_object, v20, v21, v22, v23, v24, v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v16 + 16), (int32_t)Master_object, v20, v21);
   list = this->fields.list;
-  v27 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_UserEventItemLinkSvtEntity__bool__TypeInfo);
+  v23 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_UserEventItemLinkSvtEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v27,
+    v23,
     (Il2CppObject *)v16,
     Method_UserEventItemLinkSvtMaster___c__DisplayClass1_0__EnableEventItemUsedInfo_b__0__,
     0LL);
-  v28 = System_Linq_Enumerable__Where_object_(
+  v24 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v27,
-          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_UserEventItemLinkSvtEntity___);
-  v29 = UserEventItemLinkSvtMaster___c_TypeInfo;
-  v30 = v28;
+          (System_Func_TSource__bool__o *)v23,
+          (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_UserEventItemLinkSvtEntity___);
+  v25 = UserEventItemLinkSvtMaster___c_TypeInfo;
+  v26 = v24;
   if ( !UserEventItemLinkSvtMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserEventItemLinkSvtMaster___c_TypeInfo);
-    v29 = UserEventItemLinkSvtMaster___c_TypeInfo;
+    v25 = UserEventItemLinkSvtMaster___c_TypeInfo;
   }
-  _9__1_1 = (System_Func_object__object__o *)v29->static_fields->__9__1_1;
+  _9__1_1 = (System_Func_object__object__o *)v25->static_fields->__9__1_1;
   if ( !_9__1_1 )
   {
-    if ( !v29->_2.cctor_finished )
+    if ( !v25->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v29);
-      v29 = UserEventItemLinkSvtMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v25);
+      v25 = UserEventItemLinkSvtMaster___c_TypeInfo;
     }
-    v32 = (Il2CppObject *)v29->static_fields->__9;
-    _9__1_1 = (System_Func_object__object__o *)sub_1C3B9B0(System_Func_UserEventItemLinkSvtEntity__IEnumerable_EventItemUsedInfo___TypeInfo);
+    v28 = (Il2CppObject *)v25->static_fields->__9;
+    _9__1_1 = (System_Func_object__object__o *)sub_1B4D1DC(System_Func_UserEventItemLinkSvtEntity__IEnumerable_EventItemUsedInfo___TypeInfo);
     System_Func_object__object____ctor(
       _9__1_1,
-      v32,
+      v28,
       Method_UserEventItemLinkSvtMaster___c__EnableEventItemUsedInfo_b__1_1__,
       0LL);
     static_fields = UserEventItemLinkSvtMaster___c_TypeInfo->static_fields;
     static_fields->__9__1_1 = (struct System_Func_UserEventItemLinkSvtEntity__IEnumerable_EventItemUsedInfo___o *)_9__1_1;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__1_1, (int64_t)_9__1_1, v34, v35, v36, v37, v38, v39);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__1_1, (int32_t)_9__1_1, v30, v31);
   }
-  v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__object_(
-                                                               v30,
+  v32 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__object_(
+                                                               v26,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)_9__1_1,
-                                                               (const MethodInfo_3025020 *)Method_System_Linq_Enumerable_SelectMany_UserEventItemLinkSvtEntity__EventItemUsedInfo___);
+                                                               (const MethodInfo_2F3673C *)Method_System_Linq_Enumerable_SelectMany_UserEventItemLinkSvtEntity__EventItemUsedInfo___);
   return (EventItemUsedInfo_array *)System_Linq_Enumerable__ToArray_object_(
-                                      v40,
-                                      (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_EventItemUsedInfo___);
+                                      v32,
+                                      (const MethodInfo_2F3C3E4 *)Method_System_Linq_Enumerable_ToArray_EventItemUsedInfo___);
 }
 
 
@@ -131,30 +123,18 @@ void __fastcall UserEventItemLinkSvtMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C22C6D & 1) == 0 )
+  if ( (byte_49BBB9B & 1) == 0 )
   {
-    sub_1C3B764(&UserEventItemLinkSvtMaster___c_TypeInfo, v1);
-    byte_4C22C6D = 1;
+    sub_1B4CF90(&UserEventItemLinkSvtMaster___c_TypeInfo, v1);
+    byte_49BBB9B = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(UserEventItemLinkSvtMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(UserEventItemLinkSvtMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   UserEventItemLinkSvtMaster___c_TypeInfo->static_fields->__9 = (struct UserEventItemLinkSvtMaster___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)UserEventItemLinkSvtMaster___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)UserEventItemLinkSvtMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -170,7 +150,7 @@ System_Collections_Generic_IEnumerable_EventItemUsedInfo__o *__fastcall UserEven
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return (System_Collections_Generic_IEnumerable_EventItemUsedInfo__o *)entity->fields.eventItemUsedList;
 }
 
@@ -192,12 +172,12 @@ bool __fastcall UserEventItemLinkSvtMaster___c__DisplayClass1_0___EnableEventIte
   Il2CppObject *entitya; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4C22C6E & 1) == 0 )
+  if ( (byte_49BBB9C & 1) == 0 )
   {
-    this = (UserEventItemLinkSvtMaster___c__DisplayClass1_0_o *)sub_1C3B764(
+    this = (UserEventItemLinkSvtMaster___c__DisplayClass1_0_o *)sub_1B4CF90(
                                                                   &Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__,
                                                                   entity);
-    byte_4C22C6E = 1;
+    byte_49BBB9C = 1;
   }
   entitya = 0LL;
   if ( !entity )
@@ -209,12 +189,12 @@ bool __fastcall UserEventItemLinkSvtMaster___c__DisplayClass1_0___EnableEventIte
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           &entitya,
           entity->fields.eventId,
-          (const MethodInfo_329AE94 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+          (const MethodInfo_319D9E8 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     return 0;
   this = (UserEventItemLinkSvtMaster___c__DisplayClass1_0_o *)entitya;
   if ( !entitya )
 LABEL_11:
-    sub_1C3B9C0(this, entity);
+    sub_1B4D1EC(this, entity);
   if ( !EventEntity__IsEventPeriod((EventEntity_o *)entitya, v4->fields.nowTime, 0LL) )
     return 0;
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)entity->fields.eventItemUsedList, 0LL);

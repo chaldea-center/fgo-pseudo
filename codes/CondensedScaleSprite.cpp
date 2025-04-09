@@ -31,7 +31,7 @@ float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_
         maxLabelWidth = this->fields.maxLabelWidth,
         (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0LL) )
   {
-    sub_1C3B9C0(UISprite, v4);
+    sub_1B4D1EC(UISprite, v4);
   }
   if ( mWidth <= maxLabelWidth )
     v8 = mWidth;
@@ -59,7 +59,7 @@ float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o 
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel || (mText = uiLabel->fields.mText) == 0LL )
-      sub_1C3B9C0(v3, v4);
+      sub_1B4D1EC(v3, v4);
     if ( mText->fields._stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -81,7 +81,7 @@ float __fastcall CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSpri
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
   if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0LL )
-    sub_1C3B9C0(UISprite, v5);
+    sub_1B4D1EC(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
@@ -110,43 +110,39 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_1C3B9C0(uiLabel, method);
+    sub_1B4D1EC(uiLabel, method);
   }
 }
 
 
 void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
   struct UILabel_o *uiLabel; // x8
   struct System_String_o *mText; // x1
-  CondensedScaleSprite_o *v10; // x19
-  const MethodInfo *v11; // x1
+  CondensedScaleSprite_o *v6; // x19
+  const MethodInfo *v7; // x1
   float CondensedRatio; // s8
-  const MethodInfo *v13; // x1
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v9; // x1
+  UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
   uiLabel = this->fields.uiLabel;
   if ( !uiLabel
     || (mText = uiLabel->fields.mText,
-        v10 = this,
+        v6 = this,
         this->fields.previousText = mText,
-        sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.previousText, (int64_t)mText, v2, v3, v4, v5, v6, v7),
-        CondensedRatio = CondensedScaleSprite__GetCondensedRatio(v10, v11),
-        (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v10, v13)) == 0LL)
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3),
+        CondensedRatio = CondensedScaleSprite__GetCondensedRatio(v6, v7),
+        (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v6, v9)) == 0LL)
     || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
-  v14.fields.y = 1.0;
-  v14.fields.z = 1.0;
-  v14.fields.x = CondensedRatio;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v14, 0LL);
+  v10.fields.y = 1.0;
+  v10.fields.z = 1.0;
+  v10.fields.x = CondensedRatio;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v10, 0LL);
 }
 
 
@@ -159,7 +155,7 @@ void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0LL) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
@@ -171,18 +167,14 @@ UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o
   __int64 v3; // x1
   UnityEngine_Object_o *uiSprite; // x21
   Il2CppObject *Component_object; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C2343D & 1) == 0 )
+  if ( (byte_49BC36C & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C2343D = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49BC36C = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -191,17 +183,9 @@ UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_object;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.uiSprite,
-      (int64_t)Component_object,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.uiSprite, (int32_t)Component_object, v6, v7);
   }
   return this->fields.uiSprite;
 }

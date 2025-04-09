@@ -9,21 +9,17 @@ void __fastcall SubmarineSelectScannerListViewItem___ctor(
         const MethodInfo *method)
 {
   SubmarineSelectScannerListViewItem_o *v13; // x24
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
   v13 = this;
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   v13->fields._name_k__BackingField = name;
   v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 128);
   LODWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_1C3B708((PartyOrganizationUtility_o *)v13, (int64_t)name, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)v13, (int32_t)name, v14, v15);
   LOBYTE(v13->fields.selectNum) = enabled;
 }
 
@@ -81,22 +77,14 @@ void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._consumeItemDetail_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._consumeItemDetail_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._consumeItemDetail_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -132,22 +120,10 @@ void __fastcall SubmarineSelectScannerListViewItem__set_name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._name_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._name_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

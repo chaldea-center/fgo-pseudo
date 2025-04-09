@@ -23,10 +23,10 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   il2cpp_array_size_t v14; // w21
 
   v4 = this;
-  if ( (byte_4C2341A & 1) == 0 )
+  if ( (byte_49BC349 & 1) == 0 )
   {
-    this = (ObjectSwitchEffectSubComponent_o *)sub_1C3B764(&RaceResultEffectParam_TypeInfo, param);
-    byte_4C2341A = 1;
+    this = (ObjectSwitchEffectSubComponent_o *)sub_1B4CF90(&RaceResultEffectParam_TypeInfo, param);
+    byte_49BC349 = 1;
   }
   if ( param
     && (methodPtr_low = LOBYTE(RaceResultEffectParam_TypeInfo->vtable._0_Equals.methodPtr),
@@ -44,7 +44,7 @@ void __fastcall ObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_28:
-    sub_1C3B9C0(this, param);
+    sub_1B4D1EC(this, param);
   max_length = switchObjectList->max_length;
   if ( !v6 )
     goto LABEL_22;
@@ -98,7 +98,7 @@ LABEL_22:
           goto LABEL_28;
       }
 LABEL_30:
-      sub_1C3B9C8(this, param);
+      sub_1B4D1F4(this, param);
     }
   }
 }

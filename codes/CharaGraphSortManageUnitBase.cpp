@@ -9,22 +9,10 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
         System_String_o *sortSaveKeyPrefix,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields,
-    (int64_t)sortSaveKeyPrefix,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
 }
 
 
@@ -39,17 +27,13 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
   int32_t v7; // w23
   __int64 v8; // x0
   __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C2130C & 1) == 0 )
+  if ( (byte_49BA220 & 1) == 0 )
   {
-    sub_1C3B764(&ListViewSort_TypeInfo, method);
-    byte_4C2130C = 1;
+    sub_1B4CF90(&ListViewSort_TypeInfo, method);
+    byte_49BA220 = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -58,20 +42,20 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
                               this,
                               this->klass[1]._1.name);
-    v6 = System_String__Concat_63368612(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
+    v6 = System_String__Concat_61093468(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
            this,
            this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_1C3B9B0(ListViewSort_TypeInfo);
-    ListViewSort___ctor_42232596(sortInfo, v6, v7, 0, 0LL);
+    sortInfo = (struct ListViewSort_o *)sub_1B4D1DC(ListViewSort_TypeInfo);
+    ListViewSort___ctor_41359140(sortInfo, v6, v7, 0, 0LL);
     v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
            this,
            this->klass[1]._1.this_arg.data);
     if ( !sortInfo )
-      sub_1C3B9C0(v8, v9);
+      sub_1B4D1EC(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sortInfo, (int64_t)sortInfo, v10, v11, v12, v13, v14, v15);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
   }
   return sortInfo;
 }
@@ -90,12 +74,8 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

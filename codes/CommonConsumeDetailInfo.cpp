@@ -5,75 +5,35 @@ void __fastcall CommonConsumeDetailInfo___ctor(
         Il2CppObject *userOwnStatusEntity,
         const MethodInfo *method)
 {
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
-  __int64 v27; // x0
-  const MethodInfo *v28; // x1
-  struct CommonConsumeEntity_o *v29; // x8
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  __int64 v15; // x0
+  const MethodInfo *v16; // x1
+  struct CommonConsumeEntity_o *v17; // x8
   struct System_String_o *TargetName; // x0
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
-  const MethodInfo *v37; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.CommonConsumeEntity = commonConsumeEntity;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)commonConsumeEntity, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)commonConsumeEntity, v9, v10);
   this->fields.targetEntity = targetEntity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.targetEntity,
-    (int64_t)targetEntity,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetEntity, (int32_t)targetEntity, v11, v12);
   this->fields.userOwnStatusEntity = userOwnStatusEntity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.userOwnStatusEntity,
-    (int64_t)userOwnStatusEntity,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
-  v29 = this->fields.CommonConsumeEntity;
-  if ( !v29 )
-    sub_1C3B9C0(v27, v28);
-  this->fields._Num_k__BackingField = v29->fields.num;
-  TargetName = CommonConsumeDetailInfo__GetTargetName(this, v28);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.userOwnStatusEntity, (int32_t)userOwnStatusEntity, v13, v14);
+  v17 = this->fields.CommonConsumeEntity;
+  if ( !v17 )
+    sub_1B4D1EC(v15, v16);
+  this->fields._Num_k__BackingField = v17->fields.num;
+  TargetName = CommonConsumeDetailInfo__GetTargetName(this, v16);
   this->fields._Name_k__BackingField = TargetName;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
-    (int64_t)TargetName,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36);
-  this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v37);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)TargetName, v19, v20);
+  this->fields._IsOwnedEnoughly_k__BackingField = CommonConsumeDetailInfo__CheckIsOwnedEnoughly(this, v21);
 }
 
 
@@ -88,11 +48,11 @@ bool __fastcall CommonConsumeDetailInfo__CheckIsOwnedEnoughly(
   Il2CppObject *userOwnStatusEntity; // x8
   __int64 v8; // x11
 
-  if ( (byte_4C21A55 & 1) == 0 )
+  if ( (byte_49BA96A & 1) == 0 )
   {
-    sub_1C3B764(&ItemEntity_TypeInfo, method);
-    sub_1C3B764(&UserItemEntity_TypeInfo, v3);
-    byte_4C21A55 = 1;
+    sub_1B4CF90(&ItemEntity_TypeInfo, method);
+    sub_1B4CF90(&UserItemEntity_TypeInfo, v3);
+    byte_49BA96A = 1;
   }
   targetEntity = this->fields.targetEntity;
   result = targetEntity
@@ -117,11 +77,11 @@ System_String_o *__fastcall CommonConsumeDetailInfo__GetTargetName(
   __int64 methodPtr_low; // x11
   System_String_o **p_monitor; // x8
 
-  if ( (byte_4C21A54 & 1) == 0 )
+  if ( (byte_49BA969 & 1) == 0 )
   {
-    sub_1C3B764(&ItemEntity_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v3);
-    byte_4C21A54 = 1;
+    sub_1B4CF90(&ItemEntity_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v3);
+    byte_49BA969 = 1;
   }
   targetEntity = this->fields.targetEntity;
   if ( targetEntity
@@ -173,22 +133,10 @@ void __fastcall CommonConsumeDetailInfo__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

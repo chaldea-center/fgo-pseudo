@@ -1,48 +1,40 @@
 void __fastcall TransformServantInfo___ctor(TransformServantInfo_o *this, const MethodInfo *method)
 {
-  void *v3; // x1
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v3; // w1
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C2327E & 1) == 0 )
+  if ( (byte_49BC1AD & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C2327E = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49BC1AD = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.svtId = 0LL;
-  v3 = StringLiteral_1/*""*/;
+  v3 = (int)StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.titleText, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.titleText, v3, v4, v5);
 }
 
 
-void __fastcall TransformServantInfo___ctor_42018168(
+void __fastcall TransformServantInfo___ctor_41144712(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
         System_String_o *titleText,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *v8; // x22
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  TransformServantInfo_o *v8; // x22
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  v8 = (PartyOrganizationUtility_o *)this;
+  v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v8->fields._normalFollowerInfo = (struct FollowerInfo_o *)titleText;
-  v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
-  *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = svtId;
-  *(_DWORD *)(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = dispLimitCount;
-  sub_1C3B708(v8, (int64_t)titleText, v9, v10, v11, v12, v13, v14);
+  v8->fields.titleText = titleText;
+  v8 = (TransformServantInfo_o *)((char *)v8 + 24);
+  LODWORD(v8[-1].fields.titleText) = svtId;
+  HIDWORD(v8[-1].fields.titleText) = dispLimitCount;
+  sub_1B4CF34((CGThumbnailListItem_o *)v8, (int32_t)titleText, v9, v10);
 }
 
 
@@ -56,10 +48,10 @@ int32_t __fastcall TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4C2327F & 1) == 0 )
+  if ( (byte_49BC1AE & 1) == 0 )
   {
-    sub_1C3B764(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
-    byte_4C2327F = 1;
+    sub_1B4CF90(&ImageLimitCount_TypeInfo, *(_QWORD *)&limitCount);
+    byte_49BC1AE = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

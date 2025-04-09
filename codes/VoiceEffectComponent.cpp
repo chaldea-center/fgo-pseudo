@@ -1,9 +1,9 @@
 void __fastcall VoiceEffectComponent___ctor(VoiceEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2343C & 1) == 0 )
+  if ( (byte_49BC36B & 1) == 0 )
   {
-    sub_1C3B764(&CommonEffectComponent_TypeInfo, method);
-    byte_4C2343C = 1;
+    sub_1B4CF90(&CommonEffectComponent_TypeInfo, method);
+    byte_49BC36B = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -24,31 +24,27 @@ void __fastcall VoiceEffectComponent__LoadVoiceAsset(
   Il2CppObject *v10; // x0
   struct System_String_o *v11; // x0
   struct System_String_o **p_voicePath; // x20
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  System_String_o *v19; // x20
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  System_String_o *v15; // x20
   int32_t voiceId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C2343B & 1) == 0 )
+  if ( (byte_49BC36A & 1) == 0 )
   {
-    sub_1C3B764(&int_TypeInfo, callback);
-    sub_1C3B764(&SoundManager_TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_25613, v8);
-    byte_4C2343B = 1;
+    sub_1B4CF90(&int_TypeInfo, callback);
+    sub_1B4CF90(&SoundManager_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_24801/*"{0}_{1}"*/, v8);
+    byte_49BC36A = 1;
   }
   voiceDataStr = (Il2CppObject *)this->fields.voiceDataStr;
   voiceId = this->fields.voiceId;
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &voiceId, method, v3, v4);
-  v11 = System_String__Format_63382984((System_String_o *)StringLiteral_25613, voiceDataStr, v10, 0LL);
+  v11 = System_String__Format_61134760((System_String_o *)StringLiteral_24801/*"{0}_{1}"*/, voiceDataStr, v10, 0LL);
   this->fields.voicePath = v11;
   p_voicePath = &this->fields.voicePath;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_voicePath, (int64_t)v11, v13, v14, v15, v16, v17, v18);
-  v19 = *p_voicePath;
+  sub_1B4CF34((CGThumbnailListItem_o *)p_voicePath, (int32_t)v11, v13, v14);
+  v15 = *p_voicePath;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__loadAudioAssetStorage(v19, callback, 1, 0LL);
+  SoundManager__loadAudioAssetStorage(v15, callback, 1, 0LL);
 }

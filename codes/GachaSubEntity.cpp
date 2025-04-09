@@ -1,28 +1,28 @@
 void __fastcall GachaSubEntity___ctor(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22222 & 1) == 0 )
+  if ( (byte_49BB138 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22222 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB138 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall GachaSubEntity__CreatePK(int32_t gachaId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4C22221 & 1) == 0 )
+  if ( (byte_49BB137 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
-    byte_4C22221 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&id);
+    byte_49BB137 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            gachaId,
            id,
-           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -36,43 +36,43 @@ System_String_o *__fastcall GachaSubEntity__CreatePrimaryKey(GachaSubEntity_o *t
 
 System_String_o *__fastcall GachaSubEntity__GetSummonConfirmMessage(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2221D & 1) == 0 )
+  if ( (byte_49BB133 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_13366/*"TerminalLastPlayedFreeQuestSpotId"*/, method);
-    byte_4C2221D = 1;
+    sub_1B4CF90(&StringLiteral_12872/*"SummonConfirmMessage"*/, method);
+    byte_49BB133 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_13366/*"TerminalLastPlayedFreeQuestSpotId"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_12872/*"SummonConfirmMessage"*/, 0LL, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageFontSize(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22220 & 1) == 0 )
+  if ( (byte_49BB136 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_6932/*"GetResponse"*/, method);
-    byte_4C22220 = 1;
+    sub_1B4CF90(&StringLiteral_6688/*"FontSize"*/, method);
+    byte_49BB136 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6932/*"GetResponse"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6688/*"FontSize"*/, 0, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageSpacingX(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2221F & 1) == 0 )
+  if ( (byte_49BB135 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_13130/*"TRADE_EVENT_BOARD_START_BUTTON"*/, method);
-    byte_4C2221F = 1;
+    sub_1B4CF90(&StringLiteral_12649/*"SpacingX"*/, method);
+    byte_49BB135 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13130/*"TRADE_EVENT_BOARD_START_BUTTON"*/, -1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_12649/*"SpacingX"*/, -1, 0LL);
 }
 
 
 int32_t __fastcall GachaSubEntity__GetSummonConfirmMessageSpacingY(GachaSubEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2221E & 1) == 0 )
+  if ( (byte_49BB134 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_13131/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, method);
-    byte_4C2221E = 1;
+    sub_1B4CF90(&StringLiteral_12650/*"SpacingY"*/, method);
+    byte_49BB134 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_13131/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, -1, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_12650/*"SpacingY"*/, -1, 0LL);
 }

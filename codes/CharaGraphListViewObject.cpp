@@ -1,9 +1,9 @@
 void __fastcall CharaGraphListViewObject___ctor(CharaGraphListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C212FB & 1) == 0 )
+  if ( (byte_49BA20F & 1) == 0 )
   {
-    sub_1C3B764(&ListViewObject_TypeInfo, method);
-    byte_4C212FB = 1;
+    sub_1B4CF90(&ListViewObject_TypeInfo, method);
+    byte_49BA20F = 1;
   }
   this->fields.isUpdateDisplay = 1;
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -17,27 +17,23 @@ void __fastcall CharaGraphListViewObject__Awake(CharaGraphListViewObject_o *this
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C212F4 & 1) == 0 )
+  if ( (byte_49BA208 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_CharaGraphListViewItemDraw___, method);
-    byte_4C212F4 = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_CharaGraphListViewItemDraw___, method);
+    byte_49BA208 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_CharaGraphListViewItemDraw___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_CharaGraphListViewItemDraw___);
   this->fields.itemDraw = (struct CharaGraphListViewItemDraw_o *)Component_object;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.itemDraw, (int64_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -48,10 +44,10 @@ CharaGraphListViewItemBase_o *__fastcall CharaGraphListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4C212F6 & 1) == 0 )
+  if ( (byte_49BA20A & 1) == 0 )
   {
-    sub_1C3B764(&CharaGraphListViewItemBase_TypeInfo, method);
-    byte_4C212F6 = 1;
+    sub_1B4CF90(&CharaGraphListViewItemBase_TypeInfo, method);
+    byte_49BA20A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -87,7 +83,7 @@ void __fastcall CharaGraphListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(transform, v7);
+    sub_1B4D1EC(transform, v7);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.isUpdateDisplay |= initMode == 3;
@@ -99,17 +95,17 @@ void __fastcall CharaGraphListViewObject__OnClickSelect(CharaGraphListViewObject
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C212F9 & 1) == 0 )
+  if ( (byte_49BA20D & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_10057/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, method);
-    byte_4C212F9 = 1;
+    sub_1B4CF90(&StringLiteral_9664/*"OnClickSelectListView"*/, method);
+    byte_49BA20D = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3B9C0(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10057/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION"*/, (Il2CppObject *)this, 0LL);
+      sub_1B4D1EC(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9664/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -117,25 +113,21 @@ void __fastcall CharaGraphListViewObject__OnClickSelect(CharaGraphListViewObject
 void __fastcall CharaGraphListViewObject__OnDestroy(CharaGraphListViewObject_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  PartyOrganizationUtility_o *p_dragObject; // x19
+  CGThumbnailListItem_o *p_dragObject; // x19
   UnityEngine_Object_o *v5; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C212F5 & 1) == 0 )
+  if ( (byte_49BA209 & 1) == 0 )
   {
-    sub_1C3B764(&NGUITools_TypeInfo, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C212F5 = 1;
+    sub_1B4CF90(&NGUITools_TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49BA209 = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = (PartyOrganizationUtility_o *)&this->fields.dragObject;
+  p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
   v5 = (UnityEngine_Object_o *)dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -146,7 +138,7 @@ void __fastcall CharaGraphListViewObject__OnDestroy(CharaGraphListViewObject_o *
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1C3B708(p_dragObject, 0LL, v8, v9, v10, v11, v12, v13);
+    sub_1B4CF34(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -155,17 +147,17 @@ void __fastcall CharaGraphListViewObject__OnLongPush(CharaGraphListViewObject_o 
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C212FA & 1) == 0 )
+  if ( (byte_49BA20E & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_10115/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, method);
-    byte_4C212FA = 1;
+    sub_1B4CF90(&StringLiteral_9723/*"OnLongPushListView"*/, method);
+    byte_49BA20E = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3B9C0(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10115/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, (Il2CppObject *)this, 0LL);
+      sub_1B4D1EC(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9723/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -182,10 +174,10 @@ void __fastcall CharaGraphListViewObject__SetInput(
   CharaGraphListViewItemBase_o *Item; // x0
   __int64 v9; // x1
 
-  if ( (byte_4C212F7 & 1) == 0 )
+  if ( (byte_49BA20B & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, isInput);
-    byte_4C212F7 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, isInput);
+    byte_49BA20B = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -196,7 +188,7 @@ void __fastcall CharaGraphListViewObject__SetInput(
     v7 = this->fields.itemDraw;
     Item = CharaGraphListViewObject__GetItem(this, v6);
     if ( !v7 )
-      sub_1C3B9C0(Item, v9);
+      sub_1B4D1EC(Item, v9);
     ((void (__fastcall *)(struct CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, bool, void *))v7->klass->vtable._5_SetInput.method)(
       v7,
       Item,
@@ -213,11 +205,11 @@ void __fastcall CharaGraphListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.isUpdateDisplay = 1;
-  ListViewObject__SetItem_42230072((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41356616((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
-void __fastcall CharaGraphListViewObject__SetItem_39466256(
+void __fastcall CharaGraphListViewObject__SetItem_38582808(
         CharaGraphListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -235,10 +227,10 @@ void __fastcall CharaGraphListViewObject__SetupDisplay(CharaGraphListViewObject_
   CharaGraphListViewItemBase_o *Item; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C212F8 & 1) == 0 )
+  if ( (byte_49BA20C & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C212F8 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BA20C = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -249,7 +241,7 @@ void __fastcall CharaGraphListViewObject__SetupDisplay(CharaGraphListViewObject_
     this->fields.isUpdateDisplay = 0;
     Item = CharaGraphListViewObject__GetItem(this, v4);
     if ( !v5 )
-      sub_1C3B9C0(Item, v7);
+      sub_1B4D1EC(Item, v7);
     ((void (__fastcall *)(struct CharaGraphListViewItemDraw_o *, CharaGraphListViewItemBase_o *, Il2CppMethodPointer))v5->klass->vtable._4_SetItem.method)(
       v5,
       Item,

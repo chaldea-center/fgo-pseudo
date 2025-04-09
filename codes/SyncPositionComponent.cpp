@@ -16,24 +16,12 @@ void __fastcall SyncPositionComponent__SetTarget(
         UnityEngine_Transform_o *targetTransform,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  const MethodInfo *v9; // x1
+  const MethodInfo *v3; // x3
+  const MethodInfo *v5; // x1
 
   this->fields.targetTransform = targetTransform;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.targetTransform,
-    (int64_t)targetTransform,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  SyncPositionComponent__SyncPosition(this, v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetTransform, (int32_t)targetTransform, (int32_t)method, v3);
+  SyncPositionComponent__SyncPosition(this, v5);
 }
 
 
@@ -47,10 +35,10 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
   UnityEngine_Transform_o *v7; // x19
   int v8; // s0
 
-  if ( (byte_4C261E2 & 1) == 0 )
+  if ( (byte_49BF129 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C261E2 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BF129 = 1;
   }
   targetTransform = (UnityEngine_Object_o *)this->fields.targetTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -60,7 +48,7 @@ void __fastcall SyncPositionComponent__SyncPosition(SyncPositionComponent_o *thi
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     v6 = this->fields.targetTransform;
     if ( !v6 || (v7 = transform, *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_position(v6, 0LL), !v7) )
-      sub_1C3B9C0(transform, v5);
+      sub_1B4D1EC(transform, v5);
     UnityEngine_Transform__set_position(v7, *(UnityEngine_Vector3_o *)&v8, 0LL);
   }
 }

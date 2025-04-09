@@ -13,14 +13,14 @@ void __fastcall UserFormationRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4C23A1E & 1) == 0 )
+  if ( (byte_49BC94D & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_24894/*"⅐←"*/, *(_QWORD *)&deckNo);
-    sub_1C3B764(&StringLiteral_18883/*"event_raid_ok"*/, v7);
-    byte_4C23A1E = 1;
+    sub_1B4CF90(&StringLiteral_24099/*"userEquipId"*/, *(_QWORD *)&deckNo);
+    sub_1B4CF90(&StringLiteral_18216/*"deckNo"*/, v7);
+    byte_49BC94D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18883/*"event_raid_ok"*/, deckNo, 0LL);
-  RequestBase__addField_42628192((RequestBase_o *)this, (System_String_o *)StringLiteral_24894/*"⅐←"*/, userEquipId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18216/*"deckNo"*/, deckNo, 0LL);
+  RequestBase__addField_41754736((RequestBase_o *)this, (System_String_o *)StringLiteral_24099/*"userEquipId"*/, userEquipId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -29,11 +29,11 @@ System_String_o *__fastcall UserFormationRequest__getMockData(UserFormationReque
 {
   __int64 v2; // x1
 
-  if ( (byte_4C23A1D & 1) == 0 )
+  if ( (byte_49BC94C & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v2);
-    byte_4C23A1D = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v2);
+    byte_49BC94C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -46,16 +46,16 @@ System_String_o *__fastcall UserFormationRequest__getURL(UserFormationRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23A1C & 1) == 0 )
+  if ( (byte_49BC94B & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_24974/*"バフID[{0}]はマスターに存在しておりません"*/, v2);
-    byte_4C23A1C = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_24179/*"userformation/Setup"*/, v2);
+    byte_49BC94B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_24974/*"バフID[{0}]はマスターに存在しておりません"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_24179/*"userformation/Setup"*/, 0LL);
 }
 
 
@@ -72,12 +72,12 @@ void __fastcall UserFormationRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4C23A1F & 1) == 0 )
+  if ( (byte_49BC94E & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C23A1F = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC94E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -91,7 +91,7 @@ void __fastcall UserFormationRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
+    v11 = (System_String_o *)StringLiteral_21779/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

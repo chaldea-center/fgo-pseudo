@@ -1,29 +1,25 @@
 void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  void *v4; // x1
+  int32_t v4; // w1
   struct System_String_o **p_value; // x19
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C22166 & 1) == 0 )
+  if ( (byte_49BB07B & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v3);
-    byte_4C22166 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v3);
+    byte_49BB07B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
-  v4 = StringLiteral_1/*""*/;
+  v4 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_value, (int64_t)v4, v6, v7, v8, v9, v10, v11);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_value, v4, v6, v7);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -35,16 +31,16 @@ System_String_o *__fastcall EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4C22167 & 1) == 0 )
+  if ( (byte_49BB07C & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
-    byte_4C22167 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
+    byte_49BB07C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_2FEEA6C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_2F0038C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

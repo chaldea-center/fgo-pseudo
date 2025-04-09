@@ -2,34 +2,26 @@ void __fastcall ClassBoardForwardIconAnimComponent___ctor(
         ClassBoardForwardIconAnimComponent_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v9; // x1
-  int64_t v10; // x1
-  int64_t v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v5; // x1
+  int32_t v6; // w1
+  int32_t v7; // w1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C255E0 & 1) == 0 )
+  if ( (byte_49BE51D & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_20680/*"kok"*/, method);
-    sub_1C3B764(&StringLiteral_17836/*"communicationCharaStop"*/, v9);
-    byte_4C255E0 = 1;
+    sub_1B4CF90(&StringLiteral_19975/*"img_class_{0}"*/, method);
+    sub_1B4CF90(&StringLiteral_17184/*"btn_class"*/, v5);
+    byte_49BE51D = 1;
   }
-  v10 = StringLiteral_20680/*"kok"*/;
-  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_20680/*"kok"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.spriteNameFormatIcon, v10, v2, v3, v4, v5, v6, v7);
-  v11 = StringLiteral_17836/*"communicationCharaStop"*/;
-  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17836/*"communicationCharaStop"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.spriteNameButton, v11, v12, v13, v14, v15, v16, v17);
+  v6 = StringLiteral_19975/*"img_class_{0}"*/;
+  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_19975/*"img_class_{0}"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.spriteNameFormatIcon, v6, v2, v3);
+  v7 = StringLiteral_17184/*"btn_class"*/;
+  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17184/*"btn_class"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.spriteNameButton, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -47,10 +39,10 @@ void __fastcall ClassBoardForwardIconAnimComponent__PlayAnim(
     || (UnityEngine_Animation__Rewind(anim, 0LL), (v4 = this->fields.anim) == 0LL)
     || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_clip(v4, 0LL)) == 0LL )
   {
-    sub_1C3B9C0(anim, method);
+    sub_1B4D1EC(anim, method);
   }
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)anim, 0LL);
-  UnityEngine_Animation__Play_70867156(v4, name, 0LL);
+  UnityEngine_Animation__Play_68548868(v4, name, 0LL);
 }
 
 
@@ -84,24 +76,24 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   __int64 v28; // x0
   int32_t revision; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C255DF & 1) == 0 )
+  if ( (byte_49BE51C & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, resourceCatalog);
-    sub_1C3B764(&DataManager_TypeInfo, v7);
-    sub_1C3B764(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v8);
-    sub_1C3B764(&IClassBoardResourceCatalog_TypeInfo, v9);
-    sub_1C3B764(&int_TypeInfo, v10);
-    byte_4C255DF = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, resourceCatalog);
+    sub_1B4CF90(&DataManager_TypeInfo, v7);
+    sub_1B4CF90(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v8);
+    sub_1B4CF90(&IClassBoardResourceCatalog_TypeInfo, v9);
+    sub_1B4CF90(&int_TypeInfo, v10);
+    byte_49BE51C = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   baseId,
-                                                                  (const MethodInfo_329AE48 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+                                                                  (const MethodInfo_319D99C *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Master_object )
     return;
   if ( !resourceCatalog )
@@ -124,7 +116,7 @@ void __fastcall ClassBoardForwardIconAnimComponent__Setup(
   else
   {
 LABEL_12:
-    p_method = sub_1C8D744(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    p_method = sub_1B9D724(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))p_method)(
                                                                   resourceCatalog,
@@ -157,7 +149,7 @@ LABEL_12:
   else
   {
 LABEL_20:
-    v28 = sub_1C8D744(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    v28 = sub_1B9D724(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v28)(
                                                                   resourceCatalog,
@@ -166,7 +158,7 @@ LABEL_20:
     || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object[1].fields._lookup) == 0LL )
   {
 LABEL_26:
-    sub_1C3B9C0(Master_object, v12);
+    sub_1B4D1EC(Master_object, v12);
   }
   AtlasManagerUnit__SetUI(
     (AtlasManagerUnit_o *)Master_object,

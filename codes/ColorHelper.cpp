@@ -42,18 +42,18 @@ float __fastcall ColorHelper___GetClamped_g__Clamp_0_0(float value, const Method
   __int64 v4; // x1
   float result; // s0
 
-  if ( (byte_4C237EC & 1) == 0 )
+  if ( (byte_49BC71B & 1) == 0 )
   {
-    sub_1C3B764(&System_Math_TypeInfo, v2);
-    byte_4C237EC = 1;
+    sub_1B4CF90(&System_Math_TypeInfo, v2);
+    byte_49BC71B = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4C239AF )
+  if ( !byte_49BC8DE )
   {
-    sub_1C3B764(&Method_System_Math_ThrowMinMaxException_float___, v2);
-    sub_1C3B764(&System_Math_TypeInfo, v4);
-    byte_4C239AF = 1;
+    sub_1B4CF90(&Method_System_Math_ThrowMinMaxException_float___, v2);
+    sub_1B4CF90(&System_Math_TypeInfo, v4);
+    byte_49BC8DE = 1;
   }
   result = 0.0;
   if ( value >= 0.0 )

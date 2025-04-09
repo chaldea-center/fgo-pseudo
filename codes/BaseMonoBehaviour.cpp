@@ -21,11 +21,11 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__CreateObjectStatic(
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2152D & 1) == 0 )
+  if ( (byte_49BA441 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_GameObject_TypeInfo, root);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C2152D = 1;
+    sub_1B4CF90(&UnityEngine_GameObject_TypeInfo, root);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
+    byte_49BA441 = 1;
   }
   if ( resouceurl )
   {
@@ -37,7 +37,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__CreateObjectStatic(
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      transform = (System_String_o *)UnityEngine_Object__Instantiate_71121952(v8, 0LL);
+      transform = (System_String_o *)UnityEngine_Object__Instantiate_68803660(v8, 0LL);
       if ( !transform )
         goto LABEL_20;
       resouceurl = transform;
@@ -84,7 +84,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__CreateObjectStatic(
           }
         }
 LABEL_20:
-        sub_1C3B9C0(transform, v10);
+        sub_1B4D1EC(transform, v10);
       }
     }
   }
@@ -118,11 +118,11 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject(
   UnityEngine_Quaternion_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v27; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4C2152A & 1) == 0 )
+  if ( (byte_49BA43E & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject____77992912, prefab);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
-    byte_4C2152A = 1;
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject____75575288, prefab);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
+    byte_49BA43E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -146,11 +146,11 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject(
     v27.fields.y = y;
     v27.fields.z = z;
     v27.fields.w = w;
-    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__50819092(
+    transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__49840168(
                                               (Il2CppObject *)prefab,
                                               v22,
                                               v27,
-                                              (const MethodInfo_3077014 *)Method_UnityEngine_Object_Instantiate_GameObject____77992912);
+                                              (const MethodInfo_2F88028 *)Method_UnityEngine_Object_Instantiate_GameObject____75575288);
     if ( !transform )
       goto LABEL_18;
     v9 = transform;
@@ -193,7 +193,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject(
         }
       }
 LABEL_18:
-      sub_1C3B9C0(transform, v15);
+      sub_1B4D1EC(transform, v15);
     }
   }
   return v9;
@@ -211,10 +211,10 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObjectIfNotExist(
   _BOOL8 v10; // x0
   const MethodInfo *v11; // x4
 
-  if ( (byte_4C2152B & 1) == 0 )
+  if ( (byte_49BA43F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, existCheckObj);
-    byte_4C2152B = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, existCheckObj);
+    byte_49BA43F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -227,7 +227,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObjectIfNotExist(
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject_39665308(
+UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject_38781524(
         BaseMonoBehaviour_o *this,
         System_String_o *resouceurl,
         UnityEngine_Transform_o *root,
@@ -246,11 +246,11 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject_39665308(
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
   v7 = resouceurl;
-  if ( (byte_4C2152C & 1) == 0 )
+  if ( (byte_49BA440 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_GameObject_TypeInfo, resouceurl);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
-    byte_4C2152C = 1;
+    sub_1B4CF90(&UnityEngine_GameObject_TypeInfo, resouceurl);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
+    byte_49BA440 = 1;
   }
   if ( v7 )
   {
@@ -262,7 +262,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject_39665308(
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_71121952(v9, 0LL);
+      transform = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_68803660(v9, 0LL);
       if ( !transform )
         goto LABEL_20;
       v7 = (System_String_o *)transform;
@@ -309,7 +309,7 @@ UnityEngine_GameObject_o *__fastcall BaseMonoBehaviour__createObject_39665308(
           }
         }
 LABEL_20:
-        sub_1C3B9C0(transform, v11);
+        sub_1B4D1EC(transform, v11);
       }
     }
   }
@@ -323,7 +323,7 @@ Il2CppObject *__fastcall BaseMonoBehaviour__createObject_object_(
         Il2CppObject *prefab,
         UnityEngine_Transform_o *root,
         UnityEngine_Transform_o *pos,
-        const MethodInfo_2FDA4E8 *method)
+        const MethodInfo_2EEBE08 *method)
 {
   __int64 v9; // x1
   Il2CppObject *v10; // x20
@@ -348,10 +348,10 @@ Il2CppObject *__fastcall BaseMonoBehaviour__createObject_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1C3B764(&UnityEngine_MonoBehaviour_TypeInfo, prefab);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B4CF90(&UnityEngine_MonoBehaviour_TypeInfo, prefab);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v9);
     if ( !method->rgctx_data )
-      sub_1C8D69C(method);
+      sub_1B9D67C(method);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -375,11 +375,11 @@ Il2CppObject *__fastcall BaseMonoBehaviour__createObject_object_(
     v31.fields.y = y;
     v31.fields.z = z;
     v31.fields.w = w;
-    v15 = UnityEngine_Object__Instantiate_object__50819092(
+    v15 = UnityEngine_Object__Instantiate_object__49840168(
             prefab,
             v26,
             v31,
-            (const MethodInfo_3077014 *)method->rgctx_data->_1_UnityEngine_Object_Instantiate_T_);
+            (const MethodInfo_2F88028 *)method->rgctx_data->_1_UnityEngine_Object_Instantiate_T_);
     v10 = v15;
     if ( !v15 )
       goto LABEL_11;
@@ -437,7 +437,7 @@ LABEL_11:
           }
         }
 LABEL_28:
-        sub_1C3B9C0(transform, v19);
+        sub_1B4D1EC(transform, v19);
       }
     }
   }

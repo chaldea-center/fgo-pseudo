@@ -1,5 +1,5 @@
 // attributes: thunk
 void mono_thread_detach()
 {
-  JUMPOUT(0x1C58F94LL);
+  JUMPOUT(0x1B695B8LL);
 }

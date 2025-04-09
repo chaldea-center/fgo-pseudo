@@ -4,39 +4,35 @@ void __fastcall BattleCallBack_int__bool__bool____ctor(
         bool arg2,
         bool arg3,
         System_Action_T1__T2__T3__o *callBack,
-        const MethodInfo_3210A0C *method)
+        const MethodInfo_311A4F4 *method)
 {
-  PartyOrganizationUtility_o *v8; // x21
+  BattleCallBack_int__bool__bool__o *v8; // x21
   bool v9; // w22
   bool v10; // w23
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  v8 = (PartyOrganizationUtility_o *)this;
+  v8 = this;
   v9 = arg2;
   v10 = arg3;
   BattleCallBackBase___ctor((BattleCallBackBase_o *)this, 0LL);
-  v8->fields._normalFollowerInfo = (struct FollowerInfo_o *)callBack;
-  v8 = (PartyOrganizationUtility_o *)((char *)v8 + 24);
-  *(_DWORD *)&v8[-1].fields._IsQuestStartMenuMode_k__BackingField = arg1;
-  *(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 3) = v9;
-  *(&v8[-1].fields._IsNormalFlowQuest_k__BackingField + 4) = v10;
-  sub_1C3B708(v8, (int64_t)callBack, v11, v12, v13, v14, v15, v16);
+  v8->fields.callBack = callBack;
+  v8 = (BattleCallBack_int__bool__bool__o *)((char *)v8 + 24);
+  LODWORD(v8[-1].fields.callBack) = arg1;
+  BYTE4(v8[-1].fields.callBack) = v9;
+  BYTE5(v8[-1].fields.callBack) = v10;
+  sub_1B4CF34((CGThumbnailListItem_o *)v8, (int32_t)callBack, v11, v12);
 }
 
 
 void __fastcall BattleCallBack_int__bool__bool___call(
         BattleCallBack_int__bool__bool__o *this,
-        const MethodInfo_3210A5C *method)
+        const MethodInfo_311A544 *method)
 {
   ActionExtensions__Call_int__bool__bool_(
     this->fields.callBack,
     this->fields.arg1,
     this->fields.arg2,
     this->fields.arg3,
-    (const MethodInfo_2F428E8 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
+    (const MethodInfo_2E582C4 *)method->klass->rgctx_data->_5_ActionExtensions_Call_T1__T2__T3_);
 }

@@ -2,38 +2,30 @@ void __fastcall FieldAliveServantData___ctor(FieldAliveServantData_o *this, cons
 {
   __int64 v3; // x1
   System_Collections_Generic_List_object__o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  System_Collections_Generic_List_object__o *v11; // x20
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  System_Collections_Generic_List_object__o *v7; // x20
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C24582 & 1) == 0 )
+  if ( (byte_49BD4B9 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleServantData___ctor__, method);
-    sub_1C3B764(&System_Collections_Generic_List_BattleServantData__TypeInfo, v3);
-    byte_4C24582 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleServantData___ctor__, method);
+    sub_1B4CF90(&System_Collections_Generic_List_BattleServantData__TypeInfo, v3);
+    byte_49BD4B9 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   this->fields.playerIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
-  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v11;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.enemyIdList, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+    v7,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+  this->fields.enemyIdList = (struct System_Collections_Generic_List_BattleServantData__o *)v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.enemyIdList, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -45,56 +37,44 @@ void __fastcall FieldAliveServantData__addSvtData(
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v11; // x8
-  System_Collections_Generic_List_object__o *v12; // x0
+  __int64 v7; // x8
+  System_Collections_Generic_List_object__o *v8; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v10; // x9
   __int64 size; // x10
-  Il2CppClass **v16; // x8
+  Il2CppClass **v12; // x8
 
-  if ( (byte_4C24581 & 1) == 0 )
+  if ( (byte_49BD4B8 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_BattleServantData__Add__, isEnemySide);
-    byte_4C24581 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_BattleServantData__Add__, isEnemySide);
+    byte_49BD4B8 = 1;
   }
-  v11 = 16LL;
+  v7 = 16LL;
   if ( isEnemySide )
-    v11 = 24LL;
-  v12 = *(System_Collections_Generic_List_object__o **)((char *)&this->klass + v11);
-  if ( !v12
-    || (items = v12->fields._items,
-        v14 = Method_System_Collections_Generic_List_BattleServantData__Add__,
-        ++v12->fields._version,
+    v7 = 24LL;
+  v8 = *(System_Collections_Generic_List_object__o **)((char *)&this->klass + v7);
+  if ( !v8
+    || (items = v8->fields._items,
+        v10 = Method_System_Collections_Generic_List_BattleServantData__Add__,
+        ++v8->fields._version,
         !items) )
   {
-    sub_1C3B9C0(v12, isEnemySide);
+    sub_1B4D1EC(v8, isEnemySide);
   }
-  size = v12->fields._size;
+  size = v8->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v12,
+      v8,
       (Il2CppObject *)svtData,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
-    v16 = &items->obj.klass + size;
-    v12->fields._size = size + 1;
-    v16[4] = (Il2CppClass *)svtData;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)(v16 + 4),
-      (int64_t)svtData,
-      (int64_t)svtData,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    v12 = &items->obj.klass + size;
+    v8->fields._size = size + 1;
+    v12[4] = (Il2CppClass *)svtData;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 4), (int32_t)svtData, (int32_t)svtData, method);
   }
 }
 

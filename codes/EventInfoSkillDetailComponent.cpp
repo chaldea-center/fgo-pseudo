@@ -25,10 +25,10 @@ float __fastcall EventInfoSkillDetailComponent__GetHeight(
   bool IsShowingPartition; // w0
   float partitionHeightOffset; // s1
 
-  if ( (byte_4C23648 & 1) == 0 )
+  if ( (byte_49BC577 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C23648 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC577 = 1;
   }
   skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -37,7 +37,7 @@ float __fastcall EventInfoSkillDetailComponent__GetHeight(
     return this->fields.minHeight;
   v6 = this->fields.skillDetailLabel;
   if ( !v6 )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   ((void (__fastcall *)(struct UILabel_o *, Il2CppMethodPointer))v6->klass->vtable._22_get_localSize.method)(
     v6,
     v6->klass->vtable._23_get_drawingDimensions.methodPtr);
@@ -75,11 +75,11 @@ void __fastcall EventInfoSkillDetailComponent__Setup(
   float v19; // s8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C23647 & 1) == 0 )
+  if ( (byte_49BC576 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, imagePartsGroupEntity);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C23647 = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, imagePartsGroupEntity);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
+    byte_49BC576 = 1;
   }
   if ( imagePartsGroupEntity )
   {
@@ -142,7 +142,7 @@ LABEL_23:
       }
     }
 LABEL_25:
-    sub_1C3B9C0(SkillName, v14);
+    sub_1B4D1EC(SkillName, v14);
   }
 }
 
@@ -155,10 +155,10 @@ bool __fastcall EventInfoSkillDetailComponent__get_IsShowingPartition(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4C23646 & 1) == 0 )
+  if ( (byte_49BC575 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C23646 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC575 = 1;
   }
   partition = (UnityEngine_Object_o *)this->fields.partition;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -167,6 +167,6 @@ bool __fastcall EventInfoSkillDetailComponent__get_IsShowingPartition(
     return 0;
   v5 = this->fields.partition;
   if ( !v5 )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   return UnityEngine_GameObject__get_activeSelf(v5, 0LL);
 }

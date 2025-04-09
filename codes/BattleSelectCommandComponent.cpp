@@ -7,73 +7,49 @@ void __fastcall BattleSelectCommandComponent___cctor(const MethodInfo *method)
   __int64 v5; // x1
   __int64 v6; // x0
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x19
-  int64_t v15; // x1
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  int64_t v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  int64_t v29; // x1
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  __int64 v10; // x19
+  int32_t v11; // w1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  int32_t v17; // w1
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
 
-  if ( (byte_4C24BAA & 1) == 0 )
+  if ( (byte_49BDAE4 & 1) == 0 )
   {
-    sub_1C3B764(&BattleSelectCommandComponent_TypeInfo, v1);
-    sub_1C3B764(&string___TypeInfo, v2);
-    sub_1C3B764(&StringLiteral_18521/*"effect load failed. effectId = {0}"*/, v3);
-    sub_1C3B764(&StringLiteral_18520/*"effect"*/, v4);
-    sub_1C3B764(&StringLiteral_18519/*"ef_whitepoint"*/, v5);
-    byte_4C24BAA = 1;
+    sub_1B4CF90(&BattleSelectCommandComponent_TypeInfo, v1);
+    sub_1B4CF90(&string___TypeInfo, v2);
+    sub_1B4CF90(&StringLiteral_17862/*"commandcard_select_3rd"*/, v3);
+    sub_1B4CF90(&StringLiteral_17861/*"commandcard_select_2nd"*/, v4);
+    sub_1B4CF90(&StringLiteral_17860/*"commandcard_select_1st"*/, v5);
+    byte_49BDAE4 = 1;
   }
-  v6 = sub_1C3B80C(string___TypeInfo, 3LL);
+  v6 = sub_1B4D038(string___TypeInfo, 3LL);
   if ( !v6 )
-    sub_1C3B9C0(0LL, v7);
-  v14 = v6;
+    sub_1B4D1EC(0LL, v7);
+  v10 = v6;
   if ( !*(_DWORD *)(v6 + 24)
-    || (v15 = StringLiteral_18519/*"ef_whitepoint"*/,
-        *(_QWORD *)(v6 + 32) = StringLiteral_18519/*"ef_whitepoint"*/,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 32), v15, v8, v9, v10, v11, v12, v13),
-        *(_DWORD *)(v14 + 24) <= 1u)
-    || (v22 = StringLiteral_18520/*"effect"*/,
-        *(_QWORD *)(v14 + 40) = StringLiteral_18520/*"effect"*/,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v14 + 40), v22, v16, v17, v18, v19, v20, v21),
-        *(_DWORD *)(v14 + 24) <= 2u) )
+    || (v11 = StringLiteral_17860/*"commandcard_select_1st"*/,
+        *(_QWORD *)(v6 + 32) = StringLiteral_17860/*"commandcard_select_1st"*/,
+        sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 32), v11, v8, v9),
+        *(_DWORD *)(v10 + 24) <= 1u)
+    || (v14 = StringLiteral_17861/*"commandcard_select_2nd"*/,
+        *(_QWORD *)(v10 + 40) = StringLiteral_17861/*"commandcard_select_2nd"*/,
+        sub_1B4CF34((CGThumbnailListItem_o *)(v10 + 40), v14, v12, v13),
+        *(_DWORD *)(v10 + 24) <= 2u) )
   {
-    sub_1C3B9C8(v6, v7);
+    sub_1B4D1F4(v6, v7);
   }
-  v29 = StringLiteral_18521/*"effect load failed. effectId = {0}"*/;
-  *(_QWORD *)(v14 + 48) = StringLiteral_18521/*"effect load failed. effectId = {0}"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v14 + 48), v29, v23, v24, v25, v26, v27, v28);
-  BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v14;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)BattleSelectCommandComponent_TypeInfo->static_fields,
-    v14,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35);
+  v17 = StringLiteral_17862/*"commandcard_select_3rd"*/;
+  *(_QWORD *)(v10 + 48) = StringLiteral_17862/*"commandcard_select_3rd"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v10 + 48), v17, v15, v16);
+  BattleSelectCommandComponent_TypeInfo->static_fields->frameFileList = (struct System_String_array *)v10;
+  sub_1B4CF34((CGThumbnailListItem_o *)BattleSelectCommandComponent_TypeInfo->static_fields, v10, v18, v19);
 }
 
 
@@ -96,12 +72,12 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   __int64 v9; // x8
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4C24BA9 & 1) == 0 )
+  if ( (byte_49BDAE3 & 1) == 0 )
   {
-    sub_1C3B764(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C24BA9 = 1;
+    sub_1B4CF90(&BattleSelectCommandComponent_TypeInfo, *(_QWORD *)&index);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_TweenScale___, v5);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
+    byte_49BDAE3 = 1;
   }
   gameObject = (UnityEngine_Component_o *)BattleSelectCommandComponent_TypeInfo;
   markSprite = this->fields.markSprite;
@@ -114,7 +90,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
   if ( !v9 )
     goto LABEL_16;
   if ( *(_DWORD *)(v9 + 24) <= (unsigned int)index )
-    sub_1C3B9C8(gameObject, *(_QWORD *)&index);
+    sub_1B4D1F4(gameObject, *(_QWORD *)&index);
   if ( !markSprite )
     goto LABEL_16;
   UISprite__set_spriteName(markSprite, *(System_String_o **)(v9 + 8LL * index + 32), 0LL);
@@ -126,7 +102,7 @@ void __fastcall BattleSelectCommandComponent__setIndex(
     goto LABEL_16;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)gameObject,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -142,6 +118,6 @@ void __fastcall BattleSelectCommandComponent__setIndex(
       return;
     }
 LABEL_16:
-    sub_1C3B9C0(gameObject, *(_QWORD *)&index);
+    sub_1B4D1EC(gameObject, *(_QWORD *)&index);
   }
 }

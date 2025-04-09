@@ -11,10 +11,10 @@ void __fastcall SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, 
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_4C200C5 & 1) == 0 )
+  if ( (byte_49B8F34 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, value);
-    byte_4C200C5 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, value);
+    byte_49B8F34 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -23,7 +23,7 @@ void __fastcall SwitchEnableComponent__SetEnable(SwitchEnableComponent_o *this, 
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v7 )
-      sub_1C3B9C0(0LL, v6);
+      sub_1B4D1EC(0LL, v6);
     UnityEngine_Behaviour__set_enabled(v7, value, 0LL);
   }
 }
@@ -37,10 +37,10 @@ void __fastcall SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, con
   char v6; // w8
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C200C4 & 1) == 0 )
+  if ( (byte_49B8F33 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C200C4 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B8F33 = 1;
   }
   targetComponent = (UnityEngine_Object_o *)this->fields.targetComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -49,7 +49,7 @@ void __fastcall SwitchEnableComponent__Switch(SwitchEnableComponent_o *this, con
   {
     v5 = (UnityEngine_Behaviour_o *)this->fields.targetComponent;
     if ( !v5 )
-      sub_1C3B9C0(0LL, v4);
+      sub_1B4D1EC(0LL, v4);
     v6 = ~UnityEngine_Behaviour__get_enabled(v5, 0LL);
     SwitchEnableComponent__SetEnable(this, v6 & 1, v7);
   }

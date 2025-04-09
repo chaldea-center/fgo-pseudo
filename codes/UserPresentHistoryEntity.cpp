@@ -1,13 +1,13 @@
 void __fastcall UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22D80 & 1) == 0 )
+  if ( (byte_49BBCAE & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_long___ctor__, method);
-    byte_4C22D80 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_long___ctor__, method);
+    byte_49BBCAE = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_32989AC *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_319B500 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -87,17 +87,17 @@ System_String_o *__fastcall UserPresentHistoryEntity__ToString(
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C22D7F & 1) == 0 )
+  if ( (byte_49BBCAD & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_10673/*"Quechua (Bolivia)"*/, v3);
-    byte_4C22D7F = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_10246/*"PRESENT_INFO"*/, v3);
+    byte_49BBCAD = 1;
   }
   v4 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10673/*"Quechua (Bolivia)"*/, 0LL);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10246/*"PRESENT_INFO"*/, 0LL);
   if ( !v4 )
-    sub_1C3B9C0(v5, v6);
-  return System_String__Format_63382984(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);
+    sub_1B4D1EC(v5, v6);
+  return System_String__Format_61134760(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);
 }

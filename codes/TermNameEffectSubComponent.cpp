@@ -21,13 +21,13 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
   int32_t v14; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C23439 & 1) == 0 )
+  if ( (byte_49BC368 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
-    sub_1C3B764(&RaceResultEffectParam_TypeInfo, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C3B764(&StringLiteral_1/*""*/, v7);
-    byte_4C23439 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_EventRaceMaster___, param);
+    sub_1B4CF90(&RaceResultEffectParam_TypeInfo, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v7);
+    byte_49BC368 = 1;
   }
   entity = 0LL;
   if ( param )
@@ -46,12 +46,12 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
           {
             v13 = *((_DWORD *)monitor + 8);
             v14 = *((_DWORD *)monitor + 10);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                          (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventRaceMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventRaceMaster__TryGetEntity(
@@ -72,7 +72,7 @@ void __fastcall TermNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1C3B9C0(Instance, param);
+              sub_1B4D1EC(Instance, param);
             }
           }
         }

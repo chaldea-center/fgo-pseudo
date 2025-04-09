@@ -15,23 +15,19 @@ void __fastcall BattleAddSkillTaskBeforeTargetTask__PrevAddTask(
 {
   __int64 v7; // x0
   Il2CppObject *Task_k__BackingField; // x1
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   struct BattleLogicTask_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v14; // x0
 
-  if ( (byte_4C24C1E & 1) == 0 )
+  if ( (byte_49BDB58 & 1) == 0 )
   {
-    this = (BattleAddSkillTaskBeforeTargetTask_o *)sub_1C3B764(
+    this = (BattleAddSkillTaskBeforeTargetTask_o *)sub_1B4CF90(
                                                      &Method_System_Collections_Generic_List_BattleLogicTask__Add__,
                                                      taskList);
-    byte_4C24C1E = 1;
+    byte_49BDB58 = 1;
   }
   BattleAddSkillTaskAroundTargetTask__PrevAddTask(
     (BattleAddSkillTaskAroundTargetTask_o *)this,
@@ -43,11 +39,11 @@ void __fastcall BattleAddSkillTaskBeforeTargetTask__PrevAddTask(
     || !taskList
     || (Task_k__BackingField = (Il2CppObject *)arg->fields._Task_k__BackingField,
         items = taskList->fields._items,
-        v16 = Method_System_Collections_Generic_List_BattleLogicTask__Add__,
+        v12 = Method_System_Collections_Generic_List_BattleLogicTask__Add__,
         ++taskList->fields._version,
         !items) )
   {
-    sub_1C3B9C0(v7, Task_k__BackingField);
+    sub_1B4D1EC(v7, Task_k__BackingField);
   }
   size = taskList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -55,13 +51,13 @@ void __fastcall BattleAddSkillTaskBeforeTargetTask__PrevAddTask(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)taskList,
       Task_k__BackingField,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     taskList->fields._size = size + 1;
-    v18 = &items->obj.klass + size;
-    v18[4] = (Il2CppClass *)Task_k__BackingField;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 4), (int64_t)Task_k__BackingField, v9, v10, v11, v12, v13, v14);
+    v14 = &items->obj.klass + size;
+    v14[4] = (Il2CppClass *)Task_k__BackingField;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v14 + 4), (int32_t)Task_k__BackingField, v9, v10);
   }
 }

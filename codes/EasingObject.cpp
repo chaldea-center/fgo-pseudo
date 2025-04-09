@@ -35,11 +35,11 @@ void __fastcall EasingObject__Play(
         int32_t easingType,
         const MethodInfo *method)
 {
-  EasingObject__Play_48006348(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
+  EasingObject__Play_47132360(this, 0.0, 1.0, sec, procAct, endAct, delay, easingType, method);
 }
 
 
-void __fastcall EasingObject__Play_48006348(
+void __fastcall EasingObject__Play_47132360(
         EasingObject_o *this,
         float from,
         float to,
@@ -51,20 +51,12 @@ void __fastcall EasingObject__Play_48006348(
         const MethodInfo *method)
 {
   float v15; // s10
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
   struct System_Action_o **p_mProcessAct; // x22
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  struct System_Action_o *v29; // x8
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  struct System_Action_o *v21; // x8
 
   this->fields._IsMoving_k__BackingField = 1;
   this->fields.mFrom = from;
@@ -76,19 +68,19 @@ void __fastcall EasingObject__Play_48006348(
   this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
   this->fields.mTime = v15;
   this->fields.mEndAct = endAct;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mEndAct, (int64_t)endAct, v16, v17, v18, v19, v20, v21);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v16, v17);
   this->fields.mProcessAct = procAct;
   p_mProcessAct = &this->fields.mProcessAct;
   *((float *)p_mProcessAct - 6) = from;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_mProcessAct, (int64_t)procAct, v23, v24, v25, v26, v27, v28);
-  v29 = *p_mProcessAct;
+  sub_1B4CF34((CGThumbnailListItem_o *)p_mProcessAct, (int32_t)procAct, v19, v20);
+  v21 = *p_mProcessAct;
   *((_DWORD *)p_mProcessAct + 4) = easingType;
   *((float *)p_mProcessAct - 3) = delay;
   *((_BYTE *)p_mProcessAct + 20) = 0;
-  if ( v29 )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v29->fields.m_target)(
-      v29->fields.original_method_info,
-      *(_QWORD *)&v29->fields.extra_arg);
+  if ( v21 )
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v21->fields.m_target)(
+      v21->fields.original_method_info,
+      *(_QWORD *)&v21->fields.extra_arg);
 }
 
 
@@ -166,7 +158,7 @@ void __fastcall EasingObject__Update(EasingObject_o *this, const MethodInfo *met
         v10 = 1.0;
       else
         v10 = v7;
-      v11 = Easing__Func_48005172(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
+      v11 = Easing__Func_47131184(this->fields.mFrom, this->fields.mTo, v10, this->fields.mEasingType, v5);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNow = v11;
       if ( mProcessAct )

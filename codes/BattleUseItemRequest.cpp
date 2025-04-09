@@ -14,21 +14,21 @@ void __fastcall BattleUseItemRequest__beginRequest(
   const MethodInfo *v14; // x1
   const MethodInfo *v15; // x1
 
-  if ( (byte_4C23860 & 1) == 0 )
+  if ( (byte_49BC78F & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
-    sub_1C3B764(&StringLiteral_22636/*"root"*/, v9);
-    sub_1C3B764(&StringLiteral_19507/*"graphic.shader"*/, v10);
-    sub_1C3B764(&StringLiteral_24861/*"඀฀"*/, v11);
-    byte_4C23860 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+    sub_1B4CF90(&StringLiteral_21903/*"num"*/, v9);
+    sub_1B4CF90(&StringLiteral_18824/*"eventId"*/, v10);
+    sub_1B4CF90(&StringLiteral_24067/*"useItemId"*/, v11);
+    byte_49BC78F = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19507/*"graphic.shader"*/,
+    (System_String_o *)StringLiteral_18824/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24861/*"඀฀"*/, itemId, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, num, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24067/*"useItemId"*/, itemId, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21903/*"num"*/, num, v13);
   RequestBase__addBaseField((RequestBase_o *)this, v14);
   RequestBase__WriteParameter((RequestBase_o *)this, v15);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,12 +46,12 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C2385F & 1) == 0 )
+  if ( (byte_49BC78E & 1) == 0 )
   {
-    sub_1C3B764(&AndroidUtil_TypeInfo, method);
-    sub_1C3B764(&DatFileName_TypeInfo, v2);
-    sub_1C3B764(&StringLiteral_1102/*"/[delegate]"*/, v3);
-    byte_4C2385F = 1;
+    sub_1B4CF90(&AndroidUtil_TypeInfo, method);
+    sub_1B4CF90(&DatFileName_TypeInfo, v2);
+    sub_1B4CF90(&StringLiteral_1057/*"/"*/, v3);
+    byte_49BC78E = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -59,7 +59,7 @@ System_String_o *__fastcall BattleUseItemRequest__getParameterFileName(
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(30, 0LL);
-  return System_String__Concat_63379872(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, FileName, 0LL);
+  return System_String__Concat_61131716(DatFileSavePath, (System_String_o *)StringLiteral_1057/*"/"*/, FileName, 0LL);
 }
 
 
@@ -68,16 +68,16 @@ System_String_o *__fastcall BattleUseItemRequest__getURL(BattleUseItemRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C2385E & 1) == 0 )
+  if ( (byte_49BC78D & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_17433/*"card_favorite"*/, v2);
-    byte_4C2385E = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_16784/*"battle/useItem"*/, v2);
+    byte_49BC78D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_17433/*"card_favorite"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_16784/*"battle/useItem"*/, 0LL);
 }
 
 
@@ -95,17 +95,17 @@ void __fastcall BattleUseItemRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4C23861 & 1) == 0 )
+  if ( (byte_49BC790 & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C23861 = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC790 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(107, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( success )
@@ -127,7 +127,7 @@ void __fastcall BattleUseItemRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22507/*"referrerMapId"*/,
+        StringLiteral_21779/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

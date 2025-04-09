@@ -1,28 +1,28 @@
 void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22D1D & 1) == 0 )
+  if ( (byte_49BBC4B & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22D1D = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BBC4B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4C22D1C & 1) == 0 )
+  if ( (byte_49BBC4A & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
-    byte_4C22D1C = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
+    byte_49BBC4A = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_2FEE494 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_2EFFDB4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -47,7 +47,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.num,
          0LL);
   if ( !v2 )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   return v2->fields.name;
 }
 
@@ -56,30 +56,26 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_createdAtString; // x19
+  CGThumbnailListItem_o *p_createdAtString; // x19
   int64_t createdAt; // x20
   System_String_o *DateTime; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C22D1A & 1) == 0 )
+  if ( (byte_49BBC48 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    byte_4C22D1A = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    byte_49BBC48 = 1;
   }
-  p_createdAtString = (PartyOrganizationUtility_o *)&this->fields.createdAtString;
+  p_createdAtString = (CGThumbnailListItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
   {
     createdAt = this->fields.createdAt;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     DateTime = LocalizationManager__GetDateTime(createdAt, 0LL);
-    p_createdAtString->klass = (PartyOrganizationUtility_c *)DateTime;
-    sub_1C3B708(p_createdAtString, (int64_t)DateTime, v6, v7, v8, v9, v10, v11);
+    p_createdAtString->klass = (CGThumbnailListItem_c *)DateTime;
+    sub_1B4CF34(p_createdAtString, (int32_t)DateTime, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -91,37 +87,33 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  PartyOrganizationUtility_o *p_titleString; // x19
+  CGThumbnailListItem_o *p_titleString; // x19
   int32_t gachaExtraGiftBonusType; // w21
   System_String_o **v7; // x8
   System_String_o *v8; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C22D1B & 1) == 0 )
+  if ( (byte_49BBC49 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_12613/*"Space"*/, v3);
-    sub_1C3B764(&StringLiteral_12626/*"Spanish (Honduras)"*/, v4);
-    byte_4C22D1B = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_12141/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
+    sub_1B4CF90(&StringLiteral_12155/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
+    byte_49BBC49 = 1;
   }
-  p_titleString = (PartyOrganizationUtility_o *)&this->fields.titleString;
+  p_titleString = (CGThumbnailListItem_o *)&this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
   {
     gachaExtraGiftBonusType = this->fields.gachaExtraGiftBonusType;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( gachaExtraGiftBonusType == 2 )
-      v7 = (System_String_o **)&StringLiteral_12626/*"Spanish (Honduras)"*/;
+      v7 = (System_String_o **)&StringLiteral_12155/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     else
-      v7 = (System_String_o **)&StringLiteral_12613/*"Space"*/;
+      v7 = (System_String_o **)&StringLiteral_12141/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
     v8 = LocalizationManager__Get(*v7, 0LL);
-    p_titleString->klass = (PartyOrganizationUtility_c *)v8;
-    sub_1C3B708(p_titleString, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+    p_titleString->klass = (CGThumbnailListItem_c *)v8;
+    sub_1B4CF34(p_titleString, (int32_t)v8, v9, v10);
   }
   return (System_String_o *)p_titleString->klass;
 }

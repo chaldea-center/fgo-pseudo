@@ -2,39 +2,31 @@ void __fastcall BattleFieldData___ctor(BattleFieldData_o *this, const MethodInfo
 {
   __int64 v3; // x1
   Il2CppObject *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  struct System_Double_array *v11; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  struct System_Double_array *v7; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C246CE & 1) == 0 )
+  if ( (byte_49BD605 & 1) == 0 )
   {
-    sub_1C3B764(&double___TypeInfo, method);
-    sub_1C3B764(&BattleFieldData_SaveData_TypeInfo, v3);
-    byte_4C246CE = 1;
+    sub_1B4CF90(&double___TypeInfo, method);
+    sub_1B4CF90(&BattleFieldData_SaveData_TypeInfo, v3);
+    byte_49BD605 = 1;
   }
-  v4 = (Il2CppObject *)sub_1C3B9B0(BattleFieldData_SaveData_TypeInfo);
+  v4 = (Il2CppObject *)sub_1B4D1DC(BattleFieldData_SaveData_TypeInfo);
   System_Object___ctor(v4, 0LL);
   this->fields.tmpsave = (struct BattleFieldData_SaveData_o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tmpsave, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (struct System_Double_array *)sub_1C3B80C(double___TypeInfo, 1LL);
-  this->fields.wkZeroParam = v11;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.wkZeroParam, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.tmpsave, (int32_t)v4, v5, v6);
+  v7 = (struct System_Double_array *)sub_1B4D038(double___TypeInfo, 1LL);
+  this->fields.wkZeroParam = v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.wkZeroParam, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleFieldData___ctor_44323864(
+void __fastcall BattleFieldData___ctor_43455152(
         BattleFieldData_o *this,
         int32_t inIndex,
         Il2CppObject *obj,
@@ -50,77 +42,61 @@ void __fastcall BattleFieldData___ctor_44323864(
   __int64 v14; // x1
   __int64 v15; // x1
   Il2CppObject *v16; // x22
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  struct System_Double_array *v23; // x0
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  Il2CppObject *v30; // x22
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  struct System_Double_array *v19; // x0
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  Il2CppObject *v22; // x22
   struct BattleFieldData_AiField_o **p_aiField; // x21
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   Il2CppObject *Item; // x0
-  __int64 v39; // x1
+  __int64 v27; // x1
   __int64 methodPtr_low; // x9
-  struct BattleFieldData_AiField_o *v41; // x23
-  __int64 v42; // x2
-  __int64 v43; // x3
-  struct BattleFieldData_AiField_o *v44; // x21
-  __int64 v45; // x2
-  __int64 v46; // x3
-  AiState_o *v47; // x20
-  PartyOrganizationUtility_o *p_aiState; // x19
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
+  struct BattleFieldData_AiField_o *v29; // x23
+  __int64 v30; // x2
+  __int64 v31; // x3
+  struct BattleFieldData_AiField_o *v32; // x21
+  __int64 v33; // x2
+  __int64 v34; // x3
+  AiState_o *v35; // x20
+  CGThumbnailListItem_o *p_aiState; // x19
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
   _DWORD *monitor; // x8
-  BattleFieldData_AiField_o *v56; // x0
-  const MethodInfo *v57; // x1
+  BattleFieldData_AiField_o *v40; // x0
+  const MethodInfo *v41; // x1
 
-  if ( (byte_4C246CF & 1) == 0 )
+  if ( (byte_49BD606 & 1) == 0 )
   {
-    sub_1C3B764(&BattleFieldData_AiField_TypeInfo, *(_QWORD *)&inIndex);
-    sub_1C3B764(&AiState_TypeInfo, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
-    sub_1C3B764(&double___TypeInfo, v11);
-    sub_1C3B764(&long_TypeInfo, v12);
-    sub_1C3B764(&BattleFieldData_SaveData_TypeInfo, v13);
-    sub_1C3B764(&StringLiteral_23228/*"storeName"*/, v14);
-    sub_1C3B764(&StringLiteral_20601/*"java/lang/Boolean"*/, v15);
-    byte_4C246CF = 1;
+    sub_1B4CF90(&BattleFieldData_AiField_TypeInfo, *(_QWORD *)&inIndex);
+    sub_1B4CF90(&AiState_TypeInfo, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v10);
+    sub_1B4CF90(&double___TypeInfo, v11);
+    sub_1B4CF90(&long_TypeInfo, v12);
+    sub_1B4CF90(&BattleFieldData_SaveData_TypeInfo, v13);
+    sub_1B4CF90(&StringLiteral_22484/*"raid"*/, v14);
+    sub_1B4CF90(&StringLiteral_19900/*"id"*/, v15);
+    byte_49BD606 = 1;
   }
-  v16 = (Il2CppObject *)sub_1C3B9B0(BattleFieldData_SaveData_TypeInfo);
+  v16 = (Il2CppObject *)sub_1B4D1DC(BattleFieldData_SaveData_TypeInfo);
   System_Object___ctor(v16, 0LL);
   this->fields.tmpsave = (struct BattleFieldData_SaveData_o *)v16;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tmpsave, (int64_t)v16, v17, v18, v19, v20, v21, v22);
-  v23 = (struct System_Double_array *)sub_1C3B80C(double___TypeInfo, 1LL);
-  this->fields.wkZeroParam = v23;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.wkZeroParam, (int64_t)v23, v24, v25, v26, v27, v28, v29);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.tmpsave, (int32_t)v16, v17, v18);
+  v19 = (struct System_Double_array *)sub_1B4D038(double___TypeInfo, 1LL);
+  this->fields.wkZeroParam = v19;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.wkZeroParam, (int32_t)v19, v20, v21);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.index = inIndex;
   this->fields.uniqueId = -1;
-  v30 = (Il2CppObject *)sub_1C3B9B0(BattleFieldData_AiField_TypeInfo);
-  System_Object___ctor(v30, 0LL);
-  this->fields.aiField = (struct BattleFieldData_AiField_o *)v30;
+  v22 = (Il2CppObject *)sub_1B4D1DC(BattleFieldData_AiField_TypeInfo);
+  System_Object___ctor(v22, 0LL);
+  this->fields.aiField = (struct BattleFieldData_AiField_o *)v22;
   p_aiField = &this->fields.aiField;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.aiField, (int64_t)v30, v32, v33, v34, v35, v36, v37);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.aiField, (int32_t)v22, v24, v25);
   if ( !obj )
     goto LABEL_19;
   methodPtr_low = LOBYTE(System_Collections_Generic_Dictionary_string__object__TypeInfo->vtable._0_Equals.methodPtr);
@@ -132,31 +108,31 @@ void __fastcall BattleFieldData___ctor_44323864(
   }
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)obj,
-         (Il2CppObject *)StringLiteral_23228/*"storeName"*/,
-         (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_22484/*"raid"*/,
+         (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    v41 = *p_aiField;
+    v29 = *p_aiField;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)obj,
-             (Il2CppObject *)StringLiteral_23228/*"storeName"*/,
-             (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    if ( !v41 || !Item )
+             (Il2CppObject *)StringLiteral_22484/*"raid"*/,
+             (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    if ( !v29 || !Item )
       goto LABEL_19;
     if ( Item->klass->_1.element_class != long_TypeInfo->_1.element_class )
       goto LABEL_21;
-    v41->fields.day = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v42, v43);
+    v29->fields.day = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v30, v31);
   }
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)obj,
-          (Il2CppObject *)StringLiteral_20601/*"java/lang/Boolean"*/,
-          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_19900/*"id"*/,
+          (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
 LABEL_16:
-    v47 = (AiState_o *)sub_1C3B9B0(AiState_TypeInfo);
-    AiState___ctor(v47, 0LL);
-    this->fields.aiState = v47;
-    p_aiState = (PartyOrganizationUtility_o *)&this->fields.aiState;
-    sub_1C3B708(p_aiState, (int64_t)v47, v49, v50, v51, v52, v53, v54);
+    v35 = (AiState_o *)sub_1B4D1DC(AiState_TypeInfo);
+    AiState___ctor(v35, 0LL);
+    this->fields.aiState = v35;
+    p_aiState = (CGThumbnailListItem_o *)&this->fields.aiState;
+    sub_1B4CF34(p_aiState, (int32_t)v35, v37, v38);
     monitor = p_aiState->monitor;
     if ( monitor )
     {
@@ -168,23 +144,23 @@ LABEL_16:
       }
     }
 LABEL_19:
-    sub_1C3B9C0(Item, v39);
+    sub_1B4D1EC(Item, v27);
   }
-  v44 = *p_aiField;
+  v32 = *p_aiField;
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)obj,
-           (Il2CppObject *)StringLiteral_20601/*"java/lang/Boolean"*/,
-           (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-  if ( !v44 || !Item )
+           (Il2CppObject *)StringLiteral_19900/*"id"*/,
+           (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+  if ( !v32 || !Item )
     goto LABEL_19;
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
   {
-    v44->fields.id = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v45, v46);
+    v32->fields.id = *(_QWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v33, v34);
     goto LABEL_16;
   }
 LABEL_21:
-  sub_1C3BC80(Item);
-  BattleFieldData_AiField___ctor(v56, v57);
+  sub_1B4D4AC(Item);
+  BattleFieldData_AiField___ctor(v40, v41);
 }
 
 
@@ -208,16 +184,16 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
   BattleRaidInfo_o *v18; // x20
 
   v11 = this;
-  if ( (byte_4C246D0 & 1) == 0 )
+  if ( (byte_49BD607 & 1) == 0 )
   {
-    this = (BattleFieldData_o *)sub_1C3B764(&double___TypeInfo, bData);
-    byte_4C246D0 = 1;
+    this = (BattleFieldData_o *)sub_1B4CF90(&double___TypeInfo, bData);
+    byte_49BD607 = 1;
   }
   if ( param <= 16 )
   {
     if ( param == 1 )
     {
-      this = (BattleFieldData_o *)sub_1C3B80C(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_1B4D038(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -228,7 +204,7 @@ System_Double_array *__fastcall BattleFieldData__getAiParam(
         goto LABEL_27;
       }
 LABEL_26:
-      sub_1C3B9C0(this, bData);
+      sub_1B4D1EC(this, bData);
     }
     if ( param != 16 )
       return v11->fields.wkZeroParam;
@@ -244,7 +220,7 @@ LABEL_15:
     if ( RaidInfo )
     {
       v18 = RaidInfo;
-      this = (BattleFieldData_o *)sub_1C3B80C(double___TypeInfo, 1LL);
+      this = (BattleFieldData_o *)sub_1B4D038(double___TypeInfo, 1LL);
       if ( this )
       {
         if ( LODWORD(this->fields.aiState) )
@@ -253,7 +229,7 @@ LABEL_15:
           goto LABEL_25;
         }
 LABEL_27:
-        sub_1C3B9C8(this, bData);
+        sub_1B4D1F4(this, bData);
       }
       goto LABEL_26;
     }
@@ -268,7 +244,7 @@ LABEL_27:
   if ( !v13 )
     return v11->fields.wkZeroParam;
   v14 = v13;
-  this = (BattleFieldData_o *)sub_1C3B80C(double___TypeInfo, 1LL);
+  this = (BattleFieldData_o *)sub_1B4D038(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_26;
   if ( !LODWORD(this->fields.aiState) )
@@ -296,18 +272,14 @@ BattleFieldData_SaveData_o *__fastcall BattleFieldData__getSaveData(BattleFieldD
 {
   AiState_o *aiState; // x0
   struct BattleFieldData_SaveData_o *tmpsave; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   aiState = this->fields.aiState;
   if ( !aiState || (tmpsave = this->fields.tmpsave, aiState = (AiState_o *)AiState__getSaveData(aiState, 0LL), !tmpsave) )
-    sub_1C3B9C0(aiState, method);
+    sub_1B4D1EC(aiState, method);
   tmpsave->fields.aistateSave = (struct AiState_SaveData_o *)aiState;
-  sub_1C3B708((PartyOrganizationUtility_o *)&tmpsave->fields, (int64_t)aiState, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&tmpsave->fields, (int32_t)aiState, v5, v6);
   return this->fields.tmpsave;
 }
 
@@ -335,7 +307,7 @@ void __fastcall BattleFieldData__setSaveData(
         const MethodInfo *method)
 {
   if ( !save || (this = (BattleFieldData_o *)this->fields.aiState) == 0LL )
-    sub_1C3B9C0(this, save);
+    sub_1B4D1EC(this, save);
   AiState__setSaveData((AiState_o *)this, save->fields.aistateSave, 0LL);
 }
 

@@ -1,13 +1,13 @@
 void __fastcall QuestUseItemPickupEntity___ctor(QuestUseItemPickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C225A2 & 1) == 0 )
+  if ( (byte_49BB4CC & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C225A2 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BB4CC = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,10 +27,10 @@ bool __fastcall QuestUseItemPickupEntity__IsOpen(
   int64_t Time; // x20
 
   Time = nowTime;
-  if ( (byte_4C225A1 & 1) == 0 )
+  if ( (byte_49BB4CB & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, nowTime);
-    byte_4C225A1 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, nowTime);
+    byte_49BB4CB = 1;
   }
   if ( !Time )
   {

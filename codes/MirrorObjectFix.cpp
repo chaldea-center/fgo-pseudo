@@ -1,23 +1,19 @@
 void __fastcall MirrorObjectFix___ctor(MirrorObjectFix_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v9; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  int32_t v5; // w1
 
-  if ( (byte_4C24EF5 & 1) == 0 )
+  if ( (byte_49BDE30 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_21374/*"mstEventRewardSceneRelease"*/, method);
-    byte_4C24EF5 = 1;
+    sub_1B4CF90(&StringLiteral_20661/*"joint_all_Base/joint_all"*/, method);
+    byte_49BDE30 = 1;
   }
-  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_C0CC20;
+  *(_OWORD *)&this->fields.mirrorBounds.fields.m_Center.fields.x = xmmword_BA9680;
   *(_QWORD *)&this->fields.mirrorBounds.fields.m_Extents.fields.y = 0x3E99999A3F333333LL;
-  v9 = StringLiteral_21374/*"mstEventRewardSceneRelease"*/;
-  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_21374/*"mstEventRewardSceneRelease"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.rootTransformPath, v9, v2, v3, v4, v5, v6, v7);
+  v5 = StringLiteral_20661/*"joint_all_Base/joint_all"*/;
+  this->fields.rootTransformPath = (struct System_String_o *)StringLiteral_20661/*"joint_all_Base/joint_all"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.rootTransformPath, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -42,7 +38,7 @@ UnityEngine_Bounds_o *__fastcall MirrorObjectFix__GetBounds(
   m_Extents = this->fields.mirrorBounds.fields.m_Extents;
   RootTransform = MirrorObjectFix__get_RootTransform(this, method);
   if ( !RootTransform )
-    sub_1C3B9C0(0LL, v8);
+    sub_1B4D1EC(0LL, v8);
   v11.fields.x = x;
   v11.fields.y = y;
   v11.fields.z = z;
@@ -96,7 +92,7 @@ void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const Met
         w = rotation.fields.w,
         (RootTransform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(RootTransform, v6);
+    sub_1B4D1EC(RootTransform, v6);
   }
   lossyScale = UnityEngine_Transform__get_lossyScale(RootTransform, 0LL);
   *(_QWORD *)&v19.fields.x = v3;
@@ -108,10 +104,10 @@ void __fastcall MirrorObjectFix__OnDrawGizmos(MirrorObjectFix_o *this, const Met
   UnityEngine_Matrix4x4__TRS(&v15, v19, v23, lossyScale, 0LL);
   v14 = v15;
   UnityEngine_Gizmos__set_matrix(&v14, 0LL);
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v11);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v11);
+    byte_49B5361 = 1;
   }
   v20.fields.x = *((float *)&v3 + 3) + *((float *)&v3 + 3);
   v20.fields.y = m01 + m01;
@@ -129,28 +125,20 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
   UnityEngine_Transform_o **p_cacheRootTransform; // x20
   UnityEngine_Object_o *cacheRootTransform; // x21
   UnityEngine_Object_o *rootTransform; // x21
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  struct UnityEngine_Transform_o *v12; // x1
-  UnityEngine_Transform_o *v13; // x0
-  __int64 v14; // x1
-  UnityEngine_Transform_o *v15; // x21
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct UnityEngine_Transform_o *v8; // x1
+  UnityEngine_Transform_o *v9; // x0
+  __int64 v10; // x1
+  UnityEngine_Transform_o *v11; // x21
   struct UnityEngine_Transform_o *transform; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4C24EF4 & 1) == 0 )
+  if ( (byte_49BDE2F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C24EF4 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BDE2F = 1;
   }
   p_cacheRootTransform = &this->fields.cacheRootTransform;
   cacheRootTransform = (UnityEngine_Object_o *)this->fields.cacheRootTransform;
@@ -163,39 +151,31 @@ UnityEngine_Transform_o *__fastcall MirrorObjectFix__get_RootTransform(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(rootTransform, 0LL, 0LL) )
     {
-      v12 = this->fields.rootTransform;
+      v8 = this->fields.rootTransform;
     }
     else
     {
       if ( System_String__IsNullOrEmpty(this->fields.rootTransformPath, 0LL) )
       {
 LABEL_14:
-        v15 = *p_cacheRootTransform;
+        v11 = *p_cacheRootTransform;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0LL, 0LL) )
         {
           transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
           this->fields.cacheRootTransform = transform;
-          sub_1C3B708(
-            (PartyOrganizationUtility_o *)&this->fields.cacheRootTransform,
-            (int64_t)transform,
-            v17,
-            v18,
-            v19,
-            v20,
-            v21,
-            v22);
+          sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.cacheRootTransform, (int32_t)transform, v13, v14);
         }
         return *p_cacheRootTransform;
       }
-      v13 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-      if ( !v13 )
-        sub_1C3B9C0(0LL, v14);
-      v12 = UnityEngine_Transform__Find(v13, this->fields.rootTransformPath, 0LL);
+      v9 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+      if ( !v9 )
+        sub_1B4D1EC(0LL, v10);
+      v8 = UnityEngine_Transform__Find(v9, this->fields.rootTransformPath, 0LL);
     }
-    *p_cacheRootTransform = v12;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.cacheRootTransform, (int64_t)v12, v6, v7, v8, v9, v10, v11);
+    *p_cacheRootTransform = v8;
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.cacheRootTransform, (int32_t)v8, v6, v7);
     goto LABEL_14;
   }
   return *p_cacheRootTransform;

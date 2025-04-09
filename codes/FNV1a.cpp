@@ -13,13 +13,13 @@ uint32_t __fastcall FNV1a__Hash32(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1C3B9C0(0LL, offset);
+      sub_1B4D1EC(0LL, offset);
     v5 = &bytes->m_Items[offset + 4];
     v6 = len - (__int64)offset;
     do
     {
       if ( offset >= bytes->max_length )
-        sub_1C3B9C8(bytes, *(_QWORD *)&offset);
+        sub_1B4D1F4(bytes, *(_QWORD *)&offset);
       v7 = *v5++;
       --v6;
       *(_QWORD *)&offset = (unsigned int)(offset + 1);
@@ -31,7 +31,7 @@ uint32_t __fastcall FNV1a__Hash32(
 }
 
 
-uint32_t __fastcall FNV1a__Hash32_39809948(System_String_o *str, const MethodInfo *method)
+uint32_t __fastcall FNV1a__Hash32_38926204(System_String_o *str, const MethodInfo *method)
 {
   System_Byte_array *UTF8; // x0
   __int64 v4; // x1
@@ -39,12 +39,12 @@ uint32_t __fastcall FNV1a__Hash32_39809948(System_String_o *str, const MethodInf
 
   UTF8 = (System_Byte_array *)System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8
-    || (UTF8 = (System_Byte_array *)((__int64 (__fastcall *)(System_Byte_array *, System_String_o *, Il2CppMethodPointer))UTF8->obj.klass->vtable[19].method)(
+    || (UTF8 = (System_Byte_array *)((__int64 (__fastcall *)(System_Byte_array *, System_String_o *, Il2CppMethodPointer))UTF8->obj.klass->vtable[18].method)(
                                       UTF8,
                                       str,
-                                      UTF8->obj.klass->vtable[20].methodPtr)) == 0LL )
+                                      UTF8->obj.klass->vtable[19].methodPtr)) == 0LL )
   {
-    sub_1C3B9C0(UTF8, v4);
+    sub_1B4D1EC(UTF8, v4);
   }
   return FNV1a__Hash32(UTF8, 0, UTF8->max_length, 0x811C9DC5, v5);
 }
@@ -65,13 +65,13 @@ uint64_t __fastcall FNV1a__Hash64(
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1C3B9C0(0LL, offset);
+      sub_1B4D1EC(0LL, offset);
     v5 = &bytes->m_Items[offset + 4];
     v6 = len - (__int64)offset;
     do
     {
       if ( offset >= bytes->max_length )
-        sub_1C3B9C8(bytes, *(_QWORD *)&offset);
+        sub_1B4D1F4(bytes, *(_QWORD *)&offset);
       v7 = *v5++;
       --v6;
       *(_QWORD *)&offset = (unsigned int)(offset + 1);

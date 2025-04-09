@@ -5,19 +5,15 @@ void __fastcall CombineListViewItem___ctor(
         const MethodInfo *method)
 {
   CombineListViewItem_o *v6; // x21
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
   v6 = this;
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   v6->fields.info = info;
   v6 = (CombineListViewItem_o *)((char *)v6 + 112);
   v6[-1].fields.loopIndex = index;
-  sub_1C3B708((PartyOrganizationUtility_o *)v6, (int64_t)info, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)v6, (int32_t)info, v7, v8);
 }
 
 
@@ -33,7 +29,7 @@ System_String_o *__fastcall CombineListViewItem__get_EventData(CombineListViewIt
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return info->fields.eventData;
 }
 
@@ -50,7 +46,7 @@ System_String_o *__fastcall CombineListViewItem__get_SpriteName(CombineListViewI
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return info->fields.spriteName;
 }
 
@@ -61,6 +57,6 @@ int32_t __fastcall CombineListViewItem__get_Type(CombineListViewItem_o *this, co
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return info->fields.type;
 }

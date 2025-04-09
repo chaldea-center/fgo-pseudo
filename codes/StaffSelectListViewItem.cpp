@@ -8,35 +8,39 @@ void __fastcall StaffSelectListViewItem___ctor(
         const MethodInfo *method)
 {
   struct StaffPhotoEntity_o **p_StaffPhotoEntity_k__BackingField; // x24
-  StaffPhotoEntity_o *v13; // x0
-  __int64 v14; // x1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  StaffPhotoEntity_o *v15; // x0
+  __int64 v16; // x1
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   int32_t id; // w8
-  bool v16; // w8
+  bool v20; // w8
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  v13 = (StaffPhotoEntity_o *)sub_1C3B708(&this->fields._StaffPhotoEntity_k__BackingField);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._StaffPhotoEntity_k__BackingField, (int32_t)entity, v13, v14);
   if ( !entity )
     goto LABEL_7;
   id = entity->fields.id;
   this->fields._IsSelected_k__BackingField = id == selectStaffPhotoId;
   if ( id != selectedStaffPhotoId )
   {
-    v16 = 0;
+    v20 = 0;
     goto LABEL_6;
   }
-  v13 = *p_StaffPhotoEntity_k__BackingField;
+  v15 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_7:
-    sub_1C3B9C0(v13, v14);
-  v16 = !StaffPhotoEntity__IsEnableSameSet(v13, 0LL);
+    sub_1B4D1EC(v15, v16);
+  v20 = !StaffPhotoEntity__IsEnableSameSet(v15, 0LL);
 LABEL_6:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
-  *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v16;
-  sub_1C3B708(p_PhotoCampaignAtlas_k__BackingField);
+  *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v20;
+  sub_1B4CF34((CGThumbnailListItem_o *)p_PhotoCampaignAtlas_k__BackingField, (int32_t)photoCampaignAtlas, v17, v18);
 }
 
 
@@ -49,7 +53,7 @@ void __fastcall StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C3B9C0(this, selectStaffPhotoId);
+    sub_1B4D1EC(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -64,7 +68,7 @@ bool __fastcall StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C3B9C0(this, sort);
+    sub_1B4D1EC(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

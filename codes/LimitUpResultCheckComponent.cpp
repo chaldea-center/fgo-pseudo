@@ -3,10 +3,10 @@ void __fastcall LimitUpResultCheckComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct LimitUpResultCheckComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4C25AF6 & 1) == 0 )
+  if ( (byte_49BEA3B & 1) == 0 )
   {
-    sub_1C3B764(&LimitUpResultCheckComponent_TypeInfo, v1);
-    byte_4C25AF6 = 1;
+    sub_1B4CF90(&LimitUpResultCheckComponent_TypeInfo, v1);
+    byte_49BEA3B = 1;
   }
   static_fields = LimitUpResultCheckComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->CONCURRENTLY_DISP_NUM = 0x100000002LL;
@@ -34,10 +34,10 @@ bool __fastcall LimitUpResultCheckComponent__CheckFinishedResultLimitUp(
 {
   struct System_Collections_Generic_List_GameObject__o *resInfoList; // x8
 
-  if ( (byte_4C25AF0 & 1) == 0 )
+  if ( (byte_49BEA35 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
-    byte_4C25AF0 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Count__, method);
+    byte_49BEA35 = 1;
   }
   resInfoList = this->fields.resInfoList;
   return !resInfoList || resInfoList->fields._size <= 0;
@@ -47,23 +47,23 @@ bool __fastcall LimitUpResultCheckComponent__CheckFinishedResultLimitUp(
 Il2CppObject *__fastcall LimitUpResultCheckComponent__CreateResultInfoObject_object_(
         LimitUpResultCheckComponent_o *this,
         Il2CppObject *origin,
-        const MethodInfo_306A008 *method)
+        const MethodInfo_2F7C110 *method)
 {
   UnityEngine_Component_o *v5; // x21
   UnityEngine_Transform_o *transform; // x0
 
   v5 = (UnityEngine_Component_o *)this;
   if ( !method->rgctx_data )
-    this = (LimitUpResultCheckComponent_o *)sub_1C8D69C();
+    this = (LimitUpResultCheckComponent_o *)sub_1B9D67C();
   if ( !v5 || (this = (LimitUpResultCheckComponent_o *)UnityEngine_Component__get_gameObject(v5, 0LL)) == 0LL )
-    sub_1C3B9C0(this, origin);
+    sub_1B4D1EC(this, origin);
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
   return BaseMonoBehaviour__createObject_object_(
            (BaseMonoBehaviour_o *)v5,
            origin,
            transform,
            0LL,
-           (const MethodInfo_2FDA4E8 *)method->rgctx_data->_1_BaseMonoBehaviour_createObject_T_);
+           (const MethodInfo_2EEBE08 *)method->rgctx_data->_1_BaseMonoBehaviour_createObject_T_);
 }
 
 
@@ -88,32 +88,28 @@ void __fastcall LimitUpResultCheckComponent__DispResultLimitUp(
   const MethodInfo *v19; // x4
   const MethodInfo *v20; // x6
   int32_t v21; // w25
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v29; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  int64_t v31; // x1
-  Il2CppClass **v32; // x0
-  OpenInfoWindowComponent_o *v33; // x21
+  OpenInfoWindowComponent_o *v27; // x1
+  Il2CppClass **v28; // x0
+  OpenInfoWindowComponent_o *v29; // x21
   _BOOL4 isGetNewSkill; // w8
   int32_t monitor; // w4
-  bool v36; // w5
+  bool v32; // w5
 
-  if ( (byte_4C25AEF & 1) == 0 )
+  if ( (byte_49BEA34 & 1) == 0 )
   {
-    sub_1C3B764(&LimitUpResultCheckComponent_TypeInfo, callback);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__RemoveAt__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject___ctor__, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
-    sub_1C3B764(&System_Collections_Generic_List_GameObject__TypeInfo, v12);
-    byte_4C25AEF = 1;
+    sub_1B4CF90(&LimitUpResultCheckComponent_TypeInfo, callback);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__RemoveAt__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject___ctor__, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Item__, v11);
+    sub_1B4CF90(&System_Collections_Generic_List_GameObject__TypeInfo, v12);
+    byte_49BEA34 = 1;
   }
   resInfoList = this->fields.resInfoList;
   if ( !resInfoList || resInfoList->fields._size <= 0 )
@@ -148,14 +144,14 @@ void __fastcall LimitUpResultCheckComponent__DispResultLimitUp(
       CONCURRENTLY_DISP_NUM = v17->static_fields->CONCURRENTLY_DISP_NUM_BY_LIMIT_MAX;
     }
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_GameObject__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   openInfowindowComp = (OpenInfoWindowComponent_o *)this->fields.resInfoList;
   if ( !openInfowindowComp )
 LABEL_40:
-    sub_1C3B9C0(openInfowindowComp, callback);
+    sub_1B4D1EC(openInfowindowComp, callback);
   v21 = 0;
   while ( SLODWORD(openInfowindowComp->fields.m_CancellationTokenSource) > 0
        && v21 < CONCURRENTLY_DISP_NUM
@@ -164,29 +160,29 @@ LABEL_40:
     openInfowindowComp = (OpenInfoWindowComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                         (System_Collections_Generic_List_object__o *)openInfowindowComp,
                                                         0,
-                                                        (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                        (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( v18 )
     {
       items = v18->fields._items;
-      v29 = Method_System_Collections_Generic_List_GameObject__Add__;
+      v25 = Method_System_Collections_Generic_List_GameObject__Add__;
       ++v18->fields._version;
       if ( items )
       {
         size = v18->fields._size;
-        v31 = (int64_t)openInfowindowComp;
+        v27 = openInfowindowComp;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v18,
             (Il2CppObject *)openInfowindowComp,
-            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+            *(const MethodInfo_35801DC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v32 = &items->obj.klass + size;
+          v28 = &items->obj.klass + size;
           v18->fields._size = size + 1;
-          v32[4] = (Il2CppClass *)v31;
-          sub_1C3B708((PartyOrganizationUtility_o *)(v32 + 4), v31, v22, v23, v24, v25, v26, v27);
+          v28[4] = (Il2CppClass *)v27;
+          sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v27, v22, v23);
         }
         openInfowindowComp = (OpenInfoWindowComponent_o *)this->fields.resInfoList;
         if ( openInfowindowComp )
@@ -194,7 +190,7 @@ LABEL_40:
           System_Collections_Generic_List_object___RemoveAt(
             (System_Collections_Generic_List_object__o *)openInfowindowComp,
             0,
-            (const MethodInfo_368D440 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
+            (const MethodInfo_35819B0 *)Method_System_Collections_Generic_List_GameObject__RemoveAt__);
           openInfowindowComp = (OpenInfoWindowComponent_o *)this->fields.resInfoList;
           ++v21;
           if ( openInfowindowComp )
@@ -223,17 +219,17 @@ LABEL_40:
   if ( this->fields.transformationCount > 1 )
   {
     isGetNewSkill = this->fields.isGetNewSkill;
-    v33 = this->fields.openInfowindowComp;
+    v29 = this->fields.openInfowindowComp;
     if ( isGetNewSkill )
     {
       monitor = 125;
-      v36 = 1;
+      v32 = 1;
       goto LABEL_38;
     }
   }
   else
   {
-    v33 = this->fields.openInfowindowComp;
+    v29 = this->fields.openInfowindowComp;
   }
   openInfowindowComp = (OpenInfoWindowComponent_o *)LimitUpResultCheckComponent_TypeInfo;
   if ( !LimitUpResultCheckComponent_TypeInfo->_2.cctor_finished )
@@ -241,18 +237,18 @@ LABEL_40:
     j_il2cpp_runtime_class_init_0(LimitUpResultCheckComponent_TypeInfo);
     openInfowindowComp = (OpenInfoWindowComponent_o *)LimitUpResultCheckComponent_TypeInfo;
   }
-  v36 = 0;
+  v32 = 0;
   monitor = (int32_t)openInfowindowComp[1].fields.m_CancellationTokenSource->monitor;
 LABEL_38:
-  if ( !v33 )
+  if ( !v29 )
     goto LABEL_40;
   OpenInfoWindowComponent__OpenLimitUpResultInfo(
-    v33,
+    v29,
     (System_Collections_Generic_List_GameObject__o *)v18,
     callback,
     isFirstDisp,
     monitor,
-    v36,
+    v32,
     v20);
 }
 
@@ -271,7 +267,7 @@ void __fastcall LimitUpResultCheckComponent__SetActiveInfoWindow(
     if ( !openInfowindowComp
       || (openInfowindowComp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(openInfowindowComp, 0LL)) == 0LL )
     {
-      sub_1C3B9C0(openInfowindowComp, isActive);
+      sub_1B4D1EC(openInfowindowComp, isActive);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)openInfowindowComp, isActive, 0LL);
   }
@@ -313,47 +309,43 @@ void __fastcall LimitUpResultCheckComponent__SetResInfoListQuestInfo(
   System_String_o *v31; // x0
   UnityEngine_Component_o *v32; // x20
   System_Collections_Generic_List_object__o *resInfoList; // x19
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
+  int32_t v34; // w2
+  const MethodInfo *v35; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v41; // x9
+  _QWORD *v37; // x9
   __int64 size; // x10
-  int64_t v43; // x1
-  Il2CppClass **v44; // x0
+  DataMasterBase_TMaster__TEntity__PKType__o *v39; // x1
+  Il2CppClass **v40; // x0
 
-  if ( (byte_4C25AF2 & 1) == 0 )
+  if ( (byte_49BEA37 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_ConstantStrMaster___, *(_QWORD *)&questId);
-    sub_1C3B764(&Method_DataManager_GetMaster_QuestMaster___, v5);
-    sub_1C3B764(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v6);
-    sub_1C3B764(&DataManager_TypeInfo, v7);
-    sub_1C3B764(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v8);
-    sub_1C3B764(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoComponent___, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v10);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v11);
-    sub_1C3B764(&StringLiteral_9835/*"OutlineEffectMaterial"*/, v12);
-    sub_1C3B764(&StringLiteral_9841/*"OutlineRenderTexture"*/, v13);
-    sub_1C3B764(&StringLiteral_9832/*"OtherSortKind-"*/, v14);
-    sub_1C3B764(&StringLiteral_9833/*"Out of memory"*/, v15);
-    sub_1C3B764(&StringLiteral_9827/*"OrganizationTopItem "*/, v16);
-    sub_1C3B764(&StringLiteral_9828/*"Origin: {0}, Dir: {1}"*/, v17);
-    sub_1C3B764(&StringLiteral_9834/*"Outline CommandBuffer - {0}"*/, v18);
-    byte_4C25AF2 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_ConstantStrMaster___, *(_QWORD *)&questId);
+    sub_1B4CF90(&Method_DataManager_GetMaster_QuestMaster___, v5);
+    sub_1B4CF90(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v6);
+    sub_1B4CF90(&DataManager_TypeInfo, v7);
+    sub_1B4CF90(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v8);
+    sub_1B4CF90(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoComponent___, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v10);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v11);
+    sub_1B4CF90(&StringLiteral_9446/*"OPEN_MAIN_SCENARIO_TITLE"*/, v12);
+    sub_1B4CF90(&StringLiteral_9452/*"OPEN_STORY_QUEST_TITLE_LIMIT_UP"*/, v13);
+    sub_1B4CF90(&StringLiteral_9443/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/, v14);
+    sub_1B4CF90(&StringLiteral_9444/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, v15);
+    sub_1B4CF90(&StringLiteral_9438/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/, v16);
+    sub_1B4CF90(&StringLiteral_9439/*"OPEN_EVENT_QUEST_TITLE_LIMIT_UP"*/, v17);
+    sub_1B4CF90(&StringLiteral_9445/*"OPEN_MAIN_QUEST_TITLE_LIMIT_UP"*/, v18);
+    byte_49BEA37 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_QuestMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_QuestMaster___);
   if ( !Entity )
     goto LABEL_43;
   Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                            Entity,
                                                            questId,
-                                                           (const MethodInfo_329AE48 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                                                           (const MethodInfo_319D99C *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( !Entity )
     goto LABEL_43;
   v22 = Entity;
@@ -369,26 +361,26 @@ void __fastcall LimitUpResultCheckComponent__SetResInfoListQuestInfo(
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9833/*"Out of memory"*/, 0LL);
-        v26 = &StringLiteral_9832/*"OtherSortKind-"*/;
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9444/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/, 0LL);
+        v26 = &StringLiteral_9443/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/;
       }
       else
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+        Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ConstantStrMaster___);
         if ( !Entity )
           goto LABEL_43;
         Value = (Il2CppObject *)ConstantStrMaster__GetValue(
                                   (ConstantStrMaster_o *)Entity,
-                                  (System_String_o *)StringLiteral_9835/*"OutlineEffectMaterial"*/,
+                                  (System_String_o *)StringLiteral_9446/*"OPEN_MAIN_SCENARIO_TITLE"*/,
                                   0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_9834/*"Outline CommandBuffer - {0}"*/, 0LL);
+        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_9445/*"OPEN_MAIN_QUEST_TITLE_LIMIT_UP"*/, 0LL);
         v25 = System_String__Format(v30, Value, 0LL);
 LABEL_31:
-        v26 = &StringLiteral_9827/*"OrganizationTopItem "*/;
+        v26 = &StringLiteral_9438/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/;
       }
 LABEL_32:
       v24 = v25;
@@ -401,7 +393,7 @@ LABEL_33:
         Entity = (DataMasterBase_TMaster__TEntity__PKType__o *)LimitUpResultCheckComponent__CreateResultInfoObject_object_(
                                                                  this,
                                                                  (Il2CppObject *)this->fields.limitUpResultInfoStoryOrigin,
-                                                                 (const MethodInfo_306A008 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoComponent___);
+                                                                 (const MethodInfo_2F7C110 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoComponent___);
         if ( Entity )
         {
           v32 = (UnityEngine_Component_o *)Entity;
@@ -415,32 +407,32 @@ LABEL_33:
           if ( resInfoList )
           {
             items = resInfoList->fields._items;
-            v41 = Method_System_Collections_Generic_List_GameObject__Add__;
+            v37 = Method_System_Collections_Generic_List_GameObject__Add__;
             ++resInfoList->fields._version;
             if ( items )
             {
               size = resInfoList->fields._size;
-              v43 = (int64_t)Entity;
+              v39 = Entity;
               if ( (unsigned int)size >= items->max_length )
               {
                 System_Collections_Generic_List_object___AddWithResize(
                   resInfoList,
                   (Il2CppObject *)Entity,
-                  *(const MethodInfo_368BC6C **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+                  *(const MethodInfo_35801DC **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
               }
               else
               {
                 resInfoList->fields._size = size + 1;
-                v44 = &items->obj.klass + size;
-                v44[4] = (Il2CppClass *)v43;
-                sub_1C3B708((PartyOrganizationUtility_o *)(v44 + 4), v43, v34, v35, v36, v37, v38, v39);
+                v40 = &items->obj.klass + size;
+                v40[4] = (Il2CppClass *)v39;
+                sub_1B4CF34((CGThumbnailListItem_o *)(v40 + 4), (int32_t)v39, v34, v35);
               }
               return;
             }
           }
         }
 LABEL_43:
-        sub_1C3B9C0(Entity, v21);
+        sub_1B4D1EC(Entity, v21);
       }
       return;
     case 3:
@@ -452,13 +444,13 @@ LABEL_43:
                                 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v28 = (System_String_o **)&StringLiteral_9833/*"Out of memory"*/;
+      v28 = (System_String_o **)&StringLiteral_9444/*"OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP"*/;
       if ( !IsLimitCountSealQuest )
-        v28 = (System_String_o **)&StringLiteral_9841/*"OutlineRenderTexture"*/;
+        v28 = (System_String_o **)&StringLiteral_9452/*"OPEN_STORY_QUEST_TITLE_LIMIT_UP"*/;
       if ( IsLimitCountSealQuest )
-        v26 = &StringLiteral_9832/*"OtherSortKind-"*/;
+        v26 = &StringLiteral_9443/*"OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP"*/;
       else
-        v26 = &StringLiteral_9827/*"OrganizationTopItem "*/;
+        v26 = &StringLiteral_9438/*"OPEN_EVENT_QUEST_NAME_LIMIT_UP"*/;
       v25 = LocalizationManager__Get(*v28, 0LL);
       goto LABEL_32;
     case 4:
@@ -467,7 +459,7 @@ LABEL_43:
     case 6:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9828/*"Origin: {0}, Dir: {1}"*/, 0LL);
+      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9439/*"OPEN_EVENT_QUEST_TITLE_LIMIT_UP"*/, 0LL);
       goto LABEL_31;
     default:
       v24 = 0LL;
@@ -494,7 +486,7 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
   __int64 v16; // x1
   __int64 v17; // x1
   __int64 v18; // x1
-  int64_t Master_object; // x0
+  DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
   __int64 v20; // x1
   Il2CppObject *Entity; // x24
   System_String_o *v22; // x23
@@ -513,62 +505,63 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
   bool v35; // w1
   struct System_Collections_Generic_List_GameObject__o *resInfoList; // x8
   System_Collections_Generic_List_object__o *v37; // x20
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  int32_t v38; // w2
+  const MethodInfo *v39; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v45; // x9
+  _QWORD *v41; // x9
   __int64 size; // x10
-  int64_t v47; // x1
-  Il2CppClass **v48; // x0
+  DataMasterBase_TMaster__TEntity__PKType__o *v43; // x1
+  Il2CppClass **v44; // x0
   TransformServantInfo_o *transformInfo; // [xsp+8h] [xbp-68h] BYREF
   System_String_o *detail; // [xsp+10h] [xbp-60h] BYREF
   System_String_o *name; // [xsp+18h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
 
-  if ( (byte_4C25AF4 & 1) == 0 )
+  if ( (byte_49BEA39 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_ServantSkillMaster___, *(_QWORD *)&skillId);
-    sub_1C3B764(&Method_DataManager_GetMaster_SkillMaster___, v9);
-    sub_1C3B764(&DataManager_TypeInfo, v10);
-    sub_1C3B764(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v11);
-    sub_1C3B764(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoSkillComponent___, v12);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v13);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Count__, v14);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v15);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
-    sub_1C3B764(&StringLiteral_7092/*"Header"*/, v17);
-    sub_1C3B764(&StringLiteral_7091/*"Hausa (Latin, Nigeria)"*/, v18);
-    byte_4C25AF4 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_ServantSkillMaster___, *(_QWORD *)&skillId);
+    sub_1B4CF90(&Method_DataManager_GetMaster_SkillMaster___, v9);
+    sub_1B4CF90(&DataManager_TypeInfo, v10);
+    sub_1B4CF90(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v11);
+    sub_1B4CF90(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoSkillComponent___, v12);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v13);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Count__, v14);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v15);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
+    sub_1B4CF90(&StringLiteral_6846/*"GET_SKILL_TITLE"*/, v17);
+    sub_1B4CF90(&StringLiteral_6845/*"GET_SKILL_NAME_LIMIT_UP"*/, v18);
+    byte_49BEA39 = 1;
   }
   detail = 0LL;
   name = 0LL;
   transformInfo = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
     goto LABEL_33;
   Entity = DataMasterBase_object__object__int___GetEntity(
-             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+             Master_object,
              skillId,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_7092/*"Header"*/, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
+                                                                  (System_String_o *)StringLiteral_6846/*"GET_SKILL_TITLE"*/,
+                                                                  0LL);
   if ( !this->fields.resUsrSvtData )
     goto LABEL_33;
   v22 = (System_String_o *)Master_object;
-  Master_object = UserServantEntity__getSkillLevel(this->fields.resUsrSvtData, targetIdx, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserServantEntity__getSkillLevel(
+                                                                  this->fields.resUsrSvtData,
+                                                                  targetIdx,
+                                                                  0LL);
   if ( !Entity )
     goto LABEL_33;
-  SkillEntity__getSkillMessageInfo((SkillEntity_o *)Entity, &name, &detail, Master_object, 0LL);
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_7091/*"Hausa (Latin, Nigeria)"*/, 0LL);
+  SkillEntity__getSkillMessageInfo((SkillEntity_o *)Entity, &name, &detail, (int32_t)Master_object, 0LL);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6845/*"GET_SKILL_NAME_LIMIT_UP"*/, 0LL);
   v24 = System_String__Format(v23, (Il2CppObject *)name, 0LL);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantSkillMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ServantSkillMaster___);
   resUsrSvtData = this->fields.resUsrSvtData;
   if ( !resUsrSvtData )
     goto LABEL_33;
@@ -577,18 +570,20 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
   v27 = *(_QWORD *)&resUsrSvtData->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v52.fields.currentCryptoKey = v28;
-  *(_QWORD *)&v52.fields.fakeValue = v27;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v52, 0LL);
+  *(_QWORD *)&v48.fields.currentCryptoKey = v28;
+  *(_QWORD *)&v48.fields.fakeValue = v27;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+                                                                  v48,
+                                                                  0LL);
   if ( !v26 )
     goto LABEL_33;
-  EntityFromSkillId = ServantSkillMaster__getEntityFromSkillId(v26, Master_object, targetIdx + 1, skillId, 0LL);
+  EntityFromSkillId = ServantSkillMaster__getEntityFromSkillId(v26, (int32_t)Master_object, targetIdx + 1, skillId, 0LL);
   v30 = this->fields.transformationCount <= 1 ? 128LL : 136LL;
   v31 = EntityFromSkillId;
-  Master_object = (int64_t)LimitUpResultCheckComponent__CreateResultInfoObject_object_(
-                             this,
-                             *(Il2CppObject **)((char *)&this->klass + v30),
-                             (const MethodInfo_306A008 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoSkillComponent___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LimitUpResultCheckComponent__CreateResultInfoObject_object_(
+                                                                  this,
+                                                                  *(Il2CppObject **)((char *)&this->klass + v30),
+                                                                  (const MethodInfo_2F7C110 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoSkillComponent___);
   if ( !Master_object )
     goto LABEL_33;
   v33 = (LimitUpResultInfoSkillComponent_o *)Master_object;
@@ -602,18 +597,18 @@ void __fastcall LimitUpResultCheckComponent__SetSkillRelease(
     v32);
   if ( this->fields.transformationCount < 2 )
     goto LABEL_27;
-  Master_object = (int64_t)this->fields.baseUsrSvtData;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.baseUsrSvtData;
   if ( !Master_object
-    || (Master_object = UserServantEntity__GetTransformedServantInfo(
-                          (UserServantEntity_o *)Master_object,
-                          &transformInfo,
-                          transformIndex,
-                          0LL),
+    || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserServantEntity__GetTransformedServantInfo(
+                                                                        (UserServantEntity_o *)Master_object,
+                                                                        &transformInfo,
+                                                                        transformIndex,
+                                                                        0LL),
         !transformInfo)
-    || (Master_object = (int64_t)v33->fields.battleNameLabel) == 0 )
+    || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v33->fields.battleNameLabel) == 0LL )
   {
 LABEL_33:
-    sub_1C3B9C0(Master_object, v20);
+    sub_1B4D1EC(Master_object, v20);
   }
   UILabel__set_text((UILabel_o *)Master_object, transformInfo->fields.titleText, 0LL);
   if ( this->fields.transformationCount >= 2 )
@@ -630,29 +625,31 @@ LABEL_33:
   LimitUpResultInfoSkillComponent__SetTitleDisp(v33, v35, v34);
 LABEL_27:
   v37 = (System_Collections_Generic_List_object__o *)this->fields.resInfoList;
-  Master_object = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v33, 0LL);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_gameObject(
+                                                                  (UnityEngine_Component_o *)v33,
+                                                                  0LL);
   if ( !v37 )
     goto LABEL_33;
   items = v37->fields._items;
-  v45 = Method_System_Collections_Generic_List_GameObject__Add__;
+  v41 = Method_System_Collections_Generic_List_GameObject__Add__;
   ++v37->fields._version;
   if ( !items )
     goto LABEL_33;
   size = v37->fields._size;
-  v47 = Master_object;
+  v43 = Master_object;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v37,
       (Il2CppObject *)Master_object,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
   }
   else
   {
-    v48 = &items->obj.klass + size;
+    v44 = &items->obj.klass + size;
     v37->fields._size = size + 1;
-    v48[4] = (Il2CppClass *)v47;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v48 + 4), v47, v38, v39, v40, v41, v42, v43);
+    v44[4] = (Il2CppClass *)v43;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v44 + 4), (int32_t)v43, v38, v39);
   }
   this->fields.isGetNewSkill = 1;
 }
@@ -713,35 +710,31 @@ void __fastcall LimitUpResultCheckComponent__checkGetSkill(
   System_String_o *v49; // x0
   UILabel_o *skillChangeInfoNameNow; // x20
   System_String_o *v51; // x0
-  int64_t v52; // x2
-  int32_t v53; // w3
-  System_String_o *v54; // x4
-  BattleSetupInfo_o *v55; // x5
-  FollowerInfo_o *v56; // x6
-  PartyListViewItem_o *v57; // x7
-  __int64 v58; // x8
-  _QWORD *v59; // x9
+  int32_t v52; // w2
+  const MethodInfo *v53; // x3
+  __int64 v54; // x8
+  _QWORD *v55; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  __int64 v61; // x8
+  __int64 v57; // x8
   System_String_o *detail; // [xsp+8h] [xbp-58h] BYREF
   System_String_o *name; // [xsp+18h] [xbp-48h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v64; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v60; // 0:x0.16
 
   v3 = transformIndex;
   v4 = this;
-  if ( (byte_4C25AF3 & 1) == 0 )
+  if ( (byte_49BEA38 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_SkillMaster___, *(_QWORD *)&transformIndex);
-    sub_1C3B764(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1C3B764(&StringLiteral_7090/*"Hashtable's capacity overflowed and went negative. Check load factor, capacity and the current size of the table."*/, v10);
-    sub_1C3B764(&StringLiteral_2034/*"AP_ADD_CONFIRM_MSG"*/, v11);
-    sub_1C3B764(&StringLiteral_3476/*"CLOSE_CHANGE_PROFILE"*/, v12);
-    this = (LimitUpResultCheckComponent_o *)sub_1C3B764(&StringLiteral_3039/*"Backtrace native integration status: Unsupported Android API level"*/, v13);
-    byte_4C25AF3 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_SkillMaster___, *(_QWORD *)&transformIndex);
+    sub_1B4CF90(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v6);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v7);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B4CF90(&StringLiteral_6844/*"GET_SKILL_NAME"*/, v10);
+    sub_1B4CF90(&StringLiteral_1937/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, v11);
+    sub_1B4CF90(&StringLiteral_3331/*"CHANGE_SKILL_TITLE"*/, v12);
+    this = (LimitUpResultCheckComponent_o *)sub_1B4CF90(&StringLiteral_2900/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, v13);
+    byte_49BEA38 = 1;
   }
   name = 0LL;
   detail = 0LL;
@@ -753,9 +746,9 @@ void __fastcall LimitUpResultCheckComponent__checkGetSkill(
   v15 = *(_QWORD *)&baseUsrSvtData->fields.limitCount.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v64.fields.currentCryptoKey = v16;
-  *(_QWORD *)&v64.fields.fakeValue = v15;
-  this = (LimitUpResultCheckComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v64, 0LL);
+  *(_QWORD *)&v60.fields.currentCryptoKey = v16;
+  *(_QWORD *)&v60.fields.fakeValue = v15;
+  this = (LimitUpResultCheckComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v60, 0LL);
   if ( !v4->fields.baseUsrSvtData )
     goto LABEL_57;
   v17 = (int)this;
@@ -785,7 +778,7 @@ void __fastcall LimitUpResultCheckComponent__checkGetSkill(
     this = (LimitUpResultCheckComponent_o *)v4->fields.resUsrSvtData;
     if ( !this )
 LABEL_57:
-      sub_1C3B9C0(this, *(_QWORD *)&transformIndex);
+      sub_1B4D1EC(this, *(_QWORD *)&transformIndex);
     v22 = v3;
     v23 = LimitCntMax;
   }
@@ -847,29 +840,29 @@ LABEL_57:
       return;
     }
 LABEL_56:
-    sub_1C3B9C8(this, *(_QWORD *)&transformIndex);
+    sub_1B4D1F4(this, *(_QWORD *)&transformIndex);
   }
   if ( v27 >= v20->max_length || v27 >= LODWORD(v24->fields.m_CancellationTokenSource) )
     goto LABEL_56;
   v37 = *v29;
   v38 = *v34;
-  this = (LimitUpResultCheckComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (LimitUpResultCheckComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_57;
   this = (LimitUpResultCheckComponent_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                            (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_SkillMaster___);
   if ( !this )
     goto LABEL_57;
   v39 = (DataMasterBase_TMaster__TEntity__PKType__o *)this;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              v37,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   this = (LimitUpResultCheckComponent_o *)DataMasterBase_object__object__int___GetEntity(
                                             v39,
                                             v38,
-                                            (const MethodInfo_329AE48 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                                            (const MethodInfo_319D99C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( !v4->fields.baseUsrSvtData )
     goto LABEL_57;
   v41 = (SkillEntity_o *)this;
@@ -882,17 +875,17 @@ LABEL_56:
   v45 = SkillLevel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3476/*"CLOSE_CHANGE_PROFILE"*/, 0LL);
+  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3331/*"CHANGE_SKILL_TITLE"*/, 0LL);
   if ( !skillChangeInfoTitle )
     goto LABEL_57;
   UILabel__set_text(skillChangeInfoTitle, (System_String_o *)this, 0LL);
   skillChangeInfoSubTitleOld = v4->fields.skillChangeInfoSubTitleOld;
-  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3039/*"Backtrace native integration status: Unsupported Android API level"*/, 0LL);
+  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2900/*"BEFORE_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
   if ( !skillChangeInfoSubTitleOld )
     goto LABEL_57;
   UILabel__set_text(skillChangeInfoSubTitleOld, (System_String_o *)this, 0LL);
   skillChangeInfoSubTitleNow = v4->fields.skillChangeInfoSubTitleNow;
-  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2034/*"AP_ADD_CONFIRM_MSG"*/, 0LL);
+  this = (LimitUpResultCheckComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1937/*"AFTER_CHANGE_SKILL_SUB_TITLE"*/, 0LL);
   if ( !skillChangeInfoSubTitleNow )
     goto LABEL_57;
   UILabel__set_text(skillChangeInfoSubTitleNow, (System_String_o *)this, 0LL);
@@ -900,7 +893,7 @@ LABEL_56:
     goto LABEL_57;
   SkillEntity__getSkillMessageInfo((SkillEntity_o *)Entity, &name, &detail, v42, 0LL);
   skillChangeInfoNameOld = v4->fields.skillChangeInfoNameOld;
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_7090/*"Hashtable's capacity overflowed and went negative. Check load factor, capacity and the current size of the table."*/, 0LL);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_6844/*"GET_SKILL_NAME"*/, 0LL);
   this = (LimitUpResultCheckComponent_o *)System_String__Format(v49, (Il2CppObject *)name, 0LL);
   if ( !skillChangeInfoNameOld )
     goto LABEL_57;
@@ -918,7 +911,7 @@ LABEL_56:
     goto LABEL_57;
   SkillEntity__getSkillMessageInfo(v41, &name, &detail, v45, 0LL);
   skillChangeInfoNameNow = v4->fields.skillChangeInfoNameNow;
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_7090/*"Hashtable's capacity overflowed and went negative. Check load factor, capacity and the current size of the table."*/, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_6844/*"GET_SKILL_NAME"*/, 0LL);
   this = (LimitUpResultCheckComponent_o *)System_String__Format(v51, (Il2CppObject *)name, 0LL);
   if ( !skillChangeInfoNameNow )
     goto LABEL_57;
@@ -931,25 +924,25 @@ LABEL_56:
   if ( !this )
     goto LABEL_57;
   *(_QWORD *)&transformIndex = v4->fields.skillChangeInfo;
-  v58 = *(_QWORD *)&this->fields.m_CachedPtr;
-  v59 = Method_System_Collections_Generic_List_GameObject__Add__;
+  v54 = *(_QWORD *)&this->fields.m_CachedPtr;
+  v55 = Method_System_Collections_Generic_List_GameObject__Add__;
   ++HIDWORD(this->fields.m_CancellationTokenSource);
-  if ( !v58 )
+  if ( !v54 )
     goto LABEL_57;
   m_CancellationTokenSource_low = SLODWORD(this->fields.m_CancellationTokenSource);
-  if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v58 + 24) )
+  if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v54 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       *(Il2CppObject **)&transformIndex,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
   }
   else
   {
-    v61 = v58 + 8 * m_CancellationTokenSource_low;
+    v57 = v54 + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-    *(_QWORD *)(v61 + 32) = *(_QWORD *)&transformIndex;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v61 + 32), *(int64_t *)&transformIndex, v52, v53, v54, v55, v56, v57);
+    *(_QWORD *)(v57 + 32) = *(_QWORD *)&transformIndex;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v57 + 32), transformIndex, v52, v53);
   }
   *(_WORD *)&v4->fields.isGetNewSkill = 257;
 }
@@ -975,7 +968,7 @@ void __fastcall LimitUpResultCheckComponent__checkLimitUpReward(
   __int64 v17; // x1
   __int64 v18; // x21
   Il2CppObject *Master_object; // x23
-  int64_t LimitCntMax; // x0
+  GiftMaster_o *LimitCntMax; // x0
   __int64 v21; // x1
   struct UserServantEntity_o *baseUsrSvtData; // x8
   GiftMaster_o *v23; // x22
@@ -986,93 +979,85 @@ void __fastcall LimitUpResultCheckComponent__checkLimitUpReward(
   __int64 v28; // x25
   GiftEntity_o *DataById; // x0
   __int64 v30; // x22
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
-  System_String_o *v37; // x23
-  __int64 v38; // x2
-  __int64 v39; // x3
-  __int64 v40; // x4
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
+  System_String_o *v33; // x23
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  Il2CppObject *v37; // x25
+  System_String_o *v38; // x24
+  Il2CppObject *v39; // x0
+  System_String_o *v40; // x24
   Il2CppObject *v41; // x25
-  System_String_o *v42; // x24
-  Il2CppObject *v43; // x0
-  System_String_o *v44; // x24
-  Il2CppObject *v45; // x25
-  System_Func_object__bool__o *v46; // x26
-  bool v47; // w20
-  const MethodInfo *v48; // x5
+  System_Func_object__bool__o *v42; // x26
+  bool v43; // w20
+  const MethodInfo *v44; // x5
   System_Collections_Generic_List_object__o *resInfoList; // x19
-  int64_t v50; // x2
-  int32_t v51; // w3
-  System_String_o *v52; // x4
-  BattleSetupInfo_o *v53; // x5
-  FollowerInfo_o *v54; // x6
-  PartyListViewItem_o *v55; // x7
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v57; // x9
+  _QWORD *v49; // x9
   __int64 size; // x10
-  int64_t v59; // x1
-  Il2CppClass **v60; // x0
-  int v61; // [xsp+4h] [xbp-5Ch] BYREF
+  GiftMaster_o *v51; // x1
+  Il2CppClass **v52; // x0
+  int v53; // [xsp+4h] [xbp-5Ch] BYREF
   System_String_o *countText; // [xsp+8h] [xbp-58h] BYREF
   System_String_o *nameText; // [xsp+18h] [xbp-48h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v64; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v65; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v56; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
 
-  if ( (byte_4C25AF5 & 1) == 0 )
+  if ( (byte_49BEA3A & 1) == 0 )
   {
-    sub_1C3B764(&Method_BasicHelper_Any_int_____, rewardGiftDataList);
-    sub_1C3B764(&Method_DataManager_GetMaster_CombineLimitGiftMaster___, v5);
-    sub_1C3B764(&Method_DataManager_GetMaster_GiftMaster___, v6);
-    sub_1C3B764(&DataManager_TypeInfo, v7);
-    sub_1C3B764(&System_Func_int____bool__TypeInfo, v8);
-    sub_1C3B764(&int_TypeInfo, v9);
-    sub_1C3B764(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoRewardComponent___, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v11);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v12);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
-    sub_1C3B764(&Method_LimitUpResultCheckComponent___c__DisplayClass45_0__checkLimitUpReward_b__0__, v14);
-    sub_1C3B764(&LimitUpResultCheckComponent___c__DisplayClass45_0_TypeInfo, v15);
-    sub_1C3B764(&StringLiteral_7087/*"HashSet capacity is too big."*/, v16);
-    sub_1C3B764(&StringLiteral_7088/*"HashSize"*/, v17);
-    byte_4C25AF5 = 1;
+    sub_1B4CF90(&Method_BasicHelper_Any_int_____, rewardGiftDataList);
+    sub_1B4CF90(&Method_DataManager_GetMaster_CombineLimitGiftMaster___, v5);
+    sub_1B4CF90(&Method_DataManager_GetMaster_GiftMaster___, v6);
+    sub_1B4CF90(&DataManager_TypeInfo, v7);
+    sub_1B4CF90(&System_Func_int____bool__TypeInfo, v8);
+    sub_1B4CF90(&int_TypeInfo, v9);
+    sub_1B4CF90(&Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoRewardComponent___, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v11);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v12);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v13);
+    sub_1B4CF90(&Method_LimitUpResultCheckComponent___c__DisplayClass45_0__checkLimitUpReward_b__0__, v14);
+    sub_1B4CF90(&LimitUpResultCheckComponent___c__DisplayClass45_0_TypeInfo, v15);
+    sub_1B4CF90(&StringLiteral_6841/*"GET_LIMIT_UP_REWARD_DETAIL"*/, v16);
+    sub_1B4CF90(&StringLiteral_6842/*"GET_LIMIT_UP_REWARD_TITLE"*/, v17);
+    byte_49BEA3A = 1;
   }
   nameText = 0LL;
   countText = 0LL;
-  v18 = sub_1C3B9B0(LimitUpResultCheckComponent___c__DisplayClass45_0_TypeInfo);
+  v18 = sub_1B4D1DC(LimitUpResultCheckComponent___c__DisplayClass45_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CombineLimitGiftMaster___);
-  LimitCntMax = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_CombineLimitGiftMaster___);
+  LimitCntMax = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_GiftMaster___);
   baseUsrSvtData = this->fields.baseUsrSvtData;
   if ( !baseUsrSvtData )
     goto LABEL_34;
-  v23 = (GiftMaster_o *)LimitCntMax;
+  v23 = LimitCntMax;
   v25 = *(_QWORD *)&baseUsrSvtData->fields.limitCount.fields.currentCryptoKey;
   v24 = *(_QWORD *)&baseUsrSvtData->fields.limitCount.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v64.fields.currentCryptoKey = v25;
-  *(_QWORD *)&v64.fields.fakeValue = v24;
-  LimitCntMax = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v64, 0LL);
+  *(_QWORD *)&v56.fields.currentCryptoKey = v25;
+  *(_QWORD *)&v56.fields.fakeValue = v24;
+  LimitCntMax = (GiftMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v56, 0LL);
   if ( !v18 )
     goto LABEL_34;
-  *(_DWORD *)(v18 + 16) = LimitCntMax + 1;
-  LimitCntMax = (int64_t)this->fields.baseUsrSvtData;
+  *(_DWORD *)(v18 + 16) = (_DWORD)LimitCntMax + 1;
+  LimitCntMax = (GiftMaster_o *)this->fields.baseUsrSvtData;
   if ( !LimitCntMax )
     goto LABEL_34;
-  LimitCntMax = UserServantEntity__getLimitCntMax((UserServantEntity_o *)LimitCntMax, 0LL);
+  LimitCntMax = (GiftMaster_o *)UserServantEntity__getLimitCntMax((UserServantEntity_o *)LimitCntMax, 0LL);
   if ( (int)LimitCntMax < *(_DWORD *)(v18 + 16) )
   {
-    LimitCntMax = (int64_t)this->fields.baseUsrSvtData;
+    LimitCntMax = (GiftMaster_o *)this->fields.baseUsrSvtData;
     if ( !LimitCntMax )
       goto LABEL_34;
-    LimitCntMax = UserServantEntity__getLimitCntMax((UserServantEntity_o *)LimitCntMax, 0LL);
-    *(_DWORD *)(v18 + 16) = LimitCntMax;
+    LimitCntMax = (GiftMaster_o *)UserServantEntity__getLimitCntMax((UserServantEntity_o *)LimitCntMax, 0LL);
+    *(_DWORD *)(v18 + 16) = (_DWORD)LimitCntMax;
   }
   v26 = this->fields.baseUsrSvtData;
   if ( !v26 )
@@ -1081,95 +1066,95 @@ void __fastcall LimitUpResultCheckComponent__checkLimitUpReward(
   v27 = *(_QWORD *)&v26->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v65.fields.currentCryptoKey = v28;
-  *(_QWORD *)&v65.fields.fakeValue = v27;
-  LimitCntMax = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v65, 0LL);
+  *(_QWORD *)&v57.fields.currentCryptoKey = v28;
+  *(_QWORD *)&v57.fields.fakeValue = v27;
+  LimitCntMax = (GiftMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v57, 0LL);
   if ( !Master_object )
     goto LABEL_34;
-  LimitCntMax = CombineLimitGiftMaster__GetCombineLimitGiftId(
-                  (CombineLimitGiftMaster_o *)Master_object,
-                  LimitCntMax,
-                  *(_DWORD *)(v18 + 16),
-                  0LL);
+  LimitCntMax = (GiftMaster_o *)CombineLimitGiftMaster__GetCombineLimitGiftId(
+                                  (CombineLimitGiftMaster_o *)Master_object,
+                                  (int32_t)LimitCntMax,
+                                  *(_DWORD *)(v18 + 16),
+                                  0LL);
   if ( !(_DWORD)LimitCntMax )
     return;
   if ( !v23 )
     goto LABEL_34;
-  DataById = GiftMaster__getDataById(v23, LimitCntMax, 0LL);
+  DataById = GiftMaster__getDataById(v23, (int32_t)LimitCntMax, 0LL);
   *(_QWORD *)(v18 + 24) = DataById;
   v30 = v18 + 24;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v18 + 24), (int64_t)DataById, v31, v32, v33, v34, v35, v36);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v18 + 24), (int32_t)DataById, v31, v32);
   if ( !*(_QWORD *)(v18 + 24) )
     return;
   GiftEntity__GetInfo(*(GiftEntity_o **)(v18 + 24), &nameText, &countText, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_7088/*"HashSize"*/, 0LL);
-  LimitCntMax = (int64_t)LocalizationManager__Get((System_String_o *)StringLiteral_7087/*"HashSet capacity is too big."*/, 0LL);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_6842/*"GET_LIMIT_UP_REWARD_TITLE"*/, 0LL);
+  LimitCntMax = (GiftMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6841/*"GET_LIMIT_UP_REWARD_DETAIL"*/, 0LL);
   if ( !*(_QWORD *)v30 )
     goto LABEL_34;
-  v41 = (Il2CppObject *)nameText;
-  v42 = (System_String_o *)LimitCntMax;
-  v61 = *(_DWORD *)(*(_QWORD *)v30 + 28LL);
-  v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v61, v38, v39, v40);
-  v44 = System_String__Format_63382984(v42, v41, v43, 0LL);
-  v45 = LimitUpResultCheckComponent__CreateResultInfoObject_object_(
+  v37 = (Il2CppObject *)nameText;
+  v38 = (System_String_o *)LimitCntMax;
+  v53 = *(_DWORD *)(*(_QWORD *)v30 + 28LL);
+  v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53, v34, v35, v36);
+  v40 = System_String__Format_61134760(v38, v37, v39, 0LL);
+  v41 = LimitUpResultCheckComponent__CreateResultInfoObject_object_(
           this,
           (Il2CppObject *)this->fields.limitUpResultInfoRewardOrigin,
-          (const MethodInfo_306A008 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoRewardComponent___);
+          (const MethodInfo_2F7C110 *)Method_LimitUpResultCheckComponent_CreateResultInfoObject_LimitUpResultInfoRewardComponent___);
   if ( rewardGiftDataList )
   {
-    v46 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_int____bool__TypeInfo);
+    v42 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_int____bool__TypeInfo);
     System_Func_object__bool____ctor(
-      v46,
+      v42,
       (Il2CppObject *)v18,
       Method_LimitUpResultCheckComponent___c__DisplayClass45_0__checkLimitUpReward_b__0__,
       0LL);
-    v47 = !BasicHelper__Any_object_(
+    v43 = !BasicHelper__Any_object_(
              (System_Collections_Generic_List_T__o *)rewardGiftDataList,
-             (System_Func_T__bool__o *)v46,
-             (const MethodInfo_2FDAB74 *)Method_BasicHelper_Any_int_____);
+             (System_Func_T__bool__o *)v42,
+             (const MethodInfo_2EEC494 *)Method_BasicHelper_Any_int_____);
   }
   else
   {
-    v47 = 1;
+    v43 = 1;
   }
-  LimitCntMax = *(_QWORD *)v30;
+  LimitCntMax = *(GiftMaster_o **)v30;
   if ( !*(_QWORD *)v30
-    || (LimitCntMax = GiftEntity__getIconImageId((GiftEntity_o *)LimitCntMax, 0LL), !v45)
+    || (LimitCntMax = (GiftMaster_o *)GiftEntity__getIconImageId((GiftEntity_o *)LimitCntMax, 0LL), !v41)
     || (LimitUpResultInfoRewardComponent__Setup(
-          (LimitUpResultInfoRewardComponent_o *)v45,
-          LimitCntMax,
-          v47,
-          v37,
-          v44,
-          v48),
+          (LimitUpResultInfoRewardComponent_o *)v41,
+          (int32_t)LimitCntMax,
+          v43,
+          v33,
+          v40,
+          v44),
         resInfoList = (System_Collections_Generic_List_object__o *)this->fields.resInfoList,
-        LimitCntMax = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v45, 0LL),
+        LimitCntMax = (GiftMaster_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v41, 0LL),
         !resInfoList)
     || (items = resInfoList->fields._items,
-        v57 = Method_System_Collections_Generic_List_GameObject__Add__,
+        v49 = Method_System_Collections_Generic_List_GameObject__Add__,
         ++resInfoList->fields._version,
         !items) )
   {
 LABEL_34:
-    sub_1C3B9C0(LimitCntMax, v21);
+    sub_1B4D1EC(LimitCntMax, v21);
   }
   size = resInfoList->fields._size;
-  v59 = LimitCntMax;
+  v51 = LimitCntMax;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       resInfoList,
       (Il2CppObject *)LimitCntMax,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
   }
   else
   {
-    v60 = &items->obj.klass + size;
+    v52 = &items->obj.klass + size;
     resInfoList->fields._size = size + 1;
-    v60[4] = (Il2CppClass *)v59;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v60 + 4), v59, v50, v51, v52, v53, v54, v55);
+    v52[4] = (Il2CppClass *)v51;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v52 + 4), (int32_t)v51, v46, v47);
   }
 }
 
@@ -1211,26 +1196,26 @@ void __fastcall LimitUpResultCheckComponent__checkQuestOpen(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v33; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v34; // 0:x0.16
 
-  if ( (byte_4C25AF1 & 1) == 0 )
+  if ( (byte_49BEA36 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__get_Count__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__get_Item__, v5);
-    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v6);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1C3B764(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v10);
-    sub_1C3B764(&StringLiteral_9840/*"OutlineEffectTwoPassGaussianBloom"*/, v11);
-    sub_1C3B764(&StringLiteral_9829/*"OriginalPath"*/, v12);
-    byte_4C25AF1 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Count__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Item__, v5);
+    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v6);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v7);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1B4CF90(&Method_SingletonTemplate_clsQuestCheck__get_Instance__, v10);
+    sub_1B4CF90(&StringLiteral_9451/*"OPEN_STORY_QUEST_TITLE"*/, v11);
+    sub_1B4CF90(&StringLiteral_9440/*"OPEN_HERO_QUEST_TITLE"*/, v12);
+    byte_49BEA36 = 1;
   }
   this->fields.isOpenQuest = 0;
-  v13 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
+  v13 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v13,
-    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
   svtCollectionLimitCnt = this->fields.svtCollectionLimitCnt;
   if ( (svtCollectionLimitCnt & 0x80000000) == 0 )
   {
@@ -1247,7 +1232,7 @@ void __fastcall LimitUpResultCheckComponent__checkQuestOpen(
           goto LABEL_31;
         LimitCntMax = UserServantEntity__getLimitCntMax(baseUsrSvtData, 0LL);
       }
-      baseUsrSvtData = (UserServantEntity_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38C8B54 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+      baseUsrSvtData = (UserServantEntity_o *)SingletonTemplate_object___get_Instance((const MethodInfo_37B4830 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
       resUsrSvtData = this->fields.resUsrSvtData;
       if ( !resUsrSvtData )
         goto LABEL_31;
@@ -1258,13 +1243,13 @@ void __fastcall LimitUpResultCheckComponent__checkQuestOpen(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v33.fields.currentCryptoKey = v21;
       *(_QWORD *)&v33.fields.fakeValue = v20;
-      baseUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(
+      baseUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
                                                 v33,
                                                 0LL);
       if ( !v19 )
 LABEL_31:
-        sub_1C3B9C0(baseUsrSvtData, v14);
-      v22 = clsQuestCheck__GetReleaseQuestIdByServantLimit_34800408(
+        sub_1B4D1EC(baseUsrSvtData, v14);
+      v22 = clsQuestCheck__GetReleaseQuestIdByServantLimit_33906360(
               v19,
               (int32_t)baseUsrSvtData,
               this->fields.svtCollectionLimitCnt,
@@ -1274,7 +1259,7 @@ LABEL_31:
     }
     else
     {
-      baseUsrSvtData = (UserServantEntity_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38C8B54 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+      baseUsrSvtData = (UserServantEntity_o *)SingletonTemplate_object___get_Instance((const MethodInfo_37B4830 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
       v23 = this->fields.resUsrSvtData;
       if ( !v23 )
         goto LABEL_31;
@@ -1285,7 +1270,7 @@ LABEL_31:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v34.fields.currentCryptoKey = v26;
       *(_QWORD *)&v34.fields.fakeValue = v25;
-      baseUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(
+      baseUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
                                                 v34,
                                                 0LL);
       if ( !v24 )
@@ -1300,21 +1285,21 @@ LABEL_31:
     storyQuestInfoTitle = this->fields.storyQuestInfoTitle;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    baseUsrSvtData = (UserServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9840/*"OutlineEffectTwoPassGaussianBloom"*/, 0LL);
+    baseUsrSvtData = (UserServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9451/*"OPEN_STORY_QUEST_TITLE"*/, 0LL);
     if ( storyQuestInfoTitle )
     {
       UILabel__set_text(storyQuestInfoTitle, (System_String_o *)baseUsrSvtData, 0LL);
       heroQuestInfoTitle = this->fields.heroQuestInfoTitle;
-      baseUsrSvtData = (UserServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9829/*"OriginalPath"*/, 0LL);
+      baseUsrSvtData = (UserServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_9440/*"OPEN_HERO_QUEST_TITLE"*/, 0LL);
       if ( heroQuestInfoTitle )
       {
         UILabel__set_text(heroQuestInfoTitle, (System_String_o *)baseUsrSvtData, 0LL);
-        baseUsrSvtData = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        baseUsrSvtData = (UserServantEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( baseUsrSvtData )
         {
           DataManager__GetMasterData_object_(
             (DataManager_o *)baseUsrSvtData,
-            (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+            (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
           if ( v27 && v27->fields._size >= 1 )
           {
             v30 = 0;
@@ -1323,12 +1308,12 @@ LABEL_31:
               if ( System_Collections_Generic_List_int___get_Item(
                      v27,
                      v30,
-                     (const MethodInfo_366E958 *)Method_System_Collections_Generic_List_int__get_Item__) >= 1 )
+                     (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__) >= 1 )
               {
                 Item = System_Collections_Generic_List_int___get_Item(
                          v27,
                          v30,
-                         (const MethodInfo_366E958 *)Method_System_Collections_Generic_List_int__get_Item__);
+                         (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__);
                 LimitUpResultCheckComponent__SetResInfoListQuestInfo(this, Item, v32);
               }
               ++v30;
@@ -1354,69 +1339,56 @@ void __fastcall LimitUpResultCheckComponent__checkResultLimitUp(
         System_Collections_Generic_List_int____o *rewardGiftDataList,
         const MethodInfo *method)
 {
-  PartyListViewItem_o *v7; // x7
+  __int64 v13; // x1
   __int64 v14; // x1
   __int64 v15; // x1
   __int64 v16; // x1
   __int64 v17; // x1
-  __int64 v18; // x1
   struct UserServantEntity_o **p_resUsrSvtData; // x21
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  System_Collections_Generic_List_object__o *v26; // x22
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  __int64 v33; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_object__o *v21; // x22
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  __int64 v24; // x1
   UserServantEntity_o *resUsrSvtData; // x0
-  struct UserServantEntity_o *v35; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v36; // x21
-  __int64 v37; // x22
-  __int64 v38; // x23
-  const MethodInfo *v39; // x1
-  const MethodInfo *v40; // x2
-  int32_t v41; // w21
-  const MethodInfo *v42; // x2
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
+  struct UserServantEntity_o *v26; // x8
+  DataMasterBase_TMaster__TEntity__PKType__o *v27; // x21
+  __int64 v28; // x22
+  __int64 v29; // x23
+  const MethodInfo *v30; // x1
+  const MethodInfo *v31; // x2
+  int32_t v32; // w21
+  const MethodInfo *v33; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v34; // 0:x0.16
 
-  if ( (byte_4C25AEE & 1) == 0 )
+  if ( (byte_49BEA33 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&kind);
-    sub_1C3B764(&DataManager_TypeInfo, v14);
-    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v15);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject___ctor__, v16);
-    sub_1C3B764(&System_Collections_Generic_List_GameObject__TypeInfo, v17);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v18);
-    byte_4C25AEE = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&kind);
+    sub_1B4CF90(&DataManager_TypeInfo, v13);
+    sub_1B4CF90(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject___ctor__, v15);
+    sub_1B4CF90(&System_Collections_Generic_List_GameObject__TypeInfo, v16);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v17);
+    byte_49BEA33 = 1;
   }
   this->fields.baseUsrSvtData = baseData;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.baseUsrSvtData,
-    (int64_t)baseData,
-    (int64_t)baseData,
-    (int32_t)resData,
-    *(System_String_o **)&baseCollectionLimitCnt,
-    (BattleSetupInfo_o *)rewardGiftDataList,
-    (FollowerInfo_o *)method,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields.baseUsrSvtData,
+    (int32_t)baseData,
+    (int32_t)baseData,
+    (const MethodInfo *)resData);
   p_resUsrSvtData = &this->fields.resUsrSvtData;
   this->fields.resUsrSvtData = resData;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.resUsrSvtData, (int64_t)resData, v20, v21, v22, v23, v24, v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.resUsrSvtData, (int32_t)resData, v19, v20);
   this->fields.svtCollectionLimitCnt = baseCollectionLimitCnt;
   this->fields.kind = kind;
-  v26 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_GameObject__TypeInfo);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v26,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.resInfoList = (struct System_Collections_Generic_List_GameObject__o *)v26;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.resInfoList, (int64_t)v26, v27, v28, v29, v30, v31, v32);
+    v21,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.resInfoList = (struct System_Collections_Generic_List_GameObject__o *)v21;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.resInfoList, (int32_t)v21, v22, v23);
   *(_WORD *)&this->fields.isGetNewSkill = 0;
   this->fields.isOpenQuest = 0;
   resUsrSvtData = this->fields.resUsrSvtData;
@@ -1425,38 +1397,38 @@ void __fastcall LimitUpResultCheckComponent__checkResultLimitUp(
   this->fields.transformationCount = UserServantEntity__GetTransformCount(resUsrSvtData, 1, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  resUsrSvtData = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantMaster___);
-  v35 = *p_resUsrSvtData;
+  resUsrSvtData = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ServantMaster___);
+  v26 = *p_resUsrSvtData;
   if ( !*p_resUsrSvtData )
     goto LABEL_17;
-  v36 = (DataMasterBase_TMaster__TEntity__PKType__o *)resUsrSvtData;
-  v38 = *(_QWORD *)&v35->fields.svtId.fields.currentCryptoKey;
-  v37 = *(_QWORD *)&v35->fields.svtId.fields.fakeValue;
+  v27 = (DataMasterBase_TMaster__TEntity__PKType__o *)resUsrSvtData;
+  v29 = *(_QWORD *)&v26->fields.svtId.fields.currentCryptoKey;
+  v28 = *(_QWORD *)&v26->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v43.fields.currentCryptoKey = v38;
-  *(_QWORD *)&v43.fields.fakeValue = v37;
-  resUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v43, 0LL);
-  if ( !v36
+  *(_QWORD *)&v34.fields.currentCryptoKey = v29;
+  *(_QWORD *)&v34.fields.fakeValue = v28;
+  resUsrSvtData = (UserServantEntity_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v34, 0LL);
+  if ( !v27
     || (resUsrSvtData = (UserServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
-                                                 v36,
+                                                 v27,
                                                  (int32_t)resUsrSvtData,
-                                                 (const MethodInfo_329AE48 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
+                                                 (const MethodInfo_319D99C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
   {
 LABEL_17:
-    sub_1C3B9C0(resUsrSvtData, v33);
+    sub_1B4D1EC(resUsrSvtData, v24);
   }
   if ( ServantEntity__get_IsServant((ServantEntity_o *)resUsrSvtData, 0LL) )
   {
     if ( this->fields.transformationCount >= 1 )
     {
-      v41 = 0;
+      v32 = 0;
       do
-        LimitUpResultCheckComponent__checkGetSkill(this, v41++, v40);
-      while ( v41 < this->fields.transformationCount );
+        LimitUpResultCheckComponent__checkGetSkill(this, v32++, v31);
+      while ( v32 < this->fields.transformationCount );
     }
-    LimitUpResultCheckComponent__checkQuestOpen(this, v39);
-    LimitUpResultCheckComponent__checkLimitUpReward(this, rewardGiftDataList, v42);
+    LimitUpResultCheckComponent__checkQuestOpen(this, v30);
+    LimitUpResultCheckComponent__checkLimitUpReward(this, rewardGiftDataList, v33);
   }
 }
 
@@ -1482,7 +1454,7 @@ bool __fastcall LimitUpResultCheckComponent___c__DisplayClass45_0___checkLimitUp
   max_length = data->max_length;
   if ( !max_length )
 LABEL_8:
-    sub_1C3B9C8(this, data);
+    sub_1B4D1F4(this, data);
   if ( data->m_Items[1] == this->fields.afterLimitCnt )
   {
     if ( max_length > 1 )
@@ -1491,7 +1463,7 @@ LABEL_8:
       if ( giftEntity )
         return data->m_Items[2] == giftEntity->fields.id;
 LABEL_9:
-      sub_1C3B9C0(this, data);
+      sub_1B4D1EC(this, data);
     }
     goto LABEL_8;
   }

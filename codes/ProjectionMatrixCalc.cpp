@@ -1,53 +1,41 @@
 void __fastcall ProjectionMatrixCalc___ctor(ProjectionMatrixCalc_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  int64_t v12; // x1
-  int64_t v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  System_Collections_Generic_List_object__o *v20; // x20
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  int32_t v8; // w1
+  int32_t v9; // w1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  System_Collections_Generic_List_object__o *v12; // x20
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4C2539A & 1) == 0 )
+  if ( (byte_49BE2D7 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer___ctor__, method);
-    sub_1C3B764(&System_Collections_Generic_List_Renderer__TypeInfo, v9);
-    sub_1C3B764(&StringLiteral_16625/*"authsave.dat"*/, v10);
-    sub_1C3B764(&StringLiteral_16626/*"authsave2.dat"*/, v11);
-    byte_4C2539A = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer___ctor__, method);
+    sub_1B4CF90(&System_Collections_Generic_List_Renderer__TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_16000/*"_ProjectorMatrixVP"*/, v6);
+    sub_1B4CF90(&StringLiteral_16001/*"_ProjectorPos"*/, v7);
+    byte_49BE2D7 = 1;
   }
   this->fields._orthographicSize = 1.0;
   *(_QWORD *)&this->fields._nearClipPlane = 0x42C800003C23D70ALL;
-  v12 = StringLiteral_16625/*"authsave.dat"*/;
-  this->fields._shaderPropertyName_MatrixVP = (struct System_String_o *)StringLiteral_16625/*"authsave.dat"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._shaderPropertyName_MatrixVP, v12, v2, v3, v4, v5, v6, v7);
-  v13 = StringLiteral_16626/*"authsave2.dat"*/;
-  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_16626/*"authsave2.dat"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._shaderPropertyName_Pos, v13, v14, v15, v16, v17, v18, v19);
+  v8 = StringLiteral_16000/*"_ProjectorMatrixVP"*/;
+  this->fields._shaderPropertyName_MatrixVP = (struct System_String_o *)StringLiteral_16000/*"_ProjectorMatrixVP"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._shaderPropertyName_MatrixVP, v8, v2, v3);
+  v9 = StringLiteral_16001/*"_ProjectorPos"*/;
+  this->fields._shaderPropertyName_Pos = (struct System_String_o *)StringLiteral_16001/*"_ProjectorPos"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._shaderPropertyName_Pos, v9, v10, v11);
   this->fields._destroyRendererMaterial = 1;
-  v20 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_Renderer__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_Renderer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v20,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_Renderer___ctor__);
-  this->fields.workRenderers = (struct System_Collections_Generic_List_Renderer__o *)v20;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.workRenderers, (int64_t)v20, v21, v22, v23, v24, v25, v26);
+    v12,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_Renderer___ctor__);
+  this->fields.workRenderers = (struct System_Collections_Generic_List_Renderer__o *)v12;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.workRenderers, (int32_t)v12, v13, v14);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -94,14 +82,14 @@ void __fastcall ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, c
   UnityEngine_Vector3_o forward; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o v40; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C25398 & 1) == 0 )
+  if ( (byte_49BE2D5 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__get_Count__, v6);
-    byte_4C25398 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__get_Count__, v6);
+    byte_49BE2D5 = 1;
   }
   memset(&v35, 0, sizeof(v35));
   ProjectionMatrixCalc__updateWorkRenderers(this, method);
@@ -166,37 +154,37 @@ void __fastcall ProjectionMatrixCalc__LateUpdate(ProjectionMatrixCalc_o *this, c
         (transform = (UnityEngine_Transform_o *)this->fields.workRenderers) == 0LL) )
   {
 LABEL_29:
-    sub_1C3B9C0(transform, v8);
+    sub_1B4D1EC(transform, v8);
   }
   v19 = v18;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v34,
     (System_Collections_Generic_List_object__o *)transform,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   *(_OWORD *)&v35.fields._list = *(_OWORD *)&v34.fields.m00;
   v35.fields._current = *(Il2CppObject **)&v34.fields.m01;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v35,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     if ( !v35.fields._current )
-      sub_1C3B9C0(0LL, v20);
+      sub_1B4D1EC(0LL, v20);
     materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v35.fields._current, 0LL);
     v23 = materials;
     if ( !materials )
-      sub_1C3B9C0(0LL, v22);
+      sub_1B4D1EC(0LL, v22);
     max_length = materials->max_length;
     if ( max_length >= 1 )
     {
       for ( i = 0; i < max_length; ++i )
       {
         if ( i >= (unsigned int)max_length )
-          sub_1C3B9C8(materials, v22);
+          sub_1B4D1F4(materials, v22);
         shaderPropertyName_MatrixVP = this->fields._shaderPropertyName_MatrixVP;
         v27 = v23->m_Items[i];
         v34 = v36;
         if ( !v27 )
-          sub_1C3B9C0(materials, shaderPropertyName_MatrixVP);
+          sub_1B4D1EC(materials, shaderPropertyName_MatrixVP);
         v28 = v34;
         UnityEngine_Material__SetMatrix(v27, shaderPropertyName_MatrixVP, &v28, 0LL);
         v40.fields.w = 0.0;
@@ -210,7 +198,7 @@ LABEL_29:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v35,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }
 
 
@@ -222,16 +210,16 @@ void __fastcall ProjectionMatrixCalc__OnDisable(ProjectionMatrixCalc_o *this, co
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4C25397 & 1) == 0 )
+  if ( (byte_49BE2D4 & 1) == 0 )
   {
-    this = (ProjectionMatrixCalc_o *)sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__Clear__, method);
-    byte_4C25397 = 1;
+    this = (ProjectionMatrixCalc_o *)sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__Clear__, method);
+    byte_49BE2D4 = 1;
   }
   if ( v2->fields._destroyRendererMaterial )
     ProjectionMatrixCalc__destroyWorkRenderersMaterials(v2, method);
   workRenderers = v2->fields.workRenderers;
   if ( !workRenderers )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   size = workRenderers->fields._size;
   v5 = workRenderers->fields._version + 1;
   workRenderers->fields._size = 0;
@@ -274,7 +262,7 @@ void __fastcall ProjectionMatrixCalc__OnDrawGizmos(ProjectionMatrixCalc_o *this,
   v24 = v26;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   UnityEngine_Transform__get_localToWorldMatrix(&v26, transform, 0LL);
   v23 = v26;
   UnityEngine_Gizmos__set_matrix(&v23, 0LL);
@@ -300,10 +288,10 @@ void __fastcall ProjectionMatrixCalc__OnDrawGizmos(ProjectionMatrixCalc_o *this,
   farClipPlane = this->fields._farClipPlane;
   v14 = farClipPlane - nearClipPlane;
   v15 = nearClipPlane + (float)((float)(farClipPlane - nearClipPlane) * 0.5);
-  if ( !byte_4C1C51A )
+  if ( !byte_49B536A )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v6);
-    byte_4C1C51A = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
+    byte_49B536A = 1;
   }
   v16 = vsub_f32(v11, v10).n64_u64[0];
   v17 = HIDWORD(v16);
@@ -368,22 +356,22 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
   System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+8h] [xbp-C8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v48; // [xsp+20h] [xbp-B0h] BYREF
 
-  if ( (byte_4C25399 & 1) == 0 )
+  if ( (byte_49BE2D6 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, renderers);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v8);
-    this = (ProjectionMatrixCalc_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
-    byte_4C25399 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, renderers);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v8);
+    this = (ProjectionMatrixCalc_o *)sub_1B4CF90(&UnityEngine_Object_TypeInfo, v9);
+    byte_49BE2D6 = 1;
   }
   memset(&v48, 0, sizeof(v48));
   if ( !renderers )
-    sub_1C3B9C0(this, renderers);
+    sub_1B4D1EC(this, renderers);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v47,
     (System_Collections_Generic_List_object__o *)renderers,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   v10 = 0.0;
   v11 = 0.0;
   v12 = 0.0;
@@ -393,7 +381,7 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
   v15 = 0.0;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v48,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     current = v48.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -402,13 +390,13 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
     if ( v17 )
     {
       if ( !current )
-        sub_1C3B9C0(v17, v18);
+        sub_1B4D1EC(v17, v18);
       if ( UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)current, 0LL) )
       {
-        if ( !byte_4C1C511 )
+        if ( !byte_49B5361 )
         {
-          sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v19);
-          byte_4C1C511 = 1;
+          sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v19);
+          byte_49B5361 = 1;
         }
         static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
         if ( (float)((float)((float)((float)(v10 + v10) - static_fields->zeroVector.fields.z)
@@ -496,7 +484,7 @@ UnityEngine_Bounds_o *__fastcall ProjectionMatrixCalc__calcRenderersBounds(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v48,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   retstr->fields.m_Center.fields.x = v15;
   retstr->fields.m_Center.fields.y = v14;
   retstr->fields.m_Center.fields.z = v13;
@@ -528,27 +516,27 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C25395 & 1) == 0 )
+  if ( (byte_49BE2D2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v5);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C25395 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v5);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
+    byte_49BE2D2 = 1;
   }
   memset(&v18, 0, sizeof(v18));
   workRenderers = this->fields.workRenderers;
   if ( !workRenderers )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v17,
     (System_Collections_Generic_List_object__o *)workRenderers,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
   v18 = v17;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v18,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     current = v18.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -557,11 +545,11 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
     if ( v9 )
     {
       if ( !current )
-        sub_1C3B9C0(v9, v10);
+        sub_1B4D1EC(v9, v10);
       materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)current, 0LL);
       v13 = materials;
       if ( !materials )
-        sub_1C3B9C0(0LL, v12);
+        sub_1B4D1EC(0LL, v12);
       v14 = *(_QWORD *)&materials->max_length;
       if ( (int)v14 >= 1 )
       {
@@ -569,11 +557,11 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
         do
         {
           if ( v15 >= (unsigned int)v14 )
-            sub_1C3B9C8(materials, v12);
+            sub_1B4D1F4(materials, v12);
           v16 = (UnityEngine_Object_o *)v13->m_Items[v15];
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__DestroyImmediate_71122936(v16, 0LL);
+          UnityEngine_Object__DestroyImmediate_68804644(v16, 0LL);
           LODWORD(v14) = v13->max_length;
           ++v15;
         }
@@ -583,7 +571,7 @@ void __fastcall ProjectionMatrixCalc__destroyWorkRenderersMaterials(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v18,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }
 
 
@@ -608,236 +596,228 @@ void __fastcall ProjectionMatrixCalc__updateWorkRenderers(ProjectionMatrixCalc_o
   __int64 v19; // x1
   _BOOL8 v20; // x0
   __int64 v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v29; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v31; // x0
-  __int64 v32; // x1
+  Il2CppClass **v27; // x0
+  __int64 v28; // x1
   UnityEngine_Material_array *materials; // x0
-  __int64 v34; // x1
-  UnityEngine_Material_array *v35; // x21
-  __int64 v36; // x8
-  unsigned __int64 v37; // x23
-  UnityEngine_Object_o *v38; // x22
+  __int64 v30; // x1
+  UnityEngine_Material_array *v31; // x21
+  __int64 v32; // x8
+  unsigned __int64 v33; // x23
+  UnityEngine_Object_o *v34; // x22
+  __int64 v35; // x1
+  struct System_Collections_Generic_List_Renderer__o *v36; // x0
+  Il2CppObject *v37; // x20
+  _BOOL8 v38; // x0
   __int64 v39; // x1
-  struct System_Collections_Generic_List_Renderer__o *v40; // x0
-  Il2CppObject *v41; // x20
-  _BOOL8 v42; // x0
-  __int64 v43; // x1
-  __int64 v44; // x1
-  struct System_Collections_Generic_List_Renderer__o *v45; // x0
-  __int64 v46; // x1
-  int64_t v47; // x2
-  int32_t v48; // w3
-  System_String_o *v49; // x4
-  BattleSetupInfo_o *v50; // x5
-  FollowerInfo_o *v51; // x6
-  PartyListViewItem_o *v52; // x7
-  System_Collections_Generic_List_object__o *v53; // x0
-  struct System_Object_array *v54; // x8
-  _QWORD *v55; // x9
-  __int64 v56; // x10
-  Il2CppClass **v57; // x8
-  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+8h] [xbp-98h] BYREF
+  __int64 v40; // x1
+  struct System_Collections_Generic_List_Renderer__o *v41; // x0
+  __int64 v42; // x1
+  int32_t v43; // w2
+  const MethodInfo *v44; // x3
+  System_Collections_Generic_List_object__o *v45; // x0
+  struct System_Object_array *v46; // x8
+  _QWORD *v47; // x9
+  __int64 v48; // x10
+  Il2CppClass **v49; // x8
+  System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C25396 & 1) == 0 )
+  if ( (byte_49BE2D3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__Add__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__Contains__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer__Remove__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Renderer___ctor__, v9);
-    sub_1C3B764(&System_Collections_Generic_List_Renderer__TypeInfo, v10);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
-    byte_4C25396 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_Renderer__get_Current__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__Add__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__Contains__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__GetEnumerator__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer__Remove__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Renderer___ctor__, v9);
+    sub_1B4CF90(&System_Collections_Generic_List_Renderer__TypeInfo, v10);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v11);
+    byte_49BE2D3 = 1;
   }
   memset(&i, 0, sizeof(i));
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_Renderer__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_Renderer__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_Renderer___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_Renderer___ctor__);
   workRenderers = this->fields.workRenderers;
   if ( !workRenderers )
     goto LABEL_60;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v58,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v50,
     (System_Collections_Generic_List_object__o *)workRenderers,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-  i = v58;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+  i = v50;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
     targetRenderers = this->fields._targetRenderers;
     if ( !targetRenderers )
-      sub_1C3B9C0(0LL, v15);
+      sub_1B4D1EC(0LL, v15);
     current = i.fields._current;
     v18 = System_Collections_Generic_List_object___Contains(
             (System_Collections_Generic_List_object__o *)targetRenderers,
             i.fields._current,
-            (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_Renderer__Contains__);
+            (const MethodInfo_358056C *)Method_System_Collections_Generic_List_Renderer__Contains__);
     if ( !v18 )
     {
       if ( !v12 )
-        sub_1C3B9C0(v18, v19);
+        sub_1B4D1EC(v18, v19);
       v20 = System_Collections_Generic_List_object___Contains(
               v12,
               current,
-              (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_Renderer__Contains__);
+              (const MethodInfo_358056C *)Method_System_Collections_Generic_List_Renderer__Contains__);
       if ( !v20 )
       {
         items = v12->fields._items;
-        v29 = Method_System_Collections_Generic_List_Renderer__Add__;
+        v25 = Method_System_Collections_Generic_List_Renderer__Add__;
         ++v12->fields._version;
         if ( !items )
-          sub_1C3B9C0(v20, v21);
+          sub_1B4D1EC(v20, v21);
         size = v12->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v12,
             current,
-            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+            *(const MethodInfo_35801DC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
-          v31 = &items->obj.klass + size;
+          v27 = &items->obj.klass + size;
           v12->fields._size = size + 1;
-          v31[4] = (Il2CppClass *)current;
-          sub_1C3B708((PartyOrganizationUtility_o *)(v31 + 4), (int64_t)current, v22, v23, v24, v25, v26, v27);
+          v27[4] = (Il2CppClass *)current;
+          sub_1B4CF34((CGThumbnailListItem_o *)(v27 + 4), (int32_t)current, v22, v23);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   if ( this->fields._destroyRendererMaterial )
   {
     if ( !v12 )
       goto LABEL_60;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v58,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v50,
       v12,
-      (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-    i = v58;
+      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+    i = v50;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &i,
-              (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
     {
       if ( !i.fields._current )
-        sub_1C3B9C0(0LL, v32);
+        sub_1B4D1EC(0LL, v28);
       materials = UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)i.fields._current, 0LL);
-      v35 = materials;
+      v31 = materials;
       if ( !materials )
-        sub_1C3B9C0(0LL, v34);
-      v36 = *(_QWORD *)&materials->max_length;
-      if ( (int)v36 >= 1 )
+        sub_1B4D1EC(0LL, v30);
+      v32 = *(_QWORD *)&materials->max_length;
+      if ( (int)v32 >= 1 )
       {
-        v37 = 0LL;
+        v33 = 0LL;
         do
         {
-          if ( v37 >= (unsigned int)v36 )
-            sub_1C3B9C8(materials, v34);
-          v38 = (UnityEngine_Object_o *)v35->m_Items[v37];
+          if ( v33 >= (unsigned int)v32 )
+            sub_1B4D1F4(materials, v30);
+          v34 = (UnityEngine_Object_o *)v31->m_Items[v33];
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__DestroyImmediate_71122936(v38, 0LL);
-          LODWORD(v36) = v35->max_length;
-          ++v37;
+          UnityEngine_Object__DestroyImmediate_68804644(v34, 0LL);
+          LODWORD(v32) = v31->max_length;
+          ++v33;
         }
-        while ( (__int64)v37 < (int)v36 );
+        while ( (__int64)v33 < (int)v32 );
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &i,
-      (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   }
   if ( !v12 )
     goto LABEL_60;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v58,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v50,
     v12,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-  for ( i = v58;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+  for ( i = v50;
         System_Collections_Generic_List_Enumerator_object___MoveNext(
           &i,
-          (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
+          (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__);
         System_Collections_Generic_List_object___Remove(
-          (System_Collections_Generic_List_object__o *)v40,
+          (System_Collections_Generic_List_object__o *)v36,
           i.fields._current,
-          (const MethodInfo_368D194 *)Method_System_Collections_Generic_List_Renderer__Remove__) )
+          (const MethodInfo_3581704 *)Method_System_Collections_Generic_List_Renderer__Remove__) )
   {
-    v40 = this->fields.workRenderers;
-    if ( !v40 )
-      sub_1C3B9C0(0LL, v39);
+    v36 = this->fields.workRenderers;
+    if ( !v36 )
+      sub_1B4D1EC(0LL, v35);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
   workRenderers = this->fields._targetRenderers;
   if ( !workRenderers )
 LABEL_60:
-    sub_1C3B9C0(workRenderers, v13);
+    sub_1B4D1EC(workRenderers, v13);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v58,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v50,
     (System_Collections_Generic_List_object__o *)workRenderers,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
-  i = v58;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_Renderer__GetEnumerator__);
+  i = v50;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_Renderer__MoveNext__) )
   {
-    v41 = i.fields._current;
+    v37 = i.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v42 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v41, 0LL, 0LL);
-    if ( v42 )
+    v38 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v37, 0LL, 0LL);
+    if ( v38 )
     {
-      if ( !v41 )
-        sub_1C3B9C0(v42, v43);
-      if ( UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)v41, 0LL) )
+      if ( !v37 )
+        sub_1B4D1EC(v38, v39);
+      if ( UnityEngine_Renderer__get_enabled((UnityEngine_Renderer_o *)v37, 0LL) )
       {
-        v45 = this->fields.workRenderers;
-        if ( !v45 )
-          sub_1C3B9C0(0LL, v44);
+        v41 = this->fields.workRenderers;
+        if ( !v41 )
+          sub_1B4D1EC(0LL, v40);
         if ( !System_Collections_Generic_List_object___Contains(
-                (System_Collections_Generic_List_object__o *)v45,
-                v41,
-                (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_Renderer__Contains__) )
+                (System_Collections_Generic_List_object__o *)v41,
+                v37,
+                (const MethodInfo_358056C *)Method_System_Collections_Generic_List_Renderer__Contains__) )
         {
-          v53 = (System_Collections_Generic_List_object__o *)this->fields.workRenderers;
-          if ( !v53 )
-            sub_1C3B9C0(0LL, v46);
-          v54 = v53->fields._items;
-          v55 = Method_System_Collections_Generic_List_Renderer__Add__;
-          ++v53->fields._version;
-          if ( !v54 )
-            sub_1C3B9C0(v53, v46);
-          v56 = v53->fields._size;
-          if ( (unsigned int)v56 >= v54->max_length )
+          v45 = (System_Collections_Generic_List_object__o *)this->fields.workRenderers;
+          if ( !v45 )
+            sub_1B4D1EC(0LL, v42);
+          v46 = v45->fields._items;
+          v47 = Method_System_Collections_Generic_List_Renderer__Add__;
+          ++v45->fields._version;
+          if ( !v46 )
+            sub_1B4D1EC(v45, v42);
+          v48 = v45->fields._size;
+          if ( (unsigned int)v48 >= v46->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v53,
-              v41,
-              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+              v45,
+              v37,
+              *(const MethodInfo_35801DC **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
           }
           else
           {
-            v57 = &v54->obj.klass + v56;
-            v53->fields._size = v56 + 1;
-            v57[4] = (Il2CppClass *)v41;
-            sub_1C3B708((PartyOrganizationUtility_o *)(v57 + 4), (int64_t)v41, v47, v48, v49, v50, v51, v52);
+            v49 = &v46->obj.klass + v48;
+            v45->fields._size = v48 + 1;
+            v49[4] = (Il2CppClass *)v37;
+            sub_1B4CF34((CGThumbnailListItem_o *)(v49 + 4), (int32_t)v37, v43, v44);
           }
         }
       }
@@ -845,5 +825,5 @@ LABEL_60:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_Renderer__Dispose__);
 }

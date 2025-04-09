@@ -9,26 +9,26 @@ System_String_o *__fastcall StoneShopEffectExtension__GetDisplayName(int32_t thi
   System_Enum_o v10; // [xsp+8h] [xbp-38h] BYREF
   int32_t v11; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4C20F36 & 1) == 0 )
+  if ( (byte_49B9E48 & 1) == 0 )
   {
-    sub_1C3B764(&StoneShopEffect_Kind_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_6496/*"Failed to create UnityTls context"*/, v3);
-    sub_1C3B764(&StringLiteral_3266/*"Buy"*/, v4);
-    sub_1C3B764(&StringLiteral_6497/*"Failed to create a property bag for Type=[{0}]. The type is not a valid container type."*/, v5);
-    sub_1C3B764(&StringLiteral_2412/*"Async"*/, v6);
-    sub_1C3B764(&StringLiteral_6498/*"Failed to create cubemap array texture because of invalid parameters."*/, v7);
-    byte_4C20F36 = 1;
+    sub_1B4CF90(&StoneShopEffect_Kind_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_6262/*"ExtendFriendMax"*/, v3);
+    sub_1B4CF90(&StringLiteral_3124/*"BattleContinue"*/, v4);
+    sub_1B4CF90(&StringLiteral_6263/*"ExtendServantEquipMax"*/, v5);
+    sub_1B4CF90(&StringLiteral_2292/*"ApRecover"*/, v6);
+    sub_1B4CF90(&StringLiteral_6264/*"ExtendServantMax"*/, v7);
+    byte_49B9E48 = 1;
   }
   if ( this <= 10 )
   {
     if ( this == 1 )
     {
-      v8 = &StringLiteral_3266/*"Buy"*/;
+      v8 = &StringLiteral_3124/*"BattleContinue"*/;
       return (System_String_o *)*v8;
     }
     if ( this == 2 )
     {
-      v8 = &StringLiteral_2412/*"Async"*/;
+      v8 = &StringLiteral_2292/*"ApRecover"*/;
       return (System_String_o *)*v8;
     }
 LABEL_16:
@@ -39,16 +39,16 @@ LABEL_16:
   }
   if ( this == 11 )
   {
-    v8 = &StringLiteral_6496/*"Failed to create UnityTls context"*/;
+    v8 = &StringLiteral_6262/*"ExtendFriendMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this == 12 )
   {
-    v8 = &StringLiteral_6498/*"Failed to create cubemap array texture because of invalid parameters."*/;
+    v8 = &StringLiteral_6264/*"ExtendServantMax"*/;
     return (System_String_o *)*v8;
   }
   if ( this != 13 )
     goto LABEL_16;
-  v8 = &StringLiteral_6497/*"Failed to create a property bag for Type=[{0}]. The type is not a valid container type."*/;
+  v8 = &StringLiteral_6263/*"ExtendServantEquipMax"*/;
   return (System_String_o *)*v8;
 }

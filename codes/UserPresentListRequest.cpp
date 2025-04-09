@@ -10,15 +10,15 @@ System_String_o *__fastcall UserPresentListRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4C23A27 & 1) == 0 )
+  if ( (byte_49BC956 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_9299/*"Non-static method requires a target."*/, v2);
-    byte_4C23A27 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_8947/*"MockUserPresentListResponse"*/, v2);
+    byte_49BC956 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9299/*"Non-static method requires a target."*/, 0LL);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_8947/*"MockUserPresentListResponse"*/, 0LL);
 }
 
 
@@ -27,14 +27,14 @@ System_String_o *__fastcall UserPresentListRequest__getURL(UserPresentListReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23A26 & 1) == 0 )
+  if ( (byte_49BC955 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_23058/*"smj-NO"*/, v2);
-    byte_4C23A26 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22314/*"present/list"*/, v2);
+    byte_49BC955 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_23058/*"smj-NO"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_22314/*"present/list"*/, 0LL);
 }

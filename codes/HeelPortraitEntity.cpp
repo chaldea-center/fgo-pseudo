@@ -1,13 +1,13 @@
 void __fastcall HeelPortraitEntity___ctor(HeelPortraitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22261 & 1) == 0 )
+  if ( (byte_49BB18B & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C22261 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BB18B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -35,22 +35,22 @@ int32_t __fastcall HeelPortraitEntity__GetOverwriteImageId(
   int32_t v14; // w23
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C2225E & 1) == 0 )
+  if ( (byte_49BB188 & 1) == 0 )
   {
-    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&originImageId);
-    sub_1C3B764(&StringLiteral_22841/*"setNativeExceptionOnProxy"*/, v6);
-    sub_1C3B764(&StringLiteral_22842/*"setNavigationBarColor"*/, v7);
-    sub_1C3B764(&StringLiteral_22843/*"setNeedsCost"*/, v8);
-    sub_1C3B764(&StringLiteral_22851/*"setObfuscatedProfileId"*/, v9);
-    byte_4C2225E = 1;
+    sub_1B4CF90(&CondType_TypeInfo, *(_QWORD *)&originImageId);
+    sub_1B4CF90(&StringLiteral_22100/*"overwriteCondNum"*/, v6);
+    sub_1B4CF90(&StringLiteral_22101/*"overwriteCondTargetId"*/, v7);
+    sub_1B4CF90(&StringLiteral_22102/*"overwriteCondType"*/, v8);
+    sub_1B4CF90(&StringLiteral_22110/*"overwriteImageId"*/, v9);
+    byte_49BB188 = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22843/*"setNeedsCost"*/, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22842/*"setNavigationBarColor"*/, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22841/*"setNativeExceptionOnProxy"*/, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22102/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22101/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22100/*"overwriteCondNum"*/, 0, v13);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL, 0LL) )
-    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22851/*"setObfuscatedProfileId"*/, 0, v15);
+    return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22110/*"overwriteImageId"*/, 0, v15);
   else
     return originImageId;
 }
@@ -73,22 +73,22 @@ System_String_o *__fastcall HeelPortraitEntity__GetOverwriteName(
   int32_t v14; // w23
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C2225C & 1) == 0 )
+  if ( (byte_49BB186 & 1) == 0 )
   {
-    sub_1C3B764(&CondType_TypeInfo, originName);
-    sub_1C3B764(&StringLiteral_22841/*"setNativeExceptionOnProxy"*/, v6);
-    sub_1C3B764(&StringLiteral_22842/*"setNavigationBarColor"*/, v7);
-    sub_1C3B764(&StringLiteral_22859/*"setOnSessionTrackingFailedListener"*/, v8);
-    sub_1C3B764(&StringLiteral_22843/*"setNeedsCost"*/, v9);
-    byte_4C2225C = 1;
+    sub_1B4CF90(&CondType_TypeInfo, originName);
+    sub_1B4CF90(&StringLiteral_22100/*"overwriteCondNum"*/, v6);
+    sub_1B4CF90(&StringLiteral_22101/*"overwriteCondTargetId"*/, v7);
+    sub_1B4CF90(&StringLiteral_22118/*"overwriteName"*/, v8);
+    sub_1B4CF90(&StringLiteral_22102/*"overwriteCondType"*/, v9);
+    byte_49BB186 = 1;
   }
-  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22843/*"setNeedsCost"*/, 0, v3);
-  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22842/*"setNavigationBarColor"*/, 0, v11);
-  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22841/*"setNativeExceptionOnProxy"*/, 0, v13);
+  Script = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22102/*"overwriteCondType"*/, 0, v3);
+  v12 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22101/*"overwriteCondTargetId"*/, 0, v11);
+  v14 = HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22100/*"overwriteCondNum"*/, 0, v13);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   if ( CondType__IsOpen(Script, v12, v14, 0, 0LL, 0LL) )
-    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22859/*"setOnSessionTrackingFailedListener"*/, 0LL, v15);
+    return HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22118/*"overwriteName"*/, 0LL, v15);
   else
     return originName;
 }
@@ -98,12 +98,12 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteImageId(HeelPortraitEntity_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C2225D & 1) == 0 )
+  if ( (byte_49BB187 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22851/*"setObfuscatedProfileId"*/, method);
-    byte_4C2225D = 1;
+    sub_1B4CF90(&StringLiteral_22110/*"overwriteImageId"*/, method);
+    byte_49BB187 = 1;
   }
-  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22851/*"setObfuscatedProfileId"*/, 0, v2) != 0;
+  return HeelPortraitEntity__getScript(this, (System_String_o *)StringLiteral_22110/*"overwriteImageId"*/, 0, v2) != 0;
 }
 
 
@@ -112,12 +112,12 @@ bool __fastcall HeelPortraitEntity__IsSetOverwriteName(HeelPortraitEntity_o *thi
   const MethodInfo *v2; // x3
   System_String_o *ScriptStr; // x0
 
-  if ( (byte_4C2225B & 1) == 0 )
+  if ( (byte_49BB185 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22859/*"setOnSessionTrackingFailedListener"*/, method);
-    byte_4C2225B = 1;
+    sub_1B4CF90(&StringLiteral_22118/*"overwriteName"*/, method);
+    byte_49BB185 = 1;
   }
-  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22859/*"setOnSessionTrackingFailedListener"*/, 0LL, v2);
+  ScriptStr = HeelPortraitEntity__getScriptStr(this, (System_String_o *)StringLiteral_22118/*"overwriteName"*/, 0LL, v2);
   return !System_String__IsNullOrEmpty(ScriptStr, 0LL);
 }
 
@@ -138,19 +138,19 @@ int32_t __fastcall HeelPortraitEntity__getScript(
   HeelPortraitEntity_o *v15; // x0
   const MethodInfo *v16; // x1
 
-  if ( (byte_4C2225F & 1) == 0 )
+  if ( (byte_49BB189 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1C3B764(&long_TypeInfo, v8);
-    byte_4C2225F = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B4CF90(&long_TypeInfo, v8);
+    byte_49BB189 = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
@@ -159,13 +159,13 @@ int32_t __fastcall HeelPortraitEntity__getScript(
     || (Item = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                             Item,
                                                                             (Il2CppObject *)key,
-                                                                            (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                            (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1C3B9C0(Item, v10);
+    sub_1B4D1EC(Item, v10);
   }
   if ( Item->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(Item, long_TypeInfo, v12, v13);
-  sub_1C3BC80(Item);
+  sub_1B4D4AC(Item);
   return HeelPortraitEntity__IsSetOverwriteImageId(v15, v16);
 }
 
@@ -186,32 +186,32 @@ System_String_o *__fastcall HeelPortraitEntity__getScriptStr(
   System_String_o *v15; // x1
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C22260 & 1) == 0 )
+  if ( (byte_49BB18A & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    sub_1C3B764(&string_TypeInfo, v8);
-    byte_4C22260 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
+    sub_1B4CF90(&string_TypeInfo, v8);
+    byte_49BB18A = 1;
   }
   script = this->fields.script;
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return defVal;
   }
   v11 = this->fields.script;
   if ( !v11 )
-    sub_1C3B9C0(0LL, v10);
+    sub_1B4D1EC(0LL, v10);
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)v11,
            (Il2CppObject *)key,
-           (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   defVal = (System_String_o *)Item;
   if ( !Item || (System_String_c *)Item->klass == string_TypeInfo )
     return defVal;
-  sub_1C3BC80(Item);
+  sub_1B4D4AC(Item);
   return HeelPortraitEntity__GetOverwriteName(v14, v15, v16);
 }

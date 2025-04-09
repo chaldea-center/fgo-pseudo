@@ -67,16 +67,16 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
   float v41; // s3
 
   v6 = this;
-  if ( (byte_4C1EE38 & 1) == 0 )
+  if ( (byte_49B7C63 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, item);
-    sub_1C3B764(&StringLiteral_12187/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/, v7);
-    sub_1C3B764(&StringLiteral_17813/*"commandCodeId"*/, v8);
-    sub_1C3B764(&StringLiteral_12185/*"SUPPORT_MAINQUEST"*/, v9);
-    sub_1C3B764(&StringLiteral_12186/*"SUPPORT_MEMBER"*/, v10);
-    sub_1C3B764(&StringLiteral_12181/*"SUPPORT_KIND_6"*/, v11);
-    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_1C3B764(&StringLiteral_17814/*"commandSpell/use"*/, v12);
-    byte_4C1EE38 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, item);
+    sub_1B4CF90(&StringLiteral_11721/*"SERVANT_STATUS_TD_SPEED_TWICE"*/, v7);
+    sub_1B4CF90(&StringLiteral_17161/*"btn_bg_20"*/, v8);
+    sub_1B4CF90(&StringLiteral_11719/*"SERVANT_STATUS_TD_SPEED_FREE"*/, v9);
+    sub_1B4CF90(&StringLiteral_11720/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/, v10);
+    sub_1B4CF90(&StringLiteral_11715/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/, v11);
+    this = (ServantStatusListViewItemDrawTdSpeed_o *)sub_1B4CF90(&StringLiteral_17162/*"btn_bg_21"*/, v12);
+    byte_49B7C63 = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode )
@@ -90,7 +90,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12185/*"SUPPORT_MAINQUEST"*/,
+                                                       (System_String_o *)StringLiteral_11719/*"SERVANT_STATUS_TD_SPEED_FREE"*/,
                                                        0LL);
     if ( !v14 )
       goto LABEL_54;
@@ -102,7 +102,7 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_55;
     v16 = v15->m_Items[1];
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12181/*"SUPPORT_KIND_6"*/,
+                                                       (System_String_o *)StringLiteral_11715/*"SERVANT_STATUS_TD_SPEED_ACTUAL"*/,
                                                        0LL);
     if ( !v16 )
       goto LABEL_54;
@@ -112,25 +112,25 @@ void __fastcall ServantStatusListViewItemDrawTdSpeed__SetItem(
       goto LABEL_54;
     if ( v17->max_length <= 2 )
 LABEL_55:
-      sub_1C3B9C8(this, item);
+      sub_1B4D1F4(this, item);
     v18 = v17->m_Items[2];
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12187/*"SUPPORT_SELECT_ALL_CLEAR_TITLE"*/,
+                                                       (System_String_o *)StringLiteral_11721/*"SERVANT_STATUS_TD_SPEED_TWICE"*/,
                                                        0LL);
     if ( !v18 )
       goto LABEL_54;
     UIRangeLabel__Set(v18, (System_String_o *)this, 0LL, 1, 0, 0LL);
     explanationLabel = v6->fields.explanationLabel;
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12186/*"SUPPORT_MEMBER"*/,
+                                                       (System_String_o *)StringLiteral_11720/*"SERVANT_STATUS_TD_SPEED_MESSAGE"*/,
                                                        0LL);
     if ( !explanationLabel )
       goto LABEL_54;
     UILabel__set_text(explanationLabel, (System_String_o *)this, 0LL);
-    if ( !byte_4C1CCC2 )
+    if ( !byte_49B5B12 )
     {
-      sub_1C3B764(&LocalizationManager_TypeInfo, item);
-      byte_4C1CCC2 = 1;
+      sub_1B4CF90(&LocalizationManager_TypeInfo, item);
+      byte_49B5B12 = 1;
     }
     this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -143,11 +143,11 @@ LABEL_55:
     v22 = m_CancellationTokenSource[21];
     v23 = m_CancellationTokenSource[22];
     v24 = m_CancellationTokenSource[23];
-    if ( !byte_4C1CCC3 )
+    if ( !byte_49B5B13 )
     {
-      sub_1C3B764(&LocalizationManager_TypeInfo, item);
+      sub_1B4CF90(&LocalizationManager_TypeInfo, item);
       this = (ServantStatusListViewItemDrawTdSpeed_o *)LocalizationManager_TypeInfo;
-      byte_4C1CCC3 = 1;
+      byte_49B5B13 = 1;
     }
     if ( !LODWORD(this[2].fields.tdSpeedButtonSpriteList) )
     {
@@ -189,7 +189,7 @@ LABEL_55:
         this = (ServantStatusListViewItemDrawTdSpeed_o *)tdSpeedButtonSpriteList->m_Items[v28];
         if ( !this )
           break;
-        v36 = (System_String_o **)(v28 == v34 ? &StringLiteral_17814/*"commandSpell/use"*/ : &StringLiteral_17813/*"commandCodeId"*/);
+        v36 = (System_String_o **)(v28 == v34 ? &StringLiteral_17162/*"btn_bg_21"*/ : &StringLiteral_17161/*"btn_bg_20"*/);
         UISprite__set_spriteName((UISprite_o *)this, *v36, 0LL);
         v37 = v6->fields.tdSpeedRangeLabelList;
         if ( !v37 )
@@ -208,7 +208,7 @@ LABEL_55:
           return;
       }
 LABEL_54:
-      sub_1C3B9C0(this, item);
+      sub_1B4D1EC(this, item);
     }
   }
 }

@@ -13,17 +13,17 @@ int32_t __fastcall BattleFortificationInfo__GetFortificationWorkType(
   __int64 v5; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_4C2471E & 1) == 0 )
+  if ( (byte_49BD655 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_1C3B764(&DataManager_TypeInfo, v3);
-    byte_4C2471E = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1B4CF90(&DataManager_TypeInfo, v3);
+    byte_49BD655 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   Entity = EventFortificationMaster__GetEntity(
              (EventFortificationMaster_o *)Master_object,
              this->fields.eventId,
@@ -46,16 +46,16 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
   GiftEntity_o *result; // x0
   GiftEntity_o *v8; // x19
 
-  if ( (byte_4C2471C & 1) == 0 )
+  if ( (byte_49BD653 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_1C3B764(&Method_DataManager_GetMaster_GiftMaster___, v3);
-    sub_1C3B764(&DataManager_TypeInfo, v4);
-    byte_4C2471C = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1B4CF90(&Method_DataManager_GetMaster_GiftMaster___, v3);
+    sub_1B4CF90(&DataManager_TypeInfo, v4);
+    byte_49BD653 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
     goto LABEL_12;
   result = (GiftEntity_o *)EventFortificationMaster__GetEntity(
@@ -68,11 +68,11 @@ GiftEntity_o *__fastcall BattleFortificationInfo__GetGiftEntity(
     v8 = result;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_GiftMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_GiftMaster___);
     if ( Master_object )
       return GiftMaster__getDataById((GiftMaster_o *)Master_object, (int32_t)v8[1].klass, 0LL);
 LABEL_12:
-    sub_1C3B9C0(Master_object, v6);
+    sub_1B4D1EC(Master_object, v6);
   }
   return result;
 }
@@ -87,17 +87,17 @@ int32_t __fastcall BattleFortificationInfo__GetMaxFortificationPoint(
   __int64 v5; // x1
   EventFortificationEntity_o *Entity; // x0
 
-  if ( (byte_4C2471D & 1) == 0 )
+  if ( (byte_49BD654 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
-    sub_1C3B764(&DataManager_TypeInfo, v3);
-    byte_4C2471D = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventFortificationMaster___, method);
+    sub_1B4CF90(&DataManager_TypeInfo, v3);
+    byte_49BD654 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventFortificationMaster___);
   if ( !Master_object )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   Entity = EventFortificationMaster__GetEntity(
              (EventFortificationMaster_o *)Master_object,
              this->fields.eventId,

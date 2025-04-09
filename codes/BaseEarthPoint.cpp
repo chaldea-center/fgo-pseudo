@@ -5,15 +5,15 @@ void __fastcall BaseEarthPoint___cctor(const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v3; // x8
   float z; // s1
 
-  if ( (byte_4C1E91F & 1) == 0 )
+  if ( (byte_49B7819 & 1) == 0 )
   {
-    sub_1C3B764(&BaseEarthPoint_TypeInfo, v1);
-    byte_4C1E91F = 1;
+    sub_1B4CF90(&BaseEarthPoint_TypeInfo, v1);
+    byte_49B7819 = 1;
   }
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v1);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v1);
+    byte_49B5361 = 1;
   }
   static_fields = BaseEarthPoint_TypeInfo->static_fields;
   v3 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -61,7 +61,7 @@ float __fastcall BaseEarthPoint__GetDotXZ(BaseEarthPoint_o *this, UnityEngine_Ve
   *(UnityEngine_Vector3_o *)&v7 = GameObjectExtensions__GetPosition(gameObject, 0LL);
   mEarthCore = (UnityEngine_Component_o *)this->fields.mEarthCore;
   if ( !mEarthCore )
-    sub_1C3B9C0(0LL, v6);
+    sub_1B4D1EC(0LL, v6);
   v10 = v7;
   v11 = v8;
   v12 = UnityEngine_Component__get_gameObject(mEarthCore, 0LL);
@@ -71,20 +71,20 @@ float __fastcall BaseEarthPoint__GetDotXZ(BaseEarthPoint_o *this, UnityEngine_Ve
   vec->fields.y = 0.0;
   vec->fields.x = v14;
   vec->fields.z = v11 - Position.fields.z;
-  if ( !byte_4C1C514 )
+  if ( !byte_49B5364 )
   {
-    sub_1C3B764(&System_Math_TypeInfo, v13);
-    byte_4C1C514 = 1;
+    sub_1B4CF90(&System_Math_TypeInfo, v13);
+    byte_49B5364 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v16 = sqrtf((float)(v15 * v15) + (float)((float)(v14 * v14) + 0.0));
   if ( v16 <= 0.00001 )
   {
-    if ( !byte_4C1C511 )
+    if ( !byte_49B5361 )
     {
-      sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v13);
-      byte_4C1C511 = 1;
+      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v13);
+      byte_49B5361 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -100,10 +100,10 @@ float __fastcall BaseEarthPoint__GetDotXZ(BaseEarthPoint_o *this, UnityEngine_Ve
   vec->fields.x = x;
   vec->fields.y = y;
   vec->fields.z = z;
-  if ( !byte_4C1E99B )
+  if ( !byte_49B7895 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v13);
-    byte_4C1E99B = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v13);
+    byte_49B7895 = 1;
   }
   return (float)(z * UnityEngine_Vector3_TypeInfo->static_fields->backVector.fields.z)
        + (float)((float)(x * UnityEngine_Vector3_TypeInfo->static_fields->backVector.fields.x)
@@ -149,10 +149,10 @@ float __fastcall BaseEarthPoint__GetDotXZ_Deg(
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v37; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4C1E91E & 1) == 0 )
+  if ( (byte_49B7818 & 1) == 0 )
   {
-    sub_1C3B764(&BaseEarthPoint_TypeInfo, vec);
-    byte_4C1E91E = 1;
+    sub_1B4CF90(&BaseEarthPoint_TypeInfo, vec);
+    byte_49B7818 = 1;
   }
   memset(&v32, 0, sizeof(v32));
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -162,20 +162,20 @@ float __fastcall BaseEarthPoint__GetDotXZ_Deg(
   vec->fields.y = 0.0;
   x = LocalPosition.fields.x;
   z = LocalPosition.fields.z;
-  if ( !byte_4C1C514 )
+  if ( !byte_49B5364 )
   {
-    sub_1C3B764(&System_Math_TypeInfo, v6);
-    byte_4C1C514 = 1;
+    sub_1B4CF90(&System_Math_TypeInfo, v6);
+    byte_49B5364 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   v9 = sqrtf((float)(z * z) + (float)((float)(x * x) + 0.0));
   if ( v9 <= 0.00001 )
   {
-    if ( !byte_4C1C511 )
+    if ( !byte_49B5361 )
     {
-      sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4C1C511 = 1;
+      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_49B5361 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v12 = static_fields->zeroVector.fields.z;
@@ -184,14 +184,14 @@ float __fastcall BaseEarthPoint__GetDotXZ_Deg(
   }
   else
   {
-    v10 = (unsigned __int8)byte_4C1C511;
+    v10 = (unsigned __int8)byte_49B5361;
     vec->fields.x = x / v9;
     vec->fields.y = 0.0 / v9;
     vec->fields.z = z / v9;
     if ( !v10 )
     {
-      sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_4C1C511 = 1;
+      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_49B5361 = 1;
     }
   }
   mEarthCore = (UnityEngine_Component_o *)this->fields.mEarthCore;
@@ -205,17 +205,17 @@ float __fastcall BaseEarthPoint__GetDotXZ_Deg(
                                                   (UnityEngine_GameObject_o *)mEarthCore,
                                                   0LL)) == 0LL )
   {
-    sub_1C3B9C0(mEarthCore, v6);
+    sub_1B4D1EC(mEarthCore, v6);
   }
   rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)mEarthCore, 0LL);
   v19 = rotation.fields.x;
   v20 = rotation.fields.y;
   v21 = rotation.fields.z;
   w = rotation.fields.w;
-  if ( !byte_4C1C516 )
+  if ( !byte_49B5366 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v18);
-    byte_4C1C516 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v18);
+    byte_49B5366 = 1;
   }
   v34.fields.y = y;
   v34.fields.z = v17;
@@ -226,10 +226,10 @@ float __fastcall BaseEarthPoint__GetDotXZ_Deg(
   v37.fields.w = w;
   UnityEngine_Matrix4x4__TRS(&v31, v34, v37, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
   v32 = v31;
-  if ( !byte_4C1E99B )
+  if ( !byte_49B7895 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v23);
-    byte_4C1E99B = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v23);
+    byte_49B7895 = 1;
   }
   v35 = UnityEngine_Matrix4x4__MultiplyPoint3x4(&v32, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0LL);
   v25 = vec->fields.x;
@@ -272,86 +272,66 @@ void __fastcall BaseEarthPoint__Setup(
   __int64 v13; // x1
   UnityEngine_GameObject_o *v14; // x23
   Il2CppObject *Component_object; // x0
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  Il2CppObject *v22; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  Il2CppObject *v18; // x0
   struct BaseCore_o **p_mEarthCore; // x22
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  float v30; // s8
-  __int64 v31; // x1
-  const MethodInfo *v32; // x2
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  float v22; // s8
+  __int64 v23; // x1
+  const MethodInfo *v24; // x2
   UnityEngine_Object_o *mParticleSystemObj; // x24
-  System_String_o *v34; // x24
-  UnityEngine_GameObject_o *v35; // x25
-  UnityEngine_GameObject_o *v36; // x24
-  UnityEngine_Transform_o *v37; // x25
-  UnityEngine_Transform_o *v38; // x25
-  UnityEngine_Transform_o *v39; // x25
+  System_String_o *v26; // x24
+  UnityEngine_GameObject_o *v27; // x25
+  UnityEngine_GameObject_o *v28; // x24
+  UnityEngine_Transform_o *v29; // x25
+  UnityEngine_Transform_o *v30; // x25
+  UnityEngine_Transform_o *v31; // x25
   Il2CppObject *ComponentInChildren_object; // x0
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
-  int64_t v47; // x2
-  int32_t v48; // w3
-  System_String_o *v49; // x4
-  BattleSetupInfo_o *v50; // x5
-  FollowerInfo_o *v51; // x6
-  PartyListViewItem_o *v52; // x7
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
   float DotXZ_Deg; // s0
-  UnityEngine_GameObject_o *v56; // x0
-  __int64 v57; // x1
+  UnityEngine_GameObject_o *v40; // x0
+  __int64 v41; // x1
   float x; // s8
   float y; // s9
-  float v60; // s10
-  float v61; // s2
-  float v62; // s0
-  float v63; // s1
-  float v64; // s2
-  struct UnityEngine_Vector3_StaticFields *v65; // x8
-  int64_t v66; // x2
-  int32_t v67; // w3
-  System_String_o *v68; // x4
-  BattleSetupInfo_o *v69; // x5
-  FollowerInfo_o *v70; // x6
-  PartyListViewItem_o *v71; // x7
-  UnityEngine_Vector3_o v72; // [xsp+0h] [xbp-80h] BYREF
-  UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
+  float v44; // s10
+  float v45; // s2
+  float v46; // s0
+  float v47; // s1
+  float v48; // s2
+  struct UnityEngine_Vector3_StaticFields *v49; // x8
+  int32_t v50; // w2
+  const MethodInfo *v51; // x3
+  UnityEngine_Vector3_o v52; // [xsp+0h] [xbp-80h] BYREF
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v75; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Quaternion_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Quaternion_o v56; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C1E91D & 1) == 0 )
+  if ( (byte_49B7817 & 1) == 0 )
   {
-    sub_1C3B764(&CommonEffectManager_TypeInfo, isActive);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___, v7);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_BaseCore___, v8);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v9);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v10);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v11);
-    byte_4C1E91D = 1;
+    sub_1B4CF90(&CommonEffectManager_TypeInfo, isActive);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___, v7);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_BaseCore___, v8);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v9);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v10);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v11);
+    byte_49B7817 = 1;
   }
-  v72.fields.z = 0.0;
-  *(_QWORD *)&v72.fields.x = 0LL;
+  v52.fields.z = 0.0;
+  *(_QWORD *)&v52.fields.x = 0LL;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_47;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                             (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !gameObject )
     goto LABEL_47;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 0, 0LL);
@@ -374,36 +354,28 @@ void __fastcall BaseEarthPoint__Setup(
     goto LABEL_47;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.mWidget,
-    (int64_t)Component_object,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20,
-    v21);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v16, v17);
   if ( !v14 )
     goto LABEL_47;
-  v22 = UnityEngine_GameObject__GetComponent_object_(
+  v18 = UnityEngine_GameObject__GetComponent_object_(
           v14,
-          (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_BaseCore___);
-  this->fields.mEarthCore = (struct BaseCore_o *)v22;
+          (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_BaseCore___);
+  this->fields.mEarthCore = (struct BaseCore_o *)v18;
   p_mEarthCore = &this->fields.mEarthCore;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.mEarthCore, (int64_t)v22, v24, v25, v26, v27, v28, v29);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mEarthCore, (int32_t)v18, v20, v21);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v14, 0LL);
   if ( !gameObject )
     goto LABEL_47;
-  LODWORD(v30) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0LL);
+  LODWORD(v22) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0LL);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_47;
-  v73.fields.x = 1.0 / v30;
-  v73.fields.y = 1.0 / v30;
-  v73.fields.z = 1.0 / v30;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)gameObject, v73, 0LL);
+  v53.fields.x = 1.0 / v22;
+  v53.fields.y = 1.0 / v22;
+  v53.fields.z = 1.0 / v22;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)gameObject, v53, 0LL);
   if ( isActive )
   {
     mParticleSystemObj = (UnityEngine_Object_o *)this->fields.mParticleSystemObj;
@@ -411,85 +383,69 @@ void __fastcall BaseEarthPoint__Setup(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality(mParticleSystemObj, 0LL, 0LL) )
     {
-      v34 = (System_String_o *)((__int64 (__fastcall *)(BaseEarthPoint_o *, void *))this->klass->vtable._5_GetEffectName.method)(
+      v26 = (System_String_o *)((__int64 (__fastcall *)(BaseEarthPoint_o *, void *))this->klass->vtable._5_GetEffectName.method)(
                                  this,
                                  this->klass[1]._1.image);
-      v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+      v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-      gameObject = CommonEffectManager__SetSkinEffect(v34, v35, 0LL);
+      gameObject = CommonEffectManager__SetSkinEffect(v26, v27, 0LL);
       if ( !gameObject )
         goto LABEL_47;
-      v36 = gameObject;
+      v28 = gameObject;
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
-      v37 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_4C1C511 )
+      v29 = (UnityEngine_Transform_o *)gameObject;
+      if ( !byte_49B5361 )
       {
-        gameObject = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v13);
-        byte_4C1C511 = 1;
+        gameObject = (UnityEngine_GameObject_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v13);
+        byte_49B5361 = 1;
       }
-      if ( !v37 )
+      if ( !v29 )
         goto LABEL_47;
-      UnityEngine_Transform__set_localPosition(v37, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v36, 0LL);
-      v38 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_4C1C517 )
+      UnityEngine_Transform__set_localPosition(v29, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v28, 0LL);
+      v30 = (UnityEngine_Transform_o *)gameObject;
+      if ( !byte_49B5367 )
       {
-        gameObject = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Quaternion_TypeInfo, v13);
-        byte_4C1C517 = 1;
+        gameObject = (UnityEngine_GameObject_o *)sub_1B4CF90(&UnityEngine_Quaternion_TypeInfo, v13);
+        byte_49B5367 = 1;
       }
-      if ( !v38 )
+      if ( !v30 )
         goto LABEL_47;
       UnityEngine_Transform__set_localRotation(
-        v38,
+        v30,
         UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
         0LL);
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v36, 0LL);
-      v39 = (UnityEngine_Transform_o *)gameObject;
-      if ( !byte_4C1C516 )
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v28, 0LL);
+      v31 = (UnityEngine_Transform_o *)gameObject;
+      if ( !byte_49B5366 )
       {
-        gameObject = (UnityEngine_GameObject_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v13);
-        byte_4C1C516 = 1;
+        gameObject = (UnityEngine_GameObject_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v13);
+        byte_49B5366 = 1;
       }
-      if ( !v39 )
+      if ( !v31 )
         goto LABEL_47;
-      UnityEngine_Transform__set_localScale(v39, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+      UnityEngine_Transform__set_localScale(v31, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
       ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
-                                     v36,
-                                     (const MethodInfo_3041C7C *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
+                                     v28,
+                                     (const MethodInfo_2F536A8 *)Method_UnityEngine_GameObject_GetComponentInChildren_ParticleSystem___);
       this->fields.mParticleSystem = (struct UnityEngine_ParticleSystem_o *)ComponentInChildren_object;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&this->fields.mParticleSystem,
-        (int64_t)ComponentInChildren_object,
-        v41,
-        v42,
-        v43,
-        v44,
-        v45,
-        v46);
-      this->fields.mParticleSystemObj = v36;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&this->fields.mParticleSystemObj,
-        (int64_t)v36,
-        v47,
-        v48,
-        v49,
-        v50,
-        v51,
-        v52);
+      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mParticleSystem, (int32_t)ComponentInChildren_object, v33, v34);
+      this->fields.mParticleSystemObj = v28;
+      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mParticleSystemObj, (int32_t)v28, v35, v36);
     }
   }
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v31);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v23);
+    byte_49B5361 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
-  *(_QWORD *)&v72.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  v72.fields.z = z;
-  DotXZ_Deg = BaseEarthPoint__GetDotXZ_Deg(this, &v72, v32);
-  if ( v72.fields.x < 0.0 )
+  *(_QWORD *)&v52.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  v52.fields.z = z;
+  DotXZ_Deg = BaseEarthPoint__GetDotXZ_Deg(this, &v52, v24);
+  if ( v52.fields.x < 0.0 )
     DotXZ_Deg = -DotXZ_Deg;
   this->fields._FocusAng_k__BackingField = DotXZ_Deg;
   if ( isActive )
@@ -500,56 +456,48 @@ void __fastcall BaseEarthPoint__Setup(
       goto LABEL_37;
     }
 LABEL_47:
-    sub_1C3B9C0(gameObject, v13);
+    sub_1B4D1EC(gameObject, v13);
   }
 LABEL_37:
-  v56 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  LocalPosition = GameObjectExtensions__GetLocalPosition(v56, 0LL);
+  v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  LocalPosition = GameObjectExtensions__GetLocalPosition(v40, 0LL);
   x = LocalPosition.fields.x;
   y = LocalPosition.fields.y;
-  v60 = LocalPosition.fields.z;
-  if ( !byte_4C1C514 )
+  v44 = LocalPosition.fields.z;
+  if ( !byte_49B5364 )
   {
-    sub_1C3B764(&System_Math_TypeInfo, v57);
-    byte_4C1C514 = 1;
+    sub_1B4CF90(&System_Math_TypeInfo, v41);
+    byte_49B5364 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v61 = sqrtf((float)(v60 * v60) + (float)((float)(x * x) + (float)(y * y)));
-  if ( v61 <= 0.00001 )
+  v45 = sqrtf((float)(v44 * v44) + (float)((float)(x * x) + (float)(y * y)));
+  if ( v45 <= 0.00001 )
   {
-    if ( !byte_4C1C511 )
+    if ( !byte_49B5361 )
     {
-      sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v57);
-      byte_4C1C511 = 1;
+      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v41);
+      byte_49B5361 = 1;
     }
-    v65 = UnityEngine_Vector3_TypeInfo->static_fields;
-    v62 = v65->zeroVector.fields.x;
-    v63 = v65->zeroVector.fields.y;
-    v64 = v65->zeroVector.fields.z;
+    v49 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v46 = v49->zeroVector.fields.x;
+    v47 = v49->zeroVector.fields.y;
+    v48 = v49->zeroVector.fields.z;
   }
   else
   {
-    v62 = x / v61;
-    v63 = y / v61;
-    v64 = v60 / v61;
+    v46 = x / v45;
+    v47 = y / v45;
+    v48 = v44 / v45;
   }
-  v75.fields.x = -v62;
-  v75.fields.y = -v63;
-  v75.fields.z = -v64;
-  v76 = UnityEngine_Quaternion__LookRotation_71061108(v75, 0LL);
-  this->fields._FocusQua_k__BackingField = v76;
-  this->fields._FocusQua_k__BackingField = UnityEngine_Quaternion__Inverse(v76, 0LL);
+  v55.fields.x = -v46;
+  v55.fields.y = -v47;
+  v55.fields.z = -v48;
+  v56 = UnityEngine_Quaternion__LookRotation_68742820(v55, 0LL);
+  this->fields._FocusQua_k__BackingField = v56;
+  this->fields._FocusQua_k__BackingField = UnityEngine_Quaternion__Inverse(v56, 0LL);
   this->fields.earthEffectCamera = earthEffCamera;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.earthEffectCamera,
-    (int64_t)earthEffCamera,
-    v66,
-    v67,
-    v68,
-    v69,
-    v70,
-    v71);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.earthEffectCamera, (int32_t)earthEffCamera, v50, v51);
 }
 
 

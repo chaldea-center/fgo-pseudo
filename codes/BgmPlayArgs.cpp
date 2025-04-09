@@ -8,38 +8,34 @@ void __fastcall BgmPlayArgs___ctor(
 {
   __int64 v11; // x1
   __int64 v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   float value; // s0
-  BgmManager_c *v20; // x0
+  BgmManager_c *v16; // x0
 
-  if ( (byte_4C2156B & 1) == 0 )
+  if ( (byte_49BA47F & 1) == 0 )
   {
-    sub_1C3B764(&BgmManager_TypeInfo, bgmName);
-    sub_1C3B764(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_1C3B764(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4C2156B = 1;
+    sub_1B4CF90(&BgmManager_TypeInfo, bgmName);
+    sub_1B4CF90(&Method_System_Nullable_float__GetValueOrDefault__, v11);
+    sub_1B4CF90(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_49BA47F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)bgmName, v13, v14, v15, v16, v17, v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)bgmName, v13, v14);
   if ( volume.fields.hasValue )
   {
     value = volume.fields.value;
   }
   else
   {
-    v20 = BgmManager_TypeInfo;
+    v16 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-      v20 = BgmManager_TypeInfo;
+      v16 = BgmManager_TypeInfo;
     }
-    value = v20->static_fields->DEFAULT_VOLUME;
+    value = v16->static_fields->DEFAULT_VOLUME;
   }
   this->fields._Volume_k__BackingField = value;
   this->fields._FadeTime_k__BackingField = fadeTime;
@@ -66,18 +62,18 @@ void __fastcall BgmPlayArgs__Update(
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4C2156C & 1) == 0 )
+  if ( (byte_49BA480 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Nullable_float__GetValueOrDefault__, volume);
-    sub_1C3B764(&Method_System_Nullable_long__GetValueOrDefault__, v10);
-    sub_1C3B764(&Method_System_Nullable_long__get_HasValue__, v11);
-    this = (BgmPlayArgs_o *)sub_1C3B764(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4C2156C = 1;
+    sub_1B4CF90(&Method_System_Nullable_float__GetValueOrDefault__, volume);
+    sub_1B4CF90(&Method_System_Nullable_long__GetValueOrDefault__, v10);
+    sub_1B4CF90(&Method_System_Nullable_long__get_HasValue__, v11);
+    this = (BgmPlayArgs_o *)sub_1B4CF90(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_49BA480 = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C3B9C0)(this, volume);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1B4D1EC)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -122,14 +118,10 @@ float __fastcall BgmPlayArgs__get_Volume(BgmPlayArgs_o *this, const MethodInfo *
 
 void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

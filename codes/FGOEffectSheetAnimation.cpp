@@ -9,31 +9,19 @@ void __fastcall FGOEffectSheetAnimation___ctor(FGOEffectSheetAnimation_o *this, 
 void __fastcall FGOEffectSheetAnimation__OnEnable(FGOEffectSheetAnimation_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C20DB7 & 1) == 0 )
+  if ( (byte_49B9CC9 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    byte_4C20DB7 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    byte_49B9CC9 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.compRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.compRenderer,
-    (int64_t)Component_object,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.compRenderer, (int32_t)Component_object, v4, v5);
 }
 
 
@@ -52,11 +40,11 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
   UnityEngine_Vector2_o v13; // 0:s0.4,4:s1.4
   UnityEngine_Vector2_o v14; // 0:s0.4,4:s1.4
 
-  if ( (byte_4C20DB8 & 1) == 0 )
+  if ( (byte_49B9CCA & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_16579/*"aspectRatio"*/, v3);
-    byte_4C20DB8 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_15954/*"_MainTex"*/, v3);
+    byte_49B9CCA = 1;
   }
   compRenderer = (UnityEngine_Object_o *)this->fields.compRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,20 +70,20 @@ void __fastcall FGOEffectSheetAnimation__Update(FGOEffectSheetAnimation_o *this,
                        - (float)((float)(1.0 / (float)uvAnimationTileY) * (float)(v12 / uvAnimationTileX)),
           UnityEngine_Material__SetTextureOffset(
             (UnityEngine_Material_o *)material,
-            (System_String_o *)StringLiteral_16579/*"aspectRatio"*/,
+            (System_String_o *)StringLiteral_15954/*"_MainTex"*/,
             v13,
             0LL),
           (material = this->fields.compRenderer) == 0LL)
       || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0LL)) == 0LL )
     {
 LABEL_15:
-      sub_1C3B9C0(material, v5);
+      sub_1B4D1EC(material, v5);
     }
     v14.fields.x = 1.0 / (float)uvAnimationTileX;
     v14.fields.y = 1.0 / (float)uvAnimationTileY;
     UnityEngine_Material__SetTextureScale(
       (UnityEngine_Material_o *)material,
-      (System_String_o *)StringLiteral_16579/*"aspectRatio"*/,
+      (System_String_o *)StringLiteral_15954/*"_MainTex"*/,
       v14,
       0LL);
   }

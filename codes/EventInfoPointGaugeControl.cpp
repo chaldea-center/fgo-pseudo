@@ -1,50 +1,34 @@
 void __fastcall EventInfoPointGaugeControl___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
-  __int64 v9; // x1
-  EventInfoPointGaugeControl_c *v10; // x8
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  EventInfoPointGaugeControl_c *v6; // x8
   struct EventInfoPointGaugeControl_StaticFields *static_fields; // x9
-  int64_t v12; // x1
-  struct EventInfoPointGaugeControl_StaticFields *v13; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v8; // w1
+  struct EventInfoPointGaugeControl_StaticFields *v9; // x0
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C235E8 & 1) == 0 )
+  if ( (byte_49BC517 & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, v1);
-    sub_1C3B764(&StringLiteral_16847/*"bit_battlestart_3_{0}"*/, v8);
-    sub_1C3B764(&StringLiteral_17573/*"charaReturn"*/, v9);
-    byte_4C235E8 = 1;
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, v1);
+    sub_1B4CF90(&StringLiteral_16222/*"_battle"*/, v4);
+    sub_1B4CF90(&StringLiteral_16924/*"bit_gauge_change"*/, v5);
+    byte_49BC517 = 1;
   }
-  EventInfoPointGaugeControl_TypeInfo->static_fields->EVENT_POINT_GAUGE_EFFECT_CHANGE = (struct System_String_o *)StringLiteral_17573/*"charaReturn"*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)EventInfoPointGaugeControl_TypeInfo->static_fields,
-    StringLiteral_17573/*"charaReturn"*/,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v10 = EventInfoPointGaugeControl_TypeInfo;
+  EventInfoPointGaugeControl_TypeInfo->static_fields->EVENT_POINT_GAUGE_EFFECT_CHANGE = (struct System_String_o *)StringLiteral_16924/*"bit_gauge_change"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)EventInfoPointGaugeControl_TypeInfo->static_fields, StringLiteral_16924/*"bit_gauge_change"*/, v2, v3);
+  v6 = EventInfoPointGaugeControl_TypeInfo;
   static_fields = EventInfoPointGaugeControl_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->EVENT_POINT_GAUGE_POSITION.fields.x = 0xC3B98000C1F80000LL;
   static_fields->EVENT_POINT_GAUGE_POSITION.fields.z = 0.0;
-  v12 = StringLiteral_16847/*"bit_battlestart_3_{0}"*/;
-  v13 = v10->static_fields;
-  v13->BATTLE_MODE_SUFFIX = (struct System_String_o *)StringLiteral_16847/*"bit_battlestart_3_{0}"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v13->BATTLE_MODE_SUFFIX, v12, v14, v15, v16, v17, v18, v19);
+  v8 = StringLiteral_16222/*"_battle"*/;
+  v9 = v6->static_fields;
+  v9->BATTLE_MODE_SUFFIX = (struct System_String_o *)StringLiteral_16222/*"_battle"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v9->BATTLE_MODE_SUFFIX, v8, v10, v11);
 }
 
 
@@ -71,7 +55,7 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeControl__CreateEventPoin
   __int64 v13; // x1
   __int64 v14; // x1
   AssetData_o *eventInfoAssetData; // x0
-  Il2CppObject *Object_object__50142412; // x22
+  Il2CppObject *Object_object__49169892; // x22
   bool v17; // w8
   UnityEngine_GameObject_o *result; // x0
   Il2CppObject *v19; // x22
@@ -83,57 +67,49 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeControl__CreateEventPoin
   struct EventInfoPointGaugeControl_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
   struct EventInfoPointGaugeComponent_o **p_EventPointGaugeComponent_k__BackingField; // x20
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
   struct UnityEngine_GameObject_o *EffectParent; // x0
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
 
   v5 = *(_QWORD *)&pos.fields.value.fields.y;
   v6 = *(_QWORD *)&pos.fields.hasValue;
-  if ( (byte_4C235DD & 1) == 0 )
+  if ( (byte_49BC50C & 1) == 0 )
   {
-    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, *(_QWORD *)&pos.fields.hasValue);
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, v8);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_EventInfoPointGaugeComponent___, v9);
-    sub_1C3B764(&Method_System_Nullable_Vector3__GetValueOrDefault__, v10);
-    sub_1C3B764(&Method_System_Nullable_Vector3__get_HasValue__, v11);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v13);
-    sub_1C3B764(&StringLiteral_6345/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/, v14);
-    byte_4C235DD = 1;
+    sub_1B4CF90(&Method_AssetData_GetObject_GameObject____75492000, *(_QWORD *)&pos.fields.hasValue);
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, v8);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_EventInfoPointGaugeComponent___, v9);
+    sub_1B4CF90(&Method_System_Nullable_Vector3__GetValueOrDefault__, v10);
+    sub_1B4CF90(&Method_System_Nullable_Vector3__get_HasValue__, v11);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v12);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v13);
+    sub_1B4CF90(&StringLiteral_6113/*"EventInfoPointGaugePrefab"*/, v14);
+    byte_49BC50C = 1;
   }
   eventInfoAssetData = this->fields.eventInfoAssetData;
   if ( !eventInfoAssetData )
     goto LABEL_20;
-  Object_object__50142412 = AssetData__GetObject_object__50142412(
+  Object_object__49169892 = AssetData__GetObject_object__49169892(
                               eventInfoAssetData,
-                              (System_String_o *)StringLiteral_6345/*"FOLLOWER_SELECT_REFRESH_REST_TITLE"*/,
-                              (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
+                              (System_String_o *)StringLiteral_6113/*"EventInfoPointGaugePrefab"*/,
+                              (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_GameObject____75492000);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v17 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50142412, 0LL, 0LL);
+  v17 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49169892, 0LL, 0LL);
   result = 0LL;
   if ( !v17 )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v19 = UnityEngine_Object__Instantiate_object_(
-            Object_object__50142412,
-            (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            Object_object__49169892,
+            (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
     v20 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v19, 0LL, 0LL);
     result = 0LL;
     if ( !v20 )
     {
-      GameObjectExtensions__SafeSetParent_34969340((UnityEngine_GameObject_o *)v19, this->fields.eventRoot, 0LL);
+      GameObjectExtensions__SafeSetParent_34075504((UnityEngine_GameObject_o *)v19, this->fields.eventRoot, 0LL);
       if ( (_BYTE)v6 )
       {
         z = *((float *)&v5 + 1);
@@ -158,18 +134,14 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeControl__CreateEventPoin
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v19,
-                             (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPointGaugeComponent___);
+                             (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_EventInfoPointGaugeComponent___);
         this->fields._EventPointGaugeComponent_k__BackingField = (struct EventInfoPointGaugeComponent_o *)Component_object;
         p_EventPointGaugeComponent_k__BackingField = &this->fields._EventPointGaugeComponent_k__BackingField;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields._EventPointGaugeComponent_k__BackingField,
-          (int64_t)Component_object,
+        sub_1B4CF34(
+          (CGThumbnailListItem_o *)&this->fields._EventPointGaugeComponent_k__BackingField,
+          (int32_t)Component_object,
           v28,
-          v29,
-          v30,
-          v31,
-          v32,
-          v33);
+          v29);
         eventInfoAssetData = (AssetData_o *)this->fields._EventPointGaugeComponent_k__BackingField;
         if ( eventInfoAssetData )
         {
@@ -184,21 +156,17 @@ UnityEngine_GameObject_o *__fastcall EventInfoPointGaugeControl__CreateEventPoin
                              (EventInfoPointGaugeComponent_o *)eventInfoAssetData,
                              *(const MethodInfo **)&pos.fields.hasValue);
             this->fields.eventPointGaugeEffectParent = EffectParent;
-            sub_1C3B708(
-              (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeEffectParent,
-              (int64_t)EffectParent,
-              v35,
-              v36,
-              v37,
-              v38,
-              v39,
-              v40);
+            sub_1B4CF34(
+              (CGThumbnailListItem_o *)&this->fields.eventPointGaugeEffectParent,
+              (int32_t)EffectParent,
+              v31,
+              v32);
             return (UnityEngine_GameObject_o *)v19;
           }
         }
       }
 LABEL_20:
-      sub_1C3B9C0(eventInfoAssetData, *(_QWORD *)&pos.fields.hasValue);
+      sub_1B4D1EC(eventInfoAssetData, *(_QWORD *)&pos.fields.hasValue);
     }
   }
   return result;
@@ -209,24 +177,20 @@ void __fastcall EventInfoPointGaugeControl__DestroyEventInfo(
         EventInfoPointGaugeControl_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_eventPointGaugeObj; // x19
+  CGThumbnailListItem_o *p_eventPointGaugeObj; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *eventPointGaugeObj; // t1
   UnityEngine_Object_o *klass; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4C235E5 & 1) == 0 )
+  if ( (byte_49BC514 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C235E5 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC514 = 1;
   }
   eventPointGaugeObj = this->fields.eventPointGaugeObj;
-  p_eventPointGaugeObj = (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeObj;
+  p_eventPointGaugeObj = (CGThumbnailListItem_o *)&this->fields.eventPointGaugeObj;
   v4 = (UnityEngine_Object_o *)eventPointGaugeObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -235,9 +199,9 @@ void __fastcall EventInfoPointGaugeControl__DestroyEventInfo(
     klass = (UnityEngine_Object_o *)p_eventPointGaugeObj->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71122748(klass, 0LL);
+    UnityEngine_Object__Destroy_68804456(klass, 0LL);
     p_eventPointGaugeObj->klass = 0LL;
-    sub_1C3B708(p_eventPointGaugeObj, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_1B4CF34(p_eventPointGaugeObj, 0, v7, v8);
   }
 }
 
@@ -246,29 +210,25 @@ void __fastcall EventInfoPointGaugeControl__DestroyEventPointGaugeChangeEffect(
         EventInfoPointGaugeControl_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_eventPointGaugeChangeEffectPrefab; // x19
+  CGThumbnailListItem_o *p_eventPointGaugeChangeEffectPrefab; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *eventPointGaugeChangeEffectPrefab; // t1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C235E3 & 1) == 0 )
+  if ( (byte_49BC512 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C235E3 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC512 = 1;
   }
   eventPointGaugeChangeEffectPrefab = this->fields.eventPointGaugeChangeEffectPrefab;
-  p_eventPointGaugeChangeEffectPrefab = (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeChangeEffectPrefab;
+  p_eventPointGaugeChangeEffectPrefab = (CGThumbnailListItem_o *)&this->fields.eventPointGaugeChangeEffectPrefab;
   v4 = (UnityEngine_Object_o *)eventPointGaugeChangeEffectPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71122748(v4, 0LL);
+  UnityEngine_Object__Destroy_68804456(v4, 0LL);
   p_eventPointGaugeChangeEffectPrefab->klass = 0LL;
-  sub_1C3B708(p_eventPointGaugeChangeEffectPrefab, 0LL, v6, v7, v8, v9, v10, v11);
+  sub_1B4CF34(p_eventPointGaugeChangeEffectPrefab, 0, v6, v7);
 }
 
 
@@ -281,20 +241,16 @@ void __fastcall EventInfoPointGaugeControl__DestroyEventPointGaugeEffect(
   unsigned __int64 v4; // x21
   __int64 v5; // x22
   UnityEngine_Object_o *v6; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  struct UnityEngine_GameObject_array *v13; // x8
-  Il2CppClass **v14; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  struct UnityEngine_GameObject_array *v9; // x8
+  Il2CppClass **v10; // x0
 
   v2 = this;
-  if ( (byte_4C235E4 & 1) == 0 )
+  if ( (byte_49BC513 & 1) == 0 )
   {
-    this = (EventInfoPointGaugeControl_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C235E4 = 1;
+    this = (EventInfoPointGaugeControl_o *)sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC513 = 1;
   }
   eventPointGaugeEffectPrefabList = v2->fields.eventPointGaugeEffectPrefabList;
   if ( eventPointGaugeEffectPrefabList && (int)*(_QWORD *)&eventPointGaugeEffectPrefabList->max_length >= 1 )
@@ -305,20 +261,20 @@ void __fastcall EventInfoPointGaugeControl__DestroyEventPointGaugeEffect(
     {
       if ( v4 >= eventPointGaugeEffectPrefabList->max_length )
 LABEL_15:
-        sub_1C3B9C8(this, method);
+        sub_1B4D1F4(this, method);
       v6 = (UnityEngine_Object_o *)eventPointGaugeEffectPrefabList->m_Items[v4];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71122748(v6, 0LL);
-      v13 = v2->fields.eventPointGaugeEffectPrefabList;
-      if ( !v13 )
+      UnityEngine_Object__Destroy_68804456(v6, 0LL);
+      v9 = v2->fields.eventPointGaugeEffectPrefabList;
+      if ( !v9 )
 LABEL_13:
-        sub_1C3B9C0(this, method);
-      if ( v4 >= v13->max_length )
+        sub_1B4D1EC(this, method);
+      if ( v4 >= v9->max_length )
         goto LABEL_15;
-      v14 = &v13->obj.klass + v4;
-      v14[4] = 0LL;
-      sub_1C3B708((PartyOrganizationUtility_o *)(v14 + 4), 0LL, v7, v8, v9, v10, v11, v12);
+      v10 = &v9->obj.klass + v4;
+      v10[4] = 0LL;
+      sub_1B4CF34((CGThumbnailListItem_o *)(v10 + 4), 0, v7, v8);
       if ( ++v4 == v5 )
         break;
       eventPointGaugeEffectPrefabList = v2->fields.eventPointGaugeEffectPrefabList;
@@ -352,23 +308,23 @@ int32_t __fastcall EventInfoPointGaugeControl__GetEventPointGaugeState(
   int32_t klass; // w22
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C235DC & 1) == 0 )
+  if ( (byte_49BC50B & 1) == 0 )
   {
-    sub_1C3B764(&CondType_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C3B764(&Method_DataManager_GetMasterData_QuestGroupMaster___, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__Dispose__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__MoveNext__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__get_Current__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_QuestGroupEntity__GetEnumerator__, v8);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4C235DC = 1;
+    sub_1B4CF90(&CondType_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B4CF90(&Method_DataManager_GetMasterData_QuestGroupMaster___, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__Dispose__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__MoveNext__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__get_Current__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_QuestGroupEntity__GetEnumerator__, v8);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_49BC50B = 1;
   }
   memset(&v20, 0, sizeof(v20));
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_QuestGroupMaster___)) == 0LL
+                                      (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_QuestGroupMaster___)) == 0LL
     || (v12 = (QuestGroupMaster_o *)Instance,
         (Instance = (DataManager_o *)QuestGroupMaster__GetEntityListByGroupId(
                                        (QuestGroupMaster_o *)Instance,
@@ -376,33 +332,33 @@ int32_t __fastcall EventInfoPointGaugeControl__GetEventPointGaugeState(
                                        1,
                                        0LL)) == 0LL) )
   {
-    sub_1C3B9C0(Instance, v11);
+    sub_1B4D1EC(Instance, v11);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_QuestGroupEntity__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_QuestGroupEntity__GetEnumerator__);
   v13 = 0;
   while ( 1 )
   {
     v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v20,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__MoveNext__);
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__MoveNext__);
     if ( !v14 )
       break;
     current = v20.fields._current;
     if ( !v20.fields._current )
-      sub_1C3B9C0(v14, v15);
+      sub_1B4D1EC(v14, v15);
     GroupId = QuestGroupMaster__GetGroupId(v12, (int32_t)v20.fields._current[1].klass, 12, 0LL);
     klass = (int32_t)current[1].klass;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    if ( !((GroupId < 1) | !CondType__IsQuestClear_39011304(klass, -1, 0, 0LL)) )
+    if ( !((GroupId < 1) | !CondType__IsQuestClear_38126524(klass, -1, 0, 0LL)) )
       v13 = GroupId;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_QuestGroupEntity__Dispose__);
   return v13;
 }
 
@@ -413,19 +369,19 @@ bool __fastcall EventInfoPointGaugeControl__IsEventPointGaugeOpen(int32_t eventI
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C235DB & 1) == 0 )
+  if ( (byte_49BC50A & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4C235DB = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_49BC50A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1C3B9C0(Instance, v5);
+    sub_1B4D1EC(Instance, v5);
   }
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, eventId, 0LL, 0, 0LL);
 }
@@ -444,61 +400,53 @@ void __fastcall EventInfoPointGaugeControl__LoadEventInfoAssetData(
   __int64 v11; // x21
   __int64 v12; // x0
   __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  __int64 v20; // x23
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  __int64 v16; // x23
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   AssetData_o *eventInfoAssetData; // x0
-  AssetLoader_LoadEndDataHandler_o *v28; // x19
+  AssetLoader_LoadEndDataHandler_o *v20; // x19
 
-  if ( (byte_4C235D7 & 1) == 0 )
+  if ( (byte_49BC506 & 1) == 0 )
   {
-    sub_1C3B764(&AssetManager_TypeInfo, callBack);
-    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass16_0__LoadEventInfoAssetData_b__0__, v8);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass16_0_TypeInfo, v9);
-    sub_1C3B764(&StringLiteral_6322/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/, v10);
-    byte_4C235D7 = 1;
+    sub_1B4CF90(&AssetManager_TypeInfo, callBack);
+    sub_1B4CF90(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass16_0__LoadEventInfoAssetData_b__0__, v8);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass16_0_TypeInfo, v9);
+    sub_1B4CF90(&StringLiteral_6090/*"Event/Info"*/, v10);
+    byte_49BC506 = 1;
   }
-  v11 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass16_0_TypeInfo);
+  v11 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1C3B9C0(v12, v13);
+    sub_1B4D1EC(v12, v13);
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 24) = callBack;
-  v20 = v11 + 24;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)callBack, v21, v22, v23, v24, v25, v26);
+  v16 = v11 + 24;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 24), (int32_t)callBack, v17, v18);
   *(_DWORD *)(v11 + 32) = eventId;
   eventInfoAssetData = this->fields.eventInfoAssetData;
   if ( eventInfoAssetData && !AssetData__get_IsEmpty(eventInfoAssetData, 0LL) )
   {
-    if ( *(_QWORD *)v20 )
-      (*(void (__fastcall **)(_QWORD, _QWORD, _QWORD))(*(_QWORD *)v20 + 24LL))(
-        *(_QWORD *)(*(_QWORD *)v20 + 64LL),
+    if ( *(_QWORD *)v16 )
+      (*(void (__fastcall **)(_QWORD, _QWORD, _QWORD))(*(_QWORD *)v16 + 24LL))(
+        *(_QWORD *)(*(_QWORD *)v16 + 64LL),
         *(unsigned int *)(v11 + 32),
-        *(_QWORD *)(*(_QWORD *)v20 + 40LL));
+        *(_QWORD *)(*(_QWORD *)v16 + 40LL));
   }
   else
   {
-    v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3B9B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1B4D1DC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v28,
+      v20,
       (Il2CppObject *)v11,
       Method_EventInfoPointGaugeControl___c__DisplayClass16_0__LoadEventInfoAssetData_b__0__,
       0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6322/*"FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME"*/, v28, 1, 0LL);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6090/*"Event/Info"*/, v20, 1, 0LL);
   }
 }
 
@@ -516,71 +464,63 @@ void __fastcall EventInfoPointGaugeControl__LoadEventPointGaugeEffect(
   __int64 v11; // x19
   __int64 v12; // x0
   __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  __int64 v20; // x23
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  __int64 v16; // x23
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   AssetData_o *eventPointGaugeEffectAssetData; // x0
-  Il2CppObject *v28; // x0
-  System_String_o *v29; // x20
-  AssetLoader_LoadEndDataHandler_o *v30; // x21
+  Il2CppObject *v20; // x0
+  System_String_o *v21; // x20
+  AssetLoader_LoadEndDataHandler_o *v22; // x21
 
-  if ( (byte_4C235DE & 1) == 0 )
+  if ( (byte_49BC50D & 1) == 0 )
   {
-    sub_1C3B764(&AssetManager_TypeInfo, callbackEndFunc);
-    sub_1C3B764(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass23_0__LoadEventPointGaugeEffect_b__0__, v8);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass23_0_TypeInfo, v9);
-    sub_1C3B764(&StringLiteral_5989/*"Equals"*/, v10);
-    byte_4C235DE = 1;
+    sub_1B4CF90(&AssetManager_TypeInfo, callbackEndFunc);
+    sub_1B4CF90(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass23_0__LoadEventPointGaugeEffect_b__0__, v8);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass23_0_TypeInfo, v9);
+    sub_1B4CF90(&StringLiteral_5773/*"Effect/Event/{0}"*/, v10);
+    byte_49BC50D = 1;
   }
-  v11 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass23_0_TypeInfo);
+  v11 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1C3B9C0(v12, v13);
+    sub_1B4D1EC(v12, v13);
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 16), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 24) = callbackEndFunc;
-  v20 = v11 + 24;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)callbackEndFunc, v21, v22, v23, v24, v25, v26);
+  v16 = v11 + 24;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 24), (int32_t)callbackEndFunc, v17, v18);
   *(_DWORD *)(v11 + 32) = eventId;
   eventPointGaugeEffectAssetData = this->fields.eventPointGaugeEffectAssetData;
   if ( eventPointGaugeEffectAssetData && !AssetData__get_IsEmpty(eventPointGaugeEffectAssetData, 0LL) )
   {
-    if ( *(_QWORD *)v20 )
-      (*(void (__fastcall **)(_QWORD, _QWORD, _QWORD))(*(_QWORD *)v20 + 24LL))(
-        *(_QWORD *)(*(_QWORD *)v20 + 64LL),
+    if ( *(_QWORD *)v16 )
+      (*(void (__fastcall **)(_QWORD, _QWORD, _QWORD))(*(_QWORD *)v16 + 24LL))(
+        *(_QWORD *)(*(_QWORD *)v16 + 64LL),
         *(unsigned int *)(v11 + 32),
-        *(_QWORD *)(*(_QWORD *)v20 + 40LL));
+        *(_QWORD *)(*(_QWORD *)v16 + 40LL));
   }
   else
   {
-    v28 = (Il2CppObject *)System_Int32__ToString((int)v11 + 32, 0LL);
-    v29 = System_String__Format((System_String_o *)StringLiteral_5989/*"Equals"*/, v28, 0LL);
-    v30 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3B9B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v20 = (Il2CppObject *)System_Int32__ToString((int)v11 + 32, 0LL);
+    v21 = System_String__Format((System_String_o *)StringLiteral_5773/*"Effect/Event/{0}"*/, v20, 0LL);
+    v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1B4D1DC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v30,
+      v22,
       (Il2CppObject *)v11,
       Method_EventInfoPointGaugeControl___c__DisplayClass23_0__LoadEventPointGaugeEffect_b__0__,
       0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage(v29, v30, 1, 0LL);
+    AssetManager__loadAssetStorage(v21, v22, 1, 0LL);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventInfoPointGaugeControl__LoadEventPointGaugeEffect_42386256(
+void __fastcall EventInfoPointGaugeControl__LoadEventPointGaugeEffect_41512800(
         EventInfoPointGaugeControl_o *this,
         int32_t eventId,
         System_Action_o *callbackEndFunc,
@@ -591,38 +531,34 @@ void __fastcall EventInfoPointGaugeControl__LoadEventPointGaugeEffect_42386256(
   __int64 v9; // x22
   __int64 v10; // x0
   __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  EventInfoPointGaugeControl_assetLoadFinish_o *v18; // x21
-  const MethodInfo *v19; // x3
-  const MethodInfo *v20; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  EventInfoPointGaugeControl_assetLoadFinish_o *v14; // x21
+  const MethodInfo *v15; // x3
+  const MethodInfo *v16; // x3
 
-  if ( (byte_4C235DF & 1) == 0 )
+  if ( (byte_49BC50E & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_EventInfoPointGaugeControl___c__DisplayClass24_0__LoadEventPointGaugeEffect_b__0__,
       *(_QWORD *)&eventId);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass24_0_TypeInfo, v7);
-    sub_1C3B764(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v8);
-    byte_4C235DF = 1;
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass24_0_TypeInfo, v7);
+    sub_1B4CF90(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v8);
+    byte_49BC50E = 1;
   }
-  v9 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass24_0_TypeInfo);
+  v9 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass24_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1C3B9C0(v10, v11);
+    sub_1B4D1EC(v10, v11);
   *(_QWORD *)(v9 + 16) = callbackEndFunc;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)callbackEndFunc, v12, v13, v14, v15, v16, v17);
-  v18 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1C3B9B0(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v9 + 16), (int32_t)callbackEndFunc, v12, v13);
+  v14 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1B4D1DC(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
   EventInfoPointGaugeControl_assetLoadFinish___ctor(
-    v18,
+    v14,
     (Il2CppObject *)v9,
     Method_EventInfoPointGaugeControl___c__DisplayClass24_0__LoadEventPointGaugeEffect_b__0__,
-    v19);
-  EventInfoPointGaugeControl__LoadEventPointGaugeEffect(this, v18, eventId, v20);
+    v15);
+  EventInfoPointGaugeControl__LoadEventPointGaugeEffect(this, v14, eventId, v16);
 }
 
 
@@ -651,97 +587,73 @@ void __fastcall EventInfoPointGaugeControl__PlayEventPointGaugeAddEffect(
   __int64 v24; // x22
   __int64 Component_object; // x0
   const MethodInfo *v26; // x1
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  __int64 v33; // x23
-  int64_t v34; // x2
-  int32_t v35; // w3
-  System_String_o *v36; // x4
-  BattleSetupInfo_o *v37; // x5
-  FollowerInfo_o *v38; // x6
-  PartyListViewItem_o *v39; // x7
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  __int64 v29; // x23
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
   struct TerminalPramsManager_StaticFields *static_fields; // x8
   struct EventInfoPointGaugeComponent_o *EventPointGaugeComponent_k__BackingField; // x8
   struct System_String_array **p_addEffectNameList; // x8
-  struct EventInfoPointGaugeComponent_o *v43; // x8
-  struct System_String_array *v44; // x28
+  struct EventInfoPointGaugeComponent_o *v35; // x8
+  struct System_String_array *v36; // x28
   struct UnityEngine_GameObject_array **p_eventPointGaugeEffectPrefabList; // x24
-  int64_t v46; // x0
-  int64_t v47; // x2
-  int32_t v48; // w3
-  System_String_o *v49; // x4
-  BattleSetupInfo_o *v50; // x5
-  FollowerInfo_o *v51; // x6
-  PartyListViewItem_o *v52; // x7
-  unsigned __int64 v53; // x29
+  __int64 v38; // x0
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  unsigned __int64 v41; // x29
   System_String_o **m_Items; // x19
-  __int64 v55; // x25
-  System_Text_StringBuilder_o *v56; // x26
+  __int64 v43; // x25
+  System_Text_StringBuilder_o *v44; // x26
   System_String_o *BATTLE_MODE_SUFFIX; // x1
-  EventInfoPointGaugeControl_c *v58; // x0
+  EventInfoPointGaugeControl_c *v46; // x0
   AssetData_o *eventPointGaugeEffectAssetData; // x27
-  Il2CppObject *Object_object__50142412; // x26
-  Il2CppObject *v61; // x26
-  int64_t v62; // x2
-  int32_t v63; // w3
-  System_String_o *v64; // x4
-  BattleSetupInfo_o *v65; // x5
-  FollowerInfo_o *v66; // x6
-  PartyListViewItem_o *v67; // x7
-  struct UnityEngine_GameObject_array *v68; // x8
-  int64_t v69; // x2
-  int32_t v70; // w3
-  System_String_o *v71; // x4
-  BattleSetupInfo_o *v72; // x5
-  FollowerInfo_o *v73; // x6
-  PartyListViewItem_o *v74; // x7
-  __int64 v75; // x26
+  Il2CppObject *Object_object__49169892; // x26
+  Il2CppObject *v49; // x26
+  int32_t v50; // w2
+  const MethodInfo *v51; // x3
+  struct UnityEngine_GameObject_array *v52; // x8
+  int32_t v53; // w2
+  const MethodInfo *v54; // x3
+  __int64 v55; // x26
   System_Action_o *klass; // x27
-  int64_t v77; // x2
-  int32_t v78; // w3
-  System_String_o *v79; // x4
-  BattleSetupInfo_o *v80; // x5
-  FollowerInfo_o *v81; // x6
-  PartyListViewItem_o *v82; // x7
-  PartyOrganizationUtility_o *v83; // x0
-  int64_t v84; // x1
-  PartyOrganizationUtility_o *v85; // [xsp+0h] [xbp-80h]
-  __int64 v88; // [xsp+10h] [xbp-70h]
-  int32_t v89; // [xsp+1Ch] [xbp-64h] BYREF
+  int32_t v57; // w2
+  const MethodInfo *v58; // x3
+  CGThumbnailListItem_o *v59; // x0
+  int32_t v60; // w1
+  CGThumbnailListItem_o *v61; // [xsp+0h] [xbp-80h]
+  __int64 v64; // [xsp+10h] [xbp-70h]
+  int32_t v65; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C235E2 & 1) == 0 )
+  if ( (byte_49BC511 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&gaugeState);
-    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, v13);
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, v14);
-    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeEffectAction___, v15);
-    sub_1C3B764(&UnityEngine_GameObject___TypeInfo, v16);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v17);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v18);
-    sub_1C3B764(&System_Text_StringBuilder_TypeInfo, v19);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v20);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass27_0__PlayEventPointGaugeAddEffect_b__0__, v21);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass27_0_TypeInfo, v22);
-    sub_1C3B764(&StringLiteral_16438/*"animationId"*/, v23);
-    byte_4C235E2 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&gaugeState);
+    sub_1B4CF90(&Method_AssetData_GetObject_GameObject____75492000, v13);
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, v14);
+    sub_1B4CF90(&Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeEffectAction___, v15);
+    sub_1B4CF90(&UnityEngine_GameObject___TypeInfo, v16);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v17);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v18);
+    sub_1B4CF90(&System_Text_StringBuilder_TypeInfo, v19);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v20);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass27_0__PlayEventPointGaugeAddEffect_b__0__, v21);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass27_0_TypeInfo, v22);
+    sub_1B4CF90(&StringLiteral_15813/*"_"*/, v23);
+    byte_49BC511 = 1;
   }
-  v89 = 0;
-  v24 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass27_0_TypeInfo);
+  v65 = 0;
+  v24 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0LL);
   if ( !v24 )
 LABEL_61:
-    sub_1C3B9C0(Component_object, v26);
+    sub_1B4D1EC(Component_object, v26);
   *(_QWORD *)(v24 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v24 + 16), (int64_t)this, v27, v28, v29, v30, v31, v32);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 16), (int32_t)this, v27, v28);
   *(_QWORD *)(v24 + 32) = callback;
-  v33 = v24 + 32;
+  v29 = v24 + 32;
   *(_DWORD *)(v24 + 24) = basePoint;
   *(_DWORD *)(v24 + 28) = addPoint;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v24 + 32), (int64_t)callback, v34, v35, v36, v37, v38, v39);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 32), (int32_t)callback, v30, v31);
   if ( !this->fields.eventPointGaugeEffectAssetData )
     goto LABEL_58;
   Component_object = (__int64)TerminalPramsManager_TypeInfo;
@@ -767,171 +679,163 @@ LABEL_61:
   if ( static_fields->EVENT_POINT_EFFECT_STATE_SUB != effectState )
   {
 LABEL_58:
-    if ( !*(_QWORD *)v33 )
+    if ( !*(_QWORD *)v29 )
       goto LABEL_61;
-    (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v33 + 24LL))(
-      *(_QWORD *)(*(_QWORD *)v33 + 64LL),
-      *(_QWORD *)(*(_QWORD *)v33 + 40LL));
+    (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v29 + 24LL))(
+      *(_QWORD *)(*(_QWORD *)v29 + 64LL),
+      *(_QWORD *)(*(_QWORD *)v29 + 40LL));
     return;
   }
-  v43 = this->fields._EventPointGaugeComponent_k__BackingField;
-  if ( !v43 )
+  v35 = this->fields._EventPointGaugeComponent_k__BackingField;
+  if ( !v35 )
     goto LABEL_61;
-  p_addEffectNameList = &v43->fields.subEffectNameList;
+  p_addEffectNameList = &v35->fields.subEffectNameList;
 LABEL_15:
-  v44 = *p_addEffectNameList;
+  v36 = *p_addEffectNameList;
   EventInfoPointGaugeControl__DestroyEventPointGaugeEffect(this, v26);
   p_eventPointGaugeEffectPrefabList = &this->fields.eventPointGaugeEffectPrefabList;
   if ( this->fields.eventPointGaugeEffectPrefabList )
   {
-    if ( !v44 )
+    if ( !v36 )
       goto LABEL_61;
   }
   else
   {
-    if ( !v44 )
+    if ( !v36 )
       goto LABEL_61;
-    v46 = sub_1C3B80C(UnityEngine_GameObject___TypeInfo, v44->max_length);
-    *p_eventPointGaugeEffectPrefabList = (struct UnityEngine_GameObject_array *)v46;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeEffectPrefabList,
-      v46,
-      v47,
-      v48,
-      v49,
-      v50,
-      v51,
-      v52);
+    v38 = sub_1B4D038(UnityEngine_GameObject___TypeInfo, v36->max_length);
+    *p_eventPointGaugeEffectPrefabList = (struct UnityEngine_GameObject_array *)v38;
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventPointGaugeEffectPrefabList, v38, v39, v40);
   }
-  if ( (int)*(_QWORD *)&v44->max_length >= 1 )
+  if ( (int)*(_QWORD *)&v36->max_length >= 1 )
   {
-    v88 = (unsigned int)*(_QWORD *)&v44->max_length;
-    v85 = (PartyOrganizationUtility_o *)(v24 + 40);
-    v53 = 0LL;
-    m_Items = v44->m_Items;
-    v55 = 32LL;
+    v64 = (unsigned int)*(_QWORD *)&v36->max_length;
+    v61 = (CGThumbnailListItem_o *)(v24 + 40);
+    v41 = 0LL;
+    m_Items = v36->m_Items;
+    v43 = 32LL;
     do
     {
-      v56 = (System_Text_StringBuilder_o *)sub_1C3B9B0(System_Text_StringBuilder_TypeInfo);
-      System_Text_StringBuilder___ctor(v56, 0LL);
-      if ( v53 >= v44->max_length )
+      v44 = (System_Text_StringBuilder_o *)sub_1B4D1DC(System_Text_StringBuilder_TypeInfo);
+      System_Text_StringBuilder___ctor(v44, 0LL);
+      if ( v41 >= v36->max_length )
 LABEL_62:
-        sub_1C3B9C8(Component_object, v26);
-      if ( !v56 )
+        sub_1B4D1F4(Component_object, v26);
+      if ( !v44 )
         goto LABEL_61;
-      System_Text_StringBuilder__Append_62529764(v56, m_Items[v53], 0LL);
-      if ( v53 )
+      System_Text_StringBuilder__Append_61178652(v44, m_Items[v41], 0LL);
+      if ( v41 )
       {
-        if ( v53 != 1 )
+        if ( v41 != 1 )
           goto LABEL_32;
-        System_Text_StringBuilder__Append_62529764(v56, (System_String_o *)StringLiteral_16438/*"animationId"*/, 0LL);
-        v89 = gaugeState;
-        BATTLE_MODE_SUFFIX = System_Int32__ToString((int32_t)&v89, 0LL);
+        System_Text_StringBuilder__Append_61178652(v44, (System_String_o *)StringLiteral_15813/*"_"*/, 0LL);
+        v65 = gaugeState;
+        BATTLE_MODE_SUFFIX = System_Int32__ToString((int32_t)&v65, 0LL);
       }
       else
       {
         if ( !isBattleMode )
           goto LABEL_32;
-        v58 = EventInfoPointGaugeControl_TypeInfo;
+        v46 = EventInfoPointGaugeControl_TypeInfo;
         if ( !EventInfoPointGaugeControl_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(EventInfoPointGaugeControl_TypeInfo);
-          v58 = EventInfoPointGaugeControl_TypeInfo;
+          v46 = EventInfoPointGaugeControl_TypeInfo;
         }
-        BATTLE_MODE_SUFFIX = v58->static_fields->BATTLE_MODE_SUFFIX;
+        BATTLE_MODE_SUFFIX = v46->static_fields->BATTLE_MODE_SUFFIX;
       }
-      System_Text_StringBuilder__Append_62529764(v56, BATTLE_MODE_SUFFIX, 0LL);
+      System_Text_StringBuilder__Append_61178652(v44, BATTLE_MODE_SUFFIX, 0LL);
 LABEL_32:
       eventPointGaugeEffectAssetData = this->fields.eventPointGaugeEffectAssetData;
-      Component_object = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v56->klass->vtable._3_ToString.method)(
-                           v56,
-                           v56->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+      Component_object = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v44->klass->vtable._3_ToString.method)(
+                           v44,
+                           v44->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
       if ( !eventPointGaugeEffectAssetData )
         goto LABEL_61;
-      Object_object__50142412 = AssetData__GetObject_object__50142412(
+      Object_object__49169892 = AssetData__GetObject_object__49169892(
                                   eventPointGaugeEffectAssetData,
                                   (System_String_o *)Component_object,
-                                  (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
+                                  (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_GameObject____75492000);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50142412, 0LL, 0LL);
+      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49169892, 0LL, 0LL);
       if ( (Component_object & 1) != 0 )
       {
-        if ( v53 >= v44->max_length )
+        if ( v41 >= v36->max_length )
           goto LABEL_62;
         Component_object = (__int64)this->fields.eventPointGaugeEffectAssetData;
         if ( !Component_object )
           goto LABEL_61;
-        Object_object__50142412 = AssetData__GetObject_object__50142412(
+        Object_object__49169892 = AssetData__GetObject_object__49169892(
                                     (AssetData_o *)Component_object,
-                                    m_Items[v53],
-                                    (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
+                                    m_Items[v41],
+                                    (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_GameObject____75492000);
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50142412, 0LL, 0LL);
+      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__49169892, 0LL, 0LL);
       if ( (Component_object & 1) != 0 )
         goto LABEL_58;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v61 = UnityEngine_Object__Instantiate_object_(
-              Object_object__50142412,
-              (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v61, 0LL, 0LL);
+      v49 = UnityEngine_Object__Instantiate_object_(
+              Object_object__49169892,
+              (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      Component_object = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v49, 0LL, 0LL);
       if ( (Component_object & 1) != 0 )
         goto LABEL_58;
-      v68 = *p_eventPointGaugeEffectPrefabList;
+      v52 = *p_eventPointGaugeEffectPrefabList;
       if ( !*p_eventPointGaugeEffectPrefabList )
         goto LABEL_61;
-      if ( v53 >= v68->max_length )
+      if ( v41 >= v52->max_length )
         goto LABEL_62;
-      v68->m_Items[v53] = (UnityEngine_GameObject_o *)v61;
-      sub_1C3B708((PartyOrganizationUtility_o *)((char *)v68 + v55), (int64_t)v61, v62, v63, v64, v65, v66, v67);
-      GameObjectExtensions__SafeSetParent_34969340(
-        (UnityEngine_GameObject_o *)v61,
+      v52->m_Items[v41] = (UnityEngine_GameObject_o *)v49;
+      sub_1B4CF34((CGThumbnailListItem_o *)((char *)v52 + v43), (int32_t)v49, v50, v51);
+      GameObjectExtensions__SafeSetParent_34075504(
+        (UnityEngine_GameObject_o *)v49,
         this->fields.eventPointGaugeEffectParent,
         0LL);
       Component_object = (__int64)GameObjectExtensions__SafeGetComponent_object_(
-                                    (UnityEngine_GameObject_o *)v61,
-                                    (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeEffectAction___);
-      v75 = Component_object;
-      if ( !v53 )
+                                    (UnityEngine_GameObject_o *)v49,
+                                    (const MethodInfo_2F54F2C *)Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeEffectAction___);
+      v55 = Component_object;
+      if ( !v41 )
       {
         if ( !Component_object )
           goto LABEL_61;
         *(_QWORD *)(Component_object + 32) = 0LL;
-        v83 = (PartyOrganizationUtility_o *)(Component_object + 32);
-        v84 = 0LL;
+        v59 = (CGThumbnailListItem_o *)(Component_object + 32);
+        v60 = 0;
 LABEL_55:
-        sub_1C3B708(v83, v84, v69, v70, v71, v72, v73, v74);
+        sub_1B4CF34(v59, v60, v53, v54);
         goto LABEL_56;
       }
-      if ( v53 == 1 )
+      if ( v41 == 1 )
       {
-        klass = (System_Action_o *)v85->klass;
-        if ( !v85->klass )
+        klass = (System_Action_o *)v61->klass;
+        if ( !v61->klass )
         {
-          klass = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+          klass = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
           System_Action___ctor(
             klass,
             (Il2CppObject *)v24,
             Method_EventInfoPointGaugeControl___c__DisplayClass27_0__PlayEventPointGaugeAddEffect_b__0__,
             0LL);
           *(_QWORD *)(v24 + 40) = klass;
-          sub_1C3B708(v85, (int64_t)klass, v77, v78, v79, v80, v81, v82);
+          sub_1B4CF34(v61, (int32_t)klass, v57, v58);
         }
-        if ( !v75 )
+        if ( !v55 )
           goto LABEL_61;
-        *(_QWORD *)(v75 + 32) = klass;
-        v83 = (PartyOrganizationUtility_o *)(v75 + 32);
-        v84 = (int64_t)klass;
+        *(_QWORD *)(v55 + 32) = klass;
+        v59 = (CGThumbnailListItem_o *)(v55 + 32);
+        v60 = (int)klass;
         goto LABEL_55;
       }
 LABEL_56:
-      ++v53;
-      v55 += 8LL;
+      ++v41;
+      v43 += 8LL;
     }
-    while ( v88 != v53 );
+    while ( v64 != v41 );
   }
 }
 
@@ -955,88 +859,68 @@ void __fastcall EventInfoPointGaugeControl__PlayEventPointGaugeChangeEffect(
   __int64 v20; // x21
   AssetData_o *eventPointGaugeEffectAssetData; // x0
   const MethodInfo *v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  __int64 v29; // x23
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  Il2CppObject *Object_object__50142412; // x22
-  Il2CppObject *v37; // x0
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  __int64 v25; // x23
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
+  Il2CppObject *Object_object__49169892; // x22
+  Il2CppObject *v29; // x0
   struct UnityEngine_GameObject_o **p_eventPointGaugeChangeEffectPrefab; // x19
-  int64_t v39; // x2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  BattleSetupInfo_o *v42; // x5
-  FollowerInfo_o *v43; // x6
-  PartyListViewItem_o *v44; // x7
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
   Il2CppObject *Component_object; // x19
-  System_Action_o *v46; // x20
-  System_Action_o *v47; // x22
+  System_Action_o *v34; // x20
+  System_Action_o *v35; // x22
 
-  if ( (byte_4C235E1 & 1) == 0 )
+  if ( (byte_49BC510 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, parent);
-    sub_1C3B764(&Method_AssetData_GetObject_GameObject____77902856, v13);
-    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeChangeEffectAction___, v14);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v15);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v16);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__0__, v17);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__1__, v18);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass26_0_TypeInfo, v19);
-    byte_4C235E1 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, parent);
+    sub_1B4CF90(&Method_AssetData_GetObject_GameObject____75492000, v13);
+    sub_1B4CF90(&Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeChangeEffectAction___, v14);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v15);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v16);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__0__, v17);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__1__, v18);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass26_0_TypeInfo, v19);
+    byte_49BC510 = 1;
   }
-  v20 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass26_0_TypeInfo);
+  v20 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   if ( !v20 )
     goto LABEL_18;
   *(_QWORD *)(v20 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v20 + 16), (int64_t)this, v23, v24, v25, v26, v27, v28);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 16), (int32_t)this, v23, v24);
   *(_QWORD *)(v20 + 32) = callback;
-  v29 = v20 + 32;
+  v25 = v20 + 32;
   *(_DWORD *)(v20 + 24) = afterGauge;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v20 + 32), (int64_t)callback, v30, v31, v32, v33, v34, v35);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 32), (int32_t)callback, v26, v27);
   if ( !this->fields.eventPointGaugeEffectAssetData || !beforeGauge || *(_DWORD *)(v20 + 24) <= beforeGauge )
     goto LABEL_21;
   EventInfoPointGaugeControl__DestroyEventPointGaugeChangeEffect(this, v22);
   eventPointGaugeEffectAssetData = this->fields.eventPointGaugeEffectAssetData;
   if ( !eventPointGaugeEffectAssetData )
     goto LABEL_18;
-  Object_object__50142412 = AssetData__GetObject_object__50142412(
+  Object_object__49169892 = AssetData__GetObject_object__49169892(
                               eventPointGaugeEffectAssetData,
                               name,
-                              (const MethodInfo_2FD1CCC *)Method_AssetData_GetObject_GameObject____77902856);
+                              (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_GameObject____75492000);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   eventPointGaugeEffectAssetData = (AssetData_o *)UnityEngine_Object__op_Equality(
-                                                    (UnityEngine_Object_o *)Object_object__50142412,
+                                                    (UnityEngine_Object_o *)Object_object__49169892,
                                                     0LL,
                                                     0LL);
   if ( ((unsigned __int8)eventPointGaugeEffectAssetData & 1) != 0 )
     goto LABEL_21;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v37 = UnityEngine_Object__Instantiate_object_(
-          Object_object__50142412,
-          (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  this->fields.eventPointGaugeChangeEffectPrefab = (struct UnityEngine_GameObject_o *)v37;
+  v29 = UnityEngine_Object__Instantiate_object_(
+          Object_object__49169892,
+          (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  this->fields.eventPointGaugeChangeEffectPrefab = (struct UnityEngine_GameObject_o *)v29;
   p_eventPointGaugeChangeEffectPrefab = &this->fields.eventPointGaugeChangeEffectPrefab;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)p_eventPointGaugeChangeEffectPrefab,
-    (int64_t)v37,
-    v39,
-    v40,
-    v41,
-    v42,
-    v43,
-    v44);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_eventPointGaugeChangeEffectPrefab, (int32_t)v29, v31, v32);
   eventPointGaugeEffectAssetData = (AssetData_o *)UnityEngine_Object__op_Equality(
                                                     (UnityEngine_Object_o *)*p_eventPointGaugeChangeEffectPrefab,
                                                     0LL,
@@ -1044,35 +928,35 @@ void __fastcall EventInfoPointGaugeControl__PlayEventPointGaugeChangeEffect(
   if ( ((unsigned __int8)eventPointGaugeEffectAssetData & 1) != 0 )
   {
 LABEL_21:
-    if ( *(_QWORD *)v29 )
+    if ( *(_QWORD *)v25 )
     {
-      (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v29 + 24LL))(
-        *(_QWORD *)(*(_QWORD *)v29 + 64LL),
-        *(_QWORD *)(*(_QWORD *)v29 + 40LL));
+      (*(void (__fastcall **)(_QWORD, _QWORD))(*(_QWORD *)v25 + 24LL))(
+        *(_QWORD *)(*(_QWORD *)v25 + 64LL),
+        *(_QWORD *)(*(_QWORD *)v25 + 40LL));
       return;
     }
 LABEL_18:
-    sub_1C3B9C0(eventPointGaugeEffectAssetData, v22);
+    sub_1B4D1EC(eventPointGaugeEffectAssetData, v22);
   }
-  GameObjectExtensions__SafeSetParent_34969340(*p_eventPointGaugeChangeEffectPrefab, parent, 0LL);
+  GameObjectExtensions__SafeSetParent_34075504(*p_eventPointGaugeChangeEffectPrefab, parent, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        *p_eventPointGaugeChangeEffectPrefab,
-                       (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeChangeEffectAction___);
-  v46 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+                       (const MethodInfo_2F54F2C *)Method_GameObjectExtensions_SafeGetComponent_EventPointGaugeChangeEffectAction___);
+  v34 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v46,
+    v34,
     (Il2CppObject *)v20,
     Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__0__,
     0LL);
-  v47 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v35 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v47,
+    v35,
     (Il2CppObject *)v20,
     Method_EventInfoPointGaugeControl___c__DisplayClass26_0__PlayEventPointGaugeChangeEffect_b__1__,
     0LL);
   if ( !Component_object )
     goto LABEL_18;
-  EventPointGaugeChangeEffectAction__Setup((EventPointGaugeChangeEffectAction_o *)Component_object, v46, v47, 0LL);
+  EventPointGaugeChangeEffectAction__Setup((EventPointGaugeChangeEffectAction_o *)Component_object, v34, v35, 0LL);
 }
 
 
@@ -1090,103 +974,95 @@ void __fastcall EventInfoPointGaugeControl__PlayEventPointGaugeEffect(
   __int64 v11; // x20
   __int64 v12; // x0
   __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  __int64 v26; // x1
-  TerminalPramsManager_c *v27; // x0
-  __int64 v28; // x1
-  const MethodInfo *v29; // x2
-  EventInfoPointGaugeControl_o *v30; // x0
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  __int64 v18; // x1
+  TerminalPramsManager_c *v19; // x0
+  __int64 v20; // x1
+  const MethodInfo *v21; // x2
+  EventInfoPointGaugeControl_o *v22; // x0
   int32_t m_CachedPtr; // w26
   int32_t EventPointGaugeState; // w0
-  int32_t v33; // w23
-  EventInfoPointGaugeControl_c *v34; // x0
+  int32_t v25; // w23
+  EventInfoPointGaugeControl_c *v26; // x0
   UnityEngine_GameObject_o *eventPointGaugeEffectParent; // x21
-  int32_t v36; // w22
-  bool v37; // zf
+  int32_t v28; // w22
+  bool v29; // zf
   System_String_o *EVENT_POINT_GAUGE_EFFECT_CHANGE; // x24
-  int32_t v39; // w23
-  System_Action_o *v40; // x25
-  const MethodInfo *v41; // x6
+  int32_t v31; // w23
+  System_Action_o *v32; // x25
+  const MethodInfo *v33; // x6
 
-  if ( (byte_4C235E0 & 1) == 0 )
+  if ( (byte_49BC50F & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, v7);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v8);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__0__, v9);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass25_0_TypeInfo, v10);
-    byte_4C235E0 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, v7);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v8);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__0__, v9);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass25_0_TypeInfo, v10);
+    byte_49BC50F = 1;
   }
-  v11 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass25_0_TypeInfo);
+  v11 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1C3B9C0(v12, v13);
+    sub_1B4D1EC(v12, v13);
   *(_QWORD *)(v11 + 24) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 24), (int64_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 24), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 40) = callback;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v11 + 40), (int64_t)callback, v20, v21, v22, v23, v24, v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 40), (int32_t)callback, v16, v17);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1F4EA )
+  if ( !byte_49B83F2 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v26);
-    byte_4C1F4EA = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v18);
+    byte_49B83F2 = 1;
   }
-  v27 = TerminalPramsManager_TypeInfo;
+  v19 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v27 = TerminalPramsManager_TypeInfo;
+    v19 = TerminalPramsManager_TypeInfo;
   }
-  *(_DWORD *)(v11 + 20) = v27->static_fields->_BeforeEventActivityPoint_k__BackingField;
+  *(_DWORD *)(v11 + 20) = v19->static_fields->_BeforeEventActivityPoint_k__BackingField;
   *(_DWORD *)(v11 + 16) = UserEventPointMaster__GetEventActivityPoint(eventId, 0LL);
-  if ( !byte_4C1F4EB )
+  if ( !byte_49B83F3 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v28);
-    byte_4C1F4EB = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v20);
+    byte_49B83F3 = 1;
   }
-  v30 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
+  v22 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v30 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
+    v22 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
   }
-  m_CachedPtr = v30[1].fields.eventRoot[17].fields.m_CachedPtr;
-  EventPointGaugeState = EventInfoPointGaugeControl__GetEventPointGaugeState(v30, eventId, v29);
+  m_CachedPtr = v22[1].fields.eventRoot[17].fields.m_CachedPtr;
+  EventPointGaugeState = EventInfoPointGaugeControl__GetEventPointGaugeState(v22, eventId, v21);
   *(_DWORD *)(v11 + 32) = EventPointGaugeState;
-  v33 = EventPointGaugeState;
-  v34 = EventInfoPointGaugeControl_TypeInfo;
+  v25 = EventPointGaugeState;
+  v26 = EventInfoPointGaugeControl_TypeInfo;
   eventPointGaugeEffectParent = this->fields.eventPointGaugeEffectParent;
   if ( EventInfoPointGaugeControl_TypeInfo->_2.cctor_finished )
   {
-    v36 = v33;
+    v28 = v25;
   }
   else
   {
     j_il2cpp_runtime_class_init_0(EventInfoPointGaugeControl_TypeInfo);
-    v34 = EventInfoPointGaugeControl_TypeInfo;
-    v36 = *(_DWORD *)(v11 + 32);
+    v26 = EventInfoPointGaugeControl_TypeInfo;
+    v28 = *(_DWORD *)(v11 + 32);
   }
-  v37 = v33 == 1 && m_CachedPtr == 0;
-  EVENT_POINT_GAUGE_EFFECT_CHANGE = v34->static_fields->EVENT_POINT_GAUGE_EFFECT_CHANGE;
-  if ( v37 )
-    v39 = 1;
+  v29 = v25 == 1 && m_CachedPtr == 0;
+  EVENT_POINT_GAUGE_EFFECT_CHANGE = v26->static_fields->EVENT_POINT_GAUGE_EFFECT_CHANGE;
+  if ( v29 )
+    v31 = 1;
   else
-    v39 = m_CachedPtr;
-  v40 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    v31 = m_CachedPtr;
+  v32 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v40,
+    v32,
     (Il2CppObject *)v11,
     Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__0__,
     0LL);
@@ -1194,10 +1070,10 @@ void __fastcall EventInfoPointGaugeControl__PlayEventPointGaugeEffect(
     this,
     eventPointGaugeEffectParent,
     EVENT_POINT_GAUGE_EFFECT_CHANGE,
-    v39,
-    v36,
-    v40,
-    v41);
+    v31,
+    v28,
+    v32,
+    v33);
 }
 
 
@@ -1205,31 +1081,27 @@ void __fastcall EventInfoPointGaugeControl__ReleaseEventInfoAsset(
         EventInfoPointGaugeControl_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_eventInfoAssetData; // x19
+  CGThumbnailListItem_o *p_eventInfoAssetData; // x19
   AssetData_o *v4; // x20
   struct AssetData_o *eventInfoAssetData; // t1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C235E7 & 1) == 0 )
+  if ( (byte_49BC516 & 1) == 0 )
   {
-    sub_1C3B764(&AssetManager_TypeInfo, method);
-    byte_4C235E7 = 1;
+    sub_1B4CF90(&AssetManager_TypeInfo, method);
+    byte_49BC516 = 1;
   }
   eventInfoAssetData = this->fields.eventInfoAssetData;
-  p_eventInfoAssetData = (PartyOrganizationUtility_o *)&this->fields.eventInfoAssetData;
+  p_eventInfoAssetData = (CGThumbnailListItem_o *)&this->fields.eventInfoAssetData;
   v4 = eventInfoAssetData;
   if ( eventInfoAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_39213104(v4, 0LL);
+    AssetManager__releaseAsset_38328408(v4, 0LL);
     p_eventInfoAssetData->klass = 0LL;
-    sub_1C3B708(p_eventInfoAssetData, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1B4CF34(p_eventInfoAssetData, 0, v6, v7);
   }
 }
 
@@ -1238,31 +1110,27 @@ void __fastcall EventInfoPointGaugeControl__ReleasePointGaugeEffectAsset(
         EventInfoPointGaugeControl_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_eventPointGaugeEffectAssetData; // x19
+  CGThumbnailListItem_o *p_eventPointGaugeEffectAssetData; // x19
   AssetData_o *v4; // x20
   struct AssetData_o *eventPointGaugeEffectAssetData; // t1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C235E6 & 1) == 0 )
+  if ( (byte_49BC515 & 1) == 0 )
   {
-    sub_1C3B764(&AssetManager_TypeInfo, method);
-    byte_4C235E6 = 1;
+    sub_1B4CF90(&AssetManager_TypeInfo, method);
+    byte_49BC515 = 1;
   }
   eventPointGaugeEffectAssetData = this->fields.eventPointGaugeEffectAssetData;
-  p_eventPointGaugeEffectAssetData = (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeEffectAssetData;
+  p_eventPointGaugeEffectAssetData = (CGThumbnailListItem_o *)&this->fields.eventPointGaugeEffectAssetData;
   v4 = eventPointGaugeEffectAssetData;
   if ( eventPointGaugeEffectAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_39213104(v4, 0LL);
+    AssetManager__releaseAsset_38328408(v4, 0LL);
     p_eventPointGaugeEffectAssetData->klass = 0LL;
-    sub_1C3B708(p_eventPointGaugeEffectAssetData, 0LL, v6, v7, v8, v9, v10, v11);
+    sub_1B4CF34(p_eventPointGaugeEffectAssetData, 0, v6, v7);
   }
 }
 
@@ -1272,14 +1140,10 @@ void __fastcall EventInfoPointGaugeControl__SetRootObject(
         UnityEngine_GameObject_o *root,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.eventRoot = root;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.eventRoot, (int64_t)root, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventRoot, (int32_t)root, (int32_t)method, v3);
 }
 
 
@@ -1300,50 +1164,42 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeAndPlayEffect(
   __int64 v17; // x21
   __int64 v18; // x0
   const MethodInfo *v19; // x1
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
   int32_t eventId; // w22
-  const MethodInfo *v33; // x5
-  const MethodInfo *v34; // x3
-  EventInfoPointGaugeControl_assetLoadFinish_o *v35; // x22
-  const MethodInfo *v36; // x3
-  const MethodInfo *v37; // x3
+  const MethodInfo *v25; // x5
+  const MethodInfo *v26; // x3
+  EventInfoPointGaugeControl_assetLoadFinish_o *v27; // x22
+  const MethodInfo *v28; // x3
+  const MethodInfo *v29; // x3
 
   v8 = *(_QWORD *)&pos.fields.value.fields.y;
   v9 = *(_QWORD *)&pos.fields.hasValue;
-  if ( (byte_4C235D9 & 1) == 0 )
+  if ( (byte_49BC508 & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, eventDetailEntity);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass18_0__SetupEventPointGaugeAndPlayEffect_b__0__, v14);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass18_0_TypeInfo, v15);
-    sub_1C3B764(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v16);
-    byte_4C235D9 = 1;
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, eventDetailEntity);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass18_0__SetupEventPointGaugeAndPlayEffect_b__0__, v14);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass18_0_TypeInfo, v15);
+    sub_1B4CF90(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v16);
+    byte_49BC508 = 1;
   }
-  v17 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass18_0_TypeInfo);
+  v17 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass18_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_13;
   *(_QWORD *)(v17 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v17 + 16), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 16), (int32_t)this, v20, v21);
   *(_QWORD *)(v17 + 48) = callback;
   *(_BYTE *)(v17 + 24) = isActive;
   *(_QWORD *)(v17 + 28) = v9;
   *(_QWORD *)(v17 + 36) = v8;
   *(float *)(v17 + 44) = subMarginX;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v17 + 48), (int64_t)callback, v26, v27, v28, v29, v30, v31);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 48), (int32_t)callback, v22, v23);
   if ( !eventDetailEntity )
 LABEL_13:
-    sub_1C3B9C0(v18, v19);
+    sub_1B4D1EC(v18, v19);
   eventId = eventDetailEntity->fields.eventId;
   if ( !EventInfoPointGaugeControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoPointGaugeControl_TypeInfo);
@@ -1357,22 +1213,22 @@ LABEL_13:
         *(_BYTE *)(v17 + 24),
         *(System_Nullable_Vector3__o *)(v17 + 28),
         *(float *)(v17 + 44),
-        v33);
+        v25);
       EventInfoPointGaugeControl__PlayEventPointGaugeEffect(
         this,
         eventDetailEntity->fields.eventId,
         *(System_Action_o **)(v17 + 48),
-        v34);
+        v26);
     }
     else
     {
-      v35 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1C3B9B0(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
+      v27 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1B4D1DC(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
       EventInfoPointGaugeControl_assetLoadFinish___ctor(
-        v35,
+        v27,
         (Il2CppObject *)v17,
         Method_EventInfoPointGaugeControl___c__DisplayClass18_0__SetupEventPointGaugeAndPlayEffect_b__0__,
-        v36);
-      EventInfoPointGaugeControl__LoadEventInfoAssetData(this, v35, eventDetailEntity->fields.eventId, v37);
+        v28);
+      EventInfoPointGaugeControl__LoadEventInfoAssetData(this, v27, eventDetailEntity->fields.eventId, v29);
     }
   }
   else
@@ -1398,39 +1254,35 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeComponent(
   UnityEngine_Object_o *eventPointGaugeObj; // x25
   const MethodInfo *v15; // x3
   struct UnityEngine_GameObject_o *EventPointGaugePrefab; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v24; // x1
-  __int64 v25; // x1
-  const MethodInfo *v26; // x2
-  __int64 v27; // x1
-  const MethodInfo *v28; // x2
+  __int64 v20; // x1
+  __int64 v21; // x1
+  const MethodInfo *v22; // x2
+  __int64 v23; // x1
+  const MethodInfo *v24; // x2
   int EventActivityPoint; // w22
-  EventInfoPointGaugeControl_o *v30; // x0
-  __int64 v31; // x1
+  EventInfoPointGaugeControl_o *v26; // x0
+  __int64 v27; // x1
   int32_t EventPointGaugeState; // w22
-  TerminalPramsManager_c *v33; // x0
-  TerminalPramsManager_c *v34; // x0
+  TerminalPramsManager_c *v29; // x0
+  TerminalPramsManager_c *v30; // x0
   int32_t BeforeEventActivityPoint_k__BackingField; // w22
   unsigned int BeforeEventActivityPointGauge_k__BackingField; // w21
-  const MethodInfo *v37; // x2
+  const MethodInfo *v33; // x2
   struct EventInfoPointGaugeComponent_o *EventPointGaugeComponent_k__BackingField; // x19
-  bool v39; // zf
-  const MethodInfo *v40; // x1
-  System_Nullable_Vector3__o v41; // 0:x1.16
+  bool v35; // zf
+  const MethodInfo *v36; // x1
+  System_Nullable_Vector3__o v37; // 0:x1.16
 
   v7 = *(_QWORD *)&pos.fields.value.fields.y;
   v8 = *(_QWORD *)&pos.fields.hasValue;
-  if ( (byte_4C235DA & 1) == 0 )
+  if ( (byte_49BC509 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v12);
-    byte_4C235DA = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v12);
+    byte_49BC509 = 1;
   }
   p_eventPointGaugeObj = &this->fields.eventPointGaugeObj;
   eventPointGaugeObj = (UnityEngine_Object_o *)this->fields.eventPointGaugeObj;
@@ -1438,19 +1290,11 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeComponent(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(eventPointGaugeObj, 0LL, 0LL) )
   {
-    *(_QWORD *)&v41.fields.hasValue = v8;
-    *(_QWORD *)&v41.fields.value.fields.y = v7;
-    EventPointGaugePrefab = EventInfoPointGaugeControl__CreateEventPointGaugePrefab(this, v41, subMarginX, v15);
+    *(_QWORD *)&v37.fields.hasValue = v8;
+    *(_QWORD *)&v37.fields.value.fields.y = v7;
+    EventPointGaugePrefab = EventInfoPointGaugeControl__CreateEventPointGaugePrefab(this, v37, subMarginX, v15);
     this->fields.eventPointGaugeObj = EventPointGaugePrefab;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.eventPointGaugeObj,
-      (int64_t)EventPointGaugePrefab,
-      v17,
-      v18,
-      v19,
-      v20,
-      v21,
-      v22);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventPointGaugeObj, (int32_t)EventPointGaugePrefab, v17, v18);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -1467,73 +1311,73 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeComponent(
     EventActivityPoint = UserEventPointMaster__GetEventActivityPoint(eventId, 0LL);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C1F4DA )
+    if ( !byte_49B83E2 )
     {
-      sub_1C3B764(&TerminalPramsManager_TypeInfo, v27);
-      byte_4C1F4DA = 1;
+      sub_1B4CF90(&TerminalPramsManager_TypeInfo, v23);
+      byte_49B83E2 = 1;
     }
-    v30 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
+    v26 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v30 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
+      v26 = (EventInfoPointGaugeControl_o *)TerminalPramsManager_TypeInfo;
     }
-    HIDWORD(v30[1].fields.eventRoot[17].monitor) = EventActivityPoint;
-    EventPointGaugeState = EventInfoPointGaugeControl__GetEventPointGaugeState(v30, eventId, v28);
-    if ( !byte_4C1F4DB )
+    HIDWORD(v26[1].fields.eventRoot[17].monitor) = EventActivityPoint;
+    EventPointGaugeState = EventInfoPointGaugeControl__GetEventPointGaugeState(v26, eventId, v24);
+    if ( !byte_49B83E3 )
     {
-      sub_1C3B764(&TerminalPramsManager_TypeInfo, v31);
-      byte_4C1F4DB = 1;
+      sub_1B4CF90(&TerminalPramsManager_TypeInfo, v27);
+      byte_49B83E3 = 1;
     }
-    v33 = TerminalPramsManager_TypeInfo;
+    v29 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v33 = TerminalPramsManager_TypeInfo;
+      v29 = TerminalPramsManager_TypeInfo;
     }
-    v33->static_fields->_BeforeEventActivityPointGauge_k__BackingField = EventPointGaugeState;
+    v29->static_fields->_BeforeEventActivityPointGauge_k__BackingField = EventPointGaugeState;
     TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveData(0LL);
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1F4EA )
+  if ( !byte_49B83F2 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v25);
-    byte_4C1F4EA = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v21);
+    byte_49B83F2 = 1;
   }
-  v34 = TerminalPramsManager_TypeInfo;
+  v30 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v34 = TerminalPramsManager_TypeInfo;
+    v30 = TerminalPramsManager_TypeInfo;
   }
-  BeforeEventActivityPoint_k__BackingField = v34->static_fields->_BeforeEventActivityPoint_k__BackingField;
-  if ( !byte_4C1F4EB )
+  BeforeEventActivityPoint_k__BackingField = v30->static_fields->_BeforeEventActivityPoint_k__BackingField;
+  if ( !byte_49B83F3 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v25);
-    v34 = TerminalPramsManager_TypeInfo;
-    byte_4C1F4EB = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v21);
+    v30 = TerminalPramsManager_TypeInfo;
+    byte_49B83F3 = 1;
   }
-  if ( !v34->_2.cctor_finished )
+  if ( !v30->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v34);
-    v34 = TerminalPramsManager_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v30);
+    v30 = TerminalPramsManager_TypeInfo;
   }
-  BeforeEventActivityPointGauge_k__BackingField = v34->static_fields->_BeforeEventActivityPointGauge_k__BackingField;
+  BeforeEventActivityPointGauge_k__BackingField = v30->static_fields->_BeforeEventActivityPointGauge_k__BackingField;
   gameObject = (UnityEngine_GameObject_o *)EventInfoPointGaugeControl__GetEventPointGaugeState(
-                                             (EventInfoPointGaugeControl_o *)v34,
+                                             (EventInfoPointGaugeControl_o *)v30,
                                              eventId,
-                                             v26);
+                                             v22);
   EventPointGaugeComponent_k__BackingField = this->fields._EventPointGaugeComponent_k__BackingField;
-  v39 = (_DWORD)gameObject == 1 && BeforeEventActivityPointGauge_k__BackingField == 0;
-  v24 = v39 ? 1LL : BeforeEventActivityPointGauge_k__BackingField;
+  v35 = (_DWORD)gameObject == 1 && BeforeEventActivityPointGauge_k__BackingField == 0;
+  v20 = v35 ? 1LL : BeforeEventActivityPointGauge_k__BackingField;
   if ( !EventPointGaugeComponent_k__BackingField )
 LABEL_41:
-    sub_1C3B9C0(gameObject, v24);
-  EventPointGaugeComponent_k__BackingField->fields._GaugeStateId_k__BackingField = v24;
+    sub_1B4D1EC(gameObject, v20);
+  EventPointGaugeComponent_k__BackingField->fields._GaugeStateId_k__BackingField = v20;
   EventPointGaugeComponent_k__BackingField->fields._MainPoint_k__BackingField = BeforeEventActivityPoint_k__BackingField;
-  EventInfoPointGaugeComponent__ChangeDispGauge(EventPointGaugeComponent_k__BackingField, v24, v37);
-  EventInfoPointGaugeComponent__UpdateGaugeBarHeight(EventPointGaugeComponent_k__BackingField, v40);
+  EventInfoPointGaugeComponent__ChangeDispGauge(EventPointGaugeComponent_k__BackingField, v20, v33);
+  EventInfoPointGaugeComponent__UpdateGaugeBarHeight(EventPointGaugeComponent_k__BackingField, v36);
 }
 
 
@@ -1557,44 +1401,40 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeDisp(
   __int64 v19; // x23
   DataManager_o *Instance; // x0
   const MethodInfo *v21; // x1
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
   int32_t eventId; // w21
-  const MethodInfo *v29; // x5
-  __int64 v30; // x1
-  TerminalPramsManager_c *v31; // x0
-  TerminalPramsManager_c *v32; // x0
+  const MethodInfo *v25; // x5
+  __int64 v26; // x1
+  TerminalPramsManager_c *v27; // x0
+  TerminalPramsManager_c *v28; // x0
   Il2CppObject *MasterData_object; // x21
-  __int64 v34; // x1
-  EventInfoPointGaugeControl_assetLoadFinish_o *v35; // x21
-  const MethodInfo *v36; // x3
-  const MethodInfo *v37; // x3
-  TerminalPramsManager_c *v38; // x0
+  __int64 v30; // x1
+  EventInfoPointGaugeControl_assetLoadFinish_o *v31; // x21
+  const MethodInfo *v32; // x3
+  const MethodInfo *v33; // x3
+  TerminalPramsManager_c *v34; // x0
 
   v7 = *(_QWORD *)&pos.fields.value.fields.y;
   v8 = *(_QWORD *)&pos.fields.hasValue;
-  if ( (byte_4C235D8 & 1) == 0 )
+  if ( (byte_49BC507 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_UserEventPointMaster___, eventDetailEntity);
-    sub_1C3B764(&EventInfoPointGaugeControl_TypeInfo, v12);
-    sub_1C3B764(&NetworkManager_TypeInfo, v13);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v15);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass17_0__SetupEventPointGaugeDisp_b__0__, v16);
-    sub_1C3B764(&EventInfoPointGaugeControl___c__DisplayClass17_0_TypeInfo, v17);
-    sub_1C3B764(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v18);
-    byte_4C235D8 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_UserEventPointMaster___, eventDetailEntity);
+    sub_1B4CF90(&EventInfoPointGaugeControl_TypeInfo, v12);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v13);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v15);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass17_0__SetupEventPointGaugeDisp_b__0__, v16);
+    sub_1B4CF90(&EventInfoPointGaugeControl___c__DisplayClass17_0_TypeInfo, v17);
+    sub_1B4CF90(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v18);
+    byte_49BC507 = 1;
   }
-  v19 = sub_1C3B9B0(EventInfoPointGaugeControl___c__DisplayClass17_0_TypeInfo);
+  v19 = sub_1B4D1DC(EventInfoPointGaugeControl___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v19, 0LL);
   if ( !v19 )
     goto LABEL_51;
   *(_QWORD *)(v19 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v19 + 16), (int64_t)this, v22, v23, v24, v25, v26, v27);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v19 + 16), (int32_t)this, v22, v23);
   *(_BYTE *)(v19 + 24) = isActive;
   *(_QWORD *)(v19 + 28) = v8;
   *(_QWORD *)(v19 + 36) = v7;
@@ -1614,17 +1454,17 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeDisp(
         *(_BYTE *)(v19 + 24),
         *(System_Nullable_Vector3__o *)(v19 + 28),
         *(float *)(v19 + 44),
-        v29);
+        v25);
     }
     else
     {
-      v35 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1C3B9B0(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
+      v31 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1B4D1DC(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
       EventInfoPointGaugeControl_assetLoadFinish___ctor(
-        v35,
+        v31,
         (Il2CppObject *)v19,
         Method_EventInfoPointGaugeControl___c__DisplayClass17_0__SetupEventPointGaugeDisp_b__0__,
-        v36);
-      EventInfoPointGaugeControl__LoadEventInfoAssetData(this, v35, eventDetailEntity->fields.eventId, v37);
+        v32);
+      EventInfoPointGaugeControl__LoadEventInfoAssetData(this, v31, eventDetailEntity->fields.eventId, v33);
     }
     return;
   }
@@ -1632,50 +1472,50 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeDisp(
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C1F4EA )
+    if ( !byte_49B83F2 )
     {
-      sub_1C3B764(&TerminalPramsManager_TypeInfo, v30);
-      byte_4C1F4EA = 1;
+      sub_1B4CF90(&TerminalPramsManager_TypeInfo, v26);
+      byte_49B83F2 = 1;
     }
-    v31 = TerminalPramsManager_TypeInfo;
+    v27 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v31 = TerminalPramsManager_TypeInfo;
+      v27 = TerminalPramsManager_TypeInfo;
     }
-    if ( v31->static_fields->_BeforeEventActivityPoint_k__BackingField >= 1 )
+    if ( v27->static_fields->_BeforeEventActivityPoint_k__BackingField >= 1 )
     {
-      if ( !v31->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v31);
-      if ( !byte_4C1F4EB )
+      if ( !v27->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v27);
+      if ( !byte_49B83F3 )
       {
-        sub_1C3B764(&TerminalPramsManager_TypeInfo, v30);
-        byte_4C1F4EB = 1;
+        sub_1B4CF90(&TerminalPramsManager_TypeInfo, v26);
+        byte_49B83F3 = 1;
       }
-      v32 = TerminalPramsManager_TypeInfo;
+      v28 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        v32 = TerminalPramsManager_TypeInfo;
+        v28 = TerminalPramsManager_TypeInfo;
       }
-      if ( v32->static_fields->_BeforeEventActivityPointGauge_k__BackingField >= 1 )
+      if ( v28->static_fields->_BeforeEventActivityPointGauge_k__BackingField >= 1 )
       {
-        if ( !v32->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v32);
+        if ( !v28->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v28);
         if ( TerminalPramsManager__CheckEventActivityPointSaveData(0LL) )
         {
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( Instance )
           {
             MasterData_object = DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                                  (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4C1C955 )
+            if ( !byte_49B57A5 )
             {
-              sub_1C3B764(&NetworkManager_TypeInfo, v21);
-              byte_4C1C955 = 1;
+              sub_1B4CF90(&NetworkManager_TypeInfo, v21);
+              byte_49B57A5 = 1;
             }
             Instance = (DataManager_o *)NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1694,37 +1534,37 @@ void __fastcall EventInfoPointGaugeControl__SetupEventPointGaugeDisp(
               {
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                if ( !byte_4C1F4DA )
+                if ( !byte_49B83E2 )
                 {
-                  sub_1C3B764(&TerminalPramsManager_TypeInfo, v34);
-                  byte_4C1F4DA = 1;
+                  sub_1B4CF90(&TerminalPramsManager_TypeInfo, v30);
+                  byte_49B83E2 = 1;
                 }
-                v38 = TerminalPramsManager_TypeInfo;
+                v34 = TerminalPramsManager_TypeInfo;
                 if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                  v38 = TerminalPramsManager_TypeInfo;
+                  v34 = TerminalPramsManager_TypeInfo;
                 }
-                v38->static_fields->_BeforeEventActivityPoint_k__BackingField = 0;
-                if ( !byte_4C1F4DB )
+                v34->static_fields->_BeforeEventActivityPoint_k__BackingField = 0;
+                if ( !byte_49B83E3 )
                 {
-                  sub_1C3B764(&TerminalPramsManager_TypeInfo, v34);
-                  v38 = TerminalPramsManager_TypeInfo;
-                  byte_4C1F4DB = 1;
+                  sub_1B4CF90(&TerminalPramsManager_TypeInfo, v30);
+                  v34 = TerminalPramsManager_TypeInfo;
+                  byte_49B83E3 = 1;
                 }
-                if ( !v38->_2.cctor_finished )
+                if ( !v34->_2.cctor_finished )
                 {
-                  j_il2cpp_runtime_class_init_0(v38);
-                  v38 = TerminalPramsManager_TypeInfo;
+                  j_il2cpp_runtime_class_init_0(v34);
+                  v34 = TerminalPramsManager_TypeInfo;
                 }
-                v38->static_fields->_BeforeEventActivityPointGauge_k__BackingField = 0;
+                v34->static_fields->_BeforeEventActivityPointGauge_k__BackingField = 0;
                 TerminalPramsManager__TerminalEventActivityPointInfoSave_SaveData(0LL);
               }
               return;
             }
           }
 LABEL_51:
-          sub_1C3B9C0(Instance, v21);
+          sub_1B4D1EC(Instance, v21);
         }
       }
     }
@@ -1745,22 +1585,14 @@ void __fastcall EventInfoPointGaugeControl__set_EventPointGaugeComponent(
         EventInfoPointGaugeComponent_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._EventPointGaugeComponent_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._EventPointGaugeComponent_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._EventPointGaugeComponent_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -1777,27 +1609,15 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass16_0___LoadEventInfo
         AssetData_o *prefabData,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   struct EventInfoPointGaugeControl_o *_4__this; // x0
   struct EventInfoPointGaugeControl_assetLoadFinish_o *callBack; // x8
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3B9C0(0LL, prefabData);
+    sub_1B4D1EC(0LL, prefabData);
   _4__this->fields.eventInfoAssetData = prefabData;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&_4__this->fields.eventInfoAssetData,
-    (int64_t)prefabData,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&_4__this->fields.eventInfoAssetData, (int32_t)prefabData, (int32_t)method, v3);
   callBack = this->fields.callBack;
   if ( callBack )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callBack->fields.m_target)(
@@ -1836,7 +1656,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass17_0___SetupEventPoi
           v3),
         (_4__this = this->fields.__4__this) == 0LL) )
   {
-    sub_1C3B9C0(_4__this, *(_QWORD *)&eventId);
+    sub_1B4D1EC(_4__this, *(_QWORD *)&eventId);
   }
   EventInfoPointGaugeControl__LoadEventPointGaugeEffect(_4__this, 0LL, eventId, v7);
 }
@@ -1863,20 +1683,16 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass18_0___SetupEventPoi
   EventInfoPointGaugeControl_assetLoadFinish_o *_9__1; // x23
   EventInfoPointGaugeControl_o *v10; // x21
   const MethodInfo *v11; // x3
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C235EA & 1) == 0 )
+  if ( (byte_49BC519 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_EventInfoPointGaugeControl___c__DisplayClass18_0__SetupEventPointGaugeAndPlayEffect_b__1__,
       *(_QWORD *)&eventId);
-    sub_1C3B764(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v6);
-    byte_4C235EA = 1;
+    sub_1B4CF90(&EventInfoPointGaugeControl_assetLoadFinish_TypeInfo, v6);
+    byte_49BC519 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -1892,18 +1708,18 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass18_0___SetupEventPoi
   v10 = this->fields.__4__this;
   if ( !_9__1 )
   {
-    _9__1 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1C3B9B0(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
+    _9__1 = (EventInfoPointGaugeControl_assetLoadFinish_o *)sub_1B4D1DC(EventInfoPointGaugeControl_assetLoadFinish_TypeInfo);
     EventInfoPointGaugeControl_assetLoadFinish___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_EventInfoPointGaugeControl___c__DisplayClass18_0__SetupEventPointGaugeAndPlayEffect_b__1__,
       v11);
     this->fields.__9__1 = _9__1;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v12, v13, v14, v15, v16, v17);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v12, v13);
   }
   if ( !v10 )
 LABEL_8:
-    sub_1C3B9C0(_4__this, *(_QWORD *)&eventId);
+    sub_1B4D1EC(_4__this, *(_QWORD *)&eventId);
   EventInfoPointGaugeControl__LoadEventPointGaugeEffect(v10, _9__1, eventId, v8);
 }
 
@@ -1916,7 +1732,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass18_0___SetupEventPoi
   const MethodInfo *v3; // x3
 
   if ( !this->fields.__4__this )
-    sub_1C3B9C0(this, eId);
+    sub_1B4D1EC(this, eId);
   EventInfoPointGaugeControl__PlayEventPointGaugeEffect(this->fields.__4__this, eId, this->fields.callback, v3);
 }
 
@@ -1934,27 +1750,19 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass23_0___LoadEventPoin
         AssetData_o *prefabData,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   struct EventInfoPointGaugeControl_o *_4__this; // x0
   struct EventInfoPointGaugeControl_assetLoadFinish_o *callbackEndFunc; // x8
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3B9C0(0LL, prefabData);
+    sub_1B4D1EC(0LL, prefabData);
   _4__this->fields.eventPointGaugeEffectAssetData = prefabData;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&_4__this->fields.eventPointGaugeEffectAssetData,
-    (int64_t)prefabData,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&_4__this->fields.eventPointGaugeEffectAssetData,
+    (int32_t)prefabData,
+    (int32_t)method,
+    v3);
   callbackEndFunc = this->fields.callbackEndFunc;
   if ( callbackEndFunc )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackEndFunc->fields.m_target)(
@@ -2009,26 +1817,22 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
   int32_t EventActivityPointEffectState_k__BackingField; // w20
   System_Action_o *_9__1; // x24
   int32_t v18; // w23
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4C235EB & 1) == 0 )
+  if ( (byte_49BC51A & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v4);
-    sub_1C3B764(&Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__1__, v5);
-    byte_4C235EB = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v4);
+    sub_1B4CF90(&Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__1__, v5);
+    byte_49BC51A = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1F4FF )
+  if ( !byte_49B8407 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
-    byte_4C1F4FF = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
+    byte_49B8407 = 1;
   }
   EventPointGaugeComponent_k__BackingField = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2044,10 +1848,10 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
     afterGauge = this->fields.afterGauge;
     if ( !EventPointGaugeComponent_k__BackingField->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventPointGaugeComponent_k__BackingField);
-    if ( !byte_4C1F4FF )
+    if ( !byte_49B8407 )
     {
-      sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
-      byte_4C1F4FF = 1;
+      sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
+      byte_49B8407 = 1;
     }
     EventPointGaugeComponent_k__BackingField = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2060,14 +1864,14 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
     v18 = this->fields.beforePoint;
     if ( !_9__1 )
     {
-      _9__1 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+      _9__1 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
       System_Action___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_EventInfoPointGaugeControl___c__DisplayClass25_0__PlayEventPointGaugeEffect_b__1__,
         0LL);
       this->fields.__9__1 = _9__1;
-      sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.__9__1, (int64_t)_9__1, v19, v20, v21, v22, v23, v24);
+      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v19, v20);
     }
     if ( _4__this )
     {
@@ -2083,7 +1887,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
       return;
     }
 LABEL_33:
-    sub_1C3B9C0(EventPointGaugeComponent_k__BackingField, method);
+    sub_1B4D1EC(EventPointGaugeComponent_k__BackingField, method);
   }
   v7 = this->fields.__4__this;
   if ( !v7 )
@@ -2098,10 +1902,10 @@ LABEL_33:
   v9 = this->fields.afterPoint;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1F4DA )
+  if ( !byte_49B83E2 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v8);
-    byte_4C1F4DA = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v8);
+    byte_49B83E2 = 1;
   }
   v10 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2111,11 +1915,11 @@ LABEL_33:
   }
   v10->static_fields->_BeforeEventActivityPoint_k__BackingField = v9;
   v11 = this->fields.afterGauge;
-  if ( !byte_4C1F4DB )
+  if ( !byte_49B83E3 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v8);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v8);
     v10 = TerminalPramsManager_TypeInfo;
-    byte_4C1F4DB = 1;
+    byte_49B83E3 = 1;
   }
   if ( !v10->_2.cctor_finished )
   {
@@ -2137,10 +1941,10 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
   int32_t afterPoint; // w21
   int32_t afterGauge; // w21
 
-  if ( (byte_4C235EC & 1) == 0 )
+  if ( (byte_49BC51B & 1) == 0 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
-    byte_4C235EC = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
+    byte_49BC51B = 1;
   }
   v3 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -2149,11 +1953,11 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
     v3 = TerminalPramsManager_TypeInfo;
   }
   EVENT_POINT_EFFECT_STATE_NONE = v3->static_fields->EVENT_POINT_EFFECT_STATE_NONE;
-  if ( !byte_4C1CCC8 )
+  if ( !byte_49B5B18 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C1CCC8 = 1;
+    byte_49B5B18 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -2162,11 +1966,11 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
   }
   v3->static_fields->_EventActivityPointEffectState_k__BackingField = EVENT_POINT_EFFECT_STATE_NONE;
   afterPoint = this->fields.afterPoint;
-  if ( !byte_4C1F4DA )
+  if ( !byte_49B83E2 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C1F4DA = 1;
+    byte_49B83E2 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -2175,11 +1979,11 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass25_0___PlayEventPoin
   }
   v3->static_fields->_BeforeEventActivityPoint_k__BackingField = afterPoint;
   afterGauge = this->fields.afterGauge;
-  if ( !byte_4C1F4DB )
+  if ( !byte_49B83E3 )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, method);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, method);
     v3 = TerminalPramsManager_TypeInfo;
-    byte_4C1F4DB = 1;
+    byte_49B83E3 = 1;
   }
   if ( !v3->_2.cctor_finished )
   {
@@ -2212,7 +2016,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass26_0___PlayEventPoin
   if ( !_4__this
     || (EventPointGaugeComponent_k__BackingField = _4__this->fields._EventPointGaugeComponent_k__BackingField) == 0LL )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   EventInfoPointGaugeComponent__ChangeDispGauge(EventPointGaugeComponent_k__BackingField, this->fields.afterGauge, v2);
 }
@@ -2226,7 +2030,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass26_0___PlayEventPoin
 
   callback = this->fields.callback;
   if ( !callback )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
     callback->fields.original_method_info,
     *(_QWORD *)&callback->fields.extra_arg);
@@ -2253,7 +2057,7 @@ void __fastcall EventInfoPointGaugeControl___c__DisplayClass27_0___PlayEventPoin
   if ( !_4__this
     || (EventPointGaugeComponent_k__BackingField = _4__this->fields._EventPointGaugeComponent_k__BackingField) == 0LL )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   EventPointGaugeComponent_k__BackingField->fields._MainPoint_k__BackingField = this->fields.basePoint;
   EventPointGaugeComponent_k__BackingField->fields._BufferPoint_k__BackingField += this->fields.addPoint;
@@ -2268,52 +2072,40 @@ void __fastcall EventInfoPointGaugeControl_assetLoadFinish___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x8
-  __int64 v10; // x21
-  int v12; // w22
-  struct System_Reflection_MethodInfo_o *v13; // x9
-  __int64 v14; // x0
+  __int64 v4; // x8
+  __int64 v6; // x21
+  int v8; // w22
+  struct System_Reflection_MethodInfo_o *v9; // x9
+  __int64 v10; // x0
 
-  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v10 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v8;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.method,
-    (int64_t)object,
-    *(int64_t *)&method,
-    (int32_t)a4,
-    v4,
-    v5,
-    v6,
-    v7);
-  v12 = *(unsigned __int8 *)(v10 + 82);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v10) & 1) == 0 )
+  if ( (sub_1B4D050(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v14, 0LL);
+      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v10, 0LL);
     }
     goto LABEL_5;
   }
-  if ( v12 != 1 )
+  if ( v8 != 1 )
   {
 LABEL_5:
-    v13 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
     this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v13;
+    this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A7D7D4;
+  this->fields.m_target = (Il2CppObject *)sub_199D598;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7D78C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_199D550;
 }
 
 
@@ -2329,14 +2121,14 @@ System_IAsyncResult_o *__fastcall EventInfoPointGaugeControl_assetLoadFinish__Be
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = eventId;
-  if ( (byte_4C235E9 & 1) == 0 )
+  if ( (byte_49BC518 & 1) == 0 )
   {
-    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&eventId);
-    byte_4C235E9 = 1;
+    sub_1B4CF90(&int_TypeInfo, *(_QWORD *)&eventId);
+    byte_49BC518 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C3B718(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, v9, callback, object);
 }
 
 
@@ -2345,7 +2137,7 @@ void __fastcall EventInfoPointGaugeControl_assetLoadFinish__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 

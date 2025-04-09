@@ -23,17 +23,17 @@ void __fastcall EffectRenderBehaviour__Awake(EffectRenderBehaviour_o *this, cons
   UnityEngine_Shader_o *v17; // x1
   const MethodInfo *v18; // x2
 
-  if ( (byte_4C20DA8 & 1) == 0 )
+  if ( (byte_49B9CBA & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, v3);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C3B764(&UnityEngine_ParticleSystemRenderer_TypeInfo, v5);
-    byte_4C20DA8 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, v3);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B4CF90(&UnityEngine_ParticleSystemRenderer_TypeInfo, v5);
+    byte_49B9CBA = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -41,24 +41,24 @@ void __fastcall EffectRenderBehaviour__Awake(EffectRenderBehaviour_o *this, cons
     this->fields.mbCustomShader = 0;
     material = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                            (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
     if ( !material )
       goto LABEL_19;
     material = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                             material,
-                                            (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                            (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
     if ( !material )
       goto LABEL_19;
     if ( (UnityEngine_ParticleSystemRenderer_c *)material->klass != UnityEngine_ParticleSystemRenderer_TypeInfo )
     {
-      sub_1C3BC80(material);
+      sub_1B4D4AC(material);
       EffectRenderBehaviour___isCustomShader(v16, v17, v18);
       return;
     }
     material = (UnityEngine_Component_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)material, 0LL);
     if ( !material )
 LABEL_19:
-      sub_1C3B9C0(material, v8);
+      sub_1B4D1EC(material, v8);
     v9 = (UnityEngine_Material_o *)material;
     shader = (EffectRenderBehaviour_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)material, 0LL);
     if ( !EffectRenderBehaviour___isCustomShader(shader, (UnityEngine_Shader_o *)shader, v11) )
@@ -123,23 +123,23 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
   UnityEngine_Matrix4x4_o v34; // [xsp+100h] [xbp-B0h]
   UnityEngine_Matrix4x4_o v35; // [xsp+140h] [xbp-70h] BYREF
 
-  if ( (byte_4C20DAC & 1) == 0 )
+  if ( (byte_49B9CBE & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, v3);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
-    sub_1C3B764(&UnityEngine_ParticleSystemRenderer_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_16649/*"ba-RU"*/, v6);
-    sub_1C3B764(&StringLiteral_16469/*"appStore"*/, v7);
-    sub_1C3B764(&StringLiteral_16470/*"appVer"*/, v8);
-    sub_1C3B764(&StringLiteral_16468/*"appCheckToken"*/, v9);
-    sub_1C3B764(&StringLiteral_16634/*"availMem"*/, v10);
-    byte_4C20DAC = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, v3);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
+    sub_1B4CF90(&UnityEngine_ParticleSystemRenderer_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_16024/*"_Scaling"*/, v6);
+    sub_1B4CF90(&StringLiteral_15844/*"_CameraInv"*/, v7);
+    sub_1B4CF90(&StringLiteral_15845/*"_Center"*/, v8);
+    sub_1B4CF90(&StringLiteral_15843/*"_Camera"*/, v9);
+    sub_1B4CF90(&StringLiteral_16009/*"_RenderType"*/, v10);
+    byte_49B9CBE = 1;
   }
   memset(&v35, 0, sizeof(v35));
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL)
@@ -147,18 +147,18 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
   {
     transform = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)this,
-                                             (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                                             (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
     if ( !transform )
       goto LABEL_21;
     transform = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                              transform,
-                                             (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                                             (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
     if ( !transform )
       goto LABEL_21;
     v14 = (UnityEngine_Renderer_o *)transform;
     if ( (UnityEngine_ParticleSystemRenderer_c *)transform->klass != UnityEngine_ParticleSystemRenderer_TypeInfo )
     {
-      sub_1C3BC80(transform);
+      sub_1B4D4AC(transform);
       EffectRenderBehaviour___ctor(v28, v29);
       return;
     }
@@ -172,7 +172,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     v19 = 0;
     UnityEngine_Material__SetVector(
       material,
-      (System_String_o *)StringLiteral_16470/*"appVer"*/,
+      (System_String_o *)StringLiteral_15845/*"_Center"*/,
       *(UnityEngine_Vector4_o *)&v16,
       0LL);
     v20 = UnityEngine_Renderer__get_material(v14, 0LL);
@@ -183,7 +183,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     if ( !v20 )
       goto LABEL_21;
     v24 = 0;
-    UnityEngine_Material__SetVector(v20, (System_String_o *)StringLiteral_16649/*"ba-RU"*/, *(UnityEngine_Vector4_o *)&v21, 0LL);
+    UnityEngine_Material__SetVector(v20, (System_String_o *)StringLiteral_16024/*"_Scaling"*/, *(UnityEngine_Vector4_o *)&v21, 0LL);
     v25 = UnityEngine_Renderer__get_material(v14, 0LL);
     transform = (UnityEngine_Component_o *)UnityEngine_Camera__get_current(0LL);
     if ( !transform )
@@ -196,7 +196,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     if ( !v25 )
       goto LABEL_21;
     v32 = v34;
-    UnityEngine_Material__SetMatrix(v25, (System_String_o *)StringLiteral_16468/*"appCheckToken"*/, &v32, 0LL);
+    UnityEngine_Material__SetMatrix(v25, (System_String_o *)StringLiteral_15843/*"_Camera"*/, &v32, 0LL);
     v26 = UnityEngine_Renderer__get_material(v14, 0LL);
     transform = (UnityEngine_Component_o *)UnityEngine_Camera__get_current(0LL);
     if ( !transform )
@@ -207,7 +207,7 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
     v33 = v31;
     if ( !v26
       || (v30 = v33,
-          UnityEngine_Material__SetMatrix(v26, (System_String_o *)StringLiteral_16469/*"appStore"*/, &v30, 0LL),
+          UnityEngine_Material__SetMatrix(v26, (System_String_o *)StringLiteral_15844/*"_CameraInv"*/, &v30, 0LL),
           v27 = UnityEngine_Renderer__get_material(v14, 0LL),
           transform = (UnityEngine_Component_o *)UnityEngine_ParticleSystemRenderer__get_renderMode(
                                                    (UnityEngine_ParticleSystemRenderer_o *)v14,
@@ -215,9 +215,9 @@ void __fastcall EffectRenderBehaviour__OnWillRenderObject(EffectRenderBehaviour_
           !v27) )
     {
 LABEL_21:
-      sub_1C3B9C0(transform, v13);
+      sub_1B4D1EC(transform, v13);
     }
-    UnityEngine_Material__SetInt(v27, (System_String_o *)StringLiteral_16634/*"availMem"*/, (int32_t)transform, 0LL);
+    UnityEngine_Material__SetInt(v27, (System_String_o *)StringLiteral_16009/*"_RenderType"*/, (int32_t)transform, 0LL);
   }
 }
 
@@ -230,15 +230,15 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getCustomShader(
   System_String_o *name; // x0
   System_String_o *v5; // x0
 
-  if ( (byte_4C20DAA & 1) == 0 )
+  if ( (byte_49B9CBC & 1) == 0 )
   {
-    this = (EffectRenderBehaviour_o *)sub_1C3B764(&StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/, sh);
-    byte_4C20DAA = 1;
+    this = (EffectRenderBehaviour_o *)sub_1B4CF90(&StringLiteral_685/*"(Custom)"*/, sh);
+    byte_49B9CBC = 1;
   }
   if ( !sh )
-    sub_1C3B9C0(this, sh);
+    sub_1B4D1EC(this, sh);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)sh, 0LL);
-  v5 = System_String__Concat_63368612(name, (System_String_o *)StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/, 0LL);
+  v5 = System_String__Concat_61093468(name, (System_String_o *)StringLiteral_685/*"(Custom)"*/, 0LL);
   return UnityEngine_Shader__Find(v5, 0LL);
 }
 
@@ -257,12 +257,12 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getNonCustomShader(
   __int64 v10; // x1
   System_String_o *v11; // x0
 
-  if ( (byte_4C20DAB & 1) == 0 )
+  if ( (byte_49B9CBD & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, sh);
-    sub_1C3B764(&StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C20DAB = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, sh);
+    sub_1B4CF90(&StringLiteral_685/*"(Custom)"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49B9CBD = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -274,10 +274,10 @@ UnityEngine_Shader_o *__fastcall EffectRenderBehaviour___getNonCustomShader(
     if ( ((unsigned __int8)isCustomShader & 1) != 0 )
     {
       if ( !sh || (isCustomShader = UnityEngine_Object__get_name((UnityEngine_Object_o *)sh, 0LL)) == 0LL )
-        sub_1C3B9C0(isCustomShader, v10);
-      v11 = System_String__Replace_63388240(
+        sub_1B4D1EC(isCustomShader, v10);
+      v11 = System_String__Replace_61140016(
               isCustomShader,
-              (System_String_o *)StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/,
+              (System_String_o *)StringLiteral_685/*"(Custom)"*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       return UnityEngine_Shader__Find(v11, 0LL);
@@ -300,11 +300,11 @@ bool __fastcall EffectRenderBehaviour___isCustomShader(
   System_String_o *name; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C20DA9 & 1) == 0 )
+  if ( (byte_49B9CBB & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, sh);
-    sub_1C3B764(&StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/, v4);
-    byte_4C20DA9 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, sh);
+    sub_1B4CF90(&StringLiteral_685/*"(Custom)"*/, v4);
+    byte_49B9CBB = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -312,6 +312,6 @@ bool __fastcall EffectRenderBehaviour___isCustomShader(
   if ( ((unsigned __int8)name & 1) != 0 )
     return 0;
   if ( !sh || (name = UnityEngine_Object__get_name((UnityEngine_Object_o *)sh, 0LL)) == 0LL )
-    sub_1C3B9C0(name, v6);
-  return System_String__IndexOf_63400188(name, (System_String_o *)StringLiteral_710/*"(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/reflect/Field;"*/, 0LL) >= 0;
+    sub_1B4D1EC(name, v6);
+  return System_String__IndexOf_61151964(name, (System_String_o *)StringLiteral_685/*"(Custom)"*/, 0LL) >= 0;
 }

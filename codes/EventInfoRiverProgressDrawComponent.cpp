@@ -39,32 +39,24 @@ System_Collections_IEnumerator_o *__fastcall EventInfoRiverProgressDrawComponent
 {
   bool v7; // w22
   __int64 v8; // x21
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C2362F & 1) == 0 )
+  if ( (byte_49BC55E & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_TypeInfo, endAction);
-    byte_4C2362F = 1;
+    sub_1B4CF90(&EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_TypeInfo, endAction);
+    byte_49BC55E = 1;
   }
   v7 = isFadeIn;
-  v8 = sub_1C3B9B0(EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_TypeInfo);
+  v8 = sub_1B4D1DC(EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   *(_DWORD *)(v8 + 16) = 0;
   *(_QWORD *)(v8 + 32) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 32), (int64_t)this, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 32), (int32_t)this, v9, v10);
   *(_QWORD *)(v8 + 40) = endAction;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 40), (int64_t)endAction, v15, v16, v17, v18, v19, v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 40), (int32_t)endAction, v11, v12);
   *(_BYTE *)(v8 + 48) = v7;
   return (System_Collections_IEnumerator_o *)v8;
 }
@@ -87,74 +79,62 @@ void __fastcall EventInfoRiverProgressDrawComponent__PlayFade(
   __int64 v17; // x20
   __int64 v18; // x0
   __int64 v19; // x1
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  const MethodInfo *v32; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  const MethodInfo *v24; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  EasingObject_o *v41; // x21
-  System_Action_o *v42; // x22
-  System_Action_o *v43; // x23
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  EasingObject_o *v29; // x21
+  System_Action_o *v30; // x22
+  System_Action_o *v31; // x23
 
-  if ( (byte_4C23631 & 1) == 0 )
+  if ( (byte_49BC560 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&easingType);
-    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v13);
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__0__, v14);
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__1__, v15);
-    sub_1C3B764(&EventInfoRiverProgressDrawComponent___c__DisplayClass21_0_TypeInfo, v16);
-    byte_4C23631 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&easingType);
+    sub_1B4CF90(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___, v13);
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__0__, v14);
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__1__, v15);
+    sub_1B4CF90(&EventInfoRiverProgressDrawComponent___c__DisplayClass21_0_TypeInfo, v16);
+    byte_49BC560 = 1;
   }
-  v17 = sub_1C3B9B0(EventInfoRiverProgressDrawComponent___c__DisplayClass21_0_TypeInfo);
+  v17 = sub_1B4D1DC(EventInfoRiverProgressDrawComponent___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_6;
   *(float *)(v17 + 24) = from;
   *(float *)(v17 + 28) = to;
   *(_QWORD *)(v17 + 32) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v17 + 32), (int64_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 32), (int32_t)this, v20, v21);
   *(_QWORD *)(v17 + 40) = endAction;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v17 + 40), (int64_t)endAction, v26, v27, v28, v29, v30, v31);
-  EventInfoRiverProgressDrawComponent__SetSpriteAlpha(this, *(float *)(v17 + 24), v32);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 40), (int32_t)endAction, v22, v23);
+  EventInfoRiverProgressDrawComponent__SetSpriteAlpha(this, *(float *)(v17 + 24), v24);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_2F54F2C *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v17 + 16) = Component_object;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v17 + 16), (int64_t)Component_object, v35, v36, v37, v38, v39, v40);
-  v41 = *(EasingObject_o **)(v17 + 16);
-  v42 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 16), (int32_t)Component_object, v27, v28);
+  v29 = *(EasingObject_o **)(v17 + 16);
+  v30 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v42,
+    v30,
     (Il2CppObject *)v17,
     Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__0__,
     0LL);
-  v43 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v43,
+    v31,
     (Il2CppObject *)v17,
     Method_EventInfoRiverProgressDrawComponent___c__DisplayClass21_0__PlayFade_b__1__,
     0LL);
-  if ( !v41 )
+  if ( !v29 )
 LABEL_6:
-    sub_1C3B9C0(v18, v19);
-  EasingObject__Play(v41, time, v42, v43, 0.0, easingType, 0LL);
+    sub_1B4D1EC(v18, v19);
+  EasingObject__Play(v29, time, v30, v31, 0.0, easingType, 0LL);
 }
 
 
@@ -173,109 +153,85 @@ void __fastcall EventInfoRiverProgressDrawComponent__PlayProgressClearAnim(
   __int64 v12; // x20
   UnityEngine_GameObject_o *nextUIObject; // x0
   __int64 v14; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   UnityEngine_Object_o *scenarioOpenAnimPrefab; // x22
-  char v28; // w22
-  Il2CppObject *v29; // x22
-  Il2CppObject *v30; // x0
+  char v20; // w22
+  Il2CppObject *v21; // x22
+  Il2CppObject *v22; // x0
   struct UnityEngine_GameObject_o **p_scenarioOpenObject; // x23
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   UnityEngine_GameObject_o *scenarioOpenObject; // x22
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v40; // x22
+  UnityEngine_GameObject_o *v28; // x22
   Il2CppObject *Component_object; // x22
-  Il2CppObject *v42; // x23
-  System_Action_o *v43; // x21
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
-  const MethodInfo *v50; // x1
+  Il2CppObject *v30; // x23
+  System_Action_o *v31; // x21
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C23630 & 1) == 0 )
+  if ( (byte_49BC55F & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, endAction);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v5);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v6);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass20_0__PlayProgressClearAnim_b__0__, v9);
-    sub_1C3B764(&EventInfoRiverProgressDrawComponent___c__DisplayClass20_0_TypeInfo, v10);
-    sub_1C3B764(&StringLiteral_17641/*"classBoard/releaseSquare"*/, v11);
-    byte_4C23630 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, endAction);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v5);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v6);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v7);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent___c__DisplayClass20_0__PlayProgressClearAnim_b__0__, v9);
+    sub_1B4CF90(&EventInfoRiverProgressDrawComponent___c__DisplayClass20_0_TypeInfo, v10);
+    sub_1B4CF90(&StringLiteral_16992/*"bit_scenario_open"*/, v11);
+    byte_49BC55F = 1;
   }
-  v12 = sub_1C3B9B0(EventInfoRiverProgressDrawComponent___c__DisplayClass20_0_TypeInfo);
+  v12 = sub_1B4D1DC(EventInfoRiverProgressDrawComponent___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_22;
   *(_QWORD *)(v12 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)this, v15, v16, v17, v18, v19, v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 16), (int32_t)this, v15, v16);
   *(_QWORD *)(v12 + 24) = endAction;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)endAction, v21, v22, v23, v24, v25, v26);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 24), (int32_t)endAction, v17, v18);
   scenarioOpenAnimPrefab = (UnityEngine_Object_o *)this->fields.scenarioOpenAnimPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   nextUIObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(scenarioOpenAnimPrefab, 0LL, 0LL);
   if ( !this->fields.nextUIObject )
     goto LABEL_22;
-  v28 = (char)nextUIObject;
+  v20 = (char)nextUIObject;
   UnityEngine_GameObject__SetActive(this->fields.nextUIObject, 0, 0LL);
-  if ( (v28 & 1) != 0 )
+  if ( (v20 & 1) != 0 )
     goto LABEL_18;
-  v29 = (Il2CppObject *)this->fields.scenarioOpenAnimPrefab;
+  v21 = (Il2CppObject *)this->fields.scenarioOpenAnimPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v30 = UnityEngine_Object__Instantiate_object_(
-          v29,
-          (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  this->fields.scenarioOpenObject = (struct UnityEngine_GameObject_o *)v30;
+  v22 = UnityEngine_Object__Instantiate_object_(
+          v21,
+          (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  this->fields.scenarioOpenObject = (struct UnityEngine_GameObject_o *)v22;
   p_scenarioOpenObject = &this->fields.scenarioOpenObject;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.scenarioOpenObject,
-    (int64_t)v30,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.scenarioOpenObject, (int32_t)v22, v24, v25);
   scenarioOpenObject = this->fields.scenarioOpenObject;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SafeSetParent_34969340(scenarioOpenObject, gameObject, 0LL);
+  GameObjectExtensions__SafeSetParent_34075504(scenarioOpenObject, gameObject, 0LL);
   nextUIObject = this->fields.nextUIObject;
   if ( !nextUIObject )
     goto LABEL_22;
-  v40 = *p_scenarioOpenObject;
+  v28 = *p_scenarioOpenObject;
   nextUIObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(nextUIObject, 0LL);
   if ( !nextUIObject )
     goto LABEL_22;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)nextUIObject, 0LL);
-  GameObjectExtensions__SetLocalPosition(v40, localPosition, 0LL);
+  GameObjectExtensions__SetLocalPosition(v28, localPosition, 0LL);
   nextUIObject = *p_scenarioOpenObject;
   if ( !*p_scenarioOpenObject )
     goto LABEL_22;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        nextUIObject,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
 LABEL_18:
@@ -285,29 +241,29 @@ LABEL_18:
   nextUIObject = *p_scenarioOpenObject;
   if ( !*p_scenarioOpenObject )
     goto LABEL_22;
-  v42 = UnityEngine_GameObject__GetComponent_object_(
+  v30 = UnityEngine_GameObject__GetComponent_object_(
           nextUIObject,
-          (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+          (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v42, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v30, 0LL, 0LL) )
     goto LABEL_18;
-  v43 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v43,
+    v31,
     (Il2CppObject *)v12,
     Method_EventInfoRiverProgressDrawComponent___c__DisplayClass20_0__PlayProgressClearAnim_b__0__,
     0LL);
-  if ( !v42
-    || (v42[2].monitor = v43,
-        sub_1C3B708((PartyOrganizationUtility_o *)&v42[2].monitor, (int64_t)v43, v44, v45, v46, v47, v48, v49),
+  if ( !v30
+    || (v30[2].monitor = v31,
+        sub_1B4CF34((CGThumbnailListItem_o *)&v30[2].monitor, (int32_t)v31, v32, v33),
         !Component_object) )
   {
 LABEL_22:
-    sub_1C3B9C0(nextUIObject, v14);
+    sub_1B4D1EC(nextUIObject, v14);
   }
-  SimpleAnimation__Play_65506988((SimpleAnimation_o *)Component_object, (System_String_o *)StringLiteral_17641/*"classBoard/releaseSquare"*/, 0LL);
-  EventInfoRiverProgressDrawComponent__PlayScenarioReleaseSe(this, v50);
+  SimpleAnimation__Play_64044448((SimpleAnimation_o *)Component_object, (System_String_o *)StringLiteral_16992/*"bit_scenario_open"*/, 0LL);
+  EventInfoRiverProgressDrawComponent__PlayScenarioReleaseSe(this, v34);
 }
 
 
@@ -327,10 +283,10 @@ void __fastcall EventInfoRiverProgressDrawComponent__PlayScenarioReleaseSe(
   SePlayer_o *v12; // x20
   float result; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4C23632 & 1) == 0 )
+  if ( (byte_49BC561 & 1) == 0 )
   {
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__, method);
-    byte_4C23632 = 1;
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__, method);
+    byte_49BC561 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.releaseScenarioSEName, 0LL) )
   {
@@ -344,8 +300,8 @@ void __fastcall EventInfoRiverProgressDrawComponent__PlayScenarioReleaseSe(
     v6 = *((_DWORD *)releaseScenarioSEName + 6);
     v7 = Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__;
     if ( (*((_BYTE *)Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C3B77C(Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C3B748(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B4CFA8(Method_EventInfoRiverProgressDrawComponent_PlayScenarioReleaseSe__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v7, v7[4]);
     v10 = *((_DWORD *)v5 + 6);
     if ( !v10 )
       goto LABEL_18;
@@ -357,8 +313,8 @@ void __fastcall EventInfoRiverProgressDrawComponent__PlayScenarioReleaseSe(
     }
     if ( v10 <= 1 )
 LABEL_18:
-      sub_1C3B9C8(v8, v9);
-    v11 = OverwriteAssetSoundName__PlaySe_40039436(v8, v9, *((System_String_o **)v5 + 5), 1.0, 0LL, 0, 0LL);
+      sub_1B4D1F4(v8, v9);
+    v11 = OverwriteAssetSoundName__PlaySe_39157408(v8, v9, *((System_String_o **)v5 + 5), 1.0, 0LL, 0, 0LL);
     result = 0.0;
     if ( *((int *)v5 + 6) >= 3 )
     {
@@ -372,7 +328,7 @@ LABEL_18:
           return;
         }
 LABEL_17:
-        sub_1C3B9C0(releaseScenarioSEName, v3);
+        sub_1B4D1EC(releaseScenarioSEName, v3);
       }
     }
   }
@@ -389,7 +345,7 @@ void __fastcall EventInfoRiverProgressDrawComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
 }
 
@@ -411,7 +367,7 @@ void __fastcall EventInfoRiverProgressDrawComponent__SetSpriteAlpha(
           riverBack->klass->vtable._9_CalculateFinalAlpha.methodPtr),
         (riverBack = this->fields.riverFrame) == 0LL) )
   {
-    sub_1C3B9C0(riverBack, method);
+    sub_1B4D1EC(riverBack, method);
   }
   ((void (__fastcall *)(struct UITexture_o *, Il2CppMethodPointer, long double))riverBack->klass->vtable._8_set_alpha.method)(
     riverBack,
@@ -430,137 +386,104 @@ void __fastcall EventInfoRiverProgressDrawComponent__SetTexture(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoRiverProgressDrawComponent__Setup(
         EventInfoRiverProgressDrawComponent_o *this,
         EventInfoPointRiverProgressControl_ProgressData_o *inputProgressData,
         int32_t inputEventId,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
   UnityEngine_GameObject_o *nextUIObject; // x0
-  __int64 v19; // x1
+  __int64 v15; // x1
   struct EventInfoPointRiverProgressControl_ProgressData_o *progressData; // x8
-  System_String_o *v21; // x0
-  struct System_String_o *v22; // x0
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v29; // x8
-  System_String_o *v30; // x0
-  struct System_String_o *v31; // x0
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
+  System_String_o *v17; // x0
+  struct System_String_o *v18; // x0
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  struct EventInfoPointRiverProgressControl_ProgressData_o *v21; // x8
+  System_String_o *v22; // x0
+  struct System_String_o *v23; // x0
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   int32_t eventId; // w21
   System_String_o *gaugeBackFileName; // x22
-  System_Action_o *v40; // x23
-  int32_t v41; // w21
+  System_Action_o *v28; // x23
+  int32_t v29; // w21
   System_String_o *gaugeFrameFileName; // x20
-  System_Action_o *v43; // x22
-  struct EventInfoPointRiverProgressControl_ProgressData_o *v44; // x8
+  System_Action_o *v31; // x22
+  struct EventInfoPointRiverProgressControl_ProgressData_o *v32; // x8
   int32_t ReleaseScenarioIndex; // w20
-  EventInfoPointRiverProgressControl_c *v46; // x0
+  EventInfoPointRiverProgressControl_c *v34; // x0
   Il2CppObject *scenarioOpenAnimPrefab; // x20
-  Il2CppObject *v48; // x0
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
+  Il2CppObject *v36; // x0
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
   UnityEngine_GameObject_o *scenarioOpenObject; // x21
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v57; // x19
-  int v58; // [xsp+Ch] [xbp-44h] BYREF
+  UnityEngine_GameObject_o *v41; // x19
+  int v42; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2362E & 1) == 0 )
+  if ( (byte_49BC55D & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, inputProgressData);
-    sub_1C3B764(&EventInfoPointRiverProgressControl_TypeInfo, v11);
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent__Setup_b__18_0__, v12);
-    sub_1C3B764(&Method_EventInfoRiverProgressDrawComponent__Setup_b__18_1__, v13);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject___, v14);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v15);
-    sub_1C3B764(&StringLiteral_19555/*"he-IL"*/, v16);
-    sub_1C3B764(&StringLiteral_19560/*"headers"*/, v17);
-    byte_4C2362E = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, inputProgressData);
+    sub_1B4CF90(&EventInfoPointRiverProgressControl_TypeInfo, v7);
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent__Setup_b__18_0__, v8);
+    sub_1B4CF90(&Method_EventInfoRiverProgressDrawComponent__Setup_b__18_1__, v9);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v10);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v11);
+    sub_1B4CF90(&StringLiteral_18872/*"event_gauge_back_0"*/, v12);
+    sub_1B4CF90(&StringLiteral_18877/*"event_gauge_frame_0"*/, v13);
+    byte_49BC55D = 1;
   }
   this->fields.progressData = inputProgressData;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.progressData,
-    (int64_t)inputProgressData,
-    *(int64_t *)&inputEventId,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.progressData, (int32_t)inputProgressData, inputEventId, method);
   progressData = this->fields.progressData;
   this->fields.eventId = inputEventId;
   if ( !progressData )
     goto LABEL_17;
-  v58 = progressData->fields.ReleaseScenarioIndex + 1;
-  v21 = System_Int32__ToString((int32_t)&v58, 0LL);
-  v22 = System_String__Concat_63368612((System_String_o *)StringLiteral_19555/*"he-IL"*/, v21, 0LL);
-  this->fields.gaugeBackFileName = v22;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.gaugeBackFileName, (int64_t)v22, v23, v24, v25, v26, v27, v28);
-  v29 = this->fields.progressData;
-  if ( !v29 )
+  v42 = progressData->fields.ReleaseScenarioIndex + 1;
+  v17 = System_Int32__ToString((int32_t)&v42, 0LL);
+  v18 = System_String__Concat_61093468((System_String_o *)StringLiteral_18872/*"event_gauge_back_0"*/, v17, 0LL);
+  this->fields.gaugeBackFileName = v18;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.gaugeBackFileName, (int32_t)v18, v19, v20);
+  v21 = this->fields.progressData;
+  if ( !v21 )
     goto LABEL_17;
-  v58 = v29->fields.ReleaseScenarioIndex + 1;
-  v30 = System_Int32__ToString((int32_t)&v58, 0LL);
-  v31 = System_String__Concat_63368612((System_String_o *)StringLiteral_19560/*"headers"*/, v30, 0LL);
-  this->fields.gaugeFrameFileName = v31;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.gaugeFrameFileName,
-    (int64_t)v31,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  v42 = v21->fields.ReleaseScenarioIndex + 1;
+  v22 = System_Int32__ToString((int32_t)&v42, 0LL);
+  v23 = System_String__Concat_61093468((System_String_o *)StringLiteral_18877/*"event_gauge_frame_0"*/, v22, 0LL);
+  this->fields.gaugeFrameFileName = v23;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.gaugeFrameFileName, (int32_t)v23, v24, v25);
   eventId = this->fields.eventId;
   gaugeBackFileName = this->fields.gaugeBackFileName;
-  v40 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
-  System_Action___ctor(v40, (Il2CppObject *)this, Method_EventInfoRiverProgressDrawComponent__Setup_b__18_0__, 0LL);
-  EventInfoUIBase__LoadEventUIEffectPathAssetData((EventInfoUIBase_o *)this, eventId, gaugeBackFileName, v40, 0LL);
-  v41 = this->fields.eventId;
+  v28 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  System_Action___ctor(v28, (Il2CppObject *)this, Method_EventInfoRiverProgressDrawComponent__Setup_b__18_0__, 0LL);
+  EventInfoUIBase__LoadEventUIEffectPathAssetData((EventInfoUIBase_o *)this, eventId, gaugeBackFileName, v28, 0LL);
+  v29 = this->fields.eventId;
   gaugeFrameFileName = this->fields.gaugeFrameFileName;
-  v43 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
-  System_Action___ctor(v43, (Il2CppObject *)this, Method_EventInfoRiverProgressDrawComponent__Setup_b__18_1__, 0LL);
-  EventInfoUIBase__LoadEventUIEffectPathAssetData((EventInfoUIBase_o *)this, v41, gaugeFrameFileName, v43, 0LL);
-  v44 = this->fields.progressData;
-  if ( !v44 )
+  v31 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  System_Action___ctor(v31, (Il2CppObject *)this, Method_EventInfoRiverProgressDrawComponent__Setup_b__18_1__, 0LL);
+  EventInfoUIBase__LoadEventUIEffectPathAssetData((EventInfoUIBase_o *)this, v29, gaugeFrameFileName, v31, 0LL);
+  v32 = this->fields.progressData;
+  if ( !v32 )
     goto LABEL_17;
-  if ( v44->fields.IsReleaseScenarioAnimEnd )
+  if ( v32->fields.IsReleaseScenarioAnimEnd )
   {
-    ReleaseScenarioIndex = v44->fields.ReleaseScenarioIndex;
-    v46 = EventInfoPointRiverProgressControl_TypeInfo;
+    ReleaseScenarioIndex = v32->fields.ReleaseScenarioIndex;
+    v34 = EventInfoPointRiverProgressControl_TypeInfo;
     if ( !EventInfoPointRiverProgressControl_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoPointRiverProgressControl_TypeInfo);
-      v46 = EventInfoPointRiverProgressControl_TypeInfo;
+      v34 = EventInfoPointRiverProgressControl_TypeInfo;
     }
-    if ( ReleaseScenarioIndex < v46->static_fields->MAX_SCENARIO_RIVER_INDEX )
+    if ( ReleaseScenarioIndex < v34->static_fields->MAX_SCENARIO_RIVER_INDEX )
     {
       nextUIObject = this->fields.nextUIObject;
       if ( nextUIObject )
@@ -569,37 +492,29 @@ void __fastcall EventInfoRiverProgressDrawComponent__Setup(
         scenarioOpenAnimPrefab = (Il2CppObject *)this->fields.scenarioOpenAnimPrefab;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v48 = UnityEngine_Object__Instantiate_object_(
+        v36 = UnityEngine_Object__Instantiate_object_(
                 scenarioOpenAnimPrefab,
-                (const MethodInfo_3076DB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-        this->fields.scenarioOpenObject = (struct UnityEngine_GameObject_o *)v48;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields.scenarioOpenObject,
-          (int64_t)v48,
-          v49,
-          v50,
-          v51,
-          v52,
-          v53,
-          v54);
+                (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        this->fields.scenarioOpenObject = (struct UnityEngine_GameObject_o *)v36;
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.scenarioOpenObject, (int32_t)v36, v37, v38);
         scenarioOpenObject = this->fields.scenarioOpenObject;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-        GameObjectExtensions__SafeSetParent_34969340(scenarioOpenObject, gameObject, 0LL);
+        GameObjectExtensions__SafeSetParent_34075504(scenarioOpenObject, gameObject, 0LL);
         nextUIObject = this->fields.nextUIObject;
         if ( nextUIObject )
         {
-          v57 = this->fields.scenarioOpenObject;
+          v41 = this->fields.scenarioOpenObject;
           nextUIObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(nextUIObject, 0LL);
           if ( nextUIObject )
           {
             localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)nextUIObject, 0LL);
-            GameObjectExtensions__SetLocalPosition(v57, localPosition, 0LL);
+            GameObjectExtensions__SetLocalPosition(v41, localPosition, 0LL);
             return;
           }
         }
       }
 LABEL_17:
-      sub_1C3B9C0(nextUIObject, v19);
+      sub_1B4D1EC(nextUIObject, v15);
     }
   }
 }
@@ -645,123 +560,103 @@ bool __fastcall EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__1
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *v8; // x19
+  const MethodInfo *v3; // x3
+  EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *v4; // x19
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   int32_t _1__state; // w8
   struct EventInfoRiverProgressDrawComponent_o *_4__this; // x20
   struct System_Action_o *endAction; // x1
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  int64_t *v23; // x8
-  int64_t v24; // x1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  struct System_String_o **v15; // x8
+  struct System_String_o *v16; // x1
   EventInfoUISlideAnimation_o *Component_object; // x21
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   _BOOL4 isFadeIn; // w23
   float x; // s8
   float y; // s10
   float z; // s9
-  const MethodInfo *v36; // x3
-  float v37; // s0
-  float v38; // s1
+  const MethodInfo *v24; // x3
+  float v25; // s0
+  float v26; // s1
   bool result; // w0
-  float v40; // s1
-  float v41; // s11
-  float v42; // s10
+  float v28; // s1
+  float v29; // s11
+  float v30; // s10
   UnityEngine_Object_o *scenarioOpenObject; // x21
-  Il2CppObject *v44; // x20
-  PartyOrganizationUtility_o *p__2__current; // x19
+  Il2CppObject *v32; // x20
+  CGThumbnailListItem_o *p__2__current; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  v8 = this;
-  if ( (byte_4C23633 & 1) == 0 )
+  v4 = this;
+  if ( (byte_49BC562 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___, method);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v9);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v10);
-    sub_1C3B764(&StringLiteral_23435/*"system.security.cryptography.descryptoserviceprovider"*/, v11);
-    sub_1C3B764(&StringLiteral_23436/*"system.security.cryptography.dsa"*/, v12);
-    this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)sub_1C3B764(&StringLiteral_23329/*"success"*/, v13);
-    byte_4C23633 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___, method);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___, v5);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B4CF90(&StringLiteral_22677/*"river_fade_in"*/, v7);
+    sub_1B4CF90(&StringLiteral_22678/*"river_fade_out"*/, v8);
+    this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)sub_1B4CF90(&StringLiteral_22577/*"release_scenario_out"*/, v9);
+    byte_49BC562 = 1;
   }
-  _1__state = v8->fields.__1__state;
-  _4__this = v8->fields.__4__this;
+  _1__state = v4->fields.__1__state;
+  _4__this = v4->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v8->fields.__1__state = -1;
+    v4->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_40;
     EventInfoRiverProgressDrawComponent__SetActive(_4__this, 1, v2);
     this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)_4__this->fields.riverAnim;
     if ( !this )
       goto LABEL_40;
-    SimpleAnimation__Play_65506988((SimpleAnimation_o *)this, v8->fields._animName_5__2, 0LL);
-    if ( v8->fields.isFadeIn )
+    SimpleAnimation__Play_64044448((SimpleAnimation_o *)this, v4->fields._animName_5__2, 0LL);
+    if ( v4->fields.isFadeIn )
     {
-      v37 = 0.0;
-      v38 = 1.0;
+      v25 = 0.0;
+      v26 = 1.0;
     }
     else
     {
-      v37 = 1.0;
-      v38 = 0.0;
+      v25 = 1.0;
+      v26 = 0.0;
     }
-    EventInfoRiverProgressDrawComponent__PlayFade(_4__this, v37, v38, 1.0, 3, 0LL, v36);
+    EventInfoRiverProgressDrawComponent__PlayFade(_4__this, v25, v26, 1.0, 3, 0LL, v24);
     return 0;
   }
   if ( _1__state )
     return 0;
-  v8->fields.__1__state = -1;
+  v4->fields.__1__state = -1;
   if ( !_4__this )
     goto LABEL_40;
   this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)_4__this->fields.animEndAction;
   if ( !this )
     goto LABEL_40;
-  endAction = v8->fields.endAction;
+  endAction = v4->fields.endAction;
   this->fields.endAction = endAction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.endAction,
-    (int64_t)endAction,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  if ( v8->fields.isFadeIn )
-    v23 = (int64_t *)&StringLiteral_23435/*"system.security.cryptography.descryptoserviceprovider"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)v2, v3);
+  if ( v4->fields.isFadeIn )
+    v15 = (struct System_String_o **)&StringLiteral_22677/*"river_fade_in"*/;
   else
-    v23 = (int64_t *)&StringLiteral_23436/*"system.security.cryptography.dsa"*/;
-  v24 = *v23;
-  v8->fields._animName_5__2 = (struct System_String_o *)*v23;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields._animName_5__2, v24, v17, v18, v19, v20, v21, v22);
+    v15 = (struct System_String_o **)&StringLiteral_22678/*"river_fade_out"*/;
+  v16 = *v15;
+  v4->fields._animName_5__2 = *v15;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v4->fields._animName_5__2, (int32_t)v16, v13, v14);
   Component_object = (EventInfoUISlideAnimation_o *)UnityEngine_Component__GetComponent_object_(
                                                       (UnityEngine_Component_o *)_4__this,
-                                                      (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
+                                                      (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_EventInfoUISlideAnimation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
   {
-    isFadeIn = v8->fields.isFadeIn;
+    isFadeIn = v4->fields.isFadeIn;
     this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)UnityEngine_Component__get_transform(
                                                                                     (UnityEngine_Component_o *)_4__this,
                                                                                     0LL);
@@ -778,7 +673,7 @@ bool __fastcall EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__1
                                                                                       0LL);
       if ( !Component_object )
         goto LABEL_40;
-      GameObjectExtensions__SetLocalPosition_34963496(
+      GameObjectExtensions__SetLocalPosition_34069660(
         (UnityEngine_GameObject_o *)this,
         x,
         y - Component_object->fields.slideOutPosition.fields.y,
@@ -793,13 +688,13 @@ bool __fastcall EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__1
                                                                                       0LL);
       if ( !this )
         goto LABEL_40;
-      *(UnityEngine_Vector3_o *)(&v40 - 1) = UnityEngine_Transform__get_localPosition(
+      *(UnityEngine_Vector3_o *)(&v28 - 1) = UnityEngine_Transform__get_localPosition(
                                                (UnityEngine_Transform_o *)this,
                                                0LL);
       if ( !Component_object )
         goto LABEL_40;
-      v41 = Component_object->fields.slideOutPosition.fields.y;
-      v42 = v40;
+      v29 = Component_object->fields.slideOutPosition.fields.y;
+      v30 = v28;
       this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)UnityEngine_Component__get_transform(
                                                                                       (UnityEngine_Component_o *)_4__this,
                                                                                       0LL);
@@ -807,14 +702,14 @@ bool __fastcall EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__1
         goto LABEL_40;
       localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
       z = localPosition.fields.z;
-      y = v42 + v41;
+      y = v30 + v29;
     }
-    v48.fields.x = x;
-    v48.fields.y = y;
-    v48.fields.z = z;
-    EventInfoUISlideAnimation__StartSlideAnim_43581604(Component_object, 0LL, v48, isFadeIn, 0LL);
+    v36.fields.x = x;
+    v36.fields.y = y;
+    v36.fields.z = z;
+    EventInfoUISlideAnimation__StartSlideAnim_42709580(Component_object, 0LL, v36, isFadeIn, 0LL);
   }
-  if ( v8->fields.isFadeIn )
+  if ( v4->fields.isFadeIn )
     goto LABEL_39;
   scenarioOpenObject = (UnityEngine_Object_o *)_4__this->fields.scenarioOpenObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -824,27 +719,27 @@ bool __fastcall EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__1
   this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)_4__this->fields.scenarioOpenObject;
   if ( !this )
     goto LABEL_40;
-  v44 = UnityEngine_GameObject__GetComponent_object_(
+  v32 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)this,
-          (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+          (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_o *)UnityEngine_Object__op_Inequality(
-                                                                                  (UnityEngine_Object_o *)v44,
+                                                                                  (UnityEngine_Object_o *)v32,
                                                                                   0LL,
                                                                                   0LL);
   if ( ((unsigned __int8)this & 1) == 0 )
     goto LABEL_39;
-  if ( !v44 )
+  if ( !v32 )
 LABEL_40:
-    sub_1C3B9C0(this, method);
-  SimpleAnimation__Play_65506988((SimpleAnimation_o *)v44, (System_String_o *)StringLiteral_23329/*"success"*/, 0LL);
+    sub_1B4D1EC(this, method);
+  SimpleAnimation__Play_64044448((SimpleAnimation_o *)v32, (System_String_o *)StringLiteral_22577/*"release_scenario_out"*/, 0LL);
 LABEL_39:
-  v8->fields.__2__current = 0LL;
-  p__2__current = (PartyOrganizationUtility_o *)&v8->fields.__2__current;
-  sub_1C3B708(p__2__current, 0LL, v26, v27, v28, v29, v30, v31);
+  v4->fields.__2__current = 0LL;
+  p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
+  sub_1B4CF34(p__2__current, 0, v18, v19);
   result = 1;
-  *(_DWORD *)&p__2__current[-1].fields._IsQuestStartMenuMode_k__BackingField = 1;
+  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
 }
 
@@ -865,11 +760,11 @@ void __fastcall __noreturn EventInfoRiverProgressDrawComponent__PlayChangeNewRiv
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
+  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C3B778(&Method_EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_System_Collections_IEnumerator_Reset__);
-  sub_1C3B88C(v3, v4);
+  v4 = sub_1B4CFA4(&Method_EventInfoRiverProgressDrawComponent__PlayChangeNewRiverAnim_d__19_System_Collections_IEnumerator_Reset__);
+  sub_1B4D0B8(v3, v4);
 }
 
 
@@ -909,7 +804,7 @@ void __fastcall EventInfoRiverProgressDrawComponent___c__DisplayClass20_0___Play
     || (v3 = this,
         (this = (EventInfoRiverProgressDrawComponent___c__DisplayClass20_0_o *)_4__this->fields.nextUIObject) == 0LL) )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
   ActionExtensions__Call(v3->fields.endAction, 0LL);
@@ -939,7 +834,7 @@ void __fastcall EventInfoRiverProgressDrawComponent___c__DisplayClass21_0___Play
   if ( !easingObj
     || (v3 = this, (this = (EventInfoRiverProgressDrawComponent___c__DisplayClass21_0_o *)this->fields.__4__this) == 0LL) )
   {
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   mNow = easingObj->fields.mNow;
   v5 = fminf(mNow, 1.0);
@@ -962,7 +857,7 @@ void __fastcall EventInfoRiverProgressDrawComponent___c__DisplayClass21_0___Play
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   EventInfoRiverProgressDrawComponent__SetSpriteAlpha(_4__this, this->fields.to, method);
   ActionExtensions__Call(this->fields.endAction, 0LL);
 }

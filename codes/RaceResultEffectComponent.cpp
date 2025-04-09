@@ -1,9 +1,9 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C23434 & 1) == 0 )
+  if ( (byte_49BC363 & 1) == 0 )
   {
-    sub_1C3B764(&CommonEffectComponent_TypeInfo, method);
-    byte_4C23434 = 1;
+    sub_1B4CF90(&CommonEffectComponent_TypeInfo, method);
+    byte_49BC363 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -24,74 +24,70 @@ void __fastcall RaceResultEffectComponent__SetParam(
         Il2CppObject *param,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   Il2CppObject **p_param; // x19
   System_Object_array *Components_object; // x0
-  __int64 v12; // x1
-  __int64 v13; // x21
-  int v14; // w8
-  unsigned int v15; // w22
+  __int64 v8; // x1
+  __int64 v9; // x21
+  int v10; // w8
+  unsigned int v11; // w22
   int max_length; // w8
-  System_Object_array *v17; // x20
-  __int64 v18; // x24
+  System_Object_array *v13; // x20
+  __int64 v14; // x24
 
-  if ( (byte_4C23433 & 1) == 0 )
+  if ( (byte_49BC362 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
-    byte_4C23433 = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_49BC362 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_param, (int64_t)param, (int64_t)method, v3, v4, v5, v6, v7);
-  v13 = (__int64)*(p_param - 1);
-  if ( !v13 )
+  sub_1B4CF34((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  v9 = (__int64)*(p_param - 1);
+  if ( !v9 )
 LABEL_17:
-    sub_1C3B9C0(Components_object, v12);
-  v14 = *(_DWORD *)(v13 + 24);
-  if ( v14 >= 1 )
+    sub_1B4D1EC(Components_object, v8);
+  v10 = *(_DWORD *)(v9 + 24);
+  if ( v10 >= 1 )
   {
-    v15 = 0;
+    v11 = 0;
     while ( 1 )
     {
-      if ( v15 >= v14 )
+      if ( v11 >= v10 )
         goto LABEL_16;
-      Components_object = *(System_Object_array **)(v13 + 8LL * (int)v15 + 32);
+      Components_object = *(System_Object_array **)(v9 + 8LL * (int)v11 + 32);
       if ( !Components_object )
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_3042374 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_2F53DA0 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
-        v17 = Components_object;
+        v13 = Components_object;
         if ( max_length >= 1 )
           break;
       }
 LABEL_14:
-      v14 = *(_DWORD *)(v13 + 24);
-      if ( (int)++v15 >= v14 )
+      v10 = *(_DWORD *)(v9 + 24);
+      if ( (int)++v11 >= v10 )
         return;
     }
-    v18 = 0LL;
-    while ( (unsigned int)v18 < max_length )
+    v14 = 0LL;
+    while ( (unsigned int)v14 < max_length )
     {
-      Components_object = (System_Object_array *)v17->m_Items[v18];
+      Components_object = (System_Object_array *)v13->m_Items[v14];
       if ( !Components_object )
         goto LABEL_17;
       Components_object = (System_Object_array *)((__int64 (__fastcall *)(System_Object_array *, Il2CppObject *, Il2CppMethodPointer))Components_object->obj.klass->vtable[4].method)(
                                                    Components_object,
                                                    *p_param,
                                                    Components_object->obj.klass->vtable[5].methodPtr);
-      max_length = v17->max_length;
-      if ( (int)++v18 >= max_length )
+      max_length = v13->max_length;
+      if ( (int)++v14 >= max_length )
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1C3B9C8(Components_object, v12);
+    sub_1B4D1F4(Components_object, v8);
   }
 }

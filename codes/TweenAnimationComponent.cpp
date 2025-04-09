@@ -23,18 +23,14 @@ int32_t __fastcall TweenAnimationComponent__GetEaseType(
 
 void __fastcall TweenAnimationComponent__OnFinishAnimation(TweenAnimationComponent_o *this, const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_onFinishAnimation; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  CGThumbnailListItem_o *p_onFinishAnimation; // x19
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  p_onFinishAnimation = (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation;
+  p_onFinishAnimation = (CGThumbnailListItem_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0LL);
   p_onFinishAnimation->klass = 0LL;
-  sub_1C3B708(p_onFinishAnimation, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B4CF34(p_onFinishAnimation, 0, v3, v4);
 }
 
 
@@ -51,31 +47,19 @@ void __fastcall TweenAnimationComponent__Setup(
   __int64 v11; // x1
   int32_t *p_closeEaseType; // x8
   struct UnityEngine_GameObject_o *gameObject; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x1
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w1
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4C20CB6 & 1) == 0 )
+  if ( (byte_49B9BC8 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-    sub_1C3B764(&StringLiteral_10094/*"PASS"*/, v9);
-    byte_4C20CB6 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
+    sub_1B4CF90(&StringLiteral_9702/*"OnFinishAnimation"*/, v9);
+    byte_49B9BC8 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -97,32 +81,16 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         tweener->fields.eventReceiver = gameObject;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&tweener->fields.eventReceiver,
-          (int64_t)gameObject,
-          v14,
-          v15,
-          v16,
-          v17,
-          v18,
-          v19);
-        v20 = StringLiteral_10094/*"PASS"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_10094/*"PASS"*/;
-        sub_1C3B708((PartyOrganizationUtility_o *)&tweener->fields.callWhenFinished, v20, v21, v22, v23, v24, v25, v26);
+        sub_1B4CF34((CGThumbnailListItem_o *)&tweener->fields.eventReceiver, (int32_t)gameObject, v14, v15);
+        v16 = StringLiteral_9702/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9702/*"OnFinishAnimation"*/;
+        sub_1B4CF34((CGThumbnailListItem_o *)&tweener->fields.callWhenFinished, v16, v17, v18);
         this->fields.onFinishAnimation = onFinish;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields.onFinishAnimation,
-          (int64_t)onFinish,
-          v27,
-          v28,
-          v29,
-          v30,
-          v31,
-          v32);
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onFinishAnimation, (int32_t)onFinish, v19, v20);
         return;
       }
     }
-    sub_1C3B9C0(v10, v11);
+    sub_1B4D1EC(v10, v11);
   }
 }
 
@@ -139,10 +107,10 @@ UnityEngine_GameObject_o *__fastcall TweenAnimationComponent__get_Target(
 {
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_4C20CB5 & 1) == 0 )
+  if ( (byte_49B9BC7 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C20CB5 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B9BC7 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

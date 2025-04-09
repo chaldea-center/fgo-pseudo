@@ -1,13 +1,13 @@
 void __fastcall AiActEntity___ctor(AiActEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21B4D & 1) == 0 )
+  if ( (byte_49BAA60 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C21B4D = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BAA60 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -45,45 +45,45 @@ System_Int32_array *__fastcall AiActEntity__GetFixCommandCardIds(
   _QWORD *v24; // x9
   __int64 v25; // x10
 
-  if ( (byte_4C21B4C & 1) == 0 )
+  if ( (byte_49BAA5F & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&commandType);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__ToArray__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v6);
-    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_19831/*"icon_reward_get"*/, v8);
-    sub_1C3B764(&StringLiteral_19828/*"icon_rarity5"*/, v9);
-    sub_1C3B764(&StringLiteral_19834/*"icon_sealact_disable"*/, v10);
-    sub_1C3B764(&StringLiteral_19827/*"icon_race_"*/, v11);
-    sub_1C3B764(&StringLiteral_19832/*"icon_reward_limits_release"*/, v12);
-    byte_4C21B4C = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&commandType);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__ToArray__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v6);
+    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_19141/*"fixQuickCardId"*/, v8);
+    sub_1B4CF90(&StringLiteral_19138/*"fixBusterCardId"*/, v9);
+    sub_1B4CF90(&StringLiteral_19144/*"fixWeakCardId"*/, v10);
+    sub_1B4CF90(&StringLiteral_19137/*"fixArtsCardId"*/, v11);
+    sub_1B4CF90(&StringLiteral_19142/*"fixStrengthCardId"*/, v12);
+    byte_49BAA5F = 1;
   }
-  v13 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
+  v13 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v13,
-    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( commandType == 1 )
   {
     script = this->fields.script;
-    v19 = (System_String_o *)StringLiteral_19827/*"icon_race_"*/;
+    v19 = (System_String_o *)StringLiteral_19137/*"fixArtsCardId"*/;
   }
   else
   {
     if ( commandType == 2 )
     {
       script = this->fields.script;
-      v18 = &StringLiteral_19828/*"icon_rarity5"*/;
+      v18 = &StringLiteral_19138/*"fixBusterCardId"*/;
     }
     else if ( commandType == 3 )
     {
       script = this->fields.script;
-      v18 = &StringLiteral_19831/*"icon_reward_get"*/;
+      v18 = &StringLiteral_19141/*"fixQuickCardId"*/;
     }
     else
     {
       if ( (commandType & 0xFFFFFFFE) != 10 )
         goto LABEL_23;
-      IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19834/*"icon_sealact_disable"*/, -1, v16);
+      IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19144/*"fixWeakCardId"*/, -1, v16);
       if ( (_DWORD)IntValue != -1 )
       {
         if ( !v13 )
@@ -99,7 +99,7 @@ System_Int32_array *__fastcall AiActEntity__GetFixCommandCardIds(
           System_Collections_Generic_List_int___AddWithResize(
             v13,
             IntValue,
-            *(const MethodInfo_366EC48 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_35631B8 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
@@ -108,7 +108,7 @@ System_Int32_array *__fastcall AiActEntity__GetFixCommandCardIds(
         }
       }
       script = this->fields.script;
-      v18 = &StringLiteral_19832/*"icon_reward_limits_release"*/;
+      v18 = &StringLiteral_19142/*"fixStrengthCardId"*/;
     }
     v19 = (System_String_o *)*v18;
   }
@@ -119,9 +119,9 @@ LABEL_23:
     if ( v13 )
       return System_Collections_Generic_List_int___ToArray(
                v13,
-               (const MethodInfo_3670700 *)Method_System_Collections_Generic_List_int__ToArray__);
+               (const MethodInfo_3564C70 *)Method_System_Collections_Generic_List_int__ToArray__);
 LABEL_24:
-    sub_1C3B9C0(IntValue, v15);
+    sub_1B4D1EC(IntValue, v15);
   }
   if ( !v13 )
     goto LABEL_24;
@@ -136,7 +136,7 @@ LABEL_24:
     System_Collections_Generic_List_int___AddWithResize(
       v13,
       IntValue,
-      *(const MethodInfo_366EC48 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      *(const MethodInfo_35631B8 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
@@ -145,7 +145,7 @@ LABEL_24:
   }
   return System_Collections_Generic_List_int___ToArray(
            v13,
-           (const MethodInfo_3670700 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_3564C70 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -153,12 +153,12 @@ int32_t __fastcall AiActEntity__GetNoTargetNoActionType(AiActEntity_o *this, con
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C21B4A & 1) == 0 )
+  if ( (byte_49BAA5D & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22548/*"replace"*/, method);
-    byte_4C21B4A = 1;
+    sub_1B4CF90(&StringLiteral_21816/*"noTargetNoActionType"*/, method);
+    byte_49BAA5D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22548/*"replace"*/, 0, v2);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21816/*"noTargetNoActionType"*/, 0, v2);
 }
 
 
@@ -166,12 +166,12 @@ bool __fastcall AiActEntity__IsIncludeDeathSvt(AiActEntity_o *this, const Method
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4C21B48 & 1) == 0 )
+  if ( (byte_49BAA5B & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_21031/*"maximum number of service points reached"*/, method);
-    byte_4C21B48 = 1;
+    sub_1B4CF90(&StringLiteral_20327/*"includeDeathSvt"*/, method);
+    byte_49BAA5B = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21031/*"maximum number of service points reached"*/, v2);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_20327/*"includeDeathSvt"*/, v2);
 }
 
 
@@ -179,12 +179,12 @@ bool __fastcall AiActEntity__IsNoCriticalOnAttack(AiActEntity_o *this, const Met
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C21B4B & 1) == 0 )
+  if ( (byte_49BAA5E & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22539/*"reorder-mode"*/, method);
-    byte_4C21B4B = 1;
+    sub_1B4CF90(&StringLiteral_21807/*"noCriticalOnAttack"*/, method);
+    byte_49BAA5E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22539/*"reorder-mode"*/, 0, v2) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21807/*"noCriticalOnAttack"*/, 0, v2) == 1;
 }
 
 
@@ -195,14 +195,14 @@ bool __fastcall AiActEntity__TryGetMultiIndividuality(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C21B49 & 1) == 0 )
+  if ( (byte_49BAA5C & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_7737/*"Invalid."*/, resValues);
-    byte_4C21B49 = 1;
+    sub_1B4CF90(&StringLiteral_7435/*"Individuality"*/, resValues);
+    byte_49BAA5C = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7737/*"Invalid."*/,
+           (System_String_o *)StringLiteral_7435/*"Individuality"*/,
            resValues,
            v3);
 }

@@ -15,46 +15,42 @@ void __fastcall DeckSetupRequest__beginRequest(
   System_Collections_Generic_List_object__o *v15; // x21
   __int64 v16; // x0
   __int64 v17; // x1
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v21; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  MiniMessagePack_MiniMessagePacker_o *v28; // x20
-  System_Byte_array *v29; // x20
-  System_String_o *v30; // x0
-  const MethodInfo *v31; // x3
-  const MethodInfo *v32; // x1
+  Il2CppClass **v23; // x0
+  MiniMessagePack_MiniMessagePacker_o *v24; // x20
+  System_Byte_array *v25; // x20
+  System_String_o *v26; // x0
+  const MethodInfo *v27; // x3
+  const MethodInfo *v28; // x1
 
-  if ( (byte_4C238E3 & 1) == 0 )
+  if ( (byte_49BC812 & 1) == 0 )
   {
-    sub_1C3B764(&System_Convert_TypeInfo, activeDeckId);
-    sub_1C3B764(&JsonManager_TypeInfo, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserDeckEntity__Add__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__, v9);
-    sub_1C3B764(&System_Collections_Generic_List_UserDeckEntity__TypeInfo, v10);
-    sub_1C3B764(&MiniMessagePack_MiniMessagePacker_TypeInfo, v11);
-    sub_1C3B764(&StringLiteral_16975/*"black_in"*/, v12);
-    sub_1C3B764(&StringLiteral_24889/*"‰"*/, v13);
-    byte_4C238E3 = 1;
+    sub_1B4CF90(&System_Convert_TypeInfo, activeDeckId);
+    sub_1B4CF90(&JsonManager_TypeInfo, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserDeckEntity__Add__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserDeckEntity___ctor__, v9);
+    sub_1B4CF90(&System_Collections_Generic_List_UserDeckEntity__TypeInfo, v10);
+    sub_1B4CF90(&MiniMessagePack_MiniMessagePacker_TypeInfo, v11);
+    sub_1B4CF90(&StringLiteral_16347/*"activeDeckId"*/, v12);
+    sub_1B4CF90(&StringLiteral_24094/*"userDeck"*/, v13);
+    byte_49BC812 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson((Il2CppObject *)userDeck, 0, 0, 0LL);
-  RequestBase__addField_42628192((RequestBase_o *)this, (System_String_o *)StringLiteral_16975/*"black_in"*/, activeDeckId, v14);
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
+  RequestBase__addField_41754736((RequestBase_o *)this, (System_String_o *)StringLiteral_16347/*"activeDeckId"*/, activeDeckId, v14);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_UserDeckEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_UserDeckEntity___ctor__);
   if ( !v15 )
     goto LABEL_14;
   items = v15->fields._items;
-  v25 = Method_System_Collections_Generic_List_UserDeckEntity__Add__;
+  v21 = Method_System_Collections_Generic_List_UserDeckEntity__Add__;
   ++v15->fields._version;
   if ( !items )
     goto LABEL_14;
@@ -64,35 +60,35 @@ void __fastcall DeckSetupRequest__beginRequest(
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)userDeck,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
-    v27 = &items->obj.klass + size;
+    v23 = &items->obj.klass + size;
     v15->fields._size = size + 1;
-    v27[4] = (Il2CppClass *)userDeck;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v27 + 4), (int64_t)userDeck, v18, v19, v20, v21, v22, v23);
+    v23[4] = (Il2CppClass *)userDeck;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 4), (int32_t)userDeck, v18, v19);
   }
-  v28 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C3B9B0(MiniMessagePack_MiniMessagePacker_TypeInfo);
-  MiniMessagePack_MiniMessagePacker___ctor(v28, 0LL);
-  if ( !v28 )
+  v24 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B4D1DC(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v24, 0LL);
+  if ( !v24 )
 LABEL_14:
-    sub_1C3B9C0(v16, v17);
-  v29 = MiniMessagePack_MiniMessagePacker__PackClass(v28, (Il2CppObject *)v15, 0LL);
+    sub_1B4D1EC(v16, v17);
+  v25 = MiniMessagePack_MiniMessagePacker__PackClass(v24, (Il2CppObject *)v15, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v30 = System_Convert__ToBase64String(v29, 0LL);
-  RequestBase__addField_42621852((RequestBase_o *)this, (System_String_o *)StringLiteral_24889/*"‰"*/, v30, v31);
-  RequestBase__beginRequest((RequestBase_o *)this, v32);
+  v26 = System_Convert__ToBase64String(v25, 0LL);
+  RequestBase__addField_41748396((RequestBase_o *)this, (System_String_o *)StringLiteral_24094/*"userDeck"*/, v26, v27);
+  RequestBase__beginRequest((RequestBase_o *)this, v28);
 }
 
 
 System_String_o *__fastcall DeckSetupRequest__getMockData(DeckSetupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C238E2 & 1) == 0 )
+  if ( (byte_49BC811 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C238E2 = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49BC811 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -103,16 +99,16 @@ System_String_o *__fastcall DeckSetupRequest__getURL(DeckSetupRequest_o *this, c
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238E1 & 1) == 0 )
+  if ( (byte_49BC810 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_18879/*"event_raid_hp_front"*/, v2);
-    byte_4C238E1 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_18212/*"deck/setup"*/, v2);
+    byte_49BC810 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18879/*"event_raid_hp_front"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_18212/*"deck/setup"*/, 0LL);
 }
 
 
@@ -127,29 +123,29 @@ void __fastcall DeckSetupRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4C238E4 & 1) == 0 )
+  if ( (byte_49BC813 & 1) == 0 )
   {
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C238E4 = 1;
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC813 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(7, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42712632(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22683/*"sandboxSeurity"*/;
+    v9 = &StringLiteral_21947/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22507/*"referrerMapId"*/;
+    v9 = &StringLiteral_21779/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

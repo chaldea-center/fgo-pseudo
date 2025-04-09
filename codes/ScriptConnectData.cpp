@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptConnectData___ctor(
         ScriptConnectData_o *this,
         System_String_o *connectPath,
@@ -11,52 +10,24 @@ void __fastcall ScriptConnectData___ctor(
 {
   ScriptConnectData_o *v12; // x23
   bool v13; // w24
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
 
   v12 = this;
   v13 = isView;
   this->fields.ConnectPath = connectPath;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)this,
-    (int64_t)connectPath,
-    (int64_t)objectPath,
-    (int32_t)endCallback,
-    (System_String_o *)errorCallback,
-    *(BattleSetupInfo_o **)&jumpLine,
-    (FollowerInfo_o *)isView,
-    (PartyListViewItem_o *)method);
+  sub_1B4CF34((CGThumbnailListItem_o *)this, (int32_t)connectPath, (int32_t)objectPath, (const MethodInfo *)endCallback);
   v12->fields.ObjectPath = objectPath;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v12->fields.ObjectPath, (int64_t)objectPath, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&v12->fields.ObjectPath, (int32_t)objectPath, v14, v15);
   v12->fields.EndCallback = endCallback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&v12->fields.EndCallback,
-    (int64_t)endCallback,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)&v12->fields.EndCallback, (int32_t)endCallback, v16, v17);
   v12->fields.ErrorCallback = errorCallback;
   v12 = (ScriptConnectData_o *)((char *)v12 + 24);
-  sub_1C3B708((PartyOrganizationUtility_o *)v12, (int64_t)errorCallback, v26, v27, v28, v29, v30, v31);
+  sub_1B4CF34((CGThumbnailListItem_o *)v12, (int32_t)errorCallback, v18, v19);
   LODWORD(v12->fields.ObjectPath) = jumpLine;
   BYTE4(v12->fields.ObjectPath) = v13;
   BYTE5(v12->fields.ObjectPath) = 0;

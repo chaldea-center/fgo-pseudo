@@ -9,14 +9,14 @@ void __fastcall RecoverUseItemRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C23992 & 1) == 0 )
+  if ( (byte_49BC8C1 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&recoverId);
-    sub_1C3B764(&StringLiteral_23288/*"subRenderFadeinFSSideR"*/, v7);
-    byte_4C23992 = 1;
+    sub_1B4CF90(&StringLiteral_21903/*"num"*/, *(_QWORD *)&recoverId);
+    sub_1B4CF90(&StringLiteral_22540/*"recoverId"*/, v7);
+    byte_49BC8C1 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23288/*"subRenderFadeinFSSideR"*/, recoverId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, num, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22540/*"recoverId"*/, recoverId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21903/*"num"*/, num, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall RecoverUseItemRequest__getURL(RecoverUseItemRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23991 & 1) == 0 )
+  if ( (byte_49BC8C0 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_21303/*"mstEventAdd"*/, v2);
-    byte_4C23991 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_20593/*"item/recover"*/, v2);
+    byte_49BC8C0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_21303/*"mstEventAdd"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_20593/*"item/recover"*/, 0LL);
 }
 
 
@@ -50,29 +50,29 @@ void __fastcall RecoverUseItemRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4C23993 & 1) == 0 )
+  if ( (byte_49BC8C2 & 1) == 0 )
   {
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C23993 = 1;
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC8C2 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(45, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42712632(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22683/*"sandboxSeurity"*/;
+    v9 = &StringLiteral_21947/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22507/*"referrerMapId"*/;
+    v9 = &StringLiteral_21779/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

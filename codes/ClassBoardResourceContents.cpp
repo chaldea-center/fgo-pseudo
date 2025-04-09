@@ -9,22 +9,14 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (int64_t)boardUiAtlasManagerUnit,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)boardUiAtlasManagerUnit,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -36,67 +28,21 @@ void __fastcall ClassBoardResourceContents__SetContents(
         ClassBoardBlank_o *blank,
         const MethodInfo *method)
 {
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
   this->fields._Square_k__BackingField = square;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields,
-    (int64_t)square,
-    (int64_t)line,
-    (int32_t)lockAsset,
-    (System_String_o *)blank,
-    (BattleSetupInfo_o *)method,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)square, (int32_t)line, (const MethodInfo *)lockAsset);
   this->fields._Line_k__BackingField = line;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Line_k__BackingField,
-    (int64_t)line,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Lock_k__BackingField,
-    (int64_t)lockAsset,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._Blank_k__BackingField = blank;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Blank_k__BackingField,
-    (int64_t)blank,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
@@ -105,22 +51,10 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
         ClassBoardBackground_o *bgModel,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BgModel_k__BackingField,
-    (int64_t)bgModel,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)bgModel, (int32_t)method, v3);
 }
 
 
@@ -129,22 +63,14 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
         UnityEngine_GameObject_o *boardSelectViewPrefab,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
-    (int64_t)boardSelectViewPrefab,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
+    (int32_t)boardSelectViewPrefab,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -157,82 +83,45 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
         ClassBoardSquareDetailDialog_o *classBoardSquareDetailDialog,
         const MethodInfo *method)
 {
-  PartyListViewItem_o *v7; // x7
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._DisableOpenDialog_k__BackingField,
-    (int64_t)classBoardDisableOpenDialog,
-    (int64_t)classBoardSquareOpenConfirmDialog,
-    (int32_t)classBoardLockOpenConfirmDialog,
-    (System_String_o *)classBoardLockReleaseConditionDialog,
-    (BattleSetupInfo_o *)classBoardSquareDetailDialog,
-    (FollowerInfo_o *)method,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
+    (int32_t)classBoardDisableOpenDialog,
+    (int32_t)classBoardSquareOpenConfirmDialog,
+    (const MethodInfo *)classBoardLockOpenConfirmDialog);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
-    (int64_t)classBoardSquareOpenConfirmDialog,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
+    (int32_t)classBoardSquareOpenConfirmDialog,
+    v12,
+    v13);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
-    (int64_t)classBoardLockOpenConfirmDialog,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
+    (int32_t)classBoardLockOpenConfirmDialog,
+    v14,
+    v15);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
-    (int64_t)classBoardLockReleaseConditionDialog,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
+    (int32_t)classBoardLockReleaseConditionDialog,
+    v16,
+    v17);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._SquareDetailDialog_k__BackingField,
-    (int64_t)classBoardSquareDetailDialog,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
+    (int32_t)classBoardSquareDetailDialog,
+    v18,
+    v19);
 }
 
 
@@ -241,22 +130,14 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
         UnityEngine_GameObject_o *prefab,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
-    (int64_t)prefab,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
+    (int32_t)prefab,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -268,67 +149,37 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
         AtlasManagerUnit_o *classUiAtlasManagerUnit,
         const MethodInfo *method)
 {
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardUiController_k__BackingField,
-    (int64_t)uiController,
-    (int64_t)boardUiAtlasManagerUnit,
-    (int32_t)iconAtlasManagerUnit,
-    (System_String_o *)classUiAtlasManagerUnit,
-    (BattleSetupInfo_o *)method,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
+    (int32_t)uiController,
+    (int32_t)boardUiAtlasManagerUnit,
+    (const MethodInfo *)iconAtlasManagerUnit);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (int64_t)boardUiAtlasManagerUnit,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)boardUiAtlasManagerUnit,
+    v10,
+    v11);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
-    (int64_t)iconAtlasManagerUnit,
-    v18,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
+    (int32_t)iconAtlasManagerUnit,
+    v12,
+    v13);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
-    (int64_t)classUiAtlasManagerUnit,
-    v24,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
+    (int32_t)classUiAtlasManagerUnit,
+    v14,
+    v15);
 }
 
 
@@ -465,22 +316,10 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
         ClassBoardBackground_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BgModel_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -489,22 +328,10 @@ void __fastcall ClassBoardResourceContents__set_Blank(
         ClassBoardBlank_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Blank_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Blank_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -513,22 +340,14 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -537,22 +356,14 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -561,22 +372,14 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
         ClassBoardUIController_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BoardUiController_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -585,22 +388,14 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -609,22 +404,14 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
         ClassBoardDisableOpenDialog_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._DisableOpenDialog_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -633,22 +420,14 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -657,22 +436,14 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -681,22 +452,10 @@ void __fastcall ClassBoardResourceContents__set_Line(
         ClassBoardLine_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Line_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Line_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -705,22 +464,10 @@ void __fastcall ClassBoardResourceContents__set_Lock(
         ClassBoardLock_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Lock_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Lock_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -729,22 +476,14 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
         ClassBoardLockOpenConfirmDialog_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -753,22 +492,14 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
         ClassBoardLockReleaseConditionDialog_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -777,14 +508,10 @@ void __fastcall ClassBoardResourceContents__set_Square(
         ClassBoardSquare_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Square_k__BackingField = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -793,22 +520,14 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
         ClassBoardSquareDetailDialog_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._SquareDetailDialog_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -817,20 +536,12 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
         ClassBoardSquareOpenConfirmDialog_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

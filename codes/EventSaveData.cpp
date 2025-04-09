@@ -26,27 +26,23 @@ void __fastcall EventSaveData__SetValueByArray(
 {
   System_String_o *v6; // x0
   struct System_String_o *v7; // x0
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  uint16_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
-  v14 = separator;
-  if ( (byte_4C1F35A & 1) == 0 )
+  v10 = separator;
+  if ( (byte_49B8262 & 1) == 0 )
   {
-    sub_1C3B764(&char_TypeInfo, valueArray);
-    byte_4C1F35A = 1;
+    sub_1B4CF90(&char_TypeInfo, valueArray);
+    byte_49B8262 = 1;
   }
   if ( valueArray )
   {
     if ( !char_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(char_TypeInfo);
-    v6 = System_Char__ToString((uint16_t)&v14, 0LL);
+    v6 = System_Char__ToString((uint16_t)&v10, 0LL);
     v7 = System_String__Join(v6, valueArray, 0LL);
     this->fields.value = v7;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.value, (int64_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.value, (int32_t)v7, v8, v9);
   }
 }

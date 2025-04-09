@@ -11,26 +11,22 @@ void __fastcall ScriptTextListViewItem___ctor(
   __int64 v10; // x4
   Il2CppObject *v11; // x0
   struct System_String_o *v12; // x0
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  int v19; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C1F6E4 & 1) == 0 )
+  if ( (byte_49B85EC & 1) == 0 )
   {
-    sub_1C3B764(&int_TypeInfo, *(_QWORD *)&index);
-    sub_1C3B764(&StringLiteral_16338/*"additionalSkillId"*/, v7);
-    byte_4C1F6E4 = 1;
+    sub_1B4CF90(&int_TypeInfo, *(_QWORD *)&index);
+    sub_1B4CF90(&StringLiteral_15717/*"[{0:D4}] {1}"*/, v7);
+    byte_49B85EC = 1;
   }
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
-  v19 = index + 1;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v8, v9, v10);
-  v12 = System_String__Format_63382984((System_String_o *)StringLiteral_16338/*"additionalSkillId"*/, v11, (Il2CppObject *)lineText, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  v15 = index + 1;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8, v9, v10);
+  v12 = System_String__Format_61134760((System_String_o *)StringLiteral_15717/*"[{0:D4}] {1}"*/, v11, (Il2CppObject *)lineText, 0LL);
   this->fields.lineText = v12;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.lineText, (int64_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v12, v13, v14);
 }
 
 

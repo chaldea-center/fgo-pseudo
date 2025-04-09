@@ -34,7 +34,7 @@ bool __fastcall SvtType__IsEnemyCollectionDetail(int32_t type, const MethodInfo 
 }
 
 
-bool __fastcall SvtType__IsEnemy_39135424(int32_t type, const MethodInfo *method)
+bool __fastcall SvtType__IsEnemy_38250760(int32_t type, const MethodInfo *method)
 {
   return type == 4;
 }

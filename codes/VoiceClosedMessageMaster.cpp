@@ -1,14 +1,14 @@
 void __fastcall VoiceClosedMessageMaster___ctor(VoiceClosedMessageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22F2D & 1) == 0 )
+  if ( (byte_49BBE5B & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__, method);
-    byte_4C22F2D = 1;
+    sub_1B4CF90(&Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__, method);
+    byte_49BBE5B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     309,
-    (const MethodInfo_3298B24 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__);
+    (const MethodInfo_319B678 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int___ctor__);
 }
 
 
@@ -20,19 +20,19 @@ System_String_o *__fastcall VoiceClosedMessageMaster__GetClosedMessage(
 {
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C22F2E & 1) == 0 )
+  if ( (byte_49BBE5C & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__,
       *(_QWORD *)&id);
-    byte_4C22F2E = 1;
+    byte_49BBE5C = 1;
   }
   entity = 0LL;
   DataMasterBase_object__object__int___TryGetEntity(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     &entity,
     id,
-    (const MethodInfo_329AE94 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__);
+    (const MethodInfo_319D9E8 *)Method_DataMasterBase_VoiceClosedMessageMaster__VoiceClosedMessageEntity__int__TryGetEntity__);
   if ( entity )
     return (System_String_o *)entity[1].monitor;
   else

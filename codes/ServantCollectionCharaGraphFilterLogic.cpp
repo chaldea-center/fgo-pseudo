@@ -36,10 +36,10 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
   __int64 v12; // x1
   ListViewSort_o *v13; // x20
 
-  if ( (byte_4C21291 & 1) == 0 )
+  if ( (byte_49BA1A5 & 1) == 0 )
   {
-    sub_1C3B764(&FilterKindList_TypeInfo, method);
-    byte_4C21291 = 1;
+    sub_1B4CF90(&FilterKindList_TypeInfo, method);
+    byte_49BA1A5 = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -57,7 +57,7 @@ bool __fastcall ServantCollectionCharaGraphFilterLogic__IsMatchClassFilter(
     if ( ListViewItem && sort )
       return ListViewSort__IsMatchClassGroupFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0LL);
 LABEL_16:
-    sub_1C3B9C0(ListViewItem, v12);
+    sub_1B4D1EC(ListViewItem, v12);
   }
   v7 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -84,25 +84,21 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
         ServantCollectionCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  PartyOrganizationUtility_o *p_listViewItem; // x0
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  CGThumbnailListItem_o *p_listViewItem; // x0
   CharaGraphServantCollectionListViewItem_o *listViewItem; // x19
   __int64 methodPtr_low; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
-  ServantCollectionCharaGraphFilterLogic_o *v14; // x0
-  const MethodInfo *v15; // x1
+  ServantCollectionCharaGraphFilterLogic_o *v10; // x0
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4C21290 & 1) == 0 )
+  if ( (byte_49BA1A4 & 1) == 0 )
   {
-    sub_1C3B764(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_4C21290 = 1;
+    sub_1B4CF90(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
+    byte_49BA1A4 = 1;
   }
-  p_listViewItem = (PartyOrganizationUtility_o *)&this->fields.listViewItem;
+  p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
   if ( listViewItem )
     return listViewItem;
@@ -113,10 +109,10 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
     && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
   {
     item = this->fields.item;
-    p_listViewItem->klass = (PartyOrganizationUtility_c *)listViewItem;
-    sub_1C3B708(p_listViewItem, (int64_t)item, v2, v3, v4, v5, v6, v7);
+    p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
+    sub_1B4CF34(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1C3BC80(this->fields.item);
-  return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v14, v15);
+  sub_1B4D4AC(this->fields.item);
+  return (CharaGraphServantCollectionListViewItem_o *)ServantCollectionCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
 }

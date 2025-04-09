@@ -18,13 +18,13 @@ void __fastcall EffectFlipData__Flip(
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_71145572(trEffect, 0.0, 180.0, 0.0, 0LL);
+    UnityEngine_Transform__Rotate_68827280(trEffect, 0.0, 180.0, 0.0, 0LL);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1C3B9C0(this, trEffect);
+    sub_1B4D1EC(this, trEffect);
   *(UnityEngine_Vector3_o *)&v5 = UnityEngine_Transform__get_localScale(trEffect, 0LL);
   if ( this->fields.scaleX >= 1 )
     v5 = -v5;
@@ -45,18 +45,14 @@ void __fastcall EffectFlipData__OverwriteNodeName(
         System_String_o **baseNodeName,
         const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   System_String_o *parentNodeName; // x1
 
   if ( !System_String__IsNullOrEmpty(this->fields.parentNodeName, 0LL) )
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1C3B708((PartyOrganizationUtility_o *)baseNodeName, (int64_t)parentNodeName, v5, v6, v7, v8, v9, v10);
+    sub_1B4CF34((CGThumbnailListItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
   }
 }

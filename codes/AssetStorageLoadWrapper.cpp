@@ -3,43 +3,27 @@ void __fastcall AssetStorageLoadWrapper___ctor(AssetStorageLoadWrapper_o *this, 
   __int64 v3; // x1
   AssetLoadWrapperBase_o *v4; // x20
   const MethodInfo *v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  AssetLoadWrapperBase_o *v12; // x20
-  const MethodInfo *v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  AssetLoadWrapperBase_o *v8; // x20
+  const MethodInfo *v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C21030 & 1) == 0 )
+  if ( (byte_49B9F44 & 1) == 0 )
   {
-    sub_1C3B764(&AssetLoadWrapper_TypeInfo, method);
-    sub_1C3B764(&SoundLoadWrapper_TypeInfo, v3);
-    byte_4C21030 = 1;
+    sub_1B4CF90(&AssetLoadWrapper_TypeInfo, method);
+    sub_1B4CF90(&SoundLoadWrapper_TypeInfo, v3);
+    byte_49B9F44 = 1;
   }
-  v4 = (AssetLoadWrapperBase_o *)sub_1C3B9B0(AssetLoadWrapper_TypeInfo);
+  v4 = (AssetLoadWrapperBase_o *)sub_1B4D1DC(AssetLoadWrapper_TypeInfo);
   AssetLoadWrapperBase___ctor(v4, v5);
   this->fields.assetManagerWrapper = (struct AssetLoadWrapper_o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v6, v7, v8, v9, v10, v11);
-  v12 = (AssetLoadWrapperBase_o *)sub_1C3B9B0(SoundLoadWrapper_TypeInfo);
-  AssetLoadWrapperBase___ctor(v12, v13);
-  this->fields.soundManagerWrapper = (struct SoundLoadWrapper_o *)v12;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.soundManagerWrapper,
-    (int64_t)v12,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v6, v7);
+  v8 = (AssetLoadWrapperBase_o *)sub_1B4D1DC(SoundLoadWrapper_TypeInfo);
+  AssetLoadWrapperBase___ctor(v8, v9);
+  this->fields.soundManagerWrapper = (struct SoundLoadWrapper_o *)v8;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.soundManagerWrapper, (int32_t)v8, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -55,7 +39,7 @@ bool __fastcall AssetStorageLoadWrapper__LoadAssetStorage(
 
   assetManagerWrapper = this->fields.assetManagerWrapper;
   if ( !assetManagerWrapper )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   return AssetLoadWrapper__LoadAssetStorage(assetManagerWrapper, path, callbackFunc, maxParallelLoad, method);
 }
 
@@ -71,7 +55,7 @@ void __fastcall AssetStorageLoadWrapper__LoadAudioAssetStorage(
 
   soundManagerWrapper = this->fields.soundManagerWrapper;
   if ( !soundManagerWrapper )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   SoundLoadWrapper__LoadAudioAssetStorage(soundManagerWrapper, path, callbackFunc, cueType, method);
 }
 
@@ -85,7 +69,7 @@ void __fastcall AssetStorageLoadWrapper__ReleaseAll(AssetStorageLoadWrapper_o *t
     || (AssetLoadWrapperBase__ReleaseAll(assetManagerWrapper, method),
         (assetManagerWrapper = (AssetLoadWrapperBase_o *)this->fields.soundManagerWrapper) == 0LL) )
   {
-    sub_1C3B9C0(assetManagerWrapper, method);
+    sub_1B4D1EC(assetManagerWrapper, method);
   }
   AssetLoadWrapperBase__ReleaseAll(assetManagerWrapper, method);
 }
@@ -100,7 +84,7 @@ void __fastcall AssetStorageLoadWrapper__ReleaseAssetStorage(
 
   assetManagerWrapper = this->fields.assetManagerWrapper;
   if ( !assetManagerWrapper )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   AssetLoadWrapper__ReleaseAssetStorage(assetManagerWrapper, path, method);
 }
 
@@ -114,6 +98,6 @@ void __fastcall AssetStorageLoadWrapper__ReleaseAudioAssetStorage(
 
   soundManagerWrapper = this->fields.soundManagerWrapper;
   if ( !soundManagerWrapper )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   SoundLoadWrapper__ReleaseAudioAssetStorage(soundManagerWrapper, path, method);
 }

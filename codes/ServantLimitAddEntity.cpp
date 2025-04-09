@@ -1,13 +1,13 @@
 void __fastcall ServantLimitAddEntity___ctor(ServantLimitAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2281C & 1) == 0 )
+  if ( (byte_49BB746 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C2281C = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB746 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ServantLimitAddEntity__CreatePK(
         int32_t limitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4C2281B & 1) == 0 )
+  if ( (byte_49BB745 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&limitCount);
-    byte_4C2281B = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&limitCount);
+    byte_49BB745 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            limitCount,
-           (const MethodInfo_2FEE38C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -84,12 +84,12 @@ int32_t __fastcall ServantLimitAddEntity__GetAscensionAfterDialogId(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C22811 & 1) == 0 )
+  if ( (byte_49BB73B & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_17251/*"btn_txt_progress"*/, *(_QWORD *)&defaultValue);
-    byte_4C22811 = 1;
+    sub_1B4CF90(&StringLiteral_16612/*"ascensionAfterDialogId"*/, *(_QWORD *)&defaultValue);
+    byte_49BB73B = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_17251/*"btn_txt_progress"*/, defaultValue, v3);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_16612/*"ascensionAfterDialogId"*/, defaultValue, v3);
 }
 
 
@@ -98,14 +98,14 @@ System_String_o *__fastcall ServantLimitAddEntity__GetCondTitle(
         System_String_o *defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4C22818 & 1) == 0 )
+  if ( (byte_49BB742 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22871/*"setProductType"*/, defaultValue);
-    byte_4C22818 = 1;
+    sub_1B4CF90(&StringLiteral_22130/*"overwriteServantParameterTitle"*/, defaultValue);
+    byte_49BB742 = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_22871/*"setProductType"*/,
+           (System_String_o *)StringLiteral_22130/*"overwriteServantParameterTitle"*/,
            defaultValue,
            0LL);
 }
@@ -117,12 +117,12 @@ int32_t __fastcall ServantLimitAddEntity__GetLimitCountUpResultServantLimitCount
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C22807 & 1) == 0 )
+  if ( (byte_49BB731 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_21530/*"mstStageRemap"*/, method);
-    byte_4C22807 = 1;
+    sub_1B4CF90(&StringLiteral_20813/*"limitCountUpResultServantLimitCount"*/, method);
+    byte_49BB731 = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_21530/*"mstStageRemap"*/, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_20813/*"limitCountUpResultServantLimitCount"*/, -1, v2);
 }
 
 
@@ -135,19 +135,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverWriteTDRank(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280E & 1) == 0 )
+  if ( (byte_49BB738 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22821/*"setDateUserProfile"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280E = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22080/*"overWriteTDRank"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB738 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22821/*"setDateUserProfile"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22080/*"overWriteTDRank"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -162,19 +162,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverWriteTDTypeText(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280F & 1) == 0 )
+  if ( (byte_49BB739 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22823/*"setDefaultsFromJsonString"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280F = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22082/*"overWriteTDTypeText"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB739 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22823/*"setDefaultsFromJsonString"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22082/*"overWriteTDTypeText"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -186,12 +186,12 @@ int32_t __fastcall ServantLimitAddEntity__GetOverwriteCvId(
         int32_t defaultCvId,
         const MethodInfo *method)
 {
-  if ( (byte_4C22817 & 1) == 0 )
+  if ( (byte_49BB741 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22844/*"setNotificationColor"*/, *(_QWORD *)&defaultCvId);
-    byte_4C22817 = 1;
+    sub_1B4CF90(&StringLiteral_22103/*"overwriteCv"*/, *(_QWORD *)&defaultCvId);
+    byte_49BB741 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22844/*"setNotificationColor"*/, defaultCvId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22103/*"overwriteCv"*/, defaultCvId, 0LL);
 }
 
 
@@ -204,19 +204,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantBattleName
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280D & 1) == 0 )
+  if ( (byte_49BB737 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22816/*"setContentName"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280D = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22075/*"overWriteServantBattleName"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB737 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22816/*"setContentName"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22075/*"overWriteServantBattleName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -231,19 +231,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantName(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280B & 1) == 0 )
+  if ( (byte_49BB735 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22817/*"setContentText"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280B = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22076/*"overWriteServantName"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB735 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22817/*"setContentText"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22076/*"overWriteServantName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -253,12 +253,12 @@ System_Int32_array *__fastcall ServantLimitAddEntity__GetOverwriteServantParamet
         ServantLimitAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2281A & 1) == 0 )
+  if ( (byte_49BB744 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22870/*"setProductList"*/, method);
-    byte_4C2281A = 1;
+    sub_1B4CF90(&StringLiteral_22129/*"overwriteServantParameter"*/, method);
+    byte_49BB744 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22870/*"setProductList"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_22129/*"overwriteServantParameter"*/, 0LL, 0LL);
 }
 
 
@@ -271,19 +271,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteServantShortName(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280C & 1) == 0 )
+  if ( (byte_49BB736 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22818/*"setContentTitle"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280C = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22077/*"overWriteServantShortName"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB736 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22818/*"setContentTitle"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22077/*"overWriteServantShortName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -300,36 +300,32 @@ System_String_array *__fastcall ServantLimitAddEntity__GetOverwriteShadowServant
   System_String_array *v7; // x19
   __int64 v8; // x0
   __int64 v9; // x1
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  int64_t v16; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w1
 
-  if ( (byte_4C22813 & 1) == 0 )
+  if ( (byte_49BB73D & 1) == 0 )
   {
-    sub_1C3B764(&string___TypeInfo, method);
-    sub_1C3B764(&StringLiteral_19350/*"ga"*/, v4);
-    sub_1C3B764(&StringLiteral_10308/*"ParentTableNamespace"*/, v5);
-    byte_4C22813 = 1;
+    sub_1B4CF90(&string___TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_18670/*"en_waist"*/, v4);
+    sub_1B4CF90(&StringLiteral_9880/*"OverwriteShadowServantEffectNodes"*/, v5);
+    byte_49BB73D = 1;
   }
   ScriptStringArrayParam = ServantLimitAddEntity__GetScriptStringArrayParam(
                              this,
-                             (System_String_o *)StringLiteral_10308/*"ParentTableNamespace"*/,
+                             (System_String_o *)StringLiteral_9880/*"OverwriteShadowServantEffectNodes"*/,
                              v2);
   if ( !ScriptStringArrayParam || (v7 = ScriptStringArrayParam, !*(_QWORD *)&ScriptStringArrayParam->max_length) )
   {
-    v8 = sub_1C3B80C(string___TypeInfo, 1LL);
+    v8 = sub_1B4D038(string___TypeInfo, 1LL);
     if ( !v8 )
-      sub_1C3B9C0(0LL, v9);
+      sub_1B4D1EC(0LL, v9);
     v7 = (System_String_array *)v8;
     if ( !*(_DWORD *)(v8 + 24) )
-      sub_1C3B9C8(v8, v9);
-    v16 = StringLiteral_19350/*"ga"*/;
-    *(_QWORD *)(v8 + 32) = StringLiteral_19350/*"ga"*/;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 32), v16, v10, v11, v12, v13, v14, v15);
+      sub_1B4D1F4(v8, v9);
+    v12 = StringLiteral_18670/*"en_waist"*/;
+    *(_QWORD *)(v8 + 32) = StringLiteral_18670/*"en_waist"*/;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 32), v12, v10, v11);
   }
   return v7;
 }
@@ -339,12 +335,12 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteSvtDetailName(
         ServantLimitAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C22815 & 1) == 0 )
+  if ( (byte_49BB73F & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22876/*"setReadDeviceInfoOnceEnabled"*/, method);
-    byte_4C22815 = 1;
+    sub_1B4CF90(&StringLiteral_22135/*"overwriteSvtDetailName"*/, method);
+    byte_49BB73F = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22876/*"setReadDeviceInfoOnceEnabled"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22135/*"overwriteSvtDetailName"*/, 0LL, 0LL);
 }
 
 
@@ -357,19 +353,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDFileName(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C2280A & 1) == 0 )
+  if ( (byte_49BB734 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22819/*"setCoppaCompliantEnabled"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C2280A = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22078/*"overWriteTDFileName"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB734 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22819/*"setCoppaCompliantEnabled"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22078/*"overWriteTDFileName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -384,19 +380,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDName(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C22808 & 1) == 0 )
+  if ( (byte_49BB732 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22820/*"setCurrency"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C22808 = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22079/*"overWriteTDName"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB732 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22820/*"setCurrency"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22079/*"overWriteTDName"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -411,19 +407,19 @@ System_String_o *__fastcall ServantLimitAddEntity__GetOverwriteTDRuby(
   __int64 v5; // x1
   System_String_o *result; // x0
 
-  if ( (byte_4C22809 & 1) == 0 )
+  if ( (byte_49BB733 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22822/*"setDefaultTracker"*/, v4);
-    sub_1C3B764(&StringLiteral_1/*""*/, v5);
-    byte_4C22809 = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22081/*"overWriteTDRuby"*/, v4);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BB733 = 1;
   }
-  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22822/*"setDefaultTracker"*/, v2);
+  result = (System_String_o *)ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22081/*"overWriteTDRuby"*/, v2);
   if ( result )
   {
     if ( result->klass == string_TypeInfo )
       return result;
-    sub_1C3BC80(result);
+    sub_1B4D4AC(result);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -436,13 +432,13 @@ int32_t __fastcall ServantLimitAddEntity__GetRandomGroupIndex(ServantLimitAddEnt
   Il2CppObject *ScriptObject; // x0
   Il2CppObject *v6; // x19
 
-  if ( (byte_4C22810 & 1) == 0 )
+  if ( (byte_49BB73A & 1) == 0 )
   {
-    sub_1C3B764(&System_Convert_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_23247/*"stretchin"*/, v4);
-    byte_4C22810 = 1;
+    sub_1B4CF90(&System_Convert_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22503/*"randomGroupIndex"*/, v4);
+    byte_49BB73A = 1;
   }
-  ScriptObject = ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_23247/*"stretchin"*/, v2);
+  ScriptObject = ServantLimitAddEntity__getScriptObject(this, (System_String_o *)StringLiteral_22503/*"randomGroupIndex"*/, v2);
   if ( ScriptObject )
   {
     v6 = ScriptObject;
@@ -472,35 +468,31 @@ System_String_array *__fastcall ServantLimitAddEntity__GetScriptStringArrayParam
   System_Converter_TInput__TOutput__o *_9__23_0; // x20
   Il2CppObject *v17; // x21
   struct ServantLimitAddEntity___c_StaticFields *static_fields; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  System_Collections_Generic_List_object__o *v25; // x0
-  __int64 v26; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_object__o *v21; // x0
+  __int64 v22; // x1
 
-  if ( (byte_4C22812 & 1) == 0 )
+  if ( (byte_49BB73C & 1) == 0 )
   {
-    sub_1C3B764(&System_Converter_object__string__TypeInfo, key);
-    sub_1C3B764(&Method_System_Collections_Generic_List_object__ConvertAll_string___, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__ToArray__, v6);
-    sub_1C3B764(&System_Collections_Generic_List_object__TypeInfo, v7);
-    sub_1C3B764(&string___TypeInfo, v8);
-    sub_1C3B764(&Method_ServantLimitAddEntity___c__GetScriptStringArrayParam_b__23_0__, v9);
-    sub_1C3B764(&ServantLimitAddEntity___c_TypeInfo, v10);
-    byte_4C22812 = 1;
+    sub_1B4CF90(&System_Converter_object__string__TypeInfo, key);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_object__ConvertAll_string___, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__ToArray__, v6);
+    sub_1B4CF90(&System_Collections_Generic_List_object__TypeInfo, v7);
+    sub_1B4CF90(&string___TypeInfo, v8);
+    sub_1B4CF90(&Method_ServantLimitAddEntity___c__GetScriptStringArrayParam_b__23_0__, v9);
+    sub_1B4CF90(&ServantLimitAddEntity___c_TypeInfo, v10);
+    byte_49BB73C = 1;
   }
   ScriptObject = ServantLimitAddEntity__getScriptObject(this, key, method);
   if ( !ScriptObject )
-    return (System_String_array *)sub_1C3B80C(string___TypeInfo, 0LL);
+    return (System_String_array *)sub_1B4D038(string___TypeInfo, 0LL);
   v12 = (System_Collections_Generic_List_object__o *)ScriptObject;
   methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(ScriptObject->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
     || (System_Collections_Generic_List_object__c *)ScriptObject->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
   {
-    return (System_String_array *)sub_1C3B80C(string___TypeInfo, 0LL);
+    return (System_String_array *)sub_1B4D038(string___TypeInfo, 0LL);
   }
   v15 = ServantLimitAddEntity___c_TypeInfo;
   if ( !ServantLimitAddEntity___c_TypeInfo->_2.cctor_finished )
@@ -517,7 +509,7 @@ System_String_array *__fastcall ServantLimitAddEntity__GetScriptStringArrayParam
       v15 = ServantLimitAddEntity___c_TypeInfo;
     }
     v17 = (Il2CppObject *)v15->static_fields->__9;
-    _9__23_0 = (System_Converter_TInput__TOutput__o *)sub_1C3B9B0(System_Converter_object__string__TypeInfo);
+    _9__23_0 = (System_Converter_TInput__TOutput__o *)sub_1B4D1DC(System_Converter_object__string__TypeInfo);
     System_Converter_object__object____ctor(
       _9__23_0,
       v17,
@@ -525,25 +517,17 @@ System_String_array *__fastcall ServantLimitAddEntity__GetScriptStringArrayParam
       0LL);
     static_fields = ServantLimitAddEntity___c_TypeInfo->static_fields;
     static_fields->__9__23_0 = (struct System_Converter_object__string__o *)_9__23_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__23_0,
-      (int64_t)_9__23_0,
-      v19,
-      v20,
-      v21,
-      v22,
-      v23,
-      v24);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__23_0, (int32_t)_9__23_0, v19, v20);
   }
-  v25 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ConvertAll_object_(
+  v21 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ConvertAll_object_(
                                                        v12,
                                                        (System_Converter_T__TOutput__o *)_9__23_0,
-                                                       (const MethodInfo_2F1F9D8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___);
-  if ( !v25 )
-    sub_1C3B9C0(0LL, v26);
+                                                       (const MethodInfo_2E391E8 *)Method_System_Collections_Generic_List_object__ConvertAll_string___);
+  if ( !v21 )
+    sub_1B4D1EC(0LL, v22);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
-                                  v25,
-                                  (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  v21,
+                                  (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -553,14 +537,14 @@ int32_t __fastcall ServantLimitAddEntity__GetServantParameterLimitCount(
         int32_t defaultLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4C22819 & 1) == 0 )
+  if ( (byte_49BB743 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_23603/*"time_status_icon_free"*/, *(_QWORD *)&defaultLimitCount);
-    byte_4C22819 = 1;
+    sub_1B4CF90(&StringLiteral_22840/*"servantParameterLimitCount"*/, *(_QWORD *)&defaultLimitCount);
+    byte_49BB743 = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_23603/*"time_status_icon_free"*/,
+           (System_String_o *)StringLiteral_22840/*"servantParameterLimitCount"*/,
            defaultLimitCount,
            0LL);
 }
@@ -570,12 +554,12 @@ int32_t __fastcall ServantLimitAddEntity__GetWeaponEfect(ServantLimitAddEntity_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C22806 & 1) == 0 )
+  if ( (byte_49BB730 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_25181, method);
-    byte_4C22806 = 1;
+    sub_1B4CF90(&StringLiteral_24383/*"weaponEffect"*/, method);
+    byte_49BB730 = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_25181, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_24383/*"weaponEffect"*/, -1, v2);
 }
 
 
@@ -583,23 +567,23 @@ int32_t __fastcall ServantLimitAddEntity__GetWeaponGroup(ServantLimitAddEntity_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C22805 & 1) == 0 )
+  if ( (byte_49BB72F & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_25182, method);
-    byte_4C22805 = 1;
+    sub_1B4CF90(&StringLiteral_24384/*"weaponGroup"*/, method);
+    byte_49BB72F = 1;
   }
-  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_25182, -1, v2);
+  return ServantLimitAddEntity__getScript(this, (System_String_o *)StringLiteral_24384/*"weaponGroup"*/, -1, v2);
 }
 
 
 bool __fastcall ServantLimitAddEntity__IsOverwriteCv(ServantLimitAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22816 & 1) == 0 )
+  if ( (byte_49BB740 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22844/*"setNotificationColor"*/, method);
-    byte_4C22816 = 1;
+    sub_1B4CF90(&StringLiteral_22103/*"overwriteCv"*/, method);
+    byte_49BB740 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22844/*"setNotificationColor"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22103/*"overwriteCv"*/, 0LL);
 }
 
 
@@ -607,12 +591,12 @@ bool __fastcall ServantLimitAddEntity__IsOverwriteSvtDetailName(
         ServantLimitAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C22814 & 1) == 0 )
+  if ( (byte_49BB73E & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22876/*"setReadDeviceInfoOnceEnabled"*/, method);
-    byte_4C22814 = 1;
+    sub_1B4CF90(&StringLiteral_22135/*"overwriteSvtDetailName"*/, method);
+    byte_49BB73E = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22876/*"setReadDeviceInfoOnceEnabled"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_22135/*"overwriteSvtDetailName"*/, 0LL);
 }
 
 
@@ -652,17 +636,17 @@ int32_t __fastcall ServantLimitAddEntity__getScript(
   long double v14; // q0
 
   v4 = defVal;
-  if ( (byte_4C22802 & 1) == 0 )
+  if ( (byte_49BB72C & 1) == 0 )
   {
-    sub_1C3B764(&long_TypeInfo, key);
-    byte_4C22802 = 1;
+    sub_1B4CF90(&long_TypeInfo, key);
+    byte_49BB72C = 1;
   }
   ScriptObject = ServantLimitAddEntity__getScriptObject(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObject )
     return v4;
   if ( ScriptObject->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObject, long_TypeInfo, v8, v9);
-  v14 = sub_1C3BC80(ScriptObject);
+  v14 = sub_1B4D4AC(ScriptObject);
   ServantLimitAddEntity__getScriptFloat(v11, v12, *(float *)&v14, v13);
   return result;
 }
@@ -683,17 +667,17 @@ float __fastcall ServantLimitAddEntity__getScriptFloat(
   System_Int32_array *v13; // x2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C22803 & 1) == 0 )
+  if ( (byte_49BB72D & 1) == 0 )
   {
-    sub_1C3B764(&double_TypeInfo, key);
-    byte_4C22803 = 1;
+    sub_1B4CF90(&double_TypeInfo, key);
+    byte_49BB72D = 1;
   }
   ScriptObject = ServantLimitAddEntity__getScriptObject(this, key, method);
   if ( !ScriptObject )
     return defVal;
   if ( ScriptObject->klass->_1.element_class == double_TypeInfo->_1.element_class )
     return *(double *)j_il2cpp_object_unbox_0(ScriptObject, double_TypeInfo, v8, v9);
-  sub_1C3BC80(ScriptObject);
+  sub_1B4D4AC(ScriptObject);
   ServantLimitAddEntity__getScriptIntArrayParam(v11, v12, v13, v14);
   return result;
 }
@@ -717,24 +701,20 @@ System_Int32_array *__fastcall ServantLimitAddEntity__getScriptIntArrayParam(
   System_Converter_object__int__o *_9__5_0; // x20
   Il2CppObject *v17; // x21
   struct ServantLimitAddEntity___c_StaticFields *static_fields; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  System_Collections_Generic_List_int__o *v25; // x0
-  __int64 v26; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_int__o *v21; // x0
+  __int64 v22; // x1
 
-  if ( (byte_4C22804 & 1) == 0 )
+  if ( (byte_49BB72E & 1) == 0 )
   {
-    sub_1C3B764(&System_Converter_object__int__TypeInfo, key);
-    sub_1C3B764(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_object__TypeInfo, v9);
-    sub_1C3B764(&Method_ServantLimitAddEntity___c__getScriptIntArrayParam_b__5_0__, v10);
-    sub_1C3B764(&ServantLimitAddEntity___c_TypeInfo, v11);
-    byte_4C22804 = 1;
+    sub_1B4CF90(&System_Converter_object__int__TypeInfo, key);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1B4CF90(&System_Collections_Generic_List_object__TypeInfo, v9);
+    sub_1B4CF90(&Method_ServantLimitAddEntity___c__getScriptIntArrayParam_b__5_0__, v10);
+    sub_1B4CF90(&ServantLimitAddEntity___c_TypeInfo, v11);
+    byte_49BB72E = 1;
   }
   ScriptObject = ServantLimitAddEntity__getScriptObject(this, key, (const MethodInfo *)defVal);
   if ( ScriptObject )
@@ -759,7 +739,7 @@ System_Int32_array *__fastcall ServantLimitAddEntity__getScriptIntArrayParam(
           v14 = ServantLimitAddEntity___c_TypeInfo;
         }
         v17 = (Il2CppObject *)v14->static_fields->__9;
-        _9__5_0 = (System_Converter_object__int__o *)sub_1C3B9B0(System_Converter_object__int__TypeInfo);
+        _9__5_0 = (System_Converter_object__int__o *)sub_1B4D1DC(System_Converter_object__int__TypeInfo);
         System_Converter_object__int____ctor(
           _9__5_0,
           v17,
@@ -767,30 +747,22 @@ System_Int32_array *__fastcall ServantLimitAddEntity__getScriptIntArrayParam(
           0LL);
         static_fields = ServantLimitAddEntity___c_TypeInfo->static_fields;
         static_fields->__9__5_0 = _9__5_0;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&static_fields->__9__5_0,
-          (int64_t)_9__5_0,
-          v19,
-          v20,
-          v21,
-          v22,
-          v23,
-          v24);
+        sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__5_0, (int32_t)_9__5_0, v19, v20);
       }
-      v25 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
+      v21 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
                                                         v13,
                                                         (System_Converter_T__TOutput__o *)_9__5_0,
-                                                        (const MethodInfo_2F1F8D4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
-      if ( v25 )
+                                                        (const MethodInfo_2E390E4 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+      if ( v21 )
         return System_Collections_Generic_List_int___ToArray(
-                 v25,
-                 (const MethodInfo_3670700 *)Method_System_Collections_Generic_List_int__ToArray__);
+                 v21,
+                 (const MethodInfo_3564C70 *)Method_System_Collections_Generic_List_int__ToArray__);
     }
     else
     {
-      sub_1C3BC80(v13);
+      sub_1B4D4AC(v13);
     }
-    sub_1C3B9C0(v25, v26);
+    sub_1B4D1EC(v21, v22);
   }
   return defVal;
 }
@@ -804,10 +776,10 @@ Il2CppObject *__fastcall ServantLimitAddEntity__getScriptObject(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C22801 & 1) == 0 )
+  if ( (byte_49BB72B & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4C22801 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_49BB72B = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -817,7 +789,7 @@ Il2CppObject *__fastcall ServantLimitAddEntity__getScriptObject(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -834,30 +806,18 @@ void __fastcall ServantLimitAddEntity___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C2281D & 1) == 0 )
+  if ( (byte_49BB747 & 1) == 0 )
   {
-    sub_1C3B764(&ServantLimitAddEntity___c_TypeInfo, v1);
-    byte_4C2281D = 1;
+    sub_1B4CF90(&ServantLimitAddEntity___c_TypeInfo, v1);
+    byte_49BB747 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(ServantLimitAddEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(ServantLimitAddEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ServantLimitAddEntity___c_TypeInfo->static_fields->__9 = (struct ServantLimitAddEntity___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)ServantLimitAddEntity___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)ServantLimitAddEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -873,7 +833,7 @@ System_String_o *__fastcall ServantLimitAddEntity___c___GetScriptStringArrayPara
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))x->klass->vtable[3].method)(
                               x,
                               x->klass->vtable[4].methodPtr);
@@ -887,10 +847,10 @@ int32_t __fastcall ServantLimitAddEntity___c___getScriptIntArrayParam_b__5_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4C2281E & 1) == 0 )
+  if ( (byte_49BB748 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, x);
-    byte_4C2281E = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, x);
+    byte_49BB748 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

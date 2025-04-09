@@ -10,18 +10,14 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   __int64 v4; // x1
   Il2CppObject *Component_object; // x0
   struct FSOffset_o **p_fsOffset; // x20
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  const MethodInfo *v13; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4C1E6F5 & 1) == 0 )
+  if ( (byte_49B75EE & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_FSOffset___, method);
-    byte_4C1E6F5 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_FSOffset___, method);
+    byte_49B75EE = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
@@ -33,18 +29,10 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   this->fields.infoControlLayoutDefault.fields.Scale = UnityEngine_Transform__get_localScale(transform, 0LL);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_FSOffset___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_FSOffset___);
   this->fields.fsOffset = (struct FSOffset_o *)Component_object;
   p_fsOffset = &this->fields.fsOffset;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.fsOffset,
-    (int64_t)Component_object,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.fsOffset, (int32_t)Component_object, v7, v8);
   transform = (UnityEngine_Transform_o *)this->fields.fsOffset;
   if ( !transform )
     goto LABEL_9;
@@ -53,9 +41,9 @@ void __fastcall SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodIn
   transform = (UnityEngine_Transform_o *)*p_fsOffset;
   if ( !*p_fsOffset )
 LABEL_9:
-    sub_1C3B9C0(transform, v4);
+    sub_1B4D1EC(transform, v4);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, 1, 0LL);
-  SummonInfoLayout__UpdateOffset(this, v13);
+  SummonInfoLayout__UpdateOffset(this, v9);
 }
 
 
@@ -76,7 +64,7 @@ void __fastcall SummonInfoLayout__UpdateCustom(SummonInfoLayout_o *this, const M
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutCustom.fields.Position, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(transform, v4);
+    sub_1B4D1EC(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutCustom.fields.Scale, 0LL);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -94,7 +82,7 @@ void __fastcall SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const 
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutDefault.fields.Position, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(transform, v4);
+    sub_1B4D1EC(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutDefault.fields.Scale, 0LL);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -107,10 +95,10 @@ void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const M
   __int64 v4; // x1
   FSOffset_o *v5; // x0
 
-  if ( (byte_4C1E6F6 & 1) == 0 )
+  if ( (byte_49B75EF & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C1E6F6 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B75EF = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -119,7 +107,7 @@ void __fastcall SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const M
   {
     v5 = this->fields.fsOffset;
     if ( !v5 )
-      sub_1C3B9C0(0LL, v4);
+      sub_1B4D1EC(0LL, v4);
     FSOffset__UpdateOffset(v5, 0LL);
   }
 }

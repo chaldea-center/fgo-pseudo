@@ -11,18 +11,14 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   __int64 v3; // x1
   UnityEngine_Object_o *mRenderer; // x21
   Il2CppObject *Component_object; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C1EB79 & 1) == 0 )
+  if ( (byte_49B7A73 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C1EB79 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49B7A73 = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -31,17 +27,9 @@ UnityEngine_Renderer_o *__fastcall CachableMonoBehaviour__get_renderer(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.mRenderer,
-      (int64_t)Component_object,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRenderer;
 }
@@ -54,18 +42,14 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   __int64 v3; // x1
   UnityEngine_Object_o *mRigidbody; // x21
   Il2CppObject *Component_object; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C1EB7A & 1) == 0 )
+  if ( (byte_49B7A74 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C1EB7A = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Rigidbody___, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49B7A74 = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -74,17 +58,9 @@ UnityEngine_Rigidbody_o *__fastcall CachableMonoBehaviour__get_rigidbody(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.mRigidbody,
-      (int64_t)Component_object,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mRigidbody;
 }
@@ -97,18 +73,14 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   __int64 v3; // x1
   UnityEngine_Object_o *mTransform; // x21
   Il2CppObject *Component_object; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C1EB7B & 1) == 0 )
+  if ( (byte_49B7A75 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Transform___, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C1EB7B = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Transform___, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49B7A75 = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -117,17 +89,9 @@ UnityEngine_Transform_o *__fastcall CachableMonoBehaviour__get_transform(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&this->fields.mTransform,
-      (int64_t)Component_object,
-      v6,
-      v7,
-      v8,
-      v9,
-      v10,
-      v11);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mTransform, (int32_t)Component_object, v6, v7);
   }
   return this->fields.mTransform;
 }

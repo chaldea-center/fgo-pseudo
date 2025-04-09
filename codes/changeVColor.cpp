@@ -23,18 +23,18 @@ void __fastcall changeVColor__UpdateVColor(changeVColor_o *this, const MethodInf
   unsigned __int64 v10; // x8
   __int64 v11; // x10
 
-  if ( (byte_4C20DA7 & 1) == 0 )
+  if ( (byte_49B9CB9 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Application_TypeInfo, method);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_MeshFilter___, v3);
-    byte_4C20DA7 = 1;
+    sub_1B4CF90(&UnityEngine_Application_TypeInfo, method);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_MeshFilter___, v3);
+    byte_49B9CB9 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   isPlaying = UnityEngine_Application__get_isPlaying(0LL);
   Component_object = (UnityEngine_Color_array *)UnityEngine_Component__GetComponent_object_(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
+                                                  (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_MeshFilter___);
   if ( !Component_object )
     goto LABEL_18;
   Component_object = (UnityEngine_Color_array *)(isPlaying
@@ -55,14 +55,14 @@ void __fastcall changeVColor__UpdateVColor(changeVColor_o *this, const MethodInf
     goto LABEL_16;
   if ( !colors )
 LABEL_18:
-    sub_1C3B9C0(Component_object, v6);
+    sub_1B4D1EC(Component_object, v6);
   max_length = colors->max_length;
   v10 = 0LL;
   v11 = (unsigned int)*(_QWORD *)&Component_object->max_length;
   do
   {
     if ( v10 >= max_length )
-      sub_1C3B9C8(Component_object, v6);
+      sub_1B4D1F4(Component_object, v6);
     *(struct UnityEngine_Color_o *)&colors->m_Items[v10++].fields.g = this->fields.color;
   }
   while ( v11 != v10 );

@@ -2,10 +2,10 @@ void __fastcall EventServantFatigueListViewObject___ctor(
         EventServantFatigueListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C1CDB5 & 1) == 0 )
+  if ( (byte_49B5C1E & 1) == 0 )
   {
-    sub_1C3B764(&ListViewObject_TypeInfo, method);
-    byte_4C1CDB5 = 1;
+    sub_1B4CF90(&ListViewObject_TypeInfo, method);
+    byte_49B5C1E = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -20,19 +20,19 @@ void __fastcall EventServantFatigueListViewObject__Awake(
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_4C1CDAD & 1) == 0 )
+  if ( (byte_49B5C16 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_EventServantFatigueListViewItemDraw___, method);
-    byte_4C1CDAD = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_EventServantFatigueListViewItemDraw___, method);
+    byte_49B5C16 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   this->fields.itemDraw = (struct EventServantFatigueListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                             dispObject,
-                                                                            (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueListViewItemDraw___);
-  sub_1C3B708(&this->fields.itemDraw);
+                                                                            (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_EventServantFatigueListViewItemDraw___);
+  sub_1B4CF34(&this->fields.itemDraw);
 }
 
 
@@ -43,10 +43,10 @@ EventServantFatigueListViewItem_o *__fastcall EventServantFatigueListViewObject_
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4C1CDAE & 1) == 0 )
+  if ( (byte_49B5C17 & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, method);
-    byte_4C1CDAE = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, method);
+    byte_49B5C17 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -83,10 +83,10 @@ void __fastcall EventServantFatigueListViewObject__Init(
   int32_t v20; // w9
   struct System_Action_o *v21; // x19
 
-  if ( (byte_4C1CDAF & 1) == 0 )
+  if ( (byte_49B5C18 & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4C1CDAF = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_49B5C18 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -115,17 +115,17 @@ void __fastcall EventServantFatigueListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1C3B9C0(transform, v16);
+    sub_1B4D1EC(transform, v16);
   }
   v17 = v13 || v14;
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.CallbackFunc = callbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
-  sub_1C3B708(&this->fields.CallbackFunc);
+  sub_1B4CF34(&this->fields.CallbackFunc);
   if ( (unsigned int)v11 <= 4 )
   {
-    v20 = dword_C46734[v11];
-    this->fields.dispMode = dword_C46720[v11];
+    v20 = dword_BE17C8[v11];
+    this->fields.dispMode = dword_BE17B4[v11];
     this->fields.state = v20;
   }
   if ( v17 || dispMode != this->fields.dispMode )
@@ -134,7 +134,7 @@ void __fastcall EventServantFatigueListViewObject__Init(
   if ( *p_CallbackFunc )
   {
     *p_CallbackFunc = 0LL;
-    sub_1C3B708(p_CallbackFunc);
+    sub_1B4CF34(p_CallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v21->fields.m_target)(
       v21->fields.original_method_info,
       *(_QWORD *)&v21->fields.extra_arg);
@@ -151,7 +151,7 @@ void __fastcall EventServantFatigueListViewObject__InitItem(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventServantFatigueListViewObject__Init_31680964(
+void __fastcall EventServantFatigueListViewObject__Init_30695304(
         EventServantFatigueListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -160,36 +160,17 @@ void __fastcall EventServantFatigueListViewObject__Init_31680964(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49B5361 = 1;
   }
   EventServantFatigueListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventServantFatigueListViewObject__Init_31681900(
-        EventServantFatigueListViewObject_o *this,
-        int32_t initMode,
-        System_Action_o *callbackFunc,
-        float delay,
-        const MethodInfo *method)
-{
-  int v5; // s1
-
-  if ( !byte_4C1C511 )
-  {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4C1C511 = 1;
-  }
-  EventServantFatigueListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventServantFatigueListViewObject__Init_31681984(
+void __fastcall EventServantFatigueListViewObject__Init_30695952(
         EventServantFatigueListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -198,12 +179,31 @@ void __fastcall EventServantFatigueListViewObject__Init_31681984(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49B5361 = 1;
   }
   EventServantFatigueListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall EventServantFatigueListViewObject__Init_30712652(
+        EventServantFatigueListViewObject_o *this,
+        int32_t initMode,
+        System_Action_o *callbackFunc,
+        float delay,
+        const MethodInfo *method)
+{
+  int v5; // s1
+
+  if ( !byte_49B5361 )
+  {
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_49B5361 = 1;
+  }
+  EventServantFatigueListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
@@ -232,14 +232,14 @@ void __fastcall EventServantFatigueListViewObject__OnClickSelect(
   System_Reflection_MethodBase_o *v20; // x0
 
   v2 = this;
-  if ( (byte_4C1CDB3 & 1) == 0 )
+  if ( (byte_49B5C1C & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, method);
-    sub_1C3B764(&EventServantFatigueListViewManager_TypeInfo, v3);
-    sub_1C3B764(&Method_EventServantFatigueListViewObject_OnClickSelect__, v4);
-    sub_1C3B764(&StringLiteral_10059/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/, v5);
-    this = (EventServantFatigueListViewObject_o *)sub_1C3B764(&StringLiteral_10060/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/, v6);
-    byte_4C1CDB3 = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, method);
+    sub_1B4CF90(&EventServantFatigueListViewManager_TypeInfo, v3);
+    sub_1B4CF90(&Method_EventServantFatigueListViewObject_OnClickSelect__, v4);
+    sub_1B4CF90(&StringLiteral_9666/*"OnClickSelectObject"*/, v5);
+    this = (EventServantFatigueListViewObject_o *)sub_1B4CF90(&StringLiteral_9667/*"OnClickSelectPush"*/, v6);
+    byte_49B5C1C = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( linkItem )
@@ -270,8 +270,8 @@ void __fastcall EventServantFatigueListViewObject__OnClickSelect(
     {
       v16 = Method_EventServantFatigueListViewObject_OnClickSelect__;
       if ( (*((_BYTE *)Method_EventServantFatigueListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-        v16 = (_QWORD *)sub_1C3B77C(Method_EventServantFatigueListViewObject_OnClickSelect__);
-      v17 = (System_Reflection_MethodBase_o *)sub_1C3B748(v16, v16[4]);
+        v16 = (_QWORD *)sub_1B4CFA8(Method_EventServantFatigueListViewObject_OnClickSelect__);
+      v17 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v16, v16[4]);
       OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0LL);
       if ( v9 )
       {
@@ -279,14 +279,14 @@ void __fastcall EventServantFatigueListViewObject__OnClickSelect(
         goto LABEL_23;
       }
 LABEL_37:
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     }
     if ( CallbackFunc_high == 1 )
     {
       v13 = Method_EventServantFatigueListViewObject_OnClickSelect__;
       if ( (*((_BYTE *)Method_EventServantFatigueListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-        v13 = (_QWORD *)sub_1C3B77C(Method_EventServantFatigueListViewObject_OnClickSelect__);
-      v14 = (System_Reflection_MethodBase_o *)sub_1C3B748(v13, v13[4]);
+        v13 = (_QWORD *)sub_1B4CFA8(Method_EventServantFatigueListViewObject_OnClickSelect__);
+      v14 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v13, v13[4]);
       OverwriteAssetSoundName__PlaySystemSe(v14, 11, 0, 0LL);
       if ( v9 )
       {
@@ -306,14 +306,14 @@ LABEL_23:
         this = (EventServantFatigueListViewObject_o *)v2->fields.manager;
         if ( !this )
           goto LABEL_37;
-        v18 = &StringLiteral_10060/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY"*/;
+        v18 = &StringLiteral_9667/*"OnClickSelectPush"*/;
         goto LABEL_31;
       }
     }
     else if ( EventServantFatigueListViewItem__get_IsBaseSvt(v9, 0LL)
            || !v9->fields.isFatigueRecover && !v9->fields.isCanNotSelect )
     {
-      v18 = &StringLiteral_10059/*"PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC"*/;
+      v18 = &StringLiteral_9666/*"OnClickSelectObject"*/;
       this = manager;
 LABEL_31:
       UnityEngine_Component__SendMessage(
@@ -325,8 +325,8 @@ LABEL_31:
     }
     v19 = Method_EventServantFatigueListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_EventServantFatigueListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v19 = (_QWORD *)sub_1C3B77C(Method_EventServantFatigueListViewObject_OnClickSelect__);
-    v20 = (System_Reflection_MethodBase_o *)sub_1C3B748(v19, v19[4]);
+      v19 = (_QWORD *)sub_1B4CFA8(Method_EventServantFatigueListViewObject_OnClickSelect__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v19, v19[4]);
     OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0, 0LL);
   }
 }
@@ -343,12 +343,12 @@ void __fastcall EventServantFatigueListViewObject__OnLongPush(
   __int64 methodPtr_low; // x11
 
   v2 = this;
-  if ( (byte_4C1CDB4 & 1) == 0 )
+  if ( (byte_49B5C1D & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_10115/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, v3);
-    this = (EventServantFatigueListViewObject_o *)sub_1C3B764(&StringLiteral_10133/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/, v4);
-    byte_4C1CDB4 = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_9723/*"OnLongPushListView"*/, v3);
+    this = (EventServantFatigueListViewObject_o *)sub_1B4CF90(&StringLiteral_9741/*"OnPressCancel"*/, v4);
+    byte_49B5C1D = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( linkItem )
@@ -366,23 +366,23 @@ void __fastcall EventServantFatigueListViewObject__OnLongPush(
                                                       0LL);
       if ( this )
       {
-        UnityEngine_GameObject__SendMessage_71104208(
+        UnityEngine_GameObject__SendMessage_68785916(
           (UnityEngine_GameObject_o *)this,
-          (System_String_o *)StringLiteral_10133/*"PHOTO_TARGET_SELECT_DIALOG_MESSAGE_RIGHT"*/,
+          (System_String_o *)StringLiteral_9741/*"OnPressCancel"*/,
           0LL);
         this = (EventServantFatigueListViewObject_o *)v2->fields.manager;
         if ( this )
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)this,
-            (System_String_o *)StringLiteral_10115/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/,
+            (System_String_o *)StringLiteral_9723/*"OnLongPushListView"*/,
             (Il2CppObject *)v2,
             0LL);
           return;
         }
       }
 LABEL_11:
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     }
   }
 }
@@ -394,12 +394,12 @@ void __fastcall EventServantFatigueListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_42230072((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41356616((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall EventServantFatigueListViewObject__SetItem_31681196(
+void __fastcall EventServantFatigueListViewObject__SetItem_30711952(
         EventServantFatigueListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -419,13 +419,14 @@ void __fastcall EventServantFatigueListViewObject__SetupDisp(
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v8; // x1
-  EventServantFatigueListViewItemDraw_o *v9; // x0
+  const MethodInfo *v9; // x3
+  EventServantFatigueListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C1CDB0 & 1) == 0 )
+  if ( (byte_49B5C19 & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C1CDB0 = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49B5C19 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -447,14 +448,14 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C3B9C0(0LL, v8);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1B4D1EC(0LL, v8);
     EventServantFatigueListViewItemDraw__SetItem(
-      v9,
+      v10,
       (EventServantFatigueListViewItem_o *)linkItem,
       this->fields.dispMode,
-      0LL);
+      v9);
   }
 }
 
@@ -466,7 +467,7 @@ void __fastcall EventServantFatigueListViewObject__Start(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    EventServantFatigueListViewObject__Init_31680964(this, 2, v2);
+    EventServantFatigueListViewObject__Init_30695304(this, 2, v2);
 }
 
 
@@ -484,11 +485,11 @@ System_String_o *__fastcall EventServantFatigueListViewObject__ToString(
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4C1CDB2 & 1) == 0 )
+  if ( (byte_49B5C1B & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItemDraw_DispMode_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_117/*"   "*/, v3);
-    byte_4C1CDB2 = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItemDraw_DispMode_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_115/*" "*/, v3);
+    byte_49B5C1B = 1;
   }
   v12 = 0.0;
   v11 = 0LL;
@@ -500,8 +501,8 @@ System_String_o *__fastcall EventServantFatigueListViewObject__ToString(
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_1DF9FB4(&v11, 0LL, 0LL, 0LL);
-  return System_String__Concat_63379872(v6, (System_String_o *)StringLiteral_117/*"   "*/, v7, 0LL);
+  v7 = (System_String_o *)sub_1D09D10(&v11, 0LL, 0LL, 0LL);
+  return System_String__Concat_61131716(v6, (System_String_o *)StringLiteral_115/*" "*/, v7, 0LL);
 }
 
 
@@ -515,13 +516,14 @@ void __fastcall EventServantFatigueListViewObject__UpdateDisp(
   struct ListViewItem_o *v6; // x20
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v8; // x1
-  EventServantFatigueListViewItemDraw_o *v9; // x0
+  const MethodInfo *v9; // x2
+  EventServantFatigueListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C1CDB1 & 1) == 0 )
+  if ( (byte_49B5C1A & 1) == 0 )
   {
-    sub_1C3B764(&EventServantFatigueListViewItem_TypeInfo, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C1CDB1 = 1;
+    sub_1B4CF90(&EventServantFatigueListViewItem_TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49B5C1A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -542,10 +544,10 @@ void __fastcall EventServantFatigueListViewObject__UpdateDisp(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C3B9C0(0LL, v8);
-    EventServantFatigueListViewItemDraw__UpdateDisp(v9, (EventServantFatigueListViewItem_o *)v6, 0LL);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1B4D1EC(0LL, v8);
+    EventServantFatigueListViewItemDraw__SetFatigueMask(v10, (EventServantFatigueListViewItem_o *)v6, v9);
   }
 }
 
@@ -565,10 +567,10 @@ void __fastcall EventServantFatigueListViewObject__add_CallbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C1CDAB & 1) == 0 )
+  if ( (byte_49B5C14 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, value);
-    byte_4C1CDAB = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, value);
+    byte_49B5C14 = 1;
   }
   CallbackFunc = this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -581,13 +583,13 @@ void __fastcall EventServantFatigueListViewObject__add_CallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_CallbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_CallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventServantFatigueListViewObject_o *)sub_1C3BC80(v8);
+  v11 = (EventServantFatigueListViewObject_o *)sub_1B4D4AC(v8);
   EventServantFatigueListViewObject__remove_CallbackFunc(v11, v12, v13);
 }
 
@@ -606,10 +608,10 @@ void __fastcall EventServantFatigueListViewObject__remove_CallbackFunc(
   EventServantFatigueListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C1CDAC & 1) == 0 )
+  if ( (byte_49B5C15 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, value);
-    byte_4C1CDAC = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, value);
+    byte_49B5C15 = 1;
   }
   CallbackFunc = this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -622,12 +624,12 @@ void __fastcall EventServantFatigueListViewObject__remove_CallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C76C54(p_CallbackFunc, v8, v6);
+    v9 = sub_1B8724C(p_CallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventServantFatigueListViewObject_o *)sub_1C3BC80(v8);
+  v11 = (EventServantFatigueListViewObject_o *)sub_1B4D4AC(v8);
   EventServantFatigueListViewObject__Awake(v11, v12);
 }

@@ -13,84 +13,48 @@ void __fastcall ServantStatusVoiceListViewItem___ctor(
 {
   __int64 v18; // x0
   const MethodInfo *v19; // x1
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // kr20_16
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  struct CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // kr20_16
   struct VoiceEntity_o *voiceEntity; // x1
   struct VoiceEntity_o **p_voiceEntitiy; // x23
   struct System_String_o *overwriteName; // x1
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
   struct System_String_o *overwriteNameDefault; // x1
-  int64_t v37; // x2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  BattleSetupInfo_o *v40; // x5
-  FollowerInfo_o *v41; // x6
-  PartyListViewItem_o *v42; // x7
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
   int32_t *p_overwritePriority; // x22
   int32_t overwritePriority; // t1
-  int32_t v45; // w8
+  int32_t v33; // w8
 
-  if ( (byte_4C1F90F & 1) == 0 )
+  if ( (byte_49B873C & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&index);
-    byte_4C1F90F = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&index);
+    byte_49B873C = 1;
   }
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(svtId, 0LL);
   this->fields.changeSvrVoiceId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(changeSvrVoiceId, 0LL);
-  v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(limitCount, 0LL);
-  v19 = *(const MethodInfo **)&v26.fields.fakeValue;
-  v18 = *(_QWORD *)&v26.fields.currentCryptoKey;
-  this->fields.limitCount = v26;
+  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(limitCount, 0LL);
+  v19 = *(const MethodInfo **)&v22.fields.fakeValue;
+  v18 = *(_QWORD *)&v22.fields.currentCryptoKey;
+  this->fields.limitCount = v22;
   if ( !voiceInfo )
     goto LABEL_10;
   this->fields.isCanPlay = voiceInfo->fields.isCanPlay;
   voiceEntity = voiceInfo->fields.voiceEntity;
   this->fields.voiceEntitiy = voiceEntity;
   p_voiceEntitiy = &this->fields.voiceEntitiy;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.voiceEntitiy,
-    (int64_t)voiceEntity,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.voiceEntitiy, (int32_t)voiceEntity, v20, v21);
   overwriteName = voiceInfo->fields.overwriteName;
   this->fields.overwriteName = overwriteName;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.overwriteName,
-    (int64_t)overwriteName,
-    v30,
-    v31,
-    v32,
-    v33,
-    v34,
-    v35);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.overwriteName, (int32_t)overwriteName, v26, v27);
   overwriteNameDefault = voiceInfo->fields.overwriteNameDefault;
   this->fields.overwriteNameDefault = overwriteNameDefault;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.overwriteNameDefault,
-    (int64_t)overwriteNameDefault,
-    v37,
-    v38,
-    v39,
-    v40,
-    v41,
-    v42);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.overwriteNameDefault, (int32_t)overwriteNameDefault, v29, v30);
   overwritePriority = voiceInfo->fields.overwritePriority;
   p_overwritePriority = &voiceInfo->fields.overwritePriority;
   if ( !overwritePriority )
@@ -101,12 +65,12 @@ void __fastcall ServantStatusVoiceListViewItem___ctor(
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1C3B9C0(v18, v19);
+    sub_1B4D1EC(v18, v19);
   }
 LABEL_9:
-  v45 = *p_overwritePriority;
+  v33 = *p_overwritePriority;
   this->fields.genderFlag = genderFlag;
-  this->fields.overwritePriority = v45;
+  this->fields.overwritePriority = v33;
   this->fields.firstPriority = firstPriority;
   this->fields.voiceLabelSpecification = voiceLabelSpec;
   ServantStatusVoiceListViewItem__Analyze(this, v19);
@@ -119,31 +83,23 @@ void __fastcall ServantStatusVoiceListViewItem__Analyze(
 {
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   struct VoiceEntity_o *voiceEntitiy; // x8
   struct CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *name; // x1
   System_String_o *overwriteName; // x20
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  struct VoiceEntity_o *v20; // x8
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  struct VoiceEntity_o *v12; // x8
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *nameDefault; // x20
-  System_String_o *v22; // x0
+  System_String_o *v14; // x0
   struct CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *openName; // x1
   struct CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o **p_dispName; // x0
 
-  if ( (byte_4C1F910 & 1) == 0 )
+  if ( (byte_49B873D & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    byte_4C1F910 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_49B873D = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.overwriteName, 0LL);
   if ( IsNullOrEmpty )
@@ -161,22 +117,22 @@ void __fastcall ServantStatusVoiceListViewItem__Analyze(
     name = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(overwriteName, 0LL);
   }
   this->fields.openName = name;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.openName, (int64_t)name, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.openName, (int32_t)name, v5, v6);
   if ( this->fields.isCanPlay )
     goto LABEL_14;
-  v20 = this->fields.voiceEntitiy;
-  if ( !v20 )
+  v12 = this->fields.voiceEntitiy;
+  if ( !v12 )
 LABEL_17:
-    sub_1C3B9C0(IsNullOrEmpty, v4);
-  nameDefault = v20->fields.nameDefault;
+    sub_1B4D1EC(IsNullOrEmpty, v4);
+  nameDefault = v12->fields.nameDefault;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(nameDefault, 0LL);
-  if ( !System_String__IsNullOrEmpty(v22, 0LL) )
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(nameDefault, 0LL);
+  if ( !System_String__IsNullOrEmpty(v14, 0LL) )
   {
     this->fields.dispName = 0LL;
     p_dispName = &this->fields.dispName;
-    openName = 0LL;
+    LODWORD(openName) = 0;
     goto LABEL_15;
   }
 LABEL_14:
@@ -184,7 +140,7 @@ LABEL_14:
   this->fields.dispName = openName;
   p_dispName = &this->fields.dispName;
 LABEL_15:
-  sub_1C3B708((PartyOrganizationUtility_o *)p_dispName, (int64_t)openName, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_dispName, (int32_t)openName, v10, v11);
 }
 
 
@@ -206,78 +162,42 @@ void __fastcall ServantStatusVoiceListViewItem__SetLimitCount(
         int32_t firstPriority,
         const MethodInfo *method)
 {
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // kr20_16
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // kr20_16
   struct VoiceEntity_o *voiceEntity; // x1
   struct System_String_o *overwriteName; // x1
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   struct System_String_o *overwriteNameDefault; // x1
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  const MethodInfo *v34; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  const MethodInfo *v22; // x1
 
-  if ( (byte_4C1F911 & 1) == 0 )
+  if ( (byte_49B873E & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&svtId);
-    byte_4C1F911 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&svtId);
+    byte_49B873E = 1;
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(svtId, 0LL);
   this->fields.changeSvrVoiceId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(changeSvrVoiceId, 0LL);
-  v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(limitCount, 0LL);
-  this->fields.limitCount = v18;
+  v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(limitCount, 0LL);
+  this->fields.limitCount = v14;
   if ( !voiceInfo )
-    sub_1C3B9C0(*(_QWORD *)&v18.fields.currentCryptoKey, *(_QWORD *)&v18.fields.fakeValue);
+    sub_1B4D1EC(*(_QWORD *)&v14.fields.currentCryptoKey, *(_QWORD *)&v14.fields.fakeValue);
   this->fields.isCanPlay = voiceInfo->fields.isCanPlay;
   voiceEntity = voiceInfo->fields.voiceEntity;
   this->fields.voiceEntitiy = voiceEntity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.voiceEntitiy,
-    (int64_t)voiceEntity,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.voiceEntitiy, (int32_t)voiceEntity, v12, v13);
   overwriteName = voiceInfo->fields.overwriteName;
   this->fields.overwriteName = overwriteName;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.overwriteName,
-    (int64_t)overwriteName,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25,
-    v26);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.overwriteName, (int32_t)overwriteName, v17, v18);
   overwriteNameDefault = voiceInfo->fields.overwriteNameDefault;
   this->fields.overwriteNameDefault = overwriteNameDefault;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.overwriteNameDefault,
-    (int64_t)overwriteNameDefault,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32,
-    v33);
-  ServantStatusVoiceListViewItem__Analyze(this, v34);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.overwriteNameDefault, (int32_t)overwriteNameDefault, v20, v21);
+  ServantStatusVoiceListViewItem__Analyze(this, v22);
 }
 
 
@@ -287,10 +207,10 @@ void __fastcall ServantStatusVoiceListViewItem__SetNameNum(
         int32_t num,
         const MethodInfo *method)
 {
-  if ( (byte_4C1F91A & 1) == 0 )
+  if ( (byte_49B8747 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&num);
-    byte_4C1F91A = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&num);
+    byte_49B8747 = 1;
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
@@ -334,10 +254,10 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_ChangeSvrVoiceId(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4C1F913 & 1) == 0 )
+  if ( (byte_49B8740 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4C1F913 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_49B8740 = 1;
   }
   v4 = *(_QWORD *)&this->fields.changeSvrVoiceId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.changeSvrVoiceId.fields.fakeValue;
@@ -345,7 +265,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_ChangeSvrVoiceId(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v6, 0LL);
 }
 
 
@@ -357,7 +277,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_CondType(
 
   voiceEntitiy = this->fields.voiceEntitiy;
   if ( !voiceEntitiy )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return voiceEntitiy->fields.condType;
 }
 
@@ -370,7 +290,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_CondValue(
 
   voiceEntitiy = this->fields.voiceEntitiy;
   if ( !voiceEntitiy )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return voiceEntitiy->fields.condValue;
 }
 
@@ -381,15 +301,15 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_DispName(
 {
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *dispName; // x19
 
-  if ( (byte_4C1F918 & 1) == 0 )
+  if ( (byte_49B8745 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    byte_4C1F918 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_49B8745 = 1;
   }
   dispName = this->fields.dispName;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(dispName, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(dispName, 0LL);
 }
 
 
@@ -401,10 +321,10 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_DispNum(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4C1F919 & 1) == 0 )
+  if ( (byte_49B8746 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4C1F919 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_49B8746 = 1;
   }
   v4 = *(_QWORD *)&this->fields.dispNum.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.dispNum.fields.fakeValue;
@@ -412,7 +332,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_DispNum(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v6, 0LL);
 }
 
 
@@ -457,20 +377,20 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_LabelName(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *id; // x19
 
   v2 = this;
-  if ( (byte_4C1F915 & 1) == 0 )
+  if ( (byte_49B8742 & 1) == 0 )
   {
-    this = (ServantStatusVoiceListViewItem_o *)sub_1C3B764(
+    this = (ServantStatusVoiceListViewItem_o *)sub_1B4CF90(
                                                  &CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo,
                                                  method);
-    byte_4C1F915 = 1;
+    byte_49B8742 = 1;
   }
   voiceEntitiy = v2->fields.voiceEntitiy;
   if ( !voiceEntitiy )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   id = voiceEntitiy->fields.id;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(id, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(id, 0LL);
 }
 
 
@@ -482,10 +402,10 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_LimitCount(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4C1F914 & 1) == 0 )
+  if ( (byte_49B8741 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4C1F914 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_49B8741 = 1;
   }
   v4 = *(_QWORD *)&this->fields.limitCount.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.limitCount.fields.fakeValue;
@@ -493,7 +413,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_LimitCount(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v6, 0LL);
 }
 
 
@@ -520,12 +440,12 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
-  if ( (byte_4C1F916 & 1) == 0 )
+  if ( (byte_49B8743 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_1/*""*/, v4);
-    byte_4C1F916 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v4);
+    byte_49B8743 = 1;
   }
   dispName = this->fields.dispName;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
@@ -535,7 +455,7 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
     v7 = this->fields.dispName;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(v7, 0LL);
+    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(v7, 0LL);
     v11 = *(_QWORD *)&this->fields.dispNum.fields.currentCryptoKey;
     p_dispNum = &this->fields.dispNum;
     v10 = v11;
@@ -545,7 +465,7 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v19.fields.currentCryptoKey = v10;
     *(_QWORD *)&v19.fields.fakeValue = v13;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v19, 0LL) <= 0 )
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v19, 0LL) <= 0 )
     {
       v15 = (Il2CppObject *)StringLiteral_1/*""*/;
     }
@@ -566,11 +486,11 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_Name(
     {
       voiceEntitiy = this->fields.voiceEntitiy;
       if ( !voiceEntitiy )
-        sub_1C3B9C0(0LL, v6);
+        sub_1B4D1EC(0LL, v6);
       nameDefault = voiceEntitiy->fields.nameDefault;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-      return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(nameDefault, 0LL);
+      return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(nameDefault, 0LL);
     }
   }
   return result;
@@ -583,15 +503,15 @@ System_String_o *__fastcall ServantStatusVoiceListViewItem__get_OpenName(
 {
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *openName; // x19
 
-  if ( (byte_4C1F917 & 1) == 0 )
+  if ( (byte_49B8744 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    byte_4C1F917 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_49B8744 = 1;
   }
   openName = this->fields.openName;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(openName, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(openName, 0LL);
 }
 
 
@@ -603,7 +523,7 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_PlayType(
 
   voiceEntitiy = this->fields.voiceEntitiy;
   if ( !voiceEntitiy )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return voiceEntitiy->fields.svtVoiceType;
 }
 
@@ -616,10 +536,10 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_SvtId(
   __int64 v4; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // 0:x0.16
 
-  if ( (byte_4C1F912 & 1) == 0 )
+  if ( (byte_49B873F & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4C1F912 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_49B873F = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -627,5 +547,5 @@ int32_t __fastcall ServantStatusVoiceListViewItem__get_SvtId(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v6.fields.currentCryptoKey = v4;
   *(_QWORD *)&v6.fields.fakeValue = v3;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v6, 0LL);
 }

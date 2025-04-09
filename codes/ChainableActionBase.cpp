@@ -1,26 +1,18 @@
 void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *method)
 {
   ChainableActionBase_o *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.endCallback = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields, 0, v3, v4);
   v2->fields.nextAction = 0LL;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_1C3B708((PartyOrganizationUtility_o *)v2, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)v2, 0, v5, v6);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -68,24 +60,20 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   unsigned __int64 v6; // x22
   System_Delegate_o **p_fields; // x21
   System_Delegate_o *v8; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  System_Action_c *v15; // x1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  System_Action_c *v11; // x1
 
   v4 = this;
-  if ( (byte_4C267D2 & 1) == 0 )
+  if ( (byte_49BF702 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_1C3B764(&System_Action_TypeInfo, endCallbacks);
-    byte_4C267D2 = 1;
+    this = (ChainableActionBase_o *)sub_1B4CF90(&System_Action_TypeInfo, endCallbacks);
+    byte_49BF702 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_1C3B9C0(this, endCallbacks);
+      sub_1B4D1EC(this, endCallbacks);
     v5 = *(_QWORD *)&endCallbacks->max_length;
     if ( (int)v5 >= 1 )
     {
@@ -98,20 +86,20 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
         v8 = System_Delegate__Combine(*p_fields, (System_Delegate_o *)endCallbacks->m_Items[v6], 0LL);
         if ( v8 )
         {
-          v15 = System_Action_TypeInfo;
+          v11 = System_Action_TypeInfo;
           if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
-            || (*p_fields = v8, (System_Action_c *)v8->klass != v15) )
+            || (*p_fields = v8, (System_Action_c *)v8->klass != v11) )
           {
-            sub_1C3BC80(v8);
+            sub_1B4D4AC(v8);
 LABEL_16:
-            sub_1C3B9C8(this, endCallbacks);
+            sub_1B4D1F4(this, endCallbacks);
           }
         }
         else
         {
           *p_fields = 0LL;
         }
-        sub_1C3B708((PartyOrganizationUtility_o *)&v4->fields, (int64_t)v8, v9, v10, v11, v12, v13, v14);
+        sub_1B4CF34((CGThumbnailListItem_o *)&v4->fields, (int32_t)v8, v9, v10);
         LODWORD(v5) = endCallbacks->max_length;
         ++v6;
       }
@@ -127,22 +115,10 @@ void __fastcall ChainableActionBase__SetNextAction(
         System_Action_o *nextAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.nextAction = nextAction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.nextAction,
-    (int64_t)nextAction,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
 }
 
 

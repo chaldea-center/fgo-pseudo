@@ -1,13 +1,13 @@
 void __fastcall PaymentHistoryEntity___ctor(PaymentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C223B5 & 1) == 0 )
+  if ( (byte_49BB2DF & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C223B5 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB2DF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ System_String_o *__fastcall PaymentHistoryEntity__GetDispPrice(PaymentHistoryEnt
 {
   int32_t price; // w19
 
-  if ( (byte_4C223B4 & 1) == 0 )
+  if ( (byte_49BB2DE & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    byte_4C223B4 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    byte_49BB2DE = 1;
   }
   price = this->fields.price;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -42,26 +42,26 @@ System_String_o *__fastcall PaymentHistoryEntity__GetTypeText(PaymentHistoryEnti
   int32_t type; // w8
   __int64 *v6; // x8
 
-  if ( (byte_4C223B3 & 1) == 0 )
+  if ( (byte_49BB2DD & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_10555/*"PurchaseResult NotFound Error"*/, v3);
-    sub_1C3B764(&StringLiteral_10556/*"PurchaseResult NotFound."*/, v4);
-    byte_4C223B3 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_10129/*"PAYMENT_HISTORY_EXTERNAL"*/, v3);
+    sub_1B4CF90(&StringLiteral_10130/*"PAYMENT_HISTORY_INTERNAL"*/, v4);
+    byte_49BB2DD = 1;
   }
   type = this->fields.type;
   if ( type == 2 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_10555/*"PurchaseResult NotFound Error"*/;
+    v6 = &StringLiteral_10129/*"PAYMENT_HISTORY_EXTERNAL"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   if ( type == 1 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_10556/*"PurchaseResult NotFound."*/;
+    v6 = &StringLiteral_10130/*"PAYMENT_HISTORY_INTERNAL"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0LL);
   }
   return 0LL;
@@ -72,30 +72,26 @@ System_String_o *__fastcall PaymentHistoryEntity__get_CreatedAtToString(
         PaymentHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_createdAtString; // x19
+  CGThumbnailListItem_o *p_createdAtString; // x19
   int64_t createdAt; // x20
   System_String_o *Date; // x0
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C223B2 & 1) == 0 )
+  if ( (byte_49BB2DC & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    byte_4C223B2 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    byte_49BB2DC = 1;
   }
-  p_createdAtString = (PartyOrganizationUtility_o *)&this->fields.createdAtString;
+  p_createdAtString = (CGThumbnailListItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
   {
     createdAt = this->fields.createdAt;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     Date = LocalizationManager__GetDate(createdAt, 0LL);
-    p_createdAtString->klass = (PartyOrganizationUtility_c *)Date;
-    sub_1C3B708(p_createdAtString, (int64_t)Date, v6, v7, v8, v9, v10, v11);
+    p_createdAtString->klass = (CGThumbnailListItem_c *)Date;
+    sub_1B4CF34(p_createdAtString, (int32_t)Date, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }

@@ -4,116 +4,52 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
         int32_t index,
         const MethodInfo *method)
 {
-  void *v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
-  void *v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  void *v25; // x1
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  void *v38; // x1
-  int64_t v39; // x2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  BattleSetupInfo_o *v42; // x5
-  FollowerInfo_o *v43; // x6
-  PartyListViewItem_o *v44; // x7
+  int32_t v5; // w1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  int32_t v8; // w1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4C2406F & 1) == 0 )
+  if ( (byte_49BCFA4 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, *(_QWORD *)&index);
-    byte_4C2406F = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, *(_QWORD *)&index);
+    byte_49BCFA4 = 1;
   }
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
-  v5 = StringLiteral_1/*""*/;
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  v5 = (int)StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconName_k__BackingField,
-    (int64_t)v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11);
-  v12 = StringLiteral_1/*""*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
+  v8 = (int)StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
-    (int64_t)v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
   this->fields._ItemEnt_k__BackingField = 0LL;
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0LL;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._ItemEnt_k__BackingField, 0LL, v19, v20, v21, v22, v23, v24);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
-  v25 = StringLiteral_1/*""*/;
+  v13 = (int)StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ClosedMessage_k__BackingField,
-    (int64_t)v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0LL;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LinkAction_k__BackingField,
-    0LL,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
   this->fields._IsFirst_k__BackingField = 0;
-  v38 = StringLiteral_1/*""*/;
+  v18 = (int)StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._TransitionParam_k__BackingField,
-    (int64_t)v38,
-    v39,
-    v40,
-    v41,
-    v42,
-    v43,
-    v44);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
 }
 
 
@@ -252,22 +188,14 @@ void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ClosedMessage_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -276,22 +204,10 @@ void __fastcall ItemLinkInfoListViewItem__set_IconName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconName_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconName_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -354,22 +270,10 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemEnt(
         ItemEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ItemEnt_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -387,22 +291,10 @@ void __fastcall ItemLinkInfoListViewItem__set_LinkAction(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._LinkAction_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -411,22 +303,10 @@ void __fastcall ItemLinkInfoListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Name_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -453,22 +333,14 @@ void __fastcall ItemLinkInfoListViewItem__set_TransitionParam(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._TransitionParam_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 

@@ -13,10 +13,10 @@ bool __fastcall FuncSideEffectChangeEffectIntervalProcess__IsMatchCond(
         BattleActionData_BaseData_array *actBaseDataArray,
         const MethodInfo *method)
 {
-  if ( (byte_4C2458A & 1) == 0 )
+  if ( (byte_49BD4C1 & 1) == 0 )
   {
-    sub_1C3B764(&BattleActionData_TypeInfo, actBaseDataArray);
-    byte_4C2458A = 1;
+    sub_1B4CF90(&BattleActionData_TypeInfo, actBaseDataArray);
+    byte_49BD4C1 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);

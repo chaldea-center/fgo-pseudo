@@ -1,14 +1,14 @@
 void __fastcall BlankEarthGimmickAddMaster___ctor(BlankEarthGimmickAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21BFE & 1) == 0 )
+  if ( (byte_49BAB11 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string___ctor__, method);
-    byte_4C21BFE = 1;
+    sub_1B4CF90(&Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string___ctor__, method);
+    byte_49BAB11 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     523,
-    (const MethodInfo_329D5DC *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string___ctor__);
+    (const MethodInfo_31A0130 *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string___ctor__);
 }
 
 
@@ -22,12 +22,12 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C21BFF & 1) == 0 )
+  if ( (byte_49BAB12 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__GetEntity__,
       *(_QWORD *)&blankEarthSpotId);
-    byte_4C21BFF = 1;
+    byte_49BAB12 = 1;
   }
   PK = (Il2CppObject *)BlankEarthGimmickAddEntity__CreatePK(
                          blankEarthSpotId,
@@ -37,7 +37,7 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetEntity(
   return (BlankEarthGimmickAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                            PK,
-                                           (const MethodInfo_329F900 *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__GetEntity__);
+                                           (const MethodInfo_31A2454 *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__GetEntity__);
 }
 
 
@@ -71,42 +71,38 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetPrioredA
   System_Func_object__int__o *_9__4_1; // x21
   Il2CppObject *v30; // x22
   struct BlankEarthGimmickAddMaster___c_StaticFields *static_fields; // x0
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v38; // x20
-  System_Func_object__bool__o *v39; // x21
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v34; // x20
+  System_Func_object__bool__o *v35; // x21
 
-  if ( (byte_4C21C02 & 1) == 0 )
+  if ( (byte_49BAB15 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthGimmickAddEntity___, *(_QWORD *)&type);
-    sub_1C3B764(&Method_System_Linq_Enumerable_OfType_BlankEarthGimmickAddEntity___, v11);
-    sub_1C3B764(&Method_System_Linq_Enumerable_OrderBy_BlankEarthGimmickAddEntity__int___, v12);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Where_BlankEarthGimmickAddEntity___, v13);
-    sub_1C3B764(&System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo, v14);
-    sub_1C3B764(&System_Func_BlankEarthGimmickAddEntity__int__TypeInfo, v15);
-    sub_1C3B764(&Method_BlankEarthGimmickAddMaster___c__GetPrioredAvailableEntity_b__4_1__, v16);
-    sub_1C3B764(&Method_BlankEarthGimmickAddMaster___c__DisplayClass4_0__GetPrioredAvailableEntity_b__0__, v17);
-    sub_1C3B764(&Method_BlankEarthGimmickAddMaster___c__DisplayClass4_0__GetPrioredAvailableEntity_b__2__, v18);
-    sub_1C3B764(&BlankEarthGimmickAddMaster___c__DisplayClass4_0_TypeInfo, v19);
-    sub_1C3B764(&BlankEarthGimmickAddMaster___c_TypeInfo, v20);
-    byte_4C21C02 = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthGimmickAddEntity___, *(_QWORD *)&type);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_OfType_BlankEarthGimmickAddEntity___, v11);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_OrderBy_BlankEarthGimmickAddEntity__int___, v12);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_BlankEarthGimmickAddEntity___, v13);
+    sub_1B4CF90(&System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo, v14);
+    sub_1B4CF90(&System_Func_BlankEarthGimmickAddEntity__int__TypeInfo, v15);
+    sub_1B4CF90(&Method_BlankEarthGimmickAddMaster___c__GetPrioredAvailableEntity_b__4_1__, v16);
+    sub_1B4CF90(&Method_BlankEarthGimmickAddMaster___c__DisplayClass4_0__GetPrioredAvailableEntity_b__0__, v17);
+    sub_1B4CF90(&Method_BlankEarthGimmickAddMaster___c__DisplayClass4_0__GetPrioredAvailableEntity_b__2__, v18);
+    sub_1B4CF90(&BlankEarthGimmickAddMaster___c__DisplayClass4_0_TypeInfo, v19);
+    sub_1B4CF90(&BlankEarthGimmickAddMaster___c_TypeInfo, v20);
+    byte_49BAB15 = 1;
   }
-  v21 = sub_1C3B9B0(BlankEarthGimmickAddMaster___c__DisplayClass4_0_TypeInfo);
+  v21 = sub_1B4D1DC(BlankEarthGimmickAddMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v21, 0LL);
   if ( !v21 )
-    sub_1C3B9C0(v22, v23);
+    sub_1B4D1EC(v22, v23);
   *(_DWORD *)(v21 + 20) = type;
   *(_DWORD *)(v21 + 24) = beforeClearQuestId;
   *(_DWORD *)(v21 + 16) = blankEarthSpotId;
   *(_BYTE *)(v21 + 28) = isCheckResetFlag;
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_3019DB0 *)Method_System_Linq_Enumerable_OfType_BlankEarthGimmickAddEntity___);
-  v25 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2F2D660 *)Method_System_Linq_Enumerable_OfType_BlankEarthGimmickAddEntity___);
+  v25 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v25,
     (Il2CppObject *)v21,
@@ -115,7 +111,7 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetPrioredA
   v26 = System_Linq_Enumerable__Where_object_(
           v24,
           (System_Func_TSource__bool__o *)v25,
-          (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_BlankEarthGimmickAddEntity___);
+          (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_BlankEarthGimmickAddEntity___);
   v27 = BlankEarthGimmickAddMaster___c_TypeInfo;
   v28 = v26;
   if ( !BlankEarthGimmickAddMaster___c_TypeInfo->_2.cctor_finished )
@@ -132,7 +128,7 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetPrioredA
       v27 = BlankEarthGimmickAddMaster___c_TypeInfo;
     }
     v30 = (Il2CppObject *)v27->static_fields->__9;
-    _9__4_1 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_BlankEarthGimmickAddEntity__int__TypeInfo);
+    _9__4_1 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_BlankEarthGimmickAddEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__4_1,
       v30,
@@ -140,22 +136,22 @@ BlankEarthGimmickAddEntity_o *__fastcall BlankEarthGimmickAddMaster__GetPrioredA
       0LL);
     static_fields = BlankEarthGimmickAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_1 = (struct System_Func_BlankEarthGimmickAddEntity__int__o *)_9__4_1;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__4_1, (int64_t)_9__4_1, v32, v33, v34, v35, v36, v37);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__4_1, (int32_t)_9__4_1, v32, v33);
   }
-  v38 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+  v34 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                v28,
                                                                (System_Func_TSource__TKey__o *)_9__4_1,
-                                                               (const MethodInfo_301A1E4 *)Method_System_Linq_Enumerable_OrderBy_BlankEarthGimmickAddEntity__int___);
-  v39 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2F2DB00 *)Method_System_Linq_Enumerable_OrderBy_BlankEarthGimmickAddEntity__int___);
+  v35 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_BlankEarthGimmickAddEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v39,
+    v35,
     (Il2CppObject *)v21,
     Method_BlankEarthGimmickAddMaster___c__DisplayClass4_0__GetPrioredAvailableEntity_b__2__,
     0LL);
-  return (BlankEarthGimmickAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50415372(
-                                           v38,
-                                           (System_Func_TSource__bool__o *)v39,
-                                           (const MethodInfo_301470C *)Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthGimmickAddEntity___);
+  return (BlankEarthGimmickAddEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__49446844(
+                                           v34,
+                                           (System_Func_TSource__bool__o *)v35,
+                                           (const MethodInfo_2F27FBC *)Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthGimmickAddEntity___);
 }
 
 
@@ -163,17 +159,17 @@ bool __fastcall BlankEarthGimmickAddMaster__HasAnyRecord(BlankEarthGimmickAddMas
 {
   System_Collections_ObjectModel_Collection_T__o *list; // x0
 
-  if ( (byte_4C21C01 & 1) == 0 )
+  if ( (byte_49BAB14 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickAddEntity__get_Count__, method);
-    byte_4C21C01 = 1;
+    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickAddEntity__get_Count__, method);
+    byte_49BAB14 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   return System_Collections_ObjectModel_Collection_object___get_Count(
            list,
-           (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickAddEntity__get_Count__) > 0;
+           (const MethodInfo_313AEE4 *)Method_System_Collections_ObjectModel_Collection_BlankEarthGimmickAddEntity__get_Count__) > 0;
 }
 
 
@@ -188,12 +184,12 @@ bool __fastcall BlankEarthGimmickAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C21C00 & 1) == 0 )
+  if ( (byte_49BAB13 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__TryGetEntity__,
       entity);
-    byte_4C21C00 = 1;
+    byte_49BAB13 = 1;
   }
   PK = (Il2CppObject *)BlankEarthGimmickAddEntity__CreatePK(
                          blankEarthSpotId,
@@ -204,7 +200,7 @@ bool __fastcall BlankEarthGimmickAddMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_329F94C *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__TryGetEntity__);
+           (const MethodInfo_31A24A0 *)Method_DataMasterBase_BlankEarthGimmickAddMaster__BlankEarthGimmickAddEntity__string__TryGetEntity__);
 }
 
 
@@ -212,30 +208,18 @@ void __fastcall BlankEarthGimmickAddMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C21C03 & 1) == 0 )
+  if ( (byte_49BAB16 & 1) == 0 )
   {
-    sub_1C3B764(&BlankEarthGimmickAddMaster___c_TypeInfo, v1);
-    byte_4C21C03 = 1;
+    sub_1B4CF90(&BlankEarthGimmickAddMaster___c_TypeInfo, v1);
+    byte_49BAB16 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(BlankEarthGimmickAddMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(BlankEarthGimmickAddMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BlankEarthGimmickAddMaster___c_TypeInfo->static_fields->__9 = (struct BlankEarthGimmickAddMaster___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)BlankEarthGimmickAddMaster___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)BlankEarthGimmickAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -251,7 +235,7 @@ int32_t __fastcall BlankEarthGimmickAddMaster___c___GetPrioredAvailableEntity_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return -x->fields.priority;
 }
 
@@ -270,7 +254,7 @@ bool __fastcall BlankEarthGimmickAddMaster___c__DisplayClass4_0___GetPrioredAvai
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.gimmickId == this->fields.blankEarthSpotId && x->fields.overwriteType == this->fields.typeAsInt;
 }
 
@@ -283,6 +267,6 @@ bool __fastcall BlankEarthGimmickAddMaster___c__DisplayClass4_0___GetPrioredAvai
   const MethodInfo *v3; // x3
 
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return BlankEarthGimmickAddEntity__IsOpen(x, this->fields.beforeClearQuestId, this->fields.isCheckResetFlag, v3);
 }

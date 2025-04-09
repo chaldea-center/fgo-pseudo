@@ -32,39 +32,35 @@ void __fastcall PossessionInfo__OnClickIcon(PossessionInfo_o *this, const Method
   ServantStatusDialog_EndDelegate_o *_9__11_0; // x21
   Il2CppObject *v21; // x22
   struct PossessionInfo___c_StaticFields *static_fields; // x0
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  _QWORD *v29; // x0
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  _QWORD *v25; // x0
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C1E562 & 1) == 0 )
+  if ( (byte_49B7455 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_UserServantCollectionMaster___, method);
-    sub_1C3B764(&DataManager_TypeInfo, v3);
-    sub_1C3B764(&ServantStatusDialog_EndDelegate_TypeInfo, v4);
-    sub_1C3B764(&NetworkManager_TypeInfo, v5);
-    sub_1C3B764(&Method_PossessionInfo_OnClickIcon__, v6);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1C3B764(&Method_PossessionInfo___c__OnClickIcon_b__11_0__, v8);
-    sub_1C3B764(&PossessionInfo___c_TypeInfo, v9);
-    byte_4C1E562 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserServantCollectionMaster___, method);
+    sub_1B4CF90(&DataManager_TypeInfo, v3);
+    sub_1B4CF90(&ServantStatusDialog_EndDelegate_TypeInfo, v4);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
+    sub_1B4CF90(&Method_PossessionInfo_OnClickIcon__, v6);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1B4CF90(&Method_PossessionInfo___c__OnClickIcon_b__11_0__, v8);
+    sub_1B4CF90(&PossessionInfo___c_TypeInfo, v9);
+    byte_49B7455 = 1;
   }
   entity = 0LL;
   if ( this->fields.isServantHaving )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C1C955 )
+    if ( !byte_49B57A5 )
     {
-      sub_1C3B764(&NetworkManager_TypeInfo, v10);
-      byte_4C1C955 = 1;
+      sub_1B4CF90(&NetworkManager_TypeInfo, v10);
+      byte_49B57A5 = 1;
     }
     Instance = (CommonUI_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -83,12 +79,12 @@ void __fastcall PossessionInfo__OnClickIcon(PossessionInfo_o *this, const Method
     v14 = Method_PossessionInfo_OnClickIcon__;
     v15 = v13;
     if ( (*((_BYTE *)Method_PossessionInfo_OnClickIcon__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1C3B77C(Method_PossessionInfo_OnClickIcon__);
-    v16 = (System_Reflection_MethodBase_o *)sub_1C3B748(v14, v14[4]);
+      v14 = (_QWORD *)sub_1B4CFA8(Method_PossessionInfo_OnClickIcon__);
+    v16 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v14, v14[4]);
     if ( v15 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0, 0LL);
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v17 = entity;
       v18 = Instance;
       v19 = PossessionInfo___c_TypeInfo;
@@ -106,35 +102,27 @@ void __fastcall PossessionInfo__OnClickIcon(PossessionInfo_o *this, const Method
           v19 = PossessionInfo___c_TypeInfo;
         }
         v21 = (Il2CppObject *)v19->static_fields->__9;
-        _9__11_0 = (ServantStatusDialog_EndDelegate_o *)sub_1C3B9B0(ServantStatusDialog_EndDelegate_TypeInfo);
+        _9__11_0 = (ServantStatusDialog_EndDelegate_o *)sub_1B4D1DC(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(_9__11_0, v21, Method_PossessionInfo___c__OnClickIcon_b__11_0__, 0LL);
         static_fields = PossessionInfo___c_TypeInfo->static_fields;
         static_fields->__9__11_0 = _9__11_0;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&static_fields->__9__11_0,
-          (int64_t)_9__11_0,
-          v23,
-          v24,
-          v25,
-          v26,
-          v27,
-          v28);
+        sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v23, v24);
       }
       if ( v18 )
       {
-        CommonUI__OpenServantStatusDialog_31243584(v18, 37, v17, _9__11_0, 0LL);
+        CommonUI__OpenServantStatusDialog_30259868(v18, 37, v17, _9__11_0, 0LL);
         return;
       }
 LABEL_29:
-      sub_1C3B9C0(Instance, v10);
+      sub_1B4D1EC(Instance, v10);
     }
   }
   else
   {
-    v29 = Method_PossessionInfo_OnClickIcon__;
+    v25 = Method_PossessionInfo_OnClickIcon__;
     if ( (*((_BYTE *)Method_PossessionInfo_OnClickIcon__ + 83) & 2) != 0 )
-      v29 = (_QWORD *)sub_1C3B77C(Method_PossessionInfo_OnClickIcon__);
-    v16 = (System_Reflection_MethodBase_o *)sub_1C3B748(v29, v29[4]);
+      v25 = (_QWORD *)sub_1B4CFA8(Method_PossessionInfo_OnClickIcon__);
+    v16 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v25, v25[4]);
   }
   OverwriteAssetSoundName__PlaySystemSe(v16, 2, 0, 0LL);
 }
@@ -197,34 +185,34 @@ void __fastcall PossessionInfo__SetInfo(PossessionInfo_o *this, int32_t svtId, c
   int v56; // [xsp+54h] [xbp-4Ch] BYREF
   UserSvtCoinEntity_o *entity; // [xsp+58h] [xbp-48h] BYREF
 
-  if ( (byte_4C1E561 & 1) == 0 )
+  if ( (byte_49B7454 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&svtId);
-    sub_1C3B764(&Method_DataManager_GetMaster_ItemMaster___, v5);
-    sub_1C3B764(&Method_DataManager_GetMaster_ServantMaster___, v6);
-    sub_1C3B764(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
-    sub_1C3B764(&Method_DataManager_GetMaster_UserServantMaster___, v8);
-    sub_1C3B764(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v9);
-    sub_1C3B764(&DataManager_TypeInfo, v10);
-    sub_1C3B764(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
-    sub_1C3B764(&IconLabelInfo_TypeInfo, v12);
-    sub_1C3B764(&int_TypeInfo, v13);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v14);
-    sub_1C3B764(&NetworkManager_TypeInfo, v15);
-    sub_1C3B764(&StringLiteral_8765/*"MediumSeaGreen"*/, v16);
-    sub_1C3B764(&StringLiteral_8961/*"MstMission"*/, v17);
-    sub_1C3B764(&StringLiteral_20735/*"legacy"*/, v18);
-    sub_1C3B764(&StringLiteral_10622/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, v19);
-    sub_1C3B764(&StringLiteral_20734/*"leftbutton"*/, v20);
-    sub_1C3B764(&StringLiteral_12046/*"STONE_NAME"*/, v21);
-    byte_4C1E561 = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B4CF90(&Method_DataManager_GetMaster_ItemMaster___, v5);
+    sub_1B4CF90(&Method_DataManager_GetMaster_ServantMaster___, v6);
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserServantCollectionMaster___, v7);
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserServantMaster___, v8);
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserSvtCoinMaster___, v9);
+    sub_1B4CF90(&DataManager_TypeInfo, v10);
+    sub_1B4CF90(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v11);
+    sub_1B4CF90(&IconLabelInfo_TypeInfo, v12);
+    sub_1B4CF90(&int_TypeInfo, v13);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v14);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v15);
+    sub_1B4CF90(&StringLiteral_8421/*"MAX_NP_LEVEL"*/, v16);
+    sub_1B4CF90(&StringLiteral_8617/*"MULTIPLE_INFO"*/, v17);
+    sub_1B4CF90(&StringLiteral_20030/*"img_icon_summoned"*/, v18);
+    sub_1B4CF90(&StringLiteral_10195/*"POSSESSION_NUM"*/, v19);
+    sub_1B4CF90(&StringLiteral_20029/*"img_icon_not_summoned"*/, v20);
+    sub_1B4CF90(&StringLiteral_11579/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/, v21);
+    byte_49B7454 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ServantMaster___);
-  v23 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserServantMaster___);
-  servantFaceIcon = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ServantMaster___);
+  v23 = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserServantMaster___);
+  servantFaceIcon = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !servantFaceIcon )
     goto LABEL_49;
   servantFaceIcon = (void *)UserServantCollectionMaster__IsGet(
@@ -238,19 +226,19 @@ void __fastcall PossessionInfo__SetInfo(PossessionInfo_o *this, int32_t svtId, c
   servantFaceIcon = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                       svtId,
-                      (const MethodInfo_329AE48 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                      (const MethodInfo_319D99C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !servantFaceIcon )
     goto LABEL_49;
   v26 = *((_DWORD *)servantFaceIcon + 52);
-  v27 = (IconLabelInfo_o *)sub_1C3B9B0(IconLabelInfo_TypeInfo);
+  v27 = (IconLabelInfo_o *)sub_1B4D1DC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v27, 0LL);
   if ( !v27 )
     goto LABEL_49;
-  IconLabelInfo__Set_39561332(v27, 57, v26, 0, 0, 0, 0, 0, 0LL);
+  IconLabelInfo__Set_38677548(v27, 57, v26, 0, 0, 0, 0, 0, 0LL);
   servantFaceIcon = this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
     goto LABEL_49;
-  ServantFaceIconComponent__Set_39640656(
+  ServantFaceIconComponent__Set_38756872(
     (ServantFaceIconComponent_o *)servantFaceIcon,
     svtId,
     0,
@@ -272,14 +260,14 @@ void __fastcall PossessionInfo__SetInfo(PossessionInfo_o *this, int32_t svtId, c
   if ( !servantFaceIcon )
     goto LABEL_49;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, !this->fields.isServantHaving, 0LL);
-  v28 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ItemMaster___);
-  v29 = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  v28 = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ItemMaster___);
+  v29 = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C1C955 )
+  if ( !byte_49B57A5 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, v25);
-    byte_4C1C955 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, v25);
+    byte_49B57A5 = 1;
   }
   servantFaceIcon = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -308,7 +296,7 @@ void __fastcall PossessionInfo__SetInfo(PossessionInfo_o *this, int32_t svtId, c
   coinNumLabel = this->fields.coinNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8961/*"MstMission"*/, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8617/*"MULTIPLE_INFO"*/, 0LL);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(num, 0LL);
   servantFaceIcon = System_String__Format(v32, NumberFormat, 0LL);
   if ( !coinNumLabel )
@@ -326,7 +314,7 @@ void __fastcall PossessionInfo__SetInfo(PossessionInfo_o *this, int32_t svtId, c
   servantFaceIcon = (void *)AtlasManager__SetCoin(coinIcon, ImageId, 0LL);
   if ( !v23 )
 LABEL_49:
-    sub_1C3B9C0(servantFaceIcon, v25);
+    sub_1B4D1EC(servantFaceIcon, v25);
   ServantHavingCount = UserServantMaster__GetServantHavingCount(
                          (UserServantMaster_o *)v23,
                          this->fields.servantId,
@@ -340,7 +328,7 @@ LABEL_49:
     if ( IsServantHaving )
     {
 LABEL_32:
-      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10622/*"QUEST_CONFIRM_NO_CONSUME_COUNT"*/, 0LL);
+      v40 = LocalizationManager__Get((System_String_o *)StringLiteral_10195/*"POSSESSION_NUM"*/, 0LL);
       v41 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v38, 0LL);
       servantFaceIcon = System_String__Format(v40, v41, 0LL);
       goto LABEL_35;
@@ -352,7 +340,7 @@ LABEL_32:
     if ( IsServantHaving )
       goto LABEL_32;
   }
-  servantFaceIcon = LocalizationManager__Get((System_String_o *)StringLiteral_12046/*"STONE_NAME"*/, 0LL);
+  servantFaceIcon = LocalizationManager__Get((System_String_o *)StringLiteral_11579/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/, 0LL);
 LABEL_35:
   v25 = servantFaceIcon;
   if ( !possessionNumLabel )
@@ -382,7 +370,7 @@ LABEL_35:
   v45 = MaxTreasureDeviceLevel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8765/*"MediumSeaGreen"*/, 0LL);
+  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_8421/*"MAX_NP_LEVEL"*/, 0LL);
   v56 = v45;
   v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v56, v47, v48, v49);
   servantFaceIcon = System_String__Format(v46, v50, 0LL);
@@ -395,8 +383,8 @@ LABEL_35:
   UILabel__UpdateCondensedScaleComponent((UILabel_o *)servantFaceIcon, 0LL);
   summonedSprite = this->fields.summonedSprite;
   v52 = this->fields.isServantHaving;
-  v53 = StringLiteral_20734/*"leftbutton"*/;
-  v54 = StringLiteral_20735/*"legacy"*/;
+  v53 = StringLiteral_20029/*"img_icon_not_summoned"*/;
+  v54 = StringLiteral_20030/*"img_icon_summoned"*/;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   if ( v52 )
@@ -411,30 +399,18 @@ void __fastcall PossessionInfo___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C1E563 & 1) == 0 )
+  if ( (byte_49B7456 & 1) == 0 )
   {
-    sub_1C3B764(&PossessionInfo___c_TypeInfo, v1);
-    byte_4C1E563 = 1;
+    sub_1B4CF90(&PossessionInfo___c_TypeInfo, v1);
+    byte_49B7456 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(PossessionInfo___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(PossessionInfo___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PossessionInfo___c_TypeInfo->static_fields->__9 = (struct PossessionInfo___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)PossessionInfo___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)PossessionInfo___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -450,13 +426,13 @@ void __fastcall PossessionInfo___c___OnClickIcon_b__11_0(PossessionInfo___c_o *t
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C1E564 & 1) == 0 )
+  if ( (byte_49B7457 & 1) == 0 )
   {
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, _);
-    byte_4C1E564 = 1;
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, _);
+    byte_49B7457 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0LL, 0LL);
 }

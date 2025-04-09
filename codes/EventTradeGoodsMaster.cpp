@@ -1,14 +1,14 @@
 void __fastcall EventTradeGoodsMaster___ctor(EventTradeGoodsMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C220F6 & 1) == 0 )
+  if ( (byte_49BB009 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int___ctor__, method);
-    byte_4C220F6 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int___ctor__, method);
+    byte_49BB009 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     500,
-    (const MethodInfo_3298B24 *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int___ctor__);
+    (const MethodInfo_319B678 *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int___ctor__);
 }
 
 
@@ -27,67 +27,63 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGo
   const MethodInfo *v11; // x2
   EventTradeGoodsEntity_array *TradeGoodsEntityArray; // x20
   Il2CppObject *Master_object; // x0
-  __int64 v14; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  __int64 commonReleaseId; // x1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
   int max_length; // w8
-  CommonReleaseMaster_o *v22; // x21
-  unsigned int v23; // w23
-  int64_t v24; // x22
+  CommonReleaseMaster_o *v18; // x21
+  unsigned int v19; // w23
+  EventTradeGoodsEntity_o *v20; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
+  Il2CppClass **v24; // x0
 
-  if ( (byte_4C220F4 & 1) == 0 )
+  if ( (byte_49BB007 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&eventId);
-    sub_1C3B764(&DataManager_TypeInfo, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
-    byte_4C220F4 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&eventId);
+    sub_1B4CF90(&DataManager_TypeInfo, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
+    sub_1B4CF90(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
+    byte_49BB007 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
   TradeGoodsEntityArray = EventTradeGoodsMaster__GetTradeGoodsEntityArray(this, eventId, v11);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !TradeGoodsEntityArray )
     goto LABEL_21;
   max_length = TradeGoodsEntityArray->max_length;
   if ( max_length >= 1 )
   {
-    v22 = (CommonReleaseMaster_o *)Master_object;
-    v23 = 0;
+    v18 = (CommonReleaseMaster_o *)Master_object;
+    v19 = 0;
     while ( 1 )
     {
-      if ( v23 >= max_length )
-        sub_1C3B9C8(Master_object, v14);
-      v24 = (int64_t)TradeGoodsEntityArray->m_Items[v23];
-      if ( !v24 )
+      if ( v19 >= max_length )
+        sub_1B4D1F4(Master_object, commonReleaseId);
+      v20 = TradeGoodsEntityArray->m_Items[v19];
+      if ( !v20 )
         break;
-      v14 = *(unsigned int *)(v24 + 76);
-      if ( !(_DWORD)v14 )
+      commonReleaseId = (unsigned int)v20->fields.commonReleaseId;
+      if ( !(_DWORD)commonReleaseId )
         goto LABEL_25;
-      if ( !v22 )
+      if ( !v18 )
         break;
-      Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v22, v14, 0LL, 0, 0LL);
+      Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v18, commonReleaseId, 0LL, 0, 0LL);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
 LABEL_25:
         if ( !v10 )
           break;
         items = v10->fields._items;
-        v26 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
+        v22 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
         ++v10->fields._version;
         if ( !items )
           break;
@@ -96,35 +92,35 @@ LABEL_25:
         {
           System_Collections_Generic_List_object___AddWithResize(
             v10,
-            (Il2CppObject *)v24,
-            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            (Il2CppObject *)v20,
+            *(const MethodInfo_35801DC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
-          v28 = &items->obj.klass + size;
+          v24 = &items->obj.klass + size;
           v10->fields._size = size + 1;
-          v28[4] = (Il2CppClass *)v24;
-          sub_1C3B708((PartyOrganizationUtility_o *)(v28 + 4), v24, v15, v16, v17, v18, v19, v20);
+          v24[4] = (Il2CppClass *)v20;
+          sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v20, v15, v16);
         }
       }
       max_length = TradeGoodsEntityArray->max_length;
-      if ( (int)++v23 >= max_length )
+      if ( (int)++v19 >= max_length )
         goto LABEL_19;
     }
 LABEL_21:
-    sub_1C3B9C0(Master_object, v14);
+    sub_1B4D1EC(Master_object, commonReleaseId);
   }
 LABEL_19:
   if ( !v10 )
     goto LABEL_21;
   return (EventTradeGoodsEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v10,
-                                          (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
+                                          (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGoodsEntities_40718156(
+EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGoodsEntities_39836696(
         EventTradeGoodsMaster_o *this,
         int32_t eventId,
         int32_t questId,
@@ -144,36 +140,32 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGo
   __int64 v19; // x1
   int max_length; // w8
   unsigned int v21; // w25
-  int64_t v22; // x24
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
+  EventTradeGoodsEntity_o *v22; // x24
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v30; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v32; // x0
+  Il2CppClass **v28; // x0
 
-  if ( (byte_4C220F5 & 1) == 0 )
+  if ( (byte_49BB008 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&eventId);
-    sub_1C3B764(&DataManager_TypeInfo, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v11);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v12);
-    sub_1C3B764(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v13);
-    byte_4C220F5 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&eventId);
+    sub_1B4CF90(&DataManager_TypeInfo, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v11);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v12);
+    sub_1B4CF90(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v13);
+    byte_49BB008 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   ReleaseTradeGoodsEntities = EventTradeGoodsMaster__GetReleaseTradeGoodsEntities(this, eventId, v15);
-  v17 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
   if ( !ReleaseTradeGoodsEntities )
     goto LABEL_21;
   max_length = ReleaseTradeGoodsEntities->max_length;
@@ -183,27 +175,27 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGo
     while ( 1 )
     {
       if ( v21 >= max_length )
-        sub_1C3B9C8(v18, v19);
-      v22 = (int64_t)ReleaseTradeGoodsEntities->m_Items[v21];
+        sub_1B4D1F4(v18, v19);
+      v22 = ReleaseTradeGoodsEntities->m_Items[v21];
       if ( !v22 || !Master_object )
         break;
       v18 = CommonReleaseMaster__ContainQuestClearPhase(
               (CommonReleaseMaster_o *)Master_object,
-              *(_DWORD *)(v22 + 76),
+              v22->fields.commonReleaseId,
               questId,
               questPhase,
               0LL);
       if ( v18
         || (v18 = CommonReleaseMaster__ContainQuestClear(
                     (CommonReleaseMaster_o *)Master_object,
-                    *(_DWORD *)(v22 + 76),
+                    v22->fields.commonReleaseId,
                     questId,
                     0LL)) )
       {
         if ( !v17 )
           break;
         items = v17->fields._items;
-        v30 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
+        v26 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
         ++v17->fields._version;
         if ( !items )
           break;
@@ -213,14 +205,14 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGo
           System_Collections_Generic_List_object___AddWithResize(
             v17,
             (Il2CppObject *)v22,
-            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_35801DC **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
-          v32 = &items->obj.klass + size;
+          v28 = &items->obj.klass + size;
           v17->fields._size = size + 1;
-          v32[4] = (Il2CppClass *)v22;
-          sub_1C3B708((PartyOrganizationUtility_o *)(v32 + 4), v22, v23, v24, v25, v26, v27, v28);
+          v28[4] = (Il2CppClass *)v22;
+          sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v22, v23, v24);
         }
       }
       max_length = ReleaseTradeGoodsEntities->max_length;
@@ -228,14 +220,14 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetReleaseTradeGo
         goto LABEL_19;
     }
 LABEL_21:
-    sub_1C3B9C0(v18, v19);
+    sub_1B4D1EC(v18, v19);
   }
 LABEL_19:
   if ( !v17 )
     goto LABEL_21;
   return (EventTradeGoodsEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v17,
-                                          (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
+                                          (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
 }
 
 
@@ -257,37 +249,33 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
   int max_length; // w8
   EventTradeGoodsEntity_array *v16; // x22
   __int64 v17; // x24
-  int64_t v18; // x23
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
+  EventTradeGoodsEntity_o *v18; // x23
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
+  Il2CppClass **v24; // x0
 
-  if ( (byte_4C220F3 & 1) == 0 )
+  if ( (byte_49BB006 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_CommonReleaseMaster___, eventProgressValueEntity);
-    sub_1C3B764(&DataManager_TypeInfo, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
-    byte_4C220F3 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_CommonReleaseMaster___, eventProgressValueEntity);
+    sub_1B4CF90(&DataManager_TypeInfo, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
+    sub_1B4CF90(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
+    byte_49BB006 = 1;
   }
   if ( !eventProgressValueEntity )
     return 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
   TradeGoodsEntityArray = EventTradeGoodsMaster__GetTradeGoodsEntityArray(
                             this,
                             eventProgressValueEntity->fields.eventId,
@@ -302,13 +290,13 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
     while ( 1 )
     {
       if ( (unsigned int)v17 >= max_length )
-        sub_1C3B9C8(TradeGoodsEntityArray, v14);
-      v18 = (int64_t)v16->m_Items[v17];
+        sub_1B4D1F4(TradeGoodsEntityArray, v14);
+      v18 = v16->m_Items[v17];
       if ( !v18 || !Master_object )
         break;
       TradeGoodsEntityArray = (EventTradeGoodsEntity_array *)CommonReleaseMaster__IsMatch(
                                                                (CommonReleaseMaster_o *)Master_object,
-                                                               *(_DWORD *)(v18 + 76),
+                                                               v18->fields.commonReleaseId,
                                                                eventProgressValueEntity->fields.condType,
                                                                eventProgressValueEntity->fields.condId,
                                                                eventProgressValueEntity->fields.condNum,
@@ -318,7 +306,7 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
         if ( !v11 )
           break;
         items = v11->fields._items;
-        v26 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
+        v22 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
         ++v11->fields._version;
         if ( !items )
           break;
@@ -328,14 +316,14 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             (Il2CppObject *)v18,
-            *(const MethodInfo_368BC6C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            *(const MethodInfo_35801DC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
         }
         else
         {
-          v28 = &items->obj.klass + size;
+          v24 = &items->obj.klass + size;
           v11->fields._size = size + 1;
-          v28[4] = (Il2CppClass *)v18;
-          sub_1C3B708((PartyOrganizationUtility_o *)(v28 + 4), v18, v19, v20, v21, v22, v23, v24);
+          v24[4] = (Il2CppClass *)v18;
+          sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v18, v19, v20);
         }
       }
       max_length = v16->max_length;
@@ -343,14 +331,14 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
         goto LABEL_19;
     }
 LABEL_22:
-    sub_1C3B9C0(TradeGoodsEntityArray, v14);
+    sub_1B4D1EC(TradeGoodsEntityArray, v14);
   }
 LABEL_19:
   if ( !v11 )
     goto LABEL_22;
   return (EventTradeGoodsEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v11,
-                                          (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
+                                          (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
 }
 
 
@@ -370,40 +358,36 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
   int32_t Count; // w21
   System_Collections_Generic_List_object__o *v12; // x22
   int32_t v13; // w23
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
+  Il2CppClass **v19; // x0
 
   v3 = eventId;
-  if ( (byte_4C220F2 & 1) == 0 )
+  if ( (byte_49BB005 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Item__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
-    byte_4C220F2 = 1;
+    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Item__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__, v8);
+    sub_1B4CF90(&System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo, v9);
+    byte_49BB005 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Count__);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
+            (const MethodInfo_313AEE4 *)Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Count__);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_EventTradeGoodsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity___ctor__);
   if ( Count >= 1 )
   {
     v13 = 0;
@@ -415,7 +399,7 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v13,
-                                                                 (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Item__);
+                                                                 (const MethodInfo_313AF74 *)Method_System_Collections_ObjectModel_Collection_EventTradeGoodsEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&eventId = list;
@@ -424,7 +408,7 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
           if ( !v12 )
             break;
           items = v12->fields._items;
-          v21 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
+          v17 = Method_System_Collections_Generic_List_EventTradeGoodsEntity__Add__;
           ++v12->fields._version;
           if ( !items )
             break;
@@ -434,14 +418,14 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
             System_Collections_Generic_List_object___AddWithResize(
               v12,
               (Il2CppObject *)list,
-              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              *(const MethodInfo_35801DC **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
-            v23 = &items->obj.klass + size;
+            v19 = &items->obj.klass + size;
             v12->fields._size = size + 1;
-            v23[4] = *(Il2CppClass **)&eventId;
-            sub_1C3B708((PartyOrganizationUtility_o *)(v23 + 4), *(int64_t *)&eventId, v14, v15, v16, v17, v18, v19);
+            v19[4] = *(Il2CppClass **)&eventId;
+            sub_1B4CF34((CGThumbnailListItem_o *)(v19 + 4), eventId, v14, v15);
           }
         }
       }
@@ -449,12 +433,12 @@ EventTradeGoodsEntity_array *__fastcall EventTradeGoodsMaster__GetTradeGoodsEnti
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1C3B9C0(list, *(_QWORD *)&eventId);
+    sub_1B4D1EC(list, *(_QWORD *)&eventId);
   }
 LABEL_15:
   if ( !v12 )
     goto LABEL_17;
   return (EventTradeGoodsEntity_array *)System_Collections_Generic_List_object___ToArray(
                                           v12,
-                                          (const MethodInfo_368D7C4 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
+                                          (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_EventTradeGoodsEntity__ToArray__);
 }

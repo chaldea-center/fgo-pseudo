@@ -35,33 +35,21 @@ LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(c
   __int64 v1; // x1
   LocalNotificationService_o *nullObject; // x8
   Il2CppObject *v3; // x19
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C23809 & 1) == 0 )
+  if ( (byte_49BC738 & 1) == 0 )
   {
-    sub_1C3B764(&LocalNotificationService_TypeInfo, v1);
-    byte_4C23809 = 1;
+    sub_1B4CF90(&LocalNotificationService_TypeInfo, v1);
+    byte_49BC738 = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1C3B9B0(LocalNotificationService_TypeInfo);
+    v3 = (Il2CppObject *)sub_1B4D1DC(LocalNotificationService_TypeInfo);
     System_Object___ctor(v3, 0LL);
     LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)LocalNotificationService_TypeInfo->static_fields,
-      (int64_t)v3,
-      v4,
-      v5,
-      v6,
-      v7,
-      v8,
-      v9);
+    sub_1B4CF34((CGThumbnailListItem_o *)LocalNotificationService_TypeInfo->static_fields, (int32_t)v3, v4, v5);
     return LocalNotificationService_TypeInfo->static_fields->nullObject;
   }
   return nullObject;

@@ -1,13 +1,13 @@
 void __fastcall VoiceEntity___ctor(VoiceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22F38 & 1) == 0 )
+  if ( (byte_49BBE66 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22F38 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BBE66 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,15 +15,15 @@ System_String_o *__fastcall VoiceEntity__CreatePrimaryKey(VoiceEntity_o *this, c
 {
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *id; // x19
 
-  if ( (byte_4C22F36 & 1) == 0 )
+  if ( (byte_49BBE64 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
-    byte_4C22F36 = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, method);
+    byte_49BBE64 = 1;
   }
   id = this->fields.id;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(id, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(id, 0LL);
 }
 
 
@@ -45,27 +45,27 @@ bool __fastcall VoiceEntity__IsCondEnable(VoiceEntity_o *this, int32_t svtId, co
   VoiceReleaseMaster_o *v11; // x20
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C22F37 & 1) == 0 )
+  if ( (byte_49BBE65 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_VoiceReleaseMaster___, *(_QWORD *)&svtId);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4C22F37 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_VoiceReleaseMaster___, *(_QWORD *)&svtId);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_49BBE65 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_VoiceReleaseMaster___);
+                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_VoiceReleaseMaster___);
   id = this->fields.id;
   v11 = (VoiceReleaseMaster_o *)MasterData_object;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(id, 0LL);
+  Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(id, 0LL);
   if ( !v11 )
 LABEL_8:
-    sub_1C3B9C0(Instance, v8);
+    sub_1B4D1EC(Instance, v8);
   return VoiceReleaseMaster__IsCondEnable(v11, (System_String_o *)Instance, svtId, v12);
 }
 

@@ -6,92 +6,68 @@ void __fastcall BattleEventTutorial___cctor(const MethodInfo *method)
   __int64 v4; // x1
   System_Array_o *v5; // x0
   struct EventTutorialMaster_OpenType_array *v6; // x19
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  System_Array_o *v13; // x0
-  int64_t v14; // x19
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  System_Array_o *v9; // x0
+  System_Array_o *v10; // x19
   struct BattleEventTutorial_StaticFields *static_fields; // x0
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  __int64 v22; // x0
-  __int64 v23; // x1
-  int64_t v24; // x2
-  int32_t v25; // w3
-  System_String_o *v26; // x4
-  BattleSetupInfo_o *v27; // x5
-  FollowerInfo_o *v28; // x6
-  PartyListViewItem_o *v29; // x7
-  int64_t v30; // x1
-  struct BattleEventTutorial_StaticFields *v31; // x0
-  System_RuntimeFieldHandle_o v32; // 0:w1.4
-  System_RuntimeFieldHandle_o v33; // 0:w1.4
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  __int64 v14; // x0
+  __int64 v15; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  struct EventTutorialMaster_OpenType_array *v18; // x1
+  struct BattleEventTutorial_StaticFields *v19; // x0
+  System_RuntimeFieldHandle_o v20; // 0:w1.4
+  System_RuntimeFieldHandle_o v21; // 0:w1.4
 
-  if ( (byte_4C2469D & 1) == 0 )
+  if ( (byte_49BD5D4 & 1) == 0 )
   {
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, v1);
-    sub_1C3B764(&EventTutorialMaster_OpenType___TypeInfo, v2);
-    sub_1C3B764(
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, v1);
+    sub_1B4CF90(&EventTutorialMaster_OpenType___TypeInfo, v2);
+    sub_1B4CF90(
       &Field__PrivateImplementationDetails__6CE1945219F858E505CBCB583091A5CAEBC22DD3B2E09E641296ADEE8D127F45,
       v3);
-    sub_1C3B764(
+    sub_1B4CF90(
       &Field__PrivateImplementationDetails__BCBC01A5036673E493422616677A83718EDFE475D3E938B1A879903FFB2A05A0,
       v4);
-    byte_4C2469D = 1;
+    byte_49BD5D4 = 1;
   }
-  v5 = (System_Array_o *)sub_1C3B80C(EventTutorialMaster_OpenType___TypeInfo, 4LL);
-  v32.fields.value = Field__PrivateImplementationDetails__6CE1945219F858E505CBCB583091A5CAEBC22DD3B2E09E641296ADEE8D127F45;
+  v5 = (System_Array_o *)sub_1B4D038(EventTutorialMaster_OpenType___TypeInfo, 4LL);
+  v20.fields.value = Field__PrivateImplementationDetails__6CE1945219F858E505CBCB583091A5CAEBC22DD3B2E09E641296ADEE8D127F45;
   v6 = (struct EventTutorialMaster_OpenType_array *)v5;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v5, v32, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61793784(v5, v20, 0LL);
   BattleEventTutorial_TypeInfo->static_fields->tacticalTargetTypes = v6;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)BattleEventTutorial_TypeInfo->static_fields,
-    (int64_t)v6,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
-  v13 = (System_Array_o *)sub_1C3B80C(EventTutorialMaster_OpenType___TypeInfo, 3LL);
-  v33.fields.value = Field__PrivateImplementationDetails__BCBC01A5036673E493422616677A83718EDFE475D3E938B1A879903FFB2A05A0;
-  v14 = (int64_t)v13;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63275948(v13, v33, 0LL);
+  sub_1B4CF34((CGThumbnailListItem_o *)BattleEventTutorial_TypeInfo->static_fields, (int32_t)v6, v7, v8);
+  v9 = (System_Array_o *)sub_1B4D038(EventTutorialMaster_OpenType___TypeInfo, 3LL);
+  v21.fields.value = Field__PrivateImplementationDetails__BCBC01A5036673E493422616677A83718EDFE475D3E938B1A879903FFB2A05A0;
+  v10 = v9;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61793784(v9, v21, 0LL);
   static_fields = BattleEventTutorial_TypeInfo->static_fields;
-  static_fields->resultTargetTypes = (struct EventTutorialMaster_OpenType_array *)v14;
-  sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->resultTargetTypes, v14, v16, v17, v18, v19, v20, v21);
-  v22 = sub_1C3B80C(EventTutorialMaster_OpenType___TypeInfo, 1LL);
-  if ( !v22 )
-    sub_1C3B9C0(0LL, v23);
-  v30 = v22;
-  if ( !*(_DWORD *)(v22 + 24) )
-    sub_1C3B9C8(v22, v22);
-  *(_DWORD *)(v22 + 32) = 26;
-  v31 = BattleEventTutorial_TypeInfo->static_fields;
-  v31->gimmickTargetTypes = (struct EventTutorialMaster_OpenType_array *)v30;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v31->gimmickTargetTypes, v30, v24, v25, v26, v27, v28, v29);
+  static_fields->resultTargetTypes = (struct EventTutorialMaster_OpenType_array *)v10;
+  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->resultTargetTypes, (int32_t)v10, v12, v13);
+  v14 = sub_1B4D038(EventTutorialMaster_OpenType___TypeInfo, 1LL);
+  if ( !v14 )
+    sub_1B4D1EC(0LL, v15);
+  v18 = (struct EventTutorialMaster_OpenType_array *)v14;
+  if ( !*(_DWORD *)(v14 + 24) )
+    sub_1B4D1F4(v14, v14);
+  *(_DWORD *)(v14 + 32) = 26;
+  v19 = BattleEventTutorial_TypeInfo->static_fields;
+  v19->gimmickTargetTypes = v18;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v19->gimmickTargetTypes, (int32_t)v18, v16, v17);
 }
 
 
 void __fastcall BattleEventTutorial___ctor(BattleEventTutorial_o *this, BattleEntity_o *ent, const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.battle_ent = ent;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)ent, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)ent, v5, v6);
 }
 
 
@@ -106,18 +82,14 @@ bool __fastcall BattleEventTutorial__CheckHasGimmickPhaseTutorial(
   int32_t eventId; // w21
   struct System_Collections_Generic_List_EventTutorialEntity__o *AvailableEventTutorialEntitys; // x0
   struct System_Collections_Generic_List_EventTutorialEntity__o **p_tutList; // x19
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C2469A & 1) == 0 )
+  if ( (byte_49BD5D1 & 1) == 0 )
   {
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
-    byte_4C2469A = 1;
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
+    byte_49BD5D1 = 1;
   }
   battle_ent = this->fields.battle_ent;
   if ( !battle_ent )
@@ -142,19 +114,11 @@ bool __fastcall BattleEventTutorial__CheckHasGimmickPhaseTutorial(
                                           0LL),
         this->fields.tutList = AvailableEventTutorialEntitys,
         p_tutList = &this->fields.tutList,
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)p_tutList,
-          (int64_t)AvailableEventTutorialEntitys,
-          v10,
-          v11,
-          v12,
-          v13,
-          v14,
-          v15),
+        sub_1B4CF34((CGThumbnailListItem_o *)p_tutList, (int32_t)AvailableEventTutorialEntitys, v10, v11),
         !*p_tutList) )
   {
 LABEL_10:
-    sub_1C3B9C0(battle_ent, method);
+    sub_1B4D1EC(battle_ent, method);
   }
   return (*p_tutList)->fields._size > 0;
 }
@@ -169,18 +133,14 @@ bool __fastcall BattleEventTutorial__CheckHasResultPhaseTutorial(BattleEventTuto
   int32_t eventId; // w21
   struct System_Collections_Generic_List_EventTutorialEntity__o *AvailableEventTutorialEntitys; // x0
   struct System_Collections_Generic_List_EventTutorialEntity__o **p_tutList; // x19
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C24699 & 1) == 0 )
+  if ( (byte_49BD5D0 & 1) == 0 )
   {
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
-    byte_4C24699 = 1;
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
+    byte_49BD5D0 = 1;
   }
   battle_ent = this->fields.battle_ent;
   if ( !battle_ent )
@@ -205,19 +165,11 @@ bool __fastcall BattleEventTutorial__CheckHasResultPhaseTutorial(BattleEventTuto
                                           0LL),
         this->fields.tutList = AvailableEventTutorialEntitys,
         p_tutList = &this->fields.tutList,
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)p_tutList,
-          (int64_t)AvailableEventTutorialEntitys,
-          v10,
-          v11,
-          v12,
-          v13,
-          v14,
-          v15),
+        sub_1B4CF34((CGThumbnailListItem_o *)p_tutList, (int32_t)AvailableEventTutorialEntitys, v10, v11),
         !*p_tutList) )
   {
 LABEL_10:
-    sub_1C3B9C0(battle_ent, method);
+    sub_1B4D1EC(battle_ent, method);
   }
   return (*p_tutList)->fields._size > 0;
 }
@@ -237,18 +189,14 @@ bool __fastcall BattleEventTutorial__CheckHasTacticalPhaseTutorial(
   int32_t eventId; // w23
   struct System_Collections_Generic_List_EventTutorialEntity__o *AvailableEventTutorialEntitys; // x0
   struct System_Collections_Generic_List_EventTutorialEntity__o **p_tutList; // x19
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C24694 & 1) == 0 )
+  if ( (byte_49BD5CB & 1) == 0 )
   {
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, *(_QWORD *)&wave);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v7);
-    byte_4C24694 = 1;
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, *(_QWORD *)&wave);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v7);
+    byte_49BD5CB = 1;
   }
   battle_ent = this->fields.battle_ent;
   if ( !battle_ent )
@@ -273,19 +221,11 @@ bool __fastcall BattleEventTutorial__CheckHasTacticalPhaseTutorial(
                                           0LL),
         this->fields.tutList = AvailableEventTutorialEntitys,
         p_tutList = &this->fields.tutList,
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)p_tutList,
-          (int64_t)AvailableEventTutorialEntitys,
-          v14,
-          v15,
-          v16,
-          v17,
-          v18,
-          v19),
+        sub_1B4CF34((CGThumbnailListItem_o *)p_tutList, (int32_t)AvailableEventTutorialEntitys, v14, v15),
         !*p_tutList) )
   {
 LABEL_10:
-    sub_1C3B9C0(battle_ent, *(_QWORD *)&wave);
+    sub_1B4D1EC(battle_ent, *(_QWORD *)&wave);
   }
   return (*p_tutList)->fields._size > 0;
 }
@@ -298,11 +238,11 @@ void __fastcall BattleEventTutorial__ClearTutorialList(BattleEventTutorial_o *th
   int32_t size; // w2
   int v6; // w9
 
-  if ( (byte_4C2469C & 1) == 0 )
+  if ( (byte_49BD5D3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Clear__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
-    byte_4C2469C = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Clear__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v3);
+    byte_49BD5D3 = 1;
   }
   tutList = this->fields.tutList;
   if ( tutList )
@@ -428,20 +368,16 @@ bool __fastcall BattleEventTutorial__isBreakGauge(BattleEventTutorial_o *this, c
   System_Predicate_object__o *_9__11_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24692 & 1) == 0 )
+  if ( (byte_49BD5C9 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isBreakGauge_b__11_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24692 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isBreakGauge_b__11_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5C9 = 1;
   }
   if ( !this->fields.isBreakGuageEnemyAppeared )
     return 0;
@@ -463,24 +399,16 @@ bool __fastcall BattleEventTutorial__isBreakGauge(BattleEventTutorial_o *this, c
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__11_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__11_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__11_0, v9, Method_BattleEventTutorial___c__isBreakGauge_b__11_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__11_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__11_0,
-      (int64_t)_9__11_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__11_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -494,20 +422,16 @@ bool __fastcall BattleEventTutorial__isResult(BattleEventTutorial_o *this, const
   System_Predicate_object__o *_9__14_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24695 & 1) == 0 )
+  if ( (byte_49BD5CC & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isResult_b__14_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24695 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isResult_b__14_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5CC = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -527,24 +451,16 @@ bool __fastcall BattleEventTutorial__isResult(BattleEventTutorial_o *this, const
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__14_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__14_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__14_0, v9, Method_BattleEventTutorial___c__isResult_b__14_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__14_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__14_0,
-      (int64_t)_9__14_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__14_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -558,20 +474,16 @@ bool __fastcall BattleEventTutorial__isResultLose(BattleEventTutorial_o *this, c
   System_Predicate_object__o *_9__16_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24697 & 1) == 0 )
+  if ( (byte_49BD5CE & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isResultLose_b__16_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24697 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isResultLose_b__16_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5CE = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -591,24 +503,16 @@ bool __fastcall BattleEventTutorial__isResultLose(BattleEventTutorial_o *this, c
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__16_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__16_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__16_0, v9, Method_BattleEventTutorial___c__isResultLose_b__16_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__16_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__16_0,
-      (int64_t)_9__16_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__16_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -622,20 +526,16 @@ bool __fastcall BattleEventTutorial__isResultPhase(BattleEventTutorial_o *this, 
   System_Predicate_object__o *_9__17_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24698 & 1) == 0 )
+  if ( (byte_49BD5CF & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isResultPhase_b__17_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24698 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isResultPhase_b__17_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5CF = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -655,24 +555,16 @@ bool __fastcall BattleEventTutorial__isResultPhase(BattleEventTutorial_o *this, 
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__17_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__17_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__17_0, v9, Method_BattleEventTutorial___c__isResultPhase_b__17_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__17_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__17_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__17_0,
-      (int64_t)_9__17_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__17_0, (int32_t)_9__17_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__17_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -686,20 +578,16 @@ bool __fastcall BattleEventTutorial__isResultWin(BattleEventTutorial_o *this, co
   System_Predicate_object__o *_9__15_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24696 & 1) == 0 )
+  if ( (byte_49BD5CD & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isResultWin_b__15_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24696 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isResultWin_b__15_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5CD = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -719,24 +607,16 @@ bool __fastcall BattleEventTutorial__isResultWin(BattleEventTutorial_o *this, co
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__15_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__15_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__15_0, v9, Method_BattleEventTutorial___c__isResultWin_b__15_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__15_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__15_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__15_0,
-      (int64_t)_9__15_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__15_0, (int32_t)_9__15_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__15_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -750,20 +630,16 @@ bool __fastcall BattleEventTutorial__isStart(BattleEventTutorial_o *this, const 
   System_Predicate_object__o *_9__8_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C2468F & 1) == 0 )
+  if ( (byte_49BD5C6 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isStart_b__8_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C2468F = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isStart_b__8_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5C6 = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -783,16 +659,16 @@ bool __fastcall BattleEventTutorial__isStart(BattleEventTutorial_o *this, const 
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__8_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__8_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__8_0, v9, Method_BattleEventTutorial___c__isStart_b__8_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__8_0;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__8_0, (int64_t)_9__8_0, v11, v12, v13, v14, v15, v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__8_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -806,20 +682,16 @@ bool __fastcall BattleEventTutorial__isTacticalPhase(BattleEventTutorial_o *this
   System_Predicate_object__o *_9__12_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24693 & 1) == 0 )
+  if ( (byte_49BD5CA & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isTacticalPhase_b__12_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24693 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isTacticalPhase_b__12_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5CA = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -839,24 +711,16 @@ bool __fastcall BattleEventTutorial__isTacticalPhase(BattleEventTutorial_o *this
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__12_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__12_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__12_0, v9, Method_BattleEventTutorial___c__isTacticalPhase_b__12_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__12_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__12_0,
-      (int64_t)_9__12_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__12_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -870,20 +734,16 @@ bool __fastcall BattleEventTutorial__isTurn(BattleEventTutorial_o *this, const M
   System_Predicate_object__o *_9__10_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24691 & 1) == 0 )
+  if ( (byte_49BD5C8 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isTurn_b__10_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24691 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isTurn_b__10_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5C8 = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -903,24 +763,16 @@ bool __fastcall BattleEventTutorial__isTurn(BattleEventTutorial_o *this, const M
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__10_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__10_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__10_0, v9, Method_BattleEventTutorial___c__isTurn_b__10_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__10_0;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__10_0,
-      (int64_t)_9__10_0,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__10_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -934,20 +786,16 @@ bool __fastcall BattleEventTutorial__isWave(BattleEventTutorial_o *this, const M
   System_Predicate_object__o *_9__9_0; // x20
   Il2CppObject *v9; // x21
   struct BattleEventTutorial___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C24690 & 1) == 0 )
+  if ( (byte_49BD5C7 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
-    sub_1C3B764(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
-    sub_1C3B764(&Method_BattleEventTutorial___c__isWave_b__9_0__, v4);
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v5);
-    byte_4C24690 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__Exists__, method);
+    sub_1B4CF90(&System_Predicate_EventTutorialEntity__TypeInfo, v3);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__isWave_b__9_0__, v4);
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v5);
+    byte_49BD5C7 = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -967,16 +815,16 @@ bool __fastcall BattleEventTutorial__isWave(BattleEventTutorial_o *this, const M
       v7 = BattleEventTutorial___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__9_0 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_EventTutorialEntity__TypeInfo);
+    _9__9_0 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_EventTutorialEntity__TypeInfo);
     System_Predicate_object____ctor(_9__9_0, v9, Method_BattleEventTutorial___c__isWave_b__9_0__, 0LL);
     static_fields = BattleEventTutorial___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = (struct System_Predicate_EventTutorialEntity__o *)_9__9_0;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__9_0, (int64_t)_9__9_0, v11, v12, v13, v14, v15, v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v11, v12);
   }
   return System_Collections_Generic_List_object___Exists(
            tutList,
            (System_Predicate_T__o *)_9__9_0,
-           (const MethodInfo_368C298 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
+           (const MethodInfo_3580808 *)Method_System_Collections_Generic_List_EventTutorialEntity__Exists__);
 }
 
 
@@ -992,12 +840,12 @@ void __fastcall BattleEventTutorial__popAndCallNextTutorial(
   System_Collections_Generic_List_object__o *tutList; // x0
   int32_t v10; // w22
 
-  if ( (byte_4C2469B & 1) == 0 )
+  if ( (byte_49BD5D2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__RemoveAt__, *(_QWORD *)&opType);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__, v8);
-    byte_4C2469B = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__RemoveAt__, *(_QWORD *)&opType);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Count__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__, v8);
+    byte_49BD5D2 = 1;
   }
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
@@ -1010,7 +858,7 @@ void __fastcall BattleEventTutorial__popAndCallNextTutorial(
     tutList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                              tutList,
                                                              v10,
-                                                             (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__);
+                                                             (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_EventTutorialEntity__get_Item__);
     if ( !tutList )
       goto LABEL_13;
     if ( LODWORD(tutList->fields._syncRoot) == opType )
@@ -1024,11 +872,11 @@ void __fastcall BattleEventTutorial__popAndCallNextTutorial(
   tutList = (System_Collections_Generic_List_object__o *)this->fields.tutList;
   if ( !tutList )
 LABEL_13:
-    sub_1C3B9C0(tutList, *(_QWORD *)&opType);
+    sub_1B4D1EC(tutList, *(_QWORD *)&opType);
   System_Collections_Generic_List_object___RemoveAt(
     tutList,
     v10,
-    (const MethodInfo_368D440 *)Method_System_Collections_Generic_List_EventTutorialEntity__RemoveAt__);
+    (const MethodInfo_35819B0 *)Method_System_Collections_Generic_List_EventTutorialEntity__RemoveAt__);
 }
 
 
@@ -1036,30 +884,18 @@ void __fastcall BattleEventTutorial___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C2469E & 1) == 0 )
+  if ( (byte_49BD5D5 & 1) == 0 )
   {
-    sub_1C3B764(&BattleEventTutorial___c_TypeInfo, v1);
-    byte_4C2469E = 1;
+    sub_1B4CF90(&BattleEventTutorial___c_TypeInfo, v1);
+    byte_49BD5D5 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(BattleEventTutorial___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(BattleEventTutorial___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleEventTutorial___c_TypeInfo->static_fields->__9 = (struct BattleEventTutorial___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)BattleEventTutorial___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)BattleEventTutorial___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1075,7 +911,7 @@ bool __fastcall BattleEventTutorial___c___isBreakGauge_b__11_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 46;
 }
 
@@ -1086,7 +922,7 @@ bool __fastcall BattleEventTutorial___c___isResultLose_b__16_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 9;
 }
 
@@ -1103,48 +939,44 @@ bool __fastcall BattleEventTutorial___c___isResultPhase_b__17_0(
   __int64 v8; // x20
   __int64 v9; // x0
   __int64 v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  BattleEventTutorial_c *v17; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  BattleEventTutorial_c *v13; // x0
   System_Int32Enum_array *resultTargetTypes; // x19
-  System_Predicate_T__o *v19; // x21
+  System_Predicate_T__o *v15; // x21
 
-  if ( (byte_4C246A0 & 1) == 0 )
+  if ( (byte_49BD5D7 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Array_Exists_EventTutorialMaster_OpenType___, x);
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, v4);
-    sub_1C3B764(&System_Predicate_EventTutorialMaster_OpenType__TypeInfo, v5);
-    sub_1C3B764(&Method_BattleEventTutorial___c__DisplayClass17_0__isResultPhase_b__1__, v6);
-    sub_1C3B764(&BattleEventTutorial___c__DisplayClass17_0_TypeInfo, v7);
-    byte_4C246A0 = 1;
+    sub_1B4CF90(&Method_System_Array_Exists_EventTutorialMaster_OpenType___, x);
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, v4);
+    sub_1B4CF90(&System_Predicate_EventTutorialMaster_OpenType__TypeInfo, v5);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__DisplayClass17_0__isResultPhase_b__1__, v6);
+    sub_1B4CF90(&BattleEventTutorial___c__DisplayClass17_0_TypeInfo, v7);
+    byte_49BD5D7 = 1;
   }
-  v8 = sub_1C3B9B0(BattleEventTutorial___c__DisplayClass17_0_TypeInfo);
+  v8 = sub_1B4D1DC(BattleEventTutorial___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   *(_QWORD *)(v8 + 16) = x;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)x, v11, v12, v13, v14, v15, v16);
-  v17 = BattleEventTutorial_TypeInfo;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 16), (int32_t)x, v11, v12);
+  v13 = BattleEventTutorial_TypeInfo;
   if ( !BattleEventTutorial_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleEventTutorial_TypeInfo);
-    v17 = BattleEventTutorial_TypeInfo;
+    v13 = BattleEventTutorial_TypeInfo;
   }
-  resultTargetTypes = (System_Int32Enum_array *)v17->static_fields->resultTargetTypes;
-  v19 = (System_Predicate_T__o *)sub_1C3B9B0(System_Predicate_EventTutorialMaster_OpenType__TypeInfo);
+  resultTargetTypes = (System_Int32Enum_array *)v13->static_fields->resultTargetTypes;
+  v15 = (System_Predicate_T__o *)sub_1B4D1DC(System_Predicate_EventTutorialMaster_OpenType__TypeInfo);
   System_Predicate_Int32Enum____ctor(
-    v19,
+    v15,
     (Il2CppObject *)v8,
     Method_BattleEventTutorial___c__DisplayClass17_0__isResultPhase_b__1__,
     0LL);
   return System_Array__Exists_Int32Enum_(
            resultTargetTypes,
-           v19,
-           (const MethodInfo_30EC0A0 *)Method_System_Array_Exists_EventTutorialMaster_OpenType___);
+           v15,
+           (const MethodInfo_2FF8E74 *)Method_System_Array_Exists_EventTutorialMaster_OpenType___);
 }
 
 
@@ -1154,7 +986,7 @@ bool __fastcall BattleEventTutorial___c___isResultWin_b__15_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 8;
 }
 
@@ -1165,7 +997,7 @@ bool __fastcall BattleEventTutorial___c___isResult_b__14_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 7;
 }
 
@@ -1176,7 +1008,7 @@ bool __fastcall BattleEventTutorial___c___isStart_b__8_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 5;
 }
 
@@ -1193,48 +1025,44 @@ bool __fastcall BattleEventTutorial___c___isTacticalPhase_b__12_0(
   __int64 v8; // x20
   __int64 v9; // x0
   __int64 v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  BattleEventTutorial_c *v17; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  BattleEventTutorial_c *v13; // x0
   System_Int32Enum_array *tacticalTargetTypes; // x19
-  System_Predicate_T__o *v19; // x21
+  System_Predicate_T__o *v15; // x21
 
-  if ( (byte_4C2469F & 1) == 0 )
+  if ( (byte_49BD5D6 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Array_Exists_EventTutorialMaster_OpenType___, x);
-    sub_1C3B764(&BattleEventTutorial_TypeInfo, v4);
-    sub_1C3B764(&System_Predicate_EventTutorialMaster_OpenType__TypeInfo, v5);
-    sub_1C3B764(&Method_BattleEventTutorial___c__DisplayClass12_0__isTacticalPhase_b__1__, v6);
-    sub_1C3B764(&BattleEventTutorial___c__DisplayClass12_0_TypeInfo, v7);
-    byte_4C2469F = 1;
+    sub_1B4CF90(&Method_System_Array_Exists_EventTutorialMaster_OpenType___, x);
+    sub_1B4CF90(&BattleEventTutorial_TypeInfo, v4);
+    sub_1B4CF90(&System_Predicate_EventTutorialMaster_OpenType__TypeInfo, v5);
+    sub_1B4CF90(&Method_BattleEventTutorial___c__DisplayClass12_0__isTacticalPhase_b__1__, v6);
+    sub_1B4CF90(&BattleEventTutorial___c__DisplayClass12_0_TypeInfo, v7);
+    byte_49BD5D6 = 1;
   }
-  v8 = sub_1C3B9B0(BattleEventTutorial___c__DisplayClass12_0_TypeInfo);
+  v8 = sub_1B4D1DC(BattleEventTutorial___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   *(_QWORD *)(v8 + 16) = x;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)x, v11, v12, v13, v14, v15, v16);
-  v17 = BattleEventTutorial_TypeInfo;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 16), (int32_t)x, v11, v12);
+  v13 = BattleEventTutorial_TypeInfo;
   if ( !BattleEventTutorial_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleEventTutorial_TypeInfo);
-    v17 = BattleEventTutorial_TypeInfo;
+    v13 = BattleEventTutorial_TypeInfo;
   }
-  tacticalTargetTypes = (System_Int32Enum_array *)v17->static_fields->tacticalTargetTypes;
-  v19 = (System_Predicate_T__o *)sub_1C3B9B0(System_Predicate_EventTutorialMaster_OpenType__TypeInfo);
+  tacticalTargetTypes = (System_Int32Enum_array *)v13->static_fields->tacticalTargetTypes;
+  v15 = (System_Predicate_T__o *)sub_1B4D1DC(System_Predicate_EventTutorialMaster_OpenType__TypeInfo);
   System_Predicate_Int32Enum____ctor(
-    v19,
+    v15,
     (Il2CppObject *)v8,
     Method_BattleEventTutorial___c__DisplayClass12_0__isTacticalPhase_b__1__,
     0LL);
   return System_Array__Exists_Int32Enum_(
            tacticalTargetTypes,
-           v19,
-           (const MethodInfo_30EC0A0 *)Method_System_Array_Exists_EventTutorialMaster_OpenType___);
+           v15,
+           (const MethodInfo_2FF8E74 *)Method_System_Array_Exists_EventTutorialMaster_OpenType___);
 }
 
 
@@ -1244,7 +1072,7 @@ bool __fastcall BattleEventTutorial___c___isTurn_b__10_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 6;
 }
 
@@ -1255,7 +1083,7 @@ bool __fastcall BattleEventTutorial___c___isWave_b__9_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.openType == 27;
 }
 
@@ -1277,7 +1105,7 @@ bool __fastcall BattleEventTutorial___c__DisplayClass12_0___isTacticalPhase_b__1
 
   x = this->fields.x;
   if ( !x )
-    sub_1C3B9C0(this, y);
+    sub_1B4D1EC(this, y);
   return x->fields.openType == y;
 }
 
@@ -1299,6 +1127,6 @@ bool __fastcall BattleEventTutorial___c__DisplayClass17_0___isResultPhase_b__1(
 
   x = this->fields.x;
   if ( !x )
-    sub_1C3B9C0(this, y);
+    sub_1B4D1EC(this, y);
   return x->fields.openType == y;
 }

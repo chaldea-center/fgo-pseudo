@@ -1,58 +1,34 @@
 void __fastcall LastUsedDeckNumberManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
   struct LastUsedDeckNumberManager_StaticFields *static_fields; // x0
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C21B41 & 1) == 0 )
+  if ( (byte_49BAA54 & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v1);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo___ctor__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v9);
-    sub_1C3B764(&StringLiteral_6809/*"GET_EXP_INFO"*/, v10);
-    byte_4C21B41 = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v1);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo___ctor__, v4);
+    sub_1B4CF90(&System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_6568/*"Fgo_20210906"*/, v6);
+    byte_49BAA54 = 1;
   }
-  LastUsedDeckNumberManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6809/*"GET_EXP_INFO"*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)LastUsedDeckNumberManager_TypeInfo->static_fields,
-    StringLiteral_6809/*"GET_EXP_INFO"*/,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  LastUsedDeckNumberManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6568/*"Fgo_20210906"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)LastUsedDeckNumberManager_TypeInfo->static_fields, StringLiteral_6568/*"Fgo_20210906"*/, v2, v3);
   *(_WORD *)&LastUsedDeckNumberManager_TypeInfo->static_fields->isModfiy = 0;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo___ctor__);
+    v7,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo___ctor__);
   static_fields = LastUsedDeckNumberManager_TypeInfo->static_fields;
-  static_fields->lastUsedInfoList = (struct System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__o *)v11;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&static_fields->lastUsedInfoList,
-    (int64_t)v11,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  static_fields->lastUsedInfoList = (struct System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__o *)v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->lastUsedInfoList, (int32_t)v7, v9, v10);
 }
 
 
@@ -72,12 +48,12 @@ void __fastcall LastUsedDeckNumberManager__ClearSaveDataList(const MethodInfo *m
   int32_t size; // w2
   int v7; // w9
 
-  if ( (byte_4C21B3B & 1) == 0 )
+  if ( (byte_49BAA4E & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v1);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Clear__, v2);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v3);
-    byte_4C21B3B = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v1);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Clear__, v2);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v3);
+    byte_49BAA4E = 1;
   }
   v4 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
@@ -97,7 +73,7 @@ void __fastcall LastUsedDeckNumberManager__ClearSaveDataList(const MethodInfo *m
     lastUsedInfoList = LastUsedDeckNumberManager_TypeInfo->static_fields->lastUsedInfoList;
     if ( !lastUsedInfoList )
 LABEL_14:
-      sub_1C3B9C0(v4, v1);
+      sub_1B4D1EC(v4, v1);
   }
   size = lastUsedInfoList->fields._size;
   v7 = lastUsedInfoList->fields._version + 1;
@@ -135,17 +111,17 @@ void __fastcall LastUsedDeckNumberManager__DeleteData(int32_t questId, const Met
   Il2CppObject *v15; // x19
   LastUsedDeckNumberManager_c *v16; // x0
 
-  if ( (byte_4C21B3E & 1) == 0 )
+  if ( (byte_49BAA51 & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Remove__, v4);
-    sub_1C3B764(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v5);
-    sub_1C3B764(&Method_LastUsedDeckNumberManager___c__DisplayClass11_0__DeleteData_b__0__, v6);
-    sub_1C3B764(&LastUsedDeckNumberManager___c__DisplayClass11_0_TypeInfo, v7);
-    byte_4C21B3E = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Remove__, v4);
+    sub_1B4CF90(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v5);
+    sub_1B4CF90(&Method_LastUsedDeckNumberManager___c__DisplayClass11_0__DeleteData_b__0__, v6);
+    sub_1B4CF90(&LastUsedDeckNumberManager___c__DisplayClass11_0_TypeInfo, v7);
+    byte_49BAA51 = 1;
   }
-  v8 = sub_1C3B9B0(LastUsedDeckNumberManager___c__DisplayClass11_0_TypeInfo);
+  v8 = sub_1B4D1DC(LastUsedDeckNumberManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_13;
@@ -157,7 +133,7 @@ void __fastcall LastUsedDeckNumberManager__DeleteData(int32_t questId, const Met
     v11 = LastUsedDeckNumberManager_TypeInfo;
   }
   lastUsedInfoList = (System_Collections_Generic_List_object__o *)v11->static_fields->lastUsedInfoList;
-  v13 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
+  v13 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
   System_Predicate_object____ctor(
     v13,
     (Il2CppObject *)v8,
@@ -168,7 +144,7 @@ void __fastcall LastUsedDeckNumberManager__DeleteData(int32_t questId, const Met
   v14 = System_Collections_Generic_List_object___Find(
           lastUsedInfoList,
           (System_Predicate_T__o *)v13,
-          (const MethodInfo_368C2D4 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
+          (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
   if ( !v14 )
     return;
   v15 = v14;
@@ -181,11 +157,11 @@ void __fastcall LastUsedDeckNumberManager__DeleteData(int32_t questId, const Met
   v9 = (System_Collections_Generic_List_object__o *)v16->static_fields->lastUsedInfoList;
   if ( !v9 )
 LABEL_13:
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   System_Collections_Generic_List_object___Remove(
     v9,
     v15,
-    (const MethodInfo_368D194 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Remove__);
+    (const MethodInfo_3581704 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Remove__);
   LastUsedDeckNumberManager_TypeInfo->static_fields->isModfiy = 1;
 }
 
@@ -197,10 +173,10 @@ void __fastcall LastUsedDeckNumberManager__DeleteSaveData(const MethodInfo *meth
   const MethodInfo *v3; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4C21B39 & 1) == 0 )
+  if ( (byte_49BAA4C & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v1);
-    byte_4C21B39 = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v1);
+    byte_49BAA4C = 1;
   }
   v2 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
@@ -226,16 +202,16 @@ int32_t __fastcall LastUsedDeckNumberManager__GetDeckNumber(int32_t questId, con
   System_Predicate_object__o *v12; // x21
   Il2CppObject *v13; // x0
 
-  if ( (byte_4C21B3D & 1) == 0 )
+  if ( (byte_49BAA50 & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v3);
-    sub_1C3B764(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v4);
-    sub_1C3B764(&Method_LastUsedDeckNumberManager___c__DisplayClass10_0__GetDeckNumber_b__0__, v5);
-    sub_1C3B764(&LastUsedDeckNumberManager___c__DisplayClass10_0_TypeInfo, v6);
-    byte_4C21B3D = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v3);
+    sub_1B4CF90(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v4);
+    sub_1B4CF90(&Method_LastUsedDeckNumberManager___c__DisplayClass10_0__GetDeckNumber_b__0__, v5);
+    sub_1B4CF90(&LastUsedDeckNumberManager___c__DisplayClass10_0_TypeInfo, v6);
+    byte_49BAA50 = 1;
   }
-  v7 = sub_1C3B9B0(LastUsedDeckNumberManager___c__DisplayClass10_0_TypeInfo);
+  v7 = sub_1B4D1DC(LastUsedDeckNumberManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
     goto LABEL_10;
@@ -247,7 +223,7 @@ int32_t __fastcall LastUsedDeckNumberManager__GetDeckNumber(int32_t questId, con
     v10 = LastUsedDeckNumberManager_TypeInfo;
   }
   lastUsedInfoList = (System_Collections_Generic_List_object__o *)v10->static_fields->lastUsedInfoList;
-  v12 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
+  v12 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
   System_Predicate_object____ctor(
     v12,
     (Il2CppObject *)v7,
@@ -255,11 +231,11 @@ int32_t __fastcall LastUsedDeckNumberManager__GetDeckNumber(int32_t questId, con
     0LL);
   if ( !lastUsedInfoList )
 LABEL_10:
-    sub_1C3B9C0(v8, v9);
+    sub_1B4D1EC(v8, v9);
   v13 = System_Collections_Generic_List_object___Find(
           lastUsedInfoList,
           (System_Predicate_T__o *)v12,
-          (const MethodInfo_368C2D4 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
+          (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
   if ( v13 )
     LODWORD(v13) = HIDWORD(v13[1].klass);
   return (int)v13;
@@ -274,12 +250,12 @@ System_String_o *__fastcall LastUsedDeckNumberManager__GetSaveFileName(const Met
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C21B38 & 1) == 0 )
+  if ( (byte_49BAA4B & 1) == 0 )
   {
-    sub_1C3B764(&AndroidUtil_TypeInfo, v1);
-    sub_1C3B764(&DatFileName_TypeInfo, v2);
-    sub_1C3B764(&StringLiteral_1102/*"/[delegate]"*/, v3);
-    byte_4C21B38 = 1;
+    sub_1B4CF90(&AndroidUtil_TypeInfo, v1);
+    sub_1B4CF90(&DatFileName_TypeInfo, v2);
+    sub_1B4CF90(&StringLiteral_1057/*"/"*/, v3);
+    byte_49BAA4B = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -287,7 +263,7 @@ System_String_o *__fastcall LastUsedDeckNumberManager__GetSaveFileName(const Met
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(34, 0LL);
-  return System_String__Concat_63379872(DatFileSavePath, (System_String_o *)StringLiteral_1102/*"/[delegate]"*/, FileName, 0LL);
+  return System_String__Concat_61131716(DatFileSavePath, (System_String_o *)StringLiteral_1057/*"/"*/, FileName, 0LL);
 }
 
 
@@ -296,10 +272,10 @@ void __fastcall LastUsedDeckNumberManager__Initialize(const MethodInfo *method)
   __int64 v1; // x1
   LastUsedDeckNumberManager_c *v2; // x0
 
-  if ( (byte_4C21B3A & 1) == 0 )
+  if ( (byte_49BAA4D & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v1);
-    byte_4C21B3A = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v1);
+    byte_49BAA4D = 1;
   }
   v2 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
@@ -334,36 +310,32 @@ bool __fastcall LastUsedDeckNumberManager__ReadData(const MethodInfo *method)
   int v23; // w22
   int v24; // w23
   __int64 v25; // x24
-  int64_t v26; // x21
+  __int64 v26; // x21
   __int64 v27; // x0
   __int64 v28; // x1
-  int64_t v29; // x2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  BattleSetupInfo_o *v32; // x5
-  FollowerInfo_o *v33; // x6
-  PartyListViewItem_o *v34; // x7
-  LastUsedDeckNumberManager_c *v35; // x0
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
+  LastUsedDeckNumberManager_c *v31; // x0
   System_Collections_Generic_List_object__o *lastUsedInfoList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v38; // x9
+  _QWORD *v34; // x9
   __int64 size; // x10
-  Il2CppClass **v40; // x8
+  Il2CppClass **v36; // x8
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v42; // x9
+  __int64 v38; // x9
   int32_t *p_offset; // x10
-  __int64 v44; // x0
-  LastUsedDeckNumberManager_c *v45; // x0
+  __int64 v40; // x0
+  LastUsedDeckNumberManager_c *v41; // x0
 
-  if ( (byte_4C21B3F & 1) == 0 )
+  if ( (byte_49BAA52 & 1) == 0 )
   {
-    sub_1C3B764(&System_IO_BinaryReader_TypeInfo, v1);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v2);
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v3);
-    sub_1C3B764(&LastUsedDeckNumberManager_LastUsedInfo_TypeInfo, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__, v5);
-    sub_1C3B764(&ManagerConfig_TypeInfo, v6);
-    byte_4C21B3F = 1;
+    sub_1B4CF90(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v2);
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v3);
+    sub_1B4CF90(&LastUsedDeckNumberManager_LastUsedInfo_TypeInfo, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__, v5);
+    sub_1B4CF90(&ManagerConfig_TypeInfo, v6);
+    byte_49BAA52 = 1;
   }
   v7 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
@@ -391,10 +363,10 @@ bool __fastcall LastUsedDeckNumberManager__ReadData(const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
       LastUsedDeckNumberManager__ClearSaveDataList((const MethodInfo *)v12);
       v13 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-      v14 = (System_IO_BinaryReader_o *)sub_1C3B9B0(System_IO_BinaryReader_TypeInfo);
+      v14 = (System_IO_BinaryReader_o *)sub_1B4D1DC(System_IO_BinaryReader_TypeInfo);
       System_IO_BinaryReader___ctor(v14, v13, 0LL);
       if ( !v14 )
-        sub_1C3B9C0(v15, v16);
+        sub_1B4D1EC(v15, v16);
       v17 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._22_ReadString.method)(
                                  v14,
                                  v14->klass->vtable._23_ReadChars.methodPtr);
@@ -436,41 +408,41 @@ bool __fastcall LastUsedDeckNumberManager__ReadData(const MethodInfo *method)
             v25 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._17_ReadInt64.method)(
                     v14,
                     v14->klass->vtable._18_ReadUInt64.methodPtr);
-            v26 = sub_1C3B9B0(LastUsedDeckNumberManager_LastUsedInfo_TypeInfo);
+            v26 = sub_1B4D1DC(LastUsedDeckNumberManager_LastUsedInfo_TypeInfo);
             System_Object___ctor((Il2CppObject *)v26, 0LL);
             if ( !v26 )
-              sub_1C3B9C0(v27, v28);
+              sub_1B4D1EC(v27, v28);
             *(_DWORD *)(v26 + 16) = v23;
             *(_DWORD *)(v26 + 20) = v24;
             *(_QWORD *)(v26 + 24) = v25;
-            v35 = LastUsedDeckNumberManager_TypeInfo;
+            v31 = LastUsedDeckNumberManager_TypeInfo;
             if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
-              v35 = LastUsedDeckNumberManager_TypeInfo;
+              v31 = LastUsedDeckNumberManager_TypeInfo;
             }
-            lastUsedInfoList = (System_Collections_Generic_List_object__o *)v35->static_fields->lastUsedInfoList;
+            lastUsedInfoList = (System_Collections_Generic_List_object__o *)v31->static_fields->lastUsedInfoList;
             if ( !lastUsedInfoList )
-              sub_1C3B9C0(0LL, v28);
+              sub_1B4D1EC(0LL, v28);
             items = lastUsedInfoList->fields._items;
-            v38 = Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__;
+            v34 = Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__;
             ++lastUsedInfoList->fields._version;
             if ( !items )
-              sub_1C3B9C0(lastUsedInfoList, v28);
+              sub_1B4D1EC(lastUsedInfoList, v28);
             size = lastUsedInfoList->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 lastUsedInfoList,
                 (Il2CppObject *)v26,
-                *(const MethodInfo_368BC6C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+                *(const MethodInfo_35801DC **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
             }
             else
             {
-              v40 = &items->obj.klass + size;
+              v36 = &items->obj.klass + size;
               lastUsedInfoList->fields._size = size + 1;
-              v40[4] = (Il2CppClass *)v26;
-              sub_1C3B708((PartyOrganizationUtility_o *)(v40 + 4), v26, v29, v30, v31, v32, v33, v34);
+              v36[4] = (Il2CppClass *)v26;
+              sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 4), v26, v29, v30);
             }
             --v22;
           }
@@ -479,34 +451,34 @@ bool __fastcall LastUsedDeckNumberManager__ReadData(const MethodInfo *method)
         v19 = 8;
       }
       klass = v14->klass;
-      v42 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
+      v38 = *(unsigned __int16 *)(&v14->klass->_2.bitflags2 + 3);
       if ( *(_WORD *)(&v14->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          --v42;
+          --v38;
           p_offset += 4;
-          if ( !v42 )
+          if ( !v38 )
             goto LABEL_36;
         }
-        v44 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+        v40 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
       }
       else
       {
 LABEL_36:
-        v44 = sub_1C8D744(v14, System_IDisposable_TypeInfo, 0LL);
+        v40 = sub_1B9D724(v14, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v44)(v14, *(_QWORD *)(v44 + 8));
+      (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v40)(v14, *(_QWORD *)(v40 + 8));
       if ( (v19 | 8) == 8 )
         return 1;
     }
     else
     {
-      v45 = LastUsedDeckNumberManager_TypeInfo;
+      v41 = LastUsedDeckNumberManager_TypeInfo;
       if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
-      LastUsedDeckNumberManager__ClearSaveDataList((const MethodInfo *)v45);
+      LastUsedDeckNumberManager__ClearSaveDataList((const MethodInfo *)v41);
     }
     return 0;
   }
@@ -549,48 +521,40 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
   System_Func_T1__T2__TResult__o *_9__9_1; // x23
   Il2CppObject *v35; // x24
   struct LastUsedDeckNumberManager___c_StaticFields *static_fields; // x0
-  int64_t v37; // x2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  BattleSetupInfo_o *v40; // x5
-  FollowerInfo_o *v41; // x6
-  PartyListViewItem_o *v42; // x7
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
   int32_t items; // w22
-  int64_t v44; // x22
-  int64_t v45; // x2
-  int32_t v46; // w3
-  System_String_o *v47; // x4
-  BattleSetupInfo_o *v48; // x5
-  FollowerInfo_o *v49; // x6
-  PartyListViewItem_o *v50; // x7
-  int v51; // w8
-  LastUsedDeckNumberManager_c *v52; // x0
-  struct System_Object_array *v53; // x8
-  _QWORD *v54; // x9
+  __int64 v40; // x22
+  int32_t v41; // w2
+  const MethodInfo *v42; // x3
+  int v43; // w8
+  LastUsedDeckNumberManager_c *v44; // x0
+  struct System_Object_array *v45; // x8
+  _QWORD *v46; // x9
   __int64 size; // x10
-  __int64 v56; // x8
+  __int64 v48; // x8
 
-  if ( (byte_4C21B3C & 1) == 0 )
+  if ( (byte_49BAA4F & 1) == 0 )
   {
-    sub_1C3B764(&BalanceConfig_TypeInfo, *(_QWORD *)&deckNumber);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Aggregate_LastUsedDeckNumberManager_LastUsedInfo___, v5);
-    sub_1C3B764(
+    sub_1B4CF90(&BalanceConfig_TypeInfo, *(_QWORD *)&deckNumber);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Aggregate_LastUsedDeckNumberManager_LastUsedInfo___, v5);
+    sub_1B4CF90(
       &System_Func_LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__TypeInfo,
       v6);
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v7);
-    sub_1C3B764(&LastUsedDeckNumberManager_LastUsedInfo_TypeInfo, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v11);
-    sub_1C3B764(&NetworkManager_TypeInfo, v12);
-    sub_1C3B764(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v13);
-    sub_1C3B764(&Method_LastUsedDeckNumberManager___c__SetDeckNumber_b__9_1__, v14);
-    sub_1C3B764(&Method_LastUsedDeckNumberManager___c__DisplayClass9_0__SetDeckNumber_b__0__, v15);
-    sub_1C3B764(&LastUsedDeckNumberManager___c__DisplayClass9_0_TypeInfo, v16);
-    sub_1C3B764(&LastUsedDeckNumberManager___c_TypeInfo, v17);
-    byte_4C21B3C = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v7);
+    sub_1B4CF90(&LastUsedDeckNumberManager_LastUsedInfo_TypeInfo, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v11);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v12);
+    sub_1B4CF90(&System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo, v13);
+    sub_1B4CF90(&Method_LastUsedDeckNumberManager___c__SetDeckNumber_b__9_1__, v14);
+    sub_1B4CF90(&Method_LastUsedDeckNumberManager___c__DisplayClass9_0__SetDeckNumber_b__0__, v15);
+    sub_1B4CF90(&LastUsedDeckNumberManager___c__DisplayClass9_0_TypeInfo, v16);
+    sub_1B4CF90(&LastUsedDeckNumberManager___c_TypeInfo, v17);
+    byte_49BAA4F = 1;
   }
-  v18 = sub_1C3B9B0(LastUsedDeckNumberManager___c__DisplayClass9_0_TypeInfo);
+  v18 = sub_1B4D1DC(LastUsedDeckNumberManager___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !v18 )
     goto LABEL_40;
@@ -606,7 +570,7 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
     v22 = LastUsedDeckNumberManager_TypeInfo;
   }
   lastUsedInfoList = (System_Collections_Generic_List_object__o *)v22->static_fields->lastUsedInfoList;
-  v25 = (System_Predicate_object__o *)sub_1C3B9B0(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
+  v25 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
   System_Predicate_object____ctor(
     v25,
     (Il2CppObject *)v18,
@@ -617,7 +581,7 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
   v26 = System_Collections_Generic_List_object___Find(
           lastUsedInfoList,
           (System_Predicate_T__o *)v25,
-          (const MethodInfo_368C2D4 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
+          (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Find__);
   if ( !v26 )
   {
     v19 = (System_Collections_Generic_List_object__o *)LastUsedDeckNumberManager_TypeInfo;
@@ -660,7 +624,7 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
             v32 = LastUsedDeckNumberManager___c_TypeInfo;
           }
           v35 = (Il2CppObject *)v32->static_fields->__9;
-          _9__9_1 = (System_Func_T1__T2__TResult__o *)sub_1C3B9B0(System_Func_LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
+          _9__9_1 = (System_Func_T1__T2__TResult__o *)sub_1B4D1DC(System_Func_LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__TypeInfo);
           System_Func_object__object__object____ctor(
             _9__9_1,
             v35,
@@ -668,20 +632,12 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
             0LL);
           static_fields = LastUsedDeckNumberManager___c_TypeInfo->static_fields;
           static_fields->__9__9_1 = (struct System_Func_LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__LastUsedDeckNumberManager_LastUsedInfo__o *)_9__9_1;
-          sub_1C3B708(
-            (PartyOrganizationUtility_o *)&static_fields->__9__9_1,
-            (int64_t)_9__9_1,
-            v37,
-            v38,
-            v39,
-            v40,
-            v41,
-            v42);
+          sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__9_1, (int32_t)_9__9_1, v37, v38);
         }
         v19 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__Aggregate_object_(
                                                              v33,
                                                              (System_Func_TSource__TSource__TSource__o *)_9__9_1,
-                                                             (const MethodInfo_2FF7F90 *)Method_System_Linq_Enumerable_Aggregate_LastUsedDeckNumberManager_LastUsedInfo___);
+                                                             (const MethodInfo_2F0B840 *)Method_System_Linq_Enumerable_Aggregate_LastUsedDeckNumberManager_LastUsedInfo___);
         if ( !v19 )
           goto LABEL_40;
         items = (int32_t)v19->fields._items;
@@ -689,42 +645,42 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
           j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
         LastUsedDeckNumberManager__DeleteData(items, v20);
       }
-      v44 = sub_1C3B9B0(LastUsedDeckNumberManager_LastUsedInfo_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v44, 0LL);
-      if ( v44 )
+      v40 = sub_1B4D1DC(LastUsedDeckNumberManager_LastUsedInfo_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v40, 0LL);
+      if ( v40 )
       {
-        v51 = *(_DWORD *)(v18 + 16);
-        *(_QWORD *)(v44 + 24) = v23;
-        *(_DWORD *)(v44 + 16) = v51;
-        *(_DWORD *)(v44 + 20) = deckNumber;
-        v52 = LastUsedDeckNumberManager_TypeInfo;
+        v43 = *(_DWORD *)(v18 + 16);
+        *(_QWORD *)(v40 + 24) = v23;
+        *(_DWORD *)(v40 + 16) = v43;
+        *(_DWORD *)(v40 + 20) = deckNumber;
+        v44 = LastUsedDeckNumberManager_TypeInfo;
         if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
-          v52 = LastUsedDeckNumberManager_TypeInfo;
+          v44 = LastUsedDeckNumberManager_TypeInfo;
         }
-        v19 = (System_Collections_Generic_List_object__o *)v52->static_fields->lastUsedInfoList;
+        v19 = (System_Collections_Generic_List_object__o *)v44->static_fields->lastUsedInfoList;
         if ( v19 )
         {
-          v53 = v19->fields._items;
-          v54 = Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__;
+          v45 = v19->fields._items;
+          v46 = Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__Add__;
           ++v19->fields._version;
-          if ( v53 )
+          if ( v45 )
           {
             size = v19->fields._size;
-            if ( (unsigned int)size >= v53->max_length )
+            if ( (unsigned int)size >= v45->max_length )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v19,
-                (Il2CppObject *)v44,
-                *(const MethodInfo_368BC6C **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
+                (Il2CppObject *)v40,
+                *(const MethodInfo_35801DC **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
             }
             else
             {
-              v56 = (__int64)v53 + 8 * size;
+              v48 = (__int64)v45 + 8 * size;
               v19->fields._size = size + 1;
-              *(_QWORD *)(v56 + 32) = v44;
-              sub_1C3B708((PartyOrganizationUtility_o *)(v56 + 32), v44, v45, v46, v47, v48, v49, v50);
+              *(_QWORD *)(v48 + 32) = v40;
+              sub_1B4CF34((CGThumbnailListItem_o *)(v48 + 32), v40, v41, v42);
             }
             goto LABEL_38;
           }
@@ -732,7 +688,7 @@ void __fastcall LastUsedDeckNumberManager__SetDeckNumber(int32_t questId, int32_
       }
     }
 LABEL_40:
-    sub_1C3B9C0(v19, v20);
+    sub_1B4D1EC(v19, v20);
   }
   HIDWORD(v26[1].klass) = deckNumber;
   v26[1].monitor = v23;
@@ -779,15 +735,15 @@ bool __fastcall LastUsedDeckNumberManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v30; // x0
 
-  if ( (byte_4C21B40 & 1) == 0 )
+  if ( (byte_49BAA53 & 1) == 0 )
   {
-    sub_1C3B764(&System_IO_BinaryWriter_TypeInfo, v1);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v2);
-    sub_1C3B764(&LastUsedDeckNumberManager_TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Item__, v5);
-    sub_1C3B764(&ManagerConfig_TypeInfo, v6);
-    byte_4C21B40 = 1;
+    sub_1B4CF90(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v2);
+    sub_1B4CF90(&LastUsedDeckNumberManager_TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Count__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Item__, v5);
+    sub_1B4CF90(&ManagerConfig_TypeInfo, v6);
+    byte_49BAA53 = 1;
   }
   v7 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
@@ -817,8 +773,8 @@ bool __fastcall LastUsedDeckNumberManager__WriteData(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(LastUsedDeckNumberManager_TypeInfo);
   SaveFileName = LastUsedDeckNumberManager__GetSaveFileName((const MethodInfo *)v11);
   v13 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v14 = (System_IO_BinaryWriter_o *)sub_1C3B9B0(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63607104(v14, v13, 0LL);
+  v14 = (System_IO_BinaryWriter_o *)sub_1B4D1DC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_62007932(v14, v13, 0LL);
   v16 = LastUsedDeckNumberManager_TypeInfo;
   if ( !LastUsedDeckNumberManager_TypeInfo->_2.cctor_finished )
   {
@@ -828,9 +784,9 @@ bool __fastcall LastUsedDeckNumberManager__WriteData(const MethodInfo *method)
   v17 = v16->static_fields;
   lastUsedInfoList = v17->lastUsedInfoList;
   if ( !lastUsedInfoList )
-    sub_1C3B9C0(v16, v15);
+    sub_1B4D1EC(v16, v15);
   if ( !v14 )
-    sub_1C3B9C0(v16, v15);
+    sub_1B4D1EC(v16, v15);
   size = lastUsedInfoList->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v14->klass->vtable._22_Write.method)(
     v14,
@@ -856,14 +812,14 @@ bool __fastcall LastUsedDeckNumberManager__WriteData(const MethodInfo *method)
       }
       v23 = (System_Collections_Generic_List_object__o *)v22->static_fields->lastUsedInfoList;
       if ( !v23 )
-        sub_1C3B9C0(0LL, v20);
+        sub_1B4D1EC(0LL, v20);
       Item = System_Collections_Generic_List_object___get_Item(
                v23,
                i,
-               (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Item__);
+               (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_LastUsedDeckNumberManager_LastUsedInfo__get_Item__);
       v26 = Item;
       if ( !Item )
-        sub_1C3B9C0(0LL, v25);
+        sub_1B4D1EC(0LL, v25);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
         v14,
         LODWORD(Item[1].klass),
@@ -895,7 +851,7 @@ bool __fastcall LastUsedDeckNumberManager__WriteData(const MethodInfo *method)
   else
   {
 LABEL_29:
-    v30 = sub_1C8D744(v14, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_1B9D724(v14, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v30)(v14, *(_QWORD *)(v30 + 8));
   return 1;
@@ -914,30 +870,18 @@ void __fastcall LastUsedDeckNumberManager___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C21B42 & 1) == 0 )
+  if ( (byte_49BAA55 & 1) == 0 )
   {
-    sub_1C3B764(&LastUsedDeckNumberManager___c_TypeInfo, v1);
-    byte_4C21B42 = 1;
+    sub_1B4CF90(&LastUsedDeckNumberManager___c_TypeInfo, v1);
+    byte_49BAA55 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(LastUsedDeckNumberManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(LastUsedDeckNumberManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   LastUsedDeckNumberManager___c_TypeInfo->static_fields->__9 = (struct LastUsedDeckNumberManager___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)LastUsedDeckNumberManager___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)LastUsedDeckNumberManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -954,7 +898,7 @@ LastUsedDeckNumberManager_LastUsedInfo_o *__fastcall LastUsedDeckNumberManager__
         const MethodInfo *method)
 {
   if ( !x || !y )
-    sub_1C3B9C0(this, x);
+    sub_1B4D1EC(this, x);
   if ( x->fields.time >= y->fields.time )
     return y;
   else
@@ -976,7 +920,7 @@ bool __fastcall LastUsedDeckNumberManager___c__DisplayClass10_0___GetDeckNumber_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.questId == this->fields.questId;
 }
 
@@ -995,7 +939,7 @@ bool __fastcall LastUsedDeckNumberManager___c__DisplayClass11_0___DeleteData_b__
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.questId == this->fields.questId;
 }
 
@@ -1014,6 +958,6 @@ bool __fastcall LastUsedDeckNumberManager___c__DisplayClass9_0___SetDeckNumber_b
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.questId == this->fields.questId;
 }

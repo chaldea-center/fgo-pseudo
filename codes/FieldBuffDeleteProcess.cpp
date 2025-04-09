@@ -9,14 +9,10 @@ void __fastcall FieldBuffDeleteProcess__Init(
         BattleFieldEnvironmentData_o *fieldEnvData,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)fieldEnvData, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
 }
 
 
@@ -33,12 +29,8 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
         BattleFieldEnvironmentData_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

@@ -1,9 +1,9 @@
 void __fastcall AccountLinkageMenu___ctor(AccountLinkageMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1D0ED & 1) == 0 )
+  if ( (byte_49B5F56 & 1) == 0 )
   {
-    sub_1C3B764(&BaseMenu_TypeInfo, method);
-    byte_4C1D0ED = 1;
+    sub_1B4CF90(&BaseMenu_TypeInfo, method);
+    byte_49B5F56 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -33,24 +33,24 @@ void __fastcall AccountLinkageMenu__InitView(AccountLinkageMenu_o *this, const M
   UILabel_o *warningLabel; // x20
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C1D0EB & 1) == 0 )
+  if ( (byte_49B5F54 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1987/*"APPEND_SKILL_COMBINE_ITEM_NOT_ENOUGH"*/, v3);
-    sub_1C3B764(&StringLiteral_1988/*"APPEND_SKILL_COMBINE_PRESELECT_BASE_INFO"*/, v4);
-    byte_4C1D0EB = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1891/*"ACCOUNT_LINKAGE_MENU_MESSAGE"*/, v3);
+    sub_1B4CF90(&StringLiteral_1892/*"ACCOUNT_LINKAGE_MENU_WARNING"*/, v4);
+    byte_49B5F54 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_1987/*"APPEND_SKILL_COMBINE_ITEM_NOT_ENOUGH"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_1891/*"ACCOUNT_LINKAGE_MENU_MESSAGE"*/, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, v6, 0LL),
         warningLabel = this->fields.warningLabel,
-        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_1988/*"APPEND_SKILL_COMBINE_PRESELECT_BASE_INFO"*/, 0LL),
+        v6 = LocalizationManager__Get((System_String_o *)StringLiteral_1892/*"ACCOUNT_LINKAGE_MENU_WARNING"*/, 0LL),
         !warningLabel) )
   {
-    sub_1C3B9C0(v6, v7);
+    sub_1B4D1EC(v6, v7);
   }
   UILabel__set_text(warningLabel, v6, 0LL);
   AccountLinkageMenu__UpdateView(this, v9);
@@ -107,21 +107,21 @@ void __fastcall AccountLinkageMenu__UpdateView(AccountLinkageMenu_o *this, const
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v42; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C1D0EC & 1) == 0 )
+  if ( (byte_49B5F55 & 1) == 0 )
   {
-    sub_1C3B764(&AccountLinkageParams_TypeInfo, method);
-    sub_1C3B764(&System_DateTimeOffset_TypeInfo, v3);
-    sub_1C3B764(&System_DateTime_TypeInfo, v4);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_1978/*"ANRException"*/, v6);
-    sub_1C3B764(&StringLiteral_2007/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/, v7);
-    sub_1C3B764(&StringLiteral_25396, v8);
-    sub_1C3B764(&StringLiteral_897/*"--MM--Z"*/, v9);
-    sub_1C3B764(&StringLiteral_1973/*"ANOTHER_PAY_MULTI_INFO_TITLE"*/, v10);
-    sub_1C3B764(&StringLiteral_1972/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, v11);
-    sub_1C3B764(&StringLiteral_2008/*"APPEND_SKILL_EXCHANGE_SELECT_BASE_INFO"*/, v12);
-    sub_1C3B764(&StringLiteral_1990/*"APPEND_SKILL_EXCHANGE_BASE"*/, v13);
-    byte_4C1D0EC = 1;
+    sub_1B4CF90(&AccountLinkageParams_TypeInfo, method);
+    sub_1B4CF90(&System_DateTimeOffset_TypeInfo, v3);
+    sub_1B4CF90(&System_DateTime_TypeInfo, v4);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_1882/*"ACCOUNT_LINKAGE_DATE"*/, v6);
+    sub_1B4CF90(&StringLiteral_1911/*"ACCOUNT_LINKAGE_STATUS_LINKED"*/, v7);
+    sub_1B4CF90(&StringLiteral_24594/*"yyyy/MM/dd"*/, v8);
+    sub_1B4CF90(&StringLiteral_867/*"-"*/, v9);
+    sub_1B4CF90(&StringLiteral_1877/*"ACCOUNT_LINKAGE_BUTTON_LINK"*/, v10);
+    sub_1B4CF90(&StringLiteral_1876/*"ACCOUNT_LINKAGE_BUTTON_DELINK"*/, v11);
+    sub_1B4CF90(&StringLiteral_1912/*"ACCOUNT_LINKAGE_STATUS_NOT_LINKED"*/, v12);
+    sub_1B4CF90(&StringLiteral_1894/*"ACCOUNT_LINKAGE_ON_MAINTENANCE"*/, v13);
+    byte_49B5F55 = 1;
   }
   entity = 0LL;
   v37 = 0LL;
@@ -129,7 +129,7 @@ void __fastcall AccountLinkageMenu__UpdateView(AccountLinkageMenu_o *this, const
   linkageDateLabel = this->fields.linkageDateLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1978/*"ANRException"*/, 0LL);
+  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1882/*"ACCOUNT_LINKAGE_DATE"*/, 0LL);
   if ( !linkageDateLabel )
     goto LABEL_43;
   UILabel__set_text(linkageDateLabel, (System_String_o *)SelfUserAccountLinkage, 0LL);
@@ -140,7 +140,7 @@ void __fastcall AccountLinkageMenu__UpdateView(AccountLinkageMenu_o *this, const
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
 LABEL_30:
-    SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2008/*"APPEND_SKILL_EXCHANGE_SELECT_BASE_INFO"*/, 0LL);
+    SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1912/*"ACCOUNT_LINKAGE_STATUS_NOT_LINKED"*/, 0LL);
     if ( !linkageStatusLabel )
       goto LABEL_43;
     UILabel__set_text(linkageStatusLabel, (System_String_o *)SelfUserAccountLinkage, 0LL);
@@ -152,14 +152,14 @@ LABEL_30:
       mText = v30->fields.mText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_1990/*"APPEND_SKILL_EXCHANGE_BASE"*/, 0LL);
-      v33 = System_String__Concat_63368612(mText, v32, 0LL);
+      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_1894/*"ACCOUNT_LINKAGE_ON_MAINTENANCE"*/, 0LL);
+      v33 = System_String__Concat_61093468(mText, v32, 0LL);
       UILabel__set_text(v30, v33, 0LL);
     }
     linkageButtonLabel = this->fields.linkageButtonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1973/*"ANOTHER_PAY_MULTI_INFO_TITLE"*/, 0LL);
+    SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1877/*"ACCOUNT_LINKAGE_BUTTON_LINK"*/, 0LL);
     if ( linkageButtonLabel )
     {
       UILabel__set_text(linkageButtonLabel, (System_String_o *)SelfUserAccountLinkage, 0LL);
@@ -175,13 +175,13 @@ LABEL_30:
         if ( v26 )
         {
           v29 = v26->fields.mText;
-          v28 = (System_String_o *)StringLiteral_897/*"--MM--Z"*/;
+          v28 = (System_String_o *)StringLiteral_867/*"-"*/;
           goto LABEL_42;
         }
       }
     }
 LABEL_43:
-    sub_1C3B9C0(SelfUserAccountLinkage, v16);
+    sub_1B4D1EC(SelfUserAccountLinkage, v16);
   }
   if ( !entity )
     goto LABEL_43;
@@ -191,7 +191,7 @@ LABEL_43:
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( type != 1 )
     goto LABEL_30;
-  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_2007/*"APPEND_SKILL_EXCHANGE_SELECTED_MSG"*/, 0LL);
+  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1911/*"ACCOUNT_LINKAGE_STATUS_LINKED"*/, 0LL);
   if ( !linkageStatusLabel )
     goto LABEL_43;
   UILabel__set_text(linkageStatusLabel, (System_String_o *)SelfUserAccountLinkage, 0LL);
@@ -203,14 +203,14 @@ LABEL_43:
     v20 = v19->fields.mText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_1990/*"APPEND_SKILL_EXCHANGE_BASE"*/, 0LL);
-    v22 = System_String__Concat_63368612(v20, v21, 0LL);
+    v21 = LocalizationManager__Get((System_String_o *)StringLiteral_1894/*"ACCOUNT_LINKAGE_ON_MAINTENANCE"*/, 0LL);
+    v22 = System_String__Concat_61093468(v20, v21, 0LL);
     UILabel__set_text(v19, v22, 0LL);
   }
   v23 = this->fields.linkageButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1972/*"ANOTHER_PAY_ITEM_RECONFIRM_INFO"*/, 0LL);
+  SelfUserAccountLinkage = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_1876/*"ACCOUNT_LINKAGE_BUTTON_DELINK"*/, 0LL);
   if ( !v23 )
     goto LABEL_43;
   UILabel__set_text(v23, (System_String_o *)SelfUserAccountLinkage, 0LL);
@@ -239,9 +239,9 @@ LABEL_43:
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v39.fields._dateData = (uint64_t)&v37;
-  v28 = System_DateTime__ToString_64059584(v39, (System_String_o *)StringLiteral_25396, 0LL);
+  v28 = System_DateTime__ToString_62497544(v39, (System_String_o *)StringLiteral_24594/*"yyyy/MM/dd"*/, 0LL);
   v29 = v27;
 LABEL_42:
-  v35 = System_String__Concat_63368612(v29, v28, 0LL);
+  v35 = System_String__Concat_61093468(v29, v28, 0LL);
   UILabel__set_text(v26, v35, 0LL);
 }

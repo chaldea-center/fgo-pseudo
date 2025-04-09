@@ -28,42 +28,30 @@ void __fastcall AutoFortificationButtonComponent__Init(
   UILabel_o *ButtonLb; // x21
   System_String_o *v12; // x0
   __int64 v13; // x1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C25FD0 & 1) == 0 )
+  if ( (byte_49BEF17 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_2164/*"AddStrengthCardWeights"*/, v8);
-    sub_1C3B764(&StringLiteral_17820/*"command_code_statussync"*/, v9);
-    byte_4C25FD0 = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_2067/*"AUTO_ORGANIZATION_BTN_LABEL"*/, v8);
+    sub_1B4CF90(&StringLiteral_17168/*"btn_bg_auto_organization"*/, v9);
+    byte_49BEF17 = 1;
   }
   ButtonBg = this->fields.ButtonBg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39282628(eventId, ButtonBg, (System_String_o *)StringLiteral_17820/*"command_code_statussync"*/, 0LL);
+  AtlasManager__SetEventUI_38399044(eventId, ButtonBg, (System_String_o *)StringLiteral_17168/*"btn_bg_auto_organization"*/, 0LL);
   ButtonLb = this->fields.ButtonLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2164/*"AddStrengthCardWeights"*/, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2067/*"AUTO_ORGANIZATION_BTN_LABEL"*/, 0LL);
   if ( !ButtonLb )
-    sub_1C3B9C0(v12, v13);
+    sub_1B4D1EC(v12, v13);
   UILabel__set_text(ButtonLb, v12, 0LL);
   this->fields.onClickAction = onClickAction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.onClickAction,
-    (int64_t)onClickAction,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v14, v15);
 }
 
 

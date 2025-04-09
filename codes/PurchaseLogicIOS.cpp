@@ -13,55 +13,39 @@ bool __fastcall PurchaseLogicIOS__CheckIfReceiptShouldBeSentInIOSOldStyle(
   __int64 v12; // x20
   __int64 v13; // x0
   __int64 v14; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
   System_Collections_Generic_IEnumerable_TSource__o *inAppPurchaseReceipts; // x21
   void *monitor; // x8
-  PurchaseLogicIOS___c_c *v23; // x0
+  PurchaseLogicIOS___c_c *v19; // x0
   System_Func_object__bool__o *_9__2_0; // x22
-  Il2CppObject *v25; // x23
+  Il2CppObject *v21; // x23
   struct PurchaseLogicIOS___c_StaticFields *static_fields; // x0
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  bool v33; // w0
-  System_Object_array *v34; // x19
-  bool v35; // w21
-  System_Func_object__bool__o *v36; // x22
-  bool v37; // w0
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  bool v25; // w0
+  System_Object_array *v26; // x19
+  bool v27; // w21
+  System_Func_object__bool__o *v28; // x22
+  bool v29; // w0
 
-  if ( (byte_4C218F6 & 1) == 0 )
+  if ( (byte_49BA80B & 1) == 0 )
   {
-    sub_1C3B764(&Method_BasicHelper_Any_AppleInAppPurchaseReceipt___, receipt);
-    sub_1C3B764(&Method_System_Linq_Enumerable_All_AppleInAppPurchaseReceipt___, v6);
-    sub_1C3B764(&System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo, v7);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__CheckIfReceiptShouldBeSentInIOSOldStyle_b__2_0__, v8);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__DisplayClass2_0__CheckIfReceiptShouldBeSentInIOSOldStyle_b__1__, v9);
-    sub_1C3B764(&PurchaseLogicIOS___c__DisplayClass2_0_TypeInfo, v10);
-    sub_1C3B764(&PurchaseLogicIOS___c_TypeInfo, v11);
-    byte_4C218F6 = 1;
+    sub_1B4CF90(&Method_BasicHelper_Any_AppleInAppPurchaseReceipt___, receipt);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_All_AppleInAppPurchaseReceipt___, v6);
+    sub_1B4CF90(&System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo, v7);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__CheckIfReceiptShouldBeSentInIOSOldStyle_b__2_0__, v8);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__DisplayClass2_0__CheckIfReceiptShouldBeSentInIOSOldStyle_b__1__, v9);
+    sub_1B4CF90(&PurchaseLogicIOS___c__DisplayClass2_0_TypeInfo, v10);
+    sub_1B4CF90(&PurchaseLogicIOS___c_TypeInfo, v11);
+    byte_49BA80B = 1;
   }
-  v12 = sub_1C3B9B0(PurchaseLogicIOS___c__DisplayClass2_0_TypeInfo);
+  v12 = sub_1B4D1DC(PurchaseLogicIOS___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
-    sub_1C3B9C0(v13, v14);
+    sub_1B4D1EC(v13, v14);
   *(_QWORD *)(v12 + 16) = transactionIdInOldStyleReceipt;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)(v12 + 16),
-    (int64_t)transactionIdInOldStyleReceipt,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 16), (int32_t)transactionIdInOldStyleReceipt, v15, v16);
   if ( !receipt )
     return 1;
   inAppPurchaseReceipts = (System_Collections_Generic_IEnumerable_TSource__o *)receipt->fields.inAppPurchaseReceipts;
@@ -76,48 +60,48 @@ bool __fastcall PurchaseLogicIOS__CheckIfReceiptShouldBeSentInIOSOldStyle(
       LODWORD(monitor) = (_DWORD)monitor - 1;
     while ( (_DWORD)monitor );
   }
-  v23 = PurchaseLogicIOS___c_TypeInfo;
+  v19 = PurchaseLogicIOS___c_TypeInfo;
   if ( !PurchaseLogicIOS___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicIOS___c_TypeInfo);
-    v23 = PurchaseLogicIOS___c_TypeInfo;
+    v19 = PurchaseLogicIOS___c_TypeInfo;
   }
-  _9__2_0 = (System_Func_object__bool__o *)v23->static_fields->__9__2_0;
+  _9__2_0 = (System_Func_object__bool__o *)v19->static_fields->__9__2_0;
   if ( !_9__2_0 )
   {
-    if ( !v23->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v23);
-      v23 = PurchaseLogicIOS___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = PurchaseLogicIOS___c_TypeInfo;
     }
-    v25 = (Il2CppObject *)v23->static_fields->__9;
-    _9__2_0 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo);
+    v21 = (Il2CppObject *)v19->static_fields->__9;
+    _9__2_0 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__2_0,
-      v25,
+      v21,
       Method_PurchaseLogicIOS___c__CheckIfReceiptShouldBeSentInIOSOldStyle_b__2_0__,
       0LL);
     static_fields = PurchaseLogicIOS___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_AppleInAppPurchaseReceipt__bool__o *)_9__2_0;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__2_0, (int64_t)_9__2_0, v27, v28, v29, v30, v31, v32);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v23, v24);
   }
-  v33 = System_Linq_Enumerable__All_object_(
+  v25 = System_Linq_Enumerable__All_object_(
           inAppPurchaseReceipts,
           (System_Func_TSource__bool__o *)_9__2_0,
-          (const MethodInfo_2FFA7D0 *)Method_System_Linq_Enumerable_All_AppleInAppPurchaseReceipt___);
-  v34 = (System_Object_array *)receipt->fields.inAppPurchaseReceipts;
-  v35 = v33;
-  v36 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo);
+          (const MethodInfo_2F0E080 *)Method_System_Linq_Enumerable_All_AppleInAppPurchaseReceipt___);
+  v26 = (System_Object_array *)receipt->fields.inAppPurchaseReceipts;
+  v27 = v25;
+  v28 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_AppleInAppPurchaseReceipt__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v36,
+    v28,
     (Il2CppObject *)v12,
     Method_PurchaseLogicIOS___c__DisplayClass2_0__CheckIfReceiptShouldBeSentInIOSOldStyle_b__1__,
     0LL);
-  v37 = BasicHelper__Any_object__50179104(
-          v34,
-          (System_Func_T__bool__o *)v36,
-          (const MethodInfo_2FDAC20 *)Method_BasicHelper_Any_AppleInAppPurchaseReceipt___);
-  return v35 || !v37;
+  v29 = BasicHelper__Any_object__49202496(
+          v26,
+          (System_Func_T__bool__o *)v28,
+          (const MethodInfo_2EEC540 *)Method_BasicHelper_Any_AppleInAppPurchaseReceipt___);
+  return v27 || !v29;
 }
 
 
@@ -148,35 +132,35 @@ void __fastcall PurchaseLogicIOS__ConfirmPurchase(
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C218FD & 1) == 0 )
+  if ( (byte_49BA812 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, product);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v5);
-    sub_1C3B764(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__GetEnumerator__, v7);
-    sub_1C3B764(&PurchaseLogic_TypeInfo, v8);
-    byte_4C218FD = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, product);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v5);
+    sub_1B4CF90(&UnityEngine_Purchasing_IStoreController_TypeInfo, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__GetEnumerator__, v7);
+    sub_1B4CF90(&PurchaseLogic_TypeInfo, v8);
+    byte_49BA812 = 1;
   }
   memset(&v24, 0, sizeof(v24));
   AllPurchasedProductIdList = PurchaseLogicIOS__GetAllPurchasedProductIdList(this, (const MethodInfo *)product);
   if ( !AllPurchasedProductIdList )
-    sub_1C3B9C0(0LL, v10);
+    sub_1B4D1EC(0LL, v10);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_object__o *)AllPurchasedProductIdList,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   v24 = v23;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
     if ( !v11 )
       break;
     storeController = PurchaseLogic_TypeInfo->static_fields->_storeController;
     if ( !storeController )
-      sub_1C3B9C0(v11, v12);
+      sub_1B4D1EC(v11, v12);
     klass = storeController->klass;
     current = v24.fields._current;
     v16 = *(unsigned __int16 *)(&storeController->klass->_2.bitflags2 + 3);
@@ -195,20 +179,20 @@ void __fastcall PurchaseLogicIOS__ConfirmPurchase(
     else
     {
 LABEL_11:
-      p_method = sub_1C8D744(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
+      p_method = sub_1B9D724(storeController, UnityEngine_Purchasing_IStoreController_TypeInfo, 0LL);
     }
     v19 = (UnityEngine_Purchasing_ProductCollection_o *)(*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IStoreController_o *, _QWORD))p_method)(
                                                           storeController,
                                                           *(_QWORD *)(p_method + 8));
     if ( !v19 )
-      sub_1C3B9C0(0LL, v20);
+      sub_1B4D1EC(0LL, v20);
     v21 = UnityEngine_Purchasing_ProductCollection__WithID(v19, (System_String_o *)current, 0LL);
     if ( v21 )
       PurchaseLogic__ConfirmPurchase((PurchaseLogic_o *)this, v21, v22);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
 }
 
 
@@ -249,47 +233,43 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogicIOS__ConvertB
   int32_t v34; // w1
   Il2CppObject *Entity; // x0
   __int64 v36; // x1
-  int64_t v37; // x2
-  int32_t v38; // w3
-  System_String_o *v39; // x4
-  BattleSetupInfo_o *v40; // x5
-  FollowerInfo_o *v41; // x6
-  PartyListViewItem_o *v42; // x7
-  Il2CppObject *v43; // x1
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  Il2CppObject *v39; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v45; // x9
+  _QWORD *v41; // x9
   __int64 size; // x10
-  Il2CppClass **v47; // x0
-  __int64 v48; // x8
-  __int64 v49; // x9
-  int *v50; // x10
-  __int64 v51; // x0
+  Il2CppClass **v43; // x0
+  __int64 v44; // x8
+  __int64 v45; // x9
+  int *v46; // x10
+  __int64 v47; // x0
 
-  if ( (byte_4C218FF & 1) == 0 )
+  if ( (byte_49BA814 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_BankShopMaster___, bankShopIDs);
-    sub_1C3B764(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v6);
-    sub_1C3B764(&System_Collections_Generic_IEnumerable_int__TypeInfo, v7);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_int__TypeInfo, v8);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__Add__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string___ctor__, v11);
-    sub_1C3B764(&System_Collections_Generic_List_string__TypeInfo, v12);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    sub_1C3B764(&StringLiteral_17387/*"cancel_purchase_by_bank"*/, v14);
-    byte_4C218FF = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_BankShopMaster___, bankShopIDs);
+    sub_1B4CF90(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__, v5);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v6);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerable_int__TypeInfo, v7);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_int__TypeInfo, v8);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__Add__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string___ctor__, v11);
+    sub_1B4CF90(&System_Collections_Generic_List_string__TypeInfo, v12);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    sub_1B4CF90(&StringLiteral_16739/*"bankShopMaster is null"*/, v14);
+    byte_49BA814 = 1;
   }
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_44;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_BankShopMaster___);
+               (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_BankShopMaster___);
   if ( !Instance )
   {
     logErrorOutputActionSampledByRatio = this->fields._logErrorOutputActionSampledByRatio;
@@ -297,13 +277,13 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogicIOS__ConvertB
     {
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, float))logErrorOutputActionSampledByRatio->fields.m_target)(
         logErrorOutputActionSampledByRatio->fields.original_method_info,
-        StringLiteral_17387/*"cancel_purchase_by_bank"*/,
+        StringLiteral_16739/*"bankShopMaster is null"*/,
         *(_QWORD *)&logErrorOutputActionSampledByRatio->fields.extra_arg,
         0.01);
       return (System_Collections_Generic_List_string__o *)v15;
     }
 LABEL_44:
-    sub_1C3B9C0(Instance, v17);
+    sub_1B4D1EC(Instance, v17);
   }
   if ( !bankShopIDs )
     goto LABEL_44;
@@ -325,13 +305,13 @@ LABEL_44:
   else
   {
 LABEL_10:
-    p_method = sub_1C8D744(bankShopIDs, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
+    p_method = sub_1B9D724(bankShopIDs, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
   }
   v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_int__o *, _QWORD))p_method)(
           bankShopIDs,
           *(_QWORD *)(p_method + 8));
   if ( !v25 )
-    sub_1C3B9C0(0LL, v24);
+    sub_1B4D1EC(0LL, v24);
   while ( 1 )
   {
     v26 = *(_QWORD *)v25;
@@ -351,7 +331,7 @@ LABEL_10:
     else
     {
 LABEL_19:
-      v29 = sub_1C8D744(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v29 = sub_1B9D724(v25, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v25, *(_QWORD *)(v29 + 8)) & 1) == 0 )
       break;
@@ -372,60 +352,60 @@ LABEL_19:
     else
     {
 LABEL_26:
-      v33 = sub_1C8D744(v25, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
+      v33 = sub_1B9D724(v25, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
     }
     v34 = (*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v25, *(_QWORD *)(v33 + 8));
     Entity = DataMasterBase_object__object__int___GetEntity(
                v19,
                v34,
-               (const MethodInfo_329AE48 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
+               (const MethodInfo_319D99C *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int__GetEntity__);
     if ( Entity )
     {
       if ( !v15 )
-        sub_1C3B9C0(Entity, v36);
-      v43 = (Il2CppObject *)Entity[2].klass;
+        sub_1B4D1EC(Entity, v36);
+      v39 = (Il2CppObject *)Entity[2].klass;
       items = v15->fields._items;
-      v45 = Method_System_Collections_Generic_List_string__Add__;
+      v41 = Method_System_Collections_Generic_List_string__Add__;
       ++v15->fields._version;
       if ( !items )
-        sub_1C3B9C0(Entity, v43);
+        sub_1B4D1EC(Entity, v39);
       size = v15->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v15,
-          v43,
-          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+          v39,
+          *(const MethodInfo_35801DC **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
-        v47 = &items->obj.klass + size;
+        v43 = &items->obj.klass + size;
         v15->fields._size = size + 1;
-        v47[4] = (Il2CppClass *)v43;
-        sub_1C3B708((PartyOrganizationUtility_o *)(v47 + 4), (int64_t)v43, v37, v38, v39, v40, v41, v42);
+        v43[4] = (Il2CppClass *)v39;
+        sub_1B4CF34((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v39, v37, v38);
       }
     }
   }
-  v48 = *(_QWORD *)v25;
-  v49 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
+  v44 = *(_QWORD *)v25;
+  v45 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
   if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
   {
-    v50 = (int *)(*(_QWORD *)(v48 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v50 - 1) != System_IDisposable_TypeInfo )
+    v46 = (int *)(*(_QWORD *)(v44 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v46 - 1) != System_IDisposable_TypeInfo )
     {
-      --v49;
-      v50 += 4;
-      if ( !v49 )
+      --v45;
+      v46 += 4;
+      if ( !v45 )
         goto LABEL_38;
     }
-    v51 = v48 + 16LL * *v50 + 312;
+    v47 = v44 + 16LL * *v46 + 312;
   }
   else
   {
 LABEL_38:
-    v51 = sub_1C8D744(v25, System_IDisposable_TypeInfo, 0LL);
+    v47 = sub_1B9D724(v25, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v51)(v25, *(_QWORD *)(v51 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v47)(v25, *(_QWORD *)(v47 + 8));
   return (System_Collections_Generic_List_string__o *)v15;
 }
 
@@ -435,13 +415,13 @@ void __fastcall PurchaseLogicIOS__DebugLog(PurchaseLogicIOS_o *this, System_Stri
   __int64 v4; // x1
   Il2CppObject *v5; // x19
 
-  if ( (byte_4C218FA & 1) == 0 )
+  if ( (byte_49BA80F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Debug_TypeInfo, log);
-    sub_1C3B764(&StringLiteral_15375/*"X8"*/, v4);
-    byte_4C218FA = 1;
+    sub_1B4CF90(&UnityEngine_Debug_TypeInfo, log);
+    sub_1B4CF90(&StringLiteral_14780/*"UnityIAP:"*/, v4);
+    byte_49BA80F = 1;
   }
-  v5 = (Il2CppObject *)System_String__Concat_63368612((System_String_o *)StringLiteral_15375/*"X8"*/, log, 0LL);
+  v5 = (Il2CppObject *)System_String__Concat_61093468((System_String_o *)StringLiteral_14780/*"UnityIAP:"*/, log, 0LL);
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
   UnityEngine_Debug__Log(v5, 0LL);
@@ -497,57 +477,53 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicIOS__ExtractReceiptCont
   UnityEngine_Purchasing_Security_AppleReceipt_o *v45; // x22
   System_Collections_Generic_List_string__o *DeferredPurchaseProductIdsFromPlayerPrefs; // x0
   __int64 v47; // x1
-  int64_t v48; // x2
+  int32_t v48; // w2
   const MethodInfo *v49; // x3
-  System_String_o *v50; // x4
-  BattleSetupInfo_o *v51; // x5
-  FollowerInfo_o *v52; // x6
-  PartyListViewItem_o *v53; // x7
   struct UnityEngine_Purchasing_IExtensionProvider_o *storeExtensionProvider; // x23
-  UnityEngine_Purchasing_IExtensionProvider_c *v55; // x8
-  __int64 v56; // x9
-  __int64 v57; // x1
-  __int64 v58; // x2
-  int32_t *v59; // x10
-  __int64 v60; // x0
-  __int64 v61; // x0
-  __int64 v62; // x0
-  __int64 v63; // x1
-  __int64 v64; // x23
-  __int64 v65; // x8
-  __int64 v66; // x9
-  int *v67; // x10
-  __int64 v68; // x0
-  System_String_o *v69; // x21
-  const MethodInfo *v70; // x2
+  UnityEngine_Purchasing_IExtensionProvider_c *v51; // x8
+  __int64 v52; // x9
+  __int64 v53; // x1
+  __int64 v54; // x2
+  int32_t *v55; // x10
+  __int64 v56; // x0
+  __int64 v57; // x0
+  __int64 v58; // x0
+  __int64 v59; // x1
+  __int64 v60; // x23
+  __int64 v61; // x8
+  __int64 v62; // x9
+  int *v63; // x10
+  __int64 v64; // x0
+  System_String_o *v65; // x21
+  const MethodInfo *v66; // x2
   System_String_o *TransactionIdFromOldStyleReceipt; // x23
   Il2CppObject *value; // [xsp+8h] [xbp-48h] BYREF
 
   v4 = this;
-  if ( (byte_4C218F5 & 1) == 0 )
+  if ( (byte_49BA80A & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Purchasing_Security_AppleValidator_TypeInfo, product);
-    sub_1C3B764(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IAppleConfiguration___, v5);
-    sub_1C3B764(&System_Convert_TypeInfo, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v7);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v8);
-    sub_1C3B764(&UnityEngine_Purchasing_IAppleConfiguration_TypeInfo, v9);
-    sub_1C3B764(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v10);
-    sub_1C3B764(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, v11);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__Contains__, v12);
-    sub_1C3B764(&PurchaseLogic_TypeInfo, v13);
-    sub_1C3B764(&PurchaseLogic_ReceiptContents_TypeInfo, v14);
-    sub_1C3B764(&string_TypeInfo, v15);
-    sub_1C3B764(&StringLiteral_10806/*"REJECT_ITEM_WARNING_TXT"*/, v16);
-    sub_1C3B764(&StringLiteral_11393/*"SERVANT_SELL_MESSAGE_START"*/, v17);
-    this = (PurchaseLogicIOS_o *)sub_1C3B764(&StringLiteral_1/*""*/, v18);
-    byte_4C218F5 = 1;
+    sub_1B4CF90(&UnityEngine_Purchasing_Security_AppleValidator_TypeInfo, product);
+    sub_1B4CF90(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IAppleConfiguration___, v5);
+    sub_1B4CF90(&System_Convert_TypeInfo, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v7);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v8);
+    sub_1B4CF90(&UnityEngine_Purchasing_IAppleConfiguration_TypeInfo, v9);
+    sub_1B4CF90(&UnityEngine_Purchasing_IAppleExtensions_TypeInfo, v10);
+    sub_1B4CF90(&Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___, v11);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__Contains__, v12);
+    sub_1B4CF90(&PurchaseLogic_TypeInfo, v13);
+    sub_1B4CF90(&PurchaseLogic_ReceiptContents_TypeInfo, v14);
+    sub_1B4CF90(&string_TypeInfo, v15);
+    sub_1B4CF90(&StringLiteral_10375/*"Payload"*/, v16);
+    sub_1B4CF90(&StringLiteral_10949/*"RawReceipt Decode Error. "*/, v17);
+    this = (PurchaseLogicIOS_o *)sub_1B4CF90(&StringLiteral_1/*""*/, v18);
+    byte_49BA80A = 1;
   }
   value = 0LL;
   if ( !product )
     goto LABEL_59;
   receipt_k__BackingField = product->fields._receipt_k__BackingField;
-  v20 = sub_1C3B9B0(PurchaseLogic_ReceiptContents_TypeInfo);
+  v20 = sub_1B4D1DC(PurchaseLogic_ReceiptContents_TypeInfo);
   PurchaseLogic_ReceiptContents___ctor((PurchaseLogic_ReceiptContents_o *)v20, v21);
   this = (PurchaseLogicIOS_o *)UnityEngine_Purchasing_MiniJson__JsonDecode(receipt_k__BackingField, 0LL);
   if ( !this )
@@ -564,9 +540,9 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicIOS__ExtractReceiptCont
     this = 0LL;
   this = (PurchaseLogicIOS_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                  (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                 (Il2CppObject *)StringLiteral_10806/*"REJECT_ITEM_WARNING_TXT"*/,
+                                 (Il2CppObject *)StringLiteral_10375/*"Payload"*/,
                                  &value,
-                                 (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+                                 (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( value )
@@ -588,20 +564,20 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicIOS__ExtractReceiptCont
       goto LABEL_59;
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))logErrorOutputAction->fields.m_target)(
       logErrorOutputAction->fields.original_method_info,
-      StringLiteral_11393/*"SERVANT_SELL_MESSAGE_START"*/,
+      StringLiteral_10949/*"RawReceipt Decode Error. "*/,
       *(_QWORD *)&logErrorOutputAction->fields.extra_arg);
   }
   v26 = (UnityEngine_Purchasing_ConfigurationBuilder_o *)((__int64 (__fastcall *)(PurchaseLogicIOS_o *, Il2CppMethodPointer))v4->klass->vtable._10_GetConfigurationBuilder.method)(
                                                            v4,
                                                            v4->klass->vtable._11_SetObfuscatedAccountId.methodPtr);
   if ( !v26 )
-    sub_1C3B9C0(0LL, v27);
+    sub_1B4D1EC(0LL, v27);
   v28 = UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
           v26,
-          (const MethodInfo_2FE8650 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IAppleConfiguration___);
+          (const MethodInfo_2EF9F70 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IAppleConfiguration___);
   v30 = v28;
   if ( !v28 )
-    sub_1C3B9C0(0LL, v29);
+    sub_1B4D1EC(0LL, v29);
   v31 = v28->klass;
   v32 = *(unsigned __int16 *)(&v28->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&v28->klass->_2.bitflags2 + 3) )
@@ -619,85 +595,85 @@ PurchaseLogic_ReceiptContents_o *__fastcall PurchaseLogicIOS__ExtractReceiptCont
   else
   {
 LABEL_23:
-    p_method = sub_1C8D744(v28, UnityEngine_Purchasing_IAppleConfiguration_TypeInfo, 0LL);
+    p_method = sub_1B9D724(v28, UnityEngine_Purchasing_IAppleConfiguration_TypeInfo, 0LL);
   }
   v35 = (System_String_o *)(*(__int64 (__fastcall **)(Il2CppObject *, _QWORD))p_method)(v30, *(_QWORD *)(p_method + 8));
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v36 = System_Convert__FromBase64String(v35, 0LL);
   v37 = UnityEngine_Purchasing_Security_AppleTangle__Data(0LL);
-  v38 = (UnityEngine_Purchasing_Security_AppleValidator_o *)sub_1C3B9B0(UnityEngine_Purchasing_Security_AppleValidator_TypeInfo);
+  v38 = (UnityEngine_Purchasing_Security_AppleValidator_o *)sub_1B4D1DC(UnityEngine_Purchasing_Security_AppleValidator_TypeInfo);
   UnityEngine_Purchasing_Security_AppleValidator___ctor(v38, v37, 0LL);
   if ( !v38 )
-    sub_1C3B9C0(v39, v40);
+    sub_1B4D1EC(v39, v40);
   v41 = (PurchaseLogic_o *)UnityEngine_Purchasing_Security_AppleValidator__Validate(v38, v36, 0LL);
   definition_k__BackingField = product->fields._definition_k__BackingField;
   if ( !definition_k__BackingField )
-    sub_1C3B9C0(v41, v42);
+    sub_1B4D1EC(v41, v42);
   id_k__BackingField = (Il2CppObject *)definition_k__BackingField->fields._id_k__BackingField;
   v45 = (UnityEngine_Purchasing_Security_AppleReceipt_o *)v41;
   DeferredPurchaseProductIdsFromPlayerPrefs = PurchaseLogic__GetDeferredPurchaseProductIdsFromPlayerPrefs(v41, v42);
   if ( !DeferredPurchaseProductIdsFromPlayerPrefs )
-    sub_1C3B9C0(0LL, v47);
+    sub_1B4D1EC(0LL, v47);
   this = (PurchaseLogicIOS_o *)System_Collections_Generic_List_object___Contains(
                                  (System_Collections_Generic_List_object__o *)DeferredPurchaseProductIdsFromPlayerPrefs,
                                  id_k__BackingField,
-                                 (const MethodInfo_368BFFC *)Method_System_Collections_Generic_List_string__Contains__);
+                                 (const MethodInfo_358056C *)Method_System_Collections_Generic_List_string__Contains__);
   if ( ((unsigned __int8)this & 1) == 0 )
     goto LABEL_57;
   storeExtensionProvider = PurchaseLogic_TypeInfo->static_fields->_storeExtensionProvider;
   if ( !storeExtensionProvider )
-    sub_1C3B9C0(this, product);
-  v55 = storeExtensionProvider->klass;
-  v56 = *(unsigned __int16 *)(&storeExtensionProvider->klass->_2.bitflags2 + 3);
-  v57 = *((_QWORD *)Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___ + 4);
-  v58 = *((unsigned __int16 *)Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___ + 40);
+    sub_1B4D1EC(this, product);
+  v51 = storeExtensionProvider->klass;
+  v52 = *(unsigned __int16 *)(&storeExtensionProvider->klass->_2.bitflags2 + 3);
+  v53 = *((_QWORD *)Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___ + 4);
+  v54 = *((unsigned __int16 *)Method_UnityEngine_Purchasing_IExtensionProvider_GetExtension_IAppleExtensions___ + 40);
   if ( *(_WORD *)(&storeExtensionProvider->klass->_2.bitflags2 + 3) )
   {
-    v59 = &v55->_1.interfaceOffsets->offset;
-    while ( *((_QWORD *)v59 - 1) != v57 )
+    v55 = &v51->_1.interfaceOffsets->offset;
+    while ( *((_QWORD *)v55 - 1) != v53 )
     {
-      --v56;
-      v59 += 4;
-      if ( !v56 )
+      --v52;
+      v55 += 4;
+      if ( !v52 )
         goto LABEL_36;
     }
-    v60 = (__int64)&v55->vtable[*v59 + (int)v58].method;
+    v56 = (__int64)&v51->vtable[*v55 + (int)v54].method;
   }
   else
   {
 LABEL_36:
-    v60 = sub_1C8D744(storeExtensionProvider, v57, v58);
+    v56 = sub_1B9D724(storeExtensionProvider, v53, v54);
   }
-  v61 = sub_1C3B898(*(_QWORD *)(v60 + 8));
-  v62 = (*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *))(v61 + 8))(storeExtensionProvider);
-  v64 = v62;
-  if ( !v62 )
-    sub_1C3B9C0(0LL, v63);
-  v65 = *(_QWORD *)v62;
-  v66 = *(unsigned __int16 *)(*(_QWORD *)v62 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v62 + 302LL) )
+  v57 = sub_1B4D0C4(*(_QWORD *)(v56 + 8));
+  v58 = (*(__int64 (__fastcall **)(struct UnityEngine_Purchasing_IExtensionProvider_o *))(v57 + 8))(storeExtensionProvider);
+  v60 = v58;
+  if ( !v58 )
+    sub_1B4D1EC(0LL, v59);
+  v61 = *(_QWORD *)v58;
+  v62 = *(unsigned __int16 *)(*(_QWORD *)v58 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v58 + 302LL) )
   {
-    v67 = (int *)(*(_QWORD *)(v65 + 176) + 8LL);
-    while ( *((UnityEngine_Purchasing_IAppleExtensions_c **)v67 - 1) != UnityEngine_Purchasing_IAppleExtensions_TypeInfo )
+    v63 = (int *)(*(_QWORD *)(v61 + 176) + 8LL);
+    while ( *((UnityEngine_Purchasing_IAppleExtensions_c **)v63 - 1) != UnityEngine_Purchasing_IAppleExtensions_TypeInfo )
     {
-      --v66;
-      v67 += 4;
-      if ( !v66 )
+      --v62;
+      v63 += 4;
+      if ( !v62 )
         goto LABEL_43;
     }
-    v68 = v65 + 16LL * *v67 + 312;
+    v64 = v61 + 16LL * *v63 + 312;
   }
   else
   {
 LABEL_43:
-    v68 = sub_1C8D744(v62, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 0LL);
+    v64 = sub_1B9D724(v58, UnityEngine_Purchasing_IAppleExtensions_TypeInfo, 0LL);
   }
-  v69 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, UnityEngine_Purchasing_Product_o *, _QWORD))v68)(
-                             v64,
+  v65 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, UnityEngine_Purchasing_Product_o *, _QWORD))v64)(
+                             v60,
                              product,
-                             *(_QWORD *)(v68 + 8));
-  TransactionIdFromOldStyleReceipt = PurchaseLogicIOS__GetTransactionIdFromOldStyleReceipt(v4, v69, v70);
+                             *(_QWORD *)(v64 + 8));
+  TransactionIdFromOldStyleReceipt = PurchaseLogicIOS__GetTransactionIdFromOldStyleReceipt(v4, v65, v66);
   this = (PurchaseLogicIOS_o *)System_String__IsNullOrEmpty(TransactionIdFromOldStyleReceipt, 0LL);
   if ( ((unsigned __int8)this & 1) != 0
     || (this = (PurchaseLogicIOS_o *)PurchaseLogicIOS__CheckIfReceiptShouldBeSentInIOSOldStyle(
@@ -708,28 +684,20 @@ LABEL_43:
         ((unsigned __int8)this & 1) == 0) )
   {
 LABEL_57:
-    v69 = (System_String_o *)v24;
+    v65 = (System_String_o *)v24;
     if ( v20 )
       goto LABEL_58;
 LABEL_59:
-    sub_1C3B9C0(this, product);
+    sub_1B4D1EC(this, product);
   }
   if ( !v20 )
-    sub_1C3B9C0(this, product);
+    sub_1B4D1EC(this, product);
   *(_QWORD *)(v20 + 56) = TransactionIdFromOldStyleReceipt;
   *(_BYTE *)(v20 + 48) = 1;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)(v20 + 56),
-    (int64_t)TransactionIdFromOldStyleReceipt,
-    v48,
-    (int32_t)v49,
-    v50,
-    v51,
-    v52,
-    v53);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 56), (int32_t)TransactionIdFromOldStyleReceipt, v48, v49);
 LABEL_58:
-  *(_QWORD *)(v20 + 32) = v69;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v20 + 32), (int64_t)v69, v48, (int32_t)v49, v50, v51, v52, v53);
+  *(_QWORD *)(v20 + 32) = v65;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 32), (int32_t)v65, v48, v49);
   return (PurchaseLogic_ReceiptContents_o *)v20;
 }
 
@@ -761,69 +729,53 @@ void __fastcall PurchaseLogicIOS__GetAddedStoneNum(
   System_Func_object__bool__o *_9__12_0; // x25
   Il2CppObject *v28; // x26
   struct PurchaseLogicIOS___c_StaticFields *static_fields; // x0
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v36; // x23
-  PurchaseLogicIOS___c_c *v37; // x0
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v32; // x23
+  PurchaseLogicIOS___c_c *v33; // x0
   System_Func_object__int__o *_9__12_1; // x25
-  Il2CppObject *v39; // x26
-  struct PurchaseLogicIOS___c_StaticFields *v40; // x0
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
-  System_Collections_Generic_IEnumerable_int__o *v47; // x0
-  PurchaseLogicIOS___c_c *v48; // x0
+  Il2CppObject *v35; // x26
+  struct PurchaseLogicIOS___c_StaticFields *v36; // x0
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  System_Collections_Generic_IEnumerable_int__o *v39; // x0
+  PurchaseLogicIOS___c_c *v40; // x0
   System_Func_object__int__o *_9__12_2; // x24
-  Il2CppObject *v50; // x25
-  struct PurchaseLogicIOS___c_StaticFields *v51; // x0
-  int64_t v52; // x2
-  int32_t v53; // w3
-  System_String_o *v54; // x4
-  BattleSetupInfo_o *v55; // x5
-  FollowerInfo_o *v56; // x6
-  PartyListViewItem_o *v57; // x7
-  System_Collections_Generic_IEnumerable_int__o *v58; // x0
-  PurchaseLogicIOS___c_c *v59; // x0
+  Il2CppObject *v42; // x25
+  struct PurchaseLogicIOS___c_StaticFields *v43; // x0
+  int32_t v44; // w2
+  const MethodInfo *v45; // x3
+  System_Collections_Generic_IEnumerable_int__o *v46; // x0
+  PurchaseLogicIOS___c_c *v47; // x0
   System_Func_object__bool__o *_9__12_3; // x22
-  Il2CppObject *v61; // x24
-  struct PurchaseLogicIOS___c_StaticFields *v62; // x0
-  int64_t v63; // x2
-  int32_t v64; // w3
-  System_String_o *v65; // x4
-  BattleSetupInfo_o *v66; // x5
-  FollowerInfo_o *v67; // x6
-  PartyListViewItem_o *v68; // x7
+  Il2CppObject *v49; // x24
+  struct PurchaseLogicIOS___c_StaticFields *v50; // x0
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
   Il2CppObject *object; // x0
-  __int64 v70; // x1
-  System_Func_object__bool__o *v71; // x20
-  int32_t v72; // w8
+  __int64 v54; // x1
+  System_Func_object__bool__o *v55; // x20
+  int32_t v56; // w8
 
-  if ( (byte_4C21900 & 1) == 0 )
+  if ( (byte_49BA815 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Linq_Enumerable_Any_PurchaseByBank_UnityIap_Request_PurchaseResult___,
       purchaseResultArray);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Count_PurchaseByBank_UnityIap_Request_PurchaseResult___, v12);
-    sub_1C3B764(&Method_System_Linq_Enumerable_First_PurchaseByBank_UnityIap_Request_PurchaseResult___, v13);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___, v14);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Where_PurchaseByBank_UnityIap_Request_PurchaseResult___, v15);
-    sub_1C3B764(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v16);
-    sub_1C3B764(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v17);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_0__, v18);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_1__, v19);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_2__, v20);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_3__, v21);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__DisplayClass12_0__GetAddedStoneNum_b__4__, v22);
-    sub_1C3B764(&PurchaseLogicIOS___c__DisplayClass12_0_TypeInfo, v23);
-    sub_1C3B764(&PurchaseLogicIOS___c_TypeInfo, v24);
-    byte_4C21900 = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Count_PurchaseByBank_UnityIap_Request_PurchaseResult___, v12);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_First_PurchaseByBank_UnityIap_Request_PurchaseResult___, v13);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___, v14);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_PurchaseByBank_UnityIap_Request_PurchaseResult___, v15);
+    sub_1B4CF90(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo, v16);
+    sub_1B4CF90(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v17);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_0__, v18);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_1__, v19);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_2__, v20);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_3__, v21);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__DisplayClass12_0__GetAddedStoneNum_b__4__, v22);
+    sub_1B4CF90(&PurchaseLogicIOS___c__DisplayClass12_0_TypeInfo, v23);
+    sub_1B4CF90(&PurchaseLogicIOS___c_TypeInfo, v24);
+    byte_49BA815 = 1;
   }
   *shopId = 0;
   *chargeStoneNum = 0;
@@ -831,7 +783,7 @@ void __fastcall PurchaseLogicIOS__GetAddedStoneNum(
   *isSentPresentBox = 0;
   if ( purchaseResultArray )
   {
-    v25 = sub_1C3B9B0(PurchaseLogicIOS___c__DisplayClass12_0_TypeInfo);
+    v25 = sub_1B4D1DC(PurchaseLogicIOS___c__DisplayClass12_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v25, 0LL);
     v26 = PurchaseLogicIOS___c_TypeInfo;
     if ( !PurchaseLogicIOS___c_TypeInfo->_2.cctor_finished )
@@ -848,129 +800,121 @@ void __fastcall PurchaseLogicIOS__GetAddedStoneNum(
         v26 = PurchaseLogicIOS___c_TypeInfo;
       }
       v28 = (Il2CppObject *)v26->static_fields->__9;
-      _9__12_0 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
+      _9__12_0 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__12_0, v28, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_0__, 0LL);
       static_fields = PurchaseLogicIOS___c_TypeInfo->static_fields;
       static_fields->__9__12_0 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__o *)_9__12_0;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&static_fields->__9__12_0,
-        (int64_t)_9__12_0,
-        v30,
-        v31,
-        v32,
-        v33,
-        v34,
-        v35);
+      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v30, v31);
     }
-    v36 = System_Linq_Enumerable__Where_object_(
+    v32 = System_Linq_Enumerable__Where_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)purchaseResultArray,
             (System_Func_TSource__bool__o *)_9__12_0,
-            (const MethodInfo_3030BDC *)Method_System_Linq_Enumerable_Where_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+            (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_PurchaseByBank_UnityIap_Request_PurchaseResult___);
     if ( System_Linq_Enumerable__Count_object_(
-           v36,
-           (const MethodInfo_300B768 *)Method_System_Linq_Enumerable_Count_PurchaseByBank_UnityIap_Request_PurchaseResult___) >= 1 )
+           v32,
+           (const MethodInfo_2F1F018 *)Method_System_Linq_Enumerable_Count_PurchaseByBank_UnityIap_Request_PurchaseResult___) >= 1 )
     {
-      v37 = PurchaseLogicIOS___c_TypeInfo;
+      v33 = PurchaseLogicIOS___c_TypeInfo;
       if ( !PurchaseLogicIOS___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(PurchaseLogicIOS___c_TypeInfo);
-        v37 = PurchaseLogicIOS___c_TypeInfo;
+        v33 = PurchaseLogicIOS___c_TypeInfo;
       }
-      _9__12_1 = (System_Func_object__int__o *)v37->static_fields->__9__12_1;
+      _9__12_1 = (System_Func_object__int__o *)v33->static_fields->__9__12_1;
       if ( !_9__12_1 )
       {
-        if ( !v37->_2.cctor_finished )
+        if ( !v33->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v37);
-          v37 = PurchaseLogicIOS___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v33);
+          v33 = PurchaseLogicIOS___c_TypeInfo;
         }
-        v39 = (Il2CppObject *)v37->static_fields->__9;
-        _9__12_1 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
-        System_Func_object__int____ctor(_9__12_1, v39, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_1__, 0LL);
-        v40 = PurchaseLogicIOS___c_TypeInfo->static_fields;
-        v40->__9__12_1 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__12_1;
-        sub_1C3B708((PartyOrganizationUtility_o *)&v40->__9__12_1, (int64_t)_9__12_1, v41, v42, v43, v44, v45, v46);
+        v35 = (Il2CppObject *)v33->static_fields->__9;
+        _9__12_1 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
+        System_Func_object__int____ctor(_9__12_1, v35, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_1__, 0LL);
+        v36 = PurchaseLogicIOS___c_TypeInfo->static_fields;
+        v36->__9__12_1 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__12_1;
+        sub_1B4CF34((CGThumbnailListItem_o *)&v36->__9__12_1, (int32_t)_9__12_1, v37, v38);
       }
-      v47 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
-                                                               v36,
+      v39 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
+                                                               v32,
                                                                (System_Func_TSource__TResult__o *)_9__12_1,
-                                                               (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
-      *freeStoneNum = System_Linq_Enumerable__Sum(v47, 0LL);
-      v48 = PurchaseLogicIOS___c_TypeInfo;
+                                                               (const MethodInfo_2F338DC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
+      *freeStoneNum = System_Linq_Enumerable__Sum(v39, 0LL);
+      v40 = PurchaseLogicIOS___c_TypeInfo;
       if ( !PurchaseLogicIOS___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(PurchaseLogicIOS___c_TypeInfo);
-        v48 = PurchaseLogicIOS___c_TypeInfo;
+        v40 = PurchaseLogicIOS___c_TypeInfo;
       }
-      _9__12_2 = (System_Func_object__int__o *)v48->static_fields->__9__12_2;
+      _9__12_2 = (System_Func_object__int__o *)v40->static_fields->__9__12_2;
       if ( !_9__12_2 )
       {
-        if ( !v48->_2.cctor_finished )
+        if ( !v40->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v48);
-          v48 = PurchaseLogicIOS___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v40);
+          v40 = PurchaseLogicIOS___c_TypeInfo;
         }
-        v50 = (Il2CppObject *)v48->static_fields->__9;
-        _9__12_2 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
-        System_Func_object__int____ctor(_9__12_2, v50, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_2__, 0LL);
-        v51 = PurchaseLogicIOS___c_TypeInfo->static_fields;
-        v51->__9__12_2 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__12_2;
-        sub_1C3B708((PartyOrganizationUtility_o *)&v51->__9__12_2, (int64_t)_9__12_2, v52, v53, v54, v55, v56, v57);
+        v42 = (Il2CppObject *)v40->static_fields->__9;
+        _9__12_2 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
+        System_Func_object__int____ctor(_9__12_2, v42, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_2__, 0LL);
+        v43 = PurchaseLogicIOS___c_TypeInfo->static_fields;
+        v43->__9__12_2 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__12_2;
+        sub_1B4CF34((CGThumbnailListItem_o *)&v43->__9__12_2, (int32_t)_9__12_2, v44, v45);
       }
-      v58 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
-                                                               v36,
+      v46 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
+                                                               v32,
                                                                (System_Func_TSource__TResult__o *)_9__12_2,
-                                                               (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
-      *chargeStoneNum = System_Linq_Enumerable__Sum(v58, 0LL);
-      v59 = PurchaseLogicIOS___c_TypeInfo;
+                                                               (const MethodInfo_2F338DC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
+      *chargeStoneNum = System_Linq_Enumerable__Sum(v46, 0LL);
+      v47 = PurchaseLogicIOS___c_TypeInfo;
       if ( !PurchaseLogicIOS___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(PurchaseLogicIOS___c_TypeInfo);
-        v59 = PurchaseLogicIOS___c_TypeInfo;
+        v47 = PurchaseLogicIOS___c_TypeInfo;
       }
-      _9__12_3 = (System_Func_object__bool__o *)v59->static_fields->__9__12_3;
+      _9__12_3 = (System_Func_object__bool__o *)v47->static_fields->__9__12_3;
       if ( !_9__12_3 )
       {
-        if ( !v59->_2.cctor_finished )
+        if ( !v47->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v59);
-          v59 = PurchaseLogicIOS___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v47);
+          v47 = PurchaseLogicIOS___c_TypeInfo;
         }
-        v61 = (Il2CppObject *)v59->static_fields->__9;
-        _9__12_3 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
-        System_Func_object__bool____ctor(_9__12_3, v61, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_3__, 0LL);
-        v62 = PurchaseLogicIOS___c_TypeInfo->static_fields;
-        v62->__9__12_3 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__o *)_9__12_3;
-        sub_1C3B708((PartyOrganizationUtility_o *)&v62->__9__12_3, (int64_t)_9__12_3, v63, v64, v65, v66, v67, v68);
+        v49 = (Il2CppObject *)v47->static_fields->__9;
+        _9__12_3 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
+        System_Func_object__bool____ctor(_9__12_3, v49, Method_PurchaseLogicIOS___c__GetAddedStoneNum_b__12_3__, 0LL);
+        v50 = PurchaseLogicIOS___c_TypeInfo->static_fields;
+        v50->__9__12_3 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__o *)_9__12_3;
+        sub_1B4CF34((CGThumbnailListItem_o *)&v50->__9__12_3, (int32_t)_9__12_3, v51, v52);
       }
-      *isSentPresentBox = System_Linq_Enumerable__Any_object__50322132(
-                            v36,
+      *isSentPresentBox = System_Linq_Enumerable__Any_object__49353604(
+                            v32,
                             (System_Func_TSource__bool__o *)_9__12_3,
-                            (const MethodInfo_2FFDAD4 *)Method_System_Linq_Enumerable_Any_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+                            (const MethodInfo_2F11384 *)Method_System_Linq_Enumerable_Any_PurchaseByBank_UnityIap_Request_PurchaseResult___);
       object = System_Linq_Enumerable__First_object_(
-                 v36,
-                 (const MethodInfo_301153C *)Method_System_Linq_Enumerable_First_PurchaseByBank_UnityIap_Request_PurchaseResult___);
+                 v32,
+                 (const MethodInfo_2F24DEC *)Method_System_Linq_Enumerable_First_PurchaseByBank_UnityIap_Request_PurchaseResult___);
       if ( !object || !v25 )
-        sub_1C3B9C0(object, v70);
+        sub_1B4D1EC(object, v54);
       *(_DWORD *)(v25 + 16) = object[1].klass;
-      v71 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
+      v55 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__bool__TypeInfo);
       System_Func_object__bool____ctor(
-        v71,
+        v55,
         (Il2CppObject *)v25,
         Method_PurchaseLogicIOS___c__DisplayClass12_0__GetAddedStoneNum_b__4__,
         0LL);
-      if ( System_Linq_Enumerable__Any_object__50322132(
-             v36,
-             (System_Func_TSource__bool__o *)v71,
-             (const MethodInfo_2FFDAD4 *)Method_System_Linq_Enumerable_Any_PurchaseByBank_UnityIap_Request_PurchaseResult___) )
+      if ( System_Linq_Enumerable__Any_object__49353604(
+             v32,
+             (System_Func_TSource__bool__o *)v55,
+             (const MethodInfo_2F11384 *)Method_System_Linq_Enumerable_Any_PurchaseByBank_UnityIap_Request_PurchaseResult___) )
       {
-        v72 = 0;
+        v56 = 0;
       }
       else
       {
-        v72 = *(_DWORD *)(v25 + 16);
+        v56 = *(_DWORD *)(v25 + 16);
       }
-      *shopId = v72;
+      *shopId = v56;
     }
   }
 }
@@ -992,28 +936,24 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogicIOS__GetAllPu
   System_Func_object__int__o *_9__10_0; // x21
   Il2CppObject *v12; // x22
   struct PurchaseLogicIOS___c_StaticFields *static_fields; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  System_Collections_Generic_IEnumerable_int__o *v20; // x1
-  const MethodInfo *v21; // x2
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  System_Collections_Generic_IEnumerable_int__o *v16; // x1
+  const MethodInfo *v17; // x2
   struct System_Action_string__float__o *logErrorOutputActionSampledByRatio; // x8
-  System_Collections_Generic_List_object__o *v24; // x19
+  System_Collections_Generic_List_object__o *v20; // x19
 
   v2 = this;
-  if ( (byte_4C218FE & 1) == 0 )
+  if ( (byte_49BA813 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___, method);
-    sub_1C3B764(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string___ctor__, v4);
-    sub_1C3B764(&System_Collections_Generic_List_string__TypeInfo, v5);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__GetAllPurchasedProductIdList_b__10_0__, v6);
-    sub_1C3B764(&PurchaseLogicIOS___c_TypeInfo, v7);
-    this = (PurchaseLogicIOS_o *)sub_1C3B764(&StringLiteral_16889/*"bit_happiness_counter_up"*/, v8);
-    byte_4C218FE = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___, method);
+    sub_1B4CF90(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string___ctor__, v4);
+    sub_1B4CF90(&System_Collections_Generic_List_string__TypeInfo, v5);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__GetAllPurchasedProductIdList_b__10_0__, v6);
+    sub_1B4CF90(&PurchaseLogicIOS___c_TypeInfo, v7);
+    this = (PurchaseLogicIOS_o *)sub_1B4CF90(&StringLiteral_16264/*"_purchaseResultArray is null"*/, v8);
+    byte_49BA813 = 1;
   }
   purchaseResultArray = (System_Collections_Generic_IEnumerable_TSource__o *)v2->fields._purchaseResultArray;
   if ( purchaseResultArray )
@@ -1033,7 +973,7 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogicIOS__GetAllPu
         v10 = PurchaseLogicIOS___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__10_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
+      _9__10_0 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__10_0,
         v12,
@@ -1041,37 +981,29 @@ System_Collections_Generic_List_string__o *__fastcall PurchaseLogicIOS__GetAllPu
         0LL);
       static_fields = PurchaseLogicIOS___c_TypeInfo->static_fields;
       static_fields->__9__10_0 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__10_0;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&static_fields->__9__10_0,
-        (int64_t)_9__10_0,
-        v14,
-        v15,
-        v16,
-        v17,
-        v18,
-        v19);
+      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__10_0, (int32_t)_9__10_0, v14, v15);
     }
-    v20 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
+    v16 = (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Select_object__int_(
                                                              purchaseResultArray,
                                                              (System_Func_TSource__TResult__o *)_9__10_0,
-                                                             (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
-    return PurchaseLogicIOS__ConvertBankShopIdToProductId(v2, v20, v21);
+                                                             (const MethodInfo_2F338DC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
+    return PurchaseLogicIOS__ConvertBankShopIdToProductId(v2, v16, v17);
   }
   else
   {
     logErrorOutputActionSampledByRatio = v2->fields._logErrorOutputActionSampledByRatio;
     if ( !logErrorOutputActionSampledByRatio )
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD, float))logErrorOutputActionSampledByRatio->fields.m_target)(
       logErrorOutputActionSampledByRatio->fields.original_method_info,
-      StringLiteral_16889/*"bit_happiness_counter_up"*/,
+      StringLiteral_16264/*"_purchaseResultArray is null"*/,
       *(_QWORD *)&logErrorOutputActionSampledByRatio->fields.extra_arg,
       0.01);
-    v24 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
+    v20 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v24,
-      (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
-    return (System_Collections_Generic_List_string__o *)v24;
+      v20,
+      (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+    return (System_Collections_Generic_List_string__o *)v20;
   }
 }
 
@@ -1103,14 +1035,14 @@ System_String_o *__fastcall PurchaseLogicIOS__GetTransactionIdFromOldStyleReceip
   System_String_o *v25; // [xsp+0h] [xbp-40h] BYREF
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C218F7 & 1) == 0 )
+  if ( (byte_49BA80C & 1) == 0 )
   {
-    sub_1C3B764(&System_Convert_TypeInfo, iOSOldStylePayloadStr);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v4);
-    sub_1C3B764(&string_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_23120/*"spriteMaskOn"*/, v6);
-    sub_1C3B764(&StringLiteral_24536/*"yyyy-MM-ddTHH:mm:ss.FFFFFFFK"*/, v7);
-    byte_4C218F7 = 1;
+    sub_1B4CF90(&System_Convert_TypeInfo, iOSOldStylePayloadStr);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v4);
+    sub_1B4CF90(&string_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_22376/*"purchase-info"*/, v6);
+    sub_1B4CF90(&StringLiteral_23750/*"transaction-id"*/, v7);
+    byte_49BA80C = 1;
   }
   v25 = 0LL;
   value = 0LL;
@@ -1119,19 +1051,19 @@ System_String_o *__fastcall PurchaseLogicIOS__GetTransactionIdFromOldStyleReceip
   v8 = System_Convert__FromBase64String(iOSOldStylePayloadStr, 0LL);
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_1C3B9C0(0LL, v10);
-  v11 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))UTF8->klass->vtable._36_GetString.method)(
+    sub_1B4D1EC(0LL, v10);
+  v11 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))UTF8->klass->vtable._35_GetString.method)(
                              UTF8,
                              v8,
-                             UTF8->klass->vtable._37_GetString.methodPtr);
+                             UTF8->klass->vtable._36_GetString.methodPtr);
   v13 = PurchaseLogicIOS__ParseIOSOldStyleReceipt(v11, v12);
   if ( !v13 )
-    sub_1C3B9C0(0LL, v14);
+    sub_1B4D1EC(0LL, v14);
   System_Collections_Generic_Dictionary_object__object___TryGetValue(
     (System_Collections_Generic_Dictionary_object__object__o *)v13,
-    (Il2CppObject *)StringLiteral_23120/*"spriteMaskOn"*/,
+    (Il2CppObject *)StringLiteral_22376/*"purchase-info"*/,
     &value,
-    (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( value )
   {
     if ( (System_String_c *)value->klass == string_TypeInfo )
@@ -1146,19 +1078,19 @@ System_String_o *__fastcall PurchaseLogicIOS__GetTransactionIdFromOldStyleReceip
   v16 = System_Convert__FromBase64String((System_String_o *)v15, 0LL);
   v17 = System_Text_Encoding__get_UTF8(0LL);
   if ( !v17 )
-    sub_1C3B9C0(0LL, v18);
-  v19 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))v17->klass->vtable._36_GetString.method)(
+    sub_1B4D1EC(0LL, v18);
+  v19 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, Il2CppMethodPointer))v17->klass->vtable._35_GetString.method)(
                              v17,
                              v16,
-                             v17->klass->vtable._37_GetString.methodPtr);
+                             v17->klass->vtable._36_GetString.methodPtr);
   v21 = PurchaseLogicIOS__ParseIOSOldStyleReceipt(v19, v20);
   if ( !v21 )
-    sub_1C3B9C0(0LL, v22);
+    sub_1B4D1EC(0LL, v22);
   System_Collections_Generic_Dictionary_object__object___TryGetValue(
     (System_Collections_Generic_Dictionary_object__object__o *)v21,
-    (Il2CppObject *)StringLiteral_24536/*"yyyy-MM-ddTHH:mm:ss.FFFFFFFK"*/,
+    (Il2CppObject *)StringLiteral_23750/*"transaction-id"*/,
     (Il2CppObject **)&v25,
-    (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( !v25 )
     return 0LL;
   if ( v25->klass == string_TypeInfo )
@@ -1171,17 +1103,17 @@ bool __fastcall PurchaseLogicIOS__IsDeferredPurchaseExists(PurchaseLogicIOS_o *t
 {
   System_Collections_Generic_List_string__o *DeferredPurchaseProductIdsFromPlayerPrefs; // x0
 
-  if ( (byte_4C21902 & 1) == 0 )
+  if ( (byte_49BA817 & 1) == 0 )
   {
-    this = (PurchaseLogicIOS_o *)sub_1C3B764(&Method_System_Linq_Enumerable_Any_string___, method);
-    byte_4C21902 = 1;
+    this = (PurchaseLogicIOS_o *)sub_1B4CF90(&Method_System_Linq_Enumerable_Any_string___, method);
+    byte_49BA817 = 1;
   }
   DeferredPurchaseProductIdsFromPlayerPrefs = PurchaseLogic__GetDeferredPurchaseProductIdsFromPlayerPrefs(
                                                 (PurchaseLogic_o *)this,
                                                 method);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)DeferredPurchaseProductIdsFromPlayerPrefs,
-           (const MethodInfo_2FFBC00 *)Method_System_Linq_Enumerable_Any_string___);
+           (const MethodInfo_2F0F4B0 *)Method_System_Linq_Enumerable_Any_string___);
 }
 
 
@@ -1203,63 +1135,59 @@ void __fastcall PurchaseLogicIOS__OnDeferred(
   __int64 v9; // x21
   __int64 v10; // x0
   __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct UnityEngine_Purchasing_ProductDefinition_o *definition_k__BackingField; // x8
-  int64_t id_k__BackingField; // x1
-  System_String_o **v20; // x20
-  PurchaseBehaviour_c *v21; // x0
+  struct System_String_o *id_k__BackingField; // x1
+  System_String_o **v16; // x20
+  PurchaseBehaviour_c *v17; // x0
   System_Collections_Generic_IEnumerable_TSource__o *BankShopEntityCollection; // x22
-  System_Func_object__bool__o *v23; // x23
-  Il2CppObject *v24; // x0
-  const MethodInfo *v25; // x2
+  System_Func_object__bool__o *v19; // x23
+  Il2CppObject *v20; // x0
+  const MethodInfo *v21; // x2
   int32_t klass; // w21
-  const MethodInfo *v27; // x7
+  const MethodInfo *v23; // x7
 
-  if ( (byte_4C21901 & 1) == 0 )
+  if ( (byte_49BA816 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___, product);
-    sub_1C3B764(&System_Func_BankShopEntity__bool__TypeInfo, v5);
-    sub_1C3B764(&PurchaseBehaviour_TypeInfo, v6);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__DisplayClass14_0__OnDeferred_b__0__, v7);
-    sub_1C3B764(&PurchaseLogicIOS___c__DisplayClass14_0_TypeInfo, v8);
-    byte_4C21901 = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___, product);
+    sub_1B4CF90(&System_Func_BankShopEntity__bool__TypeInfo, v5);
+    sub_1B4CF90(&PurchaseBehaviour_TypeInfo, v6);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__DisplayClass14_0__OnDeferred_b__0__, v7);
+    sub_1B4CF90(&PurchaseLogicIOS___c__DisplayClass14_0_TypeInfo, v8);
+    byte_49BA816 = 1;
   }
-  v9 = sub_1C3B9B0(PurchaseLogicIOS___c__DisplayClass14_0_TypeInfo);
+  v9 = sub_1B4D1DC(PurchaseLogicIOS___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !product || (definition_k__BackingField = product->fields._definition_k__BackingField) == 0LL || !v9 )
-    sub_1C3B9C0(v10, v11);
-  id_k__BackingField = (int64_t)definition_k__BackingField->fields._id_k__BackingField;
+    sub_1B4D1EC(v10, v11);
+  id_k__BackingField = definition_k__BackingField->fields._id_k__BackingField;
   *(_QWORD *)(v9 + 16) = id_k__BackingField;
-  v20 = (System_String_o **)(v9 + 16);
-  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 16), id_k__BackingField, v12, v13, v14, v15, v16, v17);
-  v21 = PurchaseBehaviour_TypeInfo;
+  v16 = (System_String_o **)(v9 + 16);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v9 + 16), (int32_t)id_k__BackingField, v12, v13);
+  v17 = PurchaseBehaviour_TypeInfo;
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-    v21 = PurchaseBehaviour_TypeInfo;
+    v17 = PurchaseBehaviour_TypeInfo;
   }
-  BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v21->static_fields->BankShopEntityCollection;
-  v23 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_BankShopEntity__bool__TypeInfo);
+  BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v17->static_fields->BankShopEntityCollection;
+  v19 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_BankShopEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v23,
+    v19,
     (Il2CppObject *)v9,
     Method_PurchaseLogicIOS___c__DisplayClass14_0__OnDeferred_b__0__,
     0LL);
-  v24 = System_Linq_Enumerable__FirstOrDefault_object__50415372(
+  v20 = System_Linq_Enumerable__FirstOrDefault_object__49446844(
           BankShopEntityCollection,
-          (System_Func_TSource__bool__o *)v23,
-          (const MethodInfo_301470C *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
-  if ( v24 )
-    klass = (int32_t)v24[1].klass;
+          (System_Func_TSource__bool__o *)v19,
+          (const MethodInfo_2F27FBC *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
+  if ( v20 )
+    klass = (int32_t)v20[1].klass;
   else
     klass = 0;
-  PurchaseLogic__AddDeferredPurchaseProductIdsToPlayerPrefs((PurchaseLogic_o *)v24, *v20, v25);
-  PurchaseLogic__ExecuteBuyProductFinishedActionAndClear((PurchaseLogic_o *)this, 5, 0, 0, 0, klass, 0, v27);
+  PurchaseLogic__AddDeferredPurchaseProductIdsToPlayerPrefs((PurchaseLogic_o *)v20, *v16, v21);
+  PurchaseLogic__ExecuteBuyProductFinishedActionAndClear((PurchaseLogic_o *)this, 5, 0, 0, 0, klass, 0, v23);
 }
 
 
@@ -1284,24 +1212,24 @@ System_Collections_Generic_Dictionary_string__object__o *__fastcall PurchaseLogi
   _DWORD *v17; // x21
   Il2CppObject *v18; // x22
 
-  if ( (byte_4C218F8 & 1) == 0 )
+  if ( (byte_49BA80D & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__Add__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v3);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v4);
-    sub_1C3B764(&StringLiteral_1841/*"A time zone was specified. SqlDateTime does not support time zones."*/, v5);
-    sub_1C3B764(&StringLiteral_1560/*"<KeyPair>{0}\t<Properties>{0}\t\t<Provider "*/, v6);
-    sub_1C3B764(&StringLiteral_348/*"\" standalone=\""*/, v7);
-    sub_1C3B764(&StringLiteral_1/*""*/, v8);
-    byte_4C218F8 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__Add__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v3);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v4);
+    sub_1B4CF90(&StringLiteral_1756/*"="*/, v5);
+    sub_1B4CF90(&StringLiteral_1503/*";"*/, v6);
+    sub_1B4CF90(&StringLiteral_342/*"\""*/, v7);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v8);
+    byte_49BA80D = 1;
   }
-  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_string__object__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v9,
-    (const MethodInfo_3354DB8 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+    (const MethodInfo_3257168 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
   if ( !str || (v10 = System_String__Split(str, 0xAu, 0, 0LL)) == 0LL )
 LABEL_22:
-    sub_1C3B9C0(v10, v11);
+    sub_1B4D1EC(v10, v11);
   v12 = *((_DWORD *)v10 + 6);
   v13 = v10;
   if ( v12 >= 1 )
@@ -1310,17 +1238,17 @@ LABEL_22:
     {
       if ( i >= (unsigned int)v12 )
 LABEL_23:
-        sub_1C3B9C8(v10, v11);
+        sub_1B4D1F4(v10, v11);
       v15 = (char *)&v13[2 * i];
       v16 = (System_String_o *)*((_QWORD *)v15 + 4);
       if ( !v16 )
         goto LABEL_22;
-      v10 = (void *)System_String__Contains(*((System_String_o **)v15 + 4), (System_String_o *)StringLiteral_1841/*"A time zone was specified. SqlDateTime does not support time zones."*/, 0LL);
+      v10 = (void *)System_String__Contains(*((System_String_o **)v15 + 4), (System_String_o *)StringLiteral_1756/*"="*/, 0LL);
       if ( ((unsigned __int8)v10 & 1) != 0 )
       {
-        v10 = System_String__Replace_63388240(
+        v10 = System_String__Replace_61140016(
                 v16,
-                (System_String_o *)StringLiteral_1560/*"<KeyPair>{0}\t<Properties>{0}\t\t<Provider "*/,
+                (System_String_o *)StringLiteral_1503/*";"*/,
                 (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( !v10 )
@@ -1334,9 +1262,9 @@ LABEL_23:
             v10 = (void *)*((_QWORD *)v10 + 4);
             if ( !v10 )
               goto LABEL_22;
-            v10 = System_String__Replace_63388240(
+            v10 = System_String__Replace_61140016(
                     (System_String_o *)v10,
-                    (System_String_o *)StringLiteral_348/*"\" standalone=\""*/,
+                    (System_String_o *)StringLiteral_342/*"\""*/,
                     (System_String_o *)StringLiteral_1/*""*/,
                     0LL);
             if ( !v10 )
@@ -1348,9 +1276,9 @@ LABEL_23:
             v10 = (void *)*((_QWORD *)v17 + 5);
             if ( !v10 )
               goto LABEL_22;
-            v10 = System_String__Replace_63388240(
+            v10 = System_String__Replace_61140016(
                     (System_String_o *)v10,
-                    (System_String_o *)StringLiteral_348/*"\" standalone=\""*/,
+                    (System_String_o *)StringLiteral_342/*"\""*/,
                     (System_String_o *)StringLiteral_1/*""*/,
                     0LL);
             if ( !v10 )
@@ -1362,7 +1290,7 @@ LABEL_23:
               v9,
               v18,
               (Il2CppObject *)v10,
-              (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
+              (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__object__Add__);
           }
         }
       }
@@ -1389,25 +1317,25 @@ void __fastcall PurchaseLogicIOS__SendPurchaseAction(
   const MethodInfo *v13; // x3
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C218FC & 1) == 0 )
+  if ( (byte_49BA811 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, paymentProductId);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__GetEnumerator__, v8);
-    byte_4C218FC = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__, paymentProductId);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__GetEnumerator__, v8);
+    byte_49BA811 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   AllPurchasedProductIdList = PurchaseLogicIOS__GetAllPurchasedProductIdList(this, (const MethodInfo *)paymentProductId);
   if ( !AllPurchasedProductIdList )
-    sub_1C3B9C0(0LL, v10);
+    sub_1B4D1EC(0LL, v10);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     (System_Collections_Generic_List_object__o *)AllPurchasedProductIdList,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v14,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
   {
     current = v14.fields._current;
     IsNullOrEmpty = System_String__IsNullOrEmpty((System_String_o *)v14.fields._current, 0LL);
@@ -1420,7 +1348,7 @@ void __fastcall PurchaseLogicIOS__SendPurchaseAction(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
 }
 
 
@@ -1447,15 +1375,15 @@ void __fastcall PurchaseLogicIOS__ShowPurchaseFailedNotification(
   __int64 v6; // x1
   __int64 v7; // x1
 
-  if ( (byte_4C218F9 & 1) == 0 )
+  if ( (byte_49BA80E & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_9807/*"OptionScenarioAutoWaitTimeValue"*/, *(_QWORD *)&failureReason);
-    sub_1C3B764(&StringLiteral_25914, v3);
-    sub_1C3B764(&StringLiteral_25912, v4);
-    sub_1C3B764(&StringLiteral_25913, v5);
-    sub_1C3B764(&StringLiteral_2433/*"AtlasManager/Enemys/EmenyAtlas"*/, v6);
-    sub_1C3B764(&StringLiteral_25886, v7);
-    byte_4C218F9 = 1;
+    sub_1B4CF90(&StringLiteral_9419/*"OK"*/, *(_QWORD *)&failureReason);
+    sub_1B4CF90(&StringLiteral_25100/*"購入処理中に問題が発生しました"*/, v3);
+    sub_1B4CF90(&StringLiteral_25098/*"購入できません"*/, v4);
+    sub_1B4CF90(&StringLiteral_25099/*"購入処理中です、完了までお待ち下さい"*/, v5);
+    sub_1B4CF90(&StringLiteral_2309/*"App内の購入が機能制限されています"*/, v6);
+    sub_1B4CF90(&StringLiteral_25072/*"指定されたプロダクトデータが取得できませんでした"*/, v7);
+    byte_49BA80E = 1;
   }
 }
 
@@ -1478,49 +1406,45 @@ void __fastcall PurchaseLogicIOS__UpdateMonthlyPurchasePrice(
   System_Func_object__int__o *_9__7_0; // x21
   Il2CppObject *v14; // x22
   struct PurchaseLogicIOS___c_StaticFields *static_fields; // x0
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  System_Collections_Generic_IEnumerable_TResult__o *v22; // x0
-  __int64 v23; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TResult__o *v18; // x0
+  __int64 v19; // x1
   System_Collections_Generic_IEnumerable_TResult__c *klass; // x8
-  System_Collections_Generic_IEnumerable_TResult__o *v25; // x19
-  __int64 v26; // x9
+  System_Collections_Generic_IEnumerable_TResult__o *v21; // x19
+  __int64 v22; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v29; // x1
-  __int64 v30; // x19
+  __int64 v25; // x1
+  __int64 v26; // x19
+  __int64 v27; // x8
+  __int64 v28; // x9
+  int *v29; // x10
+  __int64 v30; // x0
   __int64 v31; // x8
   __int64 v32; // x9
   int *v33; // x10
   __int64 v34; // x0
-  __int64 v35; // x8
-  __int64 v36; // x9
-  int *v37; // x10
-  __int64 v38; // x0
-  int32_t v39; // w1
-  const MethodInfo *v40; // x2
-  __int64 v41; // x8
-  __int64 v42; // x9
-  int *v43; // x10
-  __int64 v44; // x0
+  int32_t v35; // w1
+  const MethodInfo *v36; // x2
+  __int64 v37; // x8
+  __int64 v38; // x9
+  int *v39; // x10
+  __int64 v40; // x0
 
-  if ( (byte_4C218FB & 1) == 0 )
+  if ( (byte_49BA810 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___,
       *(_QWORD *)&bankShopId);
-    sub_1C3B764(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v4);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v5);
-    sub_1C3B764(&System_Collections_Generic_IEnumerable_int__TypeInfo, v6);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_int__TypeInfo, v7);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v8);
-    sub_1C3B764(&Method_PurchaseLogicIOS___c__UpdateMonthlyPurchasePrice_b__7_0__, v9);
-    sub_1C3B764(&PurchaseLogicIOS___c_TypeInfo, v10);
-    byte_4C218FB = 1;
+    sub_1B4CF90(&System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo, v4);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v5);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerable_int__TypeInfo, v6);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_int__TypeInfo, v7);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1B4CF90(&Method_PurchaseLogicIOS___c__UpdateMonthlyPurchasePrice_b__7_0__, v9);
+    sub_1B4CF90(&PurchaseLogicIOS___c_TypeInfo, v10);
+    byte_49BA810 = 1;
   }
   v11 = PurchaseLogicIOS___c_TypeInfo;
   purchaseResultArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._purchaseResultArray;
@@ -1538,29 +1462,29 @@ void __fastcall PurchaseLogicIOS__UpdateMonthlyPurchasePrice(
       v11 = PurchaseLogicIOS___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__7_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
+    _9__7_0 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__TypeInfo);
     System_Func_object__int____ctor(_9__7_0, v14, Method_PurchaseLogicIOS___c__UpdateMonthlyPurchasePrice_b__7_0__, 0LL);
     static_fields = PurchaseLogicIOS___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Func_PurchaseByBank_UnityIap_Request_PurchaseResult__int__o *)_9__7_0;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__7_0, (int64_t)_9__7_0, v16, v17, v18, v19, v20, v21);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v16, v17);
   }
-  v22 = System_Linq_Enumerable__Select_object__int_(
+  v18 = System_Linq_Enumerable__Select_object__int_(
           purchaseResultArray,
           (System_Func_TSource__TResult__o *)_9__7_0,
-          (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
-  if ( !v22 )
-    sub_1C3B9C0(0LL, v23);
-  klass = v22->klass;
-  v25 = v22;
-  v26 = *(unsigned __int16 *)(&v22->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v22->klass->_2.bitflags2 + 3) )
+          (const MethodInfo_2F338DC *)Method_System_Linq_Enumerable_Select_PurchaseByBank_UnityIap_Request_PurchaseResult__int___);
+  if ( !v18 )
+    sub_1B4D1EC(0LL, v19);
+  klass = v18->klass;
+  v21 = v18;
+  v22 = *(unsigned __int16 *)(&v18->klass->_2.bitflags2 + 3);
+  if ( *(_WORD *)(&v18->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_int__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
     {
-      --v26;
+      --v22;
       p_offset += 4;
-      if ( !v26 )
+      if ( !v22 )
         goto LABEL_14;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -1568,78 +1492,78 @@ void __fastcall PurchaseLogicIOS__UpdateMonthlyPurchasePrice(
   else
   {
 LABEL_14:
-    p_method = sub_1C8D744(v22, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
+    p_method = sub_1B9D724(v18, System_Collections_Generic_IEnumerable_int__TypeInfo, 0LL);
   }
-  v30 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))p_method)(
-          v25,
+  v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))p_method)(
+          v21,
           *(_QWORD *)(p_method + 8));
-  if ( !v30 )
-    sub_1C3B9C0(0LL, v29);
+  if ( !v26 )
+    sub_1B4D1EC(0LL, v25);
   while ( 1 )
   {
-    v31 = *(_QWORD *)v30;
-    v32 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
+    v27 = *(_QWORD *)v26;
+    v28 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
+    {
+      v29 = (int *)(*(_QWORD *)(v27 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v29 - 1) != System_Collections_IEnumerator_TypeInfo )
+      {
+        --v28;
+        v29 += 4;
+        if ( !v28 )
+          goto LABEL_21;
+      }
+      v30 = v27 + 16LL * *v29 + 312;
+    }
+    else
+    {
+LABEL_21:
+      v30 = sub_1B9D724(v26, System_Collections_IEnumerator_TypeInfo, 0LL);
+    }
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
+      break;
+    v31 = *(_QWORD *)v26;
+    v32 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
     {
       v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v33 - 1) != System_Collections_IEnumerator_TypeInfo )
+      while ( *((System_Collections_Generic_IEnumerator_int__c **)v33 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
       {
         --v32;
         v33 += 4;
         if ( !v32 )
-          goto LABEL_21;
+          goto LABEL_28;
       }
       v34 = v31 + 16LL * *v33 + 312;
     }
     else
     {
-LABEL_21:
-      v34 = sub_1C8D744(v30, System_Collections_IEnumerator_TypeInfo, 0LL);
-    }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v30, *(_QWORD *)(v34 + 8)) & 1) == 0 )
-      break;
-    v35 = *(_QWORD *)v30;
-    v36 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
-    {
-      v37 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_int__c **)v37 - 1) != System_Collections_Generic_IEnumerator_int__TypeInfo )
-      {
-        --v36;
-        v37 += 4;
-        if ( !v36 )
-          goto LABEL_28;
-      }
-      v38 = v35 + 16LL * *v37 + 312;
-    }
-    else
-    {
 LABEL_28:
-      v38 = sub_1C8D744(v30, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
+      v34 = sub_1B9D724(v26, System_Collections_Generic_IEnumerator_int__TypeInfo, 0LL);
     }
-    v39 = (*(__int64 (__fastcall **)(__int64, _QWORD))v38)(v30, *(_QWORD *)(v38 + 8));
-    PurchaseLogic__UpdateMonthlyPurchasePrice((PurchaseLogic_o *)this, v39, v40);
+    v35 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
+    PurchaseLogic__UpdateMonthlyPurchasePrice((PurchaseLogic_o *)this, v35, v36);
   }
-  v41 = *(_QWORD *)v30;
-  v42 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
+  v37 = *(_QWORD *)v26;
+  v38 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
   {
-    v43 = (int *)(*(_QWORD *)(v41 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v43 - 1) != System_IDisposable_TypeInfo )
+    v39 = (int *)(*(_QWORD *)(v37 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
     {
-      --v42;
-      v43 += 4;
-      if ( !v42 )
+      --v38;
+      v39 += 4;
+      if ( !v38 )
         goto LABEL_35;
     }
-    v44 = v41 + 16LL * *v43 + 312;
+    v40 = v37 + 16LL * *v39 + 312;
   }
   else
   {
 LABEL_35:
-    v44 = sub_1C8D744(v30, System_IDisposable_TypeInfo, 0LL);
+    v40 = sub_1B9D724(v26, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v44)(v30, *(_QWORD *)(v44 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v40)(v26, *(_QWORD *)(v40 + 8));
 }
 
 
@@ -1647,30 +1571,18 @@ void __fastcall PurchaseLogicIOS___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C21903 & 1) == 0 )
+  if ( (byte_49BA818 & 1) == 0 )
   {
-    sub_1C3B764(&PurchaseLogicIOS___c_TypeInfo, v1);
-    byte_4C21903 = 1;
+    sub_1B4CF90(&PurchaseLogicIOS___c_TypeInfo, v1);
+    byte_49BA818 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(PurchaseLogicIOS___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(PurchaseLogicIOS___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PurchaseLogicIOS___c_TypeInfo->static_fields->__9 = (struct PurchaseLogicIOS___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)PurchaseLogicIOS___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)PurchaseLogicIOS___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1690,13 +1602,13 @@ bool __fastcall PurchaseLogicIOS___c___CheckIfReceiptShouldBeSentInIOSOldStyle_b
   System_DateTime_o v7; // 0:x0.8
   System_DateTime_o v8; // 0:x1.8
 
-  if ( (byte_4C21904 & 1) == 0 )
+  if ( (byte_49BA819 & 1) == 0 )
   {
-    this = (PurchaseLogicIOS___c_o *)sub_1C3B764(&System_DateTime_TypeInfo, r);
-    byte_4C21904 = 1;
+    this = (PurchaseLogicIOS___c_o *)sub_1B4CF90(&System_DateTime_TypeInfo, r);
+    byte_49BA819 = 1;
   }
   if ( !r )
-    sub_1C3B9C0(this, r);
+    sub_1B4D1EC(this, r);
   dateData = r->fields._cancellationDate_k__BackingField.fields._dateData;
   v5 = r->fields._purchaseDate_k__BackingField.fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
@@ -1713,7 +1625,7 @@ bool __fastcall PurchaseLogicIOS___c___GetAddedStoneNum_b__12_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return !x->fields.isCommitedAlready;
 }
 
@@ -1724,7 +1636,7 @@ int32_t __fastcall PurchaseLogicIOS___c___GetAddedStoneNum_b__12_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.freeStoneNum;
 }
 
@@ -1735,7 +1647,7 @@ int32_t __fastcall PurchaseLogicIOS___c___GetAddedStoneNum_b__12_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.chargeStoneNum;
 }
 
@@ -1746,7 +1658,7 @@ bool __fastcall PurchaseLogicIOS___c___GetAddedStoneNum_b__12_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.isSentPresentBox;
 }
 
@@ -1757,7 +1669,7 @@ int32_t __fastcall PurchaseLogicIOS___c___GetAllPurchasedProductIdList_b__10_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.purchasedBankShopId;
 }
 
@@ -1768,7 +1680,7 @@ int32_t __fastcall PurchaseLogicIOS___c___UpdateMonthlyPurchasePrice_b__7_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.purchasedBankShopId;
 }
 
@@ -1787,7 +1699,7 @@ bool __fastcall PurchaseLogicIOS___c__DisplayClass12_0___GetAddedStoneNum_b__4(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.purchasedBankShopId != this->fields.bankShopId;
 }
 
@@ -1806,8 +1718,8 @@ bool __fastcall PurchaseLogicIOS___c__DisplayClass14_0___OnDeferred_b__0(
         const MethodInfo *method)
 {
   if ( !bankShop )
-    sub_1C3B9C0(this, 0LL);
-  return System_String__Equals_63377732(this->fields.productId, bankShop->fields.googleShopId, 4, 0LL);
+    sub_1B4D1EC(this, 0LL);
+  return System_String__Equals_61129576(this->fields.productId, bankShop->fields.googleShopId, 4, 0LL);
 }
 
 
@@ -1831,13 +1743,13 @@ bool __fastcall PurchaseLogicIOS___c__DisplayClass2_0___CheckIfReceiptShouldBeSe
   System_DateTime_o v9; // 0:x1.8
 
   v4 = this;
-  if ( (byte_4C21905 & 1) == 0 )
+  if ( (byte_49BA81A & 1) == 0 )
   {
-    this = (PurchaseLogicIOS___c__DisplayClass2_0_o *)sub_1C3B764(&System_DateTime_TypeInfo, r);
-    byte_4C21905 = 1;
+    this = (PurchaseLogicIOS___c__DisplayClass2_0_o *)sub_1B4CF90(&System_DateTime_TypeInfo, r);
+    byte_49BA81A = 1;
   }
   if ( !r )
-    sub_1C3B9C0(this, r);
+    sub_1B4D1EC(this, r);
   dateData = r->fields._cancellationDate_k__BackingField.fields._dateData;
   v6 = r->fields._purchaseDate_k__BackingField.fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )

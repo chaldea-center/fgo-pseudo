@@ -9,14 +9,14 @@ void __fastcall CreateRecipeRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C238CE & 1) == 0 )
+  if ( (byte_49BC7FD & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&recipeId);
-    sub_1C3B764(&StringLiteral_23282/*"subMaterialParam="*/, v7);
-    byte_4C238CE = 1;
+    sub_1B4CF90(&StringLiteral_21903/*"num"*/, *(_QWORD *)&recipeId);
+    sub_1B4CF90(&StringLiteral_22534/*"recipeId"*/, v7);
+    byte_49BC7FD = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23282/*"subMaterialParam="*/, recipeId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, createNum, v8);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22534/*"recipeId"*/, recipeId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21903/*"num"*/, createNum, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -26,16 +26,16 @@ System_String_o *__fastcall CreateRecipeRequest__getURL(CreateRecipeRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238CD & 1) == 0 )
+  if ( (byte_49BC7FC & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_19487/*"gimmick_"*/, v2);
-    byte_4C238CD = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_18804/*"event/createRecipe"*/, v2);
+    byte_49BC7FC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_19487/*"gimmick_"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_18804/*"event/createRecipe"*/, 0LL);
 }
 
 
@@ -53,18 +53,18 @@ void __fastcall CreateRecipeRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4C238CF & 1) == 0 )
+  if ( (byte_49BC7FE & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C238CF = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC7FE = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(120, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ void __fastcall CreateRecipeRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22507/*"referrerMapId"*/,
+        StringLiteral_21779/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

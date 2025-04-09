@@ -6,48 +6,32 @@ void __fastcall SubmarineScanVoiceComponent___ctor(SubmarineScanVoiceComponent_o
 
 void __fastcall SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  __int64 v15; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x1
   int32_t *p_svtId; // x0
   struct System_String_array *vcNameList; // x8
-  System_String_o *v18; // x0
-  struct System_String_o *v19; // x0
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
-  struct System_String_array *v26; // x8
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  struct System_String_array *v33; // x8
-  struct System_String_o *v34; // x1
+  System_String_o *v10; // x0
+  struct System_String_o *v11; // x0
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  struct System_String_array *v14; // x8
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  struct System_String_array *v17; // x8
+  struct System_String_o *v18; // x1
 
-  if ( (byte_4C1EA58 & 1) == 0 )
+  if ( (byte_49B7952 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_4546/*"CommonUI/MainMenuBarPrefab"*/, method);
-    byte_4C1EA58 = 1;
+    sub_1B4CF90(&StringLiteral_4380/*"ChrVoice_"*/, method);
+    byte_49B7952 = 1;
   }
   this->fields.assetName = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.assetName, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.assetName, 0, v2, v3);
   this->fields.vcName = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.vcName, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.vcName, 0, v5, v6);
   p_svtId = &this->fields.svtId;
   if ( this->fields.svtId )
   {
@@ -56,23 +40,23 @@ void __fastcall SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o
       goto LABEL_11;
     if ( !*(_QWORD *)&vcNameList->max_length )
       return;
-    v18 = System_Int32__ToString((int32_t)p_svtId, 0LL);
-    v19 = System_String__Concat_63368612((System_String_o *)StringLiteral_4546/*"CommonUI/MainMenuBarPrefab"*/, v18, 0LL);
-    this->fields.assetName = v19;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.assetName, (int64_t)v19, v20, v21, v22, v23, v24, v25);
-    v26 = this->fields.vcNameList;
-    if ( !v26
-      || (p_svtId = (int32_t *)UnityEngine_Random__Range_71082488(0, v26->max_length, 0LL),
-          (v33 = this->fields.vcNameList) == 0LL) )
+    v10 = System_Int32__ToString((int32_t)p_svtId, 0LL);
+    v11 = System_String__Concat_61093468((System_String_o *)StringLiteral_4380/*"ChrVoice_"*/, v10, 0LL);
+    this->fields.assetName = v11;
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.assetName, (int32_t)v11, v12, v13);
+    v14 = this->fields.vcNameList;
+    if ( !v14
+      || (p_svtId = (int32_t *)UnityEngine_Random__Range_68764200(0, v14->max_length, 0LL),
+          (v17 = this->fields.vcNameList) == 0LL) )
     {
 LABEL_11:
-      sub_1C3B9C0(p_svtId, v15);
+      sub_1B4D1EC(p_svtId, v7);
     }
-    if ( (unsigned int)p_svtId >= v33->max_length )
-      sub_1C3B9C8(p_svtId, v15);
-    v34 = v33->m_Items[(int)p_svtId];
-    this->fields.vcName = v34;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.vcName, (int64_t)v34, v27, v28, v29, v30, v31, v32);
+    if ( (unsigned int)p_svtId >= v17->max_length )
+      sub_1B4D1F4(p_svtId, v7);
+    v18 = v17->m_Items[(int)p_svtId];
+    this->fields.vcName = v18;
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.vcName, (int32_t)v18, v15, v16);
   }
 }
 
@@ -98,20 +82,16 @@ void __fastcall SubmarineScanVoiceComponent__PlayScanVoice(
   float DEFAULT_VOLUME; // s8
   System_Action_o *v10; // x22
   struct SePlayer_o *v11; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C1EA59 & 1) == 0 )
+  if ( (byte_49B7953 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&SeManager_TypeInfo, v3);
-    sub_1C3B764(&SoundManager_TypeInfo, v4);
-    sub_1C3B764(&Method_SubmarineScanVoiceComponent_StopVoice__, v5);
-    byte_4C1EA59 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&SeManager_TypeInfo, v3);
+    sub_1B4CF90(&SoundManager_TypeInfo, v4);
+    sub_1B4CF90(&Method_SubmarineScanVoiceComponent_StopVoice__, v5);
+    byte_49B7953 = 1;
   }
   assetName = this->fields.assetName;
   if ( assetName )
@@ -126,13 +106,13 @@ void __fastcall SubmarineScanVoiceComponent__PlayScanVoice(
         v8 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v8->static_fields->DEFAULT_VOLUME;
-      v10 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
       System_Action___ctor(v10, (Il2CppObject *)this, Method_SubmarineScanVoiceComponent_StopVoice__, 0LL);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v11 = SoundManager__playVoice_40137440(assetName, vcName, DEFAULT_VOLUME, v10, 0, 0LL);
+      v11 = SoundManager__playVoice_39255412(assetName, vcName, DEFAULT_VOLUME, v10, 0, 0LL);
       this->fields.sePlayer = v11;
-      sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sePlayer, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.sePlayer, (int32_t)v11, v12, v13);
     }
   }
 }
@@ -140,23 +120,19 @@ void __fastcall SubmarineScanVoiceComponent__PlayScanVoice(
 
 void __fastcall SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this, const MethodInfo *method)
 {
-  PartyOrganizationUtility_o *p_sePlayer; // x19
+  CGThumbnailListItem_o *p_sePlayer; // x19
   System_String_o *vcName; // x20
   System_String_o *v5; // x21
   struct System_String_o **p_vcName; // t2
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4C1EA5A & 1) == 0 )
+  if ( (byte_49B7954 & 1) == 0 )
   {
-    sub_1C3B764(&SoundManager_TypeInfo, method);
-    byte_4C1EA5A = 1;
+    sub_1B4CF90(&SoundManager_TypeInfo, method);
+    byte_49B7954 = 1;
   }
-  p_sePlayer = (PartyOrganizationUtility_o *)&this->fields.sePlayer;
+  p_sePlayer = (CGThumbnailListItem_o *)&this->fields.sePlayer;
   if ( this->fields.sePlayer )
   {
     p_vcName = &this->fields.vcName;
@@ -166,6 +142,6 @@ void __fastcall SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceCompone
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(v5, vcName, 0.0, 0LL);
     p_sePlayer->klass = 0LL;
-    sub_1C3B708(p_sePlayer, 0LL, v7, v8, v9, v10, v11, v12);
+    sub_1B4CF34(p_sePlayer, 0, v7, v8);
   }
 }

@@ -25,7 +25,7 @@ void __fastcall GiftListViewItemIcon__OnClick(GiftListViewItemIcon_o *this, cons
         return;
       }
 LABEL_8:
-      sub_1C3B9C0(IsServant, itemData);
+      sub_1B4D1EC(IsServant, itemData);
     }
   }
 }
@@ -33,30 +33,18 @@ LABEL_8:
 
 void __fastcall GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEntity_o *indata, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   struct GiftEntity_o **p_itemData; // x20
   ItemIconComponent_o *IsServant; // x0
   __int64 gifttype; // x1
   int32_t type; // w0
   struct GiftEntity_o *itemData; // x8
-  struct GiftEntity_o *v14; // x8
-  struct GiftEntity_o *v15; // x8
+  struct GiftEntity_o *v10; // x8
+  struct GiftEntity_o *v11; // x8
 
   this->fields.itemData = indata;
   p_itemData = &this->fields.itemData;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.itemData,
-    (int64_t)indata,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.itemData, (int32_t)indata, (int32_t)method, v3);
   if ( !*p_itemData )
     goto LABEL_17;
   type = (*p_itemData)->fields.type;
@@ -82,34 +70,34 @@ void __fastcall GiftListViewItemIcon__Set(GiftListViewItemIcon_o *this, GiftEnti
       }
     }
 LABEL_17:
-    sub_1C3B9C0(IsServant, gifttype);
+    sub_1B4D1EC(IsServant, gifttype);
   }
   gifttype = (unsigned int)this->fields.gifttype;
   if ( (_DWORD)gifttype == 11 )
   {
-    v14 = this->fields.itemData;
-    if ( !v14 )
+    v10 = this->fields.itemData;
+    if ( !v10 )
       goto LABEL_17;
     IsServant = this->fields.item;
     if ( !IsServant )
       goto LABEL_17;
-    ItemIconComponent__SetCommandCodeImage(IsServant, v14->fields.objectId, v14->fields.num, 0LL);
+    ItemIconComponent__SetCommandCodeImage(IsServant, v10->fields.objectId, v10->fields.num, 0LL);
   }
   else
   {
     IsServant = this->fields.item;
-    v15 = this->fields.itemData;
+    v11 = this->fields.itemData;
     if ( (_DWORD)gifttype == 2 )
     {
-      if ( !v15 || !IsServant )
+      if ( !v11 || !IsServant )
         goto LABEL_17;
-      ItemIconComponent__SetItem(IsServant, v15->fields.objectId, v15->fields.num, 1, 0LL);
+      ItemIconComponent__SetItem(IsServant, v11->fields.objectId, v11->fields.num, 1, 0LL);
     }
     else
     {
-      if ( !v15 || !IsServant )
+      if ( !v11 || !IsServant )
         goto LABEL_17;
-      ItemIconComponent__SetGift_39566180(IsServant, gifttype, v15->fields.objectId, v15->fields.num, 0, 0LL);
+      ItemIconComponent__SetGift_38682396(IsServant, gifttype, v11->fields.objectId, v11->fields.num, 0, 0LL);
     }
   }
 }
@@ -120,22 +108,10 @@ void __fastcall GiftListViewItemIcon__SetCallBack(
         GiftListViewItemIcon_ClickDelegate_o *call,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = call;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-    (int64_t)call,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)call, (int32_t)method, v3);
 }
 
 
@@ -147,18 +123,18 @@ void __fastcall GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, boo
   __int64 v7; // x1
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C2406D & 1) == 0 )
+  if ( (byte_49BCFA2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_Collider___, flg);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
-    byte_4C2406D = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Collider___, flg);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
+    byte_49BCFA2 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -173,7 +149,7 @@ void __fastcall GiftListViewItemIcon__SetTouch(GiftListViewItemIcon_o *this, boo
       return;
     }
 LABEL_10:
-    sub_1C3B9C0(gameObject, v7);
+    sub_1B4D1EC(gameObject, v7);
   }
 }
 
@@ -185,7 +161,7 @@ void __fastcall GiftListViewItemIcon__Show(GiftListViewItemIcon_o *this, const M
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
 }
 
@@ -197,86 +173,74 @@ void __fastcall GiftListViewItemIcon_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x8
-  __int64 v10; // x20
-  int v12; // w22
-  Il2CppObject *v13; // x8
-  struct System_Reflection_MethodInfo_o *v14; // x9
-  char v15; // w21
-  char v16; // w0
-  __int64 v17; // x0
+  __int64 v4; // x8
+  __int64 v6; // x20
+  int v8; // w22
+  Il2CppObject *v9; // x8
+  struct System_Reflection_MethodInfo_o *v10; // x9
+  char v11; // w21
+  char v12; // w0
+  __int64 v13; // x0
 
-  v8 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
+  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
   *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v10 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v8;
+  v6 = *(_QWORD *)&method;
+  *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.method,
-    (int64_t)object,
-    *(int64_t *)&method,
-    (int32_t)a4,
-    v4,
-    v5,
-    v6,
-    v7);
-  v12 = *(unsigned __int8 *)(v10 + 82);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v10) & 1) != 0 )
+  if ( (sub_1B4D050(v6) & 1) != 0 )
   {
-    if ( v12 == 1 )
+    if ( v8 == 1 )
     {
-      v13 = (Il2CppObject *)sub_1A7E788;
+      v9 = (Il2CppObject *)sub_199E54C;
 LABEL_16:
-      this->fields.m_target = v13;
+      this->fields.m_target = v9;
       goto LABEL_17;
     }
   }
   else
   {
-    if ( !v12 )
+    if ( !v8 )
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v15 = sub_1C3B81C(v10);
-        v16 = sub_1C3BCD8(v10);
-        if ( (v15 & 1) != 0 )
+        v11 = sub_1B4D048(v6);
+        v12 = sub_1B4D504(v6);
+        if ( (v11 & 1) != 0 )
         {
-          if ( (v16 & 1) != 0 )
-            v13 = (Il2CppObject *)sub_1A7E884;
+          if ( (v12 & 1) != 0 )
+            v9 = (Il2CppObject *)sub_199E648;
           else
-            v13 = (Il2CppObject *)sub_1A7E848;
+            v9 = (Il2CppObject *)sub_199E60C;
         }
-        else if ( (v16 & 1) != 0 )
+        else if ( (v12 & 1) != 0 )
         {
-          v13 = (Il2CppObject *)sub_1A7E7C4;
+          v9 = (Il2CppObject *)sub_199E588;
         }
         else
         {
-          v13 = (Il2CppObject *)sub_1A7E798;
+          v9 = (Il2CppObject *)sub_199E55C;
         }
       }
       else
       {
-        v13 = (Il2CppObject *)sub_1A7E768;
+        v9 = (Il2CppObject *)sub_199E52C;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v17 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v17, 0LL);
+      v13 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v13, 0LL);
     }
   }
-  v14 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
+  v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-  this->fields.original_method_info = v14;
+  this->fields.original_method_info = v10;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A7E720;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_199E4E4;
 }
 
 
@@ -290,7 +254,7 @@ System_IAsyncResult_o *__fastcall GiftListViewItemIcon_ClickDelegate__BeginInvok
   GiftEntity_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = gift;
-  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, &v6, callback, object);
 }
 
 
@@ -299,7 +263,7 @@ void __fastcall GiftListViewItemIcon_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 

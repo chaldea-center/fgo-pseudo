@@ -20,10 +20,10 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4C25EA4 & 1) == 0 )
+  if ( (byte_49BEDEB & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C25EA4 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BEDEB = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (monitor = (CommonEffectComponent_o *)v7[1].monitor) == 0LL )
 LABEL_23:
-      sub_1C3B9C0(monitor, v4);
+      sub_1B4D1EC(monitor, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)monitor, 0LL);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0LL) )
       return 1;
@@ -70,23 +70,19 @@ void __fastcall EventPointGaugeChangeEffectAction__OnChangeGauge(
         EventPointGaugeChangeEffectAction_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  PartyOrganizationUtility_o *p_gaugeChangeAction; // x0
-  System_Action_o *v9; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  CGThumbnailListItem_o *p_gaugeChangeAction; // x0
+  System_Action_o *v5; // x19
   struct System_Action_o *gaugeChangeAction; // t1
 
   gaugeChangeAction = this->fields.gaugeChangeAction;
-  p_gaugeChangeAction = (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction;
-  v9 = gaugeChangeAction;
+  p_gaugeChangeAction = (CGThumbnailListItem_o *)&this->fields.gaugeChangeAction;
+  v5 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0LL;
-  sub_1C3B708(p_gaugeChangeAction, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B4CF34(p_gaugeChangeAction, 0, v2, v3);
   if ( gaugeChangeAction )
-    ActionExtensions__Call(v9, 0LL);
+    ActionExtensions__Call(v5, 0LL);
 }
 
 
@@ -100,102 +96,62 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
   __int64 v10; // x1
-  Il2CppObject *ComponentInChildren_object__50228848; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  Il2CppObject *v18; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  Il2CppObject *v25; // x0
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  Il2CppObject *ComponentInChildren_object__49252240; // x0
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  Il2CppObject *v14; // x0
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  Il2CppObject *v17; // x0
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
 
-  if ( (byte_4C25EA3 & 1) == 0 )
+  if ( (byte_49BEDEA & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
-    byte_4C25EA3 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
+    byte_49BEDEA = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__50228848 = UnityEngine_Component__GetComponentInChildren_object__50228848(
+  ComponentInChildren_object__49252240 = UnityEngine_Component__GetComponentInChildren_object__49252240(
                                            transform,
-                                           (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__50228848;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.commonEffectComponent,
-    (int64_t)ComponentInChildren_object__50228848,
+                                           (const MethodInfo_2EF8790 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__49252240;
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields.commonEffectComponent,
+    (int32_t)ComponentInChildren_object__49252240,
     v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+    v13);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
-    || (v18 = UnityEngine_Component__GetComponentInChildren_object__50228848(
+    || (v14 = UnityEngine_Component__GetComponentInChildren_object__49252240(
                 transform,
-                (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
-        this->fields.simpleAnimation = (struct SimpleAnimation_o *)v18,
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields.simpleAnimation,
-          (int64_t)v18,
-          v19,
-          v20,
-          v21,
-          v22,
-          v23,
-          v24),
+                (const MethodInfo_2EF8790 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+        this->fields.simpleAnimation = (struct SimpleAnimation_o *)v14,
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.simpleAnimation, (int32_t)v14, v15, v16),
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)this,
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_1C3B9C0(transform, v10);
+    sub_1B4D1EC(transform, v10);
   }
-  v25 = UnityEngine_Component__GetComponentInChildren_object__50228848(
+  v17 = UnityEngine_Component__GetComponentInChildren_object__49252240(
           transform,
-          (const MethodInfo_2FE6E70 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-  this->fields.animation = (struct UnityEngine_Animation_o *)v25;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.animation, (int64_t)v25, v26, v27, v28, v29, v30, v31);
+          (const MethodInfo_2EF8790 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+  this->fields.animation = (struct UnityEngine_Animation_o *)v17;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)v17, v18, v19);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.gaugeChangeAction,
-    (int64_t)gaugeChangeAct,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.gaugeChangeAction, (int32_t)gaugeChangeAct, v20, v21);
   this->fields.endAction = endAct;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.endAction, (int64_t)endAct, v38, v39, v40, v41, v42, v43);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAct, v22, v23);
 }
 
 
@@ -203,19 +159,15 @@ void __fastcall EventPointGaugeChangeEffectAction__Update(
         EventPointGaugeChangeEffectAction_o *this,
         const MethodInfo *method)
 {
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
   System_Action_o *endAction; // x20
 
   if ( EventPointGaugeChangeEffectAction__IsEnd(this, method) )
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0LL;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.endAction, 0LL, v3, v4, v5, v6, v7, v8);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.endAction, 0, v3, v4);
     if ( endAction )
       ActionExtensions__Call(endAction, 0LL);
   }

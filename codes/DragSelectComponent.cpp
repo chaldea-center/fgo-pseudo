@@ -21,10 +21,10 @@ void __fastcall DragSelectComponent__Set(
   int32_t condensedWidth; // w1
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C2139E & 1) == 0 )
+  if ( (byte_49BA2B2 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
-    byte_4C2139E = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
+    byte_49BA2B2 = 1;
   }
   v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
@@ -89,7 +89,7 @@ LABEL_26:
       }
     }
 LABEL_28:
-    sub_1C3B9C0(v9, v8);
+    sub_1B4D1EC(v9, v8);
   }
 }
 

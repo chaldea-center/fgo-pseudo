@@ -26,10 +26,10 @@ bool __fastcall WarBoardTurnEndRequest__backgroundErrorRequest(
 
 void __fastcall WarBoardTurnEndRequest__backgroundErrorRetry(WarBoardTurnEndRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C23A5D & 1) == 0 )
+  if ( (byte_49BC98C & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    byte_4C23A5D = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    byte_49BC98C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -47,14 +47,14 @@ void __fastcall WarBoardTurnEndRequest__beginRequest(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4C23A5E & 1) == 0 )
+  if ( (byte_49BC98D & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_23970/*"updateDamageGauge"*/, *(_QWORD *)&stageId);
-    byte_4C23A5E = 1;
+    sub_1B4CF90(&StringLiteral_23204/*"stageId"*/, *(_QWORD *)&stageId);
+    byte_49BC98D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23970/*"updateDamageGauge"*/, stageId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23204/*"stageId"*/, stageId, 0LL);
   if ( !warBoardData )
-    sub_1C3B9C0(v7, v8);
+    sub_1B4D1EC(v7, v8);
   WarBoardData__SetRequest(warBoardData, (RequestBase_o *)this, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
@@ -65,16 +65,16 @@ System_String_o *__fastcall WarBoardTurnEndRequest__getURL(WarBoardTurnEndReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23A5C & 1) == 0 )
+  if ( (byte_49BC98B & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_25133, v2);
-    byte_4C23A5C = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_24336/*"warBoard/turnEnd"*/, v2);
+    byte_49BC98B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_25133, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_24336/*"warBoard/turnEnd"*/, 0LL);
 }
 
 
@@ -102,15 +102,15 @@ void __fastcall WarBoardTurnEndRequest__requestCompleted(
   Il2CppObject *v15; // x0
   System_String_o *v16; // x1
 
-  if ( (byte_4C23A5F & 1) == 0 )
+  if ( (byte_49BC98E & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1C3B764(&JsonManager_TypeInfo, v6);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v8);
-    sub_1C3B764(&StringLiteral_25136, v9);
-    byte_4C23A5F = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1B4CF90(&JsonManager_TypeInfo, v6);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v8);
+    sub_1B4CF90(&StringLiteral_24339/*"warBoardData"*/, v9);
+    byte_49BC98E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -121,21 +121,21 @@ void __fastcall WarBoardTurnEndRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_25136,
-             (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24339/*"warBoardData"*/,
+             (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v15 = RequestBase__UnpackToMessagePack((RequestBase_o *)this, Item, 0LL);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_25136,
+      (Il2CppObject *)StringLiteral_24339/*"warBoardData"*/,
       v15,
-      (const MethodInfo_3355754 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_3257B04 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v16 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
   }
   else
   {
-    v16 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
+    v16 = (System_String_o *)StringLiteral_21779/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v16, 0LL);
 }

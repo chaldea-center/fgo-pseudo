@@ -9,32 +9,28 @@ void __fastcall FGO_uv0anim__Start(FGO_uv0anim_o *this, const MethodInfo *method
 {
   __int64 v3; // x1
   Il2CppObject *Component_object; // x0
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  __int64 v11; // x1
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4C20DDE & 1) == 0 )
+  if ( (byte_49B9CF0 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1C3B764(&StringLiteral_16579/*"aspectRatio"*/, v3);
-    byte_4C20DDE = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B4CF90(&StringLiteral_15954/*"_MainTex"*/, v3);
+    byte_49B9CF0 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._renderer, (int64_t)Component_object, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v5, v6);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_1C3B9C0(renderer, v11);
+    sub_1B4D1EC(renderer, v7);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16579/*"aspectRatio"*/,
+    (System_String_o *)StringLiteral_15954/*"_MainTex"*/,
     this->fields.m_Offset,
     0LL);
 }
@@ -44,17 +40,17 @@ void __fastcall FGO_uv0anim__Update(FGO_uv0anim_o *this, const MethodInfo *metho
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4C20DDF & 1) == 0 )
+  if ( (byte_49B9CF1 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_16579/*"aspectRatio"*/, method);
-    byte_4C20DDF = 1;
+    sub_1B4CF90(&StringLiteral_15954/*"_MainTex"*/, method);
+    byte_49B9CF1 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_1C3B9C0(renderer, method);
+    sub_1B4D1EC(renderer, method);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16579/*"aspectRatio"*/,
+    (System_String_o *)StringLiteral_15954/*"_MainTex"*/,
     this->fields.m_Offset,
     0LL);
 }

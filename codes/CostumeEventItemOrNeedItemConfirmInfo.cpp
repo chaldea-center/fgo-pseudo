@@ -33,138 +33,122 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
   __int64 v28; // x22
   System_String_o *useNeedItemButton; // x0
   __int64 v30; // x1
-  int64_t v31; // x2
-  int32_t v32; // w3
-  System_String_o *v33; // x4
-  BattleSetupInfo_o *v34; // x5
-  FollowerInfo_o *v35; // x6
-  PartyListViewItem_o *v36; // x7
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
   UILabel_o *title; // x23
   UILabel_o *subTitle; // x23
-  System_String_o *v39; // x26
-  Il2CppObject *v40; // x0
+  System_String_o *v35; // x26
+  Il2CppObject *v36; // x0
   UILabel_o *needItemLabel; // x23
   struct LimitCntUpItemComponent_array *limitItemList; // x8
-  unsigned __int64 v43; // x27
+  unsigned __int64 v39; // x27
   unsigned __int64 max_length; // x9
   struct System_Int32_array *itemIds; // x9
-  LimitCntUpItemComponent_o *v46; // x26
-  struct System_Int32_array *v47; // x8
+  LimitCntUpItemComponent_o *v42; // x26
+  struct System_Int32_array *v43; // x8
   struct System_Int32_array *itemNums; // x9
-  _BOOL4 v49; // w24
-  __int64 v50; // x1
-  EventDelegate_Callback_o *v51; // x25
-  EventDelegate_o *v52; // x24
-  int64_t v53; // x2
-  int32_t v54; // w3
-  System_String_o *v55; // x4
-  BattleSetupInfo_o *v56; // x5
-  FollowerInfo_o *v57; // x6
-  PartyListViewItem_o *v58; // x7
-  struct UICommonButton_o *v59; // x8
+  _BOOL4 v45; // w24
+  __int64 v46; // x1
+  EventDelegate_Callback_o *v47; // x25
+  EventDelegate_o *v48; // x24
+  int32_t v49; // w2
+  const MethodInfo *v50; // x3
+  struct UICommonButton_o *v51; // x8
   System_String_Fields fields; // x8
-  _QWORD *v61; // x9
+  _QWORD *v53; // x9
   __int64 klass_low; // x10
-  __int64 v63; // x8
+  __int64 v55; // x8
   Il2CppObject *Entity; // x0
-  int64_t v65; // x2
-  int32_t v66; // w3
-  System_String_o *v67; // x4
-  BattleSetupInfo_o *v68; // x5
-  FollowerInfo_o *v69; // x6
-  PartyListViewItem_o *v70; // x7
+  int32_t v57; // w2
+  const MethodInfo *v58; // x3
   UILabel_o *eventItemLabel; // x24
-  System_String_o *v72; // x25
-  Il2CppObject *v73; // x0
+  System_String_o *v60; // x25
+  Il2CppObject *v61; // x0
   LimitCntUpItemComponent_o *eventItemIcon; // x24
-  struct System_Int32_array *v75; // x8
-  struct System_Int32_array *v76; // x9
-  _BOOL4 v77; // w20
-  __int64 v78; // x1
-  EventDelegate_Callback_o *v79; // x21
-  EventDelegate_o *v80; // x20
-  int64_t v81; // x2
-  int32_t v82; // w3
-  System_String_o *v83; // x4
-  BattleSetupInfo_o *v84; // x5
-  FollowerInfo_o *v85; // x6
-  PartyListViewItem_o *v86; // x7
+  struct System_Int32_array *v63; // x8
+  struct System_Int32_array *v64; // x9
+  _BOOL4 v65; // w20
+  __int64 v66; // x1
+  EventDelegate_Callback_o *v67; // x21
+  EventDelegate_o *v68; // x20
+  int32_t v69; // w2
+  const MethodInfo *v70; // x3
   struct UICommonButton_o *useEventItemButton; // x8
-  System_String_Fields v88; // x8
-  _QWORD *v89; // x9
-  __int64 v90; // x10
-  __int64 v91; // x8
+  System_String_Fields v72; // x8
+  _QWORD *v73; // x9
+  __int64 v74; // x10
+  __int64 v75; // x8
 
-  if ( (byte_4C25C68 & 1) == 0 )
+  if ( (byte_49BEBAD & 1) == 0 )
   {
-    sub_1C3B764(&EventDelegate_Callback_TypeInfo, combineCostumeEnt);
-    sub_1C3B764(&Method_DataManager_GetMasterData_EventMaster___, v13);
-    sub_1C3B764(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v14);
-    sub_1C3B764(&EventDelegate_TypeInfo, v15);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventDelegate__Add__, v16);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v17);
-    sub_1C3B764(&NetworkManager_TypeInfo, v18);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_1C3B764(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__0__, v20);
-    sub_1C3B764(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__1__, v21);
-    sub_1C3B764(&CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0_TypeInfo, v22);
-    sub_1C3B764(&StringLiteral_3873/*"CRI_ALPHA_MOVIE"*/, v23);
-    sub_1C3B764(&StringLiteral_5680/*"EXE_RESETGACHA"*/, v24);
-    sub_1C3B764(&StringLiteral_5681/*"EXE_SUMMON_COMBINE_TXT"*/, v25);
-    sub_1C3B764(&StringLiteral_5682/*"EXIST_ACCOUNT_DATA"*/, v26);
-    sub_1C3B764(&StringLiteral_5675/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/, v27);
-    byte_4C25C68 = 1;
+    sub_1B4CF90(&EventDelegate_Callback_TypeInfo, combineCostumeEnt);
+    sub_1B4CF90(&Method_DataManager_GetMasterData_EventMaster___, v13);
+    sub_1B4CF90(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v14);
+    sub_1B4CF90(&EventDelegate_TypeInfo, v15);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventDelegate__Add__, v16);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v17);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v18);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    sub_1B4CF90(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__0__, v20);
+    sub_1B4CF90(&Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__1__, v21);
+    sub_1B4CF90(&CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0_TypeInfo, v22);
+    sub_1B4CF90(&StringLiteral_3732/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, v23);
+    sub_1B4CF90(&StringLiteral_5464/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_TITLE"*/, v24);
+    sub_1B4CF90(&StringLiteral_5465/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_EVENT_ITEM"*/, v25);
+    sub_1B4CF90(&StringLiteral_5466/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/, v26);
+    sub_1B4CF90(&StringLiteral_5459/*"EVENT_COMBINE_COSTUME_ITEM"*/, v27);
+    byte_49BEBAD = 1;
   }
-  v28 = sub_1C3B9B0(CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0_TypeInfo);
+  v28 = sub_1B4D1DC(CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v28, 0LL);
   if ( !v28 )
     goto LABEL_71;
   *(_QWORD *)(v28 + 16) = callBack;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v28 + 16), (int64_t)callBack, v31, v32, v33, v34, v35, v36);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 16), (int32_t)callBack, v31, v32);
   title = this->fields.title;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  useNeedItemButton = LocalizationManager__Get((System_String_o *)StringLiteral_3873/*"CRI_ALPHA_MOVIE"*/, 0LL);
+  useNeedItemButton = LocalizationManager__Get((System_String_o *)StringLiteral_3732/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0LL);
   if ( !title )
     goto LABEL_71;
   UILabel__set_text(title, useNeedItemButton, 0LL);
   subTitle = this->fields.subTitle;
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5680/*"EXE_RESETGACHA"*/, 0LL);
-  v40 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5675/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/, 0LL);
-  useNeedItemButton = System_String__Format(v39, v40, 0LL);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5464/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_TITLE"*/, 0LL);
+  v36 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5459/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  useNeedItemButton = System_String__Format(v35, v36, 0LL);
   if ( !subTitle )
     goto LABEL_71;
   UILabel__set_text(subTitle, useNeedItemButton, 0LL);
   needItemLabel = this->fields.needItemLabel;
-  useNeedItemButton = LocalizationManager__Get((System_String_o *)StringLiteral_5682/*"EXIST_ACCOUNT_DATA"*/, 0LL);
+  useNeedItemButton = LocalizationManager__Get((System_String_o *)StringLiteral_5466/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM"*/, 0LL);
   if ( !needItemLabel )
     goto LABEL_71;
   UILabel__set_text(needItemLabel, useNeedItemButton, 0LL);
   limitItemList = this->fields.limitItemList;
   if ( !limitItemList )
     goto LABEL_71;
-  v43 = 0LL;
+  v39 = 0LL;
   while ( 1 )
   {
     max_length = limitItemList->max_length;
-    if ( (__int64)v43 >= (int)max_length )
+    if ( (__int64)v39 >= (int)max_length )
       break;
-    if ( v43 >= max_length )
+    if ( v39 >= max_length )
       goto LABEL_72;
     if ( !combineCostumeEnt )
       goto LABEL_71;
     itemIds = combineCostumeEnt->fields.itemIds;
     if ( !itemIds )
       goto LABEL_71;
-    if ( (__int64)v43 < (int)itemIds->max_length )
+    if ( (__int64)v39 < (int)itemIds->max_length )
     {
-      v46 = limitItemList->m_Items[v43];
+      v42 = limitItemList->m_Items[v39];
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C1C955 )
+      if ( !byte_49B57A5 )
       {
-        sub_1C3B764(&NetworkManager_TypeInfo, v30);
-        byte_4C1C955 = 1;
+        sub_1B4CF90(&NetworkManager_TypeInfo, v30);
+        byte_49B57A5 = 1;
       }
       useNeedItemButton = (System_String_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -172,27 +156,27 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         useNeedItemButton = (System_String_o *)NetworkManager_TypeInfo;
       }
-      v47 = combineCostumeEnt->fields.itemIds;
-      if ( !v47 )
+      v43 = combineCostumeEnt->fields.itemIds;
+      if ( !v43 )
         goto LABEL_71;
-      if ( v43 >= v47->max_length )
+      if ( v39 >= v43->max_length )
         goto LABEL_72;
       itemNums = combineCostumeEnt->fields.itemNums;
       if ( !itemNums )
         goto LABEL_71;
-      if ( v43 >= itemNums->max_length )
+      if ( v39 >= itemNums->max_length )
         goto LABEL_72;
-      if ( !v46 )
+      if ( !v42 )
         goto LABEL_71;
       LimitCntUpItemComponent__setLimitUpItemInfo(
-        v46,
+        v42,
         *(_QWORD *)(*(_QWORD *)&useNeedItemButton[7].fields + 64LL),
-        v47->m_Items[v43 + 1],
-        itemNums->m_Items[v43 + 1],
+        v43->m_Items[v39 + 1],
+        itemNums->m_Items[v39 + 1],
         0LL);
       limitItemList = this->fields.limitItemList;
     }
-    ++v43;
+    ++v39;
     if ( !limitItemList )
       goto LABEL_71;
   }
@@ -206,34 +190,34 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
   useNeedItemButton = (System_String_o *)this->fields.useNeedItemButton;
   if ( !useNeedItemButton )
     goto LABEL_71;
-  v49 = isShortNeedItemOrQp;
-  if ( v49 )
-    v50 = 3LL;
+  v45 = isShortNeedItemOrQp;
+  if ( v45 )
+    v46 = 3LL;
   else
-    v50 = 0LL;
+    v46 = 0LL;
   ((void (__fastcall *)(System_String_o *, __int64, __int64, Il2CppMethodPointer))useNeedItemButton->klass->vtable._14_System_IConvertible_ToInt16.method)(
     useNeedItemButton,
-    v50,
+    v46,
     1LL,
     useNeedItemButton->klass->vtable._15_System_IConvertible_ToUInt16.methodPtr);
-  if ( !v49 )
+  if ( !v45 )
   {
-    v51 = (EventDelegate_Callback_o *)sub_1C3B9B0(EventDelegate_Callback_TypeInfo);
+    v47 = (EventDelegate_Callback_o *)sub_1B4D1DC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
-      v51,
+      v47,
       (Il2CppObject *)v28,
       Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__0__,
       0LL);
-    v52 = (EventDelegate_o *)sub_1C3B9B0(EventDelegate_TypeInfo);
-    EventDelegate___ctor_48222576(v52, v51, 0LL);
-    v59 = this->fields.useNeedItemButton;
-    if ( !v59 )
+    v48 = (EventDelegate_o *)sub_1B4D1DC(EventDelegate_TypeInfo);
+    EventDelegate___ctor_47348588(v48, v47, 0LL);
+    v51 = this->fields.useNeedItemButton;
+    if ( !v51 )
       goto LABEL_71;
-    useNeedItemButton = (System_String_o *)v59->fields.onClick;
+    useNeedItemButton = (System_String_o *)v51->fields.onClick;
     if ( !useNeedItemButton )
       goto LABEL_71;
     fields = useNeedItemButton->fields;
-    v61 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+    v53 = Method_System_Collections_Generic_List_EventDelegate__Add__;
     ++HIDWORD(useNeedItemButton[1].klass);
     if ( !*(_QWORD *)&fields )
       goto LABEL_71;
@@ -242,47 +226,47 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)useNeedItemButton,
-        (Il2CppObject *)v52,
-        *(const MethodInfo_368BC6C **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+        (Il2CppObject *)v48,
+        *(const MethodInfo_35801DC **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
     }
     else
     {
-      v63 = *(_QWORD *)&fields + 8 * klass_low;
+      v55 = *(_QWORD *)&fields + 8 * klass_low;
       LODWORD(useNeedItemButton[1].klass) = klass_low + 1;
-      *(_QWORD *)(v63 + 32) = v52;
-      sub_1C3B708((PartyOrganizationUtility_o *)(v63 + 32), (int64_t)v52, v53, v54, v55, v56, v57, v58);
+      *(_QWORD *)(v55 + 32) = v48;
+      sub_1B4CF34((CGThumbnailListItem_o *)(v55 + 32), (int32_t)v48, v49, v50);
     }
   }
-  useNeedItemButton = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  useNeedItemButton = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !useNeedItemButton )
     goto LABEL_71;
   useNeedItemButton = (System_String_o *)DataManager__GetMasterData_object_(
                                            (DataManager_o *)useNeedItemButton,
-                                           (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventMaster___);
+                                           (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !eventCombineCostumeEnt || !useNeedItemButton )
     goto LABEL_71;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)useNeedItemButton,
              eventCombineCostumeEnt->fields.eventId,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   this->fields.eventEnt = (struct EventEntity_o *)Entity;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.eventEnt, (int64_t)Entity, v65, v66, v67, v68, v69, v70);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventEnt, (int32_t)Entity, v57, v58);
   eventItemLabel = this->fields.eventItemLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v72 = LocalizationManager__Get((System_String_o *)StringLiteral_5681/*"EXE_SUMMON_COMBINE_TXT"*/, 0LL);
-  v73 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5675/*"EXCLUSIVE_NPC_SERVANT_ID_START"*/, 0LL);
-  useNeedItemButton = System_String__Format(v72, v73, 0LL);
+  v60 = LocalizationManager__Get((System_String_o *)StringLiteral_5465/*"EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_EVENT_ITEM"*/, 0LL);
+  v61 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5459/*"EVENT_COMBINE_COSTUME_ITEM"*/, 0LL);
+  useNeedItemButton = System_String__Format(v60, v61, 0LL);
   if ( !eventItemLabel )
     goto LABEL_71;
   UILabel__set_text(eventItemLabel, useNeedItemButton, 0LL);
   eventItemIcon = this->fields.eventItemIcon;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C1C955 )
+  if ( !byte_49B57A5 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, v30);
-    byte_4C1C955 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, v30);
+    byte_49B57A5 = 1;
   }
   useNeedItemButton = (System_String_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -290,23 +274,23 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo__Set(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     useNeedItemButton = (System_String_o *)NetworkManager_TypeInfo;
   }
-  v75 = eventCombineCostumeEnt->fields.itemIds;
-  if ( !v75 )
+  v63 = eventCombineCostumeEnt->fields.itemIds;
+  if ( !v63 )
     goto LABEL_71;
-  if ( !v75->max_length )
+  if ( !v63->max_length )
     goto LABEL_72;
-  v76 = eventCombineCostumeEnt->fields.itemNums;
-  if ( !v76 )
+  v64 = eventCombineCostumeEnt->fields.itemNums;
+  if ( !v64 )
     goto LABEL_71;
-  if ( !v76->max_length )
+  if ( !v64->max_length )
 LABEL_72:
-    sub_1C3B9C8(useNeedItemButton, v30);
+    sub_1B4D1F4(useNeedItemButton, v30);
   if ( !eventItemIcon
     || (LimitCntUpItemComponent__setLimitUpItemInfo(
           eventItemIcon,
           *(_QWORD *)(*(_QWORD *)&useNeedItemButton[7].fields + 64LL),
-          v75->m_Items[1],
-          v76->m_Items[1],
+          v63->m_Items[1],
+          v64->m_Items[1],
           0LL),
         (useNeedItemButton = (System_String_o *)this->fields.useEventItemButton) == 0LL)
     || (((void (__fastcall *)(System_String_o *, bool, Il2CppMethodPointer))useNeedItemButton->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method)(
@@ -316,53 +300,53 @@ LABEL_72:
         (useNeedItemButton = (System_String_o *)this->fields.useEventItemButton) == 0LL) )
   {
 LABEL_71:
-    sub_1C3B9C0(useNeedItemButton, v30);
+    sub_1B4D1EC(useNeedItemButton, v30);
   }
-  v77 = isShortEvemtItem;
-  if ( v77 )
-    v78 = 3LL;
+  v65 = isShortEvemtItem;
+  if ( v65 )
+    v66 = 3LL;
   else
-    v78 = 0LL;
+    v66 = 0LL;
   ((void (__fastcall *)(System_String_o *, __int64, __int64, Il2CppMethodPointer))useNeedItemButton->klass->vtable._14_System_IConvertible_ToInt16.method)(
     useNeedItemButton,
-    v78,
+    v66,
     1LL,
     useNeedItemButton->klass->vtable._15_System_IConvertible_ToUInt16.methodPtr);
-  if ( !v77 )
+  if ( !v65 )
   {
-    v79 = (EventDelegate_Callback_o *)sub_1C3B9B0(EventDelegate_Callback_TypeInfo);
+    v67 = (EventDelegate_Callback_o *)sub_1B4D1DC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(
-      v79,
+      v67,
       (Il2CppObject *)v28,
       Method_CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0__Set_b__1__,
       0LL);
-    v80 = (EventDelegate_o *)sub_1C3B9B0(EventDelegate_TypeInfo);
-    EventDelegate___ctor_48222576(v80, v79, 0LL);
+    v68 = (EventDelegate_o *)sub_1B4D1DC(EventDelegate_TypeInfo);
+    EventDelegate___ctor_47348588(v68, v67, 0LL);
     useEventItemButton = this->fields.useEventItemButton;
     if ( useEventItemButton )
     {
       useNeedItemButton = (System_String_o *)useEventItemButton->fields.onClick;
       if ( useNeedItemButton )
       {
-        v88 = useNeedItemButton->fields;
-        v89 = Method_System_Collections_Generic_List_EventDelegate__Add__;
+        v72 = useNeedItemButton->fields;
+        v73 = Method_System_Collections_Generic_List_EventDelegate__Add__;
         ++HIDWORD(useNeedItemButton[1].klass);
-        if ( v88 )
+        if ( v72 )
         {
-          v90 = SLODWORD(useNeedItemButton[1].klass);
-          if ( (unsigned int)v90 >= *(_DWORD *)(*(_QWORD *)&v88 + 24LL) )
+          v74 = SLODWORD(useNeedItemButton[1].klass);
+          if ( (unsigned int)v74 >= *(_DWORD *)(*(_QWORD *)&v72 + 24LL) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)useNeedItemButton,
-              (Il2CppObject *)v80,
-              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v89[4] + 192LL) + 112LL));
+              (Il2CppObject *)v68,
+              *(const MethodInfo_35801DC **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
           }
           else
           {
-            v91 = *(_QWORD *)&v88 + 8 * v90;
-            LODWORD(useNeedItemButton[1].klass) = v90 + 1;
-            *(_QWORD *)(v91 + 32) = v80;
-            sub_1C3B708((PartyOrganizationUtility_o *)(v91 + 32), (int64_t)v80, v81, v82, v83, v84, v85, v86);
+            v75 = *(_QWORD *)&v72 + 8 * v74;
+            LODWORD(useNeedItemButton[1].klass) = v74 + 1;
+            *(_QWORD *)(v75 + 32) = v68;
+            sub_1B4CF34((CGThumbnailListItem_o *)(v75 + 32), (int32_t)v68, v69, v70);
           }
           return;
         }
@@ -389,7 +373,7 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0___Se
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callBack->fields.m_target)(
     callBack->fields.original_method_info,
     0LL,
@@ -405,7 +389,7 @@ void __fastcall CostumeEventItemOrNeedItemConfirmInfo___c__DisplayClass11_0___Se
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))callBack->fields.m_target)(
     callBack->fields.original_method_info,
     1LL,

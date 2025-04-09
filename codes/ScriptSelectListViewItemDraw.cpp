@@ -6,26 +6,22 @@ void __fastcall ScriptSelectListViewItemDraw___ctor(ScriptSelectListViewItemDraw
 
 void __fastcall ScriptSelectListViewItemDraw__EndMove(ScriptSelectListViewItemDraw_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  PartyOrganizationUtility_o *p_callbackFunc; // x0
-  struct System_Action_o *v9; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  CGThumbnailListItem_o *p_callbackFunc; // x0
+  struct System_Action_o *v5; // x19
   struct System_Action_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (PartyOrganizationUtility_o *)&this->fields.callbackFunc;
-  v9 = callbackFunc;
+  p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
+  v5 = callbackFunc;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1C3B708(p_callbackFunc, 0LL, v2, v3, v4, v5, v6, v7);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v9->fields.m_target)(
-      v9->fields.original_method_info,
-      *(_QWORD *)&v9->fields.extra_arg);
+    sub_1B4CF34(p_callbackFunc, 0, v2, v3);
+    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
+      v5->fields.original_method_info,
+      *(_QWORD *)&v5->fields.extra_arg);
   }
 }
 
@@ -36,21 +32,21 @@ void __fastcall ScriptSelectListViewItemDraw__EndSelectDecideMove1(
 {
   ScriptLineMessage_o *effectMessageManager; // x0
 
-  if ( (byte_4C23CF8 & 1) == 0 )
+  if ( (byte_49BCC2A & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_6146/*"EventUI/DownloadEventUI"*/, method);
-    byte_4C23CF8 = 1;
+    sub_1B4CF90(&StringLiteral_5920/*"EndSelectDecideMove2"*/, method);
+    byte_49BCC2A = 1;
   }
   if ( this->fields.message )
   {
     effectMessageManager = this->fields.effectMessageManager;
     if ( !effectMessageManager )
-      sub_1C3B9C0(0LL, method);
+      sub_1B4D1EC(0LL, method);
     ScriptLineMessage__Fadeout(effectMessageManager, 0.2, 0LL);
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6146/*"EventUI/DownloadEventUI"*/,
+    (System_String_o *)StringLiteral_5920/*"EndSelectDecideMove2"*/,
     0.5,
     0LL);
 }
@@ -63,10 +59,10 @@ void __fastcall ScriptSelectListViewItemDraw__EndSelectDecideMove2(
   UnityEngine_Component_o *baseSprite; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C23CF9 & 1) == 0 )
+  if ( (byte_49BCC2B & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_6126/*"EventRetryMove2"*/, method);
-    byte_4C23CF9 = 1;
+    sub_1B4CF90(&StringLiteral_5902/*"EndMove"*/, method);
+    byte_49BCC2B = 1;
   }
   baseSprite = (UnityEngine_Component_o *)this->fields.baseSprite;
   if ( !baseSprite
@@ -74,12 +70,12 @@ void __fastcall ScriptSelectListViewItemDraw__EndSelectDecideMove2(
         (baseSprite = (UnityEngine_Component_o *)TweenAlpha__Begin(gameObject, 0.6, 0.0, 0LL)) == 0LL)
     || (LODWORD(baseSprite[1].monitor) = 6, (baseSprite = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
   {
-    sub_1C3B9C0(baseSprite, method);
+    sub_1B4D1EC(baseSprite, method);
   }
   UIMessageButton__Fadeout((UIMessageButton_o *)baseSprite, 0.6, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6126/*"EventRetryMove2"*/,
+    (System_String_o *)StringLiteral_5902/*"EndMove"*/,
     0.6,
     0LL);
 }
@@ -90,32 +86,20 @@ void __fastcall ScriptSelectListViewItemDraw__NoSelectDecide(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v10; // x1
-  __int64 v11; // x1
+  const MethodInfo *v3; // x3
+  __int64 v6; // x1
+  __int64 v7; // x1
   UIMessageButton_o *baseButton; // x0
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C23CF6 & 1) == 0 )
+  if ( (byte_49BCC28 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, callback);
-    sub_1C3B764(&StringLiteral_6126/*"EventRetryMove2"*/, v10);
-    byte_4C23CF6 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Collider___, callback);
+    sub_1B4CF90(&StringLiteral_5902/*"EndMove"*/, v6);
+    byte_49BCC28 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-    (int64_t)callback,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
   baseButton = this->fields.baseButton;
   if ( !baseButton )
     goto LABEL_10;
@@ -124,7 +108,7 @@ void __fastcall ScriptSelectListViewItemDraw__NoSelectDecide(
   if ( !baseButton
     || (baseButton = (UIMessageButton_o *)UnityEngine_Component__GetComponent_object_(
                                             (UnityEngine_Component_o *)baseButton,
-                                            (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                            (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, 0, 0LL),
         (baseButton = (UIMessageButton_o *)this->fields.baseSprite) == 0LL)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseButton, 0LL),
@@ -132,12 +116,12 @@ void __fastcall ScriptSelectListViewItemDraw__NoSelectDecide(
     || (LODWORD(baseButton->fields.tweenTarget) = 6, (baseButton = this->fields.baseButton) == 0LL) )
   {
 LABEL_10:
-    sub_1C3B9C0(baseButton, v11);
+    sub_1B4D1EC(baseButton, v7);
   }
   UIMessageButton__Fadeout(baseButton, 0.5, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6126/*"EventRetryMove2"*/,
+    (System_String_o *)StringLiteral_5902/*"EndMove"*/,
     0.5,
     0LL);
 }
@@ -148,42 +132,30 @@ void __fastcall ScriptSelectListViewItemDraw__SelectDecide(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
   __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
   UIMessageButton_o *baseButton; // x0
-  System_String_o *v16; // x0
-  const MethodInfo *v17; // x1
+  System_String_o *v12; // x0
+  const MethodInfo *v13; // x1
   struct ScriptLineMessage_o *effectMessageManager; // x20
   System_String_o *message; // x21
-  System_String_o *v20; // x22
+  System_String_o *v16; // x22
 
-  if ( (byte_4C23CF7 & 1) == 0 )
+  if ( (byte_49BCC29 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, callback);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v10);
-    sub_1C3B764(&ScriptMessageLabel_TypeInfo, v11);
-    sub_1C3B764(&StringLiteral_6145/*"EventTradeSweetsWithdrawalConfirmDialog"*/, v12);
-    sub_1C3B764(&StringLiteral_11712/*"SETUP_OK"*/, v13);
-    byte_4C23CF7 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Collider___, callback);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v6);
+    sub_1B4CF90(&ScriptMessageLabel_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_5919/*"EndSelectDecideMove1"*/, v8);
+    sub_1B4CF90(&StringLiteral_11245/*"SCRIPT_ACTION_SELECT_COLOR"*/, v9);
+    byte_49BCC29 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-    (int64_t)callback,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
   baseButton = this->fields.baseButton;
   if ( !baseButton )
     goto LABEL_18;
@@ -193,7 +165,7 @@ void __fastcall ScriptSelectListViewItemDraw__SelectDecide(
     goto LABEL_18;
   baseButton = (UIMessageButton_o *)UnityEngine_Component__GetComponent_object_(
                                       (UnityEngine_Component_o *)baseButton,
-                                      (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                      (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !baseButton )
     goto LABEL_18;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)baseButton, 0, 0LL);
@@ -201,25 +173,25 @@ void __fastcall ScriptSelectListViewItemDraw__SelectDecide(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_11712/*"SETUP_OK"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11245/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0LL);
     effectMessageManager = this->fields.effectMessageManager;
     message = this->fields.message;
-    v20 = v16;
+    v16 = v12;
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
-    baseButton = (UIMessageButton_o *)ScriptMessageLabel__IsExistColorTag(message, v17);
+    baseButton = (UIMessageButton_o *)ScriptMessageLabel__IsExistColorTag(message, v13);
     if ( ((unsigned __int8)baseButton & 1) != 0
-      || (baseButton = (UIMessageButton_o *)System_String__IsNullOrEmpty(v20, 0LL),
+      || (baseButton = (UIMessageButton_o *)System_String__IsNullOrEmpty(v16, 0LL),
           ((unsigned __int8)baseButton & 1) != 0) )
     {
-      v20 = 0LL;
+      v16 = 0LL;
     }
     if ( effectMessageManager )
     {
       ((void (__fastcall *)(struct ScriptLineMessage_o *, System_String_o *, System_String_o *, struct UnityEngine_Font_o *, __int64, _QWORD, void *))effectMessageManager->klass->vtable._7_SetText.method)(
         effectMessageManager,
         message,
-        v20,
+        v16,
         this->fields.font,
         1LL,
         0LL,
@@ -232,63 +204,46 @@ void __fastcall ScriptSelectListViewItemDraw__SelectDecide(
       }
     }
 LABEL_18:
-    sub_1C3B9C0(baseButton, v14);
+    sub_1B4D1EC(baseButton, v10);
   }
 LABEL_17:
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6145/*"EventTradeSweetsWithdrawalConfirmDialog"*/,
+    (System_String_o *)StringLiteral_5919/*"EndSelectDecideMove1"*/,
     0.1,
     0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall ScriptSelectListViewItemDraw__SetItem(
         ScriptSelectListViewItemDraw_o *this,
         ScriptSelectListViewItem_o *item,
         int32_t mode,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v11; // x1
-  __int64 v12; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
   struct System_String_o *message; // x1
   struct UnityEngine_Font_o *fontType; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  System_String_o *v21; // x0
-  const MethodInfo *v22; // x1
-  struct ScriptLineMessage_o *v23; // x21
-  System_String_o *v24; // x22
-  System_String_o *v25; // x23
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  System_String_o *v13; // x0
+  const MethodInfo *v14; // x1
+  struct ScriptLineMessage_o *v15; // x21
+  System_String_o *v16; // x22
+  System_String_o *v17; // x23
   ScriptLineMessage_o *messageManager; // x0
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
 
-  if ( (byte_4C23CF5 & 1) == 0 )
+  if ( (byte_49BCC27 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, item);
-    sub_1C3B764(&ScriptMessageLabel_TypeInfo, v11);
-    sub_1C3B764(&StringLiteral_11712/*"SETUP_OK"*/, v12);
-    byte_4C23CF5 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, item);
+    sub_1B4CF90(&ScriptMessageLabel_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_11245/*"SCRIPT_ACTION_SELECT_COLOR"*/, v8);
+    byte_49BCC27 = 1;
   }
   if ( !item )
   {
@@ -301,9 +256,9 @@ void __fastcall ScriptSelectListViewItemDraw__SetItem(
       {
         ScriptLineMessage__DeleteLabels(messageManager, 0LL);
         this->fields.message = 0LL;
-        sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.message, 0LL, v27, v28, v29, v30, v31, v32);
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.message, 0, v19, v20);
         this->fields.font = 0LL;
-        sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.font, 0LL, v33, v34, v35, v36, v37, v38);
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.font, 0, v21, v22);
         return;
       }
     }
@@ -311,47 +266,39 @@ void __fastcall ScriptSelectListViewItemDraw__SetItem(
   }
   message = item->fields.message;
   this->fields.message = message;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.message,
-    (int64_t)message,
-    *(int64_t *)&mode,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, mode, method);
   fontType = item->fields.fontType;
   this->fields.font = fontType;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.font, (int64_t)fontType, v15, v16, v17, v18, v19, v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.font, (int32_t)fontType, v11, v12);
   if ( mode )
   {
     if ( this->fields.message )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_11712/*"SETUP_OK"*/, 0LL);
-      v23 = this->fields.messageManager;
-      v24 = this->fields.message;
-      v25 = v21;
+      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_11245/*"SCRIPT_ACTION_SELECT_COLOR"*/, 0LL);
+      v15 = this->fields.messageManager;
+      v16 = this->fields.message;
+      v17 = v13;
       if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
-      messageManager = (ScriptLineMessage_o *)ScriptMessageLabel__IsExistColorTag(v24, v22);
+      messageManager = (ScriptLineMessage_o *)ScriptMessageLabel__IsExistColorTag(v16, v14);
       if ( ((unsigned __int8)messageManager & 1) != 0
-        || (messageManager = (ScriptLineMessage_o *)System_String__IsNullOrEmpty(v25, 0LL),
+        || (messageManager = (ScriptLineMessage_o *)System_String__IsNullOrEmpty(v17, 0LL),
             ((unsigned __int8)messageManager & 1) != 0) )
       {
-        v25 = 0LL;
+        v17 = 0LL;
       }
-      if ( !v23 )
+      if ( !v15 )
         goto LABEL_23;
-      ((void (__fastcall *)(struct ScriptLineMessage_o *, System_String_o *, System_String_o *, struct UnityEngine_Font_o *, __int64, _QWORD, void *))v23->klass->vtable._7_SetText.method)(
-        v23,
-        v24,
-        v25,
+      ((void (__fastcall *)(struct ScriptLineMessage_o *, System_String_o *, System_String_o *, struct UnityEngine_Font_o *, __int64, _QWORD, void *))v15->klass->vtable._7_SetText.method)(
+        v15,
+        v16,
+        v17,
         this->fields.font,
         1LL,
         0LL,
-        v23->klass[1]._1.image);
+        v15->klass[1]._1.image);
     }
     else
     {
@@ -367,6 +314,6 @@ void __fastcall ScriptSelectListViewItemDraw__SetItem(
       return;
     }
 LABEL_23:
-    sub_1C3B9C0(messageManager, item);
+    sub_1B4D1EC(messageManager, item);
   }
 }

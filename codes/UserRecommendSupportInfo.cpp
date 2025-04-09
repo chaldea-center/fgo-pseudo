@@ -19,19 +19,15 @@ void __fastcall UserRecommendSupportInfo__ChangeLimitCountBySpoilerProtection(
 // positive sp value has been detected, the output may be wrong!
 void __fastcall UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
   {
     userSvtLeaderInfo->fields.equipTarget1 = 0LL;
-    sub_1C3B708((PartyOrganizationUtility_o *)&userSvtLeaderInfo->fields.equipTarget1, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1B4CF34((CGThumbnailListItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3);
   }
   System_Object__Finalize((Il2CppObject *)this, 0LL);
 }
@@ -121,10 +117,10 @@ System_String_o *__fastcall UserRecommendSupportInfo__GetOverWriteServantName(
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x9
 
-  if ( (byte_4C232CB & 1) == 0 )
+  if ( (byte_49BC1FA & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C232CB = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49BC1FA = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -143,17 +139,17 @@ System_Int32_array *__fastcall UserRecommendSupportInfo__GetRandomLimitCountTarg
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   System_Int32_array *result; // x0
 
-  if ( (byte_4C232CD & 1) == 0 )
+  if ( (byte_49BC1FC & 1) == 0 )
   {
-    sub_1C3B764(&int___TypeInfo, method);
-    byte_4C232CD = 1;
+    sub_1B4CF90(&int___TypeInfo, method);
+    byte_49BC1FC = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( !userSvtLeaderInfo )
-    return (System_Int32_array *)sub_1C3B80C(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B4D038(int___TypeInfo, 0LL);
   result = userSvtLeaderInfo->fields.randomLimitCountTargets;
   if ( !result )
-    return (System_Int32_array *)sub_1C3B80C(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1B4D038(int___TypeInfo, 0LL);
   return result;
 }
 
@@ -166,10 +162,10 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // kr00_16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
-  if ( (byte_4C232CA & 1) == 0 )
+  if ( (byte_49BC1F9 & 1) == 0 )
   {
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4C232CA = 1;
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
+    byte_49BC1F9 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -189,7 +185,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v4;
   *(_QWORD *)&v8.fields.fakeValue = v5;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v8, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v8, 0LL);
 }
 
 
@@ -200,32 +196,28 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo(
 {
   TreasureDvcInfo_o *v5; // x21
   const MethodInfo *v6; // x1
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  const MethodInfo *v13; // x2
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x2
   ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
-  if ( (byte_4C232CC & 1) == 0 )
+  if ( (byte_49BC1FB & 1) == 0 )
   {
-    sub_1C3B764(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4C232CC = 1;
+    sub_1B4CF90(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_49BC1FB = 1;
   }
-  v5 = (TreasureDvcInfo_o *)sub_1C3B9B0(TreasureDvcInfo_TypeInfo);
+  v5 = (TreasureDvcInfo_o *)sub_1B4D1DC(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v5, v6);
   *tdInfo = v5;
-  sub_1C3B708((PartyOrganizationUtility_o *)tdInfo, (int64_t)v5, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)tdInfo, (int32_t)v5, v7, v8);
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo(userSvtLeaderInfo, tdInfo, v13);
+    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo(userSvtLeaderInfo, tdInfo, v9);
   return (char)userSvtLeaderInfo;
 }
 
 
-bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_42045988(
+bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_41172532(
         UserRecommendSupportInfo_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -237,7 +229,7 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_42045988(
   *tdMaxLv = 1;
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_41983672(
+    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_41110216(
                                   userSvtLeaderInfo,
                                   tdLv,
                                   tdMaxLv,

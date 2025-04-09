@@ -8,25 +8,21 @@ void __fastcall CommonEffectActionComponent__Awake(CommonEffectActionComponent_o
 {
   __int64 v3; // x1
   System_Collections_Generic_Dictionary_int__object__o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C2339E & 1) == 0 )
+  if ( (byte_49BC2CD & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__, method);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_int__Action__TypeInfo, v3);
-    byte_4C2339E = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__, method);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_int__Action__TypeInfo, v3);
+    byte_49BC2CD = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v4,
-    (const MethodInfo_32F41C8 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    (const MethodInfo_31F64AC *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
   this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.eventActionList, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventActionList, (int32_t)v4, v5, v6);
 }
 
 
@@ -50,26 +46,26 @@ void __fastcall CommonEffectActionComponent__CallEventAction(
   struct System_Collections_Generic_Dictionary_int__Action__o *v8; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_4C233A0 & 1) == 0 )
+  if ( (byte_49BC2CF & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__, *(_QWORD *)&key);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__, v5);
-    byte_4C233A0 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__, *(_QWORD *)&key);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__, v5);
+    byte_49BC2CF = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__object___ContainsKey(
          (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
          key,
-         (const MethodInfo_32F4D90 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_31F7074 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
     v8 = this->fields.eventActionList;
     if ( !v8 )
-      sub_1C3B9C0(0LL, v7);
+      sub_1B4D1EC(0LL, v7);
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
              (System_Collections_Generic_Dictionary_int__object__o *)v8,
              key,
-             (const MethodInfo_32F4AFC *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+             (const MethodInfo_31F6DE0 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
     ActionExtensions__Call((System_Action_o *)Item, 0LL);
   }
 }
@@ -88,22 +84,10 @@ void __fastcall CommonEffectActionComponent__SetEndAction(
         System_Action_o *endAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.endAction = endAction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.endAction,
-    (int64_t)endAction,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)method, v3);
 }
 
 
@@ -116,10 +100,10 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_4C2339F & 1) == 0 )
+  if ( (byte_49BC2CE & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__, *(_QWORD *)&key);
-    byte_4C2339F = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__, *(_QWORD *)&key);
+    byte_49BC2CE = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -127,7 +111,7 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
       key,
       (Il2CppObject *)action,
-      (const MethodInfo_32F4B88 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_31F6E6C *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
@@ -136,20 +120,8 @@ void __fastcall CommonEffectActionComponent__SetStartAction(
         System_Action_o *startAction,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.startAction = startAction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.startAction,
-    (int64_t)startAction,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.startAction, (int32_t)startAction, (int32_t)method, v3);
 }

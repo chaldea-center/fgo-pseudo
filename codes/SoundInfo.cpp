@@ -39,110 +39,70 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
   float v32; // s11
   System_String_o *v33; // x0
   __int64 v34; // x1
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
-  System_String_o *v41; // x21
-  int64_t v42; // x1
-  int64_t v43; // x2
-  int32_t v44; // w3
-  System_String_o *v45; // x4
-  BattleSetupInfo_o *v46; // x5
-  FollowerInfo_o *v47; // x6
-  PartyListViewItem_o *v48; // x7
-  int64_t v49; // x2
-  int32_t v50; // w3
-  System_String_o *v51; // x4
-  BattleSetupInfo_o *v52; // x5
-  FollowerInfo_o *v53; // x6
-  PartyListViewItem_o *v54; // x7
-  int64_t v55; // x1
-  int64_t v56; // x2
-  int32_t v57; // w3
-  System_String_o *v58; // x4
-  BattleSetupInfo_o *v59; // x5
-  FollowerInfo_o *v60; // x6
-  PartyListViewItem_o *v61; // x7
-  int64_t v62; // x2
-  int32_t v63; // w3
-  System_String_o *v64; // x4
-  BattleSetupInfo_o *v65; // x5
-  FollowerInfo_o *v66; // x6
-  PartyListViewItem_o *v67; // x7
-  int64_t v68; // x1
-  System_String_o *v69; // x0
-  __int64 v70; // x2
-  __int64 v71; // x3
-  __int64 v72; // x4
-  Il2CppObject *v73; // x0
-  System_String_o *v74; // x21
-  int64_t v75; // x2
-  int32_t v76; // w3
-  System_String_o *v77; // x4
-  BattleSetupInfo_o *v78; // x5
-  FollowerInfo_o *v79; // x6
-  PartyListViewItem_o *v80; // x7
-  System_String_o *v81; // x20
-  int64_t v82; // x1
-  float v83; // s0
-  int64_t v84; // x2
-  int32_t v85; // w3
-  System_String_o *v86; // x4
-  BattleSetupInfo_o *v87; // x5
-  FollowerInfo_o *v88; // x6
-  PartyListViewItem_o *v89; // x7
-  int64_t v90; // x2
-  int32_t v91; // w3
-  System_String_o *v92; // x4
-  BattleSetupInfo_o *v93; // x5
-  FollowerInfo_o *v94; // x6
-  PartyListViewItem_o *v95; // x7
-  int64_t v96; // x1
-  int64_t v97; // x2
-  int32_t v98; // w3
-  System_String_o *v99; // x4
-  BattleSetupInfo_o *v100; // x5
-  FollowerInfo_o *v101; // x6
-  PartyListViewItem_o *v102; // x7
-  int64_t v103; // x2
-  int32_t v104; // w3
-  System_String_o *v105; // x4
-  BattleSetupInfo_o *v106; // x5
-  FollowerInfo_o *v107; // x6
-  PartyListViewItem_o *v108; // x7
-  int64_t v109; // x1
-  System_String_o *v110; // x20
-  int32_t v111; // w20
-  BgmManager_c *v112; // x0
-  int32_t v113; // [xsp+28h] [xbp-58h] BYREF
-  float v114[21]; // [xsp+2Ch] [xbp-54h] BYREF
-  UnityEngine_Rect_o v115; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v116; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v117; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
+  System_String_o *v37; // x21
+  int32_t v38; // w1
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  int32_t v41; // w2
+  const MethodInfo *v42; // x3
+  int32_t v43; // w1
+  int32_t v44; // w2
+  const MethodInfo *v45; // x3
+  int32_t v46; // w2
+  const MethodInfo *v47; // x3
+  int32_t v48; // w1
+  System_String_o *v49; // x0
+  __int64 v50; // x2
+  __int64 v51; // x3
+  __int64 v52; // x4
+  Il2CppObject *v53; // x0
+  System_String_o *v54; // x21
+  int32_t v55; // w2
+  const MethodInfo *v56; // x3
+  System_String_o *v57; // x20
+  int32_t v58; // w1
+  float v59; // s0
+  int32_t v60; // w2
+  const MethodInfo *v61; // x3
+  int32_t v62; // w2
+  const MethodInfo *v63; // x3
+  int32_t v64; // w1
+  int32_t v65; // w2
+  const MethodInfo *v66; // x3
+  int32_t v67; // w2
+  const MethodInfo *v68; // x3
+  int32_t v69; // w1
+  System_String_o *v70; // x20
+  int32_t v71; // w20
+  BgmManager_c *v72; // x0
+  int32_t v73; // [xsp+28h] [xbp-58h] BYREF
+  float v74[21]; // [xsp+2Ch] [xbp-54h] BYREF
+  UnityEngine_Rect_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v76; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v77; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C214CC & 1) == 0 )
+  if ( (byte_49BA3E0 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Application_TypeInfo, method);
-    sub_1C3B764(&BgmManager_TypeInfo, v3);
-    sub_1C3B764(&UnityEngine_GUI_TypeInfo, v4);
-    sub_1C3B764(&int_TypeInfo, v5);
-    sub_1C3B764(&SoundLogger_TypeInfo, v6);
-    sub_1C3B764(&string___TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
-    sub_1C3B764(&StringLiteral_16219/*"_oneValue"*/, v9);
-    sub_1C3B764(&StringLiteral_5391/*"EOF"*/, v10);
-    sub_1C3B764(&StringLiteral_1821/*"A label in the input string exceeded the length in ASCII representation, at {0}"*/, v11);
-    sub_1C3B764(&StringLiteral_45/*"\n\n\n"*/, v12);
-    sub_1C3B764(&StringLiteral_5390/*"ENUMERATED"*/, v13);
-    sub_1C3B764(&StringLiteral_66/*"\n[SE]\n"*/, v14);
-    sub_1C3B764(&StringLiteral_1/*""*/, v15);
-    sub_1C3B764(&StringLiteral_1609/*"<ds.DataColumn.set_AutoIncrementStep|API> {0}, {1}"*/, v16);
-    sub_1C3B764(&StringLiteral_67/*"\n[VOICE]\n"*/, v17);
-    sub_1C3B764(&StringLiteral_1847/*"A.D."*/, v18);
-    byte_4C214CC = 1;
+    sub_1B4CF90(&UnityEngine_Application_TypeInfo, method);
+    sub_1B4CF90(&BgmManager_TypeInfo, v3);
+    sub_1B4CF90(&UnityEngine_GUI_TypeInfo, v4);
+    sub_1B4CF90(&int_TypeInfo, v5);
+    sub_1B4CF90(&SoundLogger_TypeInfo, v6);
+    sub_1B4CF90(&string___TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
+    sub_1B4CF90(&StringLiteral_15598/*"[BGM]\n"*/, v9);
+    sub_1B4CF90(&StringLiteral_5192/*"Detail:{0}"*/, v10);
+    sub_1B4CF90(&StringLiteral_1736/*"<size="*/, v11);
+    sub_1B4CF90(&StringLiteral_45/*"\n\n\n"*/, v12);
+    sub_1B4CF90(&StringLiteral_5191/*"Detail: OFF"*/, v13);
+    sub_1B4CF90(&StringLiteral_66/*"\n[SE]\n"*/, v14);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v15);
+    sub_1B4CF90(&StringLiteral_1540/*"</size>"*/, v16);
+    sub_1B4CF90(&StringLiteral_67/*"\n[VOICE]\n"*/, v17);
+    sub_1B4CF90(&StringLiteral_1762/*">"*/, v18);
+    byte_49BA3E0 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -153,16 +113,16 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v20);
-    v23 = System_String__Concat_63368612((System_String_o *)StringLiteral_16219/*"_oneValue"*/, LogBgm, 0LL);
+    v23 = System_String__Concat_61093468((System_String_o *)StringLiteral_15598/*"[BGM]\n"*/, LogBgm, 0LL);
     if ( (bgmIndex & 0x80000000) != 0 )
     {
       v27 = SoundLogger_TypeInfo;
       if ( !SoundLogger_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
       LogBgmDetailLast = SoundLogger__GetLogBgmDetailLast((const MethodInfo *)v27);
-      v29 = System_String__Concat_63379872(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
+      v29 = System_String__Concat_61131716(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
       LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v29);
-      v23 = System_String__Concat_63379872(v29, (System_String_o *)StringLiteral_67/*"\n[VOICE]\n"*/, LogVoice, 0LL);
+      v23 = System_String__Concat_61131716(v29, (System_String_o *)StringLiteral_67/*"\n[VOICE]\n"*/, LogVoice, 0LL);
       LogSe = SoundLogger__getLogSe((const MethodInfo *)v23);
       v26 = &StringLiteral_66/*"\n[SE]\n"*/;
     }
@@ -174,115 +134,107 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       LogSe = SoundLogger__GetLogBgmDetail(v24, v22);
       v26 = &StringLiteral_45/*"\n\n\n"*/;
     }
-    v31 = System_String__Concat_63379872(v23, (System_String_o *)*v26, LogSe, 0LL);
+    v31 = System_String__Concat_61131716(v23, (System_String_o *)*v26, LogSe, 0LL);
     v32 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
-    v115.fields.m_XMin = 5.0;
-    v115.fields.m_YMin = 5.0;
-    v115.fields.m_Width = v32 * 310.0;
-    v115.fields.m_Height = v32 * 825.0;
-    UnityEngine_GUI__Box(v115, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v33 = (System_String_o *)sub_1C3B80C(string___TypeInfo, 5LL);
+    v75.fields.m_XMin = 5.0;
+    v75.fields.m_YMin = 5.0;
+    v75.fields.m_Width = v32 * 310.0;
+    v75.fields.m_Height = v32 * 825.0;
+    UnityEngine_GUI__Box(v75, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    v33 = (System_String_o *)sub_1B4D038(string___TypeInfo, 5LL);
     if ( v33 )
     {
-      v41 = v33;
+      v37 = v33;
       if ( !LODWORD(v33[1].klass) )
         goto LABEL_40;
-      v42 = StringLiteral_1821/*"A label in the input string exceeded the length in ASCII representation, at {0}"*/;
-      v33[1].monitor = (void *)StringLiteral_1821/*"A label in the input string exceeded the length in ASCII representation, at {0}"*/;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v33[1].monitor, v42, v35, v36, v37, v38, v39, v40);
-      v114[0] = v32 * 18.0;
-      v33 = System_Single__ToString(18.0, (const MethodInfo *)v114);
-      if ( LODWORD(v41[1].klass) <= 1 )
+      v38 = StringLiteral_1736/*"<size="*/;
+      v33[1].monitor = (void *)StringLiteral_1736/*"<size="*/;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v33[1].monitor, v38, v35, v36);
+      v74[0] = v32 * 18.0;
+      v33 = System_Single__ToString(18.0, (const MethodInfo *)v74);
+      if ( LODWORD(v37[1].klass) <= 1 )
         goto LABEL_40;
-      v41[1].fields = (System_String_Fields)v33;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v41[1].fields, (int64_t)v33, v43, v44, v45, v46, v47, v48);
-      if ( LODWORD(v41[1].klass) <= 2 )
+      v37[1].fields = (System_String_Fields)v33;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v37[1].fields, (int32_t)v33, v39, v40);
+      if ( LODWORD(v37[1].klass) <= 2 )
         goto LABEL_40;
-      v55 = StringLiteral_1847/*"A.D."*/;
-      v41[2].klass = (System_String_c *)StringLiteral_1847/*"A.D."*/;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v41[2], v55, v49, v50, v51, v52, v53, v54);
-      if ( LODWORD(v41[1].klass) <= 3 )
+      v43 = StringLiteral_1762/*">"*/;
+      v37[2].klass = (System_String_c *)StringLiteral_1762/*">"*/;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v37[2], v43, v41, v42);
+      if ( LODWORD(v37[1].klass) <= 3 )
         goto LABEL_40;
-      v41[2].monitor = v31;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v41[2].monitor, (int64_t)v31, v56, v57, v58, v59, v60, v61);
-      if ( LODWORD(v41[1].klass) <= 4 )
+      v37[2].monitor = v31;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v37[2].monitor, (int32_t)v31, v44, v45);
+      if ( LODWORD(v37[1].klass) <= 4 )
         goto LABEL_40;
-      v68 = StringLiteral_1609/*"<ds.DataColumn.set_AutoIncrementStep|API> {0}, {1}"*/;
-      v41[2].fields = (System_String_Fields)StringLiteral_1609/*"<ds.DataColumn.set_AutoIncrementStep|API> {0}, {1}"*/;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v41[2].fields, v68, v62, v63, v64, v65, v66, v67);
-      v69 = System_String__Concat_63382140((System_String_array *)v41, 0LL);
-      v116.fields.m_XMin = 10.0;
-      v116.fields.m_YMin = 5.0;
-      v116.fields.m_Width = v32 * 1000.0;
-      v116.fields.m_Height = v32 * 825.0;
-      UnityEngine_GUI__Label(v116, v69, 0LL);
+      v48 = StringLiteral_1540/*"</size>"*/;
+      v37[2].fields = (System_String_Fields)StringLiteral_1540/*"</size>"*/;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v37[2].fields, v48, v46, v47);
+      v49 = System_String__Concat_61133984((System_String_array *)v37, 0LL);
+      v76.fields.m_XMin = 10.0;
+      v76.fields.m_YMin = 5.0;
+      v76.fields.m_Width = v32 * 1000.0;
+      v76.fields.m_Height = v32 * 825.0;
+      UnityEngine_GUI__Label(v76, v49, 0LL);
       if ( (bgmIndex & 0x80000000) != 0 )
       {
-        v74 = (System_String_o *)StringLiteral_5390/*"ENUMERATED"*/;
+        v54 = (System_String_o *)StringLiteral_5191/*"Detail: OFF"*/;
       }
       else
       {
-        v113 = this->fields.bgmIndex;
-        v73 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v113, v70, v71, v72);
-        v74 = System_String__Format((System_String_o *)StringLiteral_5391/*"EOF"*/, v73, 0LL);
+        v73 = this->fields.bgmIndex;
+        v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73, v50, v51, v52);
+        v54 = System_String__Format((System_String_o *)StringLiteral_5192/*"Detail:{0}"*/, v53, 0LL);
       }
-      v33 = (System_String_o *)sub_1C3B80C(string___TypeInfo, 5LL);
+      v33 = (System_String_o *)sub_1B4D038(string___TypeInfo, 5LL);
       if ( v33 )
       {
-        v81 = v33;
+        v57 = v33;
         if ( LODWORD(v33[1].klass) )
         {
-          v82 = StringLiteral_1821/*"A label in the input string exceeded the length in ASCII representation, at {0}"*/;
-          v33[1].monitor = (void *)StringLiteral_1821/*"A label in the input string exceeded the length in ASCII representation, at {0}"*/;
-          sub_1C3B708((PartyOrganizationUtility_o *)&v33[1].monitor, v82, v75, v76, v77, v78, v79, v80);
-          v114[0] = v32 * 18.0;
-          v33 = System_Single__ToString(v83, (const MethodInfo *)v114);
-          if ( LODWORD(v81[1].klass) > 1 )
+          v58 = StringLiteral_1736/*"<size="*/;
+          v33[1].monitor = (void *)StringLiteral_1736/*"<size="*/;
+          sub_1B4CF34((CGThumbnailListItem_o *)&v33[1].monitor, v58, v55, v56);
+          v74[0] = v32 * 18.0;
+          v33 = System_Single__ToString(v59, (const MethodInfo *)v74);
+          if ( LODWORD(v57[1].klass) > 1 )
           {
-            v81[1].fields = (System_String_Fields)v33;
-            sub_1C3B708((PartyOrganizationUtility_o *)&v81[1].fields, (int64_t)v33, v84, v85, v86, v87, v88, v89);
-            if ( LODWORD(v81[1].klass) > 2 )
+            v57[1].fields = (System_String_Fields)v33;
+            sub_1B4CF34((CGThumbnailListItem_o *)&v57[1].fields, (int32_t)v33, v60, v61);
+            if ( LODWORD(v57[1].klass) > 2 )
             {
-              v96 = StringLiteral_1847/*"A.D."*/;
-              v81[2].klass = (System_String_c *)StringLiteral_1847/*"A.D."*/;
-              sub_1C3B708((PartyOrganizationUtility_o *)&v81[2], v96, v90, v91, v92, v93, v94, v95);
-              if ( LODWORD(v81[1].klass) > 3 )
+              v64 = StringLiteral_1762/*">"*/;
+              v57[2].klass = (System_String_c *)StringLiteral_1762/*">"*/;
+              sub_1B4CF34((CGThumbnailListItem_o *)&v57[2], v64, v62, v63);
+              if ( LODWORD(v57[1].klass) > 3 )
               {
-                v81[2].monitor = v74;
-                sub_1C3B708(
-                  (PartyOrganizationUtility_o *)&v81[2].monitor,
-                  (int64_t)v74,
-                  v97,
-                  v98,
-                  v99,
-                  v100,
-                  v101,
-                  v102);
-                if ( LODWORD(v81[1].klass) > 4 )
+                v57[2].monitor = v54;
+                sub_1B4CF34((CGThumbnailListItem_o *)&v57[2].monitor, (int32_t)v54, v65, v66);
+                if ( LODWORD(v57[1].klass) > 4 )
                 {
-                  v109 = StringLiteral_1609/*"<ds.DataColumn.set_AutoIncrementStep|API> {0}, {1}"*/;
-                  v81[2].fields = (System_String_Fields)StringLiteral_1609/*"<ds.DataColumn.set_AutoIncrementStep|API> {0}, {1}"*/;
-                  sub_1C3B708((PartyOrganizationUtility_o *)&v81[2].fields, v109, v103, v104, v105, v106, v107, v108);
-                  v110 = System_String__Concat_63382140((System_String_array *)v81, 0LL);
+                  v69 = StringLiteral_1540/*"</size>"*/;
+                  v57[2].fields = (System_String_Fields)StringLiteral_1540/*"</size>"*/;
+                  sub_1B4CF34((CGThumbnailListItem_o *)&v57[2].fields, v69, v67, v68);
+                  v70 = System_String__Concat_61133984((System_String_array *)v57, 0LL);
                   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
-                  v117.fields.m_XMin = 10.0;
-                  v117.fields.m_YMin = (float)(v32 * 57.0) + 10.0;
-                  v117.fields.m_Width = v32 * 300.0;
-                  v117.fields.m_Height = v32 * 40.0;
-                  if ( UnityEngine_GUI__Button(v117, v110, 0LL) )
+                  v77.fields.m_XMin = 10.0;
+                  v77.fields.m_YMin = (float)(v32 * 57.0) + 10.0;
+                  v77.fields.m_Width = v32 * 300.0;
+                  v77.fields.m_Height = v32 * 40.0;
+                  if ( UnityEngine_GUI__Button(v77, v70, 0LL) )
                   {
-                    v111 = this->fields.bgmIndex + 1;
-                    this->fields.bgmIndex = v111;
-                    v112 = BgmManager_TypeInfo;
+                    v71 = this->fields.bgmIndex + 1;
+                    this->fields.bgmIndex = v71;
+                    v72 = BgmManager_TypeInfo;
                     if ( !BgmManager_TypeInfo->_2.cctor_finished )
                     {
                       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-                      v112 = BgmManager_TypeInfo;
+                      v72 = BgmManager_TypeInfo;
                     }
-                    if ( v111 >= v112->static_fields->BGM_PLAYER_MAX_COUNT )
+                    if ( v71 >= v72->static_fields->BGM_PLAYER_MAX_COUNT )
                       this->fields.bgmIndex = -1;
                   }
                   return;
@@ -292,10 +244,10 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
           }
         }
 LABEL_40:
-        sub_1C3B9C8(v33, v34);
+        sub_1B4D1F4(v33, v34);
       }
     }
-    sub_1C3B9C0(v33, v34);
+    sub_1B4D1EC(v33, v34);
   }
 }
 

@@ -3,10 +3,10 @@ void __fastcall NoticeInfoComponent___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct NoticeInfoComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4C1D74E & 1) == 0 )
+  if ( (byte_49B6637 & 1) == 0 )
   {
-    sub_1C3B764(&NoticeInfoComponent_TypeInfo, v1);
-    byte_4C1D74E = 1;
+    sub_1B4CF90(&NoticeInfoComponent_TypeInfo, v1);
+    byte_49B6637 = 1;
   }
   static_fields = NoticeInfoComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ACCOUNT_DELETE_RECONFIRM_MESSAGE_FONT_SIZE = 0x180000001CLL;
@@ -31,22 +31,22 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteConfirmDialog(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4C1D748 & 1) == 0 )
+  if ( (byte_49B6631 & 1) == 0 )
   {
-    sub_1C3B764(&AccountDeleteConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1C3B764(&Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__, v3);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    byte_4C1D748 = 1;
+    sub_1B4CF90(&AccountDeleteConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1B4CF90(&Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__, v3);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    byte_49B6631 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (AccountDeleteConfirmDialog_ClickDelegate_o *)sub_1C3B9B0(AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (AccountDeleteConfirmDialog_ClickDelegate_o *)sub_1B4D1DC(AccountDeleteConfirmDialog_ClickDelegate_TypeInfo);
   AccountDeleteConfirmDialog_ClickDelegate___ctor(
     v6,
     (Il2CppObject *)this,
     Method_NoticeInfoComponent__OpenAccountDeleteConfirmDialog_b__18_0__,
     0LL);
   if ( !Instance )
-    sub_1C3B9C0(v7, v8);
+    sub_1B4D1EC(v7, v8);
   CommonUI__OpenAccountDeleteConfirmDialog((CommonUI_o *)Instance, v6, 0LL);
 }
 
@@ -63,22 +63,22 @@ void __fastcall NoticeInfoComponent__OpenAccountDeletePasswordDialog(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4C1D74C & 1) == 0 )
+  if ( (byte_49B6635 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, password);
-    sub_1C3B764(&Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4C1D74C = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, password);
+    sub_1B4CF90(&Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_49B6635 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
     v8,
     (Il2CppObject *)this,
     Method_NoticeInfoComponent__OpenAccountDeletePasswordDialog_b__22_0__,
     0LL);
   if ( !Instance )
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   CommonUI__OpenAccountDeletePasswordDialog((CommonUI_o *)Instance, 0, password, v8, 0LL);
 }
 
@@ -103,26 +103,26 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(
   __int64 v16; // x1
   NoticeInfoComponent_c *v17; // x0
 
-  if ( (byte_4C1D749 & 1) == 0 )
+  if ( (byte_49B6632 & 1) == 0 )
   {
-    sub_1C3B764(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v3);
-    sub_1C3B764(&Method_NoticeInfoComponent__OpenAccountDeleteReConfirmDialog_b__19_0__, v4);
-    sub_1C3B764(&NoticeInfoComponent_TypeInfo, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1C3B764(&StringLiteral_1970/*"ANOTHER_PAY_ITEM_MULTI_LIST_SKILL_NONE"*/, v7);
-    sub_1C3B764(&StringLiteral_1969/*"ANOTHER_PAY_ITEM_MULTI_CONFIRM_WARN_MSG"*/, v8);
-    sub_1C3B764(&StringLiteral_1971/*"ANOTHER_PAY_ITEM_MULTI_RECONFIRM_WARN_MSG"*/, v9);
-    sub_1C3B764(&StringLiteral_1/*""*/, v10);
-    byte_4C1D749 = 1;
+    sub_1B4CF90(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v3);
+    sub_1B4CF90(&Method_NoticeInfoComponent__OpenAccountDeleteReConfirmDialog_b__19_0__, v4);
+    sub_1B4CF90(&NoticeInfoComponent_TypeInfo, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B4CF90(&StringLiteral_1874/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/, v7);
+    sub_1B4CF90(&StringLiteral_1873/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/, v8);
+    sub_1B4CF90(&StringLiteral_1875/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/, v9);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v10);
+    byte_49B6632 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1971/*"ANOTHER_PAY_ITEM_MULTI_RECONFIRM_WARN_MSG"*/, 0LL);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_1970/*"ANOTHER_PAY_ITEM_MULTI_LIST_SKILL_NONE"*/, 0LL);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_1969/*"ANOTHER_PAY_ITEM_MULTI_CONFIRM_WARN_MSG"*/, 0LL);
-  v15 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C3B9B0(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_1875/*"ACCOUNT_DELETE_RECONFIRM_MESSAGE"*/, 0LL);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_1874/*"ACCOUNT_DELETE_RECONFIRM_DECIDE"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_1873/*"ACCOUNT_DELETE_RECONFIRM_CANCEL"*/, 0LL);
+  v15 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B4D1DC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v15,
     (Il2CppObject *)this,
@@ -135,8 +135,8 @@ void __fastcall NoticeInfoComponent__OpenAccountDeleteReConfirmDialog(
     v17 = NoticeInfoComponent_TypeInfo;
   }
   if ( !Instance )
-    sub_1C3B9C0(v17, v16);
-  CommonUI__OpenConfirmDialog_31232304(
+    sub_1B4D1EC(v17, v16);
+  CommonUI__OpenConfirmDialog_30248588(
     (CommonUI_o *)Instance,
     (System_String_o *)StringLiteral_1/*""*/,
     v12,
@@ -167,17 +167,19 @@ void __fastcall NoticeInfoComponent__SetReboot(NoticeInfoComponent_o *this, cons
   System_Action_o *_9__23_0; // x20
   Il2CppObject *v13; // x21
   struct NoticeInfoComponent___c_StaticFields *static_fields; // x0
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
-  if ( (byte_4C1D74D & 1) == 0 )
+  if ( (byte_49B6636 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&AvalonSceneManager_TypeInfo, v2);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1C3B764(&Method_NoticeInfoComponent___c__SetReboot_b__23_0__, v4);
-    sub_1C3B764(&NoticeInfoComponent___c_TypeInfo, v5);
-    byte_4C1D74D = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&AvalonSceneManager_TypeInfo, v2);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1B4CF90(&Method_NoticeInfoComponent___c__SetReboot_b__23_0__, v4);
+    sub_1B4CF90(&NoticeInfoComponent___c_TypeInfo, v5);
+    byte_49B6636 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = AvalonSceneManager_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -201,14 +203,14 @@ void __fastcall NoticeInfoComponent__SetReboot(NoticeInfoComponent_o *this, cons
       v10 = NoticeInfoComponent___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__23_0 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    _9__23_0 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
     System_Action___ctor(_9__23_0, v13, Method_NoticeInfoComponent___c__SetReboot_b__23_0__, 0LL);
     static_fields = NoticeInfoComponent___c_TypeInfo->static_fields;
     static_fields->__9__23_0 = _9__23_0;
-    v10 = (NoticeInfoComponent___c_c *)sub_1C3B708(&static_fields->__9__23_0);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__23_0, (int32_t)_9__23_0, v15, v16);
   }
   if ( !v9 )
-    sub_1C3B9C0(v10, v7);
+    sub_1B4D1EC(v10, v7);
   CommonUI__maskFadeout(v9, 1, DEFAULT_FADE_TIME, _9__23_0, 0LL);
 }
 
@@ -223,7 +225,7 @@ void __fastcall NoticeInfoComponent__Start(NoticeInfoComponent_o *this, const Me
   if ( !gameObject
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL)) == 0LL )
   {
-    sub_1C3B9C0(gameObject, v3);
+    sub_1B4D1EC(gameObject, v3);
   }
   v4.fields.y = 0.0;
   v4.fields.z = 0.0;
@@ -237,17 +239,19 @@ System_Collections_IEnumerator_o *__fastcall NoticeInfoComponent__WaitForSE(
         const MethodInfo *method)
 {
   __int64 v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C1D741 & 1) == 0 )
+  if ( (byte_49B662A & 1) == 0 )
   {
-    sub_1C3B764(&NoticeInfoComponent__WaitForSE_d__11_TypeInfo, method);
-    byte_4C1D741 = 1;
+    sub_1B4CF90(&NoticeInfoComponent__WaitForSE_d__11_TypeInfo, method);
+    byte_49B662A = 1;
   }
-  v3 = sub_1C3B9B0(NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
+  v3 = sub_1B4D1DC(NoticeInfoComponent__WaitForSE_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3B708(v3 + 32);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -264,23 +268,23 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteConfirmDialog_b__18_0(
   __int64 v8; // x1
   __int64 *v9; // x8
 
-  if ( (byte_4C1D74F & 1) == 0 )
+  if ( (byte_49B6638 & 1) == 0 )
   {
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_1C3B764(&StringLiteral_3598/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/, v5);
-    sub_1C3B764(&StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/, v6);
-    byte_4C1D74F = 1;
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    sub_1B4CF90(&StringLiteral_3454/*"CLICK_OK"*/, v5);
+    sub_1B4CF90(&StringLiteral_3427/*"CLICK_CANCLE"*/, v6);
+    byte_49B6638 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseAccountDeleteConfirmDialog(Instance, 0LL, 0LL),
         (Instance = (CommonUI_o *)this->fields.myRoomFsm) == 0LL) )
   {
-    sub_1C3B9C0(Instance, v8);
+    sub_1B4D1EC(Instance, v8);
   }
-  v9 = &StringLiteral_3598/*"COMMAND_CARD_EXCEED_CONFIRM_DIALOG_REQUIRED_QP_WARNING"*/;
+  v9 = &StringLiteral_3454/*"CLICK_OK"*/;
   if ( !isDecide )
-    v9 = &StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/;
+    v9 = &StringLiteral_3427/*"CLICK_CANCLE"*/;
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)*v9, 0LL);
 }
 
@@ -294,14 +298,14 @@ void __fastcall NoticeInfoComponent___OpenAccountDeletePasswordDialog_b__22_0(
   NoticeInfoComponent_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C1D751 & 1) == 0 )
+  if ( (byte_49B663A & 1) == 0 )
   {
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
-    byte_4C1D751 = 1;
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, method);
+    byte_49B663A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   CommonUI__CloseAccountDeletePasswordDialog((CommonUI_o *)Instance, 0LL, 0LL);
   NoticeInfoComponent__SetReboot(v4, v5);
 }
@@ -317,13 +321,13 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   CommonUI_o *Instance; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C1D750 & 1) == 0 )
+  if ( (byte_49B6639 & 1) == 0 )
   {
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    sub_1C3B764(&StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/, v5);
-    byte_4C1D750 = 1;
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
+    sub_1B4CF90(&StringLiteral_3427/*"CLICK_CANCLE"*/, v5);
+    byte_49B6639 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   CommonUI__CloseConfirmDialog(Instance, 0LL);
@@ -335,8 +339,8 @@ void __fastcall NoticeInfoComponent___OpenAccountDeleteReConfirmDialog_b__19_0(
   Instance = (CommonUI_o *)this->fields.myRoomFsm;
   if ( !Instance )
 LABEL_8:
-    sub_1C3B9C0(Instance, v7);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/, 0LL);
+    sub_1B4D1EC(Instance, v7);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_3427/*"CLICK_CANCLE"*/, 0LL);
 }
 
 
@@ -344,15 +348,15 @@ void __fastcall NoticeInfoComponent__onEndWebView(NoticeInfoComponent_o *this, c
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4C1D746 & 1) == 0 )
+  if ( (byte_49B662F & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_3647/*"COMMAND_TYPE_NAME_{0}"*/, method);
-    byte_4C1D746 = 1;
+    sub_1B4CF90(&StringLiteral_3503/*"CLOSE_WEBVIEW"*/, method);
+    byte_49B662F = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C3B9C0(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3647/*"COMMAND_TYPE_NAME_{0}"*/, 0LL);
+    sub_1B4D1EC(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3503/*"CLOSE_WEBVIEW"*/, 0LL);
 }
 
 
@@ -360,10 +364,10 @@ void __fastcall NoticeInfoComponent__openBrowser(NoticeInfoComponent_o *this, co
 {
   System_String_o *path; // x19
 
-  if ( (byte_4C1D747 & 1) == 0 )
+  if ( (byte_49B6630 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Application_TypeInfo, method);
-    byte_4C1D747 = 1;
+    sub_1B4CF90(&UnityEngine_Application_TypeInfo, method);
+    byte_49B6630 = 1;
   }
   path = this->fields.path;
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -380,16 +384,16 @@ void __fastcall NoticeInfoComponent__openWebView(NoticeInfoComponent_o *this, co
   System_String_o *path; // x21
   System_Action_o *v7; // x22
 
-  if ( (byte_4C1D745 & 1) == 0 )
+  if ( (byte_49B662E & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&Method_NoticeInfoComponent_onEndWebView__, v3);
-    sub_1C3B764(&WebViewManager_TypeInfo, v4);
-    byte_4C1D745 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&Method_NoticeInfoComponent_onEndWebView__, v3);
+    sub_1B4CF90(&WebViewManager_TypeInfo, v4);
+    byte_49B662E = 1;
   }
   title = this->fields.title;
   path = this->fields.path;
-  v7 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_NoticeInfoComponent_onEndWebView__, 0LL);
   if ( !WebViewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
@@ -406,15 +410,15 @@ void __fastcall NoticeInfoComponent__requestUserDelete(NoticeInfoComponent_o *th
   Il2CppObject *Request_object; // x0
   __int64 v8; // x1
 
-  if ( (byte_4C1D74A & 1) == 0 )
+  if ( (byte_49B6633 & 1) == 0 )
   {
-    sub_1C3B764(&Method_NetworkManager_getRequest_UserDeleteRequest___, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&Method_NoticeInfoComponent_userDeleteCallback__, v4);
-    sub_1C3B764(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    byte_4C1D74A = 1;
+    sub_1B4CF90(&Method_NetworkManager_getRequest_UserDeleteRequest___, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&Method_NoticeInfoComponent_userDeleteCallback__, v4);
+    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    byte_49B6633 = 1;
   }
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3B9B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -424,9 +428,9 @@ void __fastcall NoticeInfoComponent__requestUserDelete(NoticeInfoComponent_o *th
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v6,
-                     (const MethodInfo_3075AE8 *)Method_NetworkManager_getRequest_UserDeleteRequest___);
+                     (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_UserDeleteRequest___);
   if ( !Request_object )
-    sub_1C3B9C0(0LL, v8);
+    sub_1B4D1EC(0LL, v8);
   RequestBase__beginRequest((RequestBase_o *)Request_object, 0LL);
 }
 
@@ -435,22 +439,30 @@ void __fastcall NoticeInfoComponent__setCreditWebViewInfo(NoticeInfoComponent_o 
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D743 & 1) == 0 )
+  if ( (byte_49B662C & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15856/*"_FaceAlphaTex"*/, v4);
-    byte_4C1D743 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15249/*"WEB_VIEW_TITLE_CREDIT"*/, v4);
+    byte_49B662C = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15856/*"_FaceAlphaTex"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15249/*"WEB_VIEW_TITLE_CREDIT"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(5, 0LL);
-  sub_1C3B708(&this->fields.path);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(5, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
 }
 
 
@@ -458,22 +470,30 @@ void __fastcall NoticeInfoComponent__setHelpWebViewInfo(NoticeInfoComponent_o *t
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D73F & 1) == 0 )
+  if ( (byte_49B6628 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15857/*"_FaceAlphaTex2"*/, v4);
-    byte_4C1D73F = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15250/*"WEB_VIEW_TITLE_HELP"*/, v4);
+    byte_49B6628 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15857/*"_FaceAlphaTex2"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15250/*"WEB_VIEW_TITLE_HELP"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(2, 0LL);
-  sub_1C3B708(&this->fields.path);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(2, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
 }
 
 
@@ -481,22 +501,30 @@ void __fastcall NoticeInfoComponent__setInfomationWebViewInfo(NoticeInfoComponen
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D73E & 1) == 0 )
+  if ( (byte_49B6627 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15858/*"_FaceColor"*/, v4);
-    byte_4C1D73E = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15251/*"WEB_VIEW_TITLE_INFOMATION"*/, v4);
+    byte_49B6627 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15858/*"_FaceColor"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15251/*"WEB_VIEW_TITLE_INFOMATION"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(0, 0LL);
-  sub_1C3B708(&this->fields.path);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(0, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
 }
 
 
@@ -504,26 +532,34 @@ void __fastcall NoticeInfoComponent__setInquiryWebViewInfo(NoticeInfoComponent_o
 {
   __int64 v3; // x1
   __int64 v4; // x1
-  const MethodInfo *v5; // x1
-  System_Collections_IEnumerator_o *v6; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x1
+  System_Collections_IEnumerator_o *v12; // x1
 
-  if ( (byte_4C1D740 & 1) == 0 )
+  if ( (byte_49B6629 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15855/*"_FLAVOR2"*/, v4);
-    byte_4C1D740 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15248/*"WEB_VIEW_TITLE_CONTACT_US"*/, v4);
+    byte_49B6629 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15855/*"_FLAVOR2"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15248/*"WEB_VIEW_TITLE_CONTACT_US"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(3, 0LL);
-  sub_1C3B708(&this->fields.path);
-  v6 = NoticeInfoComponent__WaitForSE(this, v5);
-  UnityEngine_MonoBehaviour__StartCoroutine_71108020((UnityEngine_MonoBehaviour_o *)this, v6, 0LL);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(3, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
+  v12 = NoticeInfoComponent__WaitForSE(this, v11);
+  UnityEngine_MonoBehaviour__StartCoroutine_68789728((UnityEngine_MonoBehaviour_o *)this, v12, 0LL);
 }
 
 
@@ -531,20 +567,28 @@ void __fastcall NoticeInfoComponent__setNoticeInfo(NoticeInfoComponent_o *this, 
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
+  int32_t v5; // w1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  int32_t v8; // w1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D73D & 1) == 0 )
+  if ( (byte_49B6626 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C1D73D = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49B6626 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  v5 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(&this->fields.title);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, v5, v6, v7);
+  v8 = (int)StringLiteral_1/*""*/;
   this->fields.path = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708(&this->fields.path);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, v8, v9, v10);
 }
 
 
@@ -552,22 +596,30 @@ void __fastcall NoticeInfoComponent__setRightWebViewInfo(NoticeInfoComponent_o *
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D744 & 1) == 0 )
+  if ( (byte_49B662D & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15859/*"_FaceDilate"*/, v4);
-    byte_4C1D744 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15252/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, v4);
+    byte_49B662D = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15859/*"_FaceDilate"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15252/*"WEB_VIEW_TITLE_RIGHT_NOTATION"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(6, 0LL);
-  sub_1C3B708(&this->fields.path);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(6, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
 }
 
 
@@ -575,22 +627,30 @@ void __fastcall NoticeInfoComponent__setRulesWebViewInfo(NoticeInfoComponent_o *
 {
   __int64 v3; // x1
   __int64 v4; // x1
+  struct System_String_o *v5; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  struct System_String_o *WebViewAddress_39117488; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1D742 & 1) == 0 )
+  if ( (byte_49B662B & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&NetworkManager_TypeInfo, v3);
-    sub_1C3B764(&StringLiteral_15863/*"_FaceSubTex"*/, v4);
-    byte_4C1D742 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
+    sub_1B4CF90(&StringLiteral_15256/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, v4);
+    byte_49B662B = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this->fields.title = LocalizationManager__Get((System_String_o *)StringLiteral_15863/*"_FaceSubTex"*/, 0LL);
-  sub_1C3B708(&this->fields.title);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_15256/*"WEB_VIEW_TITLE_TERMS_OF_USE"*/, 0LL);
+  this->fields.title = v5;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this->fields.path = NetworkManager__getWebViewAddress_39999516(4, 0LL);
-  sub_1C3B708(&this->fields.path);
+  WebViewAddress_39117488 = NetworkManager__getWebViewAddress_39117488(4, 0LL);
+  this->fields.path = WebViewAddress_39117488;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.path, (int32_t)WebViewAddress_39117488, v9, v10);
 }
 
 
@@ -610,35 +670,35 @@ void __fastcall NoticeInfoComponent__userDeleteCallback(
   const MethodInfo *v12; // x2
 
   v4 = this;
-  if ( (byte_4C1D74B & 1) == 0 )
+  if ( (byte_49B6634 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_UserDeleteReservationMaster___, result);
-    sub_1C3B764(&NetworkManager_TypeInfo, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1C3B764(&UserDeleteReservationEntity_TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v8);
-    this = (NoticeInfoComponent_o *)sub_1C3B764(&StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/, v9);
-    byte_4C1D74B = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_UserDeleteReservationMaster___, result);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B4CF90(&UserDeleteReservationEntity_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v8);
+    this = (NoticeInfoComponent_o *)sub_1B4CF90(&StringLiteral_3427/*"CLICK_CANCLE"*/, v9);
+    byte_49B6634 = 1;
   }
   if ( !result )
     goto LABEL_19;
-  if ( System_String__Equals_63376928(result, (System_String_o *)StringLiteral_22507/*"referrerMapId"*/, 0LL) )
+  if ( System_String__Equals_61128772(result, (System_String_o *)StringLiteral_21779/*"ng"*/, 0LL) )
     goto LABEL_17;
   if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
   UserDeleteReservationEntity__SetUserDeleteFlag(1, 0LL);
-  this = (NoticeInfoComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (NoticeInfoComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_19;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
+                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserDeleteReservationMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C1C955 )
+  if ( !byte_49B57A5 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, result);
-    byte_4C1C955 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, result);
+    byte_49B57A5 = 1;
   }
   this = (NoticeInfoComponent_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -648,7 +708,7 @@ void __fastcall NoticeInfoComponent__userDeleteCallback(
   }
   if ( !MasterData_object )
 LABEL_19:
-    sub_1C3B9C0(this, result);
+    sub_1B4D1EC(this, result);
   v11 = UserDeleteReservationMaster__GetEntity(
           (UserDeleteReservationMaster_o *)MasterData_object,
           *(_QWORD *)(*(_QWORD *)&this[3].fields.m_CachedPtr + 64LL),
@@ -662,7 +722,7 @@ LABEL_17:
   this = (NoticeInfoComponent_o *)v4->fields.myRoomFsm;
   if ( !this )
     goto LABEL_19;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3572/*"COMBINE_ITEM_INFO_NEED"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_3427/*"CLICK_CANCLE"*/, 0LL);
 }
 
 
@@ -684,19 +744,23 @@ bool __fastcall NoticeInfoComponent__WaitForSE_d__11__MoveNext(
   __int64 v3; // x1
   __int64 v4; // x1
   unsigned int _1__state; // w8
-  Il2CppObject **p__2__current; // x19
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  CGThumbnailListItem_o *p__2__current; // x19
   bool result; // w0
   struct NoticeInfoComponent_o *_4__this; // x8
-  UnityEngine_WaitForSeconds_o *v9; // x20
-  Il2CppObject **v10; // x19
+  UnityEngine_WaitForSeconds_o *v11; // x20
+  CGThumbnailListItem_o *v12; // x19
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
   v2 = this;
-  if ( (byte_4C1D754 & 1) == 0 )
+  if ( (byte_49B663D & 1) == 0 )
   {
-    sub_1C3B764(&SoundManager_TypeInfo, method);
-    sub_1C3B764(&UnityEngine_WaitForSeconds_TypeInfo, v3);
-    this = (NoticeInfoComponent__WaitForSE_d__11_o *)sub_1C3B764(&StringLiteral_9823/*"Orchid"*/, v4);
-    byte_4C1D754 = 1;
+    sub_1B4CF90(&SoundManager_TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_WaitForSeconds_TypeInfo, v3);
+    this = (NoticeInfoComponent__WaitForSE_d__11_o *)sub_1B4CF90(&StringLiteral_9434/*"OPEN_BROWSER"*/, v4);
+    byte_49B663D = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state >= 2 )
@@ -706,8 +770,8 @@ bool __fastcall NoticeInfoComponent__WaitForSE_d__11__MoveNext(
       _4__this = v2->fields.__4__this;
       v2->fields.__1__state = -1;
       if ( !_4__this || (this = (NoticeInfoComponent__WaitForSE_d__11_o *)_4__this->fields.myRoomFsm) == 0LL )
-        sub_1C3B9C0(this, method);
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_9823/*"Orchid"*/, 0LL);
+        sub_1B4D1EC(this, method);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_9434/*"OPEN_BROWSER"*/, 0LL);
     }
     return 0;
   }
@@ -719,19 +783,19 @@ bool __fastcall NoticeInfoComponent__WaitForSE_d__11__MoveNext(
     if ( SoundManager__isBusyVoice(0LL, 0LL) )
     {
       v2->fields.__2__current = 0LL;
-      p__2__current = &v2->fields.__2__current;
-      sub_1C3B708(p__2__current);
+      p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
+      sub_1B4CF34(p__2__current, 0, v6, v7);
       result = 1;
-      *((_DWORD *)p__2__current - 2) = 1;
+      LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     }
     else
     {
-      v9 = (UnityEngine_WaitForSeconds_o *)sub_1C3B9B0(UnityEngine_WaitForSeconds_TypeInfo);
-      UnityEngine_WaitForSeconds___ctor(v9, 0.5, 0LL);
-      v2->fields.__2__current = (Il2CppObject *)v9;
-      v10 = &v2->fields.__2__current;
-      sub_1C3B708(v10);
-      *((_DWORD *)v10 - 2) = 2;
+      v11 = (UnityEngine_WaitForSeconds_o *)sub_1B4D1DC(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v11, 0.5, 0LL);
+      v2->fields.__2__current = (Il2CppObject *)v11;
+      v12 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
+      sub_1B4CF34(v12, (int32_t)v11, v13, v14);
+      LODWORD(v12[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
       return 1;
     }
   }
@@ -755,11 +819,11 @@ void __fastcall __noreturn NoticeInfoComponent__WaitForSE_d__11__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
+  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C3B778(&Method_NoticeInfoComponent__WaitForSE_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1C3B88C(v3, v4);
+  v4 = sub_1B4CFA4(&Method_NoticeInfoComponent__WaitForSE_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1B4D0B8(v3, v4);
 }
 
 
@@ -783,16 +847,18 @@ void __fastcall NoticeInfoComponent___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C1D752 & 1) == 0 )
+  if ( (byte_49B663B & 1) == 0 )
   {
-    sub_1C3B764(&NoticeInfoComponent___c_TypeInfo, v1);
-    byte_4C1D752 = 1;
+    sub_1B4CF90(&NoticeInfoComponent___c_TypeInfo, v1);
+    byte_49B663B = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(NoticeInfoComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(NoticeInfoComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   NoticeInfoComponent___c_TypeInfo->static_fields->__9 = (struct NoticeInfoComponent___c_o *)v2;
-  sub_1C3B708(NoticeInfoComponent___c_TypeInfo->static_fields);
+  sub_1B4CF34((CGThumbnailListItem_o *)NoticeInfoComponent___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -807,13 +873,13 @@ void __fastcall NoticeInfoComponent___c___SetReboot_b__23_0(NoticeInfoComponent_
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4C1D753 & 1) == 0 )
+  if ( (byte_49B663C & 1) == 0 )
   {
-    sub_1C3B764(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, method);
-    byte_4C1D753 = 1;
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, method);
+    byte_49B663C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
 }

@@ -14,22 +14,22 @@ void __fastcall CommandCodeSetStatusRequest__beginRequest(
   const MethodInfo *v14; // x3
   const MethodInfo *v15; // x1
 
-  if ( (byte_4C238B2 & 1) == 0 )
+  if ( (byte_49BC7E1 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_18509/*"ef_special_invincible01"*/, userCommandCodeId);
-    sub_1C3B764(&StringLiteral_21221/*"mstArea"*/, v9);
-    sub_1C3B764(&StringLiteral_21204/*"ms-BN"*/, v10);
-    byte_4C238B2 = 1;
+    sub_1B4CF90(&StringLiteral_17850/*"commandCodeId"*/, userCommandCodeId);
+    sub_1B4CF90(&StringLiteral_20511/*"isLock"*/, v9);
+    sub_1B4CF90(&StringLiteral_20493/*"isChoice"*/, v10);
+    byte_49BC7E1 = 1;
   }
-  RequestBase__addField_42628192(
+  RequestBase__addField_41754736(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_18509/*"ef_special_invincible01"*/,
+    (System_String_o *)StringLiteral_17850/*"commandCodeId"*/,
     userCommandCodeId,
     (const MethodInfo *)isChoice);
   if ( !this )
-    sub_1C3B9C0(v11, v12);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21221/*"mstArea"*/, isLock, v13);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21204/*"ms-BN"*/, isChoice, v14);
+    sub_1B4D1EC(v11, v12);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20511/*"isLock"*/, isLock, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20493/*"isChoice"*/, isChoice, v14);
   RequestBase__beginRequest((RequestBase_o *)this, v15);
 }
 
@@ -40,11 +40,11 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4C238B1 & 1) == 0 )
+  if ( (byte_49BC7E0 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v2);
-    byte_4C238B1 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v2);
+    byte_49BC7E0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -59,16 +59,16 @@ System_String_o *__fastcall CommandCodeSetStatusRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238B0 & 1) == 0 )
+  if ( (byte_49BC7DF & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_18506/*"ef_soundopen"*/, v2);
-    byte_4C238B0 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_17847/*"commandCode/setStatus"*/, v2);
+    byte_49BC7DF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18506/*"ef_soundopen"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17847/*"commandCode/setStatus"*/, 0LL);
 }
 
 
@@ -83,29 +83,29 @@ void __fastcall CommandCodeSetStatusRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4C238B3 & 1) == 0 )
+  if ( (byte_49BC7E2 & 1) == 0 )
   {
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C238B3 = 1;
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC7E2 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(71, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42712632(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22683/*"sandboxSeurity"*/;
+    v9 = &StringLiteral_21947/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22507/*"referrerMapId"*/;
+    v9 = &StringLiteral_21779/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

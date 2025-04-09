@@ -2,22 +2,18 @@ void __fastcall AssetLoadWrapperBase___ctor(AssetLoadWrapperBase_o *this, const 
 {
   AssetPathLoadCounter_o *v3; // x20
   const MethodInfo *v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C2102B & 1) == 0 )
+  if ( (byte_49B9F3F & 1) == 0 )
   {
-    sub_1C3B764(&AssetPathLoadCounter_TypeInfo, method);
-    byte_4C2102B = 1;
+    sub_1B4CF90(&AssetPathLoadCounter_TypeInfo, method);
+    byte_49B9F3F = 1;
   }
-  v3 = (AssetPathLoadCounter_o *)sub_1C3B9B0(AssetPathLoadCounter_TypeInfo);
+  v3 = (AssetPathLoadCounter_o *)sub_1B4D1DC(AssetPathLoadCounter_TypeInfo);
   AssetPathLoadCounter___ctor(v3, v4);
   this->fields.pathCounter = v3;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -31,7 +27,7 @@ void __fastcall AssetLoadWrapperBase__AddLoadCount(
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   AssetPathLoadCounter__AddCount(pathCounter, path, method);
 }
 
@@ -62,21 +58,21 @@ void __fastcall AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, c
   int32_t *v24; // x10
   __int64 v25; // x0
 
-  if ( (byte_4C2102A & 1) == 0 )
+  if ( (byte_49B9F3E & 1) == 0 )
   {
-    sub_1C3B764(&System_IDisposable_TypeInfo, method);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, v3);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__, v6);
-    byte_4C2102A = 1;
+    sub_1B4CF90(&System_IDisposable_TypeInfo, method);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, v3);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Key__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__int__get_Value__, v6);
+    byte_49B9F3E = 1;
   }
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
     goto LABEL_30;
   Enumerator = AssetPathLoadCounter__GetEnumerator(pathCounter, method);
   if ( !Enumerator )
-    sub_1C3B9C0(0LL, v8);
+    sub_1B4D1EC(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -96,7 +92,7 @@ void __fastcall AssetLoadWrapperBase__ReleaseAll(AssetLoadWrapperBase_o *this, c
     else
     {
 LABEL_9:
-      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1B9D724(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))p_method)(
             Enumerator,
@@ -119,7 +115,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1C8D744(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0LL);
+      v17 = sub_1B9D724(Enumerator, System_Collections_Generic_IEnumerator_KeyValuePair_string__int___TypeInfo, 0LL);
     }
     v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v17)(
             Enumerator,
@@ -156,7 +152,7 @@ LABEL_16:
   else
   {
 LABEL_26:
-    v25 = sub_1C8D744(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v25 = sub_1B9D724(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_KeyValuePair_string__int___o *, _QWORD))v25)(
     Enumerator,
@@ -164,7 +160,7 @@ LABEL_26:
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
 LABEL_30:
-    sub_1C3B9C0(pathCounter, method);
+    sub_1B4D1EC(pathCounter, method);
   AssetPathLoadCounter__Clear(pathCounter, method);
 }
 
@@ -178,6 +174,6 @@ void __fastcall AssetLoadWrapperBase__SubLoadCount(
 
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1C3B9C0(0LL, path);
+    sub_1B4D1EC(0LL, path);
   AssetPathLoadCounter__SubCount(pathCounter, path, method);
 }

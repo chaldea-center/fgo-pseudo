@@ -2,61 +2,45 @@ void __fastcall BattleActionLogManager___ctor(BattleActionLogManager_o *this, co
 {
   __int64 v3; // x1
   System_IO_MemoryStream_o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  System_IO_MemoryStream_o *v11; // x20
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  System_IO_MemoryStream_o *v7; // x20
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   System_IO_Stream_o *header; // x20
-  System_IO_BinaryWriter_o *v19; // x21
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  System_IO_BinaryWriter_o *v11; // x21
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   System_IO_Stream_o *data; // x20
-  System_IO_BinaryWriter_o *v27; // x21
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
+  System_IO_BinaryWriter_o *v15; // x21
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
 
-  if ( (byte_4C24235 & 1) == 0 )
+  if ( (byte_49BD16A & 1) == 0 )
   {
-    sub_1C3B764(&System_IO_BinaryWriter_TypeInfo, method);
-    sub_1C3B764(&System_IO_MemoryStream_TypeInfo, v3);
-    byte_4C24235 = 1;
+    sub_1B4CF90(&System_IO_BinaryWriter_TypeInfo, method);
+    sub_1B4CF90(&System_IO_MemoryStream_TypeInfo, v3);
+    byte_49BD16A = 1;
   }
-  v4 = (System_IO_MemoryStream_o *)sub_1C3B9B0(System_IO_MemoryStream_TypeInfo);
+  v4 = (System_IO_MemoryStream_o *)sub_1B4D1DC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v4, 0LL);
   this->fields.header = v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (System_IO_MemoryStream_o *)sub_1C3B9B0(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v11, 0LL);
-  this->fields.data = v11;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.data, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_IO_MemoryStream_o *)sub_1B4D1DC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v7, 0LL);
+  this->fields.data = v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.data, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   header = (System_IO_Stream_o *)this->fields.header;
-  v19 = (System_IO_BinaryWriter_o *)sub_1C3B9B0(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63607104(v19, header, 0LL);
-  this->fields.headerWriter = v19;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.headerWriter, (int64_t)v19, v20, v21, v22, v23, v24, v25);
+  v11 = (System_IO_BinaryWriter_o *)sub_1B4D1DC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_62007932(v11, header, 0LL);
+  this->fields.headerWriter = v11;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.headerWriter, (int32_t)v11, v12, v13);
   data = (System_IO_Stream_o *)this->fields.data;
-  v27 = (System_IO_BinaryWriter_o *)sub_1C3B9B0(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63607104(v27, data, 0LL);
-  this->fields.dataWriter = v27;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.dataWriter, (int64_t)v27, v28, v29, v30, v31, v32, v33);
+  v15 = (System_IO_BinaryWriter_o *)sub_1B4D1DC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_62007932(v15, data, 0LL);
+  this->fields.dataWriter = v15;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dataWriter, (int32_t)v15, v16, v17);
 }
 
 
@@ -90,7 +74,7 @@ void __fastcall BattleActionLogManager__addHeader(
                                  *(_QWORD *)(*(_QWORD *)headerWriter + 512LL)),
         !v5) )
   {
-    sub_1C3B9C0(headerWriter, *(_QWORD *)&logType);
+    sub_1B4D1EC(headerWriter, *(_QWORD *)&logType);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, void *, Il2CppMethodPointer))v5->klass->vtable._19_Write.method)(
     v5,
@@ -108,7 +92,7 @@ void __fastcall BattleActionLogManager__addLogContinue(BattleActionLogManager_o 
   BattleActionLogManager__addHeader(this, 5, v2);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
     0LL,
@@ -141,7 +125,7 @@ void __fastcall BattleActionLogManager__addLogSelectCommand(
           dataWriter->klass->vtable._18_Write.methodPtr),
         (dataWriter = this->fields.dataWriter) == 0LL) )
   {
-    sub_1C3B9C0(dataWriter, v9);
+    sub_1B4D1EC(dataWriter, v9);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
@@ -161,7 +145,7 @@ void __fastcall BattleActionLogManager__addLogSelectTarget(
   BattleActionLogManager__addHeader(this, 1, method);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))dataWriter->klass->vtable._17_Write.method)(
     dataWriter,
     (unsigned int)selectIndex,
@@ -205,7 +189,7 @@ void __fastcall BattleActionLogManager__addLogUseCommandSpell(
     while ( 1 )
     {
       if ( v10 >= (unsigned int)v9 )
-        sub_1C3B9C8(dataWriter, v6);
+        sub_1B4D1F4(dataWriter, v6);
       dataWriter = this->fields.dataWriter;
       if ( !dataWriter )
         break;
@@ -218,7 +202,7 @@ void __fastcall BattleActionLogManager__addLogUseCommandSpell(
         goto LABEL_10;
     }
 LABEL_13:
-    sub_1C3B9C0(dataWriter, v6);
+    sub_1B4D1EC(dataWriter, v6);
   }
 LABEL_10:
   dataWriter = task->fields.skillInfo;
@@ -292,7 +276,7 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
     while ( 1 )
     {
       if ( v12 >= (unsigned int)v11 )
-        sub_1C3B9C8(ActorId, v6);
+        sub_1B4D1F4(ActorId, v6);
       ActorId = (__int64)this->fields.dataWriter;
       if ( !ActorId )
         break;
@@ -305,7 +289,7 @@ void __fastcall BattleActionLogManager__addLogUseSkill(
         goto LABEL_12;
     }
 LABEL_17:
-    sub_1C3B9C0(ActorId, v6);
+    sub_1B4D1EC(ActorId, v6);
   }
 LABEL_12:
   ActorId = (__int64)task->fields.skillInfo;
@@ -338,25 +322,17 @@ void __fastcall BattleActionLogManager__close(BattleActionLogManager_o *this, co
 {
   System_IO_Stream_o *header; // x0
   struct System_IO_BinaryWriter_o *headerWriter; // x0
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  struct System_IO_BinaryWriter_o *v11; // x0
-  PartyOrganizationUtility_o *p_dataWriter; // x19
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  struct System_IO_BinaryWriter_o *v7; // x0
+  CGThumbnailListItem_o *p_dataWriter; // x19
   struct System_IO_BinaryWriter_o *dataWriter; // t1
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
   header = (System_IO_Stream_o *)this->fields.header;
   if ( !header || (System_IO_Stream__Dispose(header, 0LL), (header = (System_IO_Stream_o *)this->fields.data) == 0LL) )
-    sub_1C3B9C0(header, method);
+    sub_1B4D1EC(header, method);
   System_IO_Stream__Dispose(header, 0LL);
   headerWriter = this->fields.headerWriter;
   if ( headerWriter )
@@ -365,18 +341,18 @@ void __fastcall BattleActionLogManager__close(BattleActionLogManager_o *this, co
       headerWriter,
       headerWriter->klass->vtable._6_Dispose.methodPtr);
     this->fields.headerWriter = 0LL;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.headerWriter, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.headerWriter, 0, v5, v6);
   }
   dataWriter = this->fields.dataWriter;
-  p_dataWriter = (PartyOrganizationUtility_o *)&this->fields.dataWriter;
-  v11 = dataWriter;
+  p_dataWriter = (CGThumbnailListItem_o *)&this->fields.dataWriter;
+  v7 = dataWriter;
   if ( dataWriter )
   {
-    ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, Il2CppMethodPointer))v11->klass->vtable._5_Close.method)(
-      v11,
-      v11->klass->vtable._6_Dispose.methodPtr);
+    ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, Il2CppMethodPointer))v7->klass->vtable._5_Close.method)(
+      v7,
+      v7->klass->vtable._6_Dispose.methodPtr);
     p_dataWriter->klass = 0LL;
-    sub_1C3B708(p_dataWriter, 0LL, v14, v15, v16, v17, v18, v19);
+    sub_1B4CF34(p_dataWriter, 0, v10, v11);
   }
 }
 
@@ -389,8 +365,8 @@ System_Byte_array *__fastcall BattleActionLogManager__getDataRaw(
 
   data = this->fields.data;
   if ( !data )
-    sub_1C3B9C0(0LL, method);
-  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))data->klass->vtable._42_ToArray.method)(
+    sub_1B4D1EC(0LL, method);
+  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))data->klass->vtable._41_ToArray.method)(
                                 data,
                                 data->klass[1]._1.image);
 }
@@ -404,8 +380,8 @@ System_Byte_array *__fastcall BattleActionLogManager__getHeaderRaw(
 
   header = this->fields.header;
   if ( !header )
-    sub_1C3B9C0(0LL, method);
-  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))header->klass->vtable._42_ToArray.method)(
+    sub_1B4D1EC(0LL, method);
+  return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, void *))header->klass->vtable._41_ToArray.method)(
                                 header,
                                 header->klass[1]._1.image);
 }
@@ -420,7 +396,7 @@ void __fastcall BattleActionLogManager__setData(
 
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C3B9C0(0LL, buffer);
+    sub_1B4D1EC(0LL, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, Il2CppMethodPointer))dataWriter->klass->vtable._10_Write.method)(
     dataWriter,
     buffer,
@@ -437,7 +413,7 @@ void __fastcall BattleActionLogManager__setHeader(
 
   headerWriter = this->fields.headerWriter;
   if ( !headerWriter )
-    sub_1C3B9C0(0LL, buffer);
+    sub_1B4D1EC(0LL, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, Il2CppMethodPointer))headerWriter->klass->vtable._10_Write.method)(
     headerWriter,
     buffer,

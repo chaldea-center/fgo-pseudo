@@ -20,33 +20,33 @@ void __fastcall CommandCodeStatusSyncRequest__beginRequest(
   const MethodInfo *v20; // x1
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_4C238B6 & 1) == 0 )
+  if ( (byte_49BC7E5 & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, changeCommandCodeIds);
-    sub_1C3B764(&StringLiteral_18155/*"de-CH"*/, v11);
-    sub_1C3B764(&StringLiteral_23408/*"sync"*/, v12);
-    sub_1C3B764(&StringLiteral_21221/*"mstArea"*/, v13);
-    this = (CommandCodeStatusSyncRequest_o *)sub_1C3B764(&StringLiteral_21204/*"ms-BN"*/, v14);
-    byte_4C238B6 = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, changeCommandCodeIds);
+    sub_1B4CF90(&StringLiteral_17502/*"changeCommandCodeIds"*/, v11);
+    sub_1B4CF90(&StringLiteral_22652/*"revokeCommandCodeIds"*/, v12);
+    sub_1B4CF90(&StringLiteral_20511/*"isLock"*/, v13);
+    this = (CommandCodeStatusSyncRequest_o *)sub_1B4CF90(&StringLiteral_20493/*"isChoice"*/, v14);
+    byte_49BC7E5 = 1;
   }
   if ( changeCommandCodeIds && *(_QWORD *)&changeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v15 = JsonManager__toJson(&changeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_42621852(v10, (System_String_o *)StringLiteral_18155/*"de-CH"*/, v15, v16);
+    RequestBase__addField_41748396(v10, (System_String_o *)StringLiteral_17502/*"changeCommandCodeIds"*/, v15, v16);
   }
   if ( revokeCommandCodeIds && *(_QWORD *)&revokeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v17 = JsonManager__toJson(&revokeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_42621852(v10, (System_String_o *)StringLiteral_23408/*"sync"*/, v17, v18);
+    RequestBase__addField_41748396(v10, (System_String_o *)StringLiteral_22652/*"revokeCommandCodeIds"*/, v17, v18);
   }
   if ( !v10 )
-    sub_1C3B9C0(this, changeCommandCodeIds);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_21221/*"mstArea"*/, isLock, (const MethodInfo *)isLock);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_21204/*"ms-BN"*/, isChoice, v19);
+    sub_1B4D1EC(this, changeCommandCodeIds);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20511/*"isLock"*/, isLock, (const MethodInfo *)isLock);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20493/*"isChoice"*/, isChoice, v19);
   RequestBase__beginRequest(v10, v20);
 }
 
@@ -57,11 +57,11 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4C238B5 & 1) == 0 )
+  if ( (byte_49BC7E4 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v2);
-    byte_4C238B5 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v2);
+    byte_49BC7E4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -76,16 +76,16 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238B4 & 1) == 0 )
+  if ( (byte_49BC7E3 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_18507/*"ef_soundplay"*/, v2);
-    byte_4C238B4 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_17848/*"commandCode/statusSync"*/, v2);
+    byte_49BC7E3 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18507/*"ef_soundplay"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17848/*"commandCode/statusSync"*/, 0LL);
 }
 
 
@@ -100,29 +100,29 @@ void __fastcall CommandCodeStatusSyncRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4C238B7 & 1) == 0 )
+  if ( (byte_49BC7E6 & 1) == 0 )
   {
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C238B7 = 1;
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC7E6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(72, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42712632(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22683/*"sandboxSeurity"*/;
+    v9 = &StringLiteral_21947/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22507/*"referrerMapId"*/;
+    v9 = &StringLiteral_21779/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

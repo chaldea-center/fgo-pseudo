@@ -12,10 +12,10 @@ void __fastcall BattleHpGaugeBarComponent__completeDamageGauge(
   __int64 v4; // x1
   UIProgressBar_o *v5; // x0
 
-  if ( (byte_4C24F89 & 1) == 0 )
+  if ( (byte_49BDEC4 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C24F89 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BDEC4 = 1;
   }
   this->fields.prevval = this->fields.nowval;
   damageGauge = (UnityEngine_Object_o *)this->fields.damageGauge;
@@ -25,7 +25,7 @@ void __fastcall BattleHpGaugeBarComponent__completeDamageGauge(
   {
     v5 = this->fields.damageGauge;
     if ( !v5 )
-      sub_1C3B9C0(0LL, v4);
+      sub_1B4D1EC(0LL, v4);
     UIProgressBar__set_value(v5, (float)this->fields.nowval / (float)this->fields.maxval, 0LL);
   }
 }
@@ -46,7 +46,7 @@ void __fastcall BattleHpGaugeBarComponent__setInitValue(
 }
 
 
-void __fastcall BattleHpGaugeBarComponent__setInitValue_45413760(
+void __fastcall BattleHpGaugeBarComponent__setInitValue_44548004(
         BattleHpGaugeBarComponent_o *this,
         int64_t now,
         int64_t max,
@@ -66,11 +66,11 @@ bool __fastcall BattleHpGaugeBarComponent__setValue(
         int32_t max,
         const MethodInfo *method)
 {
-  return BattleHpGaugeBarComponent__setValue_45413848(this, now, max, method);
+  return BattleHpGaugeBarComponent__setValue_44548092(this, now, max, method);
 }
 
 
-bool __fastcall BattleHpGaugeBarComponent__setValue_45413848(
+bool __fastcall BattleHpGaugeBarComponent__setValue_44548092(
         BattleHpGaugeBarComponent_o *this,
         int64_t now,
         int64_t max,
@@ -95,119 +95,71 @@ bool __fastcall BattleHpGaugeBarComponent__setValue_45413848(
   UnityEngine_GameObject_o *v23; // x21
   __int64 v24; // x0
   __int64 v25; // x1
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
-  System_Object_array *v32; // x22
-  __int64 v33; // x0
-  int64_t v34; // x1
-  __int64 v35; // x2
-  __int64 v36; // x3
-  __int64 v37; // x4
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x23
-  int64_t v45; // x2
-  int32_t v46; // w3
-  System_String_o *v47; // x4
-  BattleSetupInfo_o *v48; // x5
-  FollowerInfo_o *v49; // x6
-  PartyListViewItem_o *v50; // x7
-  __int64 v51; // x2
-  __int64 v52; // x3
-  __int64 v53; // x4
-  int64_t v54; // x2
-  int32_t v55; // w3
-  System_String_o *v56; // x4
-  BattleSetupInfo_o *v57; // x5
-  FollowerInfo_o *v58; // x6
-  PartyListViewItem_o *v59; // x7
-  int64_t v60; // x23
-  int64_t v61; // x2
-  int32_t v62; // w3
-  System_String_o *v63; // x4
-  BattleSetupInfo_o *v64; // x5
-  FollowerInfo_o *v65; // x6
-  PartyListViewItem_o *v66; // x7
-  int64_t v67; // x2
-  int32_t v68; // w3
-  System_String_o *v69; // x4
-  BattleSetupInfo_o *v70; // x5
-  FollowerInfo_o *v71; // x6
-  PartyListViewItem_o *v72; // x7
-  int64_t v73; // x2
-  int32_t v74; // w3
-  System_String_o *v75; // x4
-  BattleSetupInfo_o *v76; // x5
-  FollowerInfo_o *v77; // x6
-  PartyListViewItem_o *v78; // x7
-  int64_t v79; // x2
-  int32_t v80; // w3
-  System_String_o *v81; // x4
-  BattleSetupInfo_o *v82; // x5
-  FollowerInfo_o *v83; // x6
-  PartyListViewItem_o *v84; // x7
-  int64_t v85; // x2
-  int32_t v86; // w3
-  System_String_o *v87; // x4
-  BattleSetupInfo_o *v88; // x5
-  FollowerInfo_o *v89; // x6
-  PartyListViewItem_o *v90; // x7
-  __int64 v91; // x2
-  __int64 v92; // x3
-  __int64 v93; // x4
-  int64_t v94; // x2
-  int32_t v95; // w3
-  System_String_o *v96; // x4
-  BattleSetupInfo_o *v97; // x5
-  FollowerInfo_o *v98; // x6
-  PartyListViewItem_o *v99; // x7
-  int64_t v100; // x23
-  int64_t v101; // x2
-  int32_t v102; // w3
-  System_String_o *v103; // x4
-  BattleSetupInfo_o *v104; // x5
-  FollowerInfo_o *v105; // x6
-  PartyListViewItem_o *v106; // x7
-  __int64 v107; // x2
-  __int64 v108; // x3
-  __int64 v109; // x4
-  int64_t v110; // x2
-  int32_t v111; // w3
-  System_String_o *v112; // x4
-  BattleSetupInfo_o *v113; // x5
-  FollowerInfo_o *v114; // x6
-  PartyListViewItem_o *v115; // x7
-  int64_t v116; // x23
-  System_Collections_Hashtable_o *v117; // x0
-  __int64 v119; // x0
-  int v120; // [xsp+8h] [xbp-78h] BYREF
-  int v121; // [xsp+Ch] [xbp-74h] BYREF
-  __int64 v122; // [xsp+10h] [xbp-70h] BYREF
-  __int64 v123; // [xsp+18h] [xbp-68h] BYREF
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
+  System_Object_array *v28; // x22
+  __int64 v29; // x0
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x3
+  __int64 v33; // x4
+  int32_t v34; // w2
+  const MethodInfo *v35; // x3
+  Il2CppObject *v36; // x23
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  __int64 v39; // x2
+  __int64 v40; // x3
+  __int64 v41; // x4
+  int32_t v42; // w2
+  const MethodInfo *v43; // x3
+  Il2CppObject *v44; // x23
+  int32_t v45; // w2
+  const MethodInfo *v46; // x3
+  int32_t v47; // w2
+  const MethodInfo *v48; // x3
+  int32_t v49; // w2
+  const MethodInfo *v50; // x3
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
+  int32_t v53; // w2
+  const MethodInfo *v54; // x3
+  __int64 v55; // x2
+  __int64 v56; // x3
+  __int64 v57; // x4
+  int32_t v58; // w2
+  const MethodInfo *v59; // x3
+  Il2CppObject *v60; // x23
+  int32_t v61; // w2
+  const MethodInfo *v62; // x3
+  __int64 v63; // x2
+  __int64 v64; // x3
+  __int64 v65; // x4
+  int32_t v66; // w2
+  const MethodInfo *v67; // x3
+  Il2CppObject *v68; // x23
+  System_Collections_Hashtable_o *v69; // x0
+  __int64 v71; // x0
+  int v72; // [xsp+8h] [xbp-78h] BYREF
+  int v73; // [xsp+Ch] [xbp-74h] BYREF
+  __int64 v74; // [xsp+10h] [xbp-70h] BYREF
+  __int64 v75; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C24F86 & 1) == 0 )
+  if ( (byte_49BDEC1 & 1) == 0 )
   {
-    sub_1C3B764(&double_TypeInfo, now);
-    sub_1C3B764(&object___TypeInfo, v7);
-    sub_1C3B764(&float_TypeInfo, v8);
-    sub_1C3B764(&StringLiteral_20040/*"img_parameter_D"*/, v9);
-    sub_1C3B764(&StringLiteral_24427/*"x-cp20936"*/, v10);
-    sub_1C3B764(&StringLiteral_22739/*"seagreen"*/, v11);
-    sub_1C3B764(&StringLiteral_24809/*"}?\n\n[Environment: FakeStore]"*/, v12);
-    sub_1C3B764(&StringLiteral_18909/*"event_scan_panel_map"*/, v13);
-    sub_1C3B764(&StringLiteral_24469/*"x/("*/, v14);
-    sub_1C3B764(&StringLiteral_22731/*"se-NO"*/, v15);
-    sub_1C3B764(&StringLiteral_18537/*"effect/ef_boostitem03"*/, v16);
-    sub_1C3B764(&iTween_TypeInfo, v17);
-    byte_4C24F86 = 1;
+    sub_1B4CF90(&double_TypeInfo, now);
+    sub_1B4CF90(&object___TypeInfo, v7);
+    sub_1B4CF90(&float_TypeInfo, v8);
+    sub_1B4CF90(&StringLiteral_19349/*"from"*/, v9);
+    sub_1B4CF90(&StringLiteral_23646/*"time"*/, v10);
+    sub_1B4CF90(&StringLiteral_22003/*"onupdate"*/, v11);
+    sub_1B4CF90(&StringLiteral_24020/*"updateDamageGauge"*/, v12);
+    sub_1B4CF90(&StringLiteral_18240/*"delay"*/, v13);
+    sub_1B4CF90(&StringLiteral_23685/*"to"*/, v14);
+    sub_1B4CF90(&StringLiteral_21995/*"oncomplete"*/, v15);
+    sub_1B4CF90(&StringLiteral_17878/*"completeDamageGauge"*/, v16);
+    sub_1B4CF90(&iTween_TypeInfo, v17);
+    byte_49BDEC1 = 1;
   }
   nowval = this->fields.nowval;
   maxval = this->fields.maxval;
@@ -217,7 +169,7 @@ bool __fastcall BattleHpGaugeBarComponent__setValue_45413848(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  if ( iTween__Count_62014740(gameObject, 0LL) < 1 )
+  if ( iTween__Count_60839572(gameObject, 0LL) < 1 )
   {
     v22 = 0.5;
   }
@@ -226,204 +178,204 @@ bool __fastcall BattleHpGaugeBarComponent__setValue_45413848(
     v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !iTween_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-    iTween__Stop_62016540(v21, 0LL);
+    iTween__Stop_60841372(v21, 0LL);
     v22 = 1045220557;
     this->fields.prevval = this->fields.wkprevval;
   }
   v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v24 = sub_1C3B80C(object___TypeInfo, 12LL);
+  v24 = sub_1B4D038(object___TypeInfo, 12LL);
   if ( !v24 )
-    sub_1C3B9C0(0LL, v25);
-  v32 = (System_Object_array *)v24;
-  v33 = StringLiteral_20040/*"img_parameter_D"*/;
-  if ( StringLiteral_20040/*"img_parameter_D"*/ )
+    sub_1B4D1EC(0LL, v25);
+  v28 = (System_Object_array *)v24;
+  v29 = StringLiteral_19349/*"from"*/;
+  if ( StringLiteral_19349/*"from"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_20040/*"img_parameter_D"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_19349/*"from"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_20040/*"img_parameter_D"*/;
+    v30 = StringLiteral_19349/*"from"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( !v32->max_length )
+  if ( !v28->max_length )
     goto LABEL_66;
-  v32->m_Items[0] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)v32->m_Items, v34, v26, v27, v28, v29, v30, v31);
-  v123 = 0LL;
-  v33 = j_il2cpp_value_box_0(double_TypeInfo, &v123, v35, v36, v37);
-  v44 = v33;
-  if ( v33 )
+  v28->m_Items[0] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)v28->m_Items, v30, v26, v27);
+  v75 = 0LL;
+  v29 = j_il2cpp_value_box_0(double_TypeInfo, &v75, v31, v32, v33);
+  v36 = (Il2CppObject *)v29;
+  if ( v29 )
   {
-    v33 = sub_1C3B8A0(v33, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(v29, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
   }
-  if ( v32->max_length <= 1 )
+  if ( v28->max_length <= 1 )
     goto LABEL_66;
-  v32->m_Items[1] = (Il2CppObject *)v44;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[1], v44, v38, v39, v40, v41, v42, v43);
-  v33 = StringLiteral_24469/*"x/("*/;
-  if ( StringLiteral_24469/*"x/("*/ )
+  v28->m_Items[1] = v36;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[1], (int32_t)v36, v34, v35);
+  v29 = StringLiteral_23685/*"to"*/;
+  if ( StringLiteral_23685/*"to"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_24469/*"x/("*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_23685/*"to"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_24469/*"x/("*/;
+    v30 = StringLiteral_23685/*"to"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 2 )
+  if ( v28->max_length <= 2 )
     goto LABEL_66;
-  v32->m_Items[2] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[2], v34, v45, v46, v47, v48, v49, v50);
-  v122 = 0x3FF0000000000000LL;
-  v33 = j_il2cpp_value_box_0(double_TypeInfo, &v122, v51, v52, v53);
-  v60 = v33;
-  if ( v33 )
+  v28->m_Items[2] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[2], v30, v37, v38);
+  v74 = 0x3FF0000000000000LL;
+  v29 = j_il2cpp_value_box_0(double_TypeInfo, &v74, v39, v40, v41);
+  v44 = (Il2CppObject *)v29;
+  if ( v29 )
   {
-    v33 = sub_1C3B8A0(v33, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(v29, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
   }
-  if ( v32->max_length <= 3 )
+  if ( v28->max_length <= 3 )
     goto LABEL_66;
-  v32->m_Items[3] = (Il2CppObject *)v60;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[3], v60, v54, v55, v56, v57, v58, v59);
-  v33 = StringLiteral_22739/*"seagreen"*/;
-  if ( StringLiteral_22739/*"seagreen"*/ )
+  v28->m_Items[3] = v44;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[3], (int32_t)v44, v42, v43);
+  v29 = StringLiteral_22003/*"onupdate"*/;
+  if ( StringLiteral_22003/*"onupdate"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_22739/*"seagreen"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_22003/*"onupdate"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_22739/*"seagreen"*/;
+    v30 = StringLiteral_22003/*"onupdate"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 4 )
+  if ( v28->max_length <= 4 )
     goto LABEL_66;
-  v32->m_Items[4] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[4], v34, v61, v62, v63, v64, v65, v66);
-  v33 = StringLiteral_24809/*"}?\n\n[Environment: FakeStore]"*/;
-  if ( StringLiteral_24809/*"}?\n\n[Environment: FakeStore]"*/ )
+  v28->m_Items[4] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[4], v30, v45, v46);
+  v29 = StringLiteral_24020/*"updateDamageGauge"*/;
+  if ( StringLiteral_24020/*"updateDamageGauge"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_24809/*"}?\n\n[Environment: FakeStore]"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_24020/*"updateDamageGauge"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_24809/*"}?\n\n[Environment: FakeStore]"*/;
+    v30 = StringLiteral_24020/*"updateDamageGauge"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 5 )
+  if ( v28->max_length <= 5 )
     goto LABEL_66;
-  v32->m_Items[5] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[5], v34, v67, v68, v69, v70, v71, v72);
-  v33 = StringLiteral_22731/*"se-NO"*/;
-  if ( StringLiteral_22731/*"se-NO"*/ )
+  v28->m_Items[5] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[5], v30, v47, v48);
+  v29 = StringLiteral_21995/*"oncomplete"*/;
+  if ( StringLiteral_21995/*"oncomplete"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_22731/*"se-NO"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_21995/*"oncomplete"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_22731/*"se-NO"*/;
+    v30 = StringLiteral_21995/*"oncomplete"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 6 )
+  if ( v28->max_length <= 6 )
     goto LABEL_66;
-  v32->m_Items[6] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[6], v34, v73, v74, v75, v76, v77, v78);
-  v33 = StringLiteral_18537/*"effect/ef_boostitem03"*/;
-  if ( StringLiteral_18537/*"effect/ef_boostitem03"*/ )
+  v28->m_Items[6] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[6], v30, v49, v50);
+  v29 = StringLiteral_17878/*"completeDamageGauge"*/;
+  if ( StringLiteral_17878/*"completeDamageGauge"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_18537/*"effect/ef_boostitem03"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_17878/*"completeDamageGauge"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_18537/*"effect/ef_boostitem03"*/;
+    v30 = StringLiteral_17878/*"completeDamageGauge"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 7 )
+  if ( v28->max_length <= 7 )
     goto LABEL_66;
-  v32->m_Items[7] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[7], v34, v79, v80, v81, v82, v83, v84);
-  v33 = StringLiteral_18909/*"event_scan_panel_map"*/;
-  if ( StringLiteral_18909/*"event_scan_panel_map"*/ )
+  v28->m_Items[7] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[7], v30, v51, v52);
+  v29 = StringLiteral_18240/*"delay"*/;
+  if ( StringLiteral_18240/*"delay"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_18909/*"event_scan_panel_map"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_18240/*"delay"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_18909/*"event_scan_panel_map"*/;
+    v30 = StringLiteral_18240/*"delay"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 8 )
+  if ( v28->max_length <= 8 )
     goto LABEL_66;
-  v32->m_Items[8] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[8], v34, v85, v86, v87, v88, v89, v90);
-  v121 = v22;
-  v33 = j_il2cpp_value_box_0(float_TypeInfo, &v121, v91, v92, v93);
-  v100 = v33;
-  if ( v33 )
+  v28->m_Items[8] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[8], v30, v53, v54);
+  v73 = v22;
+  v29 = j_il2cpp_value_box_0(float_TypeInfo, &v73, v55, v56, v57);
+  v60 = (Il2CppObject *)v29;
+  if ( v29 )
   {
-    v33 = sub_1C3B8A0(v33, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(v29, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
   }
-  if ( v32->max_length <= 9 )
+  if ( v28->max_length <= 9 )
     goto LABEL_66;
-  v32->m_Items[9] = (Il2CppObject *)v100;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[9], v100, v94, v95, v96, v97, v98, v99);
-  v33 = StringLiteral_24427/*"x-cp20936"*/;
-  if ( StringLiteral_24427/*"x-cp20936"*/ )
+  v28->m_Items[9] = v60;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[9], (int32_t)v60, v58, v59);
+  v29 = StringLiteral_23646/*"time"*/;
+  if ( StringLiteral_23646/*"time"*/ )
   {
-    v33 = sub_1C3B8A0(StringLiteral_24427/*"x-cp20936"*/, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(StringLiteral_23646/*"time"*/, v28->obj.klass->_1.element_class);
+    if ( !v29 )
       goto LABEL_67;
-    v34 = StringLiteral_24427/*"x-cp20936"*/;
+    v30 = StringLiteral_23646/*"time"*/;
   }
   else
   {
-    v34 = 0LL;
+    v30 = 0LL;
   }
-  if ( v32->max_length <= 0xA )
+  if ( v28->max_length <= 0xA )
     goto LABEL_66;
-  v32->m_Items[10] = (Il2CppObject *)v34;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[10], v34, v101, v102, v103, v104, v105, v106);
-  v120 = 1050253722;
-  v33 = j_il2cpp_value_box_0(float_TypeInfo, &v120, v107, v108, v109);
-  v116 = v33;
-  if ( v33 )
+  v28->m_Items[10] = (Il2CppObject *)v30;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[10], v30, v61, v62);
+  v72 = 1050253722;
+  v29 = j_il2cpp_value_box_0(float_TypeInfo, &v72, v63, v64, v65);
+  v68 = (Il2CppObject *)v29;
+  if ( v29 )
   {
-    v33 = sub_1C3B8A0(v33, v32->obj.klass->_1.element_class);
-    if ( !v33 )
+    v29 = sub_1B4D0CC(v29, v28->obj.klass->_1.element_class);
+    if ( !v29 )
     {
 LABEL_67:
-      v119 = sub_1C3B9E4(v33);
-      sub_1C3B88C(v119, 0LL);
+      v71 = sub_1B4D210(v29);
+      sub_1B4D0B8(v71, 0LL);
     }
   }
-  if ( v32->max_length <= 0xB )
+  if ( v28->max_length <= 0xB )
 LABEL_66:
-    sub_1C3B9C8(v33, v34);
-  v32->m_Items[11] = (Il2CppObject *)v116;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v32->m_Items[11], v116, v110, v111, v112, v113, v114, v115);
+    sub_1B4D1F4(v29, v30);
+  v28->m_Items[11] = v68;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v28->m_Items[11], (int32_t)v68, v66, v67);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v117 = iTween__Hash(v32, 0LL);
-  iTween__ValueTo(v23, v117, 0LL);
+  v69 = iTween__Hash(v28, 0LL);
+  iTween__ValueTo(v23, v69, 0LL);
   return nowval != now || maxval != max;
 }
 
@@ -450,10 +402,10 @@ void __fastcall BattleHpGaugeBarComponent__updateDamageGauge(
   UIProgressBar_o *v9; // x0
   int64_t v10; // x8
 
-  if ( (byte_4C24F88 & 1) == 0 )
+  if ( (byte_49BDEC3 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C24F88 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BDEC3 = 1;
   }
   v5 = BattleUtility__Lerp((float)this->fields.prevval, (float)this->fields.nowval, par, 0LL);
   damageGauge = (UnityEngine_Object_o *)this->fields.damageGauge;
@@ -464,7 +416,7 @@ void __fastcall BattleHpGaugeBarComponent__updateDamageGauge(
   {
     v9 = this->fields.damageGauge;
     if ( !v9 )
-      sub_1C3B9C0(0LL, v8);
+      sub_1B4D1EC(0LL, v8);
     UIProgressBar__set_value(v9, v7 / (float)this->fields.maxval, 0LL);
   }
   v10 = 0x8000000000000000LL;
@@ -489,12 +441,12 @@ void __fastcall BattleHpGaugeBarComponent__updateNomalGauge(
   float value; // s0
   System_String_o **v13; // x8
 
-  if ( (byte_4C24F87 & 1) == 0 )
+  if ( (byte_49BDEC2 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, val);
-    sub_1C3B764(&StringLiteral_23022/*"skillNum"*/, v5);
-    sub_1C3B764(&StringLiteral_23021/*"skillLv"*/, v6);
-    byte_4C24F87 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, val);
+    sub_1B4CF90(&StringLiteral_22278/*"playerhp_3"*/, v5);
+    sub_1B4CF90(&StringLiteral_22277/*"playerhp_1"*/, v6);
+    byte_49BDEC2 = 1;
   }
   frontGauge = (UnityEngine_Object_o *)this->fields.frontGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -517,15 +469,15 @@ void __fastcall BattleHpGaugeBarComponent__updateNomalGauge(
         value = UIProgressBar__get_value(v9, 0LL);
         if ( v11 )
         {
-          v13 = (System_String_o **)&StringLiteral_23021/*"skillLv"*/;
+          v13 = (System_String_o **)&StringLiteral_22277/*"playerhp_1"*/;
           if ( value <= 0.1 )
-            v13 = (System_String_o **)&StringLiteral_23022/*"skillNum"*/;
+            v13 = (System_String_o **)&StringLiteral_22278/*"playerhp_3"*/;
           UISprite__set_spriteName(v11, *v13, 0LL);
           return;
         }
       }
 LABEL_16:
-      sub_1C3B9C0(v9, v8);
+      sub_1B4D1EC(v9, v8);
     }
   }
 }

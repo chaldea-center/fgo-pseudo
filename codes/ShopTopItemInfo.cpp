@@ -8,35 +8,19 @@ void __fastcall ShopTopItemInfo___ctor(
         const MethodInfo *method)
 {
   ShopTopItemInfo_o *v12; // x24
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields._Kind_k__BackingField = kind;
   v12->fields._TextCode_k__BackingField = textCode;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&v12->fields._TextCode_k__BackingField,
-    (int64_t)textCode,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&v12->fields._TextCode_k__BackingField, (int32_t)textCode, v13, v14);
   v12->fields._ImageName_k__BackingField = imageName;
   v12 = (ShopTopItemInfo_o *)((char *)v12 + 32);
-  sub_1C3B708((PartyOrganizationUtility_o *)v12, (int64_t)imageName, v19, v20, v21, v22, v23, v24);
+  sub_1B4CF34((CGThumbnailListItem_o *)v12, (int32_t)imageName, v15, v16);
   LODWORD(v12->monitor) = state;
   HIDWORD(v12->monitor) = shopType;
 }
@@ -77,22 +61,10 @@ void __fastcall ShopTopItemInfo__set_ImageName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ImageName_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ImageName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -119,20 +91,8 @@ void __fastcall ShopTopItemInfo__set_TextCode(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._TextCode_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._TextCode_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

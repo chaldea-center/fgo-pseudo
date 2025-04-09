@@ -1,9 +1,9 @@
 void __fastcall PhotoFrameListViewObject___ctor(PhotoFrameListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1D7E6 & 1) == 0 )
+  if ( (byte_49B66CF & 1) == 0 )
   {
-    sub_1C3B764(&ListViewObject_TypeInfo, method);
-    byte_4C1D7E6 = 1;
+    sub_1B4CF90(&ListViewObject_TypeInfo, method);
+    byte_49B66CF = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -15,20 +15,24 @@ void __fastcall PhotoFrameListViewObject__Awake(PhotoFrameListViewObject_o *this
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
+  Il2CppObject *Component_object; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C1D7E0 & 1) == 0 )
+  if ( (byte_49B66C9 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewItemDraw___, method);
-    byte_4C1D7E0 = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewItemDraw___, method);
+    byte_49B66C9 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3B9C0(0LL, v3);
-  this->fields.itemDraw = (struct PhotoFrameListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                   dispObject,
-                                                                   (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewItemDraw___);
-  sub_1C3B708(&this->fields.itemDraw);
+    sub_1B4D1EC(0LL, v3);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewItemDraw___);
+  this->fields.itemDraw = (struct PhotoFrameListViewItemDraw_o *)Component_object;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -39,10 +43,10 @@ PhotoFrameListViewItem_o *__fastcall PhotoFrameListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4C1D7E1 & 1) == 0 )
+  if ( (byte_49B66CA & 1) == 0 )
   {
-    sub_1C3B764(&PhotoFrameListViewItem_TypeInfo, method);
-    byte_4C1D7E1 = 1;
+    sub_1B4CF90(&PhotoFrameListViewItem_TypeInfo, method);
+    byte_49B66CA = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -78,11 +82,11 @@ void __fastcall PhotoFrameListViewObject__Init(
   int32_t v18; // w8
 
   v5 = initMode;
-  if ( (byte_4C1D7E3 & 1) == 0 )
+  if ( (byte_49B66CC & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, *(_QWORD *)&initMode);
-    sub_1C3B764(&PhotoFrameListViewItem_TypeInfo, v7);
-    byte_4C1D7E3 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, *(_QWORD *)&initMode);
+    sub_1B4CF90(&PhotoFrameListViewItem_TypeInfo, v7);
+    byte_49B66CC = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -110,7 +114,7 @@ void __fastcall PhotoFrameListViewObject__Init(
   {
     if ( !v10 || (v16 = this->fields.itemDraw) == 0LL || (frameSampleSprite = v16->fields.frameSampleSprite) == 0LL )
 LABEL_33:
-      sub_1C3B9C0(frameSampleSprite, v15);
+      sub_1B4D1EC(frameSampleSprite, v15);
     UISprite__set_atlas(frameSampleSprite, *(UIAtlas_o **)&v10[1].fields.sortIndex, 0LL);
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, v5 != 0, 0LL);
@@ -167,7 +171,7 @@ void __fastcall PhotoFrameListViewObject__InitItem(PhotoFrameListViewObject_o *t
 }
 
 
-void __fastcall PhotoFrameListViewObject__Init_32767224(
+void __fastcall PhotoFrameListViewObject__Init_31856992(
         PhotoFrameListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -182,17 +186,17 @@ void __fastcall PhotoFrameListViewObject__OnClickSelect(PhotoFrameListViewObject
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C1D7E5 & 1) == 0 )
+  if ( (byte_49B66CE & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_10040/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, method);
-    byte_4C1D7E5 = 1;
+    sub_1B4CF90(&StringLiteral_9647/*"OnClickListView"*/, method);
+    byte_49B66CE = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3B9C0(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_10040/*"PARTY_ORGANIZATION_REMOVE_SELECT_TITLE"*/, (Il2CppObject *)this, 0LL);
+      sub_1B4D1EC(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9647/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -211,11 +215,11 @@ void __fastcall PhotoFrameListViewObject__SetInput(
   struct ListViewItem_o *v10; // x1
   PhotoFrameListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4C1D7E2 & 1) == 0 )
+  if ( (byte_49B66CB & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, isInput);
-    sub_1C3B764(&PhotoFrameListViewItem_TypeInfo, v5);
-    byte_4C1D7E2 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, isInput);
+    sub_1B4CF90(&PhotoFrameListViewItem_TypeInfo, v5);
+    byte_49B66CB = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -239,7 +243,7 @@ void __fastcall PhotoFrameListViewObject__SetInput(
     }
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1C3B9C0(0LL, v10);
+      sub_1B4D1EC(0LL, v10);
     PhotoFrameListViewItemDraw__SetInput(v11, (PhotoFrameListViewItem_o *)v10, isInput, v7);
   }
 }
@@ -251,12 +255,12 @@ void __fastcall PhotoFrameListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_42230072((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41356616((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall PhotoFrameListViewObject__SetItem_32769428(
+void __fastcall PhotoFrameListViewObject__SetItem_31859196(
         PhotoFrameListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -277,11 +281,11 @@ void __fastcall PhotoFrameListViewObject__SetupDisp(PhotoFrameListViewObject_o *
   const MethodInfo *v9; // x3
   PhotoFrameListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4C1D7E4 & 1) == 0 )
+  if ( (byte_49B66CD & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    sub_1C3B764(&PhotoFrameListViewItem_TypeInfo, v3);
-    byte_4C1D7E4 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    sub_1B4CF90(&PhotoFrameListViewItem_TypeInfo, v3);
+    byte_49B66CD = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -305,7 +309,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1C3B9C0(0LL, v8);
+      sub_1B4D1EC(0LL, v8);
     PhotoFrameListViewItemDraw__SetItem(v10, (PhotoFrameListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }

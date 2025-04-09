@@ -26,12 +26,8 @@ System_String_o *__fastcall BattleCommonSettings_ShiftIconAdjustment__get_Sprite
 {
   struct System_String_o **p_spriteName; // x19
   struct System_String_o *spriteName; // x21
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   p_spriteName = &this->fields.spriteName;
   spriteName = this->fields.spriteName;
@@ -39,7 +35,7 @@ System_String_o *__fastcall BattleCommonSettings_ShiftIconAdjustment__get_Sprite
   {
     spriteName = BattleServantHpShiftComponent__GetShiftIconName(this->fields.ImageType, this->fields.ImageNo, 0LL);
     this->fields.spriteName = spriteName;
-    sub_1C3B708((PartyOrganizationUtility_o *)p_spriteName, (int64_t)spriteName, v5, v6, v7, v8, v9, v10);
+    sub_1B4CF34((CGThumbnailListItem_o *)p_spriteName, (int32_t)spriteName, v5, v6);
   }
   return spriteName;
 }

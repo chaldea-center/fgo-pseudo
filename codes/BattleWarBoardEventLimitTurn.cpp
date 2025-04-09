@@ -2,27 +2,23 @@ void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn
 {
   struct System_Int32_array *v3; // x0
   __int64 v4; // x1
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C2468B & 1) == 0 )
+  if ( (byte_49BD5C2 & 1) == 0 )
   {
-    sub_1C3B764(&int___TypeInfo, method);
-    byte_4C2468B = 1;
+    sub_1B4CF90(&int___TypeInfo, method);
+    byte_49BD5C2 = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_1C3B80C(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_1B4D038(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   if ( !v3->max_length )
-    sub_1C3B9C8(v3, v3);
+    sub_1B4D1F4(v3, v3);
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.defTurnEffect, (int64_t)v3, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -40,20 +36,12 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
   BattleWarBoardEventLimitTurn_Fields *v10; // x9
   int32_t *v11; // x9
   System_Int32_array *TurnEffect; // x0
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  struct System_Int32_array *v19; // x8
-  System_Int32_array *v20; // x1
-  int64_t v21; // x2
-  int32_t v22; // w3
-  System_String_o *v23; // x4
-  BattleSetupInfo_o *v24; // x5
-  FollowerInfo_o *v25; // x6
-  PartyListViewItem_o *v26; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  struct System_Int32_array *v15; // x8
+  System_Int32_array *v16; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
 
   if ( !battleEvent )
     goto LABEL_16;
@@ -81,42 +69,26 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         {
           TurnEffect = StageEntity__getTurnEffect(stage, (int32_t)battleEvent, 0LL);
           Data_k__BackingField->fields.turnEffect = TurnEffect;
-          sub_1C3B708(
-            (PartyOrganizationUtility_o *)&Data_k__BackingField->fields.turnEffect,
-            (int64_t)TurnEffect,
-            v13,
-            v14,
-            v15,
-            v16,
-            v17,
-            v18);
-          v19 = Data_k__BackingField->fields.turnEffect;
-          if ( v19 )
+          sub_1B4CF34((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)TurnEffect, v13, v14);
+          v15 = Data_k__BackingField->fields.turnEffect;
+          if ( v15 )
           {
-            if ( !*(_QWORD *)&v19->max_length )
+            if ( !*(_QWORD *)&v15->max_length )
             {
-              v20 = StageEntity__GetTurnEffect(
+              v16 = StageEntity__GetTurnEffect(
                       stage,
                       Data_k__BackingField->fields.limitTurnCount,
                       this->fields.defTurnEffect,
                       0LL);
-              Data_k__BackingField->fields.turnEffect = v20;
-              sub_1C3B708(
-                (PartyOrganizationUtility_o *)&Data_k__BackingField->fields.turnEffect,
-                (int64_t)v20,
-                v21,
-                v22,
-                v23,
-                v24,
-                v25,
-                v26);
+              Data_k__BackingField->fields.turnEffect = v16;
+              sub_1B4CF34((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)v16, v17, v18);
             }
             return;
           }
         }
       }
 LABEL_16:
-      sub_1C3B9C0(this, battleEvent);
+      sub_1B4D1EC(this, battleEvent);
     }
   }
 }

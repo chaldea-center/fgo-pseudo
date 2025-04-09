@@ -5,10 +5,10 @@ System_Byte_array *__fastcall Internal_Cryptography_Helpers__CloneByteArray(
   System_Byte_array *result; // x0
   System_Byte_array *v4; // x19
 
-  if ( (byte_4C2A1A0 & 1) == 0 )
+  if ( (byte_49C2353 & 1) == 0 )
   {
-    sub_1C3B764(&byte___TypeInfo, method);
-    byte_4C2A1A0 = 1;
+    sub_1B4CF90(&byte___TypeInfo, method);
+    byte_49C2353 = 1;
   }
   if ( !src )
     return 0LL;
@@ -16,65 +16,14 @@ System_Byte_array *__fastcall Internal_Cryptography_Helpers__CloneByteArray(
   if ( result )
   {
     v4 = result;
-    result = (System_Byte_array *)sub_1C3B8A0(result, byte___TypeInfo);
+    result = (System_Byte_array *)sub_1B4D0CC(result, byte___TypeInfo);
     if ( !result )
     {
-      sub_1C3BC80(v4);
+      sub_1B4D4AC(v4);
       return 0LL;
     }
   }
   return result;
-}
-
-
-System_Byte_array *__fastcall Internal_Cryptography_Helpers__GenerateRandom(int32_t count, const MethodInfo *method)
-{
-  __int64 v3; // x1
-  System_Byte_array *v4; // x21
-  System_Security_Cryptography_RandomNumberGenerator_o *v5; // x0
-  __int64 v6; // x1
-  System_Security_Cryptography_RandomNumberGenerator_o *v7; // x19
-  System_Security_Cryptography_RandomNumberGenerator_c *klass; // x8
-  __int64 v9; // x9
-  int *p_offset; // x10
-  __int64 v11; // x0
-
-  if ( (byte_4C2A1A1 & 1) == 0 )
-  {
-    sub_1C3B764(&byte___TypeInfo, method);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v3);
-    byte_4C2A1A1 = 1;
-  }
-  v4 = (System_Byte_array *)sub_1C3B80C(byte___TypeInfo, (unsigned int)count);
-  v5 = System_Security_Cryptography_RandomNumberGenerator__Create(0LL);
-  v7 = v5;
-  if ( !v5 )
-    sub_1C3B9C0(0LL, v6);
-  ((void (__fastcall *)(System_Security_Cryptography_RandomNumberGenerator_o *, System_Byte_array *, Il2CppMethodPointer))v5->klass->vtable._6_unknown.method)(
-    v5,
-    v4,
-    v5->klass->vtable._7_GetBytes.methodPtr);
-  klass = v7->klass;
-  v9 = *(unsigned __int16 *)(&v7->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v7->klass->_2.bitflags2 + 3) )
-  {
-    p_offset = &klass->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
-    {
-      --v9;
-      p_offset += 4;
-      if ( !v9 )
-        goto LABEL_8;
-    }
-    v11 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
-  }
-  else
-  {
-LABEL_8:
-    v11 = sub_1C8D744(v7, System_IDisposable_TypeInfo, 0LL);
-  }
-  (*(void (__fastcall **)(System_Security_Cryptography_RandomNumberGenerator_o *, _QWORD))v11)(v7, *(_QWORD *)(v11 + 8));
-  return v4;
 }
 
 
@@ -107,14 +56,14 @@ System_Char_array *__fastcall Internal_Cryptography_Helpers__ToHexArrayUpper(
   __int16 v12; // w17
 
   v2 = bytes;
-  if ( (byte_4C2A1A2 & 1) == 0 )
+  if ( (byte_49C2354 & 1) == 0 )
   {
-    bytes = (System_Char_array *)sub_1C3B764(&char___TypeInfo, method);
-    byte_4C2A1A2 = 1;
+    bytes = (System_Char_array *)sub_1B4CF90(&char___TypeInfo, method);
+    byte_49C2354 = 1;
   }
   if ( !v2 )
     goto LABEL_19;
-  bytes = (System_Char_array *)sub_1C3B80C(char___TypeInfo, 2 * v2->max_length);
+  bytes = (System_Char_array *)sub_1B4D038(char___TypeInfo, 2 * v2->max_length);
   if ( (int)*(_QWORD *)&v2->max_length >= 1 )
   {
     v3 = (unsigned int)*(_QWORD *)&v2->max_length;
@@ -124,7 +73,7 @@ System_Char_array *__fastcall Internal_Cryptography_Helpers__ToHexArrayUpper(
     {
       if ( v4 >= v3 )
 LABEL_18:
-        sub_1C3B9C8(bytes, method);
+        sub_1B4D1F4(bytes, method);
       v6 = *((unsigned __int8 *)&v2->m_Items[2] + v4);
       v7 = v6 >= 0xA0 ? 55 : 48;
       if ( !bytes )
@@ -150,7 +99,7 @@ LABEL_18:
         return bytes;
     }
 LABEL_19:
-    sub_1C3B9C0(bytes, method);
+    sub_1B4D1EC(bytes, method);
   }
   return bytes;
 }
@@ -165,26 +114,6 @@ System_String_o *__fastcall Internal_Cryptography_Helpers__ToHexStringUpper(
 
   v2 = Internal_Cryptography_Helpers__ToHexArrayUpper(bytes, method);
   return System_String__Ctor(v2, v3);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-void __fastcall Internal_Cryptography_Helpers__WriteInt(
-        uint32_t i,
-        System_Byte_array *arr,
-        int32_t offset,
-        const MethodInfo *method)
-{
-  if ( !arr )
-    sub_1C3B9C0(i, 0LL);
-  if ( arr->max_length <= offset
-    || (arr->m_Items[offset + 4] = HIBYTE(i), offset + 1 >= arr->max_length)
-    || (arr->m_Items[offset + 5] = BYTE2(i), offset + 2 >= arr->max_length)
-    || (arr->m_Items[offset + 6] = BYTE1(i), offset + 3 >= arr->max_length) )
-  {
-    sub_1C3B9C8(*(_QWORD *)&i, arr);
-  }
-  arr->m_Items[offset + 7] = i;
 }
 
 
@@ -419,967 +348,919 @@ void __fastcall Internal_Cryptography_OidLookup___cctor(const MethodInfo *method
   __int64 v227; // x1
   __int64 v228; // x1
   System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *v229; // x19
-  int64_t v230; // x2
-  int32_t v231; // w3
-  System_String_o *v232; // x4
-  BattleSetupInfo_o *v233; // x5
-  FollowerInfo_o *v234; // x6
-  PartyListViewItem_o *v235; // x7
-  __int64 v236; // x1
-  System_StringComparer_c *v237; // x0
+  int32_t v230; // w2
+  const MethodInfo *v231; // x3
+  __int64 v232; // x1
+  System_StringComparer_c *v233; // x0
   System_Collections_Generic_IEqualityComparer_TKey__o *s_ordinalIgnoreCase; // x19
-  System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *v239; // x20
+  System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *v235; // x20
   struct Internal_Cryptography_OidLookup_StaticFields *static_fields; // x0
-  int64_t v241; // x2
-  int32_t v242; // w3
-  System_String_o *v243; // x4
-  BattleSetupInfo_o *v244; // x5
-  FollowerInfo_o *v245; // x6
-  PartyListViewItem_o *v246; // x7
-  __int64 v247; // x1
-  System_StringComparer_c *v248; // x0
-  System_Collections_Generic_IEqualityComparer_TKey__o *v249; // x20
-  System_Collections_Generic_Dictionary_object__object__o *v250; // x19
-  __int64 v251; // x0
-  __int64 v252; // x1
-  struct Internal_Cryptography_OidLookup_StaticFields *v253; // x0
-  int64_t v254; // x2
-  int32_t v255; // w3
-  System_String_o *v256; // x4
-  BattleSetupInfo_o *v257; // x5
-  FollowerInfo_o *v258; // x6
-  PartyListViewItem_o *v259; // x7
-  Internal_Cryptography_OidLookup___c_c *v260; // x0
+  int32_t v237; // w2
+  const MethodInfo *v238; // x3
+  __int64 v239; // x1
+  System_StringComparer_c *v240; // x0
+  System_Collections_Generic_IEqualityComparer_TKey__o *v241; // x20
+  System_Collections_Generic_Dictionary_object__object__o *v242; // x19
+  __int64 v243; // x0
+  __int64 v244; // x1
+  struct Internal_Cryptography_OidLookup_StaticFields *v245; // x0
+  int32_t v246; // w2
+  const MethodInfo *v247; // x3
+  Internal_Cryptography_OidLookup___c_c *v248; // x0
   struct System_Collections_Generic_Dictionary_string__string__o *s_friendlyNameToOid; // x19
-  Il2CppObject *v262; // x20
-  System_Func_T__TResult__o *v263; // x21
-  Il2CppObject *v264; // x20
-  System_Func_T__TResult__o *v265; // x22
-  System_Collections_Generic_Dictionary_TKey__TElement__o *v266; // x0
-  struct Internal_Cryptography_OidLookup_StaticFields *v267; // x8
-  int64_t v268; // x2
-  int32_t v269; // w3
-  System_String_o *v270; // x4
-  BattleSetupInfo_o *v271; // x5
-  FollowerInfo_o *v272; // x6
-  PartyListViewItem_o *v273; // x7
-  System_Collections_Generic_Dictionary_object__object__o *v274; // x19
-  struct Internal_Cryptography_OidLookup_StaticFields *v275; // x0
-  int64_t v276; // x2
-  int32_t v277; // w3
-  System_String_o *v278; // x4
-  BattleSetupInfo_o *v279; // x5
-  FollowerInfo_o *v280; // x6
-  PartyListViewItem_o *v281; // x7
+  Il2CppObject *v250; // x20
+  System_Func_T__TResult__o *v251; // x21
+  Il2CppObject *v252; // x20
+  System_Func_T__TResult__o *v253; // x22
+  System_Collections_Generic_Dictionary_TKey__TElement__o *v254; // x0
+  struct Internal_Cryptography_OidLookup_StaticFields *v255; // x8
+  int32_t v256; // w2
+  const MethodInfo *v257; // x3
+  System_Collections_Generic_Dictionary_object__object__o *v258; // x19
+  struct Internal_Cryptography_OidLookup_StaticFields *v259; // x0
+  int32_t v260; // w2
+  const MethodInfo *v261; // x3
 
-  if ( (byte_4C2BCFC & 1) == 0 )
+  if ( (byte_49C4432 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor___77786224, v1);
-    sub_1C3B764(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor__, v2);
-    sub_1C3B764(&System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string___ctor___77809984, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v6);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v7);
-    sub_1C3B764(&Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__string___string__string___, v8);
-    sub_1C3B764(&System_Func_KeyValuePair_string__string___string__TypeInfo, v9);
-    sub_1C3B764(&Internal_Cryptography_OidLookup_TypeInfo, v10);
-    sub_1C3B764(&System_StringComparer_TypeInfo, v11);
-    sub_1C3B764(&Method_Internal_Cryptography_OidLookup___c___cctor_b__10_0__, v12);
-    sub_1C3B764(&Method_Internal_Cryptography_OidLookup___c___cctor_b__10_1__, v13);
-    sub_1C3B764(&Internal_Cryptography_OidLookup___c_TypeInfo, v14);
-    sub_1C3B764(&StringLiteral_17761/*"com.unity.androidnotifications.PostNotificationsPermission"*/, v15);
-    sub_1C3B764(&StringLiteral_1266/*"1.3.132.0.30"*/, v16);
-    sub_1C3B764(&StringLiteral_17749/*"com.android.billingclient.api.ConsumeResponseListener"*/, v17);
-    sub_1C3B764(&StringLiteral_3655/*"COMMON_CONFIRM_REMOVE"*/, v18);
-    sub_1C3B764(&StringLiteral_1276/*"1.3.133.16.840.63.0.2"*/, v19);
-    sub_1C3B764(&StringLiteral_1350/*"2.16.840.1.101.3.4.2"*/, v20);
-    sub_1C3B764(&StringLiteral_1290/*"1.3.36.3.2.1"*/, v21);
-    sub_1C3B764(&StringLiteral_11649/*"SERVANT_STATUS_QUEST_NOT_RELEASED_BECAUSE_DONT_HAVE_SERVANT"*/, v22);
-    sub_1C3B764(&StringLiteral_1407/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/, v23);
-    sub_1C3B764(&StringLiteral_1434/*"502"*/, v24);
-    sub_1C3B764(&StringLiteral_1349/*"2.16.840.1.101.3.4.1.5"*/, v25);
-    sub_1C3B764(&StringLiteral_1338/*"2.0.0"*/, v26);
-    sub_1C3B764(&StringLiteral_1428/*"437"*/, v27);
-    sub_1C3B764(&StringLiteral_1319/*"1053900:100:0"*/, v28);
-    sub_1C3B764(&StringLiteral_19017/*"facebookId"*/, v29);
-    sub_1C3B764(&StringLiteral_1275/*"1.3.132.1.11.2"*/, v30);
-    sub_1C3B764(&StringLiteral_1436/*"503"*/, v31);
-    sub_1C3B764(&StringLiteral_1256/*"1.2.840.113549.1.9.4"*/, v32);
-    sub_1C3B764(&StringLiteral_1318/*"1053002:100:0"*/, v33);
-    sub_1C3B764(&StringLiteral_1401/*"302"*/, v34);
-    sub_1C3B764(&StringLiteral_1440/*"5047002:100:0"*/, v35);
-    sub_1C3B764(&StringLiteral_23558/*"testVoice"*/, v36);
-    sub_1C3B764(&StringLiteral_22511/*"refresh_app_receipt"*/, v37);
-    sub_1C3B764(&StringLiteral_1317/*"1053001:100:0"*/, v38);
-    sub_1C3B764(&StringLiteral_18934/*"event_towerbanner_"*/, v39);
-    sub_1C3B764(&StringLiteral_1439/*"5047001:100:0"*/, v40);
-    sub_1C3B764(&StringLiteral_1261/*"1.2.840.113549.2.5"*/, v41);
-    sub_1C3B764(&StringLiteral_5550/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/, v42);
-    sub_1C3B764(&StringLiteral_21944/*"onTransactionsRestoredSuccess"*/, v43);
-    sub_1C3B764(&StringLiteral_1277/*"1.3.14.3.2.12"*/, v44);
-    sub_1C3B764(&StringLiteral_21945/*"onUpdateEffect"*/, v45);
-    sub_1C3B764(&StringLiteral_16017/*"_TextureRGB"*/, v46);
-    sub_1C3B764(&StringLiteral_23728/*"treasure_box_draw"*/, v47);
-    sub_1C3B764(&StringLiteral_3654/*"COMMON_CONFIRM_NO"*/, v48);
-    sub_1C3B764(&StringLiteral_17760/*"com.unity.androidnotifications.NotificationCallback"*/, v49);
-    sub_1C3B764(&StringLiteral_5549/*"EVENT_POINT_NONE_INFO"*/, v50);
-    sub_1C3B764(&StringLiteral_1267/*"1.3.132.0.31"*/, v51);
-    sub_1C3B764(&StringLiteral_1435/*"502:"*/, v52);
-    sub_1C3B764(&StringLiteral_1412/*"3des"*/, v53);
-    sub_1C3B764(&StringLiteral_25329, v54);
-    sub_1C3B764(&StringLiteral_23557/*"testSe"*/, v55);
-    sub_1C3B764(&StringLiteral_1364/*"2.5.29.21"*/, v56);
-    sub_1C3B764(&StringLiteral_1427/*"432d18c9-9348-4b90-bfbf-9f2a10e1f15b"*/, v57);
-    sub_1C3B764(&StringLiteral_1260/*"1.2.840.113549.2.4"*/, v58);
-    sub_1C3B764(&StringLiteral_10930/*"ReadDoneAsync4"*/, v59);
-    sub_1C3B764(&StringLiteral_1325/*"10703"*/, v60);
-    sub_1C3B764(&StringLiteral_1400/*"30102"*/, v61);
-    sub_1C3B764(&StringLiteral_1264/*"1.2.840.113549.3.7"*/, v62);
-    sub_1C3B764(&StringLiteral_1254/*"1.2.840.113549.1.9.22.1"*/, v63);
-    sub_1C3B764(&StringLiteral_1355/*"2.16.840.1.113730.1.1"*/, v64);
-    sub_1C3B764(&StringLiteral_7033/*"HH:mm:ss.ffff"*/, v65);
-    sub_1C3B764(&StringLiteral_12437/*"Server for uri '"*/, v66);
-    sub_1C3B764(&StringLiteral_1259/*"1.2.840.113549.2.2"*/, v67);
-    sub_1C3B764(&StringLiteral_23734/*"treasurechest_btn_txt"*/, v68);
-    sub_1C3B764(&StringLiteral_25328, v69);
-    sub_1C3B764(&StringLiteral_1315/*"1015521325"*/, v70);
-    sub_1C3B764(&StringLiteral_5540/*"EVENT_POINT_COMMON_FORMAT"*/, v71);
-    sub_1C3B764(&StringLiteral_1438/*"5047000:100:0"*/, v72);
-    sub_1C3B764(&StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/, v73);
-    sub_1C3B764(&StringLiteral_1353/*"2.16.840.1.101.3.4.2.3"*/, v74);
-    sub_1C3B764(&StringLiteral_22512/*"refresh_terminal"*/, v75);
-    sub_1C3B764(&StringLiteral_1359/*"2.5.29.15"*/, v76);
-    sub_1C3B764(&StringLiteral_1313/*"100"*/, v77);
-    sub_1C3B764(&StringLiteral_1330/*"127.0.0.1"*/, v78);
-    sub_1C3B764(&StringLiteral_1198/*"1.2.840.10040.4.3"*/, v79);
-    sub_1C3B764(&StringLiteral_1323/*"1053911:100:0"*/, v80);
-    sub_1C3B764(&StringLiteral_5534/*"EVENT_JOIN_COMBINE_MSG_TITLE"*/, v81);
-    sub_1C3B764(&StringLiteral_23722/*"treasureDeviceId"*/, v82);
-    sub_1C3B764(&StringLiteral_1263/*"1.2.840.113549.3.4"*/, v83);
-    sub_1C3B764(&StringLiteral_25325, v84);
-    sub_1C3B764(&StringLiteral_11365/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/, v85);
-    sub_1C3B764(&StringLiteral_17751/*"com.android.billingclient.api.Purchase$PurchaseState"*/, v86);
-    sub_1C3B764(&StringLiteral_23730/*"treasurechest_btn"*/, v87);
-    sub_1C3B764(&StringLiteral_5165/*"Derived attribute's use has to be required if base attribute's use is required."*/, v88);
-    sub_1C3B764(&StringLiteral_5116/*"Debug_IsQuestReleaseAll"*/, v89);
-    sub_1C3B764(&StringLiteral_1358/*"2.5.29.14"*/, v90);
-    sub_1C3B764(&StringLiteral_11767/*"SHOP_BUY_ITEM_HOLD"*/, v91);
-    sub_1C3B764(&StringLiteral_3653/*"COMMON_CONFIRM_EXECUTE"*/, v92);
-    sub_1C3B764(&StringLiteral_23724/*"treasureDeviceRuby"*/, v93);
-    sub_1C3B764(&StringLiteral_1430/*"460"*/, v94);
-    sub_1C3B764(&StringLiteral_23725/*"treasureDeviceVoiceId"*/, v95);
-    sub_1C3B764(&StringLiteral_1404/*"3DMap"*/, v96);
-    sub_1C3B764(&StringLiteral_1251/*"1.2.840.113549.1.9.16.3.7"*/, v97);
-    sub_1C3B764(&StringLiteral_23559/*"test_lab"*/, v98);
-    sub_1C3B764(&StringLiteral_1409/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/, v99);
-    sub_1C3B764(&StringLiteral_1354/*"2.16.840.1.101.3.4.3"*/, v100);
-    sub_1C3B764(&StringLiteral_1346/*"2.16.840.1.101.3.4.1.25"*/, v101);
-    sub_1C3B764(&StringLiteral_1269/*"1.3.132.0.33"*/, v102);
-    sub_1C3B764(&StringLiteral_1403/*"350"*/, v103);
-    sub_1C3B764(&StringLiteral_17755/*"com.android.billingclient.api.QueryProductDetailsParams$Product"*/, v104);
-    sub_1C3B764(&StringLiteral_7446/*"InitMutableValue"*/, v105);
-    sub_1C3B764(&StringLiteral_11368/*"SERVANT_PERSONALITY_"*/, v106);
-    sub_1C3B764(&StringLiteral_25253, v107);
-    sub_1C3B764(&StringLiteral_1265/*"1.3.132.0.10"*/, v108);
-    sub_1C3B764(&StringLiteral_1304/*"1.3.36.3.3.2.8.1.1.8"*/, v109);
-    sub_1C3B764(&StringLiteral_5092/*"DateEnd"*/, v110);
-    sub_1C3B764(&StringLiteral_21797/*"normal"*/, v111);
-    sub_1C3B764(&StringLiteral_1397/*"3.6BossBattle"*/, v112);
-    sub_1C3B764(&StringLiteral_1324/*"1053912:100:0"*/, v113);
-    sub_1C3B764(&StringLiteral_21800/*"normalImage"*/, v114);
-    sub_1C3B764(&StringLiteral_1429/*"4441"*/, v115);
-    sub_1C3B764(&StringLiteral_13526/*"The OrderedDictionary is readonly and cannot be modified."*/, v116);
-    sub_1C3B764(&StringLiteral_11367/*"SERVANT_OVER"*/, v117);
-    sub_1C3B764(&StringLiteral_8398/*"MAX_FRIEND_HISTORY_NUM"*/, v118);
-    sub_1C3B764(&StringLiteral_17759/*"com.unity"*/, v119);
-    sub_1C3B764(&StringLiteral_1332/*"19"*/, v120);
-    sub_1C3B764(&StringLiteral_25326, v121);
-    sub_1C3B764(&StringLiteral_1343/*"2.16.840.1.101.3.4.1"*/, v122);
-    sub_1C3B764(&StringLiteral_23731/*"treasurechest_btn_info"*/, v123);
-    sub_1C3B764(&StringLiteral_21798/*"normal | italic | bold | bold-and-italic"*/, v124);
-    sub_1C3B764(&StringLiteral_23727/*"treasure_arms"*/, v125);
-    sub_1C3B764(&StringLiteral_23735/*"treasurechest_img_bg"*/, v126);
-    sub_1C3B764(&StringLiteral_1426/*"408: Request Time-out"*/, v127);
-    sub_1C3B764(&StringLiteral_23718/*"treasureBox/draw"*/, v128);
-    sub_1C3B764(&StringLiteral_21803/*"normals"*/, v129);
-    sub_1C3B764(&StringLiteral_23726/*"treasureId"*/, v130);
-    sub_1C3B764(&StringLiteral_23560/*"testing"*/, v131);
-    sub_1C3B764(&StringLiteral_21801/*"normalize-space"*/, v132);
-    sub_1C3B764(&StringLiteral_17025/*"border-width"*/, v133);
-    sub_1C3B764(&StringLiteral_1270/*"1.3.132.0.34"*/, v134);
-    sub_1C3B764(&StringLiteral_10831/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, v135);
-    sub_1C3B764(&StringLiteral_1257/*"1.2.840.113549.1.9.5"*/, v136);
-    sub_1C3B764(&StringLiteral_1469/*": '"*/, v137);
-    sub_1C3B764(&StringLiteral_21857/*"num1_glow"*/, v138);
-    sub_1C3B764(&StringLiteral_1431/*"5"*/, v139);
-    sub_1C3B764(&StringLiteral_1327/*"11814B"*/, v140);
-    sub_1C3B764(&StringLiteral_17753/*"com.android.billingclient.api.PurchasesUpdatedListener"*/, v141);
-    sub_1C3B764(&StringLiteral_5554/*"EVENT_POINT_TOTAL_TITLE"*/, v142);
-    sub_1C3B764(&StringLiteral_1322/*"1053910:100:0"*/, v143);
-    sub_1C3B764(&StringLiteral_19041/*"fbInstallReferrer"*/, v144);
-    sub_1C3B764(&StringLiteral_1424/*"404"*/, v145);
-    sub_1C3B764(&StringLiteral_9797/*"OptionBoostItemConfirm"*/, v146);
-    sub_1C3B764(&StringLiteral_1340/*"2.109.5"*/, v147);
-    sub_1C3B764(&StringLiteral_1316/*"1053000:100:0"*/, v148);
-    sub_1C3B764(&StringLiteral_17023/*"border-top-right-radius"*/, v149);
-    sub_1C3B764(&StringLiteral_1329/*"127"*/, v150);
-    sub_1C3B764(&StringLiteral_1341/*"2.16.840.1.101.2.1.1.19"*/, v151);
-    sub_1C3B764(&StringLiteral_10616/*"QUEST_CONFIRM_CONSUME_ITEM_COUNT_CAMPAIGN"*/, v152);
-    sub_1C3B764(&StringLiteral_1314/*"100-continue"*/, v153);
-    sub_1C3B764(&StringLiteral_1328/*"12.5.0"*/, v154);
-    sub_1C3B764(&StringLiteral_1252/*"1.2.840.113549.1.9.20"*/, v155);
-    sub_1C3B764(&StringLiteral_1336/*"2 CR found"*/, v156);
-    sub_1C3B764(&StringLiteral_1348/*"2.16.840.1.101.3.4.1.45"*/, v157);
-    sub_1C3B764(&StringLiteral_1272/*"1.3.132.0.8"*/, v158);
-    sub_1C3B764(&StringLiteral_11369/*"SERVANT_POLICY_"*/, v159);
-    sub_1C3B764(&StringLiteral_1425/*"404: Not Found"*/, v160);
-    sub_1C3B764(&StringLiteral_1398/*"3.7.8"*/, v161);
-    sub_1C3B764(&StringLiteral_23723/*"treasureDeviceName"*/, v162);
-    sub_1C3B764(&StringLiteral_23916/*"unity-thumb-min"*/, v163);
-    sub_1C3B764(&StringLiteral_1321/*"1053902:100:0"*/, v164);
-    sub_1C3B764(&StringLiteral_17754/*"com.android.billingclient.api.QueryProductDetailsParams"*/, v165);
-    sub_1C3B764(&StringLiteral_1333/*"1B2FA5"*/, v166);
-    sub_1C3B764(&StringLiteral_1326/*"11"*/, v167);
-    sub_1C3B764(&StringLiteral_1271/*"1.3.132.0.35"*/, v168);
-    sub_1C3B764(&StringLiteral_17748/*"com.android.billingclient.api.ConsumeParams"*/, v169);
-    sub_1C3B764(&StringLiteral_25327, v170);
-    sub_1C3B764(&StringLiteral_1337/*"2.0"*/, v171);
-    sub_1C3B764(&StringLiteral_1262/*"1.2.840.113549.3.2"*/, v172);
-    sub_1C3B764(&StringLiteral_9938/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_MESSAGE"*/, v173);
-    sub_1C3B764(&StringLiteral_1253/*"1.2.840.113549.1.9.21"*/, v174);
-    sub_1C3B764(&StringLiteral_1352/*"2.16.840.1.101.3.4.2.2"*/, v175);
-    sub_1C3B764(&StringLiteral_9495/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/, v176);
-    sub_1C3B764(&StringLiteral_23263/*"style"*/, v177);
-    sub_1C3B764(&StringLiteral_21799/*"normal | nowrap"*/, v178);
-    sub_1C3B764(&StringLiteral_19158/*"follow_assign"*/, v179);
-    sub_1C3B764(&StringLiteral_1305/*"1.3.36.3.3.2.8.1.1.9"*/, v180);
-    sub_1C3B764(&StringLiteral_3420/*"CLICK_BACK_QUEST"*/, v181);
-    sub_1C3B764(&StringLiteral_1356/*"2.23.43.1.4.9"*/, v182);
-    sub_1C3B764(&StringLiteral_1258/*"1.2.840.113549.1.9.6"*/, v183);
-    sub_1C3B764(&StringLiteral_17758/*"com.crimw.crijavaclasses.CriOutputDeviceObserver"*/, v184);
-    sub_1C3B764(&StringLiteral_17757/*"com.crashlytics.metadata.unity"*/, v185);
-    sub_1C3B764(&StringLiteral_5632/*"EVENT_TRUE"*/, v186);
-    sub_1C3B764(&StringLiteral_23729/*"treasurechest_bg_{0}"*/, v187);
-    sub_1C3B764(&StringLiteral_1303/*"1.3.36.3.3.2.8.1.1.7"*/, v188);
-    sub_1C3B764(&StringLiteral_5551/*"EVENT_POINT_RATE_INFO"*/, v189);
-    sub_1C3B764(&StringLiteral_1320/*"1053901:100:0"*/, v190);
-    sub_1C3B764(&StringLiteral_1335/*"2"*/, v191);
-    sub_1C3B764(&StringLiteral_1334/*"1st Attack"*/, v192);
-    sub_1C3B764(&StringLiteral_1274/*"1.3.132.1.11.1"*/, v193);
-    sub_1C3B764(&StringLiteral_3977/*"CancelButton"*/, v194);
-    sub_1C3B764(&StringLiteral_1441/*"5047900:100:0"*/, v195);
-    sub_1C3B764(&StringLiteral_1255/*"1.2.840.113549.1.9.3"*/, v196);
-    sub_1C3B764(&StringLiteral_23732/*"treasurechest_btn_on"*/, v197);
-    sub_1C3B764(&StringLiteral_1357/*"2.5.29.10"*/, v198);
-    sub_1C3B764(&StringLiteral_1405/*"3DSpot"*/, v199);
-    sub_1C3B764(&StringLiteral_17024/*"border-top-width"*/, v200);
-    sub_1C3B764(&StringLiteral_1367/*"2.5.4.10"*/, v201);
-    sub_1C3B764(&StringLiteral_5555/*"EVENT_POINT_VS_WIN_DIALOG_GET"*/, v202);
-    sub_1C3B764(&StringLiteral_23556/*"test"*/, v203);
-    sub_1C3B764(&StringLiteral_1408/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/, v204);
-    sub_1C3B764(&StringLiteral_1342/*"2.16.840.1.101.2.1.1.20"*/, v205);
-    sub_1C3B764(&StringLiteral_17028/*"bossIdx"*/, v206);
-    sub_1C3B764(&StringLiteral_1423/*"403: Forbidden"*/, v207);
-    sub_1C3B764(&StringLiteral_23733/*"treasurechest_btn_open"*/, v208);
-    sub_1C3B764(&StringLiteral_1331/*"16"*/, v209);
-    sub_1C3B764(&StringLiteral_1273/*"1.3.132.0.9"*/, v210);
-    sub_1C3B764(&StringLiteral_23561/*"text"*/, v211);
-    sub_1C3B764(&StringLiteral_1351/*"2.16.840.1.101.3.4.2.1"*/, v212);
-    sub_1C3B764(&StringLiteral_5553/*"EVENT_POINT_TOTAL_NUM"*/, v213);
-    sub_1C3B764(&StringLiteral_1339/*"2.0.0_Done"*/, v214);
-    sub_1C3B764(&StringLiteral_17026/*"bossBattleInfo"*/, v215);
-    sub_1C3B764(&StringLiteral_1250/*"1.2.840.113549.1.9.16.3.6"*/, v216);
-    sub_1C3B764(&StringLiteral_5374/*"END_SELECTCARD"*/, v217);
-    sub_1C3B764(&StringLiteral_23262/*"stub is not used in Mono"*/, v218);
-    sub_1C3B764(&StringLiteral_17750/*"com.android.billingclient.api.ProductDetailsResponseListener"*/, v219);
-    sub_1C3B764(&StringLiteral_1437/*"503 Auto retry count"*/, v220);
-    sub_1C3B764(&StringLiteral_17027/*"bossIdAndChangeBgmId"*/, v221);
-    sub_1C3B764(&StringLiteral_17752/*"com.android.billingclient.api.PurchasesResponseListener"*/, v222);
-    sub_1C3B764(&StringLiteral_17756/*"com.aniplex.fategrandorder"*/, v223);
-    sub_1C3B764(&StringLiteral_1347/*"2.16.840.1.101.3.4.1.42"*/, v224);
-    sub_1C3B764(&StringLiteral_1268/*"1.3.132.0.32"*/, v225);
-    sub_1C3B764(&StringLiteral_1402/*"326"*/, v226);
-    sub_1C3B764(&StringLiteral_12589/*"SmartSortOrder-"*/, v227);
-    sub_1C3B764(&StringLiteral_1432/*"500"*/, v228);
-    byte_4C2BCFC = 1;
+    sub_1B4CF90(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor___75377504, v1);
+    sub_1B4CF90(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor__, v2);
+    sub_1B4CF90(&System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__string__Add__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__string___ctor___75401104, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__string___ctor__, v6);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__string__TypeInfo, v7);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__string___string__string___, v8);
+    sub_1B4CF90(&System_Func_KeyValuePair_string__string___string__TypeInfo, v9);
+    sub_1B4CF90(&Internal_Cryptography_OidLookup_TypeInfo, v10);
+    sub_1B4CF90(&System_StringComparer_TypeInfo, v11);
+    sub_1B4CF90(&Method_Internal_Cryptography_OidLookup___c___cctor_b__10_0__, v12);
+    sub_1B4CF90(&Method_Internal_Cryptography_OidLookup___c___cctor_b__10_1__, v13);
+    sub_1B4CF90(&Internal_Cryptography_OidLookup___c_TypeInfo, v14);
+    sub_1B4CF90(&StringLiteral_17109/*"brainpoolP512t1"*/, v15);
+    sub_1B4CF90(&StringLiteral_1212/*"1.2.840.10046.2.1"*/, v16);
+    sub_1B4CF90(&StringLiteral_17097/*"brainpoolP160t1"*/, v17);
+    sub_1B4CF90(&StringLiteral_3511/*"CN"*/, v18);
+    sub_1B4CF90(&StringLiteral_1222/*"1.2.840.113549.1.1.7"*/, v19);
+    sub_1B4CF90(&StringLiteral_1296/*"1.3.36.3.3.2.8.1.1.13"*/, v20);
+    sub_1B4CF90(&StringLiteral_1236/*"1.2.840.113549.1.3.1"*/, v21);
+    sub_1B4CF90(&StringLiteral_11184/*"S"*/, v22);
+    sub_1B4CF90(&StringLiteral_1351/*"2.16.840.1.101.3.4.2.1"*/, v23);
+    sub_1B4CF90(&StringLiteral_1377/*"2.5.4.42"*/, v24);
+    sub_1B4CF90(&StringLiteral_1295/*"1.3.36.3.3.2.8.1.1.12"*/, v25);
+    sub_1B4CF90(&StringLiteral_1284/*"1.3.14.3.2.27"*/, v26);
+    sub_1B4CF90(&StringLiteral_1372/*"2.5.4.18"*/, v27);
+    sub_1B4CF90(&StringLiteral_1265/*"1.3.132.0.10"*/, v28);
+    sub_1B4CF90(&StringLiteral_18345/*"dnQualifier"*/, v29);
+    sub_1B4CF90(&StringLiteral_1221/*"1.2.840.113549.1.1.5"*/, v30);
+    sub_1B4CF90(&StringLiteral_1379/*"2.5.4.46"*/, v31);
+    sub_1B4CF90(&StringLiteral_1202/*"1.2.840.10045.3.1.3"*/, v32);
+    sub_1B4CF90(&StringLiteral_1264/*"1.2.840.113549.3.7"*/, v33);
+    sub_1B4CF90(&StringLiteral_1345/*"2.16.840.1.101.3.4.1.22"*/, v34);
+    sub_1B4CF90(&StringLiteral_1383/*"2.5.4.8"*/, v35);
+    sub_1B4CF90(&StringLiteral_22797/*"secP160r2"*/, v36);
+    sub_1B4CF90(&StringLiteral_21783/*"nistP192"*/, v37);
+    sub_1B4CF90(&StringLiteral_1263/*"1.2.840.113549.3.4"*/, v38);
+    sub_1B4CF90(&StringLiteral_18265/*"des"*/, v39);
+    sub_1B4CF90(&StringLiteral_1382/*"2.5.4.7"*/, v40);
+    sub_1B4CF90(&StringLiteral_1207/*"1.2.840.10045.4.1"*/, v41);
+    sub_1B4CF90(&StringLiteral_5338/*"ECDH_STD_SHA256_KDF"*/, v42);
+    sub_1B4CF90(&StringLiteral_21223/*"mosaicKMandUpdSig"*/, v43);
+    sub_1B4CF90(&StringLiteral_1223/*"1.2.840.113549.1.1.8"*/, v44);
+    sub_1B4CF90(&StringLiteral_21224/*"mosaicUpdatedSig"*/, v45);
+    sub_1B4CF90(&StringLiteral_15406/*"X21Address"*/, v46);
+    sub_1B4CF90(&StringLiteral_22965/*"sha256RSA"*/, v47);
+    sub_1B4CF90(&StringLiteral_3510/*"CMSRC2wrap"*/, v48);
+    sub_1B4CF90(&StringLiteral_17108/*"brainpoolP512r1"*/, v49);
+    sub_1B4CF90(&StringLiteral_5337/*"ECDH_STD_SHA1_KDF"*/, v50);
+    sub_1B4CF90(&StringLiteral_1213/*"1.2.840.113549.1.1.1"*/, v51);
+    sub_1B4CF90(&StringLiteral_1378/*"2.5.4.43"*/, v52);
+    sub_1B4CF90(&StringLiteral_1356/*"2.23.43.1.4.9"*/, v53);
+    sub_1B4CF90(&StringLiteral_24528/*"x962P239v3"*/, v54);
+    sub_1B4CF90(&StringLiteral_22796/*"secP160r1"*/, v55);
+    sub_1B4CF90(&StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/, v56);
+    sub_1B4CF90(&StringLiteral_1371/*"2.5.4.17"*/, v57);
+    sub_1B4CF90(&StringLiteral_1206/*"1.2.840.10045.3.1.7"*/, v58);
+    sub_1B4CF90(&StringLiteral_10491/*"PostalCode"*/, v59);
+    sub_1B4CF90(&StringLiteral_1271/*"1.3.132.0.35"*/, v60);
+    sub_1B4CF90(&StringLiteral_1344/*"2.16.840.1.101.3.4.1.2"*/, v61);
+    sub_1B4CF90(&StringLiteral_1210/*"1.2.840.10045.4.3.3"*/, v62);
+    sub_1B4CF90(&StringLiteral_1200/*"1.2.840.10045.3.1.1"*/, v63);
+    sub_1B4CF90(&StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/, v64);
+    sub_1B4CF90(&StringLiteral_6780/*"G"*/, v65);
+    sub_1B4CF90(&StringLiteral_11971/*"SN"*/, v66);
+    sub_1B4CF90(&StringLiteral_1205/*"1.2.840.10045.3.1.6"*/, v67);
+    sub_1B4CF90(&StringLiteral_22971/*"sha512RSA"*/, v68);
+    sub_1B4CF90(&StringLiteral_24527/*"x962P239v2"*/, v69);
+    sub_1B4CF90(&StringLiteral_1261/*"1.2.840.113549.2.5"*/, v70);
+    sub_1B4CF90(&StringLiteral_5336/*"ECC"*/, v71);
+    sub_1B4CF90(&StringLiteral_1381/*"2.5.4.6"*/, v72);
+    sub_1B4CF90(&StringLiteral_1247/*"1.2.840.113549.1.9.1"*/, v73);
+    sub_1B4CF90(&StringLiteral_1299/*"1.3.36.3.3.2.8.1.1.3"*/, v74);
+    sub_1B4CF90(&StringLiteral_21784/*"nistP224"*/, v75);
+    sub_1B4CF90(&StringLiteral_1305/*"1.3.36.3.3.2.8.1.1.9"*/, v76);
+    sub_1B4CF90(&StringLiteral_1259/*"1.2.840.113549.2.2"*/, v77);
+    sub_1B4CF90(&StringLiteral_1276/*"1.3.133.16.840.63.0.2"*/, v78);
+    sub_1B4CF90(&StringLiteral_1144/*"0.9.2342.19200300.100.1.25"*/, v79);
+    sub_1B4CF90(&StringLiteral_1269/*"1.3.132.0.33"*/, v80);
+    sub_1B4CF90(&StringLiteral_5330/*"E"*/, v81);
+    sub_1B4CF90(&StringLiteral_22959/*"sha1"*/, v82);
+    sub_1B4CF90(&StringLiteral_1209/*"1.2.840.10045.4.3.2"*/, v83);
+    sub_1B4CF90(&StringLiteral_24524/*"x962P192v2"*/, v84);
+    sub_1B4CF90(&StringLiteral_10923/*"RSA"*/, v85);
+    sub_1B4CF90(&StringLiteral_17099/*"brainpoolP192t1"*/, v86);
+    sub_1B4CF90(&StringLiteral_22967/*"sha384ECDSA"*/, v87);
+    sub_1B4CF90(&StringLiteral_4973/*"DSA"*/, v88);
+    sub_1B4CF90(&StringLiteral_4925/*"DH"*/, v89);
+    sub_1B4CF90(&StringLiteral_1304/*"1.3.36.3.3.2.8.1.1.8"*/, v90);
+    sub_1B4CF90(&StringLiteral_11300/*"SERIALNUMBER"*/, v91);
+    sub_1B4CF90(&StringLiteral_3509/*"CMS3DESwrap"*/, v92);
+    sub_1B4CF90(&StringLiteral_22961/*"sha1ECDSA"*/, v93);
+    sub_1B4CF90(&StringLiteral_1374/*"2.5.4.24"*/, v94);
+    sub_1B4CF90(&StringLiteral_22962/*"sha1RSA"*/, v95);
+    sub_1B4CF90(&StringLiteral_1348/*"2.16.840.1.101.3.4.1.45"*/, v96);
+    sub_1B4CF90(&StringLiteral_1197/*"1.2.840.10040.4.1"*/, v97);
+    sub_1B4CF90(&StringLiteral_22798/*"secP192k1"*/, v98);
+    sub_1B4CF90(&StringLiteral_1353/*"2.16.840.1.101.3.4.2.3"*/, v99);
+    sub_1B4CF90(&StringLiteral_1300/*"1.3.36.3.3.2.8.1.1.4"*/, v100);
+    sub_1B4CF90(&StringLiteral_1292/*"1.3.36.3.3.2.8.1.1.1"*/, v101);
+    sub_1B4CF90(&StringLiteral_1215/*"1.2.840.113549.1.1.11"*/, v102);
+    sub_1B4CF90(&StringLiteral_1347/*"2.16.840.1.101.3.4.1.42"*/, v103);
+    sub_1B4CF90(&StringLiteral_17103/*"brainpoolP256t1"*/, v104);
+    sub_1B4CF90(&StringLiteral_7184/*"I"*/, v105);
+    sub_1B4CF90(&StringLiteral_10925/*"RSASSA-PSS"*/, v106);
+    sub_1B4CF90(&StringLiteral_24454/*"wtls9"*/, v107);
+    sub_1B4CF90(&StringLiteral_1211/*"1.2.840.10045.4.3.4"*/, v108);
+    sub_1B4CF90(&StringLiteral_1250/*"1.2.840.113549.1.9.16.3.6"*/, v109);
+    sub_1B4CF90(&StringLiteral_4902/*"DC"*/, v110);
+    sub_1B4CF90(&StringLiteral_21077/*"md2"*/, v111);
+    sub_1B4CF90(&StringLiteral_1341/*"2.16.840.1.101.2.1.1.19"*/, v112);
+    sub_1B4CF90(&StringLiteral_1270/*"1.3.132.0.34"*/, v113);
+    sub_1B4CF90(&StringLiteral_21080/*"md4RSA"*/, v114);
+    sub_1B4CF90(&StringLiteral_1373/*"2.5.4.20"*/, v115);
+    sub_1B4CF90(&StringLiteral_13026/*"T"*/, v116);
+    sub_1B4CF90(&StringLiteral_10924/*"RSAES_OAEP"*/, v117);
+    sub_1B4CF90(&StringLiteral_8059/*"L"*/, v118);
+    sub_1B4CF90(&StringLiteral_17107/*"brainpoolP384t1"*/, v119);
+    sub_1B4CF90(&StringLiteral_1278/*"1.3.14.3.2.13"*/, v120);
+    sub_1B4CF90(&StringLiteral_24525/*"x962P192v3"*/, v121);
+    sub_1B4CF90(&StringLiteral_1289/*"1.3.14.7.2.3.1"*/, v122);
+    sub_1B4CF90(&StringLiteral_22968/*"sha384RSA"*/, v123);
+    sub_1B4CF90(&StringLiteral_21078/*"md2RSA"*/, v124);
+    sub_1B4CF90(&StringLiteral_22964/*"sha256ECDSA"*/, v125);
+    sub_1B4CF90(&StringLiteral_22972/*"shaRSA"*/, v126);
+    sub_1B4CF90(&StringLiteral_1370/*"2.5.4.13"*/, v127);
+    sub_1B4CF90(&StringLiteral_22955/*"sha"*/, v128);
+    sub_1B4CF90(&StringLiteral_21083/*"md5RSA"*/, v129);
+    sub_1B4CF90(&StringLiteral_22963/*"sha256"*/, v130);
+    sub_1B4CF90(&StringLiteral_22799/*"secP224k1"*/, v131);
+    sub_1B4CF90(&StringLiteral_21081/*"md5"*/, v132);
+    sub_1B4CF90(&StringLiteral_16394/*"aes192"*/, v133);
+    sub_1B4CF90(&StringLiteral_1216/*"1.2.840.113549.1.1.12"*/, v134);
+    sub_1B4CF90(&StringLiteral_10397/*"Phone"*/, v135);
+    sub_1B4CF90(&StringLiteral_1203/*"1.2.840.10045.3.1.4"*/, v136);
+    sub_1B4CF90(&StringLiteral_1412/*"3des"*/, v137);
+    sub_1B4CF90(&StringLiteral_21136/*"mgf1"*/, v138);
+    sub_1B4CF90(&StringLiteral_1375/*"2.5.4.3"*/, v139);
+    sub_1B4CF90(&StringLiteral_1273/*"1.3.132.0.9"*/, v140);
+    sub_1B4CF90(&StringLiteral_17101/*"brainpoolP224t1"*/, v141);
+    sub_1B4CF90(&StringLiteral_5341/*"ECDSA_P384"*/, v142);
+    sub_1B4CF90(&StringLiteral_1268/*"1.3.132.0.32"*/, v143);
+    sub_1B4CF90(&StringLiteral_18365/*"dsaSHA1"*/, v144);
+    sub_1B4CF90(&StringLiteral_1368/*"2.5.4.11"*/, v145);
+    sub_1B4CF90(&StringLiteral_9409/*"O"*/, v146);
+    sub_1B4CF90(&StringLiteral_1286/*"1.3.14.3.2.3"*/, v147);
+    sub_1B4CF90(&StringLiteral_1262/*"1.2.840.113549.3.2"*/, v148);
+    sub_1B4CF90(&StringLiteral_16392/*"aes128"*/, v149);
+    sub_1B4CF90(&StringLiteral_1275/*"1.3.132.1.11.2"*/, v150);
+    sub_1B4CF90(&StringLiteral_1287/*"1.3.14.3.2.4"*/, v151);
+    sub_1B4CF90(&StringLiteral_10189/*"POBox"*/, v152);
+    sub_1B4CF90(&StringLiteral_1260/*"1.2.840.113549.2.4"*/, v153);
+    sub_1B4CF90(&StringLiteral_1274/*"1.3.132.1.11.1"*/, v154);
+    sub_1B4CF90(&StringLiteral_1198/*"1.2.840.10040.4.3"*/, v155);
+    sub_1B4CF90(&StringLiteral_1282/*"1.3.14.3.2.22"*/, v156);
+    sub_1B4CF90(&StringLiteral_1294/*"1.3.36.3.3.2.8.1.1.11"*/, v157);
+    sub_1B4CF90(&StringLiteral_1218/*"1.2.840.113549.1.1.2"*/, v158);
+    sub_1B4CF90(&StringLiteral_10926/*"RSA_KEYX"*/, v159);
+    sub_1B4CF90(&StringLiteral_1369/*"2.5.4.12"*/, v160);
+    sub_1B4CF90(&StringLiteral_1342/*"2.16.840.1.101.2.1.1.20"*/, v161);
+    sub_1B4CF90(&StringLiteral_22960/*"sha1DSA"*/, v162);
+    sub_1B4CF90(&StringLiteral_23150/*"specifiedECDSA"*/, v163);
+    sub_1B4CF90(&StringLiteral_1267/*"1.3.132.0.31"*/, v164);
+    sub_1B4CF90(&StringLiteral_17102/*"brainpoolP256r1"*/, v165);
+    sub_1B4CF90(&StringLiteral_1279/*"1.3.14.3.2.15"*/, v166);
+    sub_1B4CF90(&StringLiteral_1272/*"1.3.132.0.8"*/, v167);
+    sub_1B4CF90(&StringLiteral_1217/*"1.2.840.113549.1.1.13"*/, v168);
+    sub_1B4CF90(&StringLiteral_17096/*"brainpoolP160r1"*/, v169);
+    sub_1B4CF90(&StringLiteral_24526/*"x962P239v1"*/, v170);
+    sub_1B4CF90(&StringLiteral_1283/*"1.3.14.3.2.26"*/, v171);
+    sub_1B4CF90(&StringLiteral_1208/*"1.2.840.10045.4.3"*/, v172);
+    sub_1B4CF90(&StringLiteral_9548/*"OU"*/, v173);
+    sub_1B4CF90(&StringLiteral_1199/*"1.2.840.10045.2.1"*/, v174);
+    sub_1B4CF90(&StringLiteral_1298/*"1.3.36.3.3.2.8.1.1.2"*/, v175);
+    sub_1B4CF90(&StringLiteral_9133/*"NO_SIGN"*/, v176);
+    sub_1B4CF90(&StringLiteral_22518/*"rc4"*/, v177);
+    sub_1B4CF90(&StringLiteral_21079/*"md4"*/, v178);
+    sub_1B4CF90(&StringLiteral_18480/*"ec192wapi"*/, v179);
+    sub_1B4CF90(&StringLiteral_1251/*"1.2.840.113549.1.9.16.3.7"*/, v180);
+    sub_1B4CF90(&StringLiteral_3273/*"C"*/, v181);
+    sub_1B4CF90(&StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/, v182);
+    sub_1B4CF90(&StringLiteral_1204/*"1.2.840.10045.3.1.5"*/, v183);
+    sub_1B4CF90(&StringLiteral_17106/*"brainpoolP384r1"*/, v184);
+    sub_1B4CF90(&StringLiteral_17105/*"brainpoolP320t1"*/, v185);
+    sub_1B4CF90(&StringLiteral_5416/*"ESDH"*/, v186);
+    sub_1B4CF90(&StringLiteral_22966/*"sha384"*/, v187);
+    sub_1B4CF90(&StringLiteral_1249/*"1.2.840.113549.1.9.16.3.5"*/, v188);
+    sub_1B4CF90(&StringLiteral_5339/*"ECDH_STD_SHA384_KDF"*/, v189);
+    sub_1B4CF90(&StringLiteral_1266/*"1.3.132.0.30"*/, v190);
+    sub_1B4CF90(&StringLiteral_1281/*"1.3.14.3.2.2"*/, v191);
+    sub_1B4CF90(&StringLiteral_1280/*"1.3.14.3.2.18"*/, v192);
+    sub_1B4CF90(&StringLiteral_1220/*"1.2.840.113549.1.1.4"*/, v193);
+    sub_1B4CF90(&StringLiteral_3836/*"CPS"*/, v194);
+    sub_1B4CF90(&StringLiteral_1384/*"2.5.4.9"*/, v195);
+    sub_1B4CF90(&StringLiteral_1201/*"1.2.840.10045.3.1.2"*/, v196);
+    sub_1B4CF90(&StringLiteral_22969/*"sha512"*/, v197);
+    sub_1B4CF90(&StringLiteral_1303/*"1.3.36.3.3.2.8.1.1.7"*/, v198);
+    sub_1B4CF90(&StringLiteral_1349/*"2.16.840.1.101.3.4.1.5"*/, v199);
+    sub_1B4CF90(&StringLiteral_16393/*"aes128wrap"*/, v200);
+    sub_1B4CF90(&StringLiteral_1312/*"1.3.6.1.5.5.7.6.2"*/, v201);
+    sub_1B4CF90(&StringLiteral_5342/*"ECDSA_P521"*/, v202);
+    sub_1B4CF90(&StringLiteral_22795/*"secP160k1"*/, v203);
+    sub_1B4CF90(&StringLiteral_1352/*"2.16.840.1.101.3.4.2.2"*/, v204);
+    sub_1B4CF90(&StringLiteral_1288/*"1.3.14.3.2.7"*/, v205);
+    sub_1B4CF90(&StringLiteral_16397/*"aes256wrap"*/, v206);
+    sub_1B4CF90(&StringLiteral_1367/*"2.5.4.10"*/, v207);
+    sub_1B4CF90(&StringLiteral_22970/*"sha512ECDSA"*/, v208);
+    sub_1B4CF90(&StringLiteral_1277/*"1.3.14.3.2.12"*/, v209);
+    sub_1B4CF90(&StringLiteral_1219/*"1.2.840.113549.1.1.3"*/, v210);
+    sub_1B4CF90(&StringLiteral_22800/*"secP256k1"*/, v211);
+    sub_1B4CF90(&StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/, v212);
+    sub_1B4CF90(&StringLiteral_5340/*"ECDSA_P256"*/, v213);
+    sub_1B4CF90(&StringLiteral_1285/*"1.3.14.3.2.29"*/, v214);
+    sub_1B4CF90(&StringLiteral_16395/*"aes192wrap"*/, v215);
+    sub_1B4CF90(&StringLiteral_1196/*"1.2.156.11235.1.1.2.1"*/, v216);
+    sub_1B4CF90(&StringLiteral_5176/*"Description"*/, v217);
+    sub_1B4CF90(&StringLiteral_22517/*"rc2"*/, v218);
+    sub_1B4CF90(&StringLiteral_17098/*"brainpoolP192r1"*/, v219);
+    sub_1B4CF90(&StringLiteral_1380/*"2.5.4.5"*/, v220);
+    sub_1B4CF90(&StringLiteral_16396/*"aes256"*/, v221);
+    sub_1B4CF90(&StringLiteral_17100/*"brainpoolP224r1"*/, v222);
+    sub_1B4CF90(&StringLiteral_17104/*"brainpoolP320r1"*/, v223);
+    sub_1B4CF90(&StringLiteral_1293/*"1.3.36.3.3.2.8.1.1.10"*/, v224);
+    sub_1B4CF90(&StringLiteral_1214/*"1.2.840.113549.1.1.10"*/, v225);
+    sub_1B4CF90(&StringLiteral_1346/*"2.16.840.1.101.3.4.1.25"*/, v226);
+    sub_1B4CF90(&StringLiteral_12117/*"STREET"*/, v227);
+    sub_1B4CF90(&StringLiteral_1376/*"2.5.4.4"*/, v228);
+    byte_49C4432 = 1;
   }
-  v229 = (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)sub_1C3B9B0(System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo);
+  v229 = (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)sub_1B4D1DC(System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo);
   System_Collections_Concurrent_ConcurrentDictionary_object__object____ctor(
     v229,
-    (const MethodInfo_327B70C *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor__);
+    (const MethodInfo_317F80C *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor__);
   Internal_Cryptography_OidLookup_TypeInfo->static_fields->s_lateBoundOidToFriendlyName = (struct System_Collections_Concurrent_ConcurrentDictionary_string__string__o *)v229;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)Internal_Cryptography_OidLookup_TypeInfo->static_fields,
-    (int64_t)v229,
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)Internal_Cryptography_OidLookup_TypeInfo->static_fields,
+    (int32_t)v229,
     v230,
-    v231,
-    v232,
-    v233,
-    v234,
-    v235);
+    v231);
   if ( !System_StringComparer_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_StringComparer_TypeInfo);
-  if ( !byte_4C29D77 )
+  if ( !byte_49C290C )
   {
-    sub_1C3B764(&System_StringComparer_TypeInfo, v236);
-    byte_4C29D77 = 1;
+    sub_1B4CF90(&System_StringComparer_TypeInfo, v232);
+    byte_49C290C = 1;
   }
-  v237 = System_StringComparer_TypeInfo;
+  v233 = System_StringComparer_TypeInfo;
   if ( !System_StringComparer_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_StringComparer_TypeInfo);
-    v237 = System_StringComparer_TypeInfo;
+    v233 = System_StringComparer_TypeInfo;
   }
-  s_ordinalIgnoreCase = (System_Collections_Generic_IEqualityComparer_TKey__o *)v237->static_fields->s_ordinalIgnoreCase;
-  v239 = (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)sub_1C3B9B0(System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo);
-  System_Collections_Concurrent_ConcurrentDictionary_object__object____ctor_52934524(
-    v239,
+  s_ordinalIgnoreCase = (System_Collections_Generic_IEqualityComparer_TKey__o *)v233->static_fields->s_ordinalIgnoreCase;
+  v235 = (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)sub_1B4D1DC(System_Collections_Concurrent_ConcurrentDictionary_string__string__TypeInfo);
+  System_Collections_Concurrent_ConcurrentDictionary_object__object____ctor_51902588(
+    v235,
     s_ordinalIgnoreCase,
-    (const MethodInfo_327B77C *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor___77786224);
+    (const MethodInfo_317F87C *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string___ctor___75377504);
   static_fields = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
-  static_fields->s_lateBoundFriendlyNameToOid = (struct System_Collections_Concurrent_ConcurrentDictionary_string__string__o *)v239;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&static_fields->s_lateBoundFriendlyNameToOid,
-    (int64_t)v239,
-    v241,
-    v242,
-    v243,
-    v244,
-    v245,
-    v246);
-  if ( !byte_4C29D77 )
+  static_fields->s_lateBoundFriendlyNameToOid = (struct System_Collections_Concurrent_ConcurrentDictionary_string__string__o *)v235;
+  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->s_lateBoundFriendlyNameToOid, (int32_t)v235, v237, v238);
+  if ( !byte_49C290C )
   {
-    sub_1C3B764(&System_StringComparer_TypeInfo, v247);
-    byte_4C29D77 = 1;
+    sub_1B4CF90(&System_StringComparer_TypeInfo, v239);
+    byte_49C290C = 1;
   }
-  v248 = System_StringComparer_TypeInfo;
+  v240 = System_StringComparer_TypeInfo;
   if ( !System_StringComparer_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(System_StringComparer_TypeInfo);
-    v248 = System_StringComparer_TypeInfo;
+    v240 = System_StringComparer_TypeInfo;
   }
-  v249 = (System_Collections_Generic_IEqualityComparer_TKey__o *)v248->static_fields->s_ordinalIgnoreCase;
-  v250 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-  System_Collections_Generic_Dictionary_object__object____ctor_53824996(
-    v250,
-    v249,
-    (const MethodInfo_3354DE4 *)Method_System_Collections_Generic_Dictionary_string__string___ctor___77809984);
-  if ( !v250 )
+  v241 = (System_Collections_Generic_IEqualityComparer_TKey__o *)v240->static_fields->s_ordinalIgnoreCase;
+  v242 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  System_Collections_Generic_Dictionary_object__object____ctor_52785556(
+    v242,
+    v241,
+    (const MethodInfo_3257194 *)Method_System_Collections_Generic_Dictionary_string__string___ctor___75401104);
+  if ( !v242 )
     goto LABEL_18;
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_1469/*": '"*/,
-    (Il2CppObject *)StringLiteral_1318/*"1053002:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17023/*"border-top-right-radius"*/,
-    (Il2CppObject *)StringLiteral_1400/*"30102"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17024/*"border-top-width"*/,
-    (Il2CppObject *)StringLiteral_1405/*"3DSpot"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17025/*"border-width"*/,
-    (Il2CppObject *)StringLiteral_1401/*"302"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17026/*"bossBattleInfo"*/,
-    (Il2CppObject *)StringLiteral_1402/*"326"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17027/*"bossIdAndChangeBgmId"*/,
-    (Il2CppObject *)StringLiteral_1403/*"350"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17028/*"bossIdx"*/,
-    (Il2CppObject *)StringLiteral_1404/*"3DMap"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17748/*"com.android.billingclient.api.ConsumeParams"*/,
-    (Il2CppObject *)StringLiteral_1346/*"2.16.840.1.101.3.4.1.25"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17749/*"com.android.billingclient.api.ConsumeResponseListener"*/,
-    (Il2CppObject *)StringLiteral_1352/*"2.16.840.1.101.3.4.2.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17750/*"com.android.billingclient.api.ProductDetailsResponseListener"*/,
-    (Il2CppObject *)StringLiteral_1353/*"2.16.840.1.101.3.4.2.3"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17751/*"com.android.billingclient.api.Purchase$PurchaseState"*/,
-    (Il2CppObject *)StringLiteral_1354/*"2.16.840.1.101.3.4.3"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17752/*"com.android.billingclient.api.PurchasesResponseListener"*/,
-    (Il2CppObject *)StringLiteral_1355/*"2.16.840.1.113730.1.1"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17753/*"com.android.billingclient.api.PurchasesUpdatedListener"*/,
-    (Il2CppObject *)StringLiteral_1356/*"2.23.43.1.4.9"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17754/*"com.android.billingclient.api.QueryProductDetailsParams"*/,
-    (Il2CppObject *)StringLiteral_1357/*"2.5.29.10"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17755/*"com.android.billingclient.api.QueryProductDetailsParams$Product"*/,
-    (Il2CppObject *)StringLiteral_1358/*"2.5.29.14"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17756/*"com.aniplex.fategrandorder"*/,
-    (Il2CppObject *)StringLiteral_1359/*"2.5.29.15"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17757/*"com.crashlytics.metadata.unity"*/,
-    (Il2CppObject *)StringLiteral_1347/*"2.16.840.1.101.3.4.1.42"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17758/*"com.crimw.crijavaclasses.CriOutputDeviceObserver"*/,
-    (Il2CppObject *)StringLiteral_1348/*"2.16.840.1.101.3.4.1.45"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17759/*"com.unity"*/,
-    (Il2CppObject *)StringLiteral_1349/*"2.16.840.1.101.3.4.1.5"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17760/*"com.unity.androidnotifications.NotificationCallback"*/,
-    (Il2CppObject *)StringLiteral_1350/*"2.16.840.1.101.3.4.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_17761/*"com.unity.androidnotifications.PostNotificationsPermission"*/,
-    (Il2CppObject *)StringLiteral_1351/*"2.16.840.1.101.3.4.2.1"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_3420/*"CLICK_BACK_QUEST"*/,
-    (Il2CppObject *)StringLiteral_1438/*"5047000:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_3653/*"COMMON_CONFIRM_EXECUTE"*/,
-    (Il2CppObject *)StringLiteral_1304/*"1.3.36.3.3.2.8.1.1.8"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_3654/*"COMMON_CONFIRM_NO"*/,
-    (Il2CppObject *)StringLiteral_1305/*"1.3.36.3.3.2.8.1.1.9"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_3655/*"COMMON_CONFIRM_REMOVE"*/,
-    (Il2CppObject *)StringLiteral_1431/*"5"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_3977/*"CancelButton"*/,
-    (Il2CppObject *)StringLiteral_1364/*"2.5.29.21"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5092/*"DateEnd"*/,
-    (Il2CppObject *)StringLiteral_1198/*"1.2.840.10040.4.3"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_18934/*"event_towerbanner_"*/,
-    (Il2CppObject *)StringLiteral_1342/*"2.16.840.1.101.2.1.1.20"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5374/*"END_SELECTCARD"*/,
-    (Il2CppObject *)StringLiteral_1426/*"408: Request Time-out"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5116/*"Debug_IsQuestReleaseAll"*/,
-    (Il2CppObject *)StringLiteral_1266/*"1.3.132.0.30"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_19017/*"facebookId"*/,
-    (Il2CppObject *)StringLiteral_1436/*"503"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5165/*"Derived attribute's use has to be required if base attribute's use is required."*/,
-    (Il2CppObject *)StringLiteral_1251/*"1.2.840.113549.1.9.16.3.7"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_19041/*"fbInstallReferrer"*/,
-    (Il2CppObject *)StringLiteral_1338/*"2.0.0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5534/*"EVENT_JOIN_COMBINE_MSG_TITLE"*/,
-    (Il2CppObject *)StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_19158/*"follow_assign"*/,
-    (Il2CppObject *)StringLiteral_1250/*"1.2.840.113549.1.9.16.3.6"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5540/*"EVENT_POINT_COMMON_FORMAT"*/,
-    (Il2CppObject *)StringLiteral_1253/*"1.2.840.113549.1.9.21"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5549/*"EVENT_POINT_NONE_INFO"*/,
-    (Il2CppObject *)StringLiteral_1330/*"127.0.0.1"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5550/*"EVENT_POINT_OPEN_REPLASE_REWARD_"*/,
-    (Il2CppObject *)StringLiteral_1328/*"12.5.0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5551/*"EVENT_POINT_RATE_INFO"*/,
-    (Il2CppObject *)StringLiteral_1329/*"127"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5553/*"EVENT_POINT_TOTAL_NUM"*/,
-    (Il2CppObject *)StringLiteral_1260/*"1.2.840.113549.2.4"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5554/*"EVENT_POINT_TOTAL_TITLE"*/,
-    (Il2CppObject *)StringLiteral_1324/*"1053912:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5555/*"EVENT_POINT_VS_WIN_DIALOG_GET"*/,
-    (Il2CppObject *)StringLiteral_1325/*"10703"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_5632/*"EVENT_TRUE"*/,
-    (Il2CppObject *)StringLiteral_1303/*"1.3.36.3.3.2.8.1.1.7"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_7033/*"HH:mm:ss.ffff"*/,
-    (Il2CppObject *)StringLiteral_1434/*"502"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_7446/*"InitMutableValue"*/,
-    (Il2CppObject *)StringLiteral_1435/*"502:"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_8398/*"MAX_FRIEND_HISTORY_NUM"*/,
-    (Il2CppObject *)StringLiteral_1439/*"5047001:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21797/*"normal"*/,
-    (Il2CppObject *)StringLiteral_1313/*"100"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21798/*"normal | italic | bold | bold-and-italic"*/,
-    (Il2CppObject *)StringLiteral_1272/*"1.3.132.0.8"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21799/*"normal | nowrap"*/,
-    (Il2CppObject *)StringLiteral_1314/*"100-continue"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21800/*"normalImage"*/,
-    (Il2CppObject *)StringLiteral_1273/*"1.3.132.0.9"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21801/*"normalize-space"*/,
-    (Il2CppObject *)StringLiteral_1315/*"1015521325"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21803/*"normals"*/,
-    (Il2CppObject *)StringLiteral_1274/*"1.3.132.1.11.1"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21857/*"num1_glow"*/,
-    (Il2CppObject *)StringLiteral_1277/*"1.3.14.3.2.12"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21944/*"onTransactionsRestoredSuccess"*/,
-    (Il2CppObject *)StringLiteral_1398/*"3.7.8"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_21945/*"onUpdateEffect"*/,
-    (Il2CppObject *)StringLiteral_1397/*"3.6BossBattle"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_22511/*"refresh_app_receipt"*/,
-    (Il2CppObject *)StringLiteral_1254/*"1.2.840.113549.1.9.22.1"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_22512/*"refresh_terminal"*/,
-    (Il2CppObject *)StringLiteral_1323/*"1053911:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_9495/*"ORDEAL_CALL_CHAPTER_FOLDER_EVENT_UI_DISP_WAR_IDS"*/,
-    (Il2CppObject *)StringLiteral_1367/*"2.5.4.10"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_9797/*"OptionBoostItemConfirm"*/,
-    (Il2CppObject *)StringLiteral_1423/*"403: Forbidden"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_9938/*"PARTY_ORGANIZATION_CONFIRM_RESTRICTION_MESSAGE"*/,
-    (Il2CppObject *)StringLiteral_1424/*"404"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_10831/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/,
-    (Il2CppObject *)StringLiteral_1429/*"4441"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_10616/*"QUEST_CONFIRM_CONSUME_ITEM_COUNT_CAMPAIGN"*/,
-    (Il2CppObject *)StringLiteral_1428/*"437"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_10930/*"ReadDoneAsync4"*/,
-    (Il2CppObject *)StringLiteral_1427/*"432d18c9-9348-4b90-bfbf-9f2a10e1f15b"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23262/*"stub is not used in Mono"*/,
-    (Il2CppObject *)StringLiteral_1316/*"1053000:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23263/*"style"*/,
-    (Il2CppObject *)StringLiteral_1317/*"1053001:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_11365/*"SERVANT_OUT_RECOVERY_FATIGUE_TEXT"*/,
-    (Il2CppObject *)StringLiteral_1267/*"1.3.132.0.31"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_11367/*"SERVANT_OVER"*/,
-    (Il2CppObject *)StringLiteral_1276/*"1.3.133.16.840.63.0.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_11368/*"SERVANT_PERSONALITY_"*/,
-    (Il2CppObject *)StringLiteral_1268/*"1.3.132.0.32"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_11649/*"SERVANT_STATUS_QUEST_NOT_RELEASED_BECAUSE_DONT_HAVE_SERVANT"*/,
-    (Il2CppObject *)StringLiteral_1440/*"5047002:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23556/*"test"*/,
-    (Il2CppObject *)StringLiteral_1327/*"11814B"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23557/*"testSe"*/,
-    (Il2CppObject *)StringLiteral_1326/*"11"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23558/*"testVoice"*/,
-    (Il2CppObject *)StringLiteral_1320/*"1053901:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23559/*"test_lab"*/,
-    (Il2CppObject *)StringLiteral_1321/*"1053902:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23560/*"testing"*/,
-    (Il2CppObject *)StringLiteral_1322/*"1053910:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23561/*"text"*/,
-    (Il2CppObject *)StringLiteral_1319/*"1053900:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_11767/*"SHOP_BUY_ITEM_HOLD"*/,
-    (Il2CppObject *)StringLiteral_1437/*"503 Auto retry count"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23722/*"treasureDeviceId"*/,
-    (Il2CppObject *)StringLiteral_1337/*"2.0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23723/*"treasureDeviceName"*/,
-    (Il2CppObject *)StringLiteral_1252/*"1.2.840.113549.1.9.20"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23724/*"treasureDeviceRuby"*/,
-    (Il2CppObject *)StringLiteral_1261/*"1.2.840.113549.2.5"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23725/*"treasureDeviceVoiceId"*/,
-    (Il2CppObject *)StringLiteral_1275/*"1.3.132.1.11.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23726/*"treasureId"*/,
-    (Il2CppObject *)StringLiteral_1407/*"3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23727/*"treasure_arms"*/,
-    (Il2CppObject *)StringLiteral_1263/*"1.2.840.113549.3.4"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23728/*"treasure_box_draw"*/,
-    (Il2CppObject *)StringLiteral_1269/*"1.3.132.0.33"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23729/*"treasurechest_bg_{0}"*/,
-    (Il2CppObject *)StringLiteral_1408/*"3D_MAP_CAMERA_MOVE_TIME_CONSTANT"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23730/*"treasurechest_btn"*/,
-    (Il2CppObject *)StringLiteral_1264/*"1.2.840.113549.3.7"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23731/*"treasurechest_btn_info"*/,
-    (Il2CppObject *)StringLiteral_1270/*"1.3.132.0.34"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23732/*"treasurechest_btn_on"*/,
-    (Il2CppObject *)StringLiteral_1409/*"3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23733/*"treasurechest_btn_open"*/,
-    (Il2CppObject *)StringLiteral_1265/*"1.3.132.0.10"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23734/*"treasurechest_btn_txt"*/,
-    (Il2CppObject *)StringLiteral_1271/*"1.3.132.0.35"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_12437/*"Server for uri '"*/,
-    (Il2CppObject *)StringLiteral_1432/*"500"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_23916/*"unity-thumb-min"*/,
-    (Il2CppObject *)StringLiteral_1262/*"1.2.840.113549.3.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_12589/*"SmartSortOrder-"*/,
-    (Il2CppObject *)StringLiteral_1441/*"5047900:100:0"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_13526/*"The OrderedDictionary is readonly and cannot be modified."*/,
-    (Il2CppObject *)StringLiteral_1425/*"404: Not Found"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25253,
+    v242,
     (Il2CppObject *)StringLiteral_1412/*"3des"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    (Il2CppObject *)StringLiteral_1264/*"1.2.840.113549.3.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_16017/*"_TextureRGB"*/,
-    (Il2CppObject *)StringLiteral_1430/*"460"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v242,
+    (Il2CppObject *)StringLiteral_16392/*"aes128"*/,
+    (Il2CppObject *)StringLiteral_1344/*"2.16.840.1.101.3.4.1.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25325,
-    (Il2CppObject *)StringLiteral_1255/*"1.2.840.113549.1.9.3"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v242,
+    (Il2CppObject *)StringLiteral_16393/*"aes128wrap"*/,
+    (Il2CppObject *)StringLiteral_1349/*"2.16.840.1.101.3.4.1.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25326,
-    (Il2CppObject *)StringLiteral_1256/*"1.2.840.113549.1.9.4"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v242,
+    (Il2CppObject *)StringLiteral_16394/*"aes192"*/,
+    (Il2CppObject *)StringLiteral_1345/*"2.16.840.1.101.3.4.1.22"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25327,
-    (Il2CppObject *)StringLiteral_1257/*"1.2.840.113549.1.9.5"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v242,
+    (Il2CppObject *)StringLiteral_16395/*"aes192wrap"*/,
+    (Il2CppObject *)StringLiteral_1346/*"2.16.840.1.101.3.4.1.25"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25328,
-    (Il2CppObject *)StringLiteral_1258/*"1.2.840.113549.1.9.6"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v242,
+    (Il2CppObject *)StringLiteral_16396/*"aes256"*/,
+    (Il2CppObject *)StringLiteral_1347/*"2.16.840.1.101.3.4.1.42"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v250,
-    (Il2CppObject *)StringLiteral_25329,
+    v242,
+    (Il2CppObject *)StringLiteral_16397/*"aes256wrap"*/,
+    (Il2CppObject *)StringLiteral_1348/*"2.16.840.1.101.3.4.1.45"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17096/*"brainpoolP160r1"*/,
+    (Il2CppObject *)StringLiteral_1292/*"1.3.36.3.3.2.8.1.1.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17097/*"brainpoolP160t1"*/,
+    (Il2CppObject *)StringLiteral_1298/*"1.3.36.3.3.2.8.1.1.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17098/*"brainpoolP192r1"*/,
+    (Il2CppObject *)StringLiteral_1299/*"1.3.36.3.3.2.8.1.1.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17099/*"brainpoolP192t1"*/,
+    (Il2CppObject *)StringLiteral_1300/*"1.3.36.3.3.2.8.1.1.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17100/*"brainpoolP224r1"*/,
+    (Il2CppObject *)StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17101/*"brainpoolP224t1"*/,
+    (Il2CppObject *)StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17102/*"brainpoolP256r1"*/,
+    (Il2CppObject *)StringLiteral_1303/*"1.3.36.3.3.2.8.1.1.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17103/*"brainpoolP256t1"*/,
+    (Il2CppObject *)StringLiteral_1304/*"1.3.36.3.3.2.8.1.1.8"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17104/*"brainpoolP320r1"*/,
+    (Il2CppObject *)StringLiteral_1305/*"1.3.36.3.3.2.8.1.1.9"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17105/*"brainpoolP320t1"*/,
+    (Il2CppObject *)StringLiteral_1293/*"1.3.36.3.3.2.8.1.1.10"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17106/*"brainpoolP384r1"*/,
+    (Il2CppObject *)StringLiteral_1294/*"1.3.36.3.3.2.8.1.1.11"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17107/*"brainpoolP384t1"*/,
+    (Il2CppObject *)StringLiteral_1295/*"1.3.36.3.3.2.8.1.1.12"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17108/*"brainpoolP512r1"*/,
+    (Il2CppObject *)StringLiteral_1296/*"1.3.36.3.3.2.8.1.1.13"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_17109/*"brainpoolP512t1"*/,
+    (Il2CppObject *)StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_3273/*"C"*/,
+    (Il2CppObject *)StringLiteral_1381/*"2.5.4.6"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_3509/*"CMS3DESwrap"*/,
+    (Il2CppObject *)StringLiteral_1250/*"1.2.840.113549.1.9.16.3.6"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_3510/*"CMSRC2wrap"*/,
+    (Il2CppObject *)StringLiteral_1251/*"1.2.840.113549.1.9.16.3.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_3511/*"CN"*/,
+    (Il2CppObject *)StringLiteral_1375/*"2.5.4.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_3836/*"CPS"*/,
+    (Il2CppObject *)StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_4902/*"DC"*/,
+    (Il2CppObject *)StringLiteral_1144/*"0.9.2342.19200300.100.1.25"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_18265/*"des"*/,
+    (Il2CppObject *)StringLiteral_1288/*"1.3.14.3.2.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5176/*"Description"*/,
+    (Il2CppObject *)StringLiteral_1370/*"2.5.4.13"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_4925/*"DH"*/,
+    (Il2CppObject *)StringLiteral_1212/*"1.2.840.10046.2.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_18345/*"dnQualifier"*/,
+    (Il2CppObject *)StringLiteral_1379/*"2.5.4.46"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_4973/*"DSA"*/,
+    (Il2CppObject *)StringLiteral_1197/*"1.2.840.10040.4.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_18365/*"dsaSHA1"*/,
+    (Il2CppObject *)StringLiteral_1284/*"1.3.14.3.2.27"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5330/*"E"*/,
+    (Il2CppObject *)StringLiteral_1247/*"1.2.840.113549.1.9.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_18480/*"ec192wapi"*/,
+    (Il2CppObject *)StringLiteral_1196/*"1.2.156.11235.1.1.2.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5336/*"ECC"*/,
+    (Il2CppObject *)StringLiteral_1199/*"1.2.840.10045.2.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5337/*"ECDH_STD_SHA1_KDF"*/,
+    (Il2CppObject *)StringLiteral_1276/*"1.3.133.16.840.63.0.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5338/*"ECDH_STD_SHA256_KDF"*/,
+    (Il2CppObject *)StringLiteral_1274/*"1.3.132.1.11.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5339/*"ECDH_STD_SHA384_KDF"*/,
+    (Il2CppObject *)StringLiteral_1275/*"1.3.132.1.11.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5340/*"ECDSA_P256"*/,
+    (Il2CppObject *)StringLiteral_1206/*"1.2.840.10045.3.1.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5341/*"ECDSA_P384"*/,
+    (Il2CppObject *)StringLiteral_1270/*"1.3.132.0.34"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5342/*"ECDSA_P521"*/,
+    (Il2CppObject *)StringLiteral_1271/*"1.3.132.0.35"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_5416/*"ESDH"*/,
+    (Il2CppObject *)StringLiteral_1249/*"1.2.840.113549.1.9.16.3.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_6780/*"G"*/,
+    (Il2CppObject *)StringLiteral_1377/*"2.5.4.42"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_7184/*"I"*/,
+    (Il2CppObject *)StringLiteral_1378/*"2.5.4.43"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_8059/*"L"*/,
+    (Il2CppObject *)StringLiteral_1382/*"2.5.4.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21077/*"md2"*/,
     (Il2CppObject *)StringLiteral_1259/*"1.2.840.113549.2.2"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  v253 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
-  v253->s_friendlyNameToOid = (struct System_Collections_Generic_Dictionary_string__string__o *)v250;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&v253->s_friendlyNameToOid,
-    (int64_t)v250,
-    v254,
-    v255,
-    v256,
-    v257,
-    v258,
-    v259);
-  v260 = Internal_Cryptography_OidLookup___c_TypeInfo;
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21078/*"md2RSA"*/,
+    (Il2CppObject *)StringLiteral_1218/*"1.2.840.113549.1.1.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21079/*"md4"*/,
+    (Il2CppObject *)StringLiteral_1260/*"1.2.840.113549.2.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21080/*"md4RSA"*/,
+    (Il2CppObject *)StringLiteral_1219/*"1.2.840.113549.1.1.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21081/*"md5"*/,
+    (Il2CppObject *)StringLiteral_1261/*"1.2.840.113549.2.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21083/*"md5RSA"*/,
+    (Il2CppObject *)StringLiteral_1220/*"1.2.840.113549.1.1.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21136/*"mgf1"*/,
+    (Il2CppObject *)StringLiteral_1223/*"1.2.840.113549.1.1.8"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21223/*"mosaicKMandUpdSig"*/,
+    (Il2CppObject *)StringLiteral_1342/*"2.16.840.1.101.2.1.1.20"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21224/*"mosaicUpdatedSig"*/,
+    (Il2CppObject *)StringLiteral_1341/*"2.16.840.1.101.2.1.1.19"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21783/*"nistP192"*/,
+    (Il2CppObject *)StringLiteral_1200/*"1.2.840.10045.3.1.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_21784/*"nistP224"*/,
+    (Il2CppObject *)StringLiteral_1269/*"1.3.132.0.33"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_9133/*"NO_SIGN"*/,
+    (Il2CppObject *)StringLiteral_1312/*"1.3.6.1.5.5.7.6.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_9409/*"O"*/,
+    (Il2CppObject *)StringLiteral_1367/*"2.5.4.10"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_9548/*"OU"*/,
+    (Il2CppObject *)StringLiteral_1368/*"2.5.4.11"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10397/*"Phone"*/,
+    (Il2CppObject *)StringLiteral_1373/*"2.5.4.20"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10189/*"POBox"*/,
+    (Il2CppObject *)StringLiteral_1372/*"2.5.4.18"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10491/*"PostalCode"*/,
+    (Il2CppObject *)StringLiteral_1371/*"2.5.4.17"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22517/*"rc2"*/,
+    (Il2CppObject *)StringLiteral_1262/*"1.2.840.113549.3.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22518/*"rc4"*/,
+    (Il2CppObject *)StringLiteral_1263/*"1.2.840.113549.3.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10923/*"RSA"*/,
+    (Il2CppObject *)StringLiteral_1213/*"1.2.840.113549.1.1.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10924/*"RSAES_OAEP"*/,
+    (Il2CppObject *)StringLiteral_1222/*"1.2.840.113549.1.1.7"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_10925/*"RSASSA-PSS"*/,
+    (Il2CppObject *)StringLiteral_1214/*"1.2.840.113549.1.1.10"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_11184/*"S"*/,
+    (Il2CppObject *)StringLiteral_1383/*"2.5.4.8"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22795/*"secP160k1"*/,
+    (Il2CppObject *)StringLiteral_1273/*"1.3.132.0.9"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22796/*"secP160r1"*/,
+    (Il2CppObject *)StringLiteral_1272/*"1.3.132.0.8"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22797/*"secP160r2"*/,
+    (Il2CppObject *)StringLiteral_1266/*"1.3.132.0.30"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22798/*"secP192k1"*/,
+    (Il2CppObject *)StringLiteral_1267/*"1.3.132.0.31"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22799/*"secP224k1"*/,
+    (Il2CppObject *)StringLiteral_1268/*"1.3.132.0.32"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22800/*"secP256k1"*/,
+    (Il2CppObject *)StringLiteral_1265/*"1.3.132.0.10"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_11300/*"SERIALNUMBER"*/,
+    (Il2CppObject *)StringLiteral_1380/*"2.5.4.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22959/*"sha1"*/,
+    (Il2CppObject *)StringLiteral_1283/*"1.3.14.3.2.26"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22960/*"sha1DSA"*/,
+    (Il2CppObject *)StringLiteral_1198/*"1.2.840.10040.4.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22961/*"sha1ECDSA"*/,
+    (Il2CppObject *)StringLiteral_1207/*"1.2.840.10045.4.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22962/*"sha1RSA"*/,
+    (Il2CppObject *)StringLiteral_1221/*"1.2.840.113549.1.1.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22963/*"sha256"*/,
+    (Il2CppObject *)StringLiteral_1351/*"2.16.840.1.101.3.4.2.1"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22964/*"sha256ECDSA"*/,
+    (Il2CppObject *)StringLiteral_1209/*"1.2.840.10045.4.3.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22965/*"sha256RSA"*/,
+    (Il2CppObject *)StringLiteral_1215/*"1.2.840.113549.1.1.11"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22966/*"sha384"*/,
+    (Il2CppObject *)StringLiteral_1352/*"2.16.840.1.101.3.4.2.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22967/*"sha384ECDSA"*/,
+    (Il2CppObject *)StringLiteral_1210/*"1.2.840.10045.4.3.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22968/*"sha384RSA"*/,
+    (Il2CppObject *)StringLiteral_1216/*"1.2.840.113549.1.1.12"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22969/*"sha512"*/,
+    (Il2CppObject *)StringLiteral_1353/*"2.16.840.1.101.3.4.2.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22970/*"sha512ECDSA"*/,
+    (Il2CppObject *)StringLiteral_1211/*"1.2.840.10045.4.3.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_22971/*"sha512RSA"*/,
+    (Il2CppObject *)StringLiteral_1217/*"1.2.840.113549.1.1.13"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_11971/*"SN"*/,
+    (Il2CppObject *)StringLiteral_1376/*"2.5.4.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_23150/*"specifiedECDSA"*/,
+    (Il2CppObject *)StringLiteral_1208/*"1.2.840.10045.4.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_12117/*"STREET"*/,
+    (Il2CppObject *)StringLiteral_1384/*"2.5.4.9"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_13026/*"T"*/,
+    (Il2CppObject *)StringLiteral_1369/*"2.5.4.12"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24454/*"wtls9"*/,
+    (Il2CppObject *)StringLiteral_1356/*"2.23.43.1.4.9"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_15406/*"X21Address"*/,
+    (Il2CppObject *)StringLiteral_1374/*"2.5.4.24"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24524/*"x962P192v2"*/,
+    (Il2CppObject *)StringLiteral_1201/*"1.2.840.10045.3.1.2"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24525/*"x962P192v3"*/,
+    (Il2CppObject *)StringLiteral_1202/*"1.2.840.10045.3.1.3"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24526/*"x962P239v1"*/,
+    (Il2CppObject *)StringLiteral_1203/*"1.2.840.10045.3.1.4"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24527/*"x962P239v2"*/,
+    (Il2CppObject *)StringLiteral_1204/*"1.2.840.10045.3.1.5"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  System_Collections_Generic_Dictionary_object__object___Add(
+    v242,
+    (Il2CppObject *)StringLiteral_24528/*"x962P239v3"*/,
+    (Il2CppObject *)StringLiteral_1205/*"1.2.840.10045.3.1.6"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  v245 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
+  v245->s_friendlyNameToOid = (struct System_Collections_Generic_Dictionary_string__string__o *)v242;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v245->s_friendlyNameToOid, (int32_t)v242, v246, v247);
+  v248 = Internal_Cryptography_OidLookup___c_TypeInfo;
   s_friendlyNameToOid = Internal_Cryptography_OidLookup_TypeInfo->static_fields->s_friendlyNameToOid;
   if ( !Internal_Cryptography_OidLookup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Internal_Cryptography_OidLookup___c_TypeInfo);
-    v260 = Internal_Cryptography_OidLookup___c_TypeInfo;
+    v248 = Internal_Cryptography_OidLookup___c_TypeInfo;
   }
-  v262 = (Il2CppObject *)v260->static_fields->__9;
-  v263 = (System_Func_T__TResult__o *)sub_1C3B9B0(System_Func_KeyValuePair_string__string___string__TypeInfo);
+  v250 = (Il2CppObject *)v248->static_fields->__9;
+  v251 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_KeyValuePair_string__string___string__TypeInfo);
   System_Func_KeyValuePair_object__object___object____ctor(
-    v263,
-    v262,
+    v251,
+    v250,
     Method_Internal_Cryptography_OidLookup___c___cctor_b__10_0__,
     0LL);
-  v264 = (Il2CppObject *)Internal_Cryptography_OidLookup___c_TypeInfo->static_fields->__9;
-  v265 = (System_Func_T__TResult__o *)sub_1C3B9B0(System_Func_KeyValuePair_string__string___string__TypeInfo);
+  v252 = (Il2CppObject *)Internal_Cryptography_OidLookup___c_TypeInfo->static_fields->__9;
+  v253 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_KeyValuePair_string__string___string__TypeInfo);
   System_Func_KeyValuePair_object__object___object____ctor(
-    v265,
-    v264,
+    v253,
+    v252,
     Method_Internal_Cryptography_OidLookup___c___cctor_b__10_1__,
     0LL);
-  v266 = System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(
+  v254 = System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)s_friendlyNameToOid,
-           (System_Func_TSource__TKey__o *)v263,
-           (System_Func_TSource__TElement__o *)v265,
-           (const MethodInfo_302B2D8 *)Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__string___string__string___);
-  v267 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
-  v267->s_oidToFriendlyName = (struct System_Collections_Generic_Dictionary_string__string__o *)v266;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&v267->s_oidToFriendlyName,
-    (int64_t)v266,
-    v268,
-    v269,
-    v270,
-    v271,
-    v272,
-    v273);
-  v274 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+           (System_Func_TSource__TKey__o *)v251,
+           (System_Func_TSource__TElement__o *)v253,
+           (const MethodInfo_2F3C9F4 *)Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__string___string__string___);
+  v255 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
+  v255->s_oidToFriendlyName = (struct System_Collections_Generic_Dictionary_string__string__o *)v254;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v255->s_oidToFriendlyName, (int32_t)v254, v256, v257);
+  v258 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
-    v274,
-    (const MethodInfo_3354DB8 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  if ( !v274 )
+    v258,
+    (const MethodInfo_3257168 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  if ( !v258 )
 LABEL_18:
-    sub_1C3B9C0(v251, v252);
+    sub_1B4D1EC(v243, v244);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1290/*"1.3.36.3.2.1"*/,
-    (Il2CppObject *)StringLiteral_5116/*"Debug_IsQuestReleaseAll"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1236/*"1.2.840.113549.1.3.1"*/,
+    (Il2CppObject *)StringLiteral_4925/*"DH"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1331/*"16"*/,
-    (Il2CppObject *)StringLiteral_5165/*"Derived attribute's use has to be required if base attribute's use is required."*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1277/*"1.3.14.3.2.12"*/,
+    (Il2CppObject *)StringLiteral_4973/*"DSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1332/*"19"*/,
-    (Il2CppObject *)StringLiteral_23723/*"treasureDeviceName"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1278/*"1.3.14.3.2.13"*/,
+    (Il2CppObject *)StringLiteral_22960/*"sha1DSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1333/*"1B2FA5"*/,
-    (Il2CppObject *)StringLiteral_23735/*"treasurechest_img_bg"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1279/*"1.3.14.3.2.15"*/,
+    (Il2CppObject *)StringLiteral_22972/*"shaRSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1334/*"1st Attack"*/,
-    (Il2CppObject *)StringLiteral_23718/*"treasureBox/draw"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1280/*"1.3.14.3.2.18"*/,
+    (Il2CppObject *)StringLiteral_22955/*"sha"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1335/*"2"*/,
-    (Il2CppObject *)StringLiteral_21800/*"normalImage"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1281/*"1.3.14.3.2.2"*/,
+    (Il2CppObject *)StringLiteral_21080/*"md4RSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1336/*"2 CR found"*/,
-    (Il2CppObject *)StringLiteral_11369/*"SERVANT_POLICY_"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1282/*"1.3.14.3.2.22"*/,
+    (Il2CppObject *)StringLiteral_10926/*"RSA_KEYX"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1339/*"2.0.0_Done"*/,
-    (Il2CppObject *)StringLiteral_23725/*"treasureDeviceVoiceId"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1285/*"1.3.14.3.2.29"*/,
+    (Il2CppObject *)StringLiteral_22962/*"sha1RSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1340/*"2.109.5"*/,
-    (Il2CppObject *)StringLiteral_21803/*"normals"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1286/*"1.3.14.3.2.3"*/,
+    (Il2CppObject *)StringLiteral_21083/*"md5RSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1341/*"2.16.840.1.101.2.1.1.19"*/,
-    (Il2CppObject *)StringLiteral_21800/*"normalImage"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    v258,
+    (Il2CppObject *)StringLiteral_1287/*"1.3.14.3.2.4"*/,
+    (Il2CppObject *)StringLiteral_21080/*"md4RSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
   System_Collections_Generic_Dictionary_object__object___Add(
-    v274,
-    (Il2CppObject *)StringLiteral_1343/*"2.16.840.1.101.3.4.1"*/,
-    (Il2CppObject *)StringLiteral_21798/*"normal | italic | bold | bold-and-italic"*/,
-    (const MethodInfo_3355768 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
-  v275 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
-  v275->s_compatOids = (struct System_Collections_Generic_Dictionary_string__string__o *)v274;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v275->s_compatOids, (int64_t)v274, v276, v277, v278, v279, v280, v281);
+    v258,
+    (Il2CppObject *)StringLiteral_1289/*"1.3.14.7.2.3.1"*/,
+    (Il2CppObject *)StringLiteral_21078/*"md2RSA"*/,
+    (const MethodInfo_3257B18 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+  v259 = Internal_Cryptography_OidLookup_TypeInfo->static_fields;
+  v259->s_compatOids = (struct System_Collections_Generic_Dictionary_string__string__o *)v258;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v259->s_compatOids, (int32_t)v258, v260, v261);
 }
 
 
@@ -1416,33 +1297,33 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeFriendlyNameT
   __int64 *v28; // x8
   System_String_o *v30; // x8
 
-  if ( (byte_4C2BCFB & 1) == 0 )
+  if ( (byte_49C4431 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_6499/*"Failed to create texture because of invalid parameters."*/, *(_QWORD *)&oidGroup);
-    sub_1C3B764(&StringLiteral_1416/*"4.0.30319.17020"*/, v5);
-    sub_1C3B764(&StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/, v6);
-    sub_1C3B764(&StringLiteral_8371/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v7);
-    sub_1C3B764(&StringLiteral_1311/*"1.3.6.1.5.5.7.3.1"*/, v8);
-    sub_1C3B764(&StringLiteral_9184/*"Nested table '{0}' which inherits its namespace cannot have multiple parent tables in different namespaces."*/, v9);
-    sub_1C3B764(&StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/, v10);
-    sub_1C3B764(&StringLiteral_1411/*"3dModelFlag"*/, v11);
-    sub_1C3B764(&StringLiteral_13058/*"TIME_BEFORE_DAYS"*/, v12);
-    sub_1C3B764(&StringLiteral_1422/*"403"*/, v13);
-    sub_1C3B764(&StringLiteral_1414/*"4"*/, v14);
-    sub_1C3B764(&StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/, v15);
-    sub_1C3B764(&StringLiteral_10599/*"QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN"*/, v16);
-    sub_1C3B764(&StringLiteral_3237/*"Brown"*/, v17);
-    sub_1C3B764(&StringLiteral_13338/*"TempRenderTexture"*/, v18);
-    sub_1C3B764(&StringLiteral_4798/*"Creating AndroidJavaObject from "*/, v19);
-    sub_1C3B764(&StringLiteral_13339/*"TempScriptActionRednerTexture"*/, v20);
-    sub_1C3B764(&StringLiteral_1415/*"4."*/, v21);
-    sub_1C3B764(&StringLiteral_9578/*"Obscured Cheating Detector"*/, v22);
-    sub_1C3B764(&StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/, v23);
-    sub_1C3B764(&StringLiteral_1418/*"400"*/, v24);
-    sub_1C3B764(&StringLiteral_20604/*"java/lang/Double"*/, v25);
-    byte_4C2BCFB = 1;
+    sub_1B4CF90(&StringLiteral_6265/*"Extended Key Usage"*/, *(_QWORD *)&oidGroup);
+    sub_1B4CF90(&StringLiteral_1360/*"2.5.29.17"*/, v5);
+    sub_1B4CF90(&StringLiteral_1256/*"1.2.840.113549.1.9.4"*/, v6);
+    sub_1B4CF90(&StringLiteral_8032/*"Key Usage"*/, v7);
+    sub_1B4CF90(&StringLiteral_1257/*"1.2.840.113549.1.9.5"*/, v8);
+    sub_1B4CF90(&StringLiteral_8835/*"Message Digest"*/, v9);
+    sub_1B4CF90(&StringLiteral_1255/*"1.2.840.113549.1.9.3"*/, v10);
+    sub_1B4CF90(&StringLiteral_1355/*"2.16.840.1.113730.1.1"*/, v11);
+    sub_1B4CF90(&StringLiteral_12577/*"Signing Time"*/, v12);
+    sub_1B4CF90(&StringLiteral_1366/*"2.5.29.37"*/, v13);
+    sub_1B4CF90(&StringLiteral_1358/*"2.5.29.14"*/, v14);
+    sub_1B4CF90(&StringLiteral_1248/*"1.2.840.113549.1.9.16.3.3"*/, v15);
+    sub_1B4CF90(&StringLiteral_10173/*"PKCS 7 Data"*/, v16);
+    sub_1B4CF90(&StringLiteral_3095/*"Basic Constraints"*/, v17);
+    sub_1B4CF90(&StringLiteral_12844/*"Subject Alternative Name"*/, v18);
+    sub_1B4CF90(&StringLiteral_4622/*"Content Type"*/, v19);
+    sub_1B4CF90(&StringLiteral_12845/*"Subject Key Identifier"*/, v20);
+    sub_1B4CF90(&StringLiteral_1359/*"2.5.29.15"*/, v21);
+    sub_1B4CF90(&StringLiteral_9214/*"Netscape Cert Type"*/, v22);
+    sub_1B4CF90(&StringLiteral_1243/*"1.2.840.113549.1.7.1"*/, v23);
+    sub_1B4CF90(&StringLiteral_1362/*"2.5.29.19"*/, v24);
+    sub_1B4CF90(&StringLiteral_19903/*"id-smime-alg-3DESwrap"*/, v25);
+    byte_49C4431 = 1;
   }
-  v26 = PrivateImplementationDetails___ComputeStringHash_69824104(friendlyName, 0LL);
+  v26 = PrivateImplementationDetails___ComputeStringHash_67573260(friendlyName, 0LL);
   if ( v26 > 0x751680DD )
   {
     if ( v26 > 0xB4301663 )
@@ -1450,16 +1331,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeFriendlyNameT
       switch ( v26 )
       {
         case 0xB85A3360:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_6499/*"Failed to create texture because of invalid parameters."*/, 0LL);
-          v28 = &StringLiteral_1422/*"403"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_6265/*"Extended Key Usage"*/, 0LL);
+          v28 = &StringLiteral_1366/*"2.5.29.37"*/;
           break;
         case 0xCCB33EB4:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_9184/*"Nested table '{0}' which inherits its namespace cannot have multiple parent tables in different namespaces."*/, 0LL);
-          v28 = &StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_8835/*"Message Digest"*/, 0LL);
+          v28 = &StringLiteral_1256/*"1.2.840.113549.1.9.4"*/;
           break;
         case 0xE2748DE9:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_20604/*"java/lang/Double"*/, 0LL);
-          v28 = &StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_19903/*"id-smime-alg-3DESwrap"*/, 0LL);
+          v28 = &StringLiteral_1248/*"1.2.840.113549.1.9.16.3.3"*/;
           break;
         default:
           return 0LL;
@@ -1470,16 +1351,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeFriendlyNameT
       switch ( v26 )
       {
         case 0x953B2236:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_4798/*"Creating AndroidJavaObject from "*/, 0LL);
-          v28 = &StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_4622/*"Content Type"*/, 0LL);
+          v28 = &StringLiteral_1255/*"1.2.840.113549.1.9.3"*/;
           break;
         case 0x9DCF2034:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_9578/*"Obscured Cheating Detector"*/, 0LL);
-          v28 = &StringLiteral_1411/*"3dModelFlag"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_9214/*"Netscape Cert Type"*/, 0LL);
+          v28 = &StringLiteral_1355/*"2.16.840.1.113730.1.1"*/;
           break;
         case 0xB4301663:
-          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_13338/*"TempRenderTexture"*/, 0LL);
-          v28 = &StringLiteral_1416/*"4.0.30319.17020"*/;
+          v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_12844/*"Subject Alternative Name"*/, 0LL);
+          v28 = &StringLiteral_1360/*"2.5.29.17"*/;
           break;
         default:
           return 0LL;
@@ -1491,16 +1372,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeFriendlyNameT
     switch ( v26 )
     {
       case 0x5BEE62EFu:
-        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_13339/*"TempScriptActionRednerTexture"*/, 0LL);
-        v28 = &StringLiteral_1414/*"4"*/;
+        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_12845/*"Subject Key Identifier"*/, 0LL);
+        v28 = &StringLiteral_1358/*"2.5.29.14"*/;
         break;
       case 0x5F357EFDu:
-        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_13058/*"TIME_BEFORE_DAYS"*/, 0LL);
-        v28 = &StringLiteral_1311/*"1.3.6.1.5.5.7.3.1"*/;
+        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_12577/*"Signing Time"*/, 0LL);
+        v28 = &StringLiteral_1257/*"1.2.840.113549.1.9.5"*/;
         break;
       case 0x751680DDu:
-        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_3237/*"Brown"*/, 0LL);
-        v28 = &StringLiteral_1418/*"400"*/;
+        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_3095/*"Basic Constraints"*/, 0LL);
+        v28 = &StringLiteral_1362/*"2.5.29.19"*/;
         break;
       default:
         return 0LL;
@@ -1512,14 +1393,14 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeFriendlyNameT
     {
       if ( v26 == 1440264225 )
       {
-        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_10599/*"QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN"*/, 0LL);
-        v28 = &StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/;
+        v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_10173/*"PKCS 7 Data"*/, 0LL);
+        v28 = &StringLiteral_1243/*"1.2.840.113549.1.7.1"*/;
         goto LABEL_29;
       }
       return 0LL;
     }
-    v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_8371/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, 0LL);
-    v28 = &StringLiteral_1415/*"4."*/;
+    v27 = System_String__op_Equality(friendlyName, (System_String_o *)StringLiteral_8032/*"Key Usage"*/, 0LL);
+    v28 = &StringLiteral_1359/*"2.5.29.15"*/;
   }
 LABEL_29:
   v30 = (System_String_o *)*v28;
@@ -1563,33 +1444,33 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeOidToFriendly
   __int64 *v28; // x8
   System_String_o *v30; // x8
 
-  if ( (byte_4C2BCFA & 1) == 0 )
+  if ( (byte_49C4430 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_6499/*"Failed to create texture because of invalid parameters."*/, *(_QWORD *)&oidGroup);
-    sub_1C3B764(&StringLiteral_1416/*"4.0.30319.17020"*/, v5);
-    sub_1C3B764(&StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/, v6);
-    sub_1C3B764(&StringLiteral_8371/*"MATERIAL_MAP_EPILOGUE_TITLE"*/, v7);
-    sub_1C3B764(&StringLiteral_1311/*"1.3.6.1.5.5.7.3.1"*/, v8);
-    sub_1C3B764(&StringLiteral_9184/*"Nested table '{0}' which inherits its namespace cannot have multiple parent tables in different namespaces."*/, v9);
-    sub_1C3B764(&StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/, v10);
-    sub_1C3B764(&StringLiteral_1411/*"3dModelFlag"*/, v11);
-    sub_1C3B764(&StringLiteral_13058/*"TIME_BEFORE_DAYS"*/, v12);
-    sub_1C3B764(&StringLiteral_1422/*"403"*/, v13);
-    sub_1C3B764(&StringLiteral_1414/*"4"*/, v14);
-    sub_1C3B764(&StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/, v15);
-    sub_1C3B764(&StringLiteral_10599/*"QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN"*/, v16);
-    sub_1C3B764(&StringLiteral_3237/*"Brown"*/, v17);
-    sub_1C3B764(&StringLiteral_13338/*"TempRenderTexture"*/, v18);
-    sub_1C3B764(&StringLiteral_4798/*"Creating AndroidJavaObject from "*/, v19);
-    sub_1C3B764(&StringLiteral_13339/*"TempScriptActionRednerTexture"*/, v20);
-    sub_1C3B764(&StringLiteral_1415/*"4."*/, v21);
-    sub_1C3B764(&StringLiteral_9578/*"Obscured Cheating Detector"*/, v22);
-    sub_1C3B764(&StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/, v23);
-    sub_1C3B764(&StringLiteral_1418/*"400"*/, v24);
-    sub_1C3B764(&StringLiteral_20604/*"java/lang/Double"*/, v25);
-    byte_4C2BCFA = 1;
+    sub_1B4CF90(&StringLiteral_6265/*"Extended Key Usage"*/, *(_QWORD *)&oidGroup);
+    sub_1B4CF90(&StringLiteral_1360/*"2.5.29.17"*/, v5);
+    sub_1B4CF90(&StringLiteral_1256/*"1.2.840.113549.1.9.4"*/, v6);
+    sub_1B4CF90(&StringLiteral_8032/*"Key Usage"*/, v7);
+    sub_1B4CF90(&StringLiteral_1257/*"1.2.840.113549.1.9.5"*/, v8);
+    sub_1B4CF90(&StringLiteral_8835/*"Message Digest"*/, v9);
+    sub_1B4CF90(&StringLiteral_1255/*"1.2.840.113549.1.9.3"*/, v10);
+    sub_1B4CF90(&StringLiteral_1355/*"2.16.840.1.113730.1.1"*/, v11);
+    sub_1B4CF90(&StringLiteral_12577/*"Signing Time"*/, v12);
+    sub_1B4CF90(&StringLiteral_1366/*"2.5.29.37"*/, v13);
+    sub_1B4CF90(&StringLiteral_1358/*"2.5.29.14"*/, v14);
+    sub_1B4CF90(&StringLiteral_1248/*"1.2.840.113549.1.9.16.3.3"*/, v15);
+    sub_1B4CF90(&StringLiteral_10173/*"PKCS 7 Data"*/, v16);
+    sub_1B4CF90(&StringLiteral_3095/*"Basic Constraints"*/, v17);
+    sub_1B4CF90(&StringLiteral_12844/*"Subject Alternative Name"*/, v18);
+    sub_1B4CF90(&StringLiteral_4622/*"Content Type"*/, v19);
+    sub_1B4CF90(&StringLiteral_12845/*"Subject Key Identifier"*/, v20);
+    sub_1B4CF90(&StringLiteral_1359/*"2.5.29.15"*/, v21);
+    sub_1B4CF90(&StringLiteral_9214/*"Netscape Cert Type"*/, v22);
+    sub_1B4CF90(&StringLiteral_1243/*"1.2.840.113549.1.7.1"*/, v23);
+    sub_1B4CF90(&StringLiteral_1362/*"2.5.29.19"*/, v24);
+    sub_1B4CF90(&StringLiteral_19903/*"id-smime-alg-3DESwrap"*/, v25);
+    byte_49C4430 = 1;
   }
-  v26 = PrivateImplementationDetails___ComputeStringHash_69824104(oid, 0LL);
+  v26 = PrivateImplementationDetails___ComputeStringHash_67573260(oid, 0LL);
   if ( v26 > 0xC67AB912 )
   {
     if ( v26 > 0xD20A3896 )
@@ -1597,16 +1478,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeOidToFriendly
       switch ( v26 )
       {
         case 0xD30A3A29:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1415/*"4."*/, 0LL);
-          v28 = &StringLiteral_8371/*"MATERIAL_MAP_EPILOGUE_TITLE"*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1359/*"2.5.29.15"*/, 0LL);
+          v28 = &StringLiteral_8032/*"Key Usage"*/;
           break;
         case 0xDC06204E:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1411/*"3dModelFlag"*/, 0LL);
-          v28 = &StringLiteral_9578/*"Obscured Cheating Detector"*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1355/*"2.16.840.1.113730.1.1"*/, 0LL);
+          v28 = &StringLiteral_9214/*"Netscape Cert Type"*/;
           break;
         case 0xDF0A4D0D:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1418/*"400"*/, 0LL);
-          v28 = &StringLiteral_3237/*"Brown"*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1362/*"2.5.29.19"*/, 0LL);
+          v28 = &StringLiteral_3095/*"Basic Constraints"*/;
           break;
         default:
           return 0LL;
@@ -1617,16 +1498,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeOidToFriendly
       switch ( v26 )
       {
         case 0xD105B9D5:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1422/*"403"*/, 0LL);
-          v28 = &StringLiteral_6499/*"Failed to create texture because of invalid parameters."*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1366/*"2.5.29.37"*/, 0LL);
+          v28 = &StringLiteral_6265/*"Extended Key Usage"*/;
           break;
         case 0xD10A3703:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1416/*"4.0.30319.17020"*/, 0LL);
-          v28 = &StringLiteral_13338/*"TempRenderTexture"*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1360/*"2.5.29.17"*/, 0LL);
+          v28 = &StringLiteral_12844/*"Subject Alternative Name"*/;
           break;
         case 0xD20A3896:
-          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1414/*"4"*/, 0LL);
-          v28 = &StringLiteral_13339/*"TempScriptActionRednerTexture"*/;
+          v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1358/*"2.5.29.14"*/, 0LL);
+          v28 = &StringLiteral_12845/*"Subject Key Identifier"*/;
           break;
         default:
           return 0LL;
@@ -1638,16 +1519,16 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeOidToFriendly
     switch ( v26 )
     {
       case 0xACE04C23:
-        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1310/*"1.3.6.1.5.5.7.2.1"*/, 0LL);
-        v28 = &StringLiteral_9184/*"Nested table '{0}' which inherits its namespace cannot have multiple parent tables in different namespaces."*/;
+        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1256/*"1.2.840.113549.1.9.4"*/, 0LL);
+        v28 = &StringLiteral_8835/*"Message Digest"*/;
         break;
       case 0xB1E05402:
-        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/, 0LL);
-        v28 = &StringLiteral_4798/*"Creating AndroidJavaObject from "*/;
+        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1255/*"1.2.840.113549.1.9.3"*/, 0LL);
+        v28 = &StringLiteral_4622/*"Content Type"*/;
         break;
       case 0xC67AB912:
-        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1302/*"1.3.36.3.3.2.8.1.1.6"*/, 0LL);
-        v28 = &StringLiteral_20604/*"java/lang/Double"*/;
+        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1248/*"1.2.840.113549.1.9.16.3.3"*/, 0LL);
+        v28 = &StringLiteral_19903/*"id-smime-alg-3DESwrap"*/;
         break;
       default:
         return 0LL;
@@ -1659,14 +1540,14 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__NativeOidToFriendly
     {
       if ( v26 == 2095896238 )
       {
-        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1297/*"1.3.36.3.3.2.8.1.1.14"*/, 0LL);
-        v28 = &StringLiteral_10599/*"QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN"*/;
+        v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1243/*"1.2.840.113549.1.7.1"*/, 0LL);
+        v28 = &StringLiteral_10173/*"PKCS 7 Data"*/;
         goto LABEL_29;
       }
       return 0LL;
     }
-    v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1311/*"1.3.6.1.5.5.7.3.1"*/, 0LL);
-    v28 = &StringLiteral_13058/*"TIME_BEFORE_DAYS"*/;
+    v27 = System_String__op_Equality(oid, (System_String_o *)StringLiteral_1257/*"1.2.840.113549.1.9.5"*/, 0LL);
+    v28 = &StringLiteral_12577/*"Signing Time"*/;
   }
 LABEL_29:
   v30 = (System_String_o *)*v28;
@@ -1706,25 +1587,25 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToFriendlyName(
   __int64 v19; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C2BCF8 & 1) == 0 )
+  if ( (byte_49C442E & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__,
       *(_QWORD *)&oidGroup);
-    sub_1C3B764(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v6);
-    sub_1C3B764(&Internal_Cryptography_OidLookup_TypeInfo, v7);
-    byte_4C2BCF8 = 1;
+    sub_1B4CF90(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v6);
+    sub_1B4CF90(&Internal_Cryptography_OidLookup_TypeInfo, v7);
+    byte_49C442E = 1;
   }
   value = 0LL;
   if ( !oid )
   {
-    v16 = sub_1C3B778(&System_ArgumentNullException_TypeInfo);
-    v17 = (System_ArgumentNullException_o *)sub_1C3B9B0(v16);
-    v18 = (System_String_o *)sub_1C3B778(&StringLiteral_22680/*"sandbox"*/);
-    System_ArgumentNullException___ctor_63971088(v17, v18, 0LL);
-    v19 = sub_1C3B778(&Method_Internal_Cryptography_OidLookup_ToFriendlyName__);
-    sub_1C3B88C(v17, v19);
+    v16 = sub_1B4CFA4(&System_ArgumentNullException_TypeInfo);
+    v17 = (System_ArgumentNullException_o *)sub_1B4D1DC(v16);
+    v18 = (System_String_o *)sub_1B4CFA4(&StringLiteral_21945/*"oid"*/);
+    System_ArgumentNullException___ctor_62091668(v17, v18, 0LL);
+    v19 = sub_1B4CFA4(&Method_Internal_Cryptography_OidLookup_ToFriendlyName__);
+    sub_1B4D0B8(v17, v19);
   }
   v8 = Internal_Cryptography_OidLookup_TypeInfo;
   if ( !Internal_Cryptography_OidLookup_TypeInfo->_2.cctor_finished )
@@ -1744,7 +1625,7 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToFriendlyName(
           (System_Collections_Generic_Dictionary_object__object__o *)s_oidToFriendlyName,
           (Il2CppObject *)oid,
           &value,
-          (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+          (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
   {
     v10 = Internal_Cryptography_OidLookup_TypeInfo;
     if ( !Internal_Cryptography_OidLookup_TypeInfo->_2.cctor_finished )
@@ -1759,7 +1640,7 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToFriendlyName(
             (System_Collections_Generic_Dictionary_object__object__o *)s_oidToFriendlyName,
             (Il2CppObject *)oid,
             &value,
-            (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+            (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
     {
       v11 = Internal_Cryptography_OidLookup_TypeInfo;
       if ( !Internal_Cryptography_OidLookup_TypeInfo->_2.cctor_finished )
@@ -1774,7 +1655,7 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToFriendlyName(
               s_oidToFriendlyName,
               (Il2CppObject *)oid,
               &value,
-              (const MethodInfo_327C5A4 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__) )
+              (const MethodInfo_31806A4 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__) )
       {
         if ( !Internal_Cryptography_OidLookup_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(Internal_Cryptography_OidLookup_TypeInfo);
@@ -1794,11 +1675,11 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToFriendlyName(
               s_oidToFriendlyName,
               (Il2CppObject *)oid,
               value,
-              (const MethodInfo_327BF20 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__);
+              (const MethodInfo_3180020 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__);
             return (System_String_o *)value;
           }
 LABEL_25:
-          sub_1C3B9C0(s_oidToFriendlyName, *(_QWORD *)&oidGroup);
+          sub_1B4D1EC(s_oidToFriendlyName, *(_QWORD *)&oidGroup);
         }
       }
     }
@@ -1830,25 +1711,25 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToOid(
   __int64 v18; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C2BCF9 & 1) == 0 )
+  if ( (byte_49C442F & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__,
       *(_QWORD *)&oidGroup);
-    sub_1C3B764(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v6);
-    sub_1C3B764(&Internal_Cryptography_OidLookup_TypeInfo, v7);
-    byte_4C2BCF9 = 1;
+    sub_1B4CF90(&Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__, v6);
+    sub_1B4CF90(&Internal_Cryptography_OidLookup_TypeInfo, v7);
+    byte_49C442F = 1;
   }
   value = 0LL;
   if ( !friendlyName )
   {
-    v15 = sub_1C3B778(&System_ArgumentNullException_TypeInfo);
-    v16 = (System_ArgumentNullException_o *)sub_1C3B9B0(v15);
-    v17 = (System_String_o *)sub_1C3B778(&StringLiteral_20038/*"img_parameter_B"*/);
-    System_ArgumentNullException___ctor_63971088(v16, v17, 0LL);
-    v18 = sub_1C3B778(&Method_Internal_Cryptography_OidLookup_ToOid__);
-    sub_1C3B88C(v16, v18);
+    v15 = sub_1B4CFA4(&System_ArgumentNullException_TypeInfo);
+    v16 = (System_ArgumentNullException_o *)sub_1B4D1DC(v15);
+    v17 = (System_String_o *)sub_1B4CFA4(&StringLiteral_19347/*"friendlyName"*/);
+    System_ArgumentNullException___ctor_62091668(v16, v17, 0LL);
+    v18 = sub_1B4CFA4(&Method_Internal_Cryptography_OidLookup_ToOid__);
+    sub_1B4D0B8(v16, v18);
   }
   if ( !friendlyName->fields._stringLength )
     return 0LL;
@@ -1870,7 +1751,7 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToOid(
          s_friendlyNameToOid,
          (Il2CppObject *)friendlyName,
          &value,
-         (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+         (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
   {
     return (System_String_o *)value;
   }
@@ -1887,7 +1768,7 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToOid(
          (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)s_friendlyNameToOid,
          (Il2CppObject *)friendlyName,
          &value,
-         (const MethodInfo_327C5A4 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__) )
+         (const MethodInfo_31806A4 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryGetValue__) )
   {
     return (System_String_o *)value;
   }
@@ -1910,11 +1791,11 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup__ToOid(
         (System_Collections_Concurrent_ConcurrentDictionary_TKey__TValue__o *)s_friendlyNameToOid,
         (Il2CppObject *)friendlyName,
         value,
-        (const MethodInfo_327BF20 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__);
+        (const MethodInfo_3180020 *)Method_System_Collections_Concurrent_ConcurrentDictionary_string__string__TryAdd__);
       return (System_String_o *)value;
     }
 LABEL_25:
-    sub_1C3B9C0(s_friendlyNameToOid, *(_QWORD *)&oidGroup);
+    sub_1B4D1EC(s_friendlyNameToOid, *(_QWORD *)&oidGroup);
   }
   return result;
 }
@@ -1924,30 +1805,18 @@ void __fastcall Internal_Cryptography_OidLookup___c___cctor(const MethodInfo *me
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C2BCFD & 1) == 0 )
+  if ( (byte_49C4433 & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Cryptography_OidLookup___c_TypeInfo, v1);
-    byte_4C2BCFD = 1;
+    sub_1B4CF90(&Internal_Cryptography_OidLookup___c_TypeInfo, v1);
+    byte_49C4433 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(Internal_Cryptography_OidLookup___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(Internal_Cryptography_OidLookup___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   Internal_Cryptography_OidLookup___c_TypeInfo->static_fields->__9 = (struct Internal_Cryptography_OidLookup___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)Internal_Cryptography_OidLookup___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)Internal_Cryptography_OidLookup___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1967,10 +1836,10 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup___c____cctor_b__10_0
   System_String_o *value; // x19
 
   value = kvp.fields.value;
-  if ( (byte_4C2BCFE & 1) == 0 )
+  if ( (byte_49C4434 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, kvp.fields.key);
-    byte_4C2BCFE = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, kvp.fields.key);
+    byte_49C4434 = 1;
   }
   return value;
 }
@@ -1984,10 +1853,10 @@ System_String_o *__fastcall Internal_Cryptography_OidLookup___c____cctor_b__10_1
   System_String_o *key; // x19
 
   key = kvp.fields.key;
-  if ( (byte_4C2BCFF & 1) == 0 )
+  if ( (byte_49C4435 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, kvp.fields.key);
-    byte_4C2BCFF = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, kvp.fields.key);
+    byte_49C4435 = 1;
   }
   return key;
 }
@@ -2012,181 +1881,115 @@ void __fastcall Internal_Cryptography_Pal_CertificateData___ctor(
   __int64 v16; // x0
   System_Security_Cryptography_CryptographicException_o *v17; // x19
   struct System_Byte_array *IntegerBytes; // x0
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  System_Security_Cryptography_DerSequenceReader_o *v25; // x23
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  System_Security_Cryptography_DerSequenceReader_o *v21; // x23
   struct System_String_o *OidAsString; // x0
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
   struct System_Byte_array *NextEncodedValue; // x1
-  _QWORD *v40; // x24
-  __int64 v41; // x8
-  __int64 v42; // x0
-  __int64 v43; // x0
-  System_Byte_array *v44; // x23
-  System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *v45; // x24
-  int64_t v46; // x2
-  int32_t v47; // w3
-  System_String_o *v48; // x4
-  BattleSetupInfo_o *v49; // x5
-  FollowerInfo_o *v50; // x6
-  PartyListViewItem_o *v51; // x7
-  System_Security_Cryptography_DerSequenceReader_o *v52; // x23
-  System_Byte_array *v53; // x23
-  System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *v54; // x24
-  int64_t v55; // x2
-  int32_t v56; // w3
-  System_String_o *v57; // x4
-  BattleSetupInfo_o *v58; // x5
-  FollowerInfo_o *v59; // x6
-  PartyListViewItem_o *v60; // x7
-  struct System_Byte_array *v61; // x0
-  int64_t v62; // x2
-  int32_t v63; // w3
-  System_String_o *v64; // x4
-  BattleSetupInfo_o *v65; // x5
-  FollowerInfo_o *v66; // x6
-  PartyListViewItem_o *v67; // x7
+  _QWORD *v28; // x24
+  __int64 v29; // x8
+  __int64 v30; // x0
+  __int64 v31; // x0
+  System_Byte_array *v32; // x23
+  System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *v33; // x24
+  int32_t v34; // w2
+  const MethodInfo *v35; // x3
+  System_Security_Cryptography_DerSequenceReader_o *v36; // x23
+  System_Byte_array *v37; // x23
+  System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *v38; // x24
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  struct System_Byte_array *v41; // x0
+  int32_t v42; // w2
+  const MethodInfo *v43; // x3
   System_Byte_array *SubjectPublicKeyInfo; // x24
-  System_Security_Cryptography_DerSequenceReader_o *v69; // x23
-  System_Security_Cryptography_DerSequenceReader_o *v70; // x24
-  struct System_String_o *v71; // x0
-  int64_t v72; // x2
-  int32_t v73; // w3
-  System_String_o *v74; // x4
-  BattleSetupInfo_o *v75; // x5
-  FollowerInfo_o *v76; // x6
-  PartyListViewItem_o *v77; // x7
-  int64_t v78; // x2
-  int32_t v79; // w3
-  System_String_o *v80; // x4
-  BattleSetupInfo_o *v81; // x5
-  FollowerInfo_o *v82; // x6
-  PartyListViewItem_o *v83; // x7
-  struct System_Byte_array *v84; // x1
-  _QWORD *v85; // x25
-  __int64 v86; // x8
-  __int64 v87; // x0
-  __int64 v88; // x0
+  System_Security_Cryptography_DerSequenceReader_o *v45; // x23
+  System_Security_Cryptography_DerSequenceReader_o *v46; // x24
+  struct System_String_o *v47; // x0
+  int32_t v48; // w2
+  const MethodInfo *v49; // x3
+  int32_t v50; // w2
+  const MethodInfo *v51; // x3
+  struct System_Byte_array *v52; // x1
+  _QWORD *v53; // x25
+  __int64 v54; // x8
+  __int64 v55; // x0
+  __int64 v56; // x0
   struct System_Byte_array *BitString; // x0
-  int64_t v90; // x2
-  int32_t v91; // w3
-  System_String_o *v92; // x4
-  BattleSetupInfo_o *v93; // x5
-  FollowerInfo_o *v94; // x6
-  PartyListViewItem_o *v95; // x7
-  int64_t v96; // x2
-  int32_t v97; // w3
-  System_String_o *v98; // x4
-  BattleSetupInfo_o *v99; // x5
-  FollowerInfo_o *v100; // x6
-  PartyListViewItem_o *v101; // x7
-  struct System_Byte_array *v102; // x1
+  int32_t v58; // w2
+  const MethodInfo *v59; // x3
+  int32_t v60; // w2
+  const MethodInfo *v61; // x3
+  struct System_Byte_array *v62; // x0
+  int32_t v63; // w1
   struct System_Byte_array **p_IssuerUniqueId; // x0
-  int64_t v104; // x2
-  int32_t v105; // w3
-  System_String_o *v106; // x4
-  BattleSetupInfo_o *v107; // x5
-  FollowerInfo_o *v108; // x6
-  PartyListViewItem_o *v109; // x7
-  struct System_Byte_array *v110; // x1
+  int32_t v65; // w2
+  const MethodInfo *v66; // x3
+  struct System_Byte_array *v67; // x0
+  int32_t v68; // w1
   struct System_Byte_array **p_SubjectUniqueId; // x0
-  System_Collections_Generic_List_object__o *v112; // x24
-  int64_t v113; // x2
-  int32_t v114; // w3
-  System_String_o *v115; // x4
-  BattleSetupInfo_o *v116; // x5
-  FollowerInfo_o *v117; // x6
-  PartyListViewItem_o *v118; // x7
-  System_Security_Cryptography_DerSequenceReader_o *v119; // x24
-  System_Security_Cryptography_DerSequenceReader_o *v120; // x25
-  System_String_o *v121; // x28
-  bool v122; // w29
+  System_Collections_Generic_List_object__o *v70; // x24
+  int32_t v71; // w2
+  const MethodInfo *v72; // x3
+  System_Security_Cryptography_DerSequenceReader_o *v73; // x24
+  System_Security_Cryptography_DerSequenceReader_o *v74; // x25
+  System_String_o *v75; // x28
+  bool v76; // w29
   System_Byte_array *OctetString; // x0
   System_Collections_Generic_List_object__o *Extensions; // x26
-  System_Byte_array *v125; // x19
-  System_Security_Cryptography_X509Certificates_X509Extension_o *v126; // x27
-  int64_t v127; // x2
-  int32_t v128; // w3
-  System_String_o *v129; // x4
-  BattleSetupInfo_o *v130; // x5
-  FollowerInfo_o *v131; // x6
-  PartyListViewItem_o *v132; // x7
+  System_Byte_array *v79; // x19
+  System_Security_Cryptography_X509Certificates_X509Extension_o *v80; // x27
+  int32_t v81; // w2
+  const MethodInfo *v82; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v134; // x9
+  _QWORD *v84; // x9
   __int64 size; // x10
-  Il2CppClass **v136; // x0
-  __int64 v137; // x0
-  System_String_o *v138; // x0
-  __int64 v139; // x0
-  System_Security_Cryptography_DerSequenceReader_o *v140; // x22
-  struct System_String_o *v141; // x0
-  int64_t v142; // x2
-  int32_t v143; // w3
-  System_String_o *v144; // x4
-  BattleSetupInfo_o *v145; // x5
-  FollowerInfo_o *v146; // x6
-  PartyListViewItem_o *v147; // x7
-  int64_t v148; // x2
-  int32_t v149; // w3
-  System_String_o *v150; // x4
-  BattleSetupInfo_o *v151; // x5
-  FollowerInfo_o *v152; // x6
-  PartyListViewItem_o *v153; // x7
-  struct System_Byte_array *v154; // x1
-  _QWORD *v155; // x23
-  __int64 v156; // x8
-  __int64 v157; // x0
-  __int64 v158; // x0
-  struct System_Byte_array *v159; // x0
-  int64_t v160; // x2
-  int32_t v161; // w3
-  System_String_o *v162; // x4
-  BattleSetupInfo_o *v163; // x5
-  FollowerInfo_o *v164; // x6
-  PartyListViewItem_o *v165; // x7
-  int64_t v166; // x2
-  int32_t v167; // w3
-  System_String_o *v168; // x4
-  BattleSetupInfo_o *v169; // x5
-  FollowerInfo_o *v170; // x6
-  PartyListViewItem_o *v171; // x7
-  struct System_Byte_array *v172; // [xsp+8h] [xbp-68h]
+  Il2CppClass **v86; // x0
+  __int64 v87; // x0
+  System_String_o *v88; // x0
+  __int64 v89; // x0
+  System_Security_Cryptography_DerSequenceReader_o *v90; // x22
+  struct System_String_o *v91; // x0
+  int32_t v92; // w2
+  const MethodInfo *v93; // x3
+  int32_t v94; // w2
+  const MethodInfo *v95; // x3
+  struct System_Byte_array *v96; // x1
+  _QWORD *v97; // x23
+  __int64 v98; // x8
+  __int64 v99; // x0
+  __int64 v100; // x0
+  struct System_Byte_array *v101; // x0
+  int32_t v102; // w2
+  const MethodInfo *v103; // x3
+  int32_t v104; // w2
+  const MethodInfo *v105; // x3
+  struct System_Byte_array *v106; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C2BD00 & 1) == 0 )
+  if ( (byte_49C4436 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Array_Empty_byte___, rawData);
-    sub_1C3B764(&System_Security_Cryptography_DerSequenceReader_TypeInfo, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_X509Extension__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_X509Extension___ctor__, v7);
-    sub_1C3B764(&System_Collections_Generic_List_X509Extension__TypeInfo, v8);
-    sub_1C3B764(&System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo, v9);
-    sub_1C3B764(&System_Security_Cryptography_X509Certificates_X509Extension_TypeInfo, v10);
-    byte_4C2BD00 = 1;
+    sub_1B4CF90(&Method_System_Array_Empty_byte___, rawData);
+    sub_1B4CF90(&System_Security_Cryptography_DerSequenceReader_TypeInfo, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_X509Extension__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_X509Extension___ctor__, v7);
+    sub_1B4CF90(&System_Collections_Generic_List_X509Extension__TypeInfo, v8);
+    sub_1B4CF90(&System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo, v9);
+    sub_1B4CF90(&System_Security_Cryptography_X509Certificates_X509Extension_TypeInfo, v10);
+    byte_49C4436 = 1;
   }
-  v11 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1C3B9B0(System_Security_Cryptography_DerSequenceReader_TypeInfo);
-  System_Security_Cryptography_DerSequenceReader___ctor_70061164(v11, rawData, 0LL);
+  v11 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1B4D1DC(System_Security_Cryptography_DerSequenceReader_TypeInfo);
+  System_Security_Cryptography_DerSequenceReader___ctor(v11, rawData, 0LL);
   if ( !v11 )
     goto LABEL_86;
   Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v11, 0LL);
   if ( !Sequence )
     goto LABEL_86;
   v14 = Sequence;
-  v172 = rawData;
+  v106 = rawData;
   if ( System_Security_Cryptography_DerSequenceReader__PeekTag(Sequence, 0LL) == 160 )
   {
     Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v14, 0LL);
@@ -2196,8 +1999,8 @@ void __fastcall Internal_Cryptography_Pal_CertificateData___ctor(
     this->fields.Version = Integer;
     if ( Integer >= 3 )
     {
-      v16 = sub_1C3B778(&System_Security_Cryptography_CryptographicException_TypeInfo);
-      v17 = (System_Security_Cryptography_CryptographicException_o *)sub_1C3B9B0(v16);
+      v16 = sub_1B4CFA4(&System_Security_Cryptography_CryptographicException_TypeInfo);
+      v17 = (System_Security_Cryptography_CryptographicException_o *)sub_1B4D1DC(v16);
       System_Security_Cryptography_CryptographicException___ctor(v17, 0LL);
       goto LABEL_69;
     }
@@ -2210,199 +2013,157 @@ void __fastcall Internal_Cryptography_Pal_CertificateData___ctor(
   }
   IntegerBytes = System_Security_Cryptography_DerSequenceReader__ReadIntegerBytes(v14, 0LL);
   this->fields.SerialNumber = IntegerBytes;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.SerialNumber,
-    (int64_t)IntegerBytes,
-    v19,
-    v20,
-    v21,
-    v22,
-    v23,
-    v24);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.SerialNumber, (int32_t)IntegerBytes, v19, v20);
   Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v14, 0LL);
   if ( !Sequence )
     goto LABEL_86;
-  v25 = Sequence;
+  v21 = Sequence;
   OidAsString = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
   this->fields.TbsSignature.fields.AlgorithmId = OidAsString;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.TbsSignature,
-    (int64_t)OidAsString,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31,
-    v32);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v25, 0LL) )
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.TbsSignature, (int32_t)OidAsString, v23, v24);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v21, 0LL) )
   {
-    NextEncodedValue = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v25, 0LL);
+    NextEncodedValue = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v21, 0LL);
   }
   else
   {
-    v40 = Method_System_Array_Empty_byte___;
-    v41 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
-    if ( !v41 )
+    v28 = Method_System_Array_Empty_byte___;
+    v29 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
+    if ( !v29 )
     {
-      sub_1C8D69C();
-      v41 = v40[7];
+      sub_1B9D67C();
+      v29 = v28[7];
     }
-    v42 = *(_QWORD *)(v41 + 16);
-    if ( (*(_BYTE *)(v42 + 309) & 1) == 0 )
-      v42 = sub_1C8D640();
-    if ( !*(_DWORD *)(v42 + 224) )
-      j_il2cpp_runtime_class_init_0(v42);
-    v43 = *(_QWORD *)(v40[7] + 16LL);
-    if ( (*(_BYTE *)(v43 + 309) & 1) == 0 )
-      v43 = sub_1C8D640();
-    NextEncodedValue = **(struct System_Byte_array ***)(v43 + 184);
+    v30 = *(_QWORD *)(v29 + 16);
+    if ( (*(_BYTE *)(v30 + 309) & 1) == 0 )
+      v30 = sub_1B9D620();
+    if ( !*(_DWORD *)(v30 + 224) )
+      j_il2cpp_runtime_class_init_0(v30);
+    v31 = *(_QWORD *)(v28[7] + 16LL);
+    if ( (*(_BYTE *)(v31 + 309) & 1) == 0 )
+      v31 = sub_1B9D620();
+    NextEncodedValue = **(struct System_Byte_array ***)(v31 + 184);
   }
   this->fields.TbsSignature.fields.Parameters = NextEncodedValue;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.TbsSignature.fields.Parameters,
-    (int64_t)NextEncodedValue,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v25, 0LL) )
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields.TbsSignature.fields.Parameters,
+    (int32_t)NextEncodedValue,
+    v25,
+    v26);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v21, 0LL) )
     goto LABEL_68;
-  v44 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
-  v45 = (System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *)sub_1C3B9B0(System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo);
-  System_Security_Cryptography_X509Certificates_X500DistinguishedName___ctor_70086288(v45, v44, 0LL);
-  this->fields.Issuer = v45;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.Issuer, (int64_t)v45, v46, v47, v48, v49, v50, v51);
+  v32 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
+  v33 = (System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *)sub_1B4D1DC(System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo);
+  System_Security_Cryptography_X509Certificates_X500DistinguishedName___ctor(v33, v32, 0LL);
+  this->fields.Issuer = v33;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.Issuer, (int32_t)v33, v34, v35);
   Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v14, 0LL);
   if ( !Sequence )
     goto LABEL_86;
-  v52 = Sequence;
+  v36 = Sequence;
   this->fields.NotBefore = System_Security_Cryptography_DerSequenceReader__ReadX509Date(Sequence, 0LL);
-  this->fields.NotAfter = System_Security_Cryptography_DerSequenceReader__ReadX509Date(v52, 0LL);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v52, 0LL) )
+  this->fields.NotAfter = System_Security_Cryptography_DerSequenceReader__ReadX509Date(v36, 0LL);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v36, 0LL) )
   {
 LABEL_68:
-    v137 = sub_1C3B778(&System_Security_Cryptography_CryptographicException_TypeInfo);
-    v17 = (System_Security_Cryptography_CryptographicException_o *)sub_1C3B9B0(v137);
-    v138 = (System_String_o *)sub_1C3B778(&StringLiteral_2148/*"AdManager Initialize error.(reboot) message="*/);
-    System_Security_Cryptography_CryptographicException___ctor_62691164(v17, v138, 0LL);
+    v87 = sub_1B4CFA4(&System_Security_Cryptography_CryptographicException_TypeInfo);
+    v17 = (System_Security_Cryptography_CryptographicException_o *)sub_1B4D1DC(v87);
+    v88 = (System_String_o *)sub_1B4CFA4(&StringLiteral_2051/*"ASN1 corrupted data."*/);
+    System_Security_Cryptography_CryptographicException___ctor_61312032(v17, v88, 0LL);
 LABEL_69:
-    v139 = sub_1C3B778(&Method_Internal_Cryptography_Pal_CertificateData__ctor__);
-    sub_1C3B88C(v17, v139);
+    v89 = sub_1B4CFA4(&Method_Internal_Cryptography_Pal_CertificateData__ctor__);
+    sub_1B4D0B8(v17, v89);
   }
-  v53 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
-  v54 = (System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *)sub_1C3B9B0(System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo);
-  System_Security_Cryptography_X509Certificates_X500DistinguishedName___ctor_70086288(v54, v53, 0LL);
-  this->fields.Subject = v54;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.Subject, (int64_t)v54, v55, v56, v57, v58, v59, v60);
-  v61 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
-  this->fields.SubjectPublicKeyInfo = v61;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.SubjectPublicKeyInfo,
-    (int64_t)v61,
-    v62,
-    v63,
-    v64,
-    v65,
-    v66,
-    v67);
+  v37 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
+  v38 = (System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *)sub_1B4D1DC(System_Security_Cryptography_X509Certificates_X500DistinguishedName_TypeInfo);
+  System_Security_Cryptography_X509Certificates_X500DistinguishedName___ctor(v38, v37, 0LL);
+  this->fields.Subject = v38;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.Subject, (int32_t)v38, v39, v40);
+  v41 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v14, 0LL);
+  this->fields.SubjectPublicKeyInfo = v41;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.SubjectPublicKeyInfo, (int32_t)v41, v42, v43);
   SubjectPublicKeyInfo = this->fields.SubjectPublicKeyInfo;
-  v69 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1C3B9B0(System_Security_Cryptography_DerSequenceReader_TypeInfo);
-  System_Security_Cryptography_DerSequenceReader___ctor_70061164(v69, SubjectPublicKeyInfo, 0LL);
-  if ( !v69 )
+  v45 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1B4D1DC(System_Security_Cryptography_DerSequenceReader_TypeInfo);
+  System_Security_Cryptography_DerSequenceReader___ctor(v45, SubjectPublicKeyInfo, 0LL);
+  if ( !v45 )
     goto LABEL_86;
-  Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v69, 0LL);
+  Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v45, 0LL);
   if ( !Sequence )
     goto LABEL_86;
-  v70 = Sequence;
-  v71 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
-  this->fields.PublicKeyAlgorithm.fields.AlgorithmId = v71;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.PublicKeyAlgorithm,
-    (int64_t)v71,
-    v72,
-    v73,
-    v74,
-    v75,
-    v76,
-    v77);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v70, 0LL) )
+  v46 = Sequence;
+  v47 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
+  this->fields.PublicKeyAlgorithm.fields.AlgorithmId = v47;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.PublicKeyAlgorithm, (int32_t)v47, v48, v49);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v46, 0LL) )
   {
-    v84 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v70, 0LL);
+    v52 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v46, 0LL);
   }
   else
   {
-    v85 = Method_System_Array_Empty_byte___;
-    v86 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
-    if ( !v86 )
+    v53 = Method_System_Array_Empty_byte___;
+    v54 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
+    if ( !v54 )
     {
-      sub_1C8D69C();
-      v86 = v85[7];
+      sub_1B9D67C();
+      v54 = v53[7];
     }
-    v87 = *(_QWORD *)(v86 + 16);
-    if ( (*(_BYTE *)(v87 + 309) & 1) == 0 )
-      v87 = sub_1C8D640();
-    if ( !*(_DWORD *)(v87 + 224) )
-      j_il2cpp_runtime_class_init_0(v87);
-    v88 = *(_QWORD *)(v85[7] + 16LL);
-    if ( (*(_BYTE *)(v88 + 309) & 1) == 0 )
-      v88 = sub_1C8D640();
-    v84 = **(struct System_Byte_array ***)(v88 + 184);
+    v55 = *(_QWORD *)(v54 + 16);
+    if ( (*(_BYTE *)(v55 + 309) & 1) == 0 )
+      v55 = sub_1B9D620();
+    if ( !*(_DWORD *)(v55 + 224) )
+      j_il2cpp_runtime_class_init_0(v55);
+    v56 = *(_QWORD *)(v53[7] + 16LL);
+    if ( (*(_BYTE *)(v56 + 309) & 1) == 0 )
+      v56 = sub_1B9D620();
+    v52 = **(struct System_Byte_array ***)(v56 + 184);
   }
-  this->fields.PublicKeyAlgorithm.fields.Parameters = v84;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.PublicKeyAlgorithm.fields.Parameters,
-    (int64_t)v84,
-    v78,
-    v79,
-    v80,
-    v81,
-    v82,
-    v83);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v70, 0LL) )
+  this->fields.PublicKeyAlgorithm.fields.Parameters = v52;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.PublicKeyAlgorithm.fields.Parameters, (int32_t)v52, v50, v51);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v46, 0LL) )
     goto LABEL_68;
-  BitString = System_Security_Cryptography_DerSequenceReader__ReadBitString(v69, 0LL);
+  BitString = System_Security_Cryptography_DerSequenceReader__ReadBitString(v45, 0LL);
   this->fields.PublicKey = BitString;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.PublicKey, (int64_t)BitString, v90, v91, v92, v93, v94, v95);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v69, 0LL) )
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.PublicKey, (int32_t)BitString, v58, v59);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v45, 0LL) )
     goto LABEL_68;
   if ( this->fields.Version >= 1
     && System_Security_Cryptography_DerSequenceReader__get_HasData(v14, 0LL)
     && System_Security_Cryptography_DerSequenceReader__PeekTag(v14, 0LL) == 161 )
   {
-    v102 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v14, 0LL);
-    this->fields.IssuerUniqueId = v102;
+    v62 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v14, 0LL);
+    v63 = (int)v62;
+    this->fields.IssuerUniqueId = v62;
     p_IssuerUniqueId = &this->fields.IssuerUniqueId;
   }
   else
   {
     this->fields.IssuerUniqueId = 0LL;
     p_IssuerUniqueId = &this->fields.IssuerUniqueId;
-    v102 = 0LL;
+    v63 = 0;
   }
-  sub_1C3B708((PartyOrganizationUtility_o *)p_IssuerUniqueId, (int64_t)v102, v96, v97, v98, v99, v100, v101);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_IssuerUniqueId, v63, v60, v61);
   if ( this->fields.Version >= 1
     && System_Security_Cryptography_DerSequenceReader__get_HasData(v14, 0LL)
     && System_Security_Cryptography_DerSequenceReader__PeekTag(v14, 0LL) == 162 )
   {
-    v110 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v14, 0LL);
-    this->fields.SubjectUniqueId = v110;
+    v67 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v14, 0LL);
+    v68 = (int)v67;
+    this->fields.SubjectUniqueId = v67;
     p_SubjectUniqueId = &this->fields.SubjectUniqueId;
   }
   else
   {
     this->fields.SubjectUniqueId = 0LL;
     p_SubjectUniqueId = &this->fields.SubjectUniqueId;
-    v110 = 0LL;
+    v68 = 0;
   }
-  sub_1C3B708((PartyOrganizationUtility_o *)p_SubjectUniqueId, (int64_t)v110, v104, v105, v106, v107, v108, v109);
-  v112 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_X509Extension__TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_SubjectUniqueId, v68, v65, v66);
+  v70 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_X509Extension__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v112,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_X509Extension___ctor__);
-  this->fields.Extensions = (struct System_Collections_Generic_List_X509Extension__o *)v112;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.Extensions, (int64_t)v112, v113, v114, v115, v116, v117, v118);
+    v70,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_X509Extension___ctor__);
+  this->fields.Extensions = (struct System_Collections_Generic_List_X509Extension__o *)v70;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.Extensions, (int32_t)v70, v71, v72);
   if ( this->fields.Version >= 2
     && System_Security_Cryptography_DerSequenceReader__get_HasData(v14, 0LL)
     && System_Security_Cryptography_DerSequenceReader__PeekTag(v14, 0LL) == 163 )
@@ -2413,25 +2174,25 @@ LABEL_69:
       Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(Sequence, 0LL);
       if ( Sequence )
       {
-        v119 = Sequence;
-        while ( System_Security_Cryptography_DerSequenceReader__get_HasData(v119, 0LL) )
+        v73 = Sequence;
+        while ( System_Security_Cryptography_DerSequenceReader__get_HasData(v73, 0LL) )
         {
-          Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v119, 0LL);
+          Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v73, 0LL);
           if ( !Sequence )
             goto LABEL_86;
-          v120 = Sequence;
-          v121 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
-          v122 = System_Security_Cryptography_DerSequenceReader__PeekTag(v120, 0LL) == 1
-              && System_Security_Cryptography_DerSequenceReader__ReadBoolean(v120, 0LL);
-          OctetString = System_Security_Cryptography_DerSequenceReader__ReadOctetString(v120, 0LL);
+          v74 = Sequence;
+          v75 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
+          v76 = System_Security_Cryptography_DerSequenceReader__PeekTag(v74, 0LL) == 1
+             && System_Security_Cryptography_DerSequenceReader__ReadBoolean(v74, 0LL);
+          OctetString = System_Security_Cryptography_DerSequenceReader__ReadOctetString(v74, 0LL);
           Extensions = (System_Collections_Generic_List_object__o *)this->fields.Extensions;
-          v125 = OctetString;
-          v126 = (System_Security_Cryptography_X509Certificates_X509Extension_o *)sub_1C3B9B0(System_Security_Cryptography_X509Certificates_X509Extension_TypeInfo);
-          System_Security_Cryptography_X509Certificates_X509Extension___ctor_70150240(v126, v121, v125, v122, 0LL);
+          v79 = OctetString;
+          v80 = (System_Security_Cryptography_X509Certificates_X509Extension_o *)sub_1B4D1DC(System_Security_Cryptography_X509Certificates_X509Extension_TypeInfo);
+          System_Security_Cryptography_X509Certificates_X509Extension___ctor_67810916(v80, v75, v79, v76, 0LL);
           if ( !Extensions )
             goto LABEL_86;
           items = Extensions->fields._items;
-          v134 = Method_System_Collections_Generic_List_X509Extension__Add__;
+          v84 = Method_System_Collections_Generic_List_X509Extension__Add__;
           ++Extensions->fields._version;
           if ( !items )
             goto LABEL_86;
@@ -2440,24 +2201,24 @@ LABEL_69:
           {
             System_Collections_Generic_List_object___AddWithResize(
               Extensions,
-              (Il2CppObject *)v126,
-              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v134[4] + 192LL) + 112LL));
+              (Il2CppObject *)v80,
+              *(const MethodInfo_35801DC **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
           }
           else
           {
-            v136 = &items->obj.klass + size;
+            v86 = &items->obj.klass + size;
             Extensions->fields._size = size + 1;
-            v136[4] = (Il2CppClass *)v126;
-            sub_1C3B708((PartyOrganizationUtility_o *)(v136 + 4), (int64_t)v126, v127, v128, v129, v130, v131, v132);
+            v86[4] = (Il2CppClass *)v80;
+            sub_1B4CF34((CGThumbnailListItem_o *)(v86 + 4), (int32_t)v80, v81, v82);
           }
-          if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v120, 0LL) )
+          if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v74, 0LL) )
             goto LABEL_68;
         }
         goto LABEL_70;
       }
     }
 LABEL_86:
-    sub_1C3B9C0(Sequence, v13);
+    sub_1B4D1EC(Sequence, v13);
   }
 LABEL_70:
   if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v14, 0LL) )
@@ -2465,68 +2226,44 @@ LABEL_70:
   Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v11, 0LL);
   if ( !Sequence )
     goto LABEL_86;
-  v140 = Sequence;
-  v141 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
-  this->fields.SignatureAlgorithm.fields.AlgorithmId = v141;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.SignatureAlgorithm,
-    (int64_t)v141,
-    v142,
-    v143,
-    v144,
-    v145,
-    v146,
-    v147);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v140, 0LL) )
+  v90 = Sequence;
+  v91 = System_Security_Cryptography_DerSequenceReader__ReadOidAsString(Sequence, 0LL);
+  this->fields.SignatureAlgorithm.fields.AlgorithmId = v91;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.SignatureAlgorithm, (int32_t)v91, v92, v93);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v90, 0LL) )
   {
-    v154 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v140, 0LL);
+    v96 = System_Security_Cryptography_DerSequenceReader__ReadNextEncodedValue(v90, 0LL);
   }
   else
   {
-    v155 = Method_System_Array_Empty_byte___;
-    v156 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
-    if ( !v156 )
+    v97 = Method_System_Array_Empty_byte___;
+    v98 = *((_QWORD *)Method_System_Array_Empty_byte___ + 7);
+    if ( !v98 )
     {
-      sub_1C8D69C();
-      v156 = v155[7];
+      sub_1B9D67C();
+      v98 = v97[7];
     }
-    v157 = *(_QWORD *)(v156 + 16);
-    if ( (*(_BYTE *)(v157 + 309) & 1) == 0 )
-      v157 = sub_1C8D640();
-    if ( !*(_DWORD *)(v157 + 224) )
-      j_il2cpp_runtime_class_init_0(v157);
-    v158 = *(_QWORD *)(v155[7] + 16LL);
-    if ( (*(_BYTE *)(v158 + 309) & 1) == 0 )
-      v158 = sub_1C8D640();
-    v154 = **(struct System_Byte_array ***)(v158 + 184);
+    v99 = *(_QWORD *)(v98 + 16);
+    if ( (*(_BYTE *)(v99 + 309) & 1) == 0 )
+      v99 = sub_1B9D620();
+    if ( !*(_DWORD *)(v99 + 224) )
+      j_il2cpp_runtime_class_init_0(v99);
+    v100 = *(_QWORD *)(v97[7] + 16LL);
+    if ( (*(_BYTE *)(v100 + 309) & 1) == 0 )
+      v100 = sub_1B9D620();
+    v96 = **(struct System_Byte_array ***)(v100 + 184);
   }
-  this->fields.SignatureAlgorithm.fields.Parameters = v154;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.SignatureAlgorithm.fields.Parameters,
-    (int64_t)v154,
-    v148,
-    v149,
-    v150,
-    v151,
-    v152,
-    v153);
-  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v140, 0LL) )
+  this->fields.SignatureAlgorithm.fields.Parameters = v96;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.SignatureAlgorithm.fields.Parameters, (int32_t)v96, v94, v95);
+  if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v90, 0LL) )
     goto LABEL_68;
-  v159 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v11, 0LL);
-  this->fields.SignatureValue = v159;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.SignatureValue,
-    (int64_t)v159,
-    v160,
-    v161,
-    v162,
-    v163,
-    v164,
-    v165);
+  v101 = System_Security_Cryptography_DerSequenceReader__ReadBitString(v11, 0LL);
+  this->fields.SignatureValue = v101;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.SignatureValue, (int32_t)v101, v102, v103);
   if ( System_Security_Cryptography_DerSequenceReader__get_HasData(v11, 0LL) )
     goto LABEL_68;
-  this->fields.RawData = v172;
-  sub_1C3B708((PartyOrganizationUtility_o *)this, (int64_t)v172, v166, v167, v168, v169, v170, v171);
+  this->fields.RawData = v106;
+  sub_1B4CF34((CGThumbnailListItem_o *)this, (int32_t)v106, v104, v105);
 }
 
 
@@ -2549,17 +2286,17 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__FindAltNa
   System_String_o *v17; // x0
   __int64 v18; // x0
 
-  if ( (byte_4C2BD03 & 1) == 0 )
+  if ( (byte_49C4439 & 1) == 0 )
   {
-    sub_1C3B764(&System_Security_Cryptography_DerSequenceReader_TypeInfo, *(_QWORD *)&matchType);
-    byte_4C2BD03 = 1;
+    sub_1B4CF90(&System_Security_Cryptography_DerSequenceReader_TypeInfo, *(_QWORD *)&matchType);
+    byte_49C4439 = 1;
   }
   if ( matchType )
     v7 = 0x80;
   else
     v7 = -96;
-  v8 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1C3B9B0(System_Security_Cryptography_DerSequenceReader_TypeInfo);
-  System_Security_Cryptography_DerSequenceReader___ctor_70061164(v8, extensionBytes, 0LL);
+  v8 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1B4D1DC(System_Security_Cryptography_DerSequenceReader_TypeInfo);
+  System_Security_Cryptography_DerSequenceReader___ctor(v8, extensionBytes, 0LL);
   if ( !v8 )
     goto LABEL_22;
   if ( !System_Security_Cryptography_DerSequenceReader__get_HasData(v8, 0LL) )
@@ -2588,17 +2325,17 @@ LABEL_16:
     goto LABEL_16;
   if ( System_Security_Cryptography_DerSequenceReader__PeekTag(v12, 0LL) != 160 )
   {
-    v15 = sub_1C3B778(&System_Security_Cryptography_CryptographicException_TypeInfo);
-    v16 = (System_Security_Cryptography_CryptographicException_o *)sub_1C3B9B0(v15);
-    v17 = (System_String_o *)sub_1C3B778(&StringLiteral_2148/*"AdManager Initialize error.(reboot) message="*/);
-    System_Security_Cryptography_CryptographicException___ctor_62691164(v16, v17, 0LL);
-    v18 = sub_1C3B778(&Method_Internal_Cryptography_Pal_CertificateData_FindAltNameMatch__);
-    sub_1C3B88C(v16, v18);
+    v15 = sub_1B4CFA4(&System_Security_Cryptography_CryptographicException_TypeInfo);
+    v16 = (System_Security_Cryptography_CryptographicException_o *)sub_1B4D1DC(v15);
+    v17 = (System_String_o *)sub_1B4CFA4(&StringLiteral_2051/*"ASN1 corrupted data."*/);
+    System_Security_Cryptography_CryptographicException___ctor_61312032(v16, v17, 0LL);
+    v18 = sub_1B4CFA4(&Method_Internal_Cryptography_Pal_CertificateData_FindAltNameMatch__);
+    sub_1B4D0B8(v16, v18);
   }
   Sequence = System_Security_Cryptography_DerSequenceReader__ReadSequence(v12, 0LL);
   if ( !Sequence )
 LABEL_22:
-    sub_1C3B9C0(Sequence, v10);
+    sub_1B4D1EC(Sequence, v10);
   return System_Security_Cryptography_DerSequenceReader__ReadUtf8String(Sequence, 0LL);
 }
 
@@ -2675,36 +2412,36 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__GetNameIn
   System_Nullable_Int32Enum__o v70; // 0:x0.8
   System_Nullable_Int32Enum__o v71; // 0:x0.8
 
-  if ( (byte_4C2BD01 & 1) == 0 )
+  if ( (byte_49C4437 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__, *(_QWORD *)&nameType);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_X509Extension__MoveNext__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_X509Extension__get_Current__, v8);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v9);
-    sub_1C3B764(&System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, v10);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, v11);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v13);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v14);
-    sub_1C3B764(&Method_System_Collections_Generic_List_X509Extension__GetEnumerator__, v15);
-    sub_1C3B764(&Method_System_Nullable_GeneralNameType___ctor__, v16);
-    sub_1C3B764(&Method_System_Nullable_GeneralNameType__get_HasValue__, v17);
-    sub_1C3B764(&Method_System_Nullable_GeneralNameType__get_Value__, v18);
-    sub_1C3B764(&StringLiteral_1416/*"4.0.30319.17020"*/, v19);
-    sub_1C3B764(&StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/, v20);
-    sub_1C3B764(&StringLiteral_1363/*"2.5.29.20"*/, v21);
-    sub_1C3B764(&StringLiteral_1431/*"5"*/, v22);
-    sub_1C3B764(&StringLiteral_1417/*"4.12.2"*/, v23);
-    sub_1C3B764(&StringLiteral_1/*""*/, v24);
-    byte_4C2BD01 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__, *(_QWORD *)&nameType);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_X509Extension__MoveNext__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_X509Extension__get_Current__, v8);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v9);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, v10);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, v11);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v13);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v14);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_X509Extension__GetEnumerator__, v15);
+    sub_1B4CF90(&Method_System_Nullable_GeneralNameType___ctor__, v16);
+    sub_1B4CF90(&Method_System_Nullable_GeneralNameType__get_HasValue__, v17);
+    sub_1B4CF90(&Method_System_Nullable_GeneralNameType__get_Value__, v18);
+    sub_1B4CF90(&StringLiteral_1360/*"2.5.29.17"*/, v19);
+    sub_1B4CF90(&StringLiteral_1247/*"1.2.840.113549.1.9.1"*/, v20);
+    sub_1B4CF90(&StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/, v21);
+    sub_1B4CF90(&StringLiteral_1375/*"2.5.4.3"*/, v22);
+    sub_1B4CF90(&StringLiteral_1361/*"2.5.29.18"*/, v23);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v24);
+    byte_49C4437 = 1;
   }
   memset(&v67, 0, sizeof(v67));
   if ( nameType )
   {
     if ( forIssuer )
-      v25 = (System_String_o **)&StringLiteral_1417/*"4.12.2"*/;
+      v25 = (System_String_o **)&StringLiteral_1361/*"2.5.29.18"*/;
     else
-      v25 = (System_String_o **)&StringLiteral_1416/*"4.0.30319.17020"*/;
+      v25 = (System_String_o **)&StringLiteral_1360/*"2.5.29.17"*/;
     v26 = *v25;
     v68 = 0LL;
     switch ( nameType )
@@ -2716,8 +2453,8 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__GetNameIn
         System_Nullable_Int32Enum____ctor(
           v71,
           0,
-          (const MethodInfo_37A87DC *)Method_System_Nullable_GeneralNameType___ctor__);
-        v31 = (System_String_o *)StringLiteral_1363/*"2.5.29.20"*/;
+          (const MethodInfo_3699FE8 *)Method_System_Nullable_GeneralNameType___ctor__);
+        v31 = (System_String_o *)StringLiteral_1309/*"1.3.6.1.4.1.311.20.2.3"*/;
         break;
       case 3:
       case 4:
@@ -2744,9 +2481,9 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__GetNameIn
     if ( SimpleNameInfo )
       return SimpleNameInfo;
     if ( forIssuer )
-      v30 = (System_String_o **)&StringLiteral_1417/*"4.12.2"*/;
+      v30 = (System_String_o **)&StringLiteral_1361/*"2.5.29.18"*/;
     else
-      v30 = (System_String_o **)&StringLiteral_1416/*"4.0.30319.17020"*/;
+      v30 = (System_String_o **)&StringLiteral_1360/*"2.5.29.17"*/;
     v26 = *v30;
     v68 = 0LL;
 LABEL_16:
@@ -2756,7 +2493,7 @@ LABEL_18:
     System_Nullable_Int32Enum____ctor(
       v69,
       v27,
-      (const MethodInfo_37A87DC *)Method_System_Nullable_GeneralNameType___ctor__);
+      (const MethodInfo_3699FE8 *)Method_System_Nullable_GeneralNameType___ctor__);
 LABEL_19:
     v31 = 0LL;
   }
@@ -2768,51 +2505,51 @@ LABEL_19:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v66,
       Extensions,
-      (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_X509Extension__GetEnumerator__);
+      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_X509Extension__GetEnumerator__);
     v67 = v66;
     while ( 1 )
     {
       v33 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v67,
-              (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__MoveNext__);
+              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_X509Extension__MoveNext__);
       if ( !v33 )
         break;
       current = v67.fields._current;
       if ( !v67.fields._current )
-        sub_1C3B9C0(v33, v34);
+        sub_1B4D1EC(v33, v34);
       klass = v67.fields._current[1].klass;
       if ( !klass )
-        sub_1C3B9C0(v33, v34);
+        sub_1B4D1EC(v33, v34);
       if ( System_String__op_Equality((System_String_o *)klass->_1.name, v26, 0LL) )
       {
         monitor = (System_Byte_array *)current[1].monitor;
         v70 = (System_Nullable_Int32Enum__o)&v68;
         Value = System_Nullable_Int32Enum___get_Value(
                   v70,
-                  (const MethodInfo_37A87F4 *)Method_System_Nullable_GeneralNameType__get_Value__);
+                  (const MethodInfo_369A000 *)Method_System_Nullable_GeneralNameType__get_Value__);
         SimpleNameInfo = Internal_Cryptography_Pal_CertificateData__FindAltNameMatch(monitor, Value, v31, v39);
         if ( SimpleNameInfo )
         {
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v67,
-            (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__);
+            (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__);
           return SimpleNameInfo;
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v67,
-      (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__);
+      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_X509Extension__Dispose__);
   }
   if ( nameType == 1 )
   {
-    v40 = &StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/;
+    v40 = &StringLiteral_1247/*"1.2.840.113549.1.9.1"*/;
   }
   else
   {
     if ( nameType != 3 )
       return (System_String_o *)StringLiteral_1/*""*/;
-    v40 = &StringLiteral_1431/*"5"*/;
+    v40 = &StringLiteral_1375/*"2.5.4.3"*/;
   }
   v41 = (System_String_o *)*v40;
   if ( !*v40 )
@@ -2825,7 +2562,7 @@ LABEL_19:
                                                               *(const MethodInfo **)&nameType);
   if ( !Extensions )
 LABEL_73:
-    sub_1C3B9C0(Extensions, *(_QWORD *)&nameType);
+    sub_1B4D1EC(Extensions, *(_QWORD *)&nameType);
   v43 = Extensions->klass;
   v44 = Extensions;
   v45 = *(unsigned __int16 *)(&Extensions->klass->_2.bitflags2 + 3);
@@ -2844,11 +2581,11 @@ LABEL_73:
   else
   {
 LABEL_42:
-    v47 = sub_1C8D744(Extensions, System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, 0LL);
+    v47 = sub_1B9D724(Extensions, System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, 0LL);
   }
   v49 = (*(__int64 (__fastcall **)(System_Collections_Generic_List_object__o *, _QWORD))v47)(v44, *(_QWORD *)(v47 + 8));
   if ( !v49 )
-    sub_1C3B9C0(0LL, v48);
+    sub_1B4D1EC(0LL, v48);
   while ( 1 )
   {
     v50 = *(_QWORD *)v49;
@@ -2868,7 +2605,7 @@ LABEL_42:
     else
     {
 LABEL_50:
-      v53 = sub_1C8D744(v49, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v53 = sub_1B9D724(v49, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v53)(v49, *(_QWORD *)(v53 + 8)) & 1) == 0 )
       break;
@@ -2889,7 +2626,7 @@ LABEL_50:
     else
     {
 LABEL_57:
-      v57 = sub_1C8D744(v49, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0LL);
+      v57 = sub_1B9D724(v49, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0LL);
     }
     v58 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v57)(v49, *(_QWORD *)(v57 + 8));
     SimpleNameInfo = v59;
@@ -2919,7 +2656,7 @@ LABEL_62:
   else
   {
 LABEL_66:
-    v64 = sub_1C8D744(v49, System_IDisposable_TypeInfo, 0LL);
+    v64 = sub_1B9D724(v49, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v64)(v49, *(_QWORD *)(v64 + 8));
   if ( v60 == 20 )
@@ -2974,23 +2711,23 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__GetSimple
   __int64 v42; // x0
   System_String_o *v44; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C2BD02 & 1) == 0 )
+  if ( (byte_49C4438 & 1) == 0 )
   {
-    sub_1C3B764(&System_IDisposable_TypeInfo, method);
-    sub_1C3B764(&System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, v3);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, v4);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v7);
-    sub_1C3B764(&StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/, v8);
-    sub_1C3B764(&StringLiteral_1431/*"5"*/, v9);
-    sub_1C3B764(&StringLiteral_1424/*"404"*/, v10);
-    sub_1C3B764(&StringLiteral_1423/*"403: Forbidden"*/, v11);
-    byte_4C2BD02 = 1;
+    sub_1B4CF90(&System_IDisposable_TypeInfo, method);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo, v3);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, v4);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Key__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string__get_Value__, v7);
+    sub_1B4CF90(&StringLiteral_1247/*"1.2.840.113549.1.9.1"*/, v8);
+    sub_1B4CF90(&StringLiteral_1375/*"2.5.4.3"*/, v9);
+    sub_1B4CF90(&StringLiteral_1368/*"2.5.4.11"*/, v10);
+    sub_1B4CF90(&StringLiteral_1367/*"2.5.4.10"*/, v11);
+    byte_49C4438 = 1;
   }
   ReverseRdns = Internal_Cryptography_Pal_CertificateData__ReadReverseRdns(name, method);
   if ( !ReverseRdns )
-    sub_1C3B9C0(0LL, v13);
+    sub_1B4D1EC(0LL, v13);
   klass = ReverseRdns->klass;
   v15 = ReverseRdns;
   v16 = *(unsigned __int16 *)(&ReverseRdns->klass->_2.bitflags2 + 3);
@@ -3009,7 +2746,7 @@ System_String_o *__fastcall Internal_Cryptography_Pal_CertificateData__GetSimple
   else
   {
 LABEL_8:
-    p_method = sub_1C8D744(
+    p_method = sub_1B9D724(
                  ReverseRdns,
                  System_Collections_Generic_IEnumerable_KeyValuePair_string__string___TypeInfo,
                  0LL);
@@ -3033,7 +2770,7 @@ LABEL_13:
   while ( 1 )
   {
     if ( !v21 )
-      sub_1C3B9C0(v19, v20);
+      sub_1B4D1EC(v19, v20);
     v26 = *(_QWORD *)v21;
     v24 = v25;
     v27 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
@@ -3052,7 +2789,7 @@ LABEL_13:
     else
     {
 LABEL_19:
-      v29 = sub_1C8D744(v21, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v29 = sub_1B9D724(v21, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v21, *(_QWORD *)(v29 + 8)) & 1) == 0 )
     {
@@ -3077,20 +2814,20 @@ LABEL_19:
     else
     {
 LABEL_26:
-      v33 = sub_1C8D744(v21, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0LL);
+      v33 = sub_1B9D724(v21, System_Collections_Generic_IEnumerator_KeyValuePair_string__string___TypeInfo, 0LL);
     }
     v34 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v33)(v21, *(_QWORD *)(v33 + 8));
     v25 = v35;
     v36 = v34;
-    if ( System_String__op_Equality(v34, (System_String_o *)StringLiteral_1431/*"5"*/, 0LL) )
+    if ( System_String__op_Equality(v34, (System_String_o *)StringLiteral_1375/*"2.5.4.3"*/, 0LL) )
       break;
-    v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1424/*"404"*/, 0LL);
+    v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1368/*"2.5.4.11"*/, 0LL);
     if ( (v19 & 1) == 0 )
     {
-      v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1423/*"403: Forbidden"*/, 0LL);
+      v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1367/*"2.5.4.10"*/, 0LL);
       if ( (v19 & 1) != 0 )
         goto LABEL_13;
-      v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1301/*"1.3.36.3.3.2.8.1.1.5"*/, 0LL);
+      v19 = System_String__op_Equality(v36, (System_String_o *)StringLiteral_1247/*"1.2.840.113549.1.9.1"*/, 0LL);
       if ( (v19 & 1) == 0 )
       {
         v37 = v44;
@@ -3121,7 +2858,7 @@ LABEL_37:
   else
   {
 LABEL_41:
-    v42 = sub_1C8D744(v21, System_IDisposable_TypeInfo, 0LL);
+    v42 = sub_1B9D724(v21, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v42)(v21, *(_QWORD *)(v42 + 8));
   if ( v38 == 10 )
@@ -3148,29 +2885,20 @@ System_Collections_Generic_IEnumerable_KeyValuePair_string__string___o *__fastca
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  __int64 v4; // x0
-  __int64 v5; // x1
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C2BD04 & 1) == 0 )
+  if ( (byte_49C443A & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo, method);
-    byte_4C2BD04 = 1;
+    sub_1B4CF90(&Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo, method);
+    byte_49C443A = 1;
   }
-  v3 = sub_1C3B9B0(Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo);
-  Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21___ctor(
-    (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)v3,
-    -2,
-    0LL);
-  if ( !v3 )
-    sub_1C3B9C0(v4, v5);
+  v3 = sub_1B4D1DC(Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  *(_DWORD *)(v3 + 16) = -2;
+  *(_DWORD *)(v3 + 40) = System_Environment__get_CurrentManagedThreadId(0LL);
   *(_QWORD *)(v3 + 56) = name;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v3 + 56), (int64_t)name, v6, v7, v8, v9, v10, v11);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v3 + 56), (int32_t)name, v4, v5);
   return (System_Collections_Generic_IEnumerable_KeyValuePair_string__string___o *)v3;
 }
 
@@ -3202,56 +2930,40 @@ bool __fastcall Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21
   System_Byte_array *raw; // x21
   System_Security_Cryptography_DerSequenceReader_o *v12; // x20
   System_Collections_Generic_Stack_T__o *v13; // x22
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   System_Collections_Generic_Stack_T__o *rdnReaders_5__2; // x22
-  Il2CppObject *v21; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  Il2CppObject *v17; // x0
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o **p_rdnReader_5__3; // x20
-  int64_t v29; // x2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  BattleSetupInfo_o *v32; // x5
-  FollowerInfo_o *v33; // x6
-  PartyListViewItem_o *v34; // x7
-  Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *v35; // x22
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
+  Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *v23; // x22
   Il2CppObject *OidAsString; // x21
-  const MethodInfo_35C5D88 *v37; // x4
-  unsigned int v38; // w8
-  Il2CppObject *v39; // x2
+  const MethodInfo_34C1C58 *v25; // x4
+  unsigned int v26; // w8
+  Il2CppObject *v27; // x2
   System_String_o *Utf8String; // x0
-  int64_t v41; // x2
-  int32_t v42; // w3
-  System_String_o *v43; // x4
-  BattleSetupInfo_o *v44; // x5
-  FollowerInfo_o *v45; // x6
-  PartyListViewItem_o *v46; // x7
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
   bool result; // w0
-  struct System_Collections_Generic_KeyValuePair_string__string__o v48; // [xsp+0h] [xbp-40h] BYREF
-  System_Collections_Generic_KeyValuePair_object__object__o v49; // 0:x0.16
+  struct System_Collections_Generic_KeyValuePair_string__string__o v32; // [xsp+0h] [xbp-40h] BYREF
+  System_Collections_Generic_KeyValuePair_object__object__o v33; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4C2DB81 & 1) == 0 )
+  if ( (byte_49C443C & 1) == 0 )
   {
-    sub_1C3B764(&System_Security_Cryptography_DerSequenceReader_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_Stack_DerSequenceReader__Pop__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_Stack_DerSequenceReader__Push__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_Stack_DerSequenceReader___ctor__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_Stack_DerSequenceReader__get_Count__, v7);
-    this = (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)sub_1C3B764(
+    sub_1B4CF90(&System_Security_Cryptography_DerSequenceReader_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_string__string___ctor__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_Stack_DerSequenceReader__Pop__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_Stack_DerSequenceReader__Push__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_Stack_DerSequenceReader___ctor__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_Stack_DerSequenceReader__get_Count__, v7);
+    this = (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)sub_1B4CF90(
                                                                                    &System_Collections_Generic_Stack_DerSequenceReader__TypeInfo,
                                                                                    v8);
-    byte_4C2DB81 = 1;
+    byte_49C443C = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -3269,7 +2981,7 @@ LABEL_13:
               0LL) )
       {
         *p_rdnReader_5__3 = 0LL;
-        sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._rdnReader_5__3, 0LL, v29, v30, v31, v32, v33, v34);
+        sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields._rdnReader_5__3, 0, v21, v22);
         goto LABEL_33;
       }
       this = *p_rdnReader_5__3;
@@ -3280,66 +2992,66 @@ LABEL_13:
                                                                                      0LL);
       if ( !this )
         goto LABEL_37;
-      v35 = this;
+      v23 = this;
       OidAsString = (Il2CppObject *)System_Security_Cryptography_DerSequenceReader__ReadOidAsString(
                                       (System_Security_Cryptography_DerSequenceReader_o *)this,
                                       0LL);
-      v38 = System_Security_Cryptography_DerSequenceReader__PeekTag(
-              (System_Security_Cryptography_DerSequenceReader_o *)v35,
+      v26 = System_Security_Cryptography_DerSequenceReader__PeekTag(
+              (System_Security_Cryptography_DerSequenceReader_o *)v23,
               0LL);
-      v39 = 0LL;
-      if ( v38 <= 0x13 )
+      v27 = 0LL;
+      if ( v26 <= 0x13 )
       {
-        if ( v38 == 12 )
+        if ( v26 == 12 )
         {
           Utf8String = System_Security_Cryptography_DerSequenceReader__ReadUtf8String(
-                         (System_Security_Cryptography_DerSequenceReader_o *)v35,
+                         (System_Security_Cryptography_DerSequenceReader_o *)v23,
                          0LL);
           goto LABEL_29;
         }
-        if ( v38 == 19 )
+        if ( v26 == 19 )
         {
           Utf8String = System_Security_Cryptography_DerSequenceReader__ReadPrintableString(
-                         (System_Security_Cryptography_DerSequenceReader_o *)v35,
+                         (System_Security_Cryptography_DerSequenceReader_o *)v23,
                          0LL);
           goto LABEL_29;
         }
       }
       else
       {
-        switch ( v38 )
+        switch ( v26 )
         {
           case 0x14u:
             Utf8String = System_Security_Cryptography_DerSequenceReader__ReadT61String(
-                           (System_Security_Cryptography_DerSequenceReader_o *)v35,
+                           (System_Security_Cryptography_DerSequenceReader_o *)v23,
                            0LL);
             goto LABEL_29;
           case 0x16u:
             Utf8String = System_Security_Cryptography_DerSequenceReader__ReadIA5String(
-                           (System_Security_Cryptography_DerSequenceReader_o *)v35,
+                           (System_Security_Cryptography_DerSequenceReader_o *)v23,
                            0LL);
             goto LABEL_29;
           case 0x1Eu:
             Utf8String = System_Security_Cryptography_DerSequenceReader__ReadBMPString(
-                           (System_Security_Cryptography_DerSequenceReader_o *)v35,
+                           (System_Security_Cryptography_DerSequenceReader_o *)v23,
                            0LL);
 LABEL_29:
-            v39 = (Il2CppObject *)Utf8String;
+            v27 = (Il2CppObject *)Utf8String;
             break;
         }
       }
-      if ( v39 )
+      if ( v27 )
       {
-        v49.fields.key = (Il2CppObject *)&v48;
-        v49.fields.value = OidAsString;
-        v48 = (struct System_Collections_Generic_KeyValuePair_string__string__o)0LL;
+        v33.fields.key = (Il2CppObject *)&v32;
+        v33.fields.value = OidAsString;
+        v32 = (struct System_Collections_Generic_KeyValuePair_string__string__o)0LL;
         System_Collections_Generic_KeyValuePair_object__object____ctor(
-          v49,
-          v39,
+          v33,
+          v27,
           (Il2CppObject *)Method_System_Collections_Generic_KeyValuePair_string__string___ctor__,
-          v37);
-        v2->fields.__2__current = v48;
-        sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields.__2__current, 0LL, v41, v42, v43, v44, v45, v46);
+          v25);
+        v2->fields.__2__current = v32;
+        sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields.__2__current, 0, v29, v30);
         result = 1;
         v2->fields.__1__state = 1;
         return result;
@@ -3353,14 +3065,14 @@ LABEL_29:
     if ( !name )
       goto LABEL_37;
     raw = name->fields._raw;
-    v12 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1C3B9B0(System_Security_Cryptography_DerSequenceReader_TypeInfo);
-    System_Security_Cryptography_DerSequenceReader___ctor_70061164(v12, raw, 0LL);
-    v13 = (System_Collections_Generic_Stack_T__o *)sub_1C3B9B0(System_Collections_Generic_Stack_DerSequenceReader__TypeInfo);
+    v12 = (System_Security_Cryptography_DerSequenceReader_o *)sub_1B4D1DC(System_Security_Cryptography_DerSequenceReader_TypeInfo);
+    System_Security_Cryptography_DerSequenceReader___ctor(v12, raw, 0LL);
+    v13 = (System_Collections_Generic_Stack_T__o *)sub_1B4D1DC(System_Collections_Generic_Stack_DerSequenceReader__TypeInfo);
     System_Collections_Generic_Stack_object____ctor(
       v13,
-      (const MethodInfo_38E1A8C *)Method_System_Collections_Generic_Stack_DerSequenceReader___ctor__);
+      (const MethodInfo_37CA3B8 *)Method_System_Collections_Generic_Stack_DerSequenceReader___ctor__);
     v2->fields._rdnReaders_5__2 = (struct System_Collections_Generic_Stack_DerSequenceReader__o *)v13;
-    sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._rdnReaders_5__2, (int64_t)v13, v14, v15, v16, v17, v18, v19);
+    sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields._rdnReaders_5__2, (int32_t)v13, v14, v15);
     if ( !v12 )
       goto LABEL_37;
     if ( !System_Security_Cryptography_DerSequenceReader__get_HasData(v12, 0LL) )
@@ -3376,21 +3088,21 @@ LABEL_29:
       System_Collections_Generic_Stack_object___Push(
         rdnReaders_5__2,
         (Il2CppObject *)this,
-        (const MethodInfo_38E20B4 *)Method_System_Collections_Generic_Stack_DerSequenceReader__Push__);
+        (const MethodInfo_37CA9E0 *)Method_System_Collections_Generic_Stack_DerSequenceReader__Push__);
     }
     while ( System_Security_Cryptography_DerSequenceReader__get_HasData(v12, 0LL) );
 LABEL_33:
     this = (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)v2->fields._rdnReaders_5__2;
     if ( !this )
 LABEL_37:
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     if ( SLODWORD(this->fields.__2__current.fields.key) > 0 )
     {
-      v21 = System_Collections_Generic_Stack_object___Pop(
+      v17 = System_Collections_Generic_Stack_object___Pop(
               (System_Collections_Generic_Stack_T__o *)this,
-              (const MethodInfo_38E2054 *)Method_System_Collections_Generic_Stack_DerSequenceReader__Pop__);
-      v2->fields._rdnReader_5__3 = (struct System_Security_Cryptography_DerSequenceReader_o *)v21;
-      sub_1C3B708((PartyOrganizationUtility_o *)&v2->fields._rdnReader_5__3, (int64_t)v21, v22, v23, v24, v25, v26, v27);
+              (const MethodInfo_37CA980 *)Method_System_Collections_Generic_Stack_DerSequenceReader__Pop__);
+      v2->fields._rdnReader_5__3 = (struct System_Security_Cryptography_DerSequenceReader_o *)v17;
+      sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields._rdnReader_5__3, (int32_t)v17, v18, v19);
       goto LABEL_13;
     }
   }
@@ -3403,38 +3115,34 @@ System_Collections_Generic_IEnumerator_KeyValuePair_string__string___o *__fastca
         const MethodInfo *method)
 {
   int32_t l__initialThreadId; // w20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
-  Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *v10; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *v6; // x20
   struct System_Security_Cryptography_X509Certificates_X500DistinguishedName_o *_3__name; // x1
 
-  if ( (byte_4C2DB83 & 1) == 0 )
+  if ( (byte_49C443E & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo, method);
-    byte_4C2DB83 = 1;
+    sub_1B4CF90(&Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo, method);
+    byte_49C443E = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
         l__initialThreadId == System_Environment__get_CurrentManagedThreadId(0LL)) )
   {
     this->fields.__1__state = 0;
-    v10 = this;
+    v6 = this;
   }
   else
   {
-    v10 = (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)sub_1C3B9B0(Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v10, 0LL);
-    v10->fields.__1__state = 0;
-    v10->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
+    v6 = (Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_o *)sub_1B4D1DC(Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v6, 0LL);
+    v6->fields.__1__state = 0;
+    v6->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0LL);
   }
   _3__name = this->fields.__3__name;
-  v10->fields.name = _3__name;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v10->fields.name, (int64_t)_3__name, v4, v5, v6, v7, v8, v9);
-  return (System_Collections_Generic_IEnumerator_KeyValuePair_string__string___o *)v10;
+  v6->fields.name = _3__name;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v6->fields.name, (int32_t)_3__name, v4, v5);
+  return (System_Collections_Generic_IEnumerator_KeyValuePair_string__string___o *)v6;
 }
 
 
@@ -3463,11 +3171,11 @@ void __fastcall __noreturn Internal_Cryptography_Pal_CertificateData__ReadRevers
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
+  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C3B778(&Method_Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_System_Collections_IEnumerator_Reset__);
-  sub_1C3B88C(v3, v4);
+  v4 = sub_1B4CFA4(&Method_Internal_Cryptography_Pal_CertificateData__ReadReverseRdns_d__21_System_Collections_IEnumerator_Reset__);
+  sub_1B4D0B8(v3, v4);
 }
 
 
@@ -3477,10 +3185,10 @@ Il2CppObject *__fastcall Internal_Cryptography_Pal_CertificateData__ReadReverseR
 {
   struct System_Collections_Generic_KeyValuePair_string__string__o _2__current; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4C2DB82 & 1) == 0 )
+  if ( (byte_49C443D & 1) == 0 )
   {
-    sub_1C3B764(&System_Collections_Generic_KeyValuePair_string__string__TypeInfo, method);
-    byte_4C2DB82 = 1;
+    sub_1B4CF90(&System_Collections_Generic_KeyValuePair_string__string__TypeInfo, method);
+    byte_49C443D = 1;
   }
   _2__current = this->fields.__2__current;
   return (Il2CppObject *)j_il2cpp_value_box_0(
@@ -3512,12 +3220,12 @@ System_Exception_o *__fastcall Internal_Runtime_Augments_ReflectionExecutionDoma
 {
   System_Reflection_MissingMetadataException_o *v3; // x19
 
-  if ( (byte_4C2A19D & 1) == 0 )
+  if ( (byte_49C2350 & 1) == 0 )
   {
-    sub_1C3B764(&System_Reflection_MissingMetadataException_TypeInfo, attributeType);
-    byte_4C2A19D = 1;
+    sub_1B4CF90(&System_Reflection_MissingMetadataException_TypeInfo, attributeType);
+    byte_49C2350 = 1;
   }
-  v3 = (System_Reflection_MissingMetadataException_o *)sub_1C3B9B0(System_Reflection_MissingMetadataException_TypeInfo);
+  v3 = (System_Reflection_MissingMetadataException_o *)sub_1B4D1DC(System_Reflection_MissingMetadataException_TypeInfo);
   System_Reflection_MissingMetadataException___ctor(v3, 0LL);
   return (System_Exception_o *)v3;
 }
@@ -3528,31 +3236,23 @@ void __fastcall Internal_Runtime_Augments_RuntimeAugments___cctor(const MethodIn
   __int64 v1; // x1
   __int64 v2; // x1
   Il2CppObject *v3; // x19
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C2A19C & 1) == 0 )
+  if ( (byte_49C234F & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_TypeInfo, v1);
-    sub_1C3B764(&Internal_Runtime_Augments_RuntimeAugments_TypeInfo, v2);
-    byte_4C2A19C = 1;
+    sub_1B4CF90(&Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_TypeInfo, v1);
+    sub_1B4CF90(&Internal_Runtime_Augments_RuntimeAugments_TypeInfo, v2);
+    byte_49C234F = 1;
   }
-  v3 = (Il2CppObject *)sub_1C3B9B0(Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_TypeInfo);
+  v3 = (Il2CppObject *)sub_1B4D1DC(Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_TypeInfo);
   System_Object___ctor(v3, 0LL);
   Internal_Runtime_Augments_RuntimeAugments_TypeInfo->static_fields->s_reflectionExecutionDomainCallbacks = (struct Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_o *)v3;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)Internal_Runtime_Augments_RuntimeAugments_TypeInfo->static_fields,
-    (int64_t)v3,
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)Internal_Runtime_Augments_RuntimeAugments_TypeInfo->static_fields,
+    (int32_t)v3,
     v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
+    v5);
 }
 
 
@@ -3566,7 +3266,7 @@ void __fastcall __noreturn Internal_Runtime_Augments_RuntimeAugments__ReportUnha
   v2 = System_Runtime_ExceptionServices_ExceptionDispatchInfo__Capture(exception, 0LL);
   if ( v2 )
     System_Runtime_ExceptionServices_ExceptionDispatchInfo__Throw(v2, 0LL);
-  sub_1C3B9C0(0LL, v3);
+  sub_1B4D1EC(0LL, v3);
 }
 
 
@@ -3576,10 +3276,10 @@ Internal_Runtime_Augments_ReflectionExecutionDomainCallbacks_o *__fastcall Inter
   __int64 v1; // x1
   Internal_Runtime_Augments_RuntimeAugments_c *v2; // x0
 
-  if ( (byte_4C2A19B & 1) == 0 )
+  if ( (byte_49C234E & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Runtime_Augments_RuntimeAugments_TypeInfo, v1);
-    byte_4C2A19B = 1;
+    sub_1B4CF90(&Internal_Runtime_Augments_RuntimeAugments_TypeInfo, v1);
+    byte_49C234E = 1;
   }
   v2 = Internal_Runtime_Augments_RuntimeAugments_TypeInfo;
   if ( !Internal_Runtime_Augments_RuntimeAugments_TypeInfo->_2.cctor_finished )
@@ -3595,10 +3295,10 @@ void __fastcall Internal_Runtime_Augments_RuntimeThread___cctor(const MethodInfo
 {
   __int64 v1; // x1
 
-  if ( (byte_4C2A19F & 1) == 0 )
+  if ( (byte_49C2352 & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Runtime_Augments_RuntimeThread_TypeInfo, v1);
-    byte_4C2A19F = 1;
+    sub_1B4CF90(&Internal_Runtime_Augments_RuntimeThread_TypeInfo, v1);
+    byte_49C2352 = 1;
   }
   Internal_Runtime_Augments_RuntimeThread_TypeInfo->static_fields->OptimalMaxSpinWaitsPerSpinIteration = 64;
 }
@@ -3609,16 +3309,12 @@ void __fastcall Internal_Runtime_Augments_RuntimeThread___ctor(
         System_Threading_Thread_o *t,
         const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.thread = t;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)t, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)t, v5, v6);
 }
 
 
@@ -3631,25 +3327,21 @@ Internal_Runtime_Augments_RuntimeThread_o *__fastcall Internal_Runtime_Augments_
   __int64 v5; // x1
   System_Threading_Thread_o *v6; // x21
   __int64 v7; // x19
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C2A19E & 1) == 0 )
+  if ( (byte_49C2351 & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Runtime_Augments_RuntimeThread_TypeInfo, *(_QWORD *)&maxStackSize);
-    sub_1C3B764(&System_Threading_Thread_TypeInfo, v5);
-    byte_4C2A19E = 1;
+    sub_1B4CF90(&Internal_Runtime_Augments_RuntimeThread_TypeInfo, *(_QWORD *)&maxStackSize);
+    sub_1B4CF90(&System_Threading_Thread_TypeInfo, v5);
+    byte_49C2351 = 1;
   }
-  v6 = (System_Threading_Thread_o *)sub_1C3B9B0(System_Threading_Thread_TypeInfo);
-  System_Threading_Thread___ctor_64631248(v6, start, maxStackSize, 0LL);
-  v7 = sub_1C3B9B0(Internal_Runtime_Augments_RuntimeThread_TypeInfo);
+  v6 = (System_Threading_Thread_o *)sub_1B4D1DC(System_Threading_Thread_TypeInfo);
+  System_Threading_Thread___ctor_63063684(v6, start, maxStackSize, 0LL);
+  v7 = sub_1B4D1DC(Internal_Runtime_Augments_RuntimeThread_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   *(_QWORD *)(v7 + 16) = v6;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v7 + 16), (int64_t)v6, v8, v9, v10, v11, v12, v13);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 16), (int32_t)v6, v8, v9);
   return (Internal_Runtime_Augments_RuntimeThread_o *)v7;
 }
 
@@ -3682,8 +3374,8 @@ void __fastcall Internal_Runtime_Augments_RuntimeThread__Start(
 
   thread = this->fields.thread;
   if ( !thread )
-    sub_1C3B9C0(0LL, state);
-  System_Threading_Thread__Start_64631704(thread, state, 0LL);
+    sub_1B4D1EC(0LL, state);
+  System_Threading_Thread__Start_63064140(thread, state, 0LL);
 }
 
 
@@ -3702,7 +3394,7 @@ void __fastcall Internal_Runtime_Augments_RuntimeThread__set_IsBackground(
 
   thread = this->fields.thread;
   if ( !thread )
-    sub_1C3B9C0(0LL, value);
+    sub_1B4D1EC(0LL, value);
   System_Threading_Thread__set_IsBackground(thread, value, 0LL);
 }
 
@@ -3718,10 +3410,10 @@ void __fastcall Internal_Threading_Tasks_Tracing_TaskTrace__TaskScheduled(
 {
   struct Internal_Runtime_Augments_TaskTraceCallbacks_o *s_callbacks; // x0
 
-  if ( (byte_4C2A19A & 1) == 0 )
+  if ( (byte_49C234D & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
-    byte_4C2A19A = 1;
+    sub_1B4CF90(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
+    byte_49C234D = 1;
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )
@@ -3745,10 +3437,10 @@ void __fastcall Internal_Threading_Tasks_Tracing_TaskTrace__TaskWaitBegin_Asynch
 {
   struct Internal_Runtime_Augments_TaskTraceCallbacks_o *s_callbacks; // x0
 
-  if ( (byte_4C2A197 & 1) == 0 )
+  if ( (byte_49C234A & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
-    byte_4C2A197 = 1;
+    sub_1B4CF90(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
+    byte_49C234A = 1;
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )
@@ -3770,10 +3462,10 @@ void __fastcall Internal_Threading_Tasks_Tracing_TaskTrace__TaskWaitBegin_Synchr
 {
   struct Internal_Runtime_Augments_TaskTraceCallbacks_o *s_callbacks; // x0
 
-  if ( (byte_4C2A198 & 1) == 0 )
+  if ( (byte_49C234B & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
-    byte_4C2A198 = 1;
+    sub_1B4CF90(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
+    byte_49C234B = 1;
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )
@@ -3795,10 +3487,10 @@ void __fastcall Internal_Threading_Tasks_Tracing_TaskTrace__TaskWaitEnd(
 {
   struct Internal_Runtime_Augments_TaskTraceCallbacks_o *s_callbacks; // x0
 
-  if ( (byte_4C2A199 & 1) == 0 )
+  if ( (byte_49C234C & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
-    byte_4C2A199 = 1;
+    sub_1B4CF90(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, *(_QWORD *)&OriginatingTaskID);
+    byte_49C234C = 1;
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )
@@ -3816,10 +3508,10 @@ bool __fastcall Internal_Threading_Tasks_Tracing_TaskTrace__get_Enabled(const Me
   __int64 v1; // x1
   struct Internal_Runtime_Augments_TaskTraceCallbacks_o *s_callbacks; // x0
 
-  if ( (byte_4C2A196 & 1) == 0 )
+  if ( (byte_49C2349 & 1) == 0 )
   {
-    sub_1C3B764(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, v1);
-    byte_4C2A196 = 1;
+    sub_1B4CF90(&Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo, v1);
+    byte_49C2349 = 1;
   }
   s_callbacks = Internal_Threading_Tasks_Tracing_TaskTrace_TypeInfo->static_fields->s_callbacks;
   if ( s_callbacks )

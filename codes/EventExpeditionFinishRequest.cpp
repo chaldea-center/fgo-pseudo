@@ -9,16 +9,16 @@ void __fastcall EventExpeditionFinishRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C238F0 & 1) == 0 )
+  if ( (byte_49BC81F & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_19507/*"graphic.shader"*/, *(_QWORD *)&eventId);
-    sub_1C3B764(&StringLiteral_19692/*"https://play.google.com/store/apps/details?id="*/, v7);
-    byte_4C238F0 = 1;
+    sub_1B4CF90(&StringLiteral_18824/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B4CF90(&StringLiteral_19007/*"expeditionIdxs"*/, v7);
+    byte_49BC81F = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19507/*"graphic.shader"*/, eventId, method);
-  RequestBase__addField_42630344(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18824/*"eventId"*/, eventId, method);
+  RequestBase__addField_41756888(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19692/*"https://play.google.com/store/apps/details?id="*/,
+    (System_String_o *)StringLiteral_19007/*"expeditionIdxs"*/,
     &expeditionIdxs->obj,
     v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
@@ -32,16 +32,16 @@ System_String_o *__fastcall EventExpeditionFinishRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238EF & 1) == 0 )
+  if ( (byte_49BC81E & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_19490/*"gl-ES"*/, v2);
-    byte_4C238EF = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_18807/*"event/expeditionFinish"*/, v2);
+    byte_49BC81E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_19490/*"gl-ES"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_18807/*"event/expeditionFinish"*/, 0LL);
 }
 
 
@@ -58,16 +58,16 @@ void __fastcall EventExpeditionFinishRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C238F1 & 1) == 0 )
+  if ( (byte_49BC820 & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    byte_4C238F1 = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    byte_49BC820 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v6 = ResponseCommandKind__SearchData(117, responseList, 0LL);
-  if ( v6 && (v7 = v6, ResponseData__checkError_42712632(v6, 0LL)) )
+  if ( v6 && (v7 = v6, ResponseData__checkError_41839176(v6, 0LL)) )
   {
     success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )

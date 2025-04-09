@@ -7,99 +7,55 @@ void __fastcall CharaGraphListViewItemBase___ctor(
   char *v6; // x0
   const MethodInfo *v7; // x1
   struct CharaGraphFilterLogicBase_o *FilterLogic; // x0
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  const MethodInfo *v15; // x1
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  const MethodInfo *v11; // x1
   struct CharaGraphSortLogicBase_o *SortLogic; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  const MethodInfo *v23; // x1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x1
   struct CharaGraphListViewItemDrawPatternBase_o *ItemDrawPattern; // x0
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
-  int64_t v44; // x2
-  int32_t v45; // w3
-  System_String_o *v46; // x4
-  BattleSetupInfo_o *v47; // x5
-  FollowerInfo_o *v48; // x6
-  PartyListViewItem_o *v49; // x7
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.filterLogic,
-    (int64_t)FilterLogic,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14);
-  SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v15);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
+  SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v11);
   this->fields.sortLogic = SortLogic;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sortLogic, (int64_t)SortLogic, v17, v18, v19, v20, v21, v22);
-  ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v23);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
+  ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v15);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._DrawPattern_k__BackingField,
-    (int64_t)ItemDrawPattern,
-    v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)ItemDrawPattern, v17, v18);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._RootInfo_k__BackingField,
-    (int64_t)RootInfo_k__BackingField,
-    v32,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField,
+    (int32_t)RootInfo_k__BackingField,
+    v20,
+    v21);
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v38, v39, v40, v41, v42, v43),
+        sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v22, v23),
         (v6 = (char *)this->fields.sortLogic) == 0LL) )
   {
 LABEL_5:
-    sub_1C3B9C0(v6, v7);
+    sub_1B4D1EC(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v6 + 24), (int64_t)this, v44, v45, v46, v47, v48, v49);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v24, v25);
 }
 
 
@@ -107,23 +63,15 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
         CharaGraphListViewItemBase_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
   struct CharaGraphSortLogicBase_o *sortLogic; // x8
   struct IconLabelInfo_o *IconInfo1_k__BackingField; // x1
   struct IconLabelInfo_o **p_IconInfo1_k__BackingField; // x20
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  __int64 v18; // x8
-  struct IconLabelInfo_o *v19; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  __int64 v10; // x8
+  struct IconLabelInfo_o *v11; // x1
 
   sortLogic = this->fields.sortLogic;
   if ( !sortLogic )
@@ -135,30 +83,18 @@ void __fastcall CharaGraphListViewItemBase__ApplySortValue(
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
   p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
-    (int64_t)IconInfo1_k__BackingField,
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)IconInfo1_k__BackingField,
     v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v18 = (__int64)*(p_IconInfo1_k__BackingField - 9);
-  if ( !v18 )
+    v3);
+  v10 = (__int64)*(p_IconInfo1_k__BackingField - 9);
+  if ( !v10 )
 LABEL_4:
-    sub_1C3B9C0(this, method);
-  v19 = *(struct IconLabelInfo_o **)(v18 + 96);
-  this->fields._IconInfo2_k__BackingField = v19;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
-    (int64_t)v19,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+    sub_1B4D1EC(this, method);
+  v11 = *(struct IconLabelInfo_o **)(v10 + 96);
+  this->fields._IconInfo2_k__BackingField = v11;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
 }
 
 
@@ -168,22 +104,18 @@ bool __fastcall CharaGraphListViewItemBase__GetNpInfo(
         const MethodInfo *method)
 {
   TreasureDvcInfo_o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C212BB & 1) == 0 )
+  if ( (byte_49BA1CF & 1) == 0 )
   {
-    sub_1C3B764(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4C212BB = 1;
+    sub_1B4CF90(&TreasureDvcInfo_TypeInfo, tdInfo);
+    byte_49BA1CF = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_1C3B9B0(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1B4D1DC(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0LL);
   *tdInfo = v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)tdInfo, (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)tdInfo, (int32_t)v4, v5, v6);
   return 0;
 }
 
@@ -193,28 +125,16 @@ bool __fastcall CharaGraphListViewItemBase__IsMatchFilter(
         ListViewSort_o *sort,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   struct CharaGraphFilterLogicBase_o *filterLogic; // x0
 
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&filterLogic->fields,
-          (int64_t)sort,
-          (int64_t)method,
-          v3,
-          v4,
-          v5,
-          v6,
-          v7),
+        sub_1B4CF34((CGThumbnailListItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
         (filterLogic = this->fields.filterLogic) == 0LL) )
   {
-    sub_1C3B9C0(filterLogic, sort);
+    sub_1B4D1EC(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, Il2CppMethodPointer))filterLogic->klass->vtable._4_unknown.method)(
            filterLogic,
@@ -235,7 +155,7 @@ void __fastcall CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._11_OnBeforeMatchingFilter.methodPtr);
   if ( !args )
-    sub_1C3B9C0(v5, v6);
+    sub_1B4D1EC(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -275,15 +195,11 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
 {
   CharaGraphListViewItemBase_c *klass; // x8
   __int64 v6; // x1
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  char v13; // w20
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  char v9; // w20
   struct CharaGraphSortLogicBase_o *sortLogic; // x0
-  const MethodInfo *v15; // x1
+  const MethodInfo *v11; // x1
 
   klass = this->klass;
   *(_WORD *)&this->fields.isTermination = 0;
@@ -292,24 +208,24 @@ bool __fastcall CharaGraphListViewItemBase__SetSortValue(
     this,
     sort,
     klass->vtable._12_GetNpInfo.methodPtr);
-  v13 = ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, ListViewSort_o *, Il2CppMethodPointer))this->klass->vtable._5_IsMatchFilter.method)(
-          this,
-          sort,
-          this->klass->vtable._6_unknown.methodPtr);
-  if ( (v13 & 1) != 0 )
+  v9 = ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, ListViewSort_o *, Il2CppMethodPointer))this->klass->vtable._5_IsMatchFilter.method)(
+         this,
+         sort,
+         this->klass->vtable._6_unknown.methodPtr);
+  if ( (v9 & 1) != 0 )
   {
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_1C3B708((PartyOrganizationUtility_o *)&sortLogic->fields, (int64_t)sort, v7, v8, v9, v10, v11, v12),
+          sub_1B4CF34((CGThumbnailListItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
           (sortLogic = this->fields.sortLogic) == 0LL) )
     {
-      sub_1C3B9C0(sortLogic, v6);
+      sub_1B4D1EC(sortLogic, v6);
     }
     CharaGraphSortLogicBase__SetSortValue(sortLogic, 0LL);
-    CharaGraphListViewItemBase__ApplySortValue(this, v15);
+    CharaGraphListViewItemBase__ApplySortValue(this, v11);
   }
-  return v13 & 1;
+  return v9 & 1;
 }
 
 
@@ -616,22 +532,10 @@ void __fastcall CharaGraphListViewItemBase__set_DrawPattern(
         CharaGraphListViewItemDrawPatternBase_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._DrawPattern_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -667,22 +571,10 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -691,22 +583,10 @@ void __fastcall CharaGraphListViewItemBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -859,20 +739,8 @@ void __fastcall CharaGraphListViewItemBase__set_RootInfo(
         CharaGraphDefine_CharaGraphRootInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._RootInfo_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

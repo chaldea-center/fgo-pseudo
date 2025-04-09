@@ -2,81 +2,49 @@ void __fastcall BoxGachaTalkInfo___ctor(BoxGachaTalkInfo_o *this, const MethodIn
 {
   __int64 v3; // x1
   System_Collections_Generic_List_object__o *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  System_Collections_Generic_List_object__o *v11; // x20
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  System_Collections_Generic_List_object__o *v18; // x20
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  System_Collections_Generic_List_object__o *v25; // x20
-  int64_t v26; // x2
-  int32_t v27; // w3
-  System_String_o *v28; // x4
-  BattleSetupInfo_o *v29; // x5
-  FollowerInfo_o *v30; // x6
-  PartyListViewItem_o *v31; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  System_Collections_Generic_List_object__o *v7; // x20
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Collections_Generic_List_object__o *v10; // x20
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  System_Collections_Generic_List_object__o *v13; // x20
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C260A6 & 1) == 0 )
+  if ( (byte_49BEFED & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string___ctor__, method);
-    sub_1C3B764(&System_Collections_Generic_List_string__TypeInfo, v3);
-    byte_4C260A6 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string___ctor__, method);
+    sub_1B4CF90(&System_Collections_Generic_List_string__TypeInfo, v3);
+    byte_49BEFED = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.beforeVoiceIdList = (struct System_Collections_Generic_List_string__o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.beforeTalkMessageList = (struct System_Collections_Generic_List_string__o *)v11;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.beforeTalkMessageList,
-    (int64_t)v11,
-    v12,
+    v7,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.beforeTalkMessageList = (struct System_Collections_Generic_List_string__o *)v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.beforeTalkMessageList, (int32_t)v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v10,
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.afterVoiceIdList = (struct System_Collections_Generic_List_string__o *)v10;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.afterVoiceIdList, (int32_t)v10, v11, v12);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v13,
-    v14,
-    v15,
-    v16,
-    v17);
-  v18 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
-    v18,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.afterVoiceIdList = (struct System_Collections_Generic_List_string__o *)v18;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.afterVoiceIdList, (int64_t)v18, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
-    v25,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.afterTalkMessageList = (struct System_Collections_Generic_List_string__o *)v25;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.afterTalkMessageList,
-    (int64_t)v25,
-    v26,
-    v27,
-    v28,
-    v29,
-    v30,
-    v31);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.afterTalkMessageList = (struct System_Collections_Generic_List_string__o *)v13;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.afterTalkMessageList, (int32_t)v13, v14, v15);
 }
 
 
@@ -86,36 +54,28 @@ void __fastcall BoxGachaTalkInfo__SetAfterGachaTalkInfo(
         System_String_o *text,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
   System_Collections_Generic_List_object__o *afterVoiceIdList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v9; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x8
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  struct System_Object_array *v22; // x8
-  _QWORD *v23; // x9
-  __int64 v24; // x10
-  Il2CppClass **v25; // x8
+  Il2CppClass **v11; // x8
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  struct System_Object_array *v14; // x8
+  _QWORD *v15; // x9
+  __int64 v16; // x10
+  Il2CppClass **v17; // x8
 
-  if ( (byte_4C260A8 & 1) == 0 )
+  if ( (byte_49BEFEF & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__Add__, voiceId);
-    byte_4C260A8 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__Add__, voiceId);
+    byte_49BEFEF = 1;
   }
   afterVoiceIdList = (System_Collections_Generic_List_object__o *)this->fields.afterVoiceIdList;
   if ( !afterVoiceIdList )
     goto LABEL_13;
   items = afterVoiceIdList->fields._items;
-  v13 = Method_System_Collections_Generic_List_string__Add__;
+  v9 = Method_System_Collections_Generic_List_string__Add__;
   ++afterVoiceIdList->fields._version;
   if ( !items )
     goto LABEL_13;
@@ -125,47 +85,39 @@ void __fastcall BoxGachaTalkInfo__SetAfterGachaTalkInfo(
     System_Collections_Generic_List_object___AddWithResize(
       afterVoiceIdList,
       (Il2CppObject *)voiceId,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
   }
   else
   {
-    v15 = &items->obj.klass + size;
+    v11 = &items->obj.klass + size;
     afterVoiceIdList->fields._size = size + 1;
-    v15[4] = (Il2CppClass *)voiceId;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)(v15 + 4),
-      (int64_t)voiceId,
-      (int64_t)text,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    v11[4] = (Il2CppClass *)voiceId;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 4), (int32_t)voiceId, (int32_t)text, method);
   }
   afterVoiceIdList = (System_Collections_Generic_List_object__o *)this->fields.afterTalkMessageList;
   if ( !afterVoiceIdList
-    || (v22 = afterVoiceIdList->fields._items,
-        v23 = Method_System_Collections_Generic_List_string__Add__,
+    || (v14 = afterVoiceIdList->fields._items,
+        v15 = Method_System_Collections_Generic_List_string__Add__,
         ++afterVoiceIdList->fields._version,
-        !v22) )
+        !v14) )
   {
 LABEL_13:
-    sub_1C3B9C0(afterVoiceIdList, voiceId);
+    sub_1B4D1EC(afterVoiceIdList, voiceId);
   }
-  v24 = afterVoiceIdList->fields._size;
-  if ( (unsigned int)v24 >= v22->max_length )
+  v16 = afterVoiceIdList->fields._size;
+  if ( (unsigned int)v16 >= v14->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       afterVoiceIdList,
       (Il2CppObject *)text,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
-    v25 = &v22->obj.klass + v24;
-    afterVoiceIdList->fields._size = v24 + 1;
-    v25[4] = (Il2CppClass *)text;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)text, v16, v17, v18, v19, v20, v21);
+    v17 = &v14->obj.klass + v16;
+    afterVoiceIdList->fields._size = v16 + 1;
+    v17[4] = (Il2CppClass *)text;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 4), (int32_t)text, v12, v13);
   }
 }
 
@@ -176,36 +128,28 @@ void __fastcall BoxGachaTalkInfo__SetBeforeGachaTalkInfo(
         System_String_o *text,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
   System_Collections_Generic_List_object__o *beforeVoiceIdList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v9; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x8
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  struct System_Object_array *v22; // x8
-  _QWORD *v23; // x9
-  __int64 v24; // x10
-  Il2CppClass **v25; // x8
+  Il2CppClass **v11; // x8
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  struct System_Object_array *v14; // x8
+  _QWORD *v15; // x9
+  __int64 v16; // x10
+  Il2CppClass **v17; // x8
 
-  if ( (byte_4C260A7 & 1) == 0 )
+  if ( (byte_49BEFEE & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__Add__, voiceId);
-    byte_4C260A7 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__Add__, voiceId);
+    byte_49BEFEE = 1;
   }
   beforeVoiceIdList = (System_Collections_Generic_List_object__o *)this->fields.beforeVoiceIdList;
   if ( !beforeVoiceIdList )
     goto LABEL_13;
   items = beforeVoiceIdList->fields._items;
-  v13 = Method_System_Collections_Generic_List_string__Add__;
+  v9 = Method_System_Collections_Generic_List_string__Add__;
   ++beforeVoiceIdList->fields._version;
   if ( !items )
     goto LABEL_13;
@@ -215,47 +159,39 @@ void __fastcall BoxGachaTalkInfo__SetBeforeGachaTalkInfo(
     System_Collections_Generic_List_object___AddWithResize(
       beforeVoiceIdList,
       (Il2CppObject *)voiceId,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
   }
   else
   {
-    v15 = &items->obj.klass + size;
+    v11 = &items->obj.klass + size;
     beforeVoiceIdList->fields._size = size + 1;
-    v15[4] = (Il2CppClass *)voiceId;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)(v15 + 4),
-      (int64_t)voiceId,
-      (int64_t)text,
-      (int32_t)method,
-      v4,
-      v5,
-      v6,
-      v7);
+    v11[4] = (Il2CppClass *)voiceId;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 4), (int32_t)voiceId, (int32_t)text, method);
   }
   beforeVoiceIdList = (System_Collections_Generic_List_object__o *)this->fields.beforeTalkMessageList;
   if ( !beforeVoiceIdList
-    || (v22 = beforeVoiceIdList->fields._items,
-        v23 = Method_System_Collections_Generic_List_string__Add__,
+    || (v14 = beforeVoiceIdList->fields._items,
+        v15 = Method_System_Collections_Generic_List_string__Add__,
         ++beforeVoiceIdList->fields._version,
-        !v22) )
+        !v14) )
   {
 LABEL_13:
-    sub_1C3B9C0(beforeVoiceIdList, voiceId);
+    sub_1B4D1EC(beforeVoiceIdList, voiceId);
   }
-  v24 = beforeVoiceIdList->fields._size;
-  if ( (unsigned int)v24 >= v22->max_length )
+  v16 = beforeVoiceIdList->fields._size;
+  if ( (unsigned int)v16 >= v14->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
       beforeVoiceIdList,
       (Il2CppObject *)text,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
-    v25 = &v22->obj.klass + v24;
-    beforeVoiceIdList->fields._size = v24 + 1;
-    v25[4] = (Il2CppClass *)text;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v25 + 4), (int64_t)text, v16, v17, v18, v19, v20, v21);
+    v17 = &v14->obj.klass + v16;
+    beforeVoiceIdList->fields._size = v16 + 1;
+    v17[4] = (Il2CppClass *)text;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 4), (int32_t)text, v12, v13);
   }
 }
 
@@ -268,18 +204,18 @@ System_String_o *__fastcall BoxGachaTalkInfo__getAfterTalkMessage(
 {
   struct System_Collections_Generic_List_string__o *afterTalkMessageList; // x0
 
-  if ( (byte_4C260AC & 1) == 0 )
+  if ( (byte_49BEFF3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
-    byte_4C260AC = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
+    byte_49BEFF3 = 1;
   }
   afterTalkMessageList = this->fields.afterTalkMessageList;
   if ( !afterTalkMessageList )
-    sub_1C3B9C0(0LL, *(_QWORD *)&idx);
+    sub_1B4D1EC(0LL, *(_QWORD *)&idx);
   return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)afterTalkMessageList,
                               idx,
-                              (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_string__get_Item__);
+                              (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_string__get_Item__);
 }
 
 
@@ -291,18 +227,18 @@ System_String_o *__fastcall BoxGachaTalkInfo__getAfterVoiceId(
 {
   struct System_Collections_Generic_List_string__o *afterVoiceIdList; // x0
 
-  if ( (byte_4C260AB & 1) == 0 )
+  if ( (byte_49BEFF2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
-    byte_4C260AB = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
+    byte_49BEFF2 = 1;
   }
   afterVoiceIdList = this->fields.afterVoiceIdList;
   if ( !afterVoiceIdList )
-    sub_1C3B9C0(0LL, *(_QWORD *)&idx);
+    sub_1B4D1EC(0LL, *(_QWORD *)&idx);
   return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)afterVoiceIdList,
                               idx,
-                              (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_string__get_Item__);
+                              (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_string__get_Item__);
 }
 
 
@@ -314,18 +250,18 @@ System_String_o *__fastcall BoxGachaTalkInfo__getBeforeTalkMessage(
 {
   struct System_Collections_Generic_List_string__o *beforeTalkMessageList; // x0
 
-  if ( (byte_4C260AA & 1) == 0 )
+  if ( (byte_49BEFF1 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
-    byte_4C260AA = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
+    byte_49BEFF1 = 1;
   }
   beforeTalkMessageList = this->fields.beforeTalkMessageList;
   if ( !beforeTalkMessageList )
-    sub_1C3B9C0(0LL, *(_QWORD *)&idx);
+    sub_1B4D1EC(0LL, *(_QWORD *)&idx);
   return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)beforeTalkMessageList,
                               idx,
-                              (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_string__get_Item__);
+                              (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_string__get_Item__);
 }
 
 
@@ -337,16 +273,16 @@ System_String_o *__fastcall BoxGachaTalkInfo__getBeforeVoiceId(
 {
   struct System_Collections_Generic_List_string__o *beforeVoiceIdList; // x0
 
-  if ( (byte_4C260A9 & 1) == 0 )
+  if ( (byte_49BEFF0 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
-    byte_4C260A9 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_string__get_Item__, *(_QWORD *)&idx);
+    byte_49BEFF0 = 1;
   }
   beforeVoiceIdList = this->fields.beforeVoiceIdList;
   if ( !beforeVoiceIdList )
-    sub_1C3B9C0(0LL, *(_QWORD *)&idx);
+    sub_1B4D1EC(0LL, *(_QWORD *)&idx);
   return (System_String_o *)System_Collections_Generic_List_object___get_Item(
                               (System_Collections_Generic_List_object__o *)beforeVoiceIdList,
                               idx,
-                              (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_string__get_Item__);
+                              (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_string__get_Item__);
 }

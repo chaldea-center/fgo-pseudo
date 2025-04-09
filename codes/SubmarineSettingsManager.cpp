@@ -1,73 +1,45 @@
 void __fastcall SubmarineSettingsManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
   struct SubmarineSettingsManager_StaticFields *static_fields; // x0
-  int64_t v12; // x1
-  int64_t v13; // x1
+  int32_t v8; // w1
+  int32_t v9; // w1
+  struct SubmarineSettingsManager_StaticFields *v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w1
   struct SubmarineSettingsManager_StaticFields *v14; // x0
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  int64_t v21; // x1
-  struct SubmarineSettingsManager_StaticFields *v22; // x0
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
-  if ( (byte_4C1EAA4 & 1) == 0 )
+  if ( (byte_49B799E & 1) == 0 )
   {
-    sub_1C3B764(&SubmarineSettingsManager_TypeInfo, v1);
-    sub_1C3B764(&StringLiteral_12591/*"Snow"*/, v8);
-    sub_1C3B764(&StringLiteral_12593/*"Socket is already connected"*/, v9);
-    sub_1C3B764(&StringLiteral_12592/*"So"*/, v10);
-    byte_4C1EAA4 = 1;
+    sub_1B4CF90(&SubmarineSettingsManager_TypeInfo, v1);
+    sub_1B4CF90(&StringLiteral_12119/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/, v4);
+    sub_1B4CF90(&StringLiteral_12121/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/, v5);
+    sub_1B4CF90(&StringLiteral_12120/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/, v6);
+    byte_49B799E = 1;
   }
   static_fields = SubmarineSettingsManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEFAULT_PANEL_WIDTH = 0x5200000052LL;
-  *(_OWORD *)&static_fields->DEFAULT_PANEL_SELECT_DELAY_SECOND = xmmword_C0CD10;
+  *(_OWORD *)&static_fields->DEFAULT_PANEL_SELECT_DELAY_SECOND = xmmword_BA9770;
   *(_QWORD *)&static_fields->DEFAULT_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = 0x3F0000003F000000LL;
-  v12 = StringLiteral_12593/*"Socket is already connected"*/;
-  static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12593/*"Socket is already connected"*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION,
-    v12,
-    v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
-  v13 = StringLiteral_12592/*"So"*/;
+  v8 = StringLiteral_12121/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/;
+  static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12121/*"SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->KEY_VIEW_SCAN_RANGE_CAMERA_DURATION, v8, v2, v3);
+  v9 = StringLiteral_12120/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/;
+  v10 = SubmarineSettingsManager_TypeInfo->static_fields;
+  v10->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12120/*"SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v10->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION, v9, v11, v12);
+  v13 = StringLiteral_12119/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/;
   v14 = SubmarineSettingsManager_TypeInfo->static_fields;
-  v14->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12592/*"So"*/;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&v14->KEY_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION,
-    v13,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
-  v21 = StringLiteral_12591/*"Snow"*/;
-  v22 = SubmarineSettingsManager_TypeInfo->static_fields;
-  v22->KEY_OPEN_PANEL_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12591/*"Snow"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v22->KEY_OPEN_PANEL_CAMERA_DURATION, v21, v23, v24, v25, v26, v27, v28);
+  v14->KEY_OPEN_PANEL_CAMERA_DURATION = (struct System_String_o *)StringLiteral_12119/*"SUBMARINE_OPEN_PANEL_CAMERA_DURATION"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v14->KEY_OPEN_PANEL_CAMERA_DURATION, v13, v15, v16);
 }
 
 
@@ -81,66 +53,54 @@ void __fastcall SubmarineSettingsManager___ctor(
   __int64 v7; // x1
   __int64 v8; // x1
   System_Collections_Generic_Dictionary_int__float__o *v9; // x20
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  __int64 v16; // x1
-  SubmarineSettingsManager_c *v17; // x0
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  __int64 v12; // x1
+  SubmarineSettingsManager_c *v13; // x0
   int32x2_t *static_fields; // x8
-  struct UnityEngine_Vector3_StaticFields *v19; // x8
-  __int64 v20; // d0
+  struct UnityEngine_Vector3_StaticFields *v15; // x8
+  __int64 v16; // d0
   float z; // s1
 
-  if ( (byte_4C1EAA0 & 1) == 0 )
+  if ( (byte_49B799A & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__float___ctor__, *(_QWORD *)&eventId);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_int__float__TypeInfo, v7);
-    sub_1C3B764(&SubmarineSettingsManager_TypeInfo, v8);
-    byte_4C1EAA0 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__float___ctor__, *(_QWORD *)&eventId);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_int__float__TypeInfo, v7);
+    sub_1B4CF90(&SubmarineSettingsManager_TypeInfo, v8);
+    byte_49B799A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.mapId = mapId;
   this->fields.eventId = eventId;
-  v9 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_int__float__TypeInfo);
+  v9 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_int__float__TypeInfo);
   System_Collections_Generic_Dictionary_int__float____ctor(
     v9,
-    (const MethodInfo_32FA030 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    (const MethodInfo_31FC304 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
   this->fields._ScanOpenPanelIntervals_k__BackingField = v9;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ScanOpenPanelIntervals_k__BackingField,
-    (int64_t)v9,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15);
-  v17 = SubmarineSettingsManager_TypeInfo;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ScanOpenPanelIntervals_k__BackingField, (int32_t)v9, v10, v11);
+  v13 = SubmarineSettingsManager_TypeInfo;
   if ( !SubmarineSettingsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SubmarineSettingsManager_TypeInfo);
-    v17 = SubmarineSettingsManager_TypeInfo;
+    v13 = SubmarineSettingsManager_TypeInfo;
   }
-  static_fields = (int32x2_t *)v17->static_fields;
+  static_fields = (int32x2_t *)v13->static_fields;
   LODWORD(this->fields._ScanOpenPanelIntervalDefault_k__BackingField) = static_fields[1].n64_u32[1];
   LODWORD(this->fields._PanelSelectDelaySecond_k__BackingField) = static_fields[1].n64_u32[0];
   this->fields._PanelUnitSize_k__BackingField = (struct UnityEngine_Vector2_o)vcvt_f32_s32((int32x2_t)static_fields->n64_u64[0]).n64_u64[0];
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v16);
-    v17 = SubmarineSettingsManager_TypeInfo;
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v12);
+    v13 = SubmarineSettingsManager_TypeInfo;
+    byte_49B5361 = 1;
   }
-  v19 = UnityEngine_Vector3_TypeInfo->static_fields;
-  v20 = *(_QWORD *)&v19->zeroVector.fields.x;
-  z = v19->zeroVector.fields.z;
+  v15 = UnityEngine_Vector3_TypeInfo->static_fields;
+  v16 = *(_QWORD *)&v15->zeroVector.fields.x;
+  z = v15->zeroVector.fields.z;
   this->fields._HomeSpotId_k__BackingField = 0;
-  *(_QWORD *)&this->fields._BoardOffset_k__BackingField.fields.x = v20;
+  *(_QWORD *)&this->fields._BoardOffset_k__BackingField.fields.x = v16;
   this->fields._BoardOffset_k__BackingField.fields.z = z;
-  *(_OWORD *)&this->fields._SecondOfOpenPanelToRevealSpot_k__BackingField = *(_OWORD *)&v17->static_fields->DEFAULT_SECOND_OF_OPEN_PANEL_TO_REVEAL_SPOT;
+  *(_OWORD *)&this->fields._SecondOfOpenPanelToRevealSpot_k__BackingField = *(_OWORD *)&v13->static_fields->DEFAULT_SECOND_OF_OPEN_PANEL_TO_REVEAL_SPOT;
 }
 
 
@@ -153,11 +113,11 @@ float __fastcall SubmarineSettingsManager__GetScanOpenPanelInterval(
   __int64 v5; // x1
   System_Collections_Generic_Dictionary_int__float__o *ScanOpenPanelIntervals_k__BackingField; // x0
 
-  if ( (byte_4C1EAA3 & 1) == 0 )
+  if ( (byte_49B799D & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__, *(_QWORD *)&scanId);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__, v5);
-    byte_4C1EAA3 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__, *(_QWORD *)&scanId);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__, v5);
+    byte_49B799D = 1;
   }
   ScanOpenPanelIntervals_k__BackingField = this->fields._ScanOpenPanelIntervals_k__BackingField;
   if ( !ScanOpenPanelIntervals_k__BackingField )
@@ -165,16 +125,16 @@ float __fastcall SubmarineSettingsManager__GetScanOpenPanelInterval(
   if ( System_Collections_Generic_Dictionary_int__float___ContainsKey(
          ScanOpenPanelIntervals_k__BackingField,
          scanId,
-         (const MethodInfo_32FABF4 *)Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__) )
+         (const MethodInfo_31FCEC8 *)Method_System_Collections_Generic_Dictionary_int__float__ContainsKey__) )
   {
     ScanOpenPanelIntervals_k__BackingField = this->fields._ScanOpenPanelIntervals_k__BackingField;
     if ( ScanOpenPanelIntervals_k__BackingField )
       return System_Collections_Generic_Dictionary_int__float___get_Item(
                ScanOpenPanelIntervals_k__BackingField,
                scanId,
-               (const MethodInfo_32FA960 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+               (const MethodInfo_31FCC34 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
 LABEL_8:
-    sub_1C3B9C0(ScanOpenPanelIntervals_k__BackingField, *(_QWORD *)&scanId);
+    sub_1B4D1EC(ScanOpenPanelIntervals_k__BackingField, *(_QWORD *)&scanId);
   }
   return this->fields._ScanOpenPanelIntervalDefault_k__BackingField;
 }
@@ -209,12 +169,12 @@ void __fastcall SubmarineSettingsManager__Load(
   float OpenPanelCameraDuration; // s0
 
   v4 = this;
-  if ( (byte_4C1EAA1 & 1) == 0 )
+  if ( (byte_49B799B & 1) == 0 )
   {
-    this = (SubmarineSettingsManager_o *)sub_1C3B764(
+    this = (SubmarineSettingsManager_o *)sub_1B4CF90(
                                            &Method_System_Collections_Generic_Dictionary_int__float__set_Item__,
                                            overrwrites);
-    byte_4C1EAA1 = 1;
+    byte_49B799B = 1;
   }
   if ( !overrwrites )
     goto LABEL_45;
@@ -229,7 +189,7 @@ void __fastcall SubmarineSettingsManager__Load(
     {
       if ( v7 >= max_length )
 LABEL_46:
-        sub_1C3B9C8(this, overrwrites);
+        sub_1B4D1F4(this, overrwrites);
       v8 = ScanOpenPanelIntervals->m_Items[v7];
       if ( !v8 )
         break;
@@ -240,13 +200,13 @@ LABEL_46:
         (System_Collections_Generic_Dictionary_int__float__o *)this,
         v8->fields.ScanId,
         v8->fields.Interval,
-        (const MethodInfo_32FA9E8 *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
+        (const MethodInfo_31FCCBC *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
       max_length = ScanOpenPanelIntervals->max_length;
       if ( (int)++v7 >= max_length )
         goto LABEL_11;
     }
 LABEL_45:
-    sub_1C3B9C0(this, overrwrites);
+    sub_1B4D1EC(this, overrwrites);
   }
 LABEL_11:
   ScanOpenPanelIntervalDefault = overrwrites->fields.ScanOpenPanelIntervalDefault;
@@ -338,10 +298,10 @@ void __fastcall SubmarineSettingsManager__UpdateSettingsFromMaster(
   SubmarineSettingsManager_c *v7; // x0
   float v8; // s0
 
-  if ( (byte_4C1EAA2 & 1) == 0 )
+  if ( (byte_49B799C & 1) == 0 )
   {
-    sub_1C3B764(&SubmarineSettingsManager_TypeInfo, method);
-    byte_4C1EAA2 = 1;
+    sub_1B4CF90(&SubmarineSettingsManager_TypeInfo, method);
+    byte_49B799C = 1;
   }
   v3 = SubmarineSettingsManager_TypeInfo;
   if ( !SubmarineSettingsManager_TypeInfo->_2.cctor_finished )
@@ -548,22 +508,14 @@ void __fastcall SubmarineSettingsManager__set_ScanOpenPanelIntervals(
         System_Collections_Generic_Dictionary_int__float__o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._ScanOpenPanelIntervals_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._ScanOpenPanelIntervals_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._ScanOpenPanelIntervals_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 

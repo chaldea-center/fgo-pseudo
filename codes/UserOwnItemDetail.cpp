@@ -17,10 +17,10 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnInfoByItemId(int32_t 
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
   v2 = itemId;
-  if ( (byte_4C232C5 & 1) == 0 )
+  if ( (byte_49BC1F4 & 1) == 0 )
   {
-    *(_QWORD *)&itemId = sub_1C3B764(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, method);
-    byte_4C232C5 = 1;
+    *(_QWORD *)&itemId = sub_1B4CF90(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, method);
+    byte_49BC1F4 = 1;
   }
   entity = 0LL;
   ItemMaster = (UserGameEntity_o *)UserOwnItemDetail__get_ItemMaster(*(const MethodInfo **)&itemId);
@@ -30,18 +30,18 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnInfoByItemId(int32_t 
          (DataMasterBase_TMaster__TEntity__PKType__o *)ItemMaster,
          &entity,
          v2,
-         (const MethodInfo_329AE94 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+         (const MethodInfo_319D9E8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
   {
     ItemMaster = UserGameMaster__getSelfUserGame(0LL);
     v4 = entity;
     if ( entity )
-      return UserOwnItemDetail__GetUserOwnItemInfo_42043452(
+      return UserOwnItemDetail__GetUserOwnItemInfo_41169996(
                (int32_t)entity[3].klass,
                (ItemEntity_o *)entity,
                ItemMaster,
                v5);
 LABEL_8:
-    sub_1C3B9C0(ItemMaster, v4);
+    sub_1B4D1EC(ItemMaster, v4);
   }
   return 0LL;
 }
@@ -66,95 +66,91 @@ System_Collections_Generic_List_UserOwnItemInfo__o *__fastcall UserOwnItemDetail
   System_Collections_Generic_List_object__o *v13; // x19
   _BOOL8 v14; // x0
   const MethodInfo *v15; // x3
-  Il2CppObject *UserOwnItemInfo_42043452; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
-  int64_t v23; // x1
+  Il2CppObject *UserOwnItemInfo_41169996; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  Il2CppObject *v19; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
+  _QWORD *v21; // x9
   __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v23; // x0
+  System_Collections_Generic_List_Enumerator_object__o v25; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+20h] [xbp-60h] BYREF
 
   v2 = itemType;
-  if ( (byte_4C232C6 & 1) == 0 )
+  if ( (byte_49BC1F5 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__get_Current__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserOwnItemInfo__Add__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__, v7);
-    *(_QWORD *)&itemType = sub_1C3B764(&System_Collections_Generic_List_UserOwnItemInfo__TypeInfo, v8);
-    byte_4C232C6 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__get_Current__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserOwnItemInfo__Add__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__, v7);
+    *(_QWORD *)&itemType = sub_1B4CF90(&System_Collections_Generic_List_UserOwnItemInfo__TypeInfo, v8);
+    byte_49BC1F5 = 1;
   }
-  memset(&v30, 0, sizeof(v30));
+  memset(&v26, 0, sizeof(v26));
   ItemMaster = UserOwnItemDetail__get_ItemMaster(*(const MethodInfo **)&itemType);
   if ( !ItemMaster
     || (EntityListByType = ItemMaster__GetEntityListByType(ItemMaster, v2, 0LL),
         SelfUserGame = UserGameMaster__getSelfUserGame(0LL),
-        v13 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_UserOwnItemInfo__TypeInfo),
+        v13 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_UserOwnItemInfo__TypeInfo),
         System_Collections_Generic_List_object____ctor(
           v13,
-          (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__),
+          (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__),
         !EntityListByType) )
   {
-    sub_1C3B9C0(ItemMaster, v10);
+    sub_1B4D1EC(ItemMaster, v10);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v29,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v25,
     (System_Collections_Generic_List_object__o *)EntityListByType,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__);
-  v30 = v29;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__);
+  v26 = v25;
   while ( 1 )
   {
     v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v30,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__);
+            &v26,
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__);
     if ( !v14 )
       break;
-    if ( !v30.fields._current )
-      sub_1C3B9C0(v14, 0LL);
-    UserOwnItemInfo_42043452 = (Il2CppObject *)UserOwnItemDetail__GetUserOwnItemInfo_42043452(
-                                                 (int32_t)v30.fields._current[3].klass,
-                                                 (ItemEntity_o *)v30.fields._current,
+    if ( !v26.fields._current )
+      sub_1B4D1EC(v14, 0LL);
+    UserOwnItemInfo_41169996 = (Il2CppObject *)UserOwnItemDetail__GetUserOwnItemInfo_41169996(
+                                                 (int32_t)v26.fields._current[3].klass,
+                                                 (ItemEntity_o *)v26.fields._current,
                                                  SelfUserGame,
                                                  v15);
-    v23 = (int64_t)UserOwnItemInfo_42043452;
-    if ( UserOwnItemInfo_42043452 )
+    v19 = UserOwnItemInfo_41169996;
+    if ( UserOwnItemInfo_41169996 )
     {
       if ( !v13 )
-        sub_1C3B9C0(UserOwnItemInfo_42043452, UserOwnItemInfo_42043452);
+        sub_1B4D1EC(UserOwnItemInfo_41169996, UserOwnItemInfo_41169996);
       items = v13->fields._items;
-      v25 = Method_System_Collections_Generic_List_UserOwnItemInfo__Add__;
+      v21 = Method_System_Collections_Generic_List_UserOwnItemInfo__Add__;
       ++v13->fields._version;
       if ( !items )
-        sub_1C3B9C0(UserOwnItemInfo_42043452, UserOwnItemInfo_42043452);
+        sub_1B4D1EC(UserOwnItemInfo_41169996, UserOwnItemInfo_41169996);
       size = v13->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v13,
-          UserOwnItemInfo_42043452,
-          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          UserOwnItemInfo_41169996,
+          *(const MethodInfo_35801DC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
-        v27 = &items->obj.klass + size;
+        v23 = &items->obj.klass + size;
         v13->fields._size = size + 1;
-        v27[4] = (Il2CppClass *)v23;
-        sub_1C3B708((PartyOrganizationUtility_o *)(v27 + 4), v23, v17, v18, v19, v20, v21, v22);
+        v23[4] = (Il2CppClass *)v19;
+        sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v19, v17, v18);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v30,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__);
+    &v26,
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__);
   return (System_Collections_Generic_List_UserOwnItemInfo__o *)v13;
 }
 
@@ -179,11 +175,11 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo(
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = userGameEntity;
-  if ( (byte_4C232C4 & 1) == 0 )
+  if ( (byte_49BC1F3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, *(_QWORD *)&itemId);
-    userGameEntity = (UserGameEntity_o *)sub_1C3B764(&UserOwnItemInfo_TypeInfo, v5);
-    byte_4C232C4 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, *(_QWORD *)&itemId);
+    userGameEntity = (UserGameEntity_o *)sub_1B4CF90(&UserOwnItemInfo_TypeInfo, v5);
+    byte_49BC1F3 = 1;
   }
   v15 = 0LL;
   entity = 0LL;
@@ -194,21 +190,21 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo(
          ItemMaster,
          &entity,
          itemId,
-         (const MethodInfo_329AE94 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+         (const MethodInfo_319D9E8 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( !v8 )
     return 0LL;
   ItemMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)UserOwnItemDetail__get_UserItemMaster((const MethodInfo *)v8);
   if ( !v4 || !ItemMaster )
 LABEL_11:
-    sub_1C3B9C0(ItemMaster, v7);
+    sub_1B4D1EC(ItemMaster, v7);
   v9 = UserItemMaster__TryGetEntity((UserItemMaster_o *)ItemMaster, &v15, v4->fields.userId, itemId, 0LL);
   v10 = 0LL;
   if ( v9 )
   {
     v12 = v15;
     v11 = entity;
-    v10 = (UserOwnItemInfo_o *)sub_1C3B9B0(UserOwnItemInfo_TypeInfo);
-    UserOwnItemInfo___ctor_42043028(v10, (ItemEntity_o *)v11, v12, v13);
+    v10 = (UserOwnItemInfo_o *)sub_1B4D1DC(UserOwnItemInfo_TypeInfo);
+    UserOwnItemInfo___ctor_41169572(v10, (ItemEntity_o *)v11, v12, v13);
   }
   return v10;
 }
@@ -240,62 +236,58 @@ System_Collections_Generic_List_UserOwnItemInfo__o *__fastcall UserOwnItemDetail
   const MethodInfo *v22; // x3
   __int64 v23; // x0
   __int64 v24; // x1
-  int64_t v25; // x2
-  int32_t v26; // w3
-  System_String_o *v27; // x4
-  BattleSetupInfo_o *v28; // x5
-  FollowerInfo_o *v29; // x6
-  PartyListViewItem_o *v30; // x7
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v32; // x9
+  _QWORD *v28; // x9
   __int64 size; // x10
-  Il2CppClass **v34; // x0
-  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+0h] [xbp-A0h] BYREF
+  Il2CppClass **v30; // x0
+  System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+0h] [xbp-A0h] BYREF
   UserItemEntity_o *entity; // [xsp+18h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+20h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C232C3 & 1) == 0 )
+  if ( (byte_49BC1F2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__get_Current__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserOwnItemInfo__Add__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__, v7);
-    sub_1C3B764(&System_Collections_Generic_List_UserOwnItemInfo__TypeInfo, v8);
-    sub_1C3B764(&NetworkManager_TypeInfo, v9);
-    sub_1C3B764(&UserOwnItemInfo_TypeInfo, v10);
-    byte_4C232C3 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ItemEntity__get_Current__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserOwnItemInfo__Add__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__, v7);
+    sub_1B4CF90(&System_Collections_Generic_List_UserOwnItemInfo__TypeInfo, v8);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v9);
+    sub_1B4CF90(&UserOwnItemInfo_TypeInfo, v10);
+    byte_49BC1F2 = 1;
   }
-  memset(&v38, 0, sizeof(v38));
+  memset(&v34, 0, sizeof(v34));
   entity = 0LL;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_UserOwnItemInfo__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_UserOwnItemInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_UserOwnItemInfo___ctor__);
   ItemMaster = UserOwnItemDetail__get_ItemMaster(v12);
   if ( !ItemMaster || (ItemMaster = (ItemMaster_o *)ItemMaster__GetEntityListByType(ItemMaster, itemType, 0LL)) == 0LL )
-    sub_1C3B9C0(ItemMaster, v14);
+    sub_1B4D1EC(ItemMaster, v14);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v36,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v32,
     (System_Collections_Generic_List_object__o *)ItemMaster,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__);
-  v38 = v36;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ItemEntity__GetEnumerator__);
+  v34 = v32;
   while ( 1 )
   {
     v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v38,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__);
+            &v34,
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__MoveNext__);
     if ( !v15 )
       break;
-    current = (ItemEntity_o *)v38.fields._current;
+    current = (ItemEntity_o *)v34.fields._current;
     UserItemMaster = UserOwnItemDetail__get_UserItemMaster((const MethodInfo *)v15);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C1C955 )
+    if ( !byte_49B57A5 )
     {
-      sub_1C3B764(&NetworkManager_TypeInfo, v17);
-      byte_4C1C955 = 1;
+      sub_1B4CF90(&NetworkManager_TypeInfo, v17);
+      byte_49B57A5 = 1;
     }
     v19 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -304,45 +296,45 @@ System_Collections_Generic_List_UserOwnItemInfo__o *__fastcall UserOwnItemDetail
       v19 = NetworkManager_TypeInfo;
     }
     if ( !current )
-      sub_1C3B9C0(v19, v17);
+      sub_1B4D1EC(v19, v17);
     if ( !UserItemMaster )
-      sub_1C3B9C0(v19, v17);
+      sub_1B4D1EC(v19, v17);
     UserItemMaster__TryGetEntity(UserItemMaster, &entity, v19->static_fields->userIdNumber, current->fields.id, 0LL);
     v20 = entity;
-    v21 = (UserOwnItemInfo_o *)sub_1C3B9B0(UserOwnItemInfo_TypeInfo);
-    UserOwnItemInfo___ctor_42043028(v21, current, v20, v22);
+    v21 = (UserOwnItemInfo_o *)sub_1B4D1DC(UserOwnItemInfo_TypeInfo);
+    UserOwnItemInfo___ctor_41169572(v21, current, v20, v22);
     if ( !v11 )
-      sub_1C3B9C0(v23, v24);
+      sub_1B4D1EC(v23, v24);
     items = v11->fields._items;
-    v32 = Method_System_Collections_Generic_List_UserOwnItemInfo__Add__;
+    v28 = Method_System_Collections_Generic_List_UserOwnItemInfo__Add__;
     ++v11->fields._version;
     if ( !items )
-      sub_1C3B9C0(v23, v24);
+      sub_1B4D1EC(v23, v24);
     size = v11->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v11,
         (Il2CppObject *)v21,
-        *(const MethodInfo_368BC6C **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+        *(const MethodInfo_35801DC **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
     }
     else
     {
-      v34 = &items->obj.klass + size;
+      v30 = &items->obj.klass + size;
       v11->fields._size = size + 1;
-      v34[4] = (Il2CppClass *)v21;
-      sub_1C3B708((PartyOrganizationUtility_o *)(v34 + 4), (int64_t)v21, v25, v26, v27, v28, v29, v30);
+      v30[4] = (Il2CppClass *)v21;
+      sub_1B4CF34((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v21, v25, v26);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v38,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__);
+    &v34,
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ItemEntity__Dispose__);
   return (System_Collections_Generic_List_UserOwnItemInfo__o *)v11;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_42043452(
+UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_41169996(
         int32_t itemType,
         ItemEntity_o *itemEntity,
         UserGameEntity_o *userGameEntity,
@@ -363,15 +355,15 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_42043452(
   const MethodInfo *v19; // x3
 
   v6 = itemType;
-  if ( (byte_4C232C7 & 1) == 0 )
+  if ( (byte_49BC1F6 & 1) == 0 )
   {
-    sub_1C3B764(&UserOwnFriendPoint_TypeInfo, itemEntity);
-    sub_1C3B764(&UserOwnManaPrism_TypeInfo, v7);
-    sub_1C3B764(&UserOwnQp_TypeInfo, v8);
-    sub_1C3B764(&UserOwnRarePrism_TypeInfo, v9);
-    sub_1C3B764(&UserOwnStone_TypeInfo, v10);
-    *(_QWORD *)&itemType = sub_1C3B764(&UserOwnSvtCoin_TypeInfo, v11);
-    byte_4C232C7 = 1;
+    sub_1B4CF90(&UserOwnFriendPoint_TypeInfo, itemEntity);
+    sub_1B4CF90(&UserOwnManaPrism_TypeInfo, v7);
+    sub_1B4CF90(&UserOwnQp_TypeInfo, v8);
+    sub_1B4CF90(&UserOwnRarePrism_TypeInfo, v9);
+    sub_1B4CF90(&UserOwnStone_TypeInfo, v10);
+    *(_QWORD *)&itemType = sub_1B4CF90(&UserOwnSvtCoin_TypeInfo, v11);
+    byte_49BC1F6 = 1;
   }
   if ( v6 <= 13 )
   {
@@ -379,13 +371,13 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_42043452(
     {
       if ( v6 == 5 )
       {
-        v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnManaPrism_TypeInfo);
+        v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnManaPrism_TypeInfo);
         UserOwnManaPrism___ctor(v12, itemEntity, userGameEntity, v19);
         return (UserOwnItemInfo_o *)v12;
       }
       if ( v6 == 13 )
       {
-        v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnFriendPoint_TypeInfo);
+        v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnFriendPoint_TypeInfo);
         UserOwnFriendPoint___ctor((UserOwnFriendPoint_o *)v12, itemEntity, userGameEntity, v15);
         return (UserOwnItemInfo_o *)v12;
       }
@@ -394,13 +386,13 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_42043452(
     {
       if ( v6 == 1 )
       {
-        v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnQp_TypeInfo);
+        v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnQp_TypeInfo);
         UserOwnQp___ctor((UserOwnQp_o *)v12, itemEntity, userGameEntity, v18);
         return (UserOwnItemInfo_o *)v12;
       }
       if ( v6 == 2 )
       {
-        v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnStone_TypeInfo);
+        v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnStone_TypeInfo);
         UserOwnStone___ctor((UserOwnStone_o *)v12, itemEntity, userGameEntity, v14);
         return (UserOwnItemInfo_o *)v12;
       }
@@ -410,19 +402,19 @@ UserOwnItemInfo_o *__fastcall UserOwnItemDetail__GetUserOwnItemInfo_42043452(
   {
     if ( v6 == 22 )
     {
-      v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnRarePrism_TypeInfo);
+      v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnRarePrism_TypeInfo);
       UserOwnRarePrism___ctor((UserOwnRarePrism_o *)v12, itemEntity, userGameEntity, v17);
       return (UserOwnItemInfo_o *)v12;
     }
     if ( v6 == 29 )
     {
-      v12 = (UserOwnManaPrism_o *)sub_1C3B9B0(UserOwnSvtCoin_TypeInfo);
+      v12 = (UserOwnManaPrism_o *)sub_1B4D1DC(UserOwnSvtCoin_TypeInfo);
       UserOwnSvtCoin___ctor((UserOwnSvtCoin_o *)v12, itemEntity, userGameEntity, v13);
       return (UserOwnItemInfo_o *)v12;
     }
   }
   if ( !itemEntity )
-    sub_1C3B9C0(*(_QWORD *)&itemType, itemEntity);
+    sub_1B4D1EC(*(_QWORD *)&itemType, itemEntity);
   return UserOwnItemDetail__GetUserOwnItemInfo(
            userGameEntity,
            itemEntity->fields.id,
@@ -437,18 +429,18 @@ ItemMaster_o *__fastcall UserOwnItemDetail__get_ItemMaster(const MethodInfo *met
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C232C1 & 1) == 0 )
+  if ( (byte_49BC1F0 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_ItemMaster___, v1);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4C232C1 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_ItemMaster___, v1);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_49BC1F0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   return (ItemMaster_o *)DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_ItemMaster___);
+                           (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ItemMaster___);
 }
 
 
@@ -459,16 +451,16 @@ UserItemMaster_o *__fastcall UserOwnItemDetail__get_UserItemMaster(const MethodI
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C232C2 & 1) == 0 )
+  if ( (byte_49BC1F1 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_UserItemMaster___, v1);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_4C232C2 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_UserItemMaster___, v1);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_49BC1F1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C3B9C0(0LL, v4);
+    sub_1B4D1EC(0LL, v4);
   return (UserItemMaster_o *)DataManager__GetMasterData_object_(
                                (DataManager_o *)Instance,
-                               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                               (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserItemMaster___);
 }

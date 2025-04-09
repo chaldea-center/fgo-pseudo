@@ -5,34 +5,26 @@ void __fastcall BattleLogicServantAiTask___ctor(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  __int64 v15; // x0
-  __int64 v16; // x1
-  struct BattleLogicServantAi_o *v17; // x1
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  __int64 v11; // x0
+  __int64 v12; // x1
+  struct BattleLogicServantAi_o *v13; // x1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
   BattleLogicServantTask___ctor((BattleLogicServantTask_o *)this, 59, svtData, (const MethodInfo *)logic);
   this->fields.procState = procState;
   this->fields.svtData = svtData;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.svtData, (int64_t)svtData, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
   if ( !svtData )
-    sub_1C3B9C0(v15, v16);
-  v17 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, Il2CppMethodPointer))svtData->klass->vtable._20_GetLogicServantAi.method)(
+    sub_1B4D1EC(v11, v12);
+  v13 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, Il2CppMethodPointer))svtData->klass->vtable._20_GetLogicServantAi.method)(
                                            svtData,
                                            logic,
                                            svtData->klass->vtable._21_getThisTurnActCount.methodPtr);
-  this->fields.logicAi = v17;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.logicAi, (int64_t)v17, v18, v19, v20, v21, v22, v23);
+  this->fields.logicAi = v13;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
 }
 
 
@@ -53,19 +45,19 @@ BattleLogicTask_array *__fastcall BattleLogicServantAiTask__MakeActionTask(
   __int64 v5; // x1
   BattleLogicServantAi_o *logicAi; // x0
 
-  if ( (byte_4C24EC8 & 1) == 0 )
+  if ( (byte_49BDE03 & 1) == 0 )
   {
-    sub_1C3B764(&BattleLogicTask___TypeInfo, logic);
-    byte_4C24EC8 = 1;
+    sub_1B4CF90(&BattleLogicTask___TypeInfo, logic);
+    byte_49BDE03 = 1;
   }
   if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, void *))this->klass->vtable._10_IsActable.method)(
           this,
           logic,
           this->klass[1]._1.image) & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1C3B80C(BattleLogicTask___TypeInfo, 0LL);
+    return (BattleLogicTask_array *)sub_1B4D038(BattleLogicTask___TypeInfo, 0LL);
   logicAi = this->fields.logicAi;
   if ( !logicAi )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   return BattleLogicServantAi__TaskAiTargetAct(
            logicAi,
            this->fields.svtData,

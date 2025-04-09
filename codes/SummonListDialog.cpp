@@ -3,26 +3,22 @@ void __fastcall SummonListDialog___ctor(SummonListDialog_o *this, const MethodIn
   __int64 v3; // x1
   __int64 v4; // x1
   System_Collections_Generic_List_object__o *v5; // x20
-  int64_t v6; // x2
-  int32_t v7; // w3
-  System_String_o *v8; // x4
-  BattleSetupInfo_o *v9; // x5
-  FollowerInfo_o *v10; // x6
-  PartyListViewItem_o *v11; // x7
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C1E711 & 1) == 0 )
+  if ( (byte_49B760A & 1) == 0 )
   {
-    sub_1C3B764(&BaseDialog_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject___ctor__, v3);
-    sub_1C3B764(&System_Collections_Generic_List_GameObject__TypeInfo, v4);
-    byte_4C1E711 = 1;
+    sub_1B4CF90(&BaseDialog_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject___ctor__, v3);
+    sub_1B4CF90(&System_Collections_Generic_List_GameObject__TypeInfo, v4);
+    byte_49B760A = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_GameObject__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_GameObject__o *)v5;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.objectList, (int64_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.objectList, (int32_t)v5, v6, v7);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -46,24 +42,20 @@ void __fastcall SummonListDialog__Close(SummonListDialog_o *this, System_Action_
   System_Action_object__o *v11; // x22
   Il2CppObject *v12; // x23
   struct SummonListDialog___c_StaticFields *static_fields; // x0
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
-  struct System_Collections_Generic_List_GameObject__o *v20; // x8
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  struct System_Collections_Generic_List_GameObject__o *v16; // x8
   int32_t size; // w2
-  int v22; // w9
+  int v18; // w9
 
-  if ( (byte_4C1E70F & 1) == 0 )
+  if ( (byte_49B7608 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_GameObject__TypeInfo, callback);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Clear__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__ForEach__, v6);
-    sub_1C3B764(&Method_SummonListDialog___c__Close_b__16_0__, v7);
-    sub_1C3B764(&SummonListDialog___c_TypeInfo, v8);
-    byte_4C1E70F = 1;
+    sub_1B4CF90(&System_Action_GameObject__TypeInfo, callback);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Clear__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__ForEach__, v6);
+    sub_1B4CF90(&Method_SummonListDialog___c__Close_b__16_0__, v7);
+    sub_1B4CF90(&SummonListDialog___c_TypeInfo, v8);
+    byte_49B7608 = 1;
   }
   if ( this->fields.isInit )
   {
@@ -83,27 +75,27 @@ void __fastcall SummonListDialog__Close(SummonListDialog_o *this, System_Action_
         bannerListScrollView = (UIScrollView_o *)SummonListDialog___c_TypeInfo;
       }
       v12 = **(Il2CppObject ***)&bannerListScrollView->fields.mLastPos.fields.z;
-      v11 = (System_Action_object__o *)sub_1C3B9B0(System_Action_GameObject__TypeInfo);
+      v11 = (System_Action_object__o *)sub_1B4D1DC(System_Action_GameObject__TypeInfo);
       System_Action_object____ctor(v11, v12, Method_SummonListDialog___c__Close_b__16_0__, 0LL);
       static_fields = SummonListDialog___c_TypeInfo->static_fields;
       static_fields->__9__16_0 = (struct System_Action_GameObject__o *)v11;
-      sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__16_0, (int64_t)v11, v14, v15, v16, v17, v18, v19);
+      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)v11, v14, v15);
     }
     if ( !objectList )
       goto LABEL_19;
     System_Collections_Generic_List_object___ForEach(
       (System_Collections_Generic_List_object__o *)objectList,
       (System_Action_T__o *)v11,
-      (const MethodInfo_368C6AC *)Method_System_Collections_Generic_List_GameObject__ForEach__);
-    v20 = this->fields.objectList;
-    if ( !v20 )
+      (const MethodInfo_3580C1C *)Method_System_Collections_Generic_List_GameObject__ForEach__);
+    v16 = this->fields.objectList;
+    if ( !v16 )
       goto LABEL_19;
-    size = v20->fields._size;
-    v22 = v20->fields._version + 1;
-    v20->fields._size = 0;
-    v20->fields._version = v22;
+    size = v16->fields._size;
+    v18 = v16->fields._version + 1;
+    v16->fields._size = 0;
+    v16->fields._version = v18;
     if ( size >= 1 )
-      System_Array__Clear((System_Array_o *)v20->fields._items, 0, size, 0LL);
+      System_Array__Clear((System_Array_o *)v16->fields._items, 0, size, 0LL);
     bannerListScrollView = this->fields.bannerListScrollView;
     if ( !bannerListScrollView
       || (((void (__fastcall *)(UIScrollView_o *, _QWORD, Il2CppMethodPointer, float, float))bannerListScrollView->klass->vtable._9_SetDragAmount.method)(
@@ -120,7 +112,7 @@ void __fastcall SummonListDialog__Close(SummonListDialog_o *this, System_Action_
           (bannerListScrollView = this->fields.bannerListScrollView) == 0LL) )
     {
 LABEL_19:
-      sub_1C3B9C0(bannerListScrollView, callback);
+      sub_1B4D1EC(bannerListScrollView, callback);
     }
     UIScrollView__UpdatePosition(bannerListScrollView, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, callback, 0LL);
@@ -179,48 +171,44 @@ void __fastcall SummonListDialog__Init(
   bool v49; // w23
   System_Action_int__o *v50; // x25
   System_Collections_Generic_List_object__o *objectList; // x23
-  int64_t v52; // x2
-  int32_t v53; // w3
-  System_String_o *v54; // x4
-  BattleSetupInfo_o *v55; // x5
-  FollowerInfo_o *v56; // x6
-  PartyListViewItem_o *v57; // x7
+  int32_t v52; // w2
+  const MethodInfo *v53; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v59; // x9
+  _QWORD *v55; // x9
   __int64 size; // x10
-  int64_t v61; // x1
-  Il2CppClass **v62; // x0
-  int32_t v63; // [xsp+Ch] [xbp-84h]
+  System_String_o *v57; // x1
+  Il2CppClass **v58; // x0
+  int32_t v59; // [xsp+Ch] [xbp-84h]
   UserGachaMaster_o *Master_object; // [xsp+10h] [xbp-80h]
   UnityEngine_Transform_o *parent; // [xsp+18h] [xbp-78h]
-  int v66; // [xsp+24h] [xbp-6Ch]
+  int v62; // [xsp+24h] [xbp-6Ch]
   UserGachaEntity_o *entity; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4C1E70B & 1) == 0 )
+  if ( (byte_49B7604 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_int__TypeInfo, *(_QWORD *)&currentIndex);
-    sub_1C3B764(&Method_DataManager_GetMaster_UserGachaMaster___, v11);
-    sub_1C3B764(&DataManager_TypeInfo, v12);
-    sub_1C3B764(&Method_System_Linq_Enumerable_Count_VaildGachaInfo___, v13);
-    sub_1C3B764(&System_Func_VaildGachaInfo__bool__TypeInfo, v14);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__Add__, v15);
-    sub_1C3B764(&Method_System_Collections_Generic_List_VaildGachaInfo__get_Count__, v16);
-    sub_1C3B764(&Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__, v17);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v18);
-    sub_1C3B764(&NetworkManager_TypeInfo, v19);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_SummonBannerIconComponent___, v20);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v21);
-    sub_1C3B764(&Method_SummonListDialog_OnClickBanner__, v22);
-    sub_1C3B764(&Method_SummonListDialog___c__DisplayClass12_0__Init_b__0__, v23);
-    sub_1C3B764(&SummonListDialog___c__DisplayClass12_0_TypeInfo, v24);
-    sub_1C3B764(&StringLiteral_15952/*"_Padding"*/, v25);
-    sub_1C3B764(&StringLiteral_12633/*"Spanish (Spain)"*/, v26);
-    sub_1C3B764(&StringLiteral_12635/*"Spanish (Uruguay)"*/, v27);
-    sub_1C3B764(&StringLiteral_20890/*"lowerBounds"*/, v28);
-    byte_4C1E70B = 1;
+    sub_1B4CF90(&System_Action_int__TypeInfo, *(_QWORD *)&currentIndex);
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserGachaMaster___, v11);
+    sub_1B4CF90(&DataManager_TypeInfo, v12);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Count_VaildGachaInfo___, v13);
+    sub_1B4CF90(&System_Func_VaildGachaInfo__bool__TypeInfo, v14);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__Add__, v15);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_VaildGachaInfo__get_Count__, v16);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__, v17);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v18);
+    sub_1B4CF90(&NetworkManager_TypeInfo, v19);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_SummonBannerIconComponent___, v20);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v21);
+    sub_1B4CF90(&Method_SummonListDialog_OnClickBanner__, v22);
+    sub_1B4CF90(&Method_SummonListDialog___c__DisplayClass12_0__Init_b__0__, v23);
+    sub_1B4CF90(&SummonListDialog___c__DisplayClass12_0_TypeInfo, v24);
+    sub_1B4CF90(&StringLiteral_15343/*"Window/CloseButton"*/, v25);
+    sub_1B4CF90(&StringLiteral_12162/*"SUMMON_LIST_DIALOG_MESSAGE"*/, v26);
+    sub_1B4CF90(&StringLiteral_12164/*"SUMMON_LIST_DIALOG_TITLE"*/, v27);
+    sub_1B4CF90(&StringLiteral_20186/*"img_summon_mini_"*/, v28);
+    byte_49B7604 = 1;
   }
   entity = 0LL;
-  v29 = sub_1C3B9B0(SummonListDialog___c__DisplayClass12_0_TypeInfo);
+  v29 = sub_1B4D1DC(SummonListDialog___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v29, 0LL);
   if ( !v29 )
     goto LABEL_53;
@@ -228,32 +216,32 @@ void __fastcall SummonListDialog__Init(
   if ( dispGachaList )
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    AndroidBackKeyManager__AddBackKeyTarget_43311980(transform, (System_String_o *)StringLiteral_15952/*"_Padding"*/, 0LL);
+    AndroidBackKeyManager__AddBackKeyTarget_42439980(transform, (System_String_o *)StringLiteral_15343/*"Window/CloseButton"*/, 0LL);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    listRoot = LocalizationManager__Get((System_String_o *)StringLiteral_12635/*"Spanish (Uruguay)"*/, 0LL);
+    listRoot = LocalizationManager__Get((System_String_o *)StringLiteral_12164/*"SUMMON_LIST_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_53;
     UILabel__set_text(titleLabel, listRoot, 0LL);
     messageLabel = this->fields.messageLabel;
-    listRoot = LocalizationManager__Get((System_String_o *)StringLiteral_12633/*"Spanish (Spain)"*/, 0LL);
+    listRoot = LocalizationManager__Get((System_String_o *)StringLiteral_12162/*"SUMMON_LIST_DIALOG_MESSAGE"*/, 0LL);
     if ( !messageLabel )
       goto LABEL_53;
     UILabel__set_text(messageLabel, listRoot, 0LL);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (UserGachaMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserGachaMaster___);
-    v35 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_VaildGachaInfo__bool__TypeInfo);
+    Master_object = (UserGachaMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserGachaMaster___);
+    v35 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_VaildGachaInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v35,
       (Il2CppObject *)v29,
       Method_SummonListDialog___c__DisplayClass12_0__Init_b__0__,
       0LL);
-    if ( System_Linq_Enumerable__Count_object__50384956(
+    if ( System_Linq_Enumerable__Count_object__49416428(
            (System_Collections_Generic_IEnumerable_TSource__o *)dispGachaList,
            (System_Func_TSource__bool__o *)v35,
-           (const MethodInfo_300D03C *)Method_System_Linq_Enumerable_Count_VaildGachaInfo___) >= 21 )
+           (const MethodInfo_2F208EC *)Method_System_Linq_Enumerable_Count_VaildGachaInfo___) >= 21 )
     {
       listRoot = (System_String_o *)this->fields.listRoot;
       if ( !listRoot )
@@ -270,19 +258,19 @@ void __fastcall SummonListDialog__Init(
     parent = v36;
     if ( dispGachaList->fields._size >= 1 )
     {
-      v66 = 0;
+      v62 = 0;
       v37 = 0;
       if ( currentIndex + 1 <= vaildGachaCount )
         v38 = 0;
       else
         v38 = vaildGachaCount;
-      v63 = v38;
+      v59 = v38;
       while ( 1 )
       {
         listRoot = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)dispGachaList,
                                         v37,
-                                        (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
+                                        (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
         if ( !listRoot )
           break;
         if ( LODWORD(listRoot[4].monitor) == *(_DWORD *)(v29 + 16) )
@@ -290,28 +278,28 @@ void __fastcall SummonListDialog__Init(
           summonBannerObject = (Il2CppObject *)this->fields.summonBannerObject;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          v40 = UnityEngine_Object__Instantiate_object__50818788(
+          v40 = UnityEngine_Object__Instantiate_object__49839864(
                   summonBannerObject,
                   parent,
-                  (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_SummonBannerIconComponent___);
+                  (const MethodInfo_2F87EF8 *)Method_UnityEngine_Object_Instantiate_SummonBannerIconComponent___);
           listRoot = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)dispGachaList,
                                           v37,
-                                          (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
+                                          (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
           if ( !listRoot )
             break;
           v41 = System_Int32__ToString((int)listRoot + 40, 0LL);
-          listRoot = System_String__Concat_63368612((System_String_o *)StringLiteral_20890/*"lowerBounds"*/, v41, 0LL);
+          listRoot = System_String__Concat_61093468((System_String_o *)StringLiteral_20186/*"img_summon_mini_"*/, v41, 0LL);
           if ( !this->fields.summonControl )
             break;
           v42 = listRoot;
           v44 = SummonControl__searchBannerImg(this->fields.summonControl, listRoot, 0LL);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4C1C955 )
+          if ( !byte_49B57A5 )
           {
-            sub_1C3B764(&NetworkManager_TypeInfo, v43);
-            byte_4C1C955 = 1;
+            sub_1B4CF90(&NetworkManager_TypeInfo, v43);
+            byte_49B57A5 = 1;
           }
           v45 = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -323,16 +311,16 @@ void __fastcall SummonListDialog__Init(
           listRoot = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)dispGachaList,
                                           v37,
-                                          (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
+                                          (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
           if ( !listRoot || !Master_object )
             break;
-          v47 = v63 + v37 - v66;
+          v47 = v59 + v37 - v62;
           if ( !UserGachaMaster__TryGetEntity(Master_object, &entity, userIdNumber, listRoot->fields._stringLength, 0LL) )
             goto LABEL_41;
           listRoot = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)dispGachaList,
                                           v37,
-                                          (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
+                                          (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
           if ( !listRoot )
             break;
           if ( listRoot[4].fields._stringLength < 1 )
@@ -343,21 +331,21 @@ void __fastcall SummonListDialog__Init(
           listRoot = (System_String_o *)System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)dispGachaList,
                                           v37,
-                                          (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
+                                          (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_VaildGachaInfo__get_Item__);
           if ( !listRoot )
             break;
           if ( num >= listRoot[4].fields._stringLength )
           {
             v47 = -1;
             v49 = 1;
-            ++v66;
+            ++v62;
           }
           else
           {
 LABEL_41:
             v49 = 0;
           }
-          v50 = (System_Action_int__o *)sub_1C3B9B0(System_Action_int__TypeInfo);
+          v50 = (System_Action_int__o *)sub_1B4D1DC(System_Action_int__TypeInfo);
           System_Action_int____ctor(v50, (Il2CppObject *)this, (intptr_t)Method_SummonListDialog_OnClickBanner__, 0LL);
           if ( !v40 )
             break;
@@ -367,32 +355,32 @@ LABEL_41:
           if ( !objectList )
             break;
           items = objectList->fields._items;
-          v59 = Method_System_Collections_Generic_List_GameObject__Add__;
+          v55 = Method_System_Collections_Generic_List_GameObject__Add__;
           ++objectList->fields._version;
           if ( !items )
             break;
           size = objectList->fields._size;
-          v61 = (int64_t)listRoot;
+          v57 = listRoot;
           if ( (unsigned int)size >= items->max_length )
           {
             System_Collections_Generic_List_object___AddWithResize(
               objectList,
               (Il2CppObject *)listRoot,
-              *(const MethodInfo_368BC6C **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+              *(const MethodInfo_35801DC **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
           }
           else
           {
-            v62 = &items->obj.klass + size;
+            v58 = &items->obj.klass + size;
             objectList->fields._size = size + 1;
-            v62[4] = (Il2CppClass *)v61;
-            sub_1C3B708((PartyOrganizationUtility_o *)(v62 + 4), v61, v52, v53, v54, v55, v56, v57);
+            v58[4] = (Il2CppClass *)v57;
+            sub_1B4CF34((CGThumbnailListItem_o *)(v58 + 4), (int32_t)v57, v52, v53);
           }
         }
         if ( ++v37 >= dispGachaList->fields._size )
           goto LABEL_51;
       }
 LABEL_53:
-      sub_1C3B9C0(listRoot, v31);
+      sub_1B4D1EC(listRoot, v31);
     }
 LABEL_51:
     SummonListDialog__RepositionBanner(this, v31);
@@ -411,35 +399,31 @@ void __fastcall SummonListDialog__OnClickBanner(SummonListDialog_o *this, int32_
   __int64 v8; // x20
   UnityEngine_Component_o *bannerLoopCtr; // x0
   const MethodInfo *v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct SummonControl_o *summonControl; // x8
-  struct SummonControl_o *v18; // x8
+  struct SummonControl_o *v14; // x8
+  _QWORD *v15; // x0
+  System_Reflection_MethodBase_o *v16; // x0
+  System_Action_o *v17; // x21
+  const MethodInfo *v18; // x2
   _QWORD *v19; // x0
   System_Reflection_MethodBase_o *v20; // x0
-  System_Action_o *v21; // x21
-  const MethodInfo *v22; // x2
-  _QWORD *v23; // x0
-  System_Reflection_MethodBase_o *v24; // x0
 
-  if ( (byte_4C1E70D & 1) == 0 )
+  if ( (byte_49B7606 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&index);
-    sub_1C3B764(&Method_SummonListDialog_OnClickBanner__, v5);
-    sub_1C3B764(&Method_SummonListDialog___c__DisplayClass14_0__OnClickBanner_b__0__, v6);
-    sub_1C3B764(&SummonListDialog___c__DisplayClass14_0_TypeInfo, v7);
-    byte_4C1E70D = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&index);
+    sub_1B4CF90(&Method_SummonListDialog_OnClickBanner__, v5);
+    sub_1B4CF90(&Method_SummonListDialog___c__DisplayClass14_0__OnClickBanner_b__0__, v6);
+    sub_1B4CF90(&SummonListDialog___c__DisplayClass14_0_TypeInfo, v7);
+    byte_49B7606 = 1;
   }
-  v8 = sub_1C3B9B0(SummonListDialog___c__DisplayClass14_0_TypeInfo);
+  v8 = sub_1B4D1DC(SummonListDialog___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_19;
   *(_QWORD *)(v8 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 16), (int32_t)this, v11, v12);
   *(_DWORD *)(v8 + 24) = index;
   summonControl = this->fields.summonControl;
   if ( !summonControl )
@@ -462,38 +446,38 @@ void __fastcall SummonListDialog__OnClickBanner(SummonListDialog_o *this, int32_
                                                  0LL);
     if ( (int)bannerLoopCtr > *(_DWORD *)(v8 + 24) )
     {
-      v18 = this->fields.summonControl;
-      if ( v18 )
+      v14 = this->fields.summonControl;
+      if ( v14 )
       {
-        bannerLoopCtr = (UnityEngine_Component_o *)v18->fields.maskObject;
+        bannerLoopCtr = (UnityEngine_Component_o *)v14->fields.maskObject;
         if ( bannerLoopCtr )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bannerLoopCtr, 1, 0LL);
           MainMenuBar__SetMenuBtnColliderEnable(0, 0, 0LL);
-          v19 = Method_SummonListDialog_OnClickBanner__;
+          v15 = Method_SummonListDialog_OnClickBanner__;
           if ( (*((_BYTE *)Method_SummonListDialog_OnClickBanner__ + 83) & 2) != 0 )
-            v19 = (_QWORD *)sub_1C3B77C(Method_SummonListDialog_OnClickBanner__);
-          v20 = (System_Reflection_MethodBase_o *)sub_1C3B748(v19, v19[4]);
-          OverwriteAssetSoundName__PlaySystemSe(v20, 0, 0, 0LL);
-          v21 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+            v15 = (_QWORD *)sub_1B4CFA8(Method_SummonListDialog_OnClickBanner__);
+          v16 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v15, v15[4]);
+          OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0, 0LL);
+          v17 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
           System_Action___ctor(
-            v21,
+            v17,
             (Il2CppObject *)v8,
             Method_SummonListDialog___c__DisplayClass14_0__OnClickBanner_b__0__,
             0LL);
-          SummonListDialog__Close(this, v21, v22);
+          SummonListDialog__Close(this, v17, v18);
           return;
         }
       }
 LABEL_19:
-      sub_1C3B9C0(bannerLoopCtr, v10);
+      sub_1B4D1EC(bannerLoopCtr, v10);
     }
   }
-  v23 = Method_SummonListDialog_OnClickBanner__;
+  v19 = Method_SummonListDialog_OnClickBanner__;
   if ( (*((_BYTE *)Method_SummonListDialog_OnClickBanner__ + 83) & 2) != 0 )
-    v23 = (_QWORD *)sub_1C3B77C(Method_SummonListDialog_OnClickBanner__);
-  v24 = (System_Reflection_MethodBase_o *)sub_1C3B748(v23, v23[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v24, 2, 0, 0LL);
+    v19 = (_QWORD *)sub_1B4CFA8(Method_SummonListDialog_OnClickBanner__);
+  v20 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v19, v19[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0, 0LL);
 }
 
 
@@ -503,17 +487,17 @@ void __fastcall SummonListDialog__OnClickClose(SummonListDialog_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C1E710 & 1) == 0 )
+  if ( (byte_49B7609 & 1) == 0 )
   {
-    sub_1C3B764(&Method_SummonListDialog_OnClickClose__, method);
-    byte_4C1E710 = 1;
+    sub_1B4CF90(&Method_SummonListDialog_OnClickClose__, method);
+    byte_49B7609 = 1;
   }
   if ( this->fields.isInit )
   {
     v3 = Method_SummonListDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_SummonListDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3B77C(Method_SummonListDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3B748(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B4CFA8(Method_SummonListDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     SummonListDialog__Close(this, 0LL, v5);
   }
@@ -525,15 +509,15 @@ void __fastcall SummonListDialog__Open(SummonListDialog_o *this, const MethodInf
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4C1E70E & 1) == 0 )
+  if ( (byte_49B7607 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&Method_SummonListDialog__Open_b__15_0__, v3);
-    byte_4C1E70E = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&Method_SummonListDialog__Open_b__15_0__, v3);
+    byte_49B7607 = 1;
   }
   if ( this->fields.isInit )
   {
-    v4 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_SummonListDialog__Open_b__15_0__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v4, 0, 0LL);
   }
@@ -575,12 +559,12 @@ void __fastcall SummonListDialog__RepositionBanner(SummonListDialog_o *this, con
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4C1E70C & 1) == 0 )
+  if ( (byte_49B7605 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__GetRange__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
-    this = (SummonListDialog_o *)sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
-    byte_4C1E70C = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__GetRange__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Count__, v3);
+    this = (SummonListDialog_o *)sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__get_Item__, v4);
+    byte_49B7605 = 1;
   }
   objectList = v2->fields.objectList;
   if ( !objectList )
@@ -590,10 +574,10 @@ void __fastcall SummonListDialog__RepositionBanner(SummonListDialog_o *this, con
     goto LABEL_33;
   size = (float)objectList->fields._size;
   maxPerLine = (float)listRoot->fields.maxPerLine;
-  if ( !byte_4C1CBC5 )
+  if ( !byte_49B5A15 )
   {
-    sub_1C3B764(&System_Math_TypeInfo, method);
-    byte_4C1CBC5 = 1;
+    sub_1B4CF90(&System_Math_TypeInfo, method);
+    byte_49B5A15 = 1;
   }
   v9 = size / maxPerLine;
   this = (SummonListDialog_o *)System_Math_TypeInfo;
@@ -637,7 +621,7 @@ void __fastcall SummonListDialog__RepositionBanner(SummonListDialog_o *this, con
                                      (System_Collections_Generic_List_object__o *)this,
                                      v20 * v17,
                                      v21,
-                                     (const MethodInfo_368C83C *)Method_System_Collections_Generic_List_GameObject__GetRange__);
+                                     (const MethodInfo_3580DAC *)Method_System_Collections_Generic_List_GameObject__GetRange__);
       if ( !this )
         goto LABEL_33;
       v22 = v2->fields.listRoot;
@@ -660,7 +644,7 @@ LABEL_31:
       this = (SummonListDialog_o *)System_Collections_Generic_List_object___get_Item(
                                      v24,
                                      v27,
-                                     (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                     (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       v29 = v2->fields.listRoot;
       if ( !v29 )
         break;
@@ -679,7 +663,7 @@ LABEL_31:
         goto LABEL_31;
     }
 LABEL_33:
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
 }
 
@@ -694,20 +678,16 @@ void __fastcall SummonListDialog___Open_b__15_0(SummonListDialog_o *this, const 
   System_Action_object__o *_9__15_1; // x20
   Il2CppObject *v9; // x21
   struct SummonListDialog___c_StaticFields *static_fields; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C1E712 & 1) == 0 )
+  if ( (byte_49B760B & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_GameObject__TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__ForEach__, v3);
-    sub_1C3B764(&Method_SummonListDialog___c__Open_b__15_1__, v4);
-    sub_1C3B764(&SummonListDialog___c_TypeInfo, v5);
-    byte_4C1E712 = 1;
+    sub_1B4CF90(&System_Action_GameObject__TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__ForEach__, v3);
+    sub_1B4CF90(&Method_SummonListDialog___c__Open_b__15_1__, v4);
+    sub_1B4CF90(&SummonListDialog___c_TypeInfo, v5);
+    byte_49B760B = 1;
   }
   v6 = SummonListDialog___c_TypeInfo;
   objectList = this->fields.objectList;
@@ -725,26 +705,18 @@ void __fastcall SummonListDialog___Open_b__15_0(SummonListDialog_o *this, const 
       v6 = SummonListDialog___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__15_1 = (System_Action_object__o *)sub_1C3B9B0(System_Action_GameObject__TypeInfo);
+    _9__15_1 = (System_Action_object__o *)sub_1B4D1DC(System_Action_GameObject__TypeInfo);
     System_Action_object____ctor(_9__15_1, v9, Method_SummonListDialog___c__Open_b__15_1__, 0LL);
     static_fields = SummonListDialog___c_TypeInfo->static_fields;
     static_fields->__9__15_1 = (struct System_Action_GameObject__o *)_9__15_1;
-    sub_1C3B708(
-      (PartyOrganizationUtility_o *)&static_fields->__9__15_1,
-      (int64_t)_9__15_1,
-      v11,
-      v12,
-      v13,
-      v14,
-      v15,
-      v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__15_1, (int32_t)_9__15_1, v11, v12);
   }
   if ( !objectList )
-    sub_1C3B9C0(v6, method);
+    sub_1B4D1EC(v6, method);
   System_Collections_Generic_List_object___ForEach(
     (System_Collections_Generic_List_object__o *)objectList,
     (System_Action_T__o *)_9__15_1,
-    (const MethodInfo_368C6AC *)Method_System_Collections_Generic_List_GameObject__ForEach__);
+    (const MethodInfo_3580C1C *)Method_System_Collections_Generic_List_GameObject__ForEach__);
 }
 
 
@@ -752,30 +724,18 @@ void __fastcall SummonListDialog___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C1E713 & 1) == 0 )
+  if ( (byte_49B760C & 1) == 0 )
   {
-    sub_1C3B764(&SummonListDialog___c_TypeInfo, v1);
-    byte_4C1E713 = 1;
+    sub_1B4CF90(&SummonListDialog___c_TypeInfo, v1);
+    byte_49B760C = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(SummonListDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(SummonListDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   SummonListDialog___c_TypeInfo->static_fields->__9 = (struct SummonListDialog___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)SummonListDialog___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)SummonListDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -790,10 +750,10 @@ void __fastcall SummonListDialog___c___Close_b__16_0(
         UnityEngine_GameObject_o *obj,
         const MethodInfo *method)
 {
-  if ( (byte_4C1E715 & 1) == 0 )
+  if ( (byte_49B760E & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, obj);
-    byte_4C1E715 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, obj);
+    byte_49B760E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -801,7 +761,7 @@ void __fastcall SummonListDialog___c___Close_b__16_0(
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71122748((UnityEngine_Object_o *)obj, 0LL);
+    UnityEngine_Object__Destroy_68804456((UnityEngine_Object_o *)obj, 0LL);
   }
 }
 
@@ -814,10 +774,10 @@ void __fastcall SummonListDialog___c___Open_b__15_1(
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C1E714 & 1) == 0 )
+  if ( (byte_49B760D & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, obj);
-    byte_4C1E714 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, obj);
+    byte_49B760D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -825,7 +785,7 @@ void __fastcall SummonListDialog___c___Open_b__15_1(
   if ( v4 )
   {
     if ( !obj )
-      sub_1C3B9C0(v4, v5);
+      sub_1B4D1EC(v4, v5);
     UnityEngine_GameObject__SetActive(obj, 1, 0LL);
   }
 }
@@ -845,7 +805,7 @@ bool __fastcall SummonListDialog___c__DisplayClass12_0___Init_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.summonListGroupId == this->fields.currentSummonListGroupId;
 }
 
@@ -867,6 +827,6 @@ void __fastcall SummonListDialog___c__DisplayClass14_0___OnClickBanner_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (summonControl = _4__this->fields.summonControl) == 0LL )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   SummonControl__OnClickMiniBanner(summonControl, this->fields.index, 0, 0LL);
 }

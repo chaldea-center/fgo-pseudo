@@ -35,17 +35,17 @@ void __fastcall ServantListViewItemDraw__SetInput(
   UISprite_o *v29; // x21
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C1E1A4 & 1) == 0 )
+  if ( (byte_49B7096 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, item);
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v8);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v9);
-    sub_1C3B764(&StringLiteral_23418/*"system.memory.free"*/, v10);
-    sub_1C3B764(&StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/, v11);
-    sub_1C3B764(&StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, v12);
-    sub_1C3B764(&StringLiteral_1/*""*/, v13);
-    byte_4C1E1A4 = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, item);
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v8);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v9);
+    sub_1B4CF90(&StringLiteral_22660/*"ribbon_noblephantasmup_01"*/, v10);
+    sub_1B4CF90(&StringLiteral_11264/*"SELECT_CANNOT"*/, v11);
+    sub_1B4CF90(&StringLiteral_11288/*"SELECT_SERVANT_EVENT_JOIN"*/, v12);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v13);
+    byte_49B7096 = 1;
   }
   if ( !item )
     return;
@@ -59,7 +59,7 @@ void __fastcall ServantListViewItemDraw__SetInput(
       goto LABEL_78;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     Component_object,
-                                                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                    (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !Component_object )
       goto LABEL_78;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
@@ -170,7 +170,7 @@ void __fastcall ServantListViewItemDraw__SetInput(
       if ( item->fields.isEventJoin )
       {
 LABEL_48:
-        v25 = &StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/;
+        v25 = &StringLiteral_11288/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_56:
         Component_object = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v25, 0LL);
         if ( !warningLabel )
@@ -188,7 +188,7 @@ LABEL_58:
       if ( isEventJoin )
         goto LABEL_48;
     }
-    v25 = &StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/;
+    v25 = &StringLiteral_11264/*"SELECT_CANNOT"*/;
     goto LABEL_56;
   }
 LABEL_59:
@@ -226,7 +226,7 @@ LABEL_59:
       v29 = this->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_23418/*"system.memory.free"*/, 0LL);
+      AtlasManager__SetEventSprite(v29, (System_String_o *)StringLiteral_22660/*"ribbon_noblephantasmup_01"*/, 0LL);
       if ( item->fields.isNeedAdjustIconLabelScale )
       {
         Component_object = (UnityEngine_Component_o *)this->fields.servantFaceIcon;
@@ -239,7 +239,7 @@ LABEL_59:
           return;
         }
 LABEL_78:
-        sub_1C3B9C0(Component_object, v15);
+        sub_1B4D1EC(Component_object, v15);
       }
     }
   }
@@ -281,18 +281,18 @@ void __fastcall ServantListViewItemDraw__SetItem(
   UISprite_o *v33; // x21
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C1E1A3 & 1) == 0 )
+  if ( (byte_49B7095 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, item);
-    sub_1C3B764(&LocalizationManager_TypeInfo, v7);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C3B764(&StringLiteral_23418/*"system.memory.free"*/, v9);
-    sub_1C3B764(&StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/, v10);
-    sub_1C3B764(&StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/, v11);
-    sub_1C3B764(&StringLiteral_20540/*"iso8859-2"*/, v12);
-    sub_1C3B764(&StringLiteral_1/*""*/, v13);
-    sub_1C3B764(&StringLiteral_20541/*"isoCurrencyCode"*/, v14);
-    byte_4C1E1A3 = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, item);
+    sub_1B4CF90(&LocalizationManager_TypeInfo, v7);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B4CF90(&StringLiteral_22660/*"ribbon_noblephantasmup_01"*/, v9);
+    sub_1B4CF90(&StringLiteral_11264/*"SELECT_CANNOT"*/, v10);
+    sub_1B4CF90(&StringLiteral_11288/*"SELECT_SERVANT_EVENT_JOIN"*/, v11);
+    sub_1B4CF90(&StringLiteral_19837/*"icon_equip"*/, v12);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v13);
+    sub_1B4CF90(&StringLiteral_19838/*"icon_equip_cc"*/, v14);
+    byte_49B7095 = 1;
   }
   if ( !item || !mode )
     return;
@@ -302,7 +302,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_97;
-    ServantFaceIconComponent__Set_39650476(
+    ServantFaceIconComponent__Set_38766692(
       servantFaceIcon,
       userCommandCodeEntity,
       item->fields.iconLabelInfo1,
@@ -313,7 +313,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
   {
     if ( !servantFaceIcon )
       goto LABEL_97;
-    ServantFaceIconComponent__Set_39643588(
+    ServantFaceIconComponent__Set_38759804(
       servantFaceIcon,
       item->fields.userSvtEntity,
       item->fields.iconLabelInfo1,
@@ -338,7 +338,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( !servantFaceIcon )
         goto LABEL_97;
     }
-    FlashingIconComponent__Set_39547472((FlashingIconComponent_o *)servantFaceIcon, (bool)userCommandCodeEntity, 0LL);
+    FlashingIconComponent__Set_38664024((FlashingIconComponent_o *)servantFaceIcon, (bool)userCommandCodeEntity, 0LL);
   }
   useSprite = (UnityEngine_Object_o *)this->fields.useSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -361,9 +361,9 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( !servantFaceIcon )
         goto LABEL_97;
       if ( item->fields.userCommandCodeEntity )
-        v20 = &StringLiteral_20541/*"isoCurrencyCode"*/;
+        v20 = &StringLiteral_19838/*"icon_equip_cc"*/;
       else
-        v20 = &StringLiteral_20540/*"iso8859-2"*/;
+        v20 = &StringLiteral_19837/*"icon_equip"*/;
       UISprite__set_spriteName((UISprite_o *)servantFaceIcon, (System_String_o *)*v20, 0LL);
     }
     else
@@ -481,7 +481,7 @@ void __fastcall ServantListViewItemDraw__SetItem(
       if ( item->fields.isEventJoin )
       {
 LABEL_67:
-        v29 = &StringLiteral_11755/*"SHOP_BUY_CONFIRM_CAN_SHOP_RESET_NO_LIMIT_MESSAGE"*/;
+        v29 = &StringLiteral_11288/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_75:
         servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get((System_String_o *)*v29, 0LL);
         if ( !warningLabel )
@@ -499,7 +499,7 @@ LABEL_77:
       if ( isEventJoin )
         goto LABEL_67;
     }
-    v29 = &StringLiteral_11731/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/;
+    v29 = &StringLiteral_11264/*"SELECT_CANNOT"*/;
     goto LABEL_75;
   }
 LABEL_78:
@@ -534,7 +534,7 @@ LABEL_78:
                                                           0LL)) == 0LL )
   {
 LABEL_97:
-    sub_1C3B9C0(servantFaceIcon, userCommandCodeEntity);
+    sub_1B4D1EC(servantFaceIcon, userCommandCodeEntity);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isMaterialTdSvt, 0LL);
   if ( item->fields.isMaterialTdSvt )
@@ -542,7 +542,7 @@ LABEL_97:
     v33 = this->fields.materialTdSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v33, (System_String_o *)StringLiteral_23418/*"system.memory.free"*/, 0LL);
+    AtlasManager__SetEventSprite(v33, (System_String_o *)StringLiteral_22660/*"ribbon_noblephantasmup_01"*/, 0LL);
     if ( item->fields.isNeedAdjustIconLabelScale )
     {
       servantFaceIcon = this->fields.servantFaceIcon;

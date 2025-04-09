@@ -18,7 +18,7 @@ void __fastcall LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const M
         (v4 = this->fields.mUiSprite) == 0LL)
     || (mUiSprite = this->fields.mCollider) == 0LL )
   {
-    sub_1C3B9C0(mUiSprite, method);
+    sub_1B4D1EC(mUiSprite, method);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -38,7 +38,7 @@ void __fastcall LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32
     || (UIWidget__set_width(mUiSprite, w, 0LL), (mUiSprite = (UIWidget_o *)this->fields.mUiSprite) == 0LL)
     || (UIWidget__set_height(mUiSprite, h, 0LL), (mUiSprite = (UIWidget_o *)this->fields.mCollider) == 0LL) )
   {
-    sub_1C3B9C0(mUiSprite, *(_QWORD *)&w);
+    sub_1B4D1EC(mUiSprite, *(_QWORD *)&w);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -53,22 +53,10 @@ void __fastcall LinkableSprite__SetUp(
         System_String_o *lnkUrl,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
   struct System_String_o **p_linkUrl; // x0
 
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)p_linkUrl,
-    (int64_t)lnkUrl,
-    (int64_t)lnkUrl,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, method);
 }

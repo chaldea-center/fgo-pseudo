@@ -16,139 +16,111 @@ void __fastcall CharaGraphCommandCodeListViewItem___ctor(
   __int64 v17; // x1
   __int64 v18; // x1
   Il2CppObject *v19; // x21
-  int64_t v20; // x2
-  int32_t v21; // w3
-  System_String_o *v22; // x4
-  BattleSetupInfo_o *v23; // x5
-  FollowerInfo_o *v24; // x6
-  PartyListViewItem_o *v25; // x7
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   int64_t Master_object; // x0
-  __int64 v27; // x1
+  __int64 v23; // x1
   struct UserCommandCodeEntity_o *UserCommandCodeEntity_k__BackingField; // x8
-  __int64 v29; // x22
-  __int64 v30; // x23
-  UserCommandCodeEntity_o *v31; // x8
+  __int64 v25; // x22
+  __int64 v26; // x23
+  UserCommandCodeEntity_o *v27; // x8
   struct System_Int32_array *CategoryIdList; // x0
-  int64_t v33; // x2
-  int32_t v34; // w3
-  System_String_o *v35; // x4
-  BattleSetupInfo_o *v36; // x5
-  FollowerInfo_o *v37; // x6
-  PartyListViewItem_o *v38; // x7
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
   Il2CppObject *Entity; // x0
-  int64_t v40; // x2
-  int32_t v41; // w3
-  System_String_o *v42; // x4
-  BattleSetupInfo_o *v43; // x5
-  FollowerInfo_o *v44; // x6
-  PartyListViewItem_o *v45; // x7
-  const MethodInfo *v46; // x1
-  struct UserCommandCodeEntity_o *v47; // x8
-  __int128 v48; // q1
-  System_Func_long__bool__o *v49; // x22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v51; // [xsp+20h] [xbp-60h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x1
+  struct UserCommandCodeEntity_o *v35; // x8
+  __int128 v36; // q1
+  System_Func_long__bool__o *v37; // x22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v38; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v39; // [xsp+20h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
 
-  if ( (byte_4C212C7 & 1) == 0 )
+  if ( (byte_49BA1DB & 1) == 0 )
   {
-    sub_1C3B764(&Method_BasicHelper_Any_long___, *(_QWORD *)&index);
-    sub_1C3B764(&Method_DataManager_GetMaster_CommandCodeMaster___, v11);
-    sub_1C3B764(&DataManager_TypeInfo, v12);
-    sub_1C3B764(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
-    sub_1C3B764(&System_Func_long__bool__TypeInfo, v14);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v16);
-    sub_1C3B764(&Method_CharaGraphCommandCodeListViewItem___c__DisplayClass20_0___ctor_b__0__, v17);
-    sub_1C3B764(&CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo, v18);
-    byte_4C212C7 = 1;
+    sub_1B4CF90(&Method_BasicHelper_Any_long___, *(_QWORD *)&index);
+    sub_1B4CF90(&Method_DataManager_GetMaster_CommandCodeMaster___, v11);
+    sub_1B4CF90(&DataManager_TypeInfo, v12);
+    sub_1B4CF90(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
+    sub_1B4CF90(&System_Func_long__bool__TypeInfo, v14);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v15);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v16);
+    sub_1B4CF90(&Method_CharaGraphCommandCodeListViewItem___c__DisplayClass20_0___ctor_b__0__, v17);
+    sub_1B4CF90(&CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo, v18);
+    byte_49BA1DB = 1;
   }
   CharaGraphListViewItemBase___ctor(
     (CharaGraphListViewItemBase_o *)this,
     index,
     listViewPattern,
     (const MethodInfo *)userCommandCodeEntity);
-  v19 = (Il2CppObject *)sub_1C3B9B0(CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
+  v19 = (Il2CppObject *)sub_1B4D1DC(CharaGraphCommandCodeListViewItem___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor(v19, 0LL);
   this->fields._UserCommandCodeEntity_k__BackingField = userCommandCodeEntity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
-    (int64_t)userCommandCodeEntity,
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
+    (int32_t)userCommandCodeEntity,
     v20,
-    v21,
-    v22,
-    v23,
-    v24,
-    v25);
+    v21);
   UserCommandCodeEntity_k__BackingField = this->fields._UserCommandCodeEntity_k__BackingField;
   if ( !UserCommandCodeEntity_k__BackingField )
     goto LABEL_15;
-  v30 = *(_QWORD *)&UserCommandCodeEntity_k__BackingField->fields.commandCodeId.fields.currentCryptoKey;
-  v29 = *(_QWORD *)&UserCommandCodeEntity_k__BackingField->fields.commandCodeId.fields.fakeValue;
+  v26 = *(_QWORD *)&UserCommandCodeEntity_k__BackingField->fields.commandCodeId.fields.currentCryptoKey;
+  v25 = *(_QWORD *)&UserCommandCodeEntity_k__BackingField->fields.commandCodeId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v52.fields.currentCryptoKey = v30;
-  *(_QWORD *)&v52.fields.fakeValue = v29;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47882560(v52, 0LL);
-  v31 = this->fields._UserCommandCodeEntity_k__BackingField;
+  *(_QWORD *)&v40.fields.currentCryptoKey = v26;
+  *(_QWORD *)&v40.fields.fakeValue = v25;
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v40, 0LL);
+  v27 = this->fields._UserCommandCodeEntity_k__BackingField;
   this->fields._CommandCodeId_k__BackingField = Master_object;
-  if ( !v31 )
+  if ( !v27 )
     goto LABEL_15;
-  CategoryIdList = UserCommandCodeEntity__GetCategoryIdList(v31, 0LL);
+  CategoryIdList = UserCommandCodeEntity__GetCategoryIdList(v27, 0LL);
   this->fields._CommandCodeCategoryIdArray_k__BackingField = CategoryIdList;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
-    (int64_t)CategoryIdList,
-    v33,
-    v34,
-    v35,
-    v36,
-    v37,
-    v38);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
+    (int32_t)CategoryIdList,
+    v29,
+    v30);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_CommandCodeMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_CommandCodeMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields._CommandCodeId_k__BackingField,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   this->fields._CommandCodeEntity_k__BackingField = (struct CommandCodeEntity_o *)Entity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._CommandCodeEntity_k__BackingField,
-    (int64_t)Entity,
-    v40,
-    v41,
-    v42,
-    v43,
-    v44,
-    v45);
-  CharaGraphCommandCodeListViewItem__UpdateProperties(this, v46);
-  v47 = this->fields._UserCommandCodeEntity_k__BackingField;
-  if ( !v47 )
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._CommandCodeEntity_k__BackingField, (int32_t)Entity, v32, v33);
+  CharaGraphCommandCodeListViewItem__UpdateProperties(this, v34);
+  v35 = this->fields._UserCommandCodeEntity_k__BackingField;
+  if ( !v35 )
     goto LABEL_15;
-  v48 = *(_OWORD *)&v47->fields.id.fields.fakeValue;
-  *(_OWORD *)&v51.fields.currentCryptoKey = *(_OWORD *)&v47->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v51.fields.fakeValue = v48;
+  v36 = *(_OWORD *)&v35->fields.id.fields.fakeValue;
+  *(_OWORD *)&v39.fields.currentCryptoKey = *(_OWORD *)&v35->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v39.fields.fakeValue = v36;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v50 = v51;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(&v50, 0LL);
+  v38 = v39;
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v38, 0LL);
   if ( !v19 )
 LABEL_15:
-    sub_1C3B9C0(Master_object, v27);
+    sub_1B4D1EC(Master_object, v23);
   v19[1].klass = (Il2CppClass *)Master_object;
-  v49 = (System_Func_long__bool__o *)sub_1C3B9B0(System_Func_long__bool__TypeInfo);
+  v37 = (System_Func_long__bool__o *)sub_1B4D1DC(System_Func_long__bool__TypeInfo);
   System_Func_long__bool____ctor(
-    v49,
+    v37,
     v19,
     Method_CharaGraphCommandCodeListViewItem___c__DisplayClass20_0___ctor_b__0__,
     0LL);
   this->fields._IsUse_k__BackingField = BasicHelper__Any_long_(
                                           attachUserCommandCodeList,
-                                          (System_Func_T__bool__o *)v49,
-                                          (const MethodInfo_2FDAAD8 *)Method_BasicHelper_Any_long___);
+                                          (System_Func_T__bool__o *)v37,
+                                          (const MethodInfo_2EEC3F8 *)Method_BasicHelper_Any_long___);
   this->fields._IsEnabled_k__BackingField = 1;
 }
 
@@ -167,56 +139,44 @@ void __fastcall CharaGraphCommandCodeListViewItem__ModifyLocal(
   __int128 v10; // q1
   DataMasterBase_TMaster__TEntity__PKType__o *v11; // x21
   Il2CppObject *Entity; // x0
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  const MethodInfo *v19; // x1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v20; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v21; // [xsp+20h] [xbp-40h]
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4C212C8 & 1) == 0 )
+  if ( (byte_49BA1DC & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_UserCommandCodeMaster___, args);
-    sub_1C3B764(&DataManager_TypeInfo, v4);
-    sub_1C3B764(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v5);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
-    byte_4C212C8 = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_UserCommandCodeMaster___, args);
+    sub_1B4CF90(&DataManager_TypeInfo, v4);
+    sub_1B4CF90(&Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__, v5);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v6);
+    byte_49BA1DC = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
   UserCommandCodeEntity_k__BackingField = this->fields._UserCommandCodeEntity_k__BackingField;
   if ( !UserCommandCodeEntity_k__BackingField )
     goto LABEL_10;
   v10 = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.fakeValue;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
-  *(_OWORD *)&v21.fields.currentCryptoKey = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v21.fields.fakeValue = v10;
+  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v17.fields.fakeValue = v10;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v20 = v21;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(&v20, 0LL);
+  v16 = v17;
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v16, 0LL);
   if ( !v11 )
 LABEL_10:
-    sub_1C3B9C0(Master_object, v8);
+    sub_1B4D1EC(Master_object, v8);
   Entity = DataMasterBase_object__object__long___GetEntity(
              v11,
              Master_object,
-             (const MethodInfo_329D3A4 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
+             (const MethodInfo_319FEF8 *)Method_DataMasterBase_UserCommandCodeMaster__UserCommandCodeEntity__long__GetEntity__);
   this->fields._UserCommandCodeEntity_k__BackingField = (struct UserCommandCodeEntity_o *)Entity;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
-    (int64_t)Entity,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
-  CharaGraphCommandCodeListViewItem__UpdateProperties(this, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField, (int32_t)Entity, v13, v14);
+  CharaGraphCommandCodeListViewItem__UpdateProperties(this, v15);
 }
 
 
@@ -236,7 +196,7 @@ void __fastcall CharaGraphCommandCodeListViewItem__UpdateProperties(
         this->fields._IsLock_k__BackingField = (unsigned __int8)UserCommandCodeEntity_k__BackingField & 1,
         !v4) )
   {
-    sub_1C3B9C0(UserCommandCodeEntity_k__BackingField, method);
+    sub_1B4D1EC(UserCommandCodeEntity_k__BackingField, method);
   }
   this->fields._IsChoice_k__BackingField = UserCommandCodeEntity__IsChoice(v4, 0LL);
 }
@@ -277,23 +237,23 @@ int64_t __fastcall CharaGraphCommandCodeListViewItem__get_ObjectId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
   v2 = this;
-  if ( (byte_4C212C6 & 1) == 0 )
+  if ( (byte_49BA1DA & 1) == 0 )
   {
-    this = (CharaGraphCommandCodeListViewItem_o *)sub_1C3B764(
+    this = (CharaGraphCommandCodeListViewItem_o *)sub_1B4CF90(
                                                     &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
                                                     method);
-    byte_4C212C6 = 1;
+    byte_49BA1DA = 1;
   }
   UserCommandCodeEntity_k__BackingField = v2->fields._UserCommandCodeEntity_k__BackingField;
   if ( !UserCommandCodeEntity_k__BackingField )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   v4 = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.fakeValue;
   *(_OWORD *)&v7.fields.currentCryptoKey = *(_OWORD *)&UserCommandCodeEntity_k__BackingField->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v7.fields.fakeValue = v4;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47886084(&v6, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v6, 0LL);
 }
 
 
@@ -305,7 +265,7 @@ int32_t __fastcall CharaGraphCommandCodeListViewItem__get_Rarity(
 
   CommandCodeEntity_k__BackingField = this->fields._CommandCodeEntity_k__BackingField;
   if ( !CommandCodeEntity_k__BackingField )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return CommandCodeEntity_k__BackingField->fields.rarity;
 }
 
@@ -323,22 +283,14 @@ void __fastcall CharaGraphCommandCodeListViewItem__set_CommandCodeCategoryIdArra
         System_Int32_array *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._CommandCodeCategoryIdArray_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._CommandCodeCategoryIdArray_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -347,22 +299,14 @@ void __fastcall CharaGraphCommandCodeListViewItem__set_CommandCodeEntity(
         CommandCodeEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._CommandCodeEntity_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._CommandCodeEntity_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._CommandCodeEntity_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -380,22 +324,14 @@ void __fastcall CharaGraphCommandCodeListViewItem__set_UserCommandCodeEntity(
         UserCommandCodeEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._UserCommandCodeEntity_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._UserCommandCodeEntity_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 

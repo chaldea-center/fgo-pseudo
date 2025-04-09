@@ -6,12 +6,12 @@ void __fastcall ContinuePrepareRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C238CB & 1) == 0 )
+  if ( (byte_49BC7FA & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_18600/*"elementValue"*/, continuePass);
-    byte_4C238CB = 1;
+    sub_1B4CF90(&StringLiteral_17939/*"continuePass"*/, continuePass);
+    byte_49BC7FA = 1;
   }
-  RequestBase__addField_42621852((RequestBase_o *)this, (System_String_o *)StringLiteral_18600/*"elementValue"*/, continuePass, v3);
+  RequestBase__addField_41748396((RequestBase_o *)this, (System_String_o *)StringLiteral_17939/*"continuePass"*/, continuePass, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -20,10 +20,10 @@ System_String_o *__fastcall ContinuePrepareRequest__getMockData(
         ContinuePrepareRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C238CA & 1) == 0 )
+  if ( (byte_49BC7F9 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C238CA = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49BC7F9 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -34,16 +34,16 @@ System_String_o *__fastcall ContinuePrepareRequest__getURL(ContinuePrepareReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C238C9 & 1) == 0 )
+  if ( (byte_49BC7F8 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_18597/*"elementOnly"*/, v2);
-    byte_4C238C9 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_17936/*"continue/prepare"*/, v2);
+    byte_49BC7F8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18597/*"elementOnly"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17936/*"continue/prepare"*/, 0LL);
 }
 
 
@@ -61,17 +61,17 @@ void __fastcall ContinuePrepareRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v12; // x8
 
-  if ( (byte_4C238CC & 1) == 0 )
+  if ( (byte_49BC7FB & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C238CC = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC7FB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(31, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42712632(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -90,7 +90,7 @@ void __fastcall ContinuePrepareRequest__requestCompleted(
     if ( v12 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
         v12->fields.original_method_info,
-        StringLiteral_22507/*"referrerMapId"*/,
+        StringLiteral_21779/*"ng"*/,
         *(_QWORD *)&v12->fields.extra_arg);
   }
 }

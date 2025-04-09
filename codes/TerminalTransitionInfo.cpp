@@ -9,41 +9,29 @@ void __fastcall TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, co
 
 void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  void *v15; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  int32_t v7; // w1
   struct System_String_o **p_voiceAssetName; // x19
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C1F359 & 1) == 0 )
+  if ( (byte_49B8261 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_1/*""*/, method);
-    byte_4C1F359 = 1;
+    sub_1B4CF90(&StringLiteral_1/*""*/, method);
+    byte_49B8261 = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.beforeActionVals, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
   this->fields.afterActionVals = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.afterActionVals, 0LL, v9, v10, v11, v12, v13, v14);
-  v15 = StringLiteral_1/*""*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.afterActionVals, 0, v5, v6);
+  v7 = (int)StringLiteral_1/*""*/;
   this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_voiceAssetName = &this->fields.voiceAssetName;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_voiceAssetName, (int64_t)v15, v17, v18, v19, v20, v21, v22);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_voiceAssetName, v7, v9, v10);
   *((_DWORD *)p_voiceAssetName + 2) = 0;
 }
 
@@ -53,25 +41,13 @@ void __fastcall TerminalTransitionInfo__SetParameters(
         TerminalTransitionInfo_o *info,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
   struct System_String_o *voiceAssetName; // x1
 
   if ( !info )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   this->fields.missionId = info->fields.missionId;
   voiceAssetName = info->fields.voiceAssetName;
   this->fields.voiceAssetName = voiceAssetName;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.voiceAssetName,
-    (int64_t)voiceAssetName,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.voiceAssetName, (int32_t)voiceAssetName, (int32_t)method, v3);
 }

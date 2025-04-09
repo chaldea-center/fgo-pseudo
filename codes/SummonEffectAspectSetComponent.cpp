@@ -20,7 +20,7 @@ void __fastcall SummonEffectAspectSetComponent__SetStartSize(
 
   memset(&v8, 0, sizeof(v8));
   if ( !particle )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main(particle, 0LL).fields.m_ParticleSystem;
   v10.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
   UnityEngine_ParticleSystem_MainModule__get_startSize(&v7, v10, 0LL);
@@ -76,10 +76,10 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
   UnityEngine_ParticleSystem_MainModule_o v40; // 0:x0.8
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C23438 & 1) == 0 )
+  if ( (byte_49BC367 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
-    byte_4C23438 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
+    byte_49BC367 = 1;
   }
   m_ParticleSystem = 0LL;
   memset(&v35, 0, sizeof(v35));
@@ -122,7 +122,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_54;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)go_above_cardScaler,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   SummonEffectAspectSetComponent__SetStartSize(
     (SummonEffectAspectSetComponent_o *)Component_object,
     (UnityEngine_ParticleSystem_o *)Component_object,
@@ -156,7 +156,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             v16 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
-                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                    (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
               (SummonEffectAspectSetComponent_o *)v16,
               (UnityEngine_ParticleSystem_o *)v16,
@@ -183,7 +183,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_54;
   v18 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)go_above_cardScaler,
-          (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+          (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   SummonEffectAspectSetComponent__SetStartSize(
     (SummonEffectAspectSetComponent_o *)v18,
     (UnityEngine_ParticleSystem_o *)v18,
@@ -217,7 +217,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             v21 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
-                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                    (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
               (SummonEffectAspectSetComponent_o *)v21,
               (UnityEngine_ParticleSystem_o *)v21,
@@ -244,7 +244,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
     goto LABEL_54;
   v23 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)go_above_cardScaler,
-          (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+          (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   SummonEffectAspectSetComponent__SetStartSize(
     (SummonEffectAspectSetComponent_o *)v23,
     (UnityEngine_ParticleSystem_o *)v23,
@@ -278,7 +278,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
           {
             v26 = UnityEngine_Component__GetComponent_object_(
                     (UnityEngine_Component_o *)go_above_cardScaler,
-                    (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                    (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
             SummonEffectAspectSetComponent__SetStartSize(
               (SummonEffectAspectSetComponent_o *)v26,
               (UnityEngine_ParticleSystem_o *)v26,
@@ -311,7 +311,7 @@ void __fastcall SummonEffectAspectSetComponent__Start(SummonEffectAspectSetCompo
   go_above_cardScaler = (UnityEngine_Transform_o *)this->fields.ps_appear_lightburst2;
   if ( !go_above_cardScaler )
 LABEL_54:
-    sub_1C3B9C0(go_above_cardScaler, v4);
+    sub_1B4D1EC(go_above_cardScaler, v4);
   m_ParticleSystem = UnityEngine_ParticleSystem__get_main((UnityEngine_ParticleSystem_o *)go_above_cardScaler, 0LL).fields.m_ParticleSystem;
   v39.fields.m_ParticleSystem = (struct UnityEngine_ParticleSystem_o *)&m_ParticleSystem;
   UnityEngine_ParticleSystem_MainModule__get_startSize(&v34, v39, 0LL);

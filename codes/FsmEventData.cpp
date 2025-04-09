@@ -1,33 +1,25 @@
 void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v9; // x1
-  int64_t v10; // x1
-  void *v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  __int64 v5; // x1
+  int32_t v6; // w1
+  int32_t v7; // w1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C23451 & 1) == 0 )
+  if ( (byte_49BC380 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22566/*"reset_purchase_num"*/, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v9);
-    byte_4C23451 = 1;
+    sub_1B4CF90(&StringLiteral_21834/*"none"*/, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
+    byte_49BC380 = 1;
   }
-  v10 = StringLiteral_22566/*"reset_purchase_num"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_22566/*"reset_purchase_num"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, v10, v2, v3, v4, v5, v6, v7);
-  v11 = StringLiteral_1/*""*/;
+  v6 = StringLiteral_21834/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_21834/*"none"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, v6, v2, v3);
+  v7 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)v11, v12, v13, v14, v15, v16, v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -52,25 +44,17 @@ System_String_o *__fastcall FsmEventData__get_Title(FsmEventData_o *this, const 
 
 void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.eventData = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
 void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.title = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.title, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
 }

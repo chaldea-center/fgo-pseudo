@@ -15,38 +15,34 @@ CreateSkillTaskFromBuffAction_array *__fastcall BattleAddSkillTaskAfterCommandAt
   Il2CppObject *v4; // x20
   __int64 v5; // x0
   __int64 v6; // x1
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  __int64 v14; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  __int64 v10; // x0
 
-  if ( (byte_4C24C25 & 1) == 0 )
+  if ( (byte_49BDB5F & 1) == 0 )
   {
-    sub_1C3B764(&CreateComboEndSkillTask_TypeInfo, method);
-    sub_1C3B764(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
-    byte_4C24C25 = 1;
+    sub_1B4CF90(&CreateComboEndSkillTask_TypeInfo, method);
+    sub_1B4CF90(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
+    byte_49BDB5F = 1;
   }
-  v3 = (CreateSkillTaskFromBuffAction_array *)sub_1C3B80C(CreateSkillTaskFromBuffAction___TypeInfo, 1LL);
-  v4 = (Il2CppObject *)sub_1C3B9B0(CreateComboEndSkillTask_TypeInfo);
+  v3 = (CreateSkillTaskFromBuffAction_array *)sub_1B4D038(CreateSkillTaskFromBuffAction___TypeInfo, 1LL);
+  v4 = (Il2CppObject *)sub_1B4D1DC(CreateComboEndSkillTask_TypeInfo);
   System_Object___ctor(v4, 0LL);
   if ( !v3 )
-    sub_1C3B9C0(v5, v6);
+    sub_1B4D1EC(v5, v6);
   if ( v4 )
   {
-    v5 = sub_1C3B8A0(v4, v3->obj.klass->_1.element_class);
+    v5 = sub_1B4D0CC(v4, v3->obj.klass->_1.element_class);
     if ( !v5 )
     {
-      v14 = sub_1C3B9E4(0LL);
-      sub_1C3B88C(v14, 0LL);
+      v10 = sub_1B4D210(0LL);
+      sub_1B4D0B8(v10, 0LL);
     }
   }
   if ( !v3->max_length )
-    sub_1C3B9C8(v5, v6);
+    sub_1B4D1F4(v5, v6);
   v3->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v4;
-  sub_1C3B708((PartyOrganizationUtility_o *)v3->m_Items, (int64_t)v4, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)v3->m_Items, (int32_t)v4, v7, v8);
   return v3;
 }
 

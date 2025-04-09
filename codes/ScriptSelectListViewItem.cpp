@@ -5,24 +5,16 @@ void __fastcall ScriptSelectListViewItem___ctor(
         UnityEngine_Font_o *fontType,
         const MethodInfo *method)
 {
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   this->fields.message = message;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.message, (int64_t)message, v8, v9, v10, v11, v12, v13);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
   this->fields.fontType = fontType;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.fontType, (int64_t)fontType, v14, v15, v16, v17, v18, v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
 }
 
 
@@ -36,12 +28,12 @@ System_String_o *__fastcall ScriptSelectListViewItem__ToString(
         ScriptSelectListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C23CF4 & 1) == 0 )
+  if ( (byte_49BCC26 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_21828/*"notification/regist"*/, method);
-    byte_4C23CF4 = 1;
+    sub_1B4CF90(&StringLiteral_21108/*"message "*/, method);
+    byte_49BCC26 = 1;
   }
-  return System_String__Concat_63368612((System_String_o *)StringLiteral_21828/*"notification/regist"*/, this->fields.message, 0LL);
+  return System_String__Concat_61093468((System_String_o *)StringLiteral_21108/*"message "*/, this->fields.message, 0LL);
 }
 
 

@@ -161,250 +161,234 @@ void __fastcall Voice___cctor(const MethodInfo *method)
   System_Collections_Generic_List_T__o *v159; // x19
   __int64 v160; // x0
   __int64 v161; // x1
-  int64_t v162; // x2
-  int32_t v163; // w3
-  System_String_o *v164; // x4
-  BattleSetupInfo_o *v165; // x5
-  FollowerInfo_o *v166; // x6
-  PartyListViewItem_o *v167; // x7
+  int32_t v162; // w2
+  const MethodInfo *v163; // x3
   struct System_Object_array *items; // x9
-  _QWORD *v169; // x8
+  _QWORD *v165; // x8
   __int64 size; // x10
+  __int64 v167; // x10
+  __int64 v168; // x10
+  __int64 v169; // x10
+  __int64 v170; // x10
   __int64 v171; // x10
   __int64 v172; // x10
   __int64 v173; // x10
-  __int64 v174; // x10
-  __int64 v175; // x10
-  __int64 v176; // x10
-  __int64 v177; // x10
-  System_Collections_Generic_List_T__o *v178; // x19
-  int64_t v179; // x2
-  int32_t v180; // w3
-  System_String_o *v181; // x4
-  BattleSetupInfo_o *v182; // x5
-  FollowerInfo_o *v183; // x6
-  PartyListViewItem_o *v184; // x7
-  struct System_Object_array *v185; // x9
-  _QWORD *v186; // x8
+  System_Collections_Generic_List_T__o *v174; // x19
+  int32_t v175; // w2
+  const MethodInfo *v176; // x3
+  struct System_Object_array *v177; // x9
+  _QWORD *v178; // x8
+  __int64 v179; // x10
+  __int64 v180; // x10
+  __int64 v181; // x10
+  __int64 v182; // x10
+  __int64 v183; // x10
+  __int64 v184; // x10
+  __int64 v185; // x10
+  __int64 v186; // x10
   __int64 v187; // x10
-  __int64 v188; // x10
-  __int64 v189; // x10
-  __int64 v190; // x10
-  __int64 v191; // x10
-  __int64 v192; // x10
-  __int64 v193; // x10
-  __int64 v194; // x10
-  __int64 v195; // x10
   struct Voice_StaticFields *static_fields; // x0
-  System_Collections_Generic_List_T__o *v197; // x19
-  int64_t v198; // x2
-  int32_t v199; // w3
-  System_String_o *v200; // x4
-  BattleSetupInfo_o *v201; // x5
-  FollowerInfo_o *v202; // x6
-  PartyListViewItem_o *v203; // x7
-  _QWORD *v204; // x8
+  System_Collections_Generic_List_T__o *v189; // x19
+  int32_t v190; // w2
+  const MethodInfo *v191; // x3
+  _QWORD *v192; // x8
   int32_t *p_version; // x21
-  struct System_Object_array *v206; // x9
-  __int64 v207; // x10
+  struct System_Object_array *v194; // x9
+  __int64 v195; // x10
   int32_t *p_size; // x20
+  __int64 v197; // x10
+  __int64 v198; // x10
+  __int64 v199; // x10
+  __int64 v200; // x10
+  __int64 v201; // x10
+  __int64 v202; // x10
+  __int64 v203; // x10
+  __int64 v204; // x10
+  __int64 v205; // x10
+  __int64 v206; // x10
+  __int64 v207; // x10
+  __int64 v208; // x10
   __int64 v209; // x10
   __int64 v210; // x10
   __int64 v211; // x10
   __int64 v212; // x10
   __int64 v213; // x10
-  __int64 v214; // x10
-  __int64 v215; // x10
-  __int64 v216; // x10
-  __int64 v217; // x10
-  __int64 v218; // x10
-  __int64 v219; // x10
-  __int64 v220; // x10
-  __int64 v221; // x10
-  __int64 v222; // x10
-  __int64 v223; // x10
-  __int64 v224; // x10
-  __int64 v225; // x10
-  struct Voice_StaticFields *v226; // x0
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v227; // x19
-  struct Voice_StaticFields *v228; // x0
-  int64_t v229; // x2
-  int32_t v230; // w3
-  System_String_o *v231; // x4
-  BattleSetupInfo_o *v232; // x5
-  FollowerInfo_o *v233; // x6
-  PartyListViewItem_o *v234; // x7
+  struct Voice_StaticFields *v214; // x0
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v215; // x19
+  struct Voice_StaticFields *v216; // x0
+  int32_t v217; // w2
+  const MethodInfo *v218; // x3
 
-  if ( (byte_4C20F5D & 1) == 0 )
+  if ( (byte_49B9E6F & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__, v1);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string___ctor__, v2);
-    sub_1C3B764(&System_Collections_Generic_Dictionary_Voice_BATTLE__string__TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Voice_BATTLE__Add__, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Voice_BATTLE___ctor__, v5);
-    sub_1C3B764(&System_Collections_Generic_List_Voice_BATTLE__TypeInfo, v6);
-    sub_1C3B764(&Voice_TypeInfo, v7);
-    sub_1C3B764(&StringLiteral_2743/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/, v8);
-    sub_1C3B764(&StringLiteral_2671/*"B890"*/, v9);
-    sub_1C3B764(&StringLiteral_2666/*"B841"*/, v10);
-    sub_1C3B764(&StringLiteral_2796/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/, v11);
-    sub_1C3B764(&StringLiteral_2776/*"BATTLE_FINISH_WAIT_FINISH"*/, v12);
-    sub_1C3B764(&StringLiteral_2797/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/, v13);
-    sub_1C3B764(&StringLiteral_2762/*"BATTLE_DIALOG_USECOMMANDSPELL_ERROR_CONF"*/, v14);
-    sub_1C3B764(&StringLiteral_2810/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE"*/, v15);
-    sub_1C3B764(&StringLiteral_2741/*"BATTLE_DIALOG_BATTLEUSEITEM_ERROR_TITLE"*/, v16);
-    sub_1C3B764(&StringLiteral_2673/*"B920"*/, v17);
-    sub_1C3B764(&StringLiteral_2705/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/, v18);
-    sub_1C3B764(&StringLiteral_2702/*"BATTLE_BUFF_BOOST"*/, v19);
-    sub_1C3B764(&StringLiteral_2697/*"BATTLERESUME_CONFIRM_MESSAGE_TEMPORARY_TITLE"*/, v20);
-    sub_1C3B764(&StringLiteral_2744/*"BATTLE_DIALOG_DETAIL_NOCOMMANDCODE"*/, v21);
-    sub_1C3B764(&StringLiteral_2668/*"B8500"*/, v22);
-    sub_1C3B764(&StringLiteral_2710/*"BATTLE_CHECKUSE_COMMANDSPELL"*/, v23);
-    sub_1C3B764(&StringLiteral_2700/*"BATTLERESUME_CONFIRM_TITLE"*/, v24);
-    sub_1C3B764(&StringLiteral_2814/*"BATTLE_NOBUFFLIST"*/, v25);
-    sub_1C3B764(&StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/, v26);
-    sub_1C3B764(&StringLiteral_2661/*"B81"*/, v27);
-    sub_1C3B764(&StringLiteral_2795/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/, v28);
-    sub_1C3B764(&StringLiteral_2770/*"BATTLE_EFFECT_ID_INVINCIBLE_PIERCE"*/, v29);
-    sub_1C3B764(&StringLiteral_2658/*"B570"*/, v30);
-    sub_1C3B764(&StringLiteral_2699/*"BATTLERESUME_CONFIRM_TEMPORARY_WITHDRAWAL"*/, v31);
-    sub_1C3B764(&StringLiteral_2756/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE"*/, v32);
-    sub_1C3B764(&StringLiteral_2738/*"BATTLE_DEFAULT_GUTS_TEXT"*/, v33);
-    sub_1C3B764(&StringLiteral_2774/*"BATTLE_END"*/, v34);
-    sub_1C3B764(&StringLiteral_2712/*"BATTLE_COMMANDDIALOG_DONTACTTYPE"*/, v35);
-    sub_1C3B764(&StringLiteral_2805/*"BATTLE_MASTER_SKILL_CHARGE"*/, v36);
-    sub_1C3B764(&StringLiteral_2693/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_ITEM_QP"*/, v37);
-    sub_1C3B764(&StringLiteral_2759/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, v38);
-    sub_1C3B764(&StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/, v39);
-    sub_1C3B764(&StringLiteral_2678/*"BACK_BUTTON_CONFIRM"*/, v40);
-    sub_1C3B764(&StringLiteral_2720/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/, v41);
-    sub_1C3B764(&StringLiteral_2735/*"BATTLE_CONTINUE_USECHECK_SPELL"*/, v42);
-    sub_1C3B764(&StringLiteral_2773/*"BATTLE_ELAPSED_TURN"*/, v43);
-    sub_1C3B764(&StringLiteral_2809/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_DECIDE"*/, v44);
-    sub_1C3B764(&StringLiteral_2692/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_ITEM"*/, v45);
-    sub_1C3B764(&StringLiteral_2734/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/, v46);
-    sub_1C3B764(&StringLiteral_2718/*"BATTLE_COMMAND_CODE_RECHARGE_TURN"*/, v47);
-    sub_1C3B764(&StringLiteral_2793/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/, v48);
-    sub_1C3B764(&StringLiteral_2748/*"BATTLE_DIALOG_RESULT_ERROR_CONF"*/, v49);
-    sub_1C3B764(&StringLiteral_2750/*"BATTLE_DIALOG_RETIRE_CONF"*/, v50);
-    sub_1C3B764(&StringLiteral_2662/*"B810"*/, v51);
-    sub_1C3B764(&StringLiteral_2742/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/, v52);
-    sub_1C3B764(&StringLiteral_2761/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, v53);
-    sub_1C3B764(&StringLiteral_2749/*"BATTLE_DIALOG_RESULT_ERROR_TITLE"*/, v54);
-    sub_1C3B764(&StringLiteral_2707/*"BATTLE_BUFF_INTERVAL_REMAIN"*/, v55);
-    sub_1C3B764(&StringLiteral_2684/*"BATTLECONTINUERESUME_CONFIRM_MESSAGE"*/, v56);
-    sub_1C3B764(&StringLiteral_2714/*"BATTLE_COMMANDDIALOG_DONTTD_COND"*/, v57);
-    sub_1C3B764(&StringLiteral_2778/*"BATTLE_HASNOT_TD"*/, v58);
-    sub_1C3B764(&StringLiteral_2786/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/, v59);
-    sub_1C3B764(&StringLiteral_2674/*"B930"*/, v60);
-    sub_1C3B764(&StringLiteral_2763/*"BATTLE_DIALOG_USECOMMANDSPELL_ERROR_TITLE"*/, v61);
-    sub_1C3B764(&StringLiteral_2811/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE"*/, v62);
-    sub_1C3B764(&StringLiteral_2753/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/, v63);
-    sub_1C3B764(&StringLiteral_2711/*"BATTLE_COMMANDDIALOG_DONTACT"*/, v64);
-    sub_1C3B764(&StringLiteral_2695/*"BATTLERESUME_CONFIRM_MESSAGE_CUSTOM"*/, v65);
-    sub_1C3B764(&StringLiteral_2679/*"BACK_BUTTON_CONFIRM_NO"*/, v66);
-    sub_1C3B764(&StringLiteral_2752/*"BATTLE_DIALOG_RETIRE_TITLE"*/, v67);
-    sub_1C3B764(&StringLiteral_2696/*"BATTLERESUME_CONFIRM_MESSAGE_NO_CONSUME"*/, v68);
-    sub_1C3B764(&StringLiteral_2758/*"BATTLE_DIALOG_TREASURE_DEVICE_CHANGE_TITLE"*/, v69);
-    sub_1C3B764(&StringLiteral_2706/*"BATTLE_BUFF_INTERVAL_COUNT"*/, v70);
-    sub_1C3B764(&StringLiteral_2683/*"BATTLECONTINUERESUME_CONFIRM_DECIDE"*/, v71);
-    sub_1C3B764(&StringLiteral_2730/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/, v72);
-    sub_1C3B764(&StringLiteral_2775/*"BATTLE_FINISH_WAIT"*/, v73);
-    sub_1C3B764(&StringLiteral_2736/*"BATTLE_CONTINUE_USECHECK_STONE"*/, v74);
-    sub_1C3B764(&StringLiteral_2745/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/, v75);
-    sub_1C3B764(&StringLiteral_2739/*"BATTLE_DEFENCE_TARGET_NAME_{0}"*/, v76);
-    sub_1C3B764(&StringLiteral_2808/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_CANCEL"*/, v77);
-    sub_1C3B764(&StringLiteral_2813/*"BATTLE_MSG_INTERVAL"*/, v78);
-    sub_1C3B764(&StringLiteral_2667/*"B842"*/, v79);
-    sub_1C3B764(&StringLiteral_2721/*"BATTLE_CONTINUE_CHECK_SPELL"*/, v80);
-    sub_1C3B764(&StringLiteral_2688/*"BATTLERESUME_CONFIRM_MESSAGE"*/, v81);
-    sub_1C3B764(&StringLiteral_2723/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/, v82);
-    sub_1C3B764(&StringLiteral_2766/*"BATTLE_EFFECT_ID_3003001"*/, v83);
-    sub_1C3B764(&StringLiteral_2751/*"BATTLE_DIALOG_RETIRE_ONLY_NPC"*/, v84);
-    sub_1C3B764(&StringLiteral_2729/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/, v85);
-    sub_1C3B764(&StringLiteral_2680/*"BACK_BUTTON_CONFIRM_YES"*/, v86);
-    sub_1C3B764(&StringLiteral_2754/*"BATTLE_DIALOG_SELECT_SERVANT"*/, v87);
-    sub_1C3B764(&StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/, v88);
-    sub_1C3B764(&StringLiteral_2660/*"B800"*/, v89);
-    sub_1C3B764(&StringLiteral_2726/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, v90);
-    sub_1C3B764(&StringLiteral_2794/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/, v91);
-    sub_1C3B764(&StringLiteral_2716/*"BATTLE_COMMANDDIALOG_DONTUSE"*/, v92);
-    sub_1C3B764(&StringLiteral_2715/*"BATTLE_COMMANDDIALOG_DONTTD_SHORTAGE_CRITICAL_STAR"*/, v93);
-    sub_1C3B764(&StringLiteral_2781/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/, v94);
-    sub_1C3B764(&StringLiteral_2755/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE"*/, v95);
-    sub_1C3B764(&StringLiteral_2686/*"BATTLERESUME_CONFIRM_CANCEL"*/, v96);
-    sub_1C3B764(&StringLiteral_2694/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_QP"*/, v97);
-    sub_1C3B764(&StringLiteral_2737/*"BATTLE_CONTINUE_USE_SPELL"*/, v98);
-    sub_1C3B764(&StringLiteral_2677/*"BACKSIDE_SVT_IMAGE_ID"*/, v99);
-    sub_1C3B764(&StringLiteral_2701/*"BATTLE_BUDDY_POINT_RANK_{0}"*/, v100);
-    sub_1C3B764(&StringLiteral_2672/*"B910"*/, v101);
-    sub_1C3B764(&StringLiteral_2784/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/, v102);
-    sub_1C3B764(&StringLiteral_2765/*"BATTLE_DO_NOT_ACT_DAMAGE_RELEASE_TEXT"*/, v103);
-    sub_1C3B764(&StringLiteral_2722/*"BATTLE_CONTINUE_CHECK_STONE"*/, v104);
-    sub_1C3B764(&StringLiteral_2717/*"BATTLE_COMMANDDIALOG_NOFUNC"*/, v105);
-    sub_1C3B764(&StringLiteral_2704/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/, v106);
-    sub_1C3B764(&StringLiteral_2802/*"BATTLE_LOSE"*/, v107);
-    sub_1C3B764(&StringLiteral_2659/*"B80"*/, v108);
-    sub_1C3B764(&StringLiteral_2767/*"BATTLE_EFFECT_ID_AVOIDANCE"*/, v109);
-    sub_1C3B764(&StringLiteral_2777/*"BATTLE_GUARD_FUNCTION"*/, v110);
-    sub_1C3B764(&StringLiteral_2769/*"BATTLE_EFFECT_ID_INVINCIBLE"*/, v111);
-    sub_1C3B764(&StringLiteral_2768/*"BATTLE_EFFECT_ID_AVOIDANCE_PIERCE"*/, v112);
-    sub_1C3B764(&StringLiteral_2728/*"BATTLE_CONTINUE_ITEM_SELECT"*/, v113);
-    sub_1C3B764(&StringLiteral_2727/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/, v114);
-    sub_1C3B764(&StringLiteral_2772/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE_PIERCE"*/, v115);
-    sub_1C3B764(&StringLiteral_2690/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_ITEM"*/, v116);
-    sub_1C3B764(&StringLiteral_2782/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/, v117);
-    sub_1C3B764(&StringLiteral_2787/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/, v118);
-    sub_1C3B764(&StringLiteral_2785/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/, v119);
-    sub_1C3B764(&StringLiteral_2681/*"BARRY"*/, v120);
-    sub_1C3B764(&StringLiteral_2675/*"BACKSIDE_CLASS_IMAGE_ID"*/, v121);
-    sub_1C3B764(&StringLiteral_2757/*"BATTLE_DIALOG_TREASURE_DEVICE_CHANGE_NOW"*/, v122);
-    sub_1C3B764(&StringLiteral_2685/*"BATTLECONTINUERESUME_CONFIRM_TITLE"*/, v123);
-    sub_1C3B764(&StringLiteral_2760/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN"*/, v124);
-    sub_1C3B764(&StringLiteral_2783/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/, v125);
-    sub_1C3B764(&StringLiteral_2709/*"BATTLE_BUFF_TURN"*/, v126);
-    sub_1C3B764(&StringLiteral_2780/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/, v127);
-    sub_1C3B764(&StringLiteral_2747/*"BATTLE_DIALOG_NOT_SELECT_TARGET"*/, v128);
-    sub_1C3B764(&StringLiteral_2665/*"B840"*/, v129);
-    sub_1C3B764(&StringLiteral_2789/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/, v130);
-    sub_1C3B764(&StringLiteral_2703/*"BATTLE_BUFF_COUNT"*/, v131);
-    sub_1C3B764(&StringLiteral_2733/*"BATTLE_CONTINUE_RETIRE"*/, v132);
-    sub_1C3B764(&StringLiteral_2731/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/, v133);
-    sub_1C3B764(&StringLiteral_2689/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP0"*/, v134);
-    sub_1C3B764(&StringLiteral_2800/*"BATTLE_ITEM_DISP_COLUMN"*/, v135);
-    sub_1C3B764(&StringLiteral_2682/*"BATTLECONTINUERESUME_CONFIRM_CANCEL"*/, v136);
-    sub_1C3B764(&StringLiteral_2698/*"BATTLERESUME_CONFIRM_MESSAGE_TEMPORARY_WITHDRAWAL"*/, v137);
-    sub_1C3B764(&StringLiteral_2804/*"BATTLE_MASTER_SKILL_ADD_SPLIT"*/, v138);
-    sub_1C3B764(&StringLiteral_2724/*"BATTLE_CONTINUE_ITEM_BTN"*/, v139);
-    sub_1C3B764(&StringLiteral_2746/*"BATTLE_DIALOG_INTERRUPTION_MESSAGE"*/, v140);
-    sub_1C3B764(&StringLiteral_2663/*"B82"*/, v141);
-    sub_1C3B764(&StringLiteral_2713/*"BATTLE_COMMANDDIALOG_DONTTD"*/, v142);
-    sub_1C3B764(&StringLiteral_2771/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/, v143);
-    sub_1C3B764(&StringLiteral_2732/*"BATTLE_CONTINUE_NO_STONE"*/, v144);
-    sub_1C3B764(&StringLiteral_2687/*"BATTLERESUME_CONFIRM_DECIDE"*/, v145);
-    sub_1C3B764(&StringLiteral_2708/*"BATTLE_BUFF_INTERVAL_TURN"*/, v146);
-    sub_1C3B764(&StringLiteral_2807/*"BATTLE_MISS_FUNCTION"*/, v147);
-    sub_1C3B764(&StringLiteral_2806/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/, v148);
-    sub_1C3B764(&StringLiteral_2669/*"B8510"*/, v149);
-    sub_1C3B764(&StringLiteral_2764/*"BATTLE_DO_NOT_ACT_COMMAND"*/, v150);
-    sub_1C3B764(&StringLiteral_2725/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, v151);
-    sub_1C3B764(&StringLiteral_2740/*"BATTLE_DIALOG_BATTLEUSEITEM_ERROR_CONF"*/, v152);
-    sub_1C3B764(&StringLiteral_2798/*"BATTLE_INVALID_SELECT_TARGET"*/, v153);
-    sub_1C3B764(&StringLiteral_2788/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/, v154);
-    sub_1C3B764(&StringLiteral_2812/*"BATTLE_MSG_BASE_TIME"*/, v155);
-    sub_1C3B764(&StringLiteral_2691/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_QP"*/, v156);
-    sub_1C3B764(&StringLiteral_2791/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/, v157);
-    sub_1C3B764(&StringLiteral_2719/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/, v158);
-    byte_4C20F5D = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__, v1);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string___ctor__, v2);
+    sub_1B4CF90(&System_Collections_Generic_Dictionary_Voice_BATTLE__string__TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Voice_BATTLE__Add__, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Voice_BATTLE___ctor__, v5);
+    sub_1B4CF90(&System_Collections_Generic_List_Voice_BATTLE__TypeInfo, v6);
+    sub_1B4CF90(&Voice_TypeInfo, v7);
+    sub_1B4CF90(&StringLiteral_2604/*"B2820"*/, v8);
+    sub_1B4CF90(&StringLiteral_2532/*"B060"*/, v9);
+    sub_1B4CF90(&StringLiteral_2527/*"B051"*/, v10);
+    sub_1B4CF90(&StringLiteral_2657/*"B550"*/, v11);
+    sub_1B4CF90(&StringLiteral_2637/*"B4042"*/, v12);
+    sub_1B4CF90(&StringLiteral_2658/*"B560"*/, v13);
+    sub_1B4CF90(&StringLiteral_2623/*"B342"*/, v14);
+    sub_1B4CF90(&StringLiteral_2671/*"B880"*/, v15);
+    sub_1B4CF90(&StringLiteral_2602/*"B270"*/, v16);
+    sub_1B4CF90(&StringLiteral_2534/*"B062"*/, v17);
+    sub_1B4CF90(&StringLiteral_2566/*"B190"*/, v18);
+    sub_1B4CF90(&StringLiteral_2563/*"B1620"*/, v19);
+    sub_1B4CF90(&StringLiteral_2558/*"B1420"*/, v20);
+    sub_1B4CF90(&StringLiteral_2605/*"B2830"*/, v21);
+    sub_1B4CF90(&StringLiteral_2529/*"B053"*/, v22);
+    sub_1B4CF90(&StringLiteral_2571/*"B2080"*/, v23);
+    sub_1B4CF90(&StringLiteral_2561/*"B1600"*/, v24);
+    sub_1B4CF90(&StringLiteral_2675/*"B930"*/, v25);
+    sub_1B4CF90(&StringLiteral_2651/*"B5230"*/, v26);
+    sub_1B4CF90(&StringLiteral_2522/*"B040"*/, v27);
+    sub_1B4CF90(&StringLiteral_2656/*"B540"*/, v28);
+    sub_1B4CF90(&StringLiteral_2631/*"B400"*/, v29);
+    sub_1B4CF90(&StringLiteral_2519/*"B010"*/, v30);
+    sub_1B4CF90(&StringLiteral_2560/*"B160"*/, v31);
+    sub_1B4CF90(&StringLiteral_2617/*"B320"*/, v32);
+    sub_1B4CF90(&StringLiteral_2599/*"B2560"*/, v33);
+    sub_1B4CF90(&StringLiteral_2635/*"B4040"*/, v34);
+    sub_1B4CF90(&StringLiteral_2573/*"B210"*/, v35);
+    sub_1B4CF90(&StringLiteral_2666/*"B840"*/, v36);
+    sub_1B4CF90(&StringLiteral_2554/*"B130"*/, v37);
+    sub_1B4CF90(&StringLiteral_2620/*"B340"*/, v38);
+    sub_1B4CF90(&StringLiteral_2653/*"B5260"*/, v39);
+    sub_1B4CF90(&StringLiteral_2539/*"B071"*/, v40);
+    sub_1B4CF90(&StringLiteral_2581/*"B2170"*/, v41);
+    sub_1B4CF90(&StringLiteral_2596/*"B2530"*/, v42);
+    sub_1B4CF90(&StringLiteral_2634/*"B4030"*/, v43);
+    sub_1B4CF90(&StringLiteral_2670/*"B8510"*/, v44);
+    sub_1B4CF90(&StringLiteral_2553/*"B1220"*/, v45);
+    sub_1B4CF90(&StringLiteral_2595/*"B2520"*/, v46);
+    sub_1B4CF90(&StringLiteral_2579/*"B2150"*/, v47);
+    sub_1B4CF90(&StringLiteral_2654/*"B5270"*/, v48);
+    sub_1B4CF90(&StringLiteral_2609/*"B300"*/, v49);
+    sub_1B4CF90(&StringLiteral_2611/*"B3020"*/, v50);
+    sub_1B4CF90(&StringLiteral_2523/*"B041"*/, v51);
+    sub_1B4CF90(&StringLiteral_2603/*"B2810"*/, v52);
+    sub_1B4CF90(&StringLiteral_2622/*"B3410"*/, v53);
+    sub_1B4CF90(&StringLiteral_2610/*"B3010"*/, v54);
+    sub_1B4CF90(&StringLiteral_2568/*"B2010"*/, v55);
+    sub_1B4CF90(&StringLiteral_2545/*"B100"*/, v56);
+    sub_1B4CF90(&StringLiteral_2575/*"B2110"*/, v57);
+    sub_1B4CF90(&StringLiteral_2639/*"B420"*/, v58);
+    sub_1B4CF90(&StringLiteral_2647/*"B510"*/, v59);
+    sub_1B4CF90(&StringLiteral_2535/*"B063"*/, v60);
+    sub_1B4CF90(&StringLiteral_2624/*"B3420"*/, v61);
+    sub_1B4CF90(&StringLiteral_2672/*"B890"*/, v62);
+    sub_1B4CF90(&StringLiteral_2614/*"B3060"*/, v63);
+    sub_1B4CF90(&StringLiteral_2572/*"B2090"*/, v64);
+    sub_1B4CF90(&StringLiteral_2556/*"B1400"*/, v65);
+    sub_1B4CF90(&StringLiteral_2540/*"B072"*/, v66);
+    sub_1B4CF90(&StringLiteral_2613/*"B3050"*/, v67);
+    sub_1B4CF90(&StringLiteral_2557/*"B1410"*/, v68);
+    sub_1B4CF90(&StringLiteral_2619/*"B331"*/, v69);
+    sub_1B4CF90(&StringLiteral_2567/*"B200"*/, v70);
+    sub_1B4CF90(&StringLiteral_2544/*"B090"*/, v71);
+    sub_1B4CF90(&StringLiteral_2591/*"B2480"*/, v72);
+    sub_1B4CF90(&StringLiteral_2636/*"B4041"*/, v73);
+    sub_1B4CF90(&StringLiteral_2597/*"B2540"*/, v74);
+    sub_1B4CF90(&StringLiteral_2606/*"B2840"*/, v75);
+    sub_1B4CF90(&StringLiteral_2600/*"B2570"*/, v76);
+    sub_1B4CF90(&StringLiteral_2669/*"B8500"*/, v77);
+    sub_1B4CF90(&StringLiteral_2674/*"B920"*/, v78);
+    sub_1B4CF90(&StringLiteral_2528/*"B052"*/, v79);
+    sub_1B4CF90(&StringLiteral_2582/*"B220"*/, v80);
+    sub_1B4CF90(&StringLiteral_2549/*"B110"*/, v81);
+    sub_1B4CF90(&StringLiteral_2584/*"B240"*/, v82);
+    sub_1B4CF90(&StringLiteral_2627/*"B3810"*/, v83);
+    sub_1B4CF90(&StringLiteral_2612/*"B3030"*/, v84);
+    sub_1B4CF90(&StringLiteral_2590/*"B2442"*/, v85);
+    sub_1B4CF90(&StringLiteral_2541/*"B073"*/, v86);
+    sub_1B4CF90(&StringLiteral_2615/*"B3070"*/, v87);
+    sub_1B4CF90(&StringLiteral_2640/*"B430"*/, v88);
+    sub_1B4CF90(&StringLiteral_2521/*"B030"*/, v89);
+    sub_1B4CF90(&StringLiteral_2587/*"B2430"*/, v90);
+    sub_1B4CF90(&StringLiteral_2655/*"B530"*/, v91);
+    sub_1B4CF90(&StringLiteral_2577/*"B2130"*/, v92);
+    sub_1B4CF90(&StringLiteral_2576/*"B2120"*/, v93);
+    sub_1B4CF90(&StringLiteral_2642/*"B441"*/, v94);
+    sub_1B4CF90(&StringLiteral_2616/*"B310"*/, v95);
+    sub_1B4CF90(&StringLiteral_2547/*"B1010"*/, v96);
+    sub_1B4CF90(&StringLiteral_2555/*"B140"*/, v97);
+    sub_1B4CF90(&StringLiteral_2598/*"B2550"*/, v98);
+    sub_1B4CF90(&StringLiteral_2538/*"B070"*/, v99);
+    sub_1B4CF90(&StringLiteral_2562/*"B1610"*/, v100);
+    sub_1B4CF90(&StringLiteral_2533/*"B061"*/, v101);
+    sub_1B4CF90(&StringLiteral_2645/*"B490"*/, v102);
+    sub_1B4CF90(&StringLiteral_2626/*"B380"*/, v103);
+    sub_1B4CF90(&StringLiteral_2583/*"B230"*/, v104);
+    sub_1B4CF90(&StringLiteral_2578/*"B2140"*/, v105);
+    sub_1B4CF90(&StringLiteral_2565/*"B180"*/, v106);
+    sub_1B4CF90(&StringLiteral_2663/*"B810"*/, v107);
+    sub_1B4CF90(&StringLiteral_2520/*"B020"*/, v108);
+    sub_1B4CF90(&StringLiteral_2628/*"B3820"*/, v109);
+    sub_1B4CF90(&StringLiteral_2638/*"B410"*/, v110);
+    sub_1B4CF90(&StringLiteral_2630/*"B390"*/, v111);
+    sub_1B4CF90(&StringLiteral_2629/*"B3830"*/, v112);
+    sub_1B4CF90(&StringLiteral_2589/*"B2441"*/, v113);
+    sub_1B4CF90(&StringLiteral_2588/*"B2440"*/, v114);
+    sub_1B4CF90(&StringLiteral_2633/*"B4020"*/, v115);
+    sub_1B4CF90(&StringLiteral_2551/*"B1200"*/, v116);
+    sub_1B4CF90(&StringLiteral_2643/*"B442"*/, v117);
+    sub_1B4CF90(&StringLiteral_2648/*"B520"*/, v118);
+    sub_1B4CF90(&StringLiteral_2646/*"B500"*/, v119);
+    sub_1B4CF90(&StringLiteral_2542/*"B074"*/, v120);
+    sub_1B4CF90(&StringLiteral_2536/*"B064"*/, v121);
+    sub_1B4CF90(&StringLiteral_2618/*"B330"*/, v122);
+    sub_1B4CF90(&StringLiteral_2546/*"B1000"*/, v123);
+    sub_1B4CF90(&StringLiteral_2621/*"B341"*/, v124);
+    sub_1B4CF90(&StringLiteral_2644/*"B480"*/, v125);
+    sub_1B4CF90(&StringLiteral_2570/*"B2030"*/, v126);
+    sub_1B4CF90(&StringLiteral_2641/*"B440"*/, v127);
+    sub_1B4CF90(&StringLiteral_2608/*"B2842"*/, v128);
+    sub_1B4CF90(&StringLiteral_2526/*"B050"*/, v129);
+    sub_1B4CF90(&StringLiteral_2650/*"B5220"*/, v130);
+    sub_1B4CF90(&StringLiteral_2564/*"B170"*/, v131);
+    sub_1B4CF90(&StringLiteral_2594/*"B2510"*/, v132);
+    sub_1B4CF90(&StringLiteral_2592/*"B250"*/, v133);
+    sub_1B4CF90(&StringLiteral_2550/*"B120"*/, v134);
+    sub_1B4CF90(&StringLiteral_2661/*"B800"*/, v135);
+    sub_1B4CF90(&StringLiteral_2543/*"B080"*/, v136);
+    sub_1B4CF90(&StringLiteral_2559/*"B150"*/, v137);
+    sub_1B4CF90(&StringLiteral_2665/*"B820"*/, v138);
+    sub_1B4CF90(&StringLiteral_2585/*"B2410"*/, v139);
+    sub_1B4CF90(&StringLiteral_2607/*"B2841"*/, v140);
+    sub_1B4CF90(&StringLiteral_2524/*"B042"*/, v141);
+    sub_1B4CF90(&StringLiteral_2574/*"B2100"*/, v142);
+    sub_1B4CF90(&StringLiteral_2632/*"B4010"*/, v143);
+    sub_1B4CF90(&StringLiteral_2593/*"B2500"*/, v144);
+    sub_1B4CF90(&StringLiteral_2548/*"B1020"*/, v145);
+    sub_1B4CF90(&StringLiteral_2569/*"B2020"*/, v146);
+    sub_1B4CF90(&StringLiteral_2668/*"B842"*/, v147);
+    sub_1B4CF90(&StringLiteral_2667/*"B841"*/, v148);
+    sub_1B4CF90(&StringLiteral_2530/*"B054"*/, v149);
+    sub_1B4CF90(&StringLiteral_2625/*"B3430"*/, v150);
+    sub_1B4CF90(&StringLiteral_2586/*"B2420"*/, v151);
+    sub_1B4CF90(&StringLiteral_2601/*"B260"*/, v152);
+    sub_1B4CF90(&StringLiteral_2659/*"B570"*/, v153);
+    sub_1B4CF90(&StringLiteral_2649/*"B5210"*/, v154);
+    sub_1B4CF90(&StringLiteral_2673/*"B910"*/, v155);
+    sub_1B4CF90(&StringLiteral_2552/*"B1210"*/, v156);
+    sub_1B4CF90(&StringLiteral_2652/*"B5250"*/, v157);
+    sub_1B4CF90(&StringLiteral_2580/*"B2160"*/, v158);
+    byte_49B9E6F = 1;
   }
-  v159 = (System_Collections_Generic_List_T__o *)sub_1C3B9B0(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
+  v159 = (System_Collections_Generic_List_T__o *)sub_1B4D1DC(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v159,
-    (const MethodInfo_3670C20 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
+    (const MethodInfo_3565190 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
   if ( !v159 )
     goto LABEL_116;
   items = v159->fields._items;
-  v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+  v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
   ++v159->fields._version;
   if ( !items )
     goto LABEL_116;
@@ -414,9 +398,9 @@ void __fastcall Voice___cctor(const MethodInfo *method)
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v159,
       81,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
     items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
     ++v159->fields._version;
     if ( !items )
       goto LABEL_116;
@@ -427,15 +411,91 @@ void __fastcall Voice___cctor(const MethodInfo *method)
     *((_DWORD *)items->m_Items + size) = 81;
     ++v159->fields._version;
   }
+  v167 = v159->fields._size;
+  if ( (unsigned int)v167 >= items->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v159,
+      82,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+    items = v159->fields._items;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v159->fields._version;
+    if ( !items )
+      goto LABEL_116;
+  }
+  else
+  {
+    v159->fields._size = v167 + 1;
+    *((_DWORD *)items->m_Items + v167) = 82;
+    ++v159->fields._version;
+  }
+  v168 = v159->fields._size;
+  if ( (unsigned int)v168 >= items->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v159,
+      230,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+    items = v159->fields._items;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v159->fields._version;
+    if ( !items )
+      goto LABEL_116;
+  }
+  else
+  {
+    v159->fields._size = v168 + 1;
+    *((_DWORD *)items->m_Items + v168) = 230;
+    ++v159->fields._version;
+  }
+  v169 = v159->fields._size;
+  if ( (unsigned int)v169 >= items->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v159,
+      231,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+    items = v159->fields._items;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v159->fields._version;
+    if ( !items )
+      goto LABEL_116;
+  }
+  else
+  {
+    v159->fields._size = v169 + 1;
+    *((_DWORD *)items->m_Items + v169) = 231;
+    ++v159->fields._version;
+  }
+  v170 = v159->fields._size;
+  if ( (unsigned int)v170 >= items->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v159,
+      285,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+    items = v159->fields._items;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v159->fields._version;
+    if ( !items )
+      goto LABEL_116;
+  }
+  else
+  {
+    v159->fields._size = v170 + 1;
+    *((_DWORD *)items->m_Items + v170) = 285;
+    ++v159->fields._version;
+  }
   v171 = v159->fields._size;
   if ( (unsigned int)v171 >= items->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v159,
-      82,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
+      286,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
     items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
     ++v159->fields._version;
     if ( !items )
       goto LABEL_116;
@@ -443,7 +503,7 @@ void __fastcall Voice___cctor(const MethodInfo *method)
   else
   {
     v159->fields._size = v171 + 1;
-    *((_DWORD *)items->m_Items + v171) = 82;
+    *((_DWORD *)items->m_Items + v171) = 286;
     ++v159->fields._version;
   }
   v172 = v159->fields._size;
@@ -451,10 +511,10 @@ void __fastcall Voice___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v159,
-      230,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
+      287,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
     items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    v165 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
     ++v159->fields._version;
     if ( !items )
       goto LABEL_116;
@@ -462,7 +522,7 @@ void __fastcall Voice___cctor(const MethodInfo *method)
   else
   {
     v159->fields._size = v172 + 1;
-    *((_DWORD *)items->m_Items + v172) = 230;
+    *((_DWORD *)items->m_Items + v172) = 287;
     ++v159->fields._version;
   }
   v173 = v159->fields._size;
@@ -470,1414 +530,1322 @@ void __fastcall Voice___cctor(const MethodInfo *method)
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v159,
-      231,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
-    items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v159->fields._version;
-    if ( !items )
-      goto LABEL_116;
+      288,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
   }
   else
   {
     v159->fields._size = v173 + 1;
-    *((_DWORD *)items->m_Items + v173) = 231;
-    ++v159->fields._version;
-  }
-  v174 = v159->fields._size;
-  if ( (unsigned int)v174 >= items->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v159,
-      285,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
-    items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v159->fields._version;
-    if ( !items )
-      goto LABEL_116;
-  }
-  else
-  {
-    v159->fields._size = v174 + 1;
-    *((_DWORD *)items->m_Items + v174) = 285;
-    ++v159->fields._version;
-  }
-  v175 = v159->fields._size;
-  if ( (unsigned int)v175 >= items->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v159,
-      286,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
-    items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v159->fields._version;
-    if ( !items )
-      goto LABEL_116;
-  }
-  else
-  {
-    v159->fields._size = v175 + 1;
-    *((_DWORD *)items->m_Items + v175) = 286;
-    ++v159->fields._version;
-  }
-  v176 = v159->fields._size;
-  if ( (unsigned int)v176 >= items->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v159,
-      287,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
-    items = v159->fields._items;
-    v169 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v159->fields._version;
-    if ( !items )
-      goto LABEL_116;
-  }
-  else
-  {
-    v159->fields._size = v176 + 1;
-    *((_DWORD *)items->m_Items + v176) = 287;
-    ++v159->fields._version;
-  }
-  v177 = v159->fields._size;
-  if ( (unsigned int)v177 >= items->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v159,
-      288,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v169[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    v159->fields._size = v177 + 1;
-    *((_DWORD *)items->m_Items + v177) = 288;
+    *((_DWORD *)items->m_Items + v173) = 288;
   }
   Voice_TypeInfo->static_fields->deadVoiceList = (struct System_Collections_Generic_List_Voice_BATTLE__o *)v159;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)Voice_TypeInfo->static_fields,
-    (int64_t)v159,
-    v162,
-    v163,
-    v164,
-    v165,
-    v166,
-    v167);
-  v178 = (System_Collections_Generic_List_T__o *)sub_1C3B9B0(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)Voice_TypeInfo->static_fields, (int32_t)v159, v162, v163);
+  v174 = (System_Collections_Generic_List_T__o *)sub_1B4D1DC(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v178,
-    (const MethodInfo_3670C20 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
-  if ( !v178 )
+    v174,
+    (const MethodInfo_3565190 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
+  if ( !v174 )
     goto LABEL_116;
-  v185 = v178->fields._items;
-  v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-  ++v178->fields._version;
-  if ( !v185 )
+  v177 = v174->fields._items;
+  v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+  ++v174->fields._version;
+  if ( !v177 )
     goto LABEL_116;
-  v187 = v178->fields._size;
-  if ( (unsigned int)v187 >= v185->max_length )
+  v179 = v174->fields._size;
+  if ( (unsigned int)v179 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       31,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v187 + 1;
-    *((_DWORD *)v185->m_Items + v187) = 31;
-    ++v178->fields._version;
+    v174->fields._size = v179 + 1;
+    *((_DWORD *)v177->m_Items + v179) = 31;
+    ++v174->fields._version;
   }
-  v188 = v178->fields._size;
-  if ( (unsigned int)v188 >= v185->max_length )
+  v180 = v174->fields._size;
+  if ( (unsigned int)v180 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       32,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v188 + 1;
-    *((_DWORD *)v185->m_Items + v188) = 32;
-    ++v178->fields._version;
+    v174->fields._size = v180 + 1;
+    *((_DWORD *)v177->m_Items + v180) = 32;
+    ++v174->fields._version;
   }
-  v189 = v178->fields._size;
-  if ( (unsigned int)v189 >= v185->max_length )
+  v181 = v174->fields._size;
+  if ( (unsigned int)v181 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       223,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v189 + 1;
-    *((_DWORD *)v185->m_Items + v189) = 223;
-    ++v178->fields._version;
+    v174->fields._size = v181 + 1;
+    *((_DWORD *)v177->m_Items + v181) = 223;
+    ++v174->fields._version;
   }
-  v190 = v178->fields._size;
-  if ( (unsigned int)v190 >= v185->max_length )
+  v182 = v174->fields._size;
+  if ( (unsigned int)v182 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       224,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v190 + 1;
-    *((_DWORD *)v185->m_Items + v190) = 224;
-    ++v178->fields._version;
+    v174->fields._size = v182 + 1;
+    *((_DWORD *)v177->m_Items + v182) = 224;
+    ++v174->fields._version;
   }
-  v191 = v178->fields._size;
-  if ( (unsigned int)v191 >= v185->max_length )
+  v183 = v174->fields._size;
+  if ( (unsigned int)v183 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       243,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v191 + 1;
-    *((_DWORD *)v185->m_Items + v191) = 243;
-    ++v178->fields._version;
+    v174->fields._size = v183 + 1;
+    *((_DWORD *)v177->m_Items + v183) = 243;
+    ++v174->fields._version;
   }
-  v192 = v178->fields._size;
-  if ( (unsigned int)v192 >= v185->max_length )
+  v184 = v174->fields._size;
+  if ( (unsigned int)v184 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       244,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v192 + 1;
-    *((_DWORD *)v185->m_Items + v192) = 244;
-    ++v178->fields._version;
+    v174->fields._size = v184 + 1;
+    *((_DWORD *)v177->m_Items + v184) = 244;
+    ++v174->fields._version;
   }
-  v193 = v178->fields._size;
-  if ( (unsigned int)v193 >= v185->max_length )
+  v185 = v174->fields._size;
+  if ( (unsigned int)v185 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       254,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v193 + 1;
-    *((_DWORD *)v185->m_Items + v193) = 254;
-    ++v178->fields._version;
+    v174->fields._size = v185 + 1;
+    *((_DWORD *)v177->m_Items + v185) = 254;
+    ++v174->fields._version;
   }
-  v194 = v178->fields._size;
-  if ( (unsigned int)v194 >= v185->max_length )
+  v186 = v174->fields._size;
+  if ( (unsigned int)v186 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       255,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
-    v185 = v178->fields._items;
-    v186 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v178->fields._version;
-    if ( !v185 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+    v177 = v174->fields._items;
+    v178 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v174->fields._version;
+    if ( !v177 )
       goto LABEL_116;
   }
   else
   {
-    v178->fields._size = v194 + 1;
-    *((_DWORD *)v185->m_Items + v194) = 255;
-    ++v178->fields._version;
+    v174->fields._size = v186 + 1;
+    *((_DWORD *)v177->m_Items + v186) = 255;
+    ++v174->fields._version;
   }
-  v195 = v178->fields._size;
-  if ( (unsigned int)v195 >= v185->max_length )
+  v187 = v174->fields._size;
+  if ( (unsigned int)v187 >= v177->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v178,
+      v174,
       256,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v186[4] + 192LL) + 112LL));
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
   }
   else
   {
-    v178->fields._size = v195 + 1;
-    *((_DWORD *)v185->m_Items + v195) = 256;
+    v174->fields._size = v187 + 1;
+    *((_DWORD *)v177->m_Items + v187) = 256;
   }
   static_fields = Voice_TypeInfo->static_fields;
-  static_fields->skillVoiceList = (struct System_Collections_Generic_List_Voice_BATTLE__o *)v178;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&static_fields->skillVoiceList,
-    (int64_t)v178,
-    v179,
-    v180,
-    v181,
-    v182,
-    v183,
-    v184);
-  v197 = (System_Collections_Generic_List_T__o *)sub_1C3B9B0(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
+  static_fields->skillVoiceList = (struct System_Collections_Generic_List_Voice_BATTLE__o *)v174;
+  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->skillVoiceList, (int32_t)v174, v175, v176);
+  v189 = (System_Collections_Generic_List_T__o *)sub_1B4D1DC(System_Collections_Generic_List_Voice_BATTLE__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
-    v197,
-    (const MethodInfo_3670C20 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
-  if ( !v197 )
+    v189,
+    (const MethodInfo_3565190 *)Method_System_Collections_Generic_List_Voice_BATTLE___ctor__);
+  if ( !v189 )
     goto LABEL_116;
-  v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-  p_version = &v197->fields._version;
-  ++v197->fields._version;
-  v206 = v197->fields._items;
-  p_size = &v197->fields._size;
-  v207 = v197->fields._size;
-  if ( !v206 )
+  v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+  p_version = &v189->fields._version;
+  ++v189->fields._version;
+  v194 = v189->fields._items;
+  p_size = &v189->fields._size;
+  v195 = v189->fields._size;
+  if ( !v194 )
     goto LABEL_116;
-  if ( (unsigned int)v207 >= v206->max_length )
+  if ( (unsigned int)v195 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
+      v189,
       111,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v195 + 1;
+    *((_DWORD *)v194->m_Items + v195) = 111;
+    ++*p_version;
+  }
+  v197 = *p_size;
+  if ( (unsigned int)v197 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      121,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v197 + 1;
+    *((_DWORD *)v194->m_Items + v197) = 121;
+    ++*p_version;
+  }
+  v198 = *p_size;
+  if ( (unsigned int)v198 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      131,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v198 + 1;
+    *((_DWORD *)v194->m_Items + v198) = 131;
+    ++*p_version;
+  }
+  v199 = *p_size;
+  if ( (unsigned int)v199 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      141,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v199 + 1;
+    *((_DWORD *)v194->m_Items + v199) = 141;
+    ++*p_version;
+  }
+  v200 = *p_size;
+  if ( (unsigned int)v200 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      151,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v200 + 1;
+    *((_DWORD *)v194->m_Items + v200) = 151;
+    ++*p_version;
+  }
+  v201 = *p_size;
+  if ( (unsigned int)v201 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      161,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v201 + 1;
+    *((_DWORD *)v194->m_Items + v201) = 161;
+    ++*p_version;
+  }
+  v202 = *p_size;
+  if ( (unsigned int)v202 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      171,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v202 + 1;
+    *((_DWORD *)v194->m_Items + v202) = 171;
+    ++*p_version;
+  }
+  v203 = *p_size;
+  if ( (unsigned int)v203 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      181,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v203 + 1;
+    *((_DWORD *)v194->m_Items + v203) = 181;
+    ++*p_version;
+  }
+  v204 = *p_size;
+  if ( (unsigned int)v204 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      191,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v204 + 1;
+    *((_DWORD *)v194->m_Items + v204) = 191;
+    ++*p_version;
+  }
+  v205 = *p_size;
+  if ( (unsigned int)v205 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      1001,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v205 + 1;
+    *((_DWORD *)v194->m_Items + v205) = 1001;
+    ++*p_version;
+  }
+  v206 = *p_size;
+  if ( (unsigned int)v206 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      1011,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v206 + 1;
+    *((_DWORD *)v194->m_Items + v206) = 1011;
+    ++*p_version;
+  }
+  v207 = *p_size;
+  if ( (unsigned int)v207 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      1021,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
       goto LABEL_116;
   }
   else
   {
     *p_size = v207 + 1;
-    *((_DWORD *)v206->m_Items + v207) = 111;
+    *((_DWORD *)v194->m_Items + v207) = 1021;
+    ++*p_version;
+  }
+  v208 = *p_size;
+  if ( (unsigned int)v208 >= v194->max_length )
+  {
+    System_Collections_Generic_List_Int32Enum___AddWithResize(
+      v189,
+      1031,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
+      goto LABEL_116;
+  }
+  else
+  {
+    *p_size = v208 + 1;
+    *((_DWORD *)v194->m_Items + v208) = 1031;
     ++*p_version;
   }
   v209 = *p_size;
-  if ( (unsigned int)v209 >= v206->max_length )
+  if ( (unsigned int)v209 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      121,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
+      v189,
+      1041,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
       goto LABEL_116;
   }
   else
   {
     *p_size = v209 + 1;
-    *((_DWORD *)v206->m_Items + v209) = 121;
+    *((_DWORD *)v194->m_Items + v209) = 1041;
     ++*p_version;
   }
   v210 = *p_size;
-  if ( (unsigned int)v210 >= v206->max_length )
+  if ( (unsigned int)v210 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      131,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
+      v189,
+      1051,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
       goto LABEL_116;
   }
   else
   {
     *p_size = v210 + 1;
-    *((_DWORD *)v206->m_Items + v210) = 131;
+    *((_DWORD *)v194->m_Items + v210) = 1051;
     ++*p_version;
   }
   v211 = *p_size;
-  if ( (unsigned int)v211 >= v206->max_length )
+  if ( (unsigned int)v211 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      141,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
+      v189,
+      1061,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
       goto LABEL_116;
   }
   else
   {
     *p_size = v211 + 1;
-    *((_DWORD *)v206->m_Items + v211) = 141;
+    *((_DWORD *)v194->m_Items + v211) = 1061;
     ++*p_version;
   }
   v212 = *p_size;
-  if ( (unsigned int)v212 >= v206->max_length )
+  if ( (unsigned int)v212 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      151,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
+      v189,
+      1071,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
+    v194 = v189->fields._items;
+    v192 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
+    ++v189->fields._version;
+    if ( !v194 )
       goto LABEL_116;
   }
   else
   {
     *p_size = v212 + 1;
-    *((_DWORD *)v206->m_Items + v212) = 151;
+    *((_DWORD *)v194->m_Items + v212) = 1071;
     ++*p_version;
   }
   v213 = *p_size;
-  if ( (unsigned int)v213 >= v206->max_length )
+  if ( (unsigned int)v213 >= v194->max_length )
   {
     System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      161,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
+      v189,
+      1081,
+      *(const MethodInfo_35659E4 **)(*(_QWORD *)(v192[4] + 192LL) + 112LL));
   }
   else
   {
     *p_size = v213 + 1;
-    *((_DWORD *)v206->m_Items + v213) = 161;
-    ++*p_version;
+    *((_DWORD *)v194->m_Items + v213) = 1081;
   }
-  v214 = *p_size;
-  if ( (unsigned int)v214 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      171,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v214 + 1;
-    *((_DWORD *)v206->m_Items + v214) = 171;
-    ++*p_version;
-  }
-  v215 = *p_size;
-  if ( (unsigned int)v215 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      181,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v215 + 1;
-    *((_DWORD *)v206->m_Items + v215) = 181;
-    ++*p_version;
-  }
-  v216 = *p_size;
-  if ( (unsigned int)v216 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      191,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v216 + 1;
-    *((_DWORD *)v206->m_Items + v216) = 191;
-    ++*p_version;
-  }
-  v217 = *p_size;
-  if ( (unsigned int)v217 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1001,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v217 + 1;
-    *((_DWORD *)v206->m_Items + v217) = 1001;
-    ++*p_version;
-  }
-  v218 = *p_size;
-  if ( (unsigned int)v218 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1011,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v218 + 1;
-    *((_DWORD *)v206->m_Items + v218) = 1011;
-    ++*p_version;
-  }
-  v219 = *p_size;
-  if ( (unsigned int)v219 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1021,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v219 + 1;
-    *((_DWORD *)v206->m_Items + v219) = 1021;
-    ++*p_version;
-  }
-  v220 = *p_size;
-  if ( (unsigned int)v220 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1031,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v220 + 1;
-    *((_DWORD *)v206->m_Items + v220) = 1031;
-    ++*p_version;
-  }
-  v221 = *p_size;
-  if ( (unsigned int)v221 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1041,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v221 + 1;
-    *((_DWORD *)v206->m_Items + v221) = 1041;
-    ++*p_version;
-  }
-  v222 = *p_size;
-  if ( (unsigned int)v222 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1051,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v222 + 1;
-    *((_DWORD *)v206->m_Items + v222) = 1051;
-    ++*p_version;
-  }
-  v223 = *p_size;
-  if ( (unsigned int)v223 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1061,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v223 + 1;
-    *((_DWORD *)v206->m_Items + v223) = 1061;
-    ++*p_version;
-  }
-  v224 = *p_size;
-  if ( (unsigned int)v224 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1071,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-    v206 = v197->fields._items;
-    v204 = Method_System_Collections_Generic_List_Voice_BATTLE__Add__;
-    ++v197->fields._version;
-    if ( !v206 )
-      goto LABEL_116;
-  }
-  else
-  {
-    *p_size = v224 + 1;
-    *((_DWORD *)v206->m_Items + v224) = 1071;
-    ++*p_version;
-  }
-  v225 = *p_size;
-  if ( (unsigned int)v225 >= v206->max_length )
-  {
-    System_Collections_Generic_List_Int32Enum___AddWithResize(
-      v197,
-      1081,
-      *(const MethodInfo_3671474 **)(*(_QWORD *)(v204[4] + 192LL) + 112LL));
-  }
-  else
-  {
-    *p_size = v225 + 1;
-    *((_DWORD *)v206->m_Items + v225) = 1081;
-  }
-  v226 = Voice_TypeInfo->static_fields;
-  v226->firstNpVoiceList = (struct System_Collections_Generic_List_Voice_BATTLE__o *)v197;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v226->firstNpVoiceList, (int64_t)v197, v198, v199, v200, v201, v202, v203);
-  v227 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C3B9B0(System_Collections_Generic_Dictionary_Voice_BATTLE__string__TypeInfo);
+  v214 = Voice_TypeInfo->static_fields;
+  v214->firstNpVoiceList = (struct System_Collections_Generic_List_Voice_BATTLE__o *)v189;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v214->firstNpVoiceList, (int32_t)v189, v190, v191);
+  v215 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_Voice_BATTLE__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
-    v227,
-    (const MethodInfo_332498C *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string___ctor__);
-  if ( !v227 )
+    v215,
+    (const MethodInfo_3226E8C *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string___ctor__);
+  if ( !v215 )
 LABEL_116:
-    sub_1C3B9C0(v160, v161);
+    sub_1B4D1EC(v160, v161);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     0,
     0LL,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     10,
-    (Il2CppObject *)StringLiteral_2658/*"B570"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2519/*"B010"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     11,
-    (Il2CppObject *)StringLiteral_2659/*"B80"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2520/*"B020"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     12,
-    (Il2CppObject *)StringLiteral_2660/*"B800"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2521/*"B030"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     20,
-    (Il2CppObject *)StringLiteral_2661/*"B81"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2522/*"B040"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     21,
-    (Il2CppObject *)StringLiteral_2662/*"B810"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2523/*"B041"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     22,
-    (Il2CppObject *)StringLiteral_2663/*"B82"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2524/*"B042"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     111,
-    (Il2CppObject *)StringLiteral_2665/*"B840"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2526/*"B050"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     112,
-    (Il2CppObject *)StringLiteral_2666/*"B841"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2527/*"B051"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     113,
-    (Il2CppObject *)StringLiteral_2667/*"B842"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2528/*"B052"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     114,
-    (Il2CppObject *)StringLiteral_2668/*"B8500"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2529/*"B053"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     115,
-    (Il2CppObject *)StringLiteral_2669/*"B8510"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2530/*"B054"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     121,
-    (Il2CppObject *)StringLiteral_2671/*"B890"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2532/*"B060"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     122,
-    (Il2CppObject *)StringLiteral_2672/*"B910"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2533/*"B061"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     123,
-    (Il2CppObject *)StringLiteral_2673/*"B920"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2534/*"B062"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     124,
-    (Il2CppObject *)StringLiteral_2674/*"B930"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2535/*"B063"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     125,
-    (Il2CppObject *)StringLiteral_2675/*"BACKSIDE_CLASS_IMAGE_ID"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2536/*"B064"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     131,
-    (Il2CppObject *)StringLiteral_2677/*"BACKSIDE_SVT_IMAGE_ID"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2538/*"B070"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     132,
-    (Il2CppObject *)StringLiteral_2678/*"BACK_BUTTON_CONFIRM"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2539/*"B071"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     133,
-    (Il2CppObject *)StringLiteral_2679/*"BACK_BUTTON_CONFIRM_NO"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2540/*"B072"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     134,
-    (Il2CppObject *)StringLiteral_2680/*"BACK_BUTTON_CONFIRM_YES"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2541/*"B073"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     135,
-    (Il2CppObject *)StringLiteral_2681/*"BARRY"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2542/*"B074"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     141,
-    (Il2CppObject *)StringLiteral_2800/*"BATTLE_ITEM_DISP_COLUMN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2661/*"B800"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     151,
-    (Il2CppObject *)StringLiteral_2802/*"BATTLE_LOSE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2663/*"B810"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     161,
-    (Il2CppObject *)StringLiteral_2804/*"BATTLE_MASTER_SKILL_ADD_SPLIT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2665/*"B820"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     171,
-    (Il2CppObject *)StringLiteral_2700/*"BATTLERESUME_CONFIRM_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2561/*"B1600"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     181,
-    (Il2CppObject *)StringLiteral_2701/*"BATTLE_BUDDY_POINT_RANK_{0}"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2562/*"B1610"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     191,
-    (Il2CppObject *)StringLiteral_2702/*"BATTLE_BUFF_BOOST"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2563/*"B1620"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1001,
-    (Il2CppObject *)StringLiteral_2685/*"BATTLECONTINUERESUME_CONFIRM_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2546/*"B1000"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     31,
-    (Il2CppObject *)StringLiteral_2682/*"BATTLECONTINUERESUME_CONFIRM_CANCEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2543/*"B080"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     32,
-    (Il2CppObject *)StringLiteral_2683/*"BATTLECONTINUERESUME_CONFIRM_DECIDE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2544/*"B090"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     41,
-    (Il2CppObject *)StringLiteral_2684/*"BATTLECONTINUERESUME_CONFIRM_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2545/*"B100"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     42,
-    (Il2CppObject *)StringLiteral_2688/*"BATTLERESUME_CONFIRM_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2549/*"B110"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     51,
-    (Il2CppObject *)StringLiteral_2689/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP0"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2550/*"B120"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     52,
-    (Il2CppObject *)StringLiteral_2693/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_ITEM_QP"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2554/*"B130"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     61,
-    (Il2CppObject *)StringLiteral_2694/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_QP"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2555/*"B140"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     71,
-    (Il2CppObject *)StringLiteral_2698/*"BATTLERESUME_CONFIRM_MESSAGE_TEMPORARY_WITHDRAWAL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2559/*"B150"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     81,
-    (Il2CppObject *)StringLiteral_2699/*"BATTLERESUME_CONFIRM_TEMPORARY_WITHDRAWAL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2560/*"B160"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     82,
-    (Il2CppObject *)StringLiteral_2703/*"BATTLE_BUFF_COUNT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2564/*"B170"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     201,
-    (Il2CppObject *)StringLiteral_2704/*"BATTLE_BUFF_ICON_INTERVAL_COUNT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2565/*"B180"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     202,
-    (Il2CppObject *)StringLiteral_2705/*"BATTLE_BUFF_ICON_INTERVAL_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2566/*"B190"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     203,
-    (Il2CppObject *)StringLiteral_2706/*"BATTLE_BUFF_INTERVAL_COUNT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2567/*"B200"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     211,
-    (Il2CppObject *)StringLiteral_2712/*"BATTLE_COMMANDDIALOG_DONTACTTYPE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2573/*"B210"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     212,
-    (Il2CppObject *)StringLiteral_2721/*"BATTLE_CONTINUE_CHECK_SPELL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2582/*"B220"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     213,
-    (Il2CppObject *)StringLiteral_2722/*"BATTLE_CONTINUE_CHECK_STONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2583/*"B230"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     214,
-    (Il2CppObject *)StringLiteral_2748/*"BATTLE_DIALOG_RESULT_ERROR_CONF"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2609/*"B300"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     215,
-    (Il2CppObject *)StringLiteral_2748/*"BATTLE_DIALOG_RESULT_ERROR_CONF"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2609/*"B300"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     216,
-    (Il2CppObject *)StringLiteral_2731/*"BATTLE_CONTINUE_NOT_ENOUGH_STONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2592/*"B250"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     217,
-    (Il2CppObject *)StringLiteral_2777/*"BATTLE_GUARD_FUNCTION"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2638/*"B410"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     218,
-    (Il2CppObject *)StringLiteral_2778/*"BATTLE_HASNOT_TD"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2639/*"B420"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     219,
-    (Il2CppObject *)StringLiteral_2779/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_CANCEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2640/*"B430"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     220,
-    (Il2CppObject *)StringLiteral_2780/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_DECIDE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2641/*"B440"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     221,
-    (Il2CppObject *)StringLiteral_2781/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2642/*"B441"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     222,
-    (Il2CppObject *)StringLiteral_2782/*"BATTLE_INTERRUPTION_RESTART_WAVE_CONFIRM_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2643/*"B442"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     223,
-    (Il2CppObject *)StringLiteral_2783/*"BATTLE_INTERRUPTION_WAVE_SELECT_EXPLANATION_LABEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2644/*"B480"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     224,
-    (Il2CppObject *)StringLiteral_2784/*"BATTLE_INTERRUPTION_WINDOW_CANCEL_BUTTON"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2645/*"B490"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     225,
-    (Il2CppObject *)StringLiteral_2785/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2646/*"B500"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     226,
-    (Il2CppObject *)StringLiteral_2786/*"BATTLE_INTERRUPTION_WINDOW_CONFIRM_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2647/*"B510"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     227,
-    (Il2CppObject *)StringLiteral_2787/*"BATTLE_INTERRUPTION_WINDOW_CURRENT_WAVE_RESTART"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2648/*"B520"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     228,
-    (Il2CppObject *)StringLiteral_2794/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE_FROM_SAME_WAVE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2655/*"B530"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     229,
-    (Il2CppObject *)StringLiteral_2795/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2656/*"B540"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     230,
-    (Il2CppObject *)StringLiteral_2797/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2658/*"B560"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     231,
-    (Il2CppObject *)StringLiteral_2798/*"BATTLE_INVALID_SELECT_TARGET"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2659/*"B570"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     232,
-    (Il2CppObject *)StringLiteral_2755/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2616/*"B310"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     233,
-    (Il2CppObject *)StringLiteral_2756/*"BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2617/*"B320"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     234,
-    (Il2CppObject *)StringLiteral_2757/*"BATTLE_DIALOG_TREASURE_DEVICE_CHANGE_NOW"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2618/*"B330"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     235,
-    (Il2CppObject *)StringLiteral_2758/*"BATTLE_DIALOG_TREASURE_DEVICE_CHANGE_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2619/*"B331"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     236,
-    (Il2CppObject *)StringLiteral_2759/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2620/*"B340"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     237,
-    (Il2CppObject *)StringLiteral_2760/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2621/*"B341"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     238,
-    (Il2CppObject *)StringLiteral_2762/*"BATTLE_DIALOG_USECOMMANDSPELL_ERROR_CONF"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2623/*"B342"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     239,
-    (Il2CppObject *)StringLiteral_2796/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_MESSAGE_FROM_SAME_WAVE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2657/*"B550"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     240,
-    (Il2CppObject *)StringLiteral_2812/*"BATTLE_MSG_BASE_TIME"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2673/*"B910"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     241,
-    (Il2CppObject *)StringLiteral_2813/*"BATTLE_MSG_INTERVAL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2674/*"B920"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     242,
-    (Il2CppObject *)StringLiteral_2814/*"BATTLE_NOBUFFLIST"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2675/*"B930"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     243,
-    (Il2CppObject *)StringLiteral_2810/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2671/*"B880"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     244,
-    (Il2CppObject *)StringLiteral_2811/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2672/*"B890"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     245,
-    (Il2CppObject *)StringLiteral_2765/*"BATTLE_DO_NOT_ACT_DAMAGE_RELEASE_TEXT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2626/*"B380"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     246,
-    (Il2CppObject *)StringLiteral_2769/*"BATTLE_EFFECT_ID_INVINCIBLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2630/*"B390"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     247,
-    (Il2CppObject *)StringLiteral_2770/*"BATTLE_EFFECT_ID_INVINCIBLE_PIERCE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2631/*"B400"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     248,
-    (Il2CppObject *)StringLiteral_2805/*"BATTLE_MASTER_SKILL_CHARGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2666/*"B840"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     249,
-    (Il2CppObject *)StringLiteral_2806/*"BATTLE_MENU_WAVE_RESTART_EXPLANATION_LABEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2667/*"B841"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     250,
-    (Il2CppObject *)StringLiteral_2807/*"BATTLE_MISS_FUNCTION"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2668/*"B842"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     251,
-    (Il2CppObject *)StringLiteral_2740/*"BATTLE_DIALOG_BATTLEUSEITEM_ERROR_CONF"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2601/*"B260"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     252,
-    (Il2CppObject *)StringLiteral_2723/*"BATTLE_CONTINUE_DEFENCE_TARGET_HEAL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2584/*"B240"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     253,
-    (Il2CppObject *)StringLiteral_2741/*"BATTLE_DIALOG_BATTLEUSEITEM_ERROR_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2602/*"B270"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     254,
-    (Il2CppObject *)StringLiteral_2710/*"BATTLE_CHECKUSE_COMMANDSPELL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2571/*"B2080"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     255,
-    (Il2CppObject *)StringLiteral_2711/*"BATTLE_COMMANDDIALOG_DONTACT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2572/*"B2090"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     256,
-    (Il2CppObject *)StringLiteral_2730/*"BATTLE_CONTINUE_ITEM_USE_CHECK"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2591/*"B2480"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     257,
-    (Il2CppObject *)StringLiteral_2727/*"BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2588/*"B2440"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     258,
-    (Il2CppObject *)StringLiteral_2728/*"BATTLE_CONTINUE_ITEM_SELECT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2589/*"B2441"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     259,
-    (Il2CppObject *)StringLiteral_2729/*"BATTLE_CONTINUE_ITEM_SELECT_NOT_COMMAND"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2590/*"B2442"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     260,
-    (Il2CppObject *)StringLiteral_2745/*"BATTLE_DIALOG_DETAIL_NOEQUIP"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2606/*"B2840"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     261,
-    (Il2CppObject *)StringLiteral_2746/*"BATTLE_DIALOG_INTERRUPTION_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2607/*"B2841"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     262,
-    (Il2CppObject *)StringLiteral_2747/*"BATTLE_DIALOG_NOT_SELECT_TARGET"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2608/*"B2842"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     263,
-    (Il2CppObject *)StringLiteral_2774/*"BATTLE_END"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2635/*"B4040"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     264,
-    (Il2CppObject *)StringLiteral_2775/*"BATTLE_FINISH_WAIT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2636/*"B4041"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     265,
-    (Il2CppObject *)StringLiteral_2776/*"BATTLE_FINISH_WAIT_FINISH"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2637/*"B4042"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     266,
-    (Il2CppObject *)StringLiteral_2707/*"BATTLE_BUFF_INTERVAL_REMAIN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2568/*"B2010"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     267,
-    (Il2CppObject *)StringLiteral_2708/*"BATTLE_BUFF_INTERVAL_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2569/*"B2020"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     268,
-    (Il2CppObject *)StringLiteral_2709/*"BATTLE_BUFF_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2570/*"B2030"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     269,
-    (Il2CppObject *)StringLiteral_2724/*"BATTLE_CONTINUE_ITEM_BTN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2585/*"B2410"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     270,
-    (Il2CppObject *)StringLiteral_2725/*"BATTLE_CONTINUE_ITEM_END_TIME"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2586/*"B2420"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     271,
-    (Il2CppObject *)StringLiteral_2726/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2587/*"B2430"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     272,
-    (Il2CppObject *)StringLiteral_2742/*"BATTLE_DIALOG_CAN_NOT_REPLACE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2603/*"B2810"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     273,
-    (Il2CppObject *)StringLiteral_2743/*"BATTLE_DIALOG_DEFENCE_TARGET_BROKEN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2604/*"B2820"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     274,
-    (Il2CppObject *)StringLiteral_2744/*"BATTLE_DIALOG_DETAIL_NOCOMMANDCODE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2605/*"B2830"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     275,
-    (Il2CppObject *)StringLiteral_2713/*"BATTLE_COMMANDDIALOG_DONTTD"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2574/*"B2100"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     276,
-    (Il2CppObject *)StringLiteral_2714/*"BATTLE_COMMANDDIALOG_DONTTD_COND"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2575/*"B2110"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     277,
-    (Il2CppObject *)StringLiteral_2732/*"BATTLE_CONTINUE_NO_STONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2593/*"B2500"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     278,
-    (Il2CppObject *)StringLiteral_2733/*"BATTLE_CONTINUE_RETIRE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2594/*"B2510"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     279,
-    (Il2CppObject *)StringLiteral_2749/*"BATTLE_DIALOG_RESULT_ERROR_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2610/*"B3010"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     280,
-    (Il2CppObject *)StringLiteral_2750/*"BATTLE_DIALOG_RETIRE_CONF"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2611/*"B3020"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     281,
-    (Il2CppObject *)StringLiteral_2751/*"BATTLE_DIALOG_RETIRE_ONLY_NPC"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2612/*"B3030"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     282,
-    (Il2CppObject *)StringLiteral_2761/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2622/*"B3410"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     283,
-    (Il2CppObject *)StringLiteral_2763/*"BATTLE_DIALOG_USECOMMANDSPELL_ERROR_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2624/*"B3420"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     284,
-    (Il2CppObject *)StringLiteral_2764/*"BATTLE_DO_NOT_ACT_COMMAND"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2625/*"B3430"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     285,
-    (Il2CppObject *)StringLiteral_2719/*"BATTLE_CONTINUE_BUTTON_BUYSTONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2580/*"B2160"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     286,
-    (Il2CppObject *)StringLiteral_2720/*"BATTLE_CONTINUE_BUTTON_USESTONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2581/*"B2170"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     287,
-    (Il2CppObject *)StringLiteral_2738/*"BATTLE_DEFAULT_GUTS_TEXT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2599/*"B2560"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     288,
-    (Il2CppObject *)StringLiteral_2739/*"BATTLE_DEFENCE_TARGET_NAME_{0}"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2600/*"B2570"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     289,
-    (Il2CppObject *)StringLiteral_2715/*"BATTLE_COMMANDDIALOG_DONTTD_SHORTAGE_CRITICAL_STAR"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2576/*"B2120"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     290,
-    (Il2CppObject *)StringLiteral_2716/*"BATTLE_COMMANDDIALOG_DONTUSE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2577/*"B2130"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     291,
-    (Il2CppObject *)StringLiteral_2734/*"BATTLE_CONTINUE_STONEPAY_WARNING_MSG"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2595/*"B2520"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     292,
-    (Il2CppObject *)StringLiteral_2735/*"BATTLE_CONTINUE_USECHECK_SPELL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2596/*"B2530"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     293,
-    (Il2CppObject *)StringLiteral_2717/*"BATTLE_COMMANDDIALOG_NOFUNC"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2578/*"B2140"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     294,
-    (Il2CppObject *)StringLiteral_2736/*"BATTLE_CONTINUE_USECHECK_STONE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2597/*"B2540"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     295,
-    (Il2CppObject *)StringLiteral_2718/*"BATTLE_COMMAND_CODE_RECHARGE_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2579/*"B2150"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     296,
-    (Il2CppObject *)StringLiteral_2737/*"BATTLE_CONTINUE_USE_SPELL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2598/*"B2550"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     297,
-    (Il2CppObject *)StringLiteral_2752/*"BATTLE_DIALOG_RETIRE_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2613/*"B3050"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     298,
-    (Il2CppObject *)StringLiteral_2753/*"BATTLE_DIALOG_SELECTMAINSUB_SERVANT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2614/*"B3060"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     299,
-    (Il2CppObject *)StringLiteral_2754/*"BATTLE_DIALOG_SELECT_SERVANT"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2615/*"B3070"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     300,
-    (Il2CppObject *)StringLiteral_2788/*"BATTLE_INTERRUPTION_WINDOW_INTERRUPTION_BUTTON"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2649/*"B5210"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     301,
-    (Il2CppObject *)StringLiteral_2789/*"BATTLE_INTERRUPTION_WINDOW_MESSAGE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2650/*"B5220"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     302,
-    (Il2CppObject *)StringLiteral_2790/*"BATTLE_INTERRUPTION_WINDOW_SELECT_WAVE_RESTART"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2651/*"B5230"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     303,
-    (Il2CppObject *)StringLiteral_2791/*"BATTLE_INTERRUPTION_WINDOW_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2652/*"B5250"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     304,
-    (Il2CppObject *)StringLiteral_2792/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_CANCEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2653/*"B5260"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     305,
-    (Il2CppObject *)StringLiteral_2793/*"BATTLE_INTERRUPTION_WINDOW_WAVE_CONFIRM_DECIDE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2654/*"B5270"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     306,
-    (Il2CppObject *)StringLiteral_2808/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_CANCEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2669/*"B8500"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     307,
-    (Il2CppObject *)StringLiteral_2809/*"BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_DECIDE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2670/*"B8510"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     308,
-    (Il2CppObject *)StringLiteral_2766/*"BATTLE_EFFECT_ID_3003001"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2627/*"B3810"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     309,
-    (Il2CppObject *)StringLiteral_2767/*"BATTLE_EFFECT_ID_AVOIDANCE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2628/*"B3820"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     310,
-    (Il2CppObject *)StringLiteral_2768/*"BATTLE_EFFECT_ID_AVOIDANCE_PIERCE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2629/*"B3830"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     311,
-    (Il2CppObject *)StringLiteral_2771/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2632/*"B4010"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     312,
-    (Il2CppObject *)StringLiteral_2772/*"BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE_PIERCE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2633/*"B4020"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     313,
-    (Il2CppObject *)StringLiteral_2773/*"BATTLE_ELAPSED_TURN"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2634/*"B4030"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1011,
-    (Il2CppObject *)StringLiteral_2686/*"BATTLERESUME_CONFIRM_CANCEL"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2547/*"B1010"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1021,
-    (Il2CppObject *)StringLiteral_2687/*"BATTLERESUME_CONFIRM_DECIDE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2548/*"B1020"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1031,
-    (Il2CppObject *)StringLiteral_2690/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_ITEM"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2551/*"B1200"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1041,
-    (Il2CppObject *)StringLiteral_2691/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_QP"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2552/*"B1210"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1051,
-    (Il2CppObject *)StringLiteral_2692/*"BATTLERESUME_CONFIRM_MESSAGE_CONSUME_ITEM"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2553/*"B1220"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1061,
-    (Il2CppObject *)StringLiteral_2695/*"BATTLERESUME_CONFIRM_MESSAGE_CUSTOM"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2556/*"B1400"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1071,
-    (Il2CppObject *)StringLiteral_2696/*"BATTLERESUME_CONFIRM_MESSAGE_NO_CONSUME"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+    (Il2CppObject *)StringLiteral_2557/*"B1410"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
-    v227,
+    v215,
     1081,
-    (Il2CppObject *)StringLiteral_2697/*"BATTLERESUME_CONFIRM_MESSAGE_TEMPORARY_TITLE"*/,
-    (const MethodInfo_3325360 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
-  v228 = Voice_TypeInfo->static_fields;
-  v228->filelist = (struct System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v227;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v228->filelist, (int64_t)v227, v229, v230, v231, v232, v233, v234);
+    (Il2CppObject *)StringLiteral_2558/*"B1420"*/,
+    (const MethodInfo_3227860 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__Add__);
+  v216 = Voice_TypeInfo->static_fields;
+  v216->filelist = (struct System_Collections_Generic_Dictionary_Voice_BATTLE__string__o *)v215;
+  sub_1B4CF34((CGThumbnailListItem_o *)&v216->filelist, (int32_t)v215, v217, v218);
 }
 
 
@@ -1897,49 +1865,45 @@ int32_t __fastcall Voice__GetTypeByFileName(System_String_o *fileName, const Met
   __int64 v8; // x20
   __int64 v9; // x0
   __int64 v10; // x1
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
-  Voice_c *v17; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  Voice_c *v13; // x0
   System_Collections_Generic_IEnumerable_TSource__o *filelist; // x19
-  System_Func_T__TResult__o *v19; // x21
+  System_Func_T__TResult__o *v15; // x21
 
-  if ( (byte_4C20F5B & 1) == 0 )
+  if ( (byte_49B9E6D & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_Voice_BATTLE__string____, method);
-    sub_1C3B764(&System_Func_KeyValuePair_Voice_BATTLE__string___bool__TypeInfo, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_KeyValuePair_Voice_BATTLE__string__get_Key__, v4);
-    sub_1C3B764(&Method_Voice___c__DisplayClass6_0__GetTypeByFileName_b__0__, v5);
-    sub_1C3B764(&Voice___c__DisplayClass6_0_TypeInfo, v6);
-    sub_1C3B764(&Voice_TypeInfo, v7);
-    byte_4C20F5B = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_Voice_BATTLE__string____, method);
+    sub_1B4CF90(&System_Func_KeyValuePair_Voice_BATTLE__string___bool__TypeInfo, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_Voice_BATTLE__string__get_Key__, v4);
+    sub_1B4CF90(&Method_Voice___c__DisplayClass6_0__GetTypeByFileName_b__0__, v5);
+    sub_1B4CF90(&Voice___c__DisplayClass6_0_TypeInfo, v6);
+    sub_1B4CF90(&Voice_TypeInfo, v7);
+    byte_49B9E6D = 1;
   }
-  v8 = sub_1C3B9B0(Voice___c__DisplayClass6_0_TypeInfo);
+  v8 = sub_1B4D1DC(Voice___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   *(_QWORD *)(v8 + 16) = fileName;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v8 + 16), (int64_t)fileName, v11, v12, v13, v14, v15, v16);
-  v17 = Voice_TypeInfo;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 16), (int32_t)fileName, v11, v12);
+  v13 = Voice_TypeInfo;
   if ( !Voice_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Voice_TypeInfo);
-    v17 = Voice_TypeInfo;
+    v13 = Voice_TypeInfo;
   }
-  filelist = (System_Collections_Generic_IEnumerable_TSource__o *)v17->static_fields->filelist;
-  v19 = (System_Func_T__TResult__o *)sub_1C3B9B0(System_Func_KeyValuePair_Voice_BATTLE__string___bool__TypeInfo);
+  filelist = (System_Collections_Generic_IEnumerable_TSource__o *)v13->static_fields->filelist;
+  v15 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_KeyValuePair_Voice_BATTLE__string___bool__TypeInfo);
   System_Func_KeyValuePair_Int32Enum__object___bool____ctor(
-    v19,
+    v15,
     (Il2CppObject *)v8,
     Method_Voice___c__DisplayClass6_0__GetTypeByFileName_b__0__,
     0LL);
   return System_Linq_Enumerable__FirstOrDefault_KeyValuePair_Int32Enum__object__(
            filelist,
-           (System_Func_TSource__bool__o *)v19,
-           (const MethodInfo_3014044 *)Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_Voice_BATTLE__string____).fields.key;
+           (System_Func_TSource__bool__o *)v15,
+           (const MethodInfo_2F278F4 *)Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_Voice_BATTLE__string____).fields.key;
 }
 
 
@@ -1956,19 +1920,19 @@ bool __fastcall Voice__IsDeadVoice(int32_t voiceBattleType, const MethodInfo *me
   System_Collections_Generic_List_T__o *deadVoiceList; // x19
   System_Func_T__TResult__o *v12; // x21
 
-  if ( (byte_4C20F5C & 1) == 0 )
+  if ( (byte_49B9E6E & 1) == 0 )
   {
-    sub_1C3B764(&Method_BasicHelper_Any_Voice_BATTLE___, method);
-    sub_1C3B764(&System_Func_Voice_BATTLE__bool__TypeInfo, v3);
-    sub_1C3B764(&Method_Voice___c__DisplayClass7_0__IsDeadVoice_b__0__, v4);
-    sub_1C3B764(&Voice___c__DisplayClass7_0_TypeInfo, v5);
-    sub_1C3B764(&Voice_TypeInfo, v6);
-    byte_4C20F5C = 1;
+    sub_1B4CF90(&Method_BasicHelper_Any_Voice_BATTLE___, method);
+    sub_1B4CF90(&System_Func_Voice_BATTLE__bool__TypeInfo, v3);
+    sub_1B4CF90(&Method_Voice___c__DisplayClass7_0__IsDeadVoice_b__0__, v4);
+    sub_1B4CF90(&Voice___c__DisplayClass7_0_TypeInfo, v5);
+    sub_1B4CF90(&Voice_TypeInfo, v6);
+    byte_49B9E6E = 1;
   }
-  v7 = sub_1C3B9B0(Voice___c__DisplayClass7_0_TypeInfo);
+  v7 = sub_1B4D1DC(Voice___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1C3B9C0(v8, v9);
+    sub_1B4D1EC(v8, v9);
   *(_DWORD *)(v7 + 16) = voiceBattleType;
   v10 = Voice_TypeInfo;
   if ( !Voice_TypeInfo->_2.cctor_finished )
@@ -1977,7 +1941,7 @@ bool __fastcall Voice__IsDeadVoice(int32_t voiceBattleType, const MethodInfo *me
     v10 = Voice_TypeInfo;
   }
   deadVoiceList = (System_Collections_Generic_List_T__o *)v10->static_fields->deadVoiceList;
-  v12 = (System_Func_T__TResult__o *)sub_1C3B9B0(System_Func_Voice_BATTLE__bool__TypeInfo);
+  v12 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_Voice_BATTLE__bool__TypeInfo);
   System_Func_Int32Enum__bool____ctor(
     v12,
     (Il2CppObject *)v7,
@@ -1986,7 +1950,7 @@ bool __fastcall Voice__IsDeadVoice(int32_t voiceBattleType, const MethodInfo *me
   return BasicHelper__Any_Int32Enum_(
            deadVoiceList,
            (System_Func_T__bool__o *)v12,
-           (const MethodInfo_2FDA990 *)Method_BasicHelper_Any_Voice_BATTLE___);
+           (const MethodInfo_2EEC2B0 *)Method_BasicHelper_Any_Voice_BATTLE___);
 }
 
 
@@ -1998,12 +1962,12 @@ System_String_o *__fastcall Voice__getFileName(int32_t type, const MethodInfo *m
   System_Collections_Generic_Dictionary_TKey__TValue__o *filelist; // x0
   Voice_c *v7; // x0
 
-  if ( (byte_4C20F5A & 1) == 0 )
+  if ( (byte_49B9E6C & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__ContainsKey__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__get_Item__, v3);
-    sub_1C3B764(&Voice_TypeInfo, v4);
-    byte_4C20F5A = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__ContainsKey__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__get_Item__, v3);
+    sub_1B4CF90(&Voice_TypeInfo, v4);
+    byte_49B9E6C = 1;
   }
   v5 = Voice_TypeInfo;
   if ( !Voice_TypeInfo->_2.cctor_finished )
@@ -2017,7 +1981,7 @@ System_String_o *__fastcall Voice__getFileName(int32_t type, const MethodInfo *m
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          filelist,
          type,
-         (const MethodInfo_3325554 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__ContainsKey__) )
+         (const MethodInfo_3227A54 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__ContainsKey__) )
   {
     v7 = Voice_TypeInfo;
     if ( !Voice_TypeInfo->_2.cctor_finished )
@@ -2030,9 +1994,9 @@ System_String_o *__fastcall Voice__getFileName(int32_t type, const MethodInfo *m
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   filelist,
                                   type,
-                                  (const MethodInfo_33252C0 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__get_Item__);
+                                  (const MethodInfo_32277C0 *)Method_System_Collections_Generic_Dictionary_Voice_BATTLE__string__get_Item__);
 LABEL_12:
-    sub_1C3B9C0(filelist, method);
+    sub_1B4D1EC(filelist, method);
   }
   return 0LL;
 }
@@ -2052,12 +2016,12 @@ bool __fastcall Voice___c__DisplayClass6_0___GetTypeByFileName_b__0(
   System_String_o *value; // x19
 
   value = x.fields.value;
-  if ( (byte_4C20F5E & 1) == 0 )
+  if ( (byte_49B9E70 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Collections_Generic_KeyValuePair_Voice_BATTLE__string__get_Value__,
       *(_QWORD *)&x.fields.key);
-    byte_4C20F5E = 1;
+    byte_49B9E70 = 1;
   }
   return System_String__op_Equality(value, this->fields.fileName, 0LL);
 }

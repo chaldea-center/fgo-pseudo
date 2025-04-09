@@ -3,14 +3,14 @@ void __fastcall CombineExpUpClassInfo___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct CombineExpUpClassInfo_StaticFields *static_fields; // x8
 
-  if ( (byte_4C25C9B & 1) == 0 )
+  if ( (byte_49BEBE0 & 1) == 0 )
   {
-    sub_1C3B764(&CombineExpUpClassInfo_TypeInfo, v1);
-    byte_4C25C9B = 1;
+    sub_1B4CF90(&CombineExpUpClassInfo_TypeInfo, v1);
+    byte_49BEBE0 = 1;
   }
   static_fields = CombineExpUpClassInfo_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NUM4_CELL_WIDTH = 0x1F00000027LL;
-  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_C0DF60;
+  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_BAA9B0;
 }
 
 
@@ -65,10 +65,10 @@ void __fastcall CombineExpUpClassInfo__Set(
   int32_t v44; // [xsp+5Ch] [xbp-44h] BYREF
 
   v12 = this;
-  if ( (byte_4C25C9A & 1) == 0 )
+  if ( (byte_49BEBDF & 1) == 0 )
   {
-    this = (CombineExpUpClassInfo_o *)sub_1C3B764(&CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId);
-    byte_4C25C9A = 1;
+    this = (CombineExpUpClassInfo_o *)sub_1B4CF90(&CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId);
+    byte_49BEBDF = 1;
   }
   v44 = 0;
   v12->fields.dispMinRarity = minRarity;
@@ -92,7 +92,7 @@ void __fastcall CombineExpUpClassInfo__Set(
       this = (CombineExpUpClassInfo_o *)*((_QWORD *)&expUpIconList->obj.klass + v13);
       if ( !this )
         goto LABEL_88;
-      ServantFaceIconComponent__Set_39640656(
+      ServantFaceIconComponent__Set_38756872(
         (ServantFaceIconComponent_o *)this,
         svtIdList->m_Items[v16 + 1],
         0,
@@ -186,7 +186,7 @@ LABEL_35:
     }
     v26 = 8LL;
 LABEL_34:
-    GameObjectExtensions__SetLocalScale_34965512(
+    GameObjectExtensions__SetLocalScale_34071676(
       v25,
       *(float *)((char *)&v24->static_fields->NUM4_CELL_WIDTH + v26),
       0LL);
@@ -261,7 +261,7 @@ LABEL_36:
                     if ( this )
                     {
                       v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                      GameObjectExtensions__SetLocalScale_34965512(
+                      GameObjectExtensions__SetLocalScale_34071676(
                         v40,
                         CombineExpUpClassInfo_TypeInfo->static_fields->NUM4_SCALE,
                         0LL);
@@ -324,7 +324,7 @@ LABEL_36:
       }
     }
 LABEL_89:
-    sub_1C3B9C8(this, *(_QWORD *)&classId);
+    sub_1B4D1F4(this, *(_QWORD *)&classId);
   }
   if ( v29 != 4 )
     goto LABEL_86;
@@ -347,7 +347,7 @@ LABEL_89:
         (v32 = v12->fields.expUpIconList) == 0LL) )
   {
 LABEL_88:
-    sub_1C3B9C0(this, *(_QWORD *)&classId);
+    sub_1B4D1EC(this, *(_QWORD *)&classId);
   }
   if ( v32->max_length <= 4 )
     goto LABEL_89;
@@ -382,7 +382,7 @@ LABEL_86:
 }
 
 
-void __fastcall CombineExpUpClassInfo__Set_46876592(
+void __fastcall CombineExpUpClassInfo__Set_46014620(
         CombineExpUpClassInfo_o *this,
         System_Int32_array *numList,
         const MethodInfo *method)
@@ -413,7 +413,7 @@ void __fastcall CombineExpUpClassInfo__Set_46876592(
           break;
         if ( (unsigned int)(v5 - 4) >= numLabelList->max_length )
 LABEL_15:
-          sub_1C3B9C8(this, numList);
+          sub_1B4D1F4(this, numList);
         v8 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + v5);
         this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v10, 0LL);
         if ( !v8 )
@@ -435,6 +435,6 @@ LABEL_15:
           return;
       }
     }
-    sub_1C3B9C0(this, numList);
+    sub_1B4D1EC(this, numList);
   }
 }

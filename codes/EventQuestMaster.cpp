@@ -1,14 +1,14 @@
 void __fastcall EventQuestMaster___ctor(EventQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21FFA & 1) == 0 )
+  if ( (byte_49BAF0D & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string___ctor__, method);
-    byte_4C21FFA = 1;
+    sub_1B4CF90(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string___ctor__, method);
+    byte_49BAF0D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     86,
-    (const MethodInfo_329D5DC *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string___ctor__);
+    (const MethodInfo_31A0130 *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string___ctor__);
 }
 
 
@@ -37,67 +37,59 @@ EventEntity_array *__fastcall EventQuestMaster__GetEnabledEventCampaignForQuest(
   System_Collections_Generic_List_int__o *v22; // x24
   _BOOL8 v23; // x0
   __int64 v24; // x1
-  PartyOrganizationUtility_c *eventQuestEntitiesOrderedByIsExceptedCache; // x25
-  PartyOrganizationUtility_o *p_eventQuestEntitiesOrderedByIsExceptedCache; // x27
+  CGThumbnailListItem_c *eventQuestEntitiesOrderedByIsExceptedCache; // x25
+  CGThumbnailListItem_o *p_eventQuestEntitiesOrderedByIsExceptedCache; // x27
   System_Collections_Generic_IEnumerable_TSource__o *v27; // x25
   EventQuestMaster___c_c *v28; // x8
   System_Func_object__int__o *_9__6_0; // x26
   Il2CppObject *v30; // x28
   struct EventQuestMaster___c_StaticFields *static_fields; // x0
-  int64_t v32; // x2
-  int32_t v33; // w3
-  System_String_o *v34; // x4
-  BattleSetupInfo_o *v35; // x5
-  FollowerInfo_o *v36; // x6
-  PartyListViewItem_o *v37; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v38; // x0
-  int64_t v39; // x2
-  int32_t v40; // w3
-  System_String_o *v41; // x4
-  BattleSetupInfo_o *v42; // x5
-  FollowerInfo_o *v43; // x6
-  PartyListViewItem_o *v44; // x7
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v34; // x0
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
   const char *namespaze; // x8
-  int v46; // w26
-  int v47; // w27
-  int32_t *v48; // x20
-  int32_t v49; // w8
-  int32_t v50; // w8
+  int v38; // w26
+  int v39; // w27
+  int32_t *v40; // x20
+  int32_t v41; // w8
+  int32_t v42; // w8
   struct System_Int32_array *items; // x8
-  _QWORD *v52; // x9
+  _QWORD *v44; // x9
   __int64 size; // x10
 
-  if ( (byte_4C21FFC & 1) == 0 )
+  if ( (byte_49BAF0F & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventMaster___, *(_QWORD *)&questId);
-    sub_1C3B764(&DataManager_TypeInfo, v9);
-    sub_1C3B764(&Method_System_Linq_Enumerable_OfType_EventQuestEntity___, v10);
-    sub_1C3B764(&Method_System_Linq_Enumerable_OrderBy_EventQuestEntity__int___, v11);
-    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_EventQuestEntity___, v12);
-    sub_1C3B764(&System_Func_EventQuestEntity__int__TypeInfo, v13);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__Add__, v14);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__Contains__, v15);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int__Remove__, v16);
-    sub_1C3B764(&Method_System_Collections_Generic_List_int___ctor__, v17);
-    sub_1C3B764(&System_Collections_Generic_List_int__TypeInfo, v18);
-    sub_1C3B764(&Method_EventQuestMaster___c__GetEnabledEventCampaignForQuest_b__6_0__, v19);
-    sub_1C3B764(&EventQuestMaster___c_TypeInfo, v20);
-    byte_4C21FFC = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventMaster___, *(_QWORD *)&questId);
+    sub_1B4CF90(&DataManager_TypeInfo, v9);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_OfType_EventQuestEntity___, v10);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_OrderBy_EventQuestEntity__int___, v11);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_ToArray_EventQuestEntity___, v12);
+    sub_1B4CF90(&System_Func_EventQuestEntity__int__TypeInfo, v13);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v14);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Contains__, v15);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Remove__, v16);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v17);
+    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v18);
+    sub_1B4CF90(&Method_EventQuestMaster___c__GetEnabledEventCampaignForQuest_b__6_0__, v19);
+    sub_1B4CF90(&EventQuestMaster___c_TypeInfo, v20);
+    byte_49BAF0F = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventMaster___);
-  v22 = (System_Collections_Generic_List_int__o *)sub_1C3B9B0(System_Collections_Generic_List_int__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventMaster___);
+  v22 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v22,
-    (const MethodInfo_366E3F4 *)Method_System_Collections_Generic_List_int___ctor__);
-  p_eventQuestEntitiesOrderedByIsExceptedCache = (PartyOrganizationUtility_o *)&this->fields.eventQuestEntitiesOrderedByIsExceptedCache;
-  eventQuestEntitiesOrderedByIsExceptedCache = (PartyOrganizationUtility_c *)this->fields.eventQuestEntitiesOrderedByIsExceptedCache;
+    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+  p_eventQuestEntitiesOrderedByIsExceptedCache = (CGThumbnailListItem_o *)&this->fields.eventQuestEntitiesOrderedByIsExceptedCache;
+  eventQuestEntitiesOrderedByIsExceptedCache = (CGThumbnailListItem_c *)this->fields.eventQuestEntitiesOrderedByIsExceptedCache;
   if ( !eventQuestEntitiesOrderedByIsExceptedCache )
   {
     v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                  (System_Collections_IEnumerable_o *)this->fields.list,
-                                                                 (const MethodInfo_3019DB0 *)Method_System_Linq_Enumerable_OfType_EventQuestEntity___);
+                                                                 (const MethodInfo_2F2D660 *)Method_System_Linq_Enumerable_OfType_EventQuestEntity___);
     v28 = EventQuestMaster___c_TypeInfo;
     if ( !EventQuestMaster___c_TypeInfo->_2.cctor_finished )
     {
@@ -113,7 +105,7 @@ EventEntity_array *__fastcall EventQuestMaster__GetEnabledEventCampaignForQuest(
         v28 = EventQuestMaster___c_TypeInfo;
       }
       v30 = (Il2CppObject *)v28->static_fields->__9;
-      _9__6_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_EventQuestEntity__int__TypeInfo);
+      _9__6_0 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_EventQuestEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__6_0,
         v30,
@@ -121,68 +113,56 @@ EventEntity_array *__fastcall EventQuestMaster__GetEnabledEventCampaignForQuest(
         0LL);
       static_fields = EventQuestMaster___c_TypeInfo->static_fields;
       static_fields->__9__6_0 = (struct System_Func_EventQuestEntity__int__o *)_9__6_0;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&static_fields->__9__6_0,
-        (int64_t)_9__6_0,
-        v32,
-        v33,
-        v34,
-        v35,
-        v36,
-        v37);
+      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v32, v33);
     }
-    v38 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+    v34 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                  v27,
                                                                  (System_Func_TSource__TKey__o *)_9__6_0,
-                                                                 (const MethodInfo_301A1E4 *)Method_System_Linq_Enumerable_OrderBy_EventQuestEntity__int___);
-    eventQuestEntitiesOrderedByIsExceptedCache = (PartyOrganizationUtility_c *)System_Linq_Enumerable__ToArray_object_(
-                                                                                 v38,
-                                                                                 (const MethodInfo_302ACC8 *)Method_System_Linq_Enumerable_ToArray_EventQuestEntity___);
+                                                                 (const MethodInfo_2F2DB00 *)Method_System_Linq_Enumerable_OrderBy_EventQuestEntity__int___);
+    eventQuestEntitiesOrderedByIsExceptedCache = (CGThumbnailListItem_c *)System_Linq_Enumerable__ToArray_object_(
+                                                                            v34,
+                                                                            (const MethodInfo_2F3C3E4 *)Method_System_Linq_Enumerable_ToArray_EventQuestEntity___);
     p_eventQuestEntitiesOrderedByIsExceptedCache->klass = eventQuestEntitiesOrderedByIsExceptedCache;
-    sub_1C3B708(
+    sub_1B4CF34(
       p_eventQuestEntitiesOrderedByIsExceptedCache,
-      (int64_t)eventQuestEntitiesOrderedByIsExceptedCache,
-      v39,
-      v40,
-      v41,
-      v42,
-      v43,
-      v44);
+      (int32_t)eventQuestEntitiesOrderedByIsExceptedCache,
+      v35,
+      v36);
     if ( !eventQuestEntitiesOrderedByIsExceptedCache )
       goto LABEL_34;
   }
   namespaze = eventQuestEntitiesOrderedByIsExceptedCache->_1.namespaze;
-  v46 = (_DWORD)namespaze - 1;
+  v38 = (_DWORD)namespaze - 1;
   if ( (int)namespaze >= 1 )
   {
-    v47 = 0;
+    v39 = 0;
     while ( 1 )
     {
-      v48 = (int32_t *)*((_QWORD *)&eventQuestEntitiesOrderedByIsExceptedCache->_1.byval_arg.data + v47);
-      if ( !v48 )
+      v40 = (int32_t *)*((_QWORD *)&eventQuestEntitiesOrderedByIsExceptedCache->_1.byval_arg.data + v39);
+      if ( !v40 )
         break;
-      v49 = v48[5];
-      if ( !v49 && !v48[6] || v49 == questId && ((v50 = v48[6]) == 0 || v50 == phase) )
+      v41 = v40[5];
+      if ( !v41 && !v40[6] || v41 == questId && ((v42 = v40[6]) == 0 || v42 == phase) )
       {
         if ( !v22 )
           break;
-        v24 = (unsigned int)v48[4];
-        if ( v48[7] )
+        v24 = (unsigned int)v40[4];
+        if ( v40[7] )
         {
           v23 = System_Collections_Generic_List_int___Contains(
                   v22,
                   v24,
-                  (const MethodInfo_366EFC0 *)Method_System_Collections_Generic_List_int__Contains__);
+                  (const MethodInfo_3563530 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( v23 )
             v23 = System_Collections_Generic_List_int___Remove(
                     v22,
-                    v48[4],
-                    (const MethodInfo_3670144 *)Method_System_Collections_Generic_List_int__Remove__);
+                    v40[4],
+                    (const MethodInfo_35646B4 *)Method_System_Collections_Generic_List_int__Remove__);
         }
         else
         {
           items = v22->fields._items;
-          v52 = Method_System_Collections_Generic_List_int__Add__;
+          v44 = Method_System_Collections_Generic_List_int__Add__;
           ++v22->fields._version;
           if ( !items )
             break;
@@ -192,7 +172,7 @@ EventEntity_array *__fastcall EventQuestMaster__GetEnabledEventCampaignForQuest(
             System_Collections_Generic_List_int___AddWithResize(
               v22,
               v24,
-              *(const MethodInfo_366EC48 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+              *(const MethodInfo_35631B8 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
           }
           else
           {
@@ -201,13 +181,13 @@ EventEntity_array *__fastcall EventQuestMaster__GetEnabledEventCampaignForQuest(
           }
         }
       }
-      if ( v46 == v47 )
+      if ( v38 == v39 )
         goto LABEL_32;
-      if ( (unsigned int)++v47 >= LODWORD(eventQuestEntitiesOrderedByIsExceptedCache->_1.namespaze) )
-        sub_1C3B9C8(v23, v24);
+      if ( (unsigned int)++v39 >= LODWORD(eventQuestEntitiesOrderedByIsExceptedCache->_1.namespaze) )
+        sub_1B4D1F4(v23, v24);
     }
 LABEL_34:
-    sub_1C3B9C0(v23, v24);
+    sub_1B4D1EC(v23, v24);
   }
 LABEL_32:
   if ( !Master_object )
@@ -226,16 +206,16 @@ EventQuestEntity_o *__fastcall EventQuestMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C21FF8 & 1) == 0 )
+  if ( (byte_49BAF0B & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__GetEntity__, *(_QWORD *)&eventId);
-    byte_4C21FF8 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__GetEntity__, *(_QWORD *)&eventId);
+    byte_49BAF0B = 1;
   }
   PK = (Il2CppObject *)EventQuestEntity__CreatePK(eventId, questId, phase, *(const MethodInfo **)&phase);
   return (EventQuestEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_329F900 *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__GetEntity__);
+                                 (const MethodInfo_31A2454 *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__GetEntity__);
 }
 
 
@@ -251,18 +231,18 @@ EventQuestEntity_o *__fastcall EventQuestMaster__GetFirstEntityFromQuestId(
   int32_t v8; // w21
   int32_t v9; // w22
 
-  if ( (byte_4C21FFB & 1) == 0 )
+  if ( (byte_49BAF0E & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Count__, *(_QWORD *)&questId);
-    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Item__, v5);
-    byte_4C21FFB = 1;
+    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Count__, *(_QWORD *)&questId);
+    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Item__, v5);
+    byte_49BAF0E = 1;
   }
   result = (EventQuestEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_12;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_32351F4 *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Count__);
+            (const MethodInfo_313AEE4 *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Count__);
   if ( Count >= 1 )
   {
     v8 = Count;
@@ -275,7 +255,7 @@ EventQuestEntity_o *__fastcall EventQuestMaster__GetFirstEntityFromQuestId(
       result = (EventQuestEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                        (System_Collections_ObjectModel_Collection_T__o *)result,
                                        v9,
-                                       (const MethodInfo_3235284 *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Item__);
+                                       (const MethodInfo_313AF74 *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__get_Item__);
       if ( !result )
         break;
       if ( result->fields.questId == questId )
@@ -284,7 +264,7 @@ EventQuestEntity_o *__fastcall EventQuestMaster__GetFirstEntityFromQuestId(
         return 0LL;
     }
 LABEL_12:
-    sub_1C3B9C0(result, *(_QWORD *)&questId);
+    sub_1B4D1EC(result, *(_QWORD *)&questId);
   }
   return 0LL;
 }
@@ -318,64 +298,64 @@ System_Int32_array *__fastcall EventQuestMaster__GetOngoingQuestTargetEventIds(
   int32_t current; // w25
   _BOOL8 IsEventNotIncluded; // x0
   __int64 v28; // x1
-  const MethodInfo_302AB30 *v29; // x1
+  const MethodInfo_2F3C24C *v29; // x1
   System_Collections_Generic_HashSet_int__o *EventValUpEventIdHash; // x0
   System_Collections_Generic_HashSet_Enumerator_T__o v32; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_HashSet_Enumerator_T__o v33; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C21FFE & 1) == 0 )
+  if ( (byte_49BAF11 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMasterData_EventMaster___, *(_QWORD *)&questId);
-    sub_1C3B764(&Method_DataManager_GetMaster_QuestGroupMaster___, v9);
-    sub_1C3B764(&DataManager_TypeInfo, v10);
-    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_int___, v11);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v12);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v13);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v14);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_int__Add__, v15);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v16);
-    sub_1C3B764(&Method_System_Collections_Generic_HashSet_int___ctor__, v17);
-    sub_1C3B764(&System_Collections_Generic_HashSet_int__TypeInfo, v18);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    byte_4C21FFE = 1;
+    sub_1B4CF90(&Method_DataManager_GetMasterData_EventMaster___, *(_QWORD *)&questId);
+    sub_1B4CF90(&Method_DataManager_GetMaster_QuestGroupMaster___, v9);
+    sub_1B4CF90(&DataManager_TypeInfo, v10);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_ToArray_int___, v11);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__, v12);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__, v13);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_Enumerator_int__get_Current__, v14);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_int__Add__, v15);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_int__GetEnumerator__, v16);
+    sub_1B4CF90(&Method_System_Collections_Generic_HashSet_int___ctor__, v17);
+    sub_1B4CF90(&System_Collections_Generic_HashSet_int__TypeInfo, v18);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
+    byte_49BAF11 = 1;
   }
   memset(&v33, 0, sizeof(v33));
   if ( !(questPhase | questId) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventMaster___);
+                   (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventMaster___);
       if ( Instance )
       {
         EventValUpEventIdHash = EventMaster__GetEventValUpEventIdHash((EventMaster_o *)Instance, 0, 0LL, 0LL);
-        v29 = (const MethodInfo_302AB30 *)Method_System_Linq_Enumerable_ToArray_int___;
+        v29 = (const MethodInfo_2F3C24C *)Method_System_Linq_Enumerable_ToArray_int___;
         return System_Linq_Enumerable__ToArray_int_(
                  (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
                  v29);
       }
     }
 LABEL_22:
-    sub_1C3B9C0(Instance, v22);
+    sub_1B4D1EC(Instance, v22);
   }
-  v20 = (System_Collections_Generic_HashSet_int__o *)sub_1C3B9B0(System_Collections_Generic_HashSet_int__TypeInfo);
+  v20 = (System_Collections_Generic_HashSet_int__o *)sub_1B4D1DC(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
     v20,
-    (const MethodInfo_35415FC *)Method_System_Collections_Generic_HashSet_int___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_343E3DC *)Method_System_Collections_Generic_HashSet_int___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_EventMaster___);
+               (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_22;
   v23 = EventMaster__GetEventValUpEventIdHash((EventMaster_o *)Instance, 0, nowTime, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_QuestGroupMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_QuestGroupMaster___);
   if ( !Instance )
     goto LABEL_22;
   Instance = (Il2CppObject *)QuestGroupMaster__GetEventId((QuestGroupMaster_o *)Instance, questId, 0LL);
@@ -385,11 +365,11 @@ LABEL_22:
   System_Collections_Generic_HashSet_int___GetEnumerator(
     &v32,
     v23,
-    (const MethodInfo_3542184 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
+    (const MethodInfo_343EF64 *)Method_System_Collections_Generic_HashSet_int__GetEnumerator__);
   v33 = v32;
   while ( System_Collections_Generic_HashSet_Enumerator_int___MoveNext(
             &v33,
-            (const MethodInfo_341C090 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__) )
+            (const MethodInfo_3304808 *)Method_System_Collections_Generic_HashSet_Enumerator_int__MoveNext__) )
   {
     current = (int32_t)v33.fields._current;
     IsEventNotIncluded = EventQuestMaster__IsEventNotIncluded(
@@ -403,17 +383,17 @@ LABEL_22:
     if ( v24 == current || !IsEventNotIncluded )
     {
       if ( !v20 )
-        sub_1C3B9C0(IsEventNotIncluded, v28);
+        sub_1B4D1EC(IsEventNotIncluded, v28);
       System_Collections_Generic_HashSet_int___Add(
         v20,
         current,
-        (const MethodInfo_3542800 *)Method_System_Collections_Generic_HashSet_int__Add__);
+        (const MethodInfo_343F5E0 *)Method_System_Collections_Generic_HashSet_int__Add__);
     }
   }
   System_Collections_Generic_HashSet_Enumerator_int___Dispose(
     &v33,
-    (const MethodInfo_341C08C *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
-  v29 = (const MethodInfo_302AB30 *)Method_System_Linq_Enumerable_ToArray_int___;
+    (const MethodInfo_3304804 *)Method_System_Collections_Generic_HashSet_Enumerator_int__Dispose__);
+  v29 = (const MethodInfo_2F3C24C *)Method_System_Linq_Enumerable_ToArray_int___;
   EventValUpEventIdHash = v20;
   return System_Linq_Enumerable__ToArray_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EventValUpEventIdHash,
@@ -452,7 +432,7 @@ bool __fastcall EventQuestMaster__IsEventNotIncluded(
     while ( 1 )
     {
       if ( max_length == v11 )
-        sub_1C3B9C8(EnabledEventCampaignForQuest, v9);
+        sub_1B4D1F4(EnabledEventCampaignForQuest, v9);
       v12 = EnabledEventCampaignForQuest->m_Items[v11];
       if ( !v12 )
         break;
@@ -461,7 +441,7 @@ bool __fastcall EventQuestMaster__IsEventNotIncluded(
       return v11 >= max_length;
     }
 LABEL_12:
-    sub_1C3B9C0(EnabledEventCampaignForQuest, v9);
+    sub_1B4D1EC(EnabledEventCampaignForQuest, v9);
   }
   v11 = 0;
   return v11 >= max_length;
@@ -498,24 +478,24 @@ bool __fastcall EventQuestMaster__IsExistQuest(
   int32_t *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4C21FFD & 1) == 0 )
+  if ( (byte_49BAF10 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Collections_ObjectModel_Collection_EventQuestEntity__GetEnumerator__,
       *(_QWORD *)&eventId);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v9);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_EventQuestEntity__TypeInfo, v10);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v11);
-    byte_4C21FFD = 1;
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v9);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_EventQuestEntity__TypeInfo, v10);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v11);
+    byte_49BAF10 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3B9C0(0LL, *(_QWORD *)&eventId);
+    sub_1B4D1EC(0LL, *(_QWORD *)&eventId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_32357CC *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__GetEnumerator__);
+                 (const MethodInfo_313B4BC *)Method_System_Collections_ObjectModel_Collection_EventQuestEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3B9C0(0LL, v13);
+    sub_1B4D1EC(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -535,7 +515,7 @@ bool __fastcall EventQuestMaster__IsExistQuest(
     else
     {
 LABEL_9:
-      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1B9D724(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -559,7 +539,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v23 = sub_1C8D744(Enumerator, System_Collections_Generic_IEnumerator_EventQuestEntity__TypeInfo, 0LL);
+      v23 = sub_1B9D724(Enumerator, System_Collections_Generic_IEnumerator_EventQuestEntity__TypeInfo, 0LL);
     }
     v24 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
                       Enumerator,
@@ -593,7 +573,7 @@ LABEL_25:
   else
   {
 LABEL_29:
-    v29 = sub_1C8D744(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1B9D724(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
   return v19 & 1;
@@ -605,35 +585,23 @@ void __fastcall EventQuestMaster__OnListChangedImplementation(
         System_Collections_Specialized_NotifyCollectionChangedEventArgs_o *e,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  __int64 v8; // x0
-  System_NotImplementedException_o *v9; // x19
-  __int64 v10; // x0
+  const MethodInfo *v3; // x3
+  __int64 v4; // x0
+  System_NotImplementedException_o *v5; // x19
+  __int64 v6; // x0
 
   if ( !e )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   if ( e->fields._action > 4u )
   {
-    v8 = sub_1C3B778(&System_NotImplementedException_TypeInfo);
-    v9 = (System_NotImplementedException_o *)sub_1C3B9B0(v8);
-    System_NotImplementedException___ctor(v9, 0LL);
-    v10 = sub_1C3B778(&Method_EventQuestMaster_OnListChangedImplementation__);
-    sub_1C3B88C(v9, v10);
+    v4 = sub_1B4CFA4(&System_NotImplementedException_TypeInfo);
+    v5 = (System_NotImplementedException_o *)sub_1B4D1DC(v4);
+    System_NotImplementedException___ctor(v5, 0LL);
+    v6 = sub_1B4CFA4(&Method_EventQuestMaster_OnListChangedImplementation__);
+    sub_1B4D0B8(v5, v6);
   }
   this->fields.eventQuestEntitiesOrderedByIsExceptedCache = 0LL;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.eventQuestEntitiesOrderedByIsExceptedCache,
-    0LL,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventQuestEntitiesOrderedByIsExceptedCache, 0, (int32_t)method, v3);
 }
 
 
@@ -648,17 +616,17 @@ bool __fastcall EventQuestMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C21FF9 & 1) == 0 )
+  if ( (byte_49BAF0C & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__TryGetEntity__, entity);
-    byte_4C21FF9 = 1;
+    sub_1B4CF90(&Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__TryGetEntity__, entity);
+    byte_49BAF0C = 1;
   }
   PK = (Il2CppObject *)EventQuestEntity__CreatePK(eventId, questId, phase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_329F94C *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__TryGetEntity__);
+           (const MethodInfo_31A24A0 *)Method_DataMasterBase_EventQuestMaster__EventQuestEntity__string__TryGetEntity__);
 }
 
 
@@ -666,30 +634,18 @@ void __fastcall EventQuestMaster___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C21FFF & 1) == 0 )
+  if ( (byte_49BAF12 & 1) == 0 )
   {
-    sub_1C3B764(&EventQuestMaster___c_TypeInfo, v1);
-    byte_4C21FFF = 1;
+    sub_1B4CF90(&EventQuestMaster___c_TypeInfo, v1);
+    byte_49BAF12 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(EventQuestMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(EventQuestMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventQuestMaster___c_TypeInfo->static_fields->__9 = (struct EventQuestMaster___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)EventQuestMaster___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)EventQuestMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -705,6 +661,6 @@ int32_t __fastcall EventQuestMaster___c___GetEnabledEventCampaignForQuest_b__6_0
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return x->fields.isExcepted;
 }

@@ -1,13 +1,13 @@
 void __fastcall GiftDetailEntity___ctor(GiftDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2223D & 1) == 0 )
+  if ( (byte_49BB167 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C2223D = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BB167 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestBoardRewardIconIt
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2223A & 1) == 0 )
+  if ( (byte_49BB164 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_7632/*"Invalid attribute restriction. Derived attribute's type is not a valid restriction of the base attribute's type."*/, method);
-    byte_4C2223A = 1;
+    sub_1B4CF90(&StringLiteral_7362/*"IgnoreQuestBoardRewardIconItemIds"*/, method);
+    byte_49BB164 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7632/*"Invalid attribute restriction. Derived attribute's type is not a valid restriction of the base attribute's type."*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7362/*"IgnoreQuestBoardRewardIconItemIds"*/, 0LL, 0LL);
 }
 
 
@@ -34,12 +34,12 @@ System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestClearRewardItemId
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2223B & 1) == 0 )
+  if ( (byte_49BB165 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_7633/*"Invalid attribute type."*/, method);
-    byte_4C2223B = 1;
+    sub_1B4CF90(&StringLiteral_7363/*"IgnoreQuestClearRewardItemIds"*/, method);
+    byte_49BB165 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7633/*"Invalid attribute type."*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7363/*"IgnoreQuestClearRewardItemIds"*/, 0LL, 0LL);
 }
 
 
@@ -47,12 +47,12 @@ System_Int32_array *__fastcall GiftDetailEntity__GetIgnoreQuestPhaseClearRewardI
         GiftDetailEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2223C & 1) == 0 )
+  if ( (byte_49BB166 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_7634/*"Invalid attribute value markup."*/, method);
-    byte_4C2223C = 1;
+    sub_1B4CF90(&StringLiteral_7364/*"IgnoreQuestPhaseClearRewardItemIds"*/, method);
+    byte_49BB166 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7634/*"Invalid attribute value markup."*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_7364/*"IgnoreQuestPhaseClearRewardItemIds"*/, 0LL, 0LL);
 }
 
 
@@ -62,15 +62,15 @@ System_String_o *__fastcall GiftDetailEntity__GetOverwritePhaseRewardImageId(
 {
   __int64 v3; // x1
 
-  if ( (byte_4C22239 & 1) == 0 )
+  if ( (byte_49BB163 & 1) == 0 )
   {
-    sub_1C3B764(&string_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_22979/*"shouldConvertToLinearSpace"*/, v3);
-    byte_4C22239 = 1;
+    sub_1B4CF90(&string_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_22235/*"phaseRewardImageId"*/, v3);
+    byte_49BB163 = 1;
   }
   return EntityScriptUtil__GetStringValue(
            this->fields.script,
-           (System_String_o *)StringLiteral_22979/*"shouldConvertToLinearSpace"*/,
+           (System_String_o *)StringLiteral_22235/*"phaseRewardImageId"*/,
            string_TypeInfo->static_fields->Empty,
            0LL);
 }
@@ -84,10 +84,10 @@ Il2CppObject *__fastcall GiftDetailEntity__GetScriptValue(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C22238 & 1) == 0 )
+  if ( (byte_49BB162 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4C22238 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_49BB162 = 1;
   }
   value = 0LL;
   result = (Il2CppObject *)this->fields.script;
@@ -97,7 +97,7 @@ Il2CppObject *__fastcall GiftDetailEntity__GetScriptValue(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3356F74 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

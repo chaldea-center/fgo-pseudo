@@ -14,10 +14,10 @@ bool __fastcall AndroidPermissionManager__EnabledRuntimePermission(const MethodI
 {
   __int64 v1; // x1
 
-  if ( (byte_4C21505 & 1) == 0 )
+  if ( (byte_49BA419 & 1) == 0 )
   {
-    sub_1C3B764(&AndroidUtil_TypeInfo, v1);
-    byte_4C21505 = 1;
+    sub_1B4CF90(&AndroidUtil_TypeInfo, v1);
+    byte_49BA419 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -37,15 +37,15 @@ void __fastcall AndroidPermissionManager__RequestPermission(
   __int64 v11; // x1
   System_Action_string__o *v12; // x1
 
-  if ( (byte_4C21507 & 1) == 0 )
+  if ( (byte_49BA41B & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Android_PermissionCallbacks_TypeInfo, grantedCallback);
-    byte_4C21507 = 1;
+    sub_1B4CF90(&UnityEngine_Android_PermissionCallbacks_TypeInfo, grantedCallback);
+    byte_49BA41B = 1;
   }
-  v9 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1C3B9B0(UnityEngine_Android_PermissionCallbacks_TypeInfo);
+  v9 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1B4D1DC(UnityEngine_Android_PermissionCallbacks_TypeInfo);
   UnityEngine_Android_PermissionCallbacks___ctor(v9, 0LL);
   if ( !v9 )
-    sub_1C3B9C0(v10, v11);
+    sub_1B4D1EC(v10, v11);
   UnityEngine_Android_PermissionCallbacks__add_PermissionGranted(v9, grantedCallback, 0LL);
   UnityEngine_Android_PermissionCallbacks__add_PermissionDenied(v9, deniedCallback, 0LL);
   if ( dontAskCallback )
@@ -74,80 +74,76 @@ bool __fastcall AndroidPermissionManager__ShouldShowRequestPermissionRationale(
   Il2CppObject *Static_object; // x20
   __int64 v14; // x0
   __int64 v15; // x1
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  __int64 v22; // x22
-  __int64 v23; // x0
-  __int64 v24; // x1
-  _BOOL4 v25; // w25
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  __int64 v18; // x22
+  __int64 v19; // x0
+  __int64 v20; // x1
+  _BOOL4 v21; // w25
   Il2CppClass *klass; // x8
-  __int64 v27; // x9
+  __int64 v23; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  UnityEngine_AndroidJavaClass_c *v30; // x8
-  __int64 v31; // x9
-  int32_t *v32; // x10
-  __int64 v33; // x0
-  __int64 v35; // x0
+  UnityEngine_AndroidJavaClass_c *v26; // x8
+  __int64 v27; // x9
+  int32_t *v28; // x10
+  __int64 v29; // x0
+  __int64 v31; // x0
 
-  if ( (byte_4C21506 & 1) == 0 )
+  if ( (byte_49BA41A & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_AndroidJavaClass_TypeInfo, method);
-    sub_1C3B764(&Method_UnityEngine_AndroidJavaObject_Call_bool____77898896, v3);
-    sub_1C3B764(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___, v4);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v5);
-    sub_1C3B764(&object___TypeInfo, v6);
-    sub_1C3B764(&StringLiteral_23793/*"uSequencer-RecordPrefs-SelectedPreset"*/, v7);
-    sub_1C3B764(&StringLiteral_18470/*"ef_clock_num"*/, v8);
-    sub_1C3B764(&StringLiteral_18755/*"evGO_ORDEALCALL"*/, v9);
-    byte_4C21506 = 1;
+    sub_1B4CF90(&UnityEngine_AndroidJavaClass_TypeInfo, method);
+    sub_1B4CF90(&Method_UnityEngine_AndroidJavaObject_Call_bool____75488680, v3);
+    sub_1B4CF90(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___, v4);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v5);
+    sub_1B4CF90(&object___TypeInfo, v6);
+    sub_1B4CF90(&StringLiteral_23030/*"shouldShowRequestPermissionRationale"*/, v7);
+    sub_1B4CF90(&StringLiteral_17811/*"com.unity3d.player.UnityPlayer"*/, v8);
+    sub_1B4CF90(&StringLiteral_18092/*"currentActivity"*/, v9);
+    byte_49BA41A = 1;
   }
-  v10 = (UnityEngine_AndroidJavaClass_o *)sub_1C3B9B0(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v10, (System_String_o *)StringLiteral_18470/*"ef_clock_num"*/, 0LL);
+  v10 = (UnityEngine_AndroidJavaClass_o *)sub_1B4D1DC(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v10, (System_String_o *)StringLiteral_17811/*"com.unity3d.player.UnityPlayer"*/, 0LL);
   if ( !v10 )
-    sub_1C3B9C0(v11, v12);
+    sub_1B4D1EC(v11, v12);
   Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
                     (UnityEngine_AndroidJavaObject_o *)v10,
-                    (System_String_o *)StringLiteral_18755/*"evGO_ORDEALCALL"*/,
-                    (const MethodInfo_2F47D6C *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-  v14 = sub_1C3B80C(object___TypeInfo, 1LL);
-  v22 = v14;
+                    (System_String_o *)StringLiteral_18092/*"currentActivity"*/,
+                    (const MethodInfo_2E5D748 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+  v14 = sub_1B4D038(object___TypeInfo, 1LL);
+  v18 = v14;
   if ( !v14 )
-    sub_1C3B9C0(0LL, v15);
+    sub_1B4D1EC(0LL, v15);
   if ( permissionName )
   {
-    v14 = sub_1C3B8A0(permissionName, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
+    v14 = sub_1B4D0CC(permissionName, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
     if ( !v14 )
     {
-      v35 = sub_1C3B9E4(0LL);
-      sub_1C3B88C(v35, 0LL);
+      v31 = sub_1B4D210(0LL);
+      sub_1B4D0B8(v31, 0LL);
     }
   }
-  if ( !*(_DWORD *)(v22 + 24) )
-    sub_1C3B9C8(v14, v15);
-  *(_QWORD *)(v22 + 32) = permissionName;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 32), (int64_t)permissionName, v16, v17, v18, v19, v20, v21);
+  if ( !*(_DWORD *)(v18 + 24) )
+    sub_1B4D1F4(v14, v15);
+  *(_QWORD *)(v18 + 32) = permissionName;
+  sub_1B4CF34((CGThumbnailListItem_o *)(v18 + 32), (int32_t)permissionName, v16, v17);
   if ( !Static_object )
-    sub_1C3B9C0(v23, v24);
-  v25 = UnityEngine_AndroidJavaObject__Call_bool_(
+    sub_1B4D1EC(v19, v20);
+  v21 = UnityEngine_AndroidJavaObject__Call_bool_(
           (UnityEngine_AndroidJavaObject_o *)Static_object,
-          (System_String_o *)StringLiteral_23793/*"uSequencer-RecordPrefs-SelectedPreset"*/,
-          (System_Object_array *)v22,
-          (const MethodInfo_2F45914 *)Method_UnityEngine_AndroidJavaObject_Call_bool____77898896);
+          (System_String_o *)StringLiteral_23030/*"shouldShowRequestPermissionRationale"*/,
+          (System_Object_array *)v18,
+          (const MethodInfo_2E5B2F0 *)Method_UnityEngine_AndroidJavaObject_Call_bool____75488680);
   klass = Static_object->klass;
-  v27 = *(unsigned __int16 *)(&Static_object->klass->_2.bitflags2 + 3);
+  v23 = *(unsigned __int16 *)(&Static_object->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Static_object->klass->_2.bitflags2 + 3) )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v27;
+      --v23;
       p_offset += 4;
-      if ( !v27 )
+      if ( !v23 )
         goto LABEL_13;
     }
     p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -155,28 +151,28 @@ bool __fastcall AndroidPermissionManager__ShouldShowRequestPermissionRationale(
   else
   {
 LABEL_13:
-    p_method = sub_1C8D744(Static_object, System_IDisposable_TypeInfo, 0LL);
+    p_method = sub_1B9D724(Static_object, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(Il2CppObject *, _QWORD))p_method)(Static_object, *(_QWORD *)(p_method + 8));
-  v30 = v10->klass;
-  v31 = *(unsigned __int16 *)(&v10->klass->_2.bitflags2 + 3);
+  v26 = v10->klass;
+  v27 = *(unsigned __int16 *)(&v10->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&v10->klass->_2.bitflags2 + 3) )
   {
-    v32 = &v30->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
+    v28 = &v26->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v28 - 1) != System_IDisposable_TypeInfo )
     {
-      --v31;
-      v32 += 4;
-      if ( !v31 )
+      --v27;
+      v28 += 4;
+      if ( !v27 )
         goto LABEL_19;
     }
-    v33 = (__int64)(&v30->vtable._0_Equals.method + 2 * *v32);
+    v29 = (__int64)(&v26->vtable._0_Equals.method + 2 * *v28);
   }
   else
   {
 LABEL_19:
-    v33 = sub_1C8D744(v10, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1B9D724(v10, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(UnityEngine_AndroidJavaClass_o *, _QWORD))v33)(v10, *(_QWORD *)(v33 + 8));
-  return v25;
+  (*(void (__fastcall **)(UnityEngine_AndroidJavaClass_o *, _QWORD))v29)(v10, *(_QWORD *)(v29 + 8));
+  return v21;
 }

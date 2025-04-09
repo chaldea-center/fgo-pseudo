@@ -2,7 +2,7 @@ void __fastcall WeightRate_WeightSeed___Il2CppFullySharedGenericType____ctor(
         WeightRate_WeightSeed_T__o *this,
         int32_t w,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o t,
-        const MethodInfo_3A72E60 *method)
+        const MethodInfo_3952CE4 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x20
@@ -17,14 +17,14 @@ void __fastcall WeightRate_WeightSeed___Il2CppFullySharedGenericType____ctor(
   v11[0] = (__int64)t.klass;
   v8 = *(unsigned int *)(*(_QWORD *)(*(_QWORD *)(*((_QWORD *)t.monitor + 4) + 192LL) + 8LL) + 252LL);
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  sub_1A87CDC(this, *(_QWORD *)(**(_QWORD **)(monitor[4] + 192LL) + 128LL), (unsigned int)w);
+  sub_19A7840(this, *(_QWORD *)(**(_QWORD **)(monitor[4] + 192LL) + 128LL), (unsigned int)w);
   v9 = monitor[4];
   if ( *(int *)(*(_QWORD *)(*(_QWORD *)(v9 + 192) + 8LL) + 40LL) >= 0 )
     v10 = v11;
   else
     v10 = (__int64 *)klass;
   memcpy((char *)v11 - ((v8 + 15) & 0x1FFFFFFF0LL), v10, v8);
-  sub_1C3B78C(
+  sub_1B4CFB8(
     this,
     *(_QWORD *)(**(_QWORD **)(v9 + 192) + 128LL) + 32LL,
     (char *)v11 - ((v8 + 15) & 0x1FFFFFFF0LL),
@@ -36,7 +36,7 @@ void __fastcall WeightRate_WeightSeed_int____ctor(
         WeightRate_WeightSeed_T__o *this,
         int32_t w,
         int32_t t,
-        const MethodInfo_3A72E34 *method)
+        const MethodInfo_3952CB8 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.weight = w;
@@ -46,7 +46,7 @@ void __fastcall WeightRate_WeightSeed_int____ctor(
 
 void __fastcall WeightRate___c__DisplayClass4_0___Il2CppFullySharedGenericType____ctor(
         WeightRate___c__DisplayClass4_0_T__o *this,
-        const MethodInfo_31BBA78 *method)
+        const MethodInfo_30CA0D8 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -55,7 +55,7 @@ void __fastcall WeightRate___c__DisplayClass4_0___Il2CppFullySharedGenericType__
 bool __fastcall WeightRate___c__DisplayClass4_0___Il2CppFullySharedGenericType____removeWeight_b__0(
         WeightRate___c__DisplayClass4_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_31BBA80 *method)
+        const MethodInfo_30CA0E0 *method)
 {
   WeightRate___c__DisplayClass4_0_T__RGCTXs *rgctx_data; // x9
   Il2CppClass *_1_T; // x8
@@ -82,33 +82,33 @@ bool __fastcall WeightRate___c__DisplayClass4_0___Il2CppFullySharedGenericType__
   }
   else
   {
-    v9 = *(_DWORD *)(sub_1C8D640() + 252);
+    v9 = *(_DWORD *)(sub_1B9D620() + 252);
     rgctx_data = method->klass->rgctx_data;
   }
   v10 = (char *)v18 - (((unsigned int)(v9 + 16) + 15LL) & 0x1FFFFFFF0LL);
   v11 = (_QWORD *)((char *)v18 - ((native_size + 15) & 0x1FFFFFFF0LL));
-  v12 = (const void *)sub_1C3B788(s, (char *)rgctx_data->_2_WeightRate_WeightSeed_T_->_1.fields + 32);
+  v12 = (const void *)sub_1B4CFB4(s, (char *)rgctx_data->_2_WeightRate_WeightSeed_T_->_1.fields + 32);
   memcpy(v11, v12, native_size);
   v13 = method->klass->rgctx_data;
   v14 = v13->_1_T;
   if ( (BYTE5(v14->vtable[0].methodPtr) & 1) == 0 )
   {
-    LODWORD(v14) = sub_1C8D640();
+    LODWORD(v14) = sub_1B9D620();
     v13 = method->klass->rgctx_data;
   }
   _0_WeightRate___c__DisplayClass4_0_T = v13[1]._0_WeightRate___c__DisplayClass4_0_T_;
-  v16 = (void *)sub_1C3B788(this, v13->_0_WeightRate___c__DisplayClass4_0_T_->_1.fields);
+  v16 = (void *)sub_1B4CFB4(this, v13->_0_WeightRate___c__DisplayClass4_0_T_->_1.fields);
   if ( (method->klass->rgctx_data->_1_T->_1.byval_arg.bits & 0x80000000) == 0 )
     v11 = (_QWORD *)*v11;
   v18[1] = v11;
-  sub_1C3C1CC((int)v14, (int)_0_WeightRate___c__DisplayClass4_0_T, (int)v10, v16);
+  sub_1B4D9F8((int)v14, (int)_0_WeightRate___c__DisplayClass4_0_T, (int)v10, v16);
   return v19 == 0;
 }
 
 
 void __fastcall WeightRate___c__DisplayClass4_0_int____ctor(
         WeightRate___c__DisplayClass4_0_T__o *this,
-        const MethodInfo_31BB9D4 *method)
+        const MethodInfo_30CA034 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -117,11 +117,11 @@ void __fastcall WeightRate___c__DisplayClass4_0_int____ctor(
 bool __fastcall WeightRate___c__DisplayClass4_0_int____removeWeight_b__0(
         WeightRate___c__DisplayClass4_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_31BB9DC *method)
+        const MethodInfo_30CA03C *method)
 {
   if ( !s )
-    sub_1C3B9C0(this, 0LL);
-  return System_Int32__CompareTo_64173900(
+    sub_1B4D1EC(this, 0LL);
+  return System_Int32__CompareTo_62608144(
            (_DWORD)this + 16,
            *(&s->fields.weight + 1),
            (const MethodInfo *)method->klass->rgctx_data[1]._0_WeightRate___c__DisplayClass4_0_T_) == 0;
@@ -130,7 +130,7 @@ bool __fastcall WeightRate___c__DisplayClass4_0_int____removeWeight_b__0(
 
 void __fastcall WeightRate___c__DisplayClass5_0___Il2CppFullySharedGenericType____ctor(
         WeightRate___c__DisplayClass5_0_T__o *this,
-        const MethodInfo_31BD4DC *method)
+        const MethodInfo_30CBB3C *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -139,7 +139,7 @@ void __fastcall WeightRate___c__DisplayClass5_0___Il2CppFullySharedGenericType__
 bool __fastcall WeightRate___c__DisplayClass5_0___Il2CppFullySharedGenericType____HasWeight_b__0(
         WeightRate___c__DisplayClass5_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_31BD4E4 *method)
+        const MethodInfo_30CBB44 *method)
 {
   WeightRate___c__DisplayClass5_0_T__RGCTXs *rgctx_data; // x9
   Il2CppClass *_1_T; // x8
@@ -166,33 +166,33 @@ bool __fastcall WeightRate___c__DisplayClass5_0___Il2CppFullySharedGenericType__
   }
   else
   {
-    v9 = *(_DWORD *)(sub_1C8D640() + 252);
+    v9 = *(_DWORD *)(sub_1B9D620() + 252);
     rgctx_data = method->klass->rgctx_data;
   }
   v10 = (char *)v18 - (((unsigned int)(v9 + 16) + 15LL) & 0x1FFFFFFF0LL);
   v11 = (_QWORD *)((char *)v18 - ((native_size + 15) & 0x1FFFFFFF0LL));
-  v12 = (const void *)sub_1C3B788(s, (char *)rgctx_data->_2_WeightRate_WeightSeed_T_->_1.fields + 32);
+  v12 = (const void *)sub_1B4CFB4(s, (char *)rgctx_data->_2_WeightRate_WeightSeed_T_->_1.fields + 32);
   memcpy(v11, v12, native_size);
   v13 = method->klass->rgctx_data;
   v14 = v13->_1_T;
   if ( (BYTE5(v14->vtable[0].methodPtr) & 1) == 0 )
   {
-    LODWORD(v14) = sub_1C8D640();
+    LODWORD(v14) = sub_1B9D620();
     v13 = method->klass->rgctx_data;
   }
   _0_WeightRate___c__DisplayClass5_0_T = v13[1]._0_WeightRate___c__DisplayClass5_0_T_;
-  v16 = (void *)sub_1C3B788(this, v13->_0_WeightRate___c__DisplayClass5_0_T_->_1.fields);
+  v16 = (void *)sub_1B4CFB4(this, v13->_0_WeightRate___c__DisplayClass5_0_T_->_1.fields);
   if ( (method->klass->rgctx_data->_1_T->_1.byval_arg.bits & 0x80000000) == 0 )
     v11 = (_QWORD *)*v11;
   v18[1] = v11;
-  sub_1C3C1CC((int)v14, (int)_0_WeightRate___c__DisplayClass5_0_T, (int)v10, v16);
+  sub_1B4D9F8((int)v14, (int)_0_WeightRate___c__DisplayClass5_0_T, (int)v10, v16);
   return v19 == 0;
 }
 
 
 void __fastcall WeightRate___c__DisplayClass5_0_int____ctor(
         WeightRate___c__DisplayClass5_0_T__o *this,
-        const MethodInfo_31BD438 *method)
+        const MethodInfo_30CBA98 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -201,45 +201,41 @@ void __fastcall WeightRate___c__DisplayClass5_0_int____ctor(
 bool __fastcall WeightRate___c__DisplayClass5_0_int____HasWeight_b__0(
         WeightRate___c__DisplayClass5_0_T__o *this,
         WeightRate_WeightSeed_T__o *s,
-        const MethodInfo_31BD440 *method)
+        const MethodInfo_30CBAA0 *method)
 {
   if ( !s )
-    sub_1C3B9C0(this, 0LL);
-  return System_Int32__CompareTo_64173900(
+    sub_1B4D1EC(this, 0LL);
+  return System_Int32__CompareTo_62608144(
            (_DWORD)this + 16,
            *(&s->fields.weight + 1),
            (const MethodInfo *)method->klass->rgctx_data[1]._0_WeightRate___c__DisplayClass5_0_T_) == 0;
 }
 
 
-void __fastcall WeightRate___c___Il2CppFullySharedGenericType____cctor(const MethodInfo_31B1B24 *method)
+void __fastcall WeightRate___c___Il2CppFullySharedGenericType____cctor(const MethodInfo_30C0D84 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
   __int64 v4; // x0
   __int64 v5; // x8
-  int64_t v6; // x20
+  __int64 v6; // x20
   __int16 v7; // w9
   __int64 v8; // x0
-  void (__fastcall *v9)(int64_t, _QWORD); // x21
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
-  __int64 v16; // x0
-  __int64 v17; // x0
-  __int64 v18; // x0
-  __int64 v19; // x0
+  void (__fastcall *v9)(__int64, _QWORD); // x21
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  __int64 v12; // x0
+  __int64 v13; // x0
+  __int64 v14; // x0
+  __int64 v15; // x0
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C8D640();
+    klass = sub_1B9D620();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C8D640();
-  v4 = sub_1C3B9B0(v3);
+    v3 = sub_1B9D620();
+  v4 = sub_1B4D1DC(v3);
   v5 = (__int64)method->klass;
   v6 = v4;
   v7 = *(_WORD *)(v5 + 309);
@@ -249,34 +245,34 @@ void __fastcall WeightRate___c___Il2CppFullySharedGenericType____cctor(const Met
   }
   else
   {
-    v8 = sub_1C8D640();
+    v8 = sub_1B9D620();
     v5 = (__int64)method->klass;
     v7 = *(_WORD *)(v5 + 309);
   }
-  v9 = **(void (__fastcall ***)(int64_t, _QWORD))(*(_QWORD *)(v8 + 192) + 8LL);
+  v9 = **(void (__fastcall ***)(__int64, _QWORD))(*(_QWORD *)(v8 + 192) + 8LL);
   if ( (v7 & 1) == 0 )
-    v5 = sub_1C8D640();
+    v5 = sub_1B9D620();
   v9(v6, *(_QWORD *)(*(_QWORD *)(v5 + 192) + 8LL));
-  v16 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1C8D640();
-  v17 = *(_QWORD *)(*(_QWORD *)(v16 + 192) + 16LL);
-  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C8D640();
-  **(_QWORD **)(v17 + 184) = v6;
-  v18 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1C8D640();
-  v19 = *(_QWORD *)(*(_QWORD *)(v18 + 192) + 16LL);
-  if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
-    v19 = sub_1C8D640();
-  sub_1C3B708(*(PartyOrganizationUtility_o **)(v19 + 184), v6, v10, v11, v12, v13, v14, v15);
+  v12 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1B9D620();
+  v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1B9D620();
+  **(_QWORD **)(v13 + 184) = v6;
+  v14 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1B9D620();
+  v15 = *(_QWORD *)(*(_QWORD *)(v14 + 192) + 16LL);
+  if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
+    v15 = sub_1B9D620();
+  sub_1B4CF34(*(CGThumbnailListItem_o **)(v15 + 184), v6, v10, v11);
 }
 
 
 void __fastcall WeightRate___c___Il2CppFullySharedGenericType____ctor(
         WeightRate___c_T__o *this,
-        const MethodInfo_31B1C18 *method)
+        const MethodInfo_30C0E78 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -286,64 +282,60 @@ int32_t __fastcall WeightRate___c___Il2CppFullySharedGenericType____ReverseWeigh
         WeightRate___c_T__o *this,
         WeightRate_WeightSeed_T__o *a,
         WeightRate_WeightSeed_T__o *b,
-        const MethodInfo_31B1C20 *method)
+        const MethodInfo_30C0E80 *method)
 {
-  const MethodInfo_31B1C20 *v5; // x19
+  const MethodInfo_30C0E80 *v5; // x19
   _DWORD *v6; // x0
   WeightRate___c_T__c *klass; // x8
 
   v5 = method;
-  v6 = (_DWORD *)sub_1C3B788(b, method->klass->rgctx_data->_3_WeightRate_WeightSeed_T_->_1.fields);
+  v6 = (_DWORD *)sub_1B4CFB4(b, method->klass->rgctx_data->_3_WeightRate_WeightSeed_T_->_1.fields);
   klass = v5->klass;
   LODWORD(v5) = *v6;
-  return (_DWORD)v5 - *(_DWORD *)sub_1C3B788(a, klass->rgctx_data->_3_WeightRate_WeightSeed_T_->_1.fields);
+  return (_DWORD)v5 - *(_DWORD *)sub_1B4CFB4(a, klass->rgctx_data->_3_WeightRate_WeightSeed_T_->_1.fields);
 }
 
 
-void __fastcall WeightRate___c_int____cctor(const MethodInfo_31AE0C4 *method)
+void __fastcall WeightRate___c_int____cctor(const MethodInfo_30BD4EC *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
   Il2CppObject *v4; // x20
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
-  __int64 v11; // x0
-  __int64 v12; // x0
-  __int64 v13; // x0
-  __int64 v14; // x0
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x0
+  __int64 v8; // x0
+  __int64 v9; // x0
+  __int64 v10; // x0
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C8D640();
+    klass = sub_1B9D620();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C8D640();
-  v4 = (Il2CppObject *)sub_1C3B9B0(v3);
+    v3 = sub_1B9D620();
+  v4 = (Il2CppObject *)sub_1B4D1DC(v3);
   if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C8D640();
+    sub_1B9D620();
   System_Object___ctor(v4, 0LL);
-  v11 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C8D640();
-  v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
-  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C8D640();
-  **(_QWORD **)(v12 + 184) = v4;
-  v13 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C8D640();
-  v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
-  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C8D640();
-  sub_1C3B708(*(PartyOrganizationUtility_o **)(v14 + 184), (int64_t)v4, v5, v6, v7, v8, v9, v10);
+  v7 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
+    v7 = sub_1B9D620();
+  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
+  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
+    v8 = sub_1B9D620();
+  **(_QWORD **)(v8 + 184) = v4;
+  v9 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+    v9 = sub_1B9D620();
+  v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
+  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
+    v10 = sub_1B9D620();
+  sub_1B4CF34(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall WeightRate___c_int____ctor(WeightRate___c_T__o *this, const MethodInfo_31AE180 *method)
+void __fastcall WeightRate___c_int____ctor(WeightRate___c_T__o *this, const MethodInfo_30BD5A8 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -353,9 +345,9 @@ int32_t __fastcall WeightRate___c_int____ReverseWeight_b__12_0(
         WeightRate___c_T__o *this,
         WeightRate_WeightSeed_T__o *a,
         WeightRate_WeightSeed_T__o *b,
-        const MethodInfo_31AE188 *method)
+        const MethodInfo_30BD5B0 *method)
 {
   if ( !b || !a )
-    sub_1C3B9C0(this, a);
+    sub_1B4D1EC(this, a);
   return b->fields.weight - a->fields.weight;
 }

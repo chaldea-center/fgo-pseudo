@@ -1,13 +1,13 @@
 void __fastcall BuffTypeDetailEntity___ctor(BuffTypeDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21CB1 & 1) == 0 )
+  if ( (byte_49BABC4 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C21CB1 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BABC4 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ bool __fastcall BuffTypeDetailEntity__CheckScript(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x0
 
-  if ( (byte_4C21CAC & 1) == 0 )
+  if ( (byte_49BABBF & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    byte_4C21CAC = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
+    byte_49BABBF = 1;
   }
   script = this->fields.script;
   if ( script )
     LOBYTE(script) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                        (System_Collections_Generic_Dictionary_object__object__o *)script,
                        (Il2CppObject *)key,
-                       (const MethodInfo_335595C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                       (const MethodInfo_3257D0C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)script;
 }
 
@@ -58,11 +58,11 @@ int32_t __fastcall BuffTypeDetailEntity__GetScript(
   const MethodInfo *v16; // x3
 
   v4 = defVal;
-  if ( (byte_4C21CAD & 1) == 0 )
+  if ( (byte_49BABC0 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    sub_1C3B764(&long_TypeInfo, v7);
-    byte_4C21CAD = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    sub_1B4CF90(&long_TypeInfo, v7);
+    byte_49BABC0 = 1;
   }
   if ( !BuffTypeDetailEntity__CheckScript(this, key, *(const MethodInfo **)&defVal) )
     return v4;
@@ -71,14 +71,14 @@ int32_t __fastcall BuffTypeDetailEntity__GetScript(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1C3B9C0(script, v8);
+    sub_1B4D1EC(script, v8);
   }
   if ( script->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(script, long_TypeInfo, v10, v11);
-  sub_1C3BC80(script);
-  return (unsigned int)BuffTypeDetailEntity__GetScript_40442436(v13, v14, v15, v16);
+  sub_1B4D4AC(script);
+  return (unsigned int)BuffTypeDetailEntity__GetScript_39560796(v13, v14, v15, v16);
 }
 
 
@@ -94,7 +94,7 @@ System_Int32_array *__fastcall BuffTypeDetailEntity__GetScriptIntArray(
   __int64 v10; // x1
   __int64 v11; // x1
   __int64 v12; // x1
-  System_String_o *Script_40442436; // x21
+  System_String_o *Script_39560796; // x21
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *v17; // x19
@@ -102,30 +102,26 @@ System_Int32_array *__fastcall BuffTypeDetailEntity__GetScriptIntArray(
   System_Func_object__int__o *_9__3_0; // x20
   Il2CppObject *v20; // x21
   struct BuffTypeDetailEntity___c_StaticFields *static_fields; // x0
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  System_Collections_Generic_IEnumerable_TSource__o *v28; // x0
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
 
-  if ( (byte_4C21CAF & 1) == 0 )
+  if ( (byte_49BABC2 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Linq_Enumerable_Select_string__int___, key);
-    sub_1C3B764(&Method_System_Linq_Enumerable_ToArray_int___, v9);
-    sub_1C3B764(&System_Func_string__int__TypeInfo, v10);
-    sub_1C3B764(&Method_BuffTypeDetailEntity___c__GetScriptIntArray_b__3_0__, v11);
-    sub_1C3B764(&BuffTypeDetailEntity___c_TypeInfo, v12);
-    byte_4C21CAF = 1;
+    sub_1B4CF90(&Method_System_Linq_Enumerable_Select_string__int___, key);
+    sub_1B4CF90(&Method_System_Linq_Enumerable_ToArray_int___, v9);
+    sub_1B4CF90(&System_Func_string__int__TypeInfo, v10);
+    sub_1B4CF90(&Method_BuffTypeDetailEntity___c__GetScriptIntArray_b__3_0__, v11);
+    sub_1B4CF90(&BuffTypeDetailEntity___c_TypeInfo, v12);
+    byte_49BABC2 = 1;
   }
-  Script_40442436 = BuffTypeDetailEntity__GetScript_40442436(this, key, 0LL, (const MethodInfo *)separator);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(Script_40442436, 0LL);
+  Script_39560796 = BuffTypeDetailEntity__GetScript_39560796(this, key, 0LL, (const MethodInfo *)separator);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(Script_39560796, 0LL);
   if ( IsNullOrEmpty )
     return defValues;
-  if ( !Script_40442436 )
-    sub_1C3B9C0(IsNullOrEmpty, v15);
-  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(Script_40442436, separator, 0, 0LL);
+  if ( !Script_39560796 )
+    sub_1B4D1EC(IsNullOrEmpty, v15);
+  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(Script_39560796, separator, 0, 0LL);
   v18 = BuffTypeDetailEntity___c_TypeInfo;
   if ( !BuffTypeDetailEntity___c_TypeInfo->_2.cctor_finished )
   {
@@ -141,23 +137,23 @@ System_Int32_array *__fastcall BuffTypeDetailEntity__GetScriptIntArray(
       v18 = BuffTypeDetailEntity___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v18->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C3B9B0(System_Func_string__int__TypeInfo);
+    _9__3_0 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(_9__3_0, v20, Method_BuffTypeDetailEntity___c__GetScriptIntArray_b__3_0__, 0LL);
     static_fields = BuffTypeDetailEntity___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_string__int__o *)_9__3_0;
-    sub_1C3B708((PartyOrganizationUtility_o *)&static_fields->__9__3_0, (int64_t)_9__3_0, v22, v23, v24, v25, v26, v27);
+    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v22, v23);
   }
-  v28 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+  v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v17,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_30221C0 *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                               (const MethodInfo_2F338DC *)Method_System_Linq_Enumerable_Select_string__int___);
   return System_Linq_Enumerable__ToArray_int_(
-           v28,
-           (const MethodInfo_302AB30 *)Method_System_Linq_Enumerable_ToArray_int___);
+           v24,
+           (const MethodInfo_2F3C24C *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
-System_String_o *__fastcall BuffTypeDetailEntity__GetScript_40442436(
+System_String_o *__fastcall BuffTypeDetailEntity__GetScript_39560796(
         BuffTypeDetailEntity_o *this,
         System_String_o *key,
         System_String_o *defVal,
@@ -166,10 +162,10 @@ System_String_o *__fastcall BuffTypeDetailEntity__GetScript_40442436(
   __int64 v7; // x1
   System_Collections_Generic_Dictionary_object__object__o *script; // x0
 
-  if ( (byte_4C21CAE & 1) == 0 )
+  if ( (byte_49BABC1 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
-    byte_4C21CAE = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, key);
+    byte_49BABC1 = 1;
   }
   if ( !BuffTypeDetailEntity__CheckScript(this, key, (const MethodInfo *)defVal) )
     return defVal;
@@ -178,9 +174,9 @@ System_String_o *__fastcall BuffTypeDetailEntity__GetScript_40442436(
     || (script = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                               script,
                                                                               (Il2CppObject *)key,
-                                                                              (const MethodInfo_33556E8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
+                                                                              (const MethodInfo_3257A98 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0LL )
   {
-    sub_1C3B9C0(script, v7);
+    sub_1B4D1EC(script, v7);
   }
   return (System_String_o *)((__int64 (__fastcall *)(System_Collections_Generic_Dictionary_object__object__o *, Il2CppMethodPointer))script->klass->vtable._3_ToString.method)(
                               script,
@@ -196,12 +192,12 @@ int32_t __fastcall BuffTypeDetailEntity__GetShowStateWarBoardEnemyEquip(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C21CB0 & 1) == 0 )
+  if ( (byte_49BABC3 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_13052/*"TERMS_OF_USE_TITLE"*/, *(_QWORD *)&defVal);
-    byte_4C21CB0 = 1;
+    sub_1B4CF90(&StringLiteral_12571/*"ShowStateWarBoardEnemyEquip"*/, *(_QWORD *)&defVal);
+    byte_49BABC3 = 1;
   }
-  return BuffTypeDetailEntity__GetScript(this, (System_String_o *)StringLiteral_13052/*"TERMS_OF_USE_TITLE"*/, defVal, v3);
+  return BuffTypeDetailEntity__GetScript(this, (System_String_o *)StringLiteral_12571/*"ShowStateWarBoardEnemyEquip"*/, defVal, v3);
 }
 
 
@@ -209,30 +205,18 @@ void __fastcall BuffTypeDetailEntity___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4C21CB2 & 1) == 0 )
+  if ( (byte_49BABC5 & 1) == 0 )
   {
-    sub_1C3B764(&BuffTypeDetailEntity___c_TypeInfo, v1);
-    byte_4C21CB2 = 1;
+    sub_1B4CF90(&BuffTypeDetailEntity___c_TypeInfo, v1);
+    byte_49BABC5 = 1;
   }
-  v2 = (Il2CppObject *)sub_1C3B9B0(BuffTypeDetailEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B4D1DC(BuffTypeDetailEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BuffTypeDetailEntity___c_TypeInfo->static_fields->__9 = (struct BuffTypeDetailEntity___c_o *)v2;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)BuffTypeDetailEntity___c_TypeInfo->static_fields,
-    (int64_t)v2,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)BuffTypeDetailEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

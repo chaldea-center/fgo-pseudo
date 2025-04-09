@@ -5,40 +5,16 @@ void __fastcall PaymentHistoryListViewItem___ctor(
         System_String_o *bottomMessage,
         const MethodInfo *method)
 {
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  int64_t v14; // x2
-  int32_t v15; // w3
-  System_String_o *v16; // x4
-  BattleSetupInfo_o *v17; // x5
-  FollowerInfo_o *v18; // x6
-  PartyListViewItem_o *v19; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42199332((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
   this->fields._UpsideMessage_k__BackingField = upsideMessage;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._UpsideMessage_k__BackingField,
-    (int64_t)upsideMessage,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._UpsideMessage_k__BackingField, (int32_t)upsideMessage, v8, v9);
   this->fields._BottomMessage_k__BackingField = bottomMessage;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BottomMessage_k__BackingField,
-    (int64_t)bottomMessage,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._BottomMessage_k__BackingField, (int32_t)bottomMessage, v10, v11);
 }
 
 
@@ -63,22 +39,14 @@ void __fastcall PaymentHistoryListViewItem__set_BottomMessage(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._BottomMessage_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._BottomMessage_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._BottomMessage_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -87,20 +55,12 @@ void __fastcall PaymentHistoryListViewItem__set_UpsideMessage(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._UpsideMessage_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._UpsideMessage_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._UpsideMessage_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

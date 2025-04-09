@@ -3,24 +3,12 @@ void __fastcall WarBoardCallbackTask___ctor(
         UnityEngine_CustomYieldInstruction_o *waitYieldInstruction,
         const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)waitYieldInstruction);
   this->fields.waitYieldInstruction = waitYieldInstruction;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.waitYieldInstruction,
-    (int64_t)waitYieldInstruction,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9,
-    v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.waitYieldInstruction, (int32_t)waitYieldInstruction, v5, v6);
 }
 
 
@@ -29,23 +17,19 @@ System_Collections_IEnumerator_o *__fastcall WarBoardCallbackTask__Execute(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C1FD48 & 1) == 0 )
+  if ( (byte_49B8C54 & 1) == 0 )
   {
-    sub_1C3B764(&WarBoardCallbackTask__Execute_d__2_TypeInfo, method);
-    byte_4C1FD48 = 1;
+    sub_1B4CF90(&WarBoardCallbackTask__Execute_d__2_TypeInfo, method);
+    byte_49B8C54 = 1;
   }
-  v3 = sub_1C3B9B0(WarBoardCallbackTask__Execute_d__2_TypeInfo);
+  v3 = sub_1B4D1DC(WarBoardCallbackTask__Execute_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -64,12 +48,8 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
         WarBoardCallbackTask__Execute_d__2_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
   int32_t _1__state; // w8
   struct WarBoardCallbackTask_o *_4__this; // x8
   Il2CppObject *waitYieldInstruction; // x1
@@ -89,7 +69,7 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C3B9C0(this, method);
+      sub_1B4D1EC(this, method);
     waitYieldInstruction = (Il2CppObject *)_4__this->fields.waitYieldInstruction;
     if ( !waitYieldInstruction )
     {
@@ -99,15 +79,7 @@ bool __fastcall WarBoardCallbackTask__Execute_d__2__MoveNext(
     {
       this->fields.__2__current = waitYieldInstruction;
       p__2__current = &this->fields.__2__current;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&this->fields.__2__current,
-        (int64_t)waitYieldInstruction,
-        v2,
-        v3,
-        v4,
-        v5,
-        v6,
-        v7);
+      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)waitYieldInstruction, v2, v3);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -132,11 +104,11 @@ void __fastcall __noreturn WarBoardCallbackTask__Execute_d__2__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
+  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C3B778(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C3B88C(v3, v4);
+  v4 = sub_1B4CFA4(&Method_WarBoardCallbackTask__Execute_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1B4D0B8(v3, v4);
 }
 
 

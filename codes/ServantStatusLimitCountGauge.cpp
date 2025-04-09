@@ -1,21 +1,17 @@
 void __fastcall ServantStatusLimitCountGauge___ctor(ServantStatusLimitCountGauge_o *this, const MethodInfo *method)
 {
   struct UISprite_array *v3; // x0
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C1E696 & 1) == 0 )
+  if ( (byte_49B74CF & 1) == 0 )
   {
-    sub_1C3B764(&UISprite___TypeInfo, method);
-    byte_4C1E696 = 1;
+    sub_1B4CF90(&UISprite___TypeInfo, method);
+    byte_49B74CF = 1;
   }
-  v3 = (struct UISprite_array *)sub_1C3B80C(UISprite___TypeInfo, 4LL);
+  v3 = (struct UISprite_array *)sub_1B4D038(UISprite___TypeInfo, 4LL);
   this->fields.gaugeSpriteList = v3;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.gaugeSpriteList, (int64_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.gaugeSpriteList, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -36,16 +32,16 @@ void __fastcall ServantStatusLimitCountGauge__Set(
   System_String_o *v12; // x1
 
   v6 = this;
-  if ( (byte_4C1E695 & 1) == 0 )
+  if ( (byte_49B74CE & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_20557/*"itemSelectIdx"*/, *(_QWORD *)&limitCount);
-    this = (ServantStatusLimitCountGauge_o *)sub_1C3B764(&StringLiteral_20556/*"itemId"*/, v7);
-    byte_4C1E695 = 1;
+    sub_1B4CF90(&StringLiteral_19855/*"icon_limit_on"*/, *(_QWORD *)&limitCount);
+    this = (ServantStatusLimitCountGauge_o *)sub_1B4CF90(&StringLiteral_19854/*"icon_limit_off"*/, v7);
+    byte_49B74CE = 1;
   }
   gaugeSpriteList = v6->fields.gaugeSpriteList;
   if ( !gaugeSpriteList )
 LABEL_16:
-    sub_1C3B9C0(this, *(_QWORD *)&limitCount);
+    sub_1B4D1EC(this, *(_QWORD *)&limitCount);
   v9 = 0LL;
   while ( 1 )
   {
@@ -53,7 +49,7 @@ LABEL_16:
     if ( v9 >= (int)max_length )
       break;
     if ( v9 >= max_length )
-      sub_1C3B9C8(this, *(_QWORD *)&limitCount);
+      sub_1B4D1F4(this, *(_QWORD *)&limitCount);
     this = (ServantStatusLimitCountGauge_o *)gaugeSpriteList->m_Items[v9];
     if ( v9 >= limitMax )
     {
@@ -66,9 +62,9 @@ LABEL_16:
       if ( !this )
         goto LABEL_16;
       if ( v9 >= limitCount )
-        v11 = (System_String_o **)&StringLiteral_20556/*"itemId"*/;
+        v11 = (System_String_o **)&StringLiteral_19854/*"icon_limit_off"*/;
       else
-        v11 = (System_String_o **)&StringLiteral_20557/*"itemSelectIdx"*/;
+        v11 = (System_String_o **)&StringLiteral_19855/*"icon_limit_on"*/;
       v12 = *v11;
     }
     UISprite__set_spriteName((UISprite_o *)this, v12, 0LL);

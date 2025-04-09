@@ -18,29 +18,29 @@ void __fastcall CardStatusSyncRequest__beginRequest(
   System_String_o *v20; // x0
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C2388B & 1) == 0 )
+  if ( (byte_49BC7BA & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, changeUserSvtIds);
-    sub_1C3B764(&StringLiteral_21246/*"mstBoost"*/, v13);
-    sub_1C3B764(&StringLiteral_18167/*"debug_server_time"*/, v14);
-    sub_1C3B764(&StringLiteral_21221/*"mstArea"*/, v15);
-    sub_1C3B764(&StringLiteral_21204/*"ms-BN"*/, v16);
-    sub_1C3B764(&StringLiteral_23409/*"synthesis_notice_"*/, v17);
-    byte_4C2388B = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, changeUserSvtIds);
+    sub_1B4CF90(&StringLiteral_20536/*"isStorage"*/, v13);
+    sub_1B4CF90(&StringLiteral_17514/*"changeUserSvtIds"*/, v14);
+    sub_1B4CF90(&StringLiteral_20511/*"isLock"*/, v15);
+    sub_1B4CF90(&StringLiteral_20493/*"isChoice"*/, v16);
+    sub_1B4CF90(&StringLiteral_22653/*"revokeUserSvtIds"*/, v17);
+    byte_49BC7BA = 1;
   }
   if ( changeUserSvtIds && *(_QWORD *)&changeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v18 = JsonManager__toJson(&changeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_42621852((RequestBase_o *)this, (System_String_o *)StringLiteral_18167/*"debug_server_time"*/, v18, v19);
+    RequestBase__addField_41748396((RequestBase_o *)this, (System_String_o *)StringLiteral_17514/*"changeUserSvtIds"*/, v18, v19);
   }
   if ( revokeUserSvtIds && *(_QWORD *)&revokeUserSvtIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v20 = JsonManager__toJson(&revokeUserSvtIds->obj, 0, 0, 0LL);
-    RequestBase__addField_42621852((RequestBase_o *)this, (System_String_o *)StringLiteral_23409/*"synthesis_notice_"*/, v20, v21);
+    RequestBase__addField_41748396((RequestBase_o *)this, (System_String_o *)StringLiteral_22653/*"revokeUserSvtIds"*/, v20, v21);
   }
   if ( !isStorage )
   {
@@ -49,14 +49,14 @@ void __fastcall CardStatusSyncRequest__beginRequest(
 LABEL_19:
     RequestBase__addField(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_21221/*"mstArea"*/,
+      (System_String_o *)StringLiteral_20511/*"isLock"*/,
       1,
       (const MethodInfo *)isStorage);
     if ( !isChoice )
       goto LABEL_17;
     goto LABEL_16;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21246/*"mstBoost"*/, 1, (const MethodInfo *)isStorage);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20536/*"isStorage"*/, 1, (const MethodInfo *)isStorage);
   if ( isLock )
     goto LABEL_19;
 LABEL_15:
@@ -64,7 +64,7 @@ LABEL_15:
 LABEL_16:
     RequestBase__addField(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_21204/*"ms-BN"*/,
+      (System_String_o *)StringLiteral_20493/*"isChoice"*/,
       1,
       (const MethodInfo *)isStorage);
 LABEL_17:
@@ -76,11 +76,11 @@ System_String_o *__fastcall CardStatusSyncRequest__getMockData(CardStatusSyncReq
 {
   __int64 v2; // x1
 
-  if ( (byte_4C2388A & 1) == 0 )
+  if ( (byte_49BC7B9 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_1/*""*/, v2);
-    byte_4C2388A = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v2);
+    byte_49BC7B9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -93,16 +93,16 @@ System_String_o *__fastcall CardStatusSyncRequest__getURL(CardStatusSyncRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23889 & 1) == 0 )
+  if ( (byte_49BC7B8 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_18104/*"darkgrey"*/, v2);
-    byte_4C23889 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_17452/*"card/statusSync"*/, v2);
+    byte_49BC7B8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_18104/*"darkgrey"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17452/*"card/statusSync"*/, 0LL);
 }
 
 
@@ -117,29 +117,29 @@ void __fastcall CardStatusSyncRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v9; // x9
 
-  if ( (byte_4C2388C & 1) == 0 )
+  if ( (byte_49BC7BB & 1) == 0 )
   {
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1C3B764(&StringLiteral_22683/*"sandboxSeurity"*/, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C2388C = 1;
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC7BB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(70, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42712632(v7, 0LL) )
+  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22683/*"sandboxSeurity"*/;
+    v9 = &StringLiteral_21947/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_22507/*"referrerMapId"*/;
+    v9 = &StringLiteral_21779/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

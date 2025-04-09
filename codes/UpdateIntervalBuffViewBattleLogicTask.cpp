@@ -3,17 +3,13 @@ void __fastcall UpdateIntervalBuffViewBattleLogicTask___ctor(
         BattleActionData_o *actData,
         const MethodInfo *method)
 {
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)actData);
   this->fields.actiontype = 58;
   this->fields.baseActData = actData;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.baseActData, (int64_t)actData, v5, v6, v7, v8, v9, v10);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.baseActData, (int32_t)actData, v5, v6);
   this->fields.isSkipStep = 1;
 }
 
@@ -26,13 +22,13 @@ BattleActionData_o *__fastcall UpdateIntervalBuffViewBattleLogicTask__MakeAction
   BattleActionData_o *baseActData; // x19
   UpdateViewIntervalBuffActionData_o *v5; // x20
 
-  if ( (byte_4C24EC4 & 1) == 0 )
+  if ( (byte_49BDDFF & 1) == 0 )
   {
-    sub_1C3B764(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
-    byte_4C24EC4 = 1;
+    sub_1B4CF90(&UpdateViewIntervalBuffActionData_TypeInfo, logic);
+    byte_49BDDFF = 1;
   }
   baseActData = this->fields.baseActData;
-  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1C3B9B0(UpdateViewIntervalBuffActionData_TypeInfo);
+  v5 = (UpdateViewIntervalBuffActionData_o *)sub_1B4D1DC(UpdateViewIntervalBuffActionData_TypeInfo);
   UpdateViewIntervalBuffActionData___ctor(v5, baseActData, 0LL);
   return (BattleActionData_o *)v5;
 }

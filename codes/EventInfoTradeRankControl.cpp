@@ -2,10 +2,10 @@ void __fastcall EventInfoTradeRankControl___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4C23FDA & 1) == 0 )
+  if ( (byte_49BCF0F & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoTradeRankControl_TypeInfo, v1);
-    byte_4C23FDA = 1;
+    sub_1B4CF90(&EventInfoTradeRankControl_TypeInfo, v1);
+    byte_49BCF0F = 1;
   }
   EventInfoTradeRankControl_TypeInfo->static_fields->oldEventPoint = -1LL;
 }
@@ -13,10 +13,10 @@ void __fastcall EventInfoTradeRankControl___cctor(const MethodInfo *method)
 
 void __fastcall EventInfoTradeRankControl___ctor(EventInfoTradeRankControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C23FD9 & 1) == 0 )
+  if ( (byte_49BCF0E & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoUIProgressControl_TypeInfo, method);
-    byte_4C23FD9 = 1;
+    sub_1B4CF90(&EventInfoUIProgressControl_TypeInfo, method);
+    byte_49BCF0E = 1;
   }
   this->fields.tradeRank = 1;
   if ( !EventInfoUIProgressControl_TypeInfo->_2.cctor_finished )
@@ -47,18 +47,18 @@ int32_t __fastcall EventInfoTradeRankControl__GetCurrentTradeRank(
   struct EventProgressValueEntity_o *v18; // x8
   int32_t progressValue; // w8
 
-  if ( (byte_4C23FD7 & 1) == 0 )
+  if ( (byte_49BCF0C & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    sub_1C3B764(&TerminalSceneComponent_TypeInfo, v3);
-    byte_4C23FD7 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    sub_1B4CF90(&TerminalSceneComponent_TypeInfo, v3);
+    byte_49BCF0C = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C1CAE3 )
+  if ( !byte_49B5933 )
   {
-    sub_1C3B764(&TerminalSceneComponent_TypeInfo, method);
-    byte_4C1CAE3 = 1;
+    sub_1B4CF90(&TerminalSceneComponent_TypeInfo, method);
+    byte_49B5933 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -73,10 +73,10 @@ int32_t __fastcall EventInfoTradeRankControl__GetCurrentTradeRank(
     goto LABEL_22;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4C1CAE3 )
+  if ( !byte_49B5933 )
   {
-    sub_1C3B764(&TerminalSceneComponent_TypeInfo, v6);
-    byte_4C1CAE3 = 1;
+    sub_1B4CF90(&TerminalSceneComponent_TypeInfo, v6);
+    byte_49B5933 = 1;
   }
   v7 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -86,7 +86,7 @@ int32_t __fastcall EventInfoTradeRankControl__GetCurrentTradeRank(
   }
   v8 = v7->static_fields->mInstance;
   if ( !v8 )
-    sub_1C3B9C0(0LL, v6);
+    sub_1B4D1EC(0LL, v6);
   if ( !TerminalSceneComponent__IsMapActive(v8, 0LL) )
   {
     currentEventProgressValueEntity = this->fields.currentEventProgressValueEntity;
@@ -150,34 +150,34 @@ EventInfoTradeRankControl_ViewData_o *__fastcall EventInfoTradeRankControl__GetV
   System_Collections_Generic_IEnumerable_TSource__o *viewDataList; // x19
   System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_4C23FD4 & 1) == 0 )
+  if ( (byte_49BCF09 & 1) == 0 )
   {
-    sub_1C3B764(
+    sub_1B4CF90(
       &Method_System_Linq_Enumerable_FirstOrDefault_EventInfoTradeRankControl_ViewData___,
       *(_QWORD *)&tradeRank);
-    sub_1C3B764(&System_Func_EventInfoTradeRankControl_ViewData__bool__TypeInfo, v5);
-    sub_1C3B764(&Method_EventInfoTradeRankControl___c__DisplayClass29_0__GetViewData_b__0__, v6);
-    sub_1C3B764(&EventInfoTradeRankControl___c__DisplayClass29_0_TypeInfo, v7);
-    byte_4C23FD4 = 1;
+    sub_1B4CF90(&System_Func_EventInfoTradeRankControl_ViewData__bool__TypeInfo, v5);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl___c__DisplayClass29_0__GetViewData_b__0__, v6);
+    sub_1B4CF90(&EventInfoTradeRankControl___c__DisplayClass29_0_TypeInfo, v7);
+    byte_49BCF09 = 1;
   }
-  v8 = sub_1C3B9B0(EventInfoTradeRankControl___c__DisplayClass29_0_TypeInfo);
+  v8 = sub_1B4D1DC(EventInfoTradeRankControl___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1C3B9C0(v9, v10);
+    sub_1B4D1EC(v9, v10);
   *(_DWORD *)(v8 + 16) = tradeRank;
   viewDataList = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.viewDataList;
   if ( !viewDataList )
     return 0LL;
-  v12 = (System_Func_object__bool__o *)sub_1C3B9B0(System_Func_EventInfoTradeRankControl_ViewData__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_EventInfoTradeRankControl_ViewData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v8,
     Method_EventInfoTradeRankControl___c__DisplayClass29_0__GetViewData_b__0__,
     0LL);
-  return (EventInfoTradeRankControl_ViewData_o *)System_Linq_Enumerable__FirstOrDefault_object__50415372(
+  return (EventInfoTradeRankControl_ViewData_o *)System_Linq_Enumerable__FirstOrDefault_object__49446844(
                                                    viewDataList,
                                                    (System_Func_TSource__bool__o *)v12,
-                                                   (const MethodInfo_301470C *)Method_System_Linq_Enumerable_FirstOrDefault_EventInfoTradeRankControl_ViewData___);
+                                                   (const MethodInfo_2F27FBC *)Method_System_Linq_Enumerable_FirstOrDefault_EventInfoTradeRankControl_ViewData___);
 }
 
 
@@ -205,17 +205,17 @@ void __fastcall EventInfoTradeRankControl__Initialization(
   struct EventInfoTradeRankControl_StaticFields *static_fields; // x8
   int64_t value; // x19
 
-  if ( (byte_4C23FCC & 1) == 0 )
+  if ( (byte_49BCF01 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, entity);
-    sub_1C3B764(&Method_EventInfoTradeRankControl__Initialization_b__18_0__, v5);
-    sub_1C3B764(&EventInfoTradeRankControl_TypeInfo, v6);
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v7);
-    byte_4C23FCC = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, entity);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl__Initialization_b__18_0__, v5);
+    sub_1B4CF90(&EventInfoTradeRankControl_TypeInfo, v6);
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v7);
+    byte_49BCF01 = 1;
   }
   EventInfoUIProgressControl__Initialization((EventInfoUIProgressControl_o *)this, entity, method);
   eventUiEntity = this->fields.eventUiEntity;
-  v9 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_EventInfoTradeRankControl__Initialization_b__18_0__, 0LL);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v9, v10);
   v12 = EventInfoTradeRankControl_TypeInfo;
@@ -241,10 +241,10 @@ void __fastcall EventInfoTradeRankControl__Initialization(
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C1EA91 )
+  if ( !byte_49B798B )
   {
-    sub_1C3B764(&TerminalPramsManager_TypeInfo, v11);
-    byte_4C1EA91 = 1;
+    sub_1B4CF90(&TerminalPramsManager_TypeInfo, v11);
+    byte_49B798B = 1;
   }
   v17 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -266,7 +266,7 @@ void __fastcall EventInfoTradeRankControl__Initialization(
         v19 = *(_QWORD *)&OldUserEventPoint_k__BackingField->max_length;
       }
       if ( !(_DWORD)v19 )
-        sub_1C3B9C8(v12, v11);
+        sub_1B4D1F4(v12, v11);
       v20 = OldUserEventPoint_k__BackingField->m_Items[0];
       if ( v20 )
       {
@@ -284,7 +284,7 @@ void __fastcall EventInfoTradeRankControl__Initialization(
         return;
       }
 LABEL_27:
-      sub_1C3B9C0(v12, v11);
+      sub_1B4D1EC(v12, v11);
     }
   }
 }
@@ -298,7 +298,7 @@ void __fastcall EventInfoTradeRankControl__OnDestroy(EventInfoTradeRankControl_o
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, v2);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, v5);
 }
@@ -316,45 +316,37 @@ void __fastcall EventInfoTradeRankControl__PlayAnim(
   __int64 v9; // x22
   __int64 v10; // x0
   __int64 v11; // x1
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  System_Action_o *v24; // x20
-  const MethodInfo *v25; // x2
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  System_Action_o *v16; // x20
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4C23FCD & 1) == 0 )
+  if ( (byte_49BCF02 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&type);
-    sub_1C3B764(&Method_EventInfoTradeRankControl___c__DisplayClass20_0__PlayAnim_b__0__, v7);
-    sub_1C3B764(&EventInfoTradeRankControl___c__DisplayClass20_0_TypeInfo, v8);
-    byte_4C23FCD = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&type);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl___c__DisplayClass20_0__PlayAnim_b__0__, v7);
+    sub_1B4CF90(&EventInfoTradeRankControl___c__DisplayClass20_0_TypeInfo, v8);
+    byte_49BCF02 = 1;
   }
-  v9 = sub_1C3B9B0(EventInfoTradeRankControl___c__DisplayClass20_0_TypeInfo);
+  v9 = sub_1B4D1DC(EventInfoTradeRankControl___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1C3B9C0(v10, v11);
+    sub_1B4D1EC(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 16), (int64_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
   *(_QWORD *)(v9 + 24) = callback;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v9 + 24), (int64_t)callback, v18, v19, v20, v21, v22, v23);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v9 + 24), (int32_t)callback, v14, v15);
   if ( type == 1 )
   {
-    v24 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
     System_Action___ctor(
-      v24,
+      v16,
       (Il2CppObject *)v9,
       Method_EventInfoTradeRankControl___c__DisplayClass20_0__PlayAnim_b__0__,
       0LL);
-    EventInfoTradeRankControl__ShowOpenQuestDialog(this, v24, v25);
+    EventInfoTradeRankControl__ShowOpenQuestDialog(this, v16, v17);
   }
   else
   {
@@ -373,18 +365,14 @@ void __fastcall EventInfoTradeRankControl__PlayRankUpAnimation(
   __int64 v7; // x1
   UnityEngine_AnimationState_o *effectAnimationState; // x0
   Il2CppObject *Component_object; // x20
-  int64_t v10; // x2
-  int32_t v11; // w3
-  System_String_o *v12; // x4
-  BattleSetupInfo_o *v13; // x5
-  FollowerInfo_o *v14; // x6
-  PartyListViewItem_o *v15; // x7
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C23FCF & 1) == 0 )
+  if ( (byte_49BCF04 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, callback);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
-    byte_4C23FCF = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, callback);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
+    byte_49BCF04 = 1;
   }
   tradeRankEffect = (UnityEngine_Object_o *)this->fields.tradeRankEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -406,7 +394,7 @@ void __fastcall EventInfoTradeRankControl__PlayRankUpAnimation(
     goto LABEL_15;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)effectAnimationState,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAnimationState = (UnityEngine_AnimationState_o *)UnityEngine_Object__op_Equality(
@@ -421,17 +409,9 @@ LABEL_12:
   }
   if ( !Component_object )
 LABEL_15:
-    sub_1C3B9C0(effectAnimationState, v7);
+    sub_1B4D1EC(effectAnimationState, v7);
   Component_object[2].monitor = callback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&Component_object[2].monitor,
-    (int64_t)callback,
-    v10,
-    v11,
-    v12,
-    v13,
-    v14,
-    v15);
+  sub_1B4CF34((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)callback, v10, v11);
 }
 
 
@@ -472,29 +452,21 @@ void __fastcall EventInfoTradeRankControl__SetTradeRank(
   System_String_o *animationName; // x21
   Il2CppObject *v15; // x0
   struct UnityEngine_Animation_o **p_effectAnimation; // x20
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   UnityEngine_Object_o *effectAnimation; // x22
   UnityEngine_Object_o *Clip; // x22
   struct UnityEngine_AnimationState_o *Item; // x0
   struct UnityEngine_AnimationState_o **p_effectAnimationState; // x19
-  int64_t v27; // x2
-  int32_t v28; // w3
-  System_String_o *v29; // x4
-  BattleSetupInfo_o *v30; // x5
-  FollowerInfo_o *v31; // x6
-  PartyListViewItem_o *v32; // x7
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
 
-  if ( (byte_4C23FD5 & 1) == 0 )
+  if ( (byte_49BCF0A & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_Animation___, *(_QWORD *)&rank);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, v5);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v6);
-    byte_4C23FD5 = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Animation___, *(_QWORD *)&rank);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___, v5);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
+    byte_49BCF0A = 1;
   }
   this->fields.tradeRank = rank;
   EventInfoUIProgressControl__SaveEventProgressValueSaveData((EventInfoUIProgressControl_o *)this, rank, method);
@@ -508,7 +480,7 @@ void __fastcall EventInfoTradeRankControl__SetTradeRank(
       goto LABEL_28;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          v9,
-                         (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                         (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -528,14 +500,14 @@ void __fastcall EventInfoTradeRankControl__SetTradeRank(
     v9 = this->fields.tradeRankEffect;
     if ( !v9 )
 LABEL_28:
-      sub_1C3B9C0(v9, v8);
+      sub_1B4D1EC(v9, v8);
     animationName = v13->fields.animationName;
     v15 = UnityEngine_GameObject__GetComponent_object_(
             v9,
-            (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+            (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     this->fields.effectAnimation = (struct UnityEngine_Animation_o *)v15;
     p_effectAnimation = &this->fields.effectAnimation;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.effectAnimation, (int64_t)v15, v17, v18, v19, v20, v21, v22);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.effectAnimation, (int32_t)v15, v17, v18);
     effectAnimation = (UnityEngine_Object_o *)this->fields.effectAnimation;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -559,15 +531,7 @@ LABEL_28:
             Item = UnityEngine_Animation__get_Item((UnityEngine_Animation_o *)v9, animationName, 0LL);
             this->fields.effectAnimationState = Item;
             p_effectAnimationState = &this->fields.effectAnimationState;
-            sub_1C3B708(
-              (PartyOrganizationUtility_o *)p_effectAnimationState,
-              (int64_t)Item,
-              v27,
-              v28,
-              v29,
-              v30,
-              v31,
-              v32);
+            sub_1B4CF34((CGThumbnailListItem_o *)p_effectAnimationState, (int32_t)Item, v23, v24);
             v9 = (UnityEngine_GameObject_o *)*p_effectAnimationState;
             if ( *p_effectAnimationState )
             {
@@ -607,11 +571,11 @@ void __fastcall EventInfoTradeRankControl__SetTradeRankCondition(
   UILabel_o *v10; // x8
   System_String_o **p_condMessage; // x9
 
-  if ( (byte_4C23FD6 & 1) == 0 )
+  if ( (byte_49BCF0B & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, *(_QWORD *)&rank);
-    sub_1C3B764(&StringLiteral_897/*"--MM--Z"*/, v5);
-    byte_4C23FD6 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, *(_QWORD *)&rank);
+    sub_1B4CF90(&StringLiteral_867/*"-"*/, v5);
+    byte_49BCF0B = 1;
   }
   nextRankConditionLabel = (UnityEngine_Object_o *)this->fields.nextRankConditionLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -635,10 +599,10 @@ LABEL_11:
     }
     else if ( v10 )
     {
-      p_condMessage = (System_String_o **)&StringLiteral_897/*"--MM--Z"*/;
+      p_condMessage = (System_String_o **)&StringLiteral_867/*"-"*/;
       goto LABEL_11;
     }
-    sub_1C3B9C0(EntityByProgressValue, v9);
+    sub_1B4D1EC(EntityByProgressValue, v9);
   }
 }
 
@@ -653,7 +617,7 @@ void __fastcall EventInfoTradeRankControl__SetUIDisp(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, isDisp, 0LL);
 }
 
@@ -682,11 +646,11 @@ void __fastcall EventInfoTradeRankControl__SetupEventPoint(EventInfoTradeRankCon
   UILabel_o *v8; // x19
   int64_t EventPointNoGroup; // x20
 
-  if ( (byte_4C23FD2 & 1) == 0 )
+  if ( (byte_49BCF07 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v3);
-    byte_4C23FD2 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
+    byte_49BCF07 = 1;
   }
   eventPointLabel = (UnityEngine_Object_o *)this->fields.eventPointLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -704,7 +668,7 @@ void __fastcall EventInfoTradeRankControl__SetupEventPoint(EventInfoTradeRankCon
     NumberFormatLong = LocalizationManager__GetNumberFormatLong(EventPointNoGroup, 0LL);
     if ( !v8 )
 LABEL_11:
-      sub_1C3B9C0(NumberFormatLong, v6);
+      sub_1B4D1EC(NumberFormatLong, v6);
     UILabel__set_text(v8, NumberFormatLong, 0LL);
   }
 }
@@ -719,10 +683,10 @@ void __fastcall EventInfoTradeRankControl__SetupEventPointBg(
   __int64 v5; // x1
   struct UISprite_o *v6; // x0
 
-  if ( (byte_4C23FD1 & 1) == 0 )
+  if ( (byte_49BCF06 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C23FD1 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BCF06 = 1;
   }
   eventPointBgSprite = (UnityEngine_Object_o *)this->fields.eventPointBgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -736,7 +700,7 @@ void __fastcall EventInfoTradeRankControl__SetupEventPointBg(
       v4);
     v6 = this->fields.eventPointBgSprite;
     if ( !v6 )
-      sub_1C3B9C0(0LL, v5);
+      sub_1B4D1EC(0LL, v5);
     ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v6->klass->vtable._33_MakePixelPerfect.method)(
       v6,
       v6->klass->vtable._34_get_minWidth.methodPtr);
@@ -754,29 +718,21 @@ void __fastcall EventInfoTradeRankControl__SetupTradeRank(EventInfoTradeRankCont
   UnityEngine_Transform_o *tradeRankEffectParent; // x21
   Il2CppObject *tradeRankEffectPrefab; // x22
   Il2CppObject *v10; // x0
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   Il2CppObject *ComponentInChildren_object; // x0
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   int32_t CurrentTradeRank; // w0
-  const MethodInfo *v25; // x2
-  const MethodInfo *v26; // x2
+  const MethodInfo *v17; // x2
+  const MethodInfo *v18; // x2
 
-  if ( (byte_4C23FD3 & 1) == 0 )
+  if ( (byte_49BCF08 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___, method);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_GameObject____77992824, v3);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v4);
-    byte_4C23FD3 = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___, method);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject____75575200, v3);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
+    byte_49BCF08 = 1;
   }
   p_tradeRankEffect = &this->fields.tradeRankEffect;
   tradeRankEffect = (UnityEngine_Object_o *)this->fields.tradeRankEffect;
@@ -788,34 +744,30 @@ void __fastcall EventInfoTradeRankControl__SetupTradeRank(EventInfoTradeRankCont
     tradeRankEffectParent = this->fields.tradeRankEffectParent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v10 = UnityEngine_Object__Instantiate_object__50818788(
+    v10 = UnityEngine_Object__Instantiate_object__49839864(
             tradeRankEffectPrefab,
             tradeRankEffectParent,
-            (const MethodInfo_3076EE4 *)Method_UnityEngine_Object_Instantiate_GameObject____77992824);
+            (const MethodInfo_2F87EF8 *)Method_UnityEngine_Object_Instantiate_GameObject____75575200);
     *p_tradeRankEffect = (UnityEngine_GameObject_o *)v10;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.tradeRankEffect, (int64_t)v10, v11, v12, v13, v14, v15, v16);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.tradeRankEffect, (int32_t)v10, v11, v12);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)*p_tradeRankEffect, 0LL, 0LL) )
     {
       if ( !*p_tradeRankEffect )
-        sub_1C3B9C0(0LL, v7);
+        sub_1B4D1EC(0LL, v7);
       ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                      *p_tradeRankEffect,
-                                     (const MethodInfo_3041C7C *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
+                                     (const MethodInfo_2F536A8 *)Method_UnityEngine_GameObject_GetComponentInChildren_UILabel___);
       this->fields.nextRankConditionLabel = (struct UILabel_o *)ComponentInChildren_object;
-      sub_1C3B708(
-        (PartyOrganizationUtility_o *)&this->fields.nextRankConditionLabel,
-        (int64_t)ComponentInChildren_object,
-        v18,
-        v19,
-        v20,
-        v21,
-        v22,
-        v23);
+      sub_1B4CF34(
+        (CGThumbnailListItem_o *)&this->fields.nextRankConditionLabel,
+        (int32_t)ComponentInChildren_object,
+        v14,
+        v15);
     }
   }
   CurrentTradeRank = EventInfoTradeRankControl__GetCurrentTradeRank(this, v7);
-  EventInfoTradeRankControl__SetTradeRank(this, CurrentTradeRank, v25);
-  EventInfoTradeRankControl__SetTradeRankCondition(this, this->fields.tradeRank, v26);
+  EventInfoTradeRankControl__SetTradeRank(this, CurrentTradeRank, v17);
+  EventInfoTradeRankControl__SetTradeRankCondition(this, this->fields.tradeRank, v18);
 }
 
 
@@ -832,70 +784,62 @@ void __fastcall EventInfoTradeRankControl__ShowOpenQuestDialog(
   __int64 v10; // x21
   CommonUI_o *Instance; // x0
   __int64 v12; // x1
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
-  int64_t v19; // x2
-  int32_t v20; // w3
-  System_String_o *v21; // x4
-  BattleSetupInfo_o *v22; // x5
-  FollowerInfo_o *v23; // x6
-  PartyListViewItem_o *v24; // x7
-  System_Action_o *v25; // x20
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  System_Action_o *v17; // x20
   struct EventUiEntity_o *eventUiEntity; // x8
-  CommonUI_o *v27; // x19
+  CommonUI_o *v19; // x19
   int32_t eventId; // w21
 
-  if ( (byte_4C23FCE & 1) == 0 )
+  if ( (byte_49BCF03 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, callback);
-    sub_1C3B764(&EventInfoTradeRankControl_TypeInfo, v5);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1C3B764(&Method_EventInfoTradeRankControl___c__DisplayClass23_0__ShowOpenQuestDialog_b__0__, v7);
-    sub_1C3B764(&EventInfoTradeRankControl___c__DisplayClass23_0_TypeInfo, v8);
-    sub_1C3B764(&StringLiteral_1/*""*/, v9);
-    byte_4C23FCE = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, callback);
+    sub_1B4CF90(&EventInfoTradeRankControl_TypeInfo, v5);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl___c__DisplayClass23_0__ShowOpenQuestDialog_b__0__, v7);
+    sub_1B4CF90(&EventInfoTradeRankControl___c__DisplayClass23_0_TypeInfo, v8);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v9);
+    byte_49BCF03 = 1;
   }
-  v10 = sub_1C3B9B0(EventInfoTradeRankControl___c__DisplayClass23_0_TypeInfo);
+  v10 = sub_1B4D1DC(EventInfoTradeRankControl___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_10;
   *(_QWORD *)(v10 + 16) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v10 + 16), (int64_t)this, v13, v14, v15, v16, v17, v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v10 + 16), (int32_t)this, v13, v14);
   *(_QWORD *)(v10 + 24) = callback;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v10 + 24), (int64_t)callback, v19, v20, v21, v22, v23, v24);
-  v25 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v10 + 24), (int32_t)callback, v15, v16);
+  v17 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v25,
+    v17,
     (Il2CppObject *)v10,
     Method_EventInfoTradeRankControl___c__DisplayClass23_0__ShowOpenQuestDialog_b__0__,
     0LL);
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
     goto LABEL_10;
-  v27 = Instance;
+  v19 = Instance;
   eventId = eventUiEntity->fields.eventId;
   Instance = (CommonUI_o *)EventInfoTradeRankControl_TypeInfo;
   if ( !EventInfoTradeRankControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoTradeRankControl_TypeInfo);
-  if ( !v27 )
+  if ( !v19 )
 LABEL_10:
-    sub_1C3B9C0(Instance, v12);
+    sub_1B4D1EC(Instance, v12);
   if ( !CommonUI__CheckOpenQuestByEventPoint(
-          v27,
+          v19,
           eventId,
           EventInfoTradeRankControl_TypeInfo->static_fields->oldEventPoint,
-          v25,
+          v17,
           1,
           0.0,
           0,
           (System_String_o *)StringLiteral_1/*""*/,
           0LL) )
-    ActionExtensions__Call(v25, 0LL);
+    ActionExtensions__Call(v17, 0LL);
 }
 
 
@@ -914,82 +858,74 @@ void __fastcall EventInfoTradeRankControl__ShowTradeRankUpDialog(
   __int64 v12; // x20
   BaseDialog_o *Instance; // x0
   __int64 v14; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
-  const MethodInfo *v21; // x2
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x2
   EventProgressValueEntity_o *EntityByProgressValue; // x0
   Il2CppObject *tradeRankUpDialog; // x22
-  EventProgressValueEntity_o *v24; // x21
+  EventProgressValueEntity_o *v20; // x21
   UnityEngine_Transform_o *basePanel; // x23
-  Il2CppObject *v26; // x0
-  BaseDialog_o **v27; // x22
-  int64_t v28; // x2
-  int32_t v29; // w3
-  System_String_o *v30; // x4
-  BattleSetupInfo_o *v31; // x5
-  FollowerInfo_o *v32; // x6
-  PartyListViewItem_o *v33; // x7
-  TradeRankUpDialog_o *v34; // x23
+  Il2CppObject *v22; // x0
+  BaseDialog_o **v23; // x22
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  TradeRankUpDialog_o *v26; // x23
   System_Collections_Generic_List_UIAtlas__o *atlasList; // x19
-  System_Action_o *v36; // x24
-  const MethodInfo *v37; // x4
+  System_Action_o *v28; // x24
+  const MethodInfo *v29; // x4
 
-  if ( (byte_4C23FD0 & 1) == 0 )
+  if ( (byte_49BCF05 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&tradeRank);
-    sub_1C3B764(&Method_UnityEngine_Object_Instantiate_TradeRankUpDialog___, v7);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v8);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1C3B764(&Method_EventInfoTradeRankControl___c__DisplayClass25_0__ShowTradeRankUpDialog_b__0__, v10);
-    sub_1C3B764(&EventInfoTradeRankControl___c__DisplayClass25_0_TypeInfo, v11);
-    byte_4C23FD0 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&tradeRank);
+    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_TradeRankUpDialog___, v7);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl___c__DisplayClass25_0__ShowTradeRankUpDialog_b__0__, v10);
+    sub_1B4CF90(&EventInfoTradeRankControl___c__DisplayClass25_0_TypeInfo, v11);
+    byte_49BCF05 = 1;
   }
-  v12 = sub_1C3B9B0(EventInfoTradeRankControl___c__DisplayClass25_0_TypeInfo);
+  v12 = sub_1B4D1DC(EventInfoTradeRankControl___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_11;
   *(_QWORD *)(v12 + 16) = callback;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v12 + 16), (int64_t)callback, v15, v16, v17, v18, v19, v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 16), (int32_t)callback, v15, v16);
   EntityByProgressValue = EventInfoUIProgressControl__GetEntityByProgressValue(
                             (EventInfoUIProgressControl_o *)this,
                             tradeRank,
-                            v21);
+                            v17);
   tradeRankUpDialog = (Il2CppObject *)this->fields.tradeRankUpDialog;
-  v24 = EntityByProgressValue;
-  Instance = (BaseDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v20 = EntityByProgressValue;
+  Instance = (BaseDialog_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   basePanel = (UnityEngine_Transform_o *)Instance[1].fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v26 = UnityEngine_Object__Instantiate_object__50818900(
+  v22 = UnityEngine_Object__Instantiate_object__49839976(
           tradeRankUpDialog,
           basePanel,
           0,
-          (const MethodInfo_3076F54 *)Method_UnityEngine_Object_Instantiate_TradeRankUpDialog___);
-  *(_QWORD *)(v12 + 24) = v26;
-  v27 = (BaseDialog_o **)(v12 + 24);
-  sub_1C3B708((PartyOrganizationUtility_o *)(v12 + 24), (int64_t)v26, v28, v29, v30, v31, v32, v33);
+          (const MethodInfo_2F87F68 *)Method_UnityEngine_Object_Instantiate_TradeRankUpDialog___);
+  *(_QWORD *)(v12 + 24) = v22;
+  v23 = (BaseDialog_o **)(v12 + 24);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 24), (int32_t)v22, v24, v25);
   Instance = *(BaseDialog_o **)(v12 + 24);
   if ( !Instance
     || (BaseDialog__Init(Instance, 0LL),
-        v34 = *(TradeRankUpDialog_o **)(v12 + 24),
+        v26 = *(TradeRankUpDialog_o **)(v12 + 24),
         atlasList = this->fields.atlasList,
-        v36 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo),
+        v28 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo),
         System_Action___ctor(
-          v36,
+          v28,
           (Il2CppObject *)v12,
           Method_EventInfoTradeRankControl___c__DisplayClass25_0__ShowTradeRankUpDialog_b__0__,
           0LL),
-        !v34)
-    || (TradeRankUpDialog__Setup(v34, v24, atlasList, v36, v37), (Instance = *v27) == 0LL) )
+        !v26)
+    || (TradeRankUpDialog__Setup(v26, v20, atlasList, v28, v29), (Instance = *v23) == 0LL) )
   {
 LABEL_11:
-    sub_1C3B9C0(Instance, v14);
+    sub_1B4D1EC(Instance, v14);
   }
   BaseDialog__Open(Instance, 0LL, 0, 0LL);
 }
@@ -1001,10 +937,10 @@ void __fastcall EventInfoTradeRankControl__UpdateOldPoint(int32_t eventId, const
   EventInfoTradeRankControl_c *v4; // x8
   int64_t v5; // x19
 
-  if ( (byte_4C23FD8 & 1) == 0 )
+  if ( (byte_49BCF0D & 1) == 0 )
   {
-    sub_1C3B764(&EventInfoTradeRankControl_TypeInfo, method);
-    byte_4C23FD8 = 1;
+    sub_1B4CF90(&EventInfoTradeRankControl_TypeInfo, method);
+    byte_49BCF0D = 1;
   }
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
   v4 = EventInfoTradeRankControl_TypeInfo;
@@ -1027,7 +963,7 @@ void __fastcall EventInfoTradeRankControl___Initialization_b__18_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, v2);
 }
 
@@ -1071,33 +1007,29 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass20_0___PlayAnim_b__0(
   __int64 v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct EventInfoTradeRankControl_o *_4__this; // x21
   struct EventProgressValueEntity_o *currentEventProgressValueEntity; // x8
   int progressValue; // w8
-  System_Action_o *v17; // x19
-  const MethodInfo *v18; // x2
+  System_Action_o *v13; // x19
+  const MethodInfo *v14; // x2
 
-  if ( (byte_4C23FDB & 1) == 0 )
+  if ( (byte_49BCF10 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    sub_1C3B764(&Method_EventInfoTradeRankControl___c__DisplayClass20_1__PlayAnim_b__1__, v3);
-    sub_1C3B764(&EventInfoTradeRankControl___c__DisplayClass20_1_TypeInfo, v4);
-    byte_4C23FDB = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    sub_1B4CF90(&Method_EventInfoTradeRankControl___c__DisplayClass20_1__PlayAnim_b__1__, v3);
+    sub_1B4CF90(&EventInfoTradeRankControl___c__DisplayClass20_1_TypeInfo, v4);
+    byte_49BCF10 = 1;
   }
-  v5 = sub_1C3B9B0(EventInfoTradeRankControl___c__DisplayClass20_1_TypeInfo);
+  v5 = sub_1B4D1DC(EventInfoTradeRankControl___c__DisplayClass20_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C3B708((PartyOrganizationUtility_o *)(v5 + 24), (int64_t)this, v8, v9, v10, v11, v12, v13),
+        sub_1B4CF34((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v8, v9),
         (_4__this = this->fields.__4__this) == 0LL) )
   {
-    sub_1C3B9C0(v6, v7);
+    sub_1B4D1EC(v6, v7);
   }
   currentEventProgressValueEntity = _4__this->fields.currentEventProgressValueEntity;
   if ( currentEventProgressValueEntity )
@@ -1111,13 +1043,13 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass20_0___PlayAnim_b__0(
   }
   else
   {
-    v17 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    v13 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
     System_Action___ctor(
-      v17,
+      v13,
       (Il2CppObject *)v5,
       Method_EventInfoTradeRankControl___c__DisplayClass20_1__PlayAnim_b__1__,
       0LL);
-    EventInfoTradeRankControl__PlayRankUpAnimation(_4__this, v17, v18);
+    EventInfoTradeRankControl__PlayRankUpAnimation(_4__this, v13, v14);
   }
 }
 
@@ -1141,21 +1073,17 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass20_1___PlayAnim_b__1(
   EventInfoTradeRankControl_o *_4__this; // x20
   System_Action_o *_9__2; // x22
   int32_t afterRank; // w21
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
   v3 = this;
-  if ( (byte_4C23FDC & 1) == 0 )
+  if ( (byte_49BCF11 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, method);
-    this = (EventInfoTradeRankControl___c__DisplayClass20_1_o *)sub_1C3B764(
+    sub_1B4CF90(&System_Action_TypeInfo, method);
+    this = (EventInfoTradeRankControl___c__DisplayClass20_1_o *)sub_1B4CF90(
                                                                   &Method_EventInfoTradeRankControl___c__DisplayClass20_1__PlayAnim_b__2__,
                                                                   v4);
-    byte_4C23FDC = 1;
+    byte_49BCF11 = 1;
   }
   CS___8__locals1 = v3->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -1165,18 +1093,18 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass20_1___PlayAnim_b__1(
   afterRank = v3->fields.afterRank;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_EventInfoTradeRankControl___c__DisplayClass20_1__PlayAnim_b__2__,
       0LL);
     v3->fields.__9__2 = _9__2;
-    sub_1C3B708((PartyOrganizationUtility_o *)&v3->fields.__9__2, (int64_t)_9__2, v9, v10, v11, v12, v13, v14);
+    sub_1B4CF34((CGThumbnailListItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v9, v10);
   }
   if ( !_4__this )
 LABEL_8:
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   EventInfoTradeRankControl__ShowTradeRankUpDialog(_4__this, afterRank, _9__2, v2);
 }
 
@@ -1208,7 +1136,7 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass20_1___PlayAnim_b__2(
         (v8 = v4->fields.CS___8__locals1) == 0LL) )
   {
 LABEL_7:
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   ActionExtensions__Call(v8->fields.callback, 0LL);
 }
@@ -1234,14 +1162,14 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass23_0___ShowOpenQuestD
   int64_t v7; // x20
 
   v2 = this;
-  if ( (byte_4C23FDD & 1) == 0 )
+  if ( (byte_49BCF12 & 1) == 0 )
   {
-    this = (EventInfoTradeRankControl___c__DisplayClass23_0_o *)sub_1C3B764(&EventInfoTradeRankControl_TypeInfo, method);
-    byte_4C23FDD = 1;
+    this = (EventInfoTradeRankControl___c__DisplayClass23_0_o *)sub_1B4CF90(&EventInfoTradeRankControl_TypeInfo, method);
+    byte_49BCF12 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this || (eventUiEntity = _4__this->fields.eventUiEntity) == 0LL )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventUiEntity->fields.eventId, 0LL);
   v6 = EventInfoTradeRankControl_TypeInfo;
   v7 = EventPointNoGroup;
@@ -1271,19 +1199,19 @@ void __fastcall EventInfoTradeRankControl___c__DisplayClass25_0___ShowTradeRankU
   UnityEngine_Component_o *dialog; // x0
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C23FDE & 1) == 0 )
+  if ( (byte_49BCF13 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C23FDE = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BCF13 = 1;
   }
   ActionExtensions__Call(this->fields.callback, 0LL);
   dialog = (UnityEngine_Component_o *)this->fields.dialog;
   if ( !dialog )
-    sub_1C3B9C0(0LL, v3);
+    sub_1B4D1EC(0LL, v3);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(dialog, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71122748(gameObject, 0LL);
+  UnityEngine_Object__Destroy_68804456(gameObject, 0LL);
 }
 
 
@@ -1301,6 +1229,6 @@ bool __fastcall EventInfoTradeRankControl___c__DisplayClass29_0___GetViewData_b_
         const MethodInfo *method)
 {
   if ( !v )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   return v->fields.tradeRank == this->fields.tradeRank;
 }

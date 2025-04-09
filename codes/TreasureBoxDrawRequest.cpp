@@ -13,14 +13,14 @@ void __fastcall TreasureBoxDrawRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4C23A0D & 1) == 0 )
+  if ( (byte_49BC93C & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22636/*"root"*/, *(_QWORD *)&treasureBoxId);
-    sub_1C3B764(&StringLiteral_24556/*"zh"*/, v7);
-    byte_4C23A0D = 1;
+    sub_1B4CF90(&StringLiteral_21903/*"num"*/, *(_QWORD *)&treasureBoxId);
+    sub_1B4CF90(&StringLiteral_23769/*"treasureBoxId"*/, v7);
+    byte_49BC93C = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24556/*"zh"*/, treasureBoxId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22636/*"root"*/, drawNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23769/*"treasureBoxId"*/, treasureBoxId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21903/*"num"*/, drawNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -30,16 +30,16 @@ System_String_o *__fastcall TreasureBoxDrawRequest__getURL(TreasureBoxDrawReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C23A0C & 1) == 0 )
+  if ( (byte_49BC93B & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_24555/*"z"*/, v2);
-    byte_4C23A0C = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_23768/*"treasureBox/draw"*/, v2);
+    byte_49BC93B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_24555/*"z"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_23768/*"treasureBox/draw"*/, 0LL);
 }
 
 
@@ -56,12 +56,12 @@ void __fastcall TreasureBoxDrawRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4C23A0E & 1) == 0 )
+  if ( (byte_49BC93D & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C23A0E = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC93D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -76,7 +76,7 @@ void __fastcall TreasureBoxDrawRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
+    v11 = (System_String_o *)StringLiteral_21779/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

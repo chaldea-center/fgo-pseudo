@@ -1,43 +1,19 @@
 void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct IconLabelInfo_o *v3; // x0
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
-  const MethodInfo *v10; // x0
-  struct IconLabelInfo_o *v11; // x0
-  int64_t v12; // x2
-  int32_t v13; // w3
-  System_String_o *v14; // x4
-  BattleSetupInfo_o *v15; // x5
-  FollowerInfo_o *v16; // x6
-  PartyListViewItem_o *v17; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  const MethodInfo *v6; // x0
+  struct IconLabelInfo_o *v7; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
-    (int64_t)v3,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8,
-    v9);
-  v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
-  this->fields._IconInfo2_k__BackingField = v11;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
-    (int64_t)v11,
-    v12,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
+  this->fields._IconInfo2_k__BackingField = v7;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -49,15 +25,15 @@ IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__ClearedIcon(const MethodInf
   __int64 v3; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C2132A & 1) == 0 )
+  if ( (byte_49BA23E & 1) == 0 )
   {
-    sub_1C3B764(&IconLabelInfo_TypeInfo, v1);
-    byte_4C2132A = 1;
+    sub_1B4CF90(&IconLabelInfo_TypeInfo, v1);
+    byte_49BA23E = 1;
   }
-  v2 = (IconLabelInfo_o *)sub_1C3B9B0(IconLabelInfo_TypeInfo);
+  v2 = (IconLabelInfo_o *)sub_1B4D1DC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v2, 0LL);
   if ( !v2 )
-    sub_1C3B9C0(v3, v4);
+    sub_1B4D1EC(v3, v4);
   IconLabelInfo__Clear(v2, 0LL);
   return v2;
 }
@@ -77,7 +53,7 @@ void __fastcall CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0LL) )
   {
-    sub_1C3B9C0(IconInfo1_k__BackingField, method);
+    sub_1B4D1EC(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL);
 }
@@ -88,14 +64,10 @@ void __fastcall CharaGraphSortLogicBase__SetListViewItem(
         CharaGraphListViewItemBase_o *inputItem,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.item = inputItem;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.item, (int64_t)inputItem, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
@@ -104,14 +76,10 @@ void __fastcall CharaGraphSortLogicBase__SetListViewSort(
         ListViewSort_o *inputSort,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.sort = inputSort;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)inputSort, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
@@ -138,7 +106,7 @@ void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBa
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1C3B9C0(item, method);
+    sub_1B4D1EC(item, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10LL;
 }
@@ -218,22 +186,10 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo1_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -242,22 +198,10 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._IconInfo2_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

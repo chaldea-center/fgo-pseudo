@@ -32,49 +32,45 @@ void __fastcall CommandCodeSkillInfo__Set(
   UISprite_o *commandCodeIconBg; // x26
   int32_t klass; // w27
   UITexture_o *v28; // x26
-  UnityEngine_Object_o *Manager__loadCommandCodeTexture_39379824; // x23
-  int64_t v30; // x2
-  int32_t v31; // w3
-  System_String_o *v32; // x4
-  BattleSetupInfo_o *v33; // x5
-  FollowerInfo_o *v34; // x6
-  PartyListViewItem_o *v35; // x7
+  UnityEngine_Object_o *Manager__loadCommandCodeTexture_38496376; // x23
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
   UISprite_o *RaritySpr; // x23
-  System_String_o *v37; // x0
+  System_String_o *v33; // x0
   UILabel_o *CommandCodeName; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v39; // x22
-  const MethodInfo *v40; // x2
-  UnityEngine_Transform_o *v41; // x22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v35; // x22
+  const MethodInfo *v36; // x2
+  UnityEngine_Transform_o *v37; // x22
   unsigned int localPosition; // s0
   float DetailObjHeight; // s1
-  int v44; // s2
+  int v40; // s2
 
-  if ( (byte_4C2138D & 1) == 0 )
+  if ( (byte_49BA2A1 & 1) == 0 )
   {
-    sub_1C3B764(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_1C3B764(&Method_DataManager_GetMasterData_CommandCodeMaster___, v12);
-    sub_1C3B764(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v14);
-    sub_1C3B764(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
-    sub_1C3B764(&ServantAssetLoadManager_TypeInfo, v16);
-    sub_1C3B764(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1C3B764(&StringLiteral_23258/*"stringToEscape"*/, v18);
-    sub_1C3B764(&StringLiteral_16439/*"animationName"*/, v19);
-    sub_1C3B764(&StringLiteral_1/*""*/, v20);
-    byte_4C2138D = 1;
+    sub_1B4CF90(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_1B4CF90(&Method_DataManager_GetMasterData_CommandCodeMaster___, v12);
+    sub_1B4CF90(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v14);
+    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
+    sub_1B4CF90(&ServantAssetLoadManager_TypeInfo, v16);
+    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1B4CF90(&StringLiteral_22513/*"rarity"*/, v18);
+    sub_1B4CF90(&StringLiteral_15814/*"_0"*/, v19);
+    sub_1B4CF90(&StringLiteral_1/*""*/, v20);
+    byte_49BA2A1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38C8734 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_2FF0204 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+               (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   if ( !Instance )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              commandCodeId,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   if ( Entity )
   {
     v24 = Entity;
@@ -108,35 +104,31 @@ void __fastcall CommandCodeSkillInfo__Set(
       v28 = *p_CommandCodeIcon;
       if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-      Manager__loadCommandCodeTexture_39379824 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_39379824(
+      Manager__loadCommandCodeTexture_38496376 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_38496376(
                                                                            v28,
                                                                            commandCodeId,
                                                                            0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_39379824, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_38496376, 0LL, 0LL) )
       {
-        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_39379824;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields.CommandCodeIcon,
-          (int64_t)Manager__loadCommandCodeTexture_39379824,
+        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_38496376;
+        sub_1B4CF34(
+          (CGThumbnailListItem_o *)&this->fields.CommandCodeIcon,
+          (int32_t)Manager__loadCommandCodeTexture_38496376,
           v30,
-          v31,
-          v32,
-          v33,
-          v34,
-          v35);
+          v31);
       }
       Instance = this->fields.NameBg;
       if ( !Instance )
         goto LABEL_36;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
       RaritySpr = this->fields.RaritySpr;
-      v37 = System_Int32__ToString((int)v24 + 64, 0LL);
-      Instance = System_String__Concat_63379872(
-                   (System_String_o *)StringLiteral_23258/*"stringToEscape"*/,
-                   v37,
-                   (System_String_o *)StringLiteral_16439/*"animationName"*/,
+      v33 = System_Int32__ToString((int)v24 + 64, 0LL);
+      Instance = System_String__Concat_61131716(
+                   (System_String_o *)StringLiteral_22513/*"rarity"*/,
+                   v33,
+                   (System_String_o *)StringLiteral_15814/*"_0"*/,
                    0LL);
       if ( !RaritySpr )
         goto LABEL_36;
@@ -148,14 +140,14 @@ void __fastcall CommandCodeSkillInfo__Set(
         Instance,
         *(_QWORD *)(*(_QWORD *)Instance + 848LL));
       CommandCodeName = this->fields.CommandCodeName;
-      v39 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v24[3].klass;
+      v35 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v24[3].klass;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47918404(v39, 0LL);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_47044416(v35, 0LL);
       if ( !CommandCodeName )
         goto LABEL_36;
       UILabel__set_text(CommandCodeName, (System_String_o *)Instance, 0LL);
-      CommonFunction__ScalingLabelWidth(this->fields.CommandCodeName, 320, v40);
+      CommonFunction__ScalingLabelWidth(this->fields.CommandCodeName, 320, v36);
     }
     else
     {
@@ -165,16 +157,16 @@ void __fastcall CommandCodeSkillInfo__Set(
       Instance = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0LL);
       if ( !this->fields.DetailObj )
         goto LABEL_36;
-      v41 = (UnityEngine_Transform_o *)Instance;
+      v37 = (UnityEngine_Transform_o *)Instance;
       Instance = UnityEngine_GameObject__get_transform(this->fields.DetailObj, 0LL);
       if ( !Instance )
         goto LABEL_36;
       localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0LL);
-      if ( !v41 )
+      if ( !v37 )
         goto LABEL_36;
       DetailObjHeight = this->fields.DetailObjHeight;
-      v44 = 0;
-      UnityEngine_Transform__set_localPosition(v41, *(UnityEngine_Vector3_o *)&localPosition, 0LL);
+      v40 = 0;
+      UnityEngine_Transform__set_localPosition(v37, *(UnityEngine_Vector3_o *)&localPosition, 0LL);
     }
     Instance = this->fields.SkillIconComp;
     if ( Instance )
@@ -193,6 +185,6 @@ void __fastcall CommandCodeSkillInfo__Set(
       }
     }
 LABEL_36:
-    sub_1C3B9C0(Instance, v22);
+    sub_1B4D1EC(Instance, v22);
   }
 }

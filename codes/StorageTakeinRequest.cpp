@@ -17,22 +17,22 @@ void __fastcall StorageTakeinRequest__beginRequest(
   System_Byte_array *v10; // x20
   System_String_o *v11; // x0
 
-  if ( (byte_4C239E3 & 1) == 0 )
+  if ( (byte_49BC912 & 1) == 0 )
   {
-    sub_1C3B764(&System_Convert_TypeInfo, userSvtIds);
-    sub_1C3B764(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_24963/*"ストーリークエスト開始【完了】クエスト"*/, v6);
-    byte_4C239E3 = 1;
+    sub_1B4CF90(&System_Convert_TypeInfo, userSvtIds);
+    sub_1B4CF90(&MiniMessagePack_MiniMessagePacker_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_24168/*"userSvtIds"*/, v6);
+    byte_49BC912 = 1;
   }
-  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1C3B9B0(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  v7 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B4D1DC(MiniMessagePack_MiniMessagePacker_TypeInfo);
   MiniMessagePack_MiniMessagePacker___ctor(v7, 0LL);
   if ( !v7 )
-    sub_1C3B9C0(v8, v9);
+    sub_1B4D1EC(v8, v9);
   v10 = MiniMessagePack_MiniMessagePacker__PackClass(v7, &userSvtIds->obj, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v11 = System_Convert__ToBase64String(v10, 0LL);
-  RequestBase__addField_42621852((RequestBase_o *)this, (System_String_o *)StringLiteral_24963/*"ストーリークエスト開始【完了】クエスト"*/, v11, 0LL);
+  RequestBase__addField_41748396((RequestBase_o *)this, (System_String_o *)StringLiteral_24168/*"userSvtIds"*/, v11, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -42,16 +42,16 @@ System_String_o *__fastcall StorageTakeinRequest__getURL(StorageTakeinRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C239E2 & 1) == 0 )
+  if ( (byte_49BC911 & 1) == 0 )
   {
-    sub_1C3B764(&NetworkManager_TypeInfo, method);
-    sub_1C3B764(&StringLiteral_24047/*"userDeleteReservation"*/, v2);
-    byte_4C239E2 = 1;
+    sub_1B4CF90(&NetworkManager_TypeInfo, method);
+    sub_1B4CF90(&StringLiteral_23272/*"storage/takein"*/, v2);
+    byte_49BC911 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_63368612(BaseUrl, (System_String_o *)StringLiteral_24047/*"userDeleteReservation"*/, 0LL);
+  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_23272/*"storage/takein"*/, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ void __fastcall StorageTakeinRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v11; // x1
 
-  if ( (byte_4C239E4 & 1) == 0 )
+  if ( (byte_49BC913 & 1) == 0 )
   {
-    sub_1C3B764(&JsonManager_TypeInfo, responseList);
-    sub_1C3B764(&ResponseCommandKind_TypeInfo, v5);
-    sub_1C3B764(&StringLiteral_22507/*"referrerMapId"*/, v6);
-    byte_4C239E4 = 1;
+    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
+    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
+    byte_49BC913 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -88,7 +88,7 @@ void __fastcall StorageTakeinRequest__requestCompleted(
   }
   else
   {
-    v11 = (System_String_o *)StringLiteral_22507/*"referrerMapId"*/;
+    v11 = (System_String_o *)StringLiteral_21779/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v11, 0LL);
 }

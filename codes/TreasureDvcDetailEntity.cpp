@@ -1,13 +1,13 @@
 void __fastcall TreasureDvcDetailEntity___ctor(TreasureDvcDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22B75 & 1) == 0 )
+  if ( (byte_49BBAA3 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_int___ctor__, method);
-    byte_4C22B75 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
+    byte_49BBAA3 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3298964 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ System_String_o *__fastcall TreasureDvcDetailEntity__getDetail(
 {
   System_String_o *detail; // x19
 
-  if ( (byte_4C22B73 & 1) == 0 )
+  if ( (byte_49BBAA1 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    byte_4C22B73 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    byte_49BBAA1 = 1;
   }
   detail = this->fields.detail;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -41,10 +41,10 @@ System_String_o *__fastcall TreasureDvcDetailEntity__getDetailShort(
 {
   System_String_o *detailShort; // x19
 
-  if ( (byte_4C22B74 & 1) == 0 )
+  if ( (byte_49BBAA2 & 1) == 0 )
   {
-    sub_1C3B764(&LocalizationManager_TypeInfo, method);
-    byte_4C22B74 = 1;
+    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
+    byte_49BBAA2 = 1;
   }
   detailShort = this->fields.detailShort;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )

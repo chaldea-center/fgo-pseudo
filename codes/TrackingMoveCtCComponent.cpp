@@ -3,10 +3,10 @@ void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
+    byte_49B5361 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -42,10 +42,10 @@ UnityEngine_Vector3_o __fastcall TrackingMoveCtCComponent__GetAdjustedPosInScree
   z = currentTargetPos.fields.z;
   y = currentTargetPos.fields.y;
   x = currentTargetPos.fields.x;
-  if ( (byte_4C2537C & 1) == 0 )
+  if ( (byte_49BE2B9 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C2537C = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BE2B9 = 1;
   }
   adjustPosInScreenComp = (UnityEngine_Object_o *)this->fields.adjustPosInScreenComp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -98,7 +98,7 @@ UnityEngine_Vector3_o __fastcall TrackingMoveCtCComponent__GetAdjustedPosInScree
           }
         }
       }
-      sub_1C3B9C0(IsOffScreen, v9);
+      sub_1B4D1EC(IsOffScreen, v9);
     }
   }
 LABEL_14:
@@ -129,78 +129,52 @@ void __fastcall TrackingMoveCtCComponent__Set(
         bool isLate,
         const MethodInfo *method)
 {
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
   float z; // s8
   float y; // s9
   float x; // s10
-  bool v15; // w22
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
-  __int64 v28; // x1
-  int64_t v29; // x2
-  int32_t v30; // w3
-  System_String_o *v31; // x4
-  BattleSetupInfo_o *v32; // x5
-  FollowerInfo_o *v33; // x6
-  PartyListViewItem_o *v34; // x7
+  bool v13; // w22
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  __int64 v18; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  __int64 v36; // d0
-  float v37; // s1
-  int64_t v38; // x2
-  int32_t v39; // w3
-  System_String_o *v40; // x4
-  BattleSetupInfo_o *v41; // x5
-  FollowerInfo_o *v42; // x6
-  PartyListViewItem_o *v43; // x7
+  __int64 v22; // d0
+  float v23; // s1
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
 
   this->fields.before = a;
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
-  v15 = isLate;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.before,
-    (int64_t)a,
-    (int64_t)b,
-    (int32_t)c,
-    (System_String_o *)isLate,
-    (BattleSetupInfo_o *)method,
-    v7,
-    v8);
+  v13 = isLate;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (const MethodInfo *)c);
   this->fields.after = b;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.after, (int64_t)b, v16, v17, v18, v19, v20, v21);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.after, (int32_t)b, v14, v15);
   this->fields.targetObject = c;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.targetObject, (int64_t)c, v22, v23, v24, v25, v26, v27);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
-  this->fields.isLateUpdate = v15;
-  if ( !byte_4C1C511 )
+  this->fields.isLateUpdate = v13;
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v28);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v18);
+    byte_49B5361 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v36 = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  v37 = static_fields->zeroVector.fields.z;
+  v22 = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  v23 = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.offset2D.fields.condition = 0LL;
-  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v36;
-  this->fields.offset2D.fields.offset.fields.z = v37;
+  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v22;
+  this->fields.offset2D.fields.offset.fields.z = v23;
   this->fields.adjustPosInScreenComp = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.adjustPosInScreenComp, 0LL, v29, v30, v31, v32, v33, v34);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp, 0, v19, v20);
   this->fields.adjustPosInScreenArg = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.adjustPosInScreenArg, 0LL, v38, v39, v40, v41, v42, v43);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, 0, v24, v25);
 }
 
 
@@ -210,39 +184,27 @@ void __fastcall TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
         AdjustPopupPosInScreenArgument_o *adjustArg,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
   UnityEngine_Object_o *targetObject; // x21
   UnityEngine_Object_o *before; // x21
-  __int64 v13; // x1
+  __int64 v9; // x1
   UnityEngine_GameObject_o *transform; // x0
-  UnityEngine_Camera_o *v15; // x21
-  struct AdjustPopupPosInScreenArgument_o *v16; // x0
-  int64_t v17; // x2
-  int32_t v18; // w3
-  System_String_o *v19; // x4
-  BattleSetupInfo_o *v20; // x5
-  FollowerInfo_o *v21; // x6
-  PartyListViewItem_o *v22; // x7
+  UnityEngine_Camera_o *v11; // x21
+  struct AdjustPopupPosInScreenArgument_o *v12; // x0
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2537A & 1) == 0 )
+  if ( (byte_49BE2B7 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, adjustComp);
-    byte_4C2537A = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, adjustComp);
+    byte_49BE2B7 = 1;
   }
   this->fields.adjustPosInScreenComp = adjustComp;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.adjustPosInScreenComp,
-    (int64_t)adjustComp,
-    (int64_t)adjustArg,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp,
+    (int32_t)adjustComp,
+    (int32_t)adjustArg,
+    method);
   if ( adjustArg )
   {
     targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
@@ -257,26 +219,18 @@ void __fastcall TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
       {
         transform = this->fields.targetObject;
         if ( !transform
-          || (v15 = this->fields.before,
+          || (v11 = this->fields.before,
               (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL) )
         {
-          sub_1C3B9C0(transform, v13);
+          sub_1B4D1EC(transform, v9);
         }
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
         position.fields.x = position.fields.x + this->fields.addpos.fields.x;
         position.fields.y = position.fields.y + this->fields.addpos.fields.y;
         position.fields.z = position.fields.z + this->fields.addpos.fields.z;
-        v16 = AdjustPopupPosInScreenArgument__Init(adjustArg, v15, position, 0LL);
-        this->fields.adjustPosInScreenArg = v16;
-        sub_1C3B708(
-          (PartyOrganizationUtility_o *)&this->fields.adjustPosInScreenArg,
-          (int64_t)v16,
-          v17,
-          v18,
-          v19,
-          v20,
-          v21,
-          v22);
+        v12 = AdjustPopupPosInScreenArgument__Init(adjustArg, v11, position, 0LL);
+        this->fields.adjustPosInScreenArg = v12;
+        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, (int32_t)v12, v13, v14);
       }
     }
   }
@@ -339,10 +293,10 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2537B & 1) == 0 )
+  if ( (byte_49BE2B8 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C2537B = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BE2B8 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -363,7 +317,7 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     *(UnityEngine_Vector3_o *)&v8 = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, position, v7);
     if ( !before )
       goto LABEL_24;
-    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToViewportPoint_70928728(
+    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToViewportPoint_68610440(
                                        before,
                                        *(UnityEngine_Vector3_o *)&v8,
                                        0LL);
@@ -420,7 +374,7 @@ LABEL_14:
         v33.fields.x = v14;
         v33.fields.y = v21;
         v33.fields.z = v16;
-        v34 = UnityEngine_Camera__ViewportToWorldPoint_70928736((UnityEngine_Camera_o *)transform, v33, 0LL);
+        v34 = UnityEngine_Camera__ViewportToWorldPoint_68610448((UnityEngine_Camera_o *)transform, v33, 0LL);
         x = v34.fields.x;
         y = v34.fields.y;
         z = v34.fields.z;
@@ -437,7 +391,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1C3B9C0(transform, v4);
+      sub_1B4D1EC(transform, v4);
     }
     v14 = v14 + this->fields.offset2D.fields.offset.fields.x;
     v21 = v21 + this->fields.offset2D.fields.offset.fields.y;

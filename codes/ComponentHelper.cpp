@@ -16,10 +16,10 @@ void __fastcall ComponentHelper__SetLocalPosition(
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4C237F0 & 1) == 0 )
+  if ( (byte_49BC71F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C237F0 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC71F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall ComponentHelper__SetLocalPosition(
   if ( !v7 )
   {
     if ( !self )
-      sub_1C3B9C0(v7, v8);
+      sub_1B4D1EC(v7, v8);
     transform = UnityEngine_Component__get_transform(self, 0LL);
     v11.fields.y = y;
     v11.fields.z = z;
@@ -47,10 +47,10 @@ void __fastcall ComponentHelper__SetLocalPositionX(
   UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C237ED & 1) == 0 )
+  if ( (byte_49BC71C & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C237ED = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC71C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -58,7 +58,7 @@ void __fastcall ComponentHelper__SetLocalPositionX(
   if ( !v5 )
   {
     if ( !self )
-      sub_1C3B9C0(v5, v6);
+      sub_1B4D1EC(v5, v6);
     transform = UnityEngine_Component__get_transform(self, 0LL);
     TransformHelper__SetLocalPositionX(transform, value, v8);
   }
@@ -75,10 +75,10 @@ void __fastcall ComponentHelper__SetLocalPositionY(
   UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C237EE & 1) == 0 )
+  if ( (byte_49BC71D & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C237EE = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC71D = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -86,7 +86,7 @@ void __fastcall ComponentHelper__SetLocalPositionY(
   if ( !v5 )
   {
     if ( !self )
-      sub_1C3B9C0(v5, v6);
+      sub_1B4D1EC(v5, v6);
     transform = UnityEngine_Component__get_transform(self, 0LL);
     TransformHelper__SetLocalPositionY(transform, value, v8);
   }
@@ -103,10 +103,10 @@ void __fastcall ComponentHelper__SetLocalPositionZ(
   UnityEngine_Transform_o *transform; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C237EF & 1) == 0 )
+  if ( (byte_49BC71E & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C237EF = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BC71E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -114,7 +114,7 @@ void __fastcall ComponentHelper__SetLocalPositionZ(
   if ( !v5 )
   {
     if ( !self )
-      sub_1C3B9C0(v5, v6);
+      sub_1B4D1EC(v5, v6);
     transform = UnityEngine_Component__get_transform(self, 0LL);
     TransformHelper__SetLocalPositionZ(transform, value, v8);
   }

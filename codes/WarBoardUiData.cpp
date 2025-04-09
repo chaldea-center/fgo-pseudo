@@ -1,176 +1,92 @@
 void __fastcall WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *method)
 {
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
   this->fields._keys_k__BackingField = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
 }
 
 
-void __fastcall WarBoardUiData___ctor_36934508(
+void __fastcall WarBoardUiData___ctor_36046940(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Int32_array *pieceIndex; // x1
   struct System_String_array *keys; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_1C3B9C0(v5, v6);
+    sub_1B4D1EC(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
-    (int64_t)pieceIndex,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)pieceIndex, v7, v8);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
-    (int64_t)keys,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v11, v12);
 }
 
 
-void __fastcall WarBoardUiData___ctor_36934588(
+void __fastcall WarBoardUiData___ctor_36047020(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField, 0LL, v7, v8, v9, v10, v11, v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
-    (int64_t)setKeys,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
-void __fastcall WarBoardUiData___ctor_36934660(
+void __fastcall WarBoardUiData___ctor_36047092(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
-    (int64_t)indexes,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
-    (int64_t)setKeys,
-    v13,
-    v14,
-    v15,
-    v16,
-    v17,
-    v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
 }
 
 
 void __fastcall WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_array *setKeys, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
-    (int64_t)setKeys,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, (int32_t)method, v3);
 }
 
 
@@ -194,22 +110,10 @@ int32_t __fastcall WarBoardUiData__get_squareIndex(WarBoardUiData_o *this, const
 
 void __fastcall WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_array *value, const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._keys_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._keys_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -218,22 +122,10 @@ void __fastcall WarBoardUiData__set_pieceIndex(
         System_Int32_array *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._pieceIndex_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -245,74 +137,42 @@ void __fastcall WarBoardUiData__set_squareIndex(WarBoardUiData_o *this, int32_t 
 
 void __fastcall WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, const MethodInfo *method)
 {
-  int64_t v3; // x2
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.pieceIndex, 0LL, v3, v4, v5, v6, v7, v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.pieceIndex, 0, v3, v4);
   this->fields.keys = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.keys, 0LL, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.keys, 0, v5, v6);
 }
 
 
-void __fastcall WarBoardUiData_SaveData___ctor_36891716(
+void __fastcall WarBoardUiData_SaveData___ctor_36004148(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
-  int64_t v7; // x2
-  int32_t v8; // w3
-  System_String_o *v9; // x4
-  BattleSetupInfo_o *v10; // x5
-  FollowerInfo_o *v11; // x6
-  PartyListViewItem_o *v12; // x7
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   struct System_Int32_array *pieceIndex_k__BackingField; // x1
   struct System_String_array *keys_k__BackingField; // x1
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !uiData )
-    sub_1C3B9C0(v5, v6);
+    sub_1B4D1EC(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.pieceIndex,
-    (int64_t)pieceIndex_k__BackingField,
-    v7,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.pieceIndex, (int32_t)pieceIndex_k__BackingField, v7, v8);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.keys,
-    (int64_t)keys_k__BackingField,
-    v15,
-    v16,
-    v17,
-    v18,
-    v19,
-    v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v11, v12);
 }

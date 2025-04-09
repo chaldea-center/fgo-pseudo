@@ -5,15 +5,15 @@ void __fastcall EarthPoint___cctor(const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v3; // x8
   float z; // s1
 
-  if ( (byte_4C1EA28 & 1) == 0 )
+  if ( (byte_49B7922 & 1) == 0 )
   {
-    sub_1C3B764(&EarthPoint_TypeInfo, v1);
-    byte_4C1EA28 = 1;
+    sub_1B4CF90(&EarthPoint_TypeInfo, v1);
+    byte_49B7922 = 1;
   }
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v1);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v1);
+    byte_49B5361 = 1;
   }
   static_fields = EarthPoint_TypeInfo->static_fields;
   v3 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -25,10 +25,10 @@ void __fastcall EarthPoint___cctor(const MethodInfo *method)
 
 void __fastcall EarthPoint___ctor(EarthPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1EA27 & 1) == 0 )
+  if ( (byte_49B7921 & 1) == 0 )
   {
-    sub_1C3B764(&BaseEarthPoint_TypeInfo, method);
-    byte_4C1EA27 = 1;
+    sub_1B4CF90(&BaseEarthPoint_TypeInfo, method);
+    byte_49B7921 = 1;
   }
   if ( !BaseEarthPoint_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseEarthPoint_TypeInfo);
@@ -38,12 +38,12 @@ void __fastcall EarthPoint___ctor(EarthPoint_o *this, const MethodInfo *method)
 
 System_String_o *__fastcall EarthPoint__GetEffectName(EarthPoint_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C1EA26 & 1) == 0 )
+  if ( (byte_49B7920 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_19193/*"forceDropItem"*/, method);
-    byte_4C1EA26 = 1;
+    sub_1B4CF90(&StringLiteral_18514/*"ef_difference11"*/, method);
+    byte_49B7920 = 1;
   }
-  return (System_String_o *)StringLiteral_19193/*"forceDropItem"*/;
+  return (System_String_o *)StringLiteral_18514/*"ef_difference11"*/;
 }
 
 
@@ -83,10 +83,10 @@ void __fastcall EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *met
   UnityEngine_Color_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C1EA25 & 1) == 0 )
+  if ( (byte_49B791F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C1EA25 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B791F = 1;
   }
   vec.fields.z = 0.0;
   *(_QWORD *)&vec.fields.x = 0LL;
@@ -96,10 +96,10 @@ void __fastcall EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *met
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(mWidget, 0LL, 0LL) )
     return;
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v4);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v4);
+    byte_49B5361 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -137,16 +137,16 @@ void __fastcall EarthPoint__LateUpdate(EarthPoint_o *this, const MethodInfo *met
   transform = (UnityEngine_ParticleSystem_o *)this->fields.mWidget;
   if ( !transform )
 LABEL_53:
-    sub_1C3B9C0(transform, v8);
+    sub_1B4D1EC(transform, v8);
   v36.fields.a = value;
   v36.fields.r = r;
   v36.fields.g = g;
   v36.fields.b = b;
   UIWidget__set_color((UIWidget_o *)transform, v36, 0LL);
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v17);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v17);
+    byte_49B5361 = 1;
   }
   earthEffectCamera = (UnityEngine_Object_o *)this->fields.earthEffectCamera;
   x = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.x;
@@ -171,7 +171,7 @@ LABEL_53:
   *(UnityEngine_Vector3_o *)&v22 = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
   if ( !v21 )
     goto LABEL_53;
-  x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_70928728(v21, *(UnityEngine_Vector3_o *)&v22, 0LL));
+  x = COERCE_FLOAT(UnityEngine_Camera__WorldToViewportPoint_68610440(v21, *(UnityEngine_Vector3_o *)&v22, 0LL));
   if ( x < 0.0 )
   {
     v25 = this->fields.mIsForward;
@@ -183,10 +183,10 @@ LABEL_30:
                                                     (UnityEngine_Component_o *)this,
                                                     0LL);
       v26 = (UnityEngine_Transform_o *)transform;
-      if ( !byte_4C1C511 )
+      if ( !byte_49B5361 )
       {
-        transform = (UnityEngine_ParticleSystem_o *)sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v8);
-        byte_4C1C511 = 1;
+        transform = (UnityEngine_ParticleSystem_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v8);
+        byte_49B5361 = 1;
       }
       if ( !v26 )
         goto LABEL_53;
@@ -211,7 +211,7 @@ LABEL_29:
     transform = this->fields.mParticleSystem;
     if ( transform )
     {
-      UnityEngine_ParticleSystem__Clear_71403500(transform, 0LL);
+      UnityEngine_ParticleSystem__Clear_69085268(transform, 0LL);
 LABEL_40:
       this->fields.IsParticleDisp = 0;
       return;

@@ -11,33 +11,29 @@ void __fastcall ClassBoardItemModel___ctor(
   __int64 v10; // x1
   Il2CppObject *Entity; // x0
   ClassBoardItemModel_Fields *p_fields; // x20
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4C2567B & 1) == 0 )
+  if ( (byte_49BE5B8 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
-    sub_1C3B764(&DataManager_TypeInfo, v7);
-    sub_1C3B764(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    byte_4C2567B = 1;
+    sub_1B4CF90(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1B4CF90(&DataManager_TypeInfo, v7);
+    sub_1B4CF90(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    byte_49BE5B8 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
-    sub_1C3B9C0(0LL, v10);
+    sub_1B4D1EC(0LL, v10);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              itemId,
-             (const MethodInfo_329AE48 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_319D99C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.entity = (struct ItemEntity_o *)Entity;
   p_fields = &this->fields;
-  sub_1C3B708((PartyOrganizationUtility_o *)p_fields, (int64_t)Entity, v13, v14, v15, v16, v17, v18);
+  sub_1B4CF34((CGThumbnailListItem_o *)p_fields, (int32_t)Entity, v13, v14);
   p_fields->_Num_k__BackingField = num;
 }
 
@@ -54,7 +50,7 @@ int32_t __fastcall ClassBoardItemModel__get_Id(ClassBoardItemModel_o *this, cons
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   return entity->fields.id;
 }
 
@@ -72,7 +68,7 @@ int32_t __fastcall ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this,
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   UserOwnInfoByItemId = UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0LL);
   if ( UserOwnInfoByItemId )
     LODWORD(UserOwnInfoByItemId) = UserOwnInfoByItemId->fields._Num_k__BackingField;

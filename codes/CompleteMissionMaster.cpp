@@ -1,14 +1,14 @@
 void __fastcall CompleteMissionMaster___ctor(CompleteMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21D8A & 1) == 0 )
+  if ( (byte_49BAC9D & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
-    byte_4C21D8A = 1;
+    sub_1B4CF90(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
+    byte_49BAC9D = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     145,
-    (const MethodInfo_3298B24 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    (const MethodInfo_319B678 *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
 }
 
 
@@ -34,41 +34,33 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
   __int64 v20; // x0
   CompleteMissionEntity_o *v21; // x0
   __int64 v22; // x1
-  int64_t v23; // x2
-  int32_t v24; // w3
-  System_String_o *v25; // x4
-  BattleSetupInfo_o *v26; // x5
-  FollowerInfo_o *v27; // x6
-  PartyListViewItem_o *v28; // x7
-  bool v29; // w22
-  int v30; // w24
-  System_Collections_Generic_IEnumerator_T__c *v31; // x8
-  __int64 v32; // x9
-  int32_t *v33; // x10
-  __int64 v34; // x0
-  int64_t v35; // x2
-  int32_t v36; // w3
-  System_String_o *v37; // x4
-  BattleSetupInfo_o *v38; // x5
-  FollowerInfo_o *v39; // x6
-  PartyListViewItem_o *v40; // x7
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  bool v25; // w22
+  int v26; // w24
+  System_Collections_Generic_IEnumerator_T__c *v27; // x8
+  __int64 v28; // x9
+  int32_t *v29; // x10
+  __int64 v30; // x0
+  int32_t v31; // w2
+  const MethodInfo *v32; // x3
 
-  if ( (byte_4C21D8B & 1) == 0 )
+  if ( (byte_49BAC9E & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
-    sub_1C3B764(&System_IDisposable_TypeInfo, v7);
-    sub_1C3B764(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
-    sub_1C3B764(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4C21D8B = 1;
+    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
+    sub_1B4CF90(&System_IDisposable_TypeInfo, v7);
+    sub_1B4CF90(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
+    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_49BAC9E = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3B9C0(0LL, entity);
+    sub_1B4D1EC(0LL, entity);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_32357CC *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+                 (const MethodInfo_313B4BC *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3B9C0(0LL, v11);
+    sub_1B4D1EC(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -88,7 +80,7 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
     else
     {
 LABEL_9:
-      p_method = sub_1C8D744(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1B9D724(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -111,50 +103,50 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v20 = sub_1C8D744(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
+      v20 = sub_1B9D724(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
     }
     v21 = (CompleteMissionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
                                        Enumerator,
                                        *(_QWORD *)(v20 + 8));
     if ( !v21 )
-      sub_1C3B9C0(0LL, v22);
+      sub_1B4D1EC(0LL, v22);
     if ( v21->fields.objectId == objectId )
     {
       *entity = v21;
-      sub_1C3B708((PartyOrganizationUtility_o *)entity, (int64_t)v21, v23, v24, v25, v26, v27, v28);
-      v29 = 1;
-      v30 = 4;
+      sub_1B4CF34((CGThumbnailListItem_o *)entity, (int32_t)v21, v23, v24);
+      v25 = 1;
+      v26 = 4;
       goto LABEL_22;
     }
   }
-  v29 = 0;
-  v30 = 5;
+  v25 = 0;
+  v26 = 5;
 LABEL_22:
-  v31 = Enumerator->klass;
-  v32 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
+  v27 = Enumerator->klass;
+  v28 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
   if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
   {
-    v33 = &v31->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
+    v29 = &v27->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v29 - 1) != System_IDisposable_TypeInfo )
     {
-      --v32;
-      v33 += 4;
-      if ( !v32 )
+      --v28;
+      v29 += 4;
+      if ( !v28 )
         goto LABEL_26;
     }
-    v34 = (__int64)&v31->vtable[*v33].method;
+    v30 = (__int64)&v27->vtable[*v29].method;
   }
   else
   {
 LABEL_26:
-    v34 = sub_1C8D744(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_1B9D724(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v34)(Enumerator, *(_QWORD *)(v34 + 8));
-  if ( v30 == 5 )
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
+  if ( v26 == 5 )
   {
     *entity = 0LL;
-    sub_1C3B708((PartyOrganizationUtility_o *)entity, 0LL, v35, v36, v37, v38, v39, v40);
+    sub_1B4CF34((CGThumbnailListItem_o *)entity, 0, v31, v32);
     return 0;
   }
-  return v29;
+  return v25;
 }

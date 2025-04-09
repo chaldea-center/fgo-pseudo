@@ -6,26 +6,18 @@ void __fastcall SubmarineSpotInfo___ctor(
         const MethodInfo *method)
 {
   SubmarineSpotInfo_o *v8; // x22
-  int64_t v9; // x2
-  int32_t v10; // w3
-  System_String_o *v11; // x4
-  BattleSetupInfo_o *v12; // x5
-  FollowerInfo_o *v13; // x6
-  PartyListViewItem_o *v14; // x7
-  int64_t v15; // x2
-  int32_t v16; // w3
-  System_String_o *v17; // x4
-  BattleSetupInfo_o *v18; // x5
-  FollowerInfo_o *v19; // x6
-  PartyListViewItem_o *v20; // x7
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_1C3B708((PartyOrganizationUtility_o *)&v8->fields, (int64_t)spot, v9, v10, v11, v12, v13, v14);
+  sub_1B4CF34((CGThumbnailListItem_o *)&v8->fields, (int32_t)spot, v9, v10);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_1C3B708((PartyOrganizationUtility_o *)v8, (int64_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
+  sub_1B4CF34((CGThumbnailListItem_o *)v8, (int32_t)eventPanelSpotEntity, v11, v12);
   LODWORD(v8->monitor) = panelId;
 }
 
@@ -61,22 +53,14 @@ void __fastcall SubmarineSpotInfo__set_EventPanelSpotEntity(
         EventPanelSpotEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34(
+    (CGThumbnailListItem_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -91,12 +75,8 @@ void __fastcall SubmarineSpotInfo__set_SpotEntity(
         SpotEntity_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields, (int64_t)value, (int64_t)method, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

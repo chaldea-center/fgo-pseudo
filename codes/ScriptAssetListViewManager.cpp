@@ -17,37 +17,29 @@ void __fastcall ScriptAssetListViewManager__CreateList(ScriptAssetListViewManage
   __int64 v11; // x1
   unsigned __int64 v12; // x21
   __int64 v13; // x26
-  int64_t v14; // x23
-  int64_t v15; // x22
-  int64_t v16; // x2
-  int32_t v17; // w3
-  System_String_o *v18; // x4
-  BattleSetupInfo_o *v19; // x5
-  FollowerInfo_o *v20; // x6
-  PartyListViewItem_o *v21; // x7
-  int64_t v22; // x2
-  int32_t v23; // w3
-  System_String_o *v24; // x4
-  BattleSetupInfo_o *v25; // x5
-  FollowerInfo_o *v26; // x6
-  PartyListViewItem_o *v27; // x7
+  __int64 v14; // x23
+  __int64 v15; // x22
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v29; // x9
+  _QWORD *v21; // x9
   __int64 size; // x10
-  __int64 v31; // x8
+  __int64 v23; // x8
 
-  if ( (byte_4C1F61D & 1) == 0 )
+  if ( (byte_49B8525 & 1) == 0 )
   {
-    sub_1C3B764(&AssetManager_TypeInfo, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ListViewItem__Add__, v3);
-    sub_1C3B764(&ScriptAssetListViewItem_TypeInfo, v4);
-    sub_1C3B764(&StringLiteral_12818/*"SubmarineMapBeforeQuestInfo"*/, v5);
-    byte_4C1F61D = 1;
+    sub_1B4CF90(&AssetManager_TypeInfo, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__Add__, v3);
+    sub_1B4CF90(&ScriptAssetListViewItem_TypeInfo, v4);
+    sub_1B4CF90(&StringLiteral_12342/*"ScriptActionEncrypt"*/, v5);
+    byte_49B8525 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorageList = (System_Collections_Generic_List_object__o *)AssetManager__getAssetStorageList(
-                                                                    (System_String_o *)StringLiteral_12818/*"SubmarineMapBeforeQuestInfo"*/,
+                                                                    (System_String_o *)StringLiteral_12342/*"ScriptActionEncrypt"*/,
                                                                     0LL);
   if ( !AssetStorageList )
     goto LABEL_16;
@@ -61,17 +53,17 @@ void __fastcall ScriptAssetListViewManager__CreateList(ScriptAssetListViewManage
     while ( 1 )
     {
       if ( v12 >= (unsigned int)v9->fields._size )
-        sub_1C3B9C8(v10, v11);
+        sub_1B4D1F4(v10, v11);
       v14 = *((_QWORD *)&v9->fields._syncRoot + v12);
-      v15 = sub_1C3B9B0(ScriptAssetListViewItem_TypeInfo);
-      ListViewItem___ctor_42199332((ListViewItem_o *)v15, v12, 0LL);
+      v15 = sub_1B4D1DC(ScriptAssetListViewItem_TypeInfo);
+      ListViewItem___ctor_41325876((ListViewItem_o *)v15, v12, 0LL);
       *(_QWORD *)(v15 + 112) = v14;
-      sub_1C3B708((PartyOrganizationUtility_o *)(v15 + 112), v14, v16, v17, v18, v19, v20, v21);
+      sub_1B4CF34((CGThumbnailListItem_o *)(v15 + 112), v14, v16, v17);
       AssetStorageList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !AssetStorageList )
         break;
       items = AssetStorageList->fields._items;
-      v29 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v21 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++AssetStorageList->fields._version;
       if ( !items )
         break;
@@ -81,20 +73,20 @@ void __fastcall ScriptAssetListViewManager__CreateList(ScriptAssetListViewManage
         System_Collections_Generic_List_object___AddWithResize(
           AssetStorageList,
           (Il2CppObject *)v15,
-          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+          *(const MethodInfo_35801DC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
-        v31 = (__int64)items + 8 * size;
+        v23 = (__int64)items + 8 * size;
         AssetStorageList->fields._size = size + 1;
-        *(_QWORD *)(v31 + 32) = v15;
-        sub_1C3B708((PartyOrganizationUtility_o *)(v31 + 32), v15, v22, v23, v24, v25, v26, v27);
+        *(_QWORD *)(v23 + 32) = v15;
+        sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 32), v15, v18, v19);
       }
       if ( v13 == ++v12 )
         goto LABEL_15;
     }
 LABEL_16:
-    sub_1C3B9C0(AssetStorageList, v7);
+    sub_1B4D1EC(AssetStorageList, v7);
   }
 LABEL_15:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
@@ -125,11 +117,11 @@ ScriptAssetListViewItem_o *__fastcall ScriptAssetListViewManager__GetItem(
   ScriptAssetListViewItem_o *result; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4C1F61E & 1) == 0 )
+  if ( (byte_49B8526 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
-    sub_1C3B764(&ScriptAssetListViewItem_TypeInfo, v5);
-    byte_4C1F61E = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, *(_QWORD *)&index);
+    sub_1B4CF90(&ScriptAssetListViewItem_TypeInfo, v5);
+    byte_49B8526 = 1;
   }
   result = (ScriptAssetListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -137,7 +129,7 @@ ScriptAssetListViewItem_o *__fastcall ScriptAssetListViewManager__GetItem(
     result = (ScriptAssetListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)result,
                                             index,
-                                            (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                            (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       methodPtr_low = LOBYTE(ScriptAssetListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -165,17 +157,17 @@ System_String_o *__fastcall ScriptAssetListViewManager__GetNextName(
   __int64 v6; // x1
   void *itemList; // x0
   int v8; // w21
-  const MethodInfo_368B99C *v9; // x2
+  const MethodInfo_357FF0C *v9; // x2
   __int64 methodPtr_low; // x10
   int32_t v11; // w1
   __int64 v12; // x10
 
-  if ( (byte_4C1F623 & 1) == 0 )
+  if ( (byte_49B852B & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, name);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
-    sub_1C3B764(&ScriptAssetListViewItem_TypeInfo, v6);
-    byte_4C1F623 = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, name);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
+    sub_1B4CF90(&ScriptAssetListViewItem_TypeInfo, v6);
+    byte_49B852B = 1;
   }
   itemList = this->fields.itemList;
   if ( !itemList )
@@ -183,13 +175,13 @@ System_String_o *__fastcall ScriptAssetListViewManager__GetNextName(
   v8 = 1;
   while ( 1 )
   {
-    v9 = (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
+    v9 = (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
     if ( v8 - 1 >= *((_DWORD *)itemList + 6) - 1 )
       break;
     itemList = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)itemList,
                  v8 - 1,
-                 (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                 (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( !itemList )
       goto LABEL_19;
     methodPtr_low = LOBYTE(ScriptAssetListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
@@ -203,7 +195,7 @@ System_String_o *__fastcall ScriptAssetListViewManager__GetNextName(
       itemList = this->fields.itemList;
       if ( itemList )
       {
-        v9 = (const MethodInfo_368B99C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
+        v9 = (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ListViewItem__get_Item__;
         v11 = v8;
         goto LABEL_15;
       }
@@ -226,7 +218,7 @@ LABEL_15:
     || *(ScriptAssetListViewItem_c **)(*(_QWORD *)(*(_QWORD *)itemList + 200LL) + 8 * v12 - 8) != ScriptAssetListViewItem_TypeInfo )
   {
 LABEL_19:
-    sub_1C3B9C0(itemList, name);
+    sub_1B4D1EC(itemList, name);
   }
   return (System_String_o *)*((_QWORD *)itemList + 14);
 }
@@ -238,23 +230,19 @@ void __fastcall ScriptAssetListViewManager__OnClickListView(
         const MethodInfo *method)
 {
   int32_t Index; // w0
-  int64_t v5; // x2
-  int32_t v6; // w3
-  System_String_o *v7; // x4
-  BattleSetupInfo_o *v8; // x5
-  FollowerInfo_o *v9; // x6
-  PartyListViewItem_o *v10; // x7
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   struct System_Action_o *callbackFunc; // x20
 
   if ( !obj )
-    sub_1C3B9C0(this, 0LL);
+    sub_1B4D1EC(this, 0LL);
   Index = ListViewObject__get_Index(obj, 0LL);
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackIndex = Index;
   if ( callbackFunc )
   {
     this->fields.callbackFunc = 0LL;
-    sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.callbackFunc, 0LL, v5, v6, v7, v8, v9, v10);
+    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
       *(_QWORD *)&callbackFunc->fields.extra_arg);
@@ -269,19 +257,15 @@ void __fastcall ScriptAssetListViewManager__OnMoveEnd(ScriptAssetListViewManager
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
   __int64 v7; // x1
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  struct UIScrollView_o *v14; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  struct UIScrollView_o *v10; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C1F622 & 1) == 0 )
+  if ( (byte_49B852A & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C1F622 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49B852A = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -296,13 +280,13 @@ void __fastcall ScriptAssetListViewManager__OnMoveEnd(ScriptAssetListViewManager
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
       {
-        v14 = this->fields.scrollView;
-        if ( !v14 )
-          sub_1C3B9C0(0LL, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v14->klass->vtable._8_UpdateScrollbars.method)(
-          v14,
+        v10 = this->fields.scrollView;
+        if ( !v10 )
+          sub_1B4D1EC(0LL, v7);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._8_UpdateScrollbars.method)(
+          v10,
           1LL,
-          v14->klass->vtable._9_SetDragAmount.methodPtr);
+          v10->klass->vtable._9_SetDragAmount.methodPtr);
       }
       if ( !this->fields.isInput )
       {
@@ -310,7 +294,7 @@ void __fastcall ScriptAssetListViewManager__OnMoveEnd(ScriptAssetListViewManager
         if ( callbackFunc )
         {
           this->fields.callbackFunc = 0LL;
-          sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.callbackFunc, 0LL, v8, v9, v10, v11, v12, v13);
+          sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v8, v9);
           ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc->fields.m_target)(
             callbackFunc->fields.original_method_info,
             *(_QWORD *)&callbackFunc->fields.extra_arg);
@@ -344,31 +328,31 @@ void __fastcall ScriptAssetListViewManager__RequestListObject(
   __int64 v20; // x1
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C1F620 & 1) == 0 )
+  if ( (byte_49B8528 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__get_Current__, v9);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__, v10);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__get_Count__, v11);
-    sub_1C3B764(&Method_ScriptAssetListViewManager_OnMoveEnd__, v12);
-    sub_1C3B764(&StringLiteral_10129/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/, v13);
-    byte_4C1F620 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__get_Current__, v9);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__, v10);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__get_Count__, v11);
+    sub_1B4CF90(&Method_ScriptAssetListViewManager_OnMoveEnd__, v12);
+    sub_1B4CF90(&StringLiteral_9737/*"OnMoveEnd"*/, v13);
+    byte_49B8528 = 1;
   }
   memset(&v21, 0, sizeof(v21));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptAssetListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C3B9C0(0LL, v15);
+    sub_1B4D1EC(0LL, v15);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10129/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/,
+      (System_String_o *)StringLiteral_9737/*"OnMoveEnd"*/,
       delay,
       0LL);
   }
@@ -378,27 +362,27 @@ void __fastcall ScriptAssetListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v21,
       ObjectList,
-      (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__);
+      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v21,
-              (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__) )
+              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__) )
     {
       current = v21.fields._current;
-      v18 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+      v18 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
       System_Action___ctor(v18, (Il2CppObject *)this, Method_ScriptAssetListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1C3B9C0(v19, v20);
-      ScriptAssetListViewObject__Init_36181624((ScriptAssetListViewObject_o *)current, mode, v18, delay, 0LL);
+        sub_1B4D1EC(v19, v20);
+      ScriptAssetListViewObject__Init_35292992((ScriptAssetListViewObject_o *)current, mode, v18, delay, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v21,
-      (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__);
+      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptAssetListViewManager__RequestListObject_36173512(
+void __fastcall ScriptAssetListViewManager__RequestListObject_35284880(
         ScriptAssetListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -419,31 +403,31 @@ void __fastcall ScriptAssetListViewManager__RequestListObject_36173512(
   __int64 v18; // x1
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C1F621 & 1) == 0 )
+  if ( (byte_49B8529 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__get_Current__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__, v8);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__get_Count__, v9);
-    sub_1C3B764(&Method_ScriptAssetListViewManager_OnMoveEnd__, v10);
-    sub_1C3B764(&StringLiteral_10129/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/, v11);
-    byte_4C1F621 = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&mode);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__get_Current__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__, v8);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__get_Count__, v9);
+    sub_1B4CF90(&Method_ScriptAssetListViewManager_OnMoveEnd__, v10);
+    sub_1B4CF90(&StringLiteral_9737/*"OnMoveEnd"*/, v11);
+    byte_49B8529 = 1;
   }
   memset(&v19, 0, sizeof(v19));
   ObjectList = (System_Collections_Generic_List_object__o *)ScriptAssetListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C3B9C0(0LL, v13);
+    sub_1B4D1EC(0LL, v13);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10129/*"PHOTO_TARGET_CHANGE_DIALOG_MESSAGE"*/,
+      (System_String_o *)StringLiteral_9737/*"OnMoveEnd"*/,
       0.0,
       0LL);
   }
@@ -453,21 +437,21 @@ void __fastcall ScriptAssetListViewManager__RequestListObject_36173512(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v19,
       ObjectList,
-      (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__);
+      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v19,
-              (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__) )
+              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__MoveNext__) )
     {
       current = v19.fields._current;
-      v16 = (System_Action_o *)sub_1C3B9B0(System_Action_TypeInfo);
+      v16 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
       System_Action___ctor(v16, (Il2CppObject *)this, Method_ScriptAssetListViewManager_OnMoveEnd__, 0LL);
       if ( !current )
-        sub_1C3B9C0(v17, v18);
-      ScriptAssetListViewObject__Init_36181708((ScriptAssetListViewObject_o *)current, mode, v16, 0LL);
+        sub_1B4D1EC(v17, v18);
+      ScriptAssetListViewObject__Init_35293076((ScriptAssetListViewObject_o *)current, mode, v16, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v19,
-      (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__);
+      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ScriptAssetListViewObject__Dispose__);
   }
 }
 
@@ -479,39 +463,27 @@ void __fastcall ScriptAssetListViewManager__SetMode(
 {
   const MethodInfo *v3; // x3
 
-  ScriptAssetListViewManager__SetMode_36173392(this, mode, 0LL, v3);
+  ScriptAssetListViewManager__SetMode_35284760(this, mode, 0LL, v3);
 }
 
 
-void __fastcall ScriptAssetListViewManager__SetMode_36173392(
+void __fastcall ScriptAssetListViewManager__SetMode_35284760(
         ScriptAssetListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  const MethodInfo *v10; // x2
+  const MethodInfo *v6; // x2
 
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.callbackFunc,
-    (int64_t)callback,
-    (int64_t)callback,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 1, 0LL);
   if ( mode == 1 )
   {
     this->fields.callbackIndex = -1;
-    ScriptAssetListViewManager__RequestListObject_36173512(this, 3, v10);
+    ScriptAssetListViewManager__RequestListObject_35284880(this, 3, v6);
   }
 }
 
@@ -527,23 +499,23 @@ void __fastcall ScriptAssetListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4C1F61F & 1) == 0 )
+  if ( (byte_49B8527 & 1) == 0 )
   {
-    this = (ScriptAssetListViewManager_o *)sub_1C3B764(&ScriptAssetListViewObject_TypeInfo, obj);
-    byte_4C1F61F = 1;
+    this = (ScriptAssetListViewManager_o *)sub_1B4CF90(&ScriptAssetListViewObject_TypeInfo, obj);
+    byte_49B8527 = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(ScriptAssetListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (ScriptAssetListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != ScriptAssetListViewObject_TypeInfo )
   {
-    sub_1C3B9C0(this, obj);
+    sub_1B4D1EC(this, obj);
   }
   if ( v5->fields.initMode == 1 )
     v7 = 3;
   else
     v7 = 2;
-  ScriptAssetListViewObject__Init_36180468((ScriptAssetListViewObject_o *)obj, v7, 0LL);
+  ScriptAssetListViewObject__Init_35291836((ScriptAssetListViewObject_o *)obj, v7, 0LL);
 }
 
 
@@ -561,10 +533,10 @@ void __fastcall ScriptAssetListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C1F61A & 1) == 0 )
+  if ( (byte_49B8522 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, value);
-    byte_4C1F61A = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, value);
+    byte_49B8522 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -576,13 +548,13 @@ void __fastcall ScriptAssetListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C76C54(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B8724C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3BC80(v7);
+  sub_1B4D4AC(v7);
   ScriptAssetListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -606,89 +578,85 @@ System_Collections_Generic_List_ScriptAssetListViewObject__o *__fastcall ScriptA
   _BOOL8 v15; // x0
   __int64 v16; // x1
   Il2CppObject *Component_object; // x0
-  int64_t v18; // x2
-  int32_t v19; // w3
-  System_String_o *v20; // x4
-  BattleSetupInfo_o *v21; // x5
-  FollowerInfo_o *v22; // x6
-  PartyListViewItem_o *v23; // x7
-  int64_t v24; // x1
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  Il2CppObject *v20; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v26; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  Il2CppClass **v28; // x0
-  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v24; // x0
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C1F61C & 1) == 0 )
+  if ( (byte_49B8524 & 1) == 0 )
   {
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1C3B764(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___, v5);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__Add__, v6);
-    sub_1C3B764(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1C3B764(&Method_System_Collections_Generic_List_ScriptAssetListViewObject___ctor__, v8);
-    sub_1C3B764(&System_Collections_Generic_List_ScriptAssetListViewObject__TypeInfo, v9);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v10);
-    byte_4C1F61C = 1;
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___, v5);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject__Add__, v6);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_ScriptAssetListViewObject___ctor__, v8);
+    sub_1B4CF90(&System_Collections_Generic_List_ScriptAssetListViewObject__TypeInfo, v9);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v10);
+    byte_49B8524 = 1;
   }
-  memset(&v31, 0, sizeof(v31));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3B9B0(System_Collections_Generic_List_ScriptAssetListViewObject__TypeInfo);
+  memset(&v27, 0, sizeof(v27));
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_ScriptAssetListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_368B438 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject___ctor__);
+    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_ScriptAssetListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C3B9C0(0LL, v12);
+    sub_1B4D1EC(0LL, v12);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v30,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_368C764 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v31 = v30;
+    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v27 = v26;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v31,
-            (const MethodInfo_34203C4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v27,
+            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v31.fields._current;
+    current = v27.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
     if ( v15 )
     {
       if ( !current )
-        sub_1C3B9C0(v15, v16);
+        sub_1B4D1EC(v15, v16);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___);
-      v24 = (int64_t)Component_object;
+                           (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_ScriptAssetListViewObject___);
+      v20 = Component_object;
       if ( !v11 )
-        sub_1C3B9C0(Component_object, Component_object);
+        sub_1B4D1EC(Component_object, Component_object);
       items = v11->fields._items;
-      v26 = Method_System_Collections_Generic_List_ScriptAssetListViewObject__Add__;
+      v22 = Method_System_Collections_Generic_List_ScriptAssetListViewObject__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1C3B9C0(Component_object, Component_object);
+        sub_1B4D1EC(Component_object, Component_object);
       size = v11->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           Component_object,
-          *(const MethodInfo_368BC6C **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_35801DC **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
-        v28 = &items->obj.klass + size;
+        v24 = &items->obj.klass + size;
         v11->fields._size = size + 1;
-        v28[4] = (Il2CppClass *)v24;
-        sub_1C3B708((PartyOrganizationUtility_o *)(v28 + 4), v24, v18, v19, v20, v21, v22, v23);
+        v24[4] = (Il2CppClass *)v20;
+        sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v20, v18, v19);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v31,
-    (const MethodInfo_34203C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v27,
+    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_ScriptAssetListViewObject__o *)v11;
 }
 
@@ -706,10 +674,10 @@ void __fastcall ScriptAssetListViewManager__remove_callbackFunc(
   ScriptAssetListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C1F61B & 1) == 0 )
+  if ( (byte_49B8523 & 1) == 0 )
   {
-    sub_1C3B764(&System_Action_TypeInfo, value);
-    byte_4C1F61B = 1;
+    sub_1B4CF90(&System_Action_TypeInfo, value);
+    byte_49B8523 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -721,12 +689,12 @@ void __fastcall ScriptAssetListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C76C54(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1B8724C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3BC80(v7);
+  sub_1B4D4AC(v7);
   ScriptAssetListViewManager__get_ObjectList(v10, v11);
 }

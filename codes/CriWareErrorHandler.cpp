@@ -26,13 +26,13 @@ void __fastcall CriWareErrorHandler__Awake(CriWareErrorHandler_o *this, const Me
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_4C1C2A5 & 1) == 0 )
+  if ( (byte_49B50F5 & 1) == 0 )
   {
-    sub_1C3B764(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, v3);
-    sub_1C3B764(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
-    this = (CriWareErrorHandler_o *)sub_1C3B764(&UnityEngine_Object_TypeInfo, v5);
-    byte_4C1C2A5 = 1;
+    sub_1B4CF90(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, v3);
+    sub_1B4CF90(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v4);
+    this = (CriWareErrorHandler_o *)sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
+    byte_49B50F5 = 1;
   }
   static_fields = CriWareErrorHandler_TypeInfo->static_fields;
   initializationCount = static_fields->initializationCount;
@@ -41,7 +41,7 @@ void __fastcall CriWareErrorHandler__Awake(CriWareErrorHandler_o *this, const Me
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71122748((UnityEngine_Object_o *)v2, 0LL);
+    UnityEngine_Object__Destroy_68804456((UnityEngine_Object_o *)v2, 0LL);
   }
   else
   {
@@ -49,14 +49,14 @@ void __fastcall CriWareErrorHandler__Awake(CriWareErrorHandler_o *this, const Me
     CriWareErrorHandler__CRIWARE527DA518(v2->fields.enableForceCrashOnError, v8);
     CriWareErrorHandler__CRIWARE063A11A2(v2->fields.messageBufferCounts, v9);
     CriWareErrorHandler__CRIWAREDBC6F415(v2->fields.enableDebugPrintOnTerminal, v10);
-    v11 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_1C3B9B0(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
+    v11 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_1B4D1DC(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
     CriWareErrorHandler_ErrorCallbackFunc___ctor(v11, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, v12);
     CriWareErrorHandler__CRIWARED1107B8D(v11, v13);
     if ( v2->fields.dontDestroyOnLoad )
     {
       transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0LL);
       if ( !transform )
-        sub_1C3B9C0(0LL, v15);
+        sub_1B4D1EC(0LL, v15);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(transform, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -73,8 +73,8 @@ void __fastcall CriWareErrorHandler__CRIWARE063A11A2(uint32_t length, const Meth
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_4C1C2B0;
-  if ( !qword_4C1C2B0 )
+  v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))qword_49B5100;
+  if ( !qword_49B5100 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -83,8 +83,8 @@ void __fastcall CriWareErrorHandler__CRIWARE063A11A2(uint32_t length, const Meth
     v5 = 4;
     v4[4] = 0x200000000LL;
     v6 = 0;
-    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_1C3BD40(v4);
-    qword_4C1C2B0 = (__int64)v2;
+    v2 = (void (__fastcall *)(_QWORD, const MethodInfo *))sub_1B4D56C(v4);
+    qword_49B5100 = (__int64)v2;
   }
   v2(length, method);
 }
@@ -97,8 +97,8 @@ void __fastcall CriWareErrorHandler__CRIWARE3BCC893C(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_4C1C2C0;
-  if ( !qword_4C1C2C0 )
+  v1 = (void (*)(void))qword_49B5110;
+  if ( !qword_49B5110 )
   {
     v3 = 0;
     v2[0] = (__int64)"cri_ware_unity";
@@ -107,8 +107,8 @@ void __fastcall CriWareErrorHandler__CRIWARE3BCC893C(const MethodInfo *method)
     v2[3] = 15LL;
     v2[4] = 0x200000000LL;
     v4 = 0;
-    v1 = (void (*)(void))sub_1C3BD40(v2);
-    qword_4C1C2C0 = (__int64)v1;
+    v1 = (void (*)(void))sub_1B4D56C(v2);
+    qword_49B5110 = (__int64)v1;
   }
   v1();
 }
@@ -121,8 +121,8 @@ void __fastcall CriWareErrorHandler__CRIWARE4A393AE0(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_4C1C2D0;
-  if ( !qword_4C1C2D0 )
+  v1 = (void (*)(void))qword_49B5120;
+  if ( !qword_49B5120 )
   {
     v3 = 0;
     v2[0] = (__int64)"cri_ware_unity";
@@ -131,8 +131,8 @@ void __fastcall CriWareErrorHandler__CRIWARE4A393AE0(const MethodInfo *method)
     v2[3] = 15LL;
     v2[4] = 0x200000000LL;
     v4 = 0;
-    v1 = (void (*)(void))sub_1C3BD40(v2);
-    qword_4C1C2D0 = (__int64)v1;
+    v1 = (void (*)(void))sub_1B4D56C(v2);
+    qword_49B5120 = (__int64)v1;
   }
   v1();
 }
@@ -145,8 +145,8 @@ void __fastcall CriWareErrorHandler__CRIWARE527DA518(bool sw, const MethodInfo *
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_4C1C2E0;
-  if ( !qword_4C1C2E0 )
+  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_49B5130;
+  if ( !qword_49B5130 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -155,8 +155,8 @@ void __fastcall CriWareErrorHandler__CRIWARE527DA518(bool sw, const MethodInfo *
     v5 = 4;
     v4[4] = 0x200000000LL;
     v6 = 0;
-    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_1C3BD40(v4);
-    qword_4C1C2E0 = (__int64)v2;
+    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_1B4D56C(v4);
+    qword_49B5130 = (__int64)v2;
   }
   v2(sw, method);
 }
@@ -169,8 +169,8 @@ intptr_t __fastcall CriWareErrorHandler__CRIWARE841C0338(const MethodInfo *metho
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)qword_4C1C2D8;
-  if ( !qword_4C1C2D8 )
+  v1 = (const MethodInfo *)qword_49B5128;
+  if ( !qword_49B5128 )
   {
     v4 = 0;
     v3[0] = (__int64)"cri_ware_unity";
@@ -179,9 +179,9 @@ intptr_t __fastcall CriWareErrorHandler__CRIWARE841C0338(const MethodInfo *metho
     v3[3] = 15LL;
     v3[4] = 0x200000000LL;
     v5 = 0;
-    method = (const MethodInfo *)sub_1C3BD40(v3);
+    method = (const MethodInfo *)sub_1B4D56C(v3);
     v1 = method;
-    qword_4C1C2D8 = (__int64)method;
+    qword_49B5128 = (__int64)method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -194,8 +194,8 @@ void __fastcall CriWareErrorHandler__CRIWAREA2E6711B(const MethodInfo *method)
   int v3; // [xsp+28h] [xbp-18h]
   char v4; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (void (*)(void))qword_4C1C2B8;
-  if ( !qword_4C1C2B8 )
+  v1 = (void (*)(void))qword_49B5108;
+  if ( !qword_49B5108 )
   {
     v3 = 0;
     v2[0] = (__int64)"cri_ware_unity";
@@ -204,8 +204,8 @@ void __fastcall CriWareErrorHandler__CRIWAREA2E6711B(const MethodInfo *method)
     v2[3] = 15LL;
     v2[4] = 0x200000000LL;
     v4 = 0;
-    v1 = (void (*)(void))sub_1C3BD40(v2);
-    qword_4C1C2B8 = (__int64)v1;
+    v1 = (void (*)(void))sub_1B4D56C(v2);
+    qword_49B5108 = (__int64)v1;
   }
   v1();
 }
@@ -223,7 +223,7 @@ void __fastcall CriWareErrorHandler__CRIWARED1107B8D(
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  if ( !qword_4C1C2E8 )
+  if ( !qword_49B5138 )
   {
     v7[0] = (__int64)"cri_ware_unity";
     v7[1] = 14LL;
@@ -232,10 +232,10 @@ void __fastcall CriWareErrorHandler__CRIWARED1107B8D(
     v8 = 8;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    qword_4C1C2E8 = (__int64 (__fastcall *)(_QWORD))sub_1C3BD40(v7);
+    qword_49B5138 = (__int64 (__fastcall *)(_QWORD))sub_1B4D56C(v7);
   }
-  v6 = sub_1C3BD38(callback, method, v2, v3, v4);
-  qword_4C1C2E8(v6);
+  v6 = sub_1B4D564(callback, method, v2, v3, v4);
+  qword_49B5138(v6);
 }
 
 
@@ -246,8 +246,8 @@ void __fastcall CriWareErrorHandler__CRIWAREDBC6F415(bool sw, const MethodInfo *
   int v5; // [xsp+28h] [xbp-28h]
   char v6; // [xsp+2Ch] [xbp-24h]
 
-  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_4C1C2C8;
-  if ( !qword_4C1C2C8 )
+  v2 = (void (__fastcall *)(bool, const MethodInfo *))qword_49B5118;
+  if ( !qword_49B5118 )
   {
     v4[0] = (__int64)"cri_ware_unity";
     v4[1] = 14LL;
@@ -256,8 +256,8 @@ void __fastcall CriWareErrorHandler__CRIWAREDBC6F415(bool sw, const MethodInfo *
     v5 = 4;
     v4[4] = 0x200000000LL;
     v6 = 0;
-    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_1C3BD40(v4);
-    qword_4C1C2C8 = (__int64)v2;
+    v2 = (void (__fastcall *)(bool, const MethodInfo *))sub_1B4D56C(v4);
+    qword_49B5118 = (__int64)v2;
   }
   v2(sw, method);
 }
@@ -284,11 +284,11 @@ void __fastcall CriWareErrorHandler__DequeueErrorMessages(CriWareErrorHandler_o 
   System_String_o *v5; // x22
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C1C2A8 & 1) == 0 )
+  if ( (byte_49B50F8 & 1) == 0 )
   {
-    sub_1C3B764(&System_Runtime_InteropServices_Marshal_TypeInfo, method);
-    this = (CriWareErrorHandler_o *)sub_1C3B764(&string_TypeInfo, v2);
-    byte_4C1C2A8 = 1;
+    sub_1B4CF90(&System_Runtime_InteropServices_Marshal_TypeInfo, method);
+    this = (CriWareErrorHandler_o *)sub_1B4CF90(&string_TypeInfo, v2);
+    byte_49B50F8 = 1;
   }
   for ( i = CriWareErrorHandler__CRIWARE841C0338((const MethodInfo *)this);
         !System_IntPtr__op_Equality(i, 0, 0LL);
@@ -314,10 +314,10 @@ void __fastcall CriWareErrorHandler__HandleMessage(System_String_o *errmsg, cons
   struct CriWareErrorHandler_Callback_o *OnCallback; // x8
   struct CriWareErrorHandler_Callback_o *callback; // x8
 
-  if ( (byte_4C1C2A9 & 1) == 0 )
+  if ( (byte_49B50F9 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, method);
-    byte_4C1C2A9 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, method);
+    byte_49B50F9 = 1;
   }
   if ( errmsg )
   {
@@ -357,10 +357,10 @@ void __fastcall CriWareErrorHandler__OnDestroy(CriWareErrorHandler_o *this, cons
   const MethodInfo *v4; // x0
   const MethodInfo *v5; // x0
 
-  if ( (byte_4C1C2A7 & 1) == 0 )
+  if ( (byte_49B50F7 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, method);
-    byte_4C1C2A7 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, method);
+    byte_49B50F7 = 1;
   }
   static_fields = CriWareErrorHandler_TypeInfo->static_fields;
   v3 = static_fields->initializationCount - 1;
@@ -390,14 +390,14 @@ void __fastcall CriWareErrorHandler__OnEnable(CriWareErrorHandler_o *this, const
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C1C2A6 & 1) == 0 )
+  if ( (byte_49B50F6 & 1) == 0 )
   {
-    sub_1C3B764(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
-    sub_1C3B764(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v3);
-    byte_4C1C2A6 = 1;
+    sub_1B4CF90(&Method_CriWareErrorHandler_ErrorCallbackFromNative__, method);
+    sub_1B4CF90(&CriWareErrorHandler_ErrorCallbackFunc_TypeInfo, v3);
+    byte_49B50F6 = 1;
   }
   CriMonoBehaviour__OnEnable((CriMonoBehaviour_o *)this, method);
-  v4 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_1C3B9B0(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
+  v4 = (CriWareErrorHandler_ErrorCallbackFunc_o *)sub_1B4D1DC(CriWareErrorHandler_ErrorCallbackFunc_TypeInfo);
   CriWareErrorHandler_ErrorCallbackFunc___ctor(v4, 0LL, Method_CriWareErrorHandler_ErrorCallbackFromNative__, v5);
   CriWareErrorHandler__CRIWARED1107B8D(v4, v6);
 }
@@ -409,16 +409,16 @@ void __fastcall CriWareErrorHandler__OutputDefaultLog(System_String_o *errmsg, c
   __int64 v3; // x1
 
   v2 = errmsg;
-  if ( (byte_4C1C2AA & 1) == 0 )
+  if ( (byte_49B50FA & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_15685/*"[{0}]+{1}[-]"*/, method);
-    errmsg = (System_String_o *)sub_1C3B764(&StringLiteral_5534/*"EVENT_JOIN_COMBINE_MSG_TITLE"*/, v3);
-    byte_4C1C2AA = 1;
+    sub_1B4CF90(&StringLiteral_15078/*"W"*/, method);
+    errmsg = (System_String_o *)sub_1B4CF90(&StringLiteral_5330/*"E"*/, v3);
+    byte_49B50FA = 1;
   }
   if ( !v2 )
-    sub_1C3B9C0(errmsg, method);
-  if ( !System_String__StartsWith(v2, (System_String_o *)StringLiteral_5534/*"EVENT_JOIN_COMBINE_MSG_TITLE"*/, 0LL) )
-    System_String__StartsWith(v2, (System_String_o *)StringLiteral_15685/*"[{0}]+{1}[-]"*/, 0LL);
+    sub_1B4D1EC(errmsg, method);
+  if ( !System_String__StartsWith(v2, (System_String_o *)StringLiteral_5330/*"E"*/, 0LL) )
+    System_String__StartsWith(v2, (System_String_o *)StringLiteral_15078/*"W"*/, 0LL);
 }
 
 
@@ -438,11 +438,11 @@ void __fastcall CriWareErrorHandler__add_OnCallback(CriWareErrorHandler_Callback
   CriWareErrorHandler_Callback_o *v8; // x0
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C1C2A3 & 1) == 0 )
+  if ( (byte_49B50F3 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_Callback_TypeInfo, method);
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, v3);
-    byte_4C1C2A3 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_Callback_TypeInfo, method);
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, v3);
+    byte_49B50F3 = 1;
   }
   OnCallback = (System_Delegate_o *)CriWareErrorHandler_TypeInfo->static_fields->OnCallback;
   while ( 1 )
@@ -453,13 +453,13 @@ void __fastcall CriWareErrorHandler__add_OnCallback(CriWareErrorHandler_Callback
       if ( (CriWareErrorHandler_Callback_c *)v5->klass != CriWareErrorHandler_Callback_TypeInfo )
         break;
     }
-    v6 = sub_1C76C54(&CriWareErrorHandler_TypeInfo->static_fields->OnCallback, v5, OnCallback);
+    v6 = sub_1B8724C(&CriWareErrorHandler_TypeInfo->static_fields->OnCallback, v5, OnCallback);
     v7 = OnCallback == (System_Delegate_o *)v6;
     OnCallback = (System_Delegate_o *)v6;
     if ( v7 )
       return;
   }
-  v8 = (CriWareErrorHandler_Callback_o *)sub_1C3BC80(v5);
+  v8 = (CriWareErrorHandler_Callback_o *)sub_1B4D4AC(v5);
   CriWareErrorHandler__remove_OnCallback(v8, v9);
 }
 
@@ -468,10 +468,10 @@ System_String_o *__fastcall CriWareErrorHandler__get_errorMessage(const MethodIn
 {
   __int64 v1; // x1
 
-  if ( (byte_4C1C2A1 & 1) == 0 )
+  if ( (byte_49B50F1 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, v1);
-    byte_4C1C2A1 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, v1);
+    byte_49B50F1 = 1;
   }
   return CriWareErrorHandler_TypeInfo->static_fields->_errorMessage_k__BackingField;
 }
@@ -487,11 +487,11 @@ void __fastcall CriWareErrorHandler__remove_OnCallback(CriWareErrorHandler_Callb
   CriWareErrorHandler_o *v8; // x0
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C1C2A4 & 1) == 0 )
+  if ( (byte_49B50F4 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_Callback_TypeInfo, method);
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, v3);
-    byte_4C1C2A4 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_Callback_TypeInfo, method);
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, v3);
+    byte_49B50F4 = 1;
   }
   OnCallback = (System_Delegate_o *)CriWareErrorHandler_TypeInfo->static_fields->OnCallback;
   while ( 1 )
@@ -502,26 +502,26 @@ void __fastcall CriWareErrorHandler__remove_OnCallback(CriWareErrorHandler_Callb
       if ( (CriWareErrorHandler_Callback_c *)v5->klass != CriWareErrorHandler_Callback_TypeInfo )
         break;
     }
-    v6 = sub_1C76C54(&CriWareErrorHandler_TypeInfo->static_fields->OnCallback, v5, OnCallback);
+    v6 = sub_1B8724C(&CriWareErrorHandler_TypeInfo->static_fields->OnCallback, v5, OnCallback);
     v7 = OnCallback == (System_Delegate_o *)v6;
     OnCallback = (System_Delegate_o *)v6;
     if ( v7 )
       return;
   }
-  v8 = (CriWareErrorHandler_o *)sub_1C3BC80(v5);
+  v8 = (CriWareErrorHandler_o *)sub_1B4D4AC(v5);
   CriWareErrorHandler__Awake(v8, v9);
 }
 
 
 void __fastcall CriWareErrorHandler__set_errorMessage(System_String_o *value, const MethodInfo *method)
 {
-  if ( (byte_4C1C2A2 & 1) == 0 )
+  if ( (byte_49B50F2 & 1) == 0 )
   {
-    sub_1C3B764(&CriWareErrorHandler_TypeInfo, method);
-    byte_4C1C2A2 = 1;
+    sub_1B4CF90(&CriWareErrorHandler_TypeInfo, method);
+    byte_49B50F2 = 1;
   }
   CriWareErrorHandler_TypeInfo->static_fields->_errorMessage_k__BackingField = value;
-  sub_1C3B708(CriWareErrorHandler_TypeInfo->static_fields);
+  sub_1B4CF34(CriWareErrorHandler_TypeInfo->static_fields);
 }
 
 
@@ -544,14 +544,14 @@ void __fastcall CriWareErrorHandler_Callback___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(&this->fields.method);
+  sub_1B4CF34(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v6) & 1) != 0 )
+  if ( (sub_1B4D050(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_1A72A38;
+      v9 = (Il2CppObject *)sub_1992798;
 LABEL_8:
       this->fields.m_target = v9;
       goto LABEL_9;
@@ -561,20 +561,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = (Il2CppObject *)sub_1A72A18;
+      v9 = (Il2CppObject *)sub_1992778;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v11, 0LL);
+      v11 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v11, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_9:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A729D0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1992730;
 }
 
 
@@ -588,7 +588,7 @@ System_IAsyncResult_o *__fastcall CriWareErrorHandler_Callback__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = message;
-  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, &v6, callback, object);
 }
 
 
@@ -597,7 +597,7 @@ void __fastcall CriWareErrorHandler_Callback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 
@@ -632,14 +632,14 @@ void __fastcall CriWareErrorHandler_ErrorCallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1C3B708(&this->fields.method);
+  sub_1B4CF34(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1C3B824(v6) & 1) != 0 )
+  if ( (sub_1B4D050(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_1A72ADC;
+      v9 = (Il2CppObject *)sub_199283C;
 LABEL_8:
       this->fields.m_target = v9;
       goto LABEL_9;
@@ -649,20 +649,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = (Il2CppObject *)sub_1A72ABC;
+      v9 = (Il2CppObject *)sub_199281C;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C3B9DC(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3B88C(v11, 0LL);
+      v11 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B4D0B8(v11, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_9:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A72A74;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19927D4;
 }
 
 
@@ -676,7 +676,7 @@ System_IAsyncResult_o *__fastcall CriWareErrorHandler_ErrorCallbackFunc__BeginIn
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = errmsg;
-  return (System_IAsyncResult_o *)sub_1C3B718(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1B4CF44(this, &v6, callback, object);
 }
 
 
@@ -685,7 +685,7 @@ void __fastcall CriWareErrorHandler_ErrorCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3B71C(result, 0LL, method);
+  sub_1B4CF48(result, 0LL, method);
 }
 
 

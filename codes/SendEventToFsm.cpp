@@ -1,21 +1,17 @@
 void __fastcall SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
-  int64_t v9; // x1
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  int32_t v5; // w1
 
-  if ( (byte_4C2145C & 1) == 0 )
+  if ( (byte_49BA370 & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_22566/*"reset_purchase_num"*/, method);
-    byte_4C2145C = 1;
+    sub_1B4CF90(&StringLiteral_21834/*"none"*/, method);
+    byte_49BA370 = 1;
   }
-  v9 = StringLiteral_22566/*"reset_purchase_num"*/;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22566/*"reset_purchase_num"*/;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields.sendEvent, v9, v2, v3, v4, v5, v6, v7);
+  v5 = StringLiteral_21834/*"none"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_21834/*"none"*/;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.sendEvent, v5, v2, v3);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -44,10 +40,10 @@ void __fastcall SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInf
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C21459 & 1) == 0 )
+  if ( (byte_49BA36D & 1) == 0 )
   {
-    sub_1C3B764(&UICamera_TypeInfo, method);
-    byte_4C21459 = 1;
+    sub_1B4CF90(&UICamera_TypeInfo, method);
+    byte_49BA36D = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -110,10 +106,10 @@ void __fastcall SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4C2145A & 1) == 0 )
+  if ( (byte_49BA36E & 1) == 0 )
   {
-    sub_1C3B764(&UICamera_TypeInfo, isSelected);
-    byte_4C2145A = 1;
+    sub_1B4CF90(&UICamera_TypeInfo, isSelected);
+    byte_49BA36E = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
   {
@@ -138,10 +134,10 @@ void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *m
   __int64 v4; // x1
   PlayMakerFSM_o *v5; // x0
 
-  if ( (byte_4C2145B & 1) == 0 )
+  if ( (byte_49BA36F & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C2145B = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BA36F = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -150,7 +146,7 @@ void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *m
   {
     v5 = this->fields.targetFSM;
     if ( !v5 )
-      sub_1C3B9C0(0LL, v4);
+      sub_1B4D1EC(0LL, v4);
     PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0LL);
   }
 }

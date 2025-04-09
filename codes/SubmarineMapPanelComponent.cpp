@@ -16,15 +16,11 @@ void __fastcall SubmarineMapPanelComponent__ClickPanel(SubmarineMapPanelComponen
 
 void __fastcall SubmarineMapPanelComponent__Initialize(SubmarineMapPanelComponent_o *this, const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
   this->fields._OnClickPanel_k__BackingField = 0LL;
-  sub_1C3B708((PartyOrganizationUtility_o *)&this->fields._OnClickPanel_k__BackingField, 0LL, v2, v3, v4, v5, v6, v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._OnClickPanel_k__BackingField, 0, v2, v3);
 }
 
 
@@ -36,17 +32,17 @@ void __fastcall SubmarineMapPanelComponent__OnPanelFadeOutFinished(
   Il2CppObject *Component_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C1EA4D & 1) == 0 )
+  if ( (byte_49B7947 & 1) == 0 )
   {
-    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
-    byte_4C1EA4D = 1;
+    sub_1B4CF90(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, method);
+    byte_49B7947 = 1;
   }
   SubmarineMapPanelComponent__SetClosedPanelVisible(this, 0, v2);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        this->fields.closedPanel,
-                       (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+                       (const MethodInfo_2F54F2C *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
   if ( !Component_object )
-    sub_1C3B9C0(0LL, v5);
+    sub_1B4D1EC(0LL, v5);
   TweenAlpha__set_value((TweenAlpha_o *)Component_object, 1.0, 0LL);
 }
 
@@ -77,18 +73,18 @@ void __fastcall SubmarineMapPanelComponent__SetClosedPanelTexture(
   int v24; // w8
   UnityEngine_Rect_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C1EA4B & 1) == 0 )
+  if ( (byte_49B7945 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_GameObject_GetComponent_UITexture___, objDomain);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C1EA4B = 1;
+    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UITexture___, objDomain);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
+    byte_49B7945 = 1;
   }
   closedPanel = this->fields.closedPanel;
   if ( !closedPanel )
     goto LABEL_17;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        closedPanel,
-                       (const MethodInfo_3041A18 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   closedPanel = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -151,7 +147,7 @@ void __fastcall SubmarineMapPanelComponent__SetClosedPanelTexture(
       }
     }
 LABEL_17:
-    sub_1C3B9C0(closedPanel, objDomain);
+    sub_1B4D1EC(closedPanel, objDomain);
   }
 }
 
@@ -166,10 +162,10 @@ void __fastcall SubmarineMapPanelComponent__SetClosedPanelVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4C1EA49 & 1) == 0 )
+  if ( (byte_49B7943 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, value);
-    byte_4C1EA49 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, value);
+    byte_49B7943 = 1;
   }
   closedPanel = (UnityEngine_Object_o *)this->fields.closedPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -178,7 +174,7 @@ void __fastcall SubmarineMapPanelComponent__SetClosedPanelVisible(
   {
     v7 = this->fields.closedPanel;
     if ( !v7 )
-      sub_1C3B9C0(0LL, v6);
+      sub_1B4D1EC(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, value, 0LL);
   }
 }
@@ -190,8 +186,8 @@ void __fastcall SubmarineMapPanelComponent__SetSize(
         const MethodInfo *method)
 {
   if ( !objDomain )
-    sub_1C3B9C0(this, 0LL);
-  SubmarineMapPanelComponent__SetSize_34851720(
+    sub_1B4D1EC(this, 0LL);
+  SubmarineMapPanelComponent__SetSize_33957672(
     this,
     objDomain->fields._Width_k__BackingField,
     objDomain->fields._Height_k__BackingField,
@@ -199,7 +195,7 @@ void __fastcall SubmarineMapPanelComponent__SetSize(
 }
 
 
-void __fastcall SubmarineMapPanelComponent__SetSize_34851720(
+void __fastcall SubmarineMapPanelComponent__SetSize_33957672(
         SubmarineMapPanelComponent_o *this,
         float width,
         float height,
@@ -212,22 +208,22 @@ void __fastcall SubmarineMapPanelComponent__SetSize_34851720(
   int32_t v11; // w1
   int32_t v12; // w1
 
-  if ( (byte_4C1EA4A & 1) == 0 )
+  if ( (byte_49B7944 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, v7);
-    byte_4C1EA4A = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
+    byte_49B7944 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( v9 )
   {
     if ( !Component_object )
-      sub_1C3B9C0(v9, v10);
+      sub_1B4D1EC(v9, v10);
     if ( width == INFINITY )
       v11 = 0x80000000;
     else
@@ -256,29 +252,25 @@ void __fastcall SubmarineMapPanelComponent__ShowOpenPanelAnim(
   System_Collections_Generic_List_object__o *onFinished; // x20
   EventDelegate_Callback_o *v11; // x21
   EventDelegate_o *v12; // x19
-  int64_t v13; // x2
-  int32_t v14; // w3
-  System_String_o *v15; // x4
-  BattleSetupInfo_o *v16; // x5
-  FollowerInfo_o *v17; // x6
-  PartyListViewItem_o *v18; // x7
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v20; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v22; // x0
+  Il2CppClass **v18; // x0
 
-  if ( (byte_4C1EA4C & 1) == 0 )
+  if ( (byte_49B7946 & 1) == 0 )
   {
-    sub_1C3B764(&EventDelegate_Callback_TypeInfo, method);
-    sub_1C3B764(&EventDelegate_TypeInfo, v3);
-    sub_1C3B764(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v4);
-    sub_1C3B764(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
-    sub_1C3B764(&Method_SubmarineMapPanelComponent_OnPanelFadeOutFinished__, v6);
-    byte_4C1EA4C = 1;
+    sub_1B4CF90(&EventDelegate_Callback_TypeInfo, method);
+    sub_1B4CF90(&EventDelegate_TypeInfo, v3);
+    sub_1B4CF90(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___, v4);
+    sub_1B4CF90(&Method_System_Collections_Generic_List_EventDelegate__Add__, v5);
+    sub_1B4CF90(&Method_SubmarineMapPanelComponent_OnPanelFadeOutFinished__, v6);
+    byte_49B7946 = 1;
   }
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        this->fields.closedPanel,
-                       (const MethodInfo_3043500 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+                       (const MethodInfo_2F54F2C *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
   if ( !Component_object )
     goto LABEL_9;
   v9 = (UITweener_o *)Component_object;
@@ -287,22 +279,22 @@ void __fastcall SubmarineMapPanelComponent__ShowOpenPanelAnim(
   UITweener__ResetToBeginning((UITweener_o *)Component_object, 0LL);
   UITweener__PlayForward(v9, 0LL);
   onFinished = (System_Collections_Generic_List_object__o *)v9->fields.onFinished;
-  v11 = (EventDelegate_Callback_o *)sub_1C3B9B0(EventDelegate_Callback_TypeInfo);
+  v11 = (EventDelegate_Callback_o *)sub_1B4D1DC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v11,
     (Il2CppObject *)this,
     Method_SubmarineMapPanelComponent_OnPanelFadeOutFinished__,
     0LL);
-  v12 = (EventDelegate_o *)sub_1C3B9B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_48222576(v12, v11, 0LL);
+  v12 = (EventDelegate_o *)sub_1B4D1DC(EventDelegate_TypeInfo);
+  EventDelegate___ctor_47348588(v12, v11, 0LL);
   if ( !onFinished
     || (items = onFinished->fields._items,
-        v20 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+        v16 = Method_System_Collections_Generic_List_EventDelegate__Add__,
         ++onFinished->fields._version,
         !items) )
   {
 LABEL_9:
-    sub_1C3B9C0(Component_object, v8);
+    sub_1B4D1EC(Component_object, v8);
   }
   size = onFinished->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -310,14 +302,14 @@ LABEL_9:
     System_Collections_Generic_List_object___AddWithResize(
       onFinished,
       (Il2CppObject *)v12,
-      *(const MethodInfo_368BC6C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_35801DC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
   }
   else
   {
-    v22 = &items->obj.klass + size;
+    v18 = &items->obj.klass + size;
     onFinished->fields._size = size + 1;
-    v22[4] = (Il2CppClass *)v12;
-    sub_1C3B708((PartyOrganizationUtility_o *)(v22 + 4), (int64_t)v12, v13, v14, v15, v16, v17, v18);
+    v18[4] = (Il2CppClass *)v12;
+    sub_1B4CF34((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
   }
 }
 
@@ -335,20 +327,8 @@ void __fastcall SubmarineMapPanelComponent__set_OnClickPanel(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._OnClickPanel_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._OnClickPanel_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._OnClickPanel_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

@@ -7,10 +7,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
+    byte_49B5361 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -26,7 +26,7 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall AdjustPopupPosInScreenArgument___ctor_45391936(
+void __fastcall AdjustPopupPosInScreenArgument___ctor_44526180(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -44,10 +44,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor_45391936(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4C1C511 )
+  if ( !byte_49B5361 )
   {
-    sub_1C3B764(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4C1C511 = 1;
+    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
+    byte_49B5361 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -72,11 +72,7 @@ AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Ini
         UnityEngine_Vector3_o worldPos,
         const MethodInfo *method)
 {
-  int32_t v4; // w3
-  System_String_o *v5; // x4
-  BattleSetupInfo_o *v6; // x5
-  FollowerInfo_o *v7; // x6
-  PartyListViewItem_o *v8; // x7
+  const MethodInfo *v4; // x3
   float z; // s8
   float y; // s9
   float x; // s10
@@ -85,15 +81,7 @@ AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Ini
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Camera_k__BackingField,
-    (int64_t)camera,
-    (int64_t)method,
-    v4,
-    v5,
-    v6,
-    v7,
-    v8);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
   this->fields._WorldPos_k__BackingField.fields.z = z;
@@ -152,10 +140,10 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_ViewPos(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C24F61 & 1) == 0 )
+  if ( (byte_49BDE9C & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C24F61 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BDE9C = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -164,18 +152,18 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_ViewPos(
   {
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
-      sub_1C3B9C0(0LL, v4);
-    *(UnityEngine_Vector3_o *)&x = UnityEngine_Camera__WorldToViewportPoint_70928728(
+      sub_1B4D1EC(0LL, v4);
+    *(UnityEngine_Vector3_o *)&x = UnityEngine_Camera__WorldToViewportPoint_68610440(
                                      v5,
                                      this->fields._WorldPos_k__BackingField,
                                      0LL);
   }
   else
   {
-    if ( !byte_4C1C511 )
+    if ( !byte_49B5361 )
     {
-      sub_1C3B764(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4C1C511 = 1;
+      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_49B5361 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -213,22 +201,10 @@ void __fastcall AdjustPopupPosInScreenArgument__set_Camera(
         UnityEngine_Camera_o *value,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields._Camera_k__BackingField = value;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._Camera_k__BackingField,
-    (int64_t)value,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

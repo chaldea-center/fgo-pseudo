@@ -4,33 +4,20 @@ void __fastcall FollowObjectPositionComponent___ctor(FollowObjectPositionCompone
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall FollowObjectPositionComponent__SetObj(
         FollowObjectPositionComponent_o *this,
         UnityEngine_GameObject_o *obj,
         bool IsInversion,
         const MethodInfo *method)
 {
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
   struct UnityEngine_GameObject_o **p_TargetObj; // x19
-  bool v9; // w20
+  bool v5; // w20
 
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
-  v9 = IsInversion;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.TargetObj,
-    (int64_t)obj,
-    IsInversion,
-    (int32_t)method,
-    v4,
-    v5,
-    v6,
-    v7);
-  *((_BYTE *)p_TargetObj + 8) = v9;
+  v5 = IsInversion;
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
+  *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
 
@@ -49,10 +36,10 @@ void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionCompon
   float v12; // s1
   float v13; // s0
 
-  if ( (byte_4C213DE & 1) == 0 )
+  if ( (byte_49BA2F2 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C213DE = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BA2F2 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -97,6 +84,6 @@ LABEL_14:
         }
       }
     }
-    sub_1C3B9C0(transform, v6);
+    sub_1B4D1EC(transform, v6);
   }
 }

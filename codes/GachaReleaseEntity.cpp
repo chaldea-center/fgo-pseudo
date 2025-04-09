@@ -1,13 +1,13 @@
 void __fastcall GachaReleaseEntity___ctor(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C22211 & 1) == 0 )
+  if ( (byte_49BB127 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C22211 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BB127 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4C2220F & 1) == 0 )
+  if ( (byte_49BB125 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4C2220F = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_49BB125 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            type,
            targetId,
-           (const MethodInfo_2FEE81C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F0013C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -41,20 +41,22 @@ System_String_o *__fastcall GachaReleaseEntity__CreatePrimaryKey(GachaReleaseEnt
 
 bool __fastcall GachaReleaseEntity__IsEnable(GachaReleaseEntity_o *this, const MethodInfo *method)
 {
-  int32_t type; // w20
+  int type; // w20
   int32_t targetId; // w21
   int64_t value; // x19
   int32_t v7; // w19
 
-  if ( (byte_4C22210 & 1) == 0 )
+  if ( (byte_49BB126 & 1) == 0 )
   {
-    sub_1C3B764(&CondType_TypeInfo, method);
-    byte_4C22210 = 1;
+    sub_1B4CF90(&CondType_TypeInfo, method);
+    byte_49BB126 = 1;
   }
   type = this->fields.type;
-  if ( type == 1 )
+  if ( type <= 46 )
   {
-LABEL_6:
+    if ( type != 1 && type != 46 )
+      return 0;
+LABEL_9:
     targetId = this->fields.targetId;
     value = this->fields.value;
     if ( !CondType_TypeInfo->_2.cctor_finished )
@@ -63,9 +65,9 @@ LABEL_6:
   }
   if ( type != 113 )
   {
-    if ( type != 46 )
+    if ( type != 247 )
       return 0;
-    goto LABEL_6;
+    goto LABEL_9;
   }
   v7 = this->fields.targetId;
   if ( !CondType_TypeInfo->_2.cctor_finished )

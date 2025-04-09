@@ -9,22 +9,10 @@ void __fastcall BillBoardAroundLocalAxis__SetTargetTransform(
         UnityEngine_Transform_o *trans,
         const MethodInfo *method)
 {
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  const MethodInfo *v3; // x3
 
   this->fields.targetTrans = trans;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields.targetTrans,
-    (int64_t)trans,
-    (int64_t)method,
-    v3,
-    v4,
-    v5,
-    v6,
-    v7);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetTrans, (int32_t)trans, (int32_t)method, v3);
 }
 
 
@@ -33,10 +21,10 @@ void __fastcall BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *thi
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C21372 & 1) == 0 )
+  if ( (byte_49BA286 & 1) == 0 )
   {
-    sub_1C3B764(&UnityEngine_Object_TypeInfo, method);
-    byte_4C21372 = 1;
+    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
+    byte_49BA286 = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -172,7 +160,7 @@ void __fastcall BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !targetTrans )
 LABEL_11:
-    sub_1C3B9C0(targetTrans, method);
+    sub_1B4D1EC(targetTrans, method);
   v43.fields.x = v22;
   v43.fields.y = v23;
   v43.fields.z = v24;

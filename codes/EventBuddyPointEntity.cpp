@@ -1,13 +1,13 @@
 void __fastcall EventBuddyPointEntity___ctor(EventBuddyPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21E36 & 1) == 0 )
+  if ( (byte_49BAD47 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_string___ctor__, method);
-    byte_4C21E36 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
+    byte_49BAD47 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32989DC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall EventBuddyPointEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4C21E34 & 1) == 0 )
+  if ( (byte_49BAD45 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
-    byte_4C21E34 = 1;
+    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
+    byte_49BAD45 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            questPhase,
-           (const MethodInfo_2FEE81C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F0013C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -51,14 +51,14 @@ int32_t __fastcall EventBuddyPointEntity__GetPosPoint(
   __int64 v6; // x1
   unsigned int v7; // w8
 
-  if ( (byte_4C21E35 & 1) == 0 )
+  if ( (byte_49BAD46 & 1) == 0 )
   {
-    sub_1C3B764(&int___TypeInfo, *(_QWORD *)&posIdx);
-    byte_4C21E35 = 1;
+    sub_1B4CF90(&int___TypeInfo, *(_QWORD *)&posIdx);
+    byte_49BAD46 = 1;
   }
-  v5 = (_DWORD *)sub_1C3B80C(int___TypeInfo, 6LL);
+  v5 = (_DWORD *)sub_1B4D038(int___TypeInfo, 6LL);
   if ( !v5 )
-    sub_1C3B9C0(0LL, v6);
+    sub_1B4D1EC(0LL, v6);
   v7 = v5[6];
   if ( !v7
     || (v5[8] = this->fields.pointPos1, v7 == 1)
@@ -68,7 +68,7 @@ int32_t __fastcall EventBuddyPointEntity__GetPosPoint(
     || (v5[12] = this->fields.pointPos5, v7 == 5)
     || (v5[13] = this->fields.pointPos6, v7 <= posIdx) )
   {
-    sub_1C3B9C8(v5, v6);
+    sub_1B4D1F4(v5, v6);
   }
   return v5[posIdx + 8];
 }

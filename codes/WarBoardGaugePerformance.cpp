@@ -7,18 +7,14 @@ void __fastcall WarBoardGaugePerformance___ctor(
         const MethodInfo *method)
 {
   WarBoardGaugePerformance_o *v10; // x20
-  int64_t v11; // x2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  BattleSetupInfo_o *v14; // x5
-  FollowerInfo_o *v15; // x6
-  PartyListViewItem_o *v16; // x7
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
   v10 = this;
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)target);
   v10->fields.target = target;
   v10 = (WarBoardGaugePerformance_o *)((char *)v10 + 56);
-  sub_1C3B708((PartyOrganizationUtility_o *)v10, (int64_t)target, v11, v12, v13, v14, v15, v16);
+  sub_1B4CF34((CGThumbnailListItem_o *)v10, (int32_t)target, v11, v12);
   *(float *)&v10->monitor = startValue;
   *((float *)&v10->monitor + 1) = endValue;
   *(float *)&v10->fields.Key = duration;
@@ -30,23 +26,19 @@ System_Collections_IEnumerator_o *__fastcall WarBoardGaugePerformance__Execute(
         const MethodInfo *method)
 {
   __int64 v3; // x20
-  int64_t v4; // x2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  BattleSetupInfo_o *v7; // x5
-  FollowerInfo_o *v8; // x6
-  PartyListViewItem_o *v9; // x7
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4C1FD5B & 1) == 0 )
+  if ( (byte_49B8C67 & 1) == 0 )
   {
-    sub_1C3B764(&WarBoardGaugePerformance__Execute_d__6_TypeInfo, method);
-    byte_4C1FD5B = 1;
+    sub_1B4CF90(&WarBoardGaugePerformance__Execute_d__6_TypeInfo, method);
+    byte_49B8C67 = 1;
   }
-  v3 = sub_1C3B9B0(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
+  v3 = sub_1B4D1DC(WarBoardGaugePerformance__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3B708((PartyOrganizationUtility_o *)(v3 + 32), (int64_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1B4CF34((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -58,7 +50,7 @@ void __fastcall WarBoardGaugePerformance__OnEnd(WarBoardGaugePerformance_o *this
 
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   UIBasicSprite__set_fillAmount(target, this->fields.endValue, 0LL);
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -82,7 +74,7 @@ void __fastcall WarBoardGaugePerformance__OnStart(WarBoardGaugePerformance_o *th
       *(_QWORD *)&StartCallback->fields.extra_arg);
   target = (UIBasicSprite_o *)this->fields.target;
   if ( !target )
-    sub_1C3B9C0(0LL, method);
+    sub_1B4D1EC(0LL, method);
   UIBasicSprite__set_fillAmount(target, this->fields.startValue, 0LL);
 }
 
@@ -101,22 +93,18 @@ bool __fastcall WarBoardGaugePerformance__Execute_d__6__MoveNext(
         WarBoardGaugePerformance__Execute_d__6_o *this,
         const MethodInfo *method)
 {
-  int64_t v2; // x2
-  int32_t v3; // w3
-  System_String_o *v4; // x4
-  BattleSetupInfo_o *v5; // x5
-  FollowerInfo_o *v6; // x6
-  PartyListViewItem_o *v7; // x7
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
   int32_t _1__state; // w8
   struct WarBoardGaugePerformance_o *_4__this; // x21
   float now_5__2; // s8
-  float v12; // s2
+  float v8; // s2
   UIBasicSprite_o *target; // x20
-  float v14; // s2
-  float v15; // s3
-  bool v16; // nf
-  float v17; // s2
-  float v18; // s0
+  float v10; // s2
+  float v11; // s3
+  bool v12; // nf
+  float v13; // s2
+  float v14; // s0
   Il2CppObject **p__2__current; // x19
   bool result; // w0
 
@@ -128,26 +116,26 @@ bool __fastcall WarBoardGaugePerformance__Execute_d__6__MoveNext(
       return 0;
     now_5__2 = this->fields._now_5__2;
     this->fields.__1__state = -1;
-    v12 = now_5__2 + UnityEngine_Time__get_deltaTime(0LL);
-    this->fields._now_5__2 = v12;
+    v8 = now_5__2 + UnityEngine_Time__get_deltaTime(0LL);
+    this->fields._now_5__2 = v8;
     if ( _4__this )
     {
       target = (UIBasicSprite_o *)_4__this->fields.target;
-      v14 = v12 / _4__this->fields.duration;
-      v15 = fminf(v14, 1.0);
-      v16 = v14 < 0.0;
-      v17 = 0.0;
-      if ( !v16 )
-        v17 = v15;
-      v18 = Easing__Func_48005172(_4__this->fields.startValue, _4__this->fields.endValue, v17, 0, 0LL);
+      v10 = v8 / _4__this->fields.duration;
+      v11 = fminf(v10, 1.0);
+      v12 = v10 < 0.0;
+      v13 = 0.0;
+      if ( !v12 )
+        v13 = v11;
+      v14 = Easing__Func_47131184(_4__this->fields.startValue, _4__this->fields.endValue, v13, 0, 0LL);
       if ( target )
       {
-        UIBasicSprite__set_fillAmount(target, v18, 0LL);
+        UIBasicSprite__set_fillAmount(target, v14, 0LL);
         goto LABEL_9;
       }
     }
 LABEL_12:
-    sub_1C3B9C0(this, method);
+    sub_1B4D1EC(this, method);
   }
   this->fields.__1__state = -1;
   this->fields._now_5__2 = 0.0;
@@ -158,7 +146,7 @@ LABEL_9:
   {
     this->fields.__2__current = 0LL;
     p__2__current = &this->fields.__2__current;
-    sub_1C3B708((PartyOrganizationUtility_o *)p__2__current, 0LL, v2, v3, v4, v5, v6, v7);
+    sub_1B4CF34((CGThumbnailListItem_o *)p__2__current, 0, v2, v3);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -183,11 +171,11 @@ void __fastcall __noreturn WarBoardGaugePerformance__Execute_d__6__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3B778(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3B9B0(v2);
+  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1C3B778(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_1C3B88C(v3, v4);
+  v4 = sub_1B4CFA4(&Method_WarBoardGaugePerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1B4D0B8(v3, v4);
 }
 
 

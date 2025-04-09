@@ -18,18 +18,18 @@ EventMapManagerInterface_o *__fastcall EventMapManagerFactory__AttachToTerminalM
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v6 = (UnityEngine_Component_o *)termialMap;
-  if ( (byte_4C1EA3F & 1) == 0 )
+  if ( (byte_49B7939 & 1) == 0 )
   {
-    sub_1C3B764(&Method_DataManager_GetMaster_EventDetailMaster___, mapInfo);
-    sub_1C3B764(&Method_DataManager_GetMaster_EventPanelMapMaster___, v7);
-    sub_1C3B764(&DataManager_TypeInfo, v8);
-    sub_1C3B764(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v9);
-    sub_1C3B764(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__TryGetEntity__, v10);
-    sub_1C3B764(&EventMapManagerIdle_TypeInfo, v11);
-    termialMap = (ScrTerminalMap_o *)sub_1C3B764(
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventDetailMaster___, mapInfo);
+    sub_1B4CF90(&Method_DataManager_GetMaster_EventPanelMapMaster___, v7);
+    sub_1B4CF90(&DataManager_TypeInfo, v8);
+    sub_1B4CF90(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__, v9);
+    sub_1B4CF90(&Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__TryGetEntity__, v10);
+    sub_1B4CF90(&EventMapManagerIdle_TypeInfo, v11);
+    termialMap = (ScrTerminalMap_o *)sub_1B4CF90(
                                        &Method_UnityEngine_GameObject_AddComponent_SubmarineMapManager___,
                                        v12);
-    byte_4C1EA3F = 1;
+    byte_49B7939 = 1;
   }
   v17 = 0LL;
   entity = 0LL;
@@ -43,14 +43,14 @@ EventMapManagerInterface_o *__fastcall EventMapManagerFactory__AttachToTerminalM
     goto LABEL_20;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  termialMap = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  termialMap = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !termialMap )
     goto LABEL_22;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)termialMap,
           &entity,
           eventId,
-          (const MethodInfo_329AE94 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_319D9E8 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     goto LABEL_20;
   termialMap = (ScrTerminalMap_o *)entity;
   if ( !entity )
@@ -58,21 +58,21 @@ EventMapManagerInterface_o *__fastcall EventMapManagerFactory__AttachToTerminalM
   if ( !EventDetailEntity__IsEventPanel((EventDetailEntity_o *)entity, 0LL) )
   {
 LABEL_20:
-    v15 = (Il2CppObject *)sub_1C3B9B0(EventMapManagerIdle_TypeInfo);
+    v15 = (Il2CppObject *)sub_1B4D1DC(EventMapManagerIdle_TypeInfo);
     System_Object___ctor(v15, 0LL);
     return (EventMapManagerInterface_o *)v15;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  termialMap = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2FF01B0 *)Method_DataManager_GetMaster_EventPanelMapMaster___);
+  termialMap = (ScrTerminalMap_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_EventPanelMapMaster___);
   if ( !mapInfo || !termialMap )
 LABEL_22:
-    sub_1C3B9C0(termialMap, mapInfo);
+    sub_1B4D1EC(termialMap, mapInfo);
   termialMap = (ScrTerminalMap_o *)DataMasterBase_object__object__int___TryGetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)termialMap,
                                      &v17,
                                      mapInfo->fields.mapId,
-                                     (const MethodInfo_329AE94 *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__TryGetEntity__);
+                                     (const MethodInfo_319D9E8 *)Method_DataMasterBase_EventPanelMapMaster__EventPanelMapEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)termialMap & 1) == 0 )
     goto LABEL_20;
   if ( !v6 )
@@ -82,7 +82,7 @@ LABEL_22:
     goto LABEL_22;
   return (EventMapManagerInterface_o *)UnityEngine_GameObject__AddComponent_object_(
                                          (UnityEngine_GameObject_o *)termialMap,
-                                         (const MethodInfo_3041930 *)Method_UnityEngine_GameObject_AddComponent_SubmarineMapManager___);
+                                         (const MethodInfo_2F5335C *)Method_UnityEngine_GameObject_AddComponent_SubmarineMapManager___);
 }
 
 
@@ -92,17 +92,17 @@ void __fastcall EventMapManagerFactory__DetachFromTerminalMap(ScrTerminalMap_o *
   UnityEngine_GameObject_o *gameObject; // x0
 
   v2 = (UnityEngine_Component_o *)termialMap;
-  if ( (byte_4C1EA40 & 1) == 0 )
+  if ( (byte_49B793A & 1) == 0 )
   {
-    termialMap = (ScrTerminalMap_o *)sub_1C3B764(
+    termialMap = (ScrTerminalMap_o *)sub_1B4CF90(
                                        &Method_GameObjectExtensions_RemoveComponents_EventMapManagerBase___,
                                        method);
-    byte_4C1EA40 = 1;
+    byte_49B793A = 1;
   }
   if ( !v2 )
-    sub_1C3B9C0(termialMap, method);
+    sub_1B4D1EC(termialMap, method);
   gameObject = UnityEngine_Component__get_gameObject(v2, 0LL);
   GameObjectExtensions__RemoveComponents_object_(
     gameObject,
-    (const MethodInfo_304343C *)Method_GameObjectExtensions_RemoveComponents_EventMapManagerBase___);
+    (const MethodInfo_2F54E68 *)Method_GameObjectExtensions_RemoveComponents_EventMapManagerBase___);
 }

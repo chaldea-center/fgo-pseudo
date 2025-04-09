@@ -12,106 +12,94 @@ void __fastcall FGO_param3ObjectPoint2__Start(FGO_param3ObjectPoint2_o *this, co
   __int64 v5; // x1
   Il2CppObject *Component_object; // x0
   struct UnityEngine_Renderer_o **p_renderer; // x20
-  int64_t v8; // x2
-  int32_t v9; // w3
-  System_String_o *v10; // x4
-  BattleSetupInfo_o *v11; // x5
-  FollowerInfo_o *v12; // x6
-  PartyListViewItem_o *v13; // x7
-  __int64 v14; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  __int64 v10; // x1
   UnityEngine_Renderer_o *renderer; // x0
-  UnityEngine_Material_o *v16; // x21
-  float v17; // s0
-  UnityEngine_Material_o *v18; // x21
-  float v19; // s1
+  UnityEngine_Material_o *v12; // x21
+  float v13; // s0
+  UnityEngine_Material_o *v14; // x21
+  float v15; // s1
   UnityEngine_GameObject_o *TargetObject; // x8
-  UnityEngine_Material_o *v21; // x19
-  float v22; // s2
+  UnityEngine_Material_o *v17; // x19
+  float v18; // s2
 
-  if ( (byte_4C20DD7 & 1) == 0 )
+  if ( (byte_49B9CE9 & 1) == 0 )
   {
-    sub_1C3B764(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1C3B764(&StringLiteral_16904/*"bit_omikuzi_open"*/, v3);
-    sub_1C3B764(&StringLiteral_16903/*"bit_omikuzi_get"*/, v4);
-    sub_1C3B764(&StringLiteral_16902/*"bit_mural_update{0}"*/, v5);
-    byte_4C20DD7 = 1;
+    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B4CF90(&StringLiteral_16279/*"_threeValue1_2"*/, v3);
+    sub_1B4CF90(&StringLiteral_16278/*"_threeValue1_1"*/, v4);
+    sub_1B4CF90(&StringLiteral_16277/*"_threeValue1_0"*/, v5);
+    byte_49B9CE9 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FE6C0C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_1C3B708(
-    (PartyOrganizationUtility_o *)&this->fields._renderer,
-    (int64_t)Component_object,
-    v8,
-    v9,
-    v10,
-    v11,
-    v12,
-    v13);
+  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v8, v9);
   renderer = this->fields._renderer;
   if ( !renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16902/*"bit_mural_update{0}"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16277/*"_threeValue1_0"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16903/*"bit_omikuzi_get"*/, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16278/*"_threeValue1_1"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16904/*"bit_omikuzi_open"*/, 0LL);
-  renderer = *p_renderer;
-  if ( !*p_renderer )
-    goto LABEL_22;
-  renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
-  if ( !this->fields.TargetObject )
-    goto LABEL_22;
-  v16 = (UnityEngine_Material_o *)renderer;
-  renderer = (UnityEngine_Renderer_o *)UnityEngine_GameObject__get_transform(this->fields.TargetObject, 0LL);
-  if ( !renderer )
-    goto LABEL_22;
-  LODWORD(v17) = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
-  if ( !v16 )
-    goto LABEL_22;
-  UnityEngine_Material__SetFloat(v16, (System_String_o *)StringLiteral_16902/*"bit_mural_update{0}"*/, v17, 0LL);
+  UnityEngine_Material__EnableKeyword((UnityEngine_Material_o *)renderer, (System_String_o *)StringLiteral_16279/*"_threeValue1_2"*/, 0LL);
   renderer = *p_renderer;
   if ( !*p_renderer )
     goto LABEL_22;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
   if ( !this->fields.TargetObject )
     goto LABEL_22;
-  v18 = (UnityEngine_Material_o *)renderer;
+  v12 = (UnityEngine_Material_o *)renderer;
   renderer = (UnityEngine_Renderer_o *)UnityEngine_GameObject__get_transform(this->fields.TargetObject, 0LL);
   if ( !renderer )
     goto LABEL_22;
-  *(UnityEngine_Vector3_o *)(&v19 - 1) = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
-  if ( !v18
-    || (UnityEngine_Material__SetFloat(v18, (System_String_o *)StringLiteral_16903/*"bit_omikuzi_get"*/, v19, 0LL),
+  LODWORD(v13) = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
+  if ( !v12 )
+    goto LABEL_22;
+  UnityEngine_Material__SetFloat(v12, (System_String_o *)StringLiteral_16277/*"_threeValue1_0"*/, v13, 0LL);
+  renderer = *p_renderer;
+  if ( !*p_renderer )
+    goto LABEL_22;
+  renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL);
+  if ( !this->fields.TargetObject )
+    goto LABEL_22;
+  v14 = (UnityEngine_Material_o *)renderer;
+  renderer = (UnityEngine_Renderer_o *)UnityEngine_GameObject__get_transform(this->fields.TargetObject, 0LL);
+  if ( !renderer )
+    goto LABEL_22;
+  *(UnityEngine_Vector3_o *)(&v15 - 1) = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
+  if ( !v14
+    || (UnityEngine_Material__SetFloat(v14, (System_String_o *)StringLiteral_16278/*"_threeValue1_1"*/, v15, 0LL),
         (renderer = *p_renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL),
         (TargetObject = this->fields.TargetObject) == 0LL)
-    || (v21 = (UnityEngine_Material_o *)renderer,
+    || (v17 = (UnityEngine_Material_o *)renderer,
         (renderer = (UnityEngine_Renderer_o *)UnityEngine_GameObject__get_transform(TargetObject, 0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)(&v22 - 2) = UnityEngine_Transform__get_position(
+    || (*(UnityEngine_Vector3_o *)(&v18 - 2) = UnityEngine_Transform__get_position(
                                                  (UnityEngine_Transform_o *)renderer,
                                                  0LL),
-        !v21) )
+        !v17) )
   {
 LABEL_22:
-    sub_1C3B9C0(renderer, v14);
+    sub_1B4D1EC(renderer, v10);
   }
-  UnityEngine_Material__SetFloat(v21, (System_String_o *)StringLiteral_16904/*"bit_omikuzi_open"*/, v22, 0LL);
+  UnityEngine_Material__SetFloat(v17, (System_String_o *)StringLiteral_16279/*"_threeValue1_2"*/, v18, 0LL);
 }
 
 
@@ -129,12 +117,12 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
   UnityEngine_Material_o *v11; // x19
   float v12; // s2
 
-  if ( (byte_4C20DD8 & 1) == 0 )
+  if ( (byte_49B9CEA & 1) == 0 )
   {
-    sub_1C3B764(&StringLiteral_16904/*"bit_omikuzi_open"*/, method);
-    sub_1C3B764(&StringLiteral_16903/*"bit_omikuzi_get"*/, v3);
-    sub_1C3B764(&StringLiteral_16902/*"bit_mural_update{0}"*/, v4);
-    byte_4C20DD8 = 1;
+    sub_1B4CF90(&StringLiteral_16279/*"_threeValue1_2"*/, method);
+    sub_1B4CF90(&StringLiteral_16278/*"_threeValue1_1"*/, v3);
+    sub_1B4CF90(&StringLiteral_16277/*"_threeValue1_0"*/, v4);
+    byte_49B9CEA = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer )
@@ -149,7 +137,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
   LODWORD(v7) = (unsigned int)UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v6 )
     goto LABEL_16;
-  UnityEngine_Material__SetFloat(v6, (System_String_o *)StringLiteral_16902/*"bit_mural_update{0}"*/, v7, 0LL);
+  UnityEngine_Material__SetFloat(v6, (System_String_o *)StringLiteral_16277/*"_threeValue1_0"*/, v7, 0LL);
   renderer = this->fields._renderer;
   if ( !renderer )
     goto LABEL_16;
@@ -162,7 +150,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
     goto LABEL_16;
   *(UnityEngine_Vector3_o *)(&v9 - 1) = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)renderer, 0LL);
   if ( !v8
-    || (UnityEngine_Material__SetFloat(v8, (System_String_o *)StringLiteral_16903/*"bit_omikuzi_get"*/, v9, 0LL),
+    || (UnityEngine_Material__SetFloat(v8, (System_String_o *)StringLiteral_16278/*"_threeValue1_1"*/, v9, 0LL),
         (renderer = this->fields._renderer) == 0LL)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0LL),
         (TargetObject = this->fields.TargetObject) == 0LL)
@@ -174,7 +162,7 @@ void __fastcall FGO_param3ObjectPoint2__Update(FGO_param3ObjectPoint2_o *this, c
         !v11) )
   {
 LABEL_16:
-    sub_1C3B9C0(renderer, method);
+    sub_1B4D1EC(renderer, method);
   }
-  UnityEngine_Material__SetFloat(v11, (System_String_o *)StringLiteral_16904/*"bit_omikuzi_open"*/, v12, 0LL);
+  UnityEngine_Material__SetFloat(v11, (System_String_o *)StringLiteral_16279/*"_threeValue1_2"*/, v12, 0LL);
 }
