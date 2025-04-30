@@ -12,10 +12,10 @@ void __fastcall ScoreRecordCardDialog__ActiveLargeObject(ScoreRecordCardDialog_o
   struct UIPanel_o *v5; // x0
   UnityEngine_Object_o *largePanel; // x20
 
-  if ( (byte_49BCF65 & 1) == 0 )
+  if ( (byte_4A50495 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BCF65 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A50495 = 1;
   }
   smallPanel = (UnityEngine_Object_o *)this->fields.smallPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void __fastcall ScoreRecordCardDialog__ActiveLargeObject(ScoreRecordCardDialog_o
       return;
     }
 LABEL_14:
-    sub_1B4D1EC(v5, v4);
+    sub_1B86614(v5, v4);
   }
 }
 
@@ -57,10 +57,10 @@ void __fastcall ScoreRecordCardDialog__ActiveSmallObject(ScoreRecordCardDialog_o
   struct UIPanel_o *v5; // x0
   UnityEngine_Object_o *largePanel; // x20
 
-  if ( (byte_49BCF64 & 1) == 0 )
+  if ( (byte_4A50494 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BCF64 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A50494 = 1;
   }
   smallPanel = (UnityEngine_Object_o *)this->fields.smallPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -90,7 +90,7 @@ void __fastcall ScoreRecordCardDialog__ActiveSmallObject(ScoreRecordCardDialog_o
       return;
     }
 LABEL_14:
-    sub_1B4D1EC(v5, v4);
+    sub_1B86614(v5, v4);
   }
 }
 
@@ -106,13 +106,13 @@ void __fastcall ScoreRecordCardDialog__OnClose(ScoreRecordCardDialog_o *this, co
   System_Action_o *v9; // x20
   const MethodInfo *v10; // x3
 
-  if ( (byte_49BCF62 & 1) == 0 )
+  if ( (byte_4A50492 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog_OnClose__, v4);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog__OnClose_b__11_0__, v5);
-    byte_49BCF62 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1B863B8(&Method_ScoreRecordCardDialog_OnClose__, v4);
+    sub_1B863B8(&Method_ScoreRecordCardDialog__OnClose_b__11_0__, v5);
+    byte_4A50492 = 1;
   }
   if ( this->fields.canTap )
   {
@@ -124,10 +124,10 @@ void __fastcall ScoreRecordCardDialog__OnClose(ScoreRecordCardDialog_o *this, co
       AndroidBackKeyManager__RemoveBackBtn(this->fields.closeBtn, 0LL);
     v7 = Method_ScoreRecordCardDialog_OnClose__;
     if ( (*((_BYTE *)Method_ScoreRecordCardDialog_OnClose__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B4CFA8(Method_ScoreRecordCardDialog_OnClose__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B863D0(Method_ScoreRecordCardDialog_OnClose__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B8639C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0, 0LL);
-    v9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, Method_ScoreRecordCardDialog__OnClose_b__11_0__, 0LL);
     ScoreRecordCardDialog__PlayAnimation(this, 1, v9, v10);
   }
@@ -142,17 +142,17 @@ void __fastcall ScoreRecordCardDialog__Open(ScoreRecordCardDialog_o *this, const
   System_Action_o *v6; // x20
   const MethodInfo *v7; // x3
 
-  if ( (byte_49BCF60 & 1) == 0 )
+  if ( (byte_4A50490 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog__Open_b__9_0__, v3);
-    byte_49BCF60 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_ScoreRecordCardDialog__Open_b__9_0__, v3);
+    byte_4A50490 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B4D1EC(0LL, v5);
+    sub_1B86614(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
-  v6 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ScoreRecordCardDialog__Open_b__9_0__, 0LL);
   ScoreRecordCardDialog__PlayAnimation(this, 0, v6, v7);
 }
@@ -207,29 +207,29 @@ void __fastcall ScoreRecordCardDialog__PlayAnimation(
   UnityEngine_Object_o *v46; // x21
   __int64 v47; // x0
 
-  if ( (byte_49BCF63 & 1) == 0 )
+  if ( (byte_4A50493 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&animationType);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog_ActiveLargeObject__, v8);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog_ActiveSmallObject__, v9);
-    sub_1B4CF90(&TweenAnimationComponent___TypeInfo, v10);
-    sub_1B4CF90(&Method_ScoreRecordCardDialog___c__DisplayClass12_0__PlayAnimation_b__0__, v11);
-    sub_1B4CF90(&ScoreRecordCardDialog___c__DisplayClass12_0_TypeInfo, v12);
-    byte_49BCF63 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&animationType);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
+    sub_1B863B8(&Method_ScoreRecordCardDialog_ActiveLargeObject__, v8);
+    sub_1B863B8(&Method_ScoreRecordCardDialog_ActiveSmallObject__, v9);
+    sub_1B863B8(&TweenAnimationComponent___TypeInfo, v10);
+    sub_1B863B8(&Method_ScoreRecordCardDialog___c__DisplayClass12_0__PlayAnimation_b__0__, v11);
+    sub_1B863B8(&ScoreRecordCardDialog___c__DisplayClass12_0_TypeInfo, v12);
+    byte_4A50493 = 1;
   }
-  v13 = sub_1B4D1DC(ScoreRecordCardDialog___c__DisplayClass12_0_TypeInfo);
+  v13 = sub_1B86604(ScoreRecordCardDialog___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_36;
   *(_QWORD *)(v13 + 32) = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v13 + 32), (int32_t)callback, v16, v17);
+  sub_1B8635C((CGThumbnailListItem_o *)(v13 + 32), (int32_t)callback, v16, v17);
   delayActionCoroutine = this->fields.delayActionCoroutine;
   if ( delayActionCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, delayActionCoroutine, 0LL);
     this->fields.delayActionCoroutine = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.delayActionCoroutine, 0, v19, v20);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.delayActionCoroutine, 0, v19, v20);
   }
   if ( animationType )
   {
@@ -244,7 +244,7 @@ void __fastcall ScoreRecordCardDialog__PlayAnimation(
     v25 = animationTime <= v22 ? v22 : animationTime;
     ScoreRecordCardDialog__ActiveLargeObject(this, (const MethodInfo *)delayActionCoroutine);
     smallAnimationTime = this->fields.smallAnimationTime;
-    v27 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_ScoreRecordCardDialog_ActiveSmallObject__, 0LL);
     v28 = v25 - smallAnimationTime;
   }
@@ -252,52 +252,52 @@ void __fastcall ScoreRecordCardDialog__PlayAnimation(
   {
     ScoreRecordCardDialog__ActiveSmallObject(this, (const MethodInfo *)delayActionCoroutine);
     v29 = this->fields.smallAnimationTime;
-    v27 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_ScoreRecordCardDialog_ActiveLargeObject__, 0LL);
     v28 = v29;
   }
   v30 = BasicHelper__DelayCall(v28, v27, 1, 0LL);
   this->fields.delayActionCoroutine = v30;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.delayActionCoroutine, (int32_t)v30, v31, v32);
-  UnityEngine_MonoBehaviour__StartCoroutine_68789728(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.delayActionCoroutine, (int32_t)v30, v31, v32);
+  UnityEngine_MonoBehaviour__StartCoroutine_69341456(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.delayActionCoroutine,
     0LL);
-  v14 = sub_1B4D038(TweenAnimationComponent___TypeInfo, 2LL);
+  v14 = sub_1B86460(TweenAnimationComponent___TypeInfo, 2LL);
   if ( !v14 )
     goto LABEL_36;
   v35 = this->fields.scaleAnimation;
   v36 = v14;
   if ( v35 )
   {
-    v14 = sub_1B4D0CC(this->fields.scaleAnimation, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
+    v14 = sub_1B864F4(this->fields.scaleAnimation, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
     if ( !v14 )
       goto LABEL_37;
   }
   if ( !*(_DWORD *)(v36 + 24) )
     goto LABEL_35;
   *(_QWORD *)(v36 + 32) = v35;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v35, v33, v34);
+  sub_1B8635C((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v35, v33, v34);
   v39 = this->fields.moveAnimation;
   if ( v39 )
   {
-    v14 = sub_1B4D0CC(v39, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
+    v14 = sub_1B864F4(v39, *(_QWORD *)(*(_QWORD *)v36 + 64LL));
     if ( !v14 )
     {
 LABEL_37:
-      v47 = sub_1B4D210(v14);
-      sub_1B4D0B8(v47, 0LL);
+      v47 = sub_1B86638(v14);
+      sub_1B864E0(v47, 0LL);
     }
   }
   if ( *(_DWORD *)(v36 + 24) <= 1u )
 LABEL_35:
-    sub_1B4D1F4(v14, v15);
+    sub_1B8661C(v14, v15);
   *(_QWORD *)(v36 + 40) = v39;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 40), (int32_t)v39, v37, v38);
+  sub_1B8635C((CGThumbnailListItem_o *)(v36 + 40), (int32_t)v39, v37, v38);
   *(_QWORD *)(v13 + 24) = v36;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v13 + 24), v36, v40, v41);
+  sub_1B8635C((CGThumbnailListItem_o *)(v13 + 24), v36, v40, v41);
   *(_DWORD *)(v13 + 16) = 0;
-  v42 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v42 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(
     v42,
     (Il2CppObject *)v13,
@@ -306,7 +306,7 @@ LABEL_35:
   v43 = *(_QWORD *)(v13 + 24);
   if ( !v43 )
 LABEL_36:
-    sub_1B4D1EC(v14, v15);
+    sub_1B86614(v14, v15);
   v44 = *(_QWORD *)(v43 + 24);
   if ( (int)v44 >= 1 )
   {
@@ -362,10 +362,10 @@ void __fastcall ScoreRecordCardDialog__Setup(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_49BCF61 & 1) == 0 )
+  if ( (byte_4A50491 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, inOnClosed);
-    byte_49BCF61 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, inOnClosed);
+    byte_4A50491 = 1;
   }
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -375,11 +375,11 @@ void __fastcall ScoreRecordCardDialog__Setup(
   this->fields.canTap = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B4D1EC(0LL, v11);
+    sub_1B86614(0LL, v11);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onClosed = inOnClosed;
   p_onClosed = &this->fields.onClosed;
-  sub_1B4CF34((CGThumbnailListItem_o *)p_onClosed, (int32_t)inOnClosed, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)p_onClosed, (int32_t)inOnClosed, v13, v14);
   v15 = (MoveAnimationComponent_o *)*(p_onClosed - 5);
   if ( v15 )
   {
@@ -400,7 +400,7 @@ void __fastcall ScoreRecordCardDialog___OnClose_b__11_0(ScoreRecordCardDialog_o 
   p_onClosed = (CGThumbnailListItem_o *)&this->fields.onClosed;
   ActionExtensions__Call(this->fields.onClosed, 0LL);
   p_onClosed->klass = 0LL;
-  sub_1B4CF34(p_onClosed, 0, v3, v4);
+  sub_1B8635C(p_onClosed, 0, v3, v4);
 }
 
 
@@ -429,7 +429,7 @@ void __fastcall ScoreRecordCardDialog___c__DisplayClass12_0___PlayAnimation_b__0
   v3 = this->fields.index + 1;
   this->fields.index = v3;
   if ( !animationComponents )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   if ( v3 >= (signed int)animationComponents->max_length )
     ActionExtensions__Call(this->fields.callback, 0LL);
 }

@@ -1,13 +1,13 @@
 void __fastcall EventMissionEntity___ctor(EventMissionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAEA0 & 1) == 0 )
+  if ( (byte_4A4E4D1 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
-    byte_49BAEA0 = 1;
+    sub_1B863B8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A4E4D1 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3211D9C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -43,10 +43,10 @@ GiftEntity_o *__fastcall EventMissionEntity__GetQpGiftEntity(EventMissionEntity_
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1B4D1F4(GiftData, v3);
+      sub_1B8661C(GiftData, v3);
     v7 = v5->m_Items[v6];
     if ( !v7 )
-      sub_1B4D1EC(GiftData, v3);
+      sub_1B86614(GiftData, v3);
     GiftData = (GiftEntity_array *)GiftEntity__isQp(v5->m_Items[v6], 0LL);
     if ( ((unsigned __int8)GiftData & 1) != 0 )
       break;
@@ -77,10 +77,10 @@ bool __fastcall EventMissionEntity__IsActiveNow(EventMissionEntity_o *this, cons
 {
   int64_t Time; // x0
 
-  if ( (byte_49BAE9F & 1) == 0 )
+  if ( (byte_4A4E4D0 & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    byte_49BAE9F = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    byte_4A4E4D0 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -98,6 +98,15 @@ bool __fastcall EventMissionEntity__IsDaily(EventMissionEntity_o *this, const Me
 bool __fastcall EventMissionEntity__IsDirectReward(EventMissionEntity_o *this, const MethodInfo *method)
 {
   return (LOBYTE(this->fields.flag) >> 4) & 1;
+}
+
+
+bool __fastcall EventMissionEntity__IsEventPeriod(
+        EventMissionEntity_o *this,
+        int64_t nowTime,
+        const MethodInfo *method)
+{
+  return this->fields.startedAt <= nowTime && this->fields.endedAt >= nowTime;
 }
 
 
@@ -129,15 +138,24 @@ bool __fastcall EventMissionEntity__IsOpenNow(EventMissionEntity_o *this, const 
 {
   int64_t Time; // x0
 
-  if ( (byte_49BAE9E & 1) == 0 )
+  if ( (byte_4A4E4CF & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    byte_49BAE9E = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    byte_4A4E4CF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   return this->fields.startedAt <= Time && this->fields.endedAt >= Time;
+}
+
+
+bool __fastcall EventMissionEntity__IsReceivablePeriod(
+        EventMissionEntity_o *this,
+        int64_t nowTime,
+        const MethodInfo *method)
+{
+  return this->fields.startedAt <= nowTime && this->fields.closedAt >= nowTime;
 }
 
 
@@ -147,19 +165,19 @@ GiftEntity_array *__fastcall EventMissionEntity__getGiftData(EventMissionEntity_
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_49BAE9B & 1) == 0 )
+  if ( (byte_4A4E4CC & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_GiftMaster___, method);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49BAE9B = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A4E4CC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_1B4D1EC(Instance, v5);
+    sub_1B86614(Instance, v5);
   }
   return GiftMaster__GetGiftListById((GiftMaster_o *)Instance, this->fields.giftId, 0LL);
 }
@@ -172,27 +190,28 @@ EventRewardSetEntity_o *__fastcall EventMissionEntity__getSetRewardData(
   __int64 v3; // x1
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
+  const MethodInfo *v6; // x4
 
-  if ( (byte_49BAE9C & 1) == 0 )
+  if ( (byte_4A4E4CD & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_EventRewardSetMaster___, method);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_49BAE9C = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_EventRewardSetMaster___, method);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4A4E4CD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
+                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventRewardSetMaster___)) == 0LL )
   {
-    sub_1B4D1EC(Instance, v5);
+    sub_1B86614(Instance, v5);
   }
   return EventRewardSetMaster__GetEntity(
            (EventRewardSetMaster_o *)Instance,
            3,
            this->fields.missionTargetId,
            this->fields.id,
-           0LL);
+           v6);
 }
 
 
@@ -200,13 +219,13 @@ bool __fastcall EventMissionEntity__isNowMission(EventMissionEntity_o *this, con
 {
   int64_t Time; // x0
 
-  if ( (byte_49BAE9D & 1) == 0 )
+  if ( (byte_4A4E4CE & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    byte_49BAE9D = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    byte_4A4E4CE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
-  return Time >= this->fields.startedAt && Time <= this->fields.endedAt;
+  return this->fields.startedAt <= Time && this->fields.endedAt >= Time;
 }

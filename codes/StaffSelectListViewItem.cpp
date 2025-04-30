@@ -18,10 +18,10 @@ void __fastcall StaffSelectListViewItem___ctor(
   bool v20; // w8
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._StaffPhotoEntity_k__BackingField, (int32_t)entity, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._StaffPhotoEntity_k__BackingField, (int32_t)entity, v13, v14);
   if ( !entity )
     goto LABEL_7;
   id = entity->fields.id;
@@ -34,13 +34,13 @@ void __fastcall StaffSelectListViewItem___ctor(
   v15 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_7:
-    sub_1B4D1EC(v15, v16);
+    sub_1B86614(v15, v16);
   v20 = !StaffPhotoEntity__IsEnableSameSet(v15, 0LL);
 LABEL_6:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
   *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v20;
-  sub_1B4CF34((CGThumbnailListItem_o *)p_PhotoCampaignAtlas_k__BackingField, (int32_t)photoCampaignAtlas, v17, v18);
+  sub_1B8635C((CGThumbnailListItem_o *)p_PhotoCampaignAtlas_k__BackingField, (int32_t)photoCampaignAtlas, v17, v18);
 }
 
 
@@ -53,7 +53,7 @@ void __fastcall StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1B4D1EC(this, selectStaffPhotoId);
+    sub_1B86614(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -68,7 +68,7 @@ bool __fastcall StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1B4D1EC(this, sort);
+    sub_1B86614(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

@@ -7,6 +7,7 @@ void __fastcall IconLabelInfo___ctor(IconLabelInfo_o *this, const MethodInfo *me
 void __fastcall IconLabelInfo__Clear(IconLabelInfo_o *this, const MethodInfo *method)
 {
   this->fields.lv = 0;
+  this->fields.actualRarity = 0;
   *(_QWORD *)&this->fields.adjustData = 0LL;
   this->fields.time = 0LL;
   *(_QWORD *)&this->fields.iconKind = 0LL;
@@ -23,12 +24,12 @@ bool __fastcall IconLabelInfo__IsClear(IconLabelInfo_o *this, const MethodInfo *
 void __fastcall IconLabelInfo__Set(IconLabelInfo_o *this, IconLabelInfo_o *info, const MethodInfo *method)
 {
   if ( !info )
-    sub_1B4D1EC(this, 0LL);
+    sub_1B86614(this, 0LL);
   *(_OWORD *)&this->fields.iconKind = *(_OWORD *)&info->fields.iconKind;
   this->fields.time = info->fields.time;
   this->fields.isHide = info->fields.isHide;
   this->fields.isMaxHide = info->fields.isMaxHide;
-  this->fields.lv = info->fields.lv;
+  *(_QWORD *)&this->fields.lv = *(_QWORD *)&info->fields.lv;
 }
 
 
@@ -66,7 +67,7 @@ void __fastcall IconLabelInfo__SetTime(
 }
 
 
-void __fastcall IconLabelInfo__Set_38677548(
+void __fastcall IconLabelInfo__Set_39094644(
         IconLabelInfo_o *this,
         int32_t iconKind,
         int32_t data,
@@ -75,6 +76,7 @@ void __fastcall IconLabelInfo__Set_38677548(
         bool isHide,
         bool isMaxHide,
         int32_t lv,
+        int32_t actualRarity,
         const MethodInfo *method)
 {
   this->fields.iconKind = iconKind;
@@ -85,6 +87,13 @@ void __fastcall IconLabelInfo__Set_38677548(
   this->fields.isHide = isHide;
   this->fields.isMaxHide = isMaxHide;
   this->fields.lv = lv;
+  this->fields.actualRarity = actualRarity;
+}
+
+
+int32_t __fastcall IconLabelInfo__get_ActualRarity(IconLabelInfo_o *this, const MethodInfo *method)
+{
+  return this->fields.actualRarity;
 }
 
 

@@ -9,13 +9,13 @@ void __fastcall WarBoardAPITreasureGetRequestTask___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  WarBoardAPIRequestTask___ctor_36137872(
+  WarBoardAPIRequestTask___ctor_36447052(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)onStartBeginRequest);
   this->fields.treasureData = treasure;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.treasureData, (int32_t)treasure, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.treasureData, (int32_t)treasure, v7, v8);
 }
 
 
@@ -33,14 +33,14 @@ void __fastcall WarBoardAPITreasureGetRequestTask__SetRequest(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_49B8C50 & 1) == 0 )
+  if ( (byte_4A4C17E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_NetworkManager_getRequest_WarBoardTreasureRequest___, method);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_49B8C50 = 1;
+    sub_1B863B8(&Method_NetworkManager_getRequest_WarBoardTreasureRequest___, method);
+    sub_1B863B8(&NetworkManager_TypeInfo, v3);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
+    byte_4A4C17E = 1;
   }
-  Instance = (WarBoardTreasureRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardTreasureRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   klass = (WarBoardData_o *)Instance[11].klass;
@@ -48,12 +48,12 @@ void __fastcall WarBoardAPITreasureGetRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (WarBoardTreasureRequest_o *)NetworkManager__getRequest_object_(
                                             0LL,
-                                            (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_WarBoardTreasureRequest___);
+                                            (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_WarBoardTreasureRequest___);
   treasureData = this->fields.treasureData;
   if ( !treasureData || (v9 = (struct RequestBase_o *)Instance) == 0LL )
 LABEL_9:
-    sub_1B4D1EC(Instance, v6);
+    sub_1B86614(Instance, v6);
   WarBoardTreasureRequest__beginRequest(Instance, treasureData->fields._treasureId_k__BackingField, klass, 0LL);
   this->fields.request = v9;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v9, v10, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v9, v10, v11);
 }

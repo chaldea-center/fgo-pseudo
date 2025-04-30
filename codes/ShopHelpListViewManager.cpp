@@ -157,463 +157,463 @@ void __fastcall ShopHelpListViewManager___ctor(ShopHelpListViewManager_o *this, 
   __int64 v157; // x0
   System_RuntimeFieldHandle_o v158; // 0:w1.4
 
-  if ( (byte_49B72DA & 1) == 0 )
+  if ( (byte_4A4A80D & 1) == 0 )
   {
-    sub_1B4CF90(&ShopHelpItemInfo_ItemKind___TypeInfo, method);
-    sub_1B4CF90(&ShopHelpItemInfo___TypeInfo, v3);
-    sub_1B4CF90(&ShopHelpItemInfo_TypeInfo, v4);
-    sub_1B4CF90(&string___TypeInfo, v5);
-    sub_1B4CF90(
+    sub_1B863B8(&ShopHelpItemInfo_ItemKind___TypeInfo, method);
+    sub_1B863B8(&ShopHelpItemInfo___TypeInfo, v3);
+    sub_1B863B8(&ShopHelpItemInfo_TypeInfo, v4);
+    sub_1B863B8(&string___TypeInfo, v5);
+    sub_1B863B8(
       &Field__PrivateImplementationDetails__E10CB21B9898DC890A2C12C77D0F3080A4687EE5D6F1EF7922CCF6259D7BB335,
       v6);
-    sub_1B4CF90(&StringLiteral_11843/*"SHOP_HELP_SERVANT_FRAME_EXTENSION_EXPLANATION"*/, v7);
-    sub_1B4CF90(&StringLiteral_11850/*"SHOP_HELP_TRADE_AP_EXPLANATION"*/, v8);
-    sub_1B4CF90(&StringLiteral_11839/*"SHOP_HELP_PURE_PRI_EXPLANATION"*/, v9);
-    sub_1B4CF90(&StringLiteral_14312/*"Tutorial/tutorial_alpha"*/, v10);
-    sub_1B4CF90(&StringLiteral_20159/*"img_shop_15"*/, v11);
-    sub_1B4CF90(&StringLiteral_20168/*"img_shop_7"*/, v12);
-    sub_1B4CF90(&StringLiteral_20155/*"img_shop_11"*/, v13);
-    sub_1B4CF90(&StringLiteral_11849/*"SHOP_HELP_SVT_COSTUME_EXPLANATION"*/, v14);
-    sub_1B4CF90(&StringLiteral_11835/*"SHOP_HELP_EVENT_SHOP_EXPLANATION"*/, v15);
-    sub_1B4CF90(&StringLiteral_11842/*"SHOP_HELP_SELL_SERVANT_EXPLANATION"*/, v16);
-    sub_1B4CF90(&StringLiteral_20165/*"img_shop_22"*/, v17);
-    sub_1B4CF90(&StringLiteral_11845/*"SHOP_HELP_START_UP_SUMMON"*/, v18);
-    sub_1B4CF90(&StringLiteral_23814/*"tutorial_0006"*/, v19);
-    sub_1B4CF90(&StringLiteral_11832/*"SHOP_HELP_ANONYMOUS_SHOP_EXPLANATION"*/, v20);
-    sub_1B4CF90(&StringLiteral_11838/*"SHOP_HELP_MANA_SHOP_EXPLANATION"*/, v21);
-    sub_1B4CF90(&StringLiteral_11834/*"SHOP_HELP_EQUIP_FRAME_EXTENSION_EXPLANATION"*/, v22);
-    sub_1B4CF90(&StringLiteral_11841/*"SHOP_HELP_REVIVAL_ITEM_EXPLANATION"*/, v23);
-    sub_1B4CF90(&StringLiteral_20157/*"img_shop_13"*/, v24);
-    sub_1B4CF90(&StringLiteral_20170/*"img_shop_9"*/, v25);
-    sub_1B4CF90(&StringLiteral_11847/*"SHOP_HELP_STONE_PURCHASE_EXPLANATION"*/, v26);
-    sub_1B4CF90(&StringLiteral_11848/*"SHOP_HELP_STONE_SHOP_EXPLANATION"*/, v27);
-    sub_1B4CF90(&StringLiteral_20154/*"img_shop_10"*/, v28);
-    sub_1B4CF90(&StringLiteral_11837/*"SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION"*/, v29);
-    sub_1B4CF90(&StringLiteral_20160/*"img_shop_16"*/, v30);
-    sub_1B4CF90(&StringLiteral_20161/*"img_shop_17"*/, v31);
-    sub_1B4CF90(&StringLiteral_20163/*"img_shop_20"*/, v32);
-    sub_1B4CF90(&StringLiteral_20169/*"img_shop_8"*/, v33);
-    sub_1B4CF90(&StringLiteral_20167/*"img_shop_4"*/, v34);
-    sub_1B4CF90(&StringLiteral_11833/*"SHOP_HELP_COIN_ROOM_EXPLANATION"*/, v35);
-    sub_1B4CF90(&StringLiteral_20164/*"img_shop_21"*/, v36);
-    sub_1B4CF90(&StringLiteral_20162/*"img_shop_18"*/, v37);
-    sub_1B4CF90(&StringLiteral_11844/*"SHOP_HELP_SPECIAL_ITEM_SHOP_EXPLANATION"*/, v38);
-    sub_1B4CF90(&StringLiteral_11836/*"SHOP_HELP_EVENT_SVT_EQUIP_EXPLANATION"*/, v39);
-    sub_1B4CF90(&StringLiteral_20166/*"img_shop_3"*/, v40);
-    sub_1B4CF90(&StringLiteral_20152/*"img_shop_0"*/, v41);
-    sub_1B4CF90(&StringLiteral_14311/*"Tutorial/tutorial_0006"*/, v42);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v43);
-    sub_1B4CF90(&StringLiteral_20158/*"img_shop_14"*/, v44);
-    sub_1B4CF90(&StringLiteral_11846/*"SHOP_HELP_STONE_FRAGMENTS_SHOP_EXPLANATION"*/, v45);
-    sub_1B4CF90(&StringLiteral_20153/*"img_shop_1"*/, v46);
-    sub_1B4CF90(&StringLiteral_23815/*"tutorial_alpha"*/, v47);
-    sub_1B4CF90(&StringLiteral_11840/*"SHOP_HELP_RARE_PRI_SHOP_EXPLANATION"*/, v48);
-    sub_1B4CF90(&StringLiteral_20156/*"img_shop_12"*/, v49);
-    byte_49B72DA = 1;
+    sub_1B863B8(&StringLiteral_11910/*"SHOP_HELP_SERVANT_FRAME_EXTENSION_EXPLANATION"*/, v7);
+    sub_1B863B8(&StringLiteral_11917/*"SHOP_HELP_TRADE_AP_EXPLANATION"*/, v8);
+    sub_1B863B8(&StringLiteral_11906/*"SHOP_HELP_PURE_PRI_EXPLANATION"*/, v9);
+    sub_1B863B8(&StringLiteral_14386/*"Tutorial/tutorial_alpha"*/, v10);
+    sub_1B863B8(&StringLiteral_20258/*"img_shop_15"*/, v11);
+    sub_1B863B8(&StringLiteral_20267/*"img_shop_7"*/, v12);
+    sub_1B863B8(&StringLiteral_20254/*"img_shop_11"*/, v13);
+    sub_1B863B8(&StringLiteral_11916/*"SHOP_HELP_SVT_COSTUME_EXPLANATION"*/, v14);
+    sub_1B863B8(&StringLiteral_11902/*"SHOP_HELP_EVENT_SHOP_EXPLANATION"*/, v15);
+    sub_1B863B8(&StringLiteral_11909/*"SHOP_HELP_SELL_SERVANT_EXPLANATION"*/, v16);
+    sub_1B863B8(&StringLiteral_20264/*"img_shop_22"*/, v17);
+    sub_1B863B8(&StringLiteral_11912/*"SHOP_HELP_START_UP_SUMMON"*/, v18);
+    sub_1B863B8(&StringLiteral_23938/*"tutorial_0006"*/, v19);
+    sub_1B863B8(&StringLiteral_11899/*"SHOP_HELP_ANONYMOUS_SHOP_EXPLANATION"*/, v20);
+    sub_1B863B8(&StringLiteral_11905/*"SHOP_HELP_MANA_SHOP_EXPLANATION"*/, v21);
+    sub_1B863B8(&StringLiteral_11901/*"SHOP_HELP_EQUIP_FRAME_EXTENSION_EXPLANATION"*/, v22);
+    sub_1B863B8(&StringLiteral_11908/*"SHOP_HELP_REVIVAL_ITEM_EXPLANATION"*/, v23);
+    sub_1B863B8(&StringLiteral_20256/*"img_shop_13"*/, v24);
+    sub_1B863B8(&StringLiteral_20269/*"img_shop_9"*/, v25);
+    sub_1B863B8(&StringLiteral_11914/*"SHOP_HELP_STONE_PURCHASE_EXPLANATION"*/, v26);
+    sub_1B863B8(&StringLiteral_11915/*"SHOP_HELP_STONE_SHOP_EXPLANATION"*/, v27);
+    sub_1B863B8(&StringLiteral_20253/*"img_shop_10"*/, v28);
+    sub_1B863B8(&StringLiteral_11904/*"SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION"*/, v29);
+    sub_1B863B8(&StringLiteral_20259/*"img_shop_16"*/, v30);
+    sub_1B863B8(&StringLiteral_20260/*"img_shop_17"*/, v31);
+    sub_1B863B8(&StringLiteral_20262/*"img_shop_20"*/, v32);
+    sub_1B863B8(&StringLiteral_20268/*"img_shop_8"*/, v33);
+    sub_1B863B8(&StringLiteral_20266/*"img_shop_4"*/, v34);
+    sub_1B863B8(&StringLiteral_11900/*"SHOP_HELP_COIN_ROOM_EXPLANATION"*/, v35);
+    sub_1B863B8(&StringLiteral_20263/*"img_shop_21"*/, v36);
+    sub_1B863B8(&StringLiteral_20261/*"img_shop_18"*/, v37);
+    sub_1B863B8(&StringLiteral_11911/*"SHOP_HELP_SPECIAL_ITEM_SHOP_EXPLANATION"*/, v38);
+    sub_1B863B8(&StringLiteral_11903/*"SHOP_HELP_EVENT_SVT_EQUIP_EXPLANATION"*/, v39);
+    sub_1B863B8(&StringLiteral_20265/*"img_shop_3"*/, v40);
+    sub_1B863B8(&StringLiteral_20251/*"img_shop_0"*/, v41);
+    sub_1B863B8(&StringLiteral_14385/*"Tutorial/tutorial_0006"*/, v42);
+    sub_1B863B8(&StringLiteral_1/*""*/, v43);
+    sub_1B863B8(&StringLiteral_20257/*"img_shop_14"*/, v44);
+    sub_1B863B8(&StringLiteral_11913/*"SHOP_HELP_STONE_FRAGMENTS_SHOP_EXPLANATION"*/, v45);
+    sub_1B863B8(&StringLiteral_20252/*"img_shop_1"*/, v46);
+    sub_1B863B8(&StringLiteral_23939/*"tutorial_alpha"*/, v47);
+    sub_1B863B8(&StringLiteral_11907/*"SHOP_HELP_RARE_PRI_SHOP_EXPLANATION"*/, v48);
+    sub_1B863B8(&StringLiteral_20255/*"img_shop_12"*/, v49);
+    byte_4A4A80D = 1;
   }
-  v50 = sub_1B4D038(string___TypeInfo, 2LL);
+  v50 = sub_1B86460(string___TypeInfo, 2LL);
   if ( !v50 )
     goto LABEL_73;
   v54 = v50;
   if ( !*(_DWORD *)(v50 + 24) )
     goto LABEL_71;
-  v55 = StringLiteral_14311/*"Tutorial/tutorial_0006"*/;
-  *(_QWORD *)(v50 + 32) = StringLiteral_14311/*"Tutorial/tutorial_0006"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v50 + 32), v55, v52, v53);
+  v55 = StringLiteral_14385/*"Tutorial/tutorial_0006"*/;
+  *(_QWORD *)(v50 + 32) = StringLiteral_14385/*"Tutorial/tutorial_0006"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 32), v55, v52, v53);
   if ( *(_DWORD *)(v54 + 24) <= 1u )
     goto LABEL_71;
-  v58 = StringLiteral_14312/*"Tutorial/tutorial_alpha"*/;
-  *(_QWORD *)(v54 + 40) = StringLiteral_14312/*"Tutorial/tutorial_alpha"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v54 + 40), v58, v56, v57);
+  v58 = StringLiteral_14386/*"Tutorial/tutorial_alpha"*/;
+  *(_QWORD *)(v54 + 40) = StringLiteral_14386/*"Tutorial/tutorial_alpha"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v54 + 40), v58, v56, v57);
   this->fields.helpBasePaths = (struct System_String_array *)v54;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.helpBasePaths, v54, v59, v60);
-  v50 = sub_1B4D038(string___TypeInfo, 2LL);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.helpBasePaths, v54, v59, v60);
+  v50 = sub_1B86460(string___TypeInfo, 2LL);
   if ( !v50 )
     goto LABEL_73;
   v63 = v50;
   if ( !*(_DWORD *)(v50 + 24) )
     goto LABEL_71;
-  v64 = StringLiteral_23814/*"tutorial_0006"*/;
-  *(_QWORD *)(v50 + 32) = StringLiteral_23814/*"tutorial_0006"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v50 + 32), v64, v61, v62);
+  v64 = StringLiteral_23938/*"tutorial_0006"*/;
+  *(_QWORD *)(v50 + 32) = StringLiteral_23938/*"tutorial_0006"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 32), v64, v61, v62);
   if ( *(_DWORD *)(v63 + 24) <= 1u )
     goto LABEL_71;
-  v67 = StringLiteral_23815/*"tutorial_alpha"*/;
-  *(_QWORD *)(v63 + 40) = StringLiteral_23815/*"tutorial_alpha"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v63 + 40), v67, v65, v66);
+  v67 = StringLiteral_23939/*"tutorial_alpha"*/;
+  *(_QWORD *)(v63 + 40) = StringLiteral_23939/*"tutorial_alpha"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v63 + 40), v67, v65, v66);
   this->fields.helpBaseNames = (struct System_String_array *)v63;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.helpBaseNames, v63, v68, v69);
-  v70 = (struct ShopHelpItemInfo_array *)sub_1B4D038(ShopHelpItemInfo___TypeInfo, 20LL);
-  v71 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.helpBaseNames, v63, v68, v69);
+  v70 = (struct ShopHelpItemInfo_array *)sub_1B86460(ShopHelpItemInfo___TypeInfo, 20LL);
+  v71 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v71,
     1,
-    (System_String_o *)StringLiteral_11835/*"SHOP_HELP_EVENT_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20169/*"img_shop_8"*/,
+    (System_String_o *)StringLiteral_11902/*"SHOP_HELP_EVENT_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20268/*"img_shop_8"*/,
     2,
     v72);
   if ( !v70 )
 LABEL_73:
-    sub_1B4D1EC(v50, v51);
+    sub_1B86614(v50, v51);
   if ( v71 )
   {
-    v50 = sub_1B4D0CC(v71, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v71, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( !v70->max_length )
     goto LABEL_71;
   v70->m_Items[0] = v71;
-  sub_1B4CF34((CGThumbnailListItem_o *)v70->m_Items, (int32_t)v71, v73, v74);
-  v75 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)v70->m_Items, (int32_t)v71, v73, v74);
+  v75 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v75,
     16,
-    (System_String_o *)StringLiteral_11845/*"SHOP_HELP_START_UP_SUMMON"*/,
-    (System_String_o *)StringLiteral_20161/*"img_shop_17"*/,
+    (System_String_o *)StringLiteral_11912/*"SHOP_HELP_START_UP_SUMMON"*/,
+    (System_String_o *)StringLiteral_20260/*"img_shop_17"*/,
     2,
     v76);
   if ( v75 )
   {
-    v50 = sub_1B4D0CC(v75, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v75, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 1 )
     goto LABEL_71;
   v70->m_Items[1] = v75;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[1], (int32_t)v75, v77, v78);
-  v79 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[1], (int32_t)v75, v77, v78);
+  v79 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v79,
     2,
-    (System_String_o *)StringLiteral_11842/*"SHOP_HELP_SELL_SERVANT_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20167/*"img_shop_4"*/,
+    (System_String_o *)StringLiteral_11909/*"SHOP_HELP_SELL_SERVANT_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20266/*"img_shop_4"*/,
     2,
     v80);
   if ( v79 )
   {
-    v50 = sub_1B4D0CC(v79, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v79, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 2 )
     goto LABEL_71;
   v70->m_Items[2] = v79;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[2], (int32_t)v79, v81, v82);
-  v83 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[2], (int32_t)v79, v81, v82);
+  v83 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v83,
     3,
-    (System_String_o *)StringLiteral_11838/*"SHOP_HELP_MANA_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20166/*"img_shop_3"*/,
+    (System_String_o *)StringLiteral_11905/*"SHOP_HELP_MANA_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20265/*"img_shop_3"*/,
     1,
     v84);
   if ( v83 )
   {
-    v50 = sub_1B4D0CC(v83, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v83, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 3 )
     goto LABEL_71;
   v70->m_Items[3] = v83;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[3], (int32_t)v83, v85, v86);
-  v87 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[3], (int32_t)v83, v85, v86);
+  v87 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v87,
     4,
-    (System_String_o *)StringLiteral_11840/*"SHOP_HELP_RARE_PRI_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20155/*"img_shop_11"*/,
+    (System_String_o *)StringLiteral_11907/*"SHOP_HELP_RARE_PRI_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20254/*"img_shop_11"*/,
     2,
     v88);
   if ( v87 )
   {
-    v50 = sub_1B4D0CC(v87, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v87, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 4 )
     goto LABEL_71;
   v70->m_Items[4] = v87;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[4], (int32_t)v87, v89, v90);
-  v91 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[4], (int32_t)v87, v89, v90);
+  v91 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v91,
     5,
-    (System_String_o *)StringLiteral_11846/*"SHOP_HELP_STONE_FRAGMENTS_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20170/*"img_shop_9"*/,
+    (System_String_o *)StringLiteral_11913/*"SHOP_HELP_STONE_FRAGMENTS_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20269/*"img_shop_9"*/,
     1,
     v92);
   if ( v91 )
   {
-    v50 = sub_1B4D0CC(v91, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v91, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 5 )
     goto LABEL_71;
   v70->m_Items[5] = v91;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[5], (int32_t)v91, v93, v94);
-  v95 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[5], (int32_t)v91, v93, v94);
+  v95 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v95,
     6,
-    (System_String_o *)StringLiteral_11847/*"SHOP_HELP_STONE_PURCHASE_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20153/*"img_shop_1"*/,
+    (System_String_o *)StringLiteral_11914/*"SHOP_HELP_STONE_PURCHASE_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20252/*"img_shop_1"*/,
     1,
     v96);
   if ( v95 )
   {
-    v50 = sub_1B4D0CC(v95, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v95, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 6 )
     goto LABEL_71;
   v70->m_Items[6] = v95;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[6], (int32_t)v95, v97, v98);
-  v99 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[6], (int32_t)v95, v97, v98);
+  v99 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v99,
     7,
-    (System_String_o *)StringLiteral_11843/*"SHOP_HELP_SERVANT_FRAME_EXTENSION_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20156/*"img_shop_12"*/,
+    (System_String_o *)StringLiteral_11910/*"SHOP_HELP_SERVANT_FRAME_EXTENSION_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20255/*"img_shop_12"*/,
     1,
     v100);
   if ( v99 )
   {
-    v50 = sub_1B4D0CC(v99, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v99, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 7 )
     goto LABEL_71;
   v70->m_Items[7] = v99;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[7], (int32_t)v99, v101, v102);
-  v103 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[7], (int32_t)v99, v101, v102);
+  v103 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v103,
     8,
-    (System_String_o *)StringLiteral_11834/*"SHOP_HELP_EQUIP_FRAME_EXTENSION_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20157/*"img_shop_13"*/,
+    (System_String_o *)StringLiteral_11901/*"SHOP_HELP_EQUIP_FRAME_EXTENSION_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20256/*"img_shop_13"*/,
     1,
     v104);
   if ( v103 )
   {
-    v50 = sub_1B4D0CC(v103, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v103, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 8 )
     goto LABEL_71;
   v70->m_Items[8] = v103;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[8], (int32_t)v103, v105, v106);
-  v107 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[8], (int32_t)v103, v105, v106);
+  v107 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v107,
     11,
-    (System_String_o *)StringLiteral_11832/*"SHOP_HELP_ANONYMOUS_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20154/*"img_shop_10"*/,
+    (System_String_o *)StringLiteral_11899/*"SHOP_HELP_ANONYMOUS_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20253/*"img_shop_10"*/,
     1,
     v108);
   if ( v107 )
   {
-    v50 = sub_1B4D0CC(v107, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v107, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 9 )
     goto LABEL_71;
   v70->m_Items[9] = v107;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[9], (int32_t)v107, v109, v110);
-  v111 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[9], (int32_t)v107, v109, v110);
+  v111 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v111,
     13,
-    (System_String_o *)StringLiteral_11844/*"SHOP_HELP_SPECIAL_ITEM_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20158/*"img_shop_14"*/,
+    (System_String_o *)StringLiteral_11911/*"SHOP_HELP_SPECIAL_ITEM_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20257/*"img_shop_14"*/,
     2,
     v112);
   if ( v111 )
   {
-    v50 = sub_1B4D0CC(v111, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v111, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xA )
     goto LABEL_71;
   v70->m_Items[10] = v111;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[10], (int32_t)v111, v113, v114);
-  v115 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[10], (int32_t)v111, v113, v114);
+  v115 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v115,
     12,
-    (System_String_o *)StringLiteral_11848/*"SHOP_HELP_STONE_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20168/*"img_shop_7"*/,
+    (System_String_o *)StringLiteral_11915/*"SHOP_HELP_STONE_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20267/*"img_shop_7"*/,
     1,
     v116);
   if ( v115 )
   {
-    v50 = sub_1B4D0CC(v115, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v115, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xB )
     goto LABEL_71;
   v70->m_Items[11] = v115;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[11], (int32_t)v115, v117, v118);
-  v119 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[11], (int32_t)v115, v117, v118);
+  v119 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v119,
     14,
-    (System_String_o *)StringLiteral_11837/*"SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20159/*"img_shop_15"*/,
+    (System_String_o *)StringLiteral_11904/*"SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20258/*"img_shop_15"*/,
     1,
     v120);
   if ( v119 )
   {
-    v50 = sub_1B4D0CC(v119, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v119, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xC )
     goto LABEL_71;
   v70->m_Items[12] = v119;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[12], (int32_t)v119, v121, v122);
-  v123 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[12], (int32_t)v119, v121, v122);
+  v123 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v123,
     15,
-    (System_String_o *)StringLiteral_11849/*"SHOP_HELP_SVT_COSTUME_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20160/*"img_shop_16"*/,
+    (System_String_o *)StringLiteral_11916/*"SHOP_HELP_SVT_COSTUME_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20259/*"img_shop_16"*/,
     2,
     v124);
   if ( v123 )
   {
-    v50 = sub_1B4D0CC(v123, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v123, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xD )
     goto LABEL_71;
   v70->m_Items[13] = v123;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[13], (int32_t)v123, v125, v126);
-  v127 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[13], (int32_t)v123, v125, v126);
+  v127 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v127,
     17,
-    (System_String_o *)StringLiteral_11833/*"SHOP_HELP_COIN_ROOM_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20161/*"img_shop_17"*/,
+    (System_String_o *)StringLiteral_11900/*"SHOP_HELP_COIN_ROOM_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20260/*"img_shop_17"*/,
     2,
     v128);
   if ( v127 )
   {
-    v50 = sub_1B4D0CC(v127, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v127, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xE )
     goto LABEL_71;
   v70->m_Items[14] = v127;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[14], (int32_t)v127, v129, v130);
-  v131 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[14], (int32_t)v127, v129, v130);
+  v131 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v131,
     18,
-    (System_String_o *)StringLiteral_11839/*"SHOP_HELP_PURE_PRI_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20162/*"img_shop_18"*/,
+    (System_String_o *)StringLiteral_11906/*"SHOP_HELP_PURE_PRI_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20261/*"img_shop_18"*/,
     1,
     v132);
   if ( v131 )
   {
-    v50 = sub_1B4D0CC(v131, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v131, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0xF )
     goto LABEL_71;
   v70->m_Items[15] = v131;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[15], (int32_t)v131, v133, v134);
-  v135 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[15], (int32_t)v131, v133, v134);
+  v135 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v135,
     19,
-    (System_String_o *)StringLiteral_11850/*"SHOP_HELP_TRADE_AP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20163/*"img_shop_20"*/,
+    (System_String_o *)StringLiteral_11917/*"SHOP_HELP_TRADE_AP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20262/*"img_shop_20"*/,
     2,
     v136);
   if ( v135 )
   {
-    v50 = sub_1B4D0CC(v135, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v135, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0x10 )
     goto LABEL_71;
   v70->m_Items[16] = v135;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[16], (int32_t)v135, v137, v138);
-  v139 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[16], (int32_t)v135, v137, v138);
+  v139 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v139,
     20,
-    (System_String_o *)StringLiteral_11841/*"SHOP_HELP_REVIVAL_ITEM_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20164/*"img_shop_21"*/,
+    (System_String_o *)StringLiteral_11908/*"SHOP_HELP_REVIVAL_ITEM_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20263/*"img_shop_21"*/,
     2,
     v140);
   if ( v139 )
   {
-    v50 = sub_1B4D0CC(v139, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v139, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0x11 )
     goto LABEL_71;
   v70->m_Items[17] = v139;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[17], (int32_t)v139, v141, v142);
-  v143 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[17], (int32_t)v139, v141, v142);
+  v143 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
   ShopHelpItemInfo___ctor(
     v143,
     21,
-    (System_String_o *)StringLiteral_11836/*"SHOP_HELP_EVENT_SVT_EQUIP_EXPLANATION"*/,
-    (System_String_o *)StringLiteral_20165/*"img_shop_22"*/,
+    (System_String_o *)StringLiteral_11903/*"SHOP_HELP_EVENT_SVT_EQUIP_EXPLANATION"*/,
+    (System_String_o *)StringLiteral_20264/*"img_shop_22"*/,
     2,
     v144);
   if ( v143 )
   {
-    v50 = sub_1B4D0CC(v143, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v143, v70->obj.klass->_1.element_class);
     if ( !v50 )
       goto LABEL_72;
   }
   if ( v70->max_length <= 0x12 )
     goto LABEL_71;
   v70->m_Items[18] = v143;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[18], (int32_t)v143, v145, v146);
-  v147 = (ShopHelpItemInfo_o *)sub_1B4D1DC(ShopHelpItemInfo_TypeInfo);
-  ShopHelpItemInfo___ctor(v147, 22, (System_String_o *)StringLiteral_1/*""*/, (System_String_o *)StringLiteral_20152/*"img_shop_0"*/, 1, v148);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[18], (int32_t)v143, v145, v146);
+  v147 = (ShopHelpItemInfo_o *)sub_1B86604(ShopHelpItemInfo_TypeInfo);
+  ShopHelpItemInfo___ctor(v147, 22, (System_String_o *)StringLiteral_1/*""*/, (System_String_o *)StringLiteral_20251/*"img_shop_0"*/, 1, v148);
   if ( v147 )
   {
-    v50 = sub_1B4D0CC(v147, v70->obj.klass->_1.element_class);
+    v50 = sub_1B864F4(v147, v70->obj.klass->_1.element_class);
     if ( !v50 )
     {
 LABEL_72:
-      v157 = sub_1B4D210();
-      sub_1B4D0B8(v157, 0LL);
+      v157 = sub_1B86638();
+      sub_1B864E0(v157, 0LL);
     }
   }
   if ( v70->max_length <= 0x13 )
 LABEL_71:
-    sub_1B4D1F4(v50, v51);
+    sub_1B8661C(v50, v51);
   v70->m_Items[19] = v147;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v70->m_Items[19], (int32_t)v147, v149, v150);
+  sub_1B8635C((CGThumbnailListItem_o *)&v70->m_Items[19], (int32_t)v147, v149, v150);
   this->fields.itemInfoList = v70;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.itemInfoList, (int32_t)v70, v151, v152);
-  v153 = (System_Array_o *)sub_1B4D038(ShopHelpItemInfo_ItemKind___TypeInfo, 18LL);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemInfoList, (int32_t)v70, v151, v152);
+  v153 = (System_Array_o *)sub_1B86460(ShopHelpItemInfo_ItemKind___TypeInfo, 18LL);
   v158.fields.value = Field__PrivateImplementationDetails__E10CB21B9898DC890A2C12C77D0F3080A4687EE5D6F1EF7922CCF6259D7BB335;
   v154 = (struct ShopHelpItemInfo_ItemKind_array *)v153;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_61793784(v153, v158, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62345492(v153, v158, 0LL);
   this->fields.kinds = v154;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.kinds, (int32_t)v154, v155, v156);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.kinds, (int32_t)v154, v155, v156);
   ListViewManager___ctor((ListViewManager_o *)this, 0LL);
 }
 
@@ -630,7 +630,7 @@ void __fastcall ShopHelpListViewManager__CallOnFadeOut(ShopHelpListViewManager_o
   {
     p_onFadeOut = (CGThumbnailListItem_o *)&this->fields.onFadeOut;
     p_onFadeOut->klass = 0LL;
-    sub_1B4CF34(p_onFadeOut, 0, v2, v3);
+    sub_1B8635C(p_onFadeOut, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onFadeOut->fields.m_target)(
       onFadeOut->fields.original_method_info,
       *(_QWORD *)&onFadeOut->fields.extra_arg);
@@ -650,19 +650,19 @@ void __fastcall ShopHelpListViewManager__CloseHelpDialog(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_49B72D8 & 1) == 0 )
+  if ( (byte_4A4A80B & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, callback);
-    sub_1B4CF90(&Method_ShopHelpListViewManager_CallOnFadeOut__, v6);
-    byte_49B72D8 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, callback);
+    sub_1B863B8(&Method_ShopHelpListViewManager_CallOnFadeOut__, v6);
+    byte_4A4A80B = 1;
   }
   this->fields.onFadeOut = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onFadeOut, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onFadeOut, (int32_t)callback, (int32_t)method, v3);
   baseDialog = this->fields.baseDialog;
-  v8 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_ShopHelpListViewManager_CallOnFadeOut__, 0LL);
   if ( !baseDialog )
-    sub_1B4D1EC(v9, v10);
+    sub_1B86614(v9, v10);
   ShopHelpMenu__Close(baseDialog, v8, 0LL);
 }
 
@@ -700,26 +700,26 @@ void __fastcall ShopHelpListViewManager__CreateList(ShopHelpListViewManager_o *t
   __int64 v31; // x10
   Il2CppClass **v32; // x0
 
-  if ( (byte_49B72D7 & 1) == 0 )
+  if ( (byte_4A4A80A & 1) == 0 )
   {
-    sub_1B4CF90(&CoinRoomUtility_TypeInfo, method);
-    sub_1B4CF90(&Method_DataManager_GetMaster_ShopMaster___, v5);
-    sub_1B4CF90(&DataManager_TypeInfo, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v8);
-    sub_1B4CF90(&ShopHelpListViewItem_TypeInfo, v9);
-    sub_1B4CF90(&ShopRootConstants_TypeInfo, v10);
-    byte_49B72D7 = 1;
+    sub_1B863B8(&CoinRoomUtility_TypeInfo, method);
+    sub_1B863B8(&Method_DataManager_GetMaster_ShopMaster___, v5);
+    sub_1B863B8(&DataManager_TypeInfo, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ListViewItem__Add__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ListViewItem__get_Count__, v8);
+    sub_1B863B8(&ShopHelpListViewItem_TypeInfo, v9);
+    sub_1B863B8(&ShopRootConstants_TypeInfo, v10);
+    byte_4A4A80A = 1;
   }
   this->fields.onFadeOut = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onFadeOut, 0, v2, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onFadeOut, 0, v2, v3);
   baseDialog = this->fields.baseDialog;
   if ( !baseDialog
     || (ShopHelpMenu__Open(baseDialog, 0LL), (kinds = this->fields.kinds) == 0LL)
     || (ListViewManager__CreateList((ListViewManager_o *)this, kinds->max_length, 0LL), (v14 = this->fields.kinds) == 0LL) )
   {
 LABEL_39:
-    sub_1B4D1EC(baseDialog, v11);
+    sub_1B86614(baseDialog, v11);
   }
   v15 = *(_QWORD *)&v14->max_length;
   if ( (int)v15 >= 1 )
@@ -727,7 +727,7 @@ LABEL_39:
     for ( i = 0LL; (__int64)i < (int)v15; ++i )
     {
       if ( i >= (unsigned int)v15 )
-        sub_1B4D1F4(baseDialog, v11);
+        sub_1B8661C(baseDialog, v11);
       v17 = v14->m_Items[i + 1];
       switch ( v17 )
       {
@@ -741,10 +741,10 @@ LABEL_39:
         case 16:
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          baseDialog = (ShopHelpMenu_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ShopMaster___);
+          baseDialog = (ShopHelpMenu_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ShopMaster___);
           if ( !baseDialog )
             goto LABEL_39;
-          baseDialog = (ShopHelpMenu_o *)ShopMaster__IsEnableEventShop_40516552((ShopMaster_o *)baseDialog, 0LL);
+          baseDialog = (ShopHelpMenu_o *)ShopMaster__IsEnableEventShop_40952200((ShopMaster_o *)baseDialog, 0LL);
           if ( ((unsigned __int8)baseDialog & 1) == 0 )
             goto LABEL_36;
           break;
@@ -780,10 +780,10 @@ LABEL_39:
         if ( !itemList )
           goto LABEL_39;
         size = itemList->fields._size;
-        v24 = sub_1B4D1DC(ShopHelpListViewItem_TypeInfo);
-        ListViewItem___ctor_41325876((ListViewItem_o *)v24, size, 0LL);
+        v24 = sub_1B86604(ShopHelpListViewItem_TypeInfo);
+        ListViewItem___ctor_41775716((ListViewItem_o *)v24, size, 0LL);
         *(_QWORD *)(v24 + 112) = v21;
-        sub_1B4CF34((CGThumbnailListItem_o *)(v24 + 112), (int32_t)v21, v25, v26);
+        sub_1B8635C((CGThumbnailListItem_o *)(v24 + 112), (int32_t)v21, v25, v26);
         items = itemList->fields._items;
         v30 = Method_System_Collections_Generic_List_ListViewItem__Add__;
         ++itemList->fields._version;
@@ -795,14 +795,14 @@ LABEL_39:
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v24,
-            *(const MethodInfo_35801DC **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_35FC958 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + v31;
           itemList->fields._size = v31 + 1;
           v32[4] = (Il2CppClass *)v24;
-          sub_1B4CF34((CGThumbnailListItem_o *)(v32 + 4), v24, v27, v28);
+          sub_1B8635C((CGThumbnailListItem_o *)(v32 + 4), v24, v27, v28);
         }
       }
 LABEL_36:
@@ -829,21 +829,21 @@ UnityEngine_Texture2D_o *__fastcall ShopHelpListViewManager__GetAssetStorageText
   AssetData_o *AssetStorage; // x0
   __int64 v8; // x1
 
-  if ( (byte_49B72D5 & 1) == 0 )
+  if ( (byte_4A4A808 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_AssetData_GetObject_Texture2D____75492024, path);
-    sub_1B4CF90(&AssetManager_TypeInfo, v6);
-    byte_49B72D5 = 1;
+    sub_1B863B8(&Method_AssetData_GetObject_Texture2D____76085320, path);
+    sub_1B863B8(&AssetManager_TypeInfo, v6);
+    byte_4A4A808 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(path, 0LL);
   if ( !AssetStorage )
-    sub_1B4D1EC(0LL, v8);
-  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__49169892(
+    sub_1B86614(0LL, v8);
+  return (UnityEngine_Texture2D_o *)AssetData__GetObject_object__49610244(
                                       AssetStorage,
                                       name,
-                                      (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_Texture2D____75492024);
+                                      (const MethodInfo_2F4FE04 *)Method_AssetData_GetObject_Texture2D____76085320);
 }
 
 
@@ -854,22 +854,22 @@ void __fastcall ShopHelpListViewManager__LoadBaseSprite(ShopHelpListViewManager_
   System_String_array *helpBasePaths; // x20
   System_Action_o *v6; // x21
 
-  if ( (byte_49B72D3 & 1) == 0 )
+  if ( (byte_4A4A806 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&AssetManager_TypeInfo, v3);
-    sub_1B4CF90(&Method_ShopHelpListViewManager__LoadBaseSprite_b__9_0__, v4);
-    byte_49B72D3 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&AssetManager_TypeInfo, v3);
+    sub_1B863B8(&Method_ShopHelpListViewManager__LoadBaseSprite_b__9_0__, v4);
+    byte_4A4A806 = 1;
   }
   if ( !this->fields.initMode )
   {
     this->fields.initMode = 1;
     helpBasePaths = this->fields.helpBasePaths;
-    v6 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_ShopHelpListViewManager__LoadBaseSprite_b__9_0__, 0LL);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage_38335040(helpBasePaths, v6, 1, 0LL);
+    AssetManager__loadAssetStorage_38751600(helpBasePaths, v6, 1, 0LL);
   }
 }
 
@@ -883,13 +883,13 @@ void __fastcall ShopHelpListViewManager__ReleaseAssetStorages(
   unsigned __int64 v5; // x21
   System_String_o *v6; // x20
 
-  if ( (byte_49B72D6 & 1) == 0 )
+  if ( (byte_4A4A809 & 1) == 0 )
   {
-    this = (ShopHelpListViewManager_o *)sub_1B4CF90(&AssetManager_TypeInfo, paths);
-    byte_49B72D6 = 1;
+    this = (ShopHelpListViewManager_o *)sub_1B863B8(&AssetManager_TypeInfo, paths);
+    byte_4A4A809 = 1;
   }
   if ( !paths )
-    sub_1B4D1EC(this, paths);
+    sub_1B86614(this, paths);
   v4 = *(_QWORD *)&paths->max_length;
   if ( (int)v4 >= 1 )
   {
@@ -897,7 +897,7 @@ void __fastcall ShopHelpListViewManager__ReleaseAssetStorages(
     do
     {
       if ( v5 >= (unsigned int)v4 )
-        sub_1B4D1F4(this, paths);
+        sub_1B8661C(this, paths);
       v6 = paths->m_Items[v5];
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -918,10 +918,10 @@ void __fastcall ShopHelpListViewManager__ReleaseBaseSprite(ShopHelpListViewManag
   UnityEngine_GameObject_o *BaseWindow; // x0
 
   v3 = this;
-  if ( (byte_49B72D4 & 1) == 0 )
+  if ( (byte_4A4A807 & 1) == 0 )
   {
-    this = (ShopHelpListViewManager_o *)sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
-    byte_49B72D4 = 1;
+    this = (ShopHelpListViewManager_o *)sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
+    byte_4A4A807 = 1;
   }
   if ( v3->fields.initMode == 2 )
   {
@@ -931,9 +931,9 @@ void __fastcall ShopHelpListViewManager__ReleaseBaseSprite(ShopHelpListViewManag
       || (BaseWindow = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(BaseWindow, 0LL)) == 0LL
       || (BaseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                      (UnityEngine_Component_o *)BaseWindow,
-                                                     (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UITexture___)) == 0LL )
+                                                     (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UITexture___)) == 0LL )
     {
-      sub_1B4D1EC(BaseWindow, v4);
+      sub_1B86614(BaseWindow, v4);
     }
     ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, const char *))BaseWindow->klass[2]._1.gc_desc)(
       BaseWindow,
@@ -952,17 +952,17 @@ void __fastcall ShopHelpListViewManager__SetObjectItem(
 {
   __int64 methodPtr_low; // x10
 
-  if ( (byte_49B72D9 & 1) == 0 )
+  if ( (byte_4A4A80C & 1) == 0 )
   {
-    this = (ShopHelpListViewManager_o *)sub_1B4CF90(&ShopHelpListViewObject_TypeInfo, obj);
-    byte_49B72D9 = 1;
+    this = (ShopHelpListViewManager_o *)sub_1B863B8(&ShopHelpListViewObject_TypeInfo, obj);
+    byte_4A4A80C = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(ShopHelpListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (ShopHelpListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != ShopHelpListViewObject_TypeInfo )
   {
-    sub_1B4D1EC(this, obj);
+    sub_1B86614(this, obj);
   }
   ShopHelpListViewObject__Init((ShopHelpListViewObject_o *)obj, 2, (const MethodInfo *)item);
 }
@@ -990,18 +990,18 @@ void __fastcall ShopHelpListViewManager___LoadBaseSprite_b__9_0(
   UnityEngine_Texture_o *AssetStorageTexture2D; // x0
 
   v3 = this;
-  if ( (byte_49B72DB & 1) == 0 )
+  if ( (byte_4A4A80E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
-    sub_1B4CF90(&UnityEngine_Material_TypeInfo, v4);
-    sub_1B4CF90(&StringLiteral_4880/*"Custom/SpriteWithMask"*/, v5);
-    this = (ShopHelpListViewManager_o *)sub_1B4CF90(&StringLiteral_15959/*"_MaskTex"*/, v6);
-    byte_49B72DB = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
+    sub_1B863B8(&UnityEngine_Material_TypeInfo, v4);
+    sub_1B863B8(&StringLiteral_4910/*"Custom/SpriteWithMask"*/, v5);
+    this = (ShopHelpListViewManager_o *)sub_1B863B8(&StringLiteral_16032/*"_MaskTex"*/, v6);
+    byte_4A4A80E = 1;
   }
   if ( v3->fields.initMode == 1 )
   {
-    v7 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4880/*"Custom/SpriteWithMask"*/, 0LL);
-    v8 = (UnityEngine_Material_o *)sub_1B4D1DC(UnityEngine_Material_TypeInfo);
+    v7 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4910/*"Custom/SpriteWithMask"*/, 0LL);
+    v8 = (UnityEngine_Material_o *)sub_1B86604(UnityEngine_Material_TypeInfo);
     UnityEngine_Material___ctor(v8, v7, 0LL);
     BaseWindow = v3->fields.BaseWindow;
     if ( BaseWindow )
@@ -1011,7 +1011,7 @@ void __fastcall ShopHelpListViewManager___LoadBaseSprite_b__9_0(
       {
         BaseWindow = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)BaseWindow,
-                                                   (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                                                   (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
         if ( BaseWindow )
         {
           BaseWindow = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, UnityEngine_Material_o *, Il2CppMethodPointer))BaseWindow->klass[1].vtable._2_GetHashCode.method)(
@@ -1053,14 +1053,14 @@ void __fastcall ShopHelpListViewManager___LoadBaseSprite_b__9_0(
                                                                          v14);
                       UnityEngine_Material__SetTexture(
                         v8,
-                        (System_String_o *)StringLiteral_15959/*"_MaskTex"*/,
+                        (System_String_o *)StringLiteral_16032/*"_MaskTex"*/,
                         AssetStorageTexture2D,
                         0LL);
                       v3->fields.initMode = 2;
                       return;
                     }
 LABEL_19:
-                    sub_1B4D1F4(BaseWindow, v9);
+                    sub_1B8661C(BaseWindow, v9);
                   }
                 }
               }
@@ -1069,7 +1069,7 @@ LABEL_19:
         }
       }
     }
-    sub_1B4D1EC(BaseWindow, v9);
+    sub_1B86614(BaseWindow, v9);
   }
   ShopHelpListViewManager__ReleaseAssetStorages(this, v3->fields.helpBasePaths, v2);
 }

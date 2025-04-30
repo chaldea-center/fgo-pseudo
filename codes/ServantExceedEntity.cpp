@@ -35,66 +35,66 @@ void __fastcall ServantExceedEntity___ctor(ServantExceedEntity_o *this, const Me
   int32_t v35; // w2
   const MethodInfo *v36; // x3
 
-  if ( (byte_49BB6F7 & 1) == 0 )
+  if ( (byte_4A4ED3C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    sub_1B4CF90(&string___TypeInfo, v3);
-    sub_1B4CF90(&StringLiteral_17684/*"class_b_"*/, v4);
-    sub_1B4CF90(&StringLiteral_17688/*"class_g_"*/, v5);
-    sub_1B4CF90(&StringLiteral_17689/*"class_n_"*/, v6);
-    sub_1B4CF90(&StringLiteral_17690/*"class_s_"*/, v7);
-    byte_49BB6F7 = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    sub_1B863B8(&string___TypeInfo, v3);
+    sub_1B863B8(&StringLiteral_17760/*"class_b_"*/, v4);
+    sub_1B863B8(&StringLiteral_17764/*"class_g_"*/, v5);
+    sub_1B863B8(&StringLiteral_17765/*"class_n_"*/, v6);
+    sub_1B863B8(&StringLiteral_17766/*"class_s_"*/, v7);
+    byte_4A4ED3C = 1;
   }
-  v8 = sub_1B4D038(string___TypeInfo, 8LL);
+  v8 = sub_1B86460(string___TypeInfo, 8LL);
   if ( !v8 )
-    sub_1B4D1EC(0LL, v9);
+    sub_1B86614(0LL, v9);
   v12 = v8;
   if ( !*(_DWORD *)(v8 + 24) )
     goto LABEL_13;
-  v13 = StringLiteral_17689/*"class_n_"*/;
-  *(_QWORD *)(v8 + 32) = StringLiteral_17689/*"class_n_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 32), v13, v10, v11);
+  v13 = StringLiteral_17765/*"class_n_"*/;
+  *(_QWORD *)(v8 + 32) = StringLiteral_17765/*"class_n_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v8 + 32), v13, v10, v11);
   if ( *(_DWORD *)(v12 + 24) <= 1u )
     goto LABEL_13;
-  v16 = StringLiteral_17684/*"class_b_"*/;
-  *(_QWORD *)(v12 + 40) = StringLiteral_17684/*"class_b_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 40), v16, v14, v15);
+  v16 = StringLiteral_17760/*"class_b_"*/;
+  *(_QWORD *)(v12 + 40) = StringLiteral_17760/*"class_b_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v12 + 40), v16, v14, v15);
   if ( *(_DWORD *)(v12 + 24) <= 2u )
     goto LABEL_13;
-  v19 = StringLiteral_17690/*"class_s_"*/;
-  *(_QWORD *)(v12 + 48) = StringLiteral_17690/*"class_s_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 48), v19, v17, v18);
+  v19 = StringLiteral_17766/*"class_s_"*/;
+  *(_QWORD *)(v12 + 48) = StringLiteral_17766/*"class_s_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v12 + 48), v19, v17, v18);
   if ( *(_DWORD *)(v12 + 24) <= 3u )
     goto LABEL_13;
-  v22 = StringLiteral_17688/*"class_g_"*/;
-  *(_QWORD *)(v12 + 56) = StringLiteral_17688/*"class_g_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 56), v22, v20, v21);
+  v22 = StringLiteral_17764/*"class_g_"*/;
+  *(_QWORD *)(v12 + 56) = StringLiteral_17764/*"class_g_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v12 + 56), v22, v20, v21);
   if ( *(_DWORD *)(v12 + 24) <= 4u )
     goto LABEL_13;
-  v25 = StringLiteral_17688/*"class_g_"*/;
-  *(_QWORD *)(v12 + 64) = StringLiteral_17688/*"class_g_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 64), v25, v23, v24);
+  v25 = StringLiteral_17764/*"class_g_"*/;
+  *(_QWORD *)(v12 + 64) = StringLiteral_17764/*"class_g_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v12 + 64), v25, v23, v24);
   if ( *(_DWORD *)(v12 + 24) <= 5u
-    || (v28 = StringLiteral_17688/*"class_g_"*/,
-        *(_QWORD *)(v12 + 72) = StringLiteral_17688/*"class_g_"*/,
-        sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 72), v28, v26, v27),
+    || (v28 = StringLiteral_17764/*"class_g_"*/,
+        *(_QWORD *)(v12 + 72) = StringLiteral_17764/*"class_g_"*/,
+        sub_1B8635C((CGThumbnailListItem_o *)(v12 + 72), v28, v26, v27),
         *(_DWORD *)(v12 + 24) <= 6u)
-    || (v31 = StringLiteral_17689/*"class_n_"*/,
-        *(_QWORD *)(v12 + 80) = StringLiteral_17689/*"class_n_"*/,
-        sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 80), v31, v29, v30),
+    || (v31 = StringLiteral_17765/*"class_n_"*/,
+        *(_QWORD *)(v12 + 80) = StringLiteral_17765/*"class_n_"*/,
+        sub_1B8635C((CGThumbnailListItem_o *)(v12 + 80), v31, v29, v30),
         *(_DWORD *)(v12 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1B4D1F4(v8, v9);
+    sub_1B8661C(v8, v9);
   }
-  v34 = StringLiteral_17689/*"class_n_"*/;
-  *(_QWORD *)(v12 + 88) = StringLiteral_17689/*"class_n_"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 88), v34, v32, v33);
+  v34 = StringLiteral_17765/*"class_n_"*/;
+  *(_QWORD *)(v12 + 88) = StringLiteral_17765/*"class_n_"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)(v12 + 88), v34, v32, v33);
   this->fields.frameCardFileList = (struct System_String_array *)v12;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, v12, v35, v36);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, v12, v35, v36);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -104,15 +104,15 @@ System_String_o *__fastcall ServantExceedEntity__CreatePK(
         int32_t exceedCount,
         const MethodInfo *method)
 {
-  if ( (byte_49BB6F6 & 1) == 0 )
+  if ( (byte_4A4ED3B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
-    byte_49BB6F6 = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&exceedCount);
+    byte_4A4ED3B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -135,9 +135,9 @@ System_String_o *__fastcall ServantExceedEntity__getFrameCardPrefix(
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= frameCardFileList->max_length )
-    sub_1B4D1F4(this, method);
+    sub_1B8661C(this, method);
   return frameCardFileList->m_Items[frameType];
 }

@@ -20,20 +20,20 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
   __int64 v22; // x1
   struct System_Int32_array *v23; // x1
 
-  if ( (byte_49BA92F & 1) == 0 )
+  if ( (byte_4A4DF57 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__object__TypeInfo, obj);
-    sub_1B4CF90(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____, v5);
-    sub_1B4CF90(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__, v6);
-    sub_1B4CF90(&System_Func_List_object___List_int___TypeInfo, v7);
-    sub_1B4CF90(&int___TypeInfo, v8);
-    sub_1B4CF90(&StringLiteral_16413/*"aiIds"*/, v9);
-    sub_1B4CF90(&StringLiteral_20359/*"individuality"*/, v10);
-    sub_1B4CF90(&StringLiteral_16541/*"applySvtType"*/, v11);
-    byte_49BA92F = 1;
+    sub_1B863B8(&System_Collections_Generic_Dictionary_string__object__TypeInfo, obj);
+    sub_1B863B8(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____, v5);
+    sub_1B863B8(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__, v6);
+    sub_1B863B8(&System_Func_List_object___List_int___TypeInfo, v7);
+    sub_1B863B8(&int___TypeInfo, v8);
+    sub_1B863B8(&StringLiteral_16486/*"aiIds"*/, v9);
+    sub_1B863B8(&StringLiteral_20461/*"individuality"*/, v10);
+    sub_1B863B8(&StringLiteral_16614/*"applySvtType"*/, v11);
+    byte_4A4DF57 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v12 = (System_Func_object__object__o *)sub_1B4D1DC(System_Func_List_object___List_int___TypeInfo);
+  v12 = (System_Func_object__object__o *)sub_1B86604(System_Func_List_object___List_int___TypeInfo);
   System_Func_object__object____ctor(v12, 0LL, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0LL);
   if ( obj )
   {
@@ -41,26 +41,26 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
     if ( LOBYTE(obj->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_Dictionary_string__object__c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_1B4D4AC(obj);
+      sub_1B868D4(obj);
       goto LABEL_13;
     }
   }
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                 (System_String_o *)StringLiteral_16413/*"aiIds"*/,
+                                 (System_String_o *)StringLiteral_16486/*"aiIds"*/,
                                  (System_Func_TSource__TDestination__o *)v12,
                                  0LL,
-                                 (const MethodInfo_2F082BC *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+                                 (const MethodInfo_2F763E0 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
   this->fields._AiIdList_k__BackingField = (struct System_Collections_Generic_List_int__o *)ScriptValue_object__object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)ScriptValue_object__object, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)ScriptValue_object__object, v15, v16);
   this->fields._ApplyType_k__BackingField = EntityScriptUtil__GetIntValue(
                                               (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                              (System_String_o *)StringLiteral_16541/*"applySvtType"*/,
+                                              (System_String_o *)StringLiteral_16614/*"applySvtType"*/,
                                               0,
                                               0LL);
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)obj,
-               (System_String_o *)StringLiteral_20359/*"individuality"*/,
+               (System_String_o *)StringLiteral_20461/*"individuality"*/,
                0,
                0LL);
   if ( IntValue < 1 )
@@ -69,17 +69,17 @@ void __fastcall AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *
     goto LABEL_11;
   }
   v20 = IntValue;
-  v21 = sub_1B4D038(int___TypeInfo, 1LL);
+  v21 = sub_1B86460(int___TypeInfo, 1LL);
   if ( !v21 )
 LABEL_13:
-    sub_1B4D1EC(v21, v22);
+    sub_1B86614(v21, v22);
   v23 = (struct System_Int32_array *)v21;
   if ( !*(_DWORD *)(v21 + 24) )
-    sub_1B4D1F4(v21, v21);
+    sub_1B8661C(v21, v21);
   *(_DWORD *)(v21 + 32) = v20;
 LABEL_11:
   this->fields._AiIndividuality_k__BackingField = v23;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._AiIndividuality_k__BackingField, (int32_t)v23, v18, v19);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._AiIndividuality_k__BackingField, (int32_t)v23, v18, v19);
 }
 
 
@@ -95,10 +95,10 @@ bool __fastcall AiAllocationInfo__IsMatch(
   const MethodInfo *v10; // x3
   struct BattleDeckServantData_o *deckSvt; // x8
 
-  if ( (byte_49BA930 & 1) == 0 )
+  if ( (byte_4A4DF58 & 1) == 0 )
   {
-    sub_1B4CF90(&Individuality_TypeInfo, svt);
-    byte_49BA930 = 1;
+    sub_1B863B8(&Individuality_TypeInfo, svt);
+    byte_4A4DF58 = 1;
   }
   AiIndividuality_k__BackingField = this->fields._AiIndividuality_k__BackingField;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -107,7 +107,7 @@ bool __fastcall AiAllocationInfo__IsMatch(
   if ( !v8 )
     return 0;
   if ( !svt || (deckSvt = svt->fields.deckSvt) == 0LL )
-    sub_1B4D1EC(v8, v9);
+    sub_1B86614(v8, v9);
   return AiAllocationInfo__IsMatchApplyType(this, deckSvt->fields.isFollowerSvt, svt->fields.followerType, v10);
 }
 
@@ -174,7 +174,7 @@ void __fastcall AiAllocationInfo__set_AiIdList(
   const MethodInfo *v3; // x3
 
   this->fields._AiIdList_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -186,7 +186,7 @@ void __fastcall AiAllocationInfo__set_AiIndividuality(
   const MethodInfo *v3; // x3
 
   this->fields._AiIndividuality_k__BackingField = value;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._AiIndividuality_k__BackingField,
     (int32_t)value,
     (int32_t)method,

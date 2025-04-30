@@ -8,22 +8,22 @@ void __fastcall LocalNotificationManagerAndroid___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_49BC736 & 1) == 0 )
+  if ( (byte_4A4FDD4 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, method);
-    sub_1B4CF90(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v3);
-    sub_1B4CF90(&Method_SingletonTemplate_LocalNotificationManagerAndroid___ctor__, v4);
-    byte_49BC736 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, method);
+    sub_1B863B8(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v3);
+    sub_1B863B8(&Method_SingletonTemplate_LocalNotificationManagerAndroid___ctor__, v4);
+    byte_4A4FDD4 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1B86604(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v5,
-    (const MethodInfo_324E434 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_32C4FFC *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   this->fields._noticeIdTable = (struct System_Collections_Generic_Dictionary_string__int__o *)v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._noticeIdTable, (int32_t)v5, v6, v7);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._noticeIdTable, (int32_t)v5, v6, v7);
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_37B4928 *)Method_SingletonTemplate_LocalNotificationManagerAndroid___ctor__);
+    (const MethodInfo_3839B98 *)Method_SingletonTemplate_LocalNotificationManagerAndroid___ctor__);
 }
 
 
@@ -38,13 +38,13 @@ void __fastcall LocalNotificationManagerAndroid__Cancel(
   struct System_Collections_Generic_Dictionary_string__int__o *noticeIdTable; // x0
   int32_t Item; // w21
 
-  if ( (byte_49BC734 & 1) == 0 )
+  if ( (byte_4A4FDD2 & 1) == 0 )
   {
-    sub_1B4CF90(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, key);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int__Remove__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
-    byte_49BC734 = 1;
+    sub_1B863B8(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, key);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int__Remove__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
+    byte_4A4FDD2 = 1;
   }
   noticeIdTable = this->fields._noticeIdTable;
   if ( !noticeIdTable )
@@ -52,7 +52,7 @@ void __fastcall LocalNotificationManagerAndroid__Cancel(
   if ( System_Collections_Generic_Dictionary_object__int___ContainsKey(
          (System_Collections_Generic_Dictionary_object__int__o *)noticeIdTable,
          (Il2CppObject *)key,
-         (const MethodInfo_324EFDC *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
+         (const MethodInfo_32C5BA4 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
   {
     noticeIdTable = this->fields._noticeIdTable;
     if ( noticeIdTable )
@@ -60,7 +60,7 @@ void __fastcall LocalNotificationManagerAndroid__Cancel(
       Item = System_Collections_Generic_Dictionary_object__int___get_Item(
                (System_Collections_Generic_Dictionary_object__int__o *)noticeIdTable,
                (Il2CppObject *)key,
-               (const MethodInfo_324ED68 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+               (const MethodInfo_32C5930 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
       if ( !Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo);
       Unity_Notifications_Android_AndroidNotificationCenter__CancelNotification(Item, 0LL);
@@ -70,12 +70,12 @@ void __fastcall LocalNotificationManagerAndroid__Cancel(
         System_Collections_Generic_Dictionary_object__int___Remove(
           (System_Collections_Generic_Dictionary_object__int__o *)noticeIdTable,
           (Il2CppObject *)key,
-          (const MethodInfo_3250294 *)Method_System_Collections_Generic_Dictionary_string__int__Remove__);
+          (const MethodInfo_32C6E5C *)Method_System_Collections_Generic_Dictionary_string__int__Remove__);
         return;
       }
     }
 LABEL_11:
-    sub_1B4D1EC(noticeIdTable, key);
+    sub_1B86614(noticeIdTable, key);
   }
 }
 
@@ -88,21 +88,21 @@ void __fastcall LocalNotificationManagerAndroid__CancelAll(
   __int64 v4; // x1
   struct System_Collections_Generic_Dictionary_string__int__o *noticeIdTable; // x0
 
-  if ( (byte_49BC735 & 1) == 0 )
+  if ( (byte_4A4FDD3 & 1) == 0 )
   {
-    sub_1B4CF90(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int__Clear__, v3);
-    byte_49BC735 = 1;
+    sub_1B863B8(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int__Clear__, v3);
+    byte_4A4FDD3 = 1;
   }
   if ( !Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo);
   Unity_Notifications_Android_AndroidNotificationCenter__CancelAllNotifications(0LL);
   noticeIdTable = this->fields._noticeIdTable;
   if ( !noticeIdTable )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   System_Collections_Generic_Dictionary_object__int___Clear(
     (System_Collections_Generic_Dictionary_object__int__o *)noticeIdTable,
-    (const MethodInfo_324EF70 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    (const MethodInfo_32C5B38 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
 }
 
 
@@ -118,10 +118,10 @@ void __fastcall LocalNotificationManagerAndroid__DeleteNotificationChannel(
   System_String_o **i; // x23
   System_String_o *ChannelId_k__BackingField; // x20
 
-  if ( (byte_49BC732 & 1) == 0 )
+  if ( (byte_4A4FDD0 & 1) == 0 )
   {
-    sub_1B4CF90(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
-    byte_49BC732 = 1;
+    sub_1B863B8(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
+    byte_4A4FDD0 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields._ChannelId_k__BackingField, 0LL) )
   {
@@ -129,7 +129,7 @@ void __fastcall LocalNotificationManagerAndroid__DeleteNotificationChannel(
       j_il2cpp_runtime_class_init_0(Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo);
     NotificationChannels = Unity_Notifications_Android_AndroidNotificationCenter__GetNotificationChannels(0LL);
     if ( !NotificationChannels )
-      sub_1B4D1EC(0LL, v4);
+      sub_1B86614(0LL, v4);
     v5 = *(_QWORD *)&NotificationChannels->max_length;
     v6 = NotificationChannels;
     if ( (int)v5 >= 1 )
@@ -138,7 +138,7 @@ void __fastcall LocalNotificationManagerAndroid__DeleteNotificationChannel(
       for ( i = &NotificationChannels->m_Items[0].fields._Id_k__BackingField; ; i += 7 )
       {
         if ( v7 >= (unsigned int)v5 )
-          sub_1B4D1F4(NotificationChannels, v4);
+          sub_1B8661C(NotificationChannels, v4);
         NotificationChannels = (Unity_Notifications_Android_AndroidNotificationChannel_array *)System_String__op_Equality(
                                                                                                  *i,
                                                                                                  this->fields._ChannelId_k__BackingField,
@@ -167,10 +167,10 @@ void __fastcall LocalNotificationManagerAndroid__RegisterNotificationChannel(
   Unity_Notifications_Android_AndroidNotificationChannel_o v4; // [xsp+40h] [xbp-A0h]
   Unity_Notifications_Android_AndroidNotificationChannel_o v5; // [xsp+80h] [xbp-60h] BYREF
 
-  if ( (byte_49BC731 & 1) == 0 )
+  if ( (byte_4A4FDCF & 1) == 0 )
   {
-    sub_1B4CF90(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
-    byte_49BC731 = 1;
+    sub_1B863B8(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, method);
+    byte_4A4FDCF = 1;
   }
   memset(&v5, 0, sizeof(v5));
   if ( !System_String__IsNullOrEmpty(this->fields._ChannelId_k__BackingField, 0LL)
@@ -227,15 +227,15 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
   System_DateTime_o v29; // 0:x3.8
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49BC733 & 1) == 0 )
+  if ( (byte_4A4FDD1 & 1) == 0 )
   {
-    sub_1B4CF90(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, key);
-    sub_1B4CF90(&System_DateTime_TypeInfo, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__, v10);
-    sub_1B4CF90(&Method_System_Nullable_Color___ctor__, v11);
-    sub_1B4CF90(&string_TypeInfo, v12);
-    sub_1B4CF90(&StringLiteral_21880/*"notification_icon"*/, v13);
-    byte_49BC733 = 1;
+    sub_1B863B8(&Unity_Notifications_Android_AndroidNotificationCenter_TypeInfo, key);
+    sub_1B863B8(&System_DateTime_TypeInfo, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__, v10);
+    sub_1B863B8(&Method_System_Nullable_Color___ctor__, v11);
+    sub_1B863B8(&string_TypeInfo, v12);
+    sub_1B863B8(&StringLiteral_21994/*"notification_icon"*/, v13);
+    byte_4A4FDD1 = 1;
   }
   memset(&s, 0, sizeof(s));
   if ( this->fields._RegisteredChannel_k__BackingField )
@@ -252,10 +252,10 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
       message,
       v29,
       0LL);
-    s.fields._SmallIcon_k__BackingField = (struct System_String_o *)StringLiteral_21880/*"notification_icon"*/;
-    sub_1B4CF34((CGThumbnailListItem_o *)&s.fields._SmallIcon_k__BackingField, StringLiteral_21880/*"notification_icon"*/, v15, v16);
+    s.fields._SmallIcon_k__BackingField = (struct System_String_o *)StringLiteral_21994/*"notification_icon"*/;
+    sub_1B8635C((CGThumbnailListItem_o *)&s.fields._SmallIcon_k__BackingField, StringLiteral_21994/*"notification_icon"*/, v15, v16);
     s.fields._LargeIcon_k__BackingField = string_TypeInfo->static_fields->Empty;
-    sub_1B4CF34(
+    sub_1B8635C(
       (CGThumbnailListItem_o *)&s.fields._LargeIcon_k__BackingField,
       (int32_t)s.fields._LargeIcon_k__BackingField,
       v17,
@@ -265,7 +265,7 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
     v30.fields.g = 0.6196;
     v30.fields.b = 0.6196;
     memset(&v25, 0, sizeof(v25));
-    System_Nullable_Color____ctor(&v25, v30, (const MethodInfo_3697168 *)Method_System_Nullable_Color___ctor__);
+    System_Nullable_Color____ctor(&v25, v30, (const MethodInfo_3719954 *)Method_System_Nullable_Color___ctor__);
     v24 = v25;
     Unity_Notifications_Android_AndroidNotification__set_Color(&s, &v24, 0LL);
     s.fields._ShowTimestamp_k__BackingField = 1;
@@ -276,12 +276,12 @@ void __fastcall LocalNotificationManagerAndroid__Schedule(
     memcpy(&v22, dest, sizeof(v22));
     v20 = Unity_Notifications_Android_AndroidNotificationCenter__SendNotification(&v22, ChannelId_k__BackingField, 0LL);
     if ( !this->fields._noticeIdTable )
-      sub_1B4D1EC(v20, v21);
+      sub_1B86614(v20, v21);
     System_Collections_Generic_Dictionary_object__int___set_Item(
       (System_Collections_Generic_Dictionary_object__int__o *)this->fields._noticeIdTable,
       (Il2CppObject *)key,
       v20,
-      (const MethodInfo_324EDD4 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+      (const MethodInfo_32C599C *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
   }
 }
 
@@ -302,21 +302,21 @@ void __fastcall LocalNotificationManagerAndroid__SetNotificationChannelParam(
   const MethodInfo *v15; // x3
 
   this->fields._ChannelId_k__BackingField = channelId;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields,
     (int32_t)channelId,
     (int32_t)channelName,
     (const MethodInfo *)channelDescription);
   this->fields._ChannelName_k__BackingField = channelName;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ChannelName_k__BackingField, (int32_t)channelName, v10, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ChannelName_k__BackingField, (int32_t)channelName, v10, v11);
   this->fields._ChannelDescription_k__BackingField = channelDescription;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._ChannelDescription_k__BackingField,
     (int32_t)channelDescription,
     v12,
     v13);
   this->fields._NotificationTitle_k__BackingField = notificationTitle;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._NotificationTitle_k__BackingField,
     (int32_t)notificationTitle,
     v14,
@@ -372,7 +372,7 @@ void __fastcall LocalNotificationManagerAndroid__set_ChannelDescription(
   const MethodInfo *v3; // x3
 
   this->fields._ChannelDescription_k__BackingField = value;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._ChannelDescription_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -388,7 +388,7 @@ void __fastcall LocalNotificationManagerAndroid__set_ChannelId(
   const MethodInfo *v3; // x3
 
   this->fields._ChannelId_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -400,7 +400,7 @@ void __fastcall LocalNotificationManagerAndroid__set_ChannelName(
   const MethodInfo *v3; // x3
 
   this->fields._ChannelName_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ChannelName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ChannelName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -412,7 +412,7 @@ void __fastcall LocalNotificationManagerAndroid__set_NotificationTitle(
   const MethodInfo *v3; // x3
 
   this->fields._NotificationTitle_k__BackingField = value;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._NotificationTitle_k__BackingField,
     (int32_t)value,
     (int32_t)method,

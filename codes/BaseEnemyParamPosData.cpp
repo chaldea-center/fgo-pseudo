@@ -20,6 +20,32 @@ int32_t __fastcall BaseEnemyParamPosData__get_BuffIconMaxLine(BaseEnemyParamPosD
 }
 
 
+UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_ExBattleUiTrPos(
+        BaseEnemyParamPosData_o *this,
+        const MethodInfo *method)
+{
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
+  float x; // s0
+  float y; // s1
+  float z; // s2
+  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
+
+  if ( !byte_4A487E1 )
+  {
+    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A487E1 = 1;
+  }
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  x = static_fields->zeroVector.fields.x;
+  y = static_fields->zeroVector.fields.y;
+  z = static_fields->zeroVector.fields.z;
+  result.fields.z = z;
+  result.fields.y = y;
+  result.fields.x = x;
+  return result;
+}
+
+
 UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
@@ -30,10 +56,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_49B5361 )
+  if ( !byte_4A487E1 )
   {
-    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
-    byte_49B5361 = 1;
+    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A487E1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -56,10 +82,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalScale(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_49B5366 )
+  if ( !byte_4A487E6 )
   {
-    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
-    byte_49B5366 = 1;
+    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A487E6 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->oneVector.fields.x;

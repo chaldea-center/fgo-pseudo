@@ -4,7 +4,7 @@ void __fastcall UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo
 }
 
 
-void __fastcall UserOwnItemInfo___ctor_41169572(
+void __fastcall UserOwnItemInfo___ctor_41609692(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
@@ -16,7 +16,7 @@ void __fastcall UserOwnItemInfo___ctor_41169572(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
   if ( userItemEntity )
     num = userItemEntity->fields.num;
   else
@@ -38,12 +38,12 @@ bool __fastcall UserOwnItemInfo__IsExpired(
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_49BC1F8 & 1) == 0 )
+  if ( (byte_4A4F873 & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
-    sub_1B4CF90(&Method_System_Nullable_long__GetValueOrDefault__, v6);
-    sub_1B4CF90(&Method_System_Nullable_long__get_HasValue__, v7);
-    byte_49BC1F8 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&time.fields.hasValue);
+    sub_1B863B8(&Method_System_Nullable_long__GetValueOrDefault__, v6);
+    sub_1B863B8(&Method_System_Nullable_long__get_HasValue__, v7);
+    byte_4A4F873 = 1;
   }
   if ( !hasValue )
   {
@@ -53,8 +53,8 @@ bool __fastcall UserOwnItemInfo__IsExpired(
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1B4D1EC(0LL, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_39953128(ItemEntity_k__BackingField, value, 0LL);
+    sub_1B86614(0LL, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_40374476(ItemEntity_k__BackingField, value, 0LL);
 }
 
 
@@ -64,7 +64,7 @@ int32_t __fastcall UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const M
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -81,7 +81,7 @@ int32_t __fastcall UserOwnItemInfo__get_ItemId(UserOwnItemInfo_o *this, const Me
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   return ItemEntity_k__BackingField->fields.id;
 }
 
@@ -98,7 +98,7 @@ int32_t __fastcall UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const Meth
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   return ItemEntity_k__BackingField->fields.type;
 }
 
@@ -108,7 +108,7 @@ void __fastcall UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEnt
   const MethodInfo *v3; // x3
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

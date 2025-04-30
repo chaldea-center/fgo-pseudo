@@ -2,10 +2,10 @@ void __fastcall RecommendSupportQuestSelectDialogComponent___ctor(
         RecommendSupportQuestSelectDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49B6F81 & 1) == 0 )
+  if ( (byte_4A4A4B0 & 1) == 0 )
   {
-    sub_1B4CF90(&BaseDialog_TypeInfo, method);
-    byte_49B6F81 = 1;
+    sub_1B863B8(&BaseDialog_TypeInfo, method);
+    byte_4A4A4B0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,7 +29,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__CallOnDecide(
   if ( onDecide )
   {
     p_onDecide->klass = 0LL;
-    sub_1B4CF34(p_onDecide, 0, v2, v3);
+    sub_1B8635C(p_onDecide, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -53,23 +53,23 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Close(
   const MethodInfo *v13; // x3
   System_Action_o *v14; // x20
 
-  if ( (byte_49B6F7F & 1) == 0 )
+  if ( (byte_4A4A4AE & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, callAction);
-    sub_1B4CF90(&Method_RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0__Close_b__0__, v5);
-    sub_1B4CF90(&RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0_TypeInfo, v6);
-    byte_49B6F7F = 1;
+    sub_1B863B8(&System_Action_TypeInfo, callAction);
+    sub_1B863B8(&Method_RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0__Close_b__0__, v5);
+    sub_1B863B8(&RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0_TypeInfo, v6);
+    byte_4A4A4AE = 1;
   }
-  v7 = sub_1B4D1DC(RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0_TypeInfo);
+  v7 = sub_1B86604(RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1B4D1EC(v8, v9);
+    sub_1B86614(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 24) = callAction;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 24), (int32_t)callAction, v12, v13);
+  sub_1B8635C((CGThumbnailListItem_o *)(v7 + 24), (int32_t)callAction, v12, v13);
   this->fields.state = 4;
-  v14 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)v7,
@@ -88,7 +88,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Init(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -103,18 +103,18 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_49B6F7E & 1) == 0 )
+  if ( (byte_4A4A4AD & 1) == 0 )
   {
-    sub_1B4CF90(&Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__, method);
-    byte_49B6F7E = 1;
+    sub_1B863B8(&Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__, method);
+    byte_4A4A4AD = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B4CFA8(Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B863D0(Method_RecommendSupportQuestSelectDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     RecommendSupportQuestSelectDialogComponent__Close(this, 0LL, v5);
   }
@@ -132,22 +132,22 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__OnClickDecide(
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_49B6F7D & 1) == 0 )
+  if ( (byte_4A4A4AC & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_RecommendSupportQuestSelectDialogComponent_CallOnDecide__, v3);
-    sub_1B4CF90(&Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__, v4);
-    byte_49B6F7D = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_RecommendSupportQuestSelectDialogComponent_CallOnDecide__, v3);
+    sub_1B863B8(&Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__, v4);
+    byte_4A4A4AC = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v5 = Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_RecommendSupportQuestSelectDialogComponent_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
-    v7 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -198,82 +198,81 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
   UILabel_o *decideButtonLb; // x23
   System_String_o **v40; // x8
   UILabel_o *cancelButtonLb; // x23
-  const MethodInfo *v42; // x3
-  UnityEngine_GameObject_o *v43; // x0
+  UnityEngine_GameObject_o *v42; // x0
+  const MethodInfo *v43; // x2
   const MethodInfo *v44; // x2
-  const MethodInfo *v45; // x2
-  UnityEngine_GameObject_o *v46; // x0
+  UnityEngine_GameObject_o *v45; // x0
   int32_t SettingSelectIndex_k__BackingField; // w20
-  UnityEngine_GameObject_o *v48; // x0
-  UILabel_o *v49; // x21
-  System_String_o *v50; // x22
-  __int64 v51; // x2
-  __int64 v52; // x3
-  __int64 v53; // x4
-  Il2CppObject *v54; // x0
+  UnityEngine_GameObject_o *v47; // x0
+  UILabel_o *v48; // x21
+  System_String_o *v49; // x22
+  __int64 v50; // x2
+  __int64 v51; // x3
+  __int64 v52; // x4
+  Il2CppObject *v53; // x0
   UILabel_o *warningLb; // x21
-  System_String_o *v56; // x22
-  __int64 v57; // x2
-  __int64 v58; // x3
-  __int64 v59; // x4
-  Il2CppObject *v60; // x0
+  System_String_o *v55; // x22
+  __int64 v56; // x2
+  __int64 v57; // x3
+  __int64 v58; // x4
+  Il2CppObject *v59; // x0
+  UnityEngine_GameObject_o *v60; // x0
   UnityEngine_GameObject_o *v61; // x0
-  UnityEngine_GameObject_o *v62; // x0
+  const MethodInfo *v62; // x2
   const MethodInfo *v63; // x2
-  const MethodInfo *v64; // x2
-  UnityEngine_GameObject_o *v65; // x0
-  System_Action_o *v66; // x20
-  int v67; // [xsp+Ch] [xbp-54h] BYREF
-  int v68; // [xsp+18h] [xbp-48h] BYREF
-  int v69; // [xsp+1Ch] [xbp-44h] BYREF
+  UnityEngine_GameObject_o *v64; // x0
+  System_Action_o *v65; // x20
+  int v66; // [xsp+Ch] [xbp-54h] BYREF
+  int v67; // [xsp+18h] [xbp-48h] BYREF
+  int v68; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_49B6F7A & 1) == 0 )
+  if ( (byte_4A4A4A9 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, item);
-    sub_1B4CF90(&int_TypeInfo, v9);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v10);
-    sub_1B4CF90(&Method_RecommendSupportQuestSelectDialogComponent__Open_b__27_0__, v11);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v12);
-    sub_1B4CF90(&StringLiteral_10805/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION"*/, v13);
-    sub_1B4CF90(&StringLiteral_10809/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE"*/, v14);
-    sub_1B4CF90(&StringLiteral_10807/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION"*/, v15);
-    sub_1B4CF90(&StringLiteral_10808/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION_WARNING"*/, v16);
-    sub_1B4CF90(&StringLiteral_3658/*"COMMON_CONFIRM_DECIDE"*/, v17);
-    sub_1B4CF90(&StringLiteral_3656/*"COMMON_CONFIRM_CANCEL"*/, v18);
-    sub_1B4CF90(&StringLiteral_10811/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_WARNING"*/, v19);
-    sub_1B4CF90(&StringLiteral_3661/*"COMMON_CONFIRM_REMOVE"*/, v20);
-    sub_1B4CF90(&StringLiteral_10806/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION_REMOVE"*/, v21);
-    sub_1B4CF90(&StringLiteral_10810/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE_REMOVE"*/, v22);
-    byte_49B6F7A = 1;
+    sub_1B863B8(&System_Action_TypeInfo, item);
+    sub_1B863B8(&int_TypeInfo, v9);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v10);
+    sub_1B863B8(&Method_RecommendSupportQuestSelectDialogComponent__Open_b__27_0__, v11);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v12);
+    sub_1B863B8(&StringLiteral_10863/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION"*/, v13);
+    sub_1B863B8(&StringLiteral_10867/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE"*/, v14);
+    sub_1B863B8(&StringLiteral_10865/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION"*/, v15);
+    sub_1B863B8(&StringLiteral_10866/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION_WARNING"*/, v16);
+    sub_1B863B8(&StringLiteral_3677/*"COMMON_CONFIRM_DECIDE"*/, v17);
+    sub_1B863B8(&StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, v18);
+    sub_1B863B8(&StringLiteral_10869/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_WARNING"*/, v19);
+    sub_1B863B8(&StringLiteral_3680/*"COMMON_CONFIRM_REMOVE"*/, v20);
+    sub_1B863B8(&StringLiteral_10864/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION_REMOVE"*/, v21);
+    sub_1B863B8(&StringLiteral_10868/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE_REMOVE"*/, v22);
+    byte_4A4A4A9 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = action;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)action, isRemove, (const MethodInfo *)action);
-    Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)action, isRemove, (const MethodInfo *)action);
+    Instance = (System_String_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
     if ( Instance )
     {
       klass = (int32_t)Instance[5].klass;
       titleLb = this->fields.titleLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v27 = (System_String_o **)&StringLiteral_10810/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE_REMOVE"*/;
+      v27 = (System_String_o **)&StringLiteral_10868/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE_REMOVE"*/;
       if ( !isRemove )
-        v27 = (System_String_o **)&StringLiteral_10809/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE"*/;
+        v27 = (System_String_o **)&StringLiteral_10867/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_TITLE"*/;
       Instance = LocalizationManager__Get(*v27, 0LL);
       if ( titleLb )
       {
         UILabel__set_text(titleLb, Instance, 0LL);
-        v28 = (System_String_o **)&StringLiteral_10806/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION_REMOVE"*/;
+        v28 = (System_String_o **)&StringLiteral_10864/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION_REMOVE"*/;
         descriptionLb = this->fields.descriptionLb;
         if ( !isRemove )
-          v28 = (System_String_o **)&StringLiteral_10805/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION"*/;
+          v28 = (System_String_o **)&StringLiteral_10863/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_DESCRIPTION"*/;
         v30 = *v28;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         v31 = LocalizationManager__Get(v30, 0LL);
-        v69 = klass + 1;
-        v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v69, v32, v33, v34);
+        v68 = klass + 1;
+        v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v68, v32, v33, v34);
         Instance = System_String__Format(v31, v35, 0LL);
         if ( descriptionLb )
         {
@@ -288,7 +287,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
             {
               UILabel__set_fontSize((UILabel_o *)Instance, 24, 0LL);
               situationLb = this->fields.situationLb;
-              Instance = LocalizationManager__Get((System_String_o *)StringLiteral_10807/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION"*/, 0LL);
+              Instance = LocalizationManager__Get((System_String_o *)StringLiteral_10865/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION"*/, 0LL);
               if ( situationLb )
               {
                 UILabel__set_text(situationLb, Instance, 0LL);
@@ -300,9 +299,9 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
                   decideButtonLb = this->fields.decideButtonLb;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v40 = (System_String_o **)&StringLiteral_3661/*"COMMON_CONFIRM_REMOVE"*/;
+                  v40 = (System_String_o **)&StringLiteral_3680/*"COMMON_CONFIRM_REMOVE"*/;
                   if ( !isRemove )
-                    v40 = (System_String_o **)&StringLiteral_3658/*"COMMON_CONFIRM_DECIDE"*/;
+                    v40 = (System_String_o **)&StringLiteral_3677/*"COMMON_CONFIRM_DECIDE"*/;
                   Instance = LocalizationManager__Get(*v40, 0LL);
                   if ( decideButtonLb )
                   {
@@ -310,7 +309,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
                     cancelButtonLb = this->fields.cancelButtonLb;
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3656/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+                    Instance = LocalizationManager__Get((System_String_o *)StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
                     if ( cancelButtonLb )
                     {
                       UILabel__set_text(cancelButtonLb, Instance, 0LL);
@@ -330,19 +329,19 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
                               (RecommendSupportQuestBoardListViewItemDraw_o *)Instance,
                               item,
                               0,
-                              v42);
+                              0LL);
                             Instance = (System_String_o *)this->fields.questBoardDraw;
                             if ( Instance )
                             {
-                              v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-                              GameObjectExtensions__SetLocalPositionY(v43, 0.0, 0LL);
-                              RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(this, klass, v44);
-                              RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(this, klass, v45);
+                              v42 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+                              GameObjectExtensions__SetLocalPositionY(v42, 0.0, 0LL);
+                              RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(this, klass, v43);
+                              RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(this, klass, v44);
                               Instance = (System_String_o *)this->fields.servantFaceIcon;
                               if ( Instance )
                               {
-                                v46 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-                                GameObjectExtensions__SetLocalPositionY(v46, -90.0, 0LL);
+                                v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
+                                GameObjectExtensions__SetLocalPositionY(v45, -90.0, 0LL);
                                 if ( item )
                                 {
                                   if ( !item->fields._IsSetting_k__BackingField || isRemove )
@@ -351,29 +350,29 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
                                   if ( Instance )
                                   {
                                     SettingSelectIndex_k__BackingField = item->fields._SettingSelectIndex_k__BackingField;
-                                    v48 = UnityEngine_Component__get_gameObject(
+                                    v47 = UnityEngine_Component__get_gameObject(
                                             (UnityEngine_Component_o *)Instance,
                                             0LL);
-                                    GameObjectExtensions__SetLocalPositionY(v48, 187.0, 0LL);
+                                    GameObjectExtensions__SetLocalPositionY(v47, 187.0, 0LL);
                                     Instance = (System_String_o *)this->fields.descriptionLb;
                                     if ( Instance )
                                     {
                                       UILabel__set_fontSize((UILabel_o *)Instance, 22, 0LL);
-                                      v49 = this->fields.situationLb;
+                                      v48 = this->fields.situationLb;
                                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                      v50 = LocalizationManager__Get((System_String_o *)StringLiteral_10808/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION_WARNING"*/, 0LL);
-                                      v68 = SettingSelectIndex_k__BackingField + 1;
-                                      v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v68, v51, v52, v53);
-                                      Instance = System_String__Format(v50, v54, 0LL);
-                                      if ( v49 )
+                                      v49 = LocalizationManager__Get((System_String_o *)StringLiteral_10866/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_SITUATION_WARNING"*/, 0LL);
+                                      v67 = SettingSelectIndex_k__BackingField + 1;
+                                      v53 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67, v50, v51, v52);
+                                      Instance = System_String__Format(v49, v53, 0LL);
+                                      if ( v48 )
                                       {
-                                        UILabel__set_text(v49, Instance, 0LL);
+                                        UILabel__set_text(v48, Instance, 0LL);
                                         warningLb = this->fields.warningLb;
-                                        v56 = LocalizationManager__Get((System_String_o *)StringLiteral_10811/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_WARNING"*/, 0LL);
-                                        v67 = SettingSelectIndex_k__BackingField + 1;
-                                        v60 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v67, v57, v58, v59);
-                                        Instance = System_String__Format(v56, v60, 0LL);
+                                        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_10869/*"RECOMMEND_SUPPORT_QUEST_SELECT_DIALOG_WARNING"*/, 0LL);
+                                        v66 = SettingSelectIndex_k__BackingField + 1;
+                                        v59 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v66, v56, v57, v58);
+                                        Instance = System_String__Format(v55, v59, 0LL);
                                         if ( warningLb )
                                         {
                                           UILabel__set_text(warningLb, Instance, 0LL);
@@ -392,41 +391,41 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__Open(
                                               Instance = (System_String_o *)this->fields.questBoardDraw;
                                               if ( Instance )
                                               {
-                                                v61 = UnityEngine_Component__get_gameObject(
+                                                v60 = UnityEngine_Component__get_gameObject(
                                                         (UnityEngine_Component_o *)Instance,
                                                         0LL);
-                                                GameObjectExtensions__SetLocalPositionY(v61, -24.0, 0LL);
+                                                GameObjectExtensions__SetLocalPositionY(v60, -24.0, 0LL);
                                                 Instance = (System_String_o *)this->fields.situationLb;
                                                 if ( Instance )
                                                 {
-                                                  v62 = UnityEngine_Component__get_gameObject(
+                                                  v61 = UnityEngine_Component__get_gameObject(
                                                           (UnityEngine_Component_o *)Instance,
                                                           0LL);
-                                                  GameObjectExtensions__SetLocalPositionY(v62, -18.0, 0LL);
+                                                  GameObjectExtensions__SetLocalPositionY(v61, -18.0, 0LL);
                                                   RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
                                                     this,
                                                     SettingSelectIndex_k__BackingField,
-                                                    v63);
+                                                    v62);
                                                   RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(
                                                     this,
                                                     SettingSelectIndex_k__BackingField,
-                                                    v64);
+                                                    v63);
                                                   Instance = (System_String_o *)this->fields.servantFaceIcon;
                                                   if ( Instance )
                                                   {
-                                                    v65 = UnityEngine_Component__get_gameObject(
+                                                    v64 = UnityEngine_Component__get_gameObject(
                                                             (UnityEngine_Component_o *)Instance,
                                                             0LL);
-                                                    GameObjectExtensions__SetLocalPositionY(v65, -98.0, 0LL);
+                                                    GameObjectExtensions__SetLocalPositionY(v64, -98.0, 0LL);
 LABEL_47:
                                                     this->fields.state = 1;
-                                                    v66 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+                                                    v65 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
                                                     System_Action___ctor(
-                                                      v66,
+                                                      v65,
                                                       (Il2CppObject *)this,
                                                       Method_RecommendSupportQuestSelectDialogComponent__Open_b__27_0__,
                                                       0LL);
-                                                    BaseDialog__Open((BaseDialog_o *)this, v66, 0, 0LL);
+                                                    BaseDialog__Open((BaseDialog_o *)this, v65, 0, 0LL);
                                                     return;
                                                   }
                                                 }
@@ -452,7 +451,7 @@ LABEL_47:
         }
       }
     }
-    sub_1B4D1EC(Instance, v24);
+    sub_1B86614(Instance, v24);
   }
 }
 
@@ -494,22 +493,22 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v26; // 0:x0.16
 
-  if ( (byte_49B6F7C & 1) == 0 )
+  if ( (byte_4A4A4AB & 1) == 0 )
   {
-    sub_1B4CF90(&AtlasManager_TypeInfo, *(_QWORD *)&index);
-    sub_1B4CF90(&Method_DataManager_GetMaster_UserServantMaster___, v5);
-    sub_1B4CF90(&DataManager_TypeInfo, v6);
-    sub_1B4CF90(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v7);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v10);
-    byte_49B6F7C = 1;
+    sub_1B863B8(&AtlasManager_TypeInfo, *(_QWORD *)&index);
+    sub_1B863B8(&Method_DataManager_GetMaster_UserServantMaster___, v5);
+    sub_1B863B8(&DataManager_TypeInfo, v6);
+    sub_1B863B8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v7);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v10);
+    byte_4A4A4AB = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = *(_QWORD *)(Instance + 112);
@@ -522,9 +521,9 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           Instance,
-          (const MethodInfo_319FF44 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+          (const MethodInfo_3216828 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
     goto LABEL_29;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   if ( RecommendSupportSelectControl__get_SelectEquipId((RecommendSupportSelectControl_o *)Instance, v13) > 0 )
@@ -552,7 +551,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v25.fields.currentCryptoKey = klass;
     *(_QWORD *)&v25.fields.fakeValue = monitor;
-    v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v25, 0LL);
+    v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v25, 0LL);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetEquipFace(equipSprite, v17, 0LL, 0LL);
@@ -574,7 +573,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupEquipIcon(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v26.fields.currentCryptoKey = v21;
           *(_QWORD *)&v26.fields.fakeValue = v20;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v26, 0LL);
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v26, 0LL);
           if ( v19 )
           {
             v22 = (int)Instance > 0;
@@ -621,7 +620,7 @@ LABEL_29:
         }
       }
 LABEL_41:
-      sub_1B4D1EC(Instance, v13);
+      sub_1B86614(Instance, v13);
     }
   }
 }
@@ -644,20 +643,20 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
   int32_t klass; // w21
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_49B6F7B & 1) == 0 )
+  if ( (byte_4A4A4AA & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMaster_UserServantMaster___, *(_QWORD *)&index);
-    sub_1B4CF90(&DataManager_TypeInfo, v5);
-    sub_1B4CF90(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v6);
-    sub_1B4CF90(&IconLabelInfo_TypeInfo, v7);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v8);
-    byte_49B6F7B = 1;
+    sub_1B863B8(&Method_DataManager_GetMaster_UserServantMaster___, *(_QWORD *)&index);
+    sub_1B863B8(&DataManager_TypeInfo, v5);
+    sub_1B863B8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v6);
+    sub_1B863B8(&IconLabelInfo_TypeInfo, v7);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v8);
+    byte_4A4A4AA = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   Instance = *(_QWORD *)(Instance + 112);
@@ -670,9 +669,9 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          &entity,
          Instance,
-         (const MethodInfo_319FF44 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+         (const MethodInfo_3216828 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
   {
-    v12 = (IconLabelInfo_o *)sub_1B4D1DC(IconLabelInfo_TypeInfo);
+    v12 = (IconLabelInfo_o *)sub_1B86604(IconLabelInfo_TypeInfo);
     IconLabelInfo___ctor(v12, 0LL);
     Instance = (int64_t)entity;
     if ( entity )
@@ -681,7 +680,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
       Instance = UserServantEntity__getLevelMax((UserServantEntity_o *)entity, 0LL);
       if ( v12 )
       {
-        IconLabelInfo__Set_38677548(v12, 2, klass, Instance, 0, 0, 0, 0, 0LL);
+        IconLabelInfo__Set_39094644(v12, 2, klass, Instance, 0, 0, 0, 0, 0, 0LL);
         Instance = (int64_t)this->fields.servantFaceIcon;
         if ( Instance )
         {
@@ -689,7 +688,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
           Instance = (int64_t)this->fields.servantFaceIcon;
           if ( Instance )
           {
-            ServantFaceIconComponent__Set_38759804(
+            ServantFaceIconComponent__Set_39177000(
               (ServantFaceIconComponent_o *)Instance,
               (UserServantEntity_o *)entity,
               v12,
@@ -701,7 +700,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent__SetupFaceIcon(
       }
     }
 LABEL_16:
-    sub_1B4D1EC(Instance, v11);
+    sub_1B86614(Instance, v11);
   }
   Instance = (int64_t)this->fields.servantFaceIcon;
   if ( !Instance )
@@ -726,10 +725,10 @@ UnityEngine_GameObject_o *__fastcall RecommendSupportQuestSelectDialogComponent_
   __int64 v4; // x1
   UnityEngine_GameObject_o *v6; // x0
 
-  if ( (byte_49B6F80 & 1) == 0 )
+  if ( (byte_4A4A4AF & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49B6F80 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A4A4AF = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -738,7 +737,7 @@ UnityEngine_GameObject_o *__fastcall RecommendSupportQuestSelectDialogComponent_
     return 0LL;
   v6 = this->fields.cancelButton;
   if ( !v6 )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   return UnityEngine_GameObject__get_gameObject(v6, 0LL);
 }
 
@@ -759,7 +758,7 @@ void __fastcall RecommendSupportQuestSelectDialogComponent___c__DisplayClass33_0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   RecommendSupportQuestSelectDialogComponent__Init(_4__this, method);
   ActionExtensions__Call(this->fields.callAction, 0LL);
 }

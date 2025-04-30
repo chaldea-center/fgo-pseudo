@@ -15,18 +15,18 @@ void __fastcall ScriptTextListViewItem___ctor(
   const MethodInfo *v14; // x3
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49B85EC & 1) == 0 )
+  if ( (byte_4A4BB96 & 1) == 0 )
   {
-    sub_1B4CF90(&int_TypeInfo, *(_QWORD *)&index);
-    sub_1B4CF90(&StringLiteral_15717/*"[{0:D4}] {1}"*/, v7);
-    byte_49B85EC = 1;
+    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&index);
+    sub_1B863B8(&StringLiteral_15790/*"[{0:D4}] {1}"*/, v7);
+    byte_4A4BB96 = 1;
   }
-  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
   v15 = index + 1;
   v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8, v9, v10);
-  v12 = System_String__Format_61134760((System_String_o *)StringLiteral_15717/*"[{0:D4}] {1}"*/, v11, (Il2CppObject *)lineText, 0LL);
+  v12 = System_String__Format_61686468((System_String_o *)StringLiteral_15790/*"[{0:D4}] {1}"*/, v11, (Il2CppObject *)lineText, 0LL);
   this->fields.lineText = v12;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v12, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v12, v13, v14);
 }
 
 

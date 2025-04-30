@@ -1,28 +1,28 @@
 void __fastcall EventRecipeGiftEntity___ctor(EventRecipeGiftEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAF54 & 1) == 0 )
+  if ( (byte_4A4E586 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BAF54 = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4E586 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EventRecipeGiftEntity__CreatePK(int32_t recipeId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_49BAF53 & 1) == 0 )
+  if ( (byte_4A4E585 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_49BAF53 = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4A4E585 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            recipeId,
            idx,
-           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

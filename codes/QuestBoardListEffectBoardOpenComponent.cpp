@@ -3,8 +3,8 @@ void __fastcall QuestBoardListEffectBoardOpenComponent___ctor(
         const MethodInfo *method)
 {
   this->fields.openFadeSkipTime = 7.0;
-  *(_OWORD *)&this->fields.targetBoardForceShiftPosY = xmmword_BAAC10;
-  *(_OWORD *)&this->fields.openStartTime = xmmword_BAA880;
-  *(_OWORD *)&this->fields.bgmFadeOutTime = xmmword_BA9FA0;
+  *(_OWORD *)&this->fields.targetBoardForceShiftPosY = xmmword_BC37A0;
+  *(_OWORD *)&this->fields.openStartTime = xmmword_BC3430;
+  *(_OWORD *)&this->fields.bgmFadeOutTime = xmmword_BC2B30;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

@@ -13,7 +13,7 @@ void __fastcall BattleObserver__Add(BattleObserver_o *this, BattleSubject_o *sub
   {
     BattleSubject__Add(subject, this, method);
     this->fields.battleSubject = subject;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)subject, v5, v6);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)subject, v5, v6);
   }
 }
 

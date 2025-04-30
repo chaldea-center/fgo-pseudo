@@ -1,3 +1,9 @@
+void __fastcall EventScanPanelMapRequest___ctor(EventScanPanelMapRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall EventScanPanelMapRequest__beginRequest(
         EventScanPanelMapRequest_o *this,
@@ -10,28 +16,20 @@ void __fastcall EventScanPanelMapRequest__beginRequest(
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
-  const MethodInfo *v17; // x1
 
-  if ( (byte_49BC83C & 1) == 0 )
+  if ( (byte_4A4FEDB & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_18824/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B4CF90(&StringLiteral_20987/*"mapId"*/, v11);
-    sub_1B4CF90(&StringLiteral_22173/*"panelMapDetailId"*/, v12);
-    sub_1B4CF90(&StringLiteral_22174/*"panelScanId"*/, v13);
-    byte_49BC83C = 1;
+    sub_1B863B8(&StringLiteral_18908/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1B863B8(&StringLiteral_21098/*"mapId"*/, v11);
+    sub_1B863B8(&StringLiteral_22296/*"panelMapDetailId"*/, v12);
+    sub_1B863B8(&StringLiteral_22297/*"panelScanId"*/, v13);
+    byte_4A4FEDB = 1;
   }
-  RequestBase__addField(
-    (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_18824/*"eventId"*/,
-    eventId,
-    *(const MethodInfo **)&panelMapDetailId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20987/*"mapId"*/, mapId, v14);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22173/*"panelMapDetailId"*/, panelMapDetailId, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22174/*"panelScanId"*/, panelScanId, v16);
-  RequestBase__beginRequest((RequestBase_o *)this, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18908/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21098/*"mapId"*/, mapId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22296/*"panelMapDetailId"*/, panelMapDetailId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22297/*"panelScanId"*/, panelScanId, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -42,16 +40,16 @@ System_String_o *__fastcall EventScanPanelMapRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49BC83B & 1) == 0 )
+  if ( (byte_4A4FEDA & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_18815/*"event/scanPanelMap"*/, v2);
-    byte_49BC83B = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_18899/*"event/scanPanelMap"*/, v2);
+    byte_4A4FEDA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_18815/*"event/scanPanelMap"*/, 0LL);
+  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_18899/*"event/scanPanelMap"*/, 0LL);
 }
 
 
@@ -65,43 +63,31 @@ void __fastcall EventScanPanelMapRequest__requestCompleted(
   ResponseData_o *v7; // x0
   ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  System_String_o *v10; // x1
 
-  if ( (byte_49BC83D & 1) == 0 )
+  if ( (byte_4A4FEDC & 1) == 0 )
   {
-    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
-    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
-    byte_49BC83D = 1;
+    sub_1B863B8(&JsonManager_TypeInfo, responseList);
+    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
+    byte_4A4FEDC = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(104, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42282948(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v10 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v10,
-        *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_21779/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = (System_String_o *)StringLiteral_21893/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }
 
 

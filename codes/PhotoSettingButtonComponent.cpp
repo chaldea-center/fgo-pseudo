@@ -76,19 +76,19 @@ void __fastcall PhotoSettingButtonComponent__DispSettingButton(
   UnityEngine_Color_o v70; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v11 = isChangePos;
-  if ( (byte_49B66F4 & 1) == 0 )
+  if ( (byte_4A49C66 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___, targetList);
-    sub_1B4CF90(&System_Func_PhotoUtility_TargetType__bool__TypeInfo, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__, v13);
-    sub_1B4CF90(&System_Predicate_PhotoUtility_TargetType__TypeInfo, v14);
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_0__, v15);
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_1__, v16);
-    sub_1B4CF90(&PhotoSettingButtonComponent___c_TypeInfo, v17);
-    byte_49B66F4 = 1;
+    sub_1B863B8(&Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___, targetList);
+    sub_1B863B8(&System_Func_PhotoUtility_TargetType__bool__TypeInfo, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__, v13);
+    sub_1B863B8(&System_Predicate_PhotoUtility_TargetType__TypeInfo, v14);
+    sub_1B863B8(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_0__, v15);
+    sub_1B863B8(&Method_PhotoSettingButtonComponent___c__DispSettingButton_b__27_1__, v16);
+    sub_1B863B8(&PhotoSettingButtonComponent___c_TypeInfo, v17);
+    byte_4A49C66 = 1;
   }
   this->fields.photoTargetList = targetList;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields.photoTargetList,
     (int32_t)targetList,
     (int32_t)photoStandFigures,
@@ -145,7 +145,7 @@ void __fastcall PhotoSettingButtonComponent__DispSettingButton(
       v25 = PhotoSettingButtonComponent___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v25->static_fields->__9;
-    _9__27_0 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_PhotoUtility_TargetType__bool__TypeInfo);
+    _9__27_0 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_PhotoUtility_TargetType__bool__TypeInfo);
     System_Func_Int32Enum__bool____ctor(
       _9__27_0,
       v27,
@@ -153,12 +153,12 @@ void __fastcall PhotoSettingButtonComponent__DispSettingButton(
       0LL);
     static_fields = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
     static_fields->__9__27_0 = (struct System_Func_PhotoUtility_TargetType__bool__o *)_9__27_0;
-    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__27_0, (int32_t)_9__27_0, v29, v30);
+    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__27_0, (int32_t)_9__27_0, v29, v30);
   }
   v31 = System_Linq_Enumerable__Count_Int32Enum_(
           (System_Collections_Generic_IEnumerable_TSource__o *)photoTargetList,
           (System_Func_TSource__bool__o *)_9__27_0,
-          (const MethodInfo_2F20234 *)Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
+          (const MethodInfo_2F8C718 *)Method_System_Linq_Enumerable_Count_PhotoUtility_TargetType___);
   switch ( v31 )
   {
     case 2:
@@ -260,7 +260,7 @@ void __fastcall PhotoSettingButtonComponent__DispSettingButton(
         }
       }
 LABEL_89:
-      sub_1B4D1F4(hideUiButton, v18);
+      sub_1B8661C(hideUiButton, v18);
     case 1:
       hideUiButton = this->fields.changeServantFaceButton;
       if ( !hideUiButton )
@@ -308,7 +308,7 @@ LABEL_89:
           hideUiButton = PhotoSettingButtonComponent___c_TypeInfo;
         }
         v48 = (Il2CppObject *)**((_QWORD **)hideUiButton + 23);
-        v47 = (System_Predicate_T__o *)sub_1B4D1DC(System_Predicate_PhotoUtility_TargetType__TypeInfo);
+        v47 = (System_Predicate_T__o *)sub_1B86604(System_Predicate_PhotoUtility_TargetType__TypeInfo);
         System_Predicate_Int32Enum____ctor(
           v47,
           v48,
@@ -316,14 +316,14 @@ LABEL_89:
           0LL);
         v49 = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
         v49->__9__27_1 = (struct System_Predicate_PhotoUtility_TargetType__o *)v47;
-        sub_1B4CF34((CGThumbnailListItem_o *)&v49->__9__27_1, (int32_t)v47, v50, v51);
+        sub_1B8635C((CGThumbnailListItem_o *)&v49->__9__27_1, (int32_t)v47, v50, v51);
       }
       if ( !v46 )
         goto LABEL_88;
       hideUiButton = (void *)System_Collections_Generic_List_Int32Enum___FindIndex(
                                v46,
                                v47,
-                               (const MethodInfo_3566218 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
+                               (const MethodInfo_35E2994 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__);
       if ( !photoStandFigures )
         goto LABEL_88;
       if ( (unsigned int)hideUiButton < photoStandFigures->max_length )
@@ -420,7 +420,7 @@ LABEL_75:
         goto LABEL_87;
     }
 LABEL_88:
-    sub_1B4D1EC(hideUiButton, v18);
+    sub_1B86614(hideUiButton, v18);
   }
   hideUiButton = this->fields.changeTargetButton;
   if ( !hideUiButton )
@@ -464,68 +464,68 @@ void __fastcall PhotoSettingButtonComponent__Init(
   UILabel_o *changePhotoFrameButtonLabel; // x21
   UILabel_o *hideUiButtonLabel; // x21
 
-  if ( (byte_49B66F3 & 1) == 0 )
+  if ( (byte_4A49C65 & 1) == 0 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, myRoom);
-    sub_1B4CF90(&StringLiteral_10156/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, v6);
-    sub_1B4CF90(&StringLiteral_17144/*"btn_Polaroid_bg"*/, v7);
-    sub_1B4CF90(&StringLiteral_10159/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, v8);
-    sub_1B4CF90(&StringLiteral_10158/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, v9);
-    sub_1B4CF90(&StringLiteral_10153/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, v10);
-    sub_1B4CF90(&StringLiteral_10151/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, v11);
-    sub_1B4CF90(&StringLiteral_10155/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, v12);
-    sub_1B4CF90(&StringLiteral_10154/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, v13);
-    sub_1B4CF90(&StringLiteral_10152/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, v14);
-    sub_1B4CF90(&StringLiteral_10157/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, v15);
-    byte_49B66F3 = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, myRoom);
+    sub_1B863B8(&StringLiteral_10211/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, v6);
+    sub_1B863B8(&StringLiteral_17220/*"btn_Polaroid_bg"*/, v7);
+    sub_1B863B8(&StringLiteral_10214/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, v8);
+    sub_1B863B8(&StringLiteral_10213/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, v9);
+    sub_1B863B8(&StringLiteral_10208/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, v10);
+    sub_1B863B8(&StringLiteral_10206/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, v11);
+    sub_1B863B8(&StringLiteral_10210/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, v12);
+    sub_1B863B8(&StringLiteral_10209/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, v13);
+    sub_1B863B8(&StringLiteral_10207/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, v14);
+    sub_1B863B8(&StringLiteral_10212/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, v15);
+    byte_4A49C65 = 1;
   }
   this->fields.myRoomControl = myRoom;
   p_myRoomControl = &this->fields.myRoomControl;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.myRoomControl, (int32_t)myRoom, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.myRoomControl, (int32_t)myRoom, (int32_t)method, v3);
   changeTargetButtonLabel = this->fields.changeTargetButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10155/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10210/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON"*/, 0LL);
   if ( !changeTargetButtonLabel )
     goto LABEL_25;
   UILabel__set_text(changeTargetButtonLabel, myRoomControl, 0LL);
   changeTargetButtonLabelLeft = this->fields.changeTargetButtonLabelLeft;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10156/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10211/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_LEFT"*/, 0LL);
   if ( !changeTargetButtonLabelLeft )
     goto LABEL_25;
   UILabel__set_text(changeTargetButtonLabelLeft, myRoomControl, 0LL);
   changeTargetButtonLabelRight = this->fields.changeTargetButtonLabelRight;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10157/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10212/*"PHOTO_SETTING_CHANGE_TARGET_BUTTON_RIGHT"*/, 0LL);
   if ( !changeTargetButtonLabelRight )
     goto LABEL_25;
   UILabel__set_text(changeTargetButtonLabelRight, myRoomControl, 0LL);
   changeServantFaceButtonLabel = this->fields.changeServantFaceButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10152/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10207/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON"*/, 0LL);
   if ( !changeServantFaceButtonLabel )
     goto LABEL_25;
   UILabel__set_text(changeServantFaceButtonLabel, myRoomControl, 0LL);
   changeServantFaceButtonLabelLeft = this->fields.changeServantFaceButtonLabelLeft;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10153/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10208/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_LEFT"*/, 0LL);
   if ( !changeServantFaceButtonLabelLeft )
     goto LABEL_25;
   UILabel__set_text(changeServantFaceButtonLabelLeft, myRoomControl, 0LL);
   changeServantFaceButtonLabelRight = this->fields.changeServantFaceButtonLabelRight;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10154/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10209/*"PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON_RIGHT"*/, 0LL);
   if ( !changeServantFaceButtonLabelRight )
     goto LABEL_25;
   UILabel__set_text(changeServantFaceButtonLabelRight, myRoomControl, 0LL);
   exchangePositionButtonLabel = this->fields.exchangePositionButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10158/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10213/*"PHOTO_SETTING_EXCHANGE_POSITION_BUTTON"*/, 0LL);
   if ( !exchangePositionButtonLabel )
     goto LABEL_25;
   UILabel__set_text(exchangePositionButtonLabel, myRoomControl, 0LL);
   changePhotoFrameButtonLabel = this->fields.changePhotoFrameButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10151/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10206/*"PHOTO_SETTING_CHANGE_PHOTO_FRAME_BUTTON"*/, 0LL);
   if ( !changePhotoFrameButtonLabel )
     goto LABEL_25;
   UILabel__set_text(changePhotoFrameButtonLabel, myRoomControl, 0LL);
   hideUiButtonLabel = this->fields.hideUiButtonLabel;
-  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10159/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, 0LL);
+  myRoomControl = LocalizationManager__Get((System_String_o *)StringLiteral_10214/*"PHOTO_SETTING_HIDE_UI_BUTTON"*/, 0LL);
   if ( !hideUiButtonLabel )
     goto LABEL_25;
   UILabel__set_text(hideUiButtonLabel, myRoomControl, 0LL);
@@ -535,7 +535,7 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButton,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
@@ -543,7 +543,7 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButtonLeft,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
@@ -551,7 +551,7 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeTargetButtonRight,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
@@ -559,7 +559,7 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButton,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
@@ -567,7 +567,7 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButtonLeft,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl )
@@ -575,31 +575,31 @@ void __fastcall PhotoSettingButtonComponent__Init(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)myRoomControl,
     this->fields.changeServantFaceButtonRight,
-    (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+    (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
     0LL);
   myRoomControl = (System_String_o *)this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetPhotoCampaignSprite(
           (MyRoomControl_o *)myRoomControl,
           this->fields.changePhotoFrameButton,
-          (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+          (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
           0LL),
         (myRoomControl = (System_String_o *)this->fields.myRoomControl) == 0LL)
     || (MyRoomControl__SetPhotoCampaignSprite(
           (MyRoomControl_o *)myRoomControl,
           this->fields.exchangePositionButton,
-          (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+          (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
           0LL),
         (myRoomControl = (System_String_o *)this->fields.myRoomControl) == 0LL)
     || (MyRoomControl__SetPhotoCampaignSprite(
           (MyRoomControl_o *)myRoomControl,
           this->fields.hideUiButton,
-          (System_String_o *)StringLiteral_17144/*"btn_Polaroid_bg"*/,
+          (System_String_o *)StringLiteral_17220/*"btn_Polaroid_bg"*/,
           0LL),
         (myRoomControl = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_25:
-    sub_1B4D1EC(myRoomControl, v19);
+    sub_1B86614(myRoomControl, v19);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)myRoomControl, 0, 0LL);
 }
@@ -629,19 +629,19 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangePhotoFrameButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66FC & 1) == 0 )
+  if ( (byte_4A49C6E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__, method);
-    byte_49B66FC = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__, method);
+    byte_4A49C6E = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangePhotoFrameButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1B4D1EC(0LL, v5);
+    sub_1B86614(0LL, v5);
   MyRoomControl__OpenPhotoFrameSelectDialog(myRoomControl, 0LL, 0LL, 0LL);
 }
 
@@ -667,20 +667,20 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_49B66F8 & 1) == 0 )
+  if ( (byte_4A49C6A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__, method);
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__, v3);
-    sub_1B4CF90(&System_Predicate_PhotoUtility_TargetType__TypeInfo, v4);
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__32_0__, v5);
-    sub_1B4CF90(&PhotoSettingButtonComponent___c_TypeInfo, v6);
-    byte_49B66F8 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__, method);
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__, v3);
+    sub_1B863B8(&System_Predicate_PhotoUtility_TargetType__TypeInfo, v4);
+    sub_1B863B8(&Method_PhotoSettingButtonComponent___c__OnClickChangeServantFaceButton_b__32_0__, v5);
+    sub_1B863B8(&PhotoSettingButtonComponent___c_TypeInfo, v6);
+    byte_4A49C6A = 1;
   }
   v7 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__;
   isEnableChangeServantFaceButton = this->fields.isEnableChangeServantFaceButton;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v7, v7[4]);
+    v7 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButton__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1B8639C(v7, v7[4]);
   if ( isEnableChangeServantFaceButton )
   {
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
@@ -701,7 +701,7 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
         Index = PhotoSettingButtonComponent___c_TypeInfo;
       }
       v15 = (Il2CppObject *)Index->static_fields->__9;
-      _9__32_0 = (System_Predicate_T__o *)sub_1B4D1DC(System_Predicate_PhotoUtility_TargetType__TypeInfo);
+      _9__32_0 = (System_Predicate_T__o *)sub_1B86604(System_Predicate_PhotoUtility_TargetType__TypeInfo);
       System_Predicate_Int32Enum____ctor(
         _9__32_0,
         v15,
@@ -709,16 +709,16 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeServantFaceButton(
         0LL);
       static_fields = PhotoSettingButtonComponent___c_TypeInfo->static_fields;
       static_fields->__9__32_0 = (struct System_Predicate_PhotoUtility_TargetType__o *)_9__32_0;
-      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__32_0, (int32_t)_9__32_0, v17, v18);
+      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__32_0, (int32_t)_9__32_0, v17, v18);
     }
     if ( !photoTargetList
       || (Index = (PhotoSettingButtonComponent___c_c *)System_Collections_Generic_List_Int32Enum___FindIndex(
                                                          photoTargetList,
                                                          _9__32_0,
-                                                         (const MethodInfo_3566218 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__),
+                                                         (const MethodInfo_35E2994 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__FindIndex__),
           !myRoomControl) )
     {
-      sub_1B4D1EC(Index, v10);
+      sub_1B86614(Index, v10);
     }
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, (int32_t)Index, 0LL);
   }
@@ -739,22 +739,22 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeServantFaceButtonLeft(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66F9 & 1) == 0 )
+  if ( (byte_4A49C6B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__, method);
-    byte_49B66F9 = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__, method);
+    byte_4A49C6B = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__;
   isEnableChangeServantFaceButtonLeft = this->fields.isEnableChangeServantFaceButtonLeft;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonLeft__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
   if ( isEnableChangeServantFaceButtonLeft )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
     myRoomControl = this->fields.myRoomControl;
     if ( !myRoomControl )
-      sub_1B4D1EC(0LL, v6);
+      sub_1B86614(0LL, v6);
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, this->fields.isChangePosition, 0LL);
   }
   else
@@ -774,22 +774,22 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeServantFaceButtonRight
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66FA & 1) == 0 )
+  if ( (byte_4A49C6C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__, method);
-    byte_49B66FA = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__, method);
+    byte_4A49C6C = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__;
   isEnableChangeServantFaceButtonRight = this->fields.isEnableChangeServantFaceButtonRight;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeServantFaceButtonRight__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
   if ( isEnableChangeServantFaceButtonRight )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
     myRoomControl = this->fields.myRoomControl;
     if ( !myRoomControl )
-      sub_1B4D1EC(0LL, v6);
+      sub_1B86614(0LL, v6);
     MyRoomControl__ChangePhotoCampaignServantFace(myRoomControl, !this->fields.isChangePosition, 0LL);
   }
   else
@@ -809,24 +809,24 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeTargetButton(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66F5 & 1) == 0 )
+  if ( (byte_4A49C67 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__, method);
-    sub_1B4CF90(&StringLiteral_9801/*"OpenTargetSelectDialogOnPhotoMode"*/, v3);
-    byte_49B66F5 = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__, method);
+    sub_1B863B8(&StringLiteral_9856/*"OpenTargetSelectDialogOnPhotoMode"*/, v3);
+    byte_4A49C67 = 1;
   }
   v4 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeTargetButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0LL), (myRoomControl = this->fields.myRoomControl) == 0LL) )
   {
-    sub_1B4D1EC(myRoomControl, v6);
+    sub_1B86614(myRoomControl, v6);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9801/*"OpenTargetSelectDialogOnPhotoMode"*/, 1, 0LL);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9856/*"OpenTargetSelectDialogOnPhotoMode"*/, 1, 0LL);
 }
 
 
@@ -840,24 +840,24 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeTargetButtonLeft(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66F6 & 1) == 0 )
+  if ( (byte_4A49C68 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__, method);
-    sub_1B4CF90(&StringLiteral_9800/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, v3);
-    byte_49B66F6 = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__, method);
+    sub_1B863B8(&StringLiteral_9855/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, v3);
+    byte_4A49C68 = 1;
   }
   v4 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonLeft__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0LL), (myRoomControl = this->fields.myRoomControl) == 0LL) )
   {
-    sub_1B4D1EC(myRoomControl, v6);
+    sub_1B86614(myRoomControl, v6);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9800/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, 1, 0LL);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9855/*"OpenTargetSelectDialogLeftOnPhotoMode"*/, 1, 0LL);
 }
 
 
@@ -871,24 +871,24 @@ void __fastcall PhotoSettingButtonComponent__OnClickChangeTargetButtonRight(
   __int64 v6; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66F7 & 1) == 0 )
+  if ( (byte_4A49C69 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__, method);
-    sub_1B4CF90(&StringLiteral_9802/*"OpenTargetSelectDialogRightOnPhotoMode"*/, v3);
-    byte_49B66F7 = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__, method);
+    sub_1B863B8(&StringLiteral_9857/*"OpenTargetSelectDialogRightOnPhotoMode"*/, v3);
+    byte_4A49C69 = 1;
   }
   v4 = Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickChangeTargetButtonRight__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl
     || (MyRoomControl__SetMaskCollider(myRoomControl, 1, 0LL), (myRoomControl = this->fields.myRoomControl) == 0LL) )
   {
-    sub_1B4D1EC(myRoomControl, v6);
+    sub_1B86614(myRoomControl, v6);
   }
-  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9802/*"OpenTargetSelectDialogRightOnPhotoMode"*/, 1, 0LL);
+  MyRoomControl__FadeInPhotoTarget(myRoomControl, (System_String_o *)StringLiteral_9857/*"OpenTargetSelectDialogRightOnPhotoMode"*/, 1, 0LL);
 }
 
 
@@ -901,19 +901,19 @@ void __fastcall PhotoSettingButtonComponent__OnClickExchangePositionButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66FB & 1) == 0 )
+  if ( (byte_4A49C6D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__, method);
-    byte_49B66FB = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__, method);
+    byte_4A49C6D = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickExchangePositionButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1B4D1EC(0LL, v5);
+    sub_1B86614(0LL, v5);
   MyRoomControl__ExchangePosition(myRoomControl, 0LL);
 }
 
@@ -927,19 +927,19 @@ void __fastcall PhotoSettingButtonComponent__OnClickHideUIButton(
   __int64 v5; // x1
   MyRoomControl_o *myRoomControl; // x0
 
-  if ( (byte_49B66FD & 1) == 0 )
+  if ( (byte_4A49C6F & 1) == 0 )
   {
-    sub_1B4CF90(&Method_PhotoSettingButtonComponent_OnClickHideUIButton__, method);
-    byte_49B66FD = 1;
+    sub_1B863B8(&Method_PhotoSettingButtonComponent_OnClickHideUIButton__, method);
+    byte_4A49C6F = 1;
   }
   v3 = Method_PhotoSettingButtonComponent_OnClickHideUIButton__;
   if ( (*((_BYTE *)Method_PhotoSettingButtonComponent_OnClickHideUIButton__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B4CFA8(Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+    v3 = (_QWORD *)sub_1B863D0(Method_PhotoSettingButtonComponent_OnClickHideUIButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   myRoomControl = this->fields.myRoomControl;
   if ( !myRoomControl )
-    sub_1B4D1EC(0LL, v5);
+    sub_1B86614(0LL, v5);
   MyRoomControl__HidePhotoUi(myRoomControl, 0LL);
 }
 
@@ -951,15 +951,15 @@ void __fastcall PhotoSettingButtonComponent___c___cctor(const MethodInfo *method
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_49B66FE & 1) == 0 )
+  if ( (byte_4A49C70 & 1) == 0 )
   {
-    sub_1B4CF90(&PhotoSettingButtonComponent___c_TypeInfo, v1);
-    byte_49B66FE = 1;
+    sub_1B863B8(&PhotoSettingButtonComponent___c_TypeInfo, v1);
+    byte_4A49C70 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B4D1DC(PhotoSettingButtonComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B86604(PhotoSettingButtonComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PhotoSettingButtonComponent___c_TypeInfo->static_fields->__9 = (struct PhotoSettingButtonComponent___c_o *)v2;
-  sub_1B4CF34((CGThumbnailListItem_o *)PhotoSettingButtonComponent___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B8635C((CGThumbnailListItem_o *)PhotoSettingButtonComponent___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

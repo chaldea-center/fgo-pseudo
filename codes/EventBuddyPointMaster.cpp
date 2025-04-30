@@ -1,14 +1,14 @@
 void __fastcall EventBuddyPointMaster___ctor(EventBuddyPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAD4A & 1) == 0 )
+  if ( (byte_4A4E37B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__, method);
-    byte_49BAD4A = 1;
+    sub_1B863B8(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__, method);
+    byte_4A4E37B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     405,
-    (const MethodInfo_31A0130 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
+    (const MethodInfo_3216A14 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string___ctor__);
 }
 
 
@@ -22,18 +22,18 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49BAD48 & 1) == 0 )
+  if ( (byte_4A4E379 & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_49BAD48 = 1;
+    byte_4A4E379 = 1;
   }
   PK = (Il2CppObject *)EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questPhase);
   return (EventBuddyPointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_31A2454 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
+                                      (const MethodInfo_3218D38 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__GetEntity__);
 }
 
 
@@ -53,24 +53,24 @@ EventBuddyPointEntity_o *__fastcall EventBuddyPointMaster__GetEntityIncludeQuest
   int v14; // w8
   int v15; // w8
 
-  if ( (byte_49BAD4B & 1) == 0 )
+  if ( (byte_4A4E37C & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Item__, v9);
-    byte_49BAD4B = 1;
+    sub_1B863B8(&Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Item__, v9);
+    byte_4A4E37C = 1;
   }
   list = this->fields.list;
   if ( !list )
 LABEL_19:
-    sub_1B4D1EC(list, *(_QWORD *)&eventId);
+    sub_1B86614(list, *(_QWORD *)&eventId);
   v11 = 0LL;
   v12 = 0LL;
   v13 = 0;
   while ( v13 < System_Collections_ObjectModel_Collection_object___get_Count(
                   (System_Collections_ObjectModel_Collection_T__o *)list,
-                  (const MethodInfo_313AEE4 *)Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Count__) )
+                  (const MethodInfo_31B0908 *)Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
@@ -78,7 +78,7 @@ LABEL_19:
     list = System_Collections_ObjectModel_Collection_object___get_Item(
              (System_Collections_ObjectModel_Collection_T__o *)list,
              v13,
-             (const MethodInfo_313AF74 *)Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Item__);
+             (const MethodInfo_31B0998 *)Method_System_Collections_ObjectModel_Collection_EventBuddyPointEntity__get_Item__);
     if ( !list )
       goto LABEL_19;
     if ( *((_DWORD *)list + 4) == eventId )
@@ -123,15 +123,15 @@ bool __fastcall EventBuddyPointMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49BAD49 & 1) == 0 )
+  if ( (byte_4A4E37A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__, entity);
-    byte_49BAD49 = 1;
+    sub_1B863B8(&Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__, entity);
+    byte_4A4E37A = 1;
   }
   PK = (Il2CppObject *)EventBuddyPointEntity__CreatePK(eventId, questId, questPhase, *(const MethodInfo **)&questId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31A24A0 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
+           (const MethodInfo_3218D84 *)Method_DataMasterBase_EventBuddyPointMaster__EventBuddyPointEntity__string__TryGetEntity__);
 }

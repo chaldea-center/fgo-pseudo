@@ -1,14 +1,14 @@
 void __fastcall ServantExpMaster___ctor(ServantExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB704 & 1) == 0 )
+  if ( (byte_4A4ED4A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__, method);
-    byte_49BB704 = 1;
+    sub_1B863B8(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__, method);
+    byte_4A4ED4A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     91,
-    (const MethodInfo_31A0130 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__);
+    (const MethodInfo_3216A14 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantExpEntity_o *__fastcall ServantExpMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_49BB702 & 1) == 0 )
+  if ( (byte_4A4ED48 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__, *(_QWORD *)&type);
-    byte_49BB702 = 1;
+    sub_1B863B8(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__, *(_QWORD *)&type);
+    byte_4A4ED48 = 1;
   }
   PK = (Il2CppObject *)ServantExpEntity__CreatePK(type, lv, *(const MethodInfo **)&lv);
   return (ServantExpEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_31A2454 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__);
+                                 (const MethodInfo_3218D38 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall ServantExpMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_49BB703 & 1) == 0 )
+  if ( (byte_4A4ED49 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__, entity);
-    byte_49BB703 = 1;
+    sub_1B863B8(&Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__, entity);
+    byte_4A4ED49 = 1;
   }
   PK = (Il2CppObject *)ServantExpEntity__CreatePK(type, lv, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31A24A0 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__);
+           (const MethodInfo_3218D84 *)Method_DataMasterBase_ServantExpMaster__ServantExpEntity__string__TryGetEntity__);
 }
 
 

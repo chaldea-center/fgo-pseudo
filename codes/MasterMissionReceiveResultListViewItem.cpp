@@ -7,9 +7,9 @@ void __fastcall MasterMissionReceiveResultListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
   this->fields._Message_k__BackingField = message;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
@@ -29,5 +29,5 @@ void __fastcall MasterMissionReceiveResultListViewItem__set_Message(
   const MethodInfo *v3; // x3
 
   this->fields._Message_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

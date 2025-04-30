@@ -5,16 +5,16 @@ void __fastcall ClassBoardBaseClassIconNameComponent___cctor(const MethodInfo *m
   const MethodInfo *v3; // x3
   __int64 v4; // x1
 
-  if ( (byte_49BE4B3 & 1) == 0 )
+  if ( (byte_4A51BAD & 1) == 0 )
   {
-    sub_1B4CF90(&ClassBoardBaseClassIconNameComponent_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_17234/*"btn_tab_{0}"*/, v4);
-    byte_49BE4B3 = 1;
+    sub_1B863B8(&ClassBoardBaseClassIconNameComponent_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_17310/*"btn_tab_{0}"*/, v4);
+    byte_4A51BAD = 1;
   }
-  ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields->TAB_BTN_NAME_FORMAT = (struct System_String_o *)StringLiteral_17234/*"btn_tab_{0}"*/;
-  sub_1B4CF34(
+  ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields->TAB_BTN_NAME_FORMAT = (struct System_String_o *)StringLiteral_17310/*"btn_tab_{0}"*/;
+  sub_1B8635C(
     (CGThumbnailListItem_o *)ClassBoardBaseClassIconNameComponent_TypeInfo->static_fields,
-    StringLiteral_17234/*"btn_tab_{0}"*/,
+    StringLiteral_17310/*"btn_tab_{0}"*/,
     v2,
     v3);
 }
@@ -59,15 +59,15 @@ void __fastcall ClassBoardBaseClassIconNameComponent__Setup(
   int32_t v19; // [xsp+Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_49BE4B2 & 1) == 0 )
+  if ( (byte_4A51BAC & 1) == 0 )
   {
-    sub_1B4CF90(&AtlasManager_TypeInfo, *(_QWORD *)&classBaseId);
-    sub_1B4CF90(&ClassBoardBaseClassIconNameComponent_TypeInfo, v7);
-    sub_1B4CF90(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, v8);
-    sub_1B4CF90(&DataManager_TypeInfo, v9);
-    sub_1B4CF90(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__, v10);
-    sub_1B4CF90(&int_TypeInfo, v11);
-    byte_49BE4B2 = 1;
+    sub_1B863B8(&AtlasManager_TypeInfo, *(_QWORD *)&classBaseId);
+    sub_1B863B8(&ClassBoardBaseClassIconNameComponent_TypeInfo, v7);
+    sub_1B863B8(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, v8);
+    sub_1B863B8(&DataManager_TypeInfo, v9);
+    sub_1B863B8(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__, v10);
+    sub_1B863B8(&int_TypeInfo, v11);
+    byte_4A51BAC = 1;
   }
   v12 = ClassBoardBaseClassIconNameComponent_TypeInfo;
   entity = 0LL;
@@ -86,19 +86,19 @@ void __fastcall ClassBoardBaseClassIconNameComponent__Setup(
   AtlasManager__SetClassIconSprite(icon, v16, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_15;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
                                                                   classBaseId,
-                                                                  (const MethodInfo_319D9E8 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_32142CC *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !entity || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.name) == 0LL )
 LABEL_15:
-    sub_1B4D1EC(Master_object, v18);
+    sub_1B86614(Master_object, v18);
   UILabel__set_text((UILabel_o *)Master_object, (System_String_o *)entity[1].monitor, 0LL);
 }
 

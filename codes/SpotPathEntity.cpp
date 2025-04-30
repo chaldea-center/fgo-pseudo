@@ -1,13 +1,13 @@
 void __fastcall SpotPathEntity___ctor(SpotPathEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB9BE & 1) == 0 )
+  if ( (byte_4A4F02B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
-    byte_49BB9BE = 1;
+    sub_1B863B8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A4F02B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3211D9C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ int32_t __fastcall SpotPathEntity__GetMapGimmickEffectId(SpotPathEntity_o *this,
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49BB9BD & 1) == 0 )
+  if ( (byte_4A4F02A & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_20985/*"mapGimmickEffectId"*/, method);
-    byte_49BB9BD = 1;
+    sub_1B863B8(&StringLiteral_21096/*"mapGimmickEffectId"*/, method);
+    byte_4A4F02A = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20985/*"mapGimmickEffectId"*/, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21096/*"mapGimmickEffectId"*/, 0, v2);
 }
 
 
@@ -34,12 +34,12 @@ int32_t __fastcall SpotPathEntity__GetMapGimmickId(SpotPathEntity_o *this, const
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49BB9BC & 1) == 0 )
+  if ( (byte_4A4F029 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_20986/*"mapGimmickId"*/, method);
-    byte_49BB9BC = 1;
+    sub_1B863B8(&StringLiteral_21097/*"mapGimmickId"*/, method);
+    byte_4A4F029 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20986/*"mapGimmickId"*/, 0, v2);
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21097/*"mapGimmickId"*/, 0, v2);
 }
 
 
@@ -53,12 +53,12 @@ bool __fastcall SpotPathEntity__IsStopRaidDeadTime(SpotPathEntity_o *this, const
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_49BB9BB & 1) == 0 )
+  if ( (byte_4A4F028 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_23270/*"stopRaidDeadTime"*/, method);
-    byte_49BB9BB = 1;
+    sub_1B863B8(&StringLiteral_23394/*"stopRaidDeadTime"*/, method);
+    byte_4A4F028 = 1;
   }
-  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_23270/*"stopRaidDeadTime"*/, 0, v2) != 0;
+  return SpotPathEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_23394/*"stopRaidDeadTime"*/, 0, v2) != 0;
 }
 
 
@@ -77,17 +77,17 @@ int32_t __fastcall SpotPathEntity__getScriptIntParam(
   const MethodInfo *v12; // x1
 
   v4 = defVal;
-  if ( (byte_49BB9BA & 1) == 0 )
+  if ( (byte_4A4F027 & 1) == 0 )
   {
-    sub_1B4CF90(&long_TypeInfo, key);
-    byte_49BB9BA = 1;
+    sub_1B863B8(&long_TypeInfo, key);
+    byte_4A4F027 = 1;
   }
   ScriptObj = SpotPathEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1B4D4AC(ScriptObj);
+  sub_1B868D4(ScriptObj);
   return SpotPathEntity__IsStopRaidDeadTime(v11, v12);
 }
 
@@ -100,10 +100,10 @@ Il2CppObject *__fastcall SpotPathEntity__getScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49BB9B9 & 1) == 0 )
+  if ( (byte_4A4F026 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_49BB9B9 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4A4F026 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -113,7 +113,7 @@ Il2CppObject *__fastcall SpotPathEntity__getScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3259324 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_32CFEEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

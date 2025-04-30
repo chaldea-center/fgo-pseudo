@@ -16,16 +16,16 @@ void __fastcall TextureUpdate__Update(TextureUpdate_o *this, const MethodInfo *m
   __int64 v4; // x1
   UnityEngine_Behaviour_o *v5; // x19
 
-  if ( (byte_49BCC6E & 1) == 0 )
+  if ( (byte_4A5030D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
-    byte_49BCC6E = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
+    byte_4A5030D = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !Component_object )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   v5 = (UnityEngine_Behaviour_o *)Component_object;
   ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Component_object->klass->vtable[30].method)(
     Component_object,

@@ -9,10 +9,10 @@ void __fastcall BattleSkillDropInfo___ctor(
   __int64 v8; // x1
   struct BattleSkillDropInfo_JsonConvertData_o **p_data; // x20
 
-  if ( (byte_49BD855 & 1) == 0 )
+  if ( (byte_4A50FF1 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___, *(_QWORD *)&uniqueId);
-    byte_49BD855 = 1;
+    sub_1B863B8(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___, *(_QWORD *)&uniqueId);
+    byte_4A50FF1 = 1;
   }
   DropInfo___ctor((DropInfo_o *)this, 0LL);
   this->fields.dropperUniqueId = uniqueId;
@@ -32,11 +32,11 @@ void __fastcall BattleSkillDropInfo___ctor(
       this->fields.effectType = EnumUtility__CastToEnum_Int32Enum_(
                                   (*p_data)->fields.dropEffectType,
                                   0,
-                                  (const MethodInfo_2F08F3C *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+                                  (const MethodInfo_2F77060 *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1B4D1EC(funcEnt, v8);
+    sub_1B86614(funcEnt, v8);
   }
 LABEL_8:
   this->fields.rarity = 1000;
@@ -52,7 +52,7 @@ void __fastcall BattleSkillDropInfo__SetBattleMoveObject(
   const MethodInfo *v3; // x3
 
   this->fields._BattleMoveObject_k__BackingField = moveObject;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)moveObject,
     (int32_t)method,
@@ -147,7 +147,7 @@ void __fastcall BattleSkillDropInfo__set_BattleMoveObject(
   const MethodInfo *v3; // x3
 
   this->fields._BattleMoveObject_k__BackingField = value;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)value,
     (int32_t)method,

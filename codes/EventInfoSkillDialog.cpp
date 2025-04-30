@@ -1,9 +1,9 @@
 void __fastcall EventInfoSkillDialog___ctor(EventInfoSkillDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BC57B & 1) == 0 )
+  if ( (byte_4A4FB3F & 1) == 0 )
   {
-    sub_1B4CF90(&BaseDialog_TypeInfo, method);
-    byte_49BC57B = 1;
+    sub_1B863B8(&BaseDialog_TypeInfo, method);
+    byte_4A4FB3F = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,13 +27,13 @@ void __fastcall EventInfoSkillDialog__OnClose(EventInfoSkillDialog_o *this, cons
   System_Reflection_MethodBase_o *v8; // x0
   System_Action_o *v9; // x20
 
-  if ( (byte_49BC57A & 1) == 0 )
+  if ( (byte_4A4FB3E & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_EventInfoSkillDialog_OnClose__, v3);
-    sub_1B4CF90(&Method_EventInfoSkillDialog__OnClose_b__10_0__, v4);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    byte_49BC57A = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_EventInfoSkillDialog_OnClose__, v3);
+    sub_1B863B8(&Method_EventInfoSkillDialog__OnClose_b__10_0__, v4);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A4FB3E = 1;
   }
   if ( this->fields.canTap )
   {
@@ -45,10 +45,10 @@ void __fastcall EventInfoSkillDialog__OnClose(EventInfoSkillDialog_o *this, cons
     this->fields.canTap = 0;
     v7 = Method_EventInfoSkillDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoSkillDialog_OnClose__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1B4CFA8(Method_EventInfoSkillDialog_OnClose__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v7, v7[4]);
+      v7 = (_QWORD *)sub_1B863D0(Method_EventInfoSkillDialog_OnClose__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1B8639C(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
-    v9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, Method_EventInfoSkillDialog__OnClose_b__10_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
   }
@@ -68,15 +68,15 @@ void __fastcall EventInfoSkillDialog__Open(
   System_Action_o *v10; // x21
   const MethodInfo *v11; // x2
 
-  if ( (byte_49BC578 & 1) == 0 )
+  if ( (byte_4A4FB3C & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&imagePartsGroupId);
-    sub_1B4CF90(&Method_EventInfoSkillDialog__Open_b__8_0__, v7);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v8);
-    byte_49BC578 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&imagePartsGroupId);
+    sub_1B863B8(&Method_EventInfoSkillDialog__Open_b__8_0__, v7);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
+    byte_4A4FB3C = 1;
   }
   this->fields.onClosed = inOnClosed;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, (int32_t)inOnClosed, method);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, (int32_t)inOnClosed, method);
   closeBtn = (UnityEngine_Object_o *)this->fields.closeBtn;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -84,7 +84,7 @@ void __fastcall EventInfoSkillDialog__Open(
     AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0LL);
   this->fields.canTap = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
-  v10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_EventInfoSkillDialog__Open_b__8_0__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v10, 0, 0LL);
   EventInfoSkillDialog__SetupSkillInfo(this, imagePartsGroupId, v11);
@@ -117,20 +117,20 @@ void __fastcall EventInfoSkillDialog__SetupSkillInfo(
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v23; // x8
 
-  if ( (byte_49BC579 & 1) == 0 )
+  if ( (byte_4A4FB3D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, *(_QWORD *)&imagePartsGroupId);
-    sub_1B4CF90(&DataManager_TypeInfo, v5);
-    sub_1B4CF90(&Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___, v6);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
-    byte_49BC579 = 1;
+    sub_1B863B8(&Method_DataManager_GetMaster_ImagePartsGroupMaster___, *(_QWORD *)&imagePartsGroupId);
+    sub_1B863B8(&DataManager_TypeInfo, v5);
+    sub_1B863B8(&Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___, v6);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A4FB3D = 1;
   }
   skillParent = this->fields.skillParent;
   if ( skillParent )
     TransformHelper__DestroyChildren(skillParent, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
+  Master_object = (ImagePartsGroupMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ImagePartsGroupMaster___);
   if ( !Master_object )
     goto LABEL_35;
   Master_object = (ImagePartsGroupMaster_o *)ImagePartsGroupMaster__GetOpenEntities(
@@ -149,7 +149,7 @@ void __fastcall EventInfoSkillDialog__SetupSkillInfo(
       while ( 1 )
       {
         if ( (unsigned int)v13 >= MasterName_k__BackingField )
-          sub_1B4D1F4(Master_object, v10);
+          sub_1B8661C(Master_object, v10);
         v16 = (ImagePartsGroupEntity_o *)*((_QWORD *)&v12->fields.revision + v13);
         if ( !v16 )
           break;
@@ -162,7 +162,7 @@ void __fastcall EventInfoSkillDialog__SetupSkillInfo(
                   this->fields.skillPrefab,
                   this->fields.skillParent,
                   0,
-                  (const MethodInfo_2F55068 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
+                  (const MethodInfo_2FC2A14 *)Method_GameObjectHelper_Instantiate_EventInfoSkillDetailComponent___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           Master_object = (ImagePartsGroupMaster_o *)UnityEngine_Object__op_Equality(
@@ -189,7 +189,7 @@ void __fastcall EventInfoSkillDialog__SetupSkillInfo(
           goto LABEL_24;
       }
 LABEL_35:
-      sub_1B4D1EC(Master_object, v10);
+      sub_1B86614(Master_object, v10);
     }
     v14 = 0;
 LABEL_24:
@@ -234,20 +234,20 @@ void __fastcall EventInfoSkillDialog___OnClose_b__10_0(EventInfoSkillDialog_o *t
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_49BC57C & 1) == 0 )
+  if ( (byte_4A4FB40 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BC57C = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A4FB40 = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_68804456(gameObject, 0LL);
+  UnityEngine_Object__Destroy_69356292(gameObject, 0LL);
   onClosed = this->fields.onClosed;
   p_onClosed = (CGThumbnailListItem_o *)&this->fields.onClosed;
   ActionExtensions__Call(onClosed, 0LL);
   p_onClosed->klass = 0LL;
-  sub_1B4CF34(p_onClosed, 0, v6, v7);
+  sub_1B8635C(p_onClosed, 0, v6, v7);
 }
 
 

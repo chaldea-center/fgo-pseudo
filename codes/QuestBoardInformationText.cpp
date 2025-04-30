@@ -9,14 +9,14 @@ void __fastcall QuestBoardInformationText___cctor(const MethodInfo *method)
   struct QuestBoardInformationText_StaticFields *v7; // x9
   struct QuestBoardInformationText_StaticFields *v8; // x9
 
-  if ( (byte_49B7CA2 & 1) == 0 )
+  if ( (byte_4A4B238 & 1) == 0 )
   {
-    sub_1B4CF90(&QuestBoardInformationText_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_17390/*"caldeagate_notice_{0:00}"*/, v4);
-    byte_49B7CA2 = 1;
+    sub_1B863B8(&QuestBoardInformationText_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_17466/*"caldeagate_notice_{0:00}"*/, v4);
+    byte_4A4B238 = 1;
   }
-  QuestBoardInformationText_TypeInfo->static_fields->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17390/*"caldeagate_notice_{0:00}"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)QuestBoardInformationText_TypeInfo->static_fields, StringLiteral_17390/*"caldeagate_notice_{0:00}"*/, v2, v3);
+  QuestBoardInformationText_TypeInfo->static_fields->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17466/*"caldeagate_notice_{0:00}"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)QuestBoardInformationText_TypeInfo->static_fields, StringLiteral_17466/*"caldeagate_notice_{0:00}"*/, v2, v3);
   v5 = QuestBoardInformationText_TypeInfo;
   static_fields = QuestBoardInformationText_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->INFO_FRAME_RIGHT_OFFSET.fields.x = 0xC180000043C58000LL;
@@ -26,12 +26,12 @@ void __fastcall QuestBoardInformationText___cctor(const MethodInfo *method)
   v7->INFO_FRAME_LEFT_OFFSET.fields.z = 0.0;
   v8 = v5->static_fields;
   *(_QWORD *)&v8->INFO_FRAME_SIDE_SIZE = 0x1200000050LL;
-  v8->CAMPAIGN_TOP_COLOR = (struct UnityEngine_Color_o)xmmword_BA9AE0;
+  v8->CAMPAIGN_TOP_COLOR = (struct UnityEngine_Color_o)xmmword_BC2660;
   v8->INFO_LABEL_BASE_WIDTH = 355;
-  v5->static_fields->CAMPAIGN_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BA9DE0;
+  v5->static_fields->CAMPAIGN_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BC2960;
   __asm { FMOV            V0.4S, #1.0 }
   v5->static_fields->NORMAL_TOP_COLOR = _Q0;
-  v5->static_fields->NORMAL_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BAA0D0;
+  v5->static_fields->NORMAL_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BC2C70;
   v5->static_fields->CHANGE_START_REMAINING_TIME = 86399LL;
 }
 
@@ -55,9 +55,9 @@ void __fastcall QuestBoardInformationText___ctor(
   v12 = isCampaign;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dispText = dispText;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v13, v14);
   this->fields.dispTextExtend = dispTextExtend;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)dispTextExtend, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)dispTextExtend, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = v12;
   this->fields.isColorSetting = 0;
@@ -73,7 +73,7 @@ void __fastcall QuestBoardInformationText___ctor(
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_34388468(
+void __fastcall QuestBoardInformationText___ctor_34701876(
         QuestBoardInformationText_o *this,
         System_String_o *inDispText,
         int64_t inTime,
@@ -94,17 +94,17 @@ void __fastcall QuestBoardInformationText___ctor_34388468(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dispText = inDispText;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)inDispText, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)inDispText, v13, v14);
   this->fields.time = inTime;
   TimeDataList = QuestBoardInformationText__CreateTimeDataList(v15, inTime, defaultColor, changedColor, v16);
   this->fields.timeDataList = TimeDataList;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.timeDataList, (int32_t)TimeDataList, v18, v19);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.timeDataList, (int32_t)TimeDataList, v18, v19);
   QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, 0, v20);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v21);
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_34389384(
+void __fastcall QuestBoardInformationText___ctor_34702792(
         QuestBoardInformationText_o *this,
         BoardMessageEntity_o *boardMessageEntity,
         System_String_o *dispText,
@@ -125,13 +125,13 @@ void __fastcall QuestBoardInformationText___ctor_34389384(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.boardMessageEnt = boardMessageEntity;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)boardMessageEntity, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)boardMessageEntity, v13, v14);
   this->fields.dispText = dispText;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = 0;
   this->fields.eventCampaignEnt = eventCampaignEnt;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v19);
   if ( boardMessageEntity )
     IsLeft = BoardMessageEntity__IsLeft(boardMessageEntity, 0LL);
@@ -141,7 +141,7 @@ void __fastcall QuestBoardInformationText___ctor_34389384(
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_34389552(
+void __fastcall QuestBoardInformationText___ctor_34702960(
         QuestBoardInformationText_o *this,
         EventEntity_o *eventEntity,
         System_String_o *dispText,
@@ -161,13 +161,13 @@ void __fastcall QuestBoardInformationText___ctor_34389552(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.eventEntity = eventEntity;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventEntity, (int32_t)eventEntity, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.eventEntity, (int32_t)eventEntity, v13, v14);
   this->fields.dispText = dispText;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = 0;
   this->fields.eventCampaignEnt = eventCampaignEnt;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v19);
   QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, 0, v20);
 }
@@ -233,20 +233,20 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
   int v55; // [xsp+1Ch] [xbp-34h] BYREF
 
   v3 = this;
-  if ( (byte_49B7C9A & 1) == 0 )
+  if ( (byte_4A4B230 & 1) == 0 )
   {
-    sub_1B4CF90(&int_TypeInfo, method);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v4);
-    sub_1B4CF90(&object___TypeInfo, v5);
-    sub_1B4CF90(&float_TypeInfo, v6);
-    this = (QuestBoardInformationText_o *)sub_1B4CF90(&StringLiteral_1/*""*/, v7);
-    byte_49B7C9A = 1;
+    sub_1B863B8(&int_TypeInfo, method);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v4);
+    sub_1B863B8(&object___TypeInfo, v5);
+    sub_1B863B8(&float_TypeInfo, v6);
+    this = (QuestBoardInformationText_o *)sub_1B863B8(&StringLiteral_1/*""*/, v7);
+    byte_4A4B230 = 1;
   }
   eventCampaignEnt = (int32_t *)v3->fields.eventCampaignEnt;
   if ( !eventCampaignEnt )
   {
     dispTextExtend = v3->fields.dispTextExtend;
-    v45 = sub_1B4D038(object___TypeInfo, 1LL);
+    v45 = sub_1B86460(object___TypeInfo, 1LL);
     time = v3->fields.time;
     v47 = v45;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -255,12 +255,12 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
     if ( !v47 )
       goto LABEL_39;
     v50 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1B4D0CC(RestTime2, *(_QWORD *)(*(_QWORD *)v47 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1B864F4(RestTime2, *(_QWORD *)(*(_QWORD *)v47 + 64LL))) != 0 )
     {
       if ( *(_DWORD *)(v47 + 24) )
       {
         *(_QWORD *)(v47 + 32) = v50;
-        sub_1B4CF34((CGThumbnailListItem_o *)(v47 + 32), v50, v48, v49);
+        sub_1B8635C((CGThumbnailListItem_o *)(v47 + 32), v50, v48, v49);
         if ( dispTextExtend )
         {
           TerminalBoardOptionTextData__SetParamsToBehindText(dispTextExtend, (System_Object_array *)v47, 0LL);
@@ -277,18 +277,18 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
   if ( boardMessageEnt && boardMessageEnt->fields.referenceType == 5 )
   {
     v11 = v3->fields.dispTextExtend;
-    v12 = sub_1B4D038(object___TypeInfo, 1LL);
+    v12 = sub_1B86460(object___TypeInfo, 1LL);
     v55 = v10;
     RestTime2 = j_il2cpp_value_box_0(float_TypeInfo, &v55, v13, v14, v15);
     if ( !v12 )
       goto LABEL_39;
     v20 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1B4D0CC(RestTime2, *(_QWORD *)(*(_QWORD *)v12 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1B864F4(RestTime2, *(_QWORD *)(*(_QWORD *)v12 + 64LL))) != 0 )
     {
       if ( *(_DWORD *)(v12 + 24) )
       {
         *(_QWORD *)(v12 + 32) = v20;
-        sub_1B4CF34((CGThumbnailListItem_o *)(v12 + 32), v20, v18, v19);
+        sub_1B8635C((CGThumbnailListItem_o *)(v12 + 32), v20, v18, v19);
         if ( v11 )
         {
           v21 = v11;
@@ -313,41 +313,41 @@ LABEL_27:
       {
         v51 = (int)StringLiteral_1/*""*/;
         v25->fields._BehindText_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-        sub_1B4CF34((CGThumbnailListItem_o *)&v25->fields._BehindText_k__BackingField, v51, v23, v24);
+        sub_1B8635C((CGThumbnailListItem_o *)&v25->fields._BehindText_k__BackingField, v51, v23, v24);
         return;
       }
       goto LABEL_39;
     }
     v26 = RestTime2;
-    v27 = sub_1B4D038(object___TypeInfo, 3LL);
+    v27 = sub_1B86460(object___TypeInfo, 3LL);
     v54 = v10;
     RestTime2 = j_il2cpp_value_box_0(float_TypeInfo, &v54, v28, v29, v30);
     if ( !v27 )
       goto LABEL_39;
     v33 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1B4D0CC(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1B864F4(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
     {
       if ( !*(_DWORD *)(v27 + 24) )
         goto LABEL_40;
       *(_QWORD *)(v27 + 32) = v33;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v27 + 32), v33, v31, v32);
+      sub_1B8635C((CGThumbnailListItem_o *)(v27 + 32), v33, v31, v32);
       v53 = v26;
       RestTime2 = j_il2cpp_value_box_0(int_TypeInfo, &v53, v34, v35, v36);
       v39 = RestTime2;
-      if ( !RestTime2 || (RestTime2 = sub_1B4D0CC(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+      if ( !RestTime2 || (RestTime2 = sub_1B864F4(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v27 + 24) <= 1u )
           goto LABEL_40;
         *(_QWORD *)(v27 + 40) = v39;
-        sub_1B4CF34((CGThumbnailListItem_o *)(v27 + 40), v39, v37, v38);
+        sub_1B8635C((CGThumbnailListItem_o *)(v27 + 40), v39, v37, v38);
         RestTime2 = (__int64)QuestBoardInformationText__GetDailyDropUpRestTimeStr(v3, v40);
         v43 = RestTime2;
-        if ( !RestTime2 || (RestTime2 = sub_1B4D0CC(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+        if ( !RestTime2 || (RestTime2 = sub_1B864F4(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v27 + 24) > 2u )
           {
             *(_QWORD *)(v27 + 48) = v43;
-            sub_1B4CF34((CGThumbnailListItem_o *)(v27 + 48), v43, v41, v42);
+            sub_1B8635C((CGThumbnailListItem_o *)(v27 + 48), v43, v41, v42);
             if ( v25 )
             {
               v21 = v25;
@@ -355,16 +355,16 @@ LABEL_27:
               goto LABEL_27;
             }
 LABEL_39:
-            sub_1B4D1EC(RestTime2, v17);
+            sub_1B86614(RestTime2, v17);
           }
 LABEL_40:
-          sub_1B4D1F4(RestTime2, v17);
+          sub_1B8661C(RestTime2, v17);
         }
       }
     }
 LABEL_41:
-    v52 = sub_1B4D210();
-    sub_1B4D0B8(v52, 0LL);
+    v52 = sub_1B86638();
+    sub_1B864E0(v52, 0LL);
   }
 }
 
@@ -379,10 +379,10 @@ bool __fastcall QuestBoardInformationText__ChangeText(
   const MethodInfo *v7; // x1
   struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
 
-  if ( (byte_49B7C99 & 1) == 0 )
+  if ( (byte_4A4B22F & 1) == 0 )
   {
-    sub_1B4CF90(&QuestBoardInformationText_TypeInfo, component);
-    byte_49B7C99 = 1;
+    sub_1B863B8(&QuestBoardInformationText_TypeInfo, component);
+    byte_4A4B22F = 1;
   }
   behindLabelText = (BoardOptionTextWithIconComponent_o *)QuestBoardInformationText_TypeInfo;
   v6 = *component;
@@ -405,7 +405,7 @@ bool __fastcall QuestBoardInformationText__ChangeText(
                                        0LL),
         (behindLabelText = *component) == 0LL) )
   {
-    sub_1B4D1EC(behindLabelText, component);
+    sub_1B86614(behindLabelText, component);
   }
   BoardOptionTextWithIconComponent__UpdateUI(
     behindLabelText,
@@ -428,19 +428,19 @@ void __fastcall QuestBoardInformationText__CreateDispTextExtendIfNotExists(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_49B7C9B & 1) == 0 )
+  if ( (byte_4A4B231 & 1) == 0 )
   {
-    sub_1B4CF90(&TerminalBoardOptionTextData_TypeInfo, isLeft);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
-    byte_49B7C9B = 1;
+    sub_1B863B8(&TerminalBoardOptionTextData_TypeInfo, isLeft);
+    sub_1B863B8(&StringLiteral_1/*""*/, v5);
+    byte_4A4B231 = 1;
   }
   if ( !this->fields.dispTextExtend )
   {
     dispText = this->fields.dispText;
-    v7 = (TerminalBoardOptionTextData_o *)sub_1B4D1DC(TerminalBoardOptionTextData_TypeInfo);
+    v7 = (TerminalBoardOptionTextData_o *)sub_1B86604(TerminalBoardOptionTextData_TypeInfo);
     TerminalBoardOptionTextData___ctor(v7, (System_String_o *)StringLiteral_1/*""*/, dispText, 0, isLeft, 0LL);
     this->fields.dispTextExtend = v7;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9);
   }
 }
 
@@ -472,36 +472,36 @@ QuestBoardInformationText_TimeData_array *__fastcall QuestBoardInformationText__
   const MethodInfo *v25; // x3
   __int64 v27; // x0
 
-  if ( (byte_49B7CA1 & 1) == 0 )
+  if ( (byte_4A4B237 & 1) == 0 )
   {
-    sub_1B4CF90(&QuestBoardInformationText_TypeInfo, endTime);
-    sub_1B4CF90(&QuestBoardInformationText_TimeData___TypeInfo, v8);
-    sub_1B4CF90(&QuestBoardInformationText_TimeData_TypeInfo, v9);
-    byte_49B7CA1 = 1;
+    sub_1B863B8(&QuestBoardInformationText_TypeInfo, endTime);
+    sub_1B863B8(&QuestBoardInformationText_TimeData___TypeInfo, v8);
+    sub_1B863B8(&QuestBoardInformationText_TimeData_TypeInfo, v9);
+    byte_4A4B237 = 1;
   }
-  v10 = (QuestBoardInformationText_TimeData_array *)sub_1B4D038(QuestBoardInformationText_TimeData___TypeInfo, 2LL);
-  v11 = sub_1B4D1DC(QuestBoardInformationText_TimeData_TypeInfo);
+  v10 = (QuestBoardInformationText_TimeData_array *)sub_1B86460(QuestBoardInformationText_TimeData___TypeInfo, 2LL);
+  v11 = sub_1B86604(QuestBoardInformationText_TimeData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
     goto LABEL_13;
   *(_QWORD *)(v11 + 24) = defaultColor;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v11 + 24), (int32_t)defaultColor, v14, v15);
+  sub_1B8635C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)defaultColor, v14, v15);
   if ( !v10 )
     goto LABEL_13;
-  v16 = sub_1B4D0CC(v11, v10->obj.klass->_1.element_class);
+  v16 = sub_1B864F4(v11, v10->obj.klass->_1.element_class);
   if ( !v16 )
     goto LABEL_14;
   if ( !v10->max_length )
     goto LABEL_15;
   v10->m_Items[0] = (QuestBoardInformationText_TimeData_o *)v11;
-  sub_1B4CF34((CGThumbnailListItem_o *)v10->m_Items, v11, v18, v19);
-  v20 = sub_1B4D1DC(QuestBoardInformationText_TimeData_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)v10->m_Items, v11, v18, v19);
+  v20 = sub_1B86604(QuestBoardInformationText_TimeData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   if ( !v20 )
 LABEL_13:
-    sub_1B4D1EC(v12, v13);
+    sub_1B86614(v12, v13);
   *(_QWORD *)(v20 + 24) = changedColor;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 24), (int32_t)changedColor, v21, v22);
+  sub_1B8635C((CGThumbnailListItem_o *)(v20 + 24), (int32_t)changedColor, v21, v22);
   v23 = QuestBoardInformationText_TypeInfo;
   if ( !QuestBoardInformationText_TypeInfo->_2.cctor_finished )
   {
@@ -509,18 +509,18 @@ LABEL_13:
     v23 = QuestBoardInformationText_TypeInfo;
   }
   *(_QWORD *)(v20 + 16) = endTime - v23->static_fields->CHANGE_START_REMAINING_TIME;
-  v16 = sub_1B4D0CC(v20, v10->obj.klass->_1.element_class);
+  v16 = sub_1B864F4(v20, v10->obj.klass->_1.element_class);
   if ( !v16 )
   {
 LABEL_14:
-    v27 = sub_1B4D210();
-    sub_1B4D0B8(v27, 0LL);
+    v27 = sub_1B86638();
+    sub_1B864E0(v27, 0LL);
   }
   if ( v10->max_length <= 1 )
 LABEL_15:
-    sub_1B4D1F4(v16, v17);
+    sub_1B8661C(v16, v17);
   v10->m_Items[1] = (QuestBoardInformationText_TimeData_o *)v20;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v10->m_Items[1], v20, v24, v25);
+  sub_1B8635C((CGThumbnailListItem_o *)&v10->m_Items[1], v20, v24, v25);
   return v10;
 }
 
@@ -573,7 +573,7 @@ QuestBoardInformationText_TimeData_o *__fastcall QuestBoardInformationText__GetC
     {
       v8 = timeDataList->m_Items[v6];
       if ( !v8 )
-        sub_1B4D1EC(this, nowTime);
+        sub_1B86614(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -586,7 +586,7 @@ QuestBoardInformationText_TimeData_o *__fastcall QuestBoardInformationText__GetC
     while ( (_DWORD)v4 != v6 );
   }
   if ( v5 >= (unsigned int)v4 )
-    sub_1B4D1F4(this, nowTime);
+    sub_1B8661C(this, nowTime);
   return timeDataList->m_Items[v5];
 }
 
@@ -611,7 +611,7 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   int32_t Day; // w22
   int32_t Value; // w4
   int32_t v17; // w0
-  int64_t NextDayTime_39106004; // x0
+  int64_t NextDayTime_39523668; // x0
   uint64_t v19; // x20
   uint64_t v20; // x21
   uint64_t v21; // x20
@@ -630,30 +630,30 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   System_DateTime_o v35; // 0:x1.8
   System_DateTime_o v36; // 0:x1.8
 
-  if ( (byte_49B7C9C & 1) == 0 )
+  if ( (byte_4A4B232 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1B4CF90(&System_DateTime_TypeInfo, v4);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B4CF90(&StringLiteral_4896/*"DAILY_DROP_UP_RESET_AT"*/, v7);
-    sub_1B4CF90(&StringLiteral_4895/*"DAILY_DROP_UP_COUNT"*/, v8);
-    byte_49B7C9C = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
+    sub_1B863B8(&System_DateTime_TypeInfo, v4);
+    sub_1B863B8(&NetworkManager_TypeInfo, v5);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1B863B8(&StringLiteral_4926/*"DAILY_DROP_UP_RESET_AT"*/, v7);
+    sub_1B863B8(&StringLiteral_4925/*"DAILY_DROP_UP_COUNT"*/, v8);
+    byte_4A4B232 = 1;
   }
   t1.fields._dateData = 0LL;
   dateData = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_49B57A5 )
+  if ( !byte_4A48C25 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, v10);
-    byte_49B57A5 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, v10);
+    byte_4A48C25 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -663,7 +663,7 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   }
   if ( !MasterData_object )
 LABEL_26:
-    sub_1B4D1EC(Instance, v10);
+    sub_1B86614(Instance, v10);
   Entity = UserEventMaster__GetEntity(
              (UserEventMaster_o *)MasterData_object,
              *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -682,13 +682,13 @@ LABEL_26:
     Month = System_DateTime__get_Month(v28, 0LL);
     v29.fields._dateData = (uint64_t)&dateData;
     Day = System_DateTime__get_Day(v29, 0LL);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4896/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4926/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
     v30.fields._dateData = (uint64_t)&t1;
-    System_DateTime___ctor_62483812(v30, Year, Month, Day, Value, 0, 0, 0LL);
-    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4896/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
-    NextDayTime_39106004 = NetworkManager__getNextDayTime_39106004(v17, 0LL);
-    v19 = NetworkManager__getServerDateTime_39105304(NextDayTime_39106004, 0LL).fields._dateData;
-    v20 = NetworkManager__getServerDateTime_39105304(Entity->fields.updatedAt, 0LL).fields._dateData;
+    System_DateTime___ctor_63034776(v30, Year, Month, Day, Value, 0, 0, 0LL);
+    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4926/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+    NextDayTime_39523668 = NetworkManager__getNextDayTime_39523668(v17, 0LL);
+    v19 = NetworkManager__getServerDateTime_39522968(NextDayTime_39523668, 0LL).fields._dateData;
+    v20 = NetworkManager__getServerDateTime_39522968(Entity->fields.updatedAt, 0LL).fields._dateData;
     v34.fields._dateData = v20;
     v31.fields._dateData = t1.fields._dateData;
     if ( System_DateTime__op_LessThanOrEqual(v31, v34, 0LL) )
@@ -712,7 +712,7 @@ LABEL_23:
     else
       LODWORD(Entity) = 0;
   }
-  v23 = ConstantMaster__getValue((System_String_o *)StringLiteral_4895/*"DAILY_DROP_UP_COUNT"*/, 0LL);
+  v23 = ConstantMaster__getValue((System_String_o *)StringLiteral_4925/*"DAILY_DROP_UP_COUNT"*/, 0LL);
   return (v23 - (_DWORD)Entity) & ~((v23 - (int)Entity) >> 31);
 }
 
@@ -724,27 +724,27 @@ System_String_o *__fastcall QuestBoardInformationText__GetDailyDropUpRestTimeStr
   __int64 v3; // x1
   __int64 v4; // x1
   int32_t Value; // w20
-  int64_t NextDayTime_39106004; // x0
+  int64_t NextDayTime_39523668; // x0
   int64_t time; // x19
   uint32_t cctor_finished; // w9
   int64_t v9; // x20
 
-  if ( (byte_49B7C9D & 1) == 0 )
+  if ( (byte_4A4B233 & 1) == 0 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
-    sub_1B4CF90(&StringLiteral_4896/*"DAILY_DROP_UP_RESET_AT"*/, v4);
-    byte_49B7C9D = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, method);
+    sub_1B863B8(&NetworkManager_TypeInfo, v3);
+    sub_1B863B8(&StringLiteral_4926/*"DAILY_DROP_UP_RESET_AT"*/, v4);
+    byte_4A4B233 = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4896/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4926/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  NextDayTime_39106004 = NetworkManager__getNextDayTime_39106004(Value, 0LL);
+  NextDayTime_39523668 = NetworkManager__getNextDayTime_39523668(Value, 0LL);
   time = this->fields.time;
   cctor_finished = LocalizationManager_TypeInfo->_2.cctor_finished;
-  if ( time >= NextDayTime_39106004 )
+  if ( time >= NextDayTime_39523668 )
   {
-    v9 = NextDayTime_39106004;
+    v9 = NextDayTime_39523668;
     if ( !cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     time = v9;
@@ -776,10 +776,10 @@ bool __fastcall QuestBoardInformationText__IsQuestOpened(QuestBoardInformationTe
   struct BoardMessageEntity_o *boardMessageEnt; // x8
   int64_t time; // x19
 
-  if ( (byte_49B7CA0 & 1) == 0 )
+  if ( (byte_4A4B236 & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    byte_49B7CA0 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    byte_4A4B236 = 1;
   }
   boardMessageEnt = this->fields.boardMessageEnt;
   if ( !boardMessageEnt || boardMessageEnt->fields.referenceType != 2 )
@@ -846,12 +846,12 @@ void __fastcall QuestBoardInformationText__SetFrameSprite(
   y = boardOffset.fields.y;
   x = boardOffset.fields.x;
   v13 = component;
-  if ( (byte_49B7C9E & 1) == 0 )
+  if ( (byte_4A4B234 & 1) == 0 )
   {
-    sub_1B4CF90(&AtlasManager_TypeInfo, component);
-    sub_1B4CF90(&int_TypeInfo, v15);
-    sub_1B4CF90(&QuestBoardInformationText_TypeInfo, v16);
-    byte_49B7C9E = 1;
+    sub_1B863B8(&AtlasManager_TypeInfo, component);
+    sub_1B863B8(&int_TypeInfo, v15);
+    sub_1B863B8(&QuestBoardInformationText_TypeInfo, v16);
+    byte_4A4B234 = 1;
   }
   if ( (boardId & 0x80000000) != 0 )
     goto LABEL_6;
@@ -880,7 +880,7 @@ LABEL_6:
       }
     }
 LABEL_51:
-    sub_1B4D1EC(IsTextEmpty, component);
+    sub_1B86614(IsTextEmpty, component);
   }
   dispTextExtend = this->fields.dispTextExtend;
   if ( !dispTextExtend )
@@ -1172,10 +1172,10 @@ void __fastcall QuestBoardInformationText__SetTextColor(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49B7C9F & 1) == 0 )
+  if ( (byte_4A4B235 & 1) == 0 )
   {
-    sub_1B4CF90(&QuestBoardInformationText_TypeInfo, component);
-    byte_49B7C9F = 1;
+    sub_1B863B8(&QuestBoardInformationText_TypeInfo, component);
+    byte_4A4B235 = 1;
   }
   if ( !this->fields.isColorSetting )
   {
@@ -1226,7 +1226,7 @@ void __fastcall QuestBoardInformationText__SetTextColor(
       }
     }
 LABEL_17:
-    sub_1B4D1EC(v5, component);
+    sub_1B86614(v5, component);
   }
   v5 = *component;
   if ( !*component )
@@ -1278,7 +1278,7 @@ void __fastcall QuestBoardInformationText__SetTextOffset(
   dispTextExtend = v5->fields.dispTextExtend;
   if ( !dispTextExtend || (this = (QuestBoardInformationText_o *)*component) == 0LL )
 LABEL_12:
-    sub_1B4D1EC(this, component);
+    sub_1B86614(this, component);
   IsLeft_k__BackingField = dispTextExtend->fields._IsLeft_k__BackingField;
   v9 = INFINITY;
   if ( !IsLeft_k__BackingField )
@@ -1320,7 +1320,7 @@ void __fastcall QuestBoardInformationText__SetTime(
 }
 
 
-void __fastcall QuestBoardInformationText__SetTime_34391556(
+void __fastcall QuestBoardInformationText__SetTime_34704964(
         QuestBoardInformationText_o *this,
         BoardOptionTextWithIconComponent_o **component,
         UISprite_o **frameSprite,

@@ -1,9 +1,9 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BC363 & 1) == 0 )
+  if ( (byte_4A4F9EE & 1) == 0 )
   {
-    sub_1B4CF90(&CommonEffectComponent_TypeInfo, method);
-    byte_49BC363 = 1;
+    sub_1B863B8(&CommonEffectComponent_TypeInfo, method);
+    byte_4A4F9EE = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -35,18 +35,18 @@ void __fastcall RaceResultEffectComponent__SetParam(
   System_Object_array *v13; // x20
   __int64 v14; // x24
 
-  if ( (byte_49BC362 & 1) == 0 )
+  if ( (byte_4A4F9ED & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
-    byte_49BC362 = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_4A4F9ED = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1B4CF34((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
   v9 = (__int64)*(p_param - 1);
   if ( !v9 )
 LABEL_17:
-    sub_1B4D1EC(Components_object, v8);
+    sub_1B86614(Components_object, v8);
   v10 = *(_DWORD *)(v9 + 24);
   if ( v10 >= 1 )
   {
@@ -60,7 +60,7 @@ LABEL_17:
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_2F53DA0 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_2FC174C *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -88,6 +88,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1B4D1F4(Components_object, v8);
+    sub_1B8661C(Components_object, v8);
   }
 }

@@ -1,13 +1,13 @@
 void __fastcall EffectMovieEntity___ctor(EffectMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BACDC & 1) == 0 )
+  if ( (byte_4A4E30D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_int___ctor__, method);
-    byte_49BACDC = 1;
+    sub_1B863B8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4A4E30D = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_319B4B8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3211D9C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -45,12 +45,12 @@ System_String_o *__fastcall EffectMovieEntity__GetFilePath(
   int32_t v25; // [xsp+8h] [xbp-38h] BYREF
   int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49BACDB & 1) == 0 )
+  if ( (byte_4A4E30C & 1) == 0 )
   {
-    sub_1B4CF90(&EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
-    sub_1B4CF90(&int_TypeInfo, v8);
-    sub_1B4CF90(&string_TypeInfo, v9);
-    byte_49BACDB = 1;
+    sub_1B863B8(&EffectMovieMaster_TypeInfo, *(_QWORD *)&additionalId);
+    sub_1B863B8(&int_TypeInfo, v8);
+    sub_1B863B8(&string_TypeInfo, v9);
+    byte_4A4E30C = 1;
   }
   switch ( this->fields.folderType )
   {
@@ -91,9 +91,9 @@ LABEL_17:
         v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, *(_QWORD *)&effectFolder, method, v4);
         v25 = effectFolder;
         v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v18, v19, v20);
-        v22 = System_String__Format_61134760(WEAPON_SUB_PATH, v17, v21, 0LL);
+        v22 = System_String__Format_61686468(WEAPON_SUB_PATH, v17, v21, 0LL);
       }
-      result = System_String__Concat_61093468(v22, this->fields.name, 0LL);
+      result = System_String__Concat_61645176(v22, this->fields.name, 0LL);
       break;
     case 5:
       v23 = EffectMovieMaster_TypeInfo;
@@ -102,7 +102,7 @@ LABEL_17:
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
         v23 = EffectMovieMaster_TypeInfo;
       }
-      result = System_String__Concat_61093468(v23->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
+      result = System_String__Concat_61645176(v23->static_fields->BATTLECOMMON_PATH, this->fields.name, 0LL);
       break;
     default:
       result = string_TypeInfo->static_fields->Empty;

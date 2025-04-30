@@ -1,14 +1,14 @@
 void __fastcall FuncDispMaster___ctor(FuncDispMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB0AE & 1) == 0 )
+  if ( (byte_4A4E6E2 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__, method);
-    byte_49BB0AE = 1;
+    sub_1B863B8(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__, method);
+    byte_4A4E6E2 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     456,
-    (const MethodInfo_319B678 *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
+    (const MethodInfo_3211F5C *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
 }
 
 
@@ -45,25 +45,25 @@ bool __fastcall FuncDispMaster__IsContainFuncIds(
   int32_t *v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_49BB0AD & 1) == 0 )
+  if ( (byte_4A4E6E1 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__, entity);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
-    sub_1B4CF90(&System_IDisposable_TypeInfo, v8);
-    sub_1B4CF90(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, v9);
-    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_49BB0AD = 1;
+    sub_1B863B8(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__, entity);
+    sub_1B863B8(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
+    sub_1B863B8(&System_IDisposable_TypeInfo, v8);
+    sub_1B863B8(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, v9);
+    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v10);
+    byte_4A4E6E1 = 1;
   }
   *entity = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)entity, 0, (int32_t)funcIds, method);
+  sub_1B8635C((CGThumbnailListItem_o *)entity, 0, (int32_t)funcIds, method);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B4D1EC(0LL, v11);
+    sub_1B86614(0LL, v11);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_313B4BC *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
+                 (const MethodInfo_31B0EE0 *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B4D1EC(0LL, v13);
+    sub_1B86614(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -83,7 +83,7 @@ bool __fastcall FuncDispMaster__IsContainFuncIds(
     else
     {
 LABEL_9:
-      p_method = sub_1B9D724(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -106,21 +106,21 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v22 = sub_1B9D724(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0LL);
+      v22 = sub_1BD6B4C(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0LL);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     v25 = (FuncDispEntity_o *)v23;
     if ( !v23 )
-      sub_1B4D1EC(0LL, v24);
+      sub_1B86614(0LL, v24);
     if ( System_Linq_Enumerable__SequenceEqual_int_(
            *(System_Collections_Generic_IEnumerable_TSource__o **)(v23 + 24),
            (System_Collections_Generic_IEnumerable_TSource__o *)funcIds,
-           (const MethodInfo_2F36E08 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
+           (const MethodInfo_2FA3FBC *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
     {
       *entity = v25;
-      sub_1B4CF34((CGThumbnailListItem_o *)entity, (int32_t)v25, v26, v27);
+      sub_1B8635C((CGThumbnailListItem_o *)entity, (int32_t)v25, v26, v27);
       v28 = 1;
       goto LABEL_22;
     }
@@ -144,7 +144,7 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v32 = sub_1B9D724(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v32 = sub_1BD6B4C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
   return v28;

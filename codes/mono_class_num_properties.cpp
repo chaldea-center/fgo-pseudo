@@ -1,4 +1,4 @@
 __int64 mono_class_num_properties()
 {
-  return sub_1B3259C();
+  return sub_1B6B9C4();
 }

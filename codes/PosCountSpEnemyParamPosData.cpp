@@ -26,6 +26,25 @@ int32_t __fastcall PosCountSpEnemyParamPosData__get_BuffIconMaxLine(
 }
 
 
+UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_ExBattleUiTrPos(
+        PosCountSpEnemyParamPosData_o *this,
+        const MethodInfo *method)
+{
+  float v2; // s0
+  float v3; // s2
+  float v4; // s1
+  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
+
+  v2 = 0.0;
+  v3 = 0.0;
+  v4 = -50.0;
+  result.fields.z = v3;
+  result.fields.y = v4;
+  result.fields.x = v2;
+  return result;
+}
+
+
 UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_NormalTrLocalPos(
         PosCountSpEnemyParamPosData_o *this,
         const MethodInfo *method)

@@ -4,12 +4,12 @@ AssumedBattleAssetSearcherForWave_o *__fastcall AssumedBattleAssetSearcherForWav
   AssumedBattleAssetSearcherBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_49BD180 & 1) == 0 )
+  if ( (byte_4A5082E & 1) == 0 )
   {
-    sub_1B4CF90(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
-    byte_49BD180 = 1;
+    sub_1B863B8(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
+    byte_4A5082E = 1;
   }
-  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B4D1DC(AssumedBattleAssetSearcherForWave_TypeInfo);
+  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1B86604(AssumedBattleAssetSearcherForWave_TypeInfo);
   AssumedBattleAssetSearcherBase___ctor(v2, v3);
   return (AssumedBattleAssetSearcherForWave_o *)v2;
 }
@@ -28,22 +28,22 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
   const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_49BD17F & 1) == 0 )
+  if ( (byte_4A5082D & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B4CF90(
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1B863B8(
                                                     &AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo,
                                                     method);
-    byte_49BD17F = 1;
+    byte_4A5082D = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
     || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0LL )
   {
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
   StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0LL);
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B4D1DC(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1B86604(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
   AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
   AssumedEffectExtractLogic__FromStage(StageEntity, v6, v8);
   return v6;

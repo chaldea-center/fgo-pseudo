@@ -1,13 +1,13 @@
 void __fastcall BannerAddEntity___ctor(BannerAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAAAE & 1) == 0 )
+  if ( (byte_4A4E0DD & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BAAAE = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4E0DD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall BannerAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_49BAAAD & 1) == 0 )
+  if ( (byte_4A4E0DC & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&dispType);
-    byte_49BAAAD = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&dispType);
+    byte_4A4E0DC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            bannerId,
            dispType,
            priority,
-           (const MethodInfo_2F0013C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_2F6C2D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

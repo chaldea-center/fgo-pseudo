@@ -21,7 +21,7 @@ bool __fastcall CreateComboStartSkillTask__IsCreatable(
     return 1;
   if ( !logic || (this = (CreateComboStartSkillTask_o *)logic->fields.logicnomal) == 0LL )
 LABEL_8:
-    sub_1B4D1EC(this, logic);
+    sub_1B86614(this, logic);
   return BattleLogicNomal__IsComboStart((BattleLogicNomal_o *)this, 0LL);
 }
 
@@ -33,16 +33,16 @@ BuffList_ACTION_array *__fastcall CreateComboStartSkillTask__get_TargetActs(
   BuffList_ACTION_array *result; // x0
   __int64 v3; // x1
 
-  if ( (byte_49BDB62 & 1) == 0 )
+  if ( (byte_4A5124A & 1) == 0 )
   {
-    sub_1B4CF90(&BuffList_ACTION___TypeInfo, method);
-    byte_49BDB62 = 1;
+    sub_1B863B8(&BuffList_ACTION___TypeInfo, method);
+    byte_4A5124A = 1;
   }
-  result = (BuffList_ACTION_array *)sub_1B4D038(BuffList_ACTION___TypeInfo, 1LL);
+  result = (BuffList_ACTION_array *)sub_1B86460(BuffList_ACTION___TypeInfo, 1LL);
   if ( !result )
-    sub_1B4D1EC(0LL, v3);
+    sub_1B86614(0LL, v3);
   if ( !result->max_length )
-    sub_1B4D1F4(result, v3);
+    sub_1B8661C(result, v3);
   result->m_Items[1] = 148;
   return result;
 }

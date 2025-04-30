@@ -1,28 +1,28 @@
 void __fastcall ServantCardAddEntity___ctor(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB555 & 1) == 0 )
+  if ( (byte_4A4EC77 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BB555 = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4EC77 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall ServantCardAddEntity__CreatePK(int32_t svtId, int32_t cardId, const MethodInfo *method)
 {
-  if ( (byte_49BB54D & 1) == 0 )
+  if ( (byte_4A4EC6F & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&cardId);
-    byte_49BB54D = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&cardId);
+    byte_4A4EC6F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            cardId,
-           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -38,45 +38,45 @@ System_String_o *__fastcall ServantCardAddEntity__CreatePrimaryKey(
 
 float __fastcall ServantCardAddEntity__GetAttackNpRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB54F & 1) == 0 )
+  if ( (byte_4A4EC71 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_16640/*"attackNpRate"*/, method);
-    byte_49BB54F = 1;
+    sub_1B863B8(&StringLiteral_16713/*"attackNpRate"*/, method);
+    byte_4A4EC71 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_16640/*"attackNpRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_16713/*"attackNpRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDamageRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB54E & 1) == 0 )
+  if ( (byte_4A4EC70 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_18133/*"damageRate"*/, method);
-    byte_49BB54E = 1;
+    sub_1B863B8(&StringLiteral_18214/*"damageRate"*/, method);
+    byte_4A4EC70 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18133/*"damageRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18214/*"damageRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDefenseNpRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB550 & 1) == 0 )
+  if ( (byte_4A4EC72 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_18234/*"defenseNpRate"*/, method);
-    byte_49BB550 = 1;
+    sub_1B863B8(&StringLiteral_18315/*"defenseNpRate"*/, method);
+    byte_4A4EC72 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18234/*"defenseNpRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18315/*"defenseNpRate"*/, 1.0, 0LL);
 }
 
 
 float __fastcall ServantCardAddEntity__GetDropStarRate(ServantCardAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB551 & 1) == 0 )
+  if ( (byte_4A4EC73 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_18361/*"dropStarRate"*/, method);
-    byte_49BB551 = 1;
+    sub_1B863B8(&StringLiteral_18442/*"dropStarRate"*/, method);
+    byte_4A4EC73 = 1;
   }
-  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18361/*"dropStarRate"*/, 1.0, 0LL);
+  return EntityScriptUtil__GetMillesimal(this->fields.script, (System_String_o *)StringLiteral_18442/*"dropStarRate"*/, 1.0, 0LL);
 }
 
 
@@ -94,12 +94,12 @@ int32_t __fastcall ServantCardAddEntity__GetPositionDamageRatesSlideType(
         ServantCardAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49BB554 & 1) == 0 )
+  if ( (byte_4A4EC76 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_22296/*"positionDamageRatesSlideType"*/, method);
-    byte_49BB554 = 1;
+    sub_1B863B8(&StringLiteral_22419/*"positionDamageRatesSlideType"*/, method);
+    byte_4A4EC76 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22296/*"positionDamageRatesSlideType"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22419/*"positionDamageRatesSlideType"*/, 0, 0LL);
 }
 
 
@@ -107,12 +107,12 @@ bool __fastcall ServantCardAddEntity__IsForceAttackFunctionTargetAll(
         ServantCardAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49BB552 & 1) == 0 )
+  if ( (byte_4A4EC74 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_6697/*"ForceAttackFunctionTargetAll"*/, method);
-    byte_49BB552 = 1;
+    sub_1B863B8(&StringLiteral_6739/*"ForceAttackFunctionTargetAll"*/, method);
+    byte_4A4EC74 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_6697/*"ForceAttackFunctionTargetAll"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_6739/*"ForceAttackFunctionTargetAll"*/, 0LL);
 }
 
 
@@ -129,14 +129,14 @@ bool __fastcall ServantCardAddEntity__TryGetPositionDamageRates(
         System_Int32_array **positionDamageRates,
         const MethodInfo *method)
 {
-  if ( (byte_49BB553 & 1) == 0 )
+  if ( (byte_4A4EC75 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_22295/*"positionDamageRates"*/, positionDamageRates);
-    byte_49BB553 = 1;
+    sub_1B863B8(&StringLiteral_22418/*"positionDamageRates"*/, positionDamageRates);
+    byte_4A4EC75 = 1;
   }
   return EntityScriptUtil__TryGetIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_22295/*"positionDamageRates"*/,
+           (System_String_o *)StringLiteral_22418/*"positionDamageRates"*/,
            positionDamageRates,
            0LL);
 }

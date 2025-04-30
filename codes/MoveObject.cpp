@@ -70,11 +70,11 @@ void __fastcall MoveObject__Play(
   this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16);
   v20 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0LL);
   this->fields.mProcessAct = procAct;
   this->fields.mNow = v20;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v17, v18);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v17, v18);
   this->fields.mEasingType = easingType;
   mProcessAct = this->fields.mProcessAct;
   this->fields.mDelay = delay;

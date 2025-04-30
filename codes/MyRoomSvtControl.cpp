@@ -2,10 +2,10 @@ void __fastcall MyRoomSvtControl___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49B6622 & 1) == 0 )
+  if ( (byte_4A49B94 & 1) == 0 )
   {
-    sub_1B4CF90(&MyRoomSvtControl_TypeInfo, v1);
-    byte_49B6622 = 1;
+    sub_1B863B8(&MyRoomSvtControl_TypeInfo, v1);
+    byte_4A49B94 = 1;
   }
   MyRoomSvtControl_TypeInfo->static_fields->SWIMSUIT_MELT_JUDGMENT_FRIENDSHIP = 3;
 }
@@ -28,35 +28,35 @@ void __fastcall MyRoomSvtControl___ctor(MyRoomSvtControl_o *this, const MethodIn
   int32_t v15; // w2
   const MethodInfo *v16; // x3
 
-  if ( (byte_49B6621 & 1) == 0 )
+  if ( (byte_4A49B93 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, method);
-    sub_1B4CF90(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__, v5);
-    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v6);
-    sub_1B4CF90(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v7);
-    byte_49B6621 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__int___ctor__, method);
+    sub_1B863B8(&System_Collections_Generic_Dictionary_int__int__TypeInfo, v3);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int___ctor__, v4);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__, v5);
+    sub_1B863B8(&System_Collections_Generic_List_int__TypeInfo, v6);
+    sub_1B863B8(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v7);
+    byte_4A49B93 = 1;
   }
   this->fields.volume = 1.0;
-  v8 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1B86604(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v8,
-    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35DF0E0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.canPlayVoiceIdxList = v8;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.canPlayVoiceIdxList, (int32_t)v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.canPlayVoiceIdxList, (int32_t)v8, v9, v10);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   this->fields.firstPlayVoiceList = (struct System_Collections_Generic_List_ServantVoiceData____o *)v11;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.firstPlayVoiceList, (int32_t)v11, v12, v13);
-  v14 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1B4D1DC(System_Collections_Generic_Dictionary_int__int__TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.firstPlayVoiceList, (int32_t)v11, v12, v13);
+  v14 = (System_Collections_Generic_Dictionary_int__int__o *)sub_1B86604(System_Collections_Generic_Dictionary_int__int__TypeInfo);
   System_Collections_Generic_Dictionary_int__int____ctor(
     v14,
-    (const MethodInfo_31ED794 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
+    (const MethodInfo_3264078 *)Method_System_Collections_Generic_Dictionary_int__int___ctor__);
   this->fields.canFirstPlayVoiceIdxDic = v14;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.canFirstPlayVoiceIdxDic, (int32_t)v14, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.canFirstPlayVoiceIdxDic, (int32_t)v14, v15, v16);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -75,12 +75,12 @@ void __fastcall MyRoomSvtControl__EndPlay(MyRoomSvtControl_o *this, const Method
   CGThumbnailListItem_o *p_player; // x0
   UnityEngine_Object_o *fsm; // x20
 
-  if ( (byte_49B661E & 1) == 0 )
+  if ( (byte_4A49B90 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_23431/*"svtVoicePlay"*/, v3);
-    sub_1B4CF90(&StringLiteral_5378/*"END_PLAY"*/, v4);
-    byte_49B661E = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_23555/*"svtVoicePlay"*/, v3);
+    sub_1B863B8(&StringLiteral_5417/*"END_PLAY"*/, v4);
+    byte_4A49B90 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -94,26 +94,26 @@ void __fastcall MyRoomSvtControl__EndPlay(MyRoomSvtControl_o *this, const Method
       if ( randomVoiceList )
       {
         if ( (unsigned int)playCnt >= randomVoiceList->max_length )
-          sub_1B4D1F4(v5, v6);
+          sub_1B8661C(v5, v6);
         v11 = randomVoiceList->m_Items[playCnt];
         if ( v11 )
         {
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_23431/*"svtVoicePlay"*/,
+            (System_String_o *)StringLiteral_23555/*"svtVoicePlay"*/,
             v11->fields.delay,
             0LL);
           return;
         }
       }
 LABEL_19:
-      sub_1B4D1EC(v5, v6);
+      sub_1B86614(v5, v6);
     }
     p_player = (CGThumbnailListItem_o *)&this->fields.player;
     if ( this->fields.player )
     {
       p_player->klass = 0LL;
-      sub_1B4CF34(p_player, 0, v7, v8);
+      sub_1B8635C(p_player, 0, v7, v8);
     }
     this->fields.playCnt = 0;
     this->fields.isValidVoice = 0;
@@ -125,7 +125,7 @@ LABEL_19:
       v5 = this->fields.fsm;
       if ( !v5 )
         goto LABEL_19;
-      PlayMakerFSM__SendEvent(v5, (System_String_o *)StringLiteral_5378/*"END_PLAY"*/, 0LL);
+      PlayMakerFSM__SendEvent(v5, (System_String_o *)StringLiteral_5417/*"END_PLAY"*/, 0LL);
     }
   }
 }
@@ -144,24 +144,24 @@ void __fastcall MyRoomSvtControl__EndSetFace(MyRoomSvtControl_o *this, const Met
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_49B661D & 1) == 0 )
+  if ( (byte_4A49B8F & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_MyRoomSvtControl_EndPlay__, v3);
-    sub_1B4CF90(&SoundManager_TypeInfo, v4);
-    byte_49B661D = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_MyRoomSvtControl_EndPlay__, v3);
+    sub_1B863B8(&SoundManager_TypeInfo, v4);
+    byte_4A49B8F = 1;
   }
   asstName = this->fields.asstName;
   vcName = this->fields.vcName;
   volume = this->fields.volume;
-  v8 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_MyRoomSvtControl_EndPlay__, 0LL);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  v9 = SoundManager__playVoice_39255412(asstName, vcName, volume, v8, 0, 0LL);
+  v9 = SoundManager__playVoice_39673076(asstName, vcName, volume, v8, 0, 0LL);
   this->fields.player = v9;
   p_player = &this->fields.player;
-  sub_1B4CF34((CGThumbnailListItem_o *)p_player, (int32_t)v9, v11, v12);
+  sub_1B8635C((CGThumbnailListItem_o *)p_player, (int32_t)v9, v11, v12);
   ++*((_DWORD *)p_player + 11);
 }
 
@@ -180,7 +180,7 @@ ServantVoiceData_o *__fastcall MyRoomSvtControl__GetFirstServantVoiceData(
   if ( !v3 )
     return 0LL;
   if ( !(_DWORD)v3 )
-    sub_1B4D1F4(this, method);
+    sub_1B8661C(this, method);
   return randomVoiceList->m_Items[0];
 }
 
@@ -190,20 +190,20 @@ int32_t __fastcall MyRoomSvtControl__GetFormId(MyRoomSvtControl_o *this, const M
   System_Collections_Generic_List_object__o *standFigureCollectList; // x0
   __int64 v4; // x8
 
-  if ( (byte_49B6620 & 1) == 0 )
+  if ( (byte_4A49B92 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, method);
-    byte_49B6620 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, method);
+    byte_4A49B92 = 1;
   }
   standFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
   if ( !standFigureCollectList
     || (standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                 standFigureCollectList,
                                                                                 0,
-                                                                                (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0LL
+                                                                                (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0LL
     || (v4 = *(_QWORD *)&standFigureCollectList->fields._size) == 0 )
   {
-    sub_1B4D1EC(standFigureCollectList, method);
+    sub_1B86614(standFigureCollectList, method);
   }
   return *(_DWORD *)(v4 + 64);
 }
@@ -266,38 +266,38 @@ void __fastcall MyRoomSvtControl__PreloadFormAssets(
   System_Collections_Generic_List_Enumerator_object__o v54; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_49B661A & 1) == 0 )
+  if ( (byte_4A49B8C & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, callback);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Exists__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v11);
-    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v12);
-    sub_1B4CF90(&System_Predicate_int__TypeInfo, v13);
-    sub_1B4CF90(&MyRoomSvtControl___c__DisplayClass22_0_TypeInfo, v14);
-    sub_1B4CF90(&Method_MyRoomSvtControl___c__DisplayClass22_1__PreloadFormAssets_b__0__, v15);
-    sub_1B4CF90(&MyRoomSvtControl___c__DisplayClass22_1_TypeInfo, v16);
-    sub_1B4CF90(&Method_MyRoomSvtControl___c__DisplayClass22_2__PreloadFormAssets_b__1__, v17);
-    sub_1B4CF90(&MyRoomSvtControl___c__DisplayClass22_2_TypeInfo, v18);
-    byte_49B661A = 1;
+    sub_1B863B8(&System_Action_TypeInfo, callback);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Exists__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int___ctor__, v11);
+    sub_1B863B8(&System_Collections_Generic_List_int__TypeInfo, v12);
+    sub_1B863B8(&System_Predicate_int__TypeInfo, v13);
+    sub_1B863B8(&MyRoomSvtControl___c__DisplayClass22_0_TypeInfo, v14);
+    sub_1B863B8(&Method_MyRoomSvtControl___c__DisplayClass22_1__PreloadFormAssets_b__0__, v15);
+    sub_1B863B8(&MyRoomSvtControl___c__DisplayClass22_1_TypeInfo, v16);
+    sub_1B863B8(&Method_MyRoomSvtControl___c__DisplayClass22_2__PreloadFormAssets_b__1__, v17);
+    sub_1B863B8(&MyRoomSvtControl___c__DisplayClass22_2_TypeInfo, v18);
+    byte_4A49B8C = 1;
   }
   memset(&v55, 0, sizeof(v55));
-  v19 = sub_1B4D1DC(MyRoomSvtControl___c__DisplayClass22_0_TypeInfo);
+  v19 = sub_1B86604(MyRoomSvtControl___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v19, 0LL);
   if ( !v19 )
     goto LABEL_25;
   *(_QWORD *)(v19 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v19 + 16), (int32_t)this, v22, v23);
+  sub_1B8635C((CGThumbnailListItem_o *)(v19 + 16), (int32_t)this, v22, v23);
   *(_QWORD *)(v19 + 24) = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v19 + 24), (int32_t)callback, v24, v25);
-  v26 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)(v19 + 24), (int32_t)callback, v24, v25);
+  v26 = (System_Collections_Generic_List_int__o *)sub_1B86604(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v26,
-    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35DF0E0 *)Method_System_Collections_Generic_List_int___ctor__);
   randomVoiceList = this->fields.randomVoiceList;
   v53 = this;
   if ( !randomVoiceList )
@@ -307,17 +307,17 @@ void __fastcall MyRoomSvtControl__PreloadFormAssets(
     v28 = 0LL;
     while ( 1 )
     {
-      v29 = sub_1B4D1DC(MyRoomSvtControl___c__DisplayClass22_1_TypeInfo);
+      v29 = sub_1B86604(MyRoomSvtControl___c__DisplayClass22_1_TypeInfo);
       System_Object___ctor((Il2CppObject *)v29, 0LL);
       if ( v28 >= randomVoiceList->max_length )
-        sub_1B4D1F4(standFigureCollectList, v21);
+        sub_1B8661C(standFigureCollectList, v21);
       if ( !v29 )
         break;
       v32 = randomVoiceList->m_Items[v28];
       *(_QWORD *)(v29 + 16) = v32;
       v33 = v29 + 16;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v29 + 16), (int32_t)v32, v30, v31);
-      v34 = (System_Predicate_int__o *)sub_1B4D1DC(System_Predicate_int__TypeInfo);
+      sub_1B8635C((CGThumbnailListItem_o *)(v29 + 16), (int32_t)v32, v30, v31);
+      v34 = (System_Predicate_int__o *)sub_1B86604(System_Predicate_int__TypeInfo);
       System_Predicate_int____ctor(
         v34,
         (Il2CppObject *)v29,
@@ -328,7 +328,7 @@ void __fastcall MyRoomSvtControl__PreloadFormAssets(
       standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_int___Exists(
                                                                               v26,
                                                                               (System_Predicate_T__o *)v34,
-                                                                              (const MethodInfo_35637C4 *)Method_System_Collections_Generic_List_int__Exists__);
+                                                                              (const MethodInfo_35DFF40 *)Method_System_Collections_Generic_List_int__Exists__);
       if ( ((unsigned __int8)standFigureCollectList & 1) == 0 )
       {
         if ( !*(_QWORD *)v33 )
@@ -345,7 +345,7 @@ void __fastcall MyRoomSvtControl__PreloadFormAssets(
           System_Collections_Generic_List_int___AddWithResize(
             v26,
             v21,
-            *(const MethodInfo_35631B8 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_35DF934 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
@@ -357,7 +357,7 @@ void __fastcall MyRoomSvtControl__PreloadFormAssets(
         goto LABEL_17;
     }
 LABEL_25:
-    sub_1B4D1EC(standFigureCollectList, v21);
+    sub_1B86614(standFigureCollectList, v21);
   }
 LABEL_17:
   standFigureCollectList = (System_Collections_Generic_List_object__o *)v53->fields.standFigureCollectList;
@@ -366,38 +366,38 @@ LABEL_17:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v54,
     standFigureCollectList,
-    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v55 = v54;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v55,
-            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__) )
+            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__) )
   {
-    v38 = sub_1B4D1DC(MyRoomSvtControl___c__DisplayClass22_2_TypeInfo);
+    v38 = sub_1B86604(MyRoomSvtControl___c__DisplayClass22_2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v38, 0LL);
     if ( !v38 )
-      sub_1B4D1EC(v39, v40);
+      sub_1B86614(v39, v40);
     *(_QWORD *)(v38 + 24) = v19;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v38 + 24), v19, v41, v42);
+    sub_1B8635C((CGThumbnailListItem_o *)(v38 + 24), v19, v41, v42);
     current = (int32_t)v55.fields._current;
     *(_QWORD *)(v38 + 16) = v55.fields._current;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v38 + 16), current, v44, v45);
+    sub_1B8635C((CGThumbnailListItem_o *)(v38 + 16), current, v44, v45);
     v48 = *(_QWORD *)(v38 + 16);
     if ( !v48 )
-      sub_1B4D1EC(v46, v47);
+      sub_1B86614(v46, v47);
     v49 = *(UIStandFigureR_o **)(v48 + 24);
-    v50 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v50 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(
       v50,
       (Il2CppObject *)v38,
       Method_MyRoomSvtControl___c__DisplayClass22_2__PreloadFormAssets_b__1__,
       0LL);
     if ( !v49 )
-      sub_1B4D1EC(v51, v52);
+      sub_1B86614(v51, v52);
     UIStandFigureR__PreloadFormAssets(v49, v26, v50, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v55,
-    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
 }
 
 
@@ -409,7 +409,7 @@ void __fastcall MyRoomSvtControl__SetSvtFigureCollect(
   const MethodInfo *v3; // x3
 
   this->fields.standFigureCollectList = collects;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.standFigureCollectList, (int32_t)collects, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.standFigureCollectList, (int32_t)collects, (int32_t)method, v3);
 }
 
 
@@ -483,33 +483,33 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
   _QWORD *v69; // x10
   __int64 v70; // x11
 
-  if ( (byte_49B6619 & 1) == 0 )
+  if ( (byte_4A49B8B & 1) == 0 )
   {
-    sub_1B4CF90(&System_Comparison_KeyValuePair_int__int___TypeInfo, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__int__Remove__, v3);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__int__get_Count__, v4);
-    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int___FindAll__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____IndexOf__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__RemoveAt__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Remove__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int___Sort__, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int____ctor___75427888, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Count__, v13);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v14);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Count__, v15);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__, v16);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Item__, v17);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v18);
-    sub_1B4CF90(&System_Collections_Generic_List_KeyValuePair_int__int___TypeInfo, v19);
-    sub_1B4CF90(&System_Predicate_KeyValuePair_int__int___TypeInfo, v20);
-    sub_1B4CF90(&System_Random_TypeInfo, v21);
-    sub_1B4CF90(&Method_MyRoomSvtControl___c__SetVoiceData_b__21_0__, v22);
-    sub_1B4CF90(&Method_MyRoomSvtControl___c__DisplayClass21_0__SetVoiceData_b__1__, v23);
-    sub_1B4CF90(&MyRoomSvtControl___c__DisplayClass21_0_TypeInfo, v24);
-    sub_1B4CF90(&MyRoomSvtControl___c_TypeInfo, v25);
-    byte_49B6619 = 1;
+    sub_1B863B8(&System_Comparison_KeyValuePair_int__int___TypeInfo, method);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__int__Remove__, v3);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__int__get_Count__, v4);
+    sub_1B863B8(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Key__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Add__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int___FindAll__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____IndexOf__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__RemoveAt__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Remove__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int___Sort__, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int____ctor___76020760, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Count__, v13);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v14);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__get_Count__, v15);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__, v16);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__get_Item__, v17);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__, v18);
+    sub_1B863B8(&System_Collections_Generic_List_KeyValuePair_int__int___TypeInfo, v19);
+    sub_1B863B8(&System_Predicate_KeyValuePair_int__int___TypeInfo, v20);
+    sub_1B863B8(&System_Random_TypeInfo, v21);
+    sub_1B863B8(&Method_MyRoomSvtControl___c__SetVoiceData_b__21_0__, v22);
+    sub_1B863B8(&Method_MyRoomSvtControl___c__DisplayClass21_0__SetVoiceData_b__1__, v23);
+    sub_1B863B8(&MyRoomSvtControl___c__DisplayClass21_0_TypeInfo, v24);
+    sub_1B863B8(&MyRoomSvtControl___c_TypeInfo, v25);
+    byte_4A49B8B = 1;
   }
   voiceList = this->fields.voiceList;
   if ( !voiceList || !voiceList->fields._size )
@@ -518,20 +518,20 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
   if ( canFirstPlayVoiceIdxDic
     && System_Collections_Generic_Dictionary_int__int___get_Count(
          canFirstPlayVoiceIdxDic,
-         (const MethodInfo_31EDE0C *)Method_System_Collections_Generic_Dictionary_int__int__get_Count__) >= 1 )
+         (const MethodInfo_32646F0 *)Method_System_Collections_Generic_Dictionary_int__int__get_Count__) >= 1 )
   {
-    v28 = sub_1B4D1DC(MyRoomSvtControl___c__DisplayClass21_0_TypeInfo);
+    v28 = sub_1B86604(MyRoomSvtControl___c__DisplayClass21_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v28, 0LL);
     v29 = (System_Collections_Generic_IEnumerable_T__o *)this->fields.canFirstPlayVoiceIdxDic;
-    v30 = (System_Collections_Generic_List_KeyValuePair_int__int___o *)sub_1B4D1DC(System_Collections_Generic_List_KeyValuePair_int__int___TypeInfo);
-    System_Collections_Generic_List_KeyValuePair_int__int_____ctor_55399048(
+    v30 = (System_Collections_Generic_List_KeyValuePair_int__int___o *)sub_1B86604(System_Collections_Generic_List_KeyValuePair_int__int___TypeInfo);
+    System_Collections_Generic_List_KeyValuePair_int__int_____ctor_55908852(
       v30,
       v29,
-      (const MethodInfo_34D5288 *)Method_System_Collections_Generic_List_KeyValuePair_int__int____ctor___75427888);
+      (const MethodInfo_35519F4 *)Method_System_Collections_Generic_List_KeyValuePair_int__int____ctor___76020760);
     if ( !v28 )
       goto LABEL_54;
     *(_QWORD *)(v28 + 16) = v30;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 16), (int32_t)v30, v33, v34);
+    sub_1B8635C((CGThumbnailListItem_o *)(v28 + 16), (int32_t)v30, v33, v34);
     v35 = *(System_Collections_Generic_List_KeyValuePair_int__int___o **)(v28 + 16);
     Item = (__int64)MyRoomSvtControl___c_TypeInfo;
     if ( !MyRoomSvtControl___c_TypeInfo->_2.cctor_finished )
@@ -548,7 +548,7 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
         Item = (__int64)MyRoomSvtControl___c_TypeInfo;
       }
       v37 = **(Il2CppObject ***)(Item + 184);
-      v36 = (System_Comparison_KeyValuePair_int__int___o *)sub_1B4D1DC(System_Comparison_KeyValuePair_int__int___TypeInfo);
+      v36 = (System_Comparison_KeyValuePair_int__int___o *)sub_1B86604(System_Comparison_KeyValuePair_int__int___TypeInfo);
       System_Comparison_KeyValuePair_int__int_____ctor(
         v36,
         v37,
@@ -556,16 +556,16 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
         0LL);
       static_fields = MyRoomSvtControl___c_TypeInfo->static_fields;
       static_fields->__9__21_0 = v36;
-      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__21_0, (int32_t)v36, v39, v40);
+      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__21_0, (int32_t)v36, v39, v40);
     }
     if ( !v35 )
       goto LABEL_54;
-    System_Collections_Generic_List_KeyValuePair_int__int____Sort_55407580(
+    System_Collections_Generic_List_KeyValuePair_int__int____Sort_55917384(
       v35,
       (System_Comparison_T__o *)v36,
-      (const MethodInfo_34D73DC *)Method_System_Collections_Generic_List_KeyValuePair_int__int___Sort__);
+      (const MethodInfo_3553B48 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___Sort__);
     v41 = *(System_Collections_Generic_List_KeyValuePair_int__int___o **)(v28 + 16);
-    v42 = (System_Predicate_KeyValuePair_int__int___o *)sub_1B4D1DC(System_Predicate_KeyValuePair_int__int___TypeInfo);
+    v42 = (System_Predicate_KeyValuePair_int__int___o *)sub_1B86604(System_Predicate_KeyValuePair_int__int___TypeInfo);
     System_Predicate_KeyValuePair_int__int_____ctor(
       v42,
       (Il2CppObject *)v28,
@@ -576,8 +576,8 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
     All = (System_Collections_Generic_List_KeyValuePair_int__int___o *)System_Collections_Generic_List_KeyValuePair_int__int____FindAll(
                                                                          v41,
                                                                          (System_Predicate_T__o *)v42,
-                                                                         (const MethodInfo_34D60A4 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___FindAll__);
-    v44 = (System_Random_o *)sub_1B4D1DC(System_Random_TypeInfo);
+                                                                         (const MethodInfo_3552810 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___FindAll__);
+    v44 = (System_Random_o *)sub_1B86604(System_Random_TypeInfo);
     System_Random___ctor(v44, 0LL);
     if ( !All )
       goto LABEL_54;
@@ -592,32 +592,32 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
     Item = (__int64)System_Collections_Generic_List_KeyValuePair_int__int____get_Item(
                       All,
                       v45,
-                      (const MethodInfo_34D56C4 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__);
+                      (const MethodInfo_3551E30 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__);
     if ( !firstPlayVoiceList )
       goto LABEL_54;
     v48 = (struct ServantVoiceData_array *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)firstPlayVoiceList,
                                              Item,
-                                             (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                             (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
     this->fields.randomVoiceList = v48;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.randomVoiceList, (int32_t)v48, v49, v50);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.randomVoiceList, (int32_t)v48, v49, v50);
     v51 = this->fields.canFirstPlayVoiceIdxDic;
     Item = (__int64)System_Collections_Generic_List_KeyValuePair_int__int____get_Item(
                       All,
                       v47,
-                      (const MethodInfo_34D56C4 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__);
+                      (const MethodInfo_3551E30 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__);
     if ( !v51 )
       goto LABEL_54;
     System_Collections_Generic_Dictionary_int__int___Remove(
       v51,
       Item,
-      (const MethodInfo_31EF510 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
+      (const MethodInfo_3265DF4 *)Method_System_Collections_Generic_Dictionary_int__int__Remove__);
     Item = (__int64)this->fields.canFirstPlayVoiceIdxDic;
     if ( !Item )
       goto LABEL_54;
     Item = System_Collections_Generic_Dictionary_int__int___get_Count(
              (System_Collections_Generic_Dictionary_int__int__o *)Item,
-             (const MethodInfo_31EDE0C *)Method_System_Collections_Generic_Dictionary_int__int__get_Count__);
+             (const MethodInfo_32646F0 *)Method_System_Collections_Generic_Dictionary_int__int__get_Count__);
     if ( !(_DWORD)Item )
     {
       Item = (__int64)this->fields.voiceList;
@@ -628,7 +628,7 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
         Item = System_Collections_Generic_List_object___IndexOf(
                  (System_Collections_Generic_List_object__o *)Item,
                  &this->fields.randomVoiceList->obj,
-                 (const MethodInfo_3580E7C *)Method_System_Collections_Generic_List_ServantVoiceData____IndexOf__);
+                 (const MethodInfo_35FD5F8 *)Method_System_Collections_Generic_List_ServantVoiceData____IndexOf__);
         if ( (_DWORD)Item != -1 )
         {
           v32 = (unsigned int)Item;
@@ -638,14 +638,14 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
           Item = System_Collections_Generic_List_int___Remove(
                    (System_Collections_Generic_List_int__o *)Item,
                    v32,
-                   (const MethodInfo_35646B4 *)Method_System_Collections_Generic_List_int__Remove__);
+                   (const MethodInfo_35E0E30 *)Method_System_Collections_Generic_List_int__Remove__);
         }
       }
     }
   }
   else
   {
-    v53 = (System_Random_o *)sub_1B4D1DC(System_Random_TypeInfo);
+    v53 = (System_Random_o *)sub_1B86604(System_Random_TypeInfo);
     System_Random___ctor(v53, 0LL);
     canPlayVoiceIdxList = this->fields.canPlayVoiceIdxList;
     if ( !canPlayVoiceIdxList )
@@ -662,23 +662,23 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
     Item = System_Collections_Generic_List_int___get_Item(
              this->fields.canPlayVoiceIdxList,
              Item,
-             (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__);
+             (const MethodInfo_35DF644 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !this->fields.voiceList )
       goto LABEL_54;
     v56 = Item;
     v57 = (struct ServantVoiceData_array *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)this->fields.voiceList,
                                              Item,
-                                             (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                             (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
     this->fields.randomVoiceList = v57;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.randomVoiceList, (int32_t)v57, v58, v59);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.randomVoiceList, (int32_t)v57, v58, v59);
     Item = (__int64)this->fields.canPlayVoiceIdxList;
     if ( !Item )
       goto LABEL_54;
     System_Collections_Generic_List_int___RemoveAt(
       (System_Collections_Generic_List_int__o *)Item,
       v55,
-      (const MethodInfo_3564938 *)Method_System_Collections_Generic_List_int__RemoveAt__);
+      (const MethodInfo_35E10B4 *)Method_System_Collections_Generic_List_int__RemoveAt__);
     v60 = this->fields.canPlayVoiceIdxList;
     if ( !v60 )
       goto LABEL_54;
@@ -709,7 +709,7 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
             System_Collections_Generic_List_int___AddWithResize(
               (System_Collections_Generic_List_int__o *)Item,
               v66,
-              *(const MethodInfo_35631B8 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
+              *(const MethodInfo_35DF934 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
             v65 = this->fields.voiceList;
           }
           else
@@ -741,7 +741,7 @@ bool __fastcall MyRoomSvtControl__SetVoiceData(MyRoomSvtControl_o *this, const M
   v64 = this->fields.randomVoiceList;
   if ( !v64 )
 LABEL_54:
-    sub_1B4D1EC(Item, v32);
+    sub_1B86614(Item, v32);
   return this->fields.playCnt < (signed int)v64->max_length;
 }
 
@@ -785,27 +785,27 @@ void __fastcall MyRoomSvtControl__initFirstPlayVoiceList(
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
 
-  if ( (byte_49B6616 & 1) == 0 )
+  if ( (byte_4A49B88 & 1) == 0 )
   {
-    sub_1B4CF90(&BalanceConfig_TypeInfo, svtVoiceEnt);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserServantMaster___, v7);
-    sub_1B4CF90(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__, v12);
-    sub_1B4CF90(&MyRoomSvtControl_TypeInfo, v13);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    byte_49B6616 = 1;
+    sub_1B863B8(&BalanceConfig_TypeInfo, svtVoiceEnt);
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantMaster___, v7);
+    sub_1B863B8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__, v12);
+    sub_1B863B8(&MyRoomSvtControl_TypeInfo, v13);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    byte_4A49B88 = 1;
   }
   memset(&i, 0, sizeof(i));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantMaster___);
   Instance = UserGameMaster__getSelfUserGame(0LL);
   if ( !Instance )
     goto LABEL_34;
@@ -814,7 +814,7 @@ void __fastcall MyRoomSvtControl__initFirstPlayVoiceList(
   Instance = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                *((_QWORD *)Instance + 14),
-               (const MethodInfo_319FEF8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+               (const MethodInfo_32167DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   if ( !Instance )
     goto LABEL_34;
   v19 = (UserServantEntity_o *)Instance;
@@ -824,7 +824,7 @@ void __fastcall MyRoomSvtControl__initFirstPlayVoiceList(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v38.fields.currentCryptoKey = v21;
   *(_QWORD *)&v38.fields.fakeValue = v20;
-  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v38, 0LL);
+  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v38, 0LL);
   voiceList = this->fields.voiceList;
   this->fields.svtId = v22;
   if ( voiceList )
@@ -832,23 +832,23 @@ void __fastcall MyRoomSvtControl__initFirstPlayVoiceList(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v36,
       (System_Collections_Generic_List_object__o *)voiceList,
-      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+      (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
     for ( i = v36;
           System_Collections_Generic_List_Enumerator_object___MoveNext(
             &i,
-            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
           MyRoomSvtControl__setFirstPlayVoice(this, (ServantVoiceData_array *)i.fields._current, v24) )
     {
       ;
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &i,
-      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+      (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
   }
   Instance = (void *)UserServantEntity__getFriendshipRank(v19, 0LL);
   if ( !svtVoiceEnt )
 LABEL_34:
-    sub_1B4D1EC(Instance, v17);
+    sub_1B86614(Instance, v17);
   v25 = ServantVoiceEntity__FriendShipRankWithVoice(svtVoiceEnt, (int32_t)Instance, 0LL);
   if ( v25 >= 2 )
   {
@@ -893,18 +893,18 @@ LABEL_26:
           System_Collections_Generic_List_object___GetEnumerator(
             (System_Collections_Generic_List_Enumerator_T__o *)&v36,
             (System_Collections_Generic_List_object__o *)MyRoomFriendShipVoiceList,
-            (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+            (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
           i = v36;
           while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                     &i,
-                    (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__) )
+                    (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__) )
           {
             if ( i.fields._current )
               MyRoomSvtControl__setFirstPlayVoice(this, (ServantVoiceData_array *)i.fields._current, v35);
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &i,
-            (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+            (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
         }
       }
     }
@@ -953,25 +953,25 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
   struct System_String_StaticFields *static_fields; // x8
   MyRoomSvtControl_o *v35; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_49B661B & 1) == 0 )
+  if ( (byte_4A49B8D & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v3);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Exists__, v4);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v6);
-    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v7);
-    sub_1B4CF90(&Method_MyRoomSvtControl_svtVoicePlay__, v8);
-    sub_1B4CF90(&System_Predicate_int__TypeInfo, v9);
-    sub_1B4CF90(&string_TypeInfo, v10);
-    sub_1B4CF90(&Method_MyRoomSvtControl___c__DisplayClass23_0__playVoice_b__0__, v11);
-    sub_1B4CF90(&MyRoomSvtControl___c__DisplayClass23_0_TypeInfo, v12);
-    byte_49B661B = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Add__, v3);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Exists__, v4);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int___ctor__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v6);
+    sub_1B863B8(&System_Collections_Generic_List_int__TypeInfo, v7);
+    sub_1B863B8(&Method_MyRoomSvtControl_svtVoicePlay__, v8);
+    sub_1B863B8(&System_Predicate_int__TypeInfo, v9);
+    sub_1B863B8(&string_TypeInfo, v10);
+    sub_1B863B8(&Method_MyRoomSvtControl___c__DisplayClass23_0__playVoice_b__0__, v11);
+    sub_1B863B8(&MyRoomSvtControl___c__DisplayClass23_0_TypeInfo, v12);
+    byte_4A49B8D = 1;
   }
-  v13 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
+  v13 = (System_Collections_Generic_List_int__o *)sub_1B86604(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v13,
-    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35DF0E0 *)Method_System_Collections_Generic_List_int___ctor__);
   randomVoiceList = this->fields.randomVoiceList;
   if ( !randomVoiceList )
     goto LABEL_24;
@@ -981,7 +981,7 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
     v16 = 0LL;
     while ( 1 )
     {
-      v17 = sub_1B4D1DC(MyRoomSvtControl___c__DisplayClass23_0_TypeInfo);
+      v17 = sub_1B86604(MyRoomSvtControl___c__DisplayClass23_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v17, 0LL);
       if ( v16 >= randomVoiceList->max_length )
         break;
@@ -990,8 +990,8 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
       v21 = randomVoiceList->m_Items[v16];
       *(_QWORD *)(v17 + 16) = v21;
       v22 = v17 + 16;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 16), (int32_t)v21, v19, v20);
-      v23 = (System_Predicate_int__o *)sub_1B4D1DC(System_Predicate_int__TypeInfo);
+      sub_1B8635C((CGThumbnailListItem_o *)(v17 + 16), (int32_t)v21, v19, v20);
+      v23 = (System_Predicate_int__o *)sub_1B86604(System_Predicate_int__TypeInfo);
       System_Predicate_int____ctor(
         v23,
         (Il2CppObject *)v17,
@@ -1002,7 +1002,7 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
       standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_int___Exists(
                                                                               v13,
                                                                               (System_Predicate_T__o *)v23,
-                                                                              (const MethodInfo_35637C4 *)Method_System_Collections_Generic_List_int__Exists__);
+                                                                              (const MethodInfo_35DFF40 *)Method_System_Collections_Generic_List_int__Exists__);
       if ( ((unsigned __int8)standFigureCollectList & 1) == 0 )
       {
         if ( !*(_QWORD *)v22 )
@@ -1019,7 +1019,7 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
           System_Collections_Generic_List_int___AddWithResize(
             v13,
             v14,
-            *(const MethodInfo_35631B8 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            *(const MethodInfo_35DF934 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
@@ -1031,7 +1031,7 @@ System_String_o *__fastcall MyRoomSvtControl__playVoice(MyRoomSvtControl_o *this
         goto LABEL_16;
     }
 LABEL_27:
-    sub_1B4D1F4(standFigureCollectList, v14);
+    sub_1B8661C(standFigureCollectList, v14);
   }
 LABEL_16:
   standFigureCollectList = (System_Collections_Generic_List_object__o *)v35->fields.standFigureCollectList;
@@ -1039,15 +1039,15 @@ LABEL_16:
     || (standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                 standFigureCollectList,
                                                                                 0,
-                                                                                (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0LL
+                                                                                (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0LL
     || (v27 = *(UIStandFigureR_o **)&standFigureCollectList->fields._size,
-        v28 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo),
+        v28 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
         System_Action___ctor(v28, (Il2CppObject *)v35, Method_MyRoomSvtControl_svtVoicePlay__, 0LL),
         !v27)
     || (UIStandFigureR__PreloadFormAssets(v27, v13, v28, 0LL), (v29 = v35->fields.randomVoiceList) == 0LL) )
   {
 LABEL_26:
-    sub_1B4D1EC(standFigureCollectList, v14);
+    sub_1B86614(standFigureCollectList, v14);
   }
   playCnt = v35->fields.playCnt;
   max_length = v29->max_length;
@@ -1091,21 +1091,21 @@ void __fastcall MyRoomSvtControl__setFirstPlayVoice(
   __int64 m_CancellationTokenSource_low; // x10
   __int64 v22; // x8
 
-  if ( (byte_49B6617 & 1) == 0 )
+  if ( (byte_4A49B89 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_VoiceMaster___, voice);
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__int__Add__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v7);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_49B6617 = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_VoiceMaster___, voice);
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__int__Add__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v7);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4A49B89 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_VoiceMaster___);
+                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_VoiceMaster___);
   if ( !voice )
     goto LABEL_19;
   if ( !voice->max_length )
@@ -1127,10 +1127,10 @@ void __fastcall MyRoomSvtControl__setFirstPlayVoice(
   firstPlayVoiceList = this->fields.firstPlayVoiceList;
   if ( !firstPlayVoiceList )
 LABEL_19:
-    sub_1B4D1EC(Instance, v10);
+    sub_1B86614(Instance, v10);
   if ( !voice->max_length )
 LABEL_20:
-    sub_1B4D1F4(Instance, v10);
+    sub_1B8661C(Instance, v10);
   v14 = voice->m_Items[0];
   if ( !v14 )
     goto LABEL_19;
@@ -1143,7 +1143,7 @@ LABEL_20:
     canFirstPlayVoiceIdxDic,
     size,
     (int32_t)Instance,
-    (const MethodInfo_31EE158 *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
+    (const MethodInfo_3264A3C *)Method_System_Collections_Generic_Dictionary_int__int__Add__);
   Instance = (DataManager_o *)this->fields.firstPlayVoiceList;
   if ( !Instance )
     goto LABEL_19;
@@ -1158,14 +1158,14 @@ LABEL_20:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Instance,
       &voice->obj,
-      *(const MethodInfo_35801DC **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = v19 + 8 * m_CancellationTokenSource_low;
     LODWORD(Instance->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
     *(_QWORD *)(v22 + 32) = voice;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v22 + 32), (int32_t)voice, v17, v18);
+    sub_1B8635C((CGThumbnailListItem_o *)(v22 + 32), (int32_t)voice, v17, v18);
   }
 }
 
@@ -1196,23 +1196,23 @@ void __fastcall MyRoomSvtControl__setSvtVoice(
   int32_t v24; // w2
   int v25; // w9
 
-  if ( (byte_49B6615 & 1) == 0 )
+  if ( (byte_4A49B87 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_Dictionary_int__int__Clear__, list);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Clear__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____Clear__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v10);
-    byte_49B6615 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__int__Clear__, list);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Add__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Clear__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____Clear__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__, v10);
+    byte_4A49B87 = 1;
   }
   this->fields.asstName = assetName;
   this->fields.playCnt = 0;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.asstName, (int32_t)assetName, (int32_t)assetName, method);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.asstName, (int32_t)assetName, (int32_t)assetName, method);
   if ( list )
   {
     this->fields.voiceList = list;
     p_voiceList = &this->fields.voiceList;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.voiceList, (int32_t)list, v11, v12);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.voiceList, (int32_t)list, v11, v12);
     canPlayVoiceIdxList = this->fields.canPlayVoiceIdxList;
     if ( !canPlayVoiceIdxList )
       goto LABEL_21;
@@ -1239,7 +1239,7 @@ void __fastcall MyRoomSvtControl__setSvtVoice(
               System_Collections_Generic_List_int___AddWithResize(
                 canFirstPlayVoiceIdxDic,
                 v19,
-                *(const MethodInfo_35631B8 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                *(const MethodInfo_35DF934 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
               v18 = *p_voiceList;
             }
             else
@@ -1267,15 +1267,15 @@ void __fastcall MyRoomSvtControl__setSvtVoice(
     canFirstPlayVoiceIdxDic = (System_Collections_Generic_List_int__o *)this->fields.canFirstPlayVoiceIdxDic;
     if ( !canFirstPlayVoiceIdxDic )
 LABEL_21:
-      sub_1B4D1EC(canFirstPlayVoiceIdxDic, v15);
+      sub_1B86614(canFirstPlayVoiceIdxDic, v15);
     System_Collections_Generic_Dictionary_int__int___Clear(
       (System_Collections_Generic_Dictionary_int__int__o *)canFirstPlayVoiceIdxDic,
-      (const MethodInfo_31EE2D8 *)Method_System_Collections_Generic_Dictionary_int__int__Clear__);
+      (const MethodInfo_3264BBC *)Method_System_Collections_Generic_Dictionary_int__int__Clear__);
   }
 }
 
 
-void __fastcall MyRoomSvtControl__setSvtVoice_31797300(
+void __fastcall MyRoomSvtControl__setSvtVoice_32136508(
         MyRoomSvtControl_o *this,
         ServantVoiceData_array *data,
         System_String_o *assetName,
@@ -1294,25 +1294,25 @@ void __fastcall MyRoomSvtControl__setSvtVoice_31797300(
   Il2CppClass **v17; // x0
   const MethodInfo *v18; // x3
 
-  if ( (byte_49B6618 & 1) == 0 )
+  if ( (byte_4A49B8A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, data);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor___75428976, v7);
-    sub_1B4CF90(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v8);
-    byte_49B6618 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData____Add__, data);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor___76021912, v7);
+    sub_1B863B8(&System_Collections_Generic_List_ServantVoiceData____TypeInfo, v8);
+    byte_4A49B8A = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-  System_Collections_Generic_List_object____ctor_56097304(
+  v9 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  System_Collections_Generic_List_object____ctor_56607124(
     v9,
     1,
-    (const MethodInfo_357FA18 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor___75428976);
+    (const MethodInfo_35FC194 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor___76021912);
   if ( !v9
     || (items = v9->fields._items,
         v15 = Method_System_Collections_Generic_List_ServantVoiceData____Add__,
         ++v9->fields._version,
         !items) )
   {
-    sub_1B4D1EC(v10, v11);
+    sub_1B86614(v10, v11);
   }
   size = v9->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -1320,14 +1320,14 @@ void __fastcall MyRoomSvtControl__setSvtVoice_31797300(
     System_Collections_Generic_List_object___AddWithResize(
       v9,
       &data->obj,
-      *(const MethodInfo_35801DC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     v9->fields._size = size + 1;
     v17[4] = (Il2CppClass *)data;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 4), (int32_t)data, v12, v13);
+    sub_1B8635C((CGThumbnailListItem_o *)(v17 + 4), (int32_t)data, v12, v13);
   }
   MyRoomSvtControl__setSvtVoice(this, (System_Collections_Generic_List_ServantVoiceData____o *)v9, assetName, v18);
 }
@@ -1358,56 +1358,56 @@ void __fastcall MyRoomSvtControl__stopVoice(MyRoomSvtControl_o *this, const Meth
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_49B661F & 1) == 0 )
+  if ( (byte_4A49B91 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, v3);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v4);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v6);
-    sub_1B4CF90(&Method_MyRoomSvtControl_EndSetFace__, v7);
-    sub_1B4CF90(&SoundManager_TypeInfo, v8);
-    sub_1B4CF90(&StringLiteral_23431/*"svtVoicePlay"*/, v9);
-    byte_49B661F = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__, v3);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__, v4);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__, v6);
+    sub_1B863B8(&Method_MyRoomSvtControl_EndSetFace__, v7);
+    sub_1B863B8(&SoundManager_TypeInfo, v8);
+    sub_1B863B8(&StringLiteral_23555/*"svtVoicePlay"*/, v9);
+    byte_4A49B91 = 1;
   }
   memset(&v24, 0, sizeof(v24));
   standFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
   if ( !standFigureCollectList )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     standFigureCollectList,
-    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   v24 = v23;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v11 )
       break;
     current = v24.fields._current;
     if ( !v24.fields._current )
-      sub_1B4D1EC(v11, v12);
+      sub_1B86614(v11, v12);
     monitor = (UIStandFigureR_o *)v24.fields._current[1].monitor;
     if ( !monitor )
-      sub_1B4D1EC(0LL, v12);
+      sub_1B86614(0LL, v12);
     UIStandFigureR__CancelPreloadFormAssets(monitor, 0LL);
     v15 = (UIStandFigureR_o *)current[1].monitor;
-    v16 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v16 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v16, (Il2CppObject *)this, Method_MyRoomSvtControl_EndSetFace__, 0LL);
     if ( !v15 )
-      sub_1B4D1EC(v17, v18);
+      sub_1B86614(v17, v18);
     UIStandFigureR__RemoveCallback(v15, v16, 0LL);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
   if ( this->fields.player )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_68789036(
+    UnityEngine_MonoBehaviour__CancelInvoke_69340764(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_23431/*"svtVoicePlay"*/,
+      (System_String_o *)StringLiteral_23555/*"svtVoicePlay"*/,
       0LL);
     asstName = this->fields.asstName;
     vcName = this->fields.vcName;
@@ -1415,7 +1415,7 @@ void __fastcall MyRoomSvtControl__stopVoice(MyRoomSvtControl_o *this, const Meth
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(asstName, vcName, 0.0, 0LL);
     this->fields.player = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.player, 0, v21, v22);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.player, 0, v21, v22);
     *(_QWORD *)&this->fields.maxPlayCnt = 0LL;
   }
 }
@@ -1456,13 +1456,13 @@ void __fastcall MyRoomSvtControl__svtVoicePlay(MyRoomSvtControl_o *this, const M
   System_Action_o *v32; // x24
 
   v4 = this;
-  if ( (byte_49B661C & 1) == 0 )
+  if ( (byte_4A49B8E & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v6);
-    this = (MyRoomSvtControl_o *)sub_1B4CF90(&Method_MyRoomSvtControl_EndSetFace__, v7);
-    byte_49B661C = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Count_StandFigureCollect___, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__, v6);
+    this = (MyRoomSvtControl_o *)sub_1B863B8(&Method_MyRoomSvtControl_EndSetFace__, v7);
+    byte_4A49B8E = 1;
   }
   if ( v4->fields.asstName && v4->fields.maxPlayCnt )
   {
@@ -1480,12 +1480,12 @@ void __fastcall MyRoomSvtControl__svtVoicePlay(MyRoomSvtControl_o *this, const M
         goto LABEL_39;
       id = v11->fields.id;
       v4->fields.vcName = id;
-      sub_1B4CF34((CGThumbnailListItem_o *)&v4->fields.vcName, (int32_t)id, v2, v3);
+      sub_1B8635C((CGThumbnailListItem_o *)&v4->fields.vcName, (int32_t)id, v2, v3);
       this = (MyRoomSvtControl_o *)v4->fields.standFigureCollectList;
       if ( !this
         || (this = (MyRoomSvtControl_o *)System_Linq_Enumerable__Count_object_(
                                            (System_Collections_Generic_IEnumerable_TSource__o *)this,
-                                           (const MethodInfo_2F1F018 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___),
+                                           (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___),
             (int)this < 2) )
       {
         v13 = v4->fields.randomVoiceList;
@@ -1507,15 +1507,15 @@ void __fastcall MyRoomSvtControl__svtVoicePlay(MyRoomSvtControl_o *this, const M
               this = (MyRoomSvtControl_o *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)this,
                                              0,
-                                             (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                             (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
               if ( this )
               {
                 m_CancellationTokenSource = (UIStandFigureR_o *)this->fields.m_CancellationTokenSource;
-                v20 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+                v20 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
                 System_Action___ctor(v20, (Il2CppObject *)v4, Method_MyRoomSvtControl_EndSetFace__, 0LL);
                 if ( m_CancellationTokenSource )
                 {
-                  UIStandFigureR__SetFace_41659428(
+                  UIStandFigureR__SetFace_42109500(
                     m_CancellationTokenSource,
                     m_CancellationTokenSource_high,
                     asstName,
@@ -1528,10 +1528,10 @@ void __fastcall MyRoomSvtControl__svtVoicePlay(MyRoomSvtControl_o *this, const M
             }
           }
 LABEL_39:
-          sub_1B4D1EC(this, method);
+          sub_1B86614(this, method);
         }
 LABEL_37:
-        sub_1B4D1F4(this, method);
+        sub_1B8661C(this, method);
       }
       v21 = v4->fields.randomVoiceList;
       if ( !v21 )
@@ -1552,7 +1552,7 @@ LABEL_37:
           v26 = v25;
           this = (MyRoomSvtControl_o *)System_Linq_Enumerable__Count_object_(
                                          (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.standFigureCollectList,
-                                         (const MethodInfo_2F1F018 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                                         (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
           if ( (_DWORD)this == (unsigned int)fsm->fields.m_CancellationTokenSource
             && (_DWORD)this == LODWORD(player->fields.cueSheetName)
             && (int)this >= 1 )
@@ -1571,7 +1571,7 @@ LABEL_37:
                 this = (MyRoomSvtControl_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)this,
                                                v27,
-                                               (const MethodInfo_357FF0C *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                               (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
                 if ( !this )
                   goto LABEL_39;
                 v31 = (UIStandFigureR_o *)this->fields.m_CancellationTokenSource;
@@ -1583,12 +1583,12 @@ LABEL_37:
                 }
                 else
                 {
-                  v32 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+                  v32 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
                   System_Action___ctor(v32, (Il2CppObject *)v4, Method_MyRoomSvtControl_EndSetFace__, 0LL);
                   if ( !v31 )
                     goto LABEL_39;
                 }
-                UIStandFigureR__SetFace_41659428(v31, v29, v30, v32, v26, 0LL);
+                UIStandFigureR__SetFace_42109500(v31, v29, v30, v32, v26, 0LL);
                 if ( v28 == v27 )
                   return;
                 if ( ++v27 >= LODWORD(fsm->fields.m_CancellationTokenSource) )
@@ -1611,15 +1611,15 @@ void __fastcall MyRoomSvtControl___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_49B6623 & 1) == 0 )
+  if ( (byte_4A49B95 & 1) == 0 )
   {
-    sub_1B4CF90(&MyRoomSvtControl___c_TypeInfo, v1);
-    byte_49B6623 = 1;
+    sub_1B863B8(&MyRoomSvtControl___c_TypeInfo, v1);
+    byte_4A49B95 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B4D1DC(MyRoomSvtControl___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B86604(MyRoomSvtControl___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MyRoomSvtControl___c_TypeInfo->static_fields->__9 = (struct MyRoomSvtControl___c_o *)v2;
-  sub_1B4CF34((CGThumbnailListItem_o *)MyRoomSvtControl___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B8635C((CGThumbnailListItem_o *)MyRoomSvtControl___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1641,13 +1641,13 @@ int32_t __fastcall MyRoomSvtControl___c___SetVoiceData_b__21_0(
 
   value = b.fields.value;
   v5 = a.fields.value;
-  if ( (byte_49B6624 & 1) == 0 )
+  if ( (byte_4A49B96 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, a);
-    byte_49B6624 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, a);
+    byte_4A49B96 = 1;
   }
   v7 = value;
-  return System_Int32__CompareTo_62608144((int32_t)&v7, v5, 0LL);
+  return System_Int32__CompareTo_63159108((int32_t)&v7, v5, 0LL);
 }
 
 
@@ -1669,19 +1669,19 @@ bool __fastcall MyRoomSvtControl___c__DisplayClass21_0___SetVoiceData_b__1(
   System_Collections_Generic_List_KeyValuePair_int__int___o *priorityList; // x0
 
   value = x.fields.value;
-  if ( (byte_49B6625 & 1) == 0 )
+  if ( (byte_4A49B97 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, x);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__, v5);
-    byte_49B6625 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_KeyValuePair_int__int__get_Value__, x);
+    sub_1B863B8(&Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__, v5);
+    byte_4A49B97 = 1;
   }
   priorityList = this->fields.priorityList;
   if ( !priorityList )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1B4D1EC)(0LL, x);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1B86614)(0LL, x);
   return value == System_Collections_Generic_List_KeyValuePair_int__int____get_Item(
                     priorityList,
                     0,
-                    (const MethodInfo_34D56C4 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__).fields.value;
+                    (const MethodInfo_3551E30 *)Method_System_Collections_Generic_List_KeyValuePair_int__int___get_Item__).fields.value;
 }
 
 
@@ -1712,8 +1712,8 @@ bool __fastcall MyRoomSvtControl___c__DisplayClass22_1___PreloadFormAssets_b__0(
   v5 = a;
   voice = this->fields.voice;
   if ( !voice )
-    sub_1B4D1EC(this, a);
-  return System_Int32__Equals_62608292((int32_t)&v5, voice->fields.form, 0LL);
+    sub_1B86614(this, a);
+  return System_Int32__Equals_63159256((int32_t)&v5, voice->fields.form, 0LL);
 }
 
 
@@ -1750,12 +1750,12 @@ void __fastcall MyRoomSvtControl___c__DisplayClass22_2___PreloadFormAssets_b__1(
     goto LABEL_9;
   playCnt = _4__this->fields.playCnt;
   if ( (unsigned int)playCnt >= randomVoiceList->max_length )
-    sub_1B4D1F4(this, method);
+    sub_1B8661C(this, method);
   v7 = randomVoiceList->m_Items[playCnt];
   if ( !v7 || (this = (MyRoomSvtControl___c__DisplayClass22_2_o *)collect->fields._standFigure_k__BackingField) == 0LL )
 LABEL_9:
-    sub_1B4D1EC(this, method);
-  UIStandFigureR__SetFace_41659428(
+    sub_1B86614(this, method);
+  UIStandFigureR__SetFace_42109500(
     (UIStandFigureR_o *)this,
     0,
     v7->fields.form,
@@ -1784,6 +1784,6 @@ bool __fastcall MyRoomSvtControl___c__DisplayClass23_0___playVoice_b__0(
   v5 = a;
   voice = this->fields.voice;
   if ( !voice )
-    sub_1B4D1EC(this, a);
-  return System_Int32__Equals_62608292((int32_t)&v5, voice->fields.form, 0LL);
+    sub_1B86614(this, a);
+  return System_Int32__Equals_63159256((int32_t)&v5, voice->fields.form, 0LL);
 }

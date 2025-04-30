@@ -1,4 +1,4 @@
-void __fastcall DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_319B4B8 *method)
+void __fastcall DataEntityBase_int____ctor(DataEntityBase_int__o *this, const MethodInfo_3211D9C *method)
 {
   DataEntityBase___ctor((DataEntityBase_o *)this, 0LL);
 }
@@ -6,7 +6,7 @@ void __fastcall DataEntityBase_int____ctor(DataEntityBase_int__o *this, const Me
 
 System_String_o *__fastcall DataEntityBase_int___get_PrimaryKey(
         DataEntityBase_int__o *this,
-        const MethodInfo_319B478 *method)
+        const MethodInfo_3211D5C *method)
 {
   int v4; // [xsp+Ch] [xbp-14h] BYREF
 

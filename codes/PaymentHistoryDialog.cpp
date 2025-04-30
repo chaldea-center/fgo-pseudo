@@ -5,14 +5,14 @@ void __fastcall PaymentHistoryDialog___cctor(const MethodInfo *method)
   const MethodInfo *v3; // x3
   __int64 v4; // x1
 
-  if ( (byte_49B70EA & 1) == 0 )
+  if ( (byte_4A4A619 & 1) == 0 )
   {
-    sub_1B4CF90(&PaymentHistoryDialog_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_408/*"#494949"*/, v4);
-    byte_49B70EA = 1;
+    sub_1B863B8(&PaymentHistoryDialog_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_408/*"#494949"*/, v4);
+    byte_4A4A619 = 1;
   }
   PaymentHistoryDialog_TypeInfo->static_fields->REFLECT_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_408/*"#494949"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)PaymentHistoryDialog_TypeInfo->static_fields, StringLiteral_408/*"#494949"*/, v2, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)PaymentHistoryDialog_TypeInfo->static_fields, StringLiteral_408/*"#494949"*/, v2, v3);
 }
 
 
@@ -30,7 +30,7 @@ void __fastcall PaymentHistoryDialog__Init(PaymentHistoryDialog_o *this, const M
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, 0LL);
   paymentHistoryListViewManager = (ListViewManager_o *)this->fields.paymentHistoryListViewManager;
   if ( !paymentHistoryListViewManager )
-    sub_1B4D1EC(0LL, v3);
+    sub_1B86614(0LL, v3);
   ListViewManager__DestroyList(paymentHistoryListViewManager, 0LL);
 }
 
@@ -43,23 +43,23 @@ void __fastcall PaymentHistoryDialog__OnClickClose(PaymentHistoryDialog_o *this,
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_49B70E8 & 1) == 0 )
+  if ( (byte_4A4A617 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_PaymentHistoryDialog_OnClickClose__, v3);
-    sub_1B4CF90(&Method_PaymentHistoryDialog__OnClickClose_b__16_0__, v4);
-    byte_49B70E8 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_PaymentHistoryDialog_OnClickClose__, v3);
+    sub_1B863B8(&Method_PaymentHistoryDialog__OnClickClose_b__16_0__, v4);
+    byte_4A4A617 = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_PaymentHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_PaymentHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_PaymentHistoryDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_PaymentHistoryDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
   }
   this->fields.state = 2;
-  v7 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_PaymentHistoryDialog__OnClickClose_b__16_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -84,23 +84,23 @@ void __fastcall PaymentHistoryDialog__OnClickReflect(PaymentHistoryDialog_o *thi
   NetworkManager_ResultCallbackFunc_o *v17; // x20
   UnityEngine_Color_o v18; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_49B70E7 & 1) == 0 )
+  if ( (byte_4A4A616 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_NetworkManager_getRequest_PaymentHistoryRequest___, method);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
-    sub_1B4CF90(&Method_PaymentHistoryDialog_OnClickReflect__, v4);
-    sub_1B4CF90(&Method_PaymentHistoryDialog__OnClickReflect_b__15_0__, v5);
-    sub_1B4CF90(&PaymentHistoryDialog_TypeInfo, v6);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    byte_49B70E7 = 1;
+    sub_1B863B8(&Method_NetworkManager_getRequest_PaymentHistoryRequest___, method);
+    sub_1B863B8(&NetworkManager_TypeInfo, v3);
+    sub_1B863B8(&Method_PaymentHistoryDialog_OnClickReflect__, v4);
+    sub_1B863B8(&Method_PaymentHistoryDialog__OnClickReflect_b__15_0__, v5);
+    sub_1B863B8(&PaymentHistoryDialog_TypeInfo, v6);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    byte_4A4A616 = 1;
   }
   v8 = Method_PaymentHistoryDialog_OnClickReflect__;
   *(_QWORD *)&v18.fields.r = 0LL;
   *(_QWORD *)&v18.fields.b = 0LL;
   canReflect = this->fields.canReflect;
   if ( (*((_BYTE *)Method_PaymentHistoryDialog_OnClickReflect__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B4CFA8(Method_PaymentHistoryDialog_OnClickReflect__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v8, v8[4]);
+    v8 = (_QWORD *)sub_1B863D0(Method_PaymentHistoryDialog_OnClickReflect__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1B8639C(v8, v8[4]);
   if ( canReflect )
   {
     OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0LL);
@@ -132,8 +132,8 @@ void __fastcall PaymentHistoryDialog__OnClickReflect(PaymentHistoryDialog_o *thi
                                       reflectButtonColor->klass->vtable._6_OnInit.methodPtr);
     this->fields.isRemainFlag = 1;
     v16 = PaymentHistoryDialog__WaitExternalPayment(v14, v15);
-    UnityEngine_MonoBehaviour__StartCoroutine_68789728((UnityEngine_MonoBehaviour_o *)this, v16, 0LL);
-    v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    UnityEngine_MonoBehaviour__StartCoroutine_69341456((UnityEngine_MonoBehaviour_o *)this, v16, 0LL);
+    v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v17,
       (Il2CppObject *)this,
@@ -143,10 +143,10 @@ void __fastcall PaymentHistoryDialog__OnClickReflect(PaymentHistoryDialog_o *thi
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     reflectButtonColor = (UIButtonColor_o *)NetworkManager__getRequest_object_(
                                               v17,
-                                              (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_PaymentHistoryRequest___);
+                                              (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_PaymentHistoryRequest___);
     if ( !reflectButtonColor )
 LABEL_17:
-      sub_1B4D1EC(reflectButtonColor, v12);
+      sub_1B86614(reflectButtonColor, v12);
     PaymentHistoryRequest__beginRequest((PaymentHistoryRequest_o *)reflectButtonColor, 0, 0LL);
   }
   else
@@ -178,24 +178,24 @@ void __fastcall PaymentHistoryDialog__Open(PaymentHistoryDialog_o *this, const M
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_49B70E4 & 1) == 0 )
+  if ( (byte_4A4A613 & 1) == 0 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
-    sub_1B4CF90(&string_TypeInfo, v3);
-    sub_1B4CF90(&StringLiteral_10133/*"PAYMENT_HISTORY_REFLECT_MESSAGE"*/, v4);
-    sub_1B4CF90(&StringLiteral_10131/*"PAYMENT_HISTORY_NODATA"*/, v5);
-    sub_1B4CF90(&StringLiteral_3657/*"COMMON_CONFIRM_CLOSE"*/, v6);
-    sub_1B4CF90(&StringLiteral_10132/*"PAYMENT_HISTORY_REFLECT_BUTTON"*/, v7);
-    sub_1B4CF90(&StringLiteral_10137/*"PAYMENT_HISTORY_TITLE"*/, v8);
-    sub_1B4CF90(&StringLiteral_10138/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, v9);
-    byte_49B70E4 = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, method);
+    sub_1B863B8(&string_TypeInfo, v3);
+    sub_1B863B8(&StringLiteral_10188/*"PAYMENT_HISTORY_REFLECT_MESSAGE"*/, v4);
+    sub_1B863B8(&StringLiteral_10186/*"PAYMENT_HISTORY_NODATA"*/, v5);
+    sub_1B863B8(&StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, v6);
+    sub_1B863B8(&StringLiteral_10187/*"PAYMENT_HISTORY_REFLECT_BUTTON"*/, v7);
+    sub_1B863B8(&StringLiteral_10192/*"PAYMENT_HISTORY_TITLE"*/, v8);
+    sub_1B863B8(&StringLiteral_10193/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, v9);
+    byte_4A4A613 = 1;
   }
   ((void (__fastcall *)(PaymentHistoryDialog_o *, void *))this->klass->vtable._7_Init.method)(
     this,
     this->klass[1]._1.image);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10137/*"PAYMENT_HISTORY_TITLE"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_10192/*"PAYMENT_HISTORY_TITLE"*/, 0LL);
   TextLabelScrollDialog__Open(
     (TextLabelScrollDialog_o *)this,
     v10,
@@ -204,12 +204,12 @@ void __fastcall PaymentHistoryDialog__Open(PaymentHistoryDialog_o *this, const M
     0LL,
     0LL);
   UpperMessageLabel = this->fields.UpperMessageLabel;
-  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10138/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, 0LL);
+  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10193/*"PAYMENT_HISTORY_UPPER_MESSAGE"*/, 0LL);
   if ( !UpperMessageLabel )
     goto LABEL_22;
   UILabel__set_text(UpperMessageLabel, paymentHistoryListViewManager, 0LL);
   reflectMessageLabel = this->fields.reflectMessageLabel;
-  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10133/*"PAYMENT_HISTORY_REFLECT_MESSAGE"*/, 0LL);
+  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10188/*"PAYMENT_HISTORY_REFLECT_MESSAGE"*/, 0LL);
   if ( !reflectMessageLabel )
     goto LABEL_22;
   UILabel__set_text(reflectMessageLabel, paymentHistoryListViewManager, 0LL);
@@ -234,7 +234,7 @@ void __fastcall PaymentHistoryDialog__Open(PaymentHistoryDialog_o *this, const M
         messageLabel = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10131/*"PAYMENT_HISTORY_NODATA"*/, 0LL);
+        paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10186/*"PAYMENT_HISTORY_NODATA"*/, 0LL);
         if ( messageLabel )
         {
           UILabel__set_text(messageLabel, paymentHistoryListViewManager, 0LL);
@@ -243,7 +243,7 @@ void __fastcall PaymentHistoryDialog__Open(PaymentHistoryDialog_o *this, const M
       }
     }
 LABEL_22:
-    sub_1B4D1EC(paymentHistoryListViewManager, v13);
+    sub_1B86614(paymentHistoryListViewManager, v13);
   }
 LABEL_16:
   paymentHistoryListViewManager = (System_String_o *)this->fields.scrollView;
@@ -254,19 +254,19 @@ LABEL_16:
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3657/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_22;
   UILabel__set_text(closeLabel, paymentHistoryListViewManager, 0LL);
   reflectButtonLabel = this->fields.reflectButtonLabel;
-  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10132/*"PAYMENT_HISTORY_REFLECT_BUTTON"*/, 0LL);
+  paymentHistoryListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_10187/*"PAYMENT_HISTORY_REFLECT_BUTTON"*/, 0LL);
   if ( !reflectButtonLabel )
     goto LABEL_22;
   UILabel__set_text(reflectButtonLabel, paymentHistoryListViewManager, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v18, v19);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v18, v19);
   this->fields.decideAction = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.decideAction, 0, v20, v21);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.decideAction, 0, v20, v21);
 }
 
 
@@ -276,11 +276,11 @@ void __fastcall PaymentHistoryDialog__ResetScrollView(PaymentHistoryDialog_o *th
   UnityEngine_Component_o *messageLabel; // x0
   UILabel_o *v5; // x20
 
-  if ( (byte_49B70E5 & 1) == 0 )
+  if ( (byte_4A4A614 & 1) == 0 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_10131/*"PAYMENT_HISTORY_NODATA"*/, v3);
-    byte_49B70E5 = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_10186/*"PAYMENT_HISTORY_NODATA"*/, v3);
+    byte_4A4A614 = 1;
   }
   messageLabel = (UnityEngine_Component_o *)this->fields.messageLabel;
   if ( !messageLabel )
@@ -312,10 +312,10 @@ void __fastcall PaymentHistoryDialog__ResetScrollView(PaymentHistoryDialog_o *th
   v5 = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10131/*"PAYMENT_HISTORY_NODATA"*/, 0LL);
+  messageLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10186/*"PAYMENT_HISTORY_NODATA"*/, 0LL);
   if ( !v5 )
 LABEL_17:
-    sub_1B4D1EC(messageLabel, method);
+    sub_1B86614(messageLabel, method);
   UILabel__set_text(v5, (System_String_o *)messageLabel, 0LL);
 LABEL_15:
   messageLabel = (UnityEngine_Component_o *)this->fields.scrollView;
@@ -356,15 +356,15 @@ void __fastcall PaymentHistoryDialog__UpdateReflectButtonInfo(PaymentHistoryDial
   UnityEngine_Color_o color; // [xsp+10h] [xbp-30h] BYREF
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49B70E9 & 1) == 0 )
+  if ( (byte_4A4A618 & 1) == 0 )
   {
-    sub_1B4CF90(&long_TypeInfo, method);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
-    sub_1B4CF90(&PaymentHistoryDialog_TypeInfo, v4);
-    sub_1B4CF90(&PaymentHistoryRequest_TypeInfo, v5);
-    sub_1B4CF90(&StringLiteral_24692/*"{0}"*/, v6);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v7);
-    byte_49B70E9 = 1;
+    sub_1B863B8(&long_TypeInfo, method);
+    sub_1B863B8(&NetworkManager_TypeInfo, v3);
+    sub_1B863B8(&PaymentHistoryDialog_TypeInfo, v4);
+    sub_1B863B8(&PaymentHistoryRequest_TypeInfo, v5);
+    sub_1B863B8(&StringLiteral_24817/*"{0}"*/, v6);
+    sub_1B863B8(&StringLiteral_1/*""*/, v7);
+    byte_4A4A618 = 1;
   }
   *(_QWORD *)&color.fields.r = 0LL;
   *(_QWORD *)&color.fields.b = 0LL;
@@ -436,7 +436,7 @@ void __fastcall PaymentHistoryDialog__UpdateReflectButtonInfo(PaymentHistoryDial
       reflectRemainLabel = this->fields.reflectRemainLabel;
       remain = this->fields.remain;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &remain, v14, v15, v16);
-      reflectButtonColor = (UIButtonColor_o *)System_String__Format((System_String_o *)StringLiteral_24692/*"{0}"*/, v17, 0LL);
+      reflectButtonColor = (UIButtonColor_o *)System_String__Format((System_String_o *)StringLiteral_24817/*"{0}"*/, v17, 0LL);
       if ( !reflectRemainLabel )
         goto LABEL_28;
       UILabel__set_text(reflectRemainLabel, (System_String_o *)reflectButtonColor, 0LL);
@@ -479,7 +479,7 @@ void __fastcall PaymentHistoryDialog__UpdateReflectButtonInfo(PaymentHistoryDial
           }
         }
 LABEL_28:
-        sub_1B4D1EC(reflectButtonColor, v9);
+        sub_1B86614(reflectButtonColor, v9);
       }
     }
   }
@@ -492,12 +492,12 @@ System_Collections_IEnumerator_o *__fastcall PaymentHistoryDialog__WaitExternalP
 {
   __int64 v2; // x19
 
-  if ( (byte_49B70E6 & 1) == 0 )
+  if ( (byte_4A4A615 & 1) == 0 )
   {
-    sub_1B4CF90(&PaymentHistoryDialog__WaitExternalPayment_d__14_TypeInfo, method);
-    byte_49B70E6 = 1;
+    sub_1B863B8(&PaymentHistoryDialog__WaitExternalPayment_d__14_TypeInfo, method);
+    byte_4A4A615 = 1;
   }
-  v2 = sub_1B4D1DC(PaymentHistoryDialog__WaitExternalPayment_d__14_TypeInfo);
+  v2 = sub_1B86604(PaymentHistoryDialog__WaitExternalPayment_d__14_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0LL);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
@@ -508,10 +508,10 @@ void __fastcall PaymentHistoryDialog___OnClickClose_b__16_0(PaymentHistoryDialog
 {
   __int64 remain; // x20
 
-  if ( (byte_49B70EB & 1) == 0 )
+  if ( (byte_4A4A61A & 1) == 0 )
   {
-    sub_1B4CF90(&PaymentHistoryRequest_TypeInfo, method);
-    byte_49B70EB = 1;
+    sub_1B863B8(&PaymentHistoryRequest_TypeInfo, method);
+    byte_4A4A61A = 1;
   }
   remain = this->fields.remain;
   if ( remain >= 1 )
@@ -558,14 +558,14 @@ bool __fastcall PaymentHistoryDialog__WaitExternalPayment_d__14__MoveNext(
   const MethodInfo *v17; // x3
   int32_t v18; // w8
 
-  if ( (byte_49B70EE & 1) == 0 )
+  if ( (byte_4A4A61D & 1) == 0 )
   {
-    sub_1B4CF90(&System_Func_bool__TypeInfo, method);
-    sub_1B4CF90(&PurchaseBehaviour_TypeInfo, v3);
-    sub_1B4CF90(&Method_PaymentHistoryDialog___c__WaitExternalPayment_b__14_0__, v4);
-    sub_1B4CF90(&PaymentHistoryDialog___c_TypeInfo, v5);
-    sub_1B4CF90(&UnityEngine_WaitUntil_TypeInfo, v6);
-    byte_49B70EE = 1;
+    sub_1B863B8(&System_Func_bool__TypeInfo, method);
+    sub_1B863B8(&PurchaseBehaviour_TypeInfo, v3);
+    sub_1B863B8(&Method_PaymentHistoryDialog___c__WaitExternalPayment_b__14_0__, v4);
+    sub_1B863B8(&PaymentHistoryDialog___c_TypeInfo, v5);
+    sub_1B863B8(&UnityEngine_WaitUntil_TypeInfo, v6);
+    byte_4A4A61D = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -596,16 +596,16 @@ bool __fastcall PaymentHistoryDialog__WaitExternalPayment_d__14__MoveNext(
         v9 = PaymentHistoryDialog___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__14_0 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+      _9__14_0 = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(_9__14_0, v11, Method_PaymentHistoryDialog___c__WaitExternalPayment_b__14_0__, 0LL);
       static_fields = PaymentHistoryDialog___c_TypeInfo->static_fields;
       static_fields->__9__14_0 = _9__14_0;
-      sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v13, v14);
+      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v13, v14);
     }
-    v15 = (UnityEngine_WaitUntil_o *)sub_1B4D1DC(UnityEngine_WaitUntil_TypeInfo);
+    v15 = (UnityEngine_WaitUntil_o *)sub_1B86604(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v15, _9__14_0, 0LL);
     this->fields.__2__current = (Il2CppObject *)v15;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
     v18 = 1;
     result = 1;
   }
@@ -630,11 +630,11 @@ void __fastcall __noreturn PaymentHistoryDialog__WaitExternalPayment_d__14__Syst
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
+  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B4CFA4(&Method_PaymentHistoryDialog__WaitExternalPayment_d__14_System_Collections_IEnumerator_Reset__);
-  sub_1B4D0B8(v3, v4);
+  v4 = sub_1B863CC(&Method_PaymentHistoryDialog__WaitExternalPayment_d__14_System_Collections_IEnumerator_Reset__);
+  sub_1B864E0(v3, v4);
 }
 
 
@@ -661,15 +661,15 @@ void __fastcall PaymentHistoryDialog___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_49B70EC & 1) == 0 )
+  if ( (byte_4A4A61B & 1) == 0 )
   {
-    sub_1B4CF90(&PaymentHistoryDialog___c_TypeInfo, v1);
-    byte_49B70EC = 1;
+    sub_1B863B8(&PaymentHistoryDialog___c_TypeInfo, v1);
+    byte_4A4A61B = 1;
   }
-  v2 = (Il2CppObject *)sub_1B4D1DC(PaymentHistoryDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B86604(PaymentHistoryDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   PaymentHistoryDialog___c_TypeInfo->static_fields->__9 = (struct PaymentHistoryDialog___c_o *)v2;
-  sub_1B4CF34((CGThumbnailListItem_o *)PaymentHistoryDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B8635C((CGThumbnailListItem_o *)PaymentHistoryDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -685,10 +685,10 @@ bool __fastcall PaymentHistoryDialog___c___WaitExternalPayment_b__14_0(
 {
   PurchaseLogicExternal_c *v2; // x0
 
-  if ( (byte_49B70ED & 1) == 0 )
+  if ( (byte_4A4A61C & 1) == 0 )
   {
-    sub_1B4CF90(&PurchaseLogicExternal_TypeInfo, method);
-    byte_49B70ED = 1;
+    sub_1B863B8(&PurchaseLogicExternal_TypeInfo, method);
+    byte_4A4A61C = 1;
   }
   v2 = PurchaseLogicExternal_TypeInfo;
   if ( !PurchaseLogicExternal_TypeInfo->_2.cctor_finished )

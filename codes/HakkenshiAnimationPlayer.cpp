@@ -10,19 +10,19 @@ void __fastcall HakkenshiAnimationPlayer___cctor(const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_49BEF09 & 1) == 0 )
+  if ( (byte_4A52642 & 1) == 0 )
   {
-    sub_1B4CF90(&HakkenshiAnimationPlayer_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_23263/*"stay_dog_{0}_loop"*/, v4);
-    sub_1B4CF90(&StringLiteral_23262/*"stay_dog_{0}_action"*/, v5);
-    byte_49BEF09 = 1;
+    sub_1B863B8(&HakkenshiAnimationPlayer_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_23387/*"stay_dog_{0}_loop"*/, v4);
+    sub_1B863B8(&StringLiteral_23386/*"stay_dog_{0}_action"*/, v5);
+    byte_4A52642 = 1;
   }
-  HakkenshiAnimationPlayer_TypeInfo->static_fields->HAKKENSHI_LOOP_ANIM_NAME = (struct System_String_o *)StringLiteral_23263/*"stay_dog_{0}_loop"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)HakkenshiAnimationPlayer_TypeInfo->static_fields, StringLiteral_23263/*"stay_dog_{0}_loop"*/, v2, v3);
-  v6 = StringLiteral_23262/*"stay_dog_{0}_action"*/;
+  HakkenshiAnimationPlayer_TypeInfo->static_fields->HAKKENSHI_LOOP_ANIM_NAME = (struct System_String_o *)StringLiteral_23387/*"stay_dog_{0}_loop"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)HakkenshiAnimationPlayer_TypeInfo->static_fields, StringLiteral_23387/*"stay_dog_{0}_loop"*/, v2, v3);
+  v6 = StringLiteral_23386/*"stay_dog_{0}_action"*/;
   static_fields = HakkenshiAnimationPlayer_TypeInfo->static_fields;
-  static_fields->HAKKENSHI_ACTION_ANIM_NAME = (struct System_String_o *)StringLiteral_23262/*"stay_dog_{0}_action"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->HAKKENSHI_ACTION_ANIM_NAME, v6, v8, v9);
+  static_fields->HAKKENSHI_ACTION_ANIM_NAME = (struct System_String_o *)StringLiteral_23386/*"stay_dog_{0}_action"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->HAKKENSHI_ACTION_ANIM_NAME, v6, v8, v9);
 }
 
 
@@ -39,17 +39,17 @@ void __fastcall HakkenshiAnimationPlayer__Awake(HakkenshiAnimationPlayer_o *this
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_49BEF04 & 1) == 0 )
+  if ( (byte_4A5263D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    byte_49BEF04 = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    byte_4A5263D = 1;
   }
   this->fields.state = 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.stayDogAnimation = (struct UnityEngine_Animation_o *)Component_object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.stayDogAnimation, (int32_t)Component_object, v4, v5);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.stayDogAnimation, (int32_t)Component_object, v4, v5);
 }
 
 
@@ -58,11 +58,11 @@ void __fastcall HakkenshiAnimationPlayer__OnReleaseEvent(HakkenshiAnimationPlaye
   __int64 v3; // x1
   UnityEngine_Object_o *stayDogAnimation; // x20
 
-  if ( (byte_49BEF07 & 1) == 0 )
+  if ( (byte_4A52640 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_10457/*"PlayStayAnim"*/, v3);
-    byte_49BEF07 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_10513/*"PlayStayAnim"*/, v3);
+    byte_4A52640 = 1;
   }
   stayDogAnimation = (UnityEngine_Object_o *)this->fields.stayDogAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,7 +70,7 @@ void __fastcall HakkenshiAnimationPlayer__OnReleaseEvent(HakkenshiAnimationPlaye
   if ( !UnityEngine_Object__op_Equality(stayDogAnimation, 0LL, 0LL) )
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_10457/*"PlayStayAnim"*/,
+      (System_String_o *)StringLiteral_10513/*"PlayStayAnim"*/,
       this->fields.durationTime,
       0LL);
 }
@@ -78,15 +78,15 @@ void __fastcall HakkenshiAnimationPlayer__OnReleaseEvent(HakkenshiAnimationPlaye
 
 void __fastcall HakkenshiAnimationPlayer__OnTouchEvent(HakkenshiAnimationPlayer_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BEF06 & 1) == 0 )
+  if ( (byte_4A5263F & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_10457/*"PlayStayAnim"*/, method);
-    byte_49BEF06 = 1;
+    sub_1B863B8(&StringLiteral_10513/*"PlayStayAnim"*/, method);
+    byte_4A5263F = 1;
   }
   this->fields.state = 1;
-  UnityEngine_MonoBehaviour__CancelInvoke_68789036(
+  UnityEngine_MonoBehaviour__CancelInvoke_69340764(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_10457/*"PlayStayAnim"*/,
+    (System_String_o *)StringLiteral_10513/*"PlayStayAnim"*/,
     0LL);
 }
 
@@ -108,12 +108,12 @@ void __fastcall HakkenshiAnimationPlayer__PlayStayAnim(HakkenshiAnimationPlayer_
   __int64 v15; // x1
   int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49BEF08 & 1) == 0 )
+  if ( (byte_4A52641 & 1) == 0 )
   {
-    sub_1B4CF90(&HakkenshiAnimationPlayer_TypeInfo, method);
-    sub_1B4CF90(&int_TypeInfo, v3);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
-    byte_49BEF08 = 1;
+    sub_1B863B8(&HakkenshiAnimationPlayer_TypeInfo, method);
+    sub_1B863B8(&int_TypeInfo, v3);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A52641 = 1;
   }
   stayDogAnimation = (UnityEngine_Object_o *)this->fields.stayDogAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -134,7 +134,7 @@ void __fastcall HakkenshiAnimationPlayer__PlayStayAnim(HakkenshiAnimationPlayer_
     v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v6, v7, v8);
     v14 = System_String__Format(HAKKENSHI_LOOP_ANIM_NAME, v13, 0LL);
     if ( !v9 )
-      sub_1B4D1EC(v14, v15);
+      sub_1B86614(v14, v15);
     UnityEngine_Animation__PlayQueued(v9, v14, 0LL);
   }
 }
@@ -165,12 +165,12 @@ void __fastcall HakkenshiAnimationPlayer__Update(HakkenshiAnimationPlayer_o *thi
   int32_t v23; // [xsp+8h] [xbp-38h] BYREF
   int32_t pieceIdx; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49BEF05 & 1) == 0 )
+  if ( (byte_4A5263E & 1) == 0 )
   {
-    sub_1B4CF90(&HakkenshiAnimationPlayer_TypeInfo, method);
-    sub_1B4CF90(&int_TypeInfo, v3);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
-    byte_49BEF05 = 1;
+    sub_1B863B8(&HakkenshiAnimationPlayer_TypeInfo, method);
+    sub_1B863B8(&int_TypeInfo, v3);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A5263E = 1;
   }
   stayDogAnimation = (UnityEngine_Object_o *)this->fields.stayDogAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -210,8 +210,8 @@ void __fastcall HakkenshiAnimationPlayer__Update(HakkenshiAnimationPlayer_o *thi
     v13 = System_String__Format(v21, v22, 0LL);
     if ( !v19 )
 LABEL_17:
-      sub_1B4D1EC(v13, v14);
-    UnityEngine_Animation__Play_68548868(v19, v13, 0LL);
+      sub_1B86614(v13, v14);
+    UnityEngine_Animation__Play_69099832(v19, v13, 0LL);
   }
 }
 

@@ -8,7 +8,7 @@ void __fastcall SimpleChainableAction___ctor(
 
   ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)action);
   this->fields.sysChainAction = action;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.sysChainAction, (int32_t)action, v5, v6);
 }
 
 
@@ -36,17 +36,17 @@ SimpleChainableAction_array *__fastcall SimpleChainableAction__ConvertToChainabl
   __int64 v20; // x0
 
   v2 = sysActions;
-  if ( (byte_49BF707 & 1) == 0 )
+  if ( (byte_4A52D5F & 1) == 0 )
   {
-    sub_1B4CF90(&SimpleChainableAction___TypeInfo, method);
-    sysActions = (System_Action_Action__array *)sub_1B4CF90(&SimpleChainableAction_TypeInfo, v3);
-    byte_49BF707 = 1;
+    sub_1B863B8(&SimpleChainableAction___TypeInfo, method);
+    sysActions = (System_Action_Action__array *)sub_1B863B8(&SimpleChainableAction_TypeInfo, v3);
+    byte_4A52D5F = 1;
   }
   if ( !v2 )
 LABEL_13:
-    sub_1B4D1EC(sysActions, method);
+    sub_1B86614(sysActions, method);
   v4 = *(_QWORD *)&v2->max_length;
-  v5 = sub_1B4D038(SimpleChainableAction___TypeInfo, (unsigned int)v4);
+  v5 = sub_1B86460(SimpleChainableAction___TypeInfo, (unsigned int)v4);
   v7 = (SimpleChainableAction_array *)v5;
   if ( (int)v4 >= 1 )
   {
@@ -59,23 +59,23 @@ LABEL_13:
       if ( v8 >= v2->max_length )
         goto LABEL_12;
       v12 = *m_Items;
-      v13 = sub_1B4D1DC(SimpleChainableAction_TypeInfo);
+      v13 = sub_1B86604(SimpleChainableAction_TypeInfo);
       ChainableActionBase___ctor((ChainableActionBase_o *)v13, v14);
       *(_QWORD *)(v13 + 40) = v12;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v13 + 40), (int32_t)v12, v15, v16);
+      sub_1B8635C((CGThumbnailListItem_o *)(v13 + 40), (int32_t)v12, v15, v16);
       if ( !v7 )
         goto LABEL_13;
-      v5 = sub_1B4D0CC(v13, v7->obj.klass->_1.element_class);
+      v5 = sub_1B864F4(v13, v7->obj.klass->_1.element_class);
       if ( !v5 )
       {
-        v20 = sub_1B4D210(0LL);
-        sub_1B4D0B8(v20, 0LL);
+        v20 = sub_1B86638(0LL);
+        sub_1B864E0(v20, 0LL);
       }
       if ( v8 >= v7->max_length )
 LABEL_12:
-        sub_1B4D1F4(v5, v6);
+        sub_1B8661C(v5, v6);
       v11->klass = (CGThumbnailListItem_c *)v13;
-      sub_1B4CF34(v11, v13, v17, v18);
+      sub_1B8635C(v11, v13, v17, v18);
       ++v8;
       ++m_Items;
       v11 = (CGThumbnailListItem_o *)((char *)v11 + 8);
@@ -92,17 +92,17 @@ void __fastcall SimpleChainableAction__ExecuteOnDetail(SimpleChainableAction_o *
   System_Action_T__o *sysChainAction; // x20
   System_Action_o *v5; // x21
 
-  if ( (byte_49BF706 & 1) == 0 )
+  if ( (byte_4A52D5E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_ActionExtensions_Call_Action___, method);
-    sub_1B4CF90(&System_Action_TypeInfo, v3);
-    byte_49BF706 = 1;
+    sub_1B863B8(&Method_ActionExtensions_Call_Action___, method);
+    sub_1B863B8(&System_Action_TypeInfo, v3);
+    byte_4A52D5E = 1;
   }
   sysChainAction = (System_Action_T__o *)this->fields.sysChainAction;
-  v5 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, (intptr_t)this->klass[1]._1.image, 0LL);
   ActionExtensions__Call_object_(
     sysChainAction,
     (Il2CppObject *)v5,
-    (const MethodInfo_2E57CDC *)Method_ActionExtensions_Call_Action___);
+    (const MethodInfo_2EBFBE4 *)Method_ActionExtensions_Call_Action___);
 }

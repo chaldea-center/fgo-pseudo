@@ -3,10 +3,10 @@ void __fastcall TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_49B5361 )
+  if ( !byte_4A487E1 )
   {
-    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, method);
-    byte_49B5361 = 1;
+    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4A487E1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -42,10 +42,10 @@ UnityEngine_Vector3_o __fastcall TrackingMoveCtCComponent__GetAdjustedPosInScree
   z = currentTargetPos.fields.z;
   y = currentTargetPos.fields.y;
   x = currentTargetPos.fields.x;
-  if ( (byte_49BE2B9 & 1) == 0 )
+  if ( (byte_4A519C1 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BE2B9 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A519C1 = 1;
   }
   adjustPosInScreenComp = (UnityEngine_Object_o *)this->fields.adjustPosInScreenComp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -98,7 +98,7 @@ UnityEngine_Vector3_o __fastcall TrackingMoveCtCComponent__GetAdjustedPosInScree
           }
         }
       }
-      sub_1B4D1EC(IsOffScreen, v9);
+      sub_1B86614(IsOffScreen, v9);
     }
   }
 LABEL_14:
@@ -151,19 +151,19 @@ void __fastcall TrackingMoveCtCComponent__Set(
   y = d.fields.y;
   x = d.fields.x;
   v13 = isLate;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (const MethodInfo *)c);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (const MethodInfo *)c);
   this->fields.after = b;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.after, (int32_t)b, v14, v15);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.after, (int32_t)b, v14, v15);
   this->fields.targetObject = c;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
   this->fields.isLateUpdate = v13;
-  if ( !byte_49B5361 )
+  if ( !byte_4A487E1 )
   {
-    sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v18);
-    byte_49B5361 = 1;
+    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v18);
+    byte_4A487E1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v22 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -172,9 +172,9 @@ void __fastcall TrackingMoveCtCComponent__Set(
   *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v22;
   this->fields.offset2D.fields.offset.fields.z = v23;
   this->fields.adjustPosInScreenComp = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp, 0, v19, v20);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp, 0, v19, v20);
   this->fields.adjustPosInScreenArg = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, 0, v24, v25);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, 0, v24, v25);
 }
 
 
@@ -194,13 +194,13 @@ void __fastcall TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
   const MethodInfo *v14; // x3
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BE2B7 & 1) == 0 )
+  if ( (byte_4A519BF & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, adjustComp);
-    byte_49BE2B7 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, adjustComp);
+    byte_4A519BF = 1;
   }
   this->fields.adjustPosInScreenComp = adjustComp;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp,
     (int32_t)adjustComp,
     (int32_t)adjustArg,
@@ -222,7 +222,7 @@ void __fastcall TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
           || (v11 = this->fields.before,
               (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL) )
         {
-          sub_1B4D1EC(transform, v9);
+          sub_1B86614(transform, v9);
         }
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0LL);
         position.fields.x = position.fields.x + this->fields.addpos.fields.x;
@@ -230,7 +230,7 @@ void __fastcall TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
         position.fields.z = position.fields.z + this->fields.addpos.fields.z;
         v12 = AdjustPopupPosInScreenArgument__Init(adjustArg, v11, position, 0LL);
         this->fields.adjustPosInScreenArg = v12;
-        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, (int32_t)v12, v13, v14);
+        sub_1B8635C((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, (int32_t)v12, v13, v14);
       }
     }
   }
@@ -293,10 +293,10 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BE2B8 & 1) == 0 )
+  if ( (byte_4A519C0 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BE2B8 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A519C0 = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -317,7 +317,7 @@ void __fastcall TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *
     *(UnityEngine_Vector3_o *)&v8 = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, position, v7);
     if ( !before )
       goto LABEL_24;
-    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToViewportPoint_68610440(
+    *(UnityEngine_Vector3_o *)&v11 = UnityEngine_Camera__WorldToViewportPoint_69162188(
                                        before,
                                        *(UnityEngine_Vector3_o *)&v8,
                                        0LL);
@@ -374,7 +374,7 @@ LABEL_14:
         v33.fields.x = v14;
         v33.fields.y = v21;
         v33.fields.z = v16;
-        v34 = UnityEngine_Camera__ViewportToWorldPoint_68610448((UnityEngine_Camera_o *)transform, v33, 0LL);
+        v34 = UnityEngine_Camera__ViewportToWorldPoint_69162196((UnityEngine_Camera_o *)transform, v33, 0LL);
         x = v34.fields.x;
         y = v34.fields.y;
         z = v34.fields.z;
@@ -391,7 +391,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1B4D1EC(transform, v4);
+      sub_1B86614(transform, v4);
     }
     v14 = v14 + this->fields.offset2D.fields.offset.fields.x;
     v21 = v21 + this->fields.offset2D.fields.offset.fields.y;

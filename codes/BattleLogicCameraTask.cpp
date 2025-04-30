@@ -11,6 +11,6 @@ void __fastcall BattleLogicCameraTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)cameraName);
   v4->fields.endCameraName = cameraName;
   v4 = (BattleLogicCameraTask_o *)((char *)v4 + 152);
-  LODWORD(v4[-1].fields.motionMessage) = 27;
-  sub_1B4CF34((CGThumbnailListItem_o *)v4, (int32_t)cameraName, v5, v6);
+  LODWORD(v4[-1].fields.overwriteFuncSideEffectArg) = 27;
+  sub_1B8635C((CGThumbnailListItem_o *)v4, (int32_t)cameraName, v5, v6);
 }

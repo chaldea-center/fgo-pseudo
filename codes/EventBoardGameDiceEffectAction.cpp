@@ -11,10 +11,10 @@ void __fastcall EventBoardGameDiceEffectAction__EndAnimation(
   UnityEngine_Object_o *modelObj; // x20
   UnityEngine_Object_o *v4; // x20
 
-  if ( (byte_49BEDD1 & 1) == 0 )
+  if ( (byte_4A5250A & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BEDD1 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A5250A = 1;
   }
   modelObj = (UnityEngine_Object_o *)this->fields.modelObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,7 +24,7 @@ void __fastcall EventBoardGameDiceEffectAction__EndAnimation(
     v4 = (UnityEngine_Object_o *)this->fields.modelObj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v4, 0LL);
+    UnityEngine_Object__Destroy_69356292(v4, 0LL);
   }
   ActionExtensions__Call(this->fields.endAction, 0LL);
 }
@@ -35,32 +35,32 @@ void __fastcall EventBoardGameDiceEffectAction__PlayDiceVoice(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  System_String_o *VoiceAssetName_40440052; // x0
+  System_String_o *VoiceAssetName_40875676; // x0
   SeManager_c *v5; // x8
   System_String_o *voiceCueName; // x19
   System_String_o *v7; // x20
 
-  if ( (byte_49BEDD0 & 1) == 0 )
+  if ( (byte_4A52509 & 1) == 0 )
   {
-    sub_1B4CF90(&SeManager_TypeInfo, method);
-    sub_1B4CF90(&SoundManager_TypeInfo, v3);
-    byte_49BEDD0 = 1;
+    sub_1B863B8(&SeManager_TypeInfo, method);
+    sub_1B863B8(&SoundManager_TypeInfo, v3);
+    byte_4A52509 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.voiceCueName, 0LL) )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoiceAll(0.0, 0LL);
-    VoiceAssetName_40440052 = ServantVoiceEntity__getVoiceAssetName_40440052(this->fields.servantId, 0LL);
+    VoiceAssetName_40875676 = ServantVoiceEntity__getVoiceAssetName_40875676(this->fields.servantId, 0LL);
     v5 = SeManager_TypeInfo;
     voiceCueName = this->fields.voiceCueName;
-    v7 = VoiceAssetName_40440052;
+    v7 = VoiceAssetName_40875676;
     if ( !SeManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
       v5 = SeManager_TypeInfo;
     }
-    SoundManager__playVoice_39255412(v7, voiceCueName, v5->static_fields->DEFAULT_VOLUME, 0LL, 0, 0LL);
+    SoundManager__playVoice_39673076(v7, voiceCueName, v5->static_fields->DEFAULT_VOLUME, 0LL, 0, 0LL);
   }
 }
 
@@ -88,42 +88,42 @@ void __fastcall EventBoardGameDiceEffectAction__Setup(
   const MethodInfo *v22; // x3
   UnityEngine_Object_o *modelObj; // x21
 
-  if ( (byte_49BEDCF & 1) == 0 )
+  if ( (byte_4A52508 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, asset);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v13);
-    byte_49BEDCF = 1;
+    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, asset);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v13);
+    byte_4A52508 = 1;
   }
   this->fields.servantId = servantId;
   this->fields.voiceCueName = voiceCueName;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields.voiceCueName,
     (int32_t)voiceCueName,
     diceType,
     *(const MethodInfo **)&diceNum);
   this->fields.endAction = endAction;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, v14, v15);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, v14, v15);
   diceModelObjList = this->fields.diceModelObjList;
   if ( !diceModelObjList )
     goto LABEL_10;
   if ( diceType - 1 >= diceModelObjList->max_length )
-    sub_1B4D1F4(name, v17);
+    sub_1B8661C(name, v17);
   v19 = (Il2CppObject *)diceModelObjList->m_Items[diceType - 1];
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v20 = UnityEngine_Object__Instantiate_object_(
           v19,
-          (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   this->fields.modelObj = (struct UnityEngine_GameObject_o *)v20;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.modelObj, (int32_t)v20, v21, v22);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.modelObj, (int32_t)v20, v21, v22);
   if ( !v19
     || (modelObj = (UnityEngine_Object_o *)this->fields.modelObj,
         name = UnityEngine_Object__get_name((UnityEngine_Object_o *)v19, 0LL),
         !modelObj) )
   {
 LABEL_10:
-    sub_1B4D1EC(name, v17);
+    sub_1B86614(name, v17);
   }
   UnityEngine_Object__set_name(modelObj, name, 0LL);
-  GameObjectExtensions__SafeSetParent_34075504(this->fields.modelObj, this->fields.rootDiceObj, 0LL);
+  GameObjectExtensions__SafeSetParent_34388184(this->fields.modelObj, this->fields.rootDiceObj, 0LL);
 }

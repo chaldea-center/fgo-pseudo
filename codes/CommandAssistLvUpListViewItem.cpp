@@ -12,29 +12,21 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
         const MethodInfo *method)
 {
   CommandAssistLvUpListViewItem_o *v17; // x26
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
 
   v17 = this;
-  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v17->fields._Name_k__BackingField, (int32_t)name, v18, v19);
+  sub_1B8635C(&v17->fields._Name_k__BackingField);
   v17->fields._Detail_k__BackingField = detail;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v17->fields._Detail_k__BackingField, (int32_t)detail, v20, v21);
+  sub_1B8635C(&v17->fields._Detail_k__BackingField);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v17->fields._BeforeName_k__BackingField, (int32_t)beforeName, v22, v23);
+  sub_1B8635C(&v17->fields._BeforeName_k__BackingField);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_1B4CF34((CGThumbnailListItem_o *)v17, (int32_t)beforeDetail, v24, v25);
+  sub_1B8635C(v17);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -117,10 +109,8 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._BeforeDetail_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C(&this->fields._BeforeDetail_k__BackingField);
 }
 
 
@@ -129,10 +119,8 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._BeforeName_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._BeforeName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C(&this->fields._BeforeName_k__BackingField);
 }
 
 
@@ -141,10 +129,8 @@ void __fastcall CommandAssistLvUpListViewItem__set_Detail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._Detail_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Detail_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C(&this->fields._Detail_k__BackingField);
 }
 
 
@@ -180,8 +166,6 @@ void __fastcall CommandAssistLvUpListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._Name_k__BackingField = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C(&this->fields._Name_k__BackingField);
 }

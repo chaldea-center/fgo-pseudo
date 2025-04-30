@@ -8,18 +8,18 @@ void __fastcall FsmEventData___ctor(FsmEventData_o *this, const MethodInfo *meth
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_49BC380 & 1) == 0 )
+  if ( (byte_4A4FA0C & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_21834/*"none"*/, method);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v5);
-    byte_49BC380 = 1;
+    sub_1B863B8(&StringLiteral_21948/*"none"*/, method);
+    sub_1B863B8(&StringLiteral_1/*""*/, v5);
+    byte_4A4FA0C = 1;
   }
-  v6 = StringLiteral_21834/*"none"*/;
-  this->fields.eventData = (struct System_String_o *)StringLiteral_21834/*"none"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, v6, v2, v3);
+  v6 = StringLiteral_21948/*"none"*/;
+  this->fields.eventData = (struct System_String_o *)StringLiteral_21948/*"none"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, v6, v2, v3);
   v7 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, v7, v8, v9);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.title, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -47,7 +47,7 @@ void __fastcall FsmEventData__set_EventData(FsmEventData_o *this, System_String_
   const MethodInfo *v3; // x3
 
   this->fields.eventData = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -56,5 +56,5 @@ void __fastcall FsmEventData__set_Title(FsmEventData_o *this, System_String_o *v
   const MethodInfo *v3; // x3
 
   this->fields.title = value;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.title, (int32_t)value, (int32_t)method, v3);
 }

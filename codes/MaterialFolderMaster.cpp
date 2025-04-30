@@ -1,14 +1,14 @@
 void __fastcall MaterialFolderMaster___ctor(MaterialFolderMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB239 & 1) == 0 )
+  if ( (byte_4A4E86F & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__, method);
-    byte_49BB239 = 1;
+    sub_1B863B8(&Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__, method);
+    byte_4A4E86F = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     178,
-    (const MethodInfo_319B678 *)Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__);
+    (const MethodInfo_3211F5C *)Method_DataMasterBase_MaterialFolderMaster__MaterialFolderEntity__int___ctor__);
 }
 
 
@@ -39,29 +39,29 @@ MaterialFolderEntity_array *__fastcall MaterialFolderMaster__getFoldersWithEvent
   __int64 size; // x10
   Il2CppClass **v25; // x0
 
-  if ( (byte_49BB23A & 1) == 0 )
+  if ( (byte_4A4E870 & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1B4CF90(&Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Item__, v7);
-    sub_1B4CF90(&CondType_TypeInfo, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_MaterialFolderEntity__Add__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__, v11);
-    sub_1B4CF90(&System_Collections_Generic_List_MaterialFolderEntity__TypeInfo, v12);
-    byte_49BB23A = 1;
+    sub_1B863B8(&Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Item__, v7);
+    sub_1B863B8(&CondType_TypeInfo, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_MaterialFolderEntity__Add__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__, v11);
+    sub_1B863B8(&System_Collections_Generic_List_MaterialFolderEntity__TypeInfo, v12);
+    byte_4A4E870 = 1;
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_MaterialFolderEntity__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_MaterialFolderEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__);
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_MaterialFolderEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_22;
   list = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
                    (System_Collections_ObjectModel_Collection_T__o *)list,
-                   (const MethodInfo_313AEE4 *)Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Count__);
+                   (const MethodInfo_31B0908 *)Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v16 = (int)list;
@@ -74,7 +74,7 @@ MaterialFolderEntity_array *__fastcall MaterialFolderMaster__getFoldersWithEvent
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v17,
-               (const MethodInfo_313AF74 *)Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Item__);
+               (const MethodInfo_31B0998 *)Method_System_Collections_ObjectModel_Collection_MaterialFolderEntity__get_Item__);
       if ( list )
       {
         v20 = (Il2CppObject *)list;
@@ -87,7 +87,7 @@ MaterialFolderEntity_array *__fastcall MaterialFolderMaster__getFoldersWithEvent
             goto LABEL_25;
           if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          list = (void *)CondType__IsQuestClear_38126524(v21, -1, 0, 0LL);
+          list = (void *)CondType__IsQuestClear_38542260(v21, -1, 0, 0LL);
           if ( ((unsigned __int8)list & 1) != 0 )
           {
 LABEL_25:
@@ -104,14 +104,14 @@ LABEL_25:
               System_Collections_Generic_List_object___AddWithResize(
                 v13,
                 v20,
-                *(const MethodInfo_35801DC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                *(const MethodInfo_35FC958 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
             }
             else
             {
               v25 = &items->obj.klass + size;
               v13->fields._size = size + 1;
               v25[4] = (Il2CppClass *)v20;
-              sub_1B4CF34((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v20, v18, v19);
+              sub_1B8635C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v20, v18, v19);
             }
           }
         }
@@ -120,12 +120,12 @@ LABEL_25:
         goto LABEL_20;
     }
 LABEL_22:
-    sub_1B4D1EC(list, v14);
+    sub_1B86614(list, v14);
   }
 LABEL_20:
   if ( !v13 )
     goto LABEL_22;
   return (MaterialFolderEntity_array *)System_Collections_Generic_List_object___ToArray(
                                          v13,
-                                         (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__);
+                                         (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_MaterialFolderEntity__ToArray__);
 }

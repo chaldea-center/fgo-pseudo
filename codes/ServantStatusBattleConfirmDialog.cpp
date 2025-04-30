@@ -26,14 +26,14 @@ void __fastcall ServantStatusBattleConfirmDialog___ctor(
   int32_t v24; // w2
   const MethodInfo *v25; // x3
 
-  if ( (byte_49B6BDB & 1) == 0 )
+  if ( (byte_4A4A18E & 1) == 0 )
   {
-    sub_1B4CF90(&BalanceConfig_TypeInfo, method);
-    sub_1B4CF90(&BaseDialog_TypeInfo, v3);
-    sub_1B4CF90(&UnityEngine_GameObject___TypeInfo, v4);
-    sub_1B4CF90(&SkillIconComponent___TypeInfo, v5);
-    sub_1B4CF90(&UIRangeLabel___TypeInfo, v6);
-    byte_49B6BDB = 1;
+    sub_1B863B8(&BalanceConfig_TypeInfo, method);
+    sub_1B863B8(&BaseDialog_TypeInfo, v3);
+    sub_1B863B8(&UnityEngine_GameObject___TypeInfo, v4);
+    sub_1B863B8(&SkillIconComponent___TypeInfo, v5);
+    sub_1B863B8(&UIRangeLabel___TypeInfo, v6);
+    byte_4A4A18E = 1;
   }
   v7 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -41,36 +41,36 @@ void __fastcall ServantStatusBattleConfirmDialog___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v7 = BalanceConfig_TypeInfo;
   }
-  v8 = (struct UnityEngine_GameObject_array *)sub_1B4D038(
+  v8 = (struct UnityEngine_GameObject_array *)sub_1B86460(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)v7->static_fields->SvtSkillListMax);
   this->fields.nowSkillBaseList = v8;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nowSkillBaseList, (int32_t)v8, v9, v10);
-  v11 = (struct UnityEngine_GameObject_array *)sub_1B4D038(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nowSkillBaseList, (int32_t)v8, v9, v10);
+  v11 = (struct UnityEngine_GameObject_array *)sub_1B86460(
                                                  UnityEngine_GameObject___TypeInfo,
                                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nextSkillBaseList = v11;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nextSkillBaseList, (int32_t)v11, v12, v13);
-  v14 = (struct SkillIconComponent_array *)sub_1B4D038(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nextSkillBaseList, (int32_t)v11, v12, v13);
+  v14 = (struct SkillIconComponent_array *)sub_1B86460(
                                              SkillIconComponent___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nowSkillIconList = v14;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nowSkillIconList, (int32_t)v14, v15, v16);
-  v17 = (struct SkillIconComponent_array *)sub_1B4D038(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nowSkillIconList, (int32_t)v14, v15, v16);
+  v17 = (struct SkillIconComponent_array *)sub_1B86460(
                                              SkillIconComponent___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nextSkillIconList = v17;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nextSkillIconList, (int32_t)v17, v18, v19);
-  v20 = (struct UIRangeLabel_array *)sub_1B4D038(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nextSkillIconList, (int32_t)v17, v18, v19);
+  v20 = (struct UIRangeLabel_array *)sub_1B86460(
                                        UIRangeLabel___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nowSkillNameList = v20;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nowSkillNameList, (int32_t)v20, v21, v22);
-  v23 = (struct UIRangeLabel_array *)sub_1B4D038(
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nowSkillNameList, (int32_t)v20, v21, v22);
+  v23 = (struct UIRangeLabel_array *)sub_1B86460(
                                        UIRangeLabel___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nextSkillNameList = v23;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.nextSkillNameList, (int32_t)v23, v24, v25);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nextSkillNameList, (int32_t)v23, v24, v25);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -83,11 +83,11 @@ void __fastcall ServantStatusBattleConfirmDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  ServantStatusBattleConfirmDialog__Close_32443016(this, 0LL, v2);
+  ServantStatusBattleConfirmDialog__Close_32785548(this, 0LL, v2);
 }
 
 
-void __fastcall ServantStatusBattleConfirmDialog__Close_32443016(
+void __fastcall ServantStatusBattleConfirmDialog__Close_32785548(
         ServantStatusBattleConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -96,16 +96,16 @@ void __fastcall ServantStatusBattleConfirmDialog__Close_32443016(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_49B6BD8 & 1) == 0 )
+  if ( (byte_4A4A18A & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, callback);
-    sub_1B4CF90(&Method_ServantStatusBattleConfirmDialog_EndClose__, v6);
-    byte_49B6BD8 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, callback);
+    sub_1B863B8(&Method_ServantStatusBattleConfirmDialog_EndClose__, v6);
+    byte_4A4A18A = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.isButtonEnable = 0;
-  v7 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -126,7 +126,7 @@ void __fastcall ServantStatusBattleConfirmDialog__EndClose(
   ServantStatusBattleConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
@@ -134,7 +134,7 @@ void __fastcall ServantStatusBattleConfirmDialog__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B4CF34(p_closeCallbackFunc, 0, v5, v6);
+    sub_1B8635C(p_closeCallbackFunc, 0, v5, v6);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
       v8->fields.original_method_info,
       *(_QWORD *)&v8->fields.extra_arg);
@@ -156,10 +156,10 @@ void __fastcall ServantStatusBattleConfirmDialog__Init(
 {
   UILabel_o *messageLabel; // x0
 
-  if ( (byte_49B6BD6 & 1) == 0 )
+  if ( (byte_4A4A188 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_1/*""*/, method);
-    byte_49B6BD6 = 1;
+    sub_1B863B8(&StringLiteral_1/*""*/, method);
+    byte_4A4A188 = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -188,7 +188,7 @@ void __fastcall ServantStatusBattleConfirmDialog__Init(
         (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_12:
-    sub_1B4D1EC(messageLabel, method);
+    sub_1B86614(messageLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -203,17 +203,17 @@ void __fastcall ServantStatusBattleConfirmDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct ServantStatusBattleConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49B6BDA & 1) == 0 )
+  if ( (byte_4A4A18C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_ServantStatusBattleConfirmDialog_OnClickCancel__, method);
-    byte_49B6BDA = 1;
+    sub_1B863B8(&Method_ServantStatusBattleConfirmDialog_OnClickCancel__, method);
+    byte_4A4A18C = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ServantStatusBattleConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ServantStatusBattleConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B4CFA8(Method_ServantStatusBattleConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B863D0(Method_ServantStatusBattleConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -234,17 +234,17 @@ void __fastcall ServantStatusBattleConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct ServantStatusBattleConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_49B6BD9 & 1) == 0 )
+  if ( (byte_4A4A18B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_ServantStatusBattleConfirmDialog_OnClickDecide__, method);
-    byte_49B6BD9 = 1;
+    sub_1B863B8(&Method_ServantStatusBattleConfirmDialog_OnClickDecide__, method);
+    byte_4A4A18B = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ServantStatusBattleConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ServantStatusBattleConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B4CFA8(Method_ServantStatusBattleConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v3, v3[4]);
+      v3 = (_QWORD *)sub_1B863D0(Method_ServantStatusBattleConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -272,6 +272,8 @@ void __fastcall ServantStatusBattleConfirmDialog__Open(
         int32_t nextLimitCount,
         const MethodInfo *method)
 {
+  __int64 v18; // x1
+  __int64 v19; // x1
   __int64 v20; // x1
   __int64 v21; // x1
   __int64 v22; // x1
@@ -281,307 +283,266 @@ void __fastcall ServantStatusBattleConfirmDialog__Open(
   __int64 v26; // x1
   __int64 v27; // x1
   __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  System_String_o *v35; // x28
-  System_String_o *v36; // x0
-  System_String_o *v37; // x0
   UILabel_o *messageLabel; // x27
-  System_String_o *v39; // x0
   System_String_o *Name; // x0
   System_String_o *OverwriteTDName; // x1
-  struct UILabel_o *v42; // x8
+  struct UILabel_o *v32; // x8
   UILabel_o *nowSkillTitleLabel; // x27
   UILabel_o *nextSkillTitleLabel; // x27
   UILabel_o *nowNpTitleLabel; // x27
   UILabel_o *nextNpTitleLabel; // x27
   UILabel_o *buttonDecideLabel; // x27
   UILabel_o *buttonCancelLabel; // x27
-  long double v49; // q0
+  long double v39; // q0
   struct UnityEngine_GameObject_array *nowSkillBaseList; // x8
-  System_String_o *v51; // x27
-  __int64 v52; // x24
+  System_String_o *v41; // x27
+  __int64 v42; // x24
   unsigned __int64 max_length; // x9
-  unsigned __int64 v54; // x29
-  SkillInfo_o *v55; // x28
+  unsigned __int64 v44; // x29
+  SkillInfo_o *v45; // x28
   struct SkillIconComponent_array *nowSkillIconList; // x8
   struct UIRangeLabel_array *nowSkillNameList; // x8
-  UIRangeLabel_o *v58; // x29
+  UIRangeLabel_o *v48; // x29
   struct UnityEngine_GameObject_array *nextSkillBaseList; // x8
-  __int64 v60; // x24
-  unsigned __int64 v61; // x9
-  unsigned __int64 v62; // x29
-  SkillInfo_o *v63; // x28
+  __int64 v50; // x24
+  unsigned __int64 v51; // x9
+  unsigned __int64 v52; // x29
+  SkillInfo_o *v53; // x28
   struct SkillIconComponent_array *nextSkillIconList; // x8
-  unsigned __int64 v65; // x8
-  __int64 v66; // x8
+  unsigned __int64 v55; // x8
+  __int64 v56; // x8
   struct UIRangeLabel_array *nextSkillNameList; // x8
-  UIRangeLabel_o *v68; // x29
-  struct UIRangeLabel_array *v69; // x8
-  System_String_o *v70; // x0
-  __int64 v71; // x0
-  __int64 v72; // x0
+  UIRangeLabel_o *v58; // x29
+  struct UIRangeLabel_array *v59; // x8
+  System_String_o *v60; // x0
+  __int64 v61; // x0
+  __int64 v62; // x0
   Il2CppObject *MasterData_object; // x25
-  System_String_o *v74; // x1
+  System_String_o *v64; // x1
   UILabel_o *nowNpNameLabel; // x0
-  struct UILabel_o *v76; // x24
+  struct UILabel_o *v66; // x24
   struct UILabel_o *nextNpNameLabel; // x20
-  System_Action_o *v78; // x20
+  System_Action_o *v68; // x20
 
-  if ( (byte_49B6BD7 & 1) == 0 )
+  if ( (byte_4A4A189 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, nowTdInfo);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v20);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v21);
-    sub_1B4CF90(&Method_ServantStatusBattleConfirmDialog_EndOpen__, v22);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v23);
-    sub_1B4CF90(&StringLiteral_11629/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, v24);
-    sub_1B4CF90(&StringLiteral_11630/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, v25);
-    sub_1B4CF90(&StringLiteral_11633/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v26);
-    sub_1B4CF90(&StringLiteral_3660/*"COMMON_CONFIRM_NO"*/, v27);
-    sub_1B4CF90(&StringLiteral_3665/*"COMMON_CONFIRM_YES"*/, v28);
-    sub_1B4CF90(&StringLiteral_11628/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, v29);
-    sub_1B4CF90(&StringLiteral_9126/*"NO_ENTRY_NAME"*/, v30);
-    sub_1B4CF90(&StringLiteral_11634/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, v31);
-    sub_1B4CF90(&StringLiteral_11631/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v32);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v33);
-    sub_1B4CF90(&StringLiteral_11632/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, v34);
-    byte_49B6BD7 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, nowTdInfo);
+    sub_1B863B8(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, v18);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v19);
+    sub_1B863B8(&Method_ServantStatusBattleConfirmDialog_EndOpen__, v20);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v21);
+    sub_1B863B8(&StringLiteral_11694/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, v22);
+    sub_1B863B8(&StringLiteral_11697/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v23);
+    sub_1B863B8(&StringLiteral_3679/*"COMMON_CONFIRM_NO"*/, v24);
+    sub_1B863B8(&StringLiteral_3684/*"COMMON_CONFIRM_YES"*/, v25);
+    sub_1B863B8(&StringLiteral_11692/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, v26);
+    sub_1B863B8(&StringLiteral_9176/*"NO_ENTRY_NAME"*/, v27);
+    sub_1B863B8(&StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v28);
+    byte_4A4A189 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields.clickFunc,
     (int32_t)func,
     (int32_t)nextTdInfo,
     (const MethodInfo *)isTdModify);
-  if ( isSkillModify )
-  {
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v35 = LocalizationManager__Get((System_String_o *)StringLiteral_11632/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_NAME"*/, 0LL);
-    if ( !isTdModify )
-      goto LABEL_16;
-    goto LABEL_9;
-  }
-  v35 = (System_String_o *)StringLiteral_1/*""*/;
-  if ( isTdModify )
-  {
-LABEL_9:
-    if ( !System_String__IsNullOrEmpty(v35, 0LL) )
-    {
-      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v36 = LocalizationManager__Get((System_String_o *)StringLiteral_11634/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SPLIT"*/, 0LL);
-      v35 = System_String__Concat_61093468(v35, v36, 0LL);
-    }
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v37 = LocalizationManager__Get((System_String_o *)StringLiteral_11630/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_NAME"*/, 0LL);
-    v35 = System_String__Concat_61093468(v35, v37, 0LL);
-  }
-LABEL_16:
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_11628/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, 0LL);
-  Name = System_String__Format(v39, (Il2CppObject *)v35, 0LL);
-  v42 = this->fields.messageLabel;
-  if ( !v42 )
-    goto LABEL_107;
-  WrapControlText__textAdjust(messageLabel, Name, v42->fields.mFontSize, 0, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11692/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE"*/, 0LL);
+  v32 = this->fields.messageLabel;
+  if ( !v32 )
+    goto LABEL_94;
+  WrapControlText__textAdjust(messageLabel, Name, v32->fields.mFontSize, 0, 0LL);
   nowSkillTitleLabel = this->fields.nowSkillTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11633/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11697/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
   if ( !nowSkillTitleLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(nowSkillTitleLabel, Name, 0LL);
   nextSkillTitleLabel = this->fields.nextSkillTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11633/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11697/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
   if ( !nextSkillTitleLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(nextSkillTitleLabel, Name, 0LL);
   nowNpTitleLabel = this->fields.nowNpTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11631/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nowNpTitleLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(nowNpTitleLabel, Name, 0LL);
   nextNpTitleLabel = this->fields.nextNpTitleLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11631/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nextNpTitleLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(nextNpTitleLabel, Name, 0LL);
   buttonDecideLabel = this->fields.buttonDecideLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3665/*"COMMON_CONFIRM_YES"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_YES"*/, 0LL);
   if ( !buttonDecideLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(buttonDecideLabel, Name, 0LL);
   buttonCancelLabel = this->fields.buttonCancelLabel;
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3660/*"COMMON_CONFIRM_NO"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_NO"*/, 0LL);
   if ( !buttonCancelLabel )
-    goto LABEL_107;
+    goto LABEL_94;
   UILabel__set_text(buttonCancelLabel, Name, 0LL);
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11629/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0LL);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_11694/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0LL);
   nowSkillBaseList = this->fields.nowSkillBaseList;
   if ( !nowSkillBaseList )
-    goto LABEL_107;
-  v51 = Name;
-  v52 = 4LL;
+    goto LABEL_94;
+  v41 = Name;
+  v42 = 4LL;
   while ( 1 )
   {
     max_length = nowSkillBaseList->max_length;
-    v54 = v52 - 4;
-    if ( v52 - 4 >= (int)max_length )
+    v44 = v42 - 4;
+    if ( v42 - 4 >= (int)max_length )
       break;
     if ( !nowSkillInfoList )
-      goto LABEL_107;
-    if ( v54 >= nowSkillInfoList->max_length )
-LABEL_112:
-      sub_1B4D1F4(Name, OverwriteTDName);
-    v55 = (SkillInfo_o *)*((_QWORD *)&nowSkillInfoList->obj.klass + v52);
-    if ( v55 && v55->fields.id >= 1 && v55->fields.lv >= 1 )
+      goto LABEL_94;
+    if ( v44 >= nowSkillInfoList->max_length )
+LABEL_99:
+      sub_1B8661C(Name, OverwriteTDName);
+    v45 = (SkillInfo_o *)*((_QWORD *)&nowSkillInfoList->obj.klass + v42);
+    if ( v45 && v45->fields.id >= 1 && v45->fields.lv >= 1 )
     {
-      if ( v54 >= max_length )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nowSkillBaseList->obj.klass + v52);
+      if ( v44 >= max_length )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nowSkillBaseList->obj.klass + v42);
       if ( !Name )
-        goto LABEL_107;
+        goto LABEL_94;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 1, 0LL);
       nowSkillIconList = this->fields.nowSkillIconList;
       if ( !nowSkillIconList )
-        goto LABEL_107;
-      if ( v54 >= nowSkillIconList->max_length )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nowSkillIconList->obj.klass + v52);
+        goto LABEL_94;
+      if ( v44 >= nowSkillIconList->max_length )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nowSkillIconList->obj.klass + v42);
       if ( !Name )
-        goto LABEL_107;
-      SkillIconComponent__Set_38776180((SkillIconComponent_o *)Name, v55->fields.id, v55->fields.lv, 0LL);
+        goto LABEL_94;
+      SkillIconComponent__Set_39193508((SkillIconComponent_o *)Name, v45->fields.id, v45->fields.lv, 0LL);
       nowSkillNameList = this->fields.nowSkillNameList;
       if ( !nowSkillNameList )
-        goto LABEL_107;
-      if ( v54 >= nowSkillNameList->max_length )
-        goto LABEL_112;
-      v58 = (UIRangeLabel_o *)*((_QWORD *)&nowSkillNameList->obj.klass + v52);
-      Name = SkillInfo__GetName(v55, 0LL);
-      if ( !v58 )
-        goto LABEL_107;
+        goto LABEL_94;
+      if ( v44 >= nowSkillNameList->max_length )
+        goto LABEL_99;
+      v48 = (UIRangeLabel_o *)*((_QWORD *)&nowSkillNameList->obj.klass + v42);
+      Name = SkillInfo__GetName(v45, 0LL);
+      if ( !v48 )
+        goto LABEL_94;
+      UIRangeLabel__Set(v48, Name, 0LL, 1, 0, 0LL);
+    }
+    else
+    {
+      if ( v44 >= max_length )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nowSkillBaseList->obj.klass + v42);
+      if ( !Name )
+        goto LABEL_94;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 0, 0LL);
+    }
+    nowSkillBaseList = this->fields.nowSkillBaseList;
+    ++v42;
+    if ( !nowSkillBaseList )
+      goto LABEL_94;
+  }
+  nextSkillBaseList = this->fields.nextSkillBaseList;
+  if ( !nextSkillBaseList )
+    goto LABEL_94;
+  v50 = 4LL;
+  while ( 1 )
+  {
+    v51 = nextSkillBaseList->max_length;
+    v52 = v50 - 4;
+    if ( v50 - 4 >= (int)v51 )
+      break;
+    if ( !nextSkillInfoList )
+      goto LABEL_94;
+    if ( v52 >= nextSkillInfoList->max_length )
+      goto LABEL_99;
+    v53 = (SkillInfo_o *)*((_QWORD *)&nextSkillInfoList->obj.klass + v50);
+    if ( v53 && v53->fields.id >= 1 && v53->fields.lv >= 1 )
+    {
+      if ( v52 >= v51 )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nextSkillBaseList->obj.klass + v50);
+      if ( !Name )
+        goto LABEL_94;
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 1, 0LL);
+      nextSkillIconList = this->fields.nextSkillIconList;
+      if ( !nextSkillIconList )
+        goto LABEL_94;
+      if ( v52 >= nextSkillIconList->max_length )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nextSkillIconList->obj.klass + v50);
+      if ( !Name )
+        goto LABEL_94;
+      SkillIconComponent__Set_39193508((SkillIconComponent_o *)Name, v53->fields.id, v53->fields.lv, 0LL);
+      if ( !nowSkillInfoList )
+        goto LABEL_94;
+      v55 = nowSkillInfoList->max_length;
+      if ( (__int64)v52 >= (int)v55 )
+        goto LABEL_59;
+      if ( v52 >= v55 )
+        goto LABEL_99;
+      v56 = *((_QWORD *)&nowSkillInfoList->obj.klass + v50);
+      if ( v56 && *(_DWORD *)(v56 + 16) == v53->fields.id )
+      {
+        nextSkillNameList = this->fields.nextSkillNameList;
+        if ( !nextSkillNameList )
+          goto LABEL_94;
+        if ( v52 >= nextSkillNameList->max_length )
+          goto LABEL_99;
+        v58 = (UIRangeLabel_o *)*((_QWORD *)&nextSkillNameList->obj.klass + v50);
+        Name = SkillInfo__GetName(v53, 0LL);
+        if ( !v58 )
+          goto LABEL_94;
+      }
+      else
+      {
+LABEL_59:
+        v59 = this->fields.nextSkillNameList;
+        if ( !v59 )
+          goto LABEL_94;
+        if ( v52 >= v59->max_length )
+          goto LABEL_99;
+        v58 = (UIRangeLabel_o *)*((_QWORD *)&v59->obj.klass + v50);
+        v60 = SkillInfo__GetName(v53, 0LL);
+        Name = System_String__Concat_61645176(v41, v60, 0LL);
+        if ( !v58 )
+          goto LABEL_94;
+      }
       UIRangeLabel__Set(v58, Name, 0LL, 1, 0, 0LL);
     }
     else
     {
-      if ( v54 >= max_length )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nowSkillBaseList->obj.klass + v52);
+      if ( v52 >= v51 )
+        goto LABEL_99;
+      Name = (System_String_o *)*((_QWORD *)&nextSkillBaseList->obj.klass + v50);
       if ( !Name )
-        goto LABEL_107;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 0, 0LL);
-    }
-    nowSkillBaseList = this->fields.nowSkillBaseList;
-    ++v52;
-    if ( !nowSkillBaseList )
-      goto LABEL_107;
-  }
-  nextSkillBaseList = this->fields.nextSkillBaseList;
-  if ( !nextSkillBaseList )
-    goto LABEL_107;
-  v60 = 4LL;
-  while ( 1 )
-  {
-    v61 = nextSkillBaseList->max_length;
-    v62 = v60 - 4;
-    if ( v60 - 4 >= (int)v61 )
-      break;
-    if ( !nextSkillInfoList )
-      goto LABEL_107;
-    if ( v62 >= nextSkillInfoList->max_length )
-      goto LABEL_112;
-    v63 = (SkillInfo_o *)*((_QWORD *)&nextSkillInfoList->obj.klass + v60);
-    if ( v63 && v63->fields.id >= 1 && v63->fields.lv >= 1 )
-    {
-      if ( v62 >= v61 )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nextSkillBaseList->obj.klass + v60);
-      if ( !Name )
-        goto LABEL_107;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 1, 0LL);
-      nextSkillIconList = this->fields.nextSkillIconList;
-      if ( !nextSkillIconList )
-        goto LABEL_107;
-      if ( v62 >= nextSkillIconList->max_length )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nextSkillIconList->obj.klass + v60);
-      if ( !Name )
-        goto LABEL_107;
-      SkillIconComponent__Set_38776180((SkillIconComponent_o *)Name, v63->fields.id, v63->fields.lv, 0LL);
-      if ( !nowSkillInfoList )
-        goto LABEL_107;
-      v65 = nowSkillInfoList->max_length;
-      if ( (__int64)v62 >= (int)v65 )
-        goto LABEL_72;
-      if ( v62 >= v65 )
-        goto LABEL_112;
-      v66 = *((_QWORD *)&nowSkillInfoList->obj.klass + v60);
-      if ( v66 && *(_DWORD *)(v66 + 16) == v63->fields.id )
-      {
-        nextSkillNameList = this->fields.nextSkillNameList;
-        if ( !nextSkillNameList )
-          goto LABEL_107;
-        if ( v62 >= nextSkillNameList->max_length )
-          goto LABEL_112;
-        v68 = (UIRangeLabel_o *)*((_QWORD *)&nextSkillNameList->obj.klass + v60);
-        Name = SkillInfo__GetName(v63, 0LL);
-        if ( !v68 )
-          goto LABEL_107;
-      }
-      else
-      {
-LABEL_72:
-        v69 = this->fields.nextSkillNameList;
-        if ( !v69 )
-          goto LABEL_107;
-        if ( v62 >= v69->max_length )
-          goto LABEL_112;
-        v68 = (UIRangeLabel_o *)*((_QWORD *)&v69->obj.klass + v60);
-        v70 = SkillInfo__GetName(v63, 0LL);
-        Name = System_String__Concat_61093468(v51, v70, 0LL);
-        if ( !v68 )
-          goto LABEL_107;
-      }
-      UIRangeLabel__Set(v68, Name, 0LL, 1, 0, 0LL);
-    }
-    else
-    {
-      if ( v62 >= v61 )
-        goto LABEL_112;
-      Name = (System_String_o *)*((_QWORD *)&nextSkillBaseList->obj.klass + v60);
-      if ( !Name )
-        goto LABEL_107;
+        goto LABEL_94;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Name, 0, 0LL);
     }
     nextSkillBaseList = this->fields.nextSkillBaseList;
-    ++v60;
+    ++v50;
     if ( !nextSkillBaseList )
-      goto LABEL_107;
+      goto LABEL_94;
   }
-  v71 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v71 + 309) & 1) == 0 )
-    v71 = sub_1B9D620(v49);
-  v72 = *(_QWORD *)(*(_QWORD *)(v71 + 192) + 16LL);
-  if ( (*(_BYTE *)(v72 + 309) & 1) == 0 )
-    v72 = sub_1B9D620(v49);
-  Name = **(System_String_o ***)(v72 + 184);
+  v61 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v61 + 309) & 1) == 0 )
+    v61 = sub_1BD6A48(v39);
+  v62 = *(_QWORD *)(*(_QWORD *)(v61 + 192) + 16LL);
+  if ( (*(_BYTE *)(v62 + 309) & 1) == 0 )
+    v62 = sub_1BD6A48(v39);
+  Name = **(System_String_o ***)(v62 + 184);
   if ( !Name )
-    goto LABEL_107;
+    goto LABEL_94;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Name,
-                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   if ( nowTdInfo && nowTdInfo->fields.id >= 1 )
   {
     Name = TreasureDvcInfo__GetName(nowTdInfo, svtId, 0LL);
     if ( !MasterData_object )
-      goto LABEL_107;
+      goto LABEL_94;
     Name = ServantLimitAddMaster__GetOverwriteTDName(
              (ServantLimitAddMaster_o *)MasterData_object,
              svtId,
@@ -590,22 +551,22 @@ LABEL_72:
              0,
              0LL);
     if ( !this->fields.nowNpNameLabel )
-      goto LABEL_107;
-    v74 = Name;
+      goto LABEL_94;
+    v64 = Name;
     nowNpNameLabel = this->fields.nowNpNameLabel;
   }
   else
   {
-    v76 = this->fields.nowNpNameLabel;
+    v66 = this->fields.nowNpNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9126/*"NO_ENTRY_NAME"*/, 0LL);
-    if ( !v76 )
-      goto LABEL_107;
-    v74 = Name;
-    nowNpNameLabel = v76;
+    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9176/*"NO_ENTRY_NAME"*/, 0LL);
+    if ( !v66 )
+      goto LABEL_94;
+    v64 = Name;
+    nowNpNameLabel = v66;
   }
-  UILabel__set_text(nowNpNameLabel, v74, 0LL);
+  UILabel__set_text(nowNpNameLabel, v64, 0LL);
   if ( !nextTdInfo || nextTdInfo->fields.id < 1 )
   {
     if ( nowTdInfo && nowTdInfo->fields.id >= 1 )
@@ -613,30 +574,30 @@ LABEL_72:
       nextNpNameLabel = this->fields.nextNpNameLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9126/*"NO_ENTRY_NAME"*/, 0LL);
-LABEL_109:
-      Name = System_String__Concat_61093468(v51, OverwriteTDName, 0LL);
+      OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9176/*"NO_ENTRY_NAME"*/, 0LL);
+LABEL_96:
+      Name = System_String__Concat_61645176(v41, OverwriteTDName, 0LL);
       if ( !nextNpNameLabel )
-        goto LABEL_107;
-      goto LABEL_110;
+        goto LABEL_94;
+      goto LABEL_97;
     }
     nextNpNameLabel = this->fields.nextNpNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9126/*"NO_ENTRY_NAME"*/, 0LL);
+    Name = LocalizationManager__Get((System_String_o *)StringLiteral_9176/*"NO_ENTRY_NAME"*/, 0LL);
     if ( nextNpNameLabel )
     {
-LABEL_110:
+LABEL_97:
       OverwriteTDName = Name;
       Name = (System_String_o *)nextNpNameLabel;
-      goto LABEL_111;
+      goto LABEL_98;
     }
-LABEL_107:
-    sub_1B4D1EC(Name, OverwriteTDName);
+LABEL_94:
+    sub_1B86614(Name, OverwriteTDName);
   }
   Name = TreasureDvcInfo__GetName(nextTdInfo, svtId, 0LL);
   if ( !MasterData_object )
-    goto LABEL_107;
+    goto LABEL_94;
   OverwriteTDName = ServantLimitAddMaster__GetOverwriteTDName(
                       (ServantLimitAddMaster_o *)MasterData_object,
                       svtId,
@@ -647,17 +608,30 @@ LABEL_107:
   if ( !nowTdInfo || nowTdInfo->fields.id != nextTdInfo->fields.id )
   {
     nextNpNameLabel = this->fields.nextNpNameLabel;
-    goto LABEL_109;
+    goto LABEL_96;
   }
   Name = (System_String_o *)this->fields.nextNpNameLabel;
   if ( !Name )
-    goto LABEL_107;
-LABEL_111:
+    goto LABEL_94;
+LABEL_98:
   UILabel__set_text((UILabel_o *)Name, OverwriteTDName, 0LL);
   this->fields.isButtonEnable = 0;
-  v78 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v78, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v78, 0, 0LL);
+  v68 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v68, (Il2CppObject *)this, Method_ServantStatusBattleConfirmDialog_EndOpen__, 0LL);
+  BaseDialog__Open((BaseDialog_o *)this, v68, 0, 0LL);
+}
+
+
+System_String_o *__fastcall ServantStatusBattleConfirmDialog__get_closeBtnPath(
+        ServantStatusBattleConfirmDialog_o *this,
+        const MethodInfo *method)
+{
+  if ( (byte_4A4A18D & 1) == 0 )
+  {
+    sub_1B863B8(&StringLiteral_15414/*"Window/CancelButton"*/, method);
+    byte_4A4A18D = 1;
+  }
+  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
 }
 
 
@@ -679,15 +653,15 @@ void __fastcall ServantStatusBattleConfirmDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B4D050(v6) & 1) == 0 )
+  if ( (sub_1B86478(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B4D0B8(v10, 0LL);
+      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B864E0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -699,9 +673,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1996B94;
+  this->fields.m_target = (Il2CppObject *)sub_19CD170;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1996B4C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CD128;
 }
 
 
@@ -717,14 +691,14 @@ System_IAsyncResult_o *__fastcall ServantStatusBattleConfirmDialog_ClickDelegate
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_49B6BDC & 1) == 0 )
+  if ( (byte_4A4A18F & 1) == 0 )
   {
-    sub_1B4CF90(&bool_TypeInfo, isDecide);
-    byte_49B6BDC = 1;
+    sub_1B863B8(&bool_TypeInfo, isDecide);
+    byte_4A4A18F = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B4CF44(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
 }
 
 
@@ -733,7 +707,7 @@ void __fastcall ServantStatusBattleConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B4CF48(result, 0LL, method);
+  sub_1B86370(result, 0LL, method);
 }
 
 

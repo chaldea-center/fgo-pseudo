@@ -1,9 +1,9 @@
 void __fastcall CGThumbnailObject___ctor(CGThumbnailObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_49B6065 & 1) == 0 )
+  if ( (byte_4A495CA & 1) == 0 )
   {
-    sub_1B4CF90(&ListViewObject_TypeInfo, method);
-    byte_49B6065 = 1;
+    sub_1B863B8(&ListViewObject_TypeInfo, method);
+    byte_4A495CA = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall CGThumbnailObject__Awake(CGThumbnailObject_o *this, const Method
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_49B6060 & 1) == 0 )
+  if ( (byte_4A495C5 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___, method);
-    byte_49B6060 = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___, method);
+    byte_4A495C5 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B4D1EC(0LL, v3);
+    sub_1B86614(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___);
+                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___);
   this->fields.itemDraw = (struct CGThumbnailListItemDraw_o *)Component_object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -41,10 +41,10 @@ CGThumbnailListItem_o *__fastcall CGThumbnailObject__GetItem(CGThumbnailObject_o
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_49B6061 & 1) == 0 )
+  if ( (byte_4A495C6 & 1) == 0 )
   {
-    sub_1B4CF90(&CGThumbnailListItem_TypeInfo, method);
-    byte_49B6061 = 1;
+    sub_1B863B8(&CGThumbnailListItem_TypeInfo, method);
+    byte_4A495C6 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -77,15 +77,15 @@ void __fastcall CGThumbnailObject__Init(
   int32_t v16; // w8
 
   v7 = initMode;
-  if ( (byte_49B6062 & 1) == 0 )
+  if ( (byte_4A495C7 & 1) == 0 )
   {
-    sub_1B4CF90(&CGThumbnailListItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_49B6062 = 1;
+    sub_1B863B8(&CGThumbnailListItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4A495C7 = 1;
   }
   this->fields.updateItemAction = updateItemFunc;
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
-  sub_1B4CF34(
+  sub_1B8635C(
     (CGThumbnailListItem_o *)&this->fields.updateItemAction,
     (int32_t)updateItemFunc,
     scale,
@@ -113,7 +113,7 @@ void __fastcall CGThumbnailObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1B4D1EC(transform, v14);
+    sub_1B86614(transform, v14);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   if ( v7 < 2 )
@@ -159,11 +159,11 @@ void __fastcall CGThumbnailObject__SetInput(CGThumbnailObject_o *this, bool isIn
   struct ListViewItem_o *v10; // x1
   CGThumbnailListItemDraw_o *v11; // x0
 
-  if ( (byte_49B6064 & 1) == 0 )
+  if ( (byte_4A495C9 & 1) == 0 )
   {
-    sub_1B4CF90(&CGThumbnailListItem_TypeInfo, isInput);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    byte_49B6064 = 1;
+    sub_1B863B8(&CGThumbnailListItem_TypeInfo, isInput);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A495C9 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -187,7 +187,7 @@ void __fastcall CGThumbnailObject__SetInput(CGThumbnailObject_o *this, bool isIn
     }
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1B4D1EC(0LL, v10);
+      sub_1B86614(0LL, v10);
     CGThumbnailListItemDraw__SetInput(v11, (CGThumbnailListItem_o *)v10, isInput, v7);
   }
 }
@@ -199,12 +199,12 @@ void __fastcall CGThumbnailObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_41356616((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_41806456((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall CGThumbnailObject__SetItem_31162540(
+void __fastcall CGThumbnailObject__SetItem_31490648(
         CGThumbnailObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -228,12 +228,12 @@ void __fastcall CGThumbnailObject__SetupDisp(CGThumbnailObject_o *this, const Me
   int32_t v12; // w3
   const MethodInfo *v13; // x4
 
-  if ( (byte_49B6063 & 1) == 0 )
+  if ( (byte_4A495C8 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_ActionExtensions_Call_string__string___, method);
-    sub_1B4CF90(&CGThumbnailListItem_TypeInfo, v3);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
-    byte_49B6063 = 1;
+    sub_1B863B8(&Method_ActionExtensions_Call_string__string___, method);
+    sub_1B863B8(&CGThumbnailListItem_TypeInfo, v3);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A495C8 = 1;
   }
   linkItem = (Il2CppObject **)this->fields.linkItem;
   if ( !linkItem )
@@ -262,10 +262,10 @@ LABEL_8:
             (System_Action_T1__T2__o *)this->fields.updateItemAction,
             linkItem[16],
             (Il2CppObject *)v11->fields._LoadedTexturePath_k__BackingField,
-            (const MethodInfo_2E580D0 *)Method_ActionExtensions_Call_string__string___),
+            (const MethodInfo_2EBFFD8 *)Method_ActionExtensions_Call_string__string___),
           (v9 = this->fields.itemDraw) == 0LL) )
     {
-      sub_1B4D1EC(v9, v10);
+      sub_1B86614(v9, v10);
     }
     CGThumbnailListItemDraw__SetItem(v9, (CGThumbnailListItem_o *)linkItem, this->fields.scaleType, v12, v13);
   }

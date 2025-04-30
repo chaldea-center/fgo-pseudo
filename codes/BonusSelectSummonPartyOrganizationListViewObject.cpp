@@ -2,10 +2,10 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49B73FF & 1) == 0 )
+  if ( (byte_4A4A92E & 1) == 0 )
   {
-    sub_1B4CF90(&ListViewObject_TypeInfo, method);
-    byte_49B73FF = 1;
+    sub_1B863B8(&ListViewObject_TypeInfo, method);
+    byte_4A4A92E = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -34,12 +34,12 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Init(
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)onTapEvent, method);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)onTapEvent, method);
   this->fields.onTapEvent = onTapEvent;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1B4D1EC(0LL, v8);
+    sub_1B86614(0LL, v8);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v9);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
     this,
@@ -57,7 +57,7 @@ void __fastcall BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

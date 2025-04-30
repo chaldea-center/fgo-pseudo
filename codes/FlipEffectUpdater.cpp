@@ -26,10 +26,10 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
   UnityEngine_Transform_o *v13; // x21
   UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_49BA2F1 & 1) == 0 )
+  if ( (byte_4A4D918 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BA2F1 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A4D918 = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
       this->fields.mTrans = transform;
-      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
+      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -55,35 +55,35 @@ void __fastcall FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const
     v11 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0LL);
     v12 = this->fields.mTrans;
-    if ( !byte_49B5361 )
+    if ( !byte_4A487E1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_49B5361 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_4A487E1 = 1;
     }
     if ( !v12 )
       goto LABEL_24;
     UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     v13 = *p_mTrans;
-    if ( !byte_49B5361 )
+    if ( !byte_4A487E1 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_49B5361 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_4A487E1 = 1;
     }
     if ( !v13 )
       goto LABEL_24;
     UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
     v14 = *p_mTrans;
-    if ( !byte_49B5366 )
+    if ( !byte_4A487E6 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v6);
-      byte_49B5366 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v6);
+      byte_4A487E6 = 1;
     }
     if ( !v14
       || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
           (parent = *p_mTrans) == 0LL) )
     {
 LABEL_24:
-      sub_1B4D1EC(parent, v6);
+      sub_1B86614(parent, v6);
     }
     UnityEngine_Transform__set_parent(parent, v11, 0LL);
   }
@@ -98,5 +98,5 @@ void __fastcall FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const Method
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   this->fields.mTrans = transform;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
 }

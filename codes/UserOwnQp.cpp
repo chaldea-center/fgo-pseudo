@@ -11,8 +11,8 @@ void __fastcall UserOwnQp___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
   if ( !userGameEntity )
-    sub_1B4D1EC(v9, v10);
+    sub_1B86614(v9, v10);
   this->fields._Num_k__BackingField = userGameEntity->fields.qp;
 }

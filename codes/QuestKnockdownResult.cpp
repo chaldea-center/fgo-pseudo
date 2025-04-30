@@ -20,32 +20,32 @@ void __fastcall QuestKnockdownResult___ctor(
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_49BD4B7 & 1) == 0 )
+  if ( (byte_4A50B7E & 1) == 0 )
   {
-    sub_1B4CF90(&QuestKnockdownInfo_TypeInfo, isRecord);
-    byte_49BD4B7 = 1;
+    sub_1B863B8(&QuestKnockdownInfo_TypeInfo, isRecord);
+    byte_4A50B7E = 1;
   }
-  v7 = (Il2CppObject *)sub_1B4D1DC(QuestKnockdownInfo_TypeInfo);
+  v7 = (Il2CppObject *)sub_1B86604(QuestKnockdownInfo_TypeInfo);
   System_Object___ctor(v7, 0LL);
   v7[1].klass = 0LL;
   v7[1].monitor = 0LL;
   this->fields.current = (struct QuestKnockdownInfo_o *)v7;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.current, (int32_t)v7, v8, v9);
-  v10 = (Il2CppObject *)sub_1B4D1DC(QuestKnockdownInfo_TypeInfo);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.current, (int32_t)v7, v8, v9);
+  v10 = (Il2CppObject *)sub_1B86604(QuestKnockdownInfo_TypeInfo);
   System_Object___ctor(v10, 0LL);
   v10[1].klass = 0LL;
   v10[1].monitor = 0LL;
   this->fields.record = (struct QuestKnockdownInfo_o *)v10;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.record, (int32_t)v10, v11, v12);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.record, (int32_t)v10, v11, v12);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.isNewRecord = isRecord;
   if ( !data )
-    sub_1B4D1EC(v13, v14);
+    sub_1B86614(v13, v14);
   this->fields.isTrialOpen = BattleData__isKnockdownTrialQuest(data, 0LL);
   currenctKnockdown = data->fields.currenctKnockdown;
   this->fields.current = currenctKnockdown;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.current, (int32_t)currenctKnockdown, v16, v17);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.current, (int32_t)currenctKnockdown, v16, v17);
   QuestKnockdownRecord = BattleData__getQuestKnockdownRecord(data, 0LL);
   this->fields.record = QuestKnockdownRecord;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.record, (int32_t)QuestKnockdownRecord, v19, v20);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.record, (int32_t)QuestKnockdownRecord, v19, v20);
 }

@@ -27,15 +27,15 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
   CombineUICommonButton_o *v21; // x0
   const MethodInfo *v22; // x1
 
-  if ( (byte_49BEC92 & 1) == 0 )
+  if ( (byte_4A523C7 & 1) == 0 )
   {
-    sub_1B4CF90(&CombineRootComponent_TypeInfo, method);
-    sub_1B4CF90(&Method_CombineUICommonButton_OnClick__, v3);
-    sub_1B4CF90(&EventDelegate_TypeInfo, v4);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_1B4CF90(&UICommonButton_TypeInfo, v7);
-    byte_49BEC92 = 1;
+    sub_1B863B8(&CombineRootComponent_TypeInfo, method);
+    sub_1B863B8(&Method_CombineUICommonButton_OnClick__, v3);
+    sub_1B863B8(&EventDelegate_TypeInfo, v4);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
+    sub_1B863B8(&UICommonButton_TypeInfo, v7);
+    byte_4A523C7 = 1;
   }
   if ( this->fields.isPassive && UICommonButtonColor__get_alpha((UICommonButtonColor_o *)this, 0LL) < 1.0 )
     return;
@@ -49,13 +49,13 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
           this->klass->vtable._5_set_isEnabled.methodPtr) & 1) != 0 )
   {
     UICommonButton_TypeInfo->static_fields->current = (struct UICommonButton_o *)this;
-    sub_1B4CF34((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v9, v10);
+    sub_1B8635C((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v9, v10);
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_47323476(onClick, 0LL);
+    EventDelegate__Execute_47749148(onClick, 0LL);
     UICommonButton_TypeInfo->static_fields->current = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, 0, v12, v13);
+    sub_1B8635C((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, 0, v12, v13);
     return;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
@@ -63,7 +63,7 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
     goto LABEL_27;
   if ( !UnityEngine_GameObject__get_activeInHierarchy(gameObject, 0LL) )
     return;
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_27;
   monitor = gameObject[1].monitor;
@@ -75,20 +75,20 @@ void __fastcall CombineUICommonButton__OnClick(CombineUICommonButton_o *this, co
 LABEL_24:
     v19 = Method_CombineUICommonButton_OnClick__;
     if ( (*((_BYTE *)Method_CombineUICommonButton_OnClick__ + 83) & 2) != 0 )
-      v19 = (_QWORD *)sub_1B4CFA8(Method_CombineUICommonButton_OnClick__);
-    v20 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v19, v19[4]);
+      v19 = (_QWORD *)sub_1B863D0(Method_CombineUICommonButton_OnClick__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1B8639C(v19, v19[4]);
     OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0, 0LL);
     return;
   }
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject || (gameObject = (UnityEngine_GameObject_o *)gameObject[1].monitor) == 0LL )
 LABEL_27:
-    sub_1B4D1EC(gameObject, v15);
+    sub_1B86614(gameObject, v15);
   v18 = LOBYTE(CombineRootComponent_TypeInfo->vtable._0_Equals.methodPtr);
   if ( LOBYTE(gameObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)v18
     || (CombineRootComponent_c *)gameObject->klass->_2.typeHierarchy[v18 - 1] != CombineRootComponent_TypeInfo )
   {
-    sub_1B4D4AC(gameObject);
+    sub_1B868D4(gameObject);
     CombineUICommonButton___ctor(v21, v22);
     return;
   }

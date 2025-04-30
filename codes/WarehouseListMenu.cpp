@@ -5,23 +5,23 @@ void __fastcall WarehouseListMenu___cctor(const MethodInfo *method)
   const MethodInfo *v3; // x3
   __int64 v4; // x1
 
-  if ( (byte_49B8D94 & 1) == 0 )
+  if ( (byte_4A4C2C2 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_409/*"#4C4C4C"*/, v4);
-    byte_49B8D94 = 1;
+    sub_1B863B8(&WarehouseListMenu_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_409/*"#4C4C4C"*/, v4);
+    byte_4A4C2C2 = 1;
   }
   WarehouseListMenu_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_409/*"#4C4C4C"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)WarehouseListMenu_TypeInfo->static_fields, StringLiteral_409/*"#4C4C4C"*/, v2, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)WarehouseListMenu_TypeInfo->static_fields, StringLiteral_409/*"#4C4C4C"*/, v2, v3);
 }
 
 
 void __fastcall WarehouseListMenu___ctor(WarehouseListMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_49B8D93 & 1) == 0 )
+  if ( (byte_4A4C2C1 & 1) == 0 )
   {
-    sub_1B4CF90(&BaseMenu_TypeInfo, method);
-    byte_49B8D93 = 1;
+    sub_1B863B8(&BaseMenu_TypeInfo, method);
+    byte_4A4C2C1 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -43,7 +43,7 @@ void __fastcall WarehouseListMenu__Callback(
   {
     p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
     p_callbackFunc->klass = 0LL;
-    sub_1B4CF34(p_callbackFunc, 0, n, method);
+    sub_1B8635C(p_callbackFunc, 0, n, method);
     if ( !result )
       result = this->fields.isModify;
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackFunc->fields.m_target)(
@@ -74,7 +74,7 @@ void __fastcall WarehouseListMenu__ChangeIconScale(WarehouseListMenu_o *this, bo
                                         (const MethodInfo *)result),
         !scaleChageTabSprite) )
   {
-    sub_1B4D1EC(this, result);
+    sub_1B86614(this, result);
   }
   UISprite__set_spriteName(scaleChageTabSprite, (System_String_o *)this, 0LL);
 }
@@ -84,11 +84,11 @@ void __fastcall WarehouseListMenu__Close(WarehouseListMenu_o *this, const Method
 {
   const MethodInfo *v2; // x2
 
-  WarehouseListMenu__Close_36262612(this, 0LL, v2);
+  WarehouseListMenu__Close_36571792(this, 0LL, v2);
 }
 
 
-void __fastcall WarehouseListMenu__Close_36262612(
+void __fastcall WarehouseListMenu__Close_36571792(
         WarehouseListMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -100,19 +100,19 @@ void __fastcall WarehouseListMenu__Close_36262612(
   const MethodInfo *v9; // x5
   System_Action_o *v10; // x20
 
-  if ( (byte_49B8D78 & 1) == 0 )
+  if ( (byte_4A4C2A6 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, callback);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClose__, v6);
-    byte_49B8D78 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, callback);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClose__, v6);
+    byte_4A4C2A6 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   tabKind = this->fields.tabKind;
   modeKind = this->fields.modeKind;
   this->fields.state = 4;
   WarehouseListMenu__SetTabKind(this, tabKind, modeKind, 0, 0, v9);
-  v10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_WarehouseListMenu_EndClose__, 0LL);
   BaseMenu__Close((BaseMenu_o *)this, v10, 0LL);
 }
@@ -134,11 +134,11 @@ void __fastcall WarehouseListMenu__EndCardFavoriteRequest(
   const MethodInfo *v11; // x2
 
   v3 = this;
-  if ( (byte_49B8D92 & 1) == 0 )
+  if ( (byte_4A4C2C0 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, result);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v4);
-    byte_49B8D92 = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, result);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v4);
+    byte_4A4C2C0 = 1;
   }
   servantListViewManager = v3->fields.servantListViewManager;
   v3->fields.state = 2;
@@ -146,7 +146,7 @@ void __fastcall WarehouseListMenu__EndCardFavoriteRequest(
     || (this = (WarehouseListMenu_o *)servantListViewManager->fields.baseListViewManager) == 0LL
     || (WarehouseListViewManager__UpdateItemState((WarehouseListViewManager_o *)this, 1, method),
         v6 = v3->fields.servantListViewManager,
-        v7 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo),
+        v7 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo),
         WarehouseListManager_CallbackFunc___ctor(
           v7,
           (Il2CppObject *)v3,
@@ -154,11 +154,11 @@ void __fastcall WarehouseListMenu__EndCardFavoriteRequest(
           v8),
         !v6) )
   {
-    sub_1B4D1EC(this, result);
+    sub_1B86614(this, result);
   }
   v6->fields.callbackFunc = v7;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
-  WarehouseListManager__SetMode_36250064(v6, 2, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
+  WarehouseListManager__SetMode_36559244(v6, 2, v11);
 }
 
 
@@ -179,9 +179,9 @@ void __fastcall WarehouseListMenu__EndClickCancel(WarehouseListMenu_o *this, boo
       || (WarehouseListViewManager__Modify((WarehouseListViewManager_o *)this, (const MethodInfo *)isRequest),
           (this = (WarehouseListMenu_o *)v4->fields.servantListViewManager) == 0LL) )
     {
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v6);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v6);
   }
   WarehouseListMenu__Callback(v4, 0, (int32_t)method, v3);
 }
@@ -207,9 +207,9 @@ void __fastcall WarehouseListMenu__EndClickTabChoice(
       || (WarehouseListViewManager__Modify((WarehouseListViewManager_o *)this, (const MethodInfo *)isRequest),
           (this = (WarehouseListMenu_o *)v4->fields.servantListViewManager) == 0LL) )
     {
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v6);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v6);
   }
   WarehouseListMenu__SetTabKind(v4, v4->fields.tabKind, 2, 0, 0, v3);
 }
@@ -232,9 +232,9 @@ void __fastcall WarehouseListMenu__EndClickTabLock(WarehouseListMenu_o *this, bo
       || (WarehouseListViewManager__Modify((WarehouseListViewManager_o *)this, (const MethodInfo *)isRequest),
           (this = (WarehouseListMenu_o *)v4->fields.servantListViewManager) == 0LL) )
     {
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v6);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v6);
   }
   WarehouseListMenu__SetTabKind(v4, v4->fields.tabKind, 1, 0, 0, v3);
 }
@@ -257,9 +257,9 @@ void __fastcall WarehouseListMenu__EndClickTabPush(WarehouseListMenu_o *this, bo
       || (WarehouseListViewManager__Modify((WarehouseListViewManager_o *)this, (const MethodInfo *)isRequest),
           (this = (WarehouseListMenu_o *)v4->fields.servantListViewManager) == 0LL) )
     {
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v6);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v6);
   }
   WarehouseListMenu__SetTabKind(v4, v4->fields.tabKind, 3, 0, 0, v3);
 }
@@ -304,17 +304,17 @@ void __fastcall WarehouseListMenu__EndClickTabPutIn(
           this = (WarehouseListMenu_o *)v5->fields.servantListViewManager;
           if ( !this )
             goto LABEL_15;
-          WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v9);
+          WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v9);
         }
 LABEL_13:
         this = (WarehouseListMenu_o *)v5->fields.servantListViewManager;
         if ( this )
         {
-          WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 2, method);
+          WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 2, method);
           return;
         }
 LABEL_15:
-        sub_1B4D1EC(this, isRequest);
+        sub_1B86614(this, isRequest);
       }
       modeKind = this->fields.modeKind;
       v7 = 0;
@@ -364,17 +364,17 @@ void __fastcall WarehouseListMenu__EndClickTabPutOut(
           this = (WarehouseListMenu_o *)v5->fields.servantListViewManager;
           if ( !this )
             goto LABEL_15;
-          WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v9);
+          WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v9);
         }
 LABEL_13:
         this = (WarehouseListMenu_o *)v5->fields.servantListViewManager;
         if ( this )
         {
-          WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 2, method);
+          WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 2, method);
           return;
         }
 LABEL_15:
-        sub_1B4D1EC(this, isRequest);
+        sub_1B86614(this, isRequest);
       }
       modeKind = this->fields.modeKind;
       v7 = 2;
@@ -424,15 +424,15 @@ LABEL_5:
           (this = (WarehouseListMenu_o *)v5->fields.servantListViewManager) == 0LL) )
     {
 LABEL_13:
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v9);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v9);
   }
 LABEL_11:
   this = (WarehouseListMenu_o *)v5->fields.servantListViewManager;
   if ( !this )
     goto LABEL_13;
-  WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 2, method);
+  WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 2, method);
 }
 
 
@@ -476,15 +476,15 @@ LABEL_5:
           (baseListViewManager = this->fields.servantListViewManager) == 0LL) )
     {
 LABEL_13:
-      sub_1B4D1EC(baseListViewManager, v6);
+      sub_1B86614(baseListViewManager, v6);
     }
-    WarehouseListManager__SetMode_36250064(baseListViewManager, 3, v13);
+    WarehouseListManager__SetMode_36559244(baseListViewManager, 3, v13);
   }
 LABEL_11:
   baseListViewManager = this->fields.servantListViewManager;
   if ( !baseListViewManager )
     goto LABEL_13;
-  WarehouseListManager__SetMode_36250064(baseListViewManager, 2, v7);
+  WarehouseListManager__SetMode_36559244(baseListViewManager, 2, v7);
 }
 
 
@@ -508,9 +508,9 @@ void __fastcall WarehouseListMenu__EndClickTabStatus(
       || (WarehouseListViewManager__Modify((WarehouseListViewManager_o *)this, (const MethodInfo *)isRequest),
           (this = (WarehouseListMenu_o *)v4->fields.servantListViewManager) == 0LL) )
     {
-      sub_1B4D1EC(this, isRequest);
+      sub_1B86614(this, isRequest);
     }
-    WarehouseListManager__SetMode_36250064((WarehouseListManager_o *)this, 3, v6);
+    WarehouseListManager__SetMode_36559244((WarehouseListManager_o *)this, 3, v6);
   }
   WarehouseListMenu__SetTabKind(v4, v4->fields.tabKind, 0, 0, 0, v3);
 }
@@ -527,7 +527,7 @@ void __fastcall WarehouseListMenu__EndClose(WarehouseListMenu_o *this, const Met
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, 0, v3, v4);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeCallbackFunc->fields.m_target)(
       closeCallbackFunc->fields.original_method_info,
       *(_QWORD *)&closeCallbackFunc->fields.extra_arg);
@@ -547,25 +547,25 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveCancel(WarehouseListMenu_o
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_49B8D8B & 1) == 0 )
+  if ( (byte_4A4C2B9 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v3);
-    byte_49B8D8B = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v3);
+    byte_4A4C2B9 = 1;
   }
   this->fields.state = 2;
   servantListViewManager = this->fields.servantListViewManager;
-  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
   WarehouseListManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_WarehouseListMenu_OnSelectServant__,
     v6);
   if ( !servantListViewManager )
-    sub_1B4D1EC(v7, v8);
+    sub_1B86614(v7, v8);
   servantListViewManager->fields.callbackFunc = v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  WarehouseListManager__SetMode_36250064(servantListViewManager, 2, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  WarehouseListManager__SetMode_36559244(servantListViewManager, 2, v11);
 }
 
 
@@ -583,17 +583,17 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveDecide(WarehouseListMenu_o
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x3
 
-  if ( (byte_49B8D88 & 1) == 0 )
+  if ( (byte_4A4C2B6 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndNotificationMove__, v3);
-    byte_49B8D88 = 1;
+    sub_1B863B8(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndNotificationMove__, v3);
+    byte_4A4C2B6 = 1;
   }
   switch ( this->fields.tabKind )
   {
     case 0:
       warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
       WarehouseConfirmMenu_CallbackFunc___ctor(
         v5,
         (Il2CppObject *)this,
@@ -605,7 +605,7 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveDecide(WarehouseListMenu_o
       goto LABEL_12;
     case 1:
       warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
       WarehouseConfirmMenu_CallbackFunc___ctor(
         v5,
         (Il2CppObject *)this,
@@ -617,7 +617,7 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveDecide(WarehouseListMenu_o
       goto LABEL_12;
     case 2:
       warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
       WarehouseConfirmMenu_CallbackFunc___ctor(
         v5,
         (Il2CppObject *)this,
@@ -629,7 +629,7 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveDecide(WarehouseListMenu_o
       goto LABEL_12;
     case 3:
       warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+      v5 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
       WarehouseConfirmMenu_CallbackFunc___ctor(
         v5,
         (Il2CppObject *)this,
@@ -637,7 +637,7 @@ void __fastcall WarehouseListMenu__EndCloseConfirmMoveDecide(WarehouseListMenu_o
         v13);
       if ( !warehouseConfirmMenu )
 LABEL_13:
-        sub_1B4D1EC(v7, v8);
+        sub_1B86614(v7, v8);
       v10 = 7;
 LABEL_12:
       WarehouseConfirmMenu__Open(warehouseConfirmMenu, v10, v5, 0, 0, v9);
@@ -666,25 +666,25 @@ void __fastcall WarehouseListMenu__EndCloseNotificationMoveDecide(WarehouseListM
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_49B8D8A & 1) == 0 )
+  if ( (byte_4A4C2B8 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v3);
-    byte_49B8D8A = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v3);
+    byte_4A4C2B8 = 1;
   }
   this->fields.state = 2;
   servantListViewManager = this->fields.servantListViewManager;
-  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
   WarehouseListManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_WarehouseListMenu_OnSelectServant__,
     v6);
   if ( !servantListViewManager )
-    sub_1B4D1EC(v7, v8);
+    sub_1B86614(v7, v8);
   servantListViewManager->fields.callbackFunc = v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  WarehouseListManager__SetMode_36250064(servantListViewManager, 2, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  WarehouseListManager__SetMode_36559244(servantListViewManager, 2, v11);
 }
 
 
@@ -700,25 +700,25 @@ void __fastcall WarehouseListMenu__EndCloseServantEquipStatus(WarehouseListMenu_
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_49B8D8F & 1) == 0 )
+  if ( (byte_4A4C2BD & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v3);
-    byte_49B8D8F = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v3);
+    byte_4A4C2BD = 1;
   }
   this->fields.state = 2;
   servantListViewManager = this->fields.servantListViewManager;
-  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
   WarehouseListManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_WarehouseListMenu_OnSelectServant__,
     v6);
   if ( !servantListViewManager )
-    sub_1B4D1EC(v7, v8);
+    sub_1B86614(v7, v8);
   servantListViewManager->fields.callbackFunc = v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  WarehouseListManager__SetMode_36250064(servantListViewManager, 2, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  WarehouseListManager__SetMode_36559244(servantListViewManager, 2, v11);
 }
 
 
@@ -734,25 +734,25 @@ void __fastcall WarehouseListMenu__EndCloseServantStatus(WarehouseListMenu_o *th
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_49B8D8D & 1) == 0 )
+  if ( (byte_4A4C2BB & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v3);
-    byte_49B8D8D = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v3);
+    byte_4A4C2BB = 1;
   }
   this->fields.state = 2;
   servantListViewManager = this->fields.servantListViewManager;
-  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+  v5 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
   WarehouseListManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_WarehouseListMenu_OnSelectServant__,
     v6);
   if ( !servantListViewManager )
-    sub_1B4D1EC(v7, v8);
+    sub_1B86614(v7, v8);
   servantListViewManager->fields.callbackFunc = v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  WarehouseListManager__SetMode_36250064(servantListViewManager, 2, v11);
+  sub_1B8635C((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  WarehouseListManager__SetMode_36559244(servantListViewManager, 2, v11);
 }
 
 
@@ -769,7 +769,7 @@ void __fastcall WarehouseListMenu__EndCloseServantStatusQuestJump(WarehouseListM
   {
     p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
     p_callbackFunc->klass = 0LL;
-    sub_1B4CF34(p_callbackFunc, 0, v2, v3);
+    sub_1B8635C(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
       2LL,
@@ -793,13 +793,13 @@ void __fastcall WarehouseListMenu__EndConfirmMove(WarehouseListMenu_o *this, boo
   __int64 v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_49B8D85 & 1) == 0 )
+  if ( (byte_4A4C2B3 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, v5);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndCloseConfirmMoveCancel__, v6);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndConfirmRequestLock__, v7);
-    byte_49B8D85 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, v5);
+    sub_1B863B8(&Method_WarehouseListMenu_EndCloseConfirmMoveCancel__, v6);
+    sub_1B863B8(&Method_WarehouseListMenu_EndConfirmRequestLock__, v7);
+    byte_4A4C2B3 = 1;
   }
   this->fields.state = 6;
   if ( isDecide )
@@ -810,7 +810,7 @@ void __fastcall WarehouseListMenu__EndConfirmMove(WarehouseListMenu_o *this, boo
     }
     else
     {
-      v8 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v8 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v8,
         (Il2CppObject *)this,
@@ -822,11 +822,11 @@ void __fastcall WarehouseListMenu__EndConfirmMove(WarehouseListMenu_o *this, boo
   else
   {
     warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-    v12 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v12 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v12, (Il2CppObject *)this, Method_WarehouseListMenu_EndCloseConfirmMoveCancel__, 0LL);
     if ( !warehouseConfirmMenu )
-      sub_1B4D1EC(v13, v14);
-    WarehouseConfirmMenu__Close_36238944(warehouseConfirmMenu, v12, v15);
+      sub_1B86614(v13, v14);
+    WarehouseConfirmMenu__Close_36548124(warehouseConfirmMenu, v12, v15);
   }
 }
 
@@ -847,19 +847,19 @@ void __fastcall WarehouseListMenu__EndConfirmRequestLock(
   __int64 v11; // x1
   NetworkManager_ResultCallbackFunc_o *v12; // x20
 
-  if ( (byte_49B8D86 & 1) == 0 )
+  if ( (byte_4A4C2B4 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_NetworkManager_getRequest_StorageTakeinRequest___, isRequest);
-    sub_1B4CF90(&Method_NetworkManager_getRequest_StorageTakeoutRequest___, v4);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndRequestWarehouse__, v7);
-    byte_49B8D86 = 1;
+    sub_1B863B8(&Method_NetworkManager_getRequest_StorageTakeinRequest___, isRequest);
+    sub_1B863B8(&Method_NetworkManager_getRequest_StorageTakeoutRequest___, v4);
+    sub_1B863B8(&NetworkManager_TypeInfo, v5);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    sub_1B863B8(&Method_WarehouseListMenu_EndRequestWarehouse__, v7);
+    byte_4A4C2B4 = 1;
   }
   tabKind = this->fields.tabKind;
   if ( tabKind < 2 )
   {
-    v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v12,
       (Il2CppObject *)this,
@@ -869,14 +869,14 @@ void __fastcall WarehouseListMenu__EndConfirmRequestLock(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v12,
-                       (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_StorageTakeinRequest___);
+                       (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_StorageTakeinRequest___);
     if ( !Request_object )
       goto LABEL_14;
     StorageTakeinRequest__beginRequest((StorageTakeinRequest_o *)Request_object, this->fields.selectNumList, 0LL);
   }
   else if ( (tabKind & 0xFFFFFFFE) == 2 )
   {
-    v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v9,
       (Il2CppObject *)this,
@@ -886,14 +886,14 @@ void __fastcall WarehouseListMenu__EndConfirmRequestLock(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v9,
-                       (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_StorageTakeoutRequest___);
+                       (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_StorageTakeoutRequest___);
     if ( Request_object )
     {
       StorageTakeoutRequest__beginRequest((StorageTakeoutRequest_o *)Request_object, this->fields.selectNumList, 0LL);
       return;
     }
 LABEL_14:
-    sub_1B4D1EC(Request_object, v11);
+    sub_1B86614(Request_object, v11);
   }
 }
 
@@ -911,18 +911,18 @@ void __fastcall WarehouseListMenu__EndNotificationMove(
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_49B8D89 & 1) == 0 )
+  if ( (byte_4A4C2B7 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndCloseNotificationMoveDecide__, v4);
-    byte_49B8D89 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&Method_WarehouseListMenu_EndCloseNotificationMoveDecide__, v4);
+    byte_4A4C2B7 = 1;
   }
   warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-  v6 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_WarehouseListMenu_EndCloseNotificationMoveDecide__, 0LL);
   if ( !warehouseConfirmMenu )
-    sub_1B4D1EC(v7, v8);
-  WarehouseConfirmMenu__Close_36238944(warehouseConfirmMenu, v6, v9);
+    sub_1B86614(v7, v8);
+  WarehouseConfirmMenu__Close_36548124(warehouseConfirmMenu, v6, v9);
 }
 
 
@@ -954,22 +954,22 @@ void __fastcall WarehouseListMenu__EndRequestWarehouse(
   __int64 v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49B8D87 & 1) == 0 )
+  if ( (byte_4A4C2B5 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, result);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndCloseConfirmMoveDecide__, v5);
-    byte_49B8D87 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, result);
+    sub_1B863B8(&Method_WarehouseListMenu_EndCloseConfirmMoveDecide__, v5);
+    byte_4A4C2B5 = 1;
   }
   tabKind = this->fields.tabKind;
   modeKind = this->fields.modeKind;
   this->fields.isModify = 1;
   WarehouseListMenu__SetTabKind(this, tabKind, modeKind, 1, 0, v3);
   warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-  v9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_WarehouseListMenu_EndCloseConfirmMoveDecide__, 0LL);
   if ( !warehouseConfirmMenu )
-    sub_1B4D1EC(v10, v11);
-  WarehouseConfirmMenu__Close_36238944(warehouseConfirmMenu, v9, v12);
+    sub_1B86614(v10, v11);
+  WarehouseConfirmMenu__Close_36548124(warehouseConfirmMenu, v9, v12);
 }
 
 
@@ -987,12 +987,12 @@ void __fastcall WarehouseListMenu__EndServantEquipStatus(
   System_Action_o *v9; // x21
 
   v4 = this;
-  if ( (byte_49B8D8E & 1) == 0 )
+  if ( (byte_4A4C2BC & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_EndCloseServantEquipStatus__, v6);
-    byte_49B8D8E = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_EndCloseServantEquipStatus__, v6);
+    byte_4A4C2BC = 1;
   }
   if ( isDecide )
   {
@@ -1002,12 +1002,12 @@ void __fastcall WarehouseListMenu__EndServantEquipStatus(
       || (this = (WarehouseListMenu_o *)servantListViewManager->fields.baseListViewManager) == 0LL )
     {
 LABEL_9:
-      sub_1B4D1EC(this, isDecide);
+      sub_1B86614(this, isDecide);
     }
     WarehouseListViewManager__ModifyItem((WarehouseListViewManager_o *)this, v4->fields.selectNum, method);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)v4, Method_WarehouseListMenu_EndCloseServantEquipStatus__, 0LL);
   if ( !Instance )
     goto LABEL_9;
@@ -1035,13 +1035,13 @@ void __fastcall WarehouseListMenu__EndServantStatus(
   __int64 *v17; // x8
 
   v8 = this;
-  if ( (byte_49B8D8C & 1) == 0 )
+  if ( (byte_4A4C2BA & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndCloseServantStatusQuestJump__, v10);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_EndCloseServantStatus__, v11);
-    byte_49B8D8C = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
+    sub_1B863B8(&Method_WarehouseListMenu_EndCloseServantStatusQuestJump__, v10);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_EndCloseServantStatus__, v11);
+    byte_4A4C2BA = 1;
   }
   if ( isDecide )
   {
@@ -1064,8 +1064,8 @@ void __fastcall WarehouseListMenu__EndServantStatus(
       WarehouseListManager__SortItem((WarehouseListManager_o *)this, (const MethodInfo *)isDecide);
     }
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v14 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   v15 = questId < 1;
   v16 = v14;
   if ( v15 )
@@ -1075,7 +1075,7 @@ void __fastcall WarehouseListMenu__EndServantStatus(
   System_Action___ctor(v14, (Il2CppObject *)v8, *v17, 0LL);
   if ( !Instance )
 LABEL_14:
-    sub_1B4D1EC(this, isDecide);
+    sub_1B86614(this, isDecide);
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v16, 0LL);
 }
 
@@ -1094,7 +1094,7 @@ void __fastcall WarehouseListMenu__EndStatusSync(
   {
     p_requedstCallback = (CGThumbnailListItem_o *)&this->fields.requedstCallback;
     p_requedstCallback->klass = 0LL;
-    sub_1B4CF34(p_requedstCallback, 0, (int32_t)method, v3);
+    sub_1B8635C(p_requedstCallback, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))requedstCallback->fields.m_target)(
       requedstCallback->fields.original_method_info,
       1LL,
@@ -1129,7 +1129,7 @@ int32_t __fastcall WarehouseListMenu__HidePushButton(
           pushTabSprite->klass[1]._1.byval_arg.data),
         (pushTabSprite = (UnityEngine_Component_o *)this->fields.pushTabButton) == 0LL) )
   {
-    sub_1B4D1EC(pushTabSprite, *(_QWORD *)&modeKind);
+    sub_1B86614(pushTabSprite, *(_QWORD *)&modeKind);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)pushTabSprite, 0, 0LL);
   if ( modeKind == 3 )
@@ -1145,7 +1145,7 @@ void __fastcall WarehouseListMenu__Init(WarehouseListMenu_o *this, const MethodI
 
   servantListViewManager = this->fields.servantListViewManager;
   if ( !servantListViewManager )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   WarehouseListManager__DestroyList(servantListViewManager, method);
   this->fields.state = 0;
   *(_QWORD *)&this->fields.tabKind = 0LL;
@@ -1175,7 +1175,7 @@ bool __fastcall WarehouseListMenu__IsSvtEqFriendShipSelectNumCheck(WarehouseList
     || (WarehouseListManager__GetSelectItemNum(servantListViewManager, &friendShipSum[1], friendShipSum, v2),
         (v5 = this->fields.servantListViewManager) == 0LL) )
   {
-    sub_1B4D1EC(servantListViewManager, method);
+    sub_1B86614(servantListViewManager, method);
   }
   return v5->fields.totalSum - friendShipSum[0] > v5->fields.sendMax;
 }
@@ -1194,19 +1194,19 @@ void __fastcall WarehouseListMenu__OnClickCancel(WarehouseListMenu_o *this, cons
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_49B8D7A & 1) == 0 )
+  if ( (byte_4A4C2A8 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickCancel__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickCancel__, v4);
-    byte_49B8D7A = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickCancel__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickCancel__, v4);
+    byte_4A4C2A8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_WarehouseListMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickCancel__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickCancel__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
     modeKind = this->fields.modeKind;
     this->fields.state = 3;
@@ -1216,7 +1216,7 @@ void __fastcall WarehouseListMenu__OnClickCancel(WarehouseListMenu_o *this, cons
     }
     else
     {
-      v10 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v10 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -1238,21 +1238,21 @@ void __fastcall WarehouseListMenu__OnClickScaleChage(WarehouseListMenu_o *this, 
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x2
 
-  if ( (byte_49B8D90 & 1) == 0 )
+  if ( (byte_4A4C2BE & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_ChangeIconScale__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickScaleChage__, v4);
-    byte_49B8D90 = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_ChangeIconScale__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickScaleChage__, v4);
+    byte_4A4C2BE = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_WarehouseListMenu_OnClickScaleChage__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickScaleChage__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickScaleChage__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickScaleChage__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
     WarehouseListMenu_RequestCallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
@@ -1280,26 +1280,26 @@ void __fastcall WarehouseListMenu__OnClickTabChoice(WarehouseListMenu_o *this, c
   const MethodInfo *v15; // x2
   WarehouseListManager_o *servantListViewManager; // x0
 
-  if ( (byte_49B8D81 & 1) == 0 )
+  if ( (byte_4A4C2AF & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabChoice__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabChoice__, v4);
-    byte_49B8D81 = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabChoice__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickTabChoice__, v4);
+    byte_4A4C2AF = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_WarehouseListMenu_OnClickTabChoice__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabChoice__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabChoice__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabChoice__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     modeKind = this->fields.modeKind;
     if ( modeKind )
     {
       if ( modeKind == 2 )
       {
-        v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+        v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
         WarehouseListMenu_RequestCallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -1309,11 +1309,11 @@ void __fastcall WarehouseListMenu__OnClickTabChoice(WarehouseListMenu_o *this, c
 LABEL_12:
         servantListViewManager = this->fields.servantListViewManager;
         if ( !servantListViewManager )
-          sub_1B4D1EC(0LL, v12);
+          sub_1B86614(0LL, v12);
         WarehouseListManager__ReleaseAll(servantListViewManager, v12);
         return;
       }
-      v13 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v13 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -1344,26 +1344,26 @@ void __fastcall WarehouseListMenu__OnClickTabLock(WarehouseListMenu_o *this, con
   const MethodInfo *v15; // x2
   WarehouseListManager_o *servantListViewManager; // x0
 
-  if ( (byte_49B8D80 & 1) == 0 )
+  if ( (byte_4A4C2AE & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabLock__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabLock__, v4);
-    byte_49B8D80 = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabLock__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickTabLock__, v4);
+    byte_4A4C2AE = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_WarehouseListMenu_OnClickTabLock__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabLock__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabLock__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabLock__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     modeKind = this->fields.modeKind;
     if ( modeKind )
     {
       if ( modeKind == 1 )
       {
-        v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+        v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
         WarehouseListMenu_RequestCallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -1373,11 +1373,11 @@ void __fastcall WarehouseListMenu__OnClickTabLock(WarehouseListMenu_o *this, con
 LABEL_12:
         servantListViewManager = this->fields.servantListViewManager;
         if ( !servantListViewManager )
-          sub_1B4D1EC(0LL, v12);
+          sub_1B86614(0LL, v12);
         WarehouseListManager__ReleaseAll(servantListViewManager, v12);
         return;
       }
-      v13 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v13 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -1403,22 +1403,22 @@ void __fastcall WarehouseListMenu__OnClickTabPush(WarehouseListMenu_o *this, con
   const MethodInfo *v10; // x1
   WarehouseListManager_o *servantListViewManager; // x0
 
-  if ( (byte_49B8D82 & 1) == 0 )
+  if ( (byte_4A4C2B0 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabPush__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabPush__, v4);
-    byte_49B8D82 = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabPush__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickTabPush__, v4);
+    byte_4A4C2B0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     EventTutorialMaster__CheckTutorial(-1, 68, 0LL, 0, 0, 0, 0, 0LL);
     v5 = Method_WarehouseListMenu_OnClickTabPush__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabPush__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabPush__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabPush__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
     WarehouseListMenu_RequestCallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
@@ -1427,7 +1427,7 @@ void __fastcall WarehouseListMenu__OnClickTabPush(WarehouseListMenu_o *this, con
     WarehouseListMenu__StatusRequest(this, v7, v9);
     servantListViewManager = this->fields.servantListViewManager;
     if ( !servantListViewManager )
-      sub_1B4D1EC(0LL, v10);
+      sub_1B86614(0LL, v10);
     WarehouseListManager__ReleaseAll(servantListViewManager, v10);
   }
 }
@@ -1447,23 +1447,23 @@ void __fastcall WarehouseListMenu__OnClickTabPutIn(WarehouseListMenu_o *this, co
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_49B8D7D & 1) == 0 )
+  if ( (byte_4A4C2AB & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabPutIn__, v3);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabPutIn__, v4);
-    byte_49B8D7D = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabPutIn__, v3);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_OnClickTabPutIn__, v4);
+    byte_4A4C2AB = 1;
   }
   if ( v2->fields.state == 2 )
   {
     servantListViewManager = v2->fields.servantListViewManager;
     if ( !servantListViewManager || !servantListViewManager->fields.baseListViewManager )
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     WarehouseListViewManager__SaveSortInfo((WarehouseListViewManager_o *)this, method);
     v6 = Method_WarehouseListMenu_OnClickTabPutIn__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabPutIn__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabPutIn__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v6, v6[4]);
+      v6 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabPutIn__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1B8639C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
     if ( (unsigned int)(v2->fields.modeKind - 1) > 1 )
     {
@@ -1471,7 +1471,7 @@ void __fastcall WarehouseListMenu__OnClickTabPutIn(WarehouseListMenu_o *this, co
     }
     else
     {
-      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v2,
@@ -1497,23 +1497,23 @@ void __fastcall WarehouseListMenu__OnClickTabPutOut(WarehouseListMenu_o *this, c
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_49B8D7E & 1) == 0 )
+  if ( (byte_4A4C2AC & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabPutOut__, v3);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabPutOut__, v4);
-    byte_49B8D7E = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabPutOut__, v3);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_OnClickTabPutOut__, v4);
+    byte_4A4C2AC = 1;
   }
   if ( v2->fields.state == 2 )
   {
     servantListViewManager = v2->fields.servantListViewManager;
     if ( !servantListViewManager || !servantListViewManager->fields.baseListViewManager )
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     WarehouseListViewManager__SaveSortInfo((WarehouseListViewManager_o *)this, method);
     v6 = Method_WarehouseListMenu_OnClickTabPutOut__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabPutOut__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabPutOut__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v6, v6[4]);
+      v6 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabPutOut__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1B8639C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
     if ( (unsigned int)(v2->fields.modeKind - 1) > 1 )
     {
@@ -1521,7 +1521,7 @@ void __fastcall WarehouseListMenu__OnClickTabPutOut(WarehouseListMenu_o *this, c
     }
     else
     {
-      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v2,
@@ -1547,23 +1547,23 @@ void __fastcall WarehouseListMenu__OnClickTabServant(WarehouseListMenu_o *this, 
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_49B8D7B & 1) == 0 )
+  if ( (byte_4A4C2A9 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabServant__, v3);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabServant__, v4);
-    byte_49B8D7B = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabServant__, v3);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_OnClickTabServant__, v4);
+    byte_4A4C2A9 = 1;
   }
   if ( v2->fields.state == 2 )
   {
     servantListViewManager = v2->fields.servantListViewManager;
     if ( !servantListViewManager || !servantListViewManager->fields.baseListViewManager )
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     WarehouseListViewManager__SaveSortInfo((WarehouseListViewManager_o *)this, method);
     v6 = Method_WarehouseListMenu_OnClickTabServant__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabServant__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabServant__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v6, v6[4]);
+      v6 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabServant__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1B8639C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
     if ( (unsigned int)(v2->fields.modeKind - 1) > 1 )
     {
@@ -1571,7 +1571,7 @@ void __fastcall WarehouseListMenu__OnClickTabServant(WarehouseListMenu_o *this, 
     }
     else
     {
-      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v2,
@@ -1597,23 +1597,23 @@ void __fastcall WarehouseListMenu__OnClickTabServantEquip(WarehouseListMenu_o *t
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_49B8D7C & 1) == 0 )
+  if ( (byte_4A4C2AA & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabServantEquip__, v3);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabServantEquip__, v4);
-    byte_49B8D7C = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabServantEquip__, v3);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_OnClickTabServantEquip__, v4);
+    byte_4A4C2AA = 1;
   }
   if ( v2->fields.state == 2 )
   {
     servantListViewManager = v2->fields.servantListViewManager;
     if ( !servantListViewManager || !servantListViewManager->fields.baseListViewManager )
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     WarehouseListViewManager__SaveSortInfo((WarehouseListViewManager_o *)this, method);
     v6 = Method_WarehouseListMenu_OnClickTabServantEquip__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabServantEquip__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabServantEquip__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v6, v6[4]);
+      v6 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabServantEquip__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1B8639C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
     if ( (unsigned int)(v2->fields.modeKind - 1) > 1 )
     {
@@ -1621,7 +1621,7 @@ void __fastcall WarehouseListMenu__OnClickTabServantEquip(WarehouseListMenu_o *t
     }
     else
     {
-      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+      v9 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
       WarehouseListMenu_RequestCallbackFunc___ctor(
         v9,
         (Il2CppObject *)v2,
@@ -1643,21 +1643,21 @@ void __fastcall WarehouseListMenu__OnClickTabStatus(WarehouseListMenu_o *this, c
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x2
 
-  if ( (byte_49B8D7F & 1) == 0 )
+  if ( (byte_4A4C2AD & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndClickTabStatus__, v3);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnClickTabStatus__, v4);
-    byte_49B8D7F = 1;
+    sub_1B863B8(&WarehouseListMenu_RequestCallbackFunc_TypeInfo, method);
+    sub_1B863B8(&Method_WarehouseListMenu_EndClickTabStatus__, v3);
+    sub_1B863B8(&Method_WarehouseListMenu_OnClickTabStatus__, v4);
+    byte_4A4C2AD = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_WarehouseListMenu_OnClickTabStatus__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnClickTabStatus__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnClickTabStatus__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v5, v5[4]);
+      v5 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnClickTabStatus__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B4D1DC(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
+    v7 = (WarehouseListMenu_RequestCallbackFunc_o *)sub_1B86604(WarehouseListMenu_RequestCallbackFunc_TypeInfo);
     WarehouseListMenu_RequestCallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
@@ -1703,7 +1703,7 @@ void __fastcall WarehouseListMenu__OnSelectServant(
   __int64 v33; // x1
   __int64 v34; // x1
   __int64 v35; // x20
-  WarehouseListViewManager_o *baseListViewManager; // x0
+  __int64 baseListViewManager; // x0
   const MethodInfo *v37; // x1
   int32_t v38; // w2
   const MethodInfo *v39; // x3
@@ -1742,7 +1742,7 @@ void __fastcall WarehouseListMenu__OnSelectServant(
   _QWORD *v72; // x0
   System_Reflection_MethodBase_o *v73; // x0
   const MethodInfo *v74; // x2
-  int64_t dragParentObject; // x22
+  int64_t v75; // x22
   struct UserServantEntity_o *userServantEntity; // x8
   __int128 v77; // q1
   _QWORD *v78; // x0
@@ -1774,92 +1774,93 @@ void __fastcall WarehouseListMenu__OnSelectServant(
   void *monitor; // x22
   Il2CppClass *klass; // x23
   Il2CppObject *v106; // x25
-  System_String_o *v107; // x19
-  System_String_o *v108; // x22
-  System_Object_array *v109; // x23
-  int32_t Rarity; // w26
-  int32_t v111; // w2
-  const MethodInfo *v112; // x3
-  Il2CppObject *v113; // x26
-  int32_t v114; // w2
-  const MethodInfo *v115; // x3
-  Il2CppObject *v116; // x26
-  int32_t v117; // w0
-  int32_t v118; // w2
-  const MethodInfo *v119; // x3
-  Il2CppObject *v120; // x24
-  int32_t v121; // w0
-  int32_t v122; // w2
-  const MethodInfo *v123; // x3
-  Il2CppObject *v124; // x24
-  int32_t v125; // w2
-  const MethodInfo *v126; // x3
-  Il2CppObject *v127; // x24
-  WarehouseListViewItem_o *v128; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v129; // x9
+  UserServantEntity_o *v107; // x8
+  int32_t v108; // w27
+  int32_t v109; // w26
+  System_String_o *v110; // x19
+  System_String_o *v111; // x22
+  System_Object_array *v112; // x23
+  int32_t v113; // w2
+  const MethodInfo *v114; // x3
+  Il2CppObject *v115; // x27
+  int32_t v116; // w2
+  const MethodInfo *v117; // x3
+  Il2CppObject *v118; // x27
+  int32_t v119; // w0
+  int32_t v120; // w2
+  const MethodInfo *v121; // x3
+  Il2CppObject *v122; // x24
+  int32_t v123; // w2
+  const MethodInfo *v124; // x3
+  Il2CppObject *v125; // x24
+  int32_t v126; // w2
+  const MethodInfo *v127; // x3
+  Il2CppObject *v128; // x24
+  WarehouseListViewItem_o *v129; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v130; // x9
   ServantEntity_o *servantEntity; // x21
-  int32_t v131; // w2
-  const MethodInfo *v132; // x3
-  Il2CppObject *v133; // x21
-  System_String_o *v134; // x21
-  System_String_o *v135; // x22
-  System_String_o *v136; // x23
+  int32_t v132; // w2
+  const MethodInfo *v133; // x3
+  Il2CppObject *v134; // x21
+  System_String_o *v135; // x21
+  System_String_o *v136; // x22
+  System_String_o *v137; // x23
   Il2CppObject *Instance; // x24
-  CommonConfirmDialog_ClickDelegate_o *v138; // x25
-  const MethodInfo *v139; // x3
-  struct WarehouseListManager_o *v140; // x8
-  const MethodInfo *v141; // x3
-  struct WarehouseListManager_o *v142; // x8
-  const MethodInfo *v143; // x3
-  struct WarehouseListManager_o *v144; // x8
-  __int64 v145; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v146; // [xsp+40h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v147; // [xsp+60h] [xbp-70h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v148; // 0:x0.16
+  CommonConfirmDialog_ClickDelegate_o *v139; // x25
+  const MethodInfo *v140; // x3
+  struct WarehouseListManager_o *v141; // x8
+  const MethodInfo *v142; // x3
+  struct WarehouseListManager_o *v143; // x8
+  const MethodInfo *v144; // x3
+  struct WarehouseListManager_o *v145; // x8
+  __int64 v146; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v147; // [xsp+40h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v148; // [xsp+60h] [xbp-70h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v149; // 0:x0.16
 
-  if ( (byte_49B8D84 & 1) == 0 )
+  if ( (byte_4A4C2B2 & 1) == 0 )
   {
-    sub_1B4CF90(&BalanceConfig_TypeInfo, *(_QWORD *)&result);
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, v9);
-    sub_1B4CF90(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, v10);
-    sub_1B4CF90(&CommonConfirmDialog_ClickDelegate_TypeInfo, v11);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_ServantMaster___, v12);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserServantMaster___, v13);
-    sub_1B4CF90(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
-    sub_1B4CF90(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v15);
-    sub_1B4CF90(&ServantStatusDialog_EndDelegate_TypeInfo, v16);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v17);
-    sub_1B4CF90(&object___TypeInfo, v18);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v19);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v20);
-    sub_1B4CF90(&Rarity_TypeInfo, v21);
-    sub_1B4CF90(&ServantStatusDialog_ResultDelegate_TypeInfo, v22);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v23);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
-    sub_1B4CF90(&Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__0__, v25);
-    sub_1B4CF90(&WarehouseListMenu___c__DisplayClass81_0_TypeInfo, v26);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndConfirmMove__, v27);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndServantEquipStatus__, v28);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndServantStatus__, v29);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v30);
-    sub_1B4CF90(&StringLiteral_11679/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v31);
-    sub_1B4CF90(&StringLiteral_11677/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v32);
-    sub_1B4CF90(&StringLiteral_11678/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v33);
-    sub_1B4CF90(&StringLiteral_11680/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v34);
-    byte_49B8D84 = 1;
+    sub_1B863B8(&BalanceConfig_TypeInfo, *(_QWORD *)&result);
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, v9);
+    sub_1B863B8(&WarehouseConfirmMenu_CallbackFunc_TypeInfo, v10);
+    sub_1B863B8(&CommonConfirmDialog_ClickDelegate_TypeInfo, v11);
+    sub_1B863B8(&Method_DataManager_GetMasterData_ServantMaster___, v12);
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantMaster___, v13);
+    sub_1B863B8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v14);
+    sub_1B863B8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v15);
+    sub_1B863B8(&ServantStatusDialog_EndDelegate_TypeInfo, v16);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v17);
+    sub_1B863B8(&object___TypeInfo, v18);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v19);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v20);
+    sub_1B863B8(&Rarity_TypeInfo, v21);
+    sub_1B863B8(&ServantStatusDialog_ResultDelegate_TypeInfo, v22);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v23);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
+    sub_1B863B8(&Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__0__, v25);
+    sub_1B863B8(&WarehouseListMenu___c__DisplayClass81_0_TypeInfo, v26);
+    sub_1B863B8(&Method_WarehouseListMenu_EndConfirmMove__, v27);
+    sub_1B863B8(&Method_WarehouseListMenu_EndServantEquipStatus__, v28);
+    sub_1B863B8(&Method_WarehouseListMenu_EndServantStatus__, v29);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v30);
+    sub_1B863B8(&StringLiteral_11744/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v31);
+    sub_1B863B8(&StringLiteral_11742/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v32);
+    sub_1B863B8(&StringLiteral_11743/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v33);
+    sub_1B863B8(&StringLiteral_11745/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v34);
+    byte_4A4C2B2 = 1;
   }
-  v35 = sub_1B4D1DC(WarehouseListMenu___c__DisplayClass81_0_TypeInfo);
+  v35 = sub_1B86604(WarehouseListMenu___c__DisplayClass81_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v35, 0LL);
   if ( !v35 )
-    goto LABEL_119;
+    goto LABEL_121;
   *(_QWORD *)(v35 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v35 + 16), (int32_t)this, v38, v39);
+  sub_1B8635C((CGThumbnailListItem_o *)(v35 + 16), (int32_t)this, v38, v39);
   if ( this->fields.state != 2 )
     return;
   this->fields.state = 3;
   this->fields.selectNum = 0LL;
   this->fields.selectNumList = list;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.selectNumList, (int32_t)list, v40, v41);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.selectNumList, (int32_t)list, v40, v41);
   if ( result == 3 )
   {
     if ( (n & 0x80000000) != 0 )
@@ -1870,25 +1871,25 @@ void __fastcall WarehouseListMenu__OnSelectServant(
     {
       servantListViewManager = this->fields.servantListViewManager;
       if ( !servantListViewManager )
-        goto LABEL_119;
-      baseListViewManager = servantListViewManager->fields.baseListViewManager;
+        goto LABEL_121;
+      baseListViewManager = (__int64)servantListViewManager->fields.baseListViewManager;
       if ( !baseListViewManager )
-        goto LABEL_119;
-      Item = WarehouseListViewManager__GetItem(baseListViewManager, n, v42);
+        goto LABEL_121;
+      Item = WarehouseListViewManager__GetItem((WarehouseListViewManager_o *)baseListViewManager, n, v42);
     }
     *(_QWORD *)(v35 + 24) = Item;
     v71 = (WarehouseListViewItem_o **)(v35 + 24);
-    sub_1B4CF34((CGThumbnailListItem_o *)(v35 + 24), (int32_t)Item, (int32_t)v42, v43);
+    sub_1B8635C((CGThumbnailListItem_o *)(v35 + 24), (int32_t)Item, (int32_t)v42, v43);
     if ( !*(_QWORD *)(v35 + 24) || !(*v71)->fields.isEnabled )
     {
       v78 = Method_WarehouseListMenu_OnSelectServant__;
       if ( (*((_BYTE *)Method_WarehouseListMenu_OnSelectServant__ + 83) & 2) != 0 )
-        v78 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnSelectServant__);
-      v79 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v78, v78[4]);
+        v78 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnSelectServant__);
+      v79 = (System_Reflection_MethodBase_o *)sub_1B8639C(v78, v78[4]);
       OverwriteAssetSoundName__PlaySystemSe(v79, 2, 0, 0LL);
       this->fields.state = 2;
       v80 = this->fields.servantListViewManager;
-      v81 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+      v81 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
       WarehouseListManager_CallbackFunc___ctor(
         v81,
         (Il2CppObject *)this,
@@ -1897,242 +1898,220 @@ void __fastcall WarehouseListMenu__OnSelectServant(
       if ( v80 )
       {
         v80->fields.callbackFunc = v81;
-        sub_1B4CF34((CGThumbnailListItem_o *)&v80->fields.callbackFunc, (int32_t)v81, v83, v84);
-        WarehouseListManager__SetMode_36250064(v80, 2, v85);
+        sub_1B8635C((CGThumbnailListItem_o *)&v80->fields.callbackFunc, (int32_t)v81, v83, v84);
+        WarehouseListManager__SetMode_36559244(v80, 2, v85);
         return;
       }
-      goto LABEL_119;
+      goto LABEL_121;
     }
     v72 = Method_WarehouseListMenu_OnSelectServant__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnSelectServant__ + 83) & 2) != 0 )
-      v72 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnSelectServant__);
-    v73 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v72, v72[4]);
+      v72 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnSelectServant__);
+    v73 = (System_Reflection_MethodBase_o *)sub_1B8639C(v72, v72[4]);
     OverwriteAssetSoundName__PlaySystemSe(v73, 0, 0, 0LL);
-    baseListViewManager = (WarehouseListViewManager_o *)UserGameMaster__getSelfUserGame(0LL);
+    baseListViewManager = (__int64)UserGameMaster__getSelfUserGame(0LL);
     if ( !baseListViewManager )
-      goto LABEL_119;
-    dragParentObject = (int64_t)baseListViewManager->fields.dragParentObject;
-    if ( !dragParentObject )
+      goto LABEL_121;
+    v75 = *(_QWORD *)(baseListViewManager + 120);
+    if ( !v75 )
       goto LABEL_44;
     if ( !*v71 )
-      goto LABEL_119;
+      goto LABEL_121;
     userServantEntity = (*v71)->fields.userServantEntity;
     if ( !userServantEntity )
-      goto LABEL_119;
+      goto LABEL_121;
     v77 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
-    *(_OWORD *)&v147.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
-    *(_OWORD *)&v147.fields.fakeValue = v77;
+    *(_OWORD *)&v148.fields.currentCryptoKey = *(_OWORD *)&userServantEntity->fields.id.fields.currentCryptoKey;
+    *(_OWORD *)&v148.fields.fakeValue = v77;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    v146 = v147;
-    if ( dragParentObject == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v146, 0LL) )
+    v147 = v148;
+    if ( v75 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v147, 0LL) )
     {
 LABEL_44:
       WarehouseListMenu__PushRequest(this, *v71, v74);
       return;
     }
-    baseListViewManager = (WarehouseListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseListViewManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseListViewManager )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)DataManager__GetMasterData_object_(
-                                                          (DataManager_o *)baseListViewManager,
-                                                          (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserServantMaster___);
+      goto LABEL_121;
+    baseListViewManager = (__int64)DataManager__GetMasterData_object_(
+                                     (DataManager_o *)baseListViewManager,
+                                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantMaster___);
     if ( !baseListViewManager )
-      goto LABEL_119;
+      goto LABEL_121;
     Entity = DataMasterBase_object__object__long___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)baseListViewManager,
-               dragParentObject,
-               (const MethodInfo_319FEF8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    baseListViewManager = (WarehouseListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+               v75,
+               (const MethodInfo_32167DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    baseListViewManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseListViewManager )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)DataManager__GetMasterData_object_(
-                                                          (DataManager_o *)baseListViewManager,
-                                                          (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ServantMaster___);
+      goto LABEL_121;
+    baseListViewManager = (__int64)DataManager__GetMasterData_object_(
+                                     (DataManager_o *)baseListViewManager,
+                                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Entity )
-      goto LABEL_119;
+      goto LABEL_121;
     v103 = (DataMasterBase_TMaster__TEntity__PKType__o *)baseListViewManager;
     klass = Entity[5].klass;
     monitor = Entity[5].monitor;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v148.fields.currentCryptoKey = klass;
-    *(_QWORD *)&v148.fields.fakeValue = monitor;
-    baseListViewManager = (WarehouseListViewManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
-                                                          v148,
-                                                          0LL);
+    *(_QWORD *)&v149.fields.currentCryptoKey = klass;
+    *(_QWORD *)&v149.fields.fakeValue = monitor;
+    baseListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v149, 0LL);
     if ( !v103 )
-      goto LABEL_119;
+      goto LABEL_121;
     v106 = DataMasterBase_object__object__int___GetEntity(
              v103,
-             (int32_t)baseListViewManager,
-             (const MethodInfo_319D99C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             baseListViewManager,
+             (const MethodInfo_3214280 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    baseListViewManager = (__int64)UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)Entity, 0LL, 0LL);
+    if ( !baseListViewManager )
+      goto LABEL_121;
+    if ( !*v71 )
+      goto LABEL_121;
+    v107 = (*v71)->fields.userServantEntity;
+    if ( !v107 )
+      goto LABEL_121;
+    v108 = *(_DWORD *)(baseListViewManager + 24);
+    baseListViewManager = (__int64)UserServantEntity__GetOverwriteStatus(v107, 0LL, 0LL);
+    if ( !baseListViewManager )
+      goto LABEL_121;
+    v109 = *(_DWORD *)(baseListViewManager + 24);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v107 = LocalizationManager__Get((System_String_o *)StringLiteral_11680/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
-    v108 = LocalizationManager__Get((System_String_o *)StringLiteral_11679/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
-    v109 = (System_Object_array *)sub_1B4D038(object___TypeInfo, 6LL);
-    Rarity = UserServantEntity__getRarity((UserServantEntity_o *)Entity, 0LL);
+    v110 = LocalizationManager__Get((System_String_o *)StringLiteral_11745/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+    v111 = LocalizationManager__Get((System_String_o *)StringLiteral_11744/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
+    v112 = (System_Object_array *)sub_1B86460(object___TypeInfo, 6LL);
     if ( !Rarity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
-    baseListViewManager = (WarehouseListViewManager_o *)Rarity__getRarityType(Rarity, 0LL);
-    if ( !v109 )
-LABEL_119:
-      sub_1B4D1EC(baseListViewManager, v37);
-    v113 = (Il2CppObject *)baseListViewManager;
+    baseListViewManager = (__int64)Rarity__getRarityType(v108, 0LL);
+    if ( !v112 )
+LABEL_121:
+      sub_1B86614(baseListViewManager, v37);
+    v115 = (Il2CppObject *)baseListViewManager;
     if ( baseListViewManager )
     {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
       if ( !baseListViewManager )
-        goto LABEL_121;
+        goto LABEL_123;
     }
-    if ( !v109->max_length )
-      goto LABEL_120;
-    v109->m_Items[0] = v113;
-    sub_1B4CF34((CGThumbnailListItem_o *)v109->m_Items, (int32_t)v113, v111, v112);
+    if ( !v112->max_length )
+      goto LABEL_122;
+    v112->m_Items[0] = v115;
+    sub_1B8635C((CGThumbnailListItem_o *)v112->m_Items, (int32_t)v115, v113, v114);
     if ( !v106 )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)ServantEntity__getClassName((ServantEntity_o *)v106, 0LL);
-    v116 = (Il2CppObject *)baseListViewManager;
+      goto LABEL_121;
+    baseListViewManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)v106, 0LL);
+    v118 = (Il2CppObject *)baseListViewManager;
     if ( baseListViewManager )
     {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
       if ( !baseListViewManager )
-        goto LABEL_121;
+        goto LABEL_123;
     }
-    if ( v109->max_length <= 1 )
-      goto LABEL_120;
-    v109->m_Items[1] = v116;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v109->m_Items[1], (int32_t)v116, v114, v115);
-    v117 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+    if ( v112->max_length <= 1 )
+      goto LABEL_122;
+    v112->m_Items[1] = v118;
+    sub_1B8635C((CGThumbnailListItem_o *)&v112->m_Items[1], (int32_t)v118, v116, v117);
+    v119 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
              (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)Entity[6],
              0LL);
-    baseListViewManager = (WarehouseListViewManager_o *)ServantEntity__getName(
-                                                          (ServantEntity_o *)v106,
-                                                          v117,
-                                                          -1,
-                                                          1,
-                                                          0LL);
-    v120 = (Il2CppObject *)baseListViewManager;
+    baseListViewManager = (__int64)ServantEntity__getName((ServantEntity_o *)v106, v119, -1, 1, 0LL);
+    v122 = (Il2CppObject *)baseListViewManager;
     if ( baseListViewManager )
     {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
       if ( !baseListViewManager )
-        goto LABEL_121;
+        goto LABEL_123;
     }
-    if ( v109->max_length <= 2 )
-      goto LABEL_120;
-    v109->m_Items[2] = v120;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v109->m_Items[2], (int32_t)v120, v118, v119);
+    if ( v112->max_length <= 2 )
+      goto LABEL_122;
+    v112->m_Items[2] = v122;
+    sub_1B8635C((CGThumbnailListItem_o *)&v112->m_Items[2], (int32_t)v122, v120, v121);
+    baseListViewManager = (__int64)Rarity__getRarityType(v109, 0LL);
+    v125 = (Il2CppObject *)baseListViewManager;
+    if ( baseListViewManager )
+    {
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
+      if ( !baseListViewManager )
+        goto LABEL_123;
+    }
+    if ( v112->max_length <= 3 )
+      goto LABEL_122;
+    v112->m_Items[3] = v125;
+    sub_1B8635C((CGThumbnailListItem_o *)&v112->m_Items[3], (int32_t)v125, v123, v124);
     if ( !*v71 )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)(*v71)->fields.userServantEntity;
+      goto LABEL_121;
+    baseListViewManager = (__int64)(*v71)->fields.servantEntity;
     if ( !baseListViewManager )
-      goto LABEL_119;
-    v121 = UserServantEntity__getRarity((UserServantEntity_o *)baseListViewManager, 0LL);
-    baseListViewManager = (WarehouseListViewManager_o *)Rarity__getRarityType(v121, 0LL);
-    v124 = (Il2CppObject *)baseListViewManager;
+      goto LABEL_121;
+    baseListViewManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)baseListViewManager, 0LL);
+    v128 = (Il2CppObject *)baseListViewManager;
     if ( baseListViewManager )
     {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
       if ( !baseListViewManager )
-        goto LABEL_121;
+        goto LABEL_123;
     }
-    if ( v109->max_length <= 3 )
-      goto LABEL_120;
-    v109->m_Items[3] = v124;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v109->m_Items[3], (int32_t)v124, v122, v123);
+    if ( v112->max_length <= 4 )
+      goto LABEL_122;
+    v112->m_Items[4] = v128;
+    sub_1B8635C((CGThumbnailListItem_o *)&v112->m_Items[4], (int32_t)v128, v126, v127);
+    v129 = *v71;
     if ( !*v71 )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)(*v71)->fields.servantEntity;
-    if ( !baseListViewManager )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)ServantEntity__getClassName(
-                                                          (ServantEntity_o *)baseListViewManager,
-                                                          0LL);
-    v127 = (Il2CppObject *)baseListViewManager;
-    if ( baseListViewManager )
-    {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
-      if ( !baseListViewManager )
-        goto LABEL_121;
-    }
-    if ( v109->max_length <= 4 )
-      goto LABEL_120;
-    v109->m_Items[4] = v127;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v109->m_Items[4], (int32_t)v127, v125, v126);
-    v128 = *v71;
-    if ( !*v71 )
-      goto LABEL_119;
-    v129 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v128->fields.userServantEntity;
-    if ( !v129 )
-      goto LABEL_119;
-    servantEntity = v128->fields.servantEntity;
-    baseListViewManager = (WarehouseListViewManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
-                                                          v129[6],
-                                                          0LL);
+      goto LABEL_121;
+    v130 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)v129->fields.userServantEntity;
+    if ( !v130 )
+      goto LABEL_121;
+    servantEntity = v129->fields.servantEntity;
+    baseListViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v130[6], 0LL);
     if ( !servantEntity )
-      goto LABEL_119;
-    baseListViewManager = (WarehouseListViewManager_o *)ServantEntity__getName(
-                                                          servantEntity,
-                                                          (int32_t)baseListViewManager,
-                                                          -1,
-                                                          1,
-                                                          0LL);
-    v133 = (Il2CppObject *)baseListViewManager;
+      goto LABEL_121;
+    baseListViewManager = (__int64)ServantEntity__getName(servantEntity, baseListViewManager, -1, 1, 0LL);
+    v134 = (Il2CppObject *)baseListViewManager;
     if ( baseListViewManager )
     {
-      baseListViewManager = (WarehouseListViewManager_o *)sub_1B4D0CC(
-                                                            baseListViewManager,
-                                                            v109->obj.klass->_1.element_class);
+      baseListViewManager = sub_1B864F4(baseListViewManager, v112->obj.klass->_1.element_class);
       if ( !baseListViewManager )
       {
-LABEL_121:
-        v145 = sub_1B4D210();
-        sub_1B4D0B8(v145, 0LL);
+LABEL_123:
+        v146 = sub_1B86638();
+        sub_1B864E0(v146, 0LL);
       }
     }
-    if ( v109->max_length > 5 )
+    if ( v112->max_length > 5 )
     {
-      v109->m_Items[5] = v133;
-      sub_1B4CF34((CGThumbnailListItem_o *)&v109->m_Items[5], (int32_t)v133, v131, v132);
-      v134 = System_String__Format_61134896(v108, v109, 0LL);
-      v135 = LocalizationManager__Get((System_String_o *)StringLiteral_11678/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
-      v136 = LocalizationManager__Get((System_String_o *)StringLiteral_11677/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v138 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B4D1DC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v112->m_Items[5] = v134;
+      sub_1B8635C((CGThumbnailListItem_o *)&v112->m_Items[5], (int32_t)v134, v132, v133);
+      v135 = System_String__Format_61686604(v111, v112, 0LL);
+      v136 = LocalizationManager__Get((System_String_o *)StringLiteral_11743/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+      v137 = LocalizationManager__Get((System_String_o *)StringLiteral_11742/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v139 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B86604(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(
-        v138,
+        v139,
         (Il2CppObject *)v35,
         Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__0__,
         0LL);
-      baseListViewManager = (WarehouseListViewManager_o *)BalanceConfig_TypeInfo;
+      baseListViewManager = (__int64)BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        baseListViewManager = (WarehouseListViewManager_o *)BalanceConfig_TypeInfo;
+        baseListViewManager = (__int64)BalanceConfig_TypeInfo;
       }
       if ( Instance )
       {
-        CommonUI__OpenConfirmDialog_30248496(
+        CommonUI__OpenConfirmDialog_30483432(
           (CommonUI_o *)Instance,
-          v107,
-          v134,
+          v110,
           v135,
           v136,
-          v138,
-          baseListViewManager->fields.sort[2].fields.bonusKind2,
-          *(&baseListViewManager->fields.sort[2].fields.filter2Kind + 1),
+          v137,
+          v139,
+          *(_DWORD *)(*(_QWORD *)(baseListViewManager + 184) + 488LL),
+          *(_DWORD *)(*(_QWORD *)(baseListViewManager + 184) + 500LL),
           15.0,
           700,
           0,
@@ -2145,10 +2124,10 @@ LABEL_121:
           0LL);
         return;
       }
-      goto LABEL_119;
+      goto LABEL_121;
     }
-LABEL_120:
-    sub_1B4D1F4(baseListViewManager, v37);
+LABEL_122:
+    sub_1B8661C(baseListViewManager, v37);
   }
   if ( result != 2 )
   {
@@ -2159,8 +2138,8 @@ LABEL_120:
     }
     v44 = Method_WarehouseListMenu_OnSelectServant__;
     if ( (*((_BYTE *)Method_WarehouseListMenu_OnSelectServant__ + 83) & 2) != 0 )
-      v44 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnSelectServant__);
-    v45 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v44, v44[4]);
+      v44 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnSelectServant__);
+    v45 = (System_Reflection_MethodBase_o *)sub_1B8639C(v44, v44[4]);
     OverwriteAssetSoundName__PlaySystemSe(v45, 0, 0, 0LL);
     v46 = this->fields.servantListViewManager;
     this->fields.state = 5;
@@ -2172,7 +2151,7 @@ LABEL_120:
         {
           case 0:
             warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v48,
               (Il2CppObject *)this,
@@ -2180,7 +2159,7 @@ LABEL_120:
               v49);
             v51 = this->fields.servantListViewManager;
             if ( !v51 || !warehouseConfirmMenu )
-              goto LABEL_119;
+              goto LABEL_121;
             sendKeep = v51->fields.sendKeep;
             sendSum = v51->fields.sendSum;
             totalSum = v51->fields.totalSum;
@@ -2188,50 +2167,50 @@ LABEL_120:
             break;
           case 1:
             warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v48,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
-              v139);
-            v140 = this->fields.servantListViewManager;
-            if ( !v140 || !warehouseConfirmMenu )
-              goto LABEL_119;
-            sendKeep = v140->fields.sendKeep;
-            sendSum = v140->fields.sendSum;
-            totalSum = v140->fields.totalSum;
+              v140);
+            v141 = this->fields.servantListViewManager;
+            if ( !v141 || !warehouseConfirmMenu )
+              goto LABEL_121;
+            sendKeep = v141->fields.sendKeep;
+            sendSum = v141->fields.sendSum;
+            totalSum = v141->fields.totalSum;
             v55 = 9;
             break;
           case 2:
             warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v48,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
-              v141);
-            v142 = this->fields.servantListViewManager;
-            if ( !v142 || !warehouseConfirmMenu )
-              goto LABEL_119;
-            sendKeep = v142->fields.sendKeep;
-            sendSum = v142->fields.sendSum;
-            totalSum = v142->fields.totalSum;
+              v142);
+            v143 = this->fields.servantListViewManager;
+            if ( !v143 || !warehouseConfirmMenu )
+              goto LABEL_121;
+            sendKeep = v143->fields.sendKeep;
+            sendSum = v143->fields.sendSum;
+            totalSum = v143->fields.totalSum;
             v55 = 10;
             break;
           case 3:
             warehouseConfirmMenu = this->fields.warehouseConfirmMenu;
-            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v48 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v48,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
-              v143);
-            v144 = this->fields.servantListViewManager;
-            if ( !v144 || !warehouseConfirmMenu )
-              goto LABEL_119;
-            sendKeep = v144->fields.sendKeep;
-            sendSum = v144->fields.sendSum;
-            totalSum = v144->fields.totalSum;
+              v144);
+            v145 = this->fields.servantListViewManager;
+            if ( !v145 || !warehouseConfirmMenu )
+              goto LABEL_121;
+            sendKeep = v145->fields.sendKeep;
+            sendSum = v145->fields.sendSum;
+            totalSum = v145->fields.totalSum;
             v55 = 11;
             break;
           default:
@@ -2247,51 +2226,51 @@ LABEL_120:
         {
           case 0:
             v67 = this->fields.warehouseConfirmMenu;
-            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v68,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
               v69);
             if ( !v67 )
-              goto LABEL_119;
+              goto LABEL_121;
             v70 = v67;
             v55 = 0;
             goto LABEL_64;
           case 1:
             v96 = this->fields.warehouseConfirmMenu;
-            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v68,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
               v97);
             if ( !v96 )
-              goto LABEL_119;
+              goto LABEL_121;
             v55 = 1;
             goto LABEL_63;
           case 2:
             v96 = this->fields.warehouseConfirmMenu;
-            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v68,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
               v98);
             if ( !v96 )
-              goto LABEL_119;
+              goto LABEL_121;
             v55 = 2;
             goto LABEL_63;
           case 3:
             v96 = this->fields.warehouseConfirmMenu;
-            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B4D1DC(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
+            v68 = (WarehouseConfirmMenu_CallbackFunc_o *)sub_1B86604(WarehouseConfirmMenu_CallbackFunc_TypeInfo);
             WarehouseConfirmMenu_CallbackFunc___ctor(
               v68,
               (Il2CppObject *)this,
               Method_WarehouseListMenu_EndConfirmMove__,
               v99);
             if ( !v96 )
-              goto LABEL_119;
+              goto LABEL_121;
             v55 = 3;
 LABEL_63:
             v70 = v96;
@@ -2307,85 +2286,85 @@ LABEL_64:
       WarehouseConfirmMenu__Open(v70, v55, v100, v101, sendKeep, v50);
       return;
     }
-    goto LABEL_119;
+    goto LABEL_121;
   }
   v58 = Method_WarehouseListMenu_OnSelectServant__;
   if ( (*((_BYTE *)Method_WarehouseListMenu_OnSelectServant__ + 83) & 2) != 0 )
-    v58 = (_QWORD *)sub_1B4CFA8(Method_WarehouseListMenu_OnSelectServant__);
-  v59 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v58, v58[4]);
+    v58 = (_QWORD *)sub_1B863D0(Method_WarehouseListMenu_OnSelectServant__);
+  v59 = (System_Reflection_MethodBase_o *)sub_1B8639C(v58, v58[4]);
   OverwriteAssetSoundName__PlaySystemSe(v59, 0, 0, 0LL);
   this->fields.state = 7;
   if ( !list )
-    goto LABEL_119;
+    goto LABEL_121;
   if ( !list->max_length )
-    goto LABEL_120;
+    goto LABEL_122;
   tabKind = this->fields.tabKind;
   this->fields.selectNum = list->m_Items[0];
   switch ( tabKind )
   {
     case 0:
-      v61 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v61 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       selectNum = this->fields.selectNum;
       v63 = v61;
-      v64 = (ServantStatusDialog_ResultDelegate_o *)sub_1B4D1DC(ServantStatusDialog_ResultDelegate_TypeInfo);
+      v64 = (ServantStatusDialog_ResultDelegate_o *)sub_1B86604(ServantStatusDialog_ResultDelegate_TypeInfo);
       ServantStatusDialog_ResultDelegate___ctor(
         v64,
         (Il2CppObject *)this,
         Method_WarehouseListMenu_EndServantStatus__,
         0LL);
       if ( !v63 )
-        goto LABEL_119;
+        goto LABEL_121;
       v65 = (CommonUI_o *)v63;
       v66 = 0;
       goto LABEL_53;
     case 1:
-      v86 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v86 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v87 = this->fields.selectNum;
       v88 = v86;
-      v89 = (ServantStatusDialog_EndDelegate_o *)sub_1B4D1DC(ServantStatusDialog_EndDelegate_TypeInfo);
+      v89 = (ServantStatusDialog_EndDelegate_o *)sub_1B86604(ServantStatusDialog_EndDelegate_TypeInfo);
       ServantStatusDialog_EndDelegate___ctor(
         v89,
         (Il2CppObject *)this,
         Method_WarehouseListMenu_EndServantEquipStatus__,
         0LL);
       if ( !v88 )
-        goto LABEL_119;
+        goto LABEL_121;
       v90 = (CommonUI_o *)v88;
       v91 = 0;
       goto LABEL_56;
     case 2:
-      v92 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v92 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       selectNum = this->fields.selectNum;
       v93 = v92;
-      v64 = (ServantStatusDialog_ResultDelegate_o *)sub_1B4D1DC(ServantStatusDialog_ResultDelegate_TypeInfo);
+      v64 = (ServantStatusDialog_ResultDelegate_o *)sub_1B86604(ServantStatusDialog_ResultDelegate_TypeInfo);
       ServantStatusDialog_ResultDelegate___ctor(
         v64,
         (Il2CppObject *)this,
         Method_WarehouseListMenu_EndServantStatus__,
         0LL);
       if ( !v93 )
-        goto LABEL_119;
+        goto LABEL_121;
       v66 = 3;
       v65 = (CommonUI_o *)v93;
 LABEL_53:
-      CommonUI__OpenServantStatusDialog_30258392(v65, v66, selectNum, v64, 0LL, 0LL);
+      CommonUI__OpenServantStatusDialog_30493336(v65, v66, selectNum, v64, 0LL, 0LL);
       break;
     case 3:
-      v94 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v94 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v87 = this->fields.selectNum;
       v95 = v94;
-      v89 = (ServantStatusDialog_EndDelegate_o *)sub_1B4D1DC(ServantStatusDialog_EndDelegate_TypeInfo);
+      v89 = (ServantStatusDialog_EndDelegate_o *)sub_1B86604(ServantStatusDialog_EndDelegate_TypeInfo);
       ServantStatusDialog_EndDelegate___ctor(
         v89,
         (Il2CppObject *)this,
         Method_WarehouseListMenu_EndServantEquipStatus__,
         0LL);
       if ( !v95 )
-        goto LABEL_119;
+        goto LABEL_121;
       v91 = 3;
       v90 = (CommonUI_o *)v95;
 LABEL_56:
-      CommonUI__OpenServantStatusDialog_30257464(v90, v91, v87, v89, 0LL, 0LL);
+      CommonUI__OpenServantStatusDialog_30492408(v90, v91, v87, v89, 0LL, 0LL);
       break;
     default:
       return;
@@ -2422,12 +2401,12 @@ void __fastcall WarehouseListMenu__Open(
   System_Action_o *v27; // x20
   unsigned __int128 v28; // [xsp+0h] [xbp-50h] BYREF
 
-  if ( (byte_49B8D77 & 1) == 0 )
+  if ( (byte_4A4C2A5 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndOpen__, v9);
-    sub_1B4CF90(&WarehouseListMenu_TypeInfo, v10);
-    byte_49B8D77 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1B863B8(&Method_WarehouseListMenu_EndOpen__, v9);
+    sub_1B863B8(&WarehouseListMenu_TypeInfo, v10);
+    byte_4A4C2A5 = 1;
   }
   v11 = WarehouseListMenu_TypeInfo;
   v28 = 0uLL;
@@ -2449,9 +2428,9 @@ void __fastcall WarehouseListMenu__Open(
   {
     this->fields.kind = kind;
     this->fields.callbackFunc = callback;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
     this->fields.setupInfo = setupinfo;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupinfo, v18, v19);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupinfo, v18, v19);
     WarehouseListMenu__SetTabKind(
       this,
       this->fields.tabKind,
@@ -2470,9 +2449,9 @@ void __fastcall WarehouseListMenu__Open(
     this->fields.kind = kind;
     this->fields.tabKind = kind == 1;
     this->fields.callbackFunc = callback;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v14, v15);
     this->fields.setupInfo = setupinfo;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupinfo, v24, v25);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.setupInfo, (int32_t)setupinfo, v24, v25);
     this->fields.isModify = 0;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( gameObject )
@@ -2480,13 +2459,13 @@ void __fastcall WarehouseListMenu__Open(
       UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
       WarehouseListMenu__SetTabKind(this, this->fields.tabKind, this->fields.modeKind, 1, 0, v26);
       this->fields.state = 1;
-      v27 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+      v27 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
       System_Action___ctor(v27, (Il2CppObject *)this, Method_WarehouseListMenu_EndOpen__, 0LL);
       BaseMenu__Open((BaseMenu_o *)this, v27, 0LL);
       return;
     }
 LABEL_12:
-    sub_1B4D1EC(gameObject, v13);
+    sub_1B86614(gameObject, v13);
   }
 }
 
@@ -2547,30 +2526,30 @@ void __fastcall WarehouseListMenu__PushRequest(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v53; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v54; // 0:x0.16
 
-  if ( (byte_49B8D91 & 1) == 0 )
+  if ( (byte_4A4C2BF & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, selectItem);
-    sub_1B4CF90(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v5);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v6);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
-    sub_1B4CF90(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_1B4CF90(&Method_WarehouseListMenu_EndCardFavoriteRequest__, v12);
-    byte_49B8D91 = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, selectItem);
+    sub_1B863B8(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v5);
+    sub_1B863B8(&NetworkManager_TypeInfo, v6);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v7);
+    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v9);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1B863B8(&Method_WarehouseListMenu_EndCardFavoriteRequest__, v12);
+    byte_4A4C2BF = 1;
   }
   limitCountSupport = (DataManager_o *)UserGameMaster__getSelfUserGame(0LL);
   if ( !selectItem )
     goto LABEL_18;
   v15 = limitCountSupport;
   userServantEntity = selectItem->fields.userServantEntity;
-  limitCountSupport = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  limitCountSupport = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_18;
   limitCountSupport = (DataManager_o *)DataManager__GetMasterData_object_(
                                          limitCountSupport,
-                                         (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                         (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !v15 || !userServantEntity )
     goto LABEL_18;
   v17 = (UserServantCollectionMaster_o *)limitCountSupport;
@@ -2581,11 +2560,11 @@ void __fastcall WarehouseListMenu__PushRequest(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v53.fields.currentCryptoKey = v20;
   *(_QWORD *)&v53.fields.fakeValue = v19;
-  limitCountSupport = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v53, 0LL);
+  limitCountSupport = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v53, 0LL);
   if ( !v17 )
     goto LABEL_18;
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v17, v18, (int32_t)limitCountSupport, 0LL);
-  limitCountSupport = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  limitCountSupport = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_18;
   CommonUI__SetConnectMarkFadeInLag((CommonUI_o *)limitCountSupport, 0, 0LL);
@@ -2598,14 +2577,14 @@ void __fastcall WarehouseListMenu__PushRequest(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v51 = v52;
-  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v51, 0LL);
+  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v51, 0LL);
   v26 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
   masterLoadThreads = v15->fields.masterLoadThreads;
   v47 = v25;
   *(_OWORD *)&v50.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v50.fields.fakeValue = v26;
-  v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v50, 0LL);
-  v27 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v50, 0LL);
+  v27 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v27,
     (Il2CppObject *)this,
@@ -2615,25 +2594,25 @@ void __fastcall WarehouseListMenu__PushRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v27,
-                     (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
+                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
   v29 = *(_OWORD *)&userServantEntity->fields.id.fields.fakeValue;
   v30 = (CardFavoriteRequest_o *)Request_object;
   *(_OWORD *)&v49.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v49.fields.fakeValue = v29;
-  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v49, 0LL);
-  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v49, 0LL);
+  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
                       userServantEntity->fields.imageLimitCount,
                       0LL);
-  v31 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  v31 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
           userServantEntity->fields.dispLimitCount,
           0LL);
-  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
           userServantEntity->fields.commandCardLimitCount,
           0LL);
-  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
           userServantEntity->fields.iconLimitCount,
           0LL);
-  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
           userServantEntity->fields.portraitLimitCount,
           0LL);
   IsLock = UserServantEntity__IsLock(userServantEntity, 0LL);
@@ -2642,23 +2621,23 @@ void __fastcall WarehouseListMenu__PushRequest(
     goto LABEL_18;
   v36 = (char)limitCountSupport;
   commonFlag = EntityDefinitely->fields.svtCommonFlag;
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
                   userServantEntity->fields.battleVoice,
                   0LL);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
                        userServantEntity->fields.randomLimitCount,
                        0LL);
-  v40 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(
+  v40 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
           userServantEntity->fields.randomLimitCountSupport,
           0LL);
   v41 = *(_QWORD *)&userServantEntity->fields.limitCountSupport.fields.currentCryptoKey;
   *(_QWORD *)&v54.fields.fakeValue = *(_QWORD *)&userServantEntity->fields.limitCountSupport.fields.fakeValue;
   randomSettingSupport = v40;
   *(_QWORD *)&v54.fields.currentCryptoKey = v41;
-  limitCountSupport = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47008572(v54, 0LL);
+  limitCountSupport = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(v54, 0LL);
   if ( !v30 )
 LABEL_18:
-    sub_1B4D1EC(limitCountSupport, v14);
+    sub_1B86614(limitCountSupport, v14);
   CardFavoriteRequest__beginRequest(
     v30,
     targetUsrSVtId,
@@ -2800,42 +2779,42 @@ void __fastcall WarehouseListMenu__SetTabKind(
   bool v119; // [xsp+Ch] [xbp-A4h]
   UnityEngine_Color_o v120; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49B8D79 & 1) == 0 )
+  if ( (byte_4A4C2A7 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, *(_QWORD *)&tabKind);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserServantMaster___, v11);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v12);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v13);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v15);
-    sub_1B4CF90(&StringLiteral_17257/*"btn_txt_craftessence_off"*/, v16);
-    sub_1B4CF90(&StringLiteral_17297/*"btn_txt_servant_off"*/, v17);
-    sub_1B4CF90(&StringLiteral_20224/*"img_txt_cardspace"*/, v18);
-    sub_1B4CF90(&StringLiteral_17351/*"button_push_reg"*/, v19);
-    sub_1B4CF90(&StringLiteral_17352/*"button_push_unreg"*/, v20);
-    sub_1B4CF90(&StringLiteral_17337/*"button_allchoice_reg"*/, v21);
-    sub_1B4CF90(&StringLiteral_17158/*"btn_bg_12"*/, v22);
-    sub_1B4CF90(&StringLiteral_17340/*"button_alllock_unreg"*/, v23);
-    sub_1B4CF90(&StringLiteral_17298/*"btn_txt_servant_on"*/, v24);
-    sub_1B4CF90(&StringLiteral_17353/*"button_select_reg"*/, v25);
-    sub_1B4CF90(&StringLiteral_17160/*"btn_bg_19"*/, v26);
-    sub_1B4CF90(&StringLiteral_17252/*"btn_txt_cardtoarchive_on"*/, v27);
-    sub_1B4CF90(&StringLiteral_15161/*"WAREHOUSE_EXPLANATION_PUT_IN"*/, v28);
-    sub_1B4CF90(&StringLiteral_15159/*"WAREHOUSE_EXPLANATION_LOCK"*/, v29);
-    sub_1B4CF90(&StringLiteral_17164/*"btn_bg_25"*/, v30);
-    sub_1B4CF90(&StringLiteral_17251/*"btn_txt_cardtoarchive_off"*/, v31);
-    sub_1B4CF90(&StringLiteral_17258/*"btn_txt_craftessence_on"*/, v32);
-    sub_1B4CF90(&StringLiteral_15162/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/, v33);
-    sub_1B4CF90(&StringLiteral_15160/*"WAREHOUSE_EXPLANATION_PUSH"*/, v34);
-    sub_1B4CF90(&StringLiteral_17240/*"btn_txt_archivetocard_on"*/, v35);
-    sub_1B4CF90(&StringLiteral_20215/*"img_txt_archivespace"*/, v36);
-    sub_1B4CF90(&StringLiteral_17239/*"btn_txt_archivetocard_off"*/, v37);
-    sub_1B4CF90(&StringLiteral_15158/*"WAREHOUSE_EXPLANATION_CHOICE"*/, v38);
-    sub_1B4CF90(&StringLiteral_17354/*"button_select_unreg"*/, v39);
-    sub_1B4CF90(&StringLiteral_17339/*"button_alllock_reg"*/, v40);
-    sub_1B4CF90(&StringLiteral_17163/*"btn_bg_24"*/, v41);
-    sub_1B4CF90(&StringLiteral_17338/*"button_allchoice_unreg"*/, v42);
-    byte_49B8D79 = 1;
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, *(_QWORD *)&tabKind);
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantMaster___, v11);
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantStorageMaster___, v12);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v13);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v15);
+    sub_1B863B8(&StringLiteral_17333/*"btn_txt_craftessence_off"*/, v16);
+    sub_1B863B8(&StringLiteral_17373/*"btn_txt_servant_off"*/, v17);
+    sub_1B863B8(&StringLiteral_20324/*"img_txt_cardspace"*/, v18);
+    sub_1B863B8(&StringLiteral_17427/*"button_push_reg"*/, v19);
+    sub_1B863B8(&StringLiteral_17428/*"button_push_unreg"*/, v20);
+    sub_1B863B8(&StringLiteral_17413/*"button_allchoice_reg"*/, v21);
+    sub_1B863B8(&StringLiteral_17234/*"btn_bg_12"*/, v22);
+    sub_1B863B8(&StringLiteral_17416/*"button_alllock_unreg"*/, v23);
+    sub_1B863B8(&StringLiteral_17374/*"btn_txt_servant_on"*/, v24);
+    sub_1B863B8(&StringLiteral_17429/*"button_select_reg"*/, v25);
+    sub_1B863B8(&StringLiteral_17236/*"btn_bg_19"*/, v26);
+    sub_1B863B8(&StringLiteral_17328/*"btn_txt_cardtoarchive_on"*/, v27);
+    sub_1B863B8(&StringLiteral_15234/*"WAREHOUSE_EXPLANATION_PUT_IN"*/, v28);
+    sub_1B863B8(&StringLiteral_15232/*"WAREHOUSE_EXPLANATION_LOCK"*/, v29);
+    sub_1B863B8(&StringLiteral_17240/*"btn_bg_25"*/, v30);
+    sub_1B863B8(&StringLiteral_17327/*"btn_txt_cardtoarchive_off"*/, v31);
+    sub_1B863B8(&StringLiteral_17334/*"btn_txt_craftessence_on"*/, v32);
+    sub_1B863B8(&StringLiteral_15235/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/, v33);
+    sub_1B863B8(&StringLiteral_15233/*"WAREHOUSE_EXPLANATION_PUSH"*/, v34);
+    sub_1B863B8(&StringLiteral_17316/*"btn_txt_archivetocard_on"*/, v35);
+    sub_1B863B8(&StringLiteral_20315/*"img_txt_archivespace"*/, v36);
+    sub_1B863B8(&StringLiteral_17315/*"btn_txt_archivetocard_off"*/, v37);
+    sub_1B863B8(&StringLiteral_15231/*"WAREHOUSE_EXPLANATION_CHOICE"*/, v38);
+    sub_1B863B8(&StringLiteral_17430/*"button_select_unreg"*/, v39);
+    sub_1B863B8(&StringLiteral_17415/*"button_alllock_reg"*/, v40);
+    sub_1B863B8(&StringLiteral_17239/*"btn_bg_24"*/, v41);
+    sub_1B863B8(&StringLiteral_17414/*"button_allchoice_unreg"*/, v42);
+    byte_4A4C2A7 = 1;
   }
   v43 = !this->fields.isInitTab || isInit;
   if ( !this->fields.isInitTab || isInit )
@@ -2846,24 +2825,24 @@ void __fastcall WarehouseListMenu__SetTabKind(
     WarehouseListManager__DestroyList(servantListViewManager, *(const MethodInfo **)&tabKind);
   }
   UserGameMaster__getSelfUserGame(0LL);
-  servantListViewManager = (WarehouseListManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  servantListViewManager = (WarehouseListManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !servantListViewManager )
     goto LABEL_196;
   DataManager__GetMasterData_object_(
     (DataManager_o *)servantListViewManager,
-    (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  servantListViewManager = (WarehouseListManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantMaster___);
+  servantListViewManager = (WarehouseListManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !servantListViewManager )
     goto LABEL_196;
   DataManager__GetMasterData_object_(
     (DataManager_o *)servantListViewManager,
-    (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
+    (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantStorageMaster___);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_49B5B12 )
+  if ( !byte_4A49076 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, *(_QWORD *)&tabKind);
-    byte_49B5B12 = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, *(_QWORD *)&tabKind);
+    byte_4A49076 = 1;
   }
   servantListViewManager = (WarehouseListManager_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2876,11 +2855,11 @@ void __fastcall WarehouseListMenu__SetTabKind(
   v48 = klass[21];
   v49 = klass[22];
   v50 = klass[23];
-  if ( !byte_49B5B13 )
+  if ( !byte_4A49077 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, *(_QWORD *)&tabKind);
+    sub_1B863B8(&LocalizationManager_TypeInfo, *(_QWORD *)&tabKind);
     servantListViewManager = (WarehouseListManager_o *)LocalizationManager_TypeInfo;
-    byte_49B5B13 = 1;
+    byte_4A49077 = 1;
   }
   if ( !LODWORD(servantListViewManager[1].fields.servantTabLabel) )
   {
@@ -2911,9 +2890,9 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v58 = &StringLiteral_17298/*"btn_txt_servant_on"*/;
+  v58 = &StringLiteral_17374/*"btn_txt_servant_on"*/;
   if ( v57 )
-    v58 = &StringLiteral_17297/*"btn_txt_servant_off"*/;
+    v58 = &StringLiteral_17373/*"btn_txt_servant_off"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v58, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantTabLabel;
   v59 = v55;
@@ -2934,7 +2913,7 @@ void __fastcall WarehouseListMenu__SetTabKind(
   if ( !servantListViewManager )
     goto LABEL_196;
   v119 = isModify;
-  v63 = (System_String_o **)(v57 ? &StringLiteral_17158/*"btn_bg_12"*/ : &StringLiteral_17160/*"btn_bg_19"*/);
+  v63 = (System_String_o **)(v57 ? &StringLiteral_17234/*"btn_bg_12"*/ : &StringLiteral_17236/*"btn_bg_19"*/);
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v63, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantTabButton;
   if ( !servantListViewManager )
@@ -2964,17 +2943,17 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantEquipTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v67 = &StringLiteral_17257/*"btn_txt_craftessence_off"*/;
+  v67 = &StringLiteral_17333/*"btn_txt_craftessence_off"*/;
   if ( v57 )
-    v67 = &StringLiteral_17258/*"btn_txt_craftessence_on"*/;
+    v67 = &StringLiteral_17334/*"btn_txt_craftessence_on"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v67, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantEquipTabSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
   if ( v57 )
-    v68 = &StringLiteral_17160/*"btn_bg_19"*/;
+    v68 = &StringLiteral_17236/*"btn_bg_19"*/;
   else
-    v68 = &StringLiteral_17158/*"btn_bg_12"*/;
+    v68 = &StringLiteral_17234/*"btn_bg_12"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v68, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.servantEquipTabLabel;
   if ( !v57 )
@@ -3022,14 +3001,14 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantListViewManager = (WarehouseListManager_o *)this->fields.putInTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v72 = (System_String_o **)&StringLiteral_17251/*"btn_txt_cardtoarchive_off"*/;
+  v72 = (System_String_o **)&StringLiteral_17327/*"btn_txt_cardtoarchive_off"*/;
   if ( v71 != 2 )
-    v72 = (System_String_o **)&StringLiteral_17252/*"btn_txt_cardtoarchive_on"*/;
+    v72 = (System_String_o **)&StringLiteral_17328/*"btn_txt_cardtoarchive_on"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v72, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.putInTabSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v73 = (System_String_o **)(v71 == 2 ? &StringLiteral_17163/*"btn_bg_24"*/ : &StringLiteral_17164/*"btn_bg_25"*/);
+  v73 = (System_String_o **)(v71 == 2 ? &StringLiteral_17239/*"btn_bg_24"*/ : &StringLiteral_17240/*"btn_bg_25"*/);
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v73, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.putInTabButton;
   if ( !servantListViewManager )
@@ -3058,14 +3037,14 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantListViewManager = (WarehouseListManager_o *)this->fields.putOutTabTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v76 = (System_String_o **)&StringLiteral_17240/*"btn_txt_archivetocard_on"*/;
+  v76 = (System_String_o **)&StringLiteral_17316/*"btn_txt_archivetocard_on"*/;
   if ( v71 != 2 )
-    v76 = (System_String_o **)&StringLiteral_17239/*"btn_txt_archivetocard_off"*/;
+    v76 = (System_String_o **)&StringLiteral_17315/*"btn_txt_archivetocard_off"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v76, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.putOutTabSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v77 = (System_String_o **)(v71 == 2 ? &StringLiteral_17164/*"btn_bg_25"*/ : &StringLiteral_17163/*"btn_bg_24"*/);
+  v77 = (System_String_o **)(v71 == 2 ? &StringLiteral_17240/*"btn_bg_25"*/ : &StringLiteral_17239/*"btn_bg_24"*/);
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v77, 0LL);
   servantListViewManager = (WarehouseListManager_o *)this->fields.putOutTabButton;
   if ( !servantListViewManager )
@@ -3083,9 +3062,9 @@ void __fastcall WarehouseListMenu__SetTabKind(
   servantListViewManager = (WarehouseListManager_o *)this->fields.sendTitleSprite;
   if ( !servantListViewManager )
     goto LABEL_196;
-  v80 = (System_String_o **)&StringLiteral_20224/*"img_txt_cardspace"*/;
+  v80 = (System_String_o **)&StringLiteral_20324/*"img_txt_cardspace"*/;
   if ( v71 != 2 )
-    v80 = (System_String_o **)&StringLiteral_20215/*"img_txt_archivespace"*/;
+    v80 = (System_String_o **)&StringLiteral_20315/*"img_txt_archivespace"*/;
   UISprite__set_spriteName((UISprite_o *)servantListViewManager, *v80, 0LL);
   switch ( tabKind )
   {
@@ -3216,9 +3195,9 @@ LABEL_115:
       servantListViewManager = (WarehouseListManager_o *)this->fields.statusTabSprite;
       if ( !servantListViewManager )
         goto LABEL_196;
-      v90 = &StringLiteral_17353/*"button_select_reg"*/;
+      v90 = &StringLiteral_17429/*"button_select_reg"*/;
       if ( modeKind )
-        v90 = &StringLiteral_17354/*"button_select_unreg"*/;
+        v90 = &StringLiteral_17430/*"button_select_unreg"*/;
       UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v90, 0LL);
       servantListViewManager = (WarehouseListManager_o *)this->fields.statusTabButton;
       if ( !servantListViewManager )
@@ -3247,9 +3226,9 @@ LABEL_115:
       servantListViewManager = (WarehouseListManager_o *)this->fields.lockTabSprite;
       if ( !servantListViewManager )
         goto LABEL_196;
-      v93 = &StringLiteral_17339/*"button_alllock_reg"*/;
+      v93 = &StringLiteral_17415/*"button_alllock_reg"*/;
       if ( modeKind != 1 )
-        v93 = &StringLiteral_17340/*"button_alllock_unreg"*/;
+        v93 = &StringLiteral_17416/*"button_alllock_unreg"*/;
       UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v93, 0LL);
       servantListViewManager = (WarehouseListManager_o *)this->fields.lockTabButton;
       if ( !servantListViewManager )
@@ -3278,9 +3257,9 @@ LABEL_115:
       servantListViewManager = (WarehouseListManager_o *)this->fields.choiceTabSprite;
       if ( !servantListViewManager )
         goto LABEL_196;
-      v96 = &StringLiteral_17337/*"button_allchoice_reg"*/;
+      v96 = &StringLiteral_17413/*"button_allchoice_reg"*/;
       if ( modeKind != 2 )
-        v96 = &StringLiteral_17338/*"button_allchoice_unreg"*/;
+        v96 = &StringLiteral_17414/*"button_allchoice_unreg"*/;
       UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v96, 0LL);
       servantListViewManager = (WarehouseListManager_o *)this->fields.choiceTabButton;
       if ( !servantListViewManager )
@@ -3312,9 +3291,9 @@ LABEL_115:
       servantListViewManager = (WarehouseListManager_o *)this->fields.pushTabSprite;
       if ( !servantListViewManager )
         goto LABEL_196;
-      v99 = &StringLiteral_17351/*"button_push_reg"*/;
+      v99 = &StringLiteral_17427/*"button_push_reg"*/;
       if ( modeKind != 3 )
-        v99 = &StringLiteral_17352/*"button_push_unreg"*/;
+        v99 = &StringLiteral_17428/*"button_push_unreg"*/;
       UISprite__set_spriteName((UISprite_o *)servantListViewManager, (System_String_o *)*v99, 0LL);
       pushTabButton = this->fields.pushTabButton;
       if ( !pushTabButton )
@@ -3377,7 +3356,7 @@ LABEL_107:
         explanationLabel = this->fields.explanationLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v105 = &StringLiteral_15161/*"WAREHOUSE_EXPLANATION_PUT_IN"*/;
+        v105 = &StringLiteral_15234/*"WAREHOUSE_EXPLANATION_PUT_IN"*/;
       }
       else
       {
@@ -3386,7 +3365,7 @@ LABEL_107:
         explanationLabel = this->fields.explanationLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v105 = &StringLiteral_15162/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/;
+        v105 = &StringLiteral_15235/*"WAREHOUSE_EXPLANATION_PUT_OUT"*/;
       }
       servantListViewManager = (WarehouseListManager_o *)LocalizationManager__Get((System_String_o *)*v105, 0LL);
       if ( !explanationLabel )
@@ -3414,7 +3393,7 @@ LABEL_182:
           modeKind == 3,
           v81);
         v110 = this->fields.servantListViewManager;
-        v111 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+        v111 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
         WarehouseListManager_CallbackFunc___ctor(
           v111,
           (Il2CppObject *)this,
@@ -3423,7 +3402,7 @@ LABEL_182:
         if ( !v110 )
           goto LABEL_196;
         v110->fields.callbackFunc = v111;
-        sub_1B4CF34((CGThumbnailListItem_o *)&v110->fields.callbackFunc, (int32_t)v111, v113, v114);
+        sub_1B8635C((CGThumbnailListItem_o *)&v110->fields.callbackFunc, (int32_t)v111, v113, v114);
         v115 = 2;
         servantListViewManager = v110;
       }
@@ -3431,7 +3410,7 @@ LABEL_182:
       {
         v115 = 1;
       }
-      WarehouseListManager__SetMode_36250064(servantListViewManager, v115, v81);
+      WarehouseListManager__SetMode_36559244(servantListViewManager, v115, v81);
       if ( !v43 && v103 )
       {
         v116 = this->fields.servantListViewManager;
@@ -3447,7 +3426,7 @@ LABEL_182:
           }
         }
 LABEL_196:
-        sub_1B4D1EC(servantListViewManager, *(_QWORD *)&tabKind);
+        sub_1B86614(servantListViewManager, *(_QWORD *)&tabKind);
       }
 LABEL_192:
       v117 = this->fields.servantListViewManager;
@@ -3469,7 +3448,7 @@ LABEL_192:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       servantListViewManager = (WarehouseListManager_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_15159/*"WAREHOUSE_EXPLANATION_LOCK"*/,
+                                                           (System_String_o *)StringLiteral_15232/*"WAREHOUSE_EXPLANATION_LOCK"*/,
                                                            0LL);
       if ( !v106 )
         goto LABEL_196;
@@ -3486,7 +3465,7 @@ LABEL_192:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       servantListViewManager = (WarehouseListManager_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_15158/*"WAREHOUSE_EXPLANATION_CHOICE"*/,
+                                                           (System_String_o *)StringLiteral_15231/*"WAREHOUSE_EXPLANATION_CHOICE"*/,
                                                            0LL);
       if ( !v108 )
         goto LABEL_196;
@@ -3503,7 +3482,7 @@ LABEL_192:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       servantListViewManager = (WarehouseListManager_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_15160/*"WAREHOUSE_EXPLANATION_PUSH"*/,
+                                                           (System_String_o *)StringLiteral_15233/*"WAREHOUSE_EXPLANATION_PUSH"*/,
                                                            0LL);
       if ( !v109 )
         goto LABEL_196;
@@ -3555,13 +3534,13 @@ void __fastcall WarehouseListMenu__StatusRequest(
   System_Int64_array *lockList; // [xsp+18h] [xbp-28h] BYREF
 
   v5 = this;
-  if ( (byte_49B8D83 & 1) == 0 )
+  if ( (byte_4A4C2B1 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, callback);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v6);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    this = (WarehouseListMenu_o *)sub_1B4CF90(&Method_WarehouseListMenu_EndStatusSync__, v8);
-    byte_49B8D83 = 1;
+    sub_1B863B8(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, callback);
+    sub_1B863B8(&NetworkManager_TypeInfo, v6);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    this = (WarehouseListMenu_o *)sub_1B863B8(&Method_WarehouseListMenu_EndStatusSync__, v8);
+    byte_4A4C2B1 = 1;
   }
   unlockList = 0LL;
   lockList = 0LL;
@@ -3579,14 +3558,14 @@ void __fastcall WarehouseListMenu__StatusRequest(
     if ( WarehouseListViewManager__GetSwapChoiceList((WarehouseListViewManager_o *)this, &choiceList, &v23, v3) )
     {
       v5->fields.requedstCallback = callback;
-      sub_1B4CF34((CGThumbnailListItem_o *)&v5->fields.requedstCallback, (int32_t)callback, v20, v21);
-      v22 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1B8635C((CGThumbnailListItem_o *)&v5->fields.requedstCallback, (int32_t)callback, v20, v21);
+      v22 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(v22, (Il2CppObject *)v5, Method_WarehouseListMenu_EndStatusSync__, 0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (WarehouseListMenu_o *)NetworkManager__getRequest_object_(
                                       v22,
-                                      (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                      (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( this )
       {
         tabKind = v5->fields.tabKind;
@@ -3597,7 +3576,7 @@ void __fastcall WarehouseListMenu__StatusRequest(
         goto LABEL_19;
       }
 LABEL_23:
-      sub_1B4D1EC(this, callback);
+      sub_1B86614(this, callback);
     }
   }
   else if ( modeKind == 1 )
@@ -3611,14 +3590,14 @@ LABEL_23:
     if ( WarehouseListViewManager__GetSwapLockList((WarehouseListViewManager_o *)this, &lockList, &unlockList, v3) )
     {
       v5->fields.requedstCallback = callback;
-      sub_1B4CF34((CGThumbnailListItem_o *)&v5->fields.requedstCallback, (int32_t)callback, v11, v12);
-      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1B8635C((CGThumbnailListItem_o *)&v5->fields.requedstCallback, (int32_t)callback, v11, v12);
+      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(v13, (Il2CppObject *)v5, Method_WarehouseListMenu_EndStatusSync__, 0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       this = (WarehouseListMenu_o *)NetworkManager__getRequest_object_(
                                       v13,
-                                      (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                      (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( this )
       {
         tabKind = v5->fields.tabKind;
@@ -3662,10 +3641,10 @@ void __fastcall WarehouseListMenu__add_callbackFunc(
   WarehouseListMenu_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_49B8D75 & 1) == 0 )
+  if ( (byte_4A4C2A3 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_CallbackFunc_TypeInfo, value);
-    byte_49B8D75 = 1;
+    sub_1B863B8(&WarehouseListMenu_CallbackFunc_TypeInfo, value);
+    byte_4A4C2A3 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -3677,13 +3656,13 @@ void __fastcall WarehouseListMenu__add_callbackFunc(
       if ( (WarehouseListMenu_CallbackFunc_c *)v7->klass != WarehouseListMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B8724C(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1BC0674(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B4D4AC(v7);
+  sub_1B868D4(v7);
   WarehouseListMenu__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -3701,10 +3680,10 @@ void __fastcall WarehouseListMenu__remove_callbackFunc(
   WarehouseListMenu_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_49B8D76 & 1) == 0 )
+  if ( (byte_4A4C2A4 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_CallbackFunc_TypeInfo, value);
-    byte_49B8D76 = 1;
+    sub_1B863B8(&WarehouseListMenu_CallbackFunc_TypeInfo, value);
+    byte_4A4C2A4 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -3716,13 +3695,13 @@ void __fastcall WarehouseListMenu__remove_callbackFunc(
       if ( (WarehouseListMenu_CallbackFunc_c *)v7->klass != WarehouseListMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1B8724C(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1BC0674(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1B4D4AC(v7);
+  sub_1B868D4(v7);
   WarehouseListMenu__GetMode(v10, v11);
 }
 
@@ -3745,15 +3724,15 @@ void __fastcall WarehouseListMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B4D050(v6) & 1) == 0 )
+  if ( (sub_1B86478(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B4D0B8(v10, 0LL);
+      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B864E0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -3765,9 +3744,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_199AB88;
+  this->fields.m_target = (Il2CppObject *)sub_19D0EEC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_199AB40;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D0EA4;
 }
 
 
@@ -3783,14 +3762,14 @@ System_IAsyncResult_o *__fastcall WarehouseListMenu_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_49B8D95 & 1) == 0 )
+  if ( (byte_4A4C2C3 & 1) == 0 )
   {
-    sub_1B4CF90(&WarehouseListMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
-    byte_49B8D95 = 1;
+    sub_1B863B8(&WarehouseListMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
+    byte_4A4C2C3 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(WarehouseListMenu_ResultKind_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B4CF44(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
 }
 
 
@@ -3799,7 +3778,7 @@ void __fastcall WarehouseListMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B4CF48(result, 0LL, method);
+  sub_1B86370(result, 0LL, method);
 }
 
 
@@ -3833,15 +3812,15 @@ void __fastcall WarehouseListMenu_RequestCallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B4D050(v6) & 1) == 0 )
+  if ( (sub_1B86478(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B4D0B8(v10, 0LL);
+      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B864E0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -3853,9 +3832,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_199ABEC;
+  this->fields.m_target = (Il2CppObject *)sub_19D0F50;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_199ABA4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D0F08;
 }
 
 
@@ -3871,14 +3850,14 @@ System_IAsyncResult_o *__fastcall WarehouseListMenu_RequestCallbackFunc__BeginIn
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isRequest;
-  if ( (byte_49B8D96 & 1) == 0 )
+  if ( (byte_4A4C2C4 & 1) == 0 )
   {
-    sub_1B4CF90(&bool_TypeInfo, isRequest);
-    byte_49B8D96 = 1;
+    sub_1B863B8(&bool_TypeInfo, isRequest);
+    byte_4A4C2C4 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B4CF44(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
 }
 
 
@@ -3887,7 +3866,7 @@ void __fastcall WarehouseListMenu_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B4CF48(result, 0LL, method);
+  sub_1B86370(result, 0LL, method);
 }
 
 
@@ -3935,38 +3914,38 @@ void __fastcall WarehouseListMenu___c__DisplayClass81_0___OnSelectServant_b__0(
   const MethodInfo *v20; // x3
   const MethodInfo *v21; // x2
 
-  if ( (byte_49B8D97 & 1) == 0 )
+  if ( (byte_4A4C2C5 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&WarehouseListManager_CallbackFunc_TypeInfo, v5);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B4CF90(&Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__1__, v7);
-    sub_1B4CF90(&Method_WarehouseListMenu_OnSelectServant__, v8);
-    byte_49B8D97 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&WarehouseListManager_CallbackFunc_TypeInfo, v5);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B863B8(&Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__1__, v7);
+    sub_1B863B8(&Method_WarehouseListMenu_OnSelectServant__, v8);
+    byte_4A4C2C5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v11 = (CommonUI_o *)Instance;
   if ( isDecide )
   {
     _9__1 = this->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+      _9__1 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
       System_Action___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_WarehouseListMenu___c__DisplayClass81_0__OnSelectServant_b__1__,
         0LL);
       this->fields.__9__1 = _9__1;
-      sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v13, v14);
+      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v13, v14);
     }
     if ( v11 )
     {
-      CommonUI__CloseConfirmDialog_30248724(v11, _9__1, 0LL);
+      CommonUI__CloseConfirmDialog_30483660(v11, _9__1, 0LL);
       return;
     }
 LABEL_12:
-    sub_1B4D1EC(Instance, v10);
+    sub_1B86614(Instance, v10);
   }
   if ( !Instance )
     goto LABEL_12;
@@ -3976,7 +3955,7 @@ LABEL_12:
     goto LABEL_12;
   _4__this->fields.state = 2;
   servantListViewManager = _4__this->fields.servantListViewManager;
-  v17 = (WarehouseListManager_CallbackFunc_o *)sub_1B4D1DC(WarehouseListManager_CallbackFunc_TypeInfo);
+  v17 = (WarehouseListManager_CallbackFunc_o *)sub_1B86604(WarehouseListManager_CallbackFunc_TypeInfo);
   WarehouseListManager_CallbackFunc___ctor(
     v17,
     (Il2CppObject *)_4__this,
@@ -3985,8 +3964,8 @@ LABEL_12:
   if ( !servantListViewManager )
     goto LABEL_12;
   servantListViewManager->fields.callbackFunc = v17;
-  sub_1B4CF34((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v17, v19, v20);
-  WarehouseListManager__SetMode_36250064(servantListViewManager, 2, v21);
+  sub_1B8635C((CGThumbnailListItem_o *)&servantListViewManager->fields.callbackFunc, (int32_t)v17, v19, v20);
+  WarehouseListManager__SetMode_36559244(servantListViewManager, 2, v21);
 }
 
 
@@ -3997,6 +3976,6 @@ void __fastcall WarehouseListMenu___c__DisplayClass81_0___OnSelectServant_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   WarehouseListMenu__PushRequest(this->fields.__4__this, this->fields.item, v2);
 }

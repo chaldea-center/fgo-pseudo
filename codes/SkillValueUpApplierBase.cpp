@@ -8,7 +8,7 @@ void __fastcall SkillValueUpApplierBase___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = data;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
 }
 
 

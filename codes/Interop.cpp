@@ -10,14 +10,14 @@ int64_t __fastcall Interop__CheckIo(
   const MethodInfo *v11; // x4
   Interop_ErrorInfo_o LastErrorInfo; // 0:x0.8
 
-  if ( (byte_49C2265 & 1) == 0 )
+  if ( (byte_4A558DF & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Sys_TypeInfo, path);
-    byte_49C2265 = 1;
+    sub_1B863B8(&Interop_Sys_TypeInfo, path);
+    byte_4A558DF = 1;
   }
   if ( (result & 0x8000000000000000LL) != 0 )
   {
-    v10 = (const MethodInfo *)sub_19A4C58(Interop_Sys_TypeInfo, path, isDirectory, errorRewriter, method);
+    v10 = (const MethodInfo *)sub_19DB0A4(Interop_Sys_TypeInfo, path, isDirectory, errorRewriter, method);
     LastErrorInfo = Interop_Sys__GetLastErrorInfo(v10);
     Interop__ThrowExceptionForIoErrno(LastErrorInfo, path, isDirectory, errorRewriter, v11);
   }
@@ -25,7 +25,7 @@ int64_t __fastcall Interop__CheckIo(
 }
 
 
-int32_t __fastcall Interop__CheckIo_61007548(
+int32_t __fastcall Interop__CheckIo_61559256(
         int32_t result,
         System_String_o *path,
         bool isDirectory,
@@ -95,29 +95,29 @@ System_Exception_o *__fastcall Interop__GetExceptionForIoErrno(
   Interop_ErrorInfo_o v57; // 0:x0.8
 
   v53 = errorInfo;
-  if ( (byte_49C2266 & 1) == 0 )
+  if ( (byte_4A558E0 & 1) == 0 )
   {
-    sub_1B4CF90(&System_ArgumentOutOfRangeException_TypeInfo, path);
-    sub_1B4CF90(&System_IO_DirectoryNotFoundException_TypeInfo, v7);
-    sub_1B4CF90(&System_IO_FileNotFoundException_TypeInfo, v8);
-    sub_1B4CF90(&System_IO_IOException_TypeInfo, v9);
-    sub_1B4CF90(&System_OperationCanceledException_TypeInfo, v10);
-    sub_1B4CF90(&System_IO_PathTooLongException_TypeInfo, v11);
-    sub_1B4CF90(&System_UnauthorizedAccessException_TypeInfo, v12);
-    sub_1B4CF90(&StringLiteral_4725/*"Could not find file '{0}'."*/, v13);
-    sub_1B4CF90(&StringLiteral_24213/*"value"*/, v14);
-    sub_1B4CF90(&StringLiteral_13842/*"The process cannot access the file '{0}' because it is being used by another process."*/, v15);
-    sub_1B4CF90(&StringLiteral_13843/*"The process cannot access the file because it is being used by another process."*/, v16);
-    sub_1B4CF90(&StringLiteral_4722/*"Could not find a part of the path."*/, v17);
-    sub_1B4CF90(&StringLiteral_2116/*"Access to the path is denied."*/, v18);
-    sub_1B4CF90(&StringLiteral_14612/*"Unable to find the specified file."*/, v19);
-    sub_1B4CF90(&StringLiteral_13907/*"The specified file name or path is too long, or a component of the specified path is too long."*/, v20);
-    sub_1B4CF90(&StringLiteral_12684/*"Specified file length was too large for the file system."*/, v21);
-    sub_1B4CF90(&StringLiteral_2115/*"Access to the path '{0}' is denied."*/, v22);
-    sub_1B4CF90(&StringLiteral_13835/*"The path '{0}' is too long, or a component of the specified path is too long."*/, v23);
-    sub_1B4CF90(&StringLiteral_4721/*"Could not find a part of the path '{0}'."*/, v24);
-    sub_1B4CF90(&StringLiteral_13733/*"The file '{0}' already exists."*/, v25);
-    byte_49C2266 = 1;
+    sub_1B863B8(&System_ArgumentOutOfRangeException_TypeInfo, path);
+    sub_1B863B8(&System_IO_DirectoryNotFoundException_TypeInfo, v7);
+    sub_1B863B8(&System_IO_FileNotFoundException_TypeInfo, v8);
+    sub_1B863B8(&System_IO_IOException_TypeInfo, v9);
+    sub_1B863B8(&System_OperationCanceledException_TypeInfo, v10);
+    sub_1B863B8(&System_IO_PathTooLongException_TypeInfo, v11);
+    sub_1B863B8(&System_UnauthorizedAccessException_TypeInfo, v12);
+    sub_1B863B8(&StringLiteral_4755/*"Could not find file '{0}'."*/, v13);
+    sub_1B863B8(&StringLiteral_24338/*"value"*/, v14);
+    sub_1B863B8(&StringLiteral_13915/*"The process cannot access the file '{0}' because it is being used by another process."*/, v15);
+    sub_1B863B8(&StringLiteral_13916/*"The process cannot access the file because it is being used by another process."*/, v16);
+    sub_1B863B8(&StringLiteral_4752/*"Could not find a part of the path."*/, v17);
+    sub_1B863B8(&StringLiteral_2120/*"Access to the path is denied."*/, v18);
+    sub_1B863B8(&StringLiteral_14686/*"Unable to find the specified file."*/, v19);
+    sub_1B863B8(&StringLiteral_13980/*"The specified file name or path is too long, or a component of the specified path is too long."*/, v20);
+    sub_1B863B8(&StringLiteral_12756/*"Specified file length was too large for the file system."*/, v21);
+    sub_1B863B8(&StringLiteral_2119/*"Access to the path '{0}' is denied."*/, v22);
+    sub_1B863B8(&StringLiteral_13908/*"The path '{0}' is too long, or a component of the specified path is too long."*/, v23);
+    sub_1B863B8(&StringLiteral_4751/*"Could not find a part of the path '{0}'."*/, v24);
+    sub_1B863B8(&StringLiteral_13806/*"The file '{0}' already exists."*/, v25);
+    byte_4A558E0 = 1;
   }
   if ( errorInfo.fields._error > 65547 )
   {
@@ -127,18 +127,18 @@ System_Exception_o *__fastcall Interop__GetExceptionForIoErrno(
       {
         if ( System_String__IsNullOrEmpty(path, 0LL) )
         {
-          v44 = (System_IO_PathTooLongException_o *)sub_1B4D1DC(System_IO_PathTooLongException_TypeInfo);
+          v44 = (System_IO_PathTooLongException_o *)sub_1B86604(System_IO_PathTooLongException_TypeInfo);
           v29 = (System_Exception_o *)v44;
-          v45 = (System_String_o *)StringLiteral_13907/*"The specified file name or path is too long, or a component of the specified path is too long."*/;
+          v45 = (System_String_o *)StringLiteral_13980/*"The specified file name or path is too long, or a component of the specified path is too long."*/;
         }
         else
         {
-          v50 = SR__Format((System_String_o *)StringLiteral_13835/*"The path '{0}' is too long, or a component of the specified path is too long."*/, (Il2CppObject *)path, v43);
-          v44 = (System_IO_PathTooLongException_o *)sub_1B4D1DC(System_IO_PathTooLongException_TypeInfo);
+          v50 = SR__Format((System_String_o *)StringLiteral_13908/*"The path '{0}' is too long, or a component of the specified path is too long."*/, (Il2CppObject *)path, v43);
+          v44 = (System_IO_PathTooLongException_o *)sub_1B86604(System_IO_PathTooLongException_TypeInfo);
           v29 = (System_Exception_o *)v44;
           v45 = v50;
         }
-        System_IO_PathTooLongException___ctor_61928576(v44, v45, 0LL);
+        System_IO_PathTooLongException___ctor_62479540(v44, v45, 0LL);
         return v29;
       }
       if ( errorInfo.fields._error != 65602 )
@@ -150,32 +150,32 @@ System_Exception_o *__fastcall Interop__GetExceptionForIoErrno(
           {
             if ( IsNullOrEmpty )
             {
-              v28 = (System_IO_DirectoryNotFoundException_o *)sub_1B4D1DC(System_IO_DirectoryNotFoundException_TypeInfo);
+              v28 = (System_IO_DirectoryNotFoundException_o *)sub_1B86604(System_IO_DirectoryNotFoundException_TypeInfo);
               v29 = (System_Exception_o *)v28;
-              v30 = (System_String_o *)StringLiteral_4722/*"Could not find a part of the path."*/;
+              v30 = (System_String_o *)StringLiteral_4752/*"Could not find a part of the path."*/;
             }
             else
             {
-              v51 = SR__Format((System_String_o *)StringLiteral_4721/*"Could not find a part of the path '{0}'."*/, (Il2CppObject *)path, v27);
-              v28 = (System_IO_DirectoryNotFoundException_o *)sub_1B4D1DC(System_IO_DirectoryNotFoundException_TypeInfo);
+              v51 = SR__Format((System_String_o *)StringLiteral_4751/*"Could not find a part of the path '{0}'."*/, (Il2CppObject *)path, v27);
+              v28 = (System_IO_DirectoryNotFoundException_o *)sub_1B86604(System_IO_DirectoryNotFoundException_TypeInfo);
               v29 = (System_Exception_o *)v28;
               v30 = v51;
             }
-            System_IO_DirectoryNotFoundException___ctor_61912460(v28, v30, 0LL);
+            System_IO_DirectoryNotFoundException___ctor_62463424(v28, v30, 0LL);
           }
           else if ( IsNullOrEmpty )
           {
-            v29 = (System_Exception_o *)sub_1B4D1DC(System_IO_FileNotFoundException_TypeInfo);
-            System_IO_FileNotFoundException___ctor_61914436(
+            v29 = (System_Exception_o *)sub_1B86604(System_IO_FileNotFoundException_TypeInfo);
+            System_IO_FileNotFoundException___ctor_62465400(
               (System_IO_FileNotFoundException_o *)v29,
-              (System_String_o *)StringLiteral_14612/*"Unable to find the specified file."*/,
+              (System_String_o *)StringLiteral_14686/*"Unable to find the specified file."*/,
               0LL);
           }
           else
           {
-            v52 = SR__Format((System_String_o *)StringLiteral_4725/*"Could not find file '{0}'."*/, (Il2CppObject *)path, v27);
-            v29 = (System_Exception_o *)sub_1B4D1DC(System_IO_FileNotFoundException_TypeInfo);
-            System_IO_FileNotFoundException___ctor_61914472((System_IO_FileNotFoundException_o *)v29, v52, path, 0LL);
+            v52 = SR__Format((System_String_o *)StringLiteral_4755/*"Could not find file '{0}'."*/, (Il2CppObject *)path, v27);
+            v29 = (System_Exception_o *)sub_1B86604(System_IO_FileNotFoundException_TypeInfo);
+            System_IO_FileNotFoundException___ctor_62465436((System_IO_FileNotFoundException_o *)v29, v52, path, 0LL);
           }
           return v29;
         }
@@ -188,35 +188,35 @@ LABEL_22:
       IOException = Interop__GetIOException(v55, (const MethodInfo *)path);
       if ( System_String__IsNullOrEmpty(path, 0LL) )
       {
-        v39 = (System_UnauthorizedAccessException_o *)sub_1B4D1DC(System_UnauthorizedAccessException_TypeInfo);
+        v39 = (System_UnauthorizedAccessException_o *)sub_1B86604(System_UnauthorizedAccessException_TypeInfo);
         v29 = (System_Exception_o *)v39;
-        v40 = (System_String_o *)StringLiteral_2116/*"Access to the path is denied."*/;
+        v40 = (System_String_o *)StringLiteral_2120/*"Access to the path is denied."*/;
       }
       else
       {
-        v41 = SR__Format((System_String_o *)StringLiteral_2115/*"Access to the path '{0}' is denied."*/, (Il2CppObject *)path, v38);
-        v39 = (System_UnauthorizedAccessException_o *)sub_1B4D1DC(System_UnauthorizedAccessException_TypeInfo);
+        v41 = SR__Format((System_String_o *)StringLiteral_2119/*"Access to the path '{0}' is denied."*/, (Il2CppObject *)path, v38);
+        v39 = (System_UnauthorizedAccessException_o *)sub_1B86604(System_UnauthorizedAccessException_TypeInfo);
         v29 = (System_Exception_o *)v39;
         v40 = v41;
       }
-      System_UnauthorizedAccessException___ctor_62742304(v39, v40, IOException, 0LL);
+      System_UnauthorizedAccessException___ctor_63293268(v39, v40, IOException, 0LL);
       return v29;
     }
     if ( errorInfo.fields._error != 65556 )
     {
       if ( errorInfo.fields._error != 65558 )
         goto LABEL_27;
-      v29 = (System_Exception_o *)sub_1B4D1DC(System_ArgumentOutOfRangeException_TypeInfo);
-      System_ArgumentOutOfRangeException___ctor_62106092(
+      v29 = (System_Exception_o *)sub_1B86604(System_ArgumentOutOfRangeException_TypeInfo);
+      System_ArgumentOutOfRangeException___ctor_62657056(
         (System_ArgumentOutOfRangeException_o *)v29,
-        (System_String_o *)StringLiteral_24213/*"value"*/,
-        (System_String_o *)StringLiteral_12684/*"Specified file length was too large for the file system."*/,
+        (System_String_o *)StringLiteral_24338/*"value"*/,
+        (System_String_o *)StringLiteral_12756/*"Specified file length was too large for the file system."*/,
         0LL);
       return v29;
     }
     if ( System_String__IsNullOrEmpty(path, 0LL) )
       goto LABEL_27;
-    v46 = &StringLiteral_13733/*"The file '{0}' already exists."*/;
+    v46 = &StringLiteral_13806/*"The file '{0}' already exists."*/;
     goto LABEL_32;
   }
   if ( errorInfo.fields._error <= 65542 )
@@ -229,20 +229,20 @@ LABEL_22:
     {
       v54 = (Interop_ErrorInfo_o)&v53;
       RawErrno = Interop_ErrorInfo__get_RawErrno(v54, v31);
-      v34 = (System_IO_IOException_o *)sub_1B4D1DC(System_IO_IOException_TypeInfo);
+      v34 = (System_IO_IOException_o *)sub_1B86604(System_IO_IOException_TypeInfo);
       v29 = (System_Exception_o *)v34;
       v35 = RawErrno;
-      v36 = (System_String_o *)StringLiteral_13843/*"The process cannot access the file because it is being used by another process."*/;
+      v36 = (System_String_o *)StringLiteral_13916/*"The process cannot access the file because it is being used by another process."*/;
 LABEL_33:
-      System_IO_IOException___ctor_61915768(v34, v36, v35, 0LL);
+      System_IO_IOException___ctor_62466732(v34, v36, v35, 0LL);
       return v29;
     }
-    v46 = &StringLiteral_13842/*"The process cannot access the file '{0}' because it is being used by another process."*/;
+    v46 = &StringLiteral_13915/*"The process cannot access the file '{0}' because it is being used by another process."*/;
 LABEL_32:
     v47 = SR__Format((System_String_o *)*v46, (Il2CppObject *)path, v32);
     v57 = (Interop_ErrorInfo_o)&v53;
     v49 = Interop_ErrorInfo__get_RawErrno(v57, v48);
-    v34 = (System_IO_IOException_o *)sub_1B4D1DC(System_IO_IOException_TypeInfo);
+    v34 = (System_IO_IOException_o *)sub_1B86604(System_IO_IOException_TypeInfo);
     v29 = (System_Exception_o *)v34;
     v36 = v47;
     v35 = v49;
@@ -252,7 +252,7 @@ LABEL_32:
     goto LABEL_22;
   if ( errorInfo.fields._error != 65547 )
     goto LABEL_27;
-  v29 = (System_Exception_o *)sub_1B4D1DC(System_OperationCanceledException_TypeInfo);
+  v29 = (System_Exception_o *)sub_1B86604(System_OperationCanceledException_TypeInfo);
   System_OperationCanceledException___ctor((System_OperationCanceledException_o *)v29, 0LL);
   return v29;
 }
@@ -269,17 +269,17 @@ System_Exception_o *__fastcall Interop__GetIOException(Interop_ErrorInfo_o error
   Interop_ErrorInfo_o v9; // 0:x0.8
 
   v7 = errorInfo;
-  if ( (byte_49C2267 & 1) == 0 )
+  if ( (byte_4A558E1 & 1) == 0 )
   {
-    sub_1B4CF90(&System_IO_IOException_TypeInfo, method);
-    byte_49C2267 = 1;
+    sub_1B863B8(&System_IO_IOException_TypeInfo, method);
+    byte_4A558E1 = 1;
   }
   v8 = (Interop_ErrorInfo_o)&v7;
   ErrorMessage = Interop_ErrorInfo__GetErrorMessage(v8, method);
   v9 = (Interop_ErrorInfo_o)&v7;
   RawErrno = Interop_ErrorInfo__get_RawErrno(v9, v3);
-  v5 = (System_IO_IOException_o *)sub_1B4D1DC(System_IO_IOException_TypeInfo);
-  System_IO_IOException___ctor_61915768(v5, ErrorMessage, RawErrno, 0LL);
+  v5 = (System_IO_IOException_o *)sub_1B86604(System_IO_IOException_TypeInfo);
+  System_IO_IOException___ctor_62466732(v5, ErrorMessage, RawErrno, 0LL);
   return (System_Exception_o *)v5;
 }
 
@@ -287,10 +287,10 @@ System_Exception_o *__fastcall Interop__GetIOException(Interop_ErrorInfo_o error
 // local variable allocation has failed, the output may be wrong!
 void __fastcall Interop__GetRandomBytes(uint8_t *buffer, int32_t length, const MethodInfo *method)
 {
-  if ( (byte_49C2268 & 1) == 0 )
+  if ( (byte_4A558E2 & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Sys_TypeInfo, *(_QWORD *)&length);
-    byte_49C2268 = 1;
+    sub_1B863B8(&Interop_Sys_TypeInfo, *(_QWORD *)&length);
+    byte_4A558E2 = 1;
   }
   if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Interop_Sys_TypeInfo);
@@ -318,18 +318,18 @@ void __fastcall __noreturn Interop__ThrowExceptionForIoErrno(
            *(_QWORD *)&errorRewriter->fields.extra_arg);
   v10 = (Interop_ErrorInfo_o)v7;
   ExceptionForIoErrno = Interop__GetExceptionForIoErrno(v10, path, isDirectory, (const MethodInfo *)errorRewriter);
-  v9 = sub_1B4CFA4(&Method_Interop_ThrowExceptionForIoErrno__);
-  sub_1B4D0B8(ExceptionForIoErrno, v9);
+  v9 = sub_1B863CC(&Method_Interop_ThrowExceptionForIoErrno__);
+  sub_1B864E0(ExceptionForIoErrno, v9);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 void __fastcall Interop_ErrorInfo___ctor(Interop_ErrorInfo_o this, int32_t errno, const MethodInfo *method)
 {
-  if ( (byte_49C2269 & 1) == 0 )
+  if ( (byte_4A558E3 & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Sys_TypeInfo, *(_QWORD *)&errno);
-    byte_49C2269 = 1;
+    sub_1B863B8(&Interop_Sys_TypeInfo, *(_QWORD *)&errno);
+    byte_4A558E3 = 1;
   }
   if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Interop_Sys_TypeInfo);
@@ -338,7 +338,7 @@ void __fastcall Interop_ErrorInfo___ctor(Interop_ErrorInfo_o this, int32_t errno
 }
 
 
-void __fastcall Interop_ErrorInfo___ctor_61008244(Interop_ErrorInfo_o this, int32_t error, const MethodInfo *method)
+void __fastcall Interop_ErrorInfo___ctor_61559952(Interop_ErrorInfo_o this, int32_t error, const MethodInfo *method)
 {
   *(_DWORD *)this.fields._error = error;
   *(_DWORD *)(*(_QWORD *)&this + 4LL) = -1;
@@ -351,10 +351,10 @@ System_String_o *__fastcall Interop_ErrorInfo__GetErrorMessage(Interop_ErrorInfo
   int32_t RawErrno; // w19
   Interop_ErrorInfo_o v6; // 0:x0.8
 
-  if ( (byte_49C226B & 1) == 0 )
+  if ( (byte_4A558E5 & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Sys_TypeInfo, method);
-    byte_49C226B = 1;
+    sub_1B863B8(&Interop_Sys_TypeInfo, method);
+    byte_4A558E5 = 1;
   }
   v6 = this;
   RawErrno = Interop_ErrorInfo__get_RawErrno(v6, method);
@@ -377,12 +377,12 @@ System_String_o *__fastcall Interop_ErrorInfo__ToString(Interop_ErrorInfo_o this
   Interop_ErrorInfo_o v12; // 0:x0.8
   Interop_ErrorInfo_o v13; // 0:x0.8
 
-  if ( (byte_49C226C & 1) == 0 )
+  if ( (byte_4A558E6 & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Error_TypeInfo, method);
-    sub_1B4CF90(&int_TypeInfo, v3);
-    sub_1B4CF90(&StringLiteral_10947/*"RawErrno: {0} Error: {1} GetErrorMessage: {2}"*/, v4);
-    byte_49C226C = 1;
+    sub_1B863B8(&Interop_Error_TypeInfo, method);
+    sub_1B863B8(&int_TypeInfo, v3);
+    sub_1B863B8(&StringLiteral_11005/*"RawErrno: {0} Error: {1} GetErrorMessage: {2}"*/, v4);
+    byte_4A558E6 = 1;
   }
   v12 = this;
   RawErrno = Interop_ErrorInfo__get_RawErrno(v12, method);
@@ -391,7 +391,7 @@ System_String_o *__fastcall Interop_ErrorInfo__ToString(Interop_ErrorInfo_o this
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(Interop_Error_TypeInfo, &v10);
   v13 = this;
   ErrorMessage = (Il2CppObject *)Interop_ErrorInfo__GetErrorMessage(v13, v7);
-  return System_String__Format_61134828((System_String_o *)StringLiteral_10947/*"RawErrno: {0} Error: {1} GetErrorMessage: {2}"*/, v5, v6, ErrorMessage, 0LL);
+  return System_String__Format_61686536((System_String_o *)StringLiteral_11005/*"RawErrno: {0} Error: {1} GetErrorMessage: {2}"*/, v5, v6, ErrorMessage, 0LL);
 }
 
 
@@ -406,10 +406,10 @@ int32_t __fastcall Interop_ErrorInfo__get_RawErrno(Interop_ErrorInfo_o this, con
   int32_t result; // w0
   unsigned int v4; // w20
 
-  if ( (byte_49C226A & 1) == 0 )
+  if ( (byte_4A558E4 & 1) == 0 )
   {
-    sub_1B4CF90(&Interop_Sys_TypeInfo, method);
-    byte_49C226A = 1;
+    sub_1B863B8(&Interop_Sys_TypeInfo, method);
+    byte_4A558E4 = 1;
   }
   result = *(_DWORD *)(*(_QWORD *)&this + 4LL);
   if ( result == -1 )
@@ -428,10 +428,10 @@ void __fastcall Interop_Sys___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49C2272 & 1) == 0 )
+  if ( (byte_4A558EC & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1B4CF90(&Interop_Sys_TypeInfo, v1);
-    byte_49C2272 = 1;
+    method = (const MethodInfo *)sub_1B863B8(&Interop_Sys_TypeInfo, v1);
+    byte_4A558EC = 1;
   }
   Interop_Sys_TypeInfo->static_fields->CanSetHiddenFlag = (unsigned int)SystemNative_LChflagsCanSetHiddenFlag(method) != 0;
 }
@@ -442,7 +442,7 @@ int32_t __fastcall Interop_Sys__CloseDir(intptr_t dir, const MethodInfo *method)
   int32_t v2; // w19
 
   v2 = SystemNative_CloseDir(dir, method);
-  sub_1B4CF40();
+  sub_1B86368();
   return v2;
 }
 
@@ -474,7 +474,7 @@ int32_t __fastcall Interop_Sys__CopyFile(
     v8 = "destination";
 LABEL_10:
     exception_argument_null_0 = j_il2cpp_get_exception_argument_null_0(v8, destination, method);
-    sub_1B4D0B8(exception_argument_null_0, 0LL);
+    sub_1B864E0(exception_argument_null_0, 0LL);
   }
   v5 = *(_QWORD *)&source->fields.handle;
   v10 = 0;
@@ -483,7 +483,7 @@ LABEL_10:
     &v10,
     0LL);
   v6 = SystemNative_CopyFile(v5, *(_QWORD *)&destination->fields.handle);
-  sub_1B4CF40();
+  sub_1B86368();
   if ( success )
     System_Runtime_InteropServices_SafeHandle__DangerousRelease(
       (System_Runtime_InteropServices_SafeHandle_o *)source,
@@ -504,10 +504,10 @@ Interop_ErrorInfo_o __fastcall Interop_Sys__GetLastErrorInfo(const MethodInfo *m
   Interop_ErrorInfo_o v5; // [xsp+8h] [xbp-18h] BYREF
   Interop_ErrorInfo_o v6; // 0:x0.8
 
-  if ( (byte_49C226D & 1) == 0 )
+  if ( (byte_4A558E7 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Runtime_InteropServices_Marshal_TypeInfo, v1);
-    byte_49C226D = 1;
+    sub_1B863B8(&System_Runtime_InteropServices_Marshal_TypeInfo, v1);
+    byte_4A558E7 = 1;
   }
   if ( !System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo);
@@ -537,15 +537,15 @@ int32_t __fastcall Interop_Sys__LStat(
   void *v14; // [xsp+18h] [xbp-8h]
 
   v8 = output;
-  v9 = sub_1B4D548((int)path, (int)output, (int)method, v3, v4, v5, v6, v7, v11, v12, v13, v14);
+  v9 = sub_1B86970((int)path, (int)output, (int)method, v3, v4, v5, v6, v7, v11, v12, v13, v14);
   LODWORD(v8) = SystemNative_LStat2(v9, v8);
-  sub_1B4CF40();
-  sub_1B4D560(v9);
+  sub_1B86368();
+  sub_1B86988(v9);
   return (int)v8;
 }
 
 
-int32_t __fastcall Interop_Sys__LStat_61010452(
+int32_t __fastcall Interop_Sys__LStat_61562160(
         uint8_t *path,
         Interop_Sys_FileStatus_o *output,
         const MethodInfo *method)
@@ -553,19 +553,19 @@ int32_t __fastcall Interop_Sys__LStat_61010452(
   int32_t v3; // w19
 
   v3 = SystemNative_LStat2(path, output);
-  sub_1B4CF40();
+  sub_1B86368();
   return v3;
 }
 
 
-int32_t __fastcall Interop_Sys__LStat_61010480(
+int32_t __fastcall Interop_Sys__LStat_61562188(
         System_ReadOnlySpan_char__o path,
         Interop_Sys_FileStatus_o *output,
         const MethodInfo *method)
 {
   __int64 v6; // x1
   __int64 v7; // x1
-  const MethodInfo_2F80278 *v8; // x1
+  const MethodInfo_2FEDCC4 *v8; // x1
   uint8_t *Reference_byte; // x20
   int32_t v10; // w19
   const MethodInfo *v11; // x2
@@ -579,12 +579,12 @@ int32_t __fastcall Interop_Sys__LStat_61010480(
   System_Text_ValueUtf8Converter_o v20; // 0:x0.16
 
   v14[3] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
-  if ( (byte_49C2271 & 1) == 0 )
+  if ( (byte_4A558EB & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Runtime_InteropServices_MemoryMarshal_GetReference_byte____75568904, output);
-    sub_1B4CF90(&Method_System_Span_byte___ctor___75479544, v6);
-    sub_1B4CF90(&Interop_Sys_TypeInfo, v7);
-    byte_49C2271 = 1;
+    sub_1B863B8(&Method_System_Runtime_InteropServices_MemoryMarshal_GetReference_byte____76163048, output);
+    sub_1B863B8(&Method_System_Span_byte___ctor___76072792, v6);
+    sub_1B863B8(&Interop_Sys_TypeInfo, v7);
+    byte_4A558EB = 1;
   }
   memset(v14, 0, 24);
   memset(v13, 0, sizeof(v13));
@@ -600,7 +600,7 @@ int32_t __fastcall Interop_Sys__LStat_61010480(
   if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Interop_Sys_TypeInfo);
   v10 = SystemNative_LStat2(Reference_byte, method);
-  sub_1B4CF40();
+  sub_1B86368();
   v20.fields._arrayToReturnToPool = (struct System_Byte_array *)v14;
   v20.fields._bytes = 0LL;
   System_Text_ValueUtf8Converter__Dispose(v20, v11);
@@ -636,12 +636,12 @@ int32_t __fastcall Interop_Sys__Link(System_String_o *source, System_String_o *l
   void *v27; // [xsp+18h] [xbp-8h]
 
   v8 = (int)link;
-  v9 = (char *)sub_1B4D548((int)source, (int)link, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
-  v17 = (char *)sub_1B4D548(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
+  v9 = (char *)sub_1B86970((int)source, (int)link, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
+  v17 = (char *)sub_1B86970(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
   v18 = SystemNative_Link(v9, v17);
-  sub_1B4CF40();
-  sub_1B4D560(v9);
-  sub_1B4D560(v17);
+  sub_1B86368();
+  sub_1B86988(v9);
+  sub_1B86988(v17);
   return v18;
 }
 
@@ -662,10 +662,10 @@ int32_t __fastcall Interop_Sys__MkDir(System_String_o *path, int32_t mode, const
   void *v15; // [xsp+18h] [xbp-8h]
 
   v8 = mode;
-  v9 = (char *)sub_1B4D548((int)path, mode, (int)method, v3, v4, v5, v6, v7, v12, v13, v14, v15);
+  v9 = (char *)sub_1B86970((int)path, mode, (int)method, v3, v4, v5, v6, v7, v12, v13, v14, v15);
   v10 = SystemNative_MkDir(v9, v8);
-  sub_1B4CF40();
-  sub_1B4D560(v9);
+  sub_1B86368();
+  sub_1B86988(v9);
   return v10;
 }
 
@@ -685,10 +685,10 @@ intptr_t __fastcall Interop_Sys__OpenDir(System_String_o *path, const MethodInfo
   int v13; // [xsp+10h] [xbp-10h]
   void *v14; // [xsp+18h] [xbp-8h]
 
-  v8 = sub_1B4D548((int)path, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
+  v8 = sub_1B86970((int)path, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
   v9 = SystemNative_OpenDir();
-  sub_1B4CF40();
-  sub_1B4D560(v8);
+  sub_1B86368();
+  sub_1B86988(v8);
   return v9;
 }
 
@@ -712,20 +712,20 @@ int32_t __fastcall Interop_Sys__ReadLink(
   int v17; // [xsp+10h] [xbp-10h]
   void *v18; // [xsp+18h] [xbp-8h]
 
-  v10 = sub_1B4D548((int)path, (int)buffer, bufferSize, (int)method, v4, v5, v6, v7, v15, v16, v17, v18);
+  v10 = sub_1B86970((int)path, (int)buffer, bufferSize, (int)method, v4, v5, v6, v7, v15, v16, v17, v18);
   if ( buffer )
     v11 = (_DWORD)buffer + 32;
   else
     v11 = 0;
   v12 = v10;
   Link = SystemNative_ReadLink(v10, v11, bufferSize);
-  sub_1B4CF40();
-  sub_1B4D560(v12);
+  sub_1B86368();
+  sub_1B86988(v12);
   return Link;
 }
 
 
-System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path, const MethodInfo *method)
+System_String_o *__fastcall Interop_Sys__ReadLink_61560608(System_String_o *path, const MethodInfo *method)
 {
   __int64 v3; // x1
   __int64 v4; // x1
@@ -749,12 +749,12 @@ System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path
   __int64 v23[2]; // [xsp+8h] [xbp-58h] BYREF
   __int64 v24; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_49C226F & 1) == 0 )
+  if ( (byte_4A558E9 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Buffers_ArrayPool_byte__get_Shared__, method);
-    sub_1B4CF90(&System_Buffers_ArrayPool_byte__TypeInfo, v3);
-    sub_1B4CF90(&Interop_Sys_TypeInfo, v4);
-    byte_49C226F = 1;
+    sub_1B863B8(&Method_System_Buffers_ArrayPool_byte__get_Shared__, method);
+    sub_1B863B8(&System_Buffers_ArrayPool_byte__TypeInfo, v3);
+    sub_1B863B8(&Interop_Sys_TypeInfo, v4);
+    byte_4A558E9 = 1;
   }
   v5 = 256;
   v24 = 0LL;
@@ -765,21 +765,21 @@ System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path
     v6 = Method_System_Buffers_ArrayPool_byte__get_Shared__;
     v7 = *((_QWORD *)Method_System_Buffers_ArrayPool_byte__get_Shared__ + 4);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1B9D620();
+      v7 = sub_1BD6A48();
     v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 8LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1B9D620();
+      v8 = sub_1BD6A48();
     if ( !*(_DWORD *)(v8 + 224) )
       j_il2cpp_runtime_class_init_0(v8);
     v9 = v6[4];
     if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-      v9 = sub_1B9D620();
+      v9 = sub_1BD6A48();
     v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 8LL);
     if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-      v10 = sub_1B9D620();
+      v10 = sub_1BD6A48();
     v11 = **(_QWORD **)(v10 + 184);
     if ( !v11 )
-      sub_1B4D1EC(0LL, method);
+      sub_1B86614(0LL, method);
     v12 = (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD))(*(_QWORD *)v11 + 376LL))(
             v11,
             v5,
@@ -788,7 +788,7 @@ System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path
     v24 = v12;
     v23[0] = 0LL;
     if ( !v12 )
-      sub_1B4D1EC(0LL, v13);
+      sub_1B86614(0LL, v13);
     v15 = (System_Byte_array *)v12;
     if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Interop_Sys_TypeInfo);
@@ -800,15 +800,15 @@ System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path
       goto LABEL_29;
     }
     if ( !v24 )
-      sub_1B4D1EC(Link, v17);
+      sub_1B86614(Link, v17);
     if ( (int)Link < *(_DWORD *)(v24 + 24) )
       break;
-    sub_1AF2418(v23);
+    sub_1B2B840(v23);
     v5 *= 2;
   }
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_1B4D1EC(0LL, v20);
+    sub_1B86614(0LL, v20);
   v21 = (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, _QWORD, _QWORD, Il2CppMethodPointer))UTF8->klass->vtable._36_GetString.method)(
                              UTF8,
                              v24,
@@ -816,7 +816,7 @@ System_String_o *__fastcall Interop_Sys__ReadLink_61008900(System_String_o *path
                              v18,
                              UTF8->klass->vtable._37_GetBestFitUnicodeToBytesData.methodPtr);
 LABEL_29:
-  sub_1AF2418(v23);
+  sub_1B2B840(v23);
   return v21;
 }
 
@@ -849,12 +849,12 @@ int32_t __fastcall Interop_Sys__Rename(System_String_o *oldPath, System_String_o
   void *v27; // [xsp+18h] [xbp-8h]
 
   v8 = (int)newPath;
-  v9 = (char *)sub_1B4D548((int)oldPath, (int)newPath, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
-  v17 = (char *)sub_1B4D548(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
+  v9 = (char *)sub_1B86970((int)oldPath, (int)newPath, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
+  v17 = (char *)sub_1B86970(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
   v18 = SystemNative_Rename(v9, v17);
-  sub_1B4CF40();
-  sub_1B4D560(v9);
-  sub_1B4D560(v17);
+  sub_1B86368();
+  sub_1B86988(v9);
+  sub_1B86988(v17);
   return v18;
 }
 
@@ -874,10 +874,10 @@ int32_t __fastcall Interop_Sys__RmDir(System_String_o *path, const MethodInfo *m
   int v13; // [xsp+10h] [xbp-10h]
   void *v14; // [xsp+18h] [xbp-8h]
 
-  v8 = (char *)sub_1B4D548((int)path, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
+  v8 = (char *)sub_1B86970((int)path, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
   v9 = SystemNative_RmDir(v8);
-  sub_1B4CF40();
-  sub_1B4D560(v8);
+  sub_1B86368();
+  sub_1B86988(v8);
   return v9;
 }
 
@@ -896,15 +896,15 @@ int32_t __fastcall Interop_Sys__Stat(System_String_o *path, Interop_Sys_FileStat
   int v13; // [xsp+10h] [xbp-10h]
   void *v14; // [xsp+18h] [xbp-8h]
 
-  v8 = (char *)sub_1B4D548((int)path, (int)output, (int)method, v3, v4, v5, v6, v7, v11, v12, v13, v14);
+  v8 = (char *)sub_1B86970((int)path, (int)output, (int)method, v3, v4, v5, v6, v7, v11, v12, v13, v14);
   v9 = SystemNative_Stat2(v8);
-  sub_1B4CF40();
-  sub_1B4D560(v8);
+  sub_1B86368();
+  sub_1B86988(v8);
   return v9;
 }
 
 
-int32_t __fastcall Interop_Sys__Stat_61010112(
+int32_t __fastcall Interop_Sys__Stat_61561820(
         uint8_t *path,
         Interop_Sys_FileStatus_o *output,
         const MethodInfo *method)
@@ -912,19 +912,19 @@ int32_t __fastcall Interop_Sys__Stat_61010112(
   int32_t v3; // w19
 
   v3 = SystemNative_Stat2((char *)path);
-  sub_1B4CF40();
+  sub_1B86368();
   return v3;
 }
 
 
-int32_t __fastcall Interop_Sys__Stat_61010140(
+int32_t __fastcall Interop_Sys__Stat_61561848(
         System_ReadOnlySpan_char__o path,
         Interop_Sys_FileStatus_o *output,
         const MethodInfo *method)
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  const MethodInfo_2F80278 *v7; // x1
+  const MethodInfo_2FEDCC4 *v7; // x1
   char *Reference_byte; // x20
   int32_t v9; // w19
   const MethodInfo *v10; // x2
@@ -938,12 +938,12 @@ int32_t __fastcall Interop_Sys__Stat_61010140(
   System_Text_ValueUtf8Converter_o v19; // 0:x0.16
 
   v13[3] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
-  if ( (byte_49C2270 & 1) == 0 )
+  if ( (byte_4A558EA & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Runtime_InteropServices_MemoryMarshal_GetReference_byte____75568904, output);
-    sub_1B4CF90(&Method_System_Span_byte___ctor___75479544, v5);
-    sub_1B4CF90(&Interop_Sys_TypeInfo, v6);
-    byte_49C2270 = 1;
+    sub_1B863B8(&Method_System_Runtime_InteropServices_MemoryMarshal_GetReference_byte____76163048, output);
+    sub_1B863B8(&Method_System_Span_byte___ctor___76072792, v5);
+    sub_1B863B8(&Interop_Sys_TypeInfo, v6);
+    byte_4A558EA = 1;
   }
   memset(v13, 0, 24);
   memset(v12, 0, sizeof(v12));
@@ -959,7 +959,7 @@ int32_t __fastcall Interop_Sys__Stat_61010140(
   if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Interop_Sys_TypeInfo);
   v9 = SystemNative_Stat2(Reference_byte);
-  sub_1B4CF40();
+  sub_1B86368();
   v19.fields._arrayToReturnToPool = (struct System_Byte_array *)v13;
   v19.fields._bytes = 0LL;
   System_Text_ValueUtf8Converter__Dispose(v19, v10);
@@ -976,11 +976,11 @@ System_String_o *__fastcall Interop_Sys__StrError(int32_t platformErrno, const M
   _QWORD v8[130]; // [xsp-400h] [xbp-410h] BYREF
 
   v8[129] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
-  if ( (byte_49C226E & 1) == 0 )
+  if ( (byte_4A558E8 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Runtime_InteropServices_Marshal_TypeInfo, method);
-    sub_1B4CF90(&Interop_Sys_TypeInfo, v3);
-    byte_49C226E = 1;
+    sub_1B863B8(&System_Runtime_InteropServices_Marshal_TypeInfo, method);
+    sub_1B863B8(&Interop_Sys_TypeInfo, v3);
+    byte_4A558E8 = 1;
   }
   memset(v8, 0, 0x400u);
   if ( !Interop_Sys_TypeInfo->_2.cctor_finished )
@@ -988,7 +988,7 @@ System_String_o *__fastcall Interop_Sys__StrError(int32_t platformErrno, const M
   v5 = (_QWORD *)SystemNative_StrErrorR((unsigned int)platformErrno, v8, 1024LL, inited);
   if ( !v5 )
     v5 = v8;
-  v6 = System_IntPtr__op_Explicit_62930136(v5, 0LL);
+  v6 = System_IntPtr__op_Explicit_63481100(v5, 0LL);
   if ( !System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo);
   return System_Runtime_InteropServices_Marshal__PtrToStringAnsi(v6, 0LL);
@@ -1023,12 +1023,12 @@ int32_t __fastcall Interop_Sys__Symlink(System_String_o *target, System_String_o
   void *v27; // [xsp+18h] [xbp-8h]
 
   v8 = (int)linkPath;
-  v9 = sub_1B4D548((int)target, (int)linkPath, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
-  v17 = sub_1B4D548(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
+  v9 = sub_1B86970((int)target, (int)linkPath, (int)method, v3, v4, v5, v6, v7, v20, v22, v24, v26);
+  v17 = sub_1B86970(v8, v10, v11, v12, v13, v14, v15, v16, v21, v23, v25, v27);
   v18 = SystemNative_Symlink(v9, v17);
-  sub_1B4CF40();
-  sub_1B4D560(v9);
-  sub_1B4D560(v17);
+  sub_1B86368();
+  sub_1B86988(v9);
+  sub_1B86988(v17);
   return v18;
 }
 
@@ -1048,10 +1048,10 @@ int32_t __fastcall Interop_Sys__Unlink(System_String_o *pathname, const MethodIn
   int v13; // [xsp+10h] [xbp-10h]
   void *v14; // [xsp+18h] [xbp-8h]
 
-  v8 = (char *)sub_1B4D548((int)pathname, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
+  v8 = (char *)sub_1B86970((int)pathname, (int)method, v2, v3, v4, v5, v6, v7, v11, v12, v13, v14);
   v9 = SystemNative_Unlink(v8);
-  sub_1B4CF40();
-  sub_1B4D560(v8);
+  sub_1B86368();
+  sub_1B86988(v8);
   return v9;
 }
 
@@ -1075,19 +1075,19 @@ System_ReadOnlySpan_char__o __fastcall Interop_Sys_DirectoryEntry__GetName(
 
   v4 = *(System_Span_T__o *)&this.fields.NameLength;
   Name = this.fields.Name;
-  if ( (byte_49C2273 & 1) == 0 )
+  if ( (byte_4A558ED & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_MemoryExtensions_IndexOf_byte___, *(_QWORD *)&this.fields.NameLength);
-    sub_1B4CF90(&Method_System_ReadOnlySpan_byte___ctor___75478080, v6);
-    sub_1B4CF90(&Method_System_Span_char__Slice___75479680, v7);
-    sub_1B4CF90(&Method_System_Span_char__op_Implicit__, v8);
-    byte_49C2273 = 1;
+    sub_1B863B8(&Method_System_MemoryExtensions_IndexOf_byte___, *(_QWORD *)&this.fields.NameLength);
+    sub_1B863B8(&Method_System_ReadOnlySpan_byte___ctor___76071328, v6);
+    sub_1B863B8(&Method_System_Span_char__Slice___76072928, v7);
+    sub_1B863B8(&Method_System_Span_char__op_Implicit__, v8);
+    byte_4A558ED = 1;
   }
   v9 = *((_DWORD *)Name + 2);
   v10 = *(_QWORD *)Name;
   if ( v9 == -1 )
   {
-    v9 = sub_3A403BC(v10, 256LL, 0LL, Method_System_MemoryExtensions_IndexOf_byte___);
+    v9 = sub_3AC6ED8(v10, 256LL, 0LL, Method_System_MemoryExtensions_IndexOf_byte___);
     if ( (v9 & 0x80000000) != 0 )
 LABEL_5:
       System_ThrowHelper__ThrowArgumentOutOfRangeException(0LL);
@@ -1098,7 +1098,7 @@ LABEL_5:
   }
   UTF8 = System_Text_Encoding__get_UTF8(0LL);
   if ( !UTF8 )
-    sub_1B4D1EC(0LL, v12);
+    sub_1B86614(0LL, v12);
   v13 = ((__int64 (__fastcall *)(System_Text_Encoding_o *, __int64, _QWORD, System_Span_T__o, System_Span_char__o, Il2CppMethodPointer))UTF8->klass->vtable._29_GetChars.method)(
           UTF8,
           v10,
@@ -1108,8 +1108,8 @@ LABEL_5:
           UTF8->klass->vtable._30_get_CodePage.methodPtr);
   if ( v13 > buffer.fields._pointer.fields._value )
     System_ThrowHelper__ThrowArgumentOutOfRangeException(0LL);
-  if ( (*(_BYTE *)(*((_QWORD *)Method_System_Span_char__Slice___75479680 + 4) + 309LL) & 1) == 0 )
-    sub_1B9D620();
+  if ( (*(_BYTE *)(*((_QWORD *)Method_System_Span_char__Slice___76072928 + 4) + 309LL) & 1) == 0 )
+    sub_1BD6A48();
   v15 = v4;
-  return *(System_ReadOnlySpan_char__o *)&System_Span_char___op_Implicit(v15, (const MethodInfo_37C42C8 *)v13);
+  return *(System_ReadOnlySpan_char__o *)&System_Span_char___op_Implicit(v15, (const MethodInfo_3849538 *)v13);
 }

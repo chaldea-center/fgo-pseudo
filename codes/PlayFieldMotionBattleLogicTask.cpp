@@ -14,7 +14,7 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)motionName);
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
-  v5[-1].fields._AiTimingPriority_k__BackingField = 44;
-  sub_1B4CF34((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
+  *(_DWORD *)&v5[-1].fields.isNoCriticalOnAttack = 44;
+  sub_1B8635C((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
   LOBYTE(v5->fields.combo) = v6;
 }

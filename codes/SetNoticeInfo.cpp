@@ -2,10 +2,10 @@ void __fastcall SetNoticeInfo___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49BC190 & 1) == 0 )
+  if ( (byte_4A4F80B & 1) == 0 )
   {
-    sub_1B4CF90(&SetNoticeInfo_TypeInfo, v1);
-    byte_49BC190 = 1;
+    sub_1B863B8(&SetNoticeInfo_TypeInfo, v1);
+    byte_4A4F80B = 1;
   }
   *SetNoticeInfo_TypeInfo->static_fields = (struct SetNoticeInfo_StaticFields)257;
 }
@@ -22,10 +22,10 @@ bool __fastcall SetNoticeInfo__GetisApRecover(const MethodInfo *method)
   __int64 v1; // x1
   SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_49BC18D & 1) == 0 )
+  if ( (byte_4A4F808 & 1) == 0 )
   {
-    sub_1B4CF90(&SetNoticeInfo_TypeInfo, v1);
-    byte_49BC18D = 1;
+    sub_1B863B8(&SetNoticeInfo_TypeInfo, v1);
+    byte_4A4F808 = 1;
   }
   v2 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -42,10 +42,10 @@ bool __fastcall SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
   __int64 v1; // x1
   SetNoticeInfo_c *v2; // x0
 
-  if ( (byte_49BC18F & 1) == 0 )
+  if ( (byte_4A4F80A & 1) == 0 )
   {
-    sub_1B4CF90(&SetNoticeInfo_TypeInfo, v1);
-    byte_49BC18F = 1;
+    sub_1B863B8(&SetNoticeInfo_TypeInfo, v1);
+    byte_4A4F80A = 1;
   }
   v2 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -61,10 +61,10 @@ void __fastcall SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *m
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_49BC18C & 1) == 0 )
+  if ( (byte_4A4F807 & 1) == 0 )
   {
-    sub_1B4CF90(&SetNoticeInfo_TypeInfo, method);
-    byte_49BC18C = 1;
+    sub_1B863B8(&SetNoticeInfo_TypeInfo, method);
+    byte_4A4F807 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -80,10 +80,10 @@ void __fastcall SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_49BC18E & 1) == 0 )
+  if ( (byte_4A4F809 & 1) == 0 )
   {
-    sub_1B4CF90(&SetNoticeInfo_TypeInfo, method);
-    byte_49BC18E = 1;
+    sub_1B863B8(&SetNoticeInfo_TypeInfo, method);
+    byte_4A4F809 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )

@@ -4,7 +4,7 @@ void __fastcall WarBoardSquareIndexData___ctor(WarBoardSquareIndexData_o *this, 
 }
 
 
-void __fastcall WarBoardSquareIndexData___ctor_36045692(
+void __fastcall WarBoardSquareIndexData___ctor_36354896(
         WarBoardSquareIndexData_o *this,
         WarBoardSquareIndexData_SaveData_o *squareIndexData,
         const MethodInfo *method)
@@ -20,14 +20,14 @@ void __fastcall WarBoardSquareIndexData___ctor_36045692(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_1B4D1EC(v5, v6);
+    sub_1B86614(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v7, v8);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v11, v12);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v11, v12);
 }
 
 
@@ -43,13 +43,13 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareIndex = 0;
   this->fields.effectIds = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.effectIds, 0, v3, v4);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.effectIds, 0, v3, v4);
   this->fields.script = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.script, 0, v5, v6);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.script, 0, v5, v6);
 }
 
 
-void __fastcall WarBoardSquareIndexData_SaveData___ctor_36004228(
+void __fastcall WarBoardSquareIndexData_SaveData___ctor_36313404(
         WarBoardSquareIndexData_SaveData_o *this,
         WarBoardSquareIndexData_o *squareIndexData,
         const MethodInfo *method)
@@ -65,12 +65,12 @@ void __fastcall WarBoardSquareIndexData_SaveData___ctor_36004228(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !squareIndexData )
-    sub_1B4D1EC(v5, v6);
+    sub_1B86614(v5, v6);
   this->fields.squareIndex = squareIndexData->fields.squareIndex;
   effectIds = squareIndexData->fields.effectIds;
   this->fields.effectIds = effectIds;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.effectIds, (int32_t)effectIds, v7, v8);
   script = squareIndexData->fields.script;
   this->fields.script = script;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v11, v12);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.script, (int32_t)script, v11, v12);
 }

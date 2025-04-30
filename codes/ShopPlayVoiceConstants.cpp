@@ -3,7 +3,7 @@ int32_t __fastcall ShopPlayVoiceConstants__GetBackVoiceFlag(int32_t state, const
   if ( (unsigned int)(state - 2) > 0x13 )
     return 0;
   else
-    return dword_BE26F0[state - 2];
+    return dword_BFB718[state - 2];
 }
 
 
@@ -13,17 +13,17 @@ System_String_o *__fastcall ShopPlayVoiceConstants__GetBackVoiceMasterKey(int32_
   __int64 v4; // x1
   System_String_o **v5; // x8
 
-  if ( (byte_49B7312 & 1) == 0 )
+  if ( (byte_4A4A841 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_11876/*"SHOP_SCENE_VOICE_BACK1"*/, method);
-    sub_1B4CF90(&StringLiteral_11877/*"SHOP_SCENE_VOICE_BACK2"*/, v3);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v4);
-    byte_49B7312 = 1;
+    sub_1B863B8(&StringLiteral_11943/*"SHOP_SCENE_VOICE_BACK1"*/, method);
+    sub_1B863B8(&StringLiteral_11944/*"SHOP_SCENE_VOICE_BACK2"*/, v3);
+    sub_1B863B8(&StringLiteral_1/*""*/, v4);
+    byte_4A4A841 = 1;
   }
   if ( (unsigned int)(state - 2) > 0x13 )
     v5 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v5 = (System_String_o **)*(&off_44114E0 + state - 2);
+    v5 = (System_String_o **)*(&off_4498E68 + state - 2);
   return *v5;
 }
 
@@ -33,7 +33,7 @@ int32_t __fastcall ShopPlayVoiceConstants__GetEnterVoiceFlag(int32_t state, cons
   if ( (unsigned int)(state - 2) > 0x13 )
     return 0;
   else
-    return dword_BE2740[state - 2];
+    return dword_BFB768[state - 2];
 }
 
 
@@ -58,31 +58,31 @@ System_String_o *__fastcall ShopPlayVoiceConstants__GetEnterVoiceMasterKey(int32
   __int64 v19; // x1
   System_String_o **v20; // x8
 
-  if ( (byte_49B7311 & 1) == 0 )
+  if ( (byte_4A4A840 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_11888/*"SHOP_SCENE_VOICE_SELL"*/, method);
-    sub_1B4CF90(&StringLiteral_11892/*"SHOP_SCENE_VOICE_STONE"*/, v3);
-    sub_1B4CF90(&StringLiteral_11890/*"SHOP_SCENE_VOICE_SPECIAL"*/, v4);
-    sub_1B4CF90(&StringLiteral_11881/*"SHOP_SCENE_VOICE_EVENT_SVT_EQUIP"*/, v5);
-    sub_1B4CF90(&StringLiteral_11884/*"SHOP_SCENE_VOICE_MANA"*/, v6);
-    sub_1B4CF90(&StringLiteral_11885/*"SHOP_SCENE_VOICE_PURE_PRI"*/, v7);
-    sub_1B4CF90(&StringLiteral_11889/*"SHOP_SCENE_VOICE_SHOP04"*/, v8);
-    sub_1B4CF90(&StringLiteral_11882/*"SHOP_SCENE_VOICE_FRAGMENT"*/, v9);
-    sub_1B4CF90(&StringLiteral_11893/*"SHOP_SCENE_VOICE_SVTSTORAGE"*/, v10);
-    sub_1B4CF90(&StringLiteral_11883/*"SHOP_SCENE_VOICE_GRAIL_FRAGMENTS"*/, v11);
-    sub_1B4CF90(&StringLiteral_11891/*"SHOP_SCENE_VOICE_STARTUPSUMMON"*/, v12);
-    sub_1B4CF90(&StringLiteral_11894/*"SHOP_SCENE_VOICE_TRADE_AP"*/, v13);
-    sub_1B4CF90(&StringLiteral_11875/*"SHOP_SCENE_VOICE_ANONYMOUS"*/, v14);
-    sub_1B4CF90(&StringLiteral_11887/*"SHOP_SCENE_VOICE_REVIVAL_ITEM"*/, v15);
-    sub_1B4CF90(&StringLiteral_11879/*"SHOP_SCENE_VOICE_EQSTORAGE"*/, v16);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v17);
-    sub_1B4CF90(&StringLiteral_11880/*"SHOP_SCENE_VOICE_EVENT"*/, v18);
-    sub_1B4CF90(&StringLiteral_11886/*"SHOP_SCENE_VOICE_RARE_PRI"*/, v19);
-    byte_49B7311 = 1;
+    sub_1B863B8(&StringLiteral_11955/*"SHOP_SCENE_VOICE_SELL"*/, method);
+    sub_1B863B8(&StringLiteral_11959/*"SHOP_SCENE_VOICE_STONE"*/, v3);
+    sub_1B863B8(&StringLiteral_11957/*"SHOP_SCENE_VOICE_SPECIAL"*/, v4);
+    sub_1B863B8(&StringLiteral_11948/*"SHOP_SCENE_VOICE_EVENT_SVT_EQUIP"*/, v5);
+    sub_1B863B8(&StringLiteral_11951/*"SHOP_SCENE_VOICE_MANA"*/, v6);
+    sub_1B863B8(&StringLiteral_11952/*"SHOP_SCENE_VOICE_PURE_PRI"*/, v7);
+    sub_1B863B8(&StringLiteral_11956/*"SHOP_SCENE_VOICE_SHOP04"*/, v8);
+    sub_1B863B8(&StringLiteral_11949/*"SHOP_SCENE_VOICE_FRAGMENT"*/, v9);
+    sub_1B863B8(&StringLiteral_11960/*"SHOP_SCENE_VOICE_SVTSTORAGE"*/, v10);
+    sub_1B863B8(&StringLiteral_11950/*"SHOP_SCENE_VOICE_GRAIL_FRAGMENTS"*/, v11);
+    sub_1B863B8(&StringLiteral_11958/*"SHOP_SCENE_VOICE_STARTUPSUMMON"*/, v12);
+    sub_1B863B8(&StringLiteral_11961/*"SHOP_SCENE_VOICE_TRADE_AP"*/, v13);
+    sub_1B863B8(&StringLiteral_11942/*"SHOP_SCENE_VOICE_ANONYMOUS"*/, v14);
+    sub_1B863B8(&StringLiteral_11954/*"SHOP_SCENE_VOICE_REVIVAL_ITEM"*/, v15);
+    sub_1B863B8(&StringLiteral_11946/*"SHOP_SCENE_VOICE_EQSTORAGE"*/, v16);
+    sub_1B863B8(&StringLiteral_1/*""*/, v17);
+    sub_1B863B8(&StringLiteral_11947/*"SHOP_SCENE_VOICE_EVENT"*/, v18);
+    sub_1B863B8(&StringLiteral_11953/*"SHOP_SCENE_VOICE_RARE_PRI"*/, v19);
+    byte_4A4A840 = 1;
   }
   if ( (unsigned int)(state - 2) > 0x13 )
     v20 = (System_String_o **)&StringLiteral_1/*""*/;
   else
-    v20 = (System_String_o **)*(&off_4411580 + state - 2);
+    v20 = (System_String_o **)*(&off_4498F08 + state - 2);
   return *v20;
 }

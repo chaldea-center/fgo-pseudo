@@ -20,43 +20,43 @@ void __fastcall EffectMovieMaster___cctor(const MethodInfo *method)
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_49BACDF & 1) == 0 )
+  if ( (byte_4A4E310 & 1) == 0 )
   {
-    sub_1B4CF90(&EffectMovieMaster_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_5800/*"Effect/weapon/{0}/usm/"*/, v4);
-    sub_1B4CF90(&StringLiteral_5746/*"Effect/BattleCommon/usm/"*/, v5);
-    sub_1B4CF90(&StringLiteral_5803/*"Effect/weapon/{0}/{1}/usm/"*/, v6);
-    sub_1B4CF90(&StringLiteral_9313/*"NoblePhantasm/{0}/usm/"*/, v7);
-    byte_49BACDF = 1;
+    sub_1B863B8(&EffectMovieMaster_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_5840/*"Effect/weapon/{0}/usm/"*/, v4);
+    sub_1B863B8(&StringLiteral_5785/*"Effect/BattleCommon/usm/"*/, v5);
+    sub_1B863B8(&StringLiteral_5843/*"Effect/weapon/{0}/{1}/usm/"*/, v6);
+    sub_1B863B8(&StringLiteral_9363/*"NoblePhantasm/{0}/usm/"*/, v7);
+    byte_4A4E310 = 1;
   }
-  EffectMovieMaster_TypeInfo->static_fields->NOBLE_PATH = (struct System_String_o *)StringLiteral_9313/*"NoblePhantasm/{0}/usm/"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)EffectMovieMaster_TypeInfo->static_fields, StringLiteral_9313/*"NoblePhantasm/{0}/usm/"*/, v2, v3);
-  v8 = StringLiteral_5800/*"Effect/weapon/{0}/usm/"*/;
+  EffectMovieMaster_TypeInfo->static_fields->NOBLE_PATH = (struct System_String_o *)StringLiteral_9363/*"NoblePhantasm/{0}/usm/"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)EffectMovieMaster_TypeInfo->static_fields, StringLiteral_9363/*"NoblePhantasm/{0}/usm/"*/, v2, v3);
+  v8 = StringLiteral_5840/*"Effect/weapon/{0}/usm/"*/;
   static_fields = EffectMovieMaster_TypeInfo->static_fields;
-  static_fields->WEAPON_PATH = (struct System_String_o *)StringLiteral_5800/*"Effect/weapon/{0}/usm/"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->WEAPON_PATH, v8, v10, v11);
-  v12 = StringLiteral_5803/*"Effect/weapon/{0}/{1}/usm/"*/;
+  static_fields->WEAPON_PATH = (struct System_String_o *)StringLiteral_5840/*"Effect/weapon/{0}/usm/"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->WEAPON_PATH, v8, v10, v11);
+  v12 = StringLiteral_5843/*"Effect/weapon/{0}/{1}/usm/"*/;
   v13 = EffectMovieMaster_TypeInfo->static_fields;
-  v13->WEAPON_SUB_PATH = (struct System_String_o *)StringLiteral_5803/*"Effect/weapon/{0}/{1}/usm/"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v13->WEAPON_SUB_PATH, v12, v14, v15);
-  v16 = StringLiteral_5746/*"Effect/BattleCommon/usm/"*/;
+  v13->WEAPON_SUB_PATH = (struct System_String_o *)StringLiteral_5843/*"Effect/weapon/{0}/{1}/usm/"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&v13->WEAPON_SUB_PATH, v12, v14, v15);
+  v16 = StringLiteral_5785/*"Effect/BattleCommon/usm/"*/;
   v17 = EffectMovieMaster_TypeInfo->static_fields;
-  v17->BATTLECOMMON_PATH = (struct System_String_o *)StringLiteral_5746/*"Effect/BattleCommon/usm/"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v17->BATTLECOMMON_PATH, v16, v18, v19);
+  v17->BATTLECOMMON_PATH = (struct System_String_o *)StringLiteral_5785/*"Effect/BattleCommon/usm/"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&v17->BATTLECOMMON_PATH, v16, v18, v19);
 }
 
 
 void __fastcall EffectMovieMaster___ctor(EffectMovieMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BACDE & 1) == 0 )
+  if ( (byte_4A4E30F & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__, method);
-    byte_49BACDE = 1;
+    sub_1B863B8(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__, method);
+    byte_4A4E30F = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     514,
-    (const MethodInfo_319B678 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__);
+    (const MethodInfo_3211F5C *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int___ctor__);
 }
 
 
@@ -91,74 +91,74 @@ System_String_array *__fastcall EffectMovieMaster__GetFilePaths(
   System_Collections_Generic_List_Enumerator_int__o v29; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v30; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_49BACDD & 1) == 0 )
+  if ( (byte_4A4E30E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__, effectMovieIdList);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_string__Add__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_string__ToArray__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_string___ctor__, v11);
-    sub_1B4CF90(&System_Collections_Generic_List_string__TypeInfo, v12);
-    byte_49BACDD = 1;
+    sub_1B863B8(&Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__, effectMovieIdList);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_string__Add__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__GetEnumerator__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_string__ToArray__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_string___ctor__, v11);
+    sub_1B863B8(&System_Collections_Generic_List_string__TypeInfo, v12);
+    byte_4A4E30E = 1;
   }
   memset(&v30, 0, sizeof(v30));
-  v13 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_string__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !effectMovieIdList )
     goto LABEL_17;
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     effectMovieIdList,
-    (const MethodInfo_3563C8C *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_35E0408 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v30 = v29;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v30,
-            (const MethodInfo_3304A70 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_337C530 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     current = v30.fields._current;
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                v30.fields._current,
-               (const MethodInfo_319D99C *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__);
+               (const MethodInfo_3214280 *)Method_DataMasterBase_EffectMovieMaster__EffectMovieEntity__int__GetEntity__);
     if ( !Entity )
-      sub_1B4D1EC(0LL, v18);
+      sub_1B86614(0LL, v18);
     FilePath = (Il2CppObject *)EffectMovieEntity__GetFilePath((EffectMovieEntity_o *)Entity, current, 0, v19);
     v23 = FilePath;
     if ( !v13 )
-      sub_1B4D1EC(FilePath, FilePath);
+      sub_1B86614(FilePath, FilePath);
     items = v13->fields._items;
     v25 = Method_System_Collections_Generic_List_string__Add__;
     ++v13->fields._version;
     if ( !items )
-      sub_1B4D1EC(FilePath, FilePath);
+      sub_1B86614(FilePath, FilePath);
     size = v13->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v13,
         FilePath,
-        *(const MethodInfo_35801DC **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+        *(const MethodInfo_35FC958 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
       v27 = &items->obj.klass + size;
       v13->fields._size = size + 1;
       v27[4] = (Il2CppClass *)v23;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v23, v21, v22);
+      sub_1B8635C((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v23, v21, v22);
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v30,
-    (const MethodInfo_3304A6C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_337C52C *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   if ( !v13 )
 LABEL_17:
-    sub_1B4D1EC(v14, v15);
+    sub_1B86614(v14, v15);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v13,
-                                  (const MethodInfo_3581D34 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_string__ToArray__);
 }

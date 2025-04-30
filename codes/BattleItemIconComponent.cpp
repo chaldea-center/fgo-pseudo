@@ -5,17 +5,17 @@ void __fastcall BattleItemIconComponent___ctor(BattleItemIconComponent_o *this, 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_49BD660 & 1) == 0 )
+  if ( (byte_4A50D33 & 1) == 0 )
   {
-    sub_1B4CF90(&ItemIconComponent_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_808/*"+"*/, v3);
-    byte_49BD660 = 1;
+    sub_1B863B8(&ItemIconComponent_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_809/*"+"*/, v3);
+    byte_4A50D33 = 1;
   }
-  this->fields.addCountColor.fields.rgba = sub_231B5C8(0LL, 1.0, 0.92157, 0.015686, 1.0);
-  v4 = StringLiteral_808/*"+"*/;
-  this->fields.addCountStr = (struct System_String_o *)StringLiteral_808/*"+"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.addCountStr, v4, v5, v6);
-  this->fields.nowAddCountColor.fields.rgba = sub_231B5C8(0LL, 1.0, 0.92157, 0.015686, 1.0);
+  this->fields.addCountColor.fields.rgba = sub_236BCEC(0LL, 1.0, 0.92157, 0.015686, 1.0);
+  v4 = StringLiteral_809/*"+"*/;
+  this->fields.addCountStr = (struct System_String_o *)StringLiteral_809/*"+"*/;
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.addCountStr, v4, v5, v6);
+  this->fields.nowAddCountColor.fields.rgba = sub_236BCEC(0LL, 1.0, 0.92157, 0.015686, 1.0);
   if ( !ItemIconComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ItemIconComponent_TypeInfo);
   ItemIconComponent___ctor((ItemIconComponent_o *)this, 0LL);
@@ -49,7 +49,7 @@ void __fastcall BattleItemIconComponent__SetActiveDarkMode(
   v8.fields.b = b;
   v8.fields.a = a;
   ItemIconComponent__SetColor((ItemIconComponent_o *)this, v8, 0LL);
-  this->fields.nowAddCountColor.fields.rgba = sub_231B5C8(
+  this->fields.nowAddCountColor.fields.rgba = sub_236BCEC(
                                                 0LL,
                                                 r
                                               * (float)((float)(unsigned __int8)this->fields.addCountColor.fields.rgba
@@ -133,16 +133,16 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
   UnityEngine_Color_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_49BD65F & 1) == 0 )
+  if ( (byte_4A50D32 & 1) == 0 )
   {
-    sub_1B4CF90(&int_TypeInfo, *(_QWORD *)&type);
-    sub_1B4CF90(&object___TypeInfo, v9);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B4CF90(&StringLiteral_24809/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v11);
-    sub_1B4CF90(&StringLiteral_15721/*"[{0}]({1}{2:#,0})[-]"*/, v12);
-    sub_1B4CF90(&StringLiteral_24808/*"{0}{1:#,0}"*/, v13);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v14);
-    byte_49BD65F = 1;
+    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&type);
+    sub_1B863B8(&object___TypeInfo, v9);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B863B8(&StringLiteral_24936/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/, v11);
+    sub_1B863B8(&StringLiteral_15794/*"[{0}]({1}{2:#,0})[-]"*/, v12);
+    sub_1B863B8(&StringLiteral_24935/*"{0}{1:#,0}"*/, v13);
+    sub_1B863B8(&StringLiteral_1/*""*/, v14);
+    byte_4A50D32 = 1;
   }
   counterLabel = (UnityEngine_Object_o *)this->fields.counterLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -165,49 +165,49 @@ void __fastcall BattleItemIconComponent__setCounterLabel(
     v27 = UnityEngine_ColorUtility__ToHtmlStringRGB(v66, 0LL);
     v28 = this->fields.counterLabel;
     v29 = v27;
-    v17 = (UILabel_o *)sub_1B4D038(object___TypeInfo, 5LL);
+    v17 = (UILabel_o *)sub_1B86460(object___TypeInfo, 5LL);
     if ( !v17 )
       goto LABEL_36;
     v32 = v17;
-    if ( !v26 || (v17 = (UILabel_o *)sub_1B4D0CC(v26, v17->klass->_1.element_class)) != 0LL )
+    if ( !v26 || (v17 = (UILabel_o *)sub_1B864F4(v26, v17->klass->_1.element_class)) != 0LL )
     {
       if ( !LODWORD(v32->fields.m_CancellationTokenSource) )
         goto LABEL_37;
       v32->fields.leftAnchor = (struct UIRect_AnchorPoint_o *)v26;
-      sub_1B4CF34((CGThumbnailListItem_o *)&v32->fields.leftAnchor, (int32_t)v26, v30, v31);
+      sub_1B8635C((CGThumbnailListItem_o *)&v32->fields.leftAnchor, (int32_t)v26, v30, v31);
       v65 = count;
       v17 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v65, v33, v34, v35);
       v38 = v17;
-      if ( !v17 || (v17 = (UILabel_o *)sub_1B4D0CC(v17, v32->klass->_1.element_class)) != 0LL )
+      if ( !v17 || (v17 = (UILabel_o *)sub_1B864F4(v17, v32->klass->_1.element_class)) != 0LL )
       {
         if ( LODWORD(v32->fields.m_CancellationTokenSource) <= 1 )
           goto LABEL_37;
         v32->fields.rightAnchor = (struct UIRect_AnchorPoint_o *)v38;
-        sub_1B4CF34((CGThumbnailListItem_o *)&v32->fields.rightAnchor, (int32_t)v38, v36, v37);
-        if ( !v29 || (v17 = (UILabel_o *)sub_1B4D0CC(v29, v32->klass->_1.element_class)) != 0LL )
+        sub_1B8635C((CGThumbnailListItem_o *)&v32->fields.rightAnchor, (int32_t)v38, v36, v37);
+        if ( !v29 || (v17 = (UILabel_o *)sub_1B864F4(v29, v32->klass->_1.element_class)) != 0LL )
         {
           if ( LODWORD(v32->fields.m_CancellationTokenSource) <= 2 )
             goto LABEL_37;
           v32->fields.bottomAnchor = (struct UIRect_AnchorPoint_o *)v29;
-          sub_1B4CF34((CGThumbnailListItem_o *)&v32->fields.bottomAnchor, (int32_t)v29, v39, v40);
+          sub_1B8635C((CGThumbnailListItem_o *)&v32->fields.bottomAnchor, (int32_t)v29, v39, v40);
           addCountStr = this->fields.addCountStr;
-          if ( !addCountStr || (v17 = (UILabel_o *)sub_1B4D0CC(addCountStr, v32->klass->_1.element_class)) != 0LL )
+          if ( !addCountStr || (v17 = (UILabel_o *)sub_1B864F4(addCountStr, v32->klass->_1.element_class)) != 0LL )
           {
             if ( LODWORD(v32->fields.m_CancellationTokenSource) <= 3 )
               goto LABEL_37;
             v32->fields.topAnchor = (struct UIRect_AnchorPoint_o *)addCountStr;
-            sub_1B4CF34((CGThumbnailListItem_o *)&v32->fields.topAnchor, (int32_t)addCountStr, v41, v42);
+            sub_1B8635C((CGThumbnailListItem_o *)&v32->fields.topAnchor, (int32_t)addCountStr, v41, v42);
             v64 = addCount;
             v17 = (UILabel_o *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v44, v45, v46);
             v49 = v17;
-            if ( !v17 || (v17 = (UILabel_o *)sub_1B4D0CC(v17, v32->klass->_1.element_class)) != 0LL )
+            if ( !v17 || (v17 = (UILabel_o *)sub_1B864F4(v17, v32->klass->_1.element_class)) != 0LL )
             {
               if ( LODWORD(v32->fields.m_CancellationTokenSource) > 4 )
               {
                 *(_QWORD *)&v32->fields.updateAnchors = v49;
-                sub_1B4CF34((CGThumbnailListItem_o *)&v32->fields.updateAnchors, (int32_t)v49, v47, v48);
-                v17 = (UILabel_o *)System_String__Format_61134896(
-                                     (System_String_o *)StringLiteral_24809/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/,
+                sub_1B8635C((CGThumbnailListItem_o *)&v32->fields.updateAnchors, (int32_t)v49, v47, v48);
+                v17 = (UILabel_o *)System_String__Format_61686604(
+                                     (System_String_o *)StringLiteral_24936/*"{0}{1:#,0}\n[{2}]({3}{4:#,0})[-]"*/,
                                      (System_Object_array *)v32,
                                      0LL);
                 if ( !v28 )
@@ -219,14 +219,14 @@ LABEL_34:
                 return;
               }
 LABEL_37:
-              sub_1B4D1F4(v17, v16);
+              sub_1B8661C(v17, v16);
             }
           }
         }
       }
     }
-    v63 = sub_1B4D210(v17);
-    sub_1B4D0B8(v63, 0LL);
+    v63 = sub_1B86638(v17);
+    sub_1B864E0(v63, 0LL);
   }
   UILabel__set_spacingY(v17, 0, 0LL);
   v17 = (UILabel_o *)ItemType__GetCountableString(type, 0LL);
@@ -242,11 +242,11 @@ LABEL_37:
     v22 = (Il2CppObject *)v17;
     v65 = count;
     v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65, v18, v19, v20);
-    v17 = (UILabel_o *)System_String__Format_61134760((System_String_o *)StringLiteral_24808/*"{0}{1:#,0}"*/, v22, v23, 0LL);
+    v17 = (UILabel_o *)System_String__Format_61686468((System_String_o *)StringLiteral_24935/*"{0}{1:#,0}"*/, v22, v23, 0LL);
     v16 = (System_String_o *)v17;
     if ( !v21 )
 LABEL_36:
-      sub_1B4D1EC(v17, v16);
+      sub_1B86614(v17, v16);
   }
   UILabel__set_text(v21, v16, 0LL);
   if ( addCount >= 1 )
@@ -265,8 +265,8 @@ LABEL_36:
     v57 = (Il2CppObject *)v55;
     v65 = addCount;
     v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v65, v58, v59, v60);
-    v62 = System_String__Format_61134828((System_String_o *)StringLiteral_15721/*"[{0}]({1}{2:#,0})[-]"*/, v57, v56, v61, 0LL);
-    v50 = System_String__Concat_61093468(mText, v62, 0LL);
+    v62 = System_String__Format_61686536((System_String_o *)StringLiteral_15794/*"[{0}]({1}{2:#,0})[-]"*/, v57, v56, v61, 0LL);
+    v50 = System_String__Concat_61645176(mText, v62, 0LL);
     v51 = v52;
     goto LABEL_34;
   }

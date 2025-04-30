@@ -1,17 +1,21 @@
+void __fastcall AccountLinkageUnlinkRequest___ctor(AccountLinkageUnlinkRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 void __fastcall AccountLinkageUnlinkRequest__beginRequest(
         AccountLinkageUnlinkRequest_o *this,
         System_String_o *accountLinkageToken,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x1
-
-  if ( (byte_49BC74D & 1) == 0 )
+  if ( (byte_4A4FDEB & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, accountLinkageToken);
-    byte_49BC74D = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, accountLinkageToken);
+    byte_4A4FDEB = 1;
   }
-  RequestBase__addBaseField((RequestBase_o *)this, (const MethodInfo *)accountLinkageToken);
-  RequestBase__WriteParameter((RequestBase_o *)this, v4);
+  RequestBase__addBaseField((RequestBase_o *)this, 0LL);
+  RequestBase__WriteParameter((RequestBase_o *)this, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__RequestStart((RequestBase_o *)this, 0LL);
@@ -25,16 +29,16 @@ System_String_o *__fastcall AccountLinkageUnlinkRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49BC74C & 1) == 0 )
+  if ( (byte_4A4FDEA & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_16333/*"accountLinkageAnx/unlink"*/, v2);
-    byte_49BC74C = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_16406/*"accountLinkageAnx/unlink"*/, v2);
+    byte_4A4FDEA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_16333/*"accountLinkageAnx/unlink"*/, 0LL);
+  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_16406/*"accountLinkageAnx/unlink"*/, 0LL);
 }
 
 
@@ -43,44 +47,28 @@ void __fastcall AccountLinkageUnlinkRequest__requestCompleted(
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  AccountLinkageUnlinkRequest_o *v4; // x19
+  RequestBase_o *v4; // x19
   __int64 v5; // x1
-  bool v6; // w0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v8; // x9
+  __int64 *v6; // x8
 
-  v4 = this;
-  if ( (byte_49BC74E & 1) == 0 )
+  v4 = (RequestBase_o *)this;
+  if ( (byte_4A4FDEC & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, responseList);
-    this = (AccountLinkageUnlinkRequest_o *)sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v5);
-    byte_49BC74E = 1;
+    sub_1B863B8(&StringLiteral_22061/*"ok"*/, responseList);
+    this = (AccountLinkageUnlinkRequest_o *)sub_1B863B8(&StringLiteral_21893/*"ng"*/, v5);
+    byte_4A4FDEC = 1;
   }
   if ( !responseList )
-    goto LABEL_13;
+    goto LABEL_10;
   if ( !responseList->max_length )
-    sub_1B4D1F4(this, responseList);
+    sub_1B8661C(this, responseList);
   this = (AccountLinkageUnlinkRequest_o *)responseList->m_Items[0];
   if ( !this )
-LABEL_13:
-    sub_1B4D1EC(this, responseList);
-  v6 = ResponseData__checkError_41839176((ResponseData_o *)this, 0LL);
-  CallBack = v4->fields.CallBack;
-  if ( v6 )
-  {
-    if ( CallBack )
-    {
-      v8 = &StringLiteral_21947/*"ok"*/;
-LABEL_11:
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        *v8,
-        *(_QWORD *)&CallBack->fields.extra_arg);
-    }
-  }
-  else if ( CallBack )
-  {
-    v8 = &StringLiteral_21779/*"ng"*/;
-    goto LABEL_11;
-  }
+LABEL_10:
+    sub_1B86614(this, responseList);
+  if ( ResponseData__checkError_42282948((ResponseData_o *)this, 0LL) )
+    v6 = &StringLiteral_22061/*"ok"*/;
+  else
+    v6 = &StringLiteral_21893/*"ng"*/;
+  RequestBase__completed(v4, (System_String_o *)*v6, 0LL);
 }

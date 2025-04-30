@@ -7,12 +7,12 @@ void __fastcall RecoverCmdSpellRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_49BC8BE & 1) == 0 )
+  if ( (byte_4A4FF5E & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_17852/*"commandSpellId"*/, *(_QWORD *)&itemId);
-    byte_49BC8BE = 1;
+    sub_1B863B8(&StringLiteral_17929/*"commandSpellId"*/, *(_QWORD *)&itemId);
+    byte_4A4FF5E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17852/*"commandSpellId"*/, itemId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17929/*"commandSpellId"*/, itemId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -22,16 +22,16 @@ System_String_o *__fastcall RecoverCmdSpellRequest__getURL(RecoverCmdSpellReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49BC8BD & 1) == 0 )
+  if ( (byte_4A4FF5D & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_17851/*"commandSpell/use"*/, v2);
-    byte_49BC8BD = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_17928/*"commandSpell/use"*/, v2);
+    byte_4A4FF5D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17851/*"commandSpell/use"*/, 0LL);
+  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_17928/*"commandSpell/use"*/, 0LL);
 }
 
 
@@ -43,35 +43,36 @@ void __fastcall RecoverCmdSpellRequest__requestCompleted(
   __int64 v5; // x1
   __int64 v6; // x1
   ResponseData_o *v7; // x0
+  const MethodInfo *v8; // x2
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v9; // x9
+  __int64 *v10; // x9
 
-  if ( (byte_49BC8BF & 1) == 0 )
+  if ( (byte_4A4FF5F & 1) == 0 )
   {
-    sub_1B4CF90(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B4CF90(&StringLiteral_21947/*"ok"*/, v5);
-    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
-    byte_49BC8BF = 1;
+    sub_1B863B8(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1B863B8(&StringLiteral_22061/*"ok"*/, v5);
+    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
+    byte_4A4FF5F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(46, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_41839176(v7, 0LL) )
+  if ( v7 && ResponseData__checkError(v7, v7->fields.resCode, v8) )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_21947/*"ok"*/;
+    v10 = &StringLiteral_22061/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v9 = &StringLiteral_21779/*"ng"*/;
+    v10 = &StringLiteral_21893/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,
-    *v9,
+    *v10,
     *(_QWORD *)&CallBack->fields.extra_arg);
 }

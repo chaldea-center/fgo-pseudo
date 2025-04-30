@@ -1,13 +1,13 @@
 void __fastcall CommonReleaseEntity___ctor(CommonReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAC85 & 1) == 0 )
+  if ( (byte_4A4E2B5 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BAC85 = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4E2B5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   *(_QWORD *)&this->fields.condGroup = 0LL;
   *(_QWORD *)&this->fields.condId = 0LL;
@@ -17,15 +17,15 @@ void __fastcall CommonReleaseEntity___ctor(CommonReleaseEntity_o *this, const Me
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall CommonReleaseEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_49BAC86 & 1) == 0 )
+  if ( (byte_4A4E2B6 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
-    byte_49BAC86 = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&priority);
+    byte_4A4E2B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_2EFFCAC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -69,7 +69,7 @@ bool __fastcall CommonReleaseEntity__IsMatchQuestClearPhase(
 }
 
 
-bool __fastcall CommonReleaseEntity__IsMatch_39602408(
+bool __fastcall CommonReleaseEntity__IsMatch_40021964(
         CommonReleaseEntity_o *this,
         CommonReleaseEntity_o *other,
         const MethodInfo *method)

@@ -1,18 +1,16 @@
 void __fastcall DiggingManager___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
+  __int64 v2; // x1
 
-  if ( (byte_49BF283 & 1) == 0 )
+  if ( (byte_4A48F6F & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager_TypeInfo, v1);
-    sub_1B4CF90(&StringLiteral_12605/*"SkipDiggingConfirmCheckBoxState"*/, v4);
-    byte_49BF283 = 1;
+    sub_1B863B8(&DiggingManager_TypeInfo, v1);
+    sub_1B863B8(&StringLiteral_12677/*"SkipDiggingConfirmCheckBoxState"*/, v2);
+    byte_4A48F6F = 1;
   }
-  DiggingManager_TypeInfo->static_fields->DIGGING_CHECK_BOX_STATE_KEY = (struct System_String_o *)StringLiteral_12605/*"SkipDiggingConfirmCheckBoxState"*/;
-  sub_1B4CF34((CGThumbnailListItem_o *)DiggingManager_TypeInfo->static_fields, StringLiteral_12605/*"SkipDiggingConfirmCheckBoxState"*/, v2, v3);
+  DiggingManager_TypeInfo->static_fields->DIGGING_CHECK_BOX_STATE_KEY = (struct System_String_o *)StringLiteral_12677/*"SkipDiggingConfirmCheckBoxState"*/;
+  sub_1B8635C(DiggingManager_TypeInfo->static_fields);
 }
 
 
@@ -34,7 +32,7 @@ void __fastcall DiggingManager__AfterBlockInformationisUpdated(DiggingManager_o 
         resetMask = (struct UISprite_o *)DiggingManager__IsAchievedTheConditionsToReset(this, v5),
         !gameObject) )
   {
-    sub_1B4D1EC(resetMask, method);
+    sub_1B86614(resetMask, method);
   }
   UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)resetMask & 1) == 0, 0LL);
   ActionExtensions__Call(this->fields.blockInfoUpdatedCallBack, 0LL);
@@ -55,13 +53,13 @@ void __fastcall DiggingManager__CheckOpenQuest(
   UserEventPointEntity_o *v12; // x8
   int64_t value; // x2
 
-  if ( (byte_49BF276 & 1) == 0 )
+  if ( (byte_4A48F62 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, response);
-    sub_1B4CF90(&StringLiteral_1/*""*/, v7);
-    byte_49BF276 = 1;
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, response);
+    sub_1B863B8(&StringLiteral_1/*""*/, v7);
+    byte_4A48F62 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !response )
     goto LABEL_12;
   oldUserEventPoint = response->fields.oldUserEventPoint;
@@ -75,10 +73,10 @@ void __fastcall DiggingManager__CheckOpenQuest(
     if ( Instance )
       goto LABEL_9;
 LABEL_12:
-    sub_1B4D1EC(Instance, eventId);
+    sub_1B86614(Instance, eventId);
   }
   if ( !(_DWORD)v11 )
-    sub_1B4D1F4(Instance, eventId);
+    sub_1B8661C(Instance, eventId);
   v12 = oldUserEventPoint->m_Items[0];
   if ( !v12 )
     goto LABEL_12;
@@ -123,74 +121,68 @@ void __fastcall DiggingManager__ClickPanel(
   __int64 v20; // x21
   DataMasterBase_TMaster__TEntity__PKType__o *eventDiggingBlockMaster; // x0
   __int64 v22; // x1
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  DiggingManager_c *v25; // x0
+  DiggingManager_c *inited; // x0
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
-  Il2CppObject *v27; // x22
-  CommonConsumeEntity_o *v28; // x22
+  Il2CppObject *v25; // x22
+  CommonConsumeEntity_o *v26; // x22
   Il2CppObject *MasterData_object; // x23
-  const MethodInfo *v30; // x1
+  const MethodInfo *v28; // x1
   int32_t num; // w23
-  int32_t v32; // w22
-  int32_t v33; // w23
-  _QWORD *v34; // x0
-  System_Reflection_MethodBase_o *v35; // x0
-  System_Collections_Generic_List_object__o *v36; // x22
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
+  int32_t v30; // w22
+  int32_t v31; // w23
+  _QWORD *v32; // x0
+  System_Reflection_MethodBase_o *v33; // x0
+  System_Collections_Generic_List_object__o *v34; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v40; // x9
+  _QWORD *v36; // x9
   __int64 size; // x10
-  Il2CppClass **v42; // x0
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  _QWORD *v45; // x0
-  DiggingManager_c *v46; // x0
-  const MethodInfo *v47; // x2
+  Il2CppClass **v38; // x0
+  _QWORD *v39; // x0
+  DiggingManager_c *v40; // x0
+  const MethodInfo *v41; // x2
   bool activeSelf; // w0
   DiggingConfirmDialogComponent_o *diggingConfirmDialog; // x22
   Il2CppObject *maskPanel; // x23
-  System_Action_bool__o *v51; // x20
-  System_Action_o *v52; // x23
-  const MethodInfo *v53; // x4
+  System_Action_bool__o *v45; // x20
+  System_Action_o *v46; // x23
+  const MethodInfo *v47; // x4
   UnityEngine_GameObject_o *tutorialPeepWindowTexturePrefab; // x23
-  Il2CppObject *v55; // x24
-  System_Action_bool__o *v56; // x20
-  System_Action_o *v57; // x24
-  const MethodInfo *v58; // x5
+  Il2CppObject *v49; // x24
+  System_Action_bool__o *v50; // x20
+  System_Action_o *v51; // x24
+  const MethodInfo *v52; // x5
   UserItemEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_49BF278 & 1) == 0 )
+  if ( (byte_4A48F64 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_bool__TypeInfo, panelData);
-    sub_1B4CF90(&System_Action_TypeInfo, v5);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v6);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserItemMaster___, v7);
-    sub_1B4CF90(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v8);
-    sub_1B4CF90(&Method_DiggingManager_ClickPanel__, v9);
-    sub_1B4CF90(&DiggingManager_TypeInfo, v10);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_SetActive__, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v13);
-    sub_1B4CF90(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v15);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__0__, v17);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__1__, v18);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass97_0_TypeInfo, v19);
-    byte_49BF278 = 1;
+    sub_1B863B8(&System_Action_bool__TypeInfo, panelData);
+    sub_1B863B8(&System_Action_TypeInfo, v5);
+    sub_1B863B8(&Method_DataManager_GetMasterData_CommonConsumeMaster___, v6);
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserItemMaster___, v7);
+    sub_1B863B8(&Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__, v8);
+    sub_1B863B8(&Method_DiggingManager_ClickPanel__, v9);
+    sub_1B863B8(&DiggingManager_TypeInfo, v10);
+    sub_1B863B8(&Method_UnityEngine_GameObject_SetActive__, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v13);
+    sub_1B863B8(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v14);
+    sub_1B863B8(&NetworkManager_TypeInfo, v15);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__0__, v17);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__1__, v18);
+    sub_1B863B8(&DiggingManager___c__DisplayClass97_0_TypeInfo, v19);
+    byte_4A48F64 = 1;
   }
-  v20 = sub_1B4D1DC(DiggingManager___c__DisplayClass97_0_TypeInfo);
+  v20 = sub_1B86604(DiggingManager___c__DisplayClass97_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   if ( !v20 )
     goto LABEL_46;
   *(_QWORD *)(v20 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 16), (int32_t)this, v23, v24);
-  v25 = DiggingManager_TypeInfo;
+  sub_1B8635C(v20 + 16);
+  inited = DiggingManager_TypeInfo;
   if ( !DiggingManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
-  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DiggingManager__get_eventDiggingBlockMaster((const MethodInfo *)v25);
+    inited = (DiggingManager_c *)j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
+  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DiggingManager__get_eventDiggingBlockMaster((const MethodInfo *)inited);
   if ( !panelData )
     goto LABEL_46;
   blockInfo = panelData->fields.blockInfo;
@@ -198,38 +190,38 @@ void __fastcall DiggingManager__ClickPanel(
     goto LABEL_46;
   if ( !eventDiggingBlockMaster )
     goto LABEL_46;
-  v27 = DataMasterBase_object__object__int___GetEntity(
+  v25 = DataMasterBase_object__object__int___GetEntity(
           eventDiggingBlockMaster,
           blockInfo->fields.diggingBlockId,
-          (const MethodInfo_319D99C *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
-  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          (const MethodInfo_3214280 *)Method_DataMasterBase_EventDiggingBlockMaster__EventDiggingBlockEntity__int__GetEntity__);
+  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !eventDiggingBlockMaster )
     goto LABEL_46;
   eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                             (DataManager_o *)eventDiggingBlockMaster,
-                                                                            (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
-  if ( !v27 )
+                                                                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+  if ( !v25 )
     goto LABEL_46;
   if ( !eventDiggingBlockMaster )
     goto LABEL_46;
-  v28 = CommonConsumeMaster__GetEntity(
+  v26 = CommonConsumeMaster__GetEntity(
           (CommonConsumeMaster_o *)eventDiggingBlockMaster,
-          HIDWORD(v27[1].monitor),
+          HIDWORD(v25[1].monitor),
           1,
           0LL);
-  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !eventDiggingBlockMaster )
     goto LABEL_46;
   entity = 0LL;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)eventDiggingBlockMaster,
-                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_49B57A5 )
+  if ( !byte_4A48C25 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, v22);
-    byte_49B57A5 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, v22);
+    byte_4A48C25 = 1;
   }
   eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -237,80 +229,80 @@ void __fastcall DiggingManager__ClickPanel(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)NetworkManager_TypeInfo;
   }
-  if ( !v28 || !MasterData_object )
+  if ( !v26 || !MasterData_object )
     goto LABEL_46;
   if ( !UserItemMaster__TryGetEntity(
           (UserItemMaster_o *)MasterData_object,
           &entity,
           (int64_t)eventDiggingBlockMaster[2].fields.list[1].monitor,
-          v28->fields.objectId,
+          v26->fields.objectId,
           0LL) )
   {
-    v45 = Method_DiggingManager_ClickPanel__;
+    v39 = Method_DiggingManager_ClickPanel__;
     if ( (*((_BYTE *)Method_DiggingManager_ClickPanel__ + 83) & 2) != 0 )
-      v45 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_ClickPanel__);
-    v35 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v45, v45[4]);
+      v39 = (_QWORD *)sub_1B863D0(Method_DiggingManager_ClickPanel__);
+    v33 = (System_Reflection_MethodBase_o *)sub_1B8639C(v39, v39[4]);
     goto LABEL_33;
   }
-  num = v28->fields.num;
+  num = v26->fields.num;
   eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DiggingBlockComponent__GetHintConsumeNum(
                                                                             panelData,
-                                                                            v30);
+                                                                            v28);
   if ( !entity )
     goto LABEL_46;
-  v32 = entity->fields.num;
-  v33 = (_DWORD)eventDiggingBlockMaster + num;
-  v34 = Method_DiggingManager_ClickPanel__;
+  v30 = entity->fields.num;
+  v31 = (_DWORD)eventDiggingBlockMaster + num;
+  v32 = Method_DiggingManager_ClickPanel__;
   if ( (*((_BYTE *)Method_DiggingManager_ClickPanel__ + 83) & 2) != 0 )
-    v34 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_ClickPanel__);
-  v35 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v34, v34[4]);
-  if ( v33 > v32 )
+    v32 = (_QWORD *)sub_1B863D0(Method_DiggingManager_ClickPanel__);
+  v33 = (System_Reflection_MethodBase_o *)sub_1B8639C(v32, v32[4]);
+  if ( v31 > v30 )
   {
 LABEL_33:
-    OverwriteAssetSoundName__PlaySystemSe(v35, 2, 0, 0LL);
+    OverwriteAssetSoundName__PlaySystemSe(v33, 2, 0, 0LL);
     return;
   }
-  OverwriteAssetSoundName__PlaySystemSe(v35, 0, 0, 0LL);
-  v36 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+  OverwriteAssetSoundName__PlaySystemSe(v33, 0, 0, 0LL);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v36,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
-  if ( !v36 )
+    v34,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+  if ( !v34 )
     goto LABEL_46;
-  items = v36->fields._items;
-  v40 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
-  ++v36->fields._version;
+  items = v34->fields._items;
+  v36 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
+  ++v34->fields._version;
   if ( !items )
     goto LABEL_46;
-  size = v36->fields._size;
+  size = v34->fields._size;
   if ( (unsigned int)size >= items->max_length )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v36,
+      v34,
       (Il2CppObject *)panelData,
-      *(const MethodInfo_35801DC **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
   }
   else
   {
-    v42 = &items->obj.klass + size;
-    v36->fields._size = size + 1;
-    v42[4] = (Il2CppClass *)panelData;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v42 + 4), (int32_t)panelData, v37, v38);
+    v38 = &items->obj.klass + size;
+    v34->fields._size = size + 1;
+    v38[4] = (Il2CppClass *)panelData;
+    sub_1B8635C(v38 + 4);
   }
-  *(_QWORD *)(v20 + 24) = v36;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v20 + 24), (int32_t)v36, v43, v44);
-  v46 = DiggingManager_TypeInfo;
+  *(_QWORD *)(v20 + 24) = v34;
+  sub_1B8635C(v20 + 24);
+  v40 = DiggingManager_TypeInfo;
   if ( !DiggingManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
-    v46 = DiggingManager_TypeInfo;
+    v40 = DiggingManager_TypeInfo;
   }
-  if ( UnityEngine_PlayerPrefs__GetInt(v46->static_fields->DIGGING_CHECK_BOX_STATE_KEY, 0, 0LL) == 1 )
+  if ( UnityEngine_PlayerPrefs__GetInt(v40->static_fields->DIGGING_CHECK_BOX_STATE_KEY, 0, 0LL) == 1 )
   {
     DiggingManager__EventDiggingRequest(
       this,
       *(System_Collections_Generic_List_DiggingBlockComponent__o **)(v20 + 24),
-      v47);
+      v41);
     return;
   }
   eventDiggingBlockMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.diggingConfirmDialog;
@@ -326,27 +318,27 @@ LABEL_33:
   if ( activeSelf )
   {
     maskPanel = (Il2CppObject *)this->fields.maskPanel;
-    v51 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
-    System_Action_bool____ctor(v51, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0LL);
-    v52 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-    System_Action___ctor(v52, (Il2CppObject *)v20, Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__0__, 0LL);
+    v45 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
+    System_Action_bool____ctor(v45, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0LL);
+    v46 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    System_Action___ctor(v46, (Il2CppObject *)v20, Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__0__, 0LL);
     if ( diggingConfirmDialog )
     {
-      DiggingConfirmDialogComponent__Redisplay(diggingConfirmDialog, panelData, v51, v52, v53);
+      DiggingConfirmDialogComponent__Redisplay(diggingConfirmDialog, panelData, v45, v46, v47);
       return;
     }
 LABEL_46:
-    sub_1B4D1EC(eventDiggingBlockMaster, v22);
+    sub_1B86614(eventDiggingBlockMaster, v22);
   }
   tutorialPeepWindowTexturePrefab = this->fields.tutorialPeepWindowTexturePrefab;
-  v55 = (Il2CppObject *)this->fields.maskPanel;
-  v56 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v56, v55, Method_UnityEngine_GameObject_SetActive__, 0LL);
-  v57 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v57, (Il2CppObject *)v20, Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__1__, 0LL);
+  v49 = (Il2CppObject *)this->fields.maskPanel;
+  v50 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v50, v49, Method_UnityEngine_GameObject_SetActive__, 0LL);
+  v51 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v51, (Il2CppObject *)v20, Method_DiggingManager___c__DisplayClass97_0__ClickPanel_b__1__, 0LL);
   if ( !diggingConfirmDialog )
     goto LABEL_46;
-  DiggingConfirmDialogComponent__Open(diggingConfirmDialog, panelData, tutorialPeepWindowTexturePrefab, v56, v57, v58);
+  DiggingConfirmDialogComponent__Open(diggingConfirmDialog, panelData, tutorialPeepWindowTexturePrefab, v50, v51, v52);
 }
 
 
@@ -355,27 +347,23 @@ System_Collections_IEnumerator_o *__fastcall DiggingManager__CoInitRequest(
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v5; // x21
+  DiggingManager__CoInitRequest_d__82_o *v5; // x21
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
 
-  if ( (byte_49BF26A & 1) == 0 )
+  if ( (byte_4A48F56 & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager__CoInitRequest_d__82_TypeInfo, finishCallback);
-    byte_49BF26A = 1;
+    sub_1B863B8(&DiggingManager__CoInitRequest_d__82_TypeInfo, finishCallback);
+    byte_4A48F56 = 1;
   }
-  v5 = sub_1B4D1DC(DiggingManager__CoInitRequest_d__82_TypeInfo);
-  DiggingManager__CoInitRequest_d__82___ctor((DiggingManager__CoInitRequest_d__82_o *)v5, 0, 0LL);
+  v5 = (DiggingManager__CoInitRequest_d__82_o *)sub_1B86604(DiggingManager__CoInitRequest_d__82_TypeInfo);
+  DiggingManager__CoInitRequest_d__82___ctor(v5, 0, 0LL);
   if ( !v5 )
-    sub_1B4D1EC(v6, v7);
-  *(_QWORD *)(v5 + 32) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
-  *(_QWORD *)(v5 + 40) = finishCallback;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v5 + 40), (int32_t)finishCallback, v10, v11);
+    sub_1B86614(v6, v7);
+  v5->fields.__4__this = this;
+  sub_1B8635C(&v5->fields.__4__this);
+  v5->fields.finishCallback = finishCallback;
+  sub_1B8635C(&v5->fields.finishCallback);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -387,28 +375,24 @@ System_Collections_IEnumerator_o *__fastcall DiggingManager__CoResetTableRequest
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x22
+  DiggingManager__CoResetTableRequest_d__83_o *v7; // x22
   __int64 v8; // x0
   __int64 v9; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
 
-  if ( (byte_49BF26B & 1) == 0 )
+  if ( (byte_4A48F57 & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager__CoResetTableRequest_d__83_TypeInfo, *(_QWORD *)&areaNum);
-    byte_49BF26B = 1;
+    sub_1B863B8(&DiggingManager__CoResetTableRequest_d__83_TypeInfo, *(_QWORD *)&areaNum);
+    byte_4A48F57 = 1;
   }
-  v7 = sub_1B4D1DC(DiggingManager__CoResetTableRequest_d__83_TypeInfo);
-  DiggingManager__CoResetTableRequest_d__83___ctor((DiggingManager__CoResetTableRequest_d__83_o *)v7, 0, 0LL);
+  v7 = (DiggingManager__CoResetTableRequest_d__83_o *)sub_1B86604(DiggingManager__CoResetTableRequest_d__83_TypeInfo);
+  DiggingManager__CoResetTableRequest_d__83___ctor(v7, 0, 0LL);
   if ( !v7 )
-    sub_1B4D1EC(v8, v9);
-  *(_QWORD *)(v7 + 32) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v10, v11);
-  *(_DWORD *)(v7 + 40) = areaNum;
-  *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 48), (int32_t)finishCallback, v12, v13);
+    sub_1B86614(v8, v9);
+  v7->fields.__4__this = this;
+  sub_1B8635C(&v7->fields.__4__this);
+  v7->fields.areaNum = areaNum;
+  v7->fields.finishCallback = finishCallback;
+  sub_1B8635C(&v7->fields.finishCallback);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -425,41 +409,29 @@ void __fastcall DiggingManager__ConstructDiggingDialog(DiggingManager_o *this, c
   __int64 v10; // x1
   struct DiggingAssetManager_o *assetManager; // x8
   Il2CppObject *AutoDiggingDialogPrefab_k__BackingField; // x21
-  Il2CppObject *Component_object; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x2
+  const MethodInfo *v13; // x2
   UnityEngine_Object_o *diggingConfirmDialog; // x21
-  struct DiggingAssetManager_o *v18; // x8
+  struct DiggingAssetManager_o *v15; // x8
   Il2CppObject *DiggingConfirmDialogPrefab_k__BackingField; // x21
-  Il2CppObject *v20; // x0
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  const MethodInfo *v23; // x2
+  const MethodInfo *v17; // x2
   UnityEngine_Object_o *diggingPointRewardDialog; // x21
-  struct DiggingAssetManager_o *v25; // x8
+  struct DiggingAssetManager_o *v19; // x8
   Il2CppObject *DiggingPointRewardDialogPrefab_k__BackingField; // x21
-  Il2CppObject *v27; // x0
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  const MethodInfo *v30; // x2
+  const MethodInfo *v21; // x2
   UnityEngine_Object_o *diggingRewardDialog; // x21
-  struct DiggingAssetManager_o *v32; // x8
+  struct DiggingAssetManager_o *v23; // x8
   Il2CppObject *DiggingRewardDialogPrefab_k__BackingField; // x21
-  Il2CppObject *v34; // x0
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  const MethodInfo *v37; // x2
+  const MethodInfo *v25; // x2
 
-  if ( (byte_49BF26D & 1) == 0 )
+  if ( (byte_4A48F59 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_AutoDiggingDialogComponent___, method);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_DiggingConfirmDialogComponent___, v3);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_DiggingPointRewardDialogComponent___, v4);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_DiggingRewardDialogComponent___, v5);
-    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
-    byte_49BF26D = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_AutoDiggingDialogComponent___, method);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_DiggingConfirmDialogComponent___, v3);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_DiggingPointRewardDialogComponent___, v4);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_DiggingRewardDialogComponent___, v5);
+    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v6);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A48F59 = 1;
   }
   autoDiggingDialog = (UnityEngine_Object_o *)this->fields.autoDiggingDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -475,15 +447,14 @@ void __fastcall DiggingManager__ConstructDiggingDialog(DiggingManager_o *this, c
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__Instantiate_object_(
            AutoDiggingDialogPrefab_k__BackingField,
-           (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v9 )
       goto LABEL_36;
-    Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)v9,
-                         (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_AutoDiggingDialogComponent___);
-    this->fields.autoDiggingDialog = (struct AutoDiggingDialogComponent_o *)Component_object;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.autoDiggingDialog, (int32_t)Component_object, v14, v15);
-    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.autoDiggingDialog, v16);
+    this->fields.autoDiggingDialog = (struct AutoDiggingDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                              (UnityEngine_GameObject_o *)v9,
+                                                                              (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_AutoDiggingDialogComponent___);
+    sub_1B8635C(&this->fields.autoDiggingDialog);
+    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.autoDiggingDialog, v13);
   }
   diggingConfirmDialog = (UnityEngine_Object_o *)this->fields.diggingConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -491,23 +462,22 @@ void __fastcall DiggingManager__ConstructDiggingDialog(DiggingManager_o *this, c
   v9 = (Il2CppObject *)UnityEngine_Object__op_Equality(diggingConfirmDialog, 0LL, 0LL);
   if ( ((unsigned __int8)v9 & 1) != 0 )
   {
-    v18 = this->fields.assetManager;
-    if ( !v18 )
+    v15 = this->fields.assetManager;
+    if ( !v15 )
       goto LABEL_36;
-    DiggingConfirmDialogPrefab_k__BackingField = (Il2CppObject *)v18->fields._DiggingConfirmDialogPrefab_k__BackingField;
+    DiggingConfirmDialogPrefab_k__BackingField = (Il2CppObject *)v15->fields._DiggingConfirmDialogPrefab_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__Instantiate_object_(
            DiggingConfirmDialogPrefab_k__BackingField,
-           (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v9 )
       goto LABEL_36;
-    v20 = UnityEngine_GameObject__GetComponent_object_(
-            (UnityEngine_GameObject_o *)v9,
-            (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingConfirmDialogComponent___);
-    this->fields.diggingConfirmDialog = (struct DiggingConfirmDialogComponent_o *)v20;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingConfirmDialog, (int32_t)v20, v21, v22);
-    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingConfirmDialog, v23);
+    this->fields.diggingConfirmDialog = (struct DiggingConfirmDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                                    (UnityEngine_GameObject_o *)v9,
+                                                                                    (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingConfirmDialogComponent___);
+    sub_1B8635C(&this->fields.diggingConfirmDialog);
+    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingConfirmDialog, v17);
   }
   diggingPointRewardDialog = (UnityEngine_Object_o *)this->fields.diggingPointRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -515,23 +485,22 @@ void __fastcall DiggingManager__ConstructDiggingDialog(DiggingManager_o *this, c
   v9 = (Il2CppObject *)UnityEngine_Object__op_Equality(diggingPointRewardDialog, 0LL, 0LL);
   if ( ((unsigned __int8)v9 & 1) != 0 )
   {
-    v25 = this->fields.assetManager;
-    if ( !v25 )
+    v19 = this->fields.assetManager;
+    if ( !v19 )
       goto LABEL_36;
-    DiggingPointRewardDialogPrefab_k__BackingField = (Il2CppObject *)v25->fields._DiggingPointRewardDialogPrefab_k__BackingField;
+    DiggingPointRewardDialogPrefab_k__BackingField = (Il2CppObject *)v19->fields._DiggingPointRewardDialogPrefab_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__Instantiate_object_(
            DiggingPointRewardDialogPrefab_k__BackingField,
-           (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v9 )
       goto LABEL_36;
-    v27 = UnityEngine_GameObject__GetComponent_object_(
-            (UnityEngine_GameObject_o *)v9,
-            (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingPointRewardDialogComponent___);
-    this->fields.diggingPointRewardDialog = (struct DiggingPointRewardDialogComponent_o *)v27;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingPointRewardDialog, (int32_t)v27, v28, v29);
-    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingPointRewardDialog, v30);
+    this->fields.diggingPointRewardDialog = (struct DiggingPointRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                                            (UnityEngine_GameObject_o *)v9,
+                                                                                            (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingPointRewardDialogComponent___);
+    sub_1B8635C(&this->fields.diggingPointRewardDialog);
+    DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingPointRewardDialog, v21);
   }
   diggingRewardDialog = (UnityEngine_Object_o *)this->fields.diggingRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -539,28 +508,27 @@ void __fastcall DiggingManager__ConstructDiggingDialog(DiggingManager_o *this, c
   v9 = (Il2CppObject *)UnityEngine_Object__op_Equality(diggingRewardDialog, 0LL, 0LL);
   if ( ((unsigned __int8)v9 & 1) != 0 )
   {
-    v32 = this->fields.assetManager;
-    if ( v32 )
+    v23 = this->fields.assetManager;
+    if ( v23 )
     {
-      DiggingRewardDialogPrefab_k__BackingField = (Il2CppObject *)v32->fields._DiggingRewardDialogPrefab_k__BackingField;
+      DiggingRewardDialogPrefab_k__BackingField = (Il2CppObject *)v23->fields._DiggingRewardDialogPrefab_k__BackingField;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v9 = UnityEngine_Object__Instantiate_object_(
              DiggingRewardDialogPrefab_k__BackingField,
-             (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+             (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( v9 )
       {
-        v34 = UnityEngine_GameObject__GetComponent_object_(
-                (UnityEngine_GameObject_o *)v9,
-                (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardDialogComponent___);
-        this->fields.diggingRewardDialog = (struct DiggingRewardDialogComponent_o *)v34;
-        sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingRewardDialog, (int32_t)v34, v35, v36);
-        DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingRewardDialog, v37);
+        this->fields.diggingRewardDialog = (struct DiggingRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                                      (UnityEngine_GameObject_o *)v9,
+                                                                                      (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardDialogComponent___);
+        sub_1B8635C(&this->fields.diggingRewardDialog);
+        DiggingManager__LocateDialogToDiggingPanel(this, (BaseDialog_o *)this->fields.diggingRewardDialog, v25);
         return;
       }
     }
 LABEL_36:
-    sub_1B4D1EC(v9, v10);
+    sub_1B86614(v9, v10);
   }
 }
 
@@ -568,53 +536,49 @@ LABEL_36:
 void __fastcall DiggingManager__ConstructParams(DiggingManager_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  TaskScheduler_o *userEventDiggingEntity; // x0
+  void *userEventDiggingEntity; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  struct DiggingInfo_o *nonBlockTasks; // x1
-  const MethodInfo *v9; // x1
+  const MethodInfo *v6; // x1
+  const MethodInfo *v7; // x1
+  System_Action_o *v8; // x20
+  const MethodInfo *v9; // x2
   const MethodInfo *v10; // x1
-  System_Action_o *v11; // x20
-  const MethodInfo *v12; // x2
-  const MethodInfo *v13; // x1
-  const MethodInfo *v14; // x1
+  const MethodInfo *v11; // x1
   UnityEngine_GameObject_o *gameObject; // x20
-  const MethodInfo *v16; // x1
+  const MethodInfo *v13; // x1
 
-  if ( (byte_49BF26C & 1) == 0 )
+  if ( (byte_4A48F58 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_DiggingManager_AfterBlockInformationisUpdated__, v3);
-    byte_49BF26C = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_DiggingManager_AfterBlockInformationisUpdated__, v3);
+    byte_4A48F58 = 1;
   }
-  userEventDiggingEntity = (TaskScheduler_o *)DiggingManager__get_userEventDiggingEntity(this, method);
+  userEventDiggingEntity = DiggingManager__get_userEventDiggingEntity(this, method);
   if ( !userEventDiggingEntity )
     goto LABEL_9;
-  nonBlockTasks = (struct DiggingInfo_o *)userEventDiggingEntity->fields.nonBlockTasks;
-  this->fields.diggingInfo = nonBlockTasks;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingInfo, (int32_t)nonBlockTasks, v6, v7);
+  this->fields.diggingInfo = (struct DiggingInfo_o *)*((_QWORD *)userEventDiggingEntity + 4);
+  sub_1B8635C(&this->fields.diggingInfo);
   userEventDiggingEntity = this->fields.taskScheduler;
   if ( !userEventDiggingEntity )
     goto LABEL_9;
-  TaskScheduler__Activate(userEventDiggingEntity, 0LL);
-  DiggingManager__CreateDiggingBlockComponents(this, v9);
-  DiggingManager__CreateDiggingRewardComponents(this, v10);
-  v11 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v11, (Il2CppObject *)this, Method_DiggingManager_AfterBlockInformationisUpdated__, 0LL);
-  DiggingManager__SetInfoInBlocks(this, v11, v12);
-  DiggingManager__ConstructDiggingDialog(this, v13);
-  DiggingManager__SetDiggingCompleteImage(this, v14);
-  userEventDiggingEntity = (TaskScheduler_o *)this->fields.diggingCompletePanel;
+  TaskScheduler__Activate((TaskScheduler_o *)userEventDiggingEntity, 0LL);
+  DiggingManager__CreateDiggingBlockComponents(this, v6);
+  DiggingManager__CreateDiggingRewardComponents(this, v7);
+  v8 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v8, (Il2CppObject *)this, Method_DiggingManager_AfterBlockInformationisUpdated__, 0LL);
+  DiggingManager__SetInfoInBlocks(this, v8, v9);
+  DiggingManager__ConstructDiggingDialog(this, v10);
+  DiggingManager__SetDiggingCompleteImage(this, v11);
+  userEventDiggingEntity = this->fields.diggingCompletePanel;
   if ( !userEventDiggingEntity
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)userEventDiggingEntity, 0LL),
-        userEventDiggingEntity = (TaskScheduler_o *)DiggingManager__IsDiggingComplete(this, v16),
+        userEventDiggingEntity = (void *)DiggingManager__IsDiggingComplete(this, v13),
         !gameObject)
     || (UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)userEventDiggingEntity & 1, 0LL),
-        (userEventDiggingEntity = (TaskScheduler_o *)this->fields.panelRoot) == 0LL) )
+        (userEventDiggingEntity = this->fields.panelRoot) == 0LL) )
   {
 LABEL_9:
-    sub_1B4D1EC(userEventDiggingEntity, v5);
+    sub_1B86614(userEventDiggingEntity, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)userEventDiggingEntity, 1, 0LL);
 }
@@ -622,26 +586,24 @@ LABEL_9:
 
 void __fastcall DiggingManager__CreateAssetManagerIfNotExists(DiggingManager_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_assetManager; // x19
+  struct DiggingAssetManager_o **p_assetManager; // x19
   struct DiggingAssetManager_o *assetManager; // t1
   DiggingAssetManager_o *v5; // x20
   const MethodInfo *v6; // x1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
 
-  if ( (byte_49BF277 & 1) == 0 )
+  if ( (byte_4A48F63 & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingAssetManager_TypeInfo, method);
-    byte_49BF277 = 1;
+    sub_1B863B8(&DiggingAssetManager_TypeInfo, method);
+    byte_4A48F63 = 1;
   }
   assetManager = this->fields.assetManager;
-  p_assetManager = (CGThumbnailListItem_o *)&this->fields.assetManager;
+  p_assetManager = &this->fields.assetManager;
   if ( !assetManager )
   {
-    v5 = (DiggingAssetManager_o *)sub_1B4D1DC(DiggingAssetManager_TypeInfo);
+    v5 = (DiggingAssetManager_o *)sub_1B86604(DiggingAssetManager_TypeInfo);
     DiggingAssetManager___ctor(v5, v6);
-    p_assetManager->klass = (CGThumbnailListItem_c *)v5;
-    sub_1B4CF34(p_assetManager, (int32_t)v5, v7, v8);
+    *p_assetManager = v5;
+    sub_1B8635C(p_assetManager);
   }
 }
 
@@ -663,24 +625,22 @@ void __fastcall DiggingManager__CreateDiggingBlockComponents(DiggingManager_o *t
   struct DiggingAssetManager_o *v15; // x8
   Il2CppObject *v16; // x20
   UnityEngine_GameObject_o *v17; // x20
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  __int64 v20; // x8
-  _QWORD *v21; // x9
+  __int64 v18; // x8
+  _QWORD *v19; // x9
   __int64 klass_low; // x10
-  __int64 v23; // x8
-  UnityEngine_Transform_o *v24; // x21
-  const MethodInfo *v25; // x1
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v21; // x8
+  UnityEngine_Transform_o *v22; // x21
+  const MethodInfo *v23; // x1
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BF27A & 1) == 0 )
+  if ( (byte_4A48F66 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_DiggingBlockComponent___, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v3);
-    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    byte_49BF27A = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_DiggingBlockComponent___, method);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v3);
+    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A48F66 = 1;
   }
   blockListRoot = (UnityEngine_Object_o *)this->fields.blockListRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -699,7 +659,7 @@ void __fastcall DiggingManager__CreateDiggingBlockComponents(DiggingManager_o *t
     eventDiggingEntity = (UnityEngine_GameObject_o *)DiggingManager__get_eventDiggingEntity(this, v11);
     if ( !eventDiggingEntity )
 LABEL_34:
-      sub_1B4D1EC(eventDiggingEntity, v8);
+      sub_1B86614(eventDiggingEntity, v8);
     v12 = 0;
     while ( v12 < *((_DWORD *)&eventDiggingEntity->fields + 1) )
     {
@@ -718,13 +678,13 @@ LABEL_34:
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                                v16,
-                                                               (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                               (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
             if ( eventDiggingEntity )
             {
               v17 = eventDiggingEntity;
               eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                  eventDiggingEntity,
-                                                                 (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingBlockComponent___);
+                                                                 (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingBlockComponent___);
               if ( eventDiggingEntity )
               {
                 HIDWORD(eventDiggingEntity[2].monitor) = v12;
@@ -733,62 +693,62 @@ LABEL_34:
                 eventDiggingEntity = (UnityEngine_GameObject_o *)this->fields.blockList;
                 if ( eventDiggingEntity )
                 {
-                  v20 = *(_QWORD *)&eventDiggingEntity->fields.m_CachedPtr;
-                  v21 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
+                  v18 = *(_QWORD *)&eventDiggingEntity->fields.m_CachedPtr;
+                  v19 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
                   ++HIDWORD(eventDiggingEntity[1].klass);
-                  if ( v20 )
+                  if ( v18 )
                   {
                     klass_low = SLODWORD(eventDiggingEntity[1].klass);
-                    if ( (unsigned int)klass_low >= *(_DWORD *)(v20 + 24) )
+                    if ( (unsigned int)klass_low >= *(_DWORD *)(v18 + 24) )
                     {
                       System_Collections_Generic_List_object___AddWithResize(
                         (System_Collections_Generic_List_object__o *)eventDiggingEntity,
                         (Il2CppObject *)v8,
-                        *(const MethodInfo_35801DC **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                        *(const MethodInfo_35FC958 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
                     }
                     else
                     {
-                      v23 = v20 + 8 * klass_low;
+                      v21 = v18 + 8 * klass_low;
                       LODWORD(eventDiggingEntity[1].klass) = klass_low + 1;
-                      *(_QWORD *)(v23 + 32) = v8;
-                      sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 32), (int32_t)v8, v18, v19);
+                      *(_QWORD *)(v21 + 32) = v8;
+                      sub_1B8635C(v21 + 32);
                     }
                     eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
                     if ( this->fields.blockListRoot )
                     {
-                      v24 = (UnityEngine_Transform_o *)eventDiggingEntity;
+                      v22 = (UnityEngine_Transform_o *)eventDiggingEntity;
                       eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                          this->fields.blockListRoot,
                                                                          0LL);
-                      if ( v24 )
+                      if ( v22 )
                       {
-                        UnityEngine_Transform__SetParent(v24, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
+                        UnityEngine_Transform__SetParent(v22, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
                         eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v17, 0LL);
                         if ( eventDiggingEntity )
                         {
-                          v26.fields.y = (float)v13 + -200.0;
-                          v26.fields.z = 0.0;
-                          v26.fields.x = (float)(70 * v12) + -4.0;
+                          v24.fields.y = (float)v13 + -200.0;
+                          v24.fields.z = 0.0;
+                          v24.fields.x = (float)(70 * v12) + -4.0;
                           UnityEngine_Transform__set_localPosition(
                             (UnityEngine_Transform_o *)eventDiggingEntity,
-                            v26,
+                            v24,
                             0LL);
                           eventDiggingEntity = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                              v17,
                                                                              0LL);
                           if ( eventDiggingEntity )
                           {
-                            v27.fields.x = 1.0;
-                            v27.fields.y = 1.0;
-                            v27.fields.z = 1.0;
+                            v25.fields.x = 1.0;
+                            v25.fields.y = 1.0;
+                            v25.fields.z = 1.0;
                             UnityEngine_Transform__set_localScale(
                               (UnityEngine_Transform_o *)eventDiggingEntity,
-                              v27,
+                              v25,
                               0LL);
                             ++v14;
                             eventDiggingEntity = (UnityEngine_GameObject_o *)DiggingManager__get_eventDiggingEntity(
                                                                                this,
-                                                                               v25);
+                                                                               v23);
                             v13 += 69;
                             if ( eventDiggingEntity )
                               continue;
@@ -834,41 +794,37 @@ void __fastcall DiggingManager__CreateDiggingRewardComponents(DiggingManager_o *
   Il2CppObject *v18; // x22
   UnityEngine_GameObject_o *v19; // x22
   Il2CppObject *v20; // x23
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  __int64 v23; // x8
-  _QWORD *v24; // x9
-  __int64 v25; // x10
-  __int64 v26; // x8
-  UnityEngine_Transform_o *v27; // x23
-  const MethodInfo *v28; // x1
-  int32_t v29; // w20
-  int v30; // w28
-  int32_t v31; // w21
-  struct DiggingAssetManager_o *v32; // x8
-  Il2CppObject *v33; // x22
-  UnityEngine_GameObject_o *v34; // x22
-  Il2CppObject *v35; // x23
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  __int64 v38; // x8
-  _QWORD *v39; // x9
-  __int64 v40; // x10
-  __int64 v41; // x8
-  UnityEngine_Transform_o *v42; // x23
-  const MethodInfo *v43; // x1
-  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
+  __int64 v21; // x8
+  _QWORD *v22; // x9
+  __int64 v23; // x10
+  __int64 v24; // x8
+  UnityEngine_Transform_o *v25; // x23
+  const MethodInfo *v26; // x1
+  int32_t v27; // w20
+  int v28; // w28
+  int32_t v29; // w21
+  struct DiggingAssetManager_o *v30; // x8
+  Il2CppObject *v31; // x22
+  UnityEngine_GameObject_o *v32; // x22
+  Il2CppObject *v33; // x23
+  __int64 v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  __int64 v37; // x8
+  UnityEngine_Transform_o *v38; // x23
+  const MethodInfo *v39; // x1
+  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BF27B & 1) == 0 )
+  if ( (byte_4A48F67 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___, method);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent__Add__, v3);
-    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    byte_49BF27B = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___, method);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent__Add__, v3);
+    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A48F67 = 1;
   }
   rewardListRoot = (UnityEngine_Object_o *)this->fields.rewardListRoot;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -913,13 +869,13 @@ void __fastcall DiggingManager__CreateDiggingRewardComponents(DiggingManager_o *
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               eventDiggingEntity = UnityEngine_Object__Instantiate_object_(
                                      v18,
-                                     (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
               if ( eventDiggingEntity )
               {
                 v19 = (UnityEngine_GameObject_o *)eventDiggingEntity;
                 eventDiggingEntity = UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)eventDiggingEntity,
-                                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___);
+                                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___);
                 if ( eventDiggingEntity )
                 {
                   v20 = (Il2CppObject *)eventDiggingEntity;
@@ -928,56 +884,56 @@ void __fastcall DiggingManager__CreateDiggingRewardComponents(DiggingManager_o *
                   eventDiggingEntity = this->fields.rewardList;
                   if ( eventDiggingEntity )
                   {
-                    v23 = *((_QWORD *)eventDiggingEntity + 2);
-                    v24 = Method_System_Collections_Generic_List_DiggingRewardComponent__Add__;
+                    v21 = *((_QWORD *)eventDiggingEntity + 2);
+                    v22 = Method_System_Collections_Generic_List_DiggingRewardComponent__Add__;
                     ++*((_DWORD *)eventDiggingEntity + 7);
-                    if ( v23 )
+                    if ( v21 )
                     {
-                      v25 = *((int *)eventDiggingEntity + 6);
-                      if ( (unsigned int)v25 >= *(_DWORD *)(v23 + 24) )
+                      v23 = *((int *)eventDiggingEntity + 6);
+                      if ( (unsigned int)v23 >= *(_DWORD *)(v21 + 24) )
                       {
                         System_Collections_Generic_List_object___AddWithResize(
                           (System_Collections_Generic_List_object__o *)eventDiggingEntity,
                           v20,
-                          *(const MethodInfo_35801DC **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                          *(const MethodInfo_35FC958 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
                       }
                       else
                       {
-                        v26 = v23 + 8 * v25;
-                        *((_DWORD *)eventDiggingEntity + 6) = v25 + 1;
-                        *(_QWORD *)(v26 + 32) = v20;
-                        sub_1B4CF34((CGThumbnailListItem_o *)(v26 + 32), (int32_t)v20, v21, v22);
+                        v24 = v21 + 8 * v23;
+                        *((_DWORD *)eventDiggingEntity + 6) = v23 + 1;
+                        *(_QWORD *)(v24 + 32) = v20;
+                        sub_1B8635C(v24 + 32);
                       }
                       eventDiggingEntity = UnityEngine_GameObject__get_transform(v19, 0LL);
                       if ( this->fields.rewardListRoot )
                       {
-                        v27 = (UnityEngine_Transform_o *)eventDiggingEntity;
+                        v25 = (UnityEngine_Transform_o *)eventDiggingEntity;
                         eventDiggingEntity = UnityEngine_GameObject__get_transform(this->fields.rewardListRoot, 0LL);
-                        if ( v27 )
+                        if ( v25 )
                         {
-                          UnityEngine_Transform__SetParent(v27, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
+                          UnityEngine_Transform__SetParent(v25, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
                           eventDiggingEntity = UnityEngine_GameObject__get_transform(v19, 0LL);
                           if ( eventDiggingEntity )
                           {
-                            v44.fields.y = (float)v15 + -213.0;
-                            v44.fields.z = 0.0;
-                            v44.fields.x = (float)(70 * v13) + 18.0;
+                            v40.fields.y = (float)v15 + -213.0;
+                            v40.fields.z = 0.0;
+                            v40.fields.x = (float)(70 * v13) + 18.0;
                             UnityEngine_Transform__set_localPosition(
                               (UnityEngine_Transform_o *)eventDiggingEntity,
-                              v44,
+                              v40,
                               0LL);
                             eventDiggingEntity = UnityEngine_GameObject__get_transform(v19, 0LL);
                             if ( eventDiggingEntity )
                             {
-                              v45.fields.x = 1.0;
-                              v45.fields.y = 1.0;
-                              v45.fields.z = 1.0;
+                              v41.fields.x = 1.0;
+                              v41.fields.y = 1.0;
+                              v41.fields.z = 1.0;
                               UnityEngine_Transform__set_localScale(
                                 (UnityEngine_Transform_o *)eventDiggingEntity,
-                                v45,
+                                v41,
                                 0LL);
                               ++v16;
-                              eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v28);
+                              eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v26);
                               v15 += 69;
                               if ( eventDiggingEntity )
                                 continue;
@@ -1001,91 +957,91 @@ void __fastcall DiggingManager__CreateDiggingRewardComponents(DiggingManager_o *
       }
       if ( !eventDiggingEntity )
 LABEL_61:
-        sub_1B4D1EC(eventDiggingEntity, v9);
-      v29 = 0;
-      while ( v29 < *((_DWORD *)eventDiggingEntity + 5) - 1 )
+        sub_1B86614(eventDiggingEntity, v9);
+      v27 = 0;
+      while ( v27 < *((_DWORD *)eventDiggingEntity + 5) - 1 )
       {
         eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v9);
         if ( eventDiggingEntity )
         {
-          v30 = 0;
-          v31 = 0;
-          while ( v31 < *((_DWORD *)eventDiggingEntity + 6) - 1 )
+          v28 = 0;
+          v29 = 0;
+          while ( v29 < *((_DWORD *)eventDiggingEntity + 6) - 1 )
           {
-            v32 = this->fields.assetManager;
-            if ( v32 )
+            v30 = this->fields.assetManager;
+            if ( v30 )
             {
-              v33 = (Il2CppObject *)v32->fields._rewardPrefab_k__BackingField;
+              v31 = (Il2CppObject *)v30->fields._rewardPrefab_k__BackingField;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               eventDiggingEntity = UnityEngine_Object__Instantiate_object_(
-                                     v33,
-                                     (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     v31,
+                                     (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
               if ( eventDiggingEntity )
               {
-                v34 = (UnityEngine_GameObject_o *)eventDiggingEntity;
+                v32 = (UnityEngine_GameObject_o *)eventDiggingEntity;
                 eventDiggingEntity = UnityEngine_GameObject__GetComponent_object_(
                                        (UnityEngine_GameObject_o *)eventDiggingEntity,
-                                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___);
+                                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_DiggingRewardComponent___);
                 if ( eventDiggingEntity )
                 {
-                  v35 = (Il2CppObject *)eventDiggingEntity;
-                  DiggingRewardComponent__SetPosOnArea((DiggingRewardComponent_o *)eventDiggingEntity, v29, v31, 0LL);
-                  LODWORD(v35[2].monitor) = 0;
+                  v33 = (Il2CppObject *)eventDiggingEntity;
+                  DiggingRewardComponent__SetPosOnArea((DiggingRewardComponent_o *)eventDiggingEntity, v27, v29, 0LL);
+                  LODWORD(v33[2].monitor) = 0;
                   eventDiggingEntity = this->fields.rewardList;
                   if ( eventDiggingEntity )
                   {
-                    v38 = *((_QWORD *)eventDiggingEntity + 2);
-                    v39 = Method_System_Collections_Generic_List_DiggingRewardComponent__Add__;
+                    v34 = *((_QWORD *)eventDiggingEntity + 2);
+                    v35 = Method_System_Collections_Generic_List_DiggingRewardComponent__Add__;
                     ++*((_DWORD *)eventDiggingEntity + 7);
-                    if ( v38 )
+                    if ( v34 )
                     {
-                      v40 = *((int *)eventDiggingEntity + 6);
-                      if ( (unsigned int)v40 >= *(_DWORD *)(v38 + 24) )
+                      v36 = *((int *)eventDiggingEntity + 6);
+                      if ( (unsigned int)v36 >= *(_DWORD *)(v34 + 24) )
                       {
                         System_Collections_Generic_List_object___AddWithResize(
                           (System_Collections_Generic_List_object__o *)eventDiggingEntity,
-                          v35,
-                          *(const MethodInfo_35801DC **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+                          v33,
+                          *(const MethodInfo_35FC958 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
                       }
                       else
                       {
-                        v41 = v38 + 8 * v40;
-                        *((_DWORD *)eventDiggingEntity + 6) = v40 + 1;
-                        *(_QWORD *)(v41 + 32) = v35;
-                        sub_1B4CF34((CGThumbnailListItem_o *)(v41 + 32), (int32_t)v35, v36, v37);
+                        v37 = v34 + 8 * v36;
+                        *((_DWORD *)eventDiggingEntity + 6) = v36 + 1;
+                        *(_QWORD *)(v37 + 32) = v33;
+                        sub_1B8635C(v37 + 32);
                       }
-                      eventDiggingEntity = UnityEngine_GameObject__get_transform(v34, 0LL);
+                      eventDiggingEntity = UnityEngine_GameObject__get_transform(v32, 0LL);
                       if ( this->fields.rareRewardListRoot )
                       {
-                        v42 = (UnityEngine_Transform_o *)eventDiggingEntity;
+                        v38 = (UnityEngine_Transform_o *)eventDiggingEntity;
                         eventDiggingEntity = UnityEngine_GameObject__get_transform(this->fields.rareRewardListRoot, 0LL);
-                        if ( v42 )
+                        if ( v38 )
                         {
-                          UnityEngine_Transform__SetParent(v42, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
-                          eventDiggingEntity = UnityEngine_GameObject__get_transform(v34, 0LL);
+                          UnityEngine_Transform__SetParent(v38, (UnityEngine_Transform_o *)eventDiggingEntity, 0LL);
+                          eventDiggingEntity = UnityEngine_GameObject__get_transform(v32, 0LL);
                           if ( eventDiggingEntity )
                           {
-                            v46.fields.y = (float)v30 + -221.0;
-                            v46.fields.z = 0.0;
-                            v46.fields.x = (float)(70 * v29) + 13.0;
+                            v42.fields.y = (float)v28 + -221.0;
+                            v42.fields.z = 0.0;
+                            v42.fields.x = (float)(70 * v27) + 13.0;
                             UnityEngine_Transform__set_localPosition(
                               (UnityEngine_Transform_o *)eventDiggingEntity,
-                              v46,
+                              v42,
                               0LL);
-                            eventDiggingEntity = UnityEngine_GameObject__get_transform(v34, 0LL);
+                            eventDiggingEntity = UnityEngine_GameObject__get_transform(v32, 0LL);
                             if ( eventDiggingEntity )
                             {
-                              v47.fields.x = 1.0;
-                              v47.fields.y = 1.0;
-                              v47.fields.z = 1.0;
+                              v43.fields.x = 1.0;
+                              v43.fields.y = 1.0;
+                              v43.fields.z = 1.0;
                               UnityEngine_Transform__set_localScale(
                                 (UnityEngine_Transform_o *)eventDiggingEntity,
-                                v47,
+                                v43,
                                 0LL);
-                              ++v31;
-                              eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v43);
-                              v30 += 69;
+                              ++v29;
+                              eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v39);
+                              v28 += 69;
                               if ( eventDiggingEntity )
                                 continue;
                             }
@@ -1099,7 +1055,7 @@ LABEL_61:
             }
             goto LABEL_61;
           }
-          ++v29;
+          ++v27;
           eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v9);
           if ( eventDiggingEntity )
             continue;
@@ -1118,32 +1074,30 @@ SchedulerTaskBase_o *__fastcall DiggingManager__CreateSlightTimeTouchBlockTask(
 {
   __int64 v5; // x1
   __int64 v6; // x1
-  __int64 v7; // x20
+  SchedulerTaskWaitTime_o *v7; // x20
   SchedulerTaskBase_TaskCallback_o *v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
 
-  if ( (byte_49BF274 & 1) == 0 )
+  if ( (byte_4A48F60 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager__CreateSlightTimeTouchBlockTask_b__93_0__, method);
-    sub_1B4CF90(&SchedulerTaskWaitTime_TypeInfo, v5);
-    sub_1B4CF90(&SchedulerTaskBase_TaskCallback_TypeInfo, v6);
-    byte_49BF274 = 1;
+    sub_1B863B8(&Method_DiggingManager__CreateSlightTimeTouchBlockTask_b__93_0__, method);
+    sub_1B863B8(&SchedulerTaskWaitTime_TypeInfo, v5);
+    sub_1B863B8(&SchedulerTaskBase_TaskCallback_TypeInfo, v6);
+    byte_4A48F60 = 1;
   }
-  v7 = sub_1B4D1DC(SchedulerTaskWaitTime_TypeInfo);
-  SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v7, duration, 0LL);
-  v8 = (SchedulerTaskBase_TaskCallback_o *)sub_1B4D1DC(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v7 = (SchedulerTaskWaitTime_o *)sub_1B86604(SchedulerTaskWaitTime_TypeInfo);
+  SchedulerTaskWaitTime___ctor(v7, duration, 0LL);
+  v8 = (SchedulerTaskBase_TaskCallback_o *)sub_1B86604(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v8,
     (Il2CppObject *)this,
     Method_DiggingManager__CreateSlightTimeTouchBlockTask_b__93_0__,
     0LL);
   if ( !v7 )
-    sub_1B4D1EC(v9, v10);
-  *(_QWORD *)(v7 + 32) = v8;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v7 + 32), (int32_t)v8, v11, v12);
+    sub_1B86614(v9, v10);
+  v7->fields.EndCallback = v8;
+  sub_1B8635C(&v7->fields.EndCallback);
   return (SchedulerTaskBase_o *)v7;
 }
 
@@ -1167,164 +1121,160 @@ void __fastcall DiggingManager__EventDiggingRequest(
   void *maskPanel; // x0
   System_Collections_Generic_List_int__o *v17; // x21
   System_Collections_Generic_List_int__o **p_diggingIdxX; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  System_Collections_Generic_List_int__o *v21; // x23
+  System_Collections_Generic_List_int__o *v19; // x23
   System_Collections_Generic_List_int__o **p_diggingIdxY; // x21
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  _BOOL8 v25; // x0
-  __int64 v26; // x1
+  _BOOL8 v21; // x0
+  __int64 v22; // x1
   Il2CppObject *current; // x22
-  System_Collections_Generic_List_int__o *v28; // x0
+  System_Collections_Generic_List_int__o *v24; // x0
   __int64 monitor_high; // x1
   struct System_Int32_array *items; // x8
-  _QWORD *v31; // x9
+  _QWORD *v27; // x9
   __int64 size; // x10
-  System_Collections_Generic_List_int__o *v33; // x0
+  System_Collections_Generic_List_int__o *v29; // x0
   __int64 klass_low; // x1
-  struct System_Int32_array *v35; // x8
-  _QWORD *v36; // x9
-  __int64 v37; // x10
-  NetworkManager_ResultCallbackFunc_o *v38; // x22
+  struct System_Int32_array *v31; // x8
+  _QWORD *v32; // x9
+  __int64 v33; // x10
+  NetworkManager_ResultCallbackFunc_o *v34; // x22
   Il2CppObject *Request_object; // x0
   int32_t eventId; // w22
-  EventDiggingRequest_o *v41; // x23
-  const MethodInfo *v42; // x1
-  int32_t v43; // w19
-  System_Int32_array *v44; // x20
-  System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+20h] [xbp-80h] BYREF
+  EventDiggingRequest_o *v37; // x23
+  const MethodInfo *v38; // x1
+  int32_t v39; // w19
+  System_Int32_array *v40; // x20
+  System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_49BF270 & 1) == 0 )
+  if ( (byte_4A48F5C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager_Response__, panelData);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__Add__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__ToArray__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int___ctor__, v11);
-    sub_1B4CF90(&System_Collections_Generic_List_int__TypeInfo, v12);
-    sub_1B4CF90(&Method_NetworkManager_getRequest_EventDiggingRequest___, v13);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v14);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
-    byte_49BF270 = 1;
+    sub_1B863B8(&Method_DiggingManager_Response__, panelData);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__ToArray__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int___ctor__, v11);
+    sub_1B863B8(&System_Collections_Generic_List_int__TypeInfo, v12);
+    sub_1B863B8(&Method_NetworkManager_getRequest_EventDiggingRequest___, v13);
+    sub_1B863B8(&NetworkManager_TypeInfo, v14);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v15);
+    byte_4A48F5C = 1;
   }
-  memset(&v46, 0, sizeof(v46));
+  memset(&v42, 0, sizeof(v42));
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_30;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0LL);
-  v17 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
+  v17 = (System_Collections_Generic_List_int__o *)sub_1B86604(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v17,
-    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_35DF0E0 *)Method_System_Collections_Generic_List_int___ctor__);
   p_diggingIdxX = &this->fields.diggingIdxX;
   this->fields.diggingIdxX = v17;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingIdxX, (int32_t)v17, v19, v20);
-  v21 = (System_Collections_Generic_List_int__o *)sub_1B4D1DC(System_Collections_Generic_List_int__TypeInfo);
+  sub_1B8635C(&this->fields.diggingIdxX);
+  v19 = (System_Collections_Generic_List_int__o *)sub_1B86604(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v21,
-    (const MethodInfo_3562964 *)Method_System_Collections_Generic_List_int___ctor__);
+    v19,
+    (const MethodInfo_35DF0E0 *)Method_System_Collections_Generic_List_int___ctor__);
   p_diggingIdxY = &this->fields.diggingIdxY;
-  this->fields.diggingIdxY = v21;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingIdxY, (int32_t)v21, v23, v24);
+  this->fields.diggingIdxY = v19;
+  maskPanel = (void *)sub_1B8635C(&this->fields.diggingIdxY);
   if ( !panelData )
     goto LABEL_30;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v45,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v41,
     (System_Collections_Generic_List_object__o *)panelData,
-    (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
-  v46 = v45;
+    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+  v42 = v41;
   while ( 1 )
   {
-    v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v46,
-            (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
-    if ( !v25 )
+    v21 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v42,
+            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__);
+    if ( !v21 )
       break;
-    current = v46.fields._current;
-    if ( !v46.fields._current )
-      sub_1B4D1EC(v25, v26);
-    v28 = *p_diggingIdxX;
+    current = v42.fields._current;
+    if ( !v42.fields._current )
+      sub_1B86614(v21, v22);
+    v24 = *p_diggingIdxX;
     if ( !*p_diggingIdxX )
-      sub_1B4D1EC(0LL, v26);
-    monitor_high = HIDWORD(v46.fields._current[3].monitor);
-    items = v28->fields._items;
-    v31 = Method_System_Collections_Generic_List_int__Add__;
-    ++v28->fields._version;
+      sub_1B86614(0LL, v22);
+    monitor_high = HIDWORD(v42.fields._current[3].monitor);
+    items = v24->fields._items;
+    v27 = Method_System_Collections_Generic_List_int__Add__;
+    ++v24->fields._version;
     if ( !items )
-      sub_1B4D1EC(v28, monitor_high);
-    size = v28->fields._size;
+      sub_1B86614(v24, monitor_high);
+    size = v24->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_int___AddWithResize(
-        v28,
+        v24,
         monitor_high,
-        *(const MethodInfo_35631B8 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+        *(const MethodInfo_35DF934 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     }
     else
     {
-      v28->fields._size = size + 1;
+      v24->fields._size = size + 1;
       items->m_Items[size + 1] = monitor_high;
     }
-    v33 = *p_diggingIdxY;
+    v29 = *p_diggingIdxY;
     if ( !*p_diggingIdxY )
-      sub_1B4D1EC(0LL, monitor_high);
+      sub_1B86614(0LL, monitor_high);
     klass_low = LODWORD(current[4].klass);
-    v35 = v33->fields._items;
-    v36 = Method_System_Collections_Generic_List_int__Add__;
-    ++v33->fields._version;
-    if ( !v35 )
-      sub_1B4D1EC(v33, klass_low);
-    v37 = v33->fields._size;
-    if ( (unsigned int)v37 >= v35->max_length )
+    v31 = v29->fields._items;
+    v32 = Method_System_Collections_Generic_List_int__Add__;
+    ++v29->fields._version;
+    if ( !v31 )
+      sub_1B86614(v29, klass_low);
+    v33 = v29->fields._size;
+    if ( (unsigned int)v33 >= v31->max_length )
     {
       System_Collections_Generic_List_int___AddWithResize(
-        v33,
+        v29,
         klass_low,
-        *(const MethodInfo_35631B8 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+        *(const MethodInfo_35DF934 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
     }
     else
     {
-      v33->fields._size = v37 + 1;
-      v35->m_Items[v37 + 1] = klass_low;
+      v29->fields._size = v33 + 1;
+      v31->m_Items[v33 + 1] = klass_low;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v46,
-    (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+    &v42,
+    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
   this->fields.eventPointDuringPerformance = UserEventPointMaster__GetEventPointNoGroup(this->fields.eventId, 0LL);
   this->fields.skip = 0;
-  v38 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
-  NetworkManager_ResultCallbackFunc___ctor(v38, (Il2CppObject *)this, Method_DiggingManager_Response__, 0LL);
+  v34 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
+  NetworkManager_ResultCallbackFunc___ctor(v34, (Il2CppObject *)this, Method_DiggingManager_Response__, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
-                     v38,
-                     (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_EventDiggingRequest___);
+                     v34,
+                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_EventDiggingRequest___);
   eventId = this->fields.eventId;
-  v41 = (EventDiggingRequest_o *)Request_object;
-  maskPanel = DiggingManager__get_userEventDiggingEntity(this, v42);
+  v37 = (EventDiggingRequest_o *)Request_object;
+  maskPanel = DiggingManager__get_userEventDiggingEntity(this, v38);
   if ( !maskPanel
     || !*p_diggingIdxX
-    || (v43 = *((_DWORD *)maskPanel + 7),
+    || (v39 = *((_DWORD *)maskPanel + 7),
         maskPanel = System_Collections_Generic_List_int___ToArray(
                       *p_diggingIdxX,
-                      (const MethodInfo_3564C70 *)Method_System_Collections_Generic_List_int__ToArray__),
+                      (const MethodInfo_35E13EC *)Method_System_Collections_Generic_List_int__ToArray__),
         !*p_diggingIdxY)
-    || (v44 = (System_Int32_array *)maskPanel,
+    || (v40 = (System_Int32_array *)maskPanel,
         maskPanel = System_Collections_Generic_List_int___ToArray(
                       *p_diggingIdxY,
-                      (const MethodInfo_3564C70 *)Method_System_Collections_Generic_List_int__ToArray__),
-        !v41) )
+                      (const MethodInfo_35E13EC *)Method_System_Collections_Generic_List_int__ToArray__),
+        !v37) )
   {
 LABEL_30:
-    sub_1B4D1EC(maskPanel, panelData);
+    sub_1B86614(maskPanel, panelData);
   }
-  EventDiggingRequest__beginRequest(v41, eventId, v43, v44, (System_Int32_array *)maskPanel, 0LL);
+  EventDiggingRequest__beginRequest(v37, eventId, v39, v40, (System_Int32_array *)maskPanel, 0LL);
 }
 
 
@@ -1359,49 +1309,39 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
   struct AutoDiggingDialogComponent_o **p_autoDiggingDialog; // x20
   UnityEngine_Object_o *autoDiggingDialog; // x21
   UnityEngine_Object_o *v32; // x21
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
   struct DiggingConfirmDialogComponent_o **p_diggingConfirmDialog; // x20
   UnityEngine_Object_o *diggingConfirmDialog; // x21
-  UnityEngine_Object_o *v37; // x21
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
+  UnityEngine_Object_o *v35; // x21
   struct DiggingPointRewardDialogComponent_o **p_diggingPointRewardDialog; // x20
   UnityEngine_Object_o *diggingPointRewardDialog; // x21
-  UnityEngine_Object_o *v42; // x21
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
+  UnityEngine_Object_o *v38; // x21
   struct DiggingRewardDialogComponent_o **p_diggingRewardDialog; // x20
   UnityEngine_Object_o *diggingRewardDialog; // x21
-  UnityEngine_Object_o *v47; // x21
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
+  UnityEngine_Object_o *v41; // x21
   struct UISprite_o **p_diggingCompleteSprite; // x20
   UnityEngine_Object_o *diggingCompleteSprite; // x21
-  UnityEngine_Object_o *v52; // x21
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
-  System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v56; // [xsp+20h] [xbp-70h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+40h] [xbp-50h] BYREF
+  UnityEngine_Object_o *v44; // x21
+  System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+20h] [xbp-70h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+40h] [xbp-50h] BYREF
 
-  if ( (byte_49BF265 & 1) == 0 )
+  if ( (byte_4A48F51 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__Dispose__, IsAssetsRelease);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__MoveNext__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__get_Current__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Clear__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent__Clear__, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent__GetEnumerator__, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v13);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v14);
-    byte_49BF265 = 1;
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__Dispose__, IsAssetsRelease);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__MoveNext__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__get_Current__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__get_Current__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Clear__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent__Clear__, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent__GetEnumerator__, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__, v13);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v14);
+    byte_4A48F51 = 1;
   }
-  memset(&v57, 0, sizeof(v57));
-  memset(&v56, 0, sizeof(v56));
+  memset(&v47, 0, sizeof(v47));
+  memset(&v46, 0, sizeof(v46));
   if ( IsAssetsRelease )
   {
     assetManager = this->fields.assetManager;
@@ -1412,26 +1352,26 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
   if ( blockList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v55,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v45,
       blockList,
-      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
-    v57 = v55;
+      (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_DiggingBlockComponent__GetEnumerator__);
+    v47 = v45;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v57,
-              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__) )
+              &v47,
+              (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__MoveNext__) )
     {
-      if ( !v57.fields._current )
-        sub_1B4D1EC(0LL, v17);
+      if ( !v47.fields._current )
+        sub_1B86614(0LL, v17);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                             (UnityEngine_Component_o *)v57.fields._current,
+                                             (UnityEngine_Component_o *)v47.fields._current,
                                              0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_68804456(gameObject, 0LL);
+      UnityEngine_Object__Destroy_69356292(gameObject, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v57,
-      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
+      &v47,
+      (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_DiggingBlockComponent__Dispose__);
     v21 = this->fields.blockList;
     if ( !v21 )
       goto LABEL_65;
@@ -1446,26 +1386,26 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
   if ( rewardList )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v55,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v45,
       rewardList,
-      (const MethodInfo_3580CD4 *)Method_System_Collections_Generic_List_DiggingRewardComponent__GetEnumerator__);
-    v56 = v55;
+      (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_DiggingRewardComponent__GetEnumerator__);
+    v46 = v45;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v56,
-              (const MethodInfo_3308B3C *)Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__MoveNext__) )
+              &v46,
+              (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__MoveNext__) )
     {
-      if ( !v56.fields._current )
-        sub_1B4D1EC(0LL, v25);
+      if ( !v46.fields._current )
+        sub_1B86614(0LL, v25);
       v26 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                      (UnityEngine_Component_o *)v56.fields._current,
+                                      (UnityEngine_Component_o *)v46.fields._current,
                                       0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_68804456(v26, 0LL);
+      UnityEngine_Object__Destroy_69356292(v26, 0LL);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v56,
-      (const MethodInfo_3308B38 *)Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__Dispose__);
+      &v46,
+      (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_DiggingRewardComponent__Dispose__);
     v27 = this->fields.rewardList;
     if ( !v27 )
       goto LABEL_65;
@@ -1488,9 +1428,9 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
     v32 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v32, 0LL);
+    UnityEngine_Object__Destroy_69356292(v32, 0LL);
     *p_autoDiggingDialog = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.autoDiggingDialog, 0, v33, v34);
+    sub_1B8635C(&this->fields.autoDiggingDialog);
   }
   p_diggingConfirmDialog = &this->fields.diggingConfirmDialog;
   diggingConfirmDialog = (UnityEngine_Object_o *)this->fields.diggingConfirmDialog;
@@ -1501,12 +1441,12 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
     panelRoot = (UnityEngine_Component_o *)*p_diggingConfirmDialog;
     if ( !*p_diggingConfirmDialog )
       goto LABEL_65;
-    v37 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
+    v35 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v37, 0LL);
+    UnityEngine_Object__Destroy_69356292(v35, 0LL);
     *p_diggingConfirmDialog = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingConfirmDialog, 0, v38, v39);
+    sub_1B8635C(&this->fields.diggingConfirmDialog);
   }
   p_diggingPointRewardDialog = &this->fields.diggingPointRewardDialog;
   diggingPointRewardDialog = (UnityEngine_Object_o *)this->fields.diggingPointRewardDialog;
@@ -1517,12 +1457,12 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
     panelRoot = (UnityEngine_Component_o *)*p_diggingPointRewardDialog;
     if ( !*p_diggingPointRewardDialog )
       goto LABEL_65;
-    v42 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
+    v38 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v42, 0LL);
+    UnityEngine_Object__Destroy_69356292(v38, 0LL);
     *p_diggingPointRewardDialog = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingPointRewardDialog, 0, v43, v44);
+    sub_1B8635C(&this->fields.diggingPointRewardDialog);
   }
   p_diggingRewardDialog = &this->fields.diggingRewardDialog;
   diggingRewardDialog = (UnityEngine_Object_o *)this->fields.diggingRewardDialog;
@@ -1533,12 +1473,12 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
     panelRoot = (UnityEngine_Component_o *)*p_diggingRewardDialog;
     if ( !*p_diggingRewardDialog )
       goto LABEL_65;
-    v47 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
+    v41 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v47, 0LL);
+    UnityEngine_Object__Destroy_69356292(v41, 0LL);
     *p_diggingRewardDialog = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingRewardDialog, 0, v48, v49);
+    sub_1B8635C(&this->fields.diggingRewardDialog);
   }
   p_diggingCompleteSprite = &this->fields.diggingCompleteSprite;
   diggingCompleteSprite = (UnityEngine_Object_o *)this->fields.diggingCompleteSprite;
@@ -1549,17 +1489,17 @@ void __fastcall DiggingManager__Finish(DiggingManager_o *this, bool IsAssetsRele
     panelRoot = (UnityEngine_Component_o *)*p_diggingCompleteSprite;
     if ( !*p_diggingCompleteSprite )
       goto LABEL_65;
-    v52 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
+    v44 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(panelRoot, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_68804456(v52, 0LL);
+    UnityEngine_Object__Destroy_69356292(v44, 0LL);
     *p_diggingCompleteSprite = 0LL;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingCompleteSprite, 0, v53, v54);
+    sub_1B8635C(&this->fields.diggingCompleteSprite);
   }
   panelRoot = (UnityEngine_Component_o *)this->fields.panelRoot;
   if ( !panelRoot )
 LABEL_65:
-    sub_1B4D1EC(panelRoot, v20);
+    sub_1B86614(panelRoot, v20);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)panelRoot, 0, 0LL);
 }
 
@@ -1642,35 +1582,35 @@ System_String_o *__fastcall DiggingManager__GetDiggingAnimationName(
   System_String_o **v12; // x8
   System_String_o **v13; // x9
 
-  if ( (byte_49BF275 & 1) == 0 )
+  if ( (byte_4A48F61 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_12569/*"ShoveltAnimation_skip"*/, block);
-    sub_1B4CF90(&StringLiteral_7086/*"HammertAnimation"*/, v6);
-    sub_1B4CF90(&StringLiteral_7087/*"HammertAnimation_skip"*/, v7);
-    sub_1B4CF90(&StringLiteral_10413/*"PickaxetAnimation_skip"*/, v8);
-    sub_1B4CF90(&StringLiteral_12568/*"ShoveltAnimation"*/, v9);
-    this = (DiggingManager_o *)sub_1B4CF90(&StringLiteral_10412/*"PickaxetAnimation"*/, v10);
-    byte_49BF275 = 1;
+    sub_1B863B8(&StringLiteral_12641/*"ShoveltAnimation_skip"*/, block);
+    sub_1B863B8(&StringLiteral_7128/*"HammertAnimation"*/, v6);
+    sub_1B863B8(&StringLiteral_7129/*"HammertAnimation_skip"*/, v7);
+    sub_1B863B8(&StringLiteral_10468/*"PickaxetAnimation_skip"*/, v8);
+    sub_1B863B8(&StringLiteral_12640/*"ShoveltAnimation"*/, v9);
+    this = (DiggingManager_o *)sub_1B863B8(&StringLiteral_10467/*"PickaxetAnimation"*/, v10);
+    byte_4A48F61 = 1;
   }
   if ( !block )
-    sub_1B4D1EC(this, block);
+    sub_1B86614(this, block);
   animationId = block->fields.animationId;
   if ( animationId == 2 )
   {
-    v12 = (System_String_o **)&StringLiteral_7086/*"HammertAnimation"*/;
-    v13 = (System_String_o **)&StringLiteral_7087/*"HammertAnimation_skip"*/;
+    v12 = (System_String_o **)&StringLiteral_7128/*"HammertAnimation"*/;
+    v13 = (System_String_o **)&StringLiteral_7129/*"HammertAnimation_skip"*/;
   }
   else if ( animationId == 1 )
   {
-    v12 = (System_String_o **)&StringLiteral_10412/*"PickaxetAnimation"*/;
-    v13 = (System_String_o **)&StringLiteral_10413/*"PickaxetAnimation_skip"*/;
+    v12 = (System_String_o **)&StringLiteral_10467/*"PickaxetAnimation"*/;
+    v13 = (System_String_o **)&StringLiteral_10468/*"PickaxetAnimation_skip"*/;
   }
   else
   {
-    v12 = (System_String_o **)&StringLiteral_12568/*"ShoveltAnimation"*/;
+    v12 = (System_String_o **)&StringLiteral_12640/*"ShoveltAnimation"*/;
     if ( animationId )
       return *v12;
-    v13 = (System_String_o **)&StringLiteral_12569/*"ShoveltAnimation_skip"*/;
+    v13 = (System_String_o **)&StringLiteral_12641/*"ShoveltAnimation_skip"*/;
   }
   if ( isSkip )
     v12 = v13;
@@ -1682,7 +1622,7 @@ System_String_o *__fastcall DiggingManager__GetDiggingAnimationName(
 bool __fastcall DiggingManager__HasUserDiggingData(DiggingManager_o *this, int32_t eventId, const MethodInfo *method)
 {
   __int64 v4; // x1
-  DiggingManager_c *v5; // x0
+  DiggingManager_c *inited; // x0
   UserEventDiggingMaster_o *userEventDiggingMaster; // x0
   DiggingManager_c *v7; // x0
   __int64 v8; // x1
@@ -1690,29 +1630,29 @@ bool __fastcall DiggingManager__HasUserDiggingData(DiggingManager_o *this, int32
   NetworkManager_c *v10; // x0
   UserEventDiggingEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49BF27E & 1) == 0 )
+  if ( (byte_4A48F6A & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v4);
-    byte_49BF27E = 1;
+    sub_1B863B8(&DiggingManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1B863B8(&NetworkManager_TypeInfo, v4);
+    byte_4A48F6A = 1;
   }
-  v5 = DiggingManager_TypeInfo;
+  inited = DiggingManager_TypeInfo;
   entity = 0LL;
   if ( !DiggingManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
-  userEventDiggingMaster = DiggingManager__get_userEventDiggingMaster((const MethodInfo *)v5);
+    inited = (DiggingManager_c *)j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
+  userEventDiggingMaster = DiggingManager__get_userEventDiggingMaster((const MethodInfo *)inited);
   if ( userEventDiggingMaster )
   {
     v7 = DiggingManager_TypeInfo;
     if ( !DiggingManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
+      v7 = (DiggingManager_c *)j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
     v9 = DiggingManager__get_userEventDiggingMaster((const MethodInfo *)v7);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_49B57A5 )
+    if ( !byte_4A48C25 )
     {
-      sub_1B4CF90(&NetworkManager_TypeInfo, v8);
-      byte_49B57A5 = 1;
+      sub_1B863B8(&NetworkManager_TypeInfo, v8);
+      byte_4A48C25 = 1;
     }
     v10 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1721,7 +1661,7 @@ bool __fastcall DiggingManager__HasUserDiggingData(DiggingManager_o *this, int32
       v10 = NetworkManager_TypeInfo;
     }
     if ( !v9 )
-      sub_1B4D1EC(v10, v8);
+      sub_1B86614(v10, v8);
     LOBYTE(userEventDiggingMaster) = UserEventDiggingMaster__TryGetEntity(
                                        v9,
                                        &entity,
@@ -1764,113 +1704,95 @@ void __fastcall DiggingManager__Init(
   __int64 v30; // x20
   DataManager_o *Instance; // x0
   __int64 v32; // x1
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
   System_Int32_array *EventItemList; // x24
   Il2CppObject *Entity; // x0
   struct ShopCurrencyInfoController_o *currencyInfoController; // x26
-  EventDetailEntity_o *v38; // x25
-  System_Collections_Generic_List_object__o *v39; // x27
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
-  ShopCurrencyInfoController_o *v42; // x26
-  int32_t v43; // w27
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
-  System_Collections_Generic_List_object__o *v50; // x21
-  int32_t v51; // w2
-  const MethodInfo *v52; // x3
-  System_Collections_Generic_List_object__o *v53; // x21
-  int32_t v54; // w2
-  const MethodInfo *v55; // x3
-  TaskScheduler_o *v56; // x21
-  int32_t v57; // w2
-  const MethodInfo *v58; // x3
+  EventDetailEntity_o *v36; // x25
+  System_Collections_Generic_List_object__o *v37; // x27
+  ShopCurrencyInfoController_o *v38; // x26
+  int32_t v39; // w27
+  System_Collections_Generic_List_object__o *v40; // x21
+  System_Collections_Generic_List_object__o *v41; // x21
+  TaskScheduler_o *v42; // x21
   struct TaskScheduler_o *taskScheduler; // x21
-  Il2CppObject *v60; // x23
-  System_Action_bool__o *v61; // x22
-  int32_t v62; // w2
-  const MethodInfo *v63; // x3
+  Il2CppObject *v44; // x23
+  System_Action_bool__o *v45; // x22
   UILabel_o *autoButtonLabel; // x21
   UILabel_o *resetButtonLabel; // x21
-  System_Action_o *v66; // x21
-  const MethodInfo *v67; // x2
+  System_Action_o *v48; // x21
+  const MethodInfo *v49; // x2
 
-  if ( (byte_49BF264 & 1) == 0 )
+  if ( (byte_4A48F50 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_bool__TypeInfo, *(_QWORD *)&eventId);
-    sub_1B4CF90(&System_Action_TypeInfo, v11);
-    sub_1B4CF90(&Method_AutomatedAction_SetBackGroundUntouchable__, v12);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_EventDetailMaster___, v13);
-    sub_1B4CF90(&Method_DataManager_GetMasterData_ShopMaster___, v14);
-    sub_1B4CF90(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v15);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__, v16);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v17);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent___ctor__, v18);
-    sub_1B4CF90(&System_Collections_Generic_List_DiggingRewardComponent__TypeInfo, v19);
-    sub_1B4CF90(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v20);
-    sub_1B4CF90(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo, v21);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v22);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__, v24);
-    sub_1B4CF90(&TaskScheduler_TypeInfo, v25);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass76_0__Init_b__0__, v26);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass76_0_TypeInfo, v27);
-    sub_1B4CF90(&StringLiteral_10858/*"RESET_DIGGING_BUTTON_TITLE"*/, v28);
-    sub_1B4CF90(&StringLiteral_2062/*"AUTO_DIGGING_BUTTON_TITLE"*/, v29);
-    byte_49BF264 = 1;
+    sub_1B863B8(&System_Action_bool__TypeInfo, *(_QWORD *)&eventId);
+    sub_1B863B8(&System_Action_TypeInfo, v11);
+    sub_1B863B8(&Method_AutomatedAction_SetBackGroundUntouchable__, v12);
+    sub_1B863B8(&Method_DataManager_GetMasterData_EventDetailMaster___, v13);
+    sub_1B863B8(&Method_DataManager_GetMasterData_ShopMaster___, v14);
+    sub_1B863B8(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v15);
+    sub_1B863B8(&Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__, v16);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v17);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent___ctor__, v18);
+    sub_1B863B8(&System_Collections_Generic_List_DiggingRewardComponent__TypeInfo, v19);
+    sub_1B863B8(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v20);
+    sub_1B863B8(&System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo, v21);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v22);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__, v24);
+    sub_1B863B8(&TaskScheduler_TypeInfo, v25);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass76_0__Init_b__0__, v26);
+    sub_1B863B8(&DiggingManager___c__DisplayClass76_0_TypeInfo, v27);
+    sub_1B863B8(&StringLiteral_10916/*"RESET_DIGGING_BUTTON_TITLE"*/, v28);
+    sub_1B863B8(&StringLiteral_2066/*"AUTO_DIGGING_BUTTON_TITLE"*/, v29);
+    byte_4A48F50 = 1;
   }
-  v30 = sub_1B4D1DC(DiggingManager___c__DisplayClass76_0_TypeInfo);
+  v30 = sub_1B86604(DiggingManager___c__DisplayClass76_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v30, 0LL);
   if ( !v30 )
     goto LABEL_22;
   *(_QWORD *)(v30 + 24) = this;
   *(_DWORD *)(v30 + 16) = eventId;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v30 + 24), (int32_t)this, v33, v34);
+  sub_1B8635C(v30 + 24);
   this->fields.eventId = *(_DWORD *)(v30 + 16);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ShopMaster___);
+                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ShopMaster___);
   if ( !Instance )
     goto LABEL_22;
   EventItemList = ShopMaster__GetEventItemList((ShopMaster_o *)Instance, *(_DWORD *)(v30 + 16), 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !Instance )
     goto LABEL_22;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              *(_DWORD *)(v30 + 16),
-             (const MethodInfo_319D99C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             (const MethodInfo_3214280 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   currencyInfoController = this->fields.currencyInfoController;
-  v38 = (EventDetailEntity_o *)Entity;
-  v39 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
+  v36 = (EventDetailEntity_o *)Entity;
+  v37 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_ShopBuyItemListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v39,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
+    v37,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_ShopBuyItemListViewObject___ctor__);
   if ( !currencyInfoController )
     goto LABEL_22;
-  currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v39;
-  sub_1B4CF34((CGThumbnailListItem_o *)&currencyInfoController->fields.objectList, (int32_t)v39, v40, v41);
+  currencyInfoController->fields.objectList = (struct System_Collections_Generic_List_ShopBuyItemListViewObject__o *)v37;
+  Instance = (DataManager_o *)sub_1B8635C(&currencyInfoController->fields.objectList);
+  if ( !v36 )
+    goto LABEL_22;
+  v38 = this->fields.currencyInfoController;
+  v39 = *(_DWORD *)(v30 + 16);
+  Instance = (DataManager_o *)EventDetailEntity__IsForcedAdjustmentDialog(v36, 0LL);
   if ( !v38 )
     goto LABEL_22;
-  v42 = this->fields.currencyInfoController;
-  v43 = *(_DWORD *)(v30 + 16);
-  Instance = (DataManager_o *)EventDetailEntity__IsForcedAdjustmentDialog(v38, 0LL);
-  if ( !v42 )
-    goto LABEL_22;
-  ShopCurrencyInfoController__RefreshEventItemInfo(v42, 6, v43, 1, EventItemList, (unsigned __int8)Instance & 1, 0LL);
+  ShopCurrencyInfoController__RefreshEventItemInfo(v38, 6, v39, 1, EventItemList, (unsigned __int8)Instance & 1, 0LL);
   Instance = (DataManager_o *)this->fields.currencyInfoController;
   if ( !Instance )
     goto LABEL_22;
@@ -1879,43 +1801,35 @@ void __fastcall DiggingManager__Init(
     goto LABEL_22;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
   this->fields.diggingCallBack = diggingCallBack;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingCallBack, (int32_t)diggingCallBack, v44, v45);
+  sub_1B8635C(&this->fields.diggingCallBack);
   this->fields.blockInfoUpdatedCallBack = blockInfoUpdatedCallBack;
-  sub_1B4CF34(
-    (CGThumbnailListItem_o *)&this->fields.blockInfoUpdatedCallBack,
-    (int32_t)blockInfoUpdatedCallBack,
-    v46,
-    v47);
+  sub_1B8635C(&this->fields.blockInfoUpdatedCallBack);
   this->fields.requestCallBack = requestCallBack;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.requestCallBack, (int32_t)requestCallBack, v48, v49);
-  v50 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+  sub_1B8635C(&this->fields.requestCallBack);
+  v40 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v50,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
-  this->fields.blockList = (struct System_Collections_Generic_List_DiggingBlockComponent__o *)v50;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.blockList, (int32_t)v50, v51, v52);
-  v53 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_DiggingRewardComponent__TypeInfo);
+    v40,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+  this->fields.blockList = (struct System_Collections_Generic_List_DiggingBlockComponent__o *)v40;
+  sub_1B8635C(&this->fields.blockList);
+  v41 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_DiggingRewardComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v53,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_DiggingRewardComponent___ctor__);
-  this->fields.rewardList = (struct System_Collections_Generic_List_DiggingRewardComponent__o *)v53;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.rewardList, (int32_t)v53, v54, v55);
-  v56 = (TaskScheduler_o *)sub_1B4D1DC(TaskScheduler_TypeInfo);
-  TaskScheduler___ctor(v56, 0LL);
-  this->fields.taskScheduler = v56;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.taskScheduler, (int32_t)v56, v57, v58);
+    v41,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_DiggingRewardComponent___ctor__);
+  this->fields.rewardList = (struct System_Collections_Generic_List_DiggingRewardComponent__o *)v41;
+  sub_1B8635C(&this->fields.rewardList);
+  v42 = (TaskScheduler_o *)sub_1B86604(TaskScheduler_TypeInfo);
+  TaskScheduler___ctor(v42, 0LL);
+  this->fields.taskScheduler = v42;
+  sub_1B8635C(&this->fields.taskScheduler);
   taskScheduler = this->fields.taskScheduler;
-  v60 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
-  v61 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v61, v60, Method_AutomatedAction_SetBackGroundUntouchable__, 0LL);
+  v44 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
+  v45 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v45, v44, Method_AutomatedAction_SetBackGroundUntouchable__, 0LL);
   if ( !taskScheduler )
     goto LABEL_22;
-  taskScheduler->fields._AllTouchBlockMethod_k__BackingField = v61;
-  sub_1B4CF34(
-    (CGThumbnailListItem_o *)&taskScheduler->fields._AllTouchBlockMethod_k__BackingField,
-    (int32_t)v61,
-    v62,
-    v63);
+  taskScheduler->fields._AllTouchBlockMethod_k__BackingField = v45;
+  sub_1B8635C(&taskScheduler->fields._AllTouchBlockMethod_k__BackingField);
   Instance = (DataManager_o *)this->fields.diggingCompletePanel;
   if ( !Instance )
     goto LABEL_22;
@@ -1930,20 +1844,20 @@ void __fastcall DiggingManager__Init(
   autoButtonLabel = this->fields.autoButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2062/*"AUTO_DIGGING_BUTTON_TITLE"*/, 0LL);
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2066/*"AUTO_DIGGING_BUTTON_TITLE"*/, 0LL);
   if ( !autoButtonLabel
     || (UILabel__set_text(autoButtonLabel, (System_String_o *)Instance, 0LL),
         resetButtonLabel = this->fields.resetButtonLabel,
-        Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10858/*"RESET_DIGGING_BUTTON_TITLE"*/, 0LL),
+        Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10916/*"RESET_DIGGING_BUTTON_TITLE"*/, 0LL),
         !resetButtonLabel) )
   {
 LABEL_22:
-    sub_1B4D1EC(Instance, v32);
+    sub_1B86614(Instance, v32);
   }
   UILabel__set_text(resetButtonLabel, (System_String_o *)Instance, 0LL);
-  v66 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v66, (Il2CppObject *)v30, Method_DiggingManager___c__DisplayClass76_0__Init_b__0__, 0LL);
-  DiggingManager__LoadAssets(this, v66, v67);
+  v48 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v48, (Il2CppObject *)v30, Method_DiggingManager___c__DisplayClass76_0__Init_b__0__, 0LL);
+  DiggingManager__LoadAssets(this, v48, v49);
 }
 
 
@@ -1958,22 +1872,20 @@ bool __fastcall DiggingManager__IsAchievedTheConditionsToReset(DiggingManager_o 
   System_Func_object__bool__o *_9__106_0; // x21
   Il2CppObject *v10; // x22
   struct DiggingManager___c_StaticFields *static_fields; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
-  int32_t v15; // w20
-  const MethodInfo *v16; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
+  int32_t v13; // w20
+  const MethodInfo *v14; // x1
   EventDiggingEntity_o *eventDiggingEntity; // x0
-  __int64 v18; // x1
+  __int64 v16; // x1
 
-  if ( (byte_49BF280 & 1) == 0 )
+  if ( (byte_4A48F6C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Count_DiggingBlockComponent___, method);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_DiggingBlockComponent___, v3);
-    sub_1B4CF90(&System_Func_DiggingBlockComponent__bool__TypeInfo, v4);
-    sub_1B4CF90(&Method_DiggingManager___c__IsAchievedTheConditionsToReset_b__106_0__, v5);
-    sub_1B4CF90(&DiggingManager___c_TypeInfo, v6);
-    byte_49BF280 = 1;
+    sub_1B863B8(&Method_System_Linq_Enumerable_Count_DiggingBlockComponent___, method);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Where_DiggingBlockComponent___, v3);
+    sub_1B863B8(&System_Func_DiggingBlockComponent__bool__TypeInfo, v4);
+    sub_1B863B8(&Method_DiggingManager___c__IsAchievedTheConditionsToReset_b__106_0__, v5);
+    sub_1B863B8(&DiggingManager___c_TypeInfo, v6);
+    byte_4A48F6C = 1;
   }
   v7 = DiggingManager___c_TypeInfo;
   blockList = this->fields.blockList;
@@ -1991,7 +1903,7 @@ bool __fastcall DiggingManager__IsAchievedTheConditionsToReset(DiggingManager_o 
       v7 = DiggingManager___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__106_0 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_DiggingBlockComponent__bool__TypeInfo);
+    _9__106_0 = (System_Func_object__bool__o *)sub_1B86604(System_Func_DiggingBlockComponent__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__106_0,
       v10,
@@ -1999,19 +1911,19 @@ bool __fastcall DiggingManager__IsAchievedTheConditionsToReset(DiggingManager_o 
       0LL);
     static_fields = DiggingManager___c_TypeInfo->static_fields;
     static_fields->__9__106_0 = (struct System_Func_DiggingBlockComponent__bool__o *)_9__106_0;
-    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__106_0, (int32_t)_9__106_0, v12, v13);
+    sub_1B8635C(&static_fields->__9__106_0);
   }
-  v14 = System_Linq_Enumerable__Where_object_(
+  v12 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)blockList,
           (System_Func_TSource__bool__o *)_9__106_0,
-          (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_DiggingBlockComponent___);
-  v15 = System_Linq_Enumerable__Count_object_(
-          v14,
-          (const MethodInfo_2F1F018 *)Method_System_Linq_Enumerable_Count_DiggingBlockComponent___);
-  eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v16);
+          (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_DiggingBlockComponent___);
+  v13 = System_Linq_Enumerable__Count_object_(
+          v12,
+          (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_DiggingBlockComponent___);
+  eventDiggingEntity = DiggingManager__get_eventDiggingEntity(this, v14);
   if ( !eventDiggingEntity )
-    sub_1B4D1EC(0LL, v18);
-  return v15 >= eventDiggingEntity->fields.resettableDiggedNum;
+    sub_1B86614(0LL, v16);
+  return v13 >= eventDiggingEntity->fields.resettableDiggedNum;
 }
 
 
@@ -2025,16 +1937,14 @@ bool __fastcall DiggingManager__IsDiggingComplete(DiggingManager_o *this, const 
   System_Func_object__bool__o *_9__105_0; // x20
   Il2CppObject *v9; // x21
   struct DiggingManager___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
 
-  if ( (byte_49BF27F & 1) == 0 )
+  if ( (byte_4A48F6B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Linq_Enumerable_All_DiggingBlockComponent___, method);
-    sub_1B4CF90(&System_Func_DiggingBlockComponent__bool__TypeInfo, v3);
-    sub_1B4CF90(&Method_DiggingManager___c__IsDiggingComplete_b__105_0__, v4);
-    sub_1B4CF90(&DiggingManager___c_TypeInfo, v5);
-    byte_49BF27F = 1;
+    sub_1B863B8(&Method_System_Linq_Enumerable_All_DiggingBlockComponent___, method);
+    sub_1B863B8(&System_Func_DiggingBlockComponent__bool__TypeInfo, v3);
+    sub_1B863B8(&Method_DiggingManager___c__IsDiggingComplete_b__105_0__, v4);
+    sub_1B863B8(&DiggingManager___c_TypeInfo, v5);
+    byte_4A48F6B = 1;
   }
   v6 = DiggingManager___c_TypeInfo;
   blockList = this->fields.blockList;
@@ -2052,16 +1962,16 @@ bool __fastcall DiggingManager__IsDiggingComplete(DiggingManager_o *this, const 
       v6 = DiggingManager___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__105_0 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_DiggingBlockComponent__bool__TypeInfo);
+    _9__105_0 = (System_Func_object__bool__o *)sub_1B86604(System_Func_DiggingBlockComponent__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__105_0, v9, Method_DiggingManager___c__IsDiggingComplete_b__105_0__, 0LL);
     static_fields = DiggingManager___c_TypeInfo->static_fields;
     static_fields->__9__105_0 = (struct System_Func_DiggingBlockComponent__bool__o *)_9__105_0;
-    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__105_0, (int32_t)_9__105_0, v11, v12);
+    sub_1B8635C(&static_fields->__9__105_0);
   }
   return System_Linq_Enumerable__All_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)blockList,
            (System_Func_TSource__bool__o *)_9__105_0,
-           (const MethodInfo_2F0E080 *)Method_System_Linq_Enumerable_All_DiggingBlockComponent___);
+           (const MethodInfo_2F7A214 *)Method_System_Linq_Enumerable_All_DiggingBlockComponent___);
 }
 
 
@@ -2073,36 +1983,32 @@ void __fastcall DiggingManager__LoadAssets(
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x21
+  Il2CppObject *v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  System_Action_o *v15; // x19
+  System_Action_o *v11; // x19
 
-  if ( (byte_49BF269 & 1) == 0 )
+  if ( (byte_4A48F55 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, finishCallback);
-    sub_1B4CF90(&AtlasManager_TypeInfo, v5);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__0__, v6);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass81_0_TypeInfo, v7);
-    byte_49BF269 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, finishCallback);
+    sub_1B863B8(&AtlasManager_TypeInfo, v5);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__0__, v6);
+    sub_1B863B8(&DiggingManager___c__DisplayClass81_0_TypeInfo, v7);
+    byte_4A48F55 = 1;
   }
-  v8 = sub_1B4D1DC(DiggingManager___c__DisplayClass81_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v8 = (Il2CppObject *)sub_1B86604(DiggingManager___c__DisplayClass81_0_TypeInfo);
+  System_Object___ctor(v8, 0LL);
   if ( !v8 )
-    sub_1B4D1EC(v9, v10);
-  *(_QWORD *)(v8 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 16), (int32_t)this, v11, v12);
-  *(_QWORD *)(v8 + 24) = finishCallback;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 24), (int32_t)finishCallback, v13, v14);
-  v15 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v15, (Il2CppObject *)v8, Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__0__, 0LL);
+    sub_1B86614(v9, v10);
+  v8[1].klass = (Il2CppClass *)this;
+  sub_1B8635C(&v8[1]);
+  v8[1].monitor = finishCallback;
+  sub_1B8635C(&v8[1].monitor);
+  v11 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v11, v8, Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__0__, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkin(v15, 5, 1, 0LL);
+  AtlasManager__LoadUISkin(v11, 5, 1, 0LL);
 }
 
 
@@ -2128,10 +2034,10 @@ void __fastcall DiggingManager__LocateDialogToDiggingPanel(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0LL);
   this = (DiggingManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)dialog, 0LL);
   v6 = this;
-  if ( !byte_49B5366 )
+  if ( !byte_4A487E6 )
   {
-    this = (DiggingManager_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, dialog);
-    byte_49B5366 = 1;
+    this = (DiggingManager_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, dialog);
+    byte_4A487E6 = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localScale(
@@ -2141,7 +2047,7 @@ void __fastcall DiggingManager__LocateDialogToDiggingPanel(
         (this = (DiggingManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)dialog, 0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1B4D1EC(this, dialog);
+    sub_1B86614(this, dialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
 }
@@ -2163,14 +2069,14 @@ void __fastcall DiggingManager__OnClickAutoDiggingBtn(DiggingManager_o *this, co
   System_Action_object__o *v14; // x23
   const MethodInfo *v15; // x4
 
-  if ( (byte_49BF279 & 1) == 0 )
+  if ( (byte_4A48F65 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_bool__TypeInfo, method);
-    sub_1B4CF90(&System_Action_List_DiggingBlockComponent___TypeInfo, v3);
-    sub_1B4CF90(&Method_DiggingManager_EventDiggingRequest__, v4);
-    sub_1B4CF90(&Method_DiggingManager_OnClickAutoDiggingBtn__, v5);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_SetActive__, v6);
-    byte_49BF279 = 1;
+    sub_1B863B8(&System_Action_bool__TypeInfo, method);
+    sub_1B863B8(&System_Action_List_DiggingBlockComponent___TypeInfo, v3);
+    sub_1B863B8(&Method_DiggingManager_EventDiggingRequest__, v4);
+    sub_1B863B8(&Method_DiggingManager_OnClickAutoDiggingBtn__, v5);
+    sub_1B863B8(&Method_UnityEngine_GameObject_SetActive__, v6);
+    byte_4A48F65 = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
@@ -2178,19 +2084,19 @@ void __fastcall DiggingManager__OnClickAutoDiggingBtn(DiggingManager_o *this, co
   UnityEngine_GameObject__SetActive(maskPanel, 1, 0LL);
   v8 = Method_DiggingManager_OnClickAutoDiggingBtn__;
   if ( (*((_BYTE *)Method_DiggingManager_OnClickAutoDiggingBtn__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_OnClickAutoDiggingBtn__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v8, v8[4]);
+    v8 = (_QWORD *)sub_1B863D0(Method_DiggingManager_OnClickAutoDiggingBtn__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1B8639C(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
   autoDiggingDialog = this->fields.autoDiggingDialog;
   blockList = this->fields.blockList;
   v12 = (Il2CppObject *)this->fields.maskPanel;
-  v13 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
+  v13 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v13, v12, Method_UnityEngine_GameObject_SetActive__, 0LL);
-  v14 = (System_Action_object__o *)sub_1B4D1DC(System_Action_List_DiggingBlockComponent___TypeInfo);
+  v14 = (System_Action_object__o *)sub_1B86604(System_Action_List_DiggingBlockComponent___TypeInfo);
   System_Action_object____ctor(v14, (Il2CppObject *)this, Method_DiggingManager_EventDiggingRequest__, 0LL);
   if ( !autoDiggingDialog )
 LABEL_8:
-    sub_1B4D1EC(maskPanel, method);
+    sub_1B86614(maskPanel, method);
   AutoDiggingDialogComponent__Open(
     autoDiggingDialog,
     blockList,
@@ -2209,17 +2115,17 @@ void __fastcall DiggingManager__OnClickCompleteSprite(DiggingManager_o *this, co
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
 
-  if ( (byte_49BF266 & 1) == 0 )
+  if ( (byte_4A48F52 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager_OnClickCompleteSprite__, method);
-    byte_49BF266 = 1;
+    sub_1B863B8(&Method_DiggingManager_OnClickCompleteSprite__, method);
+    byte_4A48F52 = 1;
   }
   started = DiggingManager__StartDiggingCompAnimation(this, method);
   UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, started, 0LL);
   v4 = Method_DiggingManager_OnClickCompleteSprite__;
   if ( (*((_BYTE *)Method_DiggingManager_OnClickCompleteSprite__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_OnClickCompleteSprite__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v4, v4[4]);
+    v4 = (_QWORD *)sub_1B863D0(Method_DiggingManager_OnClickCompleteSprite__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1B8639C(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0, 0LL);
   DiggingManager__Finish(this, 0, v6);
   DiggingManager__ConstructParams(this, v7);
@@ -2244,112 +2150,100 @@ void __fastcall DiggingManager__OnClickSkipCollider(DiggingManager_o *this, cons
   __int64 v15; // x1
   __int64 maskPanel; // x0
   __int64 v17; // x20
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
   struct System_Collections_Generic_List_int__o *diggingIdxX; // x9
-  int v21; // w26
-  int v22; // w8
-  __int64 v23; // x22
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  int v19; // w26
+  int v20; // w8
+  __int64 v21; // x22
   System_Collections_Generic_List_object__o *blockList; // x21
-  Il2CppObject *v27; // x25
-  System_Predicate_object__o *v28; // x24
-  Il2CppObject *v29; // x0
-  DiggingBlockComponent_o **v30; // x21
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  UnityEngine_Animation_o *v33; // x24
-  const MethodInfo *v34; // x3
-  __int64 v35; // x8
+  Il2CppObject *v23; // x25
+  System_Predicate_object__o *v24; // x24
+  DiggingBlockComponent_o **v25; // x21
+  UnityEngine_Animation_o *v26; // x24
+  const MethodInfo *v27; // x3
+  __int64 v28; // x8
   System_String_o *DiggingAnimationName; // x23
-  System_Action_o *v37; // x25
-  DiggingManager_o *v38; // x0
-  const MethodInfo *v39; // x4
-  System_Collections_IEnumerator_o *v40; // x0
-  const MethodInfo *v41; // x2
-  _QWORD *v42; // x0
-  System_Reflection_MethodBase_o *v43; // x22
+  System_Action_o *v30; // x25
+  DiggingManager_o *v31; // x0
+  const MethodInfo *v32; // x4
+  System_Collections_IEnumerator_o *v33; // x0
+  const MethodInfo *v34; // x2
+  _QWORD *v35; // x0
+  System_Reflection_MethodBase_o *v36; // x22
   System_String_o *DiggingSeName; // x0
-  const MethodInfo *v45; // x2
-  __int64 v46; // x20
-  System_Delegate_o **v47; // x21
-  System_Delegate_o *v48; // x22
-  SchedulerTaskBase_TaskCallback_o *v49; // x23
-  System_Delegate_o *v50; // x0
-  int32_t v51; // w2
-  const MethodInfo *v52; // x3
-  System_Delegate_o *v53; // x8
-  SchedulerTaskBase_TaskCallback_c *v54; // x1
+  const MethodInfo *v38; // x2
+  SchedulerTaskNone_o *v39; // x20
+  _QWORD *p_EndCallback; // x21
+  System_Delegate_o *EndCallback; // x22
+  SchedulerTaskBase_TaskCallback_o *v42; // x23
+  System_Delegate_o *v43; // x0
+  System_Delegate_o *v44; // x8
+  SchedulerTaskBase_TaskCallback_c *v45; // x1
   TaskScheduler_o *taskScheduler; // x21
-  __int64 v56; // x22
-  __int64 v57; // x0
-  __int64 v58; // x1
-  int32_t v59; // w2
-  const MethodInfo *v60; // x3
-  __int64 v61; // x0
+  SchedulerTaskBase_array *v47; // x22
+  __int64 v48; // x0
+  __int64 v49; // x1
+  __int64 v50; // x0
 
-  if ( (byte_49BF272 & 1) == 0 )
+  if ( (byte_4A48F5E & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_DiggingManager_OnClickSkipCollider__, v3);
-    sub_1B4CF90(&Method_DiggingManager__OnClickSkipCollider_b__91_2__, v4);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Animation___, v5);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v6);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Count__, v7);
-    sub_1B4CF90(&System_Predicate_DiggingBlockComponent__TypeInfo, v8);
-    sub_1B4CF90(&SchedulerTaskBase___TypeInfo, v9);
-    sub_1B4CF90(&SchedulerTaskNone_TypeInfo, v10);
-    sub_1B4CF90(&SchedulerTaskBase_TaskCallback_TypeInfo, v11);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass91_0__OnClickSkipCollider_b__0__, v12);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass91_0_TypeInfo, v13);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass91_1__OnClickSkipCollider_b__1__, v14);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass91_1_TypeInfo, v15);
-    byte_49BF272 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_DiggingManager_OnClickSkipCollider__, v3);
+    sub_1B863B8(&Method_DiggingManager__OnClickSkipCollider_b__91_2__, v4);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_Animation___, v5);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v6);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__get_Count__, v7);
+    sub_1B863B8(&System_Predicate_DiggingBlockComponent__TypeInfo, v8);
+    sub_1B863B8(&SchedulerTaskBase___TypeInfo, v9);
+    sub_1B863B8(&SchedulerTaskNone_TypeInfo, v10);
+    sub_1B863B8(&SchedulerTaskBase_TaskCallback_TypeInfo, v11);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass91_0__OnClickSkipCollider_b__0__, v12);
+    sub_1B863B8(&DiggingManager___c__DisplayClass91_0_TypeInfo, v13);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass91_1__OnClickSkipCollider_b__1__, v14);
+    sub_1B863B8(&DiggingManager___c__DisplayClass91_1_TypeInfo, v15);
+    byte_4A48F5E = 1;
   }
   maskPanel = (__int64)this->fields.maskPanel;
   this->fields.skip = 1;
   if ( !maskPanel )
     goto LABEL_30;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0LL);
-  v17 = sub_1B4D1DC(DiggingManager___c__DisplayClass91_0_TypeInfo);
+  v17 = sub_1B86604(DiggingManager___c__DisplayClass91_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_30;
   *(_QWORD *)(v17 + 24) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v17 + 24), (int32_t)this, v18, v19);
+  maskPanel = sub_1B8635C(v17 + 24);
   *(_DWORD *)(v17 + 16) = 0;
   diggingIdxX = this->fields.diggingIdxX;
   if ( !diggingIdxX )
     goto LABEL_30;
-  v21 = 0;
-  v22 = 0;
-  while ( v22 < diggingIdxX->fields._size )
+  v19 = 0;
+  v20 = 0;
+  while ( v20 < diggingIdxX->fields._size )
   {
-    v23 = sub_1B4D1DC(DiggingManager___c__DisplayClass91_1_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v23, 0LL);
-    if ( !v23 )
+    v21 = sub_1B86604(DiggingManager___c__DisplayClass91_1_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v21, 0LL);
+    if ( !v21 )
       goto LABEL_30;
-    *(_QWORD *)(v23 + 24) = v17;
-    sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 24), v17, v24, v25);
+    *(_QWORD *)(v21 + 24) = v17;
+    sub_1B8635C(v21 + 24);
     blockList = (System_Collections_Generic_List_object__o *)this->fields.blockList;
-    v27 = *(Il2CppObject **)(v23 + 24);
-    v28 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingBlockComponent__TypeInfo);
+    v23 = *(Il2CppObject **)(v21 + 24);
+    v24 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingBlockComponent__TypeInfo);
     System_Predicate_object____ctor(
-      v28,
-      v27,
+      v24,
+      v23,
       Method_DiggingManager___c__DisplayClass91_0__OnClickSkipCollider_b__0__,
       0LL);
     if ( !blockList )
       goto LABEL_30;
-    v29 = System_Collections_Generic_List_object___Find(
-            blockList,
-            (System_Predicate_T__o *)v28,
-            (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
-    *(_QWORD *)(v23 + 16) = v29;
-    v30 = (DiggingBlockComponent_o **)(v23 + 16);
-    sub_1B4CF34((CGThumbnailListItem_o *)(v23 + 16), (int32_t)v29, v31, v32);
-    maskPanel = *(_QWORD *)(v23 + 16);
+    *(_QWORD *)(v21 + 16) = System_Collections_Generic_List_object___Find(
+                              blockList,
+                              (System_Predicate_T__o *)v24,
+                              (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
+    v25 = (DiggingBlockComponent_o **)(v21 + 16);
+    sub_1B8635C(v21 + 16);
+    maskPanel = *(_QWORD *)(v21 + 16);
     if ( !maskPanel )
       goto LABEL_30;
     maskPanel = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskPanel, 0LL);
@@ -2357,123 +2251,122 @@ void __fastcall DiggingManager__OnClickSkipCollider(DiggingManager_o *this, cons
       goto LABEL_30;
     maskPanel = (__int64)UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)maskPanel,
-                           (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                           (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     if ( !maskPanel )
       goto LABEL_30;
-    v33 = (UnityEngine_Animation_o *)maskPanel;
+    v26 = (UnityEngine_Animation_o *)maskPanel;
     maskPanel = UnityEngine_Animation__get_isPlaying((UnityEngine_Animation_o *)maskPanel, 0LL);
-    v35 = *(_QWORD *)(v23 + 24);
-    if ( ((v21 | (unsigned int)maskPanel) & 1) != 0 )
+    v28 = *(_QWORD *)(v21 + 24);
+    if ( ((v19 | (unsigned int)maskPanel) & 1) != 0 )
     {
-      if ( !v35 )
+      if ( !v28 )
         goto LABEL_30;
     }
     else
     {
-      if ( !v35 )
+      if ( !v28 )
         goto LABEL_30;
-      if ( *(_DWORD *)(v35 + 16) < this->fields.skipTargetIndex )
+      if ( *(_DWORD *)(v28 + 16) < this->fields.skipTargetIndex )
       {
-        v21 = 0;
+        v19 = 0;
         goto LABEL_29;
       }
     }
-    if ( *(_DWORD *)(v35 + 16) <= this->fields.skipTargetIndex )
+    if ( *(_DWORD *)(v28 + 16) <= this->fields.skipTargetIndex )
     {
-      UnityEngine_Animation__Stop(v33, 0LL);
-      v42 = Method_DiggingManager_OnClickSkipCollider__;
+      UnityEngine_Animation__Stop(v26, 0LL);
+      v35 = Method_DiggingManager_OnClickSkipCollider__;
       if ( (*((_BYTE *)Method_DiggingManager_OnClickSkipCollider__ + 83) & 2) != 0 )
-        v42 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_OnClickSkipCollider__);
-      maskPanel = sub_1B4CF74(v42, v42[4]);
-      if ( !*v30 )
+        v35 = (_QWORD *)sub_1B863D0(Method_DiggingManager_OnClickSkipCollider__);
+      maskPanel = sub_1B8639C(v35, v35[4]);
+      if ( !*v25 )
         goto LABEL_30;
-      v43 = (System_Reflection_MethodBase_o *)maskPanel;
-      DiggingSeName = DiggingBlockComponent__GetDiggingSeName(*v30, method);
-      OverwriteAssetSoundName__StopSe(v43, DiggingSeName, 0.0, 0LL);
-      maskPanel = (__int64)*v30;
-      if ( !*v30 )
+      v36 = (System_Reflection_MethodBase_o *)maskPanel;
+      DiggingSeName = DiggingBlockComponent__GetDiggingSeName(*v25, method);
+      OverwriteAssetSoundName__StopSe(v36, DiggingSeName, 0.0, 0LL);
+      maskPanel = (__int64)*v25;
+      if ( !*v25 )
         goto LABEL_30;
       maskPanel = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskPanel, 0LL);
       if ( !maskPanel )
         goto LABEL_30;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0LL);
-      DiggingManager__RevealRareRewardAroundTheBlock(this, *v30, v45);
+      DiggingManager__RevealRareRewardAroundTheBlock(this, *v25, v38);
     }
     else
     {
       DiggingAnimationName = DiggingManager__GetDiggingAnimationName(
                                (DiggingManager_o *)maskPanel,
-                               *(DiggingBlockComponent_o **)(v23 + 16),
+                               *(DiggingBlockComponent_o **)(v21 + 16),
                                1,
-                               v34);
-      v37 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+                               v27);
+      v30 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
       System_Action___ctor(
-        v37,
-        (Il2CppObject *)v23,
+        v30,
+        (Il2CppObject *)v21,
         Method_DiggingManager___c__DisplayClass91_1__OnClickSkipCollider_b__1__,
         0LL);
-      v40 = DiggingManager__PlayDiggingAnim(v38, v33, DiggingAnimationName, v37, v39);
-      UnityEngine_MonoBehaviour__StartCoroutine_68789728((UnityEngine_MonoBehaviour_o *)this, v40, 0LL);
+      v33 = DiggingManager__PlayDiggingAnim(v31, v26, DiggingAnimationName, v30, v32);
+      UnityEngine_MonoBehaviour__StartCoroutine_69341456((UnityEngine_MonoBehaviour_o *)this, v33, 0LL);
     }
-    maskPanel = (__int64)*v30;
-    if ( !*v30 )
+    maskPanel = (__int64)*v25;
+    if ( !*v25 )
       goto LABEL_30;
-    DiggingBlockComponent__SetActiveBlockUI((DiggingBlockComponent_o *)maskPanel, 0, v41);
-    v21 = 1;
+    DiggingBlockComponent__SetActiveBlockUI((DiggingBlockComponent_o *)maskPanel, 0, v34);
+    v19 = 1;
 LABEL_29:
-    v22 = *(_DWORD *)(v17 + 16) + 1;
-    *(_DWORD *)(v17 + 16) = v22;
+    v20 = *(_DWORD *)(v17 + 16) + 1;
+    *(_DWORD *)(v17 + 16) = v20;
     diggingIdxX = this->fields.diggingIdxX;
     if ( !diggingIdxX )
       goto LABEL_30;
   }
   this->fields.skipTargetIndex = 0;
-  v46 = sub_1B4D1DC(SchedulerTaskNone_TypeInfo);
-  SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v46, 0LL);
-  if ( !v46 )
+  v39 = (SchedulerTaskNone_o *)sub_1B86604(SchedulerTaskNone_TypeInfo);
+  SchedulerTaskNone___ctor(v39, 0LL);
+  if ( !v39 )
     goto LABEL_30;
-  v47 = (System_Delegate_o **)(v46 + 32);
-  v48 = *(System_Delegate_o **)(v46 + 32);
-  v49 = (SchedulerTaskBase_TaskCallback_o *)sub_1B4D1DC(SchedulerTaskBase_TaskCallback_TypeInfo);
+  p_EndCallback = &v39->fields.EndCallback;
+  EndCallback = (System_Delegate_o *)v39->fields.EndCallback;
+  v42 = (SchedulerTaskBase_TaskCallback_o *)sub_1B86604(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
-    v49,
+    v42,
     (Il2CppObject *)this,
     Method_DiggingManager__OnClickSkipCollider_b__91_2__,
     0LL);
-  v50 = System_Delegate__Combine(v48, (System_Delegate_o *)v49, 0LL);
-  v53 = v50;
-  if ( !v50 )
+  v43 = System_Delegate__Combine(EndCallback, (System_Delegate_o *)v42, 0LL);
+  v44 = v43;
+  if ( !v43 )
     goto LABEL_36;
-  v54 = SchedulerTaskBase_TaskCallback_TypeInfo;
-  if ( (SchedulerTaskBase_TaskCallback_c *)v50->klass != SchedulerTaskBase_TaskCallback_TypeInfo
-    || (*v47 = v50, (SchedulerTaskBase_TaskCallback_c *)v50->klass != v54) )
+  v45 = SchedulerTaskBase_TaskCallback_TypeInfo;
+  if ( (SchedulerTaskBase_TaskCallback_c *)v43->klass != SchedulerTaskBase_TaskCallback_TypeInfo
+    || (*p_EndCallback = v43, (SchedulerTaskBase_TaskCallback_c *)v43->klass != v45) )
   {
-    sub_1B4D4AC(v50);
+    sub_1B868D4(v43);
 LABEL_36:
-    *v47 = v53;
+    *p_EndCallback = v44;
   }
-  sub_1B4CF34((CGThumbnailListItem_o *)(v46 + 32), (int32_t)v53, v51, v52);
+  sub_1B8635C(&v39->fields.EndCallback);
   taskScheduler = this->fields.taskScheduler;
-  maskPanel = sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL);
+  maskPanel = sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL);
   if ( !maskPanel )
     goto LABEL_30;
-  v56 = maskPanel;
-  v57 = sub_1B4D0CC(v46, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
-  if ( !v57 )
+  v47 = (SchedulerTaskBase_array *)maskPanel;
+  v48 = sub_1B864F4(v39, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
+  if ( !v48 )
   {
-    v61 = sub_1B4D210(0LL);
-    sub_1B4D0B8(v61, 0LL);
+    v50 = sub_1B86638();
+    sub_1B864E0(v50, 0LL);
   }
-  if ( !*(_DWORD *)(v56 + 24) )
-    sub_1B4D1F4(v57, v58);
-  *(_QWORD *)(v56 + 32) = v46;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v56 + 32), v46, v59, v60);
+  if ( !v47->max_length )
+    sub_1B8661C(v48, v49);
+  v47->m_Items[0] = (SchedulerTaskBase_o *)v39;
+  maskPanel = sub_1B8635C(v47->m_Items);
   if ( !taskScheduler
-    || (TaskScheduler__InsertTask(taskScheduler, 0, (SchedulerTaskBase_array *)v56, 0LL),
-        (maskPanel = (__int64)this->fields.skipCollider) == 0) )
+    || (TaskScheduler__InsertTask(taskScheduler, 0, v47, 0LL), (maskPanel = (__int64)this->fields.skipCollider) == 0) )
   {
 LABEL_30:
-    sub_1B4D1EC(maskPanel, method);
+    sub_1B86614(maskPanel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0LL);
 }
@@ -2491,12 +2384,12 @@ void __fastcall DiggingManager__OnConfirmReset(DiggingManager_o *this, bool isDe
   const MethodInfo *v11; // x3
   System_Collections_IEnumerator_o *v12; // x0
 
-  if ( (byte_49BF268 & 1) == 0 )
+  if ( (byte_4A48F54 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, isDecide);
-    sub_1B4CF90(&Method_DiggingManager_SetResetLabel__, v5);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_49BF268 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, isDecide);
+    sub_1B863B8(&Method_DiggingManager_SetResetLabel__, v5);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4A48F54 = 1;
   }
   if ( isDecide )
   {
@@ -2506,15 +2399,15 @@ void __fastcall DiggingManager__OnConfirmReset(DiggingManager_o *this, bool isDe
     if ( !userEventDiggingEntity )
       goto LABEL_8;
     m_CancellationTokenSource_high = HIDWORD(userEventDiggingEntity->fields.m_CancellationTokenSource);
-    v10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_DiggingManager_SetResetLabel__, 0LL);
     v12 = DiggingManager__CoResetTableRequest(this, m_CancellationTokenSource_high, v10, v11);
-    UnityEngine_MonoBehaviour__StartCoroutine_68789728((UnityEngine_MonoBehaviour_o *)this, v12, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_69341456((UnityEngine_MonoBehaviour_o *)this, v12, 0LL);
   }
-  userEventDiggingEntity = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  userEventDiggingEntity = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !userEventDiggingEntity )
 LABEL_8:
-    sub_1B4D1EC(userEventDiggingEntity, v8);
+    sub_1B86614(userEventDiggingEntity, v8);
   CommonUI__CloseConfirmDialog(userEventDiggingEntity, 0LL);
 }
 
@@ -2526,31 +2419,25 @@ System_Collections_IEnumerator_o *__fastcall DiggingManager__PlayDiggingAnim(
         System_Action_o *callBack,
         const MethodInfo *method)
 {
-  __int64 v8; // x22
+  DiggingManager__PlayDiggingAnim_d__92_o *v8; // x22
   __int64 v9; // x0
   __int64 v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
 
-  if ( (byte_49BF273 & 1) == 0 )
+  if ( (byte_4A48F5F & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager__PlayDiggingAnim_d__92_TypeInfo, animation);
-    byte_49BF273 = 1;
+    sub_1B863B8(&DiggingManager__PlayDiggingAnim_d__92_TypeInfo, animation);
+    byte_4A48F5F = 1;
   }
-  v8 = sub_1B4D1DC(DiggingManager__PlayDiggingAnim_d__92_TypeInfo);
-  DiggingManager__PlayDiggingAnim_d__92___ctor((DiggingManager__PlayDiggingAnim_d__92_o *)v8, 0, 0LL);
+  v8 = (DiggingManager__PlayDiggingAnim_d__92_o *)sub_1B86604(DiggingManager__PlayDiggingAnim_d__92_TypeInfo);
+  DiggingManager__PlayDiggingAnim_d__92___ctor(v8, 0, 0LL);
   if ( !v8 )
-    sub_1B4D1EC(v9, v10);
-  *(_QWORD *)(v8 + 32) = animation;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 32), (int32_t)animation, v11, v12);
-  *(_QWORD *)(v8 + 40) = animationName;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 40), (int32_t)animationName, v13, v14);
-  *(_QWORD *)(v8 + 48) = callBack;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v8 + 48), (int32_t)callBack, v15, v16);
+    sub_1B86614(v9, v10);
+  v8->fields.animation = animation;
+  sub_1B8635C(&v8->fields.animation);
+  v8->fields.animationName = animationName;
+  sub_1B8635C(&v8->fields.animationName);
+  v8->fields.callBack = callBack;
+  sub_1B8635C(&v8->fields.callBack);
   return (System_Collections_IEnumerator_o *)v8;
 }
 
@@ -2578,40 +2465,40 @@ void __fastcall DiggingManager__ResetTable(DiggingManager_o *this, const MethodI
   __int64 v21; // x0
   __int64 v22; // x1
 
-  if ( (byte_49BF267 & 1) == 0 )
+  if ( (byte_4A48F53 & 1) == 0 )
   {
-    sub_1B4CF90(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
-    sub_1B4CF90(&Method_DiggingManager_OnConfirmReset__, v3);
-    sub_1B4CF90(&Method_DiggingManager_ResetTable__, v4);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v5);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1B4CF90(&StringLiteral_10861/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v7);
-    sub_1B4CF90(&StringLiteral_10862/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, v8);
-    sub_1B4CF90(&StringLiteral_10860/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v9);
-    sub_1B4CF90(&StringLiteral_10859/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v10);
-    byte_49BF267 = 1;
+    sub_1B863B8(&CommonConfirmDialog_ClickDelegate_TypeInfo, method);
+    sub_1B863B8(&Method_DiggingManager_OnConfirmReset__, v3);
+    sub_1B863B8(&Method_DiggingManager_ResetTable__, v4);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v5);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1B863B8(&StringLiteral_10919/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, v7);
+    sub_1B863B8(&StringLiteral_10920/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, v8);
+    sub_1B863B8(&StringLiteral_10918/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, v9);
+    sub_1B863B8(&StringLiteral_10917/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, v10);
+    byte_4A48F53 = 1;
   }
   IsAchievedTheConditionsToReset = DiggingManager__IsAchievedTheConditionsToReset(this, method);
   v12 = Method_DiggingManager_ResetTable__;
   v13 = IsAchievedTheConditionsToReset;
   if ( (*((_BYTE *)Method_DiggingManager_ResetTable__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1B4CFA8(Method_DiggingManager_ResetTable__);
-  v14 = (System_Reflection_MethodBase_o *)sub_1B4CF74(v12, v12[4]);
+    v12 = (_QWORD *)sub_1B863D0(Method_DiggingManager_ResetTable__);
+  v14 = (System_Reflection_MethodBase_o *)sub_1B8639C(v12, v12[4]);
   if ( v13 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10862/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10861/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10860/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
-    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10859/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
-    v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B4D1DC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_10920/*"RESET_DIGGING_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10919/*"RESET_DIGGING_CONFIRM_DIALOG_MESSAGE"*/, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10918/*"RESET_DIGGING_CONFIRM_DIALOG_DECIDE"*/, 0LL);
+    v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10917/*"RESET_DIGGING_CONFIRM_DIALOG_CANCEL"*/, 0LL);
+    v20 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B86604(CommonConfirmDialog_ClickDelegate_TypeInfo);
     CommonConfirmDialog_ClickDelegate___ctor(v20, (Il2CppObject *)this, Method_DiggingManager_OnConfirmReset__, 0LL);
     if ( !Instance )
-      sub_1B4D1EC(v21, v22);
-    CommonUI__OpenConfirmDialog_30248444((CommonUI_o *)Instance, v16, v17, v18, v19, 1, v20, 26, 0, 0, 0LL);
+      sub_1B86614(v21, v22);
+    CommonUI__OpenConfirmDialog_30483380((CommonUI_o *)Instance, v16, v17, v18, v19, 1, v20, 26, 0, 0, 0LL);
   }
   else
   {
@@ -2653,162 +2540,122 @@ void __fastcall DiggingManager__Response(DiggingManager_o *this, System_String_o
   __int64 v33; // x1
   __int64 v34; // x1
   __int64 v35; // x1
-  __int64 v36; // x23
+  Il2CppObject *v36; // x23
   __int64 maskPanel; // x0
   DiggingBlockComponent_o *v38; // x1
-  int32_t v39; // w2
-  const MethodInfo *v40; // x3
-  Il2CppObject *v41; // x20
-  System_Object_array *v42; // x0
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  System_Collections_Generic_List_object__o *v45; // x20
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  System_Collections_Generic_List_object__o *p_EndCallback; // x21
-  __int64 v49; // x22
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
+  Il2CppObject *v39; // x20
+  System_Collections_Generic_List_object__o *v40; // x20
+  System_Collections_Generic_List_object__o *v41; // x21
+  __int64 v42; // x22
   struct System_Collections_Generic_List_int__o *diggingIdxX; // x9
-  DiggingManager_o *v53; // x29
-  int v54; // w8
-  float v55; // s8
-  __int64 v56; // x26
-  int32_t v57; // w2
-  const MethodInfo *v58; // x3
-  __int64 v59; // x23
-  __int64 v60; // x24
+  DiggingManager_o *v44; // x29
+  int v45; // w8
+  float v46; // s8
+  __int64 v47; // x26
+  __int64 v48; // x23
+  __int64 v49; // x24
   System_Collections_Generic_List_object__o *blockList; // x20
-  System_Predicate_object__o *v62; // x25
-  Il2CppObject *v63; // x0
-  DiggingBlockComponent_o **v64; // x24
-  int32_t v65; // w2
-  const MethodInfo *v66; // x3
-  DiggingManager_o *v67; // x22
+  System_Predicate_object__o *v51; // x25
+  DiggingBlockComponent_o **v52; // x24
+  DiggingManager_o *v53; // x22
   Il2CppObject *Component_object; // x27
-  const MethodInfo *v69; // x3
-  __int64 v70; // x25
-  System_Func_bool__o *v71; // x29
-  System_String_o *v72; // x28
-  int32_t v73; // w2
-  const MethodInfo *v74; // x3
-  __int64 v75; // x25
-  System_Delegate_o *v76; // x20
-  System_Delegate_o **v77; // x27
-  SchedulerTaskBase_TaskCallback_o *v78; // x28
-  System_Delegate_o *v79; // x0
-  int32_t v80; // w2
-  const MethodInfo *v81; // x3
-  System_Delegate_o *v82; // x8
+  const MethodInfo *v55; // x3
+  Il2CppObject *v56; // x25
+  System_Func_bool__o *monitor; // x29
+  System_String_o *v58; // x28
+  DiggingSchedulerTaskAnimationSkippable_o *v59; // x25
+  System_Delegate_o *StartCallback; // x20
+  _QWORD *p_StartCallback; // x27
+  SchedulerTaskBase_TaskCallback_o *v62; // x28
+  System_Delegate_o *v63; // x0
+  System_Delegate_o *v64; // x8
   DiggingManager_c *klass; // x1
-  System_Delegate_o *v84; // x20
-  System_Delegate_o **v85; // x27
-  SchedulerTaskBase_TaskCallback_o *v86; // x28
-  System_Delegate_o *v87; // x0
-  int32_t v88; // w2
-  const MethodInfo *v89; // x3
-  DiggingManager_c *v90; // x1
-  __int64 v91; // x27
-  System_Func_bool__o *v92; // x26
-  int32_t v93; // w2
-  const MethodInfo *v94; // x3
-  DiggingSchedulerTaskWaitTimeOrCondition_o *v95; // x27
-  const MethodInfo *v96; // x1
-  float v97; // s10
+  System_Delegate_o *EndCallback; // x20
+  _QWORD *p_EndCallback; // x27
+  SchedulerTaskBase_TaskCallback_o *v68; // x28
+  System_Delegate_o *v69; // x0
+  DiggingManager_c *v70; // x1
+  Il2CppObject *v71; // x27
+  System_Func_bool__o *v72; // x26
+  DiggingSchedulerTaskWaitTimeOrCondition_o *v73; // x27
+  const MethodInfo *v74; // x1
+  float v75; // s10
   struct DiggingSettings_o *settings; // x8
-  int32_t v99; // w2
-  const MethodInfo *v100; // x3
-  SchedulerTaskBase_array *v101; // x26
-  int32_t v102; // w2
-  const MethodInfo *v103; // x3
-  SchedulerTaskOrthostichy_o *v104; // x25
-  int32_t v105; // w2
-  const MethodInfo *v106; // x3
+  SchedulerTaskBase_array *v77; // x26
+  SchedulerTaskOrthostichy_o *v78; // x25
   struct System_Object_array *items; // x8
-  _QWORD *v108; // x9
+  _QWORD *v80; // x9
   __int64 size; // x10
-  Il2CppClass **v110; // x0
-  int32_t v111; // w2
-  const MethodInfo *v112; // x3
-  __int64 v113; // x8
-  __int64 v114; // x8
-  _QWORD *v115; // x9
-  __int64 v116; // x10
-  __int64 v117; // x8
-  SchedulerTaskParallel_o *v118; // x22
+  Il2CppClass **v82; // x0
+  __int64 v83; // x8
+  __int64 v84; // x8
+  _QWORD *v85; // x9
+  __int64 v86; // x10
+  __int64 v87; // x8
+  SchedulerTaskParallel_o *v88; // x22
   TaskScheduler_o *taskScheduler; // x21
-  int32_t v120; // w2
-  const MethodInfo *v121; // x3
-  __int64 v122; // x23
-  SchedulerTaskNone_o *v123; // x20
-  int32_t v124; // w2
-  const MethodInfo *v125; // x3
+  SchedulerTaskBase_array *v90; // x23
+  SchedulerTaskNone_o *v91; // x20
   struct SchedulerTaskNone_o *diggingDialogTask; // x21
-  System_Delegate_o *EndCallback; // t1
-  SchedulerTaskBase_TaskCallback_o *v128; // x22
-  System_Delegate_o *v129; // x0
-  int32_t v130; // w2
-  const MethodInfo *v131; // x3
-  System_Delegate_c *v132; // x1
-  TaskScheduler_o *v133; // x20
-  int32_t v134; // w2
-  const MethodInfo *v135; // x3
-  __int64 v136; // x22
-  __int64 v137; // x21
-  TaskScheduler_o *v138; // x20
-  SchedulerTaskBase_array *v139; // x21
-  const MethodInfo *v140; // x1
-  int32_t v141; // w2
-  const MethodInfo *v142; // x3
-  SchedulerTaskBase_o *v143; // x22
-  const MethodInfo *v144; // x1
-  __int64 v145; // x0
+  System_Delegate_o *v93; // t1
+  SchedulerTaskBase_TaskCallback_o *v94; // x22
+  System_Delegate_o *v95; // x0
+  System_Delegate_c *v96; // x1
+  TaskScheduler_o *v97; // x20
+  SchedulerTaskBase_o *v98; // x22
+  SchedulerTaskBase_array *v99; // x21
+  TaskScheduler_o *v100; // x20
+  SchedulerTaskBase_array *v101; // x21
+  const MethodInfo *v102; // x1
+  SchedulerTaskBase_o *v103; // x22
+  const MethodInfo *v104; // x1
+  __int64 v105; // x0
   Il2CppObject *object; // [xsp+8h] [xbp-88h]
-  __int64 v147; // [xsp+18h] [xbp-78h]
+  __int64 v107; // [xsp+18h] [xbp-78h]
 
-  if ( (byte_49BF271 & 1) == 0 )
+  if ( (byte_4A48F5D & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingSchedulerTaskAnimationSkippable_TypeInfo, result);
-    sub_1B4CF90(&DiggingSchedulerTaskWaitTimeOrCondition_TypeInfo, v5);
-    sub_1B4CF90(&System_Func_bool__TypeInfo, v6);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
-    sub_1B4CF90(&Method_JsonManager_DeserializeArray_DiggingManager_resData___, v8);
-    sub_1B4CF90(&JsonManager_TypeInfo, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__, v10);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__, v13);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v14);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_int__get_Count__, v15);
-    sub_1B4CF90(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v16);
-    sub_1B4CF90(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo, v17);
-    sub_1B4CF90(&System_Predicate_DiggingBlockComponent__TypeInfo, v18);
-    sub_1B4CF90(&SchedulerTaskBase___TypeInfo, v19);
-    sub_1B4CF90(&SchedulerTaskNone_TypeInfo, v20);
-    sub_1B4CF90(&SchedulerTaskOrthostichy_TypeInfo, v21);
-    sub_1B4CF90(&SchedulerTaskParallel_TypeInfo, v22);
-    sub_1B4CF90(&SchedulerTaskBase_TaskCallback_TypeInfo, v23);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_0__Response_b__1__, v24);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_0__Response_b__2__, v25);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_0__Response_b__5__, v26);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass90_0_TypeInfo, v27);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_1__Response_b__0__, v28);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass90_1_TypeInfo, v29);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_2__Response_b__3__, v30);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_2__Response_b__4__, v31);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass90_2_TypeInfo, v32);
-    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v33);
-    sub_1B4CF90(&StringLiteral_15507/*"["*/, v34);
-    sub_1B4CF90(&StringLiteral_15763/*"]"*/, v35);
-    byte_49BF271 = 1;
+    sub_1B863B8(&DiggingSchedulerTaskAnimationSkippable_TypeInfo, result);
+    sub_1B863B8(&DiggingSchedulerTaskWaitTimeOrCondition_TypeInfo, v5);
+    sub_1B863B8(&System_Func_bool__TypeInfo, v6);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_Animation___, v7);
+    sub_1B863B8(&Method_JsonManager_DeserializeArray_DiggingManager_resData___, v8);
+    sub_1B863B8(&JsonManager_TypeInfo, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__, v10);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Add__, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__, v13);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__, v14);
+    sub_1B863B8(&Method_System_Collections_Generic_List_int__get_Count__, v15);
+    sub_1B863B8(&System_Collections_Generic_List_DiggingBlockComponent__TypeInfo, v16);
+    sub_1B863B8(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo, v17);
+    sub_1B863B8(&System_Predicate_DiggingBlockComponent__TypeInfo, v18);
+    sub_1B863B8(&SchedulerTaskBase___TypeInfo, v19);
+    sub_1B863B8(&SchedulerTaskNone_TypeInfo, v20);
+    sub_1B863B8(&SchedulerTaskOrthostichy_TypeInfo, v21);
+    sub_1B863B8(&SchedulerTaskParallel_TypeInfo, v22);
+    sub_1B863B8(&SchedulerTaskBase_TaskCallback_TypeInfo, v23);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_0__Response_b__1__, v24);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_0__Response_b__2__, v25);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_0__Response_b__5__, v26);
+    sub_1B863B8(&DiggingManager___c__DisplayClass90_0_TypeInfo, v27);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_1__Response_b__0__, v28);
+    sub_1B863B8(&DiggingManager___c__DisplayClass90_1_TypeInfo, v29);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_2__Response_b__3__, v30);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_2__Response_b__4__, v31);
+    sub_1B863B8(&DiggingManager___c__DisplayClass90_2_TypeInfo, v32);
+    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v33);
+    sub_1B863B8(&StringLiteral_15580/*"["*/, v34);
+    sub_1B863B8(&StringLiteral_15836/*"]"*/, v35);
+    byte_4A48F5D = 1;
   }
-  v36 = sub_1B4D1DC(DiggingManager___c__DisplayClass90_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v36, 0LL);
+  v36 = (Il2CppObject *)sub_1B86604(DiggingManager___c__DisplayClass90_0_TypeInfo);
+  System_Object___ctor(v36, 0LL);
   if ( !v36 )
     goto LABEL_83;
-  *(_QWORD *)(v36 + 16) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 16), (int32_t)this, v39, v40);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21779/*"ng"*/, 0LL) )
+  v36[1].klass = (Il2CppClass *)this;
+  sub_1B8635C(&v36[1]);
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21893/*"ng"*/, 0LL) )
   {
     maskPanel = (__int64)this->fields.maskPanel;
     if ( maskPanel )
@@ -2817,274 +2664,272 @@ void __fastcall DiggingManager__Response(DiggingManager_o *this, System_String_o
       return;
     }
 LABEL_83:
-    sub_1B4D1EC(maskPanel, v38);
+    sub_1B86614(maskPanel, v38);
   }
-  v41 = (Il2CppObject *)System_String__Concat_61131716(
-                          (System_String_o *)StringLiteral_15507/*"["*/,
+  v39 = (Il2CppObject *)System_String__Concat_61683424(
+                          (System_String_o *)StringLiteral_15580/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_15763/*"]"*/,
+                          (System_String_o *)StringLiteral_15836/*"]"*/,
                           0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v42 = JsonManager__DeserializeArray_object_(
-          v41,
-          (const MethodInfo_2F6ADF0 *)Method_JsonManager_DeserializeArray_DiggingManager_resData___);
-  *(_QWORD *)(v36 + 24) = v42;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 24), (int32_t)v42, v43, v44);
-  v45 = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
+  v36[1].monitor = JsonManager__DeserializeArray_object_(
+                     v39,
+                     (const MethodInfo_2FD883C *)Method_JsonManager_DeserializeArray_DiggingManager_resData___);
+  sub_1B8635C(&v36[1].monitor);
+  v40 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_DiggingBlockComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v45,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
-  *(_QWORD *)(v36 + 32) = v45;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v36 + 32), (int32_t)v45, v46, v47);
-  p_EndCallback = (System_Collections_Generic_List_object__o *)sub_1B4D1DC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    v40,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_DiggingBlockComponent___ctor__);
+  v36[2].klass = (Il2CppClass *)v40;
+  sub_1B8635C(&v36[2]);
+  v41 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    p_EndCallback,
-    (const MethodInfo_357F9A8 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-  v49 = sub_1B4D1DC(DiggingManager___c__DisplayClass90_1_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v49, 0LL);
-  if ( !v49 )
+    v41,
+    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+  v42 = sub_1B86604(DiggingManager___c__DisplayClass90_1_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v42, 0LL);
+  if ( !v42 )
     goto LABEL_83;
-  *(_QWORD *)(v49 + 24) = v36;
-  object = (Il2CppObject *)v36;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v49 + 24), v36, v50, v51);
-  *(_DWORD *)(v49 + 16) = 0;
+  *(_QWORD *)(v42 + 24) = v36;
+  object = v36;
+  maskPanel = sub_1B8635C(v42 + 24);
+  *(_DWORD *)(v42 + 16) = 0;
   diggingIdxX = this->fields.diggingIdxX;
   if ( !diggingIdxX )
     goto LABEL_83;
-  v53 = (DiggingManager_o *)&SchedulerTaskBase_TaskCallback_TypeInfo;
-  v54 = 0;
-  v55 = 0.0;
-  v147 = v49;
-  while ( v54 < diggingIdxX->fields._size )
+  v44 = (DiggingManager_o *)&SchedulerTaskBase_TaskCallback_TypeInfo;
+  v45 = 0;
+  v46 = 0.0;
+  v107 = v42;
+  while ( v45 < diggingIdxX->fields._size )
   {
-    v56 = sub_1B4D1DC(DiggingManager___c__DisplayClass90_2_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v56, 0LL);
-    if ( v56 )
+    v47 = sub_1B86604(DiggingManager___c__DisplayClass90_2_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v47, 0LL);
+    if ( v47 )
     {
-      *(_QWORD *)(v56 + 32) = v49;
-      v59 = v56 + 32;
-      sub_1B4CF34((CGThumbnailListItem_o *)(v56 + 32), v49, v57, v58);
-      v60 = *(_QWORD *)(v56 + 32);
-      if ( v60 )
+      *(_QWORD *)(v47 + 32) = v42;
+      v48 = v47 + 32;
+      maskPanel = sub_1B8635C(v47 + 32);
+      v49 = *(_QWORD *)(v47 + 32);
+      if ( v49 )
       {
-        *(_DWORD *)(v56 + 16) = *(_DWORD *)(v60 + 16);
+        *(_DWORD *)(v47 + 16) = *(_DWORD *)(v49 + 16);
         blockList = (System_Collections_Generic_List_object__o *)this->fields.blockList;
-        v62 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingBlockComponent__TypeInfo);
+        v51 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingBlockComponent__TypeInfo);
         System_Predicate_object____ctor(
-          v62,
-          (Il2CppObject *)v60,
+          v51,
+          (Il2CppObject *)v49,
           Method_DiggingManager___c__DisplayClass90_1__Response_b__0__,
           0LL);
         if ( blockList )
         {
-          v63 = System_Collections_Generic_List_object___Find(
-                  blockList,
-                  (System_Predicate_T__o *)v62,
-                  (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
-          *(_QWORD *)(v56 + 24) = v63;
-          v64 = (DiggingBlockComponent_o **)(v56 + 24);
-          sub_1B4CF34((CGThumbnailListItem_o *)(v56 + 24), (int32_t)v63, v65, v66);
-          maskPanel = *(_QWORD *)(v56 + 24);
+          *(_QWORD *)(v47 + 24) = System_Collections_Generic_List_object___Find(
+                                    blockList,
+                                    (System_Predicate_T__o *)v51,
+                                    (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
+          v52 = (DiggingBlockComponent_o **)(v47 + 24);
+          sub_1B8635C(v47 + 24);
+          maskPanel = *(_QWORD *)(v47 + 24);
           if ( maskPanel )
           {
-            v67 = this;
+            v53 = this;
             maskPanel = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskPanel, 0LL);
             if ( maskPanel )
             {
               Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)maskPanel,
-                                   (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                   (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
               maskPanel = (__int64)DiggingManager__GetDiggingAnimationName(
                                      (DiggingManager_o *)Component_object,
-                                     *v64,
+                                     *v52,
                                      0,
-                                     v69);
-              if ( *(_QWORD *)v59 )
+                                     v55);
+              if ( *(_QWORD *)v48 )
               {
-                v70 = *(_QWORD *)(*(_QWORD *)v59 + 24LL);
-                if ( v70 )
+                v56 = *(Il2CppObject **)(*(_QWORD *)v48 + 24LL);
+                if ( v56 )
                 {
-                  this = v53;
-                  v71 = *(System_Func_bool__o **)(v70 + 40);
-                  v72 = (System_String_o *)maskPanel;
-                  if ( !v71 )
+                  this = v44;
+                  monitor = (System_Func_bool__o *)v56[2].monitor;
+                  v58 = (System_String_o *)maskPanel;
+                  if ( !monitor )
                   {
-                    v71 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+                    monitor = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
                     System_Func_bool____ctor(
-                      v71,
-                      (Il2CppObject *)v70,
+                      monitor,
+                      v56,
                       Method_DiggingManager___c__DisplayClass90_0__Response_b__1__,
                       0LL);
-                    *(_QWORD *)(v70 + 40) = v71;
-                    sub_1B4CF34((CGThumbnailListItem_o *)(v70 + 40), (int32_t)v71, v73, v74);
+                    v56[2].monitor = monitor;
+                    sub_1B8635C(&v56[2].monitor);
                   }
-                  v75 = sub_1B4D1DC(DiggingSchedulerTaskAnimationSkippable_TypeInfo);
+                  v59 = (DiggingSchedulerTaskAnimationSkippable_o *)sub_1B86604(DiggingSchedulerTaskAnimationSkippable_TypeInfo);
                   DiggingSchedulerTaskAnimationSkippable___ctor(
-                    (DiggingSchedulerTaskAnimationSkippable_o *)v75,
+                    v59,
                     (UnityEngine_Animation_o *)Component_object,
-                    v72,
-                    v71,
+                    v58,
+                    monitor,
                     0LL);
-                  if ( v75 )
+                  if ( v59 )
                   {
-                    v77 = (System_Delegate_o **)(v75 + 24);
-                    v76 = *(System_Delegate_o **)(v75 + 24);
-                    v53 = this;
-                    v78 = (SchedulerTaskBase_TaskCallback_o *)sub_1B4D1DC(this->klass);
+                    p_StartCallback = &v59->fields.StartCallback;
+                    StartCallback = (System_Delegate_o *)v59->fields.StartCallback;
+                    v44 = this;
+                    v62 = (SchedulerTaskBase_TaskCallback_o *)sub_1B86604(this->klass);
                     SchedulerTaskBase_TaskCallback___ctor(
-                      v78,
-                      (Il2CppObject *)v56,
+                      v62,
+                      (Il2CppObject *)v47,
                       Method_DiggingManager___c__DisplayClass90_2__Response_b__3__,
                       0LL);
-                    v79 = System_Delegate__Combine(v76, (System_Delegate_o *)v78, 0LL);
-                    v82 = v79;
-                    if ( v79 )
+                    v63 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v62, 0LL);
+                    v64 = v63;
+                    if ( v63 )
                     {
                       klass = this->klass;
-                      if ( v79->klass != (System_Delegate_c *)this->klass )
+                      if ( v63->klass != (System_Delegate_c *)this->klass )
                         goto LABEL_69;
-                      *v77 = v79;
-                      if ( (DiggingManager_c *)v79->klass != klass )
+                      *p_StartCallback = v63;
+                      if ( (DiggingManager_c *)v63->klass != klass )
                         goto LABEL_69;
                     }
                     else
                     {
-                      *v77 = 0LL;
+                      *p_StartCallback = 0LL;
                     }
-                    sub_1B4CF34((CGThumbnailListItem_o *)(v75 + 24), (int32_t)v79, v80, v81);
-                    v85 = (System_Delegate_o **)(v75 + 32);
-                    v84 = *(System_Delegate_o **)(v75 + 32);
-                    v86 = (SchedulerTaskBase_TaskCallback_o *)sub_1B4D1DC(this->klass);
+                    sub_1B8635C(&v59->fields.StartCallback);
+                    p_EndCallback = &v59->fields.EndCallback;
+                    EndCallback = (System_Delegate_o *)v59->fields.EndCallback;
+                    v68 = (SchedulerTaskBase_TaskCallback_o *)sub_1B86604(this->klass);
                     SchedulerTaskBase_TaskCallback___ctor(
-                      v86,
-                      (Il2CppObject *)v56,
+                      v68,
+                      (Il2CppObject *)v47,
                       Method_DiggingManager___c__DisplayClass90_2__Response_b__4__,
                       0LL);
-                    v87 = System_Delegate__Combine(v84, (System_Delegate_o *)v86, 0LL);
-                    v82 = v87;
-                    if ( v87 )
+                    v69 = System_Delegate__Combine(EndCallback, (System_Delegate_o *)v68, 0LL);
+                    v64 = v69;
+                    if ( v69 )
                     {
-                      v90 = this->klass;
-                      if ( v87->klass != (System_Delegate_c *)this->klass )
+                      v70 = this->klass;
+                      if ( v69->klass != (System_Delegate_c *)this->klass )
                         goto LABEL_69;
-                      *v85 = v87;
-                      this = v67;
-                      if ( (DiggingManager_c *)v87->klass != v90 )
+                      *p_EndCallback = v69;
+                      this = v53;
+                      if ( (DiggingManager_c *)v69->klass != v70 )
                         goto LABEL_69;
                     }
                     else
                     {
-                      *v85 = 0LL;
-                      this = v67;
+                      *p_EndCallback = 0LL;
+                      this = v53;
                     }
-                    sub_1B4CF34((CGThumbnailListItem_o *)(v75 + 32), (int32_t)v87, v88, v89);
-                    if ( *(_QWORD *)v59 )
+                    maskPanel = sub_1B8635C(&v59->fields.EndCallback);
+                    if ( *(_QWORD *)v48 )
                     {
-                      v91 = *(_QWORD *)(*(_QWORD *)v59 + 24LL);
-                      if ( v91 )
+                      v71 = *(Il2CppObject **)(*(_QWORD *)v48 + 24LL);
+                      if ( v71 )
                       {
-                        v92 = *(System_Func_bool__o **)(v91 + 48);
-                        if ( !v92 )
+                        v72 = (System_Func_bool__o *)v71[3].klass;
+                        if ( !v72 )
                         {
-                          v92 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+                          v72 = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
                           System_Func_bool____ctor(
-                            v92,
-                            (Il2CppObject *)v91,
+                            v72,
+                            v71,
                             Method_DiggingManager___c__DisplayClass90_0__Response_b__2__,
                             0LL);
-                          *(_QWORD *)(v91 + 48) = v92;
-                          sub_1B4CF34((CGThumbnailListItem_o *)(v91 + 48), (int32_t)v92, v93, v94);
+                          v71[3].klass = (Il2CppClass *)v72;
+                          sub_1B8635C(&v71[3]);
                         }
-                        v95 = (DiggingSchedulerTaskWaitTimeOrCondition_o *)sub_1B4D1DC(DiggingSchedulerTaskWaitTimeOrCondition_TypeInfo);
-                        DiggingSchedulerTaskWaitTimeOrCondition___ctor(v95, v55, v92, 0LL);
-                        maskPanel = DiggingManager__UseSettings(this, v96);
-                        v97 = 1.6;
+                        v73 = (DiggingSchedulerTaskWaitTimeOrCondition_o *)sub_1B86604(DiggingSchedulerTaskWaitTimeOrCondition_TypeInfo);
+                        DiggingSchedulerTaskWaitTimeOrCondition___ctor(v73, v46, v72, 0LL);
+                        maskPanel = DiggingManager__UseSettings(this, v74);
+                        v75 = 1.6;
                         if ( (maskPanel & 1) != 0 )
                         {
                           settings = this->fields.settings;
                           if ( !settings )
                             goto LABEL_83;
-                          v97 = *(float *)&settings[1].klass;
+                          v75 = *(float *)&settings[1].klass;
                         }
-                        maskPanel = sub_1B4D038(SchedulerTaskBase___TypeInfo, 2LL);
+                        maskPanel = sub_1B86460(SchedulerTaskBase___TypeInfo, 2LL);
                         if ( maskPanel )
                         {
-                          v101 = (SchedulerTaskBase_array *)maskPanel;
-                          if ( v95 )
+                          v77 = (SchedulerTaskBase_array *)maskPanel;
+                          if ( v73 )
                           {
-                            maskPanel = sub_1B4D0CC(v95, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
+                            maskPanel = sub_1B864F4(v73, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
                             if ( !maskPanel )
                               goto LABEL_85;
                           }
-                          if ( !v101->max_length )
+                          if ( !v77->max_length )
                             goto LABEL_84;
-                          v101->m_Items[0] = (SchedulerTaskBase_o *)v95;
-                          sub_1B4CF34((CGThumbnailListItem_o *)v101->m_Items, (int32_t)v95, v99, v100);
-                          maskPanel = sub_1B4D0CC(v75, v101->obj.klass->_1.element_class);
+                          v77->m_Items[0] = (SchedulerTaskBase_o *)v73;
+                          sub_1B8635C(v77->m_Items);
+                          maskPanel = sub_1B864F4(v59, v77->obj.klass->_1.element_class);
                           if ( !maskPanel )
                             goto LABEL_85;
-                          if ( v101->max_length <= 1 )
+                          if ( v77->max_length <= 1 )
                             goto LABEL_84;
-                          v101->m_Items[1] = (SchedulerTaskBase_o *)v75;
-                          sub_1B4CF34((CGThumbnailListItem_o *)&v101->m_Items[1], v75, v102, v103);
-                          v104 = (SchedulerTaskOrthostichy_o *)sub_1B4D1DC(SchedulerTaskOrthostichy_TypeInfo);
-                          SchedulerTaskOrthostichy___ctor(v104, v101, 0LL);
-                          if ( p_EndCallback )
+                          v77->m_Items[1] = (SchedulerTaskBase_o *)v59;
+                          sub_1B8635C(&v77->m_Items[1]);
+                          v78 = (SchedulerTaskOrthostichy_o *)sub_1B86604(SchedulerTaskOrthostichy_TypeInfo);
+                          SchedulerTaskOrthostichy___ctor(v78, v77, 0LL);
+                          if ( v41 )
                           {
-                            items = p_EndCallback->fields._items;
-                            v108 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-                            ++p_EndCallback->fields._version;
+                            items = v41->fields._items;
+                            v80 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+                            ++v41->fields._version;
                             if ( items )
                             {
-                              size = p_EndCallback->fields._size;
+                              size = v41->fields._size;
                               if ( (unsigned int)size >= items->max_length )
                               {
                                 System_Collections_Generic_List_object___AddWithResize(
-                                  p_EndCallback,
-                                  (Il2CppObject *)v104,
-                                  *(const MethodInfo_35801DC **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+                                  v41,
+                                  (Il2CppObject *)v78,
+                                  *(const MethodInfo_35FC958 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
                               }
                               else
                               {
-                                v110 = &items->obj.klass + size;
-                                p_EndCallback->fields._size = size + 1;
-                                v110[4] = (Il2CppClass *)v104;
-                                sub_1B4CF34((CGThumbnailListItem_o *)(v110 + 4), (int32_t)v104, v105, v106);
+                                v82 = &items->obj.klass + size;
+                                v41->fields._size = size + 1;
+                                v82[4] = (Il2CppClass *)v78;
+                                maskPanel = sub_1B8635C(v82 + 4);
                               }
-                              if ( *(_QWORD *)v59 )
+                              if ( *(_QWORD *)v48 )
                               {
-                                v113 = *(_QWORD *)(*(_QWORD *)v59 + 24LL);
-                                if ( v113 )
+                                v83 = *(_QWORD *)(*(_QWORD *)v48 + 24LL);
+                                if ( v83 )
                                 {
-                                  maskPanel = *(_QWORD *)(v113 + 32);
+                                  maskPanel = *(_QWORD *)(v83 + 32);
                                   if ( maskPanel )
                                   {
-                                    v38 = *v64;
-                                    v114 = *(_QWORD *)(maskPanel + 16);
-                                    v115 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
+                                    v38 = *v52;
+                                    v84 = *(_QWORD *)(maskPanel + 16);
+                                    v85 = Method_System_Collections_Generic_List_DiggingBlockComponent__Add__;
                                     ++*(_DWORD *)(maskPanel + 28);
-                                    if ( v114 )
+                                    if ( v84 )
                                     {
-                                      v116 = *(int *)(maskPanel + 24);
-                                      v49 = v147;
-                                      if ( (unsigned int)v116 >= *(_DWORD *)(v114 + 24) )
+                                      v86 = *(int *)(maskPanel + 24);
+                                      v42 = v107;
+                                      if ( (unsigned int)v86 >= *(_DWORD *)(v84 + 24) )
                                       {
                                         System_Collections_Generic_List_object___AddWithResize(
                                           (System_Collections_Generic_List_object__o *)maskPanel,
                                           (Il2CppObject *)v38,
-                                          *(const MethodInfo_35801DC **)(*(_QWORD *)(v115[4] + 192LL) + 112LL));
+                                          *(const MethodInfo_35FC958 **)(*(_QWORD *)(v85[4] + 192LL) + 112LL));
                                       }
                                       else
                                       {
-                                        v117 = v114 + 8 * v116;
-                                        *(_DWORD *)(maskPanel + 24) = v116 + 1;
-                                        *(_QWORD *)(v117 + 32) = v38;
-                                        sub_1B4CF34((CGThumbnailListItem_o *)(v117 + 32), (int32_t)v38, v111, v112);
+                                        v87 = v84 + 8 * v86;
+                                        *(_DWORD *)(maskPanel + 24) = v86 + 1;
+                                        *(_QWORD *)(v87 + 32) = v38;
+                                        maskPanel = sub_1B8635C(v87 + 32);
                                       }
-                                      v55 = v55 + v97;
-                                      v54 = *(_DWORD *)(v147 + 16) + 1;
-                                      *(_DWORD *)(v147 + 16) = v54;
+                                      v46 = v46 + v75;
+                                      v45 = *(_DWORD *)(v107 + 16) + 1;
+                                      *(_DWORD *)(v107 + 16) = v45;
                                       diggingIdxX = this->fields.diggingIdxX;
                                       if ( diggingIdxX )
                                         continue;
@@ -3107,105 +2952,102 @@ LABEL_83:
     }
     goto LABEL_83;
   }
-  v118 = (SchedulerTaskParallel_o *)sub_1B4D1DC(SchedulerTaskParallel_TypeInfo);
-  SchedulerTaskParallel___ctor_41889888(
-    v118,
-    (System_Collections_Generic_List_SchedulerTaskBase__o *)p_EndCallback,
-    0LL);
+  v88 = (SchedulerTaskParallel_o *)sub_1B86604(SchedulerTaskParallel_TypeInfo);
+  SchedulerTaskParallel___ctor_42346228(v88, (System_Collections_Generic_List_SchedulerTaskBase__o *)v41, 0LL);
   taskScheduler = this->fields.taskScheduler;
-  maskPanel = sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL);
+  maskPanel = sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL);
   if ( !maskPanel )
     goto LABEL_83;
-  v122 = maskPanel;
-  if ( v118 )
+  v90 = (SchedulerTaskBase_array *)maskPanel;
+  if ( v88 )
   {
-    maskPanel = sub_1B4D0CC(v118, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
+    maskPanel = sub_1B864F4(v88, *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
     if ( !maskPanel )
       goto LABEL_85;
   }
-  if ( !*(_DWORD *)(v122 + 24) )
+  if ( !v90->max_length )
     goto LABEL_84;
-  *(_QWORD *)(v122 + 32) = v118;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v122 + 32), (int32_t)v118, v120, v121);
+  v90->m_Items[0] = (SchedulerTaskBase_o *)v88;
+  maskPanel = sub_1B8635C(v90->m_Items);
   if ( !taskScheduler )
     goto LABEL_83;
-  TaskScheduler__AddTask(taskScheduler, 1, (SchedulerTaskBase_array *)v122, 0LL);
-  v123 = (SchedulerTaskNone_o *)sub_1B4D1DC(SchedulerTaskNone_TypeInfo);
-  SchedulerTaskNone___ctor(v123, 0LL);
-  this->fields.diggingDialogTask = v123;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.diggingDialogTask, (int32_t)v123, v124, v125);
+  TaskScheduler__AddTask(taskScheduler, 1, v90, 0LL);
+  v91 = (SchedulerTaskNone_o *)sub_1B86604(SchedulerTaskNone_TypeInfo);
+  SchedulerTaskNone___ctor(v91, 0LL);
+  this->fields.diggingDialogTask = v91;
+  maskPanel = sub_1B8635C(&this->fields.diggingDialogTask);
   diggingDialogTask = this->fields.diggingDialogTask;
   if ( !diggingDialogTask )
     goto LABEL_83;
-  EndCallback = (System_Delegate_o *)diggingDialogTask->fields.EndCallback;
-  p_EndCallback = (System_Collections_Generic_List_object__o *)&diggingDialogTask->fields.EndCallback;
-  v128 = (SchedulerTaskBase_TaskCallback_o *)sub_1B4D1DC(v53->klass);
-  SchedulerTaskBase_TaskCallback___ctor(v128, object, Method_DiggingManager___c__DisplayClass90_0__Response_b__5__, 0LL);
-  v129 = System_Delegate__Combine(EndCallback, (System_Delegate_o *)v128, 0LL);
-  v82 = v129;
-  if ( v129 )
+  v93 = (System_Delegate_o *)diggingDialogTask->fields.EndCallback;
+  v41 = (System_Collections_Generic_List_object__o *)&diggingDialogTask->fields.EndCallback;
+  v94 = (SchedulerTaskBase_TaskCallback_o *)sub_1B86604(v44->klass);
+  SchedulerTaskBase_TaskCallback___ctor(v94, object, Method_DiggingManager___c__DisplayClass90_0__Response_b__5__, 0LL);
+  v95 = System_Delegate__Combine(v93, (System_Delegate_o *)v94, 0LL);
+  v64 = v95;
+  if ( v95 )
   {
-    v132 = (System_Delegate_c *)v53->klass;
-    if ( v129->klass == (System_Delegate_c *)v53->klass )
+    v96 = (System_Delegate_c *)v44->klass;
+    if ( v95->klass == (System_Delegate_c *)v44->klass )
     {
-      p_EndCallback->klass = (System_Collections_Generic_List_object__c *)v129;
-      if ( v129->klass == v132 )
+      v41->klass = (System_Collections_Generic_List_object__c *)v95;
+      if ( v95->klass == v96 )
         goto LABEL_71;
     }
 LABEL_69:
-    sub_1B4D4AC(v82);
+    sub_1B868D4(v64);
   }
-  p_EndCallback->klass = (System_Collections_Generic_List_object__c *)v82;
+  v41->klass = (System_Collections_Generic_List_object__c *)v64;
 LABEL_71:
-  sub_1B4CF34((CGThumbnailListItem_o *)p_EndCallback, (int32_t)v82, v130, v131);
-  v133 = *(TaskScheduler_o **)((char *)&qword_F0 + (_QWORD)this);
-  maskPanel = sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL);
+  sub_1B8635C(v41);
+  v97 = *(TaskScheduler_o **)((char *)&qword_F0 + (_QWORD)this);
+  maskPanel = sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL);
   if ( !maskPanel )
     goto LABEL_83;
-  v136 = *(__int64 *)((char *)off_F8 + (_QWORD)this);
-  v137 = maskPanel;
-  if ( v136 )
+  v98 = *(SchedulerTaskBase_o **)((char *)off_F8 + (_QWORD)this);
+  v99 = (SchedulerTaskBase_array *)maskPanel;
+  if ( v98 )
   {
-    maskPanel = sub_1B4D0CC(*(void ***)((char *)off_F8 + (_QWORD)this), *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
+    maskPanel = sub_1B864F4(*(void ***)((char *)off_F8 + (_QWORD)this), *(_QWORD *)(*(_QWORD *)maskPanel + 64LL));
     if ( !maskPanel )
       goto LABEL_85;
   }
-  if ( !*(_DWORD *)(v137 + 24) )
+  if ( !v99->max_length )
     goto LABEL_84;
-  *(_QWORD *)(v137 + 32) = v136;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v137 + 32), v136, v134, v135);
-  if ( !v133 )
+  v99->m_Items[0] = v98;
+  maskPanel = sub_1B8635C(v99->m_Items);
+  if ( !v97 )
     goto LABEL_83;
-  TaskScheduler__AddTask(v133, 0, (SchedulerTaskBase_array *)v137, 0LL);
-  v138 = *(TaskScheduler_o **)((char *)&qword_F0 + (_QWORD)this);
-  v139 = (SchedulerTaskBase_array *)sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL);
-  maskPanel = (__int64)DiggingManager__CreateSlightTimeTouchBlockTask(this, 0.2, v140);
-  if ( !v139 )
+  TaskScheduler__AddTask(v97, 0, v99, 0LL);
+  v100 = *(TaskScheduler_o **)((char *)&qword_F0 + (_QWORD)this);
+  v101 = (SchedulerTaskBase_array *)sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL);
+  maskPanel = (__int64)DiggingManager__CreateSlightTimeTouchBlockTask(this, 0.2, v102);
+  if ( !v101 )
     goto LABEL_83;
-  v143 = (SchedulerTaskBase_o *)maskPanel;
+  v103 = (SchedulerTaskBase_o *)maskPanel;
   if ( maskPanel )
   {
-    maskPanel = sub_1B4D0CC(maskPanel, v139->obj.klass->_1.element_class);
+    maskPanel = sub_1B864F4(maskPanel, v101->obj.klass->_1.element_class);
     if ( !maskPanel )
     {
 LABEL_85:
-      v145 = sub_1B4D210(maskPanel);
-      sub_1B4D0B8(v145, 0LL);
+      v105 = sub_1B86638();
+      sub_1B864E0(v105, 0LL);
     }
   }
-  if ( !v139->max_length )
+  if ( !v101->max_length )
 LABEL_84:
-    sub_1B4D1F4(maskPanel, v38);
-  v139->m_Items[0] = v143;
-  sub_1B4CF34((CGThumbnailListItem_o *)v139->m_Items, (int32_t)v143, v141, v142);
-  if ( !v138 )
+    sub_1B8661C(maskPanel, v38);
+  v101->m_Items[0] = v103;
+  maskPanel = sub_1B8635C(v101->m_Items);
+  if ( !v100 )
     goto LABEL_83;
-  TaskScheduler__AddTask(v138, 0, v139, 0LL);
+  TaskScheduler__AddTask(v100, 0, v101, 0LL);
   maskPanel = *(__int64 *)((char *)off_88 + (_QWORD)this);
   if ( !maskPanel )
     goto LABEL_83;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0LL);
-  DiggingManager__UpdateEventItemList(this, v144);
+  DiggingManager__UpdateEventItemList(this, v104);
   ActionExtensions__Call(*(System_Action_o **)((char *)&qword_128 + (_QWORD)this), 0LL);
 }
 
@@ -3228,44 +3070,42 @@ void __fastcall DiggingManager__RevealRareRewardAroundTheBlock(
   System_Func_object__bool__o *_9__102_0; // x21
   Il2CppObject *v16; // x22
   struct DiggingManager___c_StaticFields *static_fields; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
-  __int64 v21; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  __int64 v19; // x1
   System_Collections_Generic_IEnumerable_TSource__c *klass; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v23; // x19
-  __int64 v24; // x9
+  System_Collections_Generic_IEnumerable_TSource__o *v21; // x19
+  __int64 v22; // x9
   int32_t *p_offset; // x10
   __int64 p_method; // x0
-  __int64 v27; // x1
-  __int64 v28; // x19
-  __int64 v29; // x8
-  __int64 v30; // x9
-  int *v31; // x10
-  __int64 v32; // x0
-  __int64 v33; // x8
-  __int64 v34; // x9
-  int *v35; // x10
-  __int64 v36; // x0
-  DiggingRewardComponent_o *v37; // x0
-  __int64 v38; // x1
-  __int64 v39; // x8
-  __int64 v40; // x9
-  int *v41; // x10
-  __int64 v42; // x0
+  __int64 v25; // x1
+  __int64 v26; // x19
+  __int64 v27; // x8
+  __int64 v28; // x9
+  int *v29; // x10
+  __int64 v30; // x0
+  __int64 v31; // x8
+  __int64 v32; // x9
+  int *v33; // x10
+  __int64 v34; // x0
+  DiggingRewardComponent_o *v35; // x0
+  __int64 v36; // x1
+  __int64 v37; // x8
+  __int64 v38; // x9
+  int *v39; // x10
+  __int64 v40; // x0
 
-  if ( (byte_49BF27D & 1) == 0 )
+  if ( (byte_4A48F69 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_DiggingRewardComponent___, blockComponent);
-    sub_1B4CF90(&System_Func_DiggingRewardComponent__bool__TypeInfo, v5);
-    sub_1B4CF90(&System_IDisposable_TypeInfo, v6);
-    sub_1B4CF90(&System_Collections_Generic_IEnumerable_DiggingRewardComponent__TypeInfo, v7);
-    sub_1B4CF90(&System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo, v8);
-    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v9);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B4CF90(&Method_DiggingManager___c__RevealRareRewardAroundTheBlock_b__102_0__, v11);
-    sub_1B4CF90(&DiggingManager___c_TypeInfo, v12);
-    byte_49BF27D = 1;
+    sub_1B863B8(&Method_System_Linq_Enumerable_Where_DiggingRewardComponent___, blockComponent);
+    sub_1B863B8(&System_Func_DiggingRewardComponent__bool__TypeInfo, v5);
+    sub_1B863B8(&System_IDisposable_TypeInfo, v6);
+    sub_1B863B8(&System_Collections_Generic_IEnumerable_DiggingRewardComponent__TypeInfo, v7);
+    sub_1B863B8(&System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo, v8);
+    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v9);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1B863B8(&Method_DiggingManager___c__RevealRareRewardAroundTheBlock_b__102_0__, v11);
+    sub_1B863B8(&DiggingManager___c_TypeInfo, v12);
+    byte_4A48F69 = 1;
   }
   if ( this->fields.rewardList )
   {
@@ -3289,7 +3129,7 @@ void __fastcall DiggingManager__RevealRareRewardAroundTheBlock(
           v14 = DiggingManager___c_TypeInfo;
         }
         v16 = (Il2CppObject *)v14->static_fields->__9;
-        _9__102_0 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_DiggingRewardComponent__bool__TypeInfo);
+        _9__102_0 = (System_Func_object__bool__o *)sub_1B86604(System_Func_DiggingRewardComponent__bool__TypeInfo);
         System_Func_object__bool____ctor(
           _9__102_0,
           v16,
@@ -3297,25 +3137,25 @@ void __fastcall DiggingManager__RevealRareRewardAroundTheBlock(
           0LL);
         static_fields = DiggingManager___c_TypeInfo->static_fields;
         static_fields->__9__102_0 = (struct System_Func_DiggingRewardComponent__bool__o *)_9__102_0;
-        sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__102_0, (int32_t)_9__102_0, v18, v19);
+        sub_1B8635C(&static_fields->__9__102_0);
       }
-      v20 = System_Linq_Enumerable__Where_object_(
+      v18 = System_Linq_Enumerable__Where_object_(
               (System_Collections_Generic_IEnumerable_TSource__o *)rewardList,
               (System_Func_TSource__bool__o *)_9__102_0,
-              (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_DiggingRewardComponent___);
-      if ( !v20 )
-        sub_1B4D1EC(0LL, v21);
-      klass = v20->klass;
-      v23 = v20;
-      v24 = *(unsigned __int16 *)(&v20->klass->_2.bitflags2 + 3);
-      if ( *(_WORD *)(&v20->klass->_2.bitflags2 + 3) )
+              (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_DiggingRewardComponent___);
+      if ( !v18 )
+        sub_1B86614(0LL, v19);
+      klass = v18->klass;
+      v21 = v18;
+      v22 = *(unsigned __int16 *)(&v18->klass->_2.bitflags2 + 3);
+      if ( *(_WORD *)(&v18->klass->_2.bitflags2 + 3) )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Collections_Generic_IEnumerable_DiggingRewardComponent__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_DiggingRewardComponent__TypeInfo )
         {
-          --v24;
+          --v22;
           p_offset += 4;
-          if ( !v24 )
+          if ( !v22 )
             goto LABEL_18;
         }
         p_method = (__int64)&klass->vtable[*p_offset].method;
@@ -3323,86 +3163,86 @@ void __fastcall DiggingManager__RevealRareRewardAroundTheBlock(
       else
       {
 LABEL_18:
-        p_method = sub_1B9D724(v20, System_Collections_Generic_IEnumerable_DiggingRewardComponent__TypeInfo, 0LL);
+        p_method = sub_1BD6B4C(v18, System_Collections_Generic_IEnumerable_DiggingRewardComponent__TypeInfo, 0LL);
       }
-      v28 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
-              v23,
+      v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))p_method)(
+              v21,
               *(_QWORD *)(p_method + 8));
-      if ( !v28 )
-        sub_1B4D1EC(0LL, v27);
+      if ( !v26 )
+        sub_1B86614(0LL, v25);
       while ( 1 )
       {
-        v29 = *(_QWORD *)v28;
-        v30 = *(unsigned __int16 *)(*(_QWORD *)v28 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v28 + 302LL) )
+        v27 = *(_QWORD *)v26;
+        v28 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
         {
-          v31 = (int *)(*(_QWORD *)(v29 + 176) + 8LL);
-          while ( *((System_Collections_IEnumerator_c **)v31 - 1) != System_Collections_IEnumerator_TypeInfo )
+          v29 = (int *)(*(_QWORD *)(v27 + 176) + 8LL);
+          while ( *((System_Collections_IEnumerator_c **)v29 - 1) != System_Collections_IEnumerator_TypeInfo )
           {
-            --v30;
-            v31 += 4;
-            if ( !v30 )
+            --v28;
+            v29 += 4;
+            if ( !v28 )
               goto LABEL_25;
           }
-          v32 = v29 + 16LL * *v31 + 312;
+          v30 = v27 + 16LL * *v29 + 312;
         }
         else
         {
 LABEL_25:
-          v32 = sub_1B9D724(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v30 = sub_1BD6B4C(v26, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
-        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v28, *(_QWORD *)(v32 + 8)) & 1) == 0 )
+        if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
           break;
-        v33 = *(_QWORD *)v28;
-        v34 = *(unsigned __int16 *)(*(_QWORD *)v28 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v28 + 302LL) )
+        v31 = *(_QWORD *)v26;
+        v32 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
         {
-          v35 = (int *)(*(_QWORD *)(v33 + 176) + 8LL);
-          while ( *((System_Collections_Generic_IEnumerator_DiggingRewardComponent__c **)v35 - 1) != System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo )
+          v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
+          while ( *((System_Collections_Generic_IEnumerator_DiggingRewardComponent__c **)v33 - 1) != System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo )
           {
-            --v34;
-            v35 += 4;
-            if ( !v34 )
+            --v32;
+            v33 += 4;
+            if ( !v32 )
               goto LABEL_32;
           }
-          v36 = v33 + 16LL * *v35 + 312;
+          v34 = v31 + 16LL * *v33 + 312;
         }
         else
         {
 LABEL_32:
-          v36 = sub_1B9D724(v28, System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo, 0LL);
+          v34 = sub_1BD6B4C(v26, System_Collections_Generic_IEnumerator_DiggingRewardComponent__TypeInfo, 0LL);
         }
-        v37 = (DiggingRewardComponent_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v36)(v28, *(_QWORD *)(v36 + 8));
+        v35 = (DiggingRewardComponent_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
         if ( !blockComponent )
-          sub_1B4D1EC(v37, v38);
-        if ( !v37 )
-          sub_1B4D1EC(0LL, v38);
-        if ( (unsigned int)(blockComponent->fields.x - v37->fields.x) <= 1
-          && (unsigned int)(blockComponent->fields.y - v37->fields.y) <= 1 )
+          sub_1B86614(v35, v36);
+        if ( !v35 )
+          sub_1B86614(0LL, v36);
+        if ( (unsigned int)(blockComponent->fields.x - v35->fields.x) <= 1
+          && (unsigned int)(blockComponent->fields.y - v35->fields.y) <= 1 )
         {
-          DiggingRewardComponent__Reveal(v37, 0LL);
+          DiggingRewardComponent__Reveal(v35, 0LL);
         }
       }
-      v39 = *(_QWORD *)v28;
-      v40 = *(unsigned __int16 *)(*(_QWORD *)v28 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v28 + 302LL) )
+      v37 = *(_QWORD *)v26;
+      v38 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
       {
-        v41 = (int *)(*(_QWORD *)(v39 + 176) + 8LL);
-        while ( *((System_IDisposable_c **)v41 - 1) != System_IDisposable_TypeInfo )
+        v39 = (int *)(*(_QWORD *)(v37 + 176) + 8LL);
+        while ( *((System_IDisposable_c **)v39 - 1) != System_IDisposable_TypeInfo )
         {
-          --v40;
-          v41 += 4;
-          if ( !v40 )
+          --v38;
+          v39 += 4;
+          if ( !v38 )
             goto LABEL_43;
         }
-        v42 = v39 + 16LL * *v41 + 312;
+        v40 = v37 + 16LL * *v39 + 312;
       }
       else
       {
 LABEL_43:
-        v42 = sub_1B9D724(v28, System_IDisposable_TypeInfo, 0LL);
+        v40 = sub_1BD6B4C(v26, System_IDisposable_TypeInfo, 0LL);
       }
-      (*(void (__fastcall **)(__int64, _QWORD))v42)(v28, *(_QWORD *)(v42 + 8));
+      (*(void (__fastcall **)(__int64, _QWORD))v40)(v26, *(_QWORD *)(v40 + 8));
     }
   }
 }
@@ -3424,22 +3264,17 @@ void __fastcall DiggingManager__SetDiggingCompleteImage(DiggingManager_o *this, 
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v14; // x0
   int32_t eventId; // w21
-  Il2CppObject *Component_object; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
 
   v2 = this;
-  if ( (byte_49BF281 & 1) == 0 )
+  if ( (byte_4A48F6D & 1) == 0 )
   {
-    sub_1B4CF90(&AtlasManager_TypeInfo, method);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v4);
-    sub_1B4CF90(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
-    this = (DiggingManager_o *)sub_1B4CF90(&StringLiteral_18318/*"digging_clear_img"*/, v7);
-    byte_49BF281 = 1;
+    sub_1B863B8(&AtlasManager_TypeInfo, method);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_Animation___, v3);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v4);
+    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v6);
+    this = (DiggingManager_o *)sub_1B863B8(&StringLiteral_18399/*"digging_clear_img"*/, v7);
+    byte_4A48F6D = 1;
   }
   assetManager = v2->fields.assetManager;
   if ( !assetManager )
@@ -3449,12 +3284,12 @@ void __fastcall DiggingManager__SetDiggingCompleteImage(DiggingManager_o *this, 
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (DiggingManager_o *)UnityEngine_Object__Instantiate_object_(
                                DiggingCompleteImagePrefab_k__BackingField,
-                               (const MethodInfo_2F87DCC *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                               (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_14;
   this = (DiggingManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)this,
-                               (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                               (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !this )
     goto LABEL_14;
   v10 = (UnityEngine_Component_o *)this;
@@ -3470,24 +3305,23 @@ void __fastcall DiggingManager__SetDiggingCompleteImage(DiggingManager_o *this, 
   transform = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0LL);
   GameObjectExtensions__SetParent((UnityEngine_GameObject_o *)v11, transform, 0LL);
   gameObject = UnityEngine_Component__get_gameObject(v10, 0LL);
-  GameObjectExtensions__SetLocalScale_34071840(gameObject, 1.0, 1.0, 1.0, 0LL);
+  GameObjectExtensions__SetLocalScale_34384564(gameObject, 1.0, 1.0, 1.0, 0LL);
   v14 = UnityEngine_Component__get_gameObject(v10, 0LL);
-  GameObjectExtensions__SetLocalPosition_34069660(v14, 7.0, 28.0, 0.0, 0LL);
+  GameObjectExtensions__SetLocalPosition_34382496(v14, 7.0, 28.0, 0.0, 0LL);
   eventId = v2->fields.eventId;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_38399044(eventId, (UISprite_o *)v10, (System_String_o *)StringLiteral_18318/*"digging_clear_img"*/, 0LL);
+  AtlasManager__SetEventUI_38815864(eventId, (UISprite_o *)v10, (System_String_o *)StringLiteral_18399/*"digging_clear_img"*/, 0LL);
   this = (DiggingManager_o *)UnityEngine_Component__get_gameObject(v10, 0LL);
   if ( !this )
 LABEL_14:
-    sub_1B4D1EC(this, method);
-  Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
-  v2->fields.diggingCompleteAnim = (struct UnityEngine_Animation_o *)Component_object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields.diggingCompleteAnim, (int32_t)Component_object, v17, v18);
+    sub_1B86614(this, method);
+  v2->fields.diggingCompleteAnim = (struct UnityEngine_Animation_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                       (UnityEngine_GameObject_o *)this,
+                                                                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  sub_1B8635C(&v2->fields.diggingCompleteAnim);
   v2->fields.diggingCompleteSprite = (struct UISprite_o *)v10;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields.diggingCompleteSprite, (int32_t)v10, v19, v20);
+  sub_1B8635C(&v2->fields.diggingCompleteSprite);
 }
 
 
@@ -3520,95 +3354,84 @@ void __fastcall DiggingManager__SetInfoInBlocks(
   struct DiggingInfo_o *diggingInfo; // x8
   struct DiggingInfo_BlockInfos_array *blockInfos; // x25
   unsigned __int64 v27; // x26
-  __int64 v28; // x22
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  DiggingInfo_BlockInfos_o *v31; // x1
-  DiggingInfo_BlockInfos_o **v32; // x21
+  Il2CppObject *v28; // x22
+  DiggingInfo_BlockInfos_o **v29; // x21
   System_Collections_Generic_List_object__o *blockList; // x23
-  System_Predicate_object__o *v34; // x24
-  Il2CppObject *v35; // x22
-  const MethodInfo *v36; // x3
-  System_Action_object__o *v37; // x21
-  const MethodInfo *v38; // x2
-  struct DiggingInfo_o *v39; // x8
+  System_Predicate_object__o *v31; // x24
+  Il2CppObject *v32; // x22
+  const MethodInfo *v33; // x3
+  System_Action_object__o *v34; // x21
+  const MethodInfo *v35; // x2
+  struct DiggingInfo_o *v36; // x8
   struct DiggingInfo_HintInfos_array *hintInfos; // x19
-  unsigned __int64 v41; // x25
-  __int64 v42; // x22
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  DiggingInfo_HintInfos_o *v45; // x1
-  DiggingInfo_HintInfos_o **v46; // x21
-  System_Collections_Generic_List_object__o *v47; // x23
-  System_Predicate_object__o *v48; // x24
-  Il2CppObject *v49; // x22
-  const MethodInfo *v50; // x2
-  struct DiggingInfo_o *v51; // x8
+  unsigned __int64 v38; // x25
+  Il2CppObject *v39; // x22
+  DiggingInfo_HintInfos_o **v40; // x21
+  System_Collections_Generic_List_object__o *v41; // x23
+  System_Predicate_object__o *v42; // x24
+  Il2CppObject *v43; // x22
+  const MethodInfo *v44; // x2
+  struct DiggingInfo_o *v45; // x8
   struct DiggingInfo_RewardInfos_array *rewardInfos; // x19
-  unsigned __int64 v53; // x25
-  __int64 v54; // x22
-  int32_t v55; // w2
-  const MethodInfo *v56; // x3
-  DiggingInfo_RewardInfos_o *v57; // x1
-  DiggingInfo_RewardInfos_o **v58; // x21
+  unsigned __int64 v47; // x25
+  Il2CppObject *v48; // x22
+  DiggingInfo_RewardInfos_o **v49; // x21
   System_Collections_Generic_List_object__o *rewardList; // x23
-  System_Predicate_object__o *v60; // x24
-  Il2CppObject *v61; // x22
-  System_Collections_Generic_IEnumerable_TSource__o *v62; // x21
-  DiggingManager___c_c *v63; // x0
+  System_Predicate_object__o *v51; // x24
+  Il2CppObject *v52; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v53; // x21
+  DiggingManager___c_c *v54; // x0
   System_Func_object__bool__o *_9__101_3; // x22
-  Il2CppObject *v65; // x23
+  Il2CppObject *v56; // x23
   struct DiggingManager___c_StaticFields *static_fields; // x0
-  int32_t v67; // w2
-  const MethodInfo *v68; // x3
   DiggingManager_c *klass; // x8
-  DiggingManager_o *v70; // x21
-  __int64 v71; // x9
+  DiggingManager_o *v59; // x21
+  __int64 v60; // x9
   int32_t *p_offset; // x10
-  __int64 v73; // x0
-  __int64 v74; // x1
-  __int64 v75; // x21
-  __int64 v76; // x8
-  __int64 v77; // x9
-  int *v78; // x10
-  __int64 v79; // x0
-  __int64 v80; // x8
-  __int64 v81; // x9
-  int *v82; // x10
-  __int64 v83; // x0
-  DiggingBlockComponent_o *v84; // x1
-  const MethodInfo *v85; // x2
-  __int64 v86; // x8
-  __int64 v87; // x9
-  int *v88; // x10
-  __int64 v89; // x0
+  __int64 v62; // x0
+  __int64 v63; // x1
+  __int64 v64; // x21
+  __int64 v65; // x8
+  __int64 v66; // x9
+  int *v67; // x10
+  __int64 v68; // x0
+  __int64 v69; // x8
+  __int64 v70; // x9
+  int *v71; // x10
+  __int64 v72; // x0
+  DiggingBlockComponent_o *v73; // x1
+  const MethodInfo *v74; // x2
+  __int64 v75; // x8
+  __int64 v76; // x9
+  int *v77; // x10
+  __int64 v78; // x0
   System_Action_o *action; // [xsp+8h] [xbp-68h]
 
   v4 = this;
-  if ( (byte_49BF27C & 1) == 0 )
+  if ( (byte_4A48F68 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_DiggingBlockComponent__TypeInfo, callBack);
-    sub_1B4CF90(&Method_DiggingManager_ClickPanel__, v5);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_DiggingBlockComponent___, v6);
-    sub_1B4CF90(&System_Func_DiggingBlockComponent__bool__TypeInfo, v7);
-    sub_1B4CF90(&System_IDisposable_TypeInfo, v8);
-    sub_1B4CF90(&System_Collections_Generic_IEnumerable_DiggingBlockComponent__TypeInfo, v9);
-    sub_1B4CF90(&System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo, v10);
-    sub_1B4CF90(&System_Collections_IEnumerator_TypeInfo, v11);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent__Find__, v12);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v13);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B4CF90(&System_Predicate_DiggingBlockComponent__TypeInfo, v15);
-    sub_1B4CF90(&System_Predicate_DiggingRewardComponent__TypeInfo, v16);
-    sub_1B4CF90(&Method_DiggingManager___c__SetInfoInBlocks_b__101_3__, v17);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass101_0__SetInfoInBlocks_b__0__, v18);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass101_0_TypeInfo, v19);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass101_1__SetInfoInBlocks_b__1__, v20);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass101_1_TypeInfo, v21);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass101_2__SetInfoInBlocks_b__2__, v22);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass101_2_TypeInfo, v23);
-    this = (DiggingManager_o *)sub_1B4CF90(&DiggingManager___c_TypeInfo, v24);
-    byte_49BF27C = 1;
+    sub_1B863B8(&System_Action_DiggingBlockComponent__TypeInfo, callBack);
+    sub_1B863B8(&Method_DiggingManager_ClickPanel__, v5);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Where_DiggingBlockComponent___, v6);
+    sub_1B863B8(&System_Func_DiggingBlockComponent__bool__TypeInfo, v7);
+    sub_1B863B8(&System_IDisposable_TypeInfo, v8);
+    sub_1B863B8(&System_Collections_Generic_IEnumerable_DiggingBlockComponent__TypeInfo, v9);
+    sub_1B863B8(&System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo, v10);
+    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v11);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent__Find__, v12);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__Find__, v13);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v14);
+    sub_1B863B8(&System_Predicate_DiggingBlockComponent__TypeInfo, v15);
+    sub_1B863B8(&System_Predicate_DiggingRewardComponent__TypeInfo, v16);
+    sub_1B863B8(&Method_DiggingManager___c__SetInfoInBlocks_b__101_3__, v17);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass101_0__SetInfoInBlocks_b__0__, v18);
+    sub_1B863B8(&DiggingManager___c__DisplayClass101_0_TypeInfo, v19);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass101_1__SetInfoInBlocks_b__1__, v20);
+    sub_1B863B8(&DiggingManager___c__DisplayClass101_1_TypeInfo, v21);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass101_2__SetInfoInBlocks_b__2__, v22);
+    sub_1B863B8(&DiggingManager___c__DisplayClass101_2_TypeInfo, v23);
+    this = (DiggingManager_o *)sub_1B863B8(&DiggingManager___c_TypeInfo, v24);
+    byte_4A48F68 = 1;
   }
   if ( v4->fields.blockList )
   {
@@ -3626,260 +3449,257 @@ void __fastcall DiggingManager__SetInfoInBlocks(
           v27 = 0LL;
           while ( 1 )
           {
-            v28 = sub_1B4D1DC(DiggingManager___c__DisplayClass101_0_TypeInfo);
-            System_Object___ctor((Il2CppObject *)v28, 0LL);
+            v28 = (Il2CppObject *)sub_1B86604(DiggingManager___c__DisplayClass101_0_TypeInfo);
+            System_Object___ctor(v28, 0LL);
             if ( v27 >= blockInfos->max_length )
               break;
             if ( !v28 )
               goto LABEL_80;
-            v31 = blockInfos->m_Items[v27];
-            *(_QWORD *)(v28 + 16) = v31;
-            v32 = (DiggingInfo_BlockInfos_o **)(v28 + 16);
-            sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 16), (int32_t)v31, v29, v30);
+            v28[1].klass = (Il2CppClass *)blockInfos->m_Items[v27];
+            v29 = (DiggingInfo_BlockInfos_o **)&v28[1];
+            sub_1B8635C(&v28[1]);
             blockList = (System_Collections_Generic_List_object__o *)v4->fields.blockList;
-            v34 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingBlockComponent__TypeInfo);
+            v31 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingBlockComponent__TypeInfo);
             System_Predicate_object____ctor(
-              v34,
-              (Il2CppObject *)v28,
+              v31,
+              v28,
               Method_DiggingManager___c__DisplayClass101_0__SetInfoInBlocks_b__0__,
               0LL);
             if ( !blockList )
               goto LABEL_80;
-            v35 = System_Collections_Generic_List_object___Find(
+            v32 = System_Collections_Generic_List_object___Find(
                     blockList,
-                    (System_Predicate_T__o *)v34,
-                    (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
+                    (System_Predicate_T__o *)v31,
+                    (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v35, 0LL, 0LL);
+            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v32, 0LL, 0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
             {
-              if ( !v35 )
+              if ( !v32 )
                 goto LABEL_80;
-              DiggingBlockComponent__Initialize((DiggingBlockComponent_o *)v35, *v32, v4->fields.eventId, v36);
-              v37 = (System_Action_object__o *)sub_1B4D1DC(System_Action_DiggingBlockComponent__TypeInfo);
-              System_Action_object____ctor(v37, (Il2CppObject *)v4, (intptr_t)Method_DiggingManager_ClickPanel__, 0LL);
+              DiggingBlockComponent__Initialize((DiggingBlockComponent_o *)v32, *v29, v4->fields.eventId, v33);
+              v34 = (System_Action_object__o *)sub_1B86604(System_Action_DiggingBlockComponent__TypeInfo);
+              System_Action_object____ctor(v34, (Il2CppObject *)v4, (intptr_t)Method_DiggingManager_ClickPanel__, 0LL);
               DiggingBlockComponent__SetPanelClickAction(
-                (DiggingBlockComponent_o *)v35,
-                (System_Action_DiggingBlockComponent__o *)v37,
-                v38);
+                (DiggingBlockComponent_o *)v32,
+                (System_Action_DiggingBlockComponent__o *)v34,
+                v35);
             }
             if ( (__int64)++v27 >= (int)blockInfos->max_length )
               goto LABEL_18;
           }
 LABEL_81:
-          sub_1B4D1F4(this, callBack);
+          sub_1B8661C(this, callBack);
         }
 LABEL_18:
-        v39 = v4->fields.diggingInfo;
-        if ( !v39 )
+        v36 = v4->fields.diggingInfo;
+        if ( !v36 )
           goto LABEL_80;
-        hintInfos = v39->fields.hintInfos;
+        hintInfos = v36->fields.hintInfos;
         if ( !hintInfos )
           goto LABEL_80;
         if ( (int)hintInfos->max_length >= 1 )
         {
-          v41 = 0LL;
+          v38 = 0LL;
           do
           {
-            v42 = sub_1B4D1DC(DiggingManager___c__DisplayClass101_1_TypeInfo);
-            System_Object___ctor((Il2CppObject *)v42, 0LL);
-            if ( v41 >= hintInfos->max_length )
+            v39 = (Il2CppObject *)sub_1B86604(DiggingManager___c__DisplayClass101_1_TypeInfo);
+            System_Object___ctor(v39, 0LL);
+            if ( v38 >= hintInfos->max_length )
               goto LABEL_81;
-            if ( !v42 )
+            if ( !v39 )
               goto LABEL_80;
-            v45 = hintInfos->m_Items[v41];
-            *(_QWORD *)(v42 + 16) = v45;
-            v46 = (DiggingInfo_HintInfos_o **)(v42 + 16);
-            sub_1B4CF34((CGThumbnailListItem_o *)(v42 + 16), (int32_t)v45, v43, v44);
-            v47 = (System_Collections_Generic_List_object__o *)v4->fields.blockList;
-            v48 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingBlockComponent__TypeInfo);
+            v39[1].klass = (Il2CppClass *)hintInfos->m_Items[v38];
+            v40 = (DiggingInfo_HintInfos_o **)&v39[1];
+            sub_1B8635C(&v39[1]);
+            v41 = (System_Collections_Generic_List_object__o *)v4->fields.blockList;
+            v42 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingBlockComponent__TypeInfo);
             System_Predicate_object____ctor(
-              v48,
-              (Il2CppObject *)v42,
+              v42,
+              v39,
               Method_DiggingManager___c__DisplayClass101_1__SetInfoInBlocks_b__1__,
               0LL);
-            if ( !v47 )
+            if ( !v41 )
               goto LABEL_80;
-            v49 = System_Collections_Generic_List_object___Find(
-                    v47,
-                    (System_Predicate_T__o *)v48,
-                    (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
+            v43 = System_Collections_Generic_List_object___Find(
+                    v41,
+                    (System_Predicate_T__o *)v42,
+                    (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_DiggingBlockComponent__Find__);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v49, 0LL, 0LL);
+            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v43, 0LL, 0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
             {
-              if ( !v49 )
+              if ( !v43 )
                 goto LABEL_80;
-              DiggingBlockComponent__SetHintInfo((DiggingBlockComponent_o *)v49, *v46, v50);
+              DiggingBlockComponent__SetHintInfo((DiggingBlockComponent_o *)v43, *v40, v44);
             }
           }
-          while ( (__int64)++v41 < (int)hintInfos->max_length );
+          while ( (__int64)++v38 < (int)hintInfos->max_length );
         }
-        v51 = v4->fields.diggingInfo;
-        if ( !v51 )
+        v45 = v4->fields.diggingInfo;
+        if ( !v45 )
           goto LABEL_80;
-        rewardInfos = v51->fields.rewardInfos;
+        rewardInfos = v45->fields.rewardInfos;
         if ( !rewardInfos )
           goto LABEL_80;
         if ( (int)rewardInfos->max_length >= 1 )
         {
-          v53 = 0LL;
+          v47 = 0LL;
           do
           {
-            v54 = sub_1B4D1DC(DiggingManager___c__DisplayClass101_2_TypeInfo);
-            System_Object___ctor((Il2CppObject *)v54, 0LL);
-            if ( v53 >= rewardInfos->max_length )
+            v48 = (Il2CppObject *)sub_1B86604(DiggingManager___c__DisplayClass101_2_TypeInfo);
+            System_Object___ctor(v48, 0LL);
+            if ( v47 >= rewardInfos->max_length )
               goto LABEL_81;
-            if ( !v54 )
+            if ( !v48 )
               goto LABEL_80;
-            v57 = rewardInfos->m_Items[v53];
-            *(_QWORD *)(v54 + 16) = v57;
-            v58 = (DiggingInfo_RewardInfos_o **)(v54 + 16);
-            sub_1B4CF34((CGThumbnailListItem_o *)(v54 + 16), (int32_t)v57, v55, v56);
+            v48[1].klass = (Il2CppClass *)rewardInfos->m_Items[v47];
+            v49 = (DiggingInfo_RewardInfos_o **)&v48[1];
+            sub_1B8635C(&v48[1]);
             rewardList = (System_Collections_Generic_List_object__o *)v4->fields.rewardList;
-            v60 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingRewardComponent__TypeInfo);
+            v51 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingRewardComponent__TypeInfo);
             System_Predicate_object____ctor(
-              v60,
-              (Il2CppObject *)v54,
+              v51,
+              v48,
               Method_DiggingManager___c__DisplayClass101_2__SetInfoInBlocks_b__2__,
               0LL);
             if ( !rewardList )
               goto LABEL_80;
-            v61 = System_Collections_Generic_List_object___Find(
+            v52 = System_Collections_Generic_List_object___Find(
                     rewardList,
-                    (System_Predicate_T__o *)v60,
-                    (const MethodInfo_3580844 *)Method_System_Collections_Generic_List_DiggingRewardComponent__Find__);
+                    (System_Predicate_T__o *)v51,
+                    (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_DiggingRewardComponent__Find__);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v61, 0LL, 0LL);
+            this = (DiggingManager_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v52, 0LL, 0LL);
             if ( ((unsigned __int8)this & 1) == 0 )
             {
-              if ( !v61 )
+              if ( !v52 )
                 goto LABEL_80;
-              DiggingRewardComponent__Initialize((DiggingRewardComponent_o *)v61, *v58, 0LL);
+              DiggingRewardComponent__Initialize((DiggingRewardComponent_o *)v52, *v49, 0LL);
             }
           }
-          while ( (__int64)++v53 < (int)rewardInfos->max_length );
+          while ( (__int64)++v47 < (int)rewardInfos->max_length );
         }
-        v62 = (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.blockList;
-        v63 = DiggingManager___c_TypeInfo;
+        v53 = (System_Collections_Generic_IEnumerable_TSource__o *)v4->fields.blockList;
+        v54 = DiggingManager___c_TypeInfo;
         if ( !DiggingManager___c_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo);
-          v63 = DiggingManager___c_TypeInfo;
+          v54 = DiggingManager___c_TypeInfo;
         }
-        _9__101_3 = (System_Func_object__bool__o *)v63->static_fields->__9__101_3;
+        _9__101_3 = (System_Func_object__bool__o *)v54->static_fields->__9__101_3;
         if ( !_9__101_3 )
         {
-          if ( !v63->_2.cctor_finished )
+          if ( !v54->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v63);
-            v63 = DiggingManager___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(v54);
+            v54 = DiggingManager___c_TypeInfo;
           }
-          v65 = (Il2CppObject *)v63->static_fields->__9;
-          _9__101_3 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_DiggingBlockComponent__bool__TypeInfo);
-          System_Func_object__bool____ctor(_9__101_3, v65, Method_DiggingManager___c__SetInfoInBlocks_b__101_3__, 0LL);
+          v56 = (Il2CppObject *)v54->static_fields->__9;
+          _9__101_3 = (System_Func_object__bool__o *)sub_1B86604(System_Func_DiggingBlockComponent__bool__TypeInfo);
+          System_Func_object__bool____ctor(_9__101_3, v56, Method_DiggingManager___c__SetInfoInBlocks_b__101_3__, 0LL);
           static_fields = DiggingManager___c_TypeInfo->static_fields;
           static_fields->__9__101_3 = (struct System_Func_DiggingBlockComponent__bool__o *)_9__101_3;
-          sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__101_3, (int32_t)_9__101_3, v67, v68);
+          sub_1B8635C(&static_fields->__9__101_3);
         }
         this = (DiggingManager_o *)System_Linq_Enumerable__Where_object_(
-                                     v62,
+                                     v53,
                                      (System_Func_TSource__bool__o *)_9__101_3,
-                                     (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_DiggingBlockComponent___);
+                                     (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_DiggingBlockComponent___);
         if ( !this )
 LABEL_80:
-          sub_1B4D1EC(this, callBack);
+          sub_1B86614(this, callBack);
         klass = this->klass;
-        v70 = this;
-        v71 = *(unsigned __int16 *)(&this->klass->_2.bitflags2 + 3);
+        v59 = this;
+        v60 = *(unsigned __int16 *)(&this->klass->_2.bitflags2 + 3);
         if ( *(_WORD *)(&this->klass->_2.bitflags2 + 3) )
         {
           p_offset = &klass->_1.interfaceOffsets->offset;
           while ( *((System_Collections_Generic_IEnumerable_DiggingBlockComponent__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_DiggingBlockComponent__TypeInfo )
           {
-            --v71;
+            --v60;
             p_offset += 4;
-            if ( !v71 )
+            if ( !v60 )
               goto LABEL_55;
           }
-          v73 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+          v62 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
         }
         else
         {
 LABEL_55:
-          v73 = sub_1B9D724(this, System_Collections_Generic_IEnumerable_DiggingBlockComponent__TypeInfo, 0LL);
+          v62 = sub_1BD6B4C(this, System_Collections_Generic_IEnumerable_DiggingBlockComponent__TypeInfo, 0LL);
         }
-        v75 = (*(__int64 (__fastcall **)(DiggingManager_o *, _QWORD))v73)(v70, *(_QWORD *)(v73 + 8));
-        if ( !v75 )
-          sub_1B4D1EC(0LL, v74);
+        v64 = (*(__int64 (__fastcall **)(DiggingManager_o *, _QWORD))v62)(v59, *(_QWORD *)(v62 + 8));
+        if ( !v64 )
+          sub_1B86614(0LL, v63);
         while ( 1 )
         {
-          v76 = *(_QWORD *)v75;
-          v77 = *(unsigned __int16 *)(*(_QWORD *)v75 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v75 + 302LL) )
+          v65 = *(_QWORD *)v64;
+          v66 = *(unsigned __int16 *)(*(_QWORD *)v64 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v64 + 302LL) )
           {
-            v78 = (int *)(*(_QWORD *)(v76 + 176) + 8LL);
-            while ( *((System_Collections_IEnumerator_c **)v78 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v67 = (int *)(*(_QWORD *)(v65 + 176) + 8LL);
+            while ( *((System_Collections_IEnumerator_c **)v67 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v77;
-              v78 += 4;
-              if ( !v77 )
+              --v66;
+              v67 += 4;
+              if ( !v66 )
                 goto LABEL_63;
             }
-            v79 = v76 + 16LL * *v78 + 312;
+            v68 = v65 + 16LL * *v67 + 312;
           }
           else
           {
 LABEL_63:
-            v79 = sub_1B9D724(v75, System_Collections_IEnumerator_TypeInfo, 0LL);
+            v68 = sub_1BD6B4C(v64, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
-          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v79)(v75, *(_QWORD *)(v79 + 8)) & 1) == 0 )
+          if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v68)(v64, *(_QWORD *)(v68 + 8)) & 1) == 0 )
             break;
-          v80 = *(_QWORD *)v75;
-          v81 = *(unsigned __int16 *)(*(_QWORD *)v75 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v75 + 302LL) )
+          v69 = *(_QWORD *)v64;
+          v70 = *(unsigned __int16 *)(*(_QWORD *)v64 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v64 + 302LL) )
           {
-            v82 = (int *)(*(_QWORD *)(v80 + 176) + 8LL);
-            while ( *((System_Collections_Generic_IEnumerator_DiggingBlockComponent__c **)v82 - 1) != System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo )
+            v71 = (int *)(*(_QWORD *)(v69 + 176) + 8LL);
+            while ( *((System_Collections_Generic_IEnumerator_DiggingBlockComponent__c **)v71 - 1) != System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo )
             {
-              --v81;
-              v82 += 4;
-              if ( !v81 )
+              --v70;
+              v71 += 4;
+              if ( !v70 )
                 goto LABEL_70;
             }
-            v83 = v80 + 16LL * *v82 + 312;
+            v72 = v69 + 16LL * *v71 + 312;
           }
           else
           {
 LABEL_70:
-            v83 = sub_1B9D724(v75, System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo, 0LL);
+            v72 = sub_1BD6B4C(v64, System_Collections_Generic_IEnumerator_DiggingBlockComponent__TypeInfo, 0LL);
           }
-          v84 = (DiggingBlockComponent_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v83)(v75, *(_QWORD *)(v83 + 8));
-          DiggingManager__RevealRareRewardAroundTheBlock(v4, v84, v85);
+          v73 = (DiggingBlockComponent_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v72)(v64, *(_QWORD *)(v72 + 8));
+          DiggingManager__RevealRareRewardAroundTheBlock(v4, v73, v74);
         }
-        v86 = *(_QWORD *)v75;
-        v87 = *(unsigned __int16 *)(*(_QWORD *)v75 + 302LL);
-        if ( *(_WORD *)(*(_QWORD *)v75 + 302LL) )
+        v75 = *(_QWORD *)v64;
+        v76 = *(unsigned __int16 *)(*(_QWORD *)v64 + 302LL);
+        if ( *(_WORD *)(*(_QWORD *)v64 + 302LL) )
         {
-          v88 = (int *)(*(_QWORD *)(v86 + 176) + 8LL);
-          while ( *((System_IDisposable_c **)v88 - 1) != System_IDisposable_TypeInfo )
+          v77 = (int *)(*(_QWORD *)(v75 + 176) + 8LL);
+          while ( *((System_IDisposable_c **)v77 - 1) != System_IDisposable_TypeInfo )
           {
-            --v87;
-            v88 += 4;
-            if ( !v87 )
+            --v76;
+            v77 += 4;
+            if ( !v76 )
               goto LABEL_77;
           }
-          v89 = v86 + 16LL * *v88 + 312;
+          v78 = v75 + 16LL * *v77 + 312;
         }
         else
         {
 LABEL_77:
-          v89 = sub_1B9D724(v75, System_IDisposable_TypeInfo, 0LL);
+          v78 = sub_1BD6B4C(v64, System_IDisposable_TypeInfo, 0LL);
         }
-        (*(void (__fastcall **)(__int64, _QWORD))v89)(v75, *(_QWORD *)(v89 + 8));
+        (*(void (__fastcall **)(__int64, _QWORD))v78)(v64, *(_QWORD *)(v78 + 8));
         ActionExtensions__Call(action, 0LL);
       }
     }
@@ -3892,10 +3712,8 @@ void __fastcall DiggingManager__SetMaskPanel(
         UnityEngine_GameObject_o *mask,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields.maskPanel = mask;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.maskPanel, (int32_t)mask, (int32_t)method, v3);
+  sub_1B8635C(&this->fields.maskPanel);
 }
 
 
@@ -3910,7 +3728,7 @@ void __fastcall DiggingManager__SetResetLabel(DiggingManager_o *this, const Meth
   if ( !userEventDiggingEntity
     || (userEventDiggingEntity = System_Int32__ToString((int)userEventDiggingEntity + 28, 0LL), !resetNumLabel) )
   {
-    sub_1B4D1EC(userEventDiggingEntity, v4);
+    sub_1B86614(userEventDiggingEntity, v4);
   }
   UILabel__set_text(resetNumLabel, userEventDiggingEntity, 0LL);
 }
@@ -3920,26 +3738,21 @@ System_Collections_IEnumerator_o *__fastcall DiggingManager__StartDiggingCompAni
         DiggingManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x20
+  DiggingManager__StartDiggingCompAnimation_d__116_o *v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
 
-  if ( (byte_49BF282 & 1) == 0 )
+  if ( (byte_4A48F6E & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager__StartDiggingCompAnimation_d__116_TypeInfo, method);
-    byte_49BF282 = 1;
+    sub_1B863B8(&DiggingManager__StartDiggingCompAnimation_d__116_TypeInfo, method);
+    byte_4A48F6E = 1;
   }
-  v3 = sub_1B4D1DC(DiggingManager__StartDiggingCompAnimation_d__116_TypeInfo);
-  DiggingManager__StartDiggingCompAnimation_d__116___ctor(
-    (DiggingManager__StartDiggingCompAnimation_d__116_o *)v3,
-    0,
-    0LL);
+  v3 = (DiggingManager__StartDiggingCompAnimation_d__116_o *)sub_1B86604(DiggingManager__StartDiggingCompAnimation_d__116_TypeInfo);
+  DiggingManager__StartDiggingCompAnimation_d__116___ctor(v3, 0, 0LL);
   if ( !v3 )
-    sub_1B4D1EC(v4, v5);
-  *(_QWORD *)(v3 + 32) = this;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+    sub_1B86614(v4, v5);
+  v3->fields.__4__this = this;
+  sub_1B8635C(&v3->fields.__4__this);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -3950,7 +3763,7 @@ void __fastcall DiggingManager__StopUpdateRemainTime(DiggingManager_o *this, con
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   ShopCurrencyInfoController__StopUpdateRemainTime(currencyInfoController, 0LL);
 }
 
@@ -3968,13 +3781,13 @@ void __fastcall DiggingManager__TryInitRequest(DiggingManager_o *this, const Met
   __int64 v10; // x1
 
   v3 = this;
-  if ( (byte_49BF26E & 1) == 0 )
+  if ( (byte_4A48F5A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager__TryInitRequest_b__87_0__, method);
-    sub_1B4CF90(&Method_NetworkManager_getRequest_EventResetDiggingRequest___, v4);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
-    this = (DiggingManager_o *)sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
-    byte_49BF26E = 1;
+    sub_1B863B8(&Method_DiggingManager__TryInitRequest_b__87_0__, method);
+    sub_1B863B8(&Method_NetworkManager_getRequest_EventResetDiggingRequest___, v4);
+    sub_1B863B8(&NetworkManager_TypeInfo, v5);
+    this = (DiggingManager_o *)sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v6);
+    byte_4A48F5A = 1;
   }
   eventId = v3->fields.eventId;
   v3->fields.initRequestFinished = 0;
@@ -3984,7 +3797,7 @@ void __fastcall DiggingManager__TryInitRequest(DiggingManager_o *this, const Met
   }
   else
   {
-    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v8,
       (Il2CppObject *)v3,
@@ -3994,9 +3807,9 @@ void __fastcall DiggingManager__TryInitRequest(DiggingManager_o *this, const Met
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
                        v8,
-                       (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_EventResetDiggingRequest___);
+                       (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_EventResetDiggingRequest___);
     if ( !Request_object )
-      sub_1B4D1EC(0LL, v10);
+      sub_1B86614(0LL, v10);
     EventResetDiggingRequest__beginRequest((EventResetDiggingRequest_o *)Request_object, v3->fields.eventId, 0, 0LL);
   }
 }
@@ -4012,16 +3825,16 @@ void __fastcall DiggingManager__TryResetTableRequest(DiggingManager_o *this, int
   Il2CppObject *Request_object; // x0
   __int64 v10; // x1
 
-  if ( (byte_49BF26F & 1) == 0 )
+  if ( (byte_4A48F5B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager__TryResetTableRequest_b__88_0__, *(_QWORD *)&areaNum);
-    sub_1B4CF90(&Method_NetworkManager_getRequest_EventResetDiggingRequest___, v5);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v6);
-    sub_1B4CF90(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    byte_49BF26F = 1;
+    sub_1B863B8(&Method_DiggingManager__TryResetTableRequest_b__88_0__, *(_QWORD *)&areaNum);
+    sub_1B863B8(&Method_NetworkManager_getRequest_EventResetDiggingRequest___, v5);
+    sub_1B863B8(&NetworkManager_TypeInfo, v6);
+    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    byte_4A48F5B = 1;
   }
   this->fields.resetTableRequestFinished = 0;
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B4D1DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v8,
     (Il2CppObject *)this,
@@ -4031,9 +3844,9 @@ void __fastcall DiggingManager__TryResetTableRequest(DiggingManager_o *this, int
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v8,
-                     (const MethodInfo_2F86AFC *)Method_NetworkManager_getRequest_EventResetDiggingRequest___);
+                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_EventResetDiggingRequest___);
   if ( !Request_object )
-    sub_1B4D1EC(0LL, v10);
+    sub_1B86614(0LL, v10);
   EventResetDiggingRequest__beginRequest(
     (EventResetDiggingRequest_o *)Request_object,
     this->fields.eventId,
@@ -4058,7 +3871,7 @@ void __fastcall DiggingManager__UpdateEventItemList(DiggingManager_o *this, cons
 
   currencyInfoController = this->fields.currencyInfoController;
   if ( !currencyInfoController )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   ShopCurrencyInfoController__RefreshEventItemWindow(currencyInfoController, 6, this->fields.eventId, 1, 0LL);
 }
 
@@ -4067,10 +3880,10 @@ bool __fastcall DiggingManager__UseSettings(DiggingManager_o *this, const Method
 {
   UnityEngine_Object_o *settings; // x19
 
-  if ( (byte_49BF263 & 1) == 0 )
+  if ( (byte_4A48F4F & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BF263 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A48F4F = 1;
   }
   settings = (UnityEngine_Object_o *)this->fields.settings;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4099,7 +3912,7 @@ void __fastcall DiggingManager___CreateSlightTimeTouchBlockTask_b__93_0(
 
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   UnityEngine_GameObject__SetActive(maskPanel, 0, 0LL);
 }
 
@@ -4108,74 +3921,70 @@ void __fastcall DiggingManager___OnClickSkipCollider_b__91_2(DiggingManager_o *t
 {
   TaskScheduler_o *taskScheduler; // x0
   TaskScheduler_o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
   struct SchedulerTaskNone_o *diggingDialogTask; // x22
-  TaskScheduler_o *v8; // x21
-  TaskScheduler_o *v9; // x20
-  SchedulerTaskBase_array *v10; // x21
-  const MethodInfo *v11; // x1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  SchedulerTaskBase_o *v14; // x19
-  __int64 v15; // x0
+  SchedulerTaskBase_array *v6; // x21
+  TaskScheduler_o *v7; // x20
+  SchedulerTaskBase_array *v8; // x21
+  const MethodInfo *v9; // x1
+  SchedulerTaskBase_o *v10; // x19
+  __int64 v11; // x0
 
-  if ( (byte_49BF284 & 1) == 0 )
+  if ( (byte_4A48F70 & 1) == 0 )
   {
-    sub_1B4CF90(&SchedulerTaskBase___TypeInfo, method);
-    byte_49BF284 = 1;
+    sub_1B863B8(&SchedulerTaskBase___TypeInfo, method);
+    byte_4A48F70 = 1;
   }
   taskScheduler = this->fields.taskScheduler;
   if ( !taskScheduler )
     goto LABEL_15;
   TaskScheduler__ClearTask(taskScheduler, 0LL);
   v4 = this->fields.taskScheduler;
-  taskScheduler = (TaskScheduler_o *)sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL);
+  taskScheduler = (TaskScheduler_o *)sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL);
   if ( !taskScheduler )
     goto LABEL_15;
   diggingDialogTask = this->fields.diggingDialogTask;
-  v8 = taskScheduler;
+  v6 = (SchedulerTaskBase_array *)taskScheduler;
   if ( diggingDialogTask )
   {
-    taskScheduler = (TaskScheduler_o *)sub_1B4D0CC(
+    taskScheduler = (TaskScheduler_o *)sub_1B864F4(
                                          this->fields.diggingDialogTask,
                                          taskScheduler->klass->_1.element_class);
     if ( !taskScheduler )
     {
 LABEL_17:
-      v15 = sub_1B4D210(taskScheduler);
-      sub_1B4D0B8(v15, 0LL);
+      v11 = sub_1B86638();
+      sub_1B864E0(v11, 0LL);
     }
   }
-  if ( !LODWORD(v8->fields.taskExecute) )
+  if ( !v6->max_length )
     goto LABEL_16;
-  v8->fields.nonBlockTasks = (struct System_Collections_Generic_List_SchedulerTaskBase__o *)diggingDialogTask;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v8->fields.nonBlockTasks, (int32_t)diggingDialogTask, v5, v6);
+  v6->m_Items[0] = (SchedulerTaskBase_o *)diggingDialogTask;
+  taskScheduler = (TaskScheduler_o *)sub_1B8635C(v6->m_Items);
   if ( !v4
-    || (TaskScheduler__AddTask(v4, 0, (SchedulerTaskBase_array *)v8, 0LL),
-        v9 = this->fields.taskScheduler,
-        v10 = (SchedulerTaskBase_array *)sub_1B4D038(SchedulerTaskBase___TypeInfo, 1LL),
-        taskScheduler = (TaskScheduler_o *)DiggingManager__CreateSlightTimeTouchBlockTask(this, 0.2, v11),
-        !v10) )
+    || (TaskScheduler__AddTask(v4, 0, v6, 0LL),
+        v7 = this->fields.taskScheduler,
+        v8 = (SchedulerTaskBase_array *)sub_1B86460(SchedulerTaskBase___TypeInfo, 1LL),
+        taskScheduler = (TaskScheduler_o *)DiggingManager__CreateSlightTimeTouchBlockTask(this, 0.2, v9),
+        !v8) )
   {
 LABEL_15:
-    sub_1B4D1EC(taskScheduler, method);
+    sub_1B86614(taskScheduler, method);
   }
-  v14 = (SchedulerTaskBase_o *)taskScheduler;
+  v10 = (SchedulerTaskBase_o *)taskScheduler;
   if ( taskScheduler )
   {
-    taskScheduler = (TaskScheduler_o *)sub_1B4D0CC(taskScheduler, v10->obj.klass->_1.element_class);
+    taskScheduler = (TaskScheduler_o *)sub_1B864F4(taskScheduler, v8->obj.klass->_1.element_class);
     if ( !taskScheduler )
       goto LABEL_17;
   }
-  if ( !v10->max_length )
+  if ( !v8->max_length )
 LABEL_16:
-    sub_1B4D1F4(taskScheduler, method);
-  v10->m_Items[0] = v14;
-  sub_1B4CF34((CGThumbnailListItem_o *)v10->m_Items, (int32_t)v14, v12, v13);
-  if ( !v9 )
+    sub_1B8661C(taskScheduler, method);
+  v8->m_Items[0] = v10;
+  taskScheduler = (TaskScheduler_o *)sub_1B8635C(v8->m_Items);
+  if ( !v7 )
     goto LABEL_15;
-  TaskScheduler__AddTask(v9, 0, v10, 0LL);
+  TaskScheduler__AddTask(v7, 0, v8, 0LL);
 }
 
 
@@ -4204,18 +4013,18 @@ EventDiggingBlockMaster_o *__fastcall DiggingManager__get_eventDiggingBlockMaste
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49BF25F & 1) == 0 )
+  if ( (byte_4A48F4B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v1);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_49BF25F = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_EventDiggingBlockMaster___, v1);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4A48F4B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   return (EventDiggingBlockMaster_o *)DataManager__GetMasterData_object_(
                                         (DataManager_o *)Instance,
-                                        (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
+                                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventDiggingBlockMaster___);
 }
 
 
@@ -4224,26 +4033,26 @@ EventDiggingEntity_o *__fastcall DiggingManager__get_eventDiggingEntity(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  DiggingManager_c *v4; // x0
+  DiggingManager_c *inited; // x0
   DataMasterBase_TMaster__TEntity__PKType__o *eventDiggingMaster; // x0
   __int64 v6; // x1
 
-  if ( (byte_49BF261 & 1) == 0 )
+  if ( (byte_4A48F4D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__, method);
-    sub_1B4CF90(&DiggingManager_TypeInfo, v3);
-    byte_49BF261 = 1;
+    sub_1B863B8(&Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__, method);
+    sub_1B863B8(&DiggingManager_TypeInfo, v3);
+    byte_4A48F4D = 1;
   }
-  v4 = DiggingManager_TypeInfo;
+  inited = DiggingManager_TypeInfo;
   if ( !DiggingManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
-  eventDiggingMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DiggingManager__get_eventDiggingMaster((const MethodInfo *)v4);
+    inited = (DiggingManager_c *)j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
+  eventDiggingMaster = (DataMasterBase_TMaster__TEntity__PKType__o *)DiggingManager__get_eventDiggingMaster((const MethodInfo *)inited);
   if ( !eventDiggingMaster )
-    sub_1B4D1EC(0LL, v6);
+    sub_1B86614(0LL, v6);
   return (EventDiggingEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                    eventDiggingMaster,
                                    this->fields.eventId,
-                                   (const MethodInfo_319D99C *)Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
+                                   (const MethodInfo_3214280 *)Method_DataMasterBase_EventDiggingMaster__EventDiggingEntity__int__GetEntity__);
 }
 
 
@@ -4254,18 +4063,18 @@ EventDiggingMaster_o *__fastcall DiggingManager__get_eventDiggingMaster(const Me
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49BF25D & 1) == 0 )
+  if ( (byte_4A48F49 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_EventDiggingMaster___, v1);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_49BF25D = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_EventDiggingMaster___, v1);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4A48F49 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   return (EventDiggingMaster_o *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)Instance,
-                                   (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventDiggingMaster___);
+                                   (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventDiggingMaster___);
 }
 
 
@@ -4276,18 +4085,18 @@ EventDiggingRewardMaster_o *__fastcall DiggingManager__get_eventDiggingRewardMas
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49BF25E & 1) == 0 )
+  if ( (byte_4A48F4A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_EventDiggingRewardMaster___, v1);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_49BF25E = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_EventDiggingRewardMaster___, v1);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4A48F4A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   return (EventDiggingRewardMaster_o *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)Instance,
-                                         (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
+                                         (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventDiggingRewardMaster___);
 }
 
 
@@ -4296,27 +4105,27 @@ UserEventDiggingEntity_o *__fastcall DiggingManager__get_userEventDiggingEntity(
         const MethodInfo *method)
 {
   __int64 v3; // x1
-  DiggingManager_c *v4; // x0
+  DiggingManager_c *inited; // x0
   __int64 v5; // x1
   UserEventDiggingMaster_o *userEventDiggingMaster; // x20
   NetworkManager_c *v7; // x0
 
-  if ( (byte_49BF262 & 1) == 0 )
+  if ( (byte_4A48F4E & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager_TypeInfo, method);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v3);
-    byte_49BF262 = 1;
+    sub_1B863B8(&DiggingManager_TypeInfo, method);
+    sub_1B863B8(&NetworkManager_TypeInfo, v3);
+    byte_4A48F4E = 1;
   }
-  v4 = DiggingManager_TypeInfo;
+  inited = DiggingManager_TypeInfo;
   if ( !DiggingManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
-  userEventDiggingMaster = DiggingManager__get_userEventDiggingMaster((const MethodInfo *)v4);
+    inited = (DiggingManager_c *)j_il2cpp_runtime_class_init_0(DiggingManager_TypeInfo);
+  userEventDiggingMaster = DiggingManager__get_userEventDiggingMaster((const MethodInfo *)inited);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_49B57A5 )
+  if ( !byte_4A48C25 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, v5);
-    byte_49B57A5 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, v5);
+    byte_4A48C25 = 1;
   }
   v7 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4325,7 +4134,7 @@ UserEventDiggingEntity_o *__fastcall DiggingManager__get_userEventDiggingEntity(
     v7 = NetworkManager_TypeInfo;
   }
   if ( !userEventDiggingMaster )
-    sub_1B4D1EC(v7, v5);
+    sub_1B86614(v7, v5);
   return UserEventDiggingMaster__GetEntity(
            userEventDiggingMaster,
            v7->static_fields->userIdNumber,
@@ -4341,18 +4150,18 @@ UserEventDiggingMaster_o *__fastcall DiggingManager__get_userEventDiggingMaster(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_49BF260 & 1) == 0 )
+  if ( (byte_4A48F4C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_UserEventDiggingMaster___, v1);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
-    byte_49BF260 = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventDiggingMaster___, v1);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v2);
+    byte_4A48F4C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   return (UserEventDiggingMaster_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)Instance,
-                                       (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_UserEventDiggingMaster___);
+                                       (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventDiggingMaster___);
 }
 
 
@@ -4382,23 +4191,23 @@ bool __fastcall DiggingManager__CoInitRequest_d__82__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_49B5B1C & 1) == 0 )
+  if ( (byte_4A49080 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager__CoInitRequest_b__82_0__, method);
-    sub_1B4CF90(&System_Func_bool__TypeInfo, v3);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    this = (DiggingManager__CoInitRequest_d__82_o *)sub_1B4CF90(&UnityEngine_WaitUntil_TypeInfo, v5);
-    byte_49B5B1C = 1;
+    sub_1B863B8(&Method_DiggingManager__CoInitRequest_b__82_0__, method);
+    sub_1B863B8(&System_Func_bool__TypeInfo, v3);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    this = (DiggingManager__CoInitRequest_d__82_o *)sub_1B863B8(&UnityEngine_WaitUntil_TypeInfo, v5);
+    byte_4A49080 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
     v2->fields.__1__state = -1;
-    this = (DiggingManager__CoInitRequest_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (DiggingManager__CoInitRequest_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this || (CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL), !_4__this) )
 LABEL_13:
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     DiggingManager__ConstructParams(_4__this, 0LL);
     ActionExtensions__Call(v2->fields.finishCallback, 0LL);
     return 0;
@@ -4409,18 +4218,18 @@ LABEL_13:
   if ( !_4__this )
     goto LABEL_13;
   DiggingManager__TryInitRequest(_4__this, 0LL);
-  this = (DiggingManager__CoInitRequest_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (DiggingManager__CoInitRequest_d__82_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_13;
   v8 = 1;
   CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
-  v9 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+  v9 = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v9, (Il2CppObject *)_4__this, Method_DiggingManager__CoInitRequest_b__82_0__, 0LL);
-  v10 = (UnityEngine_WaitUntil_o *)sub_1B4D1DC(UnityEngine_WaitUntil_TypeInfo);
+  v10 = (UnityEngine_WaitUntil_o *)sub_1B86604(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v10, v9, 0LL);
   v2->fields.__2__current = (Il2CppObject *)v10;
   p__2__current = &v2->fields.__2__current;
-  sub_1B4CF34(p__2__current);
+  sub_1B8635C(p__2__current);
   *((_DWORD *)p__2__current - 2) = 1;
   return v8;
 }
@@ -4442,11 +4251,11 @@ void __fastcall __noreturn DiggingManager__CoInitRequest_d__82__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
+  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B4CFA4(&Method_DiggingManager__CoInitRequest_d__82_System_Collections_IEnumerator_Reset__);
-  sub_1B4D0B8(v3, v4);
+  v4 = sub_1B863CC(&Method_DiggingManager__CoInitRequest_d__82_System_Collections_IEnumerator_Reset__);
+  sub_1B864E0(v3, v4);
 }
 
 
@@ -4492,23 +4301,23 @@ bool __fastcall DiggingManager__CoResetTableRequest_d__83__MoveNext(
   Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_49B5B1D & 1) == 0 )
+  if ( (byte_4A49081 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DiggingManager__CoResetTableRequest_b__83_0__, method);
-    sub_1B4CF90(&System_Func_bool__TypeInfo, v3);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    this = (DiggingManager__CoResetTableRequest_d__83_o *)sub_1B4CF90(&UnityEngine_WaitUntil_TypeInfo, v5);
-    byte_49B5B1D = 1;
+    sub_1B863B8(&Method_DiggingManager__CoResetTableRequest_b__83_0__, method);
+    sub_1B863B8(&System_Func_bool__TypeInfo, v3);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    this = (DiggingManager__CoResetTableRequest_d__83_o *)sub_1B863B8(&UnityEngine_WaitUntil_TypeInfo, v5);
+    byte_4A49081 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
     v2->fields.__1__state = -1;
-    this = (DiggingManager__CoResetTableRequest_d__83_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (DiggingManager__CoResetTableRequest_d__83_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this || (CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL), !_4__this) )
 LABEL_13:
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     DiggingManager__Finish(_4__this, 0, 0LL);
     DiggingManager__ConstructParams(_4__this, 0LL);
     ActionExtensions__Call(v2->fields.finishCallback, 0LL);
@@ -4520,18 +4329,18 @@ LABEL_13:
   if ( !_4__this )
     goto LABEL_13;
   DiggingManager__TryResetTableRequest(_4__this, v2->fields.areaNum, 0LL);
-  this = (DiggingManager__CoResetTableRequest_d__83_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (DiggingManager__CoResetTableRequest_d__83_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_13;
   v8 = 1;
   CommonUI__SetConnect((CommonUI_o *)this, 1, 0LL);
-  v9 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+  v9 = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v9, (Il2CppObject *)_4__this, Method_DiggingManager__CoResetTableRequest_b__83_0__, 0LL);
-  v10 = (UnityEngine_WaitUntil_o *)sub_1B4D1DC(UnityEngine_WaitUntil_TypeInfo);
+  v10 = (UnityEngine_WaitUntil_o *)sub_1B86604(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v10, v9, 0LL);
   v2->fields.__2__current = (Il2CppObject *)v10;
   p__2__current = &v2->fields.__2__current;
-  sub_1B4CF34(p__2__current);
+  sub_1B8635C(p__2__current);
   *((_DWORD *)p__2__current - 2) = 1;
   return v8;
 }
@@ -4553,11 +4362,11 @@ void __fastcall __noreturn DiggingManager__CoResetTableRequest_d__83__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
+  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B4CFA4(&Method_DiggingManager__CoResetTableRequest_d__83_System_Collections_IEnumerator_Reset__);
-  sub_1B4D0B8(v3, v4);
+  v4 = sub_1B863CC(&Method_DiggingManager__CoResetTableRequest_d__83_System_Collections_IEnumerator_Reset__);
+  sub_1B864E0(v3, v4);
 }
 
 
@@ -4605,13 +4414,13 @@ bool __fastcall DiggingManager__PlayDiggingAnim_d__92__MoveNext(
   bool result; // w0
   System_Action_o *callBack; // x0
 
-  if ( (byte_49B5B1E & 1) == 0 )
+  if ( (byte_4A49082 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Func_bool__TypeInfo, method);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass92_0__PlayDiggingAnim_b__0__, v3);
-    sub_1B4CF90(&DiggingManager___c__DisplayClass92_0_TypeInfo, v4);
-    sub_1B4CF90(&UnityEngine_WaitUntil_TypeInfo, v5);
-    byte_49B5B1E = 1;
+    sub_1B863B8(&System_Func_bool__TypeInfo, method);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass92_0__PlayDiggingAnim_b__0__, v3);
+    sub_1B863B8(&DiggingManager___c__DisplayClass92_0_TypeInfo, v4);
+    sub_1B863B8(&UnityEngine_WaitUntil_TypeInfo, v5);
+    byte_4A49082 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -4624,29 +4433,29 @@ bool __fastcall DiggingManager__PlayDiggingAnim_d__92__MoveNext(
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  v7 = (DiggingManager___c__DisplayClass92_0_o *)sub_1B4D1DC(DiggingManager___c__DisplayClass92_0_TypeInfo);
+  v7 = (DiggingManager___c__DisplayClass92_0_o *)sub_1B86604(DiggingManager___c__DisplayClass92_0_TypeInfo);
   DiggingManager___c__DisplayClass92_0___ctor(v7, 0LL);
   if ( !v7
     || (v7->fields.animation = this->fields.animation,
         p_animation = &v7->fields.animation,
-        sub_1B4CF34(&v7->fields),
+        sub_1B8635C(&v7->fields),
         (animation = v7->fields.animation) == 0LL)
     || (UnityEngine_Animation__Rewind(animation, 0LL), (animation = *p_animation) == 0LL) )
   {
-    sub_1B4D1EC(animation, v9);
+    sub_1B86614(animation, v9);
   }
-  UnityEngine_Animation__Play_68548868(animation, this->fields.animationName, 0LL);
-  v11 = (System_Func_bool__o *)sub_1B4D1DC(System_Func_bool__TypeInfo);
+  UnityEngine_Animation__Play_69099832(animation, this->fields.animationName, 0LL);
+  v11 = (System_Func_bool__o *)sub_1B86604(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v11,
     (Il2CppObject *)v7,
     Method_DiggingManager___c__DisplayClass92_0__PlayDiggingAnim_b__0__,
     0LL);
-  v12 = (UnityEngine_WaitUntil_o *)sub_1B4D1DC(UnityEngine_WaitUntil_TypeInfo);
+  v12 = (UnityEngine_WaitUntil_o *)sub_1B86604(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v12, v11, 0LL);
   this->fields.__2__current = (Il2CppObject *)v12;
   p__2__current = &this->fields.__2__current;
-  sub_1B4CF34(p__2__current);
+  sub_1B8635C(p__2__current);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -4669,11 +4478,11 @@ void __fastcall __noreturn DiggingManager__PlayDiggingAnim_d__92__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
+  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B4CFA4(&Method_DiggingManager__PlayDiggingAnim_d__92_System_Collections_IEnumerator_Reset__);
-  sub_1B4D0B8(v3, v4);
+  v4 = sub_1B863CC(&Method_DiggingManager__PlayDiggingAnim_d__92_System_Collections_IEnumerator_Reset__);
+  sub_1B864E0(v3, v4);
 }
 
 
@@ -4714,10 +4523,10 @@ bool __fastcall DiggingManager__StartDiggingCompAnimation_d__116__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_49B5B1F & 1) == 0 )
+  if ( (byte_4A49083 & 1) == 0 )
   {
-    this = (DiggingManager__StartDiggingCompAnimation_d__116_o *)sub_1B4CF90(&StringLiteral_5208/*"DiggingComplete"*/, method);
-    byte_49B5B1F = 1;
+    this = (DiggingManager__StartDiggingCompAnimation_d__116_o *)sub_1B863B8(&StringLiteral_5238/*"DiggingComplete"*/, method);
+    byte_4A49083 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = (DiggingManager__StartDiggingCompAnimation_d__116_o **)v2->fields.__4__this;
@@ -4738,7 +4547,7 @@ bool __fastcall DiggingManager__StartDiggingCompAnimation_d__116__MoveNext(
                                                                          0LL)) == 0LL )
     {
 LABEL_20:
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   }
@@ -4768,14 +4577,14 @@ LABEL_20:
               this = _4__this[28];
               if ( this )
               {
-                UnityEngine_Animation__Play_68548868(
+                UnityEngine_Animation__Play_69099832(
                   (UnityEngine_Animation_o *)this,
-                  (System_String_o *)StringLiteral_5208/*"DiggingComplete"*/,
+                  (System_String_o *)StringLiteral_5238/*"DiggingComplete"*/,
                   0LL);
 LABEL_15:
                 v2->fields.__2__current = 0LL;
                 p__2__current = &v2->fields.__2__current;
-                sub_1B4CF34(p__2__current);
+                sub_1B8635C(p__2__current);
                 result = 1;
                 *((_DWORD *)p__2__current - 2) = 1;
                 return result;
@@ -4807,11 +4616,11 @@ void __fastcall __noreturn DiggingManager__StartDiggingCompAnimation_d__116__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B4CFA4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B4D1DC(v2);
+  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B4CFA4(&Method_DiggingManager__StartDiggingCompAnimation_d__116_System_Collections_IEnumerator_Reset__);
-  sub_1B4D0B8(v3, v4);
+  v4 = sub_1B863CC(&Method_DiggingManager__StartDiggingCompAnimation_d__116_System_Collections_IEnumerator_Reset__);
+  sub_1B864E0(v3, v4);
 }
 
 
@@ -4835,18 +4644,16 @@ void __fastcall DiggingManager___c___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
   Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
 
-  if ( (byte_49BF285 & 1) == 0 )
+  if ( (byte_4A48F71 & 1) == 0 )
   {
-    sub_1B4CF90(&DiggingManager___c_TypeInfo, v1);
-    byte_49BF285 = 1;
+    sub_1B863B8(&DiggingManager___c_TypeInfo, v1);
+    byte_4A48F71 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B4D1DC(DiggingManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B86604(DiggingManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   DiggingManager___c_TypeInfo->static_fields->__9 = (struct DiggingManager___c_o *)v2;
-  sub_1B4CF34((CGThumbnailListItem_o *)DiggingManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B8635C(DiggingManager___c_TypeInfo->static_fields);
 }
 
 
@@ -4864,7 +4671,7 @@ bool __fastcall DiggingManager___c___IsAchievedTheConditionsToReset_b__106_0(
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
 
   if ( !x || (blockInfo = x->fields.blockInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return blockInfo->fields.isDigged == 1;
 }
 
@@ -4877,7 +4684,7 @@ bool __fastcall DiggingManager___c___IsDiggingComplete_b__105_0(
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
 
   if ( !x || (blockInfo = x->fields.blockInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return blockInfo->fields.isDigged == 1;
 }
 
@@ -4890,7 +4697,7 @@ bool __fastcall DiggingManager___c___Response_b__90_6(
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
 
   if ( !x || (blockInfo = x->fields.blockInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return blockInfo->fields.isDigged == 0;
 }
 
@@ -4901,7 +4708,7 @@ void __fastcall DiggingManager___c___Response_b__90_7(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B4D1EC(this, 0LL);
+    sub_1B86614(this, 0LL);
   DiggingBlockComponent__SetActiveBlockUI(x, 0, method);
 }
 
@@ -4912,7 +4719,7 @@ void __fastcall DiggingManager___c___Response_b__90_8(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B4D1EC(this, 0LL);
+    sub_1B86614(this, 0LL);
   DiggingRewardComponent__SetImageGray(x, 0LL);
 }
 
@@ -4923,7 +4730,7 @@ bool __fastcall DiggingManager___c___RevealRareRewardAroundTheBlock_b__102_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B4D1EC(this, 0LL);
+    sub_1B86614(this, 0LL);
   return DiggingRewardComponent__HasRewardInfo(x, 0LL) && DiggingRewardComponent__IsSize2(x, 0LL);
 }
 
@@ -4936,7 +4743,7 @@ bool __fastcall DiggingManager___c___SetInfoInBlocks_b__101_3(
   struct DiggingInfo_BlockInfos_o *blockInfo; // x8
 
   if ( !x || (blockInfo = x->fields.blockInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return blockInfo->fields.isDigged == 1;
 }
 
@@ -4958,7 +4765,7 @@ bool __fastcall DiggingManager___c__DisplayClass101_0___SetInfoInBlocks_b__0(
 
   blockInfo = this->fields.blockInfo;
   if ( !blockInfo || !x )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return x->fields.x == blockInfo->fields.x && x->fields.y == blockInfo->fields.y;
 }
 
@@ -4981,7 +4788,7 @@ bool __fastcall DiggingManager___c__DisplayClass101_1___SetInfoInBlocks_b__1(
 
   hintInfo = this->fields.hintInfo;
   if ( !hintInfo || !x || (blockInfo = x->fields.blockInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return blockInfo->fields.x == hintInfo->fields.x && blockInfo->fields.y == hintInfo->fields.y;
 }
 
@@ -5002,7 +4809,7 @@ bool __fastcall DiggingManager___c__DisplayClass101_2___SetInfoInBlocks_b__2(
   struct DiggingInfo_RewardInfos_o *rewardInfo; // x9
 
   if ( !x || (rewardInfo = this->fields.rewardInfo) == 0LL )
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   return x->fields.priority == rewardInfo->fields.priority
       && DiggingRewardComponent__CheckBlockObjectByIndex(x, rewardInfo->fields.x, rewardInfo->fields.y, 0LL);
 }
@@ -5043,14 +4850,14 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
   int v23; // [xsp+8h] [xbp-38h] BYREF
   int m_CancellationTokenSource_high; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_49BF286 & 1) == 0 )
+  if ( (byte_4A48F72 & 1) == 0 )
   {
-    sub_1B4CF90(&AtlasManager_TypeInfo, method);
-    sub_1B4CF90(&int_TypeInfo, v3);
-    sub_1B4CF90(&StringLiteral_18317/*"digging_bg_{0}"*/, v4);
-    sub_1B4CF90(&StringLiteral_18319/*"digging_txt_touchscreen"*/, v5);
-    sub_1B4CF90(&StringLiteral_18316/*"digging_bg_frame_{0}"*/, v6);
-    byte_49BF286 = 1;
+    sub_1B863B8(&AtlasManager_TypeInfo, method);
+    sub_1B863B8(&int_TypeInfo, v3);
+    sub_1B863B8(&StringLiteral_18398/*"digging_bg_{0}"*/, v4);
+    sub_1B863B8(&StringLiteral_18400/*"digging_txt_touchscreen"*/, v5);
+    sub_1B863B8(&StringLiteral_18397/*"digging_bg_frame_{0}"*/, v6);
+    byte_4A48F72 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -5062,10 +4869,10 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
     goto LABEL_11;
   m_CancellationTokenSource_high = HIDWORD(_4__this->fields.m_CancellationTokenSource);
   v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &m_CancellationTokenSource_high, v10, v11, v12);
-  v14 = System_String__Format((System_String_o *)StringLiteral_18317/*"digging_bg_{0}"*/, v13, 0LL);
+  v14 = System_String__Format((System_String_o *)StringLiteral_18398/*"digging_bg_{0}"*/, v13, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_38399044(eventId, bgSprite, v14, 0LL);
+  AtlasManager__SetEventUI_38815864(eventId, bgSprite, v14, 0LL);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_11;
@@ -5075,17 +4882,17 @@ void __fastcall DiggingManager___c__DisplayClass76_0___Init_b__0(
   if ( !_4__this
     || (v23 = HIDWORD(_4__this->fields.m_CancellationTokenSource),
         v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23, v17, v18, v19),
-        v21 = System_String__Format((System_String_o *)StringLiteral_18316/*"digging_bg_frame_{0}"*/, v20, 0LL),
-        _4__this = (DiggingManager_o *)AtlasManager__SetEventUI_38399044(v15, bgFrameSprite, v21, 0LL),
+        v21 = System_String__Format((System_String_o *)StringLiteral_18397/*"digging_bg_frame_{0}"*/, v20, 0LL),
+        _4__this = (DiggingManager_o *)AtlasManager__SetEventUI_38815864(v15, bgFrameSprite, v21, 0LL),
         (v22 = this->fields.__4__this) == 0LL) )
   {
 LABEL_11:
-    sub_1B4D1EC(_4__this, method);
+    sub_1B86614(_4__this, method);
   }
-  AtlasManager__SetEventUI_38399044(
+  AtlasManager__SetEventUI_38815864(
     this->fields.eventId,
     v22->fields.touchScreenSprite,
-    (System_String_o *)StringLiteral_18319/*"digging_txt_touchscreen"*/,
+    (System_String_o *)StringLiteral_18400/*"digging_txt_touchscreen"*/,
     0LL);
 }
 
@@ -5109,14 +4916,12 @@ void __fastcall DiggingManager___c__DisplayClass81_0___LoadAssets_b__0(
   DiggingAssetManager_o *assetManager; // x20
   int32_t eventId; // w21
   System_Action_o *_9__1; // x22
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
 
-  if ( (byte_49BF287 & 1) == 0 )
+  if ( (byte_4A48F73 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__1__, v3);
-    byte_49BF287 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__1__, v3);
+    byte_4A48F73 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -5130,18 +4935,18 @@ void __fastcall DiggingManager___c__DisplayClass81_0___LoadAssets_b__0(
   _9__1 = this->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_DiggingManager___c__DisplayClass81_0__LoadAssets_b__1__,
       0LL);
     this->fields.__9__1 = _9__1;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v10, v11);
+    _4__this = (DiggingManager_o *)sub_1B8635C(&this->fields.__9__1);
   }
   if ( !assetManager )
 LABEL_9:
-    sub_1B4D1EC(_4__this, method);
+    sub_1B86614(_4__this, method);
   DiggingAssetManager__GetAssets(assetManager, eventId, _9__1, v5);
 }
 
@@ -5150,41 +4955,37 @@ void __fastcall DiggingManager___c__DisplayClass81_0___LoadAssets_b__1(
         DiggingManager___c__DisplayClass81_0_o *this,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  DiggingManager___c__DisplayClass81_0_o *v4; // x19
-  __int64 v5; // x1
+  DiggingManager___c__DisplayClass81_0_o *v2; // x19
+  __int64 v3; // x1
   struct DiggingManager_o *_4__this; // x8
   struct DiggingAssetManager_o *assetManager; // x9
-  struct DiggingSettings_o *Settings_k__BackingField; // x1
-  Il2CppObject *v9; // x20
-  System_Action_o *v10; // x21
-  const MethodInfo *v11; // x2
+  Il2CppObject *v6; // x20
+  System_Action_o *v7; // x21
+  const MethodInfo *v8; // x2
   System_Collections_IEnumerator_o *inited; // x0
 
-  v4 = this;
-  if ( (byte_49BF288 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4A48F74 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    this = (DiggingManager___c__DisplayClass81_0_o *)sub_1B4CF90(&Method_DiggingManager_SetResetLabel__, v5);
-    byte_49BF288 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    this = (DiggingManager___c__DisplayClass81_0_o *)sub_1B863B8(&Method_DiggingManager_SetResetLabel__, v3);
+    byte_4A48F74 = 1;
   }
-  _4__this = v4->fields.__4__this;
+  _4__this = v2->fields.__4__this;
   if ( !_4__this
     || (assetManager = _4__this->fields.assetManager) == 0LL
-    || (Settings_k__BackingField = assetManager->fields._Settings_k__BackingField,
-        _4__this->fields.settings = Settings_k__BackingField,
-        sub_1B4CF34((CGThumbnailListItem_o *)&_4__this->fields.settings, (int32_t)Settings_k__BackingField, v2, v3),
-        v9 = (Il2CppObject *)v4->fields.__4__this,
-        v10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo),
-        System_Action___ctor(v10, v9, Method_DiggingManager_SetResetLabel__, 0LL),
-        !v9) )
+    || (_4__this->fields.settings = assetManager->fields._Settings_k__BackingField,
+        sub_1B8635C(&_4__this->fields.settings),
+        v6 = (Il2CppObject *)v2->fields.__4__this,
+        v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        System_Action___ctor(v7, v6, Method_DiggingManager_SetResetLabel__, 0LL),
+        !v6) )
   {
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
-  inited = DiggingManager__CoInitRequest((DiggingManager_o *)v9, v10, v11);
-  UnityEngine_MonoBehaviour__StartCoroutine_68789728((UnityEngine_MonoBehaviour_o *)v9, inited, 0LL);
-  ActionExtensions__Call(v4->fields.finishCallback, 0LL);
+  inited = DiggingManager__CoInitRequest((DiggingManager_o *)v6, v7, v8);
+  UnityEngine_MonoBehaviour__StartCoroutine_69341456((UnityEngine_MonoBehaviour_o *)v6, inited, 0LL);
+  ActionExtensions__Call(v2->fields.finishCallback, 0LL);
 }
 
 
@@ -5204,7 +5005,7 @@ bool __fastcall DiggingManager___c__DisplayClass90_0___Response_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   return _4__this->fields.skip;
 }
 
@@ -5213,64 +5014,62 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__10(
         DiggingManager___c__DisplayClass90_0_o *this,
         const MethodInfo *method)
 {
-  DiggingManager___c__DisplayClass90_0_o *v2; // x19
+  Il2CppObject *v2; // x19
   __int64 v3; // x1
-  struct DiggingManager_o *_4__this; // x8
-  struct DiggingManager_o *v5; // x8
-  struct DiggingManager_resData_array *res; // x9
-  DiggingManager_resData_o *v7; // x9
-  struct System_Action_BattleDropItem____int__Action__o *requestCallBack; // x23
-  struct BattleDropItem_array *resultEventRewardInfos; // x20
-  System_Action_o *_9__12; // x21
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  Il2CppClass *klass; // x8
+  Il2CppClass *v5; // x8
+  _DWORD *monitor; // x9
+  __int64 v7; // x9
+  const MethodInfo *v8; // x23
+  __int64 v9; // x20
+  System_Action_o *v10; // x21
 
-  v2 = this;
-  if ( (byte_49BF28B & 1) == 0 )
+  v2 = (Il2CppObject *)this;
+  if ( (byte_4A48F77 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B4CF90(
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B863B8(
                                                        &Method_DiggingManager___c__DisplayClass90_0__Response_b__12__,
                                                        v3);
-    byte_49BF28B = 1;
+    byte_4A48F77 = 1;
   }
-  _4__this = v2->fields.__4__this;
-  if ( !_4__this )
+  klass = v2[1].klass;
+  if ( !klass )
     goto LABEL_13;
-  this = (DiggingManager___c__DisplayClass90_0_o *)_4__this->fields.maskPanel;
+  this = *(DiggingManager___c__DisplayClass90_0_o **)&klass->_2.initializationExceptionGCHandle;
   if ( !this )
     goto LABEL_13;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-  v5 = v2->fields.__4__this;
+  v5 = v2[1].klass;
   if ( !v5 )
     goto LABEL_13;
-  res = v2->fields.res;
-  if ( !res )
+  monitor = v2[1].monitor;
+  if ( !monitor )
     goto LABEL_13;
-  if ( !res->max_length )
-    sub_1B4D1F4(this, method);
-  v7 = res->m_Items[0];
+  if ( !monitor[6] )
+    sub_1B8661C(this, method);
+  v7 = *((_QWORD *)monitor + 4);
   if ( !v7 )
     goto LABEL_13;
-  requestCallBack = v5->fields.requestCallBack;
-  resultEventRewardInfos = v7->fields.resultEventRewardInfos;
-  _9__12 = v2->fields.__9__12;
-  if ( !_9__12 )
+  v8 = v5->vtable[0].method;
+  v9 = *(_QWORD *)(v7 + 32);
+  v10 = (System_Action_o *)v2[4].klass;
+  if ( !v10 )
   {
-    _9__12 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-    System_Action___ctor(_9__12, (Il2CppObject *)v2, Method_DiggingManager___c__DisplayClass90_0__Response_b__12__, 0LL);
-    v2->fields.__9__12 = _9__12;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields.__9__12, (int32_t)_9__12, v11, v12);
+    v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    System_Action___ctor(v10, v2, Method_DiggingManager___c__DisplayClass90_0__Response_b__12__, 0LL);
+    v2[4].klass = (Il2CppClass *)v10;
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v2[4]);
   }
-  if ( !requestCallBack )
+  if ( !v8 )
 LABEL_13:
-    sub_1B4D1EC(this, method);
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct BattleDropItem_array *, _QWORD, System_Action_o *, _QWORD))requestCallBack->fields.m_target)(
-    requestCallBack->fields.original_method_info,
-    resultEventRewardInfos,
+    sub_1B86614(this, method);
+  ((void (__fastcall *)(const void *, __int64, _QWORD, System_Action_o *, const Il2CppType *))v8->name)(
+    v8->genericMethod,
+    v9,
     0LL,
-    _9__12,
-    *(_QWORD *)&requestCallBack->fields.extra_arg);
+    v10,
+    v8->return_type);
 }
 
 
@@ -5287,7 +5086,7 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__11(
   if ( !res )
     goto LABEL_8;
   if ( !res->max_length )
-    sub_1B4D1F4(this, method);
+    sub_1B8661C(this, method);
   v3 = res->m_Items[0];
   if ( !v3 )
     goto LABEL_8;
@@ -5297,11 +5096,11 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__11(
     if ( _4__this )
     {
       started = DiggingManager__StartDiggingCompAnimation(this->fields.__4__this, method);
-      UnityEngine_MonoBehaviour__StartCoroutine_68789728(_4__this, started, 0LL);
+      UnityEngine_MonoBehaviour__StartCoroutine_69341456(_4__this, started, 0LL);
       return;
     }
 LABEL_8:
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
 }
 
@@ -5311,43 +5110,41 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__12(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
-  DiggingManager___c__DisplayClass90_0_o *v3; // x19
+  Il2CppObject *v3; // x19
   __int64 v4; // x1
-  struct DiggingManager_resData_array *res; // x8
-  DiggingManager_o *_4__this; // x20
+  void *monitor; // x8
+  DiggingManager_o *klass; // x20
   DiggingManager_resData_o *v7; // x21
-  System_Action_o *_9__13; // x22
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  System_Action_o *v8; // x22
 
-  v3 = this;
-  if ( (byte_49BF28C & 1) == 0 )
+  v3 = (Il2CppObject *)this;
+  if ( (byte_4A48F78 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, method);
-    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B4CF90(
+    sub_1B863B8(&System_Action_TypeInfo, method);
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B863B8(
                                                        &Method_DiggingManager___c__DisplayClass90_0__Response_b__13__,
                                                        v4);
-    byte_49BF28C = 1;
+    byte_4A48F78 = 1;
   }
-  res = v3->fields.res;
-  if ( !res )
+  monitor = v3[1].monitor;
+  if ( !monitor )
     goto LABEL_9;
-  if ( !res->max_length )
-    sub_1B4D1F4(this, method);
-  _4__this = v3->fields.__4__this;
-  v7 = res->m_Items[0];
-  _9__13 = v3->fields.__9__13;
-  if ( !_9__13 )
+  if ( !*((_DWORD *)monitor + 6) )
+    sub_1B8661C(this, method);
+  klass = (DiggingManager_o *)v3[1].klass;
+  v7 = (DiggingManager_resData_o *)*((_QWORD *)monitor + 4);
+  v8 = (System_Action_o *)v3[3].monitor;
+  if ( !v8 )
   {
-    _9__13 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-    System_Action___ctor(_9__13, (Il2CppObject *)v3, Method_DiggingManager___c__DisplayClass90_0__Response_b__13__, 0LL);
-    v3->fields.__9__13 = _9__13;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v3->fields.__9__13, (int32_t)_9__13, v9, v10);
+    v8 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    System_Action___ctor(v8, v3, Method_DiggingManager___c__DisplayClass90_0__Response_b__13__, 0LL);
+    v3[3].monitor = v8;
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v3[3].monitor);
   }
-  if ( !_4__this )
+  if ( !klass )
 LABEL_9:
-    sub_1B4D1EC(this, method);
-  DiggingManager__CheckOpenQuest(_4__this, v7, _9__13, v2);
+    sub_1B86614(this, method);
+  DiggingManager__CheckOpenQuest(klass, v7, v8, v2);
 }
 
 
@@ -5364,7 +5161,7 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__13(
   if ( !res )
     goto LABEL_8;
   if ( !res->max_length )
-    sub_1B4D1F4(this, method);
+    sub_1B8661C(this, method);
   v3 = res->m_Items[0];
   if ( !v3 )
     goto LABEL_8;
@@ -5374,11 +5171,11 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__13(
     if ( _4__this )
     {
       started = DiggingManager__StartDiggingCompAnimation(this->fields.__4__this, method);
-      UnityEngine_MonoBehaviour__StartCoroutine_68789728(_4__this, started, 0LL);
+      UnityEngine_MonoBehaviour__StartCoroutine_69341456(_4__this, started, 0LL);
       return;
     }
 LABEL_8:
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
 }
 
@@ -5391,7 +5188,7 @@ bool __fastcall DiggingManager___c__DisplayClass90_0___Response_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   return _4__this->fields.skip;
 }
 
@@ -5417,74 +5214,63 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__5(
   __int64 v16; // x1
   __int64 v17; // x1
   struct DiggingManager_o *_4__this; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  struct System_Collections_Generic_List_DiggingBlockComponent__o *diggingBlockList; // x1
   struct DiggingManager_resData_array *res; // x8
-  DiggingManager_resData_o *v23; // x8
-  Il2CppObject *v24; // x20
+  DiggingManager_resData_o *v20; // x8
+  Il2CppObject *v21; // x20
   System_Collections_Generic_List_object__o *monitor; // x20
-  System_Predicate_object__o *v26; // x21
+  System_Predicate_object__o *v23; // x21
   Il2CppObject *klass; // x22
   struct DiggingManager___c_StaticFields *static_fields; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  DiggingManager___c_c *v31; // x8
-  DiggingManager___c__DisplayClass90_0_o *v32; // x20
+  DiggingManager___c_c *v26; // x8
+  DiggingManager___c__DisplayClass90_0_o *v27; // x20
   System_Action_object__o *_9__90_7; // x21
-  Il2CppObject *v34; // x22
-  struct DiggingManager___c_StaticFields *v35; // x0
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  struct DiggingManager_o *v38; // x8
+  Il2CppObject *v29; // x22
+  struct DiggingManager___c_StaticFields *v30; // x0
+  struct DiggingManager_o *v31; // x8
   System_Collections_Generic_List_object__o *rewardList; // x20
   Il2CppObject *m_target; // x21
-  Il2CppObject *v41; // x22
-  struct DiggingManager___c_StaticFields *v42; // x0
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  System_Action_o *v45; // x21
-  const MethodInfo *v46; // x2
-  struct DiggingManager_o *v47; // x8
+  Il2CppObject *v34; // x22
+  struct DiggingManager___c_StaticFields *v35; // x0
+  System_Action_o *v36; // x21
+  const MethodInfo *v37; // x2
+  struct DiggingManager_o *v38; // x8
   UnityEngine_Object_o *titleInfoControl; // x20
-  struct DiggingManager_o *v49; // x8
-  struct DiggingManager_o *v50; // x8
-  struct DiggingManager_resData_array *v51; // x9
-  DiggingManager_resData_o *v52; // x9
+  struct DiggingManager_o *v40; // x8
+  struct DiggingManager_o *v41; // x8
+  struct DiggingManager_resData_array *v42; // x9
+  DiggingManager_resData_o *v43; // x9
   struct BattleDropItem_array *resultEventRewardInfos; // x28
   BattleDropItem_array *resultDiggingRewardInfos; // x20
   UserGameEntity_array *oldUserGame; // x21
-  System_Collections_Generic_List_DiggingBlockComponent__o *v56; // x22
+  System_Collections_Generic_List_DiggingBlockComponent__o *diggingBlockList; // x22
   int32_t eventId; // w23
   DiggingRewardDialogComponent_o *diggingRewardDialog; // x24
   Il2CppObject *maskPanel; // x26
-  System_Action_bool__o *v60; // x25
+  System_Action_bool__o *v51; // x25
   System_Action_o *_9__9; // x26
   il2cpp_array_size_t max_length; // w28
-  int32_t v63; // w2
-  const MethodInfo *v64; // x3
-  struct DiggingManager_o *v65; // x8
+  struct DiggingManager_o *v54; // x8
 
   v2 = this;
-  if ( (byte_49BF289 & 1) == 0 )
+  if ( (byte_4A48F75 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_DiggingRewardComponent__TypeInfo, method);
-    sub_1B4CF90(&System_Action_bool__TypeInfo, v3);
-    sub_1B4CF90(&System_Action_DiggingBlockComponent__TypeInfo, v4);
-    sub_1B4CF90(&System_Action_TypeInfo, v5);
-    sub_1B4CF90(&Method_DiggingManager_AfterBlockInformationisUpdated__, v6);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_SetActive__, v7);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__FindAll__, v8);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingBlockComponent__ForEach__, v9);
-    sub_1B4CF90(&Method_System_Collections_Generic_List_DiggingRewardComponent__ForEach__, v10);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v11);
-    sub_1B4CF90(&System_Predicate_DiggingBlockComponent__TypeInfo, v12);
-    sub_1B4CF90(&Method_DiggingManager___c__Response_b__90_6__, v13);
-    sub_1B4CF90(&Method_DiggingManager___c__Response_b__90_7__, v14);
-    sub_1B4CF90(&Method_DiggingManager___c__Response_b__90_8__, v15);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_0__Response_b__9__, v16);
-    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B4CF90(&DiggingManager___c_TypeInfo, v17);
-    byte_49BF289 = 1;
+    sub_1B863B8(&System_Action_DiggingRewardComponent__TypeInfo, method);
+    sub_1B863B8(&System_Action_bool__TypeInfo, v3);
+    sub_1B863B8(&System_Action_DiggingBlockComponent__TypeInfo, v4);
+    sub_1B863B8(&System_Action_TypeInfo, v5);
+    sub_1B863B8(&Method_DiggingManager_AfterBlockInformationisUpdated__, v6);
+    sub_1B863B8(&Method_UnityEngine_GameObject_SetActive__, v7);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__FindAll__, v8);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingBlockComponent__ForEach__, v9);
+    sub_1B863B8(&Method_System_Collections_Generic_List_DiggingRewardComponent__ForEach__, v10);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v11);
+    sub_1B863B8(&System_Predicate_DiggingBlockComponent__TypeInfo, v12);
+    sub_1B863B8(&Method_DiggingManager___c__Response_b__90_6__, v13);
+    sub_1B863B8(&Method_DiggingManager___c__Response_b__90_7__, v14);
+    sub_1B863B8(&Method_DiggingManager___c__Response_b__90_8__, v15);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_0__Response_b__9__, v16);
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B863B8(&DiggingManager___c_TypeInfo, v17);
+    byte_4A48F75 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -5494,31 +5280,30 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__5(
                                                      method);
   if ( !this )
     goto LABEL_53;
-  diggingBlockList = this->fields.diggingBlockList;
-  _4__this->fields.diggingInfo = (struct DiggingInfo_o *)diggingBlockList;
-  sub_1B4CF34((CGThumbnailListItem_o *)&_4__this->fields.diggingInfo, (int32_t)diggingBlockList, v19, v20);
+  _4__this->fields.diggingInfo = (struct DiggingInfo_o *)this->fields.diggingBlockList;
+  this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&_4__this->fields.diggingInfo);
   res = v2->fields.res;
   if ( !res )
     goto LABEL_53;
   if ( !res->max_length )
     goto LABEL_54;
-  v23 = res->m_Items[0];
-  if ( !v23 )
+  v20 = res->m_Items[0];
+  if ( !v20 )
     goto LABEL_53;
-  v24 = (Il2CppObject *)v2->fields.__4__this;
-  if ( v23->fields.resetDiggingArea )
+  v21 = (Il2CppObject *)v2->fields.__4__this;
+  if ( v20->fields.resetDiggingArea )
   {
-    if ( v24 )
+    if ( v21 )
     {
-      monitor = (System_Collections_Generic_List_object__o *)v24[10].monitor;
+      monitor = (System_Collections_Generic_List_object__o *)v21[10].monitor;
       this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
       if ( !DiggingManager___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo);
         this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
       }
-      v26 = (System_Predicate_object__o *)this[1].fields.__9__9->monitor;
-      if ( !v26 )
+      v23 = (System_Predicate_object__o *)this[1].fields.__9__9->monitor;
+      if ( !v23 )
       {
         if ( !LODWORD(this[2].fields.diggingBlockList) )
         {
@@ -5526,51 +5311,51 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__5(
           this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
         }
         klass = (Il2CppObject *)this[1].fields.__9__9->klass;
-        v26 = (System_Predicate_object__o *)sub_1B4D1DC(System_Predicate_DiggingBlockComponent__TypeInfo);
-        System_Predicate_object____ctor(v26, klass, Method_DiggingManager___c__Response_b__90_6__, 0LL);
+        v23 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_DiggingBlockComponent__TypeInfo);
+        System_Predicate_object____ctor(v23, klass, Method_DiggingManager___c__Response_b__90_6__, 0LL);
         static_fields = DiggingManager___c_TypeInfo->static_fields;
-        static_fields->__9__90_6 = (struct System_Predicate_DiggingBlockComponent__o *)v26;
-        sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__90_6, (int32_t)v26, v29, v30);
+        static_fields->__9__90_6 = (struct System_Predicate_DiggingBlockComponent__o *)v23;
+        this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&static_fields->__9__90_6);
       }
       if ( monitor )
       {
         this = (DiggingManager___c__DisplayClass90_0_o *)System_Collections_Generic_List_object___FindAll(
                                                            monitor,
-                                                           (System_Predicate_T__o *)v26,
-                                                           (const MethodInfo_35808EC *)Method_System_Collections_Generic_List_DiggingBlockComponent__FindAll__);
-        v31 = DiggingManager___c_TypeInfo;
-        v32 = this;
+                                                           (System_Predicate_T__o *)v23,
+                                                           (const MethodInfo_35FD068 *)Method_System_Collections_Generic_List_DiggingBlockComponent__FindAll__);
+        v26 = DiggingManager___c_TypeInfo;
+        v27 = this;
         if ( !DiggingManager___c_TypeInfo->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo);
-          v31 = DiggingManager___c_TypeInfo;
+          this = (DiggingManager___c__DisplayClass90_0_o *)j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo);
+          v26 = DiggingManager___c_TypeInfo;
         }
-        _9__90_7 = (System_Action_object__o *)v31->static_fields->__9__90_7;
+        _9__90_7 = (System_Action_object__o *)v26->static_fields->__9__90_7;
         if ( !_9__90_7 )
         {
-          if ( !v31->_2.cctor_finished )
+          if ( !v26->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v31);
-            v31 = DiggingManager___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(v26);
+            v26 = DiggingManager___c_TypeInfo;
           }
-          v34 = (Il2CppObject *)v31->static_fields->__9;
-          _9__90_7 = (System_Action_object__o *)sub_1B4D1DC(System_Action_DiggingBlockComponent__TypeInfo);
-          System_Action_object____ctor(_9__90_7, v34, Method_DiggingManager___c__Response_b__90_7__, 0LL);
-          v35 = DiggingManager___c_TypeInfo->static_fields;
-          v35->__9__90_7 = (struct System_Action_DiggingBlockComponent__o *)_9__90_7;
-          sub_1B4CF34((CGThumbnailListItem_o *)&v35->__9__90_7, (int32_t)_9__90_7, v36, v37);
+          v29 = (Il2CppObject *)v26->static_fields->__9;
+          _9__90_7 = (System_Action_object__o *)sub_1B86604(System_Action_DiggingBlockComponent__TypeInfo);
+          System_Action_object____ctor(_9__90_7, v29, Method_DiggingManager___c__Response_b__90_7__, 0LL);
+          v30 = DiggingManager___c_TypeInfo->static_fields;
+          v30->__9__90_7 = (struct System_Action_DiggingBlockComponent__o *)_9__90_7;
+          this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v30->__9__90_7);
         }
-        if ( v32 )
+        if ( v27 )
         {
           System_Collections_Generic_List_object___ForEach(
-            (System_Collections_Generic_List_object__o *)v32,
+            (System_Collections_Generic_List_object__o *)v27,
             (System_Action_T__o *)_9__90_7,
-            (const MethodInfo_3580C1C *)Method_System_Collections_Generic_List_DiggingBlockComponent__ForEach__);
-          v38 = v2->fields.__4__this;
-          if ( v38 )
+            (const MethodInfo_35FD398 *)Method_System_Collections_Generic_List_DiggingBlockComponent__ForEach__);
+          v31 = v2->fields.__4__this;
+          if ( v31 )
           {
             this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
-            rewardList = (System_Collections_Generic_List_object__o *)v38->fields.rewardList;
+            rewardList = (System_Collections_Generic_List_object__o *)v31->fields.rewardList;
             if ( !DiggingManager___c_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(DiggingManager___c_TypeInfo);
@@ -5584,23 +5369,23 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__5(
                 j_il2cpp_runtime_class_init_0(this);
                 this = (DiggingManager___c__DisplayClass90_0_o *)DiggingManager___c_TypeInfo;
               }
-              v41 = (Il2CppObject *)this[1].fields.__9__9->klass;
-              m_target = (Il2CppObject *)sub_1B4D1DC(System_Action_DiggingRewardComponent__TypeInfo);
+              v34 = (Il2CppObject *)this[1].fields.__9__9->klass;
+              m_target = (Il2CppObject *)sub_1B86604(System_Action_DiggingRewardComponent__TypeInfo);
               System_Action_object____ctor(
                 (System_Action_object__o *)m_target,
-                v41,
+                v34,
                 Method_DiggingManager___c__Response_b__90_8__,
                 0LL);
-              v42 = DiggingManager___c_TypeInfo->static_fields;
-              v42->__9__90_8 = (struct System_Action_DiggingRewardComponent__o *)m_target;
-              sub_1B4CF34((CGThumbnailListItem_o *)&v42->__9__90_8, (int32_t)m_target, v43, v44);
+              v35 = DiggingManager___c_TypeInfo->static_fields;
+              v35->__9__90_8 = (struct System_Action_DiggingRewardComponent__o *)m_target;
+              this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v35->__9__90_8);
             }
             if ( rewardList )
             {
               System_Collections_Generic_List_object___ForEach(
                 rewardList,
                 (System_Action_T__o *)m_target,
-                (const MethodInfo_3580C1C *)Method_System_Collections_Generic_List_DiggingRewardComponent__ForEach__);
+                (const MethodInfo_35FD398 *)Method_System_Collections_Generic_List_DiggingRewardComponent__ForEach__);
               goto LABEL_35;
             }
           }
@@ -5608,62 +5393,62 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__5(
       }
     }
 LABEL_53:
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
-  v45 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-  System_Action___ctor(v45, v24, Method_DiggingManager_AfterBlockInformationisUpdated__, 0LL);
-  if ( !v24 )
+  v36 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  System_Action___ctor(v36, v21, Method_DiggingManager_AfterBlockInformationisUpdated__, 0LL);
+  if ( !v21 )
     goto LABEL_53;
-  DiggingManager__SetInfoInBlocks((DiggingManager_o *)v24, v45, v46);
+  DiggingManager__SetInfoInBlocks((DiggingManager_o *)v21, v36, v37);
 LABEL_35:
-  v47 = v2->fields.__4__this;
-  if ( !v47 )
+  v38 = v2->fields.__4__this;
+  if ( !v38 )
     goto LABEL_53;
-  titleInfoControl = (UnityEngine_Object_o *)v47->fields.titleInfoControl;
+  titleInfoControl = (UnityEngine_Object_o *)v38->fields.titleInfoControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (DiggingManager___c__DisplayClass90_0_o *)UnityEngine_Object__op_Inequality(titleInfoControl, 0LL, 0LL);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v49 = v2->fields.__4__this;
-    if ( !v49 )
+    v40 = v2->fields.__4__this;
+    if ( !v40 )
       goto LABEL_53;
-    this = (DiggingManager___c__DisplayClass90_0_o *)v49->fields.titleInfoControl;
+    this = (DiggingManager___c__DisplayClass90_0_o *)v40->fields.titleInfoControl;
     if ( !this )
       goto LABEL_53;
     TitleInfoControl__RedisplayEventUI((TitleInfoControl_o *)this, 0LL);
   }
-  v50 = v2->fields.__4__this;
-  if ( !v50 )
+  v41 = v2->fields.__4__this;
+  if ( !v41 )
     goto LABEL_53;
-  v51 = v2->fields.res;
-  if ( !v51 )
+  v42 = v2->fields.res;
+  if ( !v42 )
     goto LABEL_53;
-  if ( !v51->max_length )
+  if ( !v42->max_length )
 LABEL_54:
-    sub_1B4D1F4(this, method);
-  v52 = v51->m_Items[0];
-  if ( !v52 )
+    sub_1B8661C(this, method);
+  v43 = v42->m_Items[0];
+  if ( !v43 )
     goto LABEL_53;
-  resultEventRewardInfos = v52->fields.resultEventRewardInfos;
+  resultEventRewardInfos = v43->fields.resultEventRewardInfos;
   if ( !resultEventRewardInfos )
     goto LABEL_53;
-  resultDiggingRewardInfos = v52->fields.resultDiggingRewardInfos;
-  oldUserGame = v52->fields.oldUserGame;
-  v56 = v2->fields.diggingBlockList;
-  eventId = v50->fields.eventId;
-  diggingRewardDialog = v50->fields.diggingRewardDialog;
-  maskPanel = (Il2CppObject *)v50->fields.maskPanel;
-  v60 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v60, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0LL);
+  resultDiggingRewardInfos = v43->fields.resultDiggingRewardInfos;
+  oldUserGame = v43->fields.oldUserGame;
+  diggingBlockList = v2->fields.diggingBlockList;
+  eventId = v41->fields.eventId;
+  diggingRewardDialog = v41->fields.diggingRewardDialog;
+  maskPanel = (Il2CppObject *)v41->fields.maskPanel;
+  v51 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v51, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0LL);
   _9__9 = v2->fields.__9__9;
   max_length = resultEventRewardInfos->max_length;
   if ( !_9__9 )
   {
-    _9__9 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+    _9__9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
     System_Action___ctor(_9__9, (Il2CppObject *)v2, Method_DiggingManager___c__DisplayClass90_0__Response_b__9__, 0LL);
     v2->fields.__9__9 = _9__9;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v2->fields.__9__9, (int32_t)_9__9, v63, v64);
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v2->fields.__9__9);
   }
   if ( !diggingRewardDialog )
     goto LABEL_53;
@@ -5671,16 +5456,16 @@ LABEL_54:
     diggingRewardDialog,
     resultDiggingRewardInfos,
     oldUserGame,
-    v56,
+    diggingBlockList,
     eventId,
     max_length != 0,
-    v60,
+    v51,
     _9__9,
     0LL);
-  v65 = v2->fields.__4__this;
-  if ( !v65 )
+  v54 = v2->fields.__4__this;
+  if ( !v54 )
     goto LABEL_53;
-  this = (DiggingManager___c__DisplayClass90_0_o *)v65->fields.skipCollider;
+  this = (DiggingManager___c__DisplayClass90_0_o *)v54->fields.skipCollider;
   if ( !this )
     goto LABEL_53;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
@@ -5692,114 +5477,106 @@ void __fastcall DiggingManager___c__DisplayClass90_0___Response_b__9(
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
-  DiggingManager___c__DisplayClass90_0_o *v3; // x19
+  Il2CppObject *v3; // x19
   __int64 v4; // x1
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  struct DiggingManager_resData_array *res; // x8
+  void *monitor; // x8
   DiggingManager_resData_o *v9; // x20
   struct BattleDropItem_array *resultEventRewardInfos; // x8
-  struct DiggingManager_o *_4__this; // x21
-  struct DiggingManager_o *v12; // x8
-  struct DiggingManager_resData_array *v13; // x9
-  DiggingManager_resData_o *v14; // x9
-  DiggingPointRewardDialogComponent_o *diggingPointRewardDialog; // x20
+  Il2CppClass *klass; // x21
+  Il2CppClass *v12; // x8
+  _QWORD *v13; // x9
+  __int64 v14; // x9
+  DiggingPointRewardDialogComponent_o *typeHierarchy; // x20
   BattleDropItem_array *v16; // x21
-  int32_t eventId; // w22
-  Il2CppObject *maskPanel; // x24
+  int32_t thread_static_fields_offset; // w22
+  Il2CppObject *v18; // x24
   System_Action_bool__o *v19; // x23
-  System_Action_o *_9__10; // x24
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  System_Action_o *_9__11; // x23
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  System_Action_o *v20; // x24
+  System_Action_o *v21; // x23
 
-  v3 = this;
-  if ( (byte_49BF28A & 1) == 0 )
+  v3 = (Il2CppObject *)this;
+  if ( (byte_4A48F76 & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_bool__TypeInfo, method);
-    sub_1B4CF90(&System_Action_TypeInfo, v4);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_SetActive__, v5);
-    sub_1B4CF90(&Method_DiggingManager___c__DisplayClass90_0__Response_b__10__, v6);
-    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B4CF90(
+    sub_1B863B8(&System_Action_bool__TypeInfo, method);
+    sub_1B863B8(&System_Action_TypeInfo, v4);
+    sub_1B863B8(&Method_UnityEngine_GameObject_SetActive__, v5);
+    sub_1B863B8(&Method_DiggingManager___c__DisplayClass90_0__Response_b__10__, v6);
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B863B8(
                                                        &Method_DiggingManager___c__DisplayClass90_0__Response_b__11__,
                                                        v7);
-    byte_49BF28A = 1;
+    byte_4A48F76 = 1;
   }
-  res = v3->fields.res;
-  if ( !res )
+  monitor = v3[1].monitor;
+  if ( !monitor )
     goto LABEL_22;
-  if ( !res->max_length )
+  if ( !*((_DWORD *)monitor + 6) )
 LABEL_23:
-    sub_1B4D1F4(this, method);
-  v9 = res->m_Items[0];
+    sub_1B8661C(this, method);
+  v9 = (DiggingManager_resData_o *)*((_QWORD *)monitor + 4);
   if ( !v9 )
     goto LABEL_22;
   resultEventRewardInfos = v9->fields.resultEventRewardInfos;
   if ( !resultEventRewardInfos )
     goto LABEL_22;
-  _4__this = v3->fields.__4__this;
+  klass = v3[1].klass;
   if ( *(_QWORD *)&resultEventRewardInfos->max_length )
   {
-    if ( !_4__this )
+    if ( !klass )
       goto LABEL_22;
-    this = (DiggingManager___c__DisplayClass90_0_o *)_4__this->fields.maskPanel;
+    this = *(DiggingManager___c__DisplayClass90_0_o **)&klass->_2.initializationExceptionGCHandle;
     if ( !this )
       goto LABEL_22;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-    v12 = v3->fields.__4__this;
+    v12 = v3[1].klass;
     if ( !v12 )
       goto LABEL_22;
-    v13 = v3->fields.res;
+    v13 = v3[1].monitor;
     if ( !v13 )
       goto LABEL_22;
-    if ( v13->max_length )
+    if ( *((_DWORD *)v13 + 6) )
     {
-      v14 = v13->m_Items[0];
+      v14 = v13[4];
       if ( v14 )
       {
-        diggingPointRewardDialog = v12->fields.diggingPointRewardDialog;
-        v16 = v14->fields.resultEventRewardInfos;
-        eventId = v12->fields.eventId;
-        maskPanel = (Il2CppObject *)v12->fields.maskPanel;
-        v19 = (System_Action_bool__o *)sub_1B4D1DC(System_Action_bool__TypeInfo);
-        System_Action_bool____ctor(v19, maskPanel, Method_UnityEngine_GameObject_SetActive__, 0LL);
-        _9__10 = v3->fields.__9__10;
-        if ( !_9__10 )
+        typeHierarchy = (DiggingPointRewardDialogComponent_o *)v12->_2.typeHierarchy;
+        v16 = *(BattleDropItem_array **)(v14 + 32);
+        thread_static_fields_offset = v12->_2.thread_static_fields_offset;
+        v18 = *(Il2CppObject **)&v12->_2.initializationExceptionGCHandle;
+        v19 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo);
+        System_Action_bool____ctor(v19, v18, Method_UnityEngine_GameObject_SetActive__, 0LL);
+        v20 = (System_Action_o *)v3[4].monitor;
+        if ( !v20 )
         {
-          _9__10 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-          System_Action___ctor(
-            _9__10,
-            (Il2CppObject *)v3,
-            Method_DiggingManager___c__DisplayClass90_0__Response_b__10__,
-            0LL);
-          v3->fields.__9__10 = _9__10;
-          sub_1B4CF34((CGThumbnailListItem_o *)&v3->fields.__9__10, (int32_t)_9__10, v21, v22);
+          v20 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          System_Action___ctor(v20, v3, Method_DiggingManager___c__DisplayClass90_0__Response_b__10__, 0LL);
+          v3[4].monitor = v20;
+          this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v3[4].monitor);
         }
-        if ( diggingPointRewardDialog )
+        if ( typeHierarchy )
         {
-          DiggingPointRewardDialogComponent__Open(diggingPointRewardDialog, v16, eventId, v19, _9__10, 0LL);
+          DiggingPointRewardDialogComponent__Open(typeHierarchy, v16, thread_static_fields_offset, v19, v20, 0LL);
           return;
         }
       }
 LABEL_22:
-      sub_1B4D1EC(this, method);
+      sub_1B86614(this, method);
     }
     goto LABEL_23;
   }
-  _9__11 = v3->fields.__9__11;
-  if ( !_9__11 )
+  v21 = (System_Action_o *)v3[5].klass;
+  if ( !v21 )
   {
-    _9__11 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
-    System_Action___ctor(_9__11, (Il2CppObject *)v3, Method_DiggingManager___c__DisplayClass90_0__Response_b__11__, 0LL);
-    v3->fields.__9__11 = _9__11;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v3->fields.__9__11, (int32_t)_9__11, v24, v25);
+    v21 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    System_Action___ctor(v21, v3, Method_DiggingManager___c__DisplayClass90_0__Response_b__11__, 0LL);
+    v3[5].klass = (Il2CppClass *)v21;
+    this = (DiggingManager___c__DisplayClass90_0_o *)sub_1B8635C(&v3[5]);
   }
-  if ( !_4__this )
+  if ( !klass )
     goto LABEL_22;
-  DiggingManager__CheckOpenQuest(_4__this, v9, _9__11, v2);
+  DiggingManager__CheckOpenQuest((DiggingManager_o *)klass, v9, v21, v2);
 }
 
 
@@ -5824,12 +5601,12 @@ bool __fastcall DiggingManager___c__DisplayClass90_1___Response_b__0(
   int v9; // w21
 
   v4 = this;
-  if ( (byte_49BF28D & 1) == 0 )
+  if ( (byte_4A48F79 & 1) == 0 )
   {
-    this = (DiggingManager___c__DisplayClass90_1_o *)sub_1B4CF90(
+    this = (DiggingManager___c__DisplayClass90_1_o *)sub_1B863B8(
                                                        &Method_System_Collections_Generic_List_int__get_Item__,
                                                        x);
-    byte_49BF28D = 1;
+    byte_4A48F79 = 1;
   }
   CS___8__locals1 = v4->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -5840,18 +5617,18 @@ bool __fastcall DiggingManager___c__DisplayClass90_1___Response_b__0(
     || (this = (DiggingManager___c__DisplayClass90_1_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.i,
-                                                           (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_35DF644 *)Method_System_Collections_Generic_List_int__get_Item__),
         (v7 = v4->fields.CS___8__locals1) == 0LL)
     || (v8 = v7->fields.__4__this) == 0LL
     || (v9 = (int)this, (this = (DiggingManager___c__DisplayClass90_1_o *)v8->fields.diggingIdxY) == 0LL)
     || (this = (DiggingManager___c__DisplayClass90_1_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.i,
-                                                           (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_35DF644 *)Method_System_Collections_Generic_List_int__get_Item__),
         !x) )
   {
 LABEL_13:
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   }
   return x->fields.x == v9 && x->fields.y == (_DWORD)this;
 }
@@ -5900,7 +5677,7 @@ void __fastcall DiggingManager___c__DisplayClass90_2___Response_b__3(
     || (this = (DiggingManager___c__DisplayClass90_2_o *)v9->fields.__4__this) == 0LL )
   {
 LABEL_10:
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   }
   DiggingManager__RevealRareRewardAroundTheBlock((DiggingManager_o *)this, v5->fields.block, v7);
 }
@@ -5930,11 +5707,11 @@ void __fastcall DiggingManager___c__DisplayClass90_2___Response_b__4(
   TitleInfoControl_o *v20; // x19
   int64_t v21; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49BF28E & 1) == 0 )
+  if ( (byte_4A48F7A & 1) == 0 )
   {
-    sub_1B4CF90(&long_TypeInfo, method);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v4);
-    byte_49BF28E = 1;
+    sub_1B863B8(&long_TypeInfo, method);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4A48F7A = 1;
   }
   block = this->fields.block;
   if ( !block )
@@ -5991,7 +5768,7 @@ void __fastcall DiggingManager___c__DisplayClass90_2___Response_b__4(
       }
     }
 LABEL_20:
-    sub_1B4D1EC(block, method);
+    sub_1B86614(block, method);
   }
 }
 
@@ -6015,12 +5792,12 @@ bool __fastcall DiggingManager___c__DisplayClass91_0___OnClickSkipCollider_b__0(
   int v7; // w21
 
   v4 = this;
-  if ( (byte_49BF28F & 1) == 0 )
+  if ( (byte_4A48F7B & 1) == 0 )
   {
-    this = (DiggingManager___c__DisplayClass91_0_o *)sub_1B4CF90(
+    this = (DiggingManager___c__DisplayClass91_0_o *)sub_1B863B8(
                                                        &Method_System_Collections_Generic_List_int__get_Item__,
                                                        x);
-    byte_49BF28F = 1;
+    byte_4A48F7B = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this
@@ -6028,16 +5805,16 @@ bool __fastcall DiggingManager___c__DisplayClass91_0___OnClickSkipCollider_b__0(
     || (this = (DiggingManager___c__DisplayClass91_0_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.i,
-                                                           (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_35DF644 *)Method_System_Collections_Generic_List_int__get_Item__),
         (v6 = v4->fields.__4__this) == 0LL)
     || (v7 = (int)this, (this = (DiggingManager___c__DisplayClass91_0_o *)v6->fields.diggingIdxY) == 0LL)
     || (this = (DiggingManager___c__DisplayClass91_0_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.i,
-                                                           (const MethodInfo_3562EC8 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_35DF644 *)Method_System_Collections_Generic_List_int__get_Item__),
         !x) )
   {
-    sub_1B4D1EC(this, x);
+    sub_1B86614(this, x);
   }
   return x->fields.x == v7 && x->fields.y == (_DWORD)this;
 }
@@ -6066,7 +5843,7 @@ void __fastcall DiggingManager___c__DisplayClass91_1___OnClickSkipCollider_b__1(
         (CS___8__locals1 = this->fields.CS___8__locals1) == 0LL)
     || (block = (UnityEngine_Component_o *)CS___8__locals1->fields.__4__this) == 0LL )
   {
-    sub_1B4D1EC(block, method);
+    sub_1B86614(block, method);
   }
   DiggingManager__RevealRareRewardAroundTheBlock((DiggingManager_o *)block, this->fields.block, v4);
 }
@@ -6088,7 +5865,7 @@ bool __fastcall DiggingManager___c__DisplayClass92_0___PlayDiggingAnim_b__0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_1B4D1EC(0LL, method);
+    sub_1B86614(0LL, method);
   return !UnityEngine_Animation__get_isPlaying(animation, 0LL);
 }
 
@@ -6108,7 +5885,7 @@ void __fastcall DiggingManager___c__DisplayClass97_0___ClickPanel_b__0(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   DiggingManager__EventDiggingRequest(this->fields.__4__this, this->fields.panelDataList, v2);
 }
 
@@ -6120,7 +5897,7 @@ void __fastcall DiggingManager___c__DisplayClass97_0___ClickPanel_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   DiggingManager__EventDiggingRequest(this->fields.__4__this, this->fields.panelDataList, v2);
 }
 

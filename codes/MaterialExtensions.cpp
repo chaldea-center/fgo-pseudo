@@ -17,12 +17,12 @@ UnityEngine_Color_o __fastcall MaterialExtensions__GetColorOrDefault(
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !self )
-    sub_1B4D1EC(0LL, propertyName);
+    sub_1B86614(0LL, propertyName);
   a = defaultValue.fields.a;
   b = defaultValue.fields.b;
   g = defaultValue.fields.g;
   r = defaultValue.fields.r;
-  if ( UnityEngine_Material__HasProperty_68670640(self, propertyName, 0LL) )
+  if ( UnityEngine_Material__HasProperty_69222264(self, propertyName, 0LL) )
   {
     Color = UnityEngine_Material__GetColor(self, propertyName, 0LL);
     r = Color.fields.r;

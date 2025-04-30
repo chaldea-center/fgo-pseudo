@@ -7,9 +7,10 @@ void __fastcall BlinkingComponent___ctor(BlinkingComponent_o *this, const Method
 void __fastcall BlinkingComponent__Awake(BlinkingComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
+  const MethodInfo *v4; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  this->fields.mOrgScl = GameObjectExtensions__GetLocalScale(gameObject, 0LL);
+  this->fields.mOrgScl = GameObjectExtensions__GetLocalScale(gameObject, v4);
 }
 
 
@@ -58,7 +59,8 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   float v8; // s9
   float v9; // s10
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo *v11; // x1
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.mIsDisp = is_disp;
   if ( is_disp )
@@ -69,10 +71,10 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   }
   else
   {
-    if ( !byte_49B5361 )
+    if ( !byte_4A487E1 )
     {
-      sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, is_disp);
-      byte_49B5361 = 1;
+      sub_1B863B8(&UnityEngine_Vector3_TypeInfo, is_disp);
+      byte_4A487E1 = 1;
     }
     p_mOrgScl = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = &p_mOrgScl->zeroVector.fields.y;
@@ -82,10 +84,10 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   v8 = *p_y;
   v9 = *p_z;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v11.fields.x = x;
-  v11.fields.y = v8;
-  v11.fields.z = v9;
-  GameObjectExtensions__SetLocalScale(gameObject, v11, 0LL);
+  v12.fields.x = x;
+  v12.fields.y = v8;
+  v12.fields.z = v9;
+  GameObjectExtensions__SetLocalScale(gameObject, v12, v11);
 }
 
 

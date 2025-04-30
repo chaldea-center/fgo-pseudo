@@ -1,13 +1,13 @@
 void __fastcall SkillGroupOverwriteEntity___ctor(SkillGroupOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BC05D & 1) == 0 )
+  if ( (byte_4A4F6D7 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BC05D = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4F6D7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -16,15 +16,15 @@ System_String_o *__fastcall SkillGroupOverwriteEntity__CreatePK(
         int64_t startedAt,
         const MethodInfo *method)
 {
-  if ( (byte_49BC05C & 1) == 0 )
+  if ( (byte_4A4F6D6 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__long___, startedAt);
-    byte_49BC05C = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__long___, startedAt);
+    byte_4A4F6D6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            skillGroupId,
            startedAt,
-           (const MethodInfo_2EFFD30 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_2F6BEC4 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

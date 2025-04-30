@@ -2,10 +2,10 @@ void __fastcall EffectComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_49BDB26 & 1) == 0 )
+  if ( (byte_4A5120E & 1) == 0 )
   {
-    sub_1B4CF90(&EffectComponent_TypeInfo, v1);
-    byte_49BDB26 = 1;
+    sub_1B863B8(&EffectComponent_TypeInfo, v1);
+    byte_4A5120E = 1;
   }
   EffectComponent_TypeInfo->static_fields->_RenderQueue = 4000;
 }
@@ -25,21 +25,21 @@ void __fastcall EffectComponent__EndLoadAsset(EffectComponent_o *this, AssetData
   struct UITexture_o *texture; // x21
 
   v4 = this;
-  if ( (byte_49BDB24 & 1) == 0 )
+  if ( (byte_4A5120C & 1) == 0 )
   {
-    this = (EffectComponent_o *)sub_1B4CF90(&Method_AssetData_GetObject_Texture2D____75492024, loadData);
-    byte_49BDB24 = 1;
+    this = (EffectComponent_o *)sub_1B863B8(&Method_AssetData_GetObject_Texture2D____76085320, loadData);
+    byte_4A5120C = 1;
   }
   if ( !loadData
     || (this = (EffectComponent_o *)AssetData__GetObjectNameList(loadData, 0LL)) == 0LL
     || (texture = v4->fields.texture,
-        this = (EffectComponent_o *)AssetData__GetObject_object__49169892(
+        this = (EffectComponent_o *)AssetData__GetObject_object__49610244(
                                       loadData,
                                       v4->fields.filename,
-                                      (const MethodInfo_2EE45E4 *)Method_AssetData_GetObject_Texture2D____75492024),
+                                      (const MethodInfo_2F4FE04 *)Method_AssetData_GetObject_Texture2D____76085320),
         !texture) )
   {
-    sub_1B4D1EC(this, loadData);
+    sub_1B86614(this, loadData);
   }
   ((void (__fastcall *)(struct UITexture_o *, EffectComponent_o *, Il2CppMethodPointer))texture->klass->vtable._27_set_mainTexture.method)(
     texture,
@@ -54,16 +54,16 @@ UISprite_o *__fastcall EffectComponent__GetSpriteByIndex(
         int32_t index,
         const MethodInfo *method)
 {
-  if ( (byte_49BDB21 & 1) == 0 )
+  if ( (byte_4A51209 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_BasicHelper_IndexValue_UISprite___, *(_QWORD *)&index);
-    byte_49BDB21 = 1;
+    sub_1B863B8(&Method_BasicHelper_IndexValue_UISprite___, *(_QWORD *)&index);
+    byte_4A51209 = 1;
   }
   return (UISprite_o *)BasicHelper__IndexValue_object_(
                          (System_Object_array *)this->fields.spriteArray,
                          index,
                          0LL,
-                         (const MethodInfo_2EF03FC *)Method_BasicHelper_IndexValue_UISprite___);
+                         (const MethodInfo_2F5C590 *)Method_BasicHelper_IndexValue_UISprite___);
 }
 
 
@@ -75,17 +75,17 @@ void __fastcall EffectComponent__Init(EffectComponent_o *this, const MethodInfo 
   UnityEngine_Transform_o *transform; // x19
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
-  System_Object_array *ComponentsInChildren_object__49627240; // x21
+  System_Object_array *ComponentsInChildren_object__50076180; // x21
   int32_t v10; // w20
   UnityEngine_Material_o *v11; // x21
 
-  if ( (byte_49BDB1B & 1) == 0 )
+  if ( (byte_4A51203 & 1) == 0 )
   {
-    sub_1B4CF90(&EffectComponent_TypeInfo, method);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v3);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponentsInChildren_UILabel___, v4);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponentsInChildren_UISprite___, v5);
-    byte_49BDB1B = 1;
+    sub_1B863B8(&EffectComponent_TypeInfo, method);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v3);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponentsInChildren_UILabel___, v4);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponentsInChildren_UISprite___, v5);
+    byte_4A51203 = 1;
   }
   if ( this->fields.uieffect )
   {
@@ -93,16 +93,16 @@ void __fastcall EffectComponent__Init(EffectComponent_o *this, const MethodInfo 
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_18;
-    ComponentsInChildren_object__49627240 = UnityEngine_GameObject__GetComponentsInChildren_object__49627240(
+    ComponentsInChildren_object__50076180 = UnityEngine_GameObject__GetComponentsInChildren_object__50076180(
                                               gameObject,
-                                              (const MethodInfo_2F54068 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UISprite___);
+                                              (const MethodInfo_2FC1A14 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UISprite___);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_18;
-    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__49627240(
+    gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponentsInChildren_object__50076180(
                                                gameObject,
-                                               (const MethodInfo_2F54068 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UILabel___);
-    if ( !((unsigned __int64)ComponentsInChildren_object__49627240 | (unsigned __int64)gameObject) )
+                                               (const MethodInfo_2FC1A14 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UILabel___);
+    if ( !((unsigned __int64)ComponentsInChildren_object__50076180 | (unsigned __int64)gameObject) )
     {
       if ( !transform )
         goto LABEL_18;
@@ -119,7 +119,7 @@ void __fastcall EffectComponent__Init(EffectComponent_o *this, const MethodInfo 
             break;
           gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      gameObject,
-                                                     (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                                     (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
           if ( !gameObject )
             break;
           gameObject = (UnityEngine_GameObject_o *)UnityEngine_Renderer__get_material(
@@ -135,7 +135,7 @@ void __fastcall EffectComponent__Init(EffectComponent_o *this, const MethodInfo 
             return;
         }
 LABEL_18:
-        sub_1B4D1EC(gameObject, v8);
+        sub_1B86614(gameObject, v8);
       }
     }
   }
@@ -155,15 +155,15 @@ void __fastcall EffectComponent__OnDestroy(EffectComponent_o *this, const Method
   UnityEngine_Object_o *texture; // x20
   UnityEngine_Object_o *v12; // x0
 
-  if ( (byte_49BDB1D & 1) == 0 )
+  if ( (byte_4A51205 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v3);
-    byte_49BDB1D = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4A51205 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   materials = (_QWORD *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -184,11 +184,11 @@ void __fastcall EffectComponent__OnDestroy(EffectComponent_o *this, const Method
         do
         {
           if ( v9 >= (unsigned int)v7 )
-            sub_1B4D1F4(materials, v6);
+            sub_1B8661C(materials, v6);
           v10 = (UnityEngine_Object_o *)v8[v9 + 4];
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__DestroyImmediate_68804644(v10, 0LL);
+          UnityEngine_Object__DestroyImmediate_69356480(v10, 0LL);
           LODWORD(v7) = *((_DWORD *)v8 + 6);
           ++v9;
         }
@@ -219,7 +219,7 @@ void __fastcall EffectComponent__OnDestroy(EffectComponent_o *this, const Method
       }
     }
 LABEL_23:
-    sub_1B4D1EC(materials, v6);
+    sub_1B86614(materials, v6);
   }
 }
 
@@ -242,11 +242,11 @@ void __fastcall EffectComponent__SetBattleActor(
 
   this->fields.battleActor = actor;
   p_battleActor = &this->fields.battleActor;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.battleActor, (int32_t)actor, buffEffectId, method);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.battleActor, (int32_t)actor, buffEffectId, method);
   v7 = *p_battleActor;
   *((_DWORD *)p_battleActor + 2) = buffEffectId;
   if ( !v7 )
-    sub_1B4D1EC(0LL, v6);
+    sub_1B86614(0LL, v6);
   BattleActorControl__AddReservedEffectBuffEffectId(v7, buffEffectId, 0LL);
 }
 
@@ -262,21 +262,21 @@ void __fastcall EffectComponent__Start(EffectComponent_o *this, const MethodInfo
   struct Spawner_o *v9; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_49BDB1C & 1) == 0 )
+  if ( (byte_4A51204 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_Spawner__getInstance__, method);
-    byte_49BDB1C = 1;
+    sub_1B863B8(&Method_SingletonMonoBehaviour_Spawner__getInstance__, method);
+    byte_4A51204 = 1;
   }
   v6 = *((_QWORD *)Method_SingletonMonoBehaviour_Spawner__getInstance__ + 4);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1B9D620(v4);
+    v6 = sub_1BD6A48(v4);
   v7 = *(_QWORD *)(*(_QWORD *)(v6 + 192) + 16LL);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1B9D620(v4);
+    v7 = sub_1BD6A48(v4);
   v8 = *(struct Spawner_o ***)(v7 + 184);
   v9 = *v8;
   this->fields.spawner = *v8;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.spawner, (int32_t)v9, v2, v3);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.spawner, (int32_t)v9, v2, v3);
   EffectComponent__Init(this, v10);
 }
 
@@ -287,10 +287,10 @@ void __fastcall EffectComponent__StartActorBuffEffect(EffectComponent_o *this, c
   __int64 v4; // x1
   BattleActorControl_o *v5; // x0
 
-  if ( (byte_49BDB25 & 1) == 0 )
+  if ( (byte_4A5120D & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BDB25 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A5120D = 1;
   }
   battleActor = (UnityEngine_Object_o *)this->fields.battleActor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -299,7 +299,7 @@ void __fastcall EffectComponent__StartActorBuffEffect(EffectComponent_o *this, c
   {
     v5 = this->fields.battleActor;
     if ( !v5 )
-      sub_1B4D1EC(0LL, v4);
+      sub_1B86614(0LL, v4);
     BattleActorControl__ActiveReservedBuffEffect(v5, this->fields.effectBuffEffectId, 0LL);
   }
 }
@@ -323,10 +323,10 @@ void __fastcall EffectComponent__Update(EffectComponent_o *this, const MethodInf
   UnityEngine_Object_o *v16; // x19
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_49BDB1E & 1) == 0 )
+  if ( (byte_4A51206 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, method);
-    byte_49BDB1E = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
+    byte_4A51206 = 1;
   }
   if ( this->fields.loop )
     return;
@@ -347,7 +347,7 @@ void __fastcall EffectComponent__Update(EffectComponent_o *this, const MethodInf
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_68804456(gameObject, 0LL);
+      UnityEngine_Object__Destroy_69356292(gameObject, 0LL);
       return;
     }
     v10 = this->fields.spawner;
@@ -358,7 +358,7 @@ void __fastcall EffectComponent__Update(EffectComponent_o *this, const MethodInf
       return;
     }
 LABEL_27:
-    sub_1B4D1EC(v11, v12);
+    sub_1B86614(v11, v12);
   }
   if ( endtime > v8 )
     return;
@@ -373,7 +373,7 @@ LABEL_27:
     do
     {
       if ( v15 >= (unsigned int)v14 )
-        sub_1B4D1F4(v11, v12);
+        sub_1B8661C(v11, v12);
       v16 = (UnityEngine_Object_o *)particlelist->m_Items[v15];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -382,7 +382,7 @@ LABEL_27:
       {
         if ( !v16 )
           goto LABEL_27;
-        UnityEngine_ParticleSystem__Stop_69085132((UnityEngine_ParticleSystem_o *)v16, 0LL);
+        UnityEngine_ParticleSystem__Stop_69639052((UnityEngine_ParticleSystem_o *)v16, 0LL);
       }
       LODWORD(v14) = particlelist->max_length;
       ++v15;
@@ -423,22 +423,22 @@ void __fastcall EffectComponent__replaceFigure(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BDB22 & 1) == 0 )
+  if ( (byte_4A5120A & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UITexture___, obj);
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___, v5);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B4CF90(&StringLiteral_13448/*"Texture"*/, v7);
-    byte_49BDB22 = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UITexture___, obj);
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___, v5);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1B863B8(&StringLiteral_13521/*"Texture"*/, v7);
+    byte_4A5120A = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  NodeFromName = (__int64)TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_13448/*"Texture"*/, 1, 0LL);
+  NodeFromName = (__int64)TransformHelper__getNodeFromName(transform, (System_String_o *)StringLiteral_13521/*"Texture"*/, 1, 0LL);
   if ( !NodeFromName )
     goto LABEL_18;
   v11 = (UnityEngine_Transform_o *)NodeFromName;
   NodeFromName = (__int64)UnityEngine_Component__GetComponent_object_(
                             (UnityEngine_Component_o *)NodeFromName,
-                            (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                            (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !NodeFromName )
     goto LABEL_18;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)NodeFromName, 0, 0LL);
@@ -446,7 +446,7 @@ void __fastcall EffectComponent__replaceFigure(
     goto LABEL_18;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        obj,
-                       (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___);
+                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIStandFigureR___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   NodeFromName = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -476,17 +476,17 @@ void __fastcall EffectComponent__replaceFigure(
                                       (UnityEngine_Component_o *)Component_object,
                                       0LL);
             v13 = (UnityEngine_Transform_o *)NodeFromName;
-            if ( !byte_49B5366 )
+            if ( !byte_4A487E6 )
             {
-              NodeFromName = sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v10);
-              byte_49B5366 = 1;
+              NodeFromName = sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v10);
+              byte_4A487E6 = 1;
             }
             if ( v13 )
             {
               UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
               UIStandFigureR__SetDepth((UIStandFigureR_o *)Component_object, 200, 0LL);
               this->fields.myStandFigure = (struct UIStandFigureR_o *)Component_object;
-              sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.myStandFigure, (int32_t)Component_object, v14, v15);
+              sub_1B8635C((CGThumbnailListItem_o *)&this->fields.myStandFigure, (int32_t)Component_object, v14, v15);
               return;
             }
           }
@@ -494,7 +494,7 @@ void __fastcall EffectComponent__replaceFigure(
       }
     }
 LABEL_18:
-    sub_1B4D1EC(NodeFromName, v10);
+    sub_1B86614(NodeFromName, v10);
   }
 }
 
@@ -518,7 +518,7 @@ void __fastcall EffectComponent__setFigure(
   const MethodInfo *v17; // x3
   UnityEngine_GameObject_o *gameObject; // x22
   System_Action_o *v19; // x23
-  struct UIStandFigureR_o *RenderPrefab_38519712; // x0
+  struct UIStandFigureR_o *RenderPrefab_38936732; // x0
   struct UIStandFigureR_o **p_myStandFigure; // x19
   int32_t v22; // w2
   const MethodInfo *v23; // x3
@@ -526,18 +526,18 @@ void __fastcall EffectComponent__setFigure(
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_49BDB23 & 1) == 0 )
+  if ( (byte_4A5120B & 1) == 0 )
   {
-    sub_1B4CF90(&System_Action_TypeInfo, *(_QWORD *)&svtId);
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_UITexture___, v9);
-    sub_1B4CF90(&Method_EffectComponent_onFigureAssetLoad__, v10);
-    sub_1B4CF90(&StringLiteral_13448/*"Texture"*/, v11);
-    byte_49BDB23 = 1;
+    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&svtId);
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UITexture___, v9);
+    sub_1B863B8(&Method_EffectComponent_onFigureAssetLoad__, v10);
+    sub_1B863B8(&StringLiteral_13521/*"Texture"*/, v11);
+    byte_4A5120B = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   NodeFromName = (UnityEngine_Component_o *)TransformHelper__getNodeFromName(
                                               transform,
-                                              (System_String_o *)StringLiteral_13448/*"Texture"*/,
+                                              (System_String_o *)StringLiteral_13521/*"Texture"*/,
                                               1,
                                               0LL);
   if ( !NodeFromName )
@@ -545,16 +545,16 @@ void __fastcall EffectComponent__setFigure(
   v15 = NodeFromName;
   NodeFromName = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               NodeFromName,
-                                              (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                                              (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !NodeFromName )
     goto LABEL_15;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)NodeFromName, 0, 0LL);
   this->fields.FigureLoadCallback = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.FigureLoadCallback, (int32_t)callback, v16, v17);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.FigureLoadCallback, (int32_t)callback, v16, v17);
   gameObject = UnityEngine_Component__get_gameObject(v15, 0LL);
-  v19 = (System_Action_o *)sub_1B4D1DC(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_EffectComponent_onFigureAssetLoad__, 0LL);
-  RenderPrefab_38519712 = StandFigureManager__CreateRenderPrefab_38519712(
+  RenderPrefab_38936732 = StandFigureManager__CreateRenderPrefab_38936732(
                             gameObject,
                             svtId,
                             limit,
@@ -566,9 +566,9 @@ void __fastcall EffectComponent__setFigure(
                             -1,
                             0LL,
                             0LL);
-  this->fields.myStandFigure = RenderPrefab_38519712;
+  this->fields.myStandFigure = RenderPrefab_38936732;
   p_myStandFigure = &this->fields.myStandFigure;
-  sub_1B4CF34((CGThumbnailListItem_o *)p_myStandFigure, (int32_t)RenderPrefab_38519712, v22, v23);
+  sub_1B8635C((CGThumbnailListItem_o *)p_myStandFigure, (int32_t)RenderPrefab_38936732, v22, v23);
   NodeFromName = (UnityEngine_Component_o *)*p_myStandFigure;
   if ( !*p_myStandFigure )
     goto LABEL_15;
@@ -594,17 +594,17 @@ void __fastcall EffectComponent__setFigure(
     goto LABEL_15;
   NodeFromName = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(NodeFromName, 0LL);
   v24 = (UnityEngine_Transform_o *)NodeFromName;
-  if ( !byte_49B5366 )
+  if ( !byte_4A487E6 )
   {
-    NodeFromName = (UnityEngine_Component_o *)sub_1B4CF90(&UnityEngine_Vector3_TypeInfo, v14);
-    byte_49B5366 = 1;
+    NodeFromName = (UnityEngine_Component_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v14);
+    byte_4A487E6 = 1;
   }
   if ( !v24
     || (UnityEngine_Transform__set_localScale(v24, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
         (NodeFromName = (UnityEngine_Component_o *)*p_myStandFigure) == 0LL) )
   {
 LABEL_15:
-    sub_1B4D1EC(NodeFromName, v14);
+    sub_1B86614(NodeFromName, v14);
   }
   UIStandFigureR__SetDepth((UIStandFigureR_o *)NodeFromName, 200, 0LL);
 }
@@ -616,10 +616,10 @@ void __fastcall EffectComponent__setLabel(EffectComponent_o *this, System_String
   __int64 v6; // x1
   UILabel_o *v7; // x0
 
-  if ( (byte_49BDB1F & 1) == 0 )
+  if ( (byte_4A51207 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, text);
-    byte_49BDB1F = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, text);
+    byte_4A51207 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -628,7 +628,7 @@ void __fastcall EffectComponent__setLabel(EffectComponent_o *this, System_String
   {
     v7 = this->fields.label;
     if ( !v7 )
-      sub_1B4D1EC(0LL, v6);
+      sub_1B86614(0LL, v6);
     UILabel__set_text(v7, text, 0LL);
   }
 }
@@ -645,11 +645,11 @@ void __fastcall EffectComponent__setTexture(
   __int64 v8; // x1
   struct UITexture_o *v9; // x8
 
-  if ( (byte_49BDB20 & 1) == 0 )
+  if ( (byte_4A51208 & 1) == 0 )
   {
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, filename);
-    sub_1B4CF90(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
-    byte_49BDB20 = 1;
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, filename);
+    sub_1B863B8(&Method_UnityEngine_Resources_Load_Texture2D___, v5);
+    byte_4A51208 = 1;
   }
   texture = (UnityEngine_Object_o *)this->fields.texture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -658,10 +658,10 @@ void __fastcall EffectComponent__setTexture(
   {
     object = UnityEngine_Resources__Load_object_(
                filename,
-               (const MethodInfo_2F97C44 *)Method_UnityEngine_Resources_Load_Texture2D___);
+               (const MethodInfo_30059F0 *)Method_UnityEngine_Resources_Load_Texture2D___);
     v9 = this->fields.texture;
     if ( !v9 )
-      sub_1B4D1EC(object, v8);
+      sub_1B86614(object, v8);
     ((void (__fastcall *)(struct UITexture_o *, Il2CppObject *, Il2CppMethodPointer))v9->klass->vtable._27_set_mainTexture.method)(
       v9,
       object,

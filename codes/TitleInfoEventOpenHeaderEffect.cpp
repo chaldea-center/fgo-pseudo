@@ -1,9 +1,9 @@
 void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_49B8F9C & 1) == 0 )
+  if ( (byte_4A4CE7E & 1) == 0 )
   {
-    sub_1B4CF90(&CommonEffectComponent_TypeInfo, method);
-    byte_49B8F9C = 1;
+    sub_1B863B8(&CommonEffectComponent_TypeInfo, method);
+    byte_4A4CE7E = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -55,22 +55,22 @@ void __fastcall TitleInfoEventOpenHeaderEffect__setup(
   int32_t v17; // [xsp+Ch] [xbp-34h] BYREF
 
   v17 = eventId;
-  if ( (byte_49B8F9B & 1) == 0 )
+  if ( (byte_4A4CE7D & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_16221/*"_anim"*/, *(_QWORD *)&eventId);
-    sub_1B4CF90(&StringLiteral_18529/*"ef_mapnamechange_"*/, v8);
-    byte_49B8F9B = 1;
+    sub_1B863B8(&StringLiteral_16294/*"_anim"*/, *(_QWORD *)&eventId);
+    sub_1B863B8(&StringLiteral_18610/*"ef_mapnamechange_"*/, v8);
+    byte_4A4CE7D = 1;
   }
   v9 = System_Int32__ToString((int32_t)&v17, 0LL);
-  v10 = System_String__Concat_61131716(
-          (System_String_o *)StringLiteral_18529/*"ef_mapnamechange_"*/,
+  v10 = System_String__Concat_61683424(
+          (System_String_o *)StringLiteral_18610/*"ef_mapnamechange_"*/,
           v9,
-          (System_String_o *)StringLiteral_16221/*"_anim"*/,
+          (System_String_o *)StringLiteral_16294/*"_anim"*/,
           0LL);
   this->fields.baseName = v10;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v10, v11, v12);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v10, v11, v12);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v13, v14);
   this->fields.animEndCallback = endCallback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v15, v16);
 }

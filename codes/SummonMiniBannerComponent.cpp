@@ -63,20 +63,20 @@ void __fastcall SummonMiniBannerComponent__SetBannerInfo(
   UIAtlas_o *Component_object; // x0
   __int64 v23; // x1
 
-  if ( (byte_49B7611 & 1) == 0 )
+  if ( (byte_4A4AB7F & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, info);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v17);
-    byte_49B7611 = 1;
+    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, info);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v17);
+    byte_4A4AB7F = 1;
   }
   this->fields.info = info;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, idx, *(const MethodInfo **)&moveIdx);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, idx, *(const MethodInfo **)&moveIdx);
   this->fields.bannerIdx = idx;
   this->fields.moveBannerIdx = moveIdx;
   this->fields.callbackFunc = callback;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v18, v19);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v18, v19);
   this->fields.scrollPanel = parent;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.scrollPanel, (int32_t)parent, v20, v21);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.scrollPanel, (int32_t)parent, v20, v21);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UIAtlas_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)bannerAtlas, 0LL, 0LL);
@@ -85,12 +85,12 @@ void __fastcall SummonMiniBannerComponent__SetBannerInfo(
     if ( !bannerAtlas
       || (Component_object = (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                                             bannerAtlas,
-                                            (const MethodInfo_2F53444 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
+                                            (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
           !this->fields.bannerImg)
       || (UISprite__set_atlas(this->fields.bannerImg, Component_object, 0LL),
           (Component_object = (UIAtlas_o *)this->fields.bannerImg) == 0LL) )
     {
-      sub_1B4D1EC(Component_object, v23);
+      sub_1B86614(Component_object, v23);
     }
     UISprite__set_spriteName((UISprite_o *)Component_object, imgName, 0LL);
   }
@@ -108,22 +108,22 @@ void __fastcall SummonMiniBannerComponent__SetEnableCollider(
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_49B7612 & 1) == 0 )
+  if ( (byte_4A4AB80 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Collider___, isEnable);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    byte_49B7612 = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Collider___, isEnable);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4A4AB80 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
   if ( v7 )
   {
     if ( !Component_object )
-      sub_1B4D1EC(v7, v8);
+      sub_1B86614(v7, v8);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0LL);
   }
 }
@@ -140,7 +140,7 @@ void __fastcall SummonMiniBannerComponent__Update(SummonMiniBannerComponent_o *t
 
   scrollPanel = this->fields.scrollPanel;
   if ( !scrollPanel )
-    sub_1B4D1EC(this, method);
+    sub_1B86614(this, method);
   x = scrollPanel->fields.mClipOffset.fields.x;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v6 = vabds_f32(x, GameObjectExtensions__GetLocalPositionX(gameObject, 0LL));
@@ -148,7 +148,7 @@ void __fastcall SummonMiniBannerComponent__Update(SummonMiniBannerComponent_o *t
   if ( v6 > 0.1 )
     v7 = 1.0 - (float)(v6 * (float)((float)(1.0 - this->fields.SCALING_SIZE) / this->fields.SCALING_POS));
   v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalScale_34071736(v8, v7, v7, 0LL);
+  GameObjectExtensions__SetLocalScale_34384460(v8, v7, v7, 0LL);
 }
 
 
@@ -167,10 +167,10 @@ void __fastcall SummonMiniBannerComponent__add_callbackFunc(
   SummonMiniBannerComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_49B760F & 1) == 0 )
+  if ( (byte_4A4AB7D & 1) == 0 )
   {
-    sub_1B4CF90(&SummonMiniBannerComponent_CallbackFunc_TypeInfo, value);
-    byte_49B760F = 1;
+    sub_1B863B8(&SummonMiniBannerComponent_CallbackFunc_TypeInfo, value);
+    byte_4A4AB7D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -183,13 +183,13 @@ void __fastcall SummonMiniBannerComponent__add_callbackFunc(
       if ( (SummonMiniBannerComponent_CallbackFunc_c *)v8->klass != SummonMiniBannerComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
+    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B4D4AC(v8);
+  sub_1B868D4(v8);
   SummonMiniBannerComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -215,10 +215,10 @@ void __fastcall SummonMiniBannerComponent__remove_callbackFunc(
   UIPanel_o *v18; // x7
   const MethodInfo *v19; // [xsp+30h] [xbp+0h]
 
-  if ( (byte_49B7610 & 1) == 0 )
+  if ( (byte_4A4AB7E & 1) == 0 )
   {
-    sub_1B4CF90(&SummonMiniBannerComponent_CallbackFunc_TypeInfo, value);
-    byte_49B7610 = 1;
+    sub_1B863B8(&SummonMiniBannerComponent_CallbackFunc_TypeInfo, value);
+    byte_4A4AB7E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -231,13 +231,13 @@ void __fastcall SummonMiniBannerComponent__remove_callbackFunc(
       if ( (SummonMiniBannerComponent_CallbackFunc_c *)v8->klass != SummonMiniBannerComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1B8724C(p_callbackFunc, v8, v6);
+    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B4D4AC(v8);
+  sub_1B868D4(v8);
   SummonMiniBannerComponent__SetBannerInfo(v11, v12, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -260,15 +260,15 @@ void __fastcall SummonMiniBannerComponent_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B4D050(v6) & 1) == 0 )
+  if ( (sub_1B86478(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B4D208(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B4D0B8(v10, 0LL);
+      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1B864E0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -280,9 +280,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1998A20;
+  this->fields.m_target = (Il2CppObject *)sub_19CEDB0;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19989C8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CED58;
 }
 
 
@@ -305,16 +305,16 @@ System_IAsyncResult_o *__fastcall SummonMiniBannerComponent_CallbackFunc__BeginI
 
   v16 = moveIndex;
   v15[0] = isPlaySe;
-  if ( (byte_49B7613 & 1) == 0 )
+  if ( (byte_4A4AB81 & 1) == 0 )
   {
-    sub_1B4CF90(&bool_TypeInfo, *(_QWORD *)&moveIndex);
-    sub_1B4CF90(&int_TypeInfo, v9);
-    byte_49B7613 = 1;
+    sub_1B863B8(&bool_TypeInfo, *(_QWORD *)&moveIndex);
+    sub_1B863B8(&int_TypeInfo, v9);
+    byte_4A4AB81 = 1;
   }
   v14[2] = 0LL;
   v14[0] = j_il2cpp_value_box_0(int_TypeInfo, &v16, isPlaySe, callback, object);
   v14[1] = j_il2cpp_value_box_0(bool_TypeInfo, v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1B4CF44(this, v14, callback, object);
+  return (System_IAsyncResult_o *)sub_1B8636C(this, v14, callback, object);
 }
 
 
@@ -323,7 +323,7 @@ void __fastcall SummonMiniBannerComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B4CF48(result, 0LL, method);
+  sub_1B86370(result, 0LL, method);
 }
 
 

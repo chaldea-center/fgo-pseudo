@@ -43,7 +43,7 @@ bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilt
   sort = CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1B4D1EC(sort, method);
+    sub_1B86614(sort, method);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
            *((System_Int32_array **)sort + 30),
            this->fields.sort,
@@ -64,10 +64,10 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
   CommandCodeCharaGraphFilterLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_49BA1A3 & 1) == 0 )
+  if ( (byte_4A4D7CA & 1) == 0 )
   {
-    sub_1B4CF90(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
-    byte_49BA1A3 = 1;
+    sub_1B863B8(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
+    byte_4A4D7CA = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -81,9 +81,9 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1B4CF34(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1B8635C(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1B4D4AC(this->fields.item);
+  sub_1B868D4(this->fields.item);
   return (CharaGraphCommandCodeListViewItem_o *)CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
 }

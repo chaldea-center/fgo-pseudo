@@ -1,14 +1,14 @@
 void __fastcall GalleryFolderReleaseMaster___ctor(GalleryFolderReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BB147 & 1) == 0 )
+  if ( (byte_4A4E77D & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__, method);
-    byte_49BB147 = 1;
+    sub_1B863B8(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__, method);
+    byte_4A4E77D = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    544,
-    (const MethodInfo_319B678 *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__);
+    545,
+    (const MethodInfo_3211F5C *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__);
 }
 
 
@@ -29,29 +29,29 @@ bool __fastcall GalleryFolderReleaseMaster__IsDisplayGalleryWar(
   const MethodInfo *v14; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_49BB146 & 1) == 0 )
+  if ( (byte_4A4E77C & 1) == 0 )
   {
-    sub_1B4CF90(&CondType_TypeInfo, *(_QWORD *)&warId);
-    sub_1B4CF90(&Method_DataManager_GetMaster_GalleryMaster___, v5);
-    sub_1B4CF90(&DataManager_TypeInfo, v6);
-    sub_1B4CF90(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__, v7);
-    byte_49BB146 = 1;
+    sub_1B863B8(&CondType_TypeInfo, *(_QWORD *)&warId);
+    sub_1B863B8(&Method_DataManager_GetMaster_GalleryMaster___, v5);
+    sub_1B863B8(&DataManager_TypeInfo, v6);
+    sub_1B863B8(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__, v7);
+    byte_4A4E77C = 1;
   }
   entity = 0LL;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     &entity,
                                     warId,
-                                    (const MethodInfo_319D9E8 *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__);
+                                    (const MethodInfo_32142CC *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_GalleryMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_GalleryMaster___);
     if ( Master_object )
       return GalleryMaster__HasEnableGalleryWar((GalleryMaster_o *)Master_object, warId, v14);
 LABEL_13:
-    sub_1B4D1EC(Master_object, v9);
+    sub_1B86614(Master_object, v9);
   }
   if ( !entity )
     goto LABEL_13;

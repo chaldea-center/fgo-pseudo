@@ -2,10 +2,10 @@ void __fastcall RecommendSupportQuestSelectListMenu___ctor(
         RecommendSupportQuestSelectListMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_49B6F83 & 1) == 0 )
+  if ( (byte_4A4A4B2 & 1) == 0 )
   {
-    sub_1B4CF90(&BaseMenu_TypeInfo, method);
-    byte_49B6F83 = 1;
+    sub_1B863B8(&BaseMenu_TypeInfo, method);
+    byte_4A4A4B2 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -21,8 +21,8 @@ void __fastcall RecommendSupportQuestSelectListMenu__Init(
 
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1B4D1EC(0LL, method);
-  RecommendSupportQuestBoardListViewManager__Init(listViewManager, method);
+    sub_1B86614(0LL, method);
+  RecommendSupportQuestBoardListViewManager__Init(listViewManager, 0LL);
   BaseMenu__Init((BaseMenu_o *)this, 0LL);
 }
 
@@ -43,23 +43,23 @@ void __fastcall RecommendSupportQuestSelectListMenu__Open(
   Il2CppObject *v12; // x0
   int v13; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_49B6F82 & 1) == 0 )
+  if ( (byte_4A4A4B1 & 1) == 0 )
   {
-    sub_1B4CF90(&int_TypeInfo, method);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v3);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
-    sub_1B4CF90(&StringLiteral_10812/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, v5);
-    byte_49B6F82 = 1;
+    sub_1B863B8(&int_TypeInfo, method);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v3);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v4);
+    sub_1B863B8(&StringLiteral_10870/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, v5);
+    byte_4A4A4B1 = 1;
   }
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
     goto LABEL_9;
-  RecommendSupportQuestBoardListViewManager__InitOpen(listViewManager, method);
+  RecommendSupportQuestBoardListViewManager__InitOpen(listViewManager, 0LL);
   explanationLabel = this->fields.explanationLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10812/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, 0LL);
-  listViewManager = (RecommendSupportQuestBoardListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10870/*"RECOMMEND_SUPPORT_QUEST_SELECT_MENU_EXPLANATION"*/, 0LL);
+  listViewManager = (RecommendSupportQuestBoardListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !listViewManager
     || (v13 = LODWORD(listViewManager->fields.dragParentObject) + 1,
         v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v9, v10, v11),
@@ -67,7 +67,7 @@ void __fastcall RecommendSupportQuestSelectListMenu__Open(
         !explanationLabel) )
   {
 LABEL_9:
-    sub_1B4D1EC(listViewManager, method);
+    sub_1B86614(listViewManager, method);
   }
   UILabel__set_text(explanationLabel, (System_String_o *)listViewManager, 0LL);
   BaseMenu__Open((BaseMenu_o *)this, 0LL, 0LL);
@@ -96,7 +96,7 @@ void __fastcall RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo___c
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields.warEntity = warEnt;
   v6 = (RecommendSupportQuestSelectListMenu_RecommendQuestFolderInfo_o *)((char *)v6 + 16);
-  sub_1B4CF34((CGThumbnailListItem_o *)v6, (int32_t)warEnt, v7, v8);
+  sub_1B8635C((CGThumbnailListItem_o *)v6, (int32_t)warEnt, v7, v8);
   LODWORD(v6->monitor) = parentId;
 }
 
@@ -121,12 +121,12 @@ void __fastcall RecommendSupportQuestSelectListMenu_RecommendQuestInfo___ctor(
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields.questEntity = questEnt;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v12->fields, (int32_t)questEnt, v13, v14);
+  sub_1B8635C((CGThumbnailListItem_o *)&v12->fields, (int32_t)questEnt, v13, v14);
   v12->fields.warEntity = warEnt;
-  sub_1B4CF34((CGThumbnailListItem_o *)&v12->fields.warEntity, (int32_t)warEnt, v15, v16);
+  sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.warEntity, (int32_t)warEnt, v15, v16);
   v12->fields.message = questMessage;
   v12 = (RecommendSupportQuestSelectListMenu_RecommendQuestInfo_o *)((char *)v12 + 32);
-  sub_1B4CF34((CGThumbnailListItem_o *)v12, (int32_t)questMessage, v17, v18);
+  sub_1B8635C((CGThumbnailListItem_o *)v12, (int32_t)questMessage, v17, v18);
   LODWORD(v12->monitor) = questPhase;
   HIDWORD(v12->monitor) = dispPriority;
 }

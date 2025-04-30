@@ -19,10 +19,10 @@ bool __fastcall WarBoardTouchBlockObject__Activate(
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
+    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
-      sub_1B4D1EC(0LL, v9);
+      sub_1B86614(0LL, v9);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   }
   return !isActiveAndEnabled;
@@ -38,10 +38,10 @@ void __fastcall WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B4D1EC(0LL, v4);
+    sub_1B86614(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.onClickCallback = 0LL;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v5, v6);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v5, v6);
 }
 
 
@@ -60,7 +60,7 @@ void __fastcall WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject
       onClickCallback->fields.original_method_info,
       *(_QWORD *)&onClickCallback->fields.extra_arg);
     p_onClickCallback->klass = 0LL;
-    sub_1B4CF34(p_onClickCallback, 0, v4, v5);
+    sub_1B8635C(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -79,7 +79,7 @@ void __fastcall WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObjec
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0LL;
-      sub_1B4CF34(p_onClickCallback, 0, v3, v4);
+      sub_1B8635C(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -102,7 +102,7 @@ void __fastcall WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (CGThumbnailListItem_c *)callback;
-      sub_1B4CF34(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1B8635C(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

@@ -18,12 +18,12 @@ __int64 __fastcall BrotliDecoderDecompress(__int64 a1, __int64 a2, __int64 *a3, 
   v8 = a4;
   v9 = v5;
   v10 = a2;
-  result = sub_1B4DB58(v13, 0LL, 0LL, 0LL);
+  result = sub_1B86F80(v13, 0LL, 0LL, 0LL);
   if ( (_DWORD)result )
   {
     v7 = BrotliDecoderDecompressStream(v13, &v11, &v10, &v9, &v8, &v12);
     *a3 = v12;
-    sub_1B4DCE8(v13);
+    sub_1B87110(v13);
     return v7 == 1;
   }
   return result;

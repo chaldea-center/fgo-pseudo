@@ -16,28 +16,28 @@ void __fastcall EventRewardAnotherPayListViewItem___ctor(
   _QWORD *p_image; // x0
   int v19; // w8
 
-  if ( (byte_49B5B5A & 1) == 0 )
+  if ( (byte_4A490BE & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&index);
-    sub_1B4CF90(&DataManager_TypeInfo, v13);
-    sub_1B4CF90(&NetworkManager_TypeInfo, v14);
-    byte_49B5B5A = 1;
+    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&index);
+    sub_1B863B8(&DataManager_TypeInfo, v13);
+    sub_1B863B8(&NetworkManager_TypeInfo, v14);
+    byte_4A490BE = 1;
   }
-  ListViewItem___ctor_41325876((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F01AD0 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
   this->fields._ItemEntity_k__BackingField = itemEntity;
   v16 = (UserItemMaster_o *)Master_object;
   this->fields._EventId_k__BackingField = eventId;
-  sub_1B4CF34(&this->fields._ItemEntity_k__BackingField);
+  sub_1B8635C(&this->fields._ItemEntity_k__BackingField);
   this->fields._IsAnotherPay_k__BackingField = isAnotherPay;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_49B57A5 )
+  if ( !byte_4A48C25 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, v17);
-    byte_49B57A5 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, v17);
+    byte_4A48C25 = 1;
   }
   p_image = &NetworkManager_TypeInfo->_1.image;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -49,7 +49,7 @@ void __fastcall EventRewardAnotherPayListViewItem___ctor(
     || !v16
     || (p_image = UserItemMaster__GetEntityDefinitely(v16, *(_QWORD *)(p_image[23] + 64LL), itemEntity->fields.id, 0LL)) == 0LL )
   {
-    sub_1B4D1EC(p_image, v17);
+    sub_1B86614(p_image, v17);
   }
   v19 = *((_DWORD *)p_image + 7);
   this->fields.priority = sortPriority;

@@ -1,4 +1,9 @@
-// local variable allocation has failed, the output may be wrong!
+void __fastcall AppendSkillCombineRequest___ctor(AppendSkillCombineRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 void __fastcall AppendSkillCombineRequest__beginRequest(
         AppendSkillCombineRequest_o *this,
         int64_t baseUsrSvtId,
@@ -8,25 +13,18 @@ void __fastcall AppendSkillCombineRequest__beginRequest(
 {
   __int64 v9; // x1
   __int64 v10; // x1
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x1
 
-  if ( (byte_49BC754 & 1) == 0 )
+  if ( (byte_4A4FDF2 & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_23072/*"skillNum"*/, baseUsrSvtId);
-    sub_1B4CF90(&StringLiteral_16766/*"baseUserSvtId"*/, v9);
-    sub_1B4CF90(&StringLiteral_18094/*"currentSkillLv"*/, v10);
-    byte_49BC754 = 1;
+    sub_1B863B8(&StringLiteral_23196/*"skillNum"*/, baseUsrSvtId);
+    sub_1B863B8(&StringLiteral_16839/*"baseUserSvtId"*/, v9);
+    sub_1B863B8(&StringLiteral_18174/*"currentSkillLv"*/, v10);
+    byte_4A4FDF2 = 1;
   }
-  RequestBase__addField_41754736(
-    (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_16766/*"baseUserSvtId"*/,
-    baseUsrSvtId,
-    *(const MethodInfo **)&currentSkillLv);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23072/*"skillNum"*/, skillNum, v11);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18094/*"currentSkillLv"*/, currentSkillLv, v12);
-  RequestBase__beginRequest((RequestBase_o *)this, v13);
+  RequestBase__addField_42287768((RequestBase_o *)this, (System_String_o *)StringLiteral_16839/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23196/*"skillNum"*/, skillNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18174/*"currentSkillLv"*/, currentSkillLv, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -37,16 +35,16 @@ System_String_o *__fastcall AppendSkillCombineRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49BC753 & 1) == 0 )
+  if ( (byte_4A4FDF1 & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_17439/*"card/combineAppendPassiveSkill"*/, v2);
-    byte_49BC753 = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_17515/*"card/combineAppendPassiveSkill"*/, v2);
+    byte_4A4FDF1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17439/*"card/combineAppendPassiveSkill"*/, 0LL);
+  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_17515/*"card/combineAppendPassiveSkill"*/, 0LL);
 }
 
 
@@ -60,40 +58,28 @@ void __fastcall AppendSkillCombineRequest__requestCompleted(
   ResponseData_o *v7; // x0
   ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  System_String_o *v10; // x1
 
-  if ( (byte_49BC755 & 1) == 0 )
+  if ( (byte_4A4FDF3 & 1) == 0 )
   {
-    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
-    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
-    byte_49BC755 = 1;
+    sub_1B863B8(&JsonManager_TypeInfo, responseList);
+    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
+    byte_4A4FDF3 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(108, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_42282948(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v10 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v10,
-        *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_21779/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = (System_String_o *)StringLiteral_21893/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

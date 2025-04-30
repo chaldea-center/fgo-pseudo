@@ -1,13 +1,13 @@
 void __fastcall EventRewardGuideReleaseEntity___ctor(EventRewardGuideReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BAF70 & 1) == 0 )
+  if ( (byte_4A4E5A2 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BAF70 = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4E5A2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall EventRewardGuideReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_49BAF6E & 1) == 0 )
+  if ( (byte_4A4E5A0 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&slot);
-    byte_49BAF6E = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&slot);
+    byte_4A4E5A0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            slot,
            condType,
            condTargetId,
-           (const MethodInfo_2F005FC *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_2F6C790 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -64,10 +64,10 @@ bool __fastcall EventRewardGuideReleaseEntity__GetIsReleased(
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_49BAF6F & 1) == 0 )
+  if ( (byte_4A4E5A1 & 1) == 0 )
   {
-    sub_1B4CF90(&CondType_TypeInfo, method);
-    byte_49BAF6F = 1;
+    sub_1B863B8(&CondType_TypeInfo, method);
+    byte_4A4E5A1 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

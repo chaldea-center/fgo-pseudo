@@ -6,16 +6,16 @@ void __fastcall DeckListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_49B68A4 & 1) == 0 )
+  if ( (byte_4A49E16 & 1) == 0 )
   {
-    sub_1B4CF90(&DeckListViewItemDraw_TypeInfo, v1);
-    sub_1B4CF90(&PartyOrganizationListViewItem_TypeInfo, v2);
-    byte_49B68A4 = 1;
+    sub_1B863B8(&DeckListViewItemDraw_TypeInfo, v1);
+    sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, v2);
+    byte_4A49E16 = 1;
   }
-  v3 = (PartyOrganizationListViewItem_o *)sub_1B4D1DC(PartyOrganizationListViewItem_TypeInfo);
-  PartyOrganizationListViewItem___ctor_32262724(v3, 0, 1, 0LL, 0LL, 1, 0, 0LL);
+  v3 = (PartyOrganizationListViewItem_o *)sub_1B86604(PartyOrganizationListViewItem_TypeInfo);
+  PartyOrganizationListViewItem___ctor_32589396(v3, 0, 1, 0LL, 0LL, 1, 0, 0LL);
   DeckListViewItemDraw_TypeInfo->static_fields->emptyFollowerListViewItem = v3;
-  sub_1B4CF34((CGThumbnailListItem_o *)DeckListViewItemDraw_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  sub_1B8635C((CGThumbnailListItem_o *)DeckListViewItemDraw_TypeInfo->static_fields, (int32_t)v3, v4, v5);
 }
 
 
@@ -27,11 +27,11 @@ void __fastcall DeckListViewItemDraw___ctor(DeckListViewItemDraw_o *this, const 
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_49B68A3 & 1) == 0 )
+  if ( (byte_4A49E15 & 1) == 0 )
   {
-    sub_1B4CF90(&BalanceConfig_TypeInfo, method);
-    sub_1B4CF90(&PartyOrganizationConfirmItemDraw___TypeInfo, v3);
-    byte_49B68A3 = 1;
+    sub_1B863B8(&BalanceConfig_TypeInfo, method);
+    sub_1B863B8(&PartyOrganizationConfirmItemDraw___TypeInfo, v3);
+    byte_4A49E15 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -39,11 +39,11 @@ void __fastcall DeckListViewItemDraw___ctor(DeckListViewItemDraw_o *this, const 
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct PartyOrganizationConfirmItemDraw_array *)sub_1B4D038(
+  v5 = (struct PartyOrganizationConfirmItemDraw_array *)sub_1B86460(
                                                           PartyOrganizationConfirmItemDraw___TypeInfo,
                                                           (unsigned int)v4->static_fields->DeckMemberMax);
   this->fields.memberObjectList = v5;
-  sub_1B4CF34((CGThumbnailListItem_o *)&this->fields.memberObjectList, (int32_t)v5, v6, v7);
+  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.memberObjectList, (int32_t)v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -55,12 +55,12 @@ void __fastcall DeckListViewItemDraw__SetItem(
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1B4D1EC(this, 0LL);
-  DeckListViewItemDraw__SetItem_32024808(this, item->fields.partyItem, mode, method);
+    sub_1B86614(this, 0LL);
+  DeckListViewItemDraw__SetItem_32364416(this, item->fields.partyItem, mode, method);
 }
 
 
-void __fastcall DeckListViewItemDraw__SetItem_32024808(
+void __fastcall DeckListViewItemDraw__SetItem_32364416(
         DeckListViewItemDraw_o *this,
         PartyListViewItem_o *item,
         int32_t mode,
@@ -84,13 +84,13 @@ void __fastcall DeckListViewItemDraw__SetItem_32024808(
 
   v5 = item;
   v6 = this;
-  if ( (byte_49B68A2 & 1) == 0 )
+  if ( (byte_4A49E14 & 1) == 0 )
   {
-    sub_1B4CF90(&DeckListViewItemDraw_TypeInfo, item);
-    sub_1B4CF90(&LocalizationManager_TypeInfo, v7);
-    sub_1B4CF90(&StringLiteral_10020/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, v8);
-    this = (DeckListViewItemDraw_o *)sub_1B4CF90(&StringLiteral_10019/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, v9);
-    byte_49B68A2 = 1;
+    sub_1B863B8(&DeckListViewItemDraw_TypeInfo, item);
+    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
+    sub_1B863B8(&StringLiteral_10075/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, v8);
+    this = (DeckListViewItemDraw_o *)sub_1B863B8(&StringLiteral_10074/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, v9);
+    byte_4A49E14 = 1;
   }
   if ( mode )
   {
@@ -109,7 +109,7 @@ void __fastcall DeckListViewItemDraw__SetItem_32024808(
       if ( !v12 )
         goto LABEL_18;
       if ( v11 >= v12->max_length )
-        sub_1B4D1F4(this, item);
+        sub_1B8661C(this, item);
       v13 = v12->m_Items[v11];
       item = (PartyListViewItem_o *)this;
       if ( LOBYTE(this[1].fields.baseButton) )
@@ -134,7 +134,7 @@ void __fastcall DeckListViewItemDraw__SetItem_32024808(
     deckNumLabel = v6->fields.deckNumLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (DeckListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10020/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, 0LL);
+    this = (DeckListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10075/*"PARTY_ORGANIZATION_DECK_SELECT_NUMBER"*/, 0LL);
     if ( !v5 )
       goto LABEL_18;
     v15 = this;
@@ -144,12 +144,12 @@ void __fastcall DeckListViewItemDraw__SetItem_32024808(
     if ( !deckNumLabel
       || (UILabel__set_text(deckNumLabel, (System_String_o *)this, 0LL),
           deckNameLabel = v6->fields.deckNameLabel,
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10019/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, 0LL),
+          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10074/*"PARTY_ORGANIZATION_DECK_SELECT_NAME"*/, 0LL),
           this = (DeckListViewItemDraw_o *)System_String__Format(v19, (Il2CppObject *)v5->fields.deckName, 0LL),
           !deckNameLabel) )
     {
 LABEL_18:
-      sub_1B4D1EC(this, item);
+      sub_1B86614(this, item);
     }
     UILabel__set_text(deckNameLabel, (System_String_o *)this, 0LL);
   }

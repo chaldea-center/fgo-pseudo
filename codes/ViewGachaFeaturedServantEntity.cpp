@@ -1,26 +1,26 @@
 void __fastcall ViewGachaFeaturedServantEntity___ctor(ViewGachaFeaturedServantEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BBE3F & 1) == 0 )
+  if ( (byte_4A4F4B7 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_string___ctor__, method);
-    byte_49BBE3F = 1;
+    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4A4F4B7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_319B530 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall ViewGachaFeaturedServantEntity__CreatePK(int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_49BBE3E & 1) == 0 )
+  if ( (byte_4A4F4B6 & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataEntityBase_CreateMultiplePK_int___, method);
-    byte_49BBE3E = 1;
+    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int___, method);
+    byte_4A4F4B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            gachaId,
-           (const MethodInfo_2EFFB40 *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_2F6BCD4 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 

@@ -31,13 +31,13 @@ void __fastcall StaffCostumeSelectListViewItemDraw__SetDisp(
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = (StaffCostumeSelectListViewItemDraw_o **)this;
-  if ( (byte_49B670D & 1) == 0 )
+  if ( (byte_4A49C7F & 1) == 0 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, item);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B4CF90(&StringLiteral_17161/*"btn_bg_20"*/, v6);
-    this = (StaffCostumeSelectListViewItemDraw_o *)sub_1B4CF90(&StringLiteral_17162/*"btn_bg_21"*/, v7);
-    byte_49B670D = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, item);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1B863B8(&StringLiteral_17237/*"btn_bg_20"*/, v6);
+    this = (StaffCostumeSelectListViewItemDraw_o *)sub_1B863B8(&StringLiteral_17238/*"btn_bg_21"*/, v7);
+    byte_4A49C7F = 1;
   }
   if ( !item )
     goto LABEL_35;
@@ -60,10 +60,10 @@ void __fastcall StaffCostumeSelectListViewItemDraw__SetDisp(
   if ( !IsSelected_k__BackingField )
   {
 LABEL_15:
-    if ( !byte_49B5B12 )
+    if ( !byte_4A49076 )
     {
-      sub_1B4CF90(&LocalizationManager_TypeInfo, item);
-      byte_49B5B12 = 1;
+      sub_1B863B8(&LocalizationManager_TypeInfo, item);
+      byte_4A49076 = 1;
     }
     this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -79,13 +79,13 @@ LABEL_15:
     if ( v9 )
       goto LABEL_20;
 LABEL_35:
-    sub_1B4D1EC(this, item);
+    sub_1B86614(this, item);
   }
 LABEL_8:
-  if ( !byte_49B5B13 )
+  if ( !byte_4A49077 )
   {
-    sub_1B4CF90(&LocalizationManager_TypeInfo, item);
-    byte_49B5B13 = 1;
+    sub_1B863B8(&LocalizationManager_TypeInfo, item);
+    byte_4A49077 = 1;
   }
   this = (StaffCostumeSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -110,9 +110,9 @@ LABEL_20:
   if ( !this )
     goto LABEL_35;
   if ( item->fields._IsSelected_k__BackingField )
-    v17 = &StringLiteral_17162/*"btn_bg_21"*/;
+    v17 = &StringLiteral_17238/*"btn_bg_21"*/;
   else
-    v17 = &StringLiteral_17161/*"btn_bg_20"*/;
+    v17 = &StringLiteral_17237/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v17, 0LL);
   PhotoCampaignAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._PhotoCampaignAtlas_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -159,11 +159,11 @@ void __fastcall StaffCostumeSelectListViewItemDraw__SetInput(
   const MethodInfo *v10; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_49B670C & 1) == 0 )
+  if ( (byte_4A49C7E & 1) == 0 )
   {
-    sub_1B4CF90(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1B4CF90(&UnityEngine_Object_TypeInfo, v7);
-    byte_49B670C = 1;
+    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
+    byte_4A49C7E = 1;
   }
   if ( item )
   {
@@ -176,11 +176,11 @@ void __fastcall StaffCostumeSelectListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_2EF852C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                            (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_1B4D1EC(Component_object, v9);
+        sub_1B86614(Component_object, v9);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
         Component_object,

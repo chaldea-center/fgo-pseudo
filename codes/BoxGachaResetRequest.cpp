@@ -1,19 +1,22 @@
+void __fastcall BoxGachaResetRequest___ctor(BoxGachaResetRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0LL);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BoxGachaResetRequest__beginRequest(
         BoxGachaResetRequest_o *this,
         int32_t gachaId,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  const MethodInfo *v6; // x1
-
-  if ( (byte_49BC7A0 & 1) == 0 )
+  if ( (byte_4A4FE3F & 1) == 0 )
   {
-    sub_1B4CF90(&StringLiteral_17077/*"boxGachaId"*/, *(_QWORD *)&gachaId);
-    byte_49BC7A0 = 1;
+    sub_1B863B8(&StringLiteral_17153/*"boxGachaId"*/, *(_QWORD *)&gachaId);
+    byte_4A4FE3F = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17077/*"boxGachaId"*/, gachaId, v3);
-  RequestBase__beginRequest((RequestBase_o *)this, v6);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17153/*"boxGachaId"*/, gachaId, 0LL);
+  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
@@ -22,16 +25,16 @@ System_String_o *__fastcall BoxGachaResetRequest__getURL(BoxGachaResetRequest_o 
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_49BC79F & 1) == 0 )
+  if ( (byte_4A4FE3E & 1) == 0 )
   {
-    sub_1B4CF90(&NetworkManager_TypeInfo, method);
-    sub_1B4CF90(&StringLiteral_17075/*"boxGacha/reset"*/, v2);
-    byte_49BC79F = 1;
+    sub_1B863B8(&NetworkManager_TypeInfo, method);
+    sub_1B863B8(&StringLiteral_17151/*"boxGacha/reset"*/, v2);
+    byte_4A4FE3E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61093468(BaseUrl, (System_String_o *)StringLiteral_17075/*"boxGacha/reset"*/, 0LL);
+  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_17151/*"boxGacha/reset"*/, 0LL);
 }
 
 
@@ -45,41 +48,29 @@ void __fastcall BoxGachaResetRequest__requestCompleted(
   ResponseData_o *v7; // x0
   ResponseData_o *v8; // x20
   Il2CppObject *success; // x20
-  System_String_o *v10; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v12; // x8
+  System_String_o *v10; // x1
 
-  if ( (byte_49BC7A1 & 1) == 0 )
+  if ( (byte_4A4FE40 & 1) == 0 )
   {
-    sub_1B4CF90(&JsonManager_TypeInfo, responseList);
-    sub_1B4CF90(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B4CF90(&StringLiteral_21779/*"ng"*/, v6);
-    byte_49BC7A1 = 1;
+    sub_1B863B8(&JsonManager_TypeInfo, responseList);
+    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
+    byte_4A4FE40 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(48, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_41839176(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_42282948(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v10 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v10,
-        *(_QWORD *)&CallBack->fields.extra_arg);
   }
   else
   {
-    v12 = this->fields.CallBack;
-    if ( v12 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v12->fields.m_target)(
-        v12->fields.original_method_info,
-        StringLiteral_21779/*"ng"*/,
-        *(_QWORD *)&v12->fields.extra_arg);
+    v10 = (System_String_o *)StringLiteral_21893/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

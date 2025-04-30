@@ -1,16 +1,16 @@
 void __fastcall UserEventServantPointMaster___ctor(UserEventServantPointMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_49BBBFB & 1) == 0 )
+  if ( (byte_4A4F26A & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string___ctor__,
       method);
-    byte_49BBBFB = 1;
+    byte_4A4F26A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     407,
-    (const MethodInfo_31A0130 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string___ctor__);
+    (const MethodInfo_3216A14 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string___ctor__);
 }
 
 
@@ -65,30 +65,30 @@ UserEventServantPointEntity_o *__fastcall UserEventServantPointMaster__GetBestSe
   System_Func_object__int__o *v49; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v50; // x0
 
-  if ( (byte_49BBBFC & 1) == 0 )
+  if ( (byte_4A4F26B & 1) == 0 )
   {
-    sub_1B4CF90(&Method_DataManager_GetMasterData_ServantMaster___, userId);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___, v7);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventServantPointEntity___, v8);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_OrderByDescending_UserEventServantPointEntity__long___, v9);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___, v10);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_ThenBy_UserEventServantPointEntity__int___, v11);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___, v12);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__int__TypeInfo, v13);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__long__TypeInfo, v14);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo, v15);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__bool__TypeInfo, v16);
-    sub_1B4CF90(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__GetBestServantPointEntity_b__3_0__, v18);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__GetBestServantPointEntity_b__3_2__, v19);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__DisplayClass3_0__GetBestServantPointEntity_b__1__, v20);
-    sub_1B4CF90(&UserEventServantPointMaster___c__DisplayClass3_0_TypeInfo, v21);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__DisplayClass3_1__GetBestServantPointEntity_b__3__, v22);
-    sub_1B4CF90(&UserEventServantPointMaster___c__DisplayClass3_1_TypeInfo, v23);
-    sub_1B4CF90(&UserEventServantPointMaster___c_TypeInfo, v24);
-    byte_49BBBFC = 1;
+    sub_1B863B8(&Method_DataManager_GetMasterData_ServantMaster___, userId);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___, v7);
+    sub_1B863B8(&Method_System_Linq_Enumerable_FirstOrDefault_UserEventServantPointEntity___, v8);
+    sub_1B863B8(&Method_System_Linq_Enumerable_OrderByDescending_UserEventServantPointEntity__long___, v9);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___, v10);
+    sub_1B863B8(&Method_System_Linq_Enumerable_ThenBy_UserEventServantPointEntity__int___, v11);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___, v12);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__int__TypeInfo, v13);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__long__TypeInfo, v14);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo, v15);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__bool__TypeInfo, v16);
+    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__GetBestServantPointEntity_b__3_0__, v18);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__GetBestServantPointEntity_b__3_2__, v19);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__DisplayClass3_0__GetBestServantPointEntity_b__1__, v20);
+    sub_1B863B8(&UserEventServantPointMaster___c__DisplayClass3_0_TypeInfo, v21);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__DisplayClass3_1__GetBestServantPointEntity_b__3__, v22);
+    sub_1B863B8(&UserEventServantPointMaster___c__DisplayClass3_1_TypeInfo, v23);
+    sub_1B863B8(&UserEventServantPointMaster___c_TypeInfo, v24);
+    byte_4A4F26B = 1;
   }
-  v25 = sub_1B4D1DC(UserEventServantPointMaster___c__DisplayClass3_0_TypeInfo);
+  v25 = sub_1B86604(UserEventServantPointMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v25, 0LL);
   if ( !v25 )
     goto LABEL_21;
@@ -96,22 +96,22 @@ UserEventServantPointEntity_o *__fastcall UserEventServantPointMaster__GetBestSe
   *(_DWORD *)(v25 + 24) = eventId;
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.list,
-          (const MethodInfo_2F0F4B0 *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___) )
+          (const MethodInfo_2F7B8DC *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___) )
     return 0LL;
-  v28 = sub_1B4D1DC(UserEventServantPointMaster___c__DisplayClass3_1_TypeInfo);
+  v28 = sub_1B86604(UserEventServantPointMaster___c__DisplayClass3_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v28, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_37B4410 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F01B24 *)Method_DataManager_GetMasterData_ServantMaster___),
+                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantMaster___),
         !v28) )
   {
 LABEL_21:
-    sub_1B4D1EC(Instance, v27);
+    sub_1B86614(Instance, v27);
   }
   *(_QWORD *)(v28 + 16) = Instance;
-  sub_1B4CF34((CGThumbnailListItem_o *)(v28 + 16), (int32_t)Instance, v29, v30);
+  sub_1B8635C((CGThumbnailListItem_o *)(v28 + 16), (int32_t)Instance, v29, v30);
   list = this->fields.list;
   v32 = UserEventServantPointMaster___c_TypeInfo;
   if ( !UserEventServantPointMaster___c_TypeInfo->_2.cctor_finished )
@@ -128,7 +128,7 @@ LABEL_21:
       v32 = UserEventServantPointMaster___c_TypeInfo;
     }
     v34 = (Il2CppObject *)v32->static_fields->__9;
-    _9__3_0 = (System_Func_object__object__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo);
+    _9__3_0 = (System_Func_object__object__o *)sub_1B86604(System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo);
     System_Func_object__object____ctor(
       _9__3_0,
       v34,
@@ -136,13 +136,13 @@ LABEL_21:
       0LL);
     static_fields = UserEventServantPointMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_UserEventServantPointEntity__UserEventServantPointEntity__o *)_9__3_0;
-    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v36, v37);
+    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v36, v37);
   }
   v38 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__3_0,
-                                                               (const MethodInfo_2F341B8 *)Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___);
-  v39 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___);
+  v39 = (System_Func_object__bool__o *)sub_1B86604(System_Func_UserEventServantPointEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v39,
     (Il2CppObject *)v25,
@@ -151,7 +151,7 @@ LABEL_21:
   v40 = System_Linq_Enumerable__Where_object_(
           v38,
           (System_Func_TSource__bool__o *)v39,
-          (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___);
+          (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___);
   v41 = UserEventServantPointMaster___c_TypeInfo;
   v42 = v40;
   if ( !UserEventServantPointMaster___c_TypeInfo->_2.cctor_finished )
@@ -168,7 +168,7 @@ LABEL_21:
       v41 = UserEventServantPointMaster___c_TypeInfo;
     }
     v44 = (Il2CppObject *)v41->static_fields->__9;
-    _9__3_2 = (System_Func_T__TResult__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__long__TypeInfo);
+    _9__3_2 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_UserEventServantPointEntity__long__TypeInfo);
     System_Func_object__long____ctor(
       _9__3_2,
       v44,
@@ -176,13 +176,13 @@ LABEL_21:
       0LL);
     v45 = UserEventServantPointMaster___c_TypeInfo->static_fields;
     v45->__9__3_2 = (struct System_Func_UserEventServantPointEntity__long__o *)_9__3_2;
-    sub_1B4CF34((CGThumbnailListItem_o *)&v45->__9__3_2, (int32_t)_9__3_2, v46, v47);
+    sub_1B8635C((CGThumbnailListItem_o *)&v45->__9__3_2, (int32_t)_9__3_2, v46, v47);
   }
   v48 = System_Linq_Enumerable__OrderByDescending_object__long_(
           v42,
           (System_Func_TSource__TKey__o *)_9__3_2,
-          (const MethodInfo_2F2E108 *)Method_System_Linq_Enumerable_OrderByDescending_UserEventServantPointEntity__long___);
-  v49 = (System_Func_object__int__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__int__TypeInfo);
+          (const MethodInfo_2F9B1C4 *)Method_System_Linq_Enumerable_OrderByDescending_UserEventServantPointEntity__long___);
+  v49 = (System_Func_object__int__o *)sub_1B86604(System_Func_UserEventServantPointEntity__int__TypeInfo);
   System_Func_object__int____ctor(
     v49,
     (Il2CppObject *)v28,
@@ -191,13 +191,14 @@ LABEL_21:
   v50 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ThenBy_object__int_(
                                                                v48,
                                                                (System_Func_TSource__TKey__o *)v49,
-                                                               (const MethodInfo_2F3B878 *)Method_System_Linq_Enumerable_ThenBy_UserEventServantPointEntity__int___);
+                                                               (const MethodInfo_2FA8D6C *)Method_System_Linq_Enumerable_ThenBy_UserEventServantPointEntity__int___);
   return (UserEventServantPointEntity_o *)System_Linq_Enumerable__FirstOrDefault_object_(
                                             v50,
-                                            (const MethodInfo_2F26C18 *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventServantPointEntity___);
+                                            (const MethodInfo_2F93C68 *)Method_System_Linq_Enumerable_FirstOrDefault_UserEventServantPointEntity___);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 UserEventServantPointEntity_o *__fastcall UserEventServantPointMaster__GetEntity(
         UserEventServantPointMaster_o *this,
         int64_t userId,
@@ -208,21 +209,21 @@ UserEventServantPointEntity_o *__fastcall UserEventServantPointMaster__GetEntity
   __int64 v9; // x1
   Il2CppObject *PK; // x1
 
-  if ( (byte_49BBBF9 & 1) == 0 )
+  if ( (byte_4A4F268 & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__GetEntity__,
       userId);
-    sub_1B4CF90(&UserEventServantPointEntity_TypeInfo, v9);
-    byte_49BBBF9 = 1;
+    sub_1B863B8(&UserEventServantPointEntity_TypeInfo, v9);
+    byte_4A4F268 = 1;
   }
   if ( !UserEventServantPointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserEventServantPointEntity_TypeInfo);
-  PK = (Il2CppObject *)UserEventServantPointEntity__CreatePK(userId, eventId, svtId, 0LL);
+  PK = (Il2CppObject *)UserEventServantPointEntity__CreatePK(userId, eventId, svtId, *(const MethodInfo **)&svtId);
   return (UserEventServantPointEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_31A2454 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__GetEntity__);
+                                            (const MethodInfo_3218D38 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__GetEntity__);
 }
 
 
@@ -254,28 +255,28 @@ bool __fastcall UserEventServantPointMaster__IsAnyExist(
   System_Func_object__bool__o *v26; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v27; // x0
 
-  if ( (byte_49BBBFD & 1) == 0 )
+  if ( (byte_4A4F26C & 1) == 0 )
   {
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___, userId);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___, v7);
-    sub_1B4CF90(&Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___, v8);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo, v9);
-    sub_1B4CF90(&System_Func_UserEventServantPointEntity__bool__TypeInfo, v10);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__IsAnyExist_b__4_0__, v11);
-    sub_1B4CF90(&Method_UserEventServantPointMaster___c__DisplayClass4_0__IsAnyExist_b__1__, v12);
-    sub_1B4CF90(&UserEventServantPointMaster___c__DisplayClass4_0_TypeInfo, v13);
-    sub_1B4CF90(&UserEventServantPointMaster___c_TypeInfo, v14);
-    byte_49BBBFD = 1;
+    sub_1B863B8(&Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___, userId);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___, v7);
+    sub_1B863B8(&Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___, v8);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo, v9);
+    sub_1B863B8(&System_Func_UserEventServantPointEntity__bool__TypeInfo, v10);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__IsAnyExist_b__4_0__, v11);
+    sub_1B863B8(&Method_UserEventServantPointMaster___c__DisplayClass4_0__IsAnyExist_b__1__, v12);
+    sub_1B863B8(&UserEventServantPointMaster___c__DisplayClass4_0_TypeInfo, v13);
+    sub_1B863B8(&UserEventServantPointMaster___c_TypeInfo, v14);
+    byte_4A4F26C = 1;
   }
-  v15 = sub_1B4D1DC(UserEventServantPointMaster___c__DisplayClass4_0_TypeInfo);
+  v15 = sub_1B86604(UserEventServantPointMaster___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0LL);
   if ( !v15 )
-    sub_1B4D1EC(v16, v17);
+    sub_1B86614(v16, v17);
   *(_QWORD *)(v15 + 16) = userId;
   *(_DWORD *)(v15 + 24) = eventId;
   if ( !System_Linq_Enumerable__Any_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.list,
-          (const MethodInfo_2F0F4B0 *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___) )
+          (const MethodInfo_2F7B8DC *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___) )
     return 0;
   list = this->fields.list;
   v19 = UserEventServantPointMaster___c_TypeInfo;
@@ -293,17 +294,17 @@ bool __fastcall UserEventServantPointMaster__IsAnyExist(
       v19 = UserEventServantPointMaster___c_TypeInfo;
     }
     v21 = (Il2CppObject *)v19->static_fields->__9;
-    _9__4_0 = (System_Func_object__object__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo);
+    _9__4_0 = (System_Func_object__object__o *)sub_1B86604(System_Func_UserEventServantPointEntity__UserEventServantPointEntity__TypeInfo);
     System_Func_object__object____ctor(_9__4_0, v21, Method_UserEventServantPointMaster___c__IsAnyExist_b__4_0__, 0LL);
     static_fields = UserEventServantPointMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_UserEventServantPointEntity__UserEventServantPointEntity__o *)_9__4_0;
-    sub_1B4CF34((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v23, v24);
+    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v23, v24);
   }
   v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TResult__o *)_9__4_0,
-                                                               (const MethodInfo_2F341B8 *)Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___);
-  v26 = (System_Func_object__bool__o *)sub_1B4D1DC(System_Func_UserEventServantPointEntity__bool__TypeInfo);
+                                                               (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_UserEventServantPointEntity__UserEventServantPointEntity___);
+  v26 = (System_Func_object__bool__o *)sub_1B86604(System_Func_UserEventServantPointEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v26,
     (Il2CppObject *)v15,
@@ -312,13 +313,14 @@ bool __fastcall UserEventServantPointMaster__IsAnyExist(
   v27 = System_Linq_Enumerable__Where_object_(
           v25,
           (System_Func_TSource__bool__o *)v26,
-          (const MethodInfo_2F42638 *)Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___);
+          (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_UserEventServantPointEntity___);
   return System_Linq_Enumerable__Any_object_(
            v27,
-           (const MethodInfo_2F0F4B0 *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___);
+           (const MethodInfo_2F7B8DC *)Method_System_Linq_Enumerable_Any_UserEventServantPointEntity___);
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall UserEventServantPointMaster__TryGetEntity(
         UserEventServantPointMaster_o *this,
         UserEventServantPointEntity_o **entity,
@@ -330,22 +332,22 @@ bool __fastcall UserEventServantPointMaster__TryGetEntity(
   __int64 v11; // x1
   Il2CppObject *PK; // x2
 
-  if ( (byte_49BBBFA & 1) == 0 )
+  if ( (byte_4A4F269 & 1) == 0 )
   {
-    sub_1B4CF90(
+    sub_1B863B8(
       &Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__TryGetEntity__,
       entity);
-    sub_1B4CF90(&UserEventServantPointEntity_TypeInfo, v11);
-    byte_49BBBFA = 1;
+    sub_1B863B8(&UserEventServantPointEntity_TypeInfo, v11);
+    byte_4A4F269 = 1;
   }
   if ( !UserEventServantPointEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserEventServantPointEntity_TypeInfo);
-  PK = (Il2CppObject *)UserEventServantPointEntity__CreatePK(userId, eventId, svtId, 0LL);
+  PK = (Il2CppObject *)UserEventServantPointEntity__CreatePK(userId, eventId, svtId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_31A24A0 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__TryGetEntity__);
+           (const MethodInfo_3218D84 *)Method_DataMasterBase_UserEventServantPointMaster__UserEventServantPointEntity__string__TryGetEntity__);
 }
 
 
@@ -356,15 +358,15 @@ void __fastcall UserEventServantPointMaster___c___cctor(const MethodInfo *method
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_49BBBFE & 1) == 0 )
+  if ( (byte_4A4F26D & 1) == 0 )
   {
-    sub_1B4CF90(&UserEventServantPointMaster___c_TypeInfo, v1);
-    byte_49BBBFE = 1;
+    sub_1B863B8(&UserEventServantPointMaster___c_TypeInfo, v1);
+    byte_4A4F26D = 1;
   }
-  v2 = (Il2CppObject *)sub_1B4D1DC(UserEventServantPointMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1B86604(UserEventServantPointMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   UserEventServantPointMaster___c_TypeInfo->static_fields->__9 = (struct UserEventServantPointMaster___c_o *)v2;
-  sub_1B4CF34((CGThumbnailListItem_o *)UserEventServantPointMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1B8635C((CGThumbnailListItem_o *)UserEventServantPointMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -391,7 +393,7 @@ int64_t __fastcall UserEventServantPointMaster___c___GetBestServantPointEntity_b
         const MethodInfo *method)
 {
   if ( !svtPointEnt )
-    sub_1B4D1EC(this, 0LL);
+    sub_1B86614(this, 0LL);
   return svtPointEnt->fields.value;
 }
 
@@ -424,22 +426,22 @@ bool __fastcall UserEventServantPointMaster___c__DisplayClass3_0___GetBestServan
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
   v4 = this;
-  if ( (byte_49BBBFF & 1) == 0 )
+  if ( (byte_4A4F26E & 1) == 0 )
   {
-    this = (UserEventServantPointMaster___c__DisplayClass3_0_o *)sub_1B4CF90(
+    this = (UserEventServantPointMaster___c__DisplayClass3_0_o *)sub_1B863B8(
                                                                    &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
                                                                    svtPointEnt);
-    byte_49BBBFF = 1;
+    byte_4A4F26E = 1;
   }
   if ( !svtPointEnt )
-    sub_1B4D1EC(this, svtPointEnt);
+    sub_1B86614(this, svtPointEnt);
   v5 = *(_OWORD *)&svtPointEnt->fields.userId.fields.fakeValue;
   *(_OWORD *)&v8.fields.currentCryptoKey = *(_OWORD *)&svtPointEnt->fields.userId.fields.currentCryptoKey;
   *(_OWORD *)&v8.fields.fakeValue = v5;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v7 = v8;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v7, 0LL) == v4->fields.userId
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v7, 0LL) == v4->fields.userId
       && svtPointEnt->fields.eventId == v4->fields.eventId;
 }
 
@@ -460,21 +462,21 @@ int32_t __fastcall UserEventServantPointMaster___c__DisplayClass3_1___GetBestSer
   UserEventServantPointMaster___c__DisplayClass3_1_o *v4; // x20
 
   v4 = this;
-  if ( (byte_49BBC00 & 1) == 0 )
+  if ( (byte_4A4F26F & 1) == 0 )
   {
-    this = (UserEventServantPointMaster___c__DisplayClass3_1_o *)sub_1B4CF90(
+    this = (UserEventServantPointMaster___c__DisplayClass3_1_o *)sub_1B863B8(
                                                                    &Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__,
                                                                    svtPointEnt);
-    byte_49BBC00 = 1;
+    byte_4A4F26F = 1;
   }
   if ( !svtPointEnt
     || (this = (UserEventServantPointMaster___c__DisplayClass3_1_o *)v4->fields.svtMaster) == 0LL
     || (this = (UserEventServantPointMaster___c__DisplayClass3_1_o *)DataMasterBase_object__object__int___GetEntity(
                                                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                                        svtPointEnt->fields.svtId,
-                                                                       (const MethodInfo_319D99C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
+                                                                       (const MethodInfo_3214280 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1B4D1EC(this, svtPointEnt);
+    sub_1B86614(this, svtPointEnt);
   }
   return (int32_t)this[8].fields.svtMaster;
 }
@@ -499,21 +501,21 @@ bool __fastcall UserEventServantPointMaster___c__DisplayClass4_0___IsAnyExist_b_
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
   v4 = this;
-  if ( (byte_49BBC01 & 1) == 0 )
+  if ( (byte_4A4F270 & 1) == 0 )
   {
-    this = (UserEventServantPointMaster___c__DisplayClass4_0_o *)sub_1B4CF90(
+    this = (UserEventServantPointMaster___c__DisplayClass4_0_o *)sub_1B863B8(
                                                                    &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
                                                                    svtPointEnt);
-    byte_49BBC01 = 1;
+    byte_4A4F270 = 1;
   }
   if ( !svtPointEnt )
-    sub_1B4D1EC(this, svtPointEnt);
+    sub_1B86614(this, svtPointEnt);
   v5 = *(_OWORD *)&svtPointEnt->fields.userId.fields.fakeValue;
   *(_OWORD *)&v8.fields.currentCryptoKey = *(_OWORD *)&svtPointEnt->fields.userId.fields.currentCryptoKey;
   *(_OWORD *)&v8.fields.fakeValue = v5;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v7 = v8;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47012096(&v7, 0LL) == v4->fields.userId
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_47437768(&v7, 0LL) == v4->fields.userId
       && svtPointEnt->fields.eventId == v4->fields.eventId;
 }
